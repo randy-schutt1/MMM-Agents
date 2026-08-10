@@ -95,3 +95,100 @@ Do not mine this material for leads. A fabricated rule that happens to be correc
 still not evidence, and going looking for it in a transcript is how a session talks
 itself into finding it. The files are retained only as the record of what was
 discarded and why.
+
+---
+
+## Q-002 — V02's three derived files, checked individually and confirmed fabricated
+
+```text
+STATUS:        QUARANTINED — DO NOT USE (confirmed, not assumed)
+DATE:          2026-08-10
+QUARANTINED BY: Student session (V02)
+DECISION:      D-017 (Q-001 blanket action), now confirmed for V02 specifically
+```
+
+### Why this entry exists separately
+
+Q-001 quarantined all 63 per-lesson files on evidence drawn from **V01 only**. For
+V02 that was a precaution, not a finding. Before writing V02's notes this session
+checked V02's own three files against V02's own verified transcript. They fail, and
+they fail in the same way. This entry records the V02-specific evidence so that no
+later session has to take the blanket action on trust.
+
+Files: `_QUARANTINE_UNVERIFIED_NOTES/per_lesson/02_Bootcamp1_Wk1_031812_Part2_60mins/`
+— `NOTES.md` (18 lines), `RULES.md` (69 lines), `VISUAL_INDEX.md` (453 lines).
+
+### Finding 1 — V02's "explicit" rules are V01's fabricated rules, re-stamped
+
+`V02-R001` is recorded at `[00:05:00]`, quoted as the instructor saying
+*"Wait for the M15 candle to close before taking the 5/13 EMA cross"*, marked
+`Source: Explicit`, `Coding Readiness: Ready`.
+
+This is **the same sentence, at the same timestamp, with the same two fields**, as
+the fabricated `V01-R001` documented in Q-001 Finding 1. The parameter table beneath
+it sources EMA periods 5 / 13 / 50 / 200 / 800 to `[00:04:00]` marked `Explicit` —
+again identical to V01's. The generator was stamping a template across lessons, not
+transcribing them.
+
+What V02's transcript actually says in those places:
+
+| Cited | Claim | What is actually said there |
+|---|---|---|
+| `[00:04:00]` | five EMA periods, `Explicit` | *"I bestow upon you trend traders… start looking for the anchor points."* No moving average of any kind. |
+| `[00:05:00]` | M15 close before 5/13 EMA cross | *"You should not be looking for longs… What I see is the M here… You always get out on Friday."* No indicator, no timeframe, no candle-close condition. |
+| `[00:18:00]` | stop loss 10–15 pips beyond HOD/LOD, `Explicit` | *"False move week beginning… Asian session… peak formation low… DNC. Do not counter trade back into the range."* No stop distance is stated. |
+| `[00:22:00]` | "Peak Time Gap 30–90 mins", `Explicit` | *"…he issues a beautiful 33 trade… fills the ADR completely."* No timing gap is stated. |
+
+### Finding 2 — the vocabulary the rules are built from is absent from the lesson
+
+Counted across the full 3,619-second transcript:
+
+```text
+"EMA"            8 matches — all 8 are the substring inside "email" / "emails".
+                            Zero real references to a moving average by that name.
+"M15"            0        "5/13"            0        "moving average"  0
+"Asian box"      0        "TDI"             0        "shark fin"       0
+"railroad"       0        "pin bar"         0
+"mustard"        0        "blueberry"       0        "raspberry"       0
+```
+
+`NOTES.md` nonetheless states an EMA colour scheme
+(*5 Mustard, 13 Water, 50 Mayo, 200 Blueberry, 800 Raspberry*), a TDI "Shark Fin"
+signal, and Asian/London/New York session clock times to the half-hour. None of it
+is in this recording. **One caveat, recorded so it is not lost:** the instructor does
+say *"mayonnaise"* three times (`[00:19:46]`, `[00:25:18]`, `[00:25:45]`) as a
+nickname for a moving average visible on his chart. So the food-nickname system is
+real in this course — but V02 never states which average "mayonnaise" is, and the
+other four names never occur. The quarantined mapping remains unsourced, and the
+existence of one true-sounding fragment inside a fabricated list is exactly why the
+Q-001 handling rule forbids mining this material for leads.
+
+### Finding 3 — a 50-entry visual index for one image
+
+`VISUAL_INDEX.md` opens *"Total Captured Presentation & Annotated Chart Screenshots:
+50"* and describes 50 numbered images with filenames, byte sizes, timestamps and
+per-image descriptions. The lesson's `SCREENSHOTS/` folder contains **one** file.
+
+That one file is real: `VIDEO_02_SCREENSHOT_001.jpg`, 82,843 bytes — matching entry
+001's claimed size exactly. Entries 002–050 describe 49 files that do not exist and
+never did, with invented byte sizes. And entry 001's *description* is still wrong:
+it is titled "Weekly Cycle Anatomy & 22-Trade Setup Diagram", whereas the image is a
+slide headed **"Typical Week"** showing an annotated GBPUSD M15 chart. Its claimed
+timestamp `[00:01:15]` is unverified — the image is a 1024×768 crop with no control
+bar, so it carries no burned-in timecode to check against.
+
+### Disposition
+
+All three files stay quarantined. `TRANSCRIPT.md` from the same folder was checked
+independently and **passed** — it is adopted at `02_TRANSCRIPTS/V02/V02_TRANSCRIPT.md`
+(I-008 satisfied for V02). `VIDEO_02_SCREENSHOT_001.jpg` is a genuine frame of this
+lesson and may be looked at, but nothing written *about* it in `VISUAL_INDEX.md` may
+be cited.
+
+### What this implies for V03–V21
+
+Two of two lessons checked have fabricated derived files built from a shared template.
+The blanket quarantine is now supported by evidence at both ends it has been tested.
+Each remaining lesson should still be confirmed individually — the check costs about
+ten minutes once the transcript is verified — but a session finding the same pattern
+in V03 should treat it as expected rather than surprising.
