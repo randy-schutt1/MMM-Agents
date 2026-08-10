@@ -27,12 +27,22 @@ CURRENT LESSON:      V02 — re-reviewed R2 2026-08-10: **REVISE** (HIGH), 0 cri
                      block) closed by withdrawing it in place.
 NEXT ACTION:         Apply V02 R2's **three** required corrections
                      (18_REVIEW/V02/V02_REVIEW_R2.md §9), then resubmit for R3.
-                     (1) V02_HOMEWORK.md §1.1 — the Sun 2 Aug / Fri 31 Jul day
-                     boundary is one bar out and the "self-validating on all six
-                     boundaries" claim does not hold; the chart's own dotted day
-                     separators settle it. Retain the existing rows superseded in
-                     place. Do NOT touch §1.2 or §1.3 — both verified correct.
-                     (2) The PFH/PFL count in V02_SOURCE_NOTES.md §3 and
+                     (1) ✅ DONE 2026-08-10. V02_HOMEWORK.md §1.1 — the Sun 2 Aug /
+                     Fri 31 Jul day boundary is corrected (Sun 2 Aug = 2 bars, open
+                     0.80552, high 0.80737 23:00; Fri 31 Jul open 0.80578, low
+                     0.80538, close 0.80678), the superseded rows and the superseded
+                     boundary reasoning are retained in place per
+                     REMEDIATION_PROTOCOL.md §2, the day boundaries now come from the
+                     chart's own dotted separators (x = 147, 273, 429, 573, 717, 861,
+                     987, 1149), and the false "self-validating on all six boundaries"
+                     claim is restated as what it actually establishes (174 of 176
+                     BAR boundaries; cannot adjudicate the weekend gap, measured at
+                     -12.6 pip at x=273). The overstated "reusable pipeline" claim is
+                     corrected in the two files that carried it (V02_HOMEWORK.md §1.3
+                     and CONTRADICTIONS.md C-001), plus the same false self-validation
+                     claim in V02_MASTERY_REPORT.md and in this file. §1.2 and §1.3's
+                     C-001 result were NOT touched — both verified correct at R2.
+                     (2) ⏳ OUTSTANDING — the PFH/PFL count in V02_SOURCE_NOTES.md §3 and
                      V02_TRANSCRIPT.md — both abbreviations occur ZERO times.
                      I-008's transcript adoption is unaffected and strengthened.
                      (3) Reconcile this file's PHASE STATUS row and
@@ -146,8 +156,10 @@ fabricate, interpolate, or infer Week 6 content.**
   contradicts the chart it cites and must be redone. See
   `18_REVIEW/V02/V02_REVIEW_R1.md`.
   **R1 remediation ✅ 2026-08-10:** the markup was **redone from pixel measurement** of
-  the committed PNG (method: `V02_HOMEWORK.md` §1.1; ±0.5 pip, self-validating on day
-  boundaries), with the invalid first pass preserved in place per
+  the committed PNG (method: `V02_HOMEWORK.md` §1.1; ±0.5 pip; ~~self-validating on day
+  boundaries~~ — **corrected 2026-08-10 per R2 Minor 1: day boundaries come from the
+  chart's own dotted separators, and open = prior close is a within-session check that
+  cannot adjudicate the Fri→Sun weekend boundary**), with the invalid first pass preserved in place per
   `REMEDIATION_PROTOCOL.md` §2. The "at least 3 days" confirmation is **withdrawn**; the
   corrected week is recorded against `C-001` as **non-resolving** and commits no
   day-count value. Labels remain unverified — no answer key exists — so dimension B

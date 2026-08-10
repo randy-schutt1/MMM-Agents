@@ -370,7 +370,9 @@ is withdrawn** (V02 review R1, MAJOR 1): the markup had misread the chart, and p
 traded back *above* the Monday high on Thursday.
 
 The chart has since been re-measured from the committed PNG (method: `V02_HOMEWORK.md`
-§1.1; ±0.5 pip, self-validating on day boundaries). The corrected measurement:
+§1.1; ±0.5 pip, ~~self-validating on day boundaries~~ **day boundaries taken from the
+chart's own dotted separators — corrected 2026-08-10, V02 review R2 Minor 1; the earlier
+"self-validating" description was wrong, see below**). The corrected measurement:
 
 | | |
 |---|---|
@@ -398,9 +400,26 @@ NO DAY-COUNT VALUE IS COMMITTED ANYWHERE AS A RESULT OF THIS DATUM.
 ```
 
 **Precondition for this test ever counting:** `A-004` must first settle what "the level"
-is as a price. If it does, the measurement pipeline in `V02_HOMEWORK.md` §1.1 is reusable
-and this week becomes the first observation of the manual backtest (dimension G), which
-`V02_REVIEW_R1.md` recommends. Until then it is an anecdote with a decimal point.
+is as a price. If it does, ~~the measurement pipeline in `V02_HOMEWORK.md` §1.1 is
+reusable and~~ this week becomes the first observation of the manual backtest
+(dimension G), which `V02_REVIEW_R1.md` recommends. Until then it is an anecdote with a
+decimal point.
+
+> **AMENDED 2026-08-10 (V02 review R2, Minor 1).** The struck clause overstated §1.1.
+> §1.1's **price** measurement is verified (`±0.5 pip`, confirmed against the chart's own
+> printed last-bar OHLC) and is reusable. Its **day-boundary** derivation was not: it
+> placed one bar on the wrong side of the Fri 31 Jul → Sun 2 Aug weekend boundary, and its
+> *"open = prior close on all six boundaries"* self-validation was applied at the one
+> boundary where continuity does not apply — a Friday-to-Sunday gap is normal, and the
+> check selected the mapping that made a real −12.6 pip weekend gap vanish. Corrected in
+> §1.1: day boundaries come from the chart's own dotted separators; continuity is a
+> within-session check only.
+>
+> **The datum above is unaffected.** The 72-hour result, the level 0.81151 (Mon 3 Aug
+> `15:00`) and the first breach (Thu 6 Aug `15:00`, 0.81356) were independently
+> re-measured and reproduced exactly in R2. Only Sun 2 Aug's open and high and the
+> prior-week Friday row moved, and no claim here rests on them. `EFFECT ON C-001` remains
+> **NONE**.
 
 ---
 

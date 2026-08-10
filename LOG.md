@@ -1533,3 +1533,51 @@ than discovered later as a puzzle.
 The R2 decision stands exactly as written: **`REVISE`, confidence HIGH, 0 critical, 0 major
 on mastery, 3 minor, plus 1 MAJOR process finding (the live D-004 gate breach). Advancement
 NOT AUTHORIZED. V03 remains gated.**
+
+---
+
+## 2026-08-10 — V02 R2 REMEDIATION, PART 1: §1.1's day boundary and the false self-validation
+
+**Session:** Student (remediation). Applies **required correction 1** of
+`18_REVIEW/V02/V02_REVIEW_R2.md` §9. Correction 2 (the `PFH`/`PFL` count) is **not**
+applied in this pass and remains outstanding; correction 3 was discharged by the reviewer.
+
+**What was wrong.** §1.1 placed bar `x=267` in Sunday 2 August when it belongs to Friday
+31 July, and it settled that boundary with an open = prior-close continuity test — at the
+one boundary in the week where a gap is the *normal* case. The test therefore selected the
+mapping that made a real **−12.6 pip weekend gap vanish**, and the sentence *"it does, on
+all six boundaries"* was never evidence that the mapping was right.
+
+**What was applied.**
+
+- `05_HOMEWORK/V02/V02_HOMEWORK.md` §1.1 — the day-boundary method row, the *"one boundary
+  that had to be settled"* block and the daily OHLC table are **retained in place and
+  superseded** per `REMEDIATION_PROTOCOL.md` §2, with corrected versions beside them. Day
+  boundaries now come from **the chart's own dotted separators** at `x = 147, 273, 429,
+  573, 717, 861, 987, 1149`. Sun 2 Aug = **2 bars**, open **0.80552**, high **0.80737
+  `23:00`**; Fri 31 Jul open **0.80578**, low **0.80538 `00:00`**, close **0.80678**.
+- The *"the `31` label is ambiguous"* and *"the same feed cannot give one Sunday three bars
+  and the other two"* arguments are **withdrawn**, with the measurements that refute them
+  (`31` centroid 146.12; `Aug` centroid 273.03; Sun 9 Aug carries three bars).
+- The self-validation claim is **restated** rather than deleted: continuity holds on 174 of
+  176 **bar** boundaries and is a valid *within-session* check; it cannot adjudicate a
+  weekend boundary. Corrected in `V02_HOMEWORK.md` (§1.1 twice, §1.4), the R1 correction
+  block at §1, `07_MASTERY_REPORTS/V02_MASTERY_REPORT.md`, `00_SYSTEM/COURSE_PROGRESS.md`
+  and `11_CONTRADICTIONS/CONTRADICTIONS.md`.
+- **The overstated reusability claim is corrected in both files that carried it** —
+  `V02_HOMEWORK.md` §1.3 and `CONTRADICTIONS.md` C-001. §1.1's *price* measurement is
+  verified and reusable; its *day-boundary* half was not, and §1.1 is explicitly **not** a
+  fully general self-validating pipeline. Anything reusing it for dimension G must
+  re-derive boundaries from that chart's separators and must not expect continuity across
+  a weekend or session gap.
+- §1.2 row 1's *"in its first four hourly bars"* → **the first bar of the week**.
+
+**What was deliberately not touched.** §1.2's corrected markup and §1.3's 72-hour `C-001`
+result — both independently reproduced at R2 and explicitly excluded from the correction
+scope. `EFFECT ON C-001` remains **NONE**. No homework conclusion changed. The untracked
+`05_HOMEWORK/V02/measure_usdchf_week.py` is left in place, uncommitted and undeleted, per
+R2 Note 8.
+
+**Git discipline.** Per the R2 addendum's second process point, this commit used explicit
+paths for **both** `git add` and `git commit`, with `git status` and `git diff --staged`
+read immediately before committing, so no concurrent session's work could be swept in.

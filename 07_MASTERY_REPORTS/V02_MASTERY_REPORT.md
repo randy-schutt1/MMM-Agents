@@ -299,7 +299,7 @@ gets.
 | Item | Action |
 |---|---|
 | 11a markup | **Redone from measurement.** Original preserved in place, marked `SUPERSEDED — INVALID READING (R1 MAJOR 1)`. New reading in `V02_HOMEWORK.md` §1.2, method in §1.1. |
-| Measurement method | New — candle-pixel detection, least-squares axis calibration (52.27 px/0.00100, max residual 0.10 pip), day boundaries from the x-axis label lattice. Self-validates: measured open = prior close on all six day boundaries. |
+| Measurement method | New — candle-pixel detection, least-squares axis calibration (52.27 px/0.00100, max residual 0.10 pip), day boundaries from the x-axis label lattice. ~~Self-validates: measured open = prior close on all six day boundaries.~~ **CORRECTED 2026-08-10 (R2 Minor 1):** it does **not** self-validate on all six day boundaries — that check cannot adjudicate the Fri→Sun weekend boundary, and applying it there put one bar on the wrong side. Day boundaries now come from the chart's own dotted separators; open = prior close is retained as a *within-session* check only (174 of 176 bar boundaries). The price measurement is unaffected and was independently verified in R2. |
 | "three days" confirmation | **Withdrawn.** Replaced by the measured result and an explicit statement of why it resolves nothing (`V02_HOMEWORK.md` §1.3). |
 | `±5 pips` accuracy claim | Withdrawn as untrue. Corrected table states **±0.5 pip**, derived from ±1 px quantisation plus calibration residual, not asserted. |
 | §B "decisive extreme fell on Monday" | Corrected — it fell on **Thursday**. Replaced with the observation that survives. Grade unchanged: **FAIL**. |

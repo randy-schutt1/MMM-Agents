@@ -92,10 +92,17 @@ approximately-placed rectangle is not. The clean chart is included as the eviden
 
 > **CORRECTED 2026-08-10 (R1 remediation).** The claim above that *"the day-column
 > boundaries cannot be pinned from the tick labels alone"* is **false, and it was the
-> excuse that let the MAJOR through.** §1.1 pins every boundary exactly: the x-axis date
+> excuse that let the MAJOR through.** §1.1 pins every boundary exactly: ~~the x-axis date
 > labels sit on the 6-px bar lattice and give Mon–Thu = 24 bars, Fri = 21, Sun = 3, with
-> the day mapping independently confirmed by open = prior close on all six boundaries.
+> the day mapping independently confirmed by open = prior close on all six boundaries.~~
 > The boundaries were pinnable the whole time; they simply were not pinned.
+>
+> **AMENDED 2026-08-10 (R2 Minor 1).** The struck sentence above is corrected: the chart
+> draws its **own dotted day separators** at `x = 147, 273, 429, 573, 717, 861, 987, 1149`,
+> and they give Mon–Thu = 24 bars, **Fri 31 Jul = 21**, **Sun 2 Aug = 2**, Fri 7 Aug = 21.
+> The open = prior close check does **not** validate all six boundaries — see the R2
+> correction block in §1.1. The point being made here is unaffected and is in fact
+> stronger: the boundaries were not merely pinnable, they were **printed in the image**.
 >
 > The *conclusion* of this section still stands — a table keyed to date, time and price
 > remains more auditable than a drawn rectangle, and is more so now that the values are
@@ -173,15 +180,24 @@ reproducible by anyone with the file.
 | Artifact removal | The dashed current-price line at `y=434` is drawn in the **exact** bullish body colour and spans the chart. Pixels on that row are kept only where the same column also has candle pixels at `y=433` or `y=435`. | Without this the measured high of three separate days reads exactly `0.81025`, the current price — the tell that caught it |
 | Price calibration | Least-squares fit through the 13 unobstructed right-axis label centres (`0.81700` … `0.80400`) | **52.27 px per 0.00100**; max residual **0.10 pip** |
 | Bar pitch | Column structure of the candle mask | **6 px per H1 bar**, bar centres ≡ 3 (mod 6) |
-| Day boundaries | The x-axis date labels are centred on the first bar of each day. Labels `4`, `5`, `6`, `7`, `9`, `11` sit at x = 429, 573, 717, 861, 987, 1149 — all on the 6-px lattice. | Mon–Thu = **24 bars**, Fri = **21 bars** (861→987 = 126 px), Sun = **3 bars** (987→1005 = 18 px) |
-| Independent check | Each measured daily **open** should equal the previous day's **close** | It does, on all six boundaries — this validates the day mapping, which was the first pass's actual failure |
+| Day boundaries | ~~The x-axis date labels are centred on the first bar of each day. Labels `4`, `5`, `6`, `7`, `9`, `11` sit at x = 429, 573, 717, 861, 987, 1149 — all on the 6-px lattice.~~ **SUPERSEDED (R2 Minor 1)** — six of the eight labels were measured and the other two were declared ambiguous. See the corrected row below. | ~~Mon–Thu = **24 bars**, Fri = **21 bars** (861→987 = 126 px), Sun = **3 bars** (987→1005 = 18 px)~~ |
+| **Day boundaries — CORRECTED (R2 Minor 1)** | The chart **draws its own day separators**: faint dotted vertical lines in `rgb(213,213,213)`, at `x = 147, 273, 429, 573, 717, 861, 987, 1149` — every one on a bar centre (`x ≡ 3 mod 6`). All eight x-axis date labels sit within 0.9 px of their separator, including the two the first correction declined to measure (`31` → centroid **146.12**, i.e. bar 147; `Aug` → centroid **273.03**, i.e. bar 273). | Fri 31 Jul = **21 bars** (147→273), **Sun 2 Aug = 2 bars** (273→285), Mon–Thu = **24 bars**, Fri 7 Aug = **21 bars**, Sun 9 Aug = **3 bars** |
+| Independent check | Each measured daily **open** should equal the previous day's **close** | ~~It does, on all six boundaries — this validates the day mapping, which was the first pass's actual failure~~ **RESTATED (R2 Minor 1):** it holds on **174 of the 176 bar-to-bar boundaries** to within 0.15 pip, which is what makes the series verifiable — but it **cannot** adjudicate the Fri→Sun weekend boundary, where a non-zero gap is the normal case. The one true discontinuity in all 177 bars is **−12.6 pip at `x=273`**, and that is the weekend gap. See the correction block below |
 
-Chart timezone is **UTC** (printed in the chart footer: `19:21:20 UTC`). Sunday's three
-bars are 21:00, 22:00 and 23:00 UTC.
+Chart timezone is **UTC** (printed in the chart footer: `19:21:20 UTC`). ~~Sunday's three
+bars are 21:00, 22:00 and 23:00 UTC.~~ **CORRECTED (R2 Minor 1): Sun 2 Aug carries two
+bars, 22:00 and 23:00 UTC.** (Sun 9 Aug, outside the analysed week, carries three.)
 
 **Timebase confirmation.** The last-price badge shows a countdown of `38:40` at a footer
 clock of `19:21:20 UTC`, and `19:21:20 + 38:40 = 20:00:00` exactly — so the rightmost bar
 is the 19:00 UTC hour and the hour indices above are UTC, not a local offset.
+
+```text
+SUPERSEDED — INVALID BOUNDARY REASONING (R2 MINOR 1)
+Retained in place per REMEDIATION_PROTOCOL.md §2. Superseded by the
+corrected block that follows. Do not cite the adopted hypothesis or the
+Sun 2 Aug / Fri 31 Jul values that follow from it.
+```
 
 **The one boundary that had to be settled: Sun 2 Aug.** Whether Sunday 2 Aug carries two
 bars or three shifts the whole Fri 31 Jul → Mon 3 Aug chain by one bar, and the `31` date
@@ -201,11 +217,82 @@ on this — the week's low sits in the 22:00 bar either way — but it is record
 "nothing turns on it" was the reasoning that let the first pass leave its day boundaries
 unpinned.
 
+#### CORRECTED BOUNDARY REASONING — 2026-08-10 (R2 Minor 1)
+
+**The adopted hypothesis above is wrong. Sun 2 Aug carries 2 bars, not 3; bar `x=267`
+belongs to Friday 31 July.** The boundary did not have to be "settled" by inference at
+all — the chart states it. Four lines of evidence, three of them in the PNG and none of
+them consulted above:
+
+1. **The chart's own dotted day separators** sit at `x = 147` and `x = 273`. `147→273` is
+   **21 bars** — a complete Friday, identical to Friday 7 Aug's 21. `273→429` is 26 bars
+   = Sunday (2) + Monday (24).
+2. **The two date labels the block above declined to measure settle it.** The claim that
+   `31` *"is ambiguous… it sits between the two candidate bar centres"* is **withdrawn**:
+   its sub-pixel ink centroid is **146.12** — 0.88 px from bar 147 and 5.12 px from bar
+   141. `Aug`, the first bar of the month and therefore the first bar of the Sunday
+   session, centres at **273.03** — 0.03 px from bar 273 and 6.03 px from bar 267. The
+   worst of the six labels that *were* measured misses its bar by 0.64 px, and the
+   two-glyph `11` misses by 0.06 px, so multi-character labels are not offset.
+3. **The continuity test points the other way.** There is exactly **one** open ≠
+   prior-close discontinuity in all 177 bars: **−12.6 pip at `x=273`**. Under the
+   corrected mapping that is the **weekend gap**, exactly where a gap belongs, and every
+   other boundary is continuous. Under the superseded mapping the weekend gap is 0.0 pip
+   and a 12.6-pip discontinuity sits *inside* the Sunday session, between its 21:00 and
+   22:00 bars — unexplained, and not surfaced in the table above.
+4. **Bar 267 does not behave like a Sunday-open bar.** Its volume bar is 49 px and its
+   range 23.7 pip; the unambiguous Sunday bars either side are 27 px and 27 px, and Sun
+   9 Aug's three are 9, 14 and 13 px. Bar 285's volume is 113 px — a session open, not a
+   Sunday 23:00 — confirming Monday starts at 285 and holds a full 24 bars.
+
+**The `"the same feed cannot give one Sunday three bars and the other two"` argument is
+also withdrawn.** It is a symmetry assumption and the separators refute it: Sun 2 Aug
+carries two bars and Sun 9 Aug carries three. A missing thin Sunday-open hour is an
+ordinary feed artifact.
+
+**The methodological error matters more than the pips.** Open = prior close is a sound
+check *within* a session — it is what makes 174 of the 176 bar boundaries verifiable —
+but it **cannot adjudicate a weekend boundary**, because a non-zero Friday-to-Sunday gap
+is the normal case. It was used above to choose between two hypotheses at precisely that
+boundary, and it selected the one that made the real weekend gap vanish. So the sentence
+*"it does, on all six boundaries"* was never evidence that the mapping was right; under
+the correct mapping it is evidence that one day boundary had been placed at a continuous
+point **inside Friday**.
+
+**What this changes, stated exactly:**
+
+| | Superseded | Corrected |
+|---|---|---|
+| Sun 2 Aug bar count | 3 | **2** (22:00, 23:00) |
+| Sun 2 Aug Open | 0.80831 | **0.80552** *(0.80831 is Friday's 19:00 close)* |
+| Sun 2 Aug High | 0.80870 `21:00` | **0.80737 `23:00`** |
+| Sun 2 Aug Low / Close | 0.80552 `22:00` / 0.80699 | unchanged — both already correct |
+| *Fri 31 Jul* Open / Low / Close | *0.80527 / 0.80514 / 0.80831* | ***0.80578 / 0.80538 `00:00` / 0.80678*** |
+| *Fri 31 Jul* High | *0.81289* | unchanged — already correct |
+
+**No conclusion in this homework changes.** Both mappings anchor Mon 3 Aug 00:00 at
+`x=285`, so the week's low is still 0.80552 in the Sunday 22:00 bar, the week's high is
+still Thursday's, all of Mon–Fri is untouched, and §1.3's 72-hour `C-001` result is
+unaffected. What moves is a partial weekend session's open and high, plus a prior-week
+reference row that no claim rests on.
+
+**The transferable lesson**, recorded because it is a second instance of the same class
+of failure R1 charged: *the parts of a source you did not read are not thereby ambiguous.*
+Six of eight date labels were measured and the other two were declared ambiguous without
+being measured. The chart had been drawing its own day boundaries the whole time.
+
 **Residual uncertainty: ±1 px ≈ ±0.2 pip** on each extreme, plus the ±0.1 pip
 calibration residual. The honest accuracy claim for the corrected table is therefore
 **±0.5 pip**, and it is measured rather than asserted.
 
-### Measured daily OHLC — USD/CHF 1H, FXCM
+### Measured daily OHLC — USD/CHF 1H, FXCM — `SUPERSEDED IN PART (R2 MINOR 1)`
+
+```text
+SUPERSEDED IN PART — rows 1 and 2 only (Fri 31 Jul, Sun 2 Aug).
+Retained in place per REMEDIATION_PROTOCOL.md §2. Superseded by the
+corrected table below. Mon 3 Aug – Fri 7 Aug are unaffected and were
+independently verified correct by V02 review R2.
+```
 
 | Day (UTC) | Open | High | Low | Close |
 |---|---|---|---|---|
@@ -217,6 +304,26 @@ calibration residual. The honest accuracy claim for the corrected table is there
 | Thu 6 Aug | 0.80667 | **0.81356** `15:00` ← week high | 0.80602 `02:00` | 0.81239 |
 | Fri 7 Aug (21 bars) | 0.81239 | 0.81291 `00:00` | 0.80564 `12:00` | 0.80753 |
 
+### Measured daily OHLC — CORRECTED (R2 Minor 1) — USD/CHF 1H, FXCM
+
+Day boundaries taken from the chart's own dotted separators. **This is the table to
+cite.** Values are ±0.5 pip; where this table and R2's independent re-measurement differ
+it is by 0.1–0.2 pip, i.e. one pixel.
+
+| Day (UTC) | bars | Open | High | Low | Close |
+|---|---:|---|---|---|---|
+| *Fri 31 Jul (prior week)* | *21* | *0.80578* | *0.81289* `14:00` | *0.80538* `00:00` | *0.80678* |
+| Sun 2 Aug | **2** | **0.80552** | **0.80737** `23:00` | **0.80552** `22:00` ← week low | 0.80699 |
+| Mon 3 Aug | 24 | 0.80697 | **0.81151** `15:00` | 0.80560 `00:00` | 0.81038 |
+| Tue 4 Aug | 24 | 0.81038 | 0.81061 `05:00` | 0.80801 `14:00` | 0.80910 |
+| Wed 5 Aug | 24 | 0.80910 | 0.81013 `08:00` | 0.80606 `21:00` | 0.80667 |
+| Thu 6 Aug | 24 | 0.80667 | **0.81356** `15:00` ← week high | 0.80602 `02:00` | 0.81239 |
+| Fri 7 Aug | 21 | 0.81239 | 0.81291 `00:00` | 0.80564 `12:00` | 0.80753 |
+
+Sun 2 Aug's open and low are the same bar: the week opens **at the week's low**, in its
+first bar. The weekend gap Fri 31 Jul close → Sun 2 Aug open is **−12.6 pip**, and it is
+the only open ≠ prior-close discontinuity in the series.
+
 ---
 
 ## 1.2 THE CORRECTED MARKUP
@@ -227,7 +334,7 @@ imitation of a worked example and are still unverified — see §1.4.
 
 | # | His label | Corrected placement | Measured price region | Reasoning |
 |---|---|---|---|---|
-| 1 | **False Move Week Beginning** | Sun 2 Aug 21:00 → Mon 3 Aug 15:00 | **0.80552 → 0.81151** | The week does **not** open in a narrow range. It opens by making **the week's low** in its first four hourly bars (0.80552 at Sun 22:00), then runs ~60 pips up into Monday afternoon. Under the lesson's framing this opening push is the move that traps; here it would trap shorts carried over from Friday's decline. |
+| 1 | **False Move Week Beginning** | Sun 2 Aug 21:00 → Mon 3 Aug 15:00 | **0.80552 → 0.81151** | The week does **not** open in a narrow range. It opens by making **the week's low** in **the first bar of the week** (0.80552 at Sun 22:00 — the Sunday session is 2 bars, not 3; corrected R2 Minor 1), then runs ~60 pips up into Monday afternoon. Under the lesson's framing this opening push is the move that traps; here it would trap shorts carried over from Friday's decline. |
 | 2 | **PFH** (peak formation high) | Mon 3 Aug **15:00** | **0.81151** | Monday's high, and the week's first structural extreme. *(First pass said `~0.8130` — a price not traded on Monday at all.)* |
 | 3 | **Stop hunt / reversal** | Mon 3 Aug 15:00 → Tue 4 Aug | 0.81151 → 0.80801 | Price rejects the Monday high and contracts. Tuesday is the week's **narrowest** day (26 pips). |
 | 4 | **Level 1** | Tue 4 Aug | **0.80801 – 0.81061** | First leg after the anchor: a contained range, no new extreme. |
@@ -302,9 +409,24 @@ non-resolving framing. **No day-count value is committed anywhere as a result of
 homework**, which is the condition C-001 has carried since V01.
 
 **What the week does establish, weakly:** that this test becomes performable the moment
-`A-004` settles what "the level" is. The measurement pipeline in §1.1 is reusable, and
+`A-004` settles what "the level" is. ~~The measurement pipeline in §1.1 is reusable~~, and
 `18_REVIEW/V02/V02_REVIEW_R1.md` notes this should become the first datum of the manual
 backtest (dimension G) once that ambiguity resolves.
+
+> **AMENDED 2026-08-10 (R2 Minor 1) — the reusability claim was overstated.** §1.1's
+> *price* measurement (colour-exact candle detection, axis calibration, 6-px bar lattice,
+> `±0.5 pip`) is verified and is reusable. §1.1's **day-boundary derivation was not**: it
+> placed one bar on the wrong side of the Fri 31 Jul → Sun 2 Aug weekend boundary and used
+> an open = prior-close continuity check at the one boundary where continuity does not
+> apply. Both are corrected in §1.1, and the correction is what makes the boundary method
+> reusable: **read the chart's own dotted day separators**, and treat continuity as a
+> within-session check only.
+>
+> So §1.1 is **not** a fully general, self-validating measurement pipeline, and it should
+> not be described as one. It is a documented method for this chart, whose price half is
+> verified and whose boundary half now rests on the separators rather than on inference.
+> Anything reusing it for dimension G must re-derive boundaries from the separators of
+> **that** chart, and must not expect continuity across a weekend or a session gap.
 
 ---
 
@@ -320,8 +442,12 @@ DIMENSION B (Recognition): FAIL — unchanged.
 The correction fixes **what the chart did**, not **whether my labels are the right
 labels**. Those are two different claims and only the first is now evidenced:
 
-- The measured OHLC in §1.1 is reproducible from the committed PNG and self-validates
-  (open = prior close on all six day boundaries).
+- The measured OHLC in §1.1 is reproducible from the committed PNG. ~~and self-validates
+  (open = prior close on all six day boundaries).~~ **CORRECTED (R2 Minor 1):** it does
+  **not** self-validate on all six day boundaries. Open = prior close holds on 174 of the
+  176 bar boundaries and is a valid *within-session* check, but it cannot validate the
+  Fri→Sun weekend boundary, where the real −12.6 pip gap belongs. The day boundaries are
+  established instead by the chart's own dotted separators.
 - The *labels* in §1.2 — `PFH`, `Level 1/2/3`, `Reverse` — remain plausible imitations of
   a worked example. **It has not been checked against any answer key**, because none
   exists for this week. Row 6 is now explicitly flagged as unsupportable.
