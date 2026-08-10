@@ -1498,3 +1498,38 @@ are reported in the review and none is incorporated into it.
 
 Student resubmission of V02 after the three corrections → `18_REVIEW/V02/V02_REVIEW_R3.md`,
 by a fresh session per D-003. **V03 stays closed, and the in-progress V03 pass must stop.**
+
+### Addendum — commit collision, recorded 2026-08-10
+
+**The R2 review was committed by another session, under a message that does not mention
+it.** While this reviewer session was staging its five files, the concurrent V03 session
+ran its own commit and swept the staged index into it. `1c836df`
+*"feat: V03 transcript verified and adopted (I-008); Q-003 confirms V03 derived files
+fabricated"* therefore contains **both** the gated V03 work **and** the entire R2 review
+that flags that work as a D-004 breach — with a message describing only the former.
+
+Verified before writing this: `18_REVIEW/V02/V02_REVIEW_R2.md` is in `HEAD`
+**byte-for-byte identical** to what this session wrote (md5 `15fec440…`), the
+`V03 GATE: CLOSED` line and its breach note survived intact, and nothing of this review was
+altered or lost. **No content problem — a history problem.**
+
+`1c836df` is **not** rewritten. It is already pushed, and rewriting shared history to tidy a
+message would be worse than the untidiness, and would sit badly beside
+`REVIEW_PROTOCOL.md` §12's *"never delete or rewrite old review decisions."* This addendum
+exists so the R2 decision is findable in the log, and so the collision is recorded rather
+than discovered later as a puzzle.
+
+**Two process points, both mechanical rather than disciplinary:**
+
+1. **This is the D-004 breach doing concrete damage**, not merely a paperwork violation. An
+   ungated session running concurrently did not just create premature artifacts — it
+   captured another session's staged work and mislabelled it. The `VNN GATE: CLOSED`
+   pre-flight guard proposed at `REVIEW_INDEX.md` open item 14 would have prevented both.
+2. **`git commit` with no pathspec is unsafe in this repository.** `I-009` already requires
+   explicit paths for `git add`; it should require them for `git commit` too — `git commit
+   -- <paths>` — so a session can never commit work it did not stage. Raise with the other
+   two mechanical checks at the 25% review.
+
+The R2 decision stands exactly as written: **`REVISE`, confidence HIGH, 0 critical, 0 major
+on mastery, 3 minor, plus 1 MAJOR process finding (the live D-004 gate breach). Advancement
+NOT AUTHORIZED. V03 remains gated.**
