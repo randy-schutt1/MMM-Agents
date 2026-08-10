@@ -77,9 +77,9 @@ resolved record keeps its history.
 | A-002 | "trap move" / "false move" | V01 `[00:34:33]` | DO NOT CODE | Foundational. The lesson's central object. Wrong = the whole framing is misapplied. |
 | A-003 | "picks up the [?penings?]" → **"pendings"** | V01 `[00:39:12]` | **RESOLVED BY COURSE** | Unknown — the word itself is unrecovered. Sits at two steps of the core sequence. |
 | A-004 | "level" (countable unit) | V01 `[00:35:38]` | DO NOT CODE | High. Used to bound expected move size ("one to three levels"). |
-| A-005 | "the trading zone" | V01 `[00:30:40]` | DO NOT CODE | Foundational. The stated entry filter for struggling traders. Deferred to V02. |
+| A-005 | "the trading zone" | V01 `[00:30:40]` | DO NOT CODE | Foundational. The stated entry filter for struggling traders. **Deferred twice: V01→V02, then V02 `[00:45:52]`→V03.** |
 | A-006 | "the blue box" / "the box" / "the red box" | V01 `[00:43:07]` | DO NOT CODE | High. Three box terms, no definition, one entry prohibition attached. |
-| A-007 | "second leg" | V01 `[00:43:21]` | DO NOT CODE | High. The stated preferred entry timing. |
+| A-007 | "second leg" | V01 `[00:43:21]` | DO NOT CODE | **Foundational (raised from High at V02).** Three of V02's instructions route through it, and V02 promises a definition then withholds it. |
 | A-008 | "the tracer" | V01 `[00:38:57]` | DO NOT CODE | Medium. Named as the only thing that varies week to week. |
 | A-009 | "stop hunt high drop" / "straight drop" | V01 `[00:51:42]` | DO NOT CODE | High. The named entry formation for struggling traders. |
 | A-010 | "peak formation high or low" | V01 `[00:34:26]` | DO NOT CODE | Foundational. May or may not be the same object as A-001. |
@@ -91,6 +91,13 @@ resolved record keeps its history.
 | A-016 | "goes into chop" | V01 `[00:44:45]` | DO NOT CODE | Medium. The stated end-of-week failure state. |
 | A-017 | "big entry candle" | V01 `[00:48:41]` | DO NOT CODE | Medium. The only entry-trigger language in the lesson. |
 | A-018 | `R = <number>` labels on the shaded boxes | V01 `[00:48:35]` | DO NOT CODE | Medium. If misread as a risk-to-reward ratio it would invent a target rule the lesson never states. |
+| A-019 | session times with **no timezone stated** | V02 `[00:50:32]` | DO NOT CODE | Foundational. Every timing rule in V02 is unusable without it, and the instructor explicitly declines to reason about DST. |
+| A-020 | "mayonnaise" (a moving average) | V02 `[00:19:46]` | DO NOT CODE | High. Used as a support/resistance reference *and* as the distance test for whether a trade is worth taking. |
+| A-021 | the letter sequence for "the cycle" | V02 `[00:07:28]` / `[00:19:31]` | DO NOT CODE | Medium. Two incompatible strings ("M-A-A-W", "WVVM") for the same named object. |
+| A-022 | "half-Batman" | V02 `[00:20:37]` | DO NOT CODE | High. One of exactly two named continuations at outside structure high. |
+| A-023 | "33 trade" | V02 `[00:22:16]` | DO NOT CODE | Medium. Named but never decomposed; the obvious analogy to "22" is unconfirmed and may be wrong. |
+| A-024 | "slightly above" (22-trade overshoot tolerance) | V02 `[00:01:32]` | DO NOT CODE | Medium. Decides whether an otherwise-valid 22 setup is invalidated. |
+| A-025 | "a good close below" | V02 `[00:39:19]` | DO NOT CODE | Medium. The trigger for the only numeric exit rule in V02 (−15 scratch-out). |
 
 ---
 
@@ -450,7 +457,13 @@ Three distinct box terms appear in V01. **None is defined and it is not establis
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **UPDATED 2026-08-10 (review R1, finding 1).** The original entry read: *"Unknown — no screenshot exists for V01 (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* Screenshots were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+Read from captured frames `[00:38:50]`, `[00:40:25]`, `[00:44:40]`, `[00:48:35]`:
+
+The boxes are **shaded rectangles with both a time extent and a price extent**. Pale blue covers flat, low-range consolidation; dark red covers the extended area where price is described as trapped. At `[00:48:35]` each rectangle carries a numeric label (`R = 70.5`, `R = 51…`, `= 43.1`) — see `A-018` — so they bound a measured region rather than being decorative shading.
+
+**What this does NOT settle.** Both candidate measures below remain live. A rectangle has two axes and the time axis carries information too: the blue rectangle's left edge sits on a vertical day-separator at `[00:38:50]`, the blue rectangle at `[00:44:40]` begins immediately after two vertical separators, and the blue rectangle at `[00:48:35]` abuts a dashed vertical pair. An earlier reading (`V01_INTERPRETATION.md` §10.1 `U2`, now **withdrawn**) declared the session-time reading wrong; review R1 finding 1 overturned that as unsupported. **Neither candidate is eliminated.**
 
 ### Counter-examples
 
@@ -462,6 +475,8 @@ None. V01 shows no example where this was rejected or explicitly not applied. Co
 |---|---|---|---|
 | 1 | A session range rectangle drawn on the chart, colour-coded by session | The red box appears in a US-session context and "inside the box" is used as a waiting condition | NONE |
 | 2 | A price zone bounding valid entries, independent of session | `[00:43:56]` describes a trade being outside it, implying a positional not temporal boundary | NONE — and this reading conflicts with the one above |
+
+Both candidates survive the visual evidence. The frames show rectangles that are bounded on **both** axes, which is consistent with either reading and decisive for neither. Resolving this requires a later lesson that draws a box live or states what bounds it — not further inspection of these four frames.
 
 ```text
 Classification:          INFERRED MACHINE CANDIDATE

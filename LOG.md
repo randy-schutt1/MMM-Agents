@@ -717,3 +717,96 @@ updated.
 
 ### Next Review Trigger
 Student resubmission of V01 after the eight corrections → `V01_REVIEW_R2.md`.
+
+---
+
+## 2026-08-10 — Remediation of V01 (Review R1)
+
+### Objective
+Apply four of the corrections required by `18_REVIEW/V01/V01_REVIEW_R1.md`, at the
+project owner's direction: both `MAJOR` findings and two `MINOR` ones.
+
+**Role note.** These corrections were applied by the same session that wrote R1.
+`REVIEW_PROTOCOL.md` and the reviewer prompt both hold that the reviewer does not
+perform the student's work, and `DECISIONS.md` D-003 holds that a session cannot
+independently evaluate what it produced. The owner directed the work explicitly. The
+consequence is recorded rather than glossed: **R1's verdict is unchanged and R1 was not
+edited; this session cannot certify these corrections; V01 requires a fresh reviewer
+session for R2.**
+
+### Findings Addressed
+- [E02 / MAJOR] R1 finding 1 — `V01_INTERPRETATION.md` §10.1 `U2` declared the
+  session-time reading of the blue/red boxes "wrong" under a heading titled "Resolved
+  outright" → `U2` **withdrawn** (stub retains the original claim); corrected entry added
+  as `C5` in §10.2 "Materially constrained, still not defined". `A-006`'s Visual
+  Characteristics rewritten from the frames; both candidate measures explicitly still
+  live; `Q4` reopened; `A-006` remains `DO NOT CODE`.
+- [E10 / MAJOR] R1 finding 2 — dimension F marked all eight homework items
+  `NOT APPLICABLE` → **split**. H1–H3, H6–H8 remain `NOT APPLICABLE`; **H4 and H5 are
+  `DEFERRED — BLOCKED BY I-007`**. New **`D-019`** records the general rule that
+  `NOT APPLICABLE` (closed permanently) and `DEFERRED` (open, blocked) are distinct
+  dispositions and that D-018 grants only the first. D-018 itself is unedited and remains
+  `ACTIVE` — `DECISIONS.md` is append-only.
+- [E13 / MINOR] R1 finding 4 — six-vs-four trap-move enumeration mismatch unflagged →
+  recorded in `V01_SOURCE_NOTES.md` §14. The abbreviated-recap reading is recorded as a
+  reading, not a resolution; the `[00:30:35]` slide is treated as the higher-tier evidence.
+- [E20 / MINOR] R1 finding 6b — `CONCEPT_INDEX.md` still claimed "No course material has
+  been studied" → corrected to state the real current reason for emptiness (V01 studied;
+  zero concepts, because every candidate is an open `DO NOT CODE` ambiguity).
+  `09_CHART_EXAMPLES/README.md` given the equivalent correction.
+
+### Work Redone (not edited)
+**None, and none was required.** Every R1 finding was a documentation fix under
+`REMEDIATION_PROTOCOL.md` §3.3. No test was invalid because no test was performed —
+V01 states no rule whose application could be graded. No observation, classification or
+sample exists to redo.
+
+### Work Corrected (documentation only)
+`V01_INTERPRETATION.md` (§10.1 `U2` withdrawn, §10.2 `C5` added);
+`AUTOMATION_AMBIGUITIES.md` (`A-006`); `V01_MASTERY_REPORT.md` (dimension F, QC
+checklist, the "visuals eliminated one reading" claim struck, `## Revision R1` appended,
+pointer added to the original STATUS paragraph); `DECISIONS.md` (`D-019` appended);
+`V01_SOURCE_NOTES.md` (§14); `CONCEPT_INDEX.md`; `09_CHART_EXAMPLES/README.md`;
+`COURSE_PROGRESS.md`; `REVIEW_INDEX.md`.
+
+Nothing was deleted. Superseded wording is retained in place and marked, per
+`REMEDIATION_PROTOCOL.md` §§2 and 6.
+
+### Retesting
+Not applicable — no rule definition changed in a way that invalidates downstream work,
+because there is no downstream work. `A-006` moved from "one reading eliminated" to "both
+readings live", which *widens* uncertainty rather than narrowing it, so nothing
+previously classified becomes suspect. `scripts/validate_project.py`: 97 passed,
+0 warnings, 0 failures.
+
+### New Finding Surfaced During Remediation
+The stale *"Unknown — no screenshot exists for V01 (`SETUP_ISSUES.md` I-006)"* paragraph
+is **not** confined to the three files R1 identified. It appears in the Visual
+Characteristics section of **17** ambiguity records. `A-006` was fixed as a direct
+dependency of finding 1; **16 remain** (`A-001`–`A-005`, `A-007`–`A-017`).
+
+Deliberately not swept up. R1 scoped and counted this defect at three instances, and
+fixing sixteen more it never assessed would put unreviewed work into the corpus. Several
+are not mechanical — `A-009` ("stop hunt high drop"), `A-015` ("shows something to the
+traders") and `A-017` ("big entry candle") all have captured frames bearing directly on
+them, so updating those means making fresh visual claims, which is study work and needs
+auditing. Logged as open item 6 in `REVIEW_INDEX.md`; **referred to R2**.
+
+### Remaining Open Items
+R1 findings **3, 5, 7, 8, 9, 10, 11, 12** were outside the directed scope and are **not**
+applied. They stand open for R2. Carried research items unchanged: `C-001` (day count,
+foundational, UNRESOLVED); `I7` (re-adjudicate at V02); H4/H5 pending `I-007`; the
+`[00:46:04]` / `[00:48:05]` / `[00:48:13]` audio re-check before any session-timing
+parameter is coded; dimension B pending V02.
+
+### Files Created/Updated
+Created: `DECISIONS.md` `D-019`; `V01_MASTERY_REPORT.md` `## Revision R1`;
+`V01_INTERPRETATION.md` `C5`; `REVIEW_INDEX.md` open item 6.
+Updated: as listed under "Work Corrected".
+**Not touched:** `18_REVIEW/V01/V01_REVIEW_R1.md` — a review file is never edited
+(`REVIEW_PROTOCOL.md` §11).
+
+### Next Action
+Request a **fresh** reviewer session for V01 R2. It must confirm the four applied
+corrections, dispose of R1 findings 3, 5, 7, 8, 9–12, and rule on the newly-quantified
+16-record staleness.

@@ -454,6 +454,60 @@ this decision governs its application and is cited from the report.
 
 ---
 
+## D-019 — `NOT APPLICABLE` and `DEFERRED` are different dispositions, and D-018 grants only the first
+
+**Date:** 2026-08-10
+**Decision:** Refines `D-018` (which remains `ACTIVE` and is not superseded). When a
+mastery dimension cannot be satisfied, the report must choose between two dispositions
+and must not use them interchangeably:
+
+| Disposition | Meaning | Effect | Who can grant it |
+|---|---|---|---|
+| `NOT APPLICABLE` | The lesson supplies **no subject matter** for the dimension. There is nothing to do, now or ever, for this lesson. | The item is **closed permanently**. It is never revisited. | `D-018`, for dimensions F and G only, subject to reviewer audit |
+| `DEFERRED` | Subject matter **exists** and the work is performable in principle, but repository infrastructure or a prerequisite is missing. | The item **stays open** and is carried in `18_REVIEW/REVIEW_INDEX.md` under open research items until the blocker clears, then performed. | Any dimension |
+
+The test is **not** "can this be done today". It is **"is there anything here to do at
+all"**. Work that is merely blocked is `DEFERRED`, never `NOT APPLICABLE`.
+
+**Worked example — V01 dimension F.** The student marked all eight homework items
+`NOT APPLICABLE` under D-018. Review R1 upheld six and overturned two:
+
+- H1–H3 (an 18-item survey emailed to the instructor's 2012 address), H6 (read your own
+  broker account agreement — no account exists), H7 (execute concepts in demo — and V01
+  supplies no concept with an executable form), H8 (use the instructor's MT4 template —
+  the template is not in the library) → **`NOT APPLICABLE`**, correctly. These match
+  D-018's own eligibility test: work no present-day agent can perform.
+- H4 `[00:37:58]` ("on the one hour chart… start looking at the levels and the cycle")
+  and H5 `[00:52:20]`, `[00:53:02]` ("mark the chart up once or twice", "go look at the
+  pairs this week") → **`DEFERRED`**. These are observational chart exercises. They
+  require a chart and a declared data source, **not** a rule definition — the instructor's
+  own framing is to mark up a week and see whether the shape repeats. They are blocked by
+  `I-007`, not inapplicable.
+
+**Reason:** `NOT APPLICABLE` closes an item permanently. Applied to merely-blocked work
+it silently discards performable research — in V01's case the only cheap empirical check
+available against `CL3` ("Is it always like this?" — "Yeah"), the lesson's largest
+unevidenced claim. D-018 as written did not distinguish the two, and V01 was about to set
+that precedent for all 21 lessons.
+**Evidence:** `18_REVIEW/V01/V01_REVIEW_R1.md` finding 2 (`E10`, MAJOR) and its
+Homework section; `SETUP_ISSUES.md` I-007.
+**Alternatives considered:** *Widening D-018 so blocked work also counts as
+`NOT APPLICABLE`* — rejected; it converts an infrastructure gap into a permanent
+research gap, and does so invisibly. *Reinstating dimension F in full and marking V01
+incomplete* — rejected; six of the eight items genuinely have no subject matter, and
+failing the lesson over a 2012 email address is the bureaucracy `REVIEW_PROTOCOL.md` §1
+forbids. *Performing H4/H5 immediately* — rejected; with no data source, feed or
+timezone declared, the observations would be unreproducible, which
+`STUDY_PROTOCOL.md` §6 forbids.
+**Consequences:** V01 dimension F becomes split (six `NOT APPLICABLE`, two `DEFERRED`).
+H4/H5 are carried as open item 3 in `REVIEW_INDEX.md` and are performed when `I-007`
+closes. Every future mastery report claiming `NOT APPLICABLE` must show the dimension
+has no subject matter, not merely that it is currently blocked. The reviewer audits the
+disposition, not just the conclusion.
+**Status:** ACTIVE
+
+---
+
 ## DECISIONS TO BE MADE AT INGESTION
 
 Not yet decided; record as new entries when the information exists.

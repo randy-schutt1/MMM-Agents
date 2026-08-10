@@ -14,9 +14,10 @@ VIDEOS INGESTED:     21
 VIDEOS IN PROGRESS:  1  (V01)
 VIDEOS PASSED:       0
 CURRENT LESSON:      V01 — reviewed R1 2026-08-10: REVISE (HIGH). In remediation.
-NEXT ACTION:         student session applies the 8 corrections in
-                     18_REVIEW/V01/V01_REVIEW_R1.md, then resubmits for R2.
-                     All 8 are documentation edits; no source study is required again.
+NEXT ACTION:         4 of 8 R1 corrections applied 2026-08-10 (findings 1, 2, 4, 6b).
+                     Findings 3, 5, 7, 8, 9-12 remain open. A FRESH reviewer session
+                     writes 18_REVIEW/V01/V01_REVIEW_R2.md; the session that applied
+                     the corrections cannot certify them (D-003).
 BLOCKED ON:          nothing. I-006 RESOLVED. I-007 open — now blocks V01 H4/H5,
                      which R1 reclassified from NOT APPLICABLE to DEFERRED.
 ```
@@ -44,7 +45,7 @@ fabricate, interpolate, or infer Week 6 content.**
 
 | Video | Session | Duration | Source Verified | Transcript | Notes | Screenshots | Homework | Manual Backtest | Student Mastery | Reviewer | Final Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED | ⏳ R1 REVISE | IN REMEDIATION |
+| V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ⏳ R1 REVISE → R2 due | IN REMEDIATION |
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |

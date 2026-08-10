@@ -20,8 +20,15 @@ Student self-assessment against `00_SYSTEM/MASTERY_STANDARD.md`.
 ## STATUS
 
 ```text
-REVIEW REQUIRED
+REVIEW REQUIRED  (resubmission — see "Revision R1" at the end of this file)
 ```
+
+> **Read the STATUS paragraph below as of the original submission.** It has since been
+> reviewed: `18_REVIEW/V01/V01_REVIEW_R1.md` returned `REVISE` (HIGH), answered all four
+> of the requests at the foot of this file, and directed corrections — four of which are
+> applied and documented in **`## Revision R1`**. Dimension F below is now split, not
+> wholly `NOT APPLICABLE`. This paragraph is left unedited as the original submission
+> record.
 
 **Not `PASS`.** Two dimensions are claimed `NOT APPLICABLE` under D-018 and that claim
 needs independent adjudication; one contradiction is foundational and unresolved; and
@@ -99,24 +106,31 @@ midweek reversal as an alternative cycle start `[00:52:56]`.
 Two of these (`[00:44:03]`, `[00:51:34]`) are gated on an unmeasurable skill threshold —
 logged as A-013 and C-002 rather than smoothed over.
 
-### F. Homework — `NOT APPLICABLE` (per D-018)
+### F. Homework — `NOT APPLICABLE` (H1–H3, H6–H8) / `DEFERRED` (H4–H5)
+
+> **CORRECTED 2026-08-10 — review R1 finding 2 (`E10`, MAJOR).** This section
+> originally claimed `NOT APPLICABLE` for **all eight** items under D-018. R1 upheld six
+> and overturned two: H4 and H5 are observational chart exercises, blocked by `I-007`,
+> not inapplicable. The original dispositions for H4/H5 are shown struck through below
+> so the correction stays visible. See `D-019` for the general rule.
 
 Eight assignments were captured (§11). Their character:
 
-| Assignment | Actionable by an agent in 2026? |
-|---|---|
-| H1 — take the 18-item survey, email results to the instructor | No. Self-rating survey, emailed to a 2012 address. |
-| H2 — three further survey items (% targets, session choice) | No. Same. |
-| H3 — "face your demons", report other analysis baggage | No. Same. |
-| H4 — "on the one hour chart… look at the levels and the cycle" | **Blocked.** Depends on "level" (A-004) and "the cycle", neither defined in V01. Also blocked by I-007. |
-| H5 — mark the chart up, "go look at the pairs this week" | **Blocked.** Same reasons; "this week" was March 2012. |
-| H6 — read your own broker account agreement | Not applicable to an agent; no account exists. |
-| H7 — execute concepts in demo | Not applicable; ongoing instruction, no demo account. |
-| H8 — use the instructor's MT4 template | Not applicable; the template is not in the library. |
+| Assignment | Disposition | Basis |
+|---|---|---|
+| H1 — take the 18-item survey, email results to the instructor | `NOT APPLICABLE` | Self-rating survey, emailed to a 2012 address. No subject matter for a present-day agent. |
+| H2 — three further survey items (% targets, session choice) | `NOT APPLICABLE` | Same. |
+| H3 — "face your demons", report other analysis baggage | `NOT APPLICABLE` | Same. |
+| H4 — `[00:37:58]` "on the one hour chart… look at the levels and the cycle" | ~~`NOT APPLICABLE`~~ → **`DEFERRED — BLOCKED BY I-007`** | An observational exercise. It requires **a chart and a declared data source, not a rule definition** — the instructor's framing is to look at the H1 chart and locate the cycle. My original reasoning ("depends on 'level' (A-004) … neither defined") was wrong: marking up a week's price action does not require "level" to be defined. Performable once `I-007` declares a source, feed and timezone. |
+| H5 — `[00:52:20]`, `[00:53:02]` mark the chart up, "go look at the pairs this week" | ~~`NOT APPLICABLE`~~ → **`DEFERRED — BLOCKED BY I-007`** | Same. "This week" being March 2012 is not disqualifying — the instruction is to observe whether the weekly shape repeats, which any sufficient history serves. This is the **only cheap empirical check available against `CL3`** ("Is it always like this?" — "Yeah"), the lesson's largest unevidenced claim, and closing it permanently would have discarded it. |
+| H6 — read your own broker account agreement | `NOT APPLICABLE` | No account exists. |
+| H7 — execute concepts in demo | `NOT APPLICABLE` | Ongoing instruction, no demo account — and V01 supplies no concept with an executable form. |
+| H8 — use the instructor's MT4 template | `NOT APPLICABLE` | The template is not in the library (confirmed: no template file exists under `01_SOURCE_VIDEOS/`). |
 
-Nothing here can be completed, and nothing here can be *graded*. Claimed `NOT
-APPLICABLE` under **D-018**. **The reviewer should audit this claim** — if any of H4–H8
-is judged actionable, the correct outcome is `REVISE` with F reinstated.
+Six of the eight have no subject matter and are closed. **H4 and H5 stay open**, carried
+as open research item 3 in `18_REVIEW/REVIEW_INDEX.md`, and are performed when `I-007`
+closes. They are **not** attempted before then: with no declared data source, feed or
+timezone, the observations would be unreproducible, which `STUDY_PROTOCOL.md` §6 forbids.
 
 ### G. Manual Backtesting — `NOT APPLICABLE` (per D-018)
 
@@ -193,7 +207,7 @@ Two records:
 | Interpretation in a separate file | ✅ |
 | Screenshots captured and indexed | ✅ 22, indexed, self-verifying timecodes |
 | Major rules have provenance | ✅ 63 timestamped statements, no orphans |
-| Homework complete or documented as absent | ✅ documented — `NOT APPLICABLE`, D-018 |
+| Homework complete or documented as absent | ⚠️ documented — six items `NOT APPLICABLE` (D-018), **two `DEFERRED`** pending I-007 (D-019, review R1 finding 2) |
 | Manual chart testing complete where appropriate | ✅ documented — `NOT APPLICABLE`, D-018 |
 | Positive examples exist | ❌ **none** — see below |
 | Negative examples exist | ❌ **none** |
@@ -248,7 +262,11 @@ screenshot existed, and were deliberately not rewritten afterwards. §10 of
 - **corrected one over-generalisation** — I had widened a closed slide-list of six
   trap-move boundaries into "every session boundary" (`I9`/`G5`);
 - **resolved one refusal** — "pendings", printed at `[00:40:25]`, never spoken;
-- **eliminated one of two competing readings** of the boxes (`A-006`);
+- ~~**eliminated one of two competing readings** of the boxes (`A-006`)~~ — **withdrawn
+  by review R1 finding 1.** The visuals *constrained* the boxes (shaded rectangles
+  bounding a measured region) but eliminated neither reading: the rectangles have both a
+  time extent and a price extent, and the blue ones abut vertical day-separators at
+  `[00:38:50]`, `[00:44:40]` and `[00:48:35]`. Both candidates in `A-006` remain live;
 - **left `I7` open.**
 
 No transcript-only reading turned out to be fabricated. One was wider than its evidence,
@@ -273,3 +291,105 @@ REQUESTS:
 NEXT: an independent reviewer session writes 18_REVIEW/V01/V01_REVIEW_R1.md.
       The student session does not audit itself (REVIEW_PROTOCOL.md §1).
 ```
+
+---
+
+## Revision R1 — 2026-08-10
+
+Applied per `REMEDIATION_PROTOCOL.md` §3, addressing
+`18_REVIEW/V01/V01_REVIEW_R1.md` (decision `REVISE`, confidence HIGH, 0 critical,
+2 major, 6 minor, 4 notes).
+
+### Scope of this revision
+
+The four corrections directed by the project owner. **All four are documentation
+fixes** (`REMEDIATION_PROTOCOL.md` §3.3) — no underlying test was invalid, because
+no test was performed. Nothing was redone; nothing was deleted. Superseded wording is
+retained in place, marked, so the correction stays legible.
+
+| R1 finding | Severity | Applied |
+|---|---|---|
+| 1 — `U2` eliminated the session-time reading of the boxes without evidence (`E02`) | MAJOR | ✅ |
+| 2 — dimension F marked all eight homework items `NOT APPLICABLE` (`E10`) | MAJOR | ✅ |
+| 4 — six-vs-four trap-move enumeration mismatch unflagged (`E13`) | MINOR | ✅ |
+| 6b — stale "no course material has been studied" in the concept index (`E20`) | MINOR | ✅ |
+
+### What changed
+
+**Finding 1 — the boxes.** `V01_INTERPRETATION.md` §10.1 `U2` is **withdrawn**; a stub
+retains the original claim and points forward. The corrected entry is **`C5` in §10.2
+"Materially constrained, still not defined"** — the boxes are shaded rectangles with
+both a time extent and a price extent; the price-zone reading is confirmed and the
+session-time reading is **not excluded**. `A-006`'s Visual Characteristics section was
+rewritten with what the frames actually show, and its two candidate measures are
+explicitly both still live. `Q4` remains fully open. `A-006` remains `DO NOT CODE`.
+
+**Finding 2 — dimension F.** Split. H1–H3, H6–H8 remain `NOT APPLICABLE` (no subject
+matter). **H4 and H5 are now `DEFERRED — BLOCKED BY I-007`** and stay on the books. My
+original reasoning for H4 — that it "depends on 'level' (A-004)" — was wrong: marking up
+a week of price action to see whether the shape repeats does not require "level" to be
+defined. It requires a chart. `D-019` records the general rule that `NOT APPLICABLE`
+(closed permanently) and `DEFERRED` (open, blocked) are different dispositions and that
+D-018 grants only the first. H4/H5 are **not** attempted now — without a declared data
+source, feed and timezone the observations would be unreproducible
+(`STUDY_PROTOCOL.md` §6).
+
+**Finding 4 — trap-move count.** `V01_SOURCE_NOTES.md` §14 now records that the
+`[00:30:35]` slide and the spoken enumeration at `[00:36:38]`–`[00:37:09]` give **six**
+boundaries while the `[00:45:44]` recap gives **four**. The abbreviated-recap reading is
+recorded as a reading, not as a resolution, and the slide is treated as the higher-tier
+evidence.
+
+**Finding 6b — stale status.** `08_CONCEPT_LIBRARY/CONCEPT_INDEX.md` no longer claims
+"No course material has been studied". It now states the real current reason for being
+empty: V01 was studied and produced zero concepts because every candidate is an open
+`DO NOT CODE` ambiguity. `09_CHART_EXAMPLES/README.md` received the equivalent
+correction.
+
+### Dependent changes not separately directed
+
+- `A-006`'s Visual Characteristics still asserted "no screenshot exists for V01". Fixed
+  as a direct dependency of finding 1.
+- This report's "WHAT THE VISUALS CHANGED" section claimed the visuals "eliminated one of
+  two competing readings" of the boxes. Struck and corrected — it restated the withdrawn
+  `U2`.
+- The QC checklist's homework row now reads ⚠️ rather than ✅.
+
+### New finding surfaced while applying finding 6b
+
+The stale "**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006)"
+paragraph is not confined to the three files R1 identified. It appears in the Visual
+Characteristics section of **17** ambiguity records. One (`A-006`) is fixed here as a
+dependency; **16 remain** — `A-001`, `A-002`, `A-003`, `A-004`, `A-005`, `A-007` … `A-017`.
+
+These are left deliberately rather than silently swept up: R1 scoped and counted the
+staleness at three instances, and quietly fixing sixteen more it did not assess would
+put work into the corpus that no review has seen. Several are not mechanical — `A-009`
+("stop hunt high drop"), `A-015` ("shows something to the traders") and `A-017` ("big
+entry candle") all have frames bearing directly on them, and updating those means making
+fresh visual claims, which is study work and needs auditing. **Referred to R2.**
+
+### Remaining open items
+
+Unchanged by this revision, carried in `18_REVIEW/REVIEW_INDEX.md`: `C-001` (day count,
+UNRESOLVED, foundational); `I7` (re-adjudicate at V02); H4/H5 pending `I-007`; the
+`[00:46:04]` / `[00:48:05]` / `[00:48:13]` audio re-check before any session-timing
+parameter is coded; dimension B pending V02.
+
+R1's remaining findings — 3, 5, 7, 8, 9, 10, 11, 12 — were **not** in the scope directed
+for this revision and are **not** applied. They stand open for R2.
+
+### Status after this revision
+
+```text
+LESSON:  V01
+STUDENT STATUS: REVIEW REQUIRED (resubmission)
+NEXT:    a FRESH reviewer session writes 18_REVIEW/V01/V01_REVIEW_R2.md.
+         R1 is never edited (REVIEW_PROTOCOL.md §11).
+         The session that applied these corrections cannot certify them
+         (DECISIONS.md D-003).
+```
+
+The four R1 requests are answered in `V01_REVIEW_R1.md` and need not be re-asked:
+G `NOT APPLICABLE` upheld; `C-001` does not justify `BLOCKED`; `I7` stays open at
+`INFERRED / Low`; the empty concept library and chart-example set are correct.

@@ -4,6 +4,22 @@ Labelled chart evidence, sorted by classification.
 
 ## STATUS: EMPTY — NO EXAMPLE COLLECTED
 
+**Lessons studied: 1 (V01).** V01 produced no chart example, and that is the correct
+outcome rather than an omission: classifying a chart as a positive, negative or
+borderline instance requires a concept with stated boundaries, and V01 states no
+confirmation and no invalidation for anything it names. Producing examples would have
+meant inventing the classification criteria first. Review R1 audited this judgement and
+upheld it (`18_REVIEW/V01/V01_REVIEW_R1.md`, findings 6b and the Negative Examples
+section).
+
+Note that the instructor's own annotated slides are **not** chart examples in this
+sense and are not stored here — they are source evidence and live in
+`04_SCREENSHOTS/V01/`. Recreations, if ever produced, go here with sidecars and never
+into `04_SCREENSHOTS/` (`SETUP_ISSUES.md` I-006).
+
+Next realistic opportunity: after a lesson defines a setup boundary — V02 at the
+earliest.
+
 ## STRUCTURE
 
 ```text
