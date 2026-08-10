@@ -346,6 +346,15 @@ empty: V01 was studied and produced zero concepts because every candidate is an 
 `DO NOT CODE` ambiguity. `09_CHART_EXAMPLES/README.md` received the equivalent
 correction.
 
+Two further instances of the identical stale sentence were found while checking this
+one, and they were worse: `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` and
+`11_CONTRADICTIONS/CONTRADICTIONS.md` both declared `RECORDS: 0` and *"Intentionally
+empty. No course material has been studied"* while holding **18** and **2** records
+respectively — a status block flatly contradicting its own file contents. Both
+corrected, with counts and the original wording retained. Unlike the 16 ambiguity
+records referred to R2 below, these required no new visual or interpretive claim: the
+counts are arithmetic over what the files already contain.
+
 ### Dependent changes not separately directed
 
 - `A-006`'s Visual Characteristics still asserted "no screenshot exists for V01". Fixed

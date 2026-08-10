@@ -9,11 +9,24 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 ## STATUS
 
 ```text
-RECORDS: 0
+RECORDS:         2   (C-001, C-002)
+LESSONS STUDIED: 1   (V01)
+UNRESOLVED:      1   (C-001 — foundational)
 ```
 
-**Intentionally empty.** No course material has been studied, so no course
-contradiction has been observed.
+> **UPDATED 2026-08-10 (review R1, finding 6b).** This block previously read
+> `RECORDS: 0` and *"**Intentionally empty.** No course material has been studied, so no
+> course contradiction has been observed."* Both statements were true at project start
+> and are now false — the file holds two records. Corrected so the status does not
+> contradict the file's own contents.
+
+Both are **intra-lesson** contradictions within V01, and both originate with the
+instructor rather than with the reading of him. `C-001` (how long price runs away from
+the anchor point) is foundational and `UNRESOLVED` — the instructor was challenged on it
+at `[00:36:07]`, conceded at `[00:36:13]`, and moved on. Review R1 ruled that it does
+**not** justify `BLOCKED`, since no further work on V01 can resolve what the recording
+does not say; it travels forward as an open research item with no day-count value
+committed anywhere.
 
 > Infrastructure conflicts — including disagreements between the two governing
 > agent files — are **not** recorded here. They belong in

@@ -9,12 +9,24 @@ Template: `00_SYSTEM/TEMPLATES/AMBIGUITY_TEMPLATE.md`
 ## STATUS
 
 ```text
-RECORDS: 0
+RECORDS:         18   (A-001 … A-018)
+LESSONS STUDIED:  1   (V01)
+RESOLVED:         1   (A-003 — "pendings", on visual evidence at [00:40:25])
+DO NOT CODE:     17
 ```
 
-**Intentionally empty.** No course material has been studied, so no course
-ambiguity has been observed. Records appear here only when an actual lesson uses an
-actual subjective phrase.
+> **UPDATED 2026-08-10 (review R1, finding 6b).** This block previously read
+> `RECORDS: 0` and *"**Intentionally empty.** No course material has been studied, so no
+> course ambiguity has been observed."* Both statements were true at project start and
+> are now false — the file holds eighteen records. Corrected so the status does not
+> contradict the file's own contents.
+
+All eighteen arise from **V01 alone**, which names seventeen load-bearing terms and
+defines none of them. `A-003` is the only one resolved, and it was resolved by text
+printed on a slide rather than by anything spoken. The remaining seventeen are
+`DO NOT CODE`.
+
+Records appear here only when an actual lesson uses an actual subjective phrase.
 
 ---
 
@@ -1245,3 +1257,405 @@ misreading is never made silently.
 |---|---|
 | Ambiguity | A-004 (level), A-006 (the boxes) |
 | Interpretation | `03_LESSON_NOTES/V01_INTERPRETATION.md` §10.4 |
+
+---
+
+## A-019 — session times with no timezone stated
+
+### Course Meaning
+
+A set of clock times that gate every timing instruction in V02: "3 to 3:30 is the gap,
+4 o'clock session open"; "the pattern has to come in around 3, 4 o'clock — 3:30, 4:30";
+"at 9:30 this is the candle that paints"; "the vector candle at the release of the news
+at 8:31"; "the vector candle at 4:30 London".
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V02 | `[00:50:32]` | "3 to 3.30 is the gap, 4 o'clock session open." |
+| V02 | `[00:50:42]` | "The pattern has to come in around 3, 4 o'clock, 3.30, 4.30 in that range into the new session. You got to trade." |
+| V02 | `[00:47:34]` | "You need to know that at 9.30, this is the candle that paints. At 9.45, this is the candle that paints on my platform." |
+| V02 | `[00:43:55]` | "Using the vector candle at the release of the news at 831." |
+| V02 | `[00:43:59]` | "Using the vector candle at 430 London." |
+| V02 | `[00:51:03]` | "Forex Factory shows New York open at 8… Forex Factory is clueless." |
+| V01 | `[00:46:09]` | "US session starts at 930 New York Eastern" — the one clean, timezone-qualified value in the course so far. |
+
+### Why it is unresolved
+
+Only two of these carry any timezone marker: "4:30 **London**", and V01's "930 New York
+**Eastern**". The rest are bare numbers. The 3:00/3:30/4:00 group is almost certainly not
+New York time if it denotes the London open, which means at least two timezones are in
+use in a single list with only one of them labelled.
+
+**The instructor explicitly refuses to reason about it.** At `[00:49:52]`–`[00:50:16]`:
+"I was taught these are the times, and the only adjustment for daylight savings is for
+us — that 9:30… Listen, don't analyse it. I was taught if it works… the answer was,
+don't worry about it. These are the times." He also says at `[00:49:22]` that he cannot
+ask the person who taught him because "the guy died", and at `[00:50:26]` that "we back
+up the London session in the winter" — i.e. the whole table shifts seasonally by an
+unstated amount.
+
+So this is not a transcription gap. The source itself declines to specify.
+
+### Possible Measurable Features
+
+| # | Candidate reading | Rationale | Course support |
+|---|---|---|---|
+| 1 | 3:00/3:30/4:00 are **New York Eastern**, describing the London session as seen from NY | Consistent with V01's "930 New York Eastern" for the US session, and with a 3–4 am ET London open | PARTIAL — arithmetically plausible, never stated |
+| 2 | They are London local time | "4:30 London" is adjacent in the same list | **Weak** — would put the "session open" at 4 am London, which does not match a London open |
+| 3 | The lesson's slide shows the timezone | Not audible; the times are read off a slide he calls up at `[00:49:16]` | **Testable from screenshots** |
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A screenshot of the session-times slide (this lesson displays one — see
+`04_SCREENSHOTS/V02/`), or a later lesson that states the zone. This is the cheapest
+open ambiguity in the project to resolve and the highest-leverage: it unblocks M3, M6,
+I21, I29 and I30 in `V02_INTERPRETATION.md` at once.
+
+### Impact If Wrong
+
+Every time-gated rule fires at the wrong hour. A three-hour error would place the
+"pattern arrival window" in the middle of the Asian session instead of the London open,
+inverting the method.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Interpretation | `03_LESSON_NOTES/V02_INTERPRETATION.md` I21, I29, I30, M3, M6 |
+| Source | `03_LESSON_NOTES/V02_SOURCE_NOTES.md` §2k, §10 |
+
+---
+
+## A-020 — "mayonnaise"
+
+### Course Meaning
+
+A moving average plotted on the instructor's chart, referred to only by this nickname.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V02 | `[00:19:46]` | "That one in this example paid out because there was enough distance between the entry and the mayonnaise to make it worth your while." |
+| V02 | `[00:25:18]` | "Consolidates, straight rise out of here. Right back to the mayonnaise." |
+| V02 | `[00:25:45]` | "So now, support/resistance, you can use the low as resistance and look for an M formation here. And it just so happens to coincide with the mayonnaise." |
+
+### Why it matters more than a nickname should
+
+It is not decorative. At `[00:19:46]` the distance from entry to the mayonnaise is the
+stated reason a trade was "worth your while" — that is a viability filter. At
+`[00:25:45]` it is a confluence factor for locating an M formation. Both are decision
+inputs.
+
+### What is NOT evidence
+
+The quarantined `NOTES.md` for this lesson asserts a full colour scheme —
+*5 Mustard, 13 Water, 50 Mayo, 200 Blueberry, 800 Raspberry*. That file is fabricated
+(`QUARANTINE_REGISTER.md` Q-002) and **must not be used to resolve this record**, even
+though "mayo" appears in it and "mayonnaise" is genuinely spoken. A fabricated document
+containing one true-sounding token is still not a source. Note also that V01's
+transcript contains the garbled *"the water that catch up in the mustard"*
+(`V01 [00:19:24]`), which suggests "water" and "mustard" are also real course terms —
+but *suggests* is the operative word, and no mapping to a period has been heard in
+either lesson.
+
+### Possible Measurable Features
+
+| # | Candidate | Rationale | Course support |
+|---|---|---|---|
+| 1 | A specific EMA period, identifiable from a chart legend | The instructor's MT4 template prints indicator settings | **Testable from screenshots** |
+| 2 | The slowest/most prominent average on the chart | It acts as support/resistance across a whole week, which suits a slow average | INFERRED — no course support |
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A screenshot showing the chart's indicator list or a labelled average, at a timestamp
+where he says the word. `[00:25:18]` and `[00:25:45]` are 27 seconds apart on the same
+chart and are the best candidates.
+
+### Impact If Wrong
+
+Assigning the wrong period would put a support/resistance reference in the wrong place
+and would silently import an indicator rule the course never stated — the Q-001/Q-002
+failure mode.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Quarantine | Q-002 Finding 2 |
+| Interpretation | `03_LESSON_NOTES/V02_INTERPRETATION.md` Q2, §6 |
+
+---
+
+## A-021 — the letter sequence for "the cycle"
+
+### Course Meaning
+
+A mnemonic naming the order of formations in the dealer's cycle.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V02 | `[00:07:28]` | "You're looking for stop hunt high drop, stop hunt high drop, reverse. That's the cycle, **M-A-A-W**." |
+| V02 | `[00:19:28]` | "Stop hunt low rise, the formation. **WVVM**, the cycle." |
+
+### Conflict
+
+Two different strings, twelve minutes apart, both introduced as "the cycle". They are
+not anagrams of each other and cannot both be right as transcribed. Both were produced
+by ASR from a spoken sequence of single letters, which is the transcription case most
+prone to error.
+
+Note the surrounding context differs in direction: `[00:07:28]` follows a *high drop*
+(bearish) description, `[00:19:28]` follows a *low rise* (bullish) one. It is therefore
+possible that these are two genuinely different sequences — a bearish cycle and a
+bullish cycle — rather than one sequence transcribed two ways. **The lesson does not
+say this**, and adopting it would be inventing a distinction to reconcile the source.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+Screenshots of the slide at either timestamp, if the sequence is written down. Failing
+that, careful re-listening to both points at reduced speed. Cheap either way — the full
+V02 mp4 is retained.
+
+### Impact If Wrong
+
+Low for trading, high for comprehension: this string appears to encode the order of
+formations across a cycle, which is the lesson's core object.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-011 (M and W formation) |
+| Interpretation | `03_LESSON_NOTES/V02_INTERPRETATION.md` Q4 |
+
+---
+
+## A-022 — "half-Batman"
+
+### Course Meaning
+
+Unknown. Used as an established term for one of two possible continuations after an
+outside structure high.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V02 | `[00:20:33]` | "One of two things can happen when you hit outside structure high. **The dealer can half-Batman to the low**, or he can finish out the M formation in London and correct." |
+
+### Why it is load-bearing
+
+It is one branch of an explicitly closed binary. The instruction "one of two things can
+happen" is only usable if both things can be recognised. The other branch ("finish out
+the M formation in London") is itself dependent on A-011.
+
+### Possible Measurable Features
+
+| # | Candidate | Rationale | Course support |
+|---|---|---|---|
+| 1 | A shape term — "Batman" being a double-top-with-a-dip silhouette, "half" being one side of it | The name is visually suggestive and the course uses shape names (M, W, V) throughout | INFERRED — **no course support whatsoever.** Recorded only so the reasoning is visible and rejectable. |
+
+**Do not adopt candidate 1.** It is pattern-matching on a word, which is precisely how
+a plausible-sounding fabrication enters a record.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A later lesson defining it, or a screenshot at `[00:20:33]`–`[00:20:44]` showing what he
+draws while saying it. The latter is likely: he is annotating a chart live at this point.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-011 (M and W formation) |
+| Interpretation | `03_LESSON_NOTES/V02_INTERPRETATION.md` I18, Q6 |
+
+---
+
+## A-023 — "33 trade"
+
+### Course Meaning
+
+Unknown. A named trade, introduced alongside the well-specified "22 trade" but not
+decomposed the way "22" is.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V02 | `[00:22:16]` | "And day three, he issues a beautiful **33 trade** where he makes an aggressive move and fills the ADR completely. Or more than the ADR." |
+
+### The trap
+
+"22" is defined in this same lesson as *a second leg of a second leg* `[00:00:56]`. The
+obvious inference is that "33" means *a third leg of a third leg*. But what he actually
+attaches to "33" is a **day-three move that fills the ADR** — a statement about timing
+and extent, not about leg structure. Those are different kinds of fact, and the lesson
+never bridges them.
+
+Adopting the leg-structure reading would be exactly the kind of tidy, plausible
+inference this register exists to block.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A later lesson that defines it, or one that uses "33" in a context where leg structure
+is visible.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-007 (second leg) |
+| Interpretation | `03_LESSON_NOTES/V02_INTERPRETATION.md` Q7 |
+
+---
+
+## A-024 — "slightly above" (the 22-trade overshoot tolerance)
+
+### Course Meaning
+
+How far the dealer may exceed the prior high while leaving a 22 setup valid.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V02 | `[00:01:28]` | "There can be a variation on the 22… The dealer can go **slightly above**, pull back. And you'll look like, oh no, this is invalidated. No." |
+| V02 | `[00:01:38]` | "What makes it valid is that the dealer has fallen back below the previous high level." |
+| V02 | `[00:29:37]` | "If he comes back just **slightly outside** the blue box, right? Same thing." |
+| V02 | `[00:24:43]` | Related mechanism: "See how the spike **slightly** goes above? Slightly above the level right there… the dealer has the spread to reach a little higher with this big fat hand." |
+
+### Assessment
+
+This is a **partially self-resolving** ambiguity and is recorded as such. The *validity
+test* he gives at `[00:01:38]` is genuinely objective in form: price must fall back
+below the previous high level. That is checkable without knowing what "slightly" means.
+
+What remains unmeasured is the upper bound — how far above is too far before the setup
+is a genuine break rather than a stop-grab. `[00:24:51]` hints at a mechanism (the
+dealer reaches up by roughly the spread) but states no number, and "the spread" is
+broker-dependent.
+
+### Possible Measurable Features
+
+| # | Candidate | Rationale | Course support |
+|---|---|---|---|
+| 1 | No upper bound needed — the fall-back-below test is sufficient | It is the test he actually states | **This is the reading the source supports.** |
+| 2 | Bounded by the spread | `[00:24:51]` | PARTIAL — mechanism named, no number, broker-dependent |
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+Reading 1 is close to codeable and is the honest reading, but it is recorded here rather
+than promoted because it depends on "the previous high level" (A-004) and "the blue box"
+(A-006) being defined.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-004, A-006 |
+| Interpretation | `03_LESSON_NOTES/V02_INTERPRETATION.md` I26 |
+
+---
+
+## A-025 — "a good close below"
+
+### Course Meaning
+
+The trigger condition for the only numeric exit rule stated in V02.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V02 | `[00:39:09]` | "If you're in a trade and the dealer cuts the low or the high and starts going this way, don't sit there like a deer in the headlights." |
+| V02 | `[00:39:19]` | "The dealer gives you **a good close below** and opens the next candle and starts dropping and you're only down 15. Eat it." |
+| V02 | `[00:39:34]` | "Scratch out at minus 15, because then if you hit 25 or 30 on your next trade, you're up instead of even." |
+
+### Why it matters
+
+The −15 scratch-out is one of the few fully numeric instructions in the lesson, and it
+is the closest thing V02 has to loss control. But it does not fire on the number alone —
+it fires on "a good close below" **plus** the next candle opening and dropping. Without
+"good", the rule reduces to "exit at −15", which is a different and stricter rule than
+the one he states.
+
+### Unstated components
+
+- **Timeframe.** No chart interval is given, so "a close" has no duration.
+- **"Good".** Presumably means decisive rather than marginal — a close clearly beyond
+  the level rather than a wick through it. Not stated.
+- **"Below"** what. The level cut at `[00:39:09]`, most likely, but not said.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+Specifically: **do not simplify this to a flat −15 stop.** That would convert a
+conditional management action into an unconditional stop-loss rule, and V02 explicitly
+defers stop-loss placement to a later lesson (`[00:17:39]`).
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Interpretation | `03_LESSON_NOTES/V02_INTERPRETATION.md` I23, M4 |
+| Source | `03_LESSON_NOTES/V02_SOURCE_NOTES.md` §2h, §6 |
+
+---
+
+## V02 EVIDENCE ADDED TO EXISTING RECORDS
+
+V02 supplies further occurrences of six ambiguities first logged against V01. The
+records above are new; these are extensions, kept here in one place rather than
+scattered through the originals so the V02 pass is auditable as a unit.
+
+| ID | V02 evidence | Effect on the record |
+|---|---|---|
+| **A-004** — "level" (countable) | `[00:33:11]` "especially when you're new and you can't count the levels" | Confirms level-counting is a taught skill not yet taught. No new information about the unit. Status unchanged. |
+| **A-005** — "the trading zone" | `[00:45:52]` "we'll talk about the trading zone next week"; `[00:37:10]` "when the trading zone is set exactly the way I lay it out" | **Second deferral.** Index note updated from "Deferred to V02" to record V01→V02→V03. `[00:37:10]` newly establishes that the trading zone is the thing the Zaireen backtest was conditioned on, which raises its importance. |
+| **A-006** — "the box" | `[00:12:15]`, `[00:29:37]` "slightly outside the blue box", `[00:37:26]` "second leg out of the box, 25 to 50 pips", `[00:43:48]` "sometimes they'll be below the box" | Substantially more usage, still no definition. `[00:37:26]` attaches a **pip distance** to "out of the box" for the first time, making the referent more consequential. |
+| **A-007** — "second leg" | `[00:34:57]` "I'm only going to take second leg trades"; `[00:35:22]` "**And I'm going to define what a second leg is**"; `[00:35:25]` the "definition", which is "If you see this, that's not a trade. This is not a trade. That's a trade." | **Impact raised from High to Foundational.** V02 is materially worse than V01 here: the definition is promised and then given only by gesture. Three V02 instructions depend on it. |
+| **A-010** — "peak formation high/low" | `[00:07:07]`, `[00:18:06]`, `[00:15:46]` "they will not go below last week's peak formation" | Adds a new load-bearing claim built on the undefined object. Still no definition. Still not distinguished from the anchor point. |
+| **A-014** — "fractional disparity" | `[00:43:26]` "He handled the crosses fractional disparity" | **Second occurrence**, first outside a survey. Now clearly a live term in the instructor's vocabulary rather than a one-off. Still unexplained. |

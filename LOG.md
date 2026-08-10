@@ -754,6 +754,13 @@ session for R2.**
   been studied" → corrected to state the real current reason for emptiness (V01 studied;
   zero concepts, because every candidate is an open `DO NOT CODE` ambiguity).
   `09_CHART_EXAMPLES/README.md` given the equivalent correction.
+  **Two further instances found while checking, and worse:**
+  `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` and `11_CONTRADICTIONS/CONTRADICTIONS.md`
+  both declared `RECORDS: 0` and "Intentionally empty. No course material has been
+  studied" while holding **18** and **2** records — a status block contradicting its own
+  file's contents. Both corrected with accurate counts; original wording retained. These
+  needed no new visual or interpretive claim (the counts are arithmetic over existing
+  content), which is why they were fixed rather than referred to R2 like the 16 below.
 
 ### Work Redone (not edited)
 **None, and none was required.** Every R1 finding was a documentation fix under
