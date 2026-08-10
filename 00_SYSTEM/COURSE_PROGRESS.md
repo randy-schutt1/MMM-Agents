@@ -11,16 +11,20 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V02 awaiting review)
+VIDEOS IN PROGRESS:  1  (V02 in remediation)
 VIDEOS PASSED:       1  (V01)
-CURRENT LESSON:      V02 — student pass complete, AWAITING REVIEW.
+CURRENT LESSON:      V02 — reviewed R1 2026-08-10: **REVISE** (HIGH), 0 critical,
+                     1 major, 5 minor. IN REMEDIATION.
                      V01 — re-reviewed R3 2026-08-10: **PASS** (HIGH), 0 critical,
                      0 major. COMPLETE. All 15 of R2's required actions applied and
                      verified against the source; R2 finding N1 (A-006's trailing
                      block) closed by withdrawing it in place.
-NEXT ACTION:         An independent reviewer session for V02 writes
-                     18_REVIEW/V02/V02_REVIEW_R1.md (D-003). The session that produced
-                     the V02 artifacts cannot review them.
+NEXT ACTION:         A student/remediation session applies V02 R1's ten required
+                     corrections (18_REVIEW/V02/V02_REVIEW_R1.md), then resubmits for
+                     R2. The MAJOR is homework 11a: its markup contradicts the chart
+                     it cites and falsely confirms the "at least 3 days" doctrine that
+                     C-001 has open. Preserve the original markup in place
+                     (REMEDIATION_PROTOCOL.md §2); do not overwrite it.
 BLOCKED ON:          nothing. I-006 RESOLVED. I-007 open — blocks V01 H4/H5, which
                      R1 reclassified from NOT APPLICABLE to DEFERRED (D-019), and it
                      travels forward as an open research item rather than blocking
@@ -31,6 +35,9 @@ V02 GATE:            OPEN as of V01 R3 PASS (D-004 satisfied).
                      discarded, but the gate did not hold — see REVIEW_INDEX.md open
                      item 9.
 V03 GATE:            CLOSED. D-004 requires reviewer PASS on V02 before V03 opens.
+                     V02 is REVISE, not PASS, so this gate is live and must hold.
+                     Open item 9 records that the last gate did not; this is the test.
+                     No V03 work of any kind until V02 R2 returns PASS.
 ```
 
 ---
@@ -57,7 +64,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | Video | Session | Duration | Source Verified | Transcript | Notes | Screenshots | Homework | Manual Backtest | Student Mastery | Reviewer | Final Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
-| V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED | ⬜ | AWAITING REVIEW |
+| V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED | ⏳ **R1 REVISE** | **IN REMEDIATION** |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -90,6 +97,11 @@ fabricate, interpolate, or infer Week 6 content.**
   for a substituted week, first pass preserved, ungraded — 2012 hourly data is
   account-gated. 11b (40 flashcards) `DEFERRED` on **A-011/A-007**, not on tooling.
   `05_HOMEWORK/V02/V02_HOMEWORK.md`.
+  **Review R1 outcome:** the *substitution* is upheld as honestly handled and correctly
+  evidenced, and 11b's `DEFERRED` is upheld after independent verification that M/W
+  anatomy is undefined across both V01 and V02. The *markup* is the round's MAJOR — it
+  contradicts the chart it cites and must be redone. See
+  `18_REVIEW/V02/V02_REVIEW_R1.md`.
 - **V02 Manual Backtest ⏸** — `DEFERRED` under D-019, not `NOT APPLICABLE`. V02 states a
   falsifiable structural claim ("does not cross the level for at least 3 days") but
   A-004 leaves "the level" without a price, and the lesson states no entry, so there is

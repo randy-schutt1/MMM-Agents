@@ -1138,3 +1138,126 @@ behind V02's reviewer `PASS`.**
 An **independent** reviewer session for V02 writes `18_REVIEW/V02/V02_REVIEW_R1.md`. It
 should spot-check `A-006` and `A-003` while it is in those files, since no independent
 session has audited this round.
+
+---
+
+## 2026-08-10 — Reviewer Session
+
+### Lesson
+
+V02 — `Bootcamp1 Wk1 031812 Part2 (60mins).swf`
+
+### Review Objective
+
+Independent mastery audit, round 1. Full 17-dimension protocol. Plus the `A-006` /
+`A-003` spot-check that `V01_REVIEW_R3.md` requested, since R3 both remediated and
+reviewed V01 in one session, departing from `D-003`.
+
+**Independence:** this session produced none of V02's artifacts. `D-003` satisfied.
+
+### Source Evidence Reviewed
+
+`V02_TRANSCRIPT.md` read end to end (3,164 lines, 1,026 markers). Six V02 screenshots
+opened at full resolution and their printed slide text compared character-by-character
+against `INDEX.md` (`00:45`, `08:55`, `18:00`, `33:10`, `45:55`, `55:35`). Two V01
+screenshots opened for the spot-check (`00-38-50`, `00-40-25`). The homework's USD/CHF
+chart measured programmatically — candle pixels detected by colour, price axis
+calibrated from its own labels, day boundaries taken from the chart's own gridlines.
+Fifteen transcript term-counts verified directly against the verbatim body.
+
+### Student Artifacts Reviewed
+
+`V02_SOURCE_NOTES.md`, `V02_INTERPRETATION.md`, `V02_HOMEWORK.md` + charts,
+`V02_MASTERY_REPORT.md`, `04_SCREENSHOTS/V02/INDEX.md`, `Q-002`, `A-019`–`A-028` and the
+six extended V01 records, `C-003`/`C-004` and the `C-001` re-test, `COURSE_PROGRESS.md`,
+`REVIEW_INDEX.md`, `D-003`/`D-004`/`D-018`/`D-019`/`D-020`/`D-021`,
+`SWF_CAPTURE_RECIPE.md` §10, `V01_REVIEW_R3.md`.
+
+### Findings
+
+**0 critical. 1 major. 5 minor. 6 notes.**
+
+**MAJOR — the 11a homework markup contradicts the chart it cites** (`E06`, also `E19`).
+Measured off the committed PNG: "PFH Mon 3 Aug ~0.8130" — Monday's high is **0.81150**,
+15 pips out against the file's own stated ±5 pip tolerance, and 0.8130 is not traded on
+Monday at all. "Reverse | Fri 7 Aug | 0.8062 → 0.8130 sharp rise off the low" — that rise
+is **Thursday's** (low 0.80601 early, 0.81355 at ~15:00); **Friday opened at its high and
+fell to 0.80562**, the opposite direction. Rows 1, 4 and 5 are 10–15 pips out. The
+consequence is what makes it major: §1 concludes *"the move away from the Monday high runs
+Tuesday through Thursday — about three days — consistent with the printed 'For At Least
+3 Days'"*, but price traded **back above** the Monday high on Thursday. That is a false
+confirmation of the exact quantity `C-001` has open as foundational and unresolved — and
+it is the only empirical datum the project has gathered about it. It propagates once, into
+`V02_MASTERY_REPORT.md` §B ("the decisive extreme fell on Monday" — it fell on Thursday).
+
+Contained, and not critical, because the student marked 11a ungraded and unverified,
+self-graded Recognition **FAIL**, and neither the source notes nor the interpretation
+cite the homework. `E09` (cherry-picking) and `E08` (hindsight) were considered and
+**not** charged — the errors are consistent with hurried axis-reading, not selection.
+
+**MINOR ×5:** three wrong occurrence counts in `V02_SOURCE_NOTES.md` §3 ("second leg"
+~12 → 21; "the box"/"blue box" 6 → 9; "count the levels" 2 → 1); two ASR garbles repaired
+inside quotation marks in a file that promises not to (`E01`); `CONTRADICTIONS.md` STATUS
+says `UNRESOLVED: 1` when C-001, C-003 and C-004 are all unresolved — **fourth** occurrence
+of this staleness class in that file, and introduced by the R3 edit correcting the same
+block; `COURSE_PROGRESS.md` PHASE STATUS still reads Phase 1 blocked; a TradingView
+history figure inconsistent between §0 and §2 of the homework.
+
+**Upheld after independent verification:**
+
+- **The homework data substitution is honest**, not silently faked. Flagged up front, the
+  paywall evidenced with a screenshot that also shows how far back the free tier reaches,
+  no account created, no bot check bypassed, and what is lost by substituting named
+  precisely.
+- **11b's `DEFERRED` holds and is not an excuse.** M/W formations are referenced ~14
+  times across V01 and V02 and never described — no leg count, no proportion, no timing,
+  no invalidation. `A-011` is correctly `Foundational` / `DO NOT CODE`, and the assignment
+  asks for the *"one perfect"* M and W against a standard that does not exist. Producing
+  forty cards would mean inventing the anatomy. Answering the mastery report's own
+  question: a best-effort attempt with a labelled invented definition would be **worse**,
+  because it becomes the anchor the next session reasons from.
+- **The Q-002 quarantine is genuinely and completely done** — verified at the filesystem
+  level. Three fabricated files in quarantine, none loose anywhere in the tree, README
+  travelling with them, zero git-tracked.
+- **The wrong-file capture is contained.** All 25 frames burn in `/ 60:2`; the discarded
+  capture read `54:4`; content matches the transcript at every frame opened.
+- **`A-006` and `A-003` both PASS** the requested spot-check, verified against the frames
+  rather than R3's word. `[00:40:25]` prints "Trigger The Pendings"/"Trigger The Stops";
+  `[00:38:50]` shows the pale-blue rectangle's left edge on the second vertical separator,
+  over a sharp advance, confirming both the A-006 withdrawal and R2's narrowing. R3's
+  remediation is substantively correct despite its `D-003` departure.
+- **Gate state is coherent.** V02 OPEN with the ordering violation recorded rather than
+  erased; V03 CLOSED; open item 9 still OPEN. This REVISE is the test of whether the next
+  gate holds.
+- **`E11`, V01's dominant defect across three rounds, does not recur.** ~20 sampled
+  citations all resolved to markers carrying their words.
+
+### Required Corrections
+
+Ten, listed in `18_REVIEW/V02/V02_REVIEW_R1.md`. The first four concern the homework and
+the mastery report; the rest are documentation. **The source notes and interpretation are
+not to be rewritten** — they are sound. The original 11a markup must be preserved in
+place per `REMEDIATION_PROTOCOL.md` §2.
+
+### Decision
+
+```text
+REVISE — confidence HIGH. Advancement NOT AUTHORIZED.
+```
+
+Good work with one bad half-page in it. The evidence discipline — audio before visuals,
+refusals recorded as refusals, inferences downgraded when they turn out to be the agent's
+rather than the instructor's, a fabrication audit that confirms rather than assumes — is
+the standard this project should keep. What failed is the one place the work left the
+documents and touched a chart: sources were read rigorously, price was not.
+
+### Git
+
+`18_REVIEW/V02/V02_REVIEW_R1.md` (new). `18_REVIEW/REVIEW_INDEX.md`,
+`00_SYSTEM/COURSE_PROGRESS.md`, `LOG.md`, `CHANGELOG.md` updated — reviewer-owned fields
+only. **No student artifact was edited**, deliberately: findings 2–9 are remediation work
+and belong to a separate session, per `D-003` and the R3 precedent.
+
+### Next Review Trigger
+
+Student resubmission of V02 → `18_REVIEW/V02/V02_REVIEW_R2.md`. **V03 stays closed.**

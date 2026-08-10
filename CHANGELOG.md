@@ -11,6 +11,61 @@ Newest first.
 
 ---
 
+## [0.5.0] — 2026-08-10 — V02 reviewed: REVISE; V03 gate holds
+
+### Added
+
+- `18_REVIEW/V02/V02_REVIEW_R1.md` — first independent review of V02. **`REVISE`**,
+  confidence HIGH, 0 critical, 1 major, 5 minor, 6 notes. Produced by a session that
+  wrote none of V02's artifacts, so `D-003` is satisfied for the first time since
+  V01 R2.
+
+### Changed
+
+- **V02: `AWAITING REVIEW` → `IN REMEDIATION`.** Ten required corrections.
+- **`E06` (false positive) enters the error register**, and it is a new *class* for this
+  project. Every prior defect concerned citing sources; this one concerns **reading
+  price**. The V02 homework's chart markup states days and levels its own committed PNG
+  does not show, and concludes from them that a real week confirms the "at least 3 days"
+  doctrine — the exact quantity `C-001` has open. Measured from the image: Monday's high
+  is 0.81150 not ~0.8130, and the reversal the markup places on Friday is Thursday's
+  move, with Friday running the opposite way. **Protocol implication:** chart-derived
+  claims need the same verifiability standard as transcript-derived ones — a markup keyed
+  to dates and prices should be reproducible from the image by someone who was not there.
+- **`E20` rises to 13, four open.** `CONTRADICTIONS.md`'s STATUS block is wrong for the
+  **fourth** time, and this time the error was introduced by the R3 edit that was
+  correcting that same block. Recommend the 25% review promote the session-close re-read
+  to a requirement *and* consider a mechanical check in `validate_project.py` — every one
+  of these failures is arithmetic over the file's own contents.
+- **`E11` did not recur.** V01's dominant defect across three rounds; ~20 V02 citations
+  sampled, all resolved to markers carrying their words.
+- `REVIEW_INDEX.md` open items: **10 added** (C-001's only empirical datum was misread —
+  record what the corrected week actually shows, including "nothing"); **11 added and
+  closed** (the `A-006`/`A-003` spot-check R3 requested — both pass, verified against the
+  frames).
+- `COURSE_PROGRESS.md`: `V03 GATE` note strengthened. V02 is `REVISE`, not `PASS`, so the
+  gate is live. Open item 9 records that the last one did not hold; this is the test.
+
+### Upheld
+
+- The V02 homework's **data substitution** (a 2026 week for the paywalled 2012 week) —
+  honestly handled, evidenced, and better than deferring outright.
+- **11b's `DEFERRED`** — verified independently that M/W anatomy is undefined across both
+  lessons. Producing forty flashcards would require inventing it.
+- **Q-002's quarantine** — verified complete at the filesystem level.
+- **The wrong-file capture is contained** — nothing derived from it survives into the notes.
+
+### Notes
+
+- No student artifact was edited by the reviewer session. Findings 2–9 are remediation
+  work for a separate session, per `D-003` and the R3 precedent.
+- The 40× / 10× figures in `D-021`, `SWF_CAPTURE_RECIPE.md` §10 and
+  `04_SCREENSHOTS/V02/INDEX.md` are **not** in conflict: 40× is the measured capability,
+  10× the chosen operating point. Recorded because the two appear together often enough
+  to read as a contradiction.
+
+---
+
 ## [0.4.0] — 2026-08-10 — V01 PASSED at R3; V02 gate opens
 
 ### Changed

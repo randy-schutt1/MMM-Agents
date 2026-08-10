@@ -11,10 +11,10 @@ stays visible with its round number.
 ## STATUS
 
 ```text
-LESSONS REVIEWED: 1
+LESSONS REVIEWED: 2
 PASSED:           1  (V01)
-IN REMEDIATION:   0
-AWAITING REVIEW:  1  (V02)
+IN REMEDIATION:   1  (V02)
+AWAITING REVIEW:  0
 ```
 
 V01 reviewed 2026-08-10 (R1): `REVISE`, confidence HIGH. 0 critical, 2 major.
@@ -22,8 +22,16 @@ V01 re-reviewed 2026-08-10 (R2): `REVISE`, confidence HIGH. 0 critical, 1 major.
 V01 re-reviewed 2026-08-10 (R3): **`PASS`**, confidence HIGH. 0 critical, 0 major.
 All 15 of R2's required actions verified applied against the source, not against the
 commit message. R2 finding N1 (the only open MAJOR) is closed. **The V02 gate is now
-open** — D-004 satisfied. V02's student work already exists and moves to `AWAITING
-REVIEW`; **V03 remains gated** until V02 receives reviewer `PASS`.
+open** — D-004 satisfied.
+
+V02 reviewed 2026-08-10 (R1): **`REVISE`**, confidence HIGH. 0 critical, 1 major,
+5 minor. Reviewed by a genuinely independent session (D-003 satisfied). The source
+notes, interpretation, ambiguity and contradiction work are the strongest evidence
+artifacts in the repository to date, and V01's recurring `E11` citation defect does
+**not** recur. The single MAJOR is in the homework: the 11a markup contradicts the
+chart it cites, and produces a false confirmation that a real week held away from its
+Monday high for three days — bearing directly on `C-001`. **V03 remains gated** until
+V02 receives reviewer `PASS`.
 
 ---
 
@@ -34,6 +42,7 @@ REVIEW`; **V03 remains gated** until V02 receives reviewer `PASS`.
 | V01 | REVIEW REQUIRED | R1 | REVISE | 0 | 2 | ⏳ |
 | V01 | REVIEW REQUIRED | R2 | REVISE | 0 | 1 | ⏳ |
 | V01 | REVIEW REQUIRED | R3 | PASS | 0 | 0 | ✅ |
+| V02 | REVIEW REQUIRED | R1 | REVISE | 0 | 1 | ⏳ |
 
 ### Row template
 
@@ -70,12 +79,12 @@ keeps recurring is a training problem, not a lesson problem.
 
 | Code | Description | Count | Lessons |
 |---|---|---:|---|
-| E01 | Source misquote | 0 | |
+| E01 | Source misquote | 1 | V02 (R1 ×1) — two ASR garbles repaired inside quotation marks |
 | E02 | Unsupported generalization | 3 | V01 (R1 ×1, R2 ×2) — all closed at R3 |
 | E03 | Missed qualifier | 0 | |
 | E04 | Wrong sequence | 0 | |
 | E05 | Wrong pattern boundary | 0 | |
-| E06 | False positive | 0 | |
+| E06 | False positive | 1 | V02 (R1 ×1, also codes `E19`) — homework markup contradicts its own chart |
 | E07 | False negative | 0 | |
 | E08 | Hindsight contamination | 0 | |
 | E09 | Cherry-picking | 0 | |
@@ -89,7 +98,7 @@ keeps recurring is a training problem, not a lesson problem.
 | E17 | Missing negative examples | 0 | |
 | E18 | Invalid manual-backtest procedure | 0 | |
 | E19 | Data/timeframe inconsistency | 0 | |
-| E20 | Other | 9 | V01 (R1 ×6, R2 ×2, R3 ×1) — all closed at R3 |
+| E20 | Other | 13 | V01 (R1 ×6, R2 ×2, R3 ×1) — all closed at R3; V02 (R1 ×4) — open |
 
 **Escalation rule:** any code reaching 3 occurrences is a systematic weakness.
 Note it in the next cumulative review and consider whether the student protocol
@@ -149,18 +158,56 @@ not reset — a closed finding still happened.
   `STUDY_PROTOCOL.md` session-close requirement at the 25% review**, alongside the
   citation amendment.
 
+### ESCALATION UPDATE 2026-08-10 (V02 R1)
+
+- **`E11` — missing provenance — did NOT recur.** This is the headline. It was V01's
+  dominant defect across three rounds (9 occurrences) and prompted the proposed
+  `STUDY_PROTOCOL.md` citation amendment. V02's R1 sampled ~20 cited timestamps against
+  the transcript, weighted toward numbers and load-bearing claims, and **every one
+  resolved to a marker carrying its words.** The amendment is still worth adopting at the
+  25% review, but the behaviour it targets has already improved without it.
+- **`E20` — other — rose from 9 to 13, four of them open on V02.** Same class as before:
+  status text asserting a state of the world that has gone stale, plus occurrence counts
+  that do not match the artifact they count. Two are especially instructive. The
+  `CONTRADICTIONS.md` STATUS block is now wrong for the **fourth** time — and this time
+  the error was *introduced by the R3 edit that was correcting that same block*, which is
+  the R2 lesson repeating ("a correction is new work and carries the same risk as the
+  original"). The `COURSE_PROGRESS.md` PHASE STATUS row contradicts the same file's own
+  SUMMARY. **This code has now failed on status blocks in four separate rounds and is the
+  project's most persistent weakness.** Promote the session-close re-read from suggestion
+  to requirement at the 25% review, and consider a mechanical check in
+  `validate_project.py` — every one of these is arithmetic over the file's own contents
+  and could be verified automatically rather than by eye.
+- **`E06` — false positive (1), new.** V02's homework markup states price levels and days
+  that its own committed chart does not show, and draws a confirmation of the C-001 day
+  count from them. Novel class for this project: the previous defects were all about
+  *citing sources*; this is the first about *reading price*. **Protocol implication:**
+  chart-derived claims need the same verifiability standard as transcript-derived ones.
+  A markup keyed to dates and prices should be reproducible from the image by someone
+  who was not there — which means naming how the day boundaries were established, not
+  estimating them from axis ticks.
+- **`E01` — source misquote (1), new.** Minor in effect — both repairs are almost
+  certainly correct — but it is the first time this project has smoothed ASR garble
+  inside quotation marks, and the file it happened in explicitly promises not to.
+
 ---
 
 ## SEVERITY TOTALS
 
-Cumulative across R1, R2 and R3.
+Cumulative across V01 R1–R3 and V02 R1.
 
 | Severity | Total | Open | Closed |
 |---|---:|---:|---:|
 | CRITICAL | 0 | 0 | 0 |
-| MAJOR | 3 | 0 | 3 |
-| MINOR | 13 | 0 | 13 |
-| NOTE | 11 | 2 | 9 |
+| MAJOR | 4 | 1 | 3 |
+| MINOR | 18 | 5 | 13 |
+| NOTE | 17 | 3 | 14 |
+
+**Open MAJOR — V02 R1 finding 1.** The 11a homework markup contradicts the chart it
+cites (PFH misplaced by 15 pips; the reversal attributed to Friday when it is Thursday's
+move and Friday ran the opposite way), producing a false confirmation of the "at least
+3 days" doctrine that `C-001` has open. Blocks V02 advancement. See
+`18_REVIEW/V02/V02_REVIEW_R1.md`.
 
 A lesson with unresolved CRITICAL issues cannot pass.
 
@@ -193,6 +240,8 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 | 7 | V01 R2 | Citation hygiene is the project's recurring weakness (`E11` ×5). Eight statements across two rounds cite a timestamp that does not carry their words. No quotation is fabricated. Consider requiring in `STUDY_PROTOCOL.md` that a quoted sentence cite the marker its first words fall under, and that passage-level citation be written as an explicit range | `18_REVIEW/REVIEW_INDEX.md` escalation note; raise at `CUMULATIVE_25.md` | OPEN |
 | 8 | V01 R2 | `SETUP_ISSUES.md` I-006 described the SWF header frame-rate speedup as "an untested faster path". **R2's own framing was stale in turn:** it cited `D-020` as having ruled the speedup out, but `D-020` is `RETRACTED` and `D-021` records that the speedup **works at 40×** and is the default method. `I-006` now points to `D-021` | `SETUP_ISSUES.md` I-006; `DECISIONS.md` D-021 | **CLOSED at R3** |
 | 9 | V01 R3 | **The V02 gate was not honoured.** `D-004` makes reviewer `PASS` the only progression gate, and `COURSE_PROGRESS.md` recorded `V02 GATE: CLOSED`, yet a full V02 student pass (transcript, notes, interpretation, 25 screenshots, homework, mastery report, `A-019`–`A-028`, `C-003`–`C-004`) was completed while V01 was in remediation. V01's `PASS` makes this moot going forward, and none of the V02 work is discarded — but the gate did not hold, and the next one (V02 `PASS` before V03) must | `DECISIONS.md` D-004; `COURSE_PROGRESS.md` | OPEN — process |
+| 10 | V02 R1 | **`C-001` has one empirical datum and it was misread.** The 11a homework is the only independent observation the project has made about the day-count doctrine, and its "runs Tuesday through Thursday, consistent with 'At Least 3 Days'" claim is contradicted by the chart (price traded back above the Monday high on Thursday). Once 11a is corrected, record what the week **actually** shows against `C-001` — including "nothing", which is a legitimate result. Do not let a corrected reading quietly drop the C-001 entry | `CONTRADICTIONS.md` C-001; `18_REVIEW/V02/V02_REVIEW_R1.md` MAJOR 1 | OPEN |
+| 11 | V02 R1 | **A-006 / A-003 spot-check requested by V01 R3 — completed, both PASS.** Verified against the frames, not against R3's word: `[00:40:25]` prints "Trigger The Pendings"/"Trigger The Stops" as A-003 claims; `[00:38:50]` shows the pale-blue rectangle's left edge on the second vertical separator and covering a sharp advance, confirming both A-006's withdrawal and R2's narrowing. R3's remediation is substantively correct despite its D-003 departure — though two records is not an audit of fifteen actions | `18_REVIEW/V02/V02_REVIEW_R1.md` Ambiguities | **CLOSED** |
 
 ---
 
