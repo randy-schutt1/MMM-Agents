@@ -13,13 +13,19 @@ PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
 VIDEOS IN PROGRESS:  1  (V01)
 VIDEOS PASSED:       0
-CURRENT LESSON:      V01 — reviewed R1 2026-08-10: REVISE (HIGH). In remediation.
-NEXT ACTION:         4 of 8 R1 corrections applied 2026-08-10 (findings 1, 2, 4, 6b).
-                     Findings 3, 5, 7, 8, 9-12 remain open. A FRESH reviewer session
-                     writes 18_REVIEW/V01/V01_REVIEW_R2.md; the session that applied
-                     the corrections cannot certify them (D-003).
-BLOCKED ON:          nothing. I-006 RESOLVED. I-007 open — now blocks V01 H4/H5,
-                     which R1 reclassified from NOT APPLICABLE to DEFERRED.
+CURRENT LESSON:      V01 — re-reviewed R2 2026-08-10: REVISE (HIGH), 0 critical,
+                     1 major. Still in remediation.
+NEXT ACTION:         Apply the 15 required actions in 18_REVIEW/V01/V01_REVIEW_R2.md.
+                     R2 closed R1 findings 2, 4 and 6b, and found R1 finding 1 applied
+                     in only 3 of its 4 locations — AUTOMATION_AMBIGUITIES.md A-006's
+                     trailing block still asserts the overturned elimination (R2 N1,
+                     the one open MAJOR). Everything else is a documentation edit;
+                     no re-study of V01 is required. Then a FRESH reviewer session
+                     writes V01_REVIEW_R3.md (D-003).
+BLOCKED ON:          nothing. I-006 RESOLVED. I-007 open — blocks V01 H4/H5, which
+                     R1 reclassified from NOT APPLICABLE to DEFERRED (D-019).
+V02 GATE:            CLOSED. D-004 requires reviewer PASS on V01 before V02 opens.
+                     V02 ingestion work exists but must not advance past it.
 ```
 
 ---
@@ -45,7 +51,7 @@ fabricate, interpolate, or infer Week 6 content.**
 
 | Video | Session | Duration | Source Verified | Transcript | Notes | Screenshots | Homework | Manual Backtest | Student Mastery | Reviewer | Final Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ⏳ R1 REVISE → R2 due | IN REMEDIATION |
+| V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ⏳ R1 REVISE → R2 REVISE → R3 due | IN REMEDIATION |
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |

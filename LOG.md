@@ -817,3 +817,125 @@ Updated: as listed under "Work Corrected".
 Request a **fresh** reviewer session for V01 R2. It must confirm the four applied
 corrections, dispose of R1 findings 3, 5, 7, 8, 9–12, and rule on the newly-quantified
 16-record staleness.
+
+---
+
+## 2026-08-10 — Reviewer Session — V01 Review R2
+
+**Role:** Independent Reviewer / Teacher. This session produced no V01 artifact and
+applied no correction (`DECISIONS.md` D-003).
+
+### Decision
+
+```text
+LESSON: V01   DECISION: REVISE   CONFIDENCE: HIGH
+0 critical · 1 major · 4 minor · 3 notes (new this round)
+ADVANCEMENT: NOT AUTHORIZED — the V02 gate stays closed (D-004)
+```
+
+### Method
+
+Source first, per `REVIEW_PROTOCOL.md` §3, and targeted rather than a repeat of R1's
+full pass (§4). Transcript read line by line at `[00:35:55]`–`[00:37:28]`,
+`[00:37:49]`–`[00:38:13]`, `[00:52:19]`–`[00:53:07]` and four shorter passages.
+**Twelve screenshots opened at full resolution**; all twelve carried a burned-in
+timecode matching the filename. `validate_project.py` re-run: 97 passed, 0 warnings,
+0 failures. R1's hash check, 144-quotation sweep, quarantine audit and dimension-G
+adversarial test were **not** repeated — no cause appeared to re-litigate them.
+
+### The four applied corrections
+
+| R1 finding | Verdict |
+|---|---|
+| 1 — box reading (`E02`, MAJOR) | **PARTIALLY APPLIED — reopened as R2 N1** |
+| 2 — dimension F split (`E10`, MAJOR) | **APPLIED CORRECTLY — CLOSED** |
+| 4 — six-vs-four trap-move count (`E13`, MINOR) | **APPLIED CORRECTLY — CLOSED** |
+| 6b — stale concept-index status (`E20`, MINOR) | **APPLIED CORRECTLY, WIDENED HONESTLY — CLOSED** |
+
+Finding 1 was applied in `V01_INTERPRETATION.md` §10.1 `U2`, §10.2 `C5`, the mastery
+report, and `A-006`'s *Visual Characteristics* — but **not** in `A-006`'s trailing
+`Visual Evidence Update` block, whose header still reads *"one candidate reading
+ELIMINATED"* and whose body still reads *"This eliminates candidate 1… The boxes do not
+align with session boundaries."* I checked that sentence against the three frames it
+relies on: at `[00:38:50]`, `[00:44:40]` and `[00:48:35]` the pale-blue rectangle's left
+edge sits on, or immediately right of, a vertical dotted separator. **It is refuted by
+its own evidence**, it contradicts the corrected text 45 lines above it, and it survives
+in the register that governs what may later be coded. That is the one open MAJOR.
+
+Findings 2 and 4 were verified by re-deriving them from the transcript before reading
+the artifacts. `D-019` is sound and sets the right 21-lesson precedent; its test —
+*"is there anything here to do at all"*, not *"can this be done today"* — is correct.
+
+### R1's remaining findings — all eight disposed of
+
+3, 5, 6a, 6c, 7, 8, 9, 10, 11, 12: **all upheld and all still open.** Three needed
+correcting or widening in the process:
+
+- **3** — the `[00:36:38]` misdating occurs in **five** places, not two.
+- **8** — **eight** screenshots are missing from §4, not seven, and the eighth
+  (`[00:54:30]`) is a teaching frame, so R1's proposed remedy would have been false as
+  stated.
+- **10** — `A-003` has **five** self-contradicting fields, not one stale Risk cell. The
+  project's one resolved ambiguity currently tells a reader who stops before the
+  trailing block the opposite of the truth.
+
+### Ruling on open item 6 (the 16-record staleness)
+
+**Upheld, and it is real study work — but the item's own scope was wrong.** It named
+`A-009`, `A-015` and `A-017` as needing fresh visual claims. All three already carry
+visual updates; I audited all three against the frames and all three are sound. The
+records that actually need a fresh visual determination are **`A-002`** (the lesson's
+central object is printed on two chart slides), **`A-008`** ("these two lines" —
+`[00:38:50]` shows exactly two vertical dotted separators bounding Sunday) and
+**`A-016`** (`[00:44:40]` shows the spike-then-chop sequence). Determinations supplied
+in R2 Part 3.3, all as *materially constrained*, none as resolved. `A-011` / `A-012` /
+`A-014` gain slide-text evidence. `A-007` needs a "frame exists, defines nothing" note —
+I declined to convert the `[00:43:58]` freehand into a leg definition. Eight are
+mechanical.
+
+### New findings
+
+`N1` (MAJOR, `E02`) above. `N2`–`N4` (MINOR, `E11`): `S29` misdated; the `[00:36:38]`
+error propagated to three files R1 did not list; H5 cited as `[00:52:20]` / `[00:53:02]`
+in `D-019` and the mastery report when the assignment is at `[00:52:38]`–`[00:52:50]`
+and `[00:53:07]`. `N5` (MINOR, `E02`): the corrected box text says pale blue covers
+"flat, low-range consolidation", which `[00:38:50]` — cited in the same sentence —
+contradicts. `N6`–`N8` (NOTE): enumeration range truncated; `INDEX.md` `[00:30:35]`
+cites `S28–S33`; §4's omission count.
+
+### Escalation triggered
+
+Three error codes passed the threshold on one lesson. `E11` (5) is the substantive one:
+eight statements across two rounds cite a timestamp that does not carry their words.
+**No quotation was fabricated** — the words always exist and are quoted accurately; only
+the citation is off. Recorded in `REVIEW_INDEX.md` with a proposed `STUDY_PROTOCOL.md`
+amendment, to be raised at the 25% cumulative review. `E02` (3) is instructive in its
+own right: two of the three were introduced *while remediating the first*.
+
+### Also answered
+
+R1 reviewer question 2 — the `[00:39:40]` freehand does **not** mark the anchor point.
+It traces the week-opening advance inside the blue rectangle and the pre-open range; no
+stroke isolates a turning point and nothing is named. `§10.3` should cite it as examined
+and non-determinative.
+
+### Credit where due
+
+The remediation session marked every supersession, retained the wording it replaced,
+refused to sweep up sixteen records it could not certify, and reported a defect that
+widened its own scope. Hindsight discipline held through the round where it is most
+likely to break. `N1` is a miss of coverage, not of honesty.
+
+### Files Created/Updated
+
+Created: `18_REVIEW/V01/V01_REVIEW_R2.md`.
+Updated: `18_REVIEW/REVIEW_INDEX.md` (R2 row, error counts, escalation note, severity
+ledger, open items 6–8), `00_SYSTEM/COURSE_PROGRESS.md`, this log.
+**Not touched:** any student artifact, and `V01_REVIEW_R1.md` — a review file is never
+edited (`REVIEW_PROTOCOL.md` §11).
+
+### Next Action
+
+A Student/remediation session applies the 15 required actions in
+`V01_REVIEW_R2.md`. None requires re-studying V01. Then a **fresh** reviewer session
+writes `V01_REVIEW_R3.md`. R3 should be short.
