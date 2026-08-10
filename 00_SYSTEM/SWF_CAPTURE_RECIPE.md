@@ -304,28 +304,85 @@ it in the background, one video per session.
 
 ---
 
-## 11. UNTESTED IDEA THAT WOULD REMOVE THE 1-HOUR COST
+## 11. THE FRAME-RATE SPEEDUP IDEA — TESTED ON V02, IT DOES NOT WORK
+
+**Status: RULED OUT, 2026-08-10. Do not re-attempt. Budget the full real-time hour for
+every remaining lesson.**
+
+### The idea, as it stood before testing
 
 The SWF header declares its frame rate, and it is patchable in a **working copy**:
 
 ```text
-V01: frameRate=3.0, frameCount=9853, stored as a 16.16 fixed value at body offset 17
+V01: frameRate=3.0, frameCount=9853,  at body offset 17
+V02: frameRate=3.0, frameCount=10861, at body offset 17
      (after the 8-byte file header and the RECT; decompress CWS bodies with zlib first)
 ```
 
-Raising 3 fps to, say, 120 fps should make Ruffle advance the root timeline ~40× faster
-— a full sweep in ~1.5 min instead of 55. The presentation **is** the root timeline
-(9853 `SHOWFRAME` tags exactly matches `frameCount`), so this has a good chance of
-working.
+Raising 3 fps to 120 fps *should* have made Ruffle advance the root timeline ~40×
+faster. The arithmetic that made this look promising is real and still checks out:
+V02's 10861 frames ÷ 3 fps = 3620.3 s, against a measured audio length of 3619.8 s.
+**The root timeline is exactly as long as the presentation.** That is why the idea was
+worth testing.
 
-Two unknowns: the Camtasia player may drive slides from an internal timer or audio
-position rather than the root timeline, in which case nothing speeds up; and Ruffle
-ticks on `requestAnimationFrame`, which headless Chrome typically caps at 60 fps, so the
-practical ceiling may be ~20× rather than 40×.
+### What was tested
 
-**Audio would be unusable at that rate**, so this is a screenshots-only path. If you
-also want the archival mp4, you still need one real-time pass.
+Three runs, each loading a patched working copy from a local HTTP origin in headless
+Chrome via Playwright, clicking play, and reading the Camtasia player's own burned-in
+timecode against wall clock.
 
-Worth 15 minutes on V02 before committing to 20 more hours of real-time capture. If it
-works, the recommendation becomes: fast sweep for screenshots by default, real-time only
-when the mp4 is specifically wanted.
+| Run | Declared fps | Wall clock 60 s | Player OSD read |
+|---|---|---|---|
+| 1 | **120.0** (40×) | 60 s | `01:00` |
+| 2 | **1.0** (⅓×) | 60 s | `01:00` |
+| 3 | 3.0 (unmodified control) | 60 s | `01:00` |
+
+Screenshots at 0/10/20/30/45/60 s in run 1 advanced exactly 10, 20, 30, 45 and 60
+seconds of presentation content. At 60 s of wall clock the patched 120 fps copy was
+still displaying the opening title slide.
+
+### Why the 1 fps run is the decisive one
+
+A 120 fps run that shows no speedup is ambiguous — it could mean the header is honoured
+but something downstream caps the rate (the `requestAnimationFrame` ceiling that was
+listed as unknown #2). **Patching *down* to 1 fps removes that ambiguity.** No frame
+rate cap can explain a threefold *slowdown* failing to appear. Playback ran at exactly
+1× in all three runs, so the declared frame rate is not being used to drive the
+presentation at all.
+
+**Conclusion: unknown #1 was the real one.** The Camtasia player drives its slides from
+an internal timer or from audio position, not from the root timeline. The root timeline
+is the right length, but it is not the clock.
+
+If you test a variant of this idea on some future file, use the same two-sided design —
+patch up *and* down. A one-sided test cannot distinguish "ignored" from "capped".
+
+### Reusable code
+
+The header parser and patcher are ~20 lines each and are worth rewriting if ever needed:
+read `sig`/`version`/`fileLength` from the first 8 bytes, zlib-decompress the body for
+`CWS`, skip the RECT (5-bit `nbits`, then 4 × `nbits` bits, rounded up to a byte
+boundary — 17 bytes for a 1024×786 stage), then `frameRate` is a `UI16` at that offset
+(8.8 fixed: `raw / 256`) followed by `frameCount` as a `UI16`. Write back as `FWS` with
+`fileLength = 8 + len(body)` to avoid recompressing.
+
+**Always patch a copy.** The originals were verified untouched by SHA-256 against
+`SOURCE_MANIFEST.md` after this session's work.
+
+### What this means for V03–V21
+
+There is no shortcut. Each remaining lesson costs one real-time playthrough of its own
+length. That is ~18 hours across V03–V21, and it is unattended background time that
+overlaps with reading the transcript — which is the right way to schedule it, and is
+what §10's timings already assume.
+
+Two things make the hour cheaper than it looks, and both should be exploited:
+
+1. **Start the recording first, before anything else.** It is the long pole and needs no
+   attention. On V02 the recording was launched ~7 minutes into the session and the
+   transcript verification, quarantine audit, source notes, interpretation and register
+   updates were all completed while it ran. The capture cost effectively nothing.
+2. **The mp4 is a permanent asset.** Once made, any future timestamp is one
+   `ffmpeg -ss` away. There is no reason to ever record the same lesson twice, which
+   means the archival pass and the screenshot pass are the same pass. Do not treat them
+   as a value/cost tradeoff to be re-litigated per lesson — record once, keep it.

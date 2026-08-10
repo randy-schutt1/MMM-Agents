@@ -523,3 +523,51 @@ Not yet decided; record as new entries when the information exists.
 | Default timeframes used in manual study | First chart lesson |
 | Development / validation / holdout dataset boundaries | Phase 4–8 |
 | Whether Git LFS is adopted for any media | Only if media must be versioned |
+
+---
+
+## D-020 — The SWF frame-rate speedup is ruled out; every lesson costs one real-time playthrough
+
+**Date:** 2026-08-10
+**Decision:** The frame-rate patching idea recorded as untested in
+`SWF_CAPTURE_RECIPE.md` §11 was tested on V02 and **does not work**. §11 is rewritten
+from a proposal into a ruled-out record. Capture planning for V03–V21 assumes one
+real-time playthrough per lesson — roughly 18 further hours of unattended recording —
+with no shortcut available.
+
+Two consequences are adopted as standing practice:
+
+1. **Start the recording before any other work in the session.** It needs no attention
+   and it is the long pole. On V02 it was launched ~7 minutes in, and transcript
+   verification, the quarantine audit, source notes, interpretation and register updates
+   all completed while it ran. The hour cost effectively nothing in wall clock.
+2. **Record once and keep the mp4.** The archival pass and the screenshot pass are the
+   same pass; there is no separate "is the mp4 worth it" decision to make per lesson,
+   because the recording has to happen anyway to get screenshots at all. Retaining it
+   makes every future timestamp an `ffmpeg -ss` away and removes any reason to record a
+   lesson twice.
+
+**Reason:** the test was cheap (~6 minutes) and the stakes were 18 hours, so it was
+worth running before committing. It failed for the first of the two reasons §11 had
+flagged as unknown: the Camtasia player drives its slides from an internal timer or
+audio position, not from the SWF root timeline.
+
+**Evidence:** three runs at 120 fps, 1 fps and 3 fps (unmodified control), all showing
+the player's burned-in timecode reading exactly `01:00` after 60 seconds of wall clock.
+The 1 fps run is the decisive one — a frame-rate ceiling could explain a missing
+speed-*up*, but nothing can explain a missing slow-*down*. Full method and numbers in
+`SWF_CAPTURE_RECIPE.md` §11.
+
+**Alternatives considered:** *Accepting the idea untested and skipping real-time capture
+for V03–V21* — rejected before testing; it would have produced screenshot sets with no
+archival source and no way to verify a timestamp. *Declaring it ruled out on the 120 fps
+run alone* — rejected as insufficient; that run cannot distinguish "header ignored" from
+"header honoured but rate-capped", and the recipe's own §11 had named the cap as a live
+possibility. *Re-testing on a third lesson* — rejected; the control run already
+establishes the header has no effect on this player, and all 21 files are the same
+Camtasia export family.
+
+**Note on the arithmetic that made the idea attractive.** It was not a bad hypothesis.
+V02's frame count (10861) ÷ its declared 3 fps = 3620.3 s against a measured audio length
+of 3619.8 s — the root timeline really is exactly as long as the presentation. It is just
+not what the player uses as its clock.

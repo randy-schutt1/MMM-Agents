@@ -313,6 +313,8 @@ and timeframes — before observations are collected. See `STUDY_PROTOCOL.md` §
 ## I-008 — Twenty of twenty-one transcripts are unverified
 
 **Status:** `OPEN` — must be resolved per-lesson, before that lesson is studied
+**Progress:** V01 verified 2026-08-10. **V02 verified 2026-08-10** (see below).
+19 remaining: V03–V21.
 
 Each lesson folder arrived with a `TRANSCRIPT.md` produced by a pre-ingestion process
 — the same process that produced the `NOTES.md`, `RULES.md`, and `VISUAL_INDEX.md`
@@ -326,9 +328,28 @@ a fabricated transcript does not invent its own mishearings. It was adopted and 
 lives at `02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md` with the verification recorded in its
 header.
 
-**V02–V21 have not been checked.** There is no evidence against them and none for
+**V02 was checked on 2026-08-10 and passed.** It was tested against all four criteria
+below, including the audio spot-check that V01's verification did not perform
+mechanically: four 60-second windows (`00:03:00`, `00:20:00`, `00:40:00`, `00:59:00`)
+were independently re-transcribed from the extracted audio with Whisper `small.en` and
+compared against the corresponding transcript entries. All four matched near-verbatim,
+including low-frequency specifics a fabricator would not invent. Divergences were
+ASR-vs-ASR only. 1,026 timestamps, strictly monotonic, final entry `[01:00:16]` against
+a measured 3619.81 s. Adopted at `02_TRANSCRIPTS/V02/V02_TRANSCRIPT.md`.
+
+Note that V02's transcript passed while the three derived files **in the same folder**
+were confirmed fabricated the same day (`QUARANTINE_REGISTER.md` Q-002). Two for two,
+the transcripts have been sound and the derived notes have not. That is a useful prior
+for V03–V21 but it is not a substitute for the check — the point of I-008 is that
+provenance is not evidence in either direction.
+
+**V03–V21 have not been checked.** There is no evidence against them and none for
 them. Sharing a provenance with fabricated material is not proof of fabrication, but
 it is enough that adoption without checking would be negligent.
+
+**Cost, now measured:** the V02 check took about 12 minutes end to end, most of it
+unattended Whisper runs, and it was performed while the screen capture recorded in the
+background. It is not an expensive gate.
 
 **Required before each lesson is studied**, at minimum:
 
@@ -341,5 +362,8 @@ it is enough that adoption without checking would be negligent.
 A transcript that fails these is quarantined and re-transcribed, not repaired.
 
 **Why this is not resolvable in bulk now:** study is strictly sequential and gated
-(`SOURCE_INGESTION_PROTOCOL.md` §10). Verifying V02–V21 today would front-load work
-that may be redone anyway if CloudConvert conversion changes the audio route.
+(`SOURCE_INGESTION_PROTOCOL.md` §10). Verifying V03–V21 today would front-load work
+ahead of the lessons that need it. The audio route is now settled — `ffmpeg -vn -c copy`
+straight off the `.swf`, no third-party conversion — so the earlier concern about
+redoing the work if the audio route changed no longer applies; the remaining reason to
+keep this per-lesson is sequencing, not risk.

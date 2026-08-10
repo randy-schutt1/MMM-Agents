@@ -90,6 +90,7 @@ An ignored contradiction is reviewer error code E13.
 |---|---|---|---|---|
 | C-001 | How long price runs away from the anchor point | V01 `[00:35:05]` vs V01 `[00:35:15]` / `[00:35:55]` | UNRESOLVED | **Yes** |
 | C-002 | Whether the trading-zone / blue-box filter and the one-direction rule are mandatory | V01 `[00:44:15]` / `[00:51:22]` vs V01 `[00:44:03]` / `[00:51:34]` | STATED EXCEPTION — condition unmeasurable | No, but blocking for implementation |
+| C-003 | Whether M and W formations can fail | V02 `[00:38:40]` vs V02 `[00:38:40]` (same sentence) | UNRESOLVED — self-contradictory as spoken | No |
 
 ---
 
@@ -239,3 +240,100 @@ doctrine.
 
 Encode neither form as unconditional. Carry both, tagged with the skill condition,
 until A-013 resolves or is declared permanently unmeasurable.
+
+---
+
+## C-003 — Whether M and W formations can fail
+
+### Concept
+
+Whether the course's core entry formations are presented as reliable, and what a
+student is supposed to do when one does not work.
+
+### Source A
+
+| Field | Value |
+|---|---|
+| Video | V02 |
+| Timestamp | `[00:38:40]` |
+| What is said | "MRWs will not fail" — ASR for "**M's and W's will not fail**". |
+
+### Source B
+
+| Field | Value |
+|---|---|
+| Video | V02 |
+| Timestamp | `[00:38:40]` — the same sentence |
+| What is said | "…**and when they do, cut them quickly and control your loss.**" |
+
+### Conflict
+
+The claim and its refutation are one sentence: *"M's and W's will not fail, and when
+they do, cut them quickly and control your loss."*
+
+This is not two statements minutes apart that might be reconciled by context. The
+subordinate clause presupposes exactly what the main clause denies.
+
+### Possible Explanations
+
+| # | Explanation | Supporting evidence | Assessment |
+|---|---|---|---|
+| 1 | Rhetorical emphasis — "will not fail" means "fail rarely" | The immediately preceding passage `[00:38:19]` is about following "a simple set of rules" and being "man enough to admit it… and let your stop trigger and look for the next set up". The whole surrounding paragraph is about handling being wrong. | **Strongly supported.** The context is a lesson about accepting losses, which makes a literal "never fails" reading implausible on its face. |
+| 2 | Two different objects — some M/W's fail, canonical ones don't | Nothing stated. Would require a "perfect M/W" category, which the homework at `[00:56:01]` does gesture at ("pick one perfect M and one perfect W"). | **Speculative.** The homework's "perfect" is about selecting good teaching examples, not about a reliability tier. Do not adopt. |
+| 3 | Transcription artifact | The phrase is rendered "MRWs", so the ASR is imperfect here. | Partial — but the *structure* of the sentence (claim + "and when they do") is not the kind of thing ASR invents. |
+| 4 | Genuine inconsistency in the teaching | The instructor makes several absolute claims in V02 that he softens in the same breath. | Plausible |
+
+### Resolution
+
+```text
+UNRESOLVED — but low-stakes, and explanation 1 is strongly favoured
+```
+
+This is logged not because the practical guidance is unclear — it is not; he plainly
+says to cut losers quickly — but because **"M's and W's will not fail" is exactly the
+kind of sentence that gets extracted as a quotable course rule and propagates as a
+reliability claim.** The quarantined `RULES.md` files demonstrate how readily this
+project's source material generates unsupported confidence assertions. Recording the
+contradiction here means any later session that finds the first half of the sentence
+also finds the second.
+
+**Foundational: no.** No downstream rule depends on M/W formations being infallible,
+and the actionable half of the sentence is unambiguous.
+
+### Required to resolve
+
+A later lesson stating a failure rate, or stating the conditions under which an M or W
+is expected to fail.
+
+### Interim handling
+
+**Do not record "M's and W's will not fail" as a course claim without its second
+clause.** Where a reliability figure is needed downstream, note that the course offers
+none — the only number in this vicinity is the Zaireen backtest hit rate at V02
+`[00:37:37]`, which the instructor retracts as he says it.
+
+---
+
+## V02 EVIDENCE ADDED TO C-001
+
+C-001 (duration of the move away from the anchor point) listed *"a later lesson
+refines the earlier one"* as explanation 4, and identified it as the **most likely
+route to resolution**. V02 is the next lesson. It does not resolve it.
+
+| Video | Timestamp | What is said |
+|---|---|---|
+| V02 | `[00:05:30]` | "I know it's **not always three days**… It could be **four days**. It could be **two and a half days**." |
+| V02 | `[00:16:15]` | "The objective is to stay above/below the perceived support or resistance level for **at least three days**, causing exhaustion and panic." |
+| V02 | `[00:16:23]` | "The dealer's job is to not cross that level for **two and a half to three days or four days**." |
+| V02 | `[00:17:09]` | "The dealer will not cross the level for **two and a half to three or four days**." |
+
+`[00:16:15]` and `[00:16:23]` are eight seconds apart and give incompatible lower
+bounds — "at least three" against "two and a half".
+
+**Effect on C-001:** none of the ambiguity is removed, and one thing is added — V02
+shows the same spread (2.5 / 3 / 4) recurring in a second lesson, which makes
+explanation 8 ("instructor shorthand") and explanation 9 ("actual inconsistency in the
+course") more likely, and explanation 4 ("a later lesson refines it") less likely. The
+range appears to be how the course talks about this quantity, not a slip in V01.
+
+C-001 remains `UNRESOLVED` and remains foundational. Re-test at V03.
