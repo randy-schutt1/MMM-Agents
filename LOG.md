@@ -1581,3 +1581,98 @@ R2 Note 8.
 **Git discipline.** Per the R2 addendum's second process point, this commit used explicit
 paths for **both** `git add` and `git commit`, with `git status` and `git diff --staged`
 read immediately before committing, so no concurrent session's work could be swept in.
+
+---
+
+## 2026-08-10 — Reviewer Session
+
+### Lesson
+
+V02
+
+### Review Objective
+
+Independent verification of the R2 remediation (round 3). Both of R2's required
+student corrections were to be **re-derived from the source**, not read from the diffs,
+per the project's standing methodology that a correction is new work and carries the
+same generalization risk as the original.
+
+### Source Evidence Reviewed
+
+- `05_HOMEWORK/V02/charts/USDCHF_1H_2026-08-10_tradingview-fxcm.png` — **re-measured
+  from scratch** with an independent pipeline: exact-colour candle detection with the
+  header, quote boxes and dashed last-price row masked; day separators detected by
+  exact-colour column ink counts; price calibrated by least squares over the sub-pixel
+  ink centroids of the 13 unobstructed right-axis labels; x-axis date labels measured
+  the same way. **177 bars, 52.277 px per 0.00100, max residual 0.086 pip.** Validated
+  against a ground truth external to the calibration — the chart header's *printed*
+  last-bar OHLC — to **0.48 pip** worst case.
+- `02_TRANSCRIPTS/V02/V02_TRANSCRIPT.md` — verbatim body isolated from the first
+  `[00:00:00]` marker (58,424 characters, 1,026 markers) and re-counted by regex for
+  `PFH`, `PFL`, the spelled-out forms, and `level count` / `count the levels`.
+- Git history — `git status`, `git log`, and the full diffs of `8df7c32` and `d030a14`,
+  read only **after** the independent measurements were complete.
+
+### Student Artifacts Reviewed
+
+`V02_HOMEWORK.md` §1.1–§1.4, `V02_SOURCE_NOTES.md` §3, `V02_TRANSCRIPT.md`
+§"One thing was removed", `V02_MASTERY_REPORT.md`, `CONTRADICTIONS.md` C-001,
+`COURSE_PROGRESS.md`, `REVIEW_INDEX.md`, `DECISIONS.md`.
+
+### Findings
+
+**Both required corrections are applied and both reproduce exactly.**
+
+Correction 1 — every value verified independently: separators at
+`x = 147, 273, 429, 573, 717, 861, 987, 1149`; bar counts 21/26/24/24/24/21/27; Sun 2 Aug
+= **2 bars**, open **0.80552**, high **0.80737 `23:00`**; Fri 31 Jul open **0.80578**, low
+**0.80538 `00:00`**, close **0.80678**; weekend gap **−12.63 pip**; `31` and `Aug` label
+centroids **146.12** and **273.03**. The Mon–Fri rows and the 72-hour `C-001` datum were
+re-derived too, to confirm the edit did not disturb what it was told not to touch — they
+reproduce. `REMEDIATION_PROTOCOL.md` §2 verified line by line: all ten deleted lines have
+superseded-in-place counterparts.
+
+Correction 2 — `PFH` **0**, `PFL` **0**, "peak formation high" **1**, "peak formation low"
+**2**, "peak formation" **4**. Exactly as stated, in both files, with the I-008 decision
+correctly described as unaffected and strengthened.
+
+**Two MINOR items remain, neither blocking:**
+
+1. `V02_TRANSCRIPT.md` still asserts `level count` as a verbatim occurrence; the literal
+   string occurs zero times (the referent occurs once, `[00:33:11]`). Ruled on at the
+   student session's request: it **is** a real defect of the class just corrected, but
+   `V02_SOURCE_NOTES.md` — the canonical layer — is already accurate and needs no change.
+2. The *"174 of 176"* continuity figure does not reproduce (172 at the stated threshold,
+   175 above 0.8 pip; three genuine sub-pip gaps besides the weekend one, confirmed
+   visually at 4× zoom). **Recorded against R2, not the student** — the remediation was
+   required to state R2's number and did so accurately.
+
+**Notes:** every new positive claim in correction 1 reproduces to better than 0.1 px;
+correction 2 shipped without a `LOG.md` entry; the V03 gate breach is now an
+owner-authorized override that no `DECISIONS.md` entry records, so three files still
+describe it as a live violation; `COURSE_PROGRESS.md` status staleness recurred for the
+sixth time and was discharged by this session.
+
+### Required Corrections
+
+**None blocking.** Four carry-forward items, to be discharged at the next natural touch of
+each file — `REVIEW_INDEX.md` open items 15, 16, 17 and the item-14 escalation. Item 12 is
+**closed**. Do not open a remediation round for these.
+
+### Decision
+
+**PASS** — confidence HIGH. 0 critical, 0 major, 2 minor (non-blocking).
+Advancement **AUTHORIZED**. `18_REVIEW/V02/V02_REVIEW_R3.md`.
+
+### Git
+
+Explicit paths for both `git add` and `git commit`; `git status` and `git diff --staged`
+read immediately before committing. The untracked `05_HOMEWORK/V02/measure_usdchf_week.py`
+is left in place, unmodified, unstaged and undeleted, and was excluded from this review's
+evidence base.
+
+### Next Review Trigger
+
+V03 student pass. **The V03 gate is now OPEN** (D-004 satisfied by this `PASS`). The V03
+work already performed in parallel is an owner-authorized override and is not to be
+reverted; it should be recorded as a numbered decision in `DECISIONS.md`.

@@ -11,22 +11,47 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V02 — R2 REVISE, awaiting remediation round 2)
-VIDEOS PASSED:       1  (V01)
-CURRENT LESSON:      V02 — re-reviewed R2 2026-08-10: **REVISE** (HIGH), 0 critical,
-                     **0 major**, 3 minor. R1's MAJOR is CLOSED — R2 re-measured the
-                     committed chart independently and every corrected value
-                     reproduces to within 0.2 pip, as does the 72-hour C-001 result.
-                     Three narrow corrections remain: see
-                     18_REVIEW/V02/V02_REVIEW_R2.md §9.
-                     (R1 2026-08-10: REVISE (HIGH), 0 critical, 1 major, 5 minor —
+VIDEOS IN PROGRESS:  0
+VIDEOS PASSED:       2  (V01, V02)
+CURRENT LESSON:      V02 — re-reviewed R3 2026-08-10: **PASS** (HIGH), 0 critical,
+                     0 major, 2 minor (both non-blocking). **COMPLETE.**
+                     Both of R2's required corrections applied and independently
+                     re-derived at R3 — the chart re-measured from the committed PNG
+                     with a fresh pipeline (177 bars, 52.277 px/0.00100, max residual
+                     0.086 pip, validated against the header's printed last-bar OHLC
+                     to 0.48 pip) and the transcript re-counted by regex. Every
+                     corrected value reproduces. See 18_REVIEW/V02/V02_REVIEW_R3.md.
+                     (R2 2026-08-10: REVISE (HIGH), 0 critical, 0 major, 3 minor,
+                     plus 1 MAJOR process finding — the D-004 gate breach, since
+                     confirmed by the project owner as an intentional override.
+                     R1 2026-08-10: REVISE (HIGH), 0 critical, 1 major, 5 minor —
                      all ten required corrections applied and verified at R2.)
                      V01 — re-reviewed R3 2026-08-10: **PASS** (HIGH), 0 critical,
                      0 major. COMPLETE. All 15 of R2's required actions applied and
                      verified against the source; R2 finding N1 (A-006's trailing
                      block) closed by withdrawing it in place.
-NEXT ACTION:         Apply V02 R2's **three** required corrections
-                     (18_REVIEW/V02/V02_REVIEW_R2.md §9), then resubmit for R3.
+NEXT ACTION:         **Begin V03.** The V03 gate is OPEN as of V02 R3 PASS.
+                     Four non-blocking carry-forward items from R3 (§9), none of
+                     which opens a remediation round:
+                     (a) V02_TRANSCRIPT.md — restate the `level count` clause; the
+                     literal string occurs ZERO times, the referent once at
+                     [00:33:11] ("you can't count the levels"). R3 gives the wording.
+                     (b) V02_HOMEWORK.md §1.1/§1.4 + V02_MASTERY_REPORT.md + this
+                     file — restate the continuity figure: 175 of 176 boundaries
+                     within 1 pip, the only MATERIAL discontinuity is the -12.6 pip
+                     weekend gap at x=273, and three sub-pip gaps (<=0.8 pip, at
+                     x=285, 447, 933) also exist. The "174 of 176" figure does not
+                     reproduce. **Charged against R2, not the student** — the
+                     remediation was required to state R2's number and did so
+                     accurately.
+                     (c) DECISIONS.md — record the owner's V03 parallel-work
+                     override as a numbered decision, then reconcile the V03 GATE
+                     block below and REVIEW_INDEX.md open item 9 to it. **Owner
+                     action, not student action.**
+                     (d) REVIEW_INDEX.md — close open item 12 (discharged by R2
+                     correction 1); item 13 stays open; item 14 now carries six
+                     instances and becomes a work item at the 25% review.
+                     ---- V02 R2 remediation history, retained ----
                      (1) ✅ DONE 2026-08-10. V02_HOMEWORK.md §1.1 — the Sun 2 Aug /
                      Fri 31 Jul day boundary is corrected (Sun 2 Aug = 2 bars, open
                      0.80552, high 0.80737 23:00; Fri 31 Jul open 0.80578, low
@@ -42,12 +67,16 @@ NEXT ACTION:         Apply V02 R2's **three** required corrections
                      and CONTRADICTIONS.md C-001), plus the same false self-validation
                      claim in V02_MASTERY_REPORT.md and in this file. §1.2 and §1.3's
                      C-001 result were NOT touched — both verified correct at R2.
-                     (2) ⏳ OUTSTANDING — the PFH/PFL count in V02_SOURCE_NOTES.md §3 and
-                     V02_TRANSCRIPT.md — both abbreviations occur ZERO times.
-                     I-008's transcript adoption is unaffected and strengthened.
-                     (3) Reconcile this file's PHASE STATUS row and
-                     VIDEOS IN PROGRESS to the SUMMARY block above.
-                     → Then a FRESH session writes V02_REVIEW_R3.md (D-003).
+                     (2) ✅ DONE 2026-08-10 (commit d030a14) — the PFH/PFL count in
+                     V02_SOURCE_NOTES.md §3 and V02_TRANSCRIPT.md. Both
+                     abbreviations occur ZERO times; spelled out, "peak formation
+                     high" x1 and "peak formation low" x2 (4 total). Independently
+                     re-counted and confirmed at R3. I-008's transcript adoption is
+                     unaffected and strengthened.
+                     (3) ✅ Discharged by the reviewer sessions (R2 and R3), which
+                     had to rewrite these lines to record their decisions.
+                     → ✅ R3 written 2026-08-10 by a fresh session (D-003):
+                     18_REVIEW/V02/V02_REVIEW_R3.md — **PASS**.
                      ---- R1 history, retained ----
                      ✅ DONE 2026-08-10 — all ten of V02 R1's required corrections are
                      applied (see V02_MASTERY_REPORT.md "Revision R1"). Homework 11a
@@ -70,7 +99,23 @@ V02 GATE:            OPEN as of V01 R3 PASS (D-004 satisfied).
                      read CLOSED. V01's PASS makes it moot and no V02 work is
                      discarded, but the gate did not hold — see REVIEW_INDEX.md open
                      item 9.
-V03 GATE:            CLOSED. D-004 requires reviewer PASS on V02 before V03 opens.
+V03 GATE:            **OPEN as of V02 R3 PASS, 2026-08-10 (D-004 satisfied).**
+                     The V03 work performed in parallel while this gate read CLOSED
+                     was an **owner-authorized override**, confirmed by the project
+                     owner as intentional and not an error to correct. It is NOT to
+                     be reverted, re-done or discarded. ⚠ **It is not yet recorded
+                     as a decision** — DECISIONS.md carries no entry for it (last
+                     entry D-022), so the history below still reads as an
+                     unresolved violation. R3 Note 3 asks the owner to record the
+                     override as a numbered decision and reconcile this block and
+                     REVIEW_INDEX.md open item 9 to it.
+                     **The mechanism finding survives the override:** a written
+                     gate with no enforcement failed twice in one day. Open item 9
+                     stays open on that ground alone, and the concrete fix is
+                     unchanged — a validate_project.py pre-flight guard that
+                     refuses VNN artifact creation while VNN GATE reads CLOSED.
+                     ---- history, retained ----
+                     CLOSED. D-004 requires reviewer PASS on V02 before V03 opens.
                      ⚠ **BREACHED — LIVE, as of V02 R2 (2026-08-10).** The gate held
                      at R2's start and did not hold at its end: an in-progress V03
                      student pass appeared in the working tree from another session
@@ -117,7 +162,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | Video | Session | Duration | Source Verified | Transcript | Notes | Screenshots | Homework | Manual Backtest | Student Mastery | Reviewer | Final Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
-| V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED | ⏳ **R1 REVISE** | **IN REMEDIATION** |
+| V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -269,7 +314,7 @@ points are set once the real lesson count is known at ingestion.
 | Phase | Name | Status |
 |---|---|---|
 | 0 | Environment | ✅ Complete |
-| 1 | Student | 🔄 In progress — V01 PASS; V02 R2 REVISE (0 critical, 0 major, 3 minor), awaiting remediation round 2 |
+| 1 | Student | 🔄 In progress — V01 **PASS** (R3); V02 **PASS** (R3, 0 critical, 0 major, 2 minor non-blocking); V03 gate open, V03 next |
 | 2 | Scholar | Not started |
 | 3 | Expert (Master Spec) | Not started |
 | 4 | Formalizer (Machine Spec) | Not started |

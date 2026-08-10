@@ -12,8 +12,8 @@ stays visible with its round number.
 
 ```text
 LESSONS REVIEWED: 2
-PASSED:           1  (V01)
-IN REMEDIATION:   1  (V02 — R2 REVISE, 0 critical, 0 major, 3 minor)
+PASSED:           2  (V01, V02)
+IN REMEDIATION:   0
 AWAITING REVIEW:  0
 ```
 
@@ -58,6 +58,40 @@ three corrections outstanding, one of them in the measurement pipeline V03's cha
 would inherit. Charged as a **process** MAJOR, deliberately kept out of V02's mastery
 counts, and left untouched and unstaged by R2. **V03 remains gated; the pass must stop
 until V02 receives `PASS`.**
+
+V02 re-reviewed 2026-08-10 (R3): **`PASS`**, confidence HIGH. 0 critical, 0 major,
+2 minor — both non-blocking. **Both of R2's required student corrections are applied and
+both were re-derived from the source in the R3 session, not read from the diffs.** The
+chart was re-measured from the committed PNG with an independent pipeline (177 bars,
+52.277 px per 0.00100, max residual 0.086 pip, validated against the header's *printed*
+last-bar OHLC to 0.48 pip) and the transcript re-counted by regex over the verbatim body.
+Everything reproduces: the day separators at `x = 147, 273, 429, 573, 717, 861, 987, 1149`;
+Sun 2 Aug = **2 bars**, open **0.80552**, high **0.80737 `23:00`**; Fri 31 Jul open
+**0.80578**, low **0.80538**, close **0.80678**; the weekend gap at **−12.63 pip**; the
+`31` and `Aug` label centroids at **146.12** and **273.03**; and `PFH`/`PFL` at **zero**
+occurrences with "peak formation" spelled out four times. `REMEDIATION_PROTOCOL.md` §2 was
+verified line by line — every deleted line has a superseded-in-place counterpart.
+
+**Open item 12 is DISCHARGED.** The two remaining minors are documentation-precision items
+inside sentences that were themselves just corrected, neither of which changes any value or
+conclusion: the `level count` clause in `V02_TRANSCRIPT.md` (the literal string occurs zero
+times; the referent occurs once at `[00:33:11]`), and the *"174 of 176"* continuity figure,
+which does not reproduce — R3 measures **172** at the stated 0.15-pip threshold or **175**
+above 0.8 pip, with three genuine sub-pip gaps besides the weekend one. **The continuity
+figure is recorded against R2, not against the student**, since required correction 1
+instructed the student to state R2's number and the remediation did so accurately. This is
+the second round in a row in which a reviewer's own verified figure failed to reproduce
+under the next round's independent measurement (R1's `PFH`/`PFL` count at R2, R2's
+continuity count at R3) — the pattern is worth carrying to `CUMULATIVE_25.md`.
+
+**The V03 gate is now OPEN** — D-004 satisfied. Separately, the project owner has confirmed
+the parallel V03 work as an **intentional override** of the closed gate rather than an error
+to correct. R3 takes no position on the override itself but records that it is **not yet
+written down**: `DECISIONS.md` has no entry for it, so `COURSE_PROGRESS.md` and open item 9
+below still describe an authorized action as a live violation. Recommended owner action —
+record it as a numbered decision and reconcile both. **The mechanism finding behind open
+item 9 survives the override and is not closed by it:** a written gate with no enforcement
+failed twice in one day.
 
 ---
 
@@ -269,9 +303,12 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 | 9 | V01 R3 | **The V02 gate was not honoured.** `D-004` makes reviewer `PASS` the only progression gate, and `COURSE_PROGRESS.md` recorded `V02 GATE: CLOSED`, yet a full V02 student pass (transcript, notes, interpretation, 25 screenshots, homework, mastery report, `A-019`–`A-028`, `C-003`–`C-004`) was completed while V01 was in remediation. V01's `PASS` makes this moot going forward, and none of the V02 work is discarded — but the gate did not hold, and the next one (V02 `PASS` before V03) must | `DECISIONS.md` D-004; `COURSE_PROGRESS.md` | OPEN — process. **First test PASSED at R2:** V02 R1 returned `REVISE` and no V03 artifact was created — verified at the filesystem level across `03_LESSON_NOTES/`, `04_SCREENSHOTS/`, `05_HOMEWORK/`, `07_MASTERY_REPORTS/`. Stays open until a second gate holds. **ESCALATED at R2 to a LIVE BREACH — the second occurrence, and this one is not moot.** A V03 student pass appeared in the working tree during R2 while V02 was unpassed. **Two failures of the same written gate in one day is a mechanism problem, not a discipline problem:** D-004 has no enforcement, exactly like the status-block rule in R2 Minor 3. Concrete fix — a pre-flight guard in `validate_project.py` that refuses `VNN` artifact creation while `VNN GATE: CLOSED`. Required disposition in `18_REVIEW/V02/V02_REVIEW_R2.md` §7: stop the V03 pass, **do not delete the V03 work**, re-audit it against a passed V02 |
 | 10 | V02 R1 | ~~**`C-001` has one empirical datum and it was misread.**~~ The 11a homework is the only independent observation the project has made about the day-count doctrine, and its "runs Tuesday through Thursday, consistent with 'At Least 3 Days'" claim is contradicted by the chart (price traded back above the Monday high on Thursday). Once 11a is corrected, record what the week **actually** shows against `C-001` — including "nothing", which is a legitimate result. Do not let a corrected reading quietly drop the C-001 entry | `CONTRADICTIONS.md` C-001; `18_REVIEW/V02/V02_REVIEW_R1.md` MAJOR 1 | **CLOSED at R2** — 11a redone from measurement and independently re-verified; the "three days" confirmation withdrawn; the corrected result (level 0.81150 set Mon 3 Aug 15:00 UTC, first bar above it Thu 6 Aug 15:00, **72 hours exactly**) recorded in `CONTRADICTIONS.md` under C-001 as explicitly non-resolving. The entry was **not** quietly dropped. `EFFECT ON C-001: NONE` is correct in both directions — three counting conventions give three answers, and the level was reader-selected against `A-004`. No day-count value is committed anywhere |
 | 11 | V02 R1 | **A-006 / A-003 spot-check requested by V01 R3 — completed, both PASS.** Verified against the frames, not against R3's word: `[00:40:25]` prints "Trigger The Pendings"/"Trigger The Stops" as A-003 claims; `[00:38:50]` shows the pale-blue rectangle's left edge on the second vertical separator and covering a sharp advance, confirming both A-006's withdrawal and R2's narrowing. R3's remediation is substantively correct despite its D-003 departure — though two records is not an audit of fifteen actions | `18_REVIEW/V02/V02_REVIEW_R1.md` Ambiguities | **CLOSED** |
-| 12 | V02 R2 | **`V02_HOMEWORK.md` §1.1's measurement pipeline is advertised as reusable for the dimension-G backtest but places one bar on the wrong side of the Fri 31 Jul → Sun 2 Aug boundary**, and its *"open = prior close on all six boundaries"* self-validation was applied at a weekend boundary where continuity should not be expected. The chart's own dotted day separators (`x = 147, 273, 429, 573, 717, 861, 987, 1149`) settle it. No conclusion in the homework changes. Must be corrected before the pipeline is reused | `V02_HOMEWORK.md` §1.1; `18_REVIEW/V02/V02_REVIEW_R2.md` Minor 1 | OPEN |
+| 12 | V02 R2 | **`V02_HOMEWORK.md` §1.1's measurement pipeline is advertised as reusable for the dimension-G backtest but places one bar on the wrong side of the Fri 31 Jul → Sun 2 Aug boundary**, and its *"open = prior close on all six boundaries"* self-validation was applied at a weekend boundary where continuity should not be expected. The chart's own dotted day separators (`x = 147, 273, 429, 573, 717, 861, 987, 1149`) settle it. No conclusion in the homework changes. Must be corrected before the pipeline is reused | `V02_HOMEWORK.md` §1.1; `18_REVIEW/V02/V02_REVIEW_R2.md` Minor 1 | **CLOSED at R3** — corrected in `8df7c32` and independently re-derived at R3 from the PNG: separators, bar counts, both corrected rows, the −12.63 pip weekend gap and the `31`/`Aug` label centroids (146.12 / 273.03) all reproduce exactly. The two refuted arguments are withdrawn with the measurements that kill them, the superseded reasoning is retained in place per `REMEDIATION_PROTOCOL.md` §2, and the pipeline's real limits are now written into the file: read the chart's own separators, and do not expect continuity across a session gap |
 | 13 | V02 R2 | **Two measurements of the same chart disagree, and one is untracked.** `05_HOMEWORK/V02/measure_usdchf_week.py` is a working, uncommitted measurement script that encodes the *correct* Sun 2 Aug mapping and calls the boundary *"uncertain by one bar"*, contradicting committed §1.1's "settled". **Leave it in place, adjudicate with item 12, do not delete.** §1.1 promises a reproducible method and commits no script; committing a corrected one discharges that promise | `05_HOMEWORK/V02/`; `18_REVIEW/V02/V02_REVIEW_R2.md` Note 8 | OPEN |
-| 14 | V02 R2 | **A stated rule did not prevent the defect it was written for.** `COURSE_PROGRESS.md`'s status view went stale in the same commit that declared the SUMMARY authoritative — fifth occurrence of this class. Promote R1's proposed mechanical check in `validate_project.py` from suggestion to work item at the 25% review; all five occurrences are arithmetic over a file's own contents | `18_REVIEW/REVIEW_INDEX.md` escalation notes; raise at `CUMULATIVE_25.md` | OPEN |
+| 14 | V02 R2 | **A stated rule did not prevent the defect it was written for.** `COURSE_PROGRESS.md`'s status view went stale in the same commit that declared the SUMMARY authoritative — fifth occurrence of this class. Promote R1's proposed mechanical check in `validate_project.py` from suggestion to work item at the 25% review; all five occurrences are arithmetic over a file's own contents | `18_REVIEW/REVIEW_INDEX.md` escalation notes; raise at `CUMULATIVE_25.md` | OPEN — **sixth occurrence at R3**, again inside a remediation: correction 2 shipped in `d030a14` without updating `COURSE_PROGRESS.md`, which still read `⏳ OUTSTANDING` for it, and the PROGRESS TABLE's V02 row had never been reconciled to R2 at all. Discharged by the R3 session, which had to rewrite those lines to record its decision. Six instances, all arithmetic over a file's own contents. **This is a work item at the 25% review, not a suggestion** |
+| 15 | V02 R3 | **`level count` is presented as a verbatim transcript occurrence and the literal string occurs zero times.** The referent is real — *"you can't count the levels"*, `[00:33:11]` — and `A-004` rests on the passage, not the string. `V02_SOURCE_NOTES.md` §3 needs **no** change (its row is headed *"Level count / counting the levels"* and quotes the actual words); only `V02_TRANSCRIPT.md`'s "One thing was removed" paragraph does. Notable because it is the residue of the same false claim: three verbatim counts were asserted, two were checked and found to be zero, the third was carried forward unchecked in the edit that corrected the other two. **Non-blocking; fix at the next natural touch** — exact wording in `V02_REVIEW_R3.md` §3 | `V02_TRANSCRIPT.md` §"One thing was removed"; `18_REVIEW/V02/V02_REVIEW_R3.md` Minor 1 | OPEN |
+| 16 | V02 R3 | **The *"174 of 176"* continuity figure does not reproduce.** R3's independent measurement finds **172** boundaries continuous at the stated 0.15-pip threshold, or **175** above 0.8 pip; three genuine sub-pip gaps exist besides the weekend one (`x=285` −0.19 pip, `x=447` +0.77, `x=933` −0.77, confirmed visually at 4× zoom), so *"the only open ≠ prior-close discontinuity"* is overstated. **174 is unreachable under any threshold. Charged against R2, not the student** — required correction 1 instructed the student to state R2's number and the remediation did so accurately. Changes nothing and errs in the safe direction: continuity is *weaker* than claimed, which strengthens the corrected reasoning. **Non-blocking**; restate as 175 of 176 within 1 pip, only material discontinuity −12.6 pip at `x=273`, three sub-pip gaps besides | `V02_HOMEWORK.md` §1.1/§1.4; `V02_MASTERY_REPORT.md`; `COURSE_PROGRESS.md`; `18_REVIEW/V02/V02_REVIEW_R2.md` §1c | OPEN |
+| 17 | V02 R3 | **An owner-authorized override is recorded in the repository as an unresolved violation.** The project owner confirmed the parallel V03 work as an intentional override of the closed D-004 gate, but `DECISIONS.md` carries no entry for it (last entry D-022), so `COURSE_PROGRESS.md`'s `V03 GATE` block and open item 9 above still read as a live breach. A future session will either halt authorized work or conclude the gate register is unreliable. **Owner action:** record the override as a numbered decision and reconcile both locations to it. **Does not close item 9's mechanism finding** — a written gate with no enforcement failed twice in one day, and the `validate_project.py` pre-flight guard is still the fix | `DECISIONS.md`; `COURSE_PROGRESS.md`; `18_REVIEW/V02/V02_REVIEW_R3.md` Note 3 | OPEN — owner |
 
 ---
 
