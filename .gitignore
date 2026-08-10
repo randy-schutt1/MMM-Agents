@@ -32,6 +32,8 @@
 *.webm
 *.mpg
 *.mpeg
+# *.ts below = MPEG transport stream. NOTE: the pattern also matches TypeScript —
+# if TS tooling is ever added to this project, narrow it to 01_SOURCE_VIDEOS/**/*.ts
 *.ts
 *.vob
 *.mp3

@@ -152,3 +152,83 @@ Secondary, optional: confirm or correct setup issues I-001 … I-004 in
 `00_SYSTEM/SETUP_ISSUES.md`.
 
 ---
+
+## 2026-08-10 — Session 2 — Checkpoint Commit Cadence + Infrastructure Audit
+
+### Objective
+
+(1) Adopt the project owner's instruction to commit at frequent checkpoints rather
+than at session end. (2) Independently re-audit the Phase 0 infrastructure build.
+
+### Correction Note
+
+The checkpoint-cadence change (commit `31fd4d8`) was committed and pushed
+**without appending a LOG.md entry at the time** — a violation of the
+session-close protocol this project itself defines. Per the log rules, this entry
+corrects the omission rather than rewriting history. The audit below caught it.
+
+### Work Completed
+
+- Recorded D-015 (checkpoint commit cadence) in `00_SYSTEM/DECISIONS.md` and
+  propagated it to `SESSION_CLOSE.md` §6, `README.md` §13, and both session
+  prompts. Commit `31fd4d8`.
+- Full infrastructure audit:
+  - All 38 files required by the setup instruction verified present and non-empty.
+  - All D-001…D-015 and I-001…I-007 cross-references resolve; no dangling
+    file references (the `VXX`/`NNN` patterns are intentional placeholders).
+  - `COURSE_PROGRESS.md` header matches the requested column set exactly.
+  - `.gitignore` covers every item from the setup instruction's list.
+  - README internal section references (§11, §13) verified against actual
+    numbering.
+  - Negative-tested `scripts/validate_project.py`: it fails correctly when a
+    required file is removed (96/0/1) and passes when restored (97/0/0) — the
+    green result is not vacuous.
+- Fixes from the audit (this session's commit):
+  - This LOG entry (finding 1: missing Session 2 log entry).
+  - `CHANGELOG.md` 0.1.1 entry for the D-015 process change (finding 2).
+  - Clarifying comment on the `*.ts` pattern in `.gitignore` (finding 3: it means
+    MPEG transport stream; noted so it isn't mistaken for a stray TypeScript
+    exclusion later).
+
+### Key Findings
+
+No Market Maker Method content anywhere in the repository — confirmed by direct
+inspection: 0 manifest rows, 0 progress rows, 0 concepts, 0 ambiguity records,
+0 contradiction records, 0 reviews, 0 backtests, 0 content files in any lesson
+directory. All course-material directories contain only README contracts.
+
+### Manual Backtesting
+
+None. Not applicable before source ingestion.
+
+### Ambiguities / Contradictions
+
+None (course-level). Infrastructure issues remain I-001…I-007 in
+`00_SYSTEM/SETUP_ISSUES.md`, unchanged.
+
+### Decisions
+
+D-015 (see above). No new decisions from the audit.
+
+### Files Created/Updated
+
+`LOG.md`, `CHANGELOG.md`, `.gitignore` (this commit);
+`00_SYSTEM/DECISIONS.md`, `00_SYSTEM/SESSION_CLOSE.md`, `README.md`,
+`00_SYSTEM/STUDENT_SESSION_PROMPT.md`, `00_SYSTEM/REVIEWER_SESSION_PROMPT.md`
+(commit `31fd4d8`).
+
+### Git
+
+```text
+31fd4d8 docs: adopt checkpoint commit cadence
+<this commit> docs: log session 2 and record audit fixes
+```
+
+### Next Action
+
+Unchanged from Session 1: **blocked on source video access.** When available,
+start a Student session with the ingestion instruction in
+`00_SYSTEM/STUDENT_SESSION_PROMPT.md` (first-run variant). Optional: confirm
+I-001…I-004 provisional handling.
+
+---

@@ -11,6 +11,34 @@ Newest first.
 
 ---
 
+## [0.1.1] — 2026-08-10 — Checkpoint commit cadence; audit fixes
+
+### Changed
+
+- Adopted D-015: commit and push at checkpoints during a session (roughly every
+  5–10 artifacts, or at any natural boundary), rather than accumulating a whole
+  session into one end-of-session commit. Propagated to `SESSION_CLOSE.md`,
+  `README.md` §13, and both session prompts.
+
+### Fixed (from infrastructure self-audit)
+
+- Appended the missing `LOG.md` entry for the D-015 session — the change had been
+  committed without a log entry, which the audit flagged as a session-close
+  protocol violation.
+- Added a clarifying comment to the `*.ts` pattern in `.gitignore` (MPEG transport
+  stream, not TypeScript).
+
+### Audit notes
+
+- Verified all 38 required setup files present and non-empty; all D/I
+  cross-references resolve; `COURSE_PROGRESS.md` columns match specification;
+  README section references correct.
+- Negative-tested `scripts/validate_project.py` — it fails correctly when a
+  required file is removed, so its green result is not vacuous.
+- Re-confirmed zero Market Maker Method content anywhere in the repository.
+
+---
+
 ## [0.1.0] — 2026-08-10 — Phase 0: Infrastructure
 
 ### Added
