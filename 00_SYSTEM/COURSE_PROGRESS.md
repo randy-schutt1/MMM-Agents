@@ -11,21 +11,26 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  2  (V01 in remediation, V02 awaiting review)
-VIDEOS PASSED:       0
-CURRENT LESSON:      V01 — re-reviewed R2 2026-08-10: REVISE (HIGH), 0 critical,
-                     1 major. Still in remediation.
-NEXT ACTION:         Apply the 15 required actions in 18_REVIEW/V01/V01_REVIEW_R2.md.
-                     R2 closed R1 findings 2, 4 and 6b, and found R1 finding 1 applied
-                     in only 3 of its 4 locations — AUTOMATION_AMBIGUITIES.md A-006's
-                     trailing block still asserts the overturned elimination (R2 N1,
-                     the one open MAJOR). Everything else is a documentation edit;
-                     no re-study of V01 is required. Then a FRESH reviewer session
-                     writes V01_REVIEW_R3.md (D-003).
+VIDEOS IN PROGRESS:  1  (V02 awaiting review)
+VIDEOS PASSED:       1  (V01)
+CURRENT LESSON:      V02 — student pass complete, AWAITING REVIEW.
+                     V01 — re-reviewed R3 2026-08-10: **PASS** (HIGH), 0 critical,
+                     0 major. COMPLETE. All 15 of R2's required actions applied and
+                     verified against the source; R2 finding N1 (A-006's trailing
+                     block) closed by withdrawing it in place.
+NEXT ACTION:         An independent reviewer session for V02 writes
+                     18_REVIEW/V02/V02_REVIEW_R1.md (D-003). The session that produced
+                     the V02 artifacts cannot review them.
 BLOCKED ON:          nothing. I-006 RESOLVED. I-007 open — blocks V01 H4/H5, which
-                     R1 reclassified from NOT APPLICABLE to DEFERRED (D-019).
-V02 GATE:            CLOSED. D-004 requires reviewer PASS on V01 before V02 opens.
-                     V02 ingestion work exists but must not advance past it.
+                     R1 reclassified from NOT APPLICABLE to DEFERRED (D-019), and it
+                     travels forward as an open research item rather than blocking
+                     advancement.
+V02 GATE:            OPEN as of V01 R3 PASS (D-004 satisfied).
+                     NOTE: the V02 student pass was performed while this gate still
+                     read CLOSED. V01's PASS makes it moot and no V02 work is
+                     discarded, but the gate did not hold — see REVIEW_INDEX.md open
+                     item 9.
+V03 GATE:            CLOSED. D-004 requires reviewer PASS on V02 before V03 opens.
 ```
 
 ---
@@ -51,7 +56,7 @@ fabricate, interpolate, or infer Week 6 content.**
 
 | Video | Session | Duration | Source Verified | Transcript | Notes | Screenshots | Homework | Manual Backtest | Student Mastery | Reviewer | Final Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ⏳ R1 REVISE → R2 REVISE → R3 due | IN REMEDIATION |
+| V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED | ⬜ | AWAITING REVIEW |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |

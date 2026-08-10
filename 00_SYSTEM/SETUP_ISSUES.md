@@ -236,12 +236,20 @@ structural rather than a tooling gap:
 `ffmpeg` can then sample normally. Blocked until the project owner is at his own
 machine (expected Thursday). Nothing else in the project is blocked behind this.
 
-**Interim handling:** V01's artifacts were produced from the transcript alone and say
-so, in `V01_SOURCE_NOTES.md` §4, `V01_INTERPRETATION.md` §9 item 1, and
-`04_SCREENSHOTS/V01/INDEX.md`. No item in `V01_INTERPRETATION.md` is classified
-`VISUAL`, because nothing visual was seen. The approved TradingView-recreation
-fallback has **not** been started; when it is, recreations go to `09_CHART_EXAMPLES/`
-with sidecars, never to `04_SCREENSHOTS/`.
+**Interim handling (superseded by the RESOLUTION below — see the note):** V01's
+artifacts were produced from the transcript alone and say so, in `V01_SOURCE_NOTES.md`
+§4, `V01_INTERPRETATION.md` §9 item 1, and `04_SCREENSHOTS/V01/INDEX.md`. No item in
+`V01_INTERPRETATION.md` is classified `VISUAL`, because nothing visual was seen. The
+approved TradingView-recreation fallback has **not** been started; when it is,
+recreations go to `09_CHART_EXAMPLES/` with sidecars, never to `04_SCREENSHOTS/`.
+
+> **STALE — CORRECTED 2026-08-10 (review R1 finding 6c, `E20`).** The paragraph above is
+> the pre-capture state and is retained as the record of it. Two of its statements are
+> now false: **items in `V01_INTERPRETATION.md` §10 *are* classified `VISUAL`** (`U1`,
+> `U3`, `U4`, `U5`, and the `C1`–`C5` constraints), and `V01_SOURCE_NOTES.md` §4 now
+> carries visual observations read off real frames. The recreation-fallback sentence is
+> superseded by the RESOLUTION below; the prohibition on substituting generated images
+> for real course screenshots is unchanged and permanent.
 
 ### RESOLUTION 2026-08-10 — Ruffle (WASM) in headless Chrome
 
@@ -274,8 +282,15 @@ remains available for illustrating concepts, and if used must go to
 `09_CHART_EXAMPLES/` with sidecars, never to `04_SCREENSHOTS/` — the prohibition below
 on substituting generated images for real course screenshots is unchanged.
 
-**Cost:** capture is real-time, ~1 hour per video. An untested faster path (patching the
-SWF header frame rate in a working copy) is described in the recipe.
+**Cost:** capture was real-time for V01, ~1 hour per video.
+
+> **UPDATED 2026-08-10 (review R3; `REVIEW_INDEX.md` open item 8).** This paragraph read:
+> *"An untested faster path (patching the SWF header frame rate in a working copy) is
+> described in the recipe."* It is no longer untested. `DECISIONS.md` **D-021** records
+> that the frame-rate speedup **works at 40×** and is now the default screenshot method;
+> **D-020**, which had ruled it out, is `RETRACTED`. Open item 8 in `REVIEW_INDEX.md`
+> described this staleness but cited D-020's ruling rather than its retraction, and is
+> corrected in the same round.
 
 ---
 

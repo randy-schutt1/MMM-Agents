@@ -82,7 +82,7 @@ reader can tell which claims survive on audio alone.
 | S16 | `[00:35:15]` | "I can tell you that if the anchor point comes in on a Tuesday, it is **likely** that they will rise for what's perceived as four days, three and a half days, three days." | EXPLICIT |
 | S17 | `[00:35:43]` | "If the dealer is trying to trap lower level longs or higher level shorts, he will pull away from that area an extra day if it happens to fall on Friday." | EXPLICIT |
 | S18 | `[00:35:55]` | "If the dealer anchors in on Tuesday and rises Tuesday, [Asian] session, half a day, he'll rise Wednesday, Thursday and complete the cycle on Friday." | EXPLICIT |
-| S19 | `[00:36:38]` | "But if the dealer anchors in early because he completed the pattern… in the previous week, then you're still looking for trades away from the anchor point going into Friday if he issues you the signal." | EXPLICIT |
+| S19 | `[00:36:17]` | "But if the dealer anchors in early because he completed the pattern… in the previous week, then you're still looking for trades away from the anchor point going into Friday if he issues you the signal." | EXPLICIT |
 | S20 | `[00:50:49]` | "A typical trading week, you have to be able to identify the cycle." | EXPLICIT |
 | S21 | `[00:51:22]` | "When the dealer anchors in the middle of the week, you only are trading one direction till Friday away from the peak formation down short. Only short trades will be warranted." | EXPLICIT |
 | S22 | `[00:51:34]` | "When you become more proficient, you can trade both ways. But right now, if you're struggling, I want you to try to identify the anchor point and take shorts off of stop [hunt] high drop." | EXPLICIT |
@@ -95,13 +95,13 @@ reader can tell which claims survive on audio alone.
 
 | # | Timestamp | Statement | Type |
 |---|---|---|---|
-| S27 | `[00:36:38]` | "Understand that the trap moves are the key to your success in the business. It's identifying where the trap moves are made." | EXPLICIT |
+| S27 | `[00:36:38]` | "Understand that the trap moves [are] the key to your success in the business. It's identifying where the trap moves are made." | EXPLICIT |
 | S28 | `[00:36:49]` | "On the broader spectrum, the trap moves are made at the beginning of the week, Sunday and Monday." | EXPLICIT |
-| S29 | `[00:37:04]` | "In [intra]day, they're made at the beginning of every day, Asian session." | EXPLICIT |
+| S29 | `[00:36:56]` | "In [intra]day, they're made at the beginning of every day, Asian session." | EXPLICIT |
 | S30 | `[00:37:04]` | "And they're made at the beginning of London's day and the beginning of the U.S. day, which is the beginning of the sessions." | EXPLICIT |
 | S31 | `[00:37:14]` | "They make a false move at the end of the session for that dealer to square his books." | EXPLICIT |
 | S32 | `[00:37:23]` | "And they make a trap move at the end of the day and Friday at the end of the week to end the cycle." | EXPLICIT |
-| S33 | `[00:45:40]` | Recap, verbatim list: "False move week beginning, beginning of the session, end of the session, end of the week." | EXPLICIT |
+| S33 | `[00:45:44]` | Recap, verbatim list: "False move week beginning, beginning of the session, end of the session, end of the week." | EXPLICIT |
 | S34 | `[00:38:27]` | "If they make a false move at the beginning of the week, what you have to ask yourself is, don't fall for it. Don't bite at the beginning of the week and get stuck holding a wrong directional position." | EXPLICIT |
 | S35 | `[00:39:53]` | "You're only going to get one to three levels out of the false move week beginning." | EXPLICIT |
 | S36 | `[00:53:15]` | "It's not like they have a monster bag of tricks." | EXPLICIT |
@@ -170,7 +170,7 @@ Recording these is the point of the section. Each is used as though already know
 | Anchor point | `[00:34:47]` | Used ~8 times. Appears alongside "peak formation high or low" `[00:34:26]` and "W or M formation" `[00:34:47]`, but the relationship between the three is never stated. |
 | Peak formation high / low | `[00:34:26]` | Introduced while describing a former student, not taught. |
 | M and W formation | `[00:34:47]` | Referenced as known. No anatomy, no leg count, no timing. |
-| Trap move / false move | `[00:33:33]` | Defined only by *when* it happens, never by *what it looks like*. |
+| Trap move / false move | `[00:30:40]` | Defined only by *when* it happens, never by *what it looks like*. **Citation corrected 2026-08-10 (review R3):** the first-use marker was given as `[00:33:33]`, which is neither a transcript marker nor a passage about trap moves — it falls inside the forum-admin exchange. The term's first occurrence in V01 is `[00:30:40]`, "Now let's talk about some trap moves the trading zone…". |
 | Level | `[00:35:38]`, `[00:39:53]` | Used as a countable unit ("four levels here", "one to three levels"). Never defined or measured. |
 | Trading zone | `[00:30:40]` | Explicitly deferred: "which I'm going to discuss tonight" `[00:44:22]`. Not delivered in this file. |
 | Tracer | `[00:38:57]` | "this is the tracer Sunday Monday, right? These two lines." Points at a visual not available. |
@@ -234,6 +234,24 @@ Described neutrally: what is on screen, not what it means.
 | V11 | `[00:51:45]` | As V10 | Same chart with green freehand marks over the decline | `V01_00-51-45_typical-week-drawn-on.png` |
 | V12 | `[00:52:10]` | As V10 | Further green freehand marks | `V01_00-52-10_typical-week-more-drawing.png` |
 | V13 | `[00:16:55]`, `[00:19:20]` | Slide, no chart | **"STUDENT RATING SELF EVALUATION"** — the survey, questions 1–18 fully legible | `V01_00-16-55_...png`, `V01_00-19-20_...png` |
+| V14 | `[00:54:30]` | As V10 (`GBPUSD,M15`) | **The final annotated state of the "Typical Week" chart at lesson end.** All five printed annotations from V10 remain, with day labels Sunday / Monday / Tues / Wed / Friday. The instructor's accumulated green freehand now spans the whole week: a large loop enclosing the Sunday–Monday decline into the Tuesday low, an up-stroke out of that low, strokes tracing the Wednesday advance, and short horizontal strokes at the Friday region. Nothing drawn is named or labelled | `V01_00-54-30_typical-week-final-state.png` |
+
+> **`V14` added 2026-08-10 (review R2 finding N8 / R1 finding 8).** `[00:54:30]` had been
+> omitted from this table. It is **not** an administrative slide: it is a teaching frame,
+> and the only one showing the fully accumulated annotation. R1 proposed scoping this
+> table to "teaching slides only", which would have been false as stated while
+> `[00:54:30]` was missing. With `V14` present, the scope statement below is accurate.
+
+**Coverage of this table, stated so it is not mistaken for the full index.** The 14 rows
+above cover **15 of the 22** indexed screenshots (`V13` covers two, `V10`/`V14` are the
+same chart at two states). The seven not described here — `[00:00:35]`, `[00:02:35]`,
+`[00:06:15]`, `[00:09:50]`, `[00:14:10]`, `[00:24:10]`, `[00:27:50]` — are administrative
+slides from `[00:00:00]`–`[00:33:41]`: course framing, the five conduct bullets, the
+contact address, the forum layout, the student-folder instructions, the extra survey
+items 19–21 and the "baggage" question, and the "Teaching 26 to 90" title card. Their
+content is captured in §2a and §11; they are indexed and captioned in
+`04_SCREENSHOTS/V01/INDEX.md`, and none carries chart content. **This table covers every frame with teaching content; it is not the
+screenshot index.**
 
 ### Corrections to earlier sections arising from the visuals
 
@@ -351,8 +369,8 @@ timeframe, an entry, a stop, or a result.
 | # | Timestamp | Rule affected | Exception as stated |
 |---|---|---|---|
 | X1 | `[00:35:43]` | "trade away from the anchor for two and a half to three more days" (S15) | "He will pull away from that area an extra day if it happens to fall on Friday." |
-| X2 | `[00:36:17]` | The day count itself | The instructor names his own inconsistency out loud: "Steve, you said three days, three levels. Four days or three and a half days… It's more than what I've told you. I understand that." He does not resolve it. |
-| X3 | `[00:36:38]` | Anchor timing | "If the dealer anchors in early because he completed the pattern… in the previous week, then you're still looking for trades away from the anchor point going into Friday **if he issues you the signal**." |
+| X2 | `[00:36:07]`–`[00:36:15]` | The day count itself | The instructor names his own inconsistency out loud: "Steve, you said three days, three levels. Four days or three and a half days… It's more than what I've told you. I understand that." He does not resolve it. |
+| X3 | `[00:36:17]` | Anchor timing | "If the dealer anchors in early because he completed the pattern… in the previous week, then you're still looking for trades away from the anchor point going into Friday **if he issues you the signal**." |
 | X4 | `[00:44:03]` | "take only trades established by the trading zone" (S44) | "When you become more experienced… the blue box is more of a guide." |
 | X5 | `[00:51:34]` | "Only short trades will be warranted" (S21) | "When you become more proficient, you can trade both ways." |
 | X6 | `[00:52:56]` | The cycle starting Sunday/Monday | "Sometimes it might start on Thursday. You might get the midweek reversal." |
@@ -387,7 +405,7 @@ Recorded exactly as given, **with the qualifier attached.**
 
 **N1 and N2 disagree** — "two and a half to three more days" versus "four days,
 three and a half days, three days" — twenty seconds apart, and the instructor
-acknowledges the disagreement at `[00:36:17]` without resolving it. Logged in §14 and
+acknowledges the disagreement at `[00:36:13]`–`[00:36:15]` without resolving it. Logged in §14 and
 carried to `V01_INTERPRETATION.md` §8.
 
 **No indicator parameter of any kind is stated in this video.** No moving-average
@@ -479,8 +497,8 @@ beginning of this bootcamp cycle. Material assumed here may never be taught in t
 | `[00:51:11]` | "The dealer anchors would have stopped lost. You are long." | Syntactically broken. The point being made about direction versus retail bias cannot be reconstructed with confidence. |
 | `[00:37:32]`–`[00:37:49]` | "they were shifting to zone and jamming people up for the gap or whatever happens that happened when they opened here" | Refers to a specific week and a specific slide. Without the visual this is not interpretable. |
 | `[00:48:51]` | "pull away from higher level long holders, analyze, drop down" | "analyze" does not fit the sentence. Possibly a mis-hearing of a formation name. |
-| `[00:35:05]` vs `[00:35:15]` | "two and a half to three more days" versus "four days, three and a half days, three days" | Two different durations for the same thing, twenty seconds apart. The instructor acknowledges the conflict at `[00:36:17]` and does not resolve it. **This is a source contradiction, not a transcription error.** |
-| `[00:30:35]` / `[00:36:38]`–`[00:37:09]` vs `[00:45:44]` | **The trap-move enumeration is given as six, then recapped as four.** Added 2026-08-10 per review R1 finding 4 (`E13`). The `[00:30:35]` slide lists six boundaries — Beginning Of The Week (Sun/Mon), Beginning Of The Day, Beginning Of The Session, End Of The Session, End Of The Day, End Of The Week — and the spoken enumeration at `[00:36:38]`–`[00:37:09]` (S28–S32) matches it one-for-one. The recap at `[00:45:44]` (S33) gives **four**: "False move week beginning, beginning of the session, end of the session, end of the week" — dropping *beginning of the day* and *end of the day*. | Most probably an abbreviated recap rather than a correction: the four retained items are the ones the surrounding teaching is actually about, and the instructor is mid-example rather than re-stating the taxonomy. **That reading is recorded as a reading, not as a resolution.** The slide is the higher-tier evidence (`REVIEW_PROTOCOL.md` §5 level 2 over level 3) and the six-item list should be treated as the enumeration. Do not treat the four-item recap as narrowing it, and do not treat the six-item list as evidence that day-boundary traps are taught here — neither the day-open nor the day-close item is developed anywhere in V01 beyond appearing on the slide and in the one spoken pass. |
+| `[00:35:05]` vs `[00:35:15]` | "two and a half to three more days" versus "four days, three and a half days, three days" | Two different durations for the same thing, twenty seconds apart. The instructor acknowledges the conflict at `[00:36:13]`–`[00:36:15]` and does not resolve it. **This is a source contradiction, not a transcription error.** |
+| `[00:30:35]` / `[00:36:49]`–`[00:37:28]` vs `[00:45:44]` | **The trap-move enumeration is given as six, then recapped as four.** Added 2026-08-10 per review R1 finding 4 (`E13`). The `[00:30:35]` slide lists six boundaries — Beginning Of The Week (Sun/Mon), Beginning Of The Day, Beginning Of The Session, End Of The Session, End Of The Day, End Of The Week — and the spoken enumeration at `[00:36:49]`–`[00:37:28]` (S28–S32) matches it one-for-one. **Range corrected 2026-08-10 (review R2 finding N6):** it was first written as `[00:36:38]`–`[00:37:09]`, which starts on `S27` (a different statement) and stops mid-list at item three — the cited span contained four of the six items, contradicting the note's own count. The six land at `[00:36:49]`, `[00:36:56]`, `[00:37:04]`, `[00:37:14]`, and `[00:37:23]`–`[00:37:28]` (two). The recap at `[00:45:44]` (S33) gives **four**: "False move week beginning, beginning of the session, end of the session, end of the week" — dropping *beginning of the day* and *end of the day*. | Most probably an abbreviated recap rather than a correction: the four retained items are the ones the surrounding teaching is actually about, and the instructor is mid-example rather than re-stating the taxonomy. **That reading is recorded as a reading, not as a resolution.** The slide is the higher-tier evidence (`REVIEW_PROTOCOL.md` §5 level 2 over level 3) and the six-item list should be treated as the enumeration. Do not treat the four-item recap as narrowing it, and do not treat the six-item list as evidence that day-boundary traps are taught here — neither the day-open nor the day-close item is developed anywhere in V01 beyond appearing on the slide and in the one spoken pass. |
 | `[00:20:43]`–`[00:21:57]` | Survey numbering collapses: "I know I jumped over", "I missed 13", "Sorry, back up" | Question numbers 12–17 cannot be reliably mapped to question text from this transcript. |
 | Whole file | No `[inaudible]` or `[unclear]` marker anywhere across 54 minutes | The transcriber produced a best guess everywhere rather than declaring failure. The entries above are the *detectable* damage; there may be confident-sounding lines that are also wrong. |
 | `[00:38:57]`–`[00:54:38]` | Continuous deictic reference to slides — "this", "right here", "these two lines", "where I've drawn it" | **The largest single gap.** The teaching half of this lesson is narration over images that were never captured. Roughly half of what was taught is not in the transcript at all. |

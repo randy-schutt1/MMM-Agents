@@ -35,19 +35,19 @@ screen; `INFERRED` = the agent's reading of the image.
 | Screenshot | Timestamp | Concept | What to notice | Rule supported | Classification |
 |---|---|---|---|---|---|
 | `V01_00-00-35_boot-camp-intro-slide.png` | `[00:00:35]` | Course framing | Slide text matches the transcript opening almost word for word | §1 overview | SOURCE |
-| `V01_00-02-35_managing-expectations-slide.png` | `[00:02:35]` | Student conduct | Five bullets: follow free from distraction; honest effort on assignments; execute in demo; refrain from negativity; take your time | S1–S7 | SOURCE |
+| `V01_00-02-35_managing-expectations-slide.png` | `[00:02:35]` | Student conduct | Five bullets: follow free from distraction; honest effort on assignments; execute in demo; refrain from negativity; take your time. **`S2` ("it's not the method") and `S6` (the four-week pact) are spoken only — they are not on this slide** | S1, S3, S4, S5, S7 | SOURCE |
 | `V01_00-06-15_contact-email-slide.png` | `[00:06:15]` | Admin | Contact address slide | — | SOURCE |
 | `V01_00-09-50_forum-layout-screenshot.png` | `[00:09:50]` | Admin | Screen capture of the reorganised forum; sections visible | H1 submission location | VISUAL |
 | `V01_00-14-10_student-folder-slide.png` | `[00:14:10]` | Admin | Template / student folder instructions | S9 | SOURCE |
 | `V01_00-16-55_survey-questions-1-to-9.png` | `[00:16:55]` | Curriculum | Titled **"STUDENT RATING SELF EVALUATION"**. Questions 1–9 legible | H1 | SOURCE |
-| `V01_00-19-20_survey-questions-10-to-18.png` | `[00:19:20]` | Curriculum | Questions 10–18 legible, including *"10. Do you know how to read the EMA's in real time?"* | H1, A-013 | SOURCE |
+| `V01_00-19-20_survey-questions-10-to-18.png` | `[00:19:20]` | Curriculum | Questions 10–18 legible, including *"10. Do you know how to read the EMA's in real time?"*, *"12. Have you doubled a demo account? Y N"* (the printed origin of `A-013`'s candidate measure 1, though it does not define the skill threshold) and *"16. Can you identify a mid week reversal"* | H1, A-012 | SOURCE |
 | `V01_00-24-10_survey-target-and-baggage-questions.png` | `[00:24:10]` | Curriculum | IDEAL % gain target per month / per week; London vs NY; other analysis "baggage" | H2, H3 | SOURCE |
 | `V01_00-27-50_teaching-26-to-90-slide.png` | `[00:27:50]` | Admin | Reads "Teaching 26 to 90 day 1" | — | SOURCE |
-| `V01_00-30-35_trap-moves-are-made-list.png` | `[00:30:35]` | **Trap-move timing** | Slide **"How To Beat The Market Maker — The Trap Moves Are Made:"** listing six boundaries | **S28–S33** | **VISUAL** |
+| `V01_00-30-35_trap-moves-are-made-list.png` | `[00:30:35]` | **Trap-move timing** | Slide **"How To Beat The Market Maker — The Trap Moves Are Made:"** listing six boundaries. **`S33` is the four-item recap at `[00:45:40]` and is not on this slide** — it is the other side of the six-vs-four mismatch recorded in `V01_SOURCE_NOTES.md` §14 | **S28–S32** | **VISUAL** |
 | `V01_00-38-50_beginning-of-week-chart.png` | `[00:38:50]` | Weekly cycle | Slide titled **"Beginning Of Week"**. Candles, four MA lines (yellow/red/cyan/white), a blue shaded box and a red shaded box, red and green arrows | S34, S35 | **VISUAL** |
 | `V01_00-39-10_week-beginning-trap-high-label.png` | `[00:39:10]` | Weekly cycle | Same chart carrying the printed label **"Week Beginning Trap High"** | S34, W1 | **VISUAL** |
 | `V01_00-39-40_beginning-of-week-drawn-on.png` | `[00:39:40]` | Weekly cycle | Instructor's live green freehand annotation added over the same chart | Steps 1–12, §5 | **VISUAL** |
-| `V01_00-40-25_beginning-of-session-chart.png` | `[00:40:25]` | **Session traps** | Slide **"Beginning Of Session"**. Printed labels **"Trigger The Pendings"**, **"Trigger The Stops"**, **"Beginning Of Sessions"**. Blue box over the low flat range; red box over the post-run high | **S29–S31, A-003** | **VISUAL** |
+| `V01_00-40-25_beginning-of-session-chart.png` | `[00:40:25]` | **Session traps** | Slide **"Beginning Of Session"**. Printed labels **"Trigger The Pendings"**, **"Trigger The Stops"**, **"Beginning Of Sessions"**. Blue box over the low flat range; red box over the post-run high. **Nothing on this slide concerns the *end* of a session, which is `S31`** | **S29–S30, A-003** | **VISUAL** |
 | `V01_00-43-58_beginning-of-session-drawn-on.png` | `[00:43:58]` | Session traps | Same chart with live green annotation | S39–S41 | **VISUAL** |
 | `V01_00-44-40_end-of-week-chart.png` | `[00:44:40]` | End-of-week trap | Slide **"End Of Week"**. Red box mid-chart, blue box at lower right, printed label "End Of Week" | S55–S57 | **VISUAL** |
 | `V01_00-46-05_end-of-week-drawn-on.png` | `[00:46:05]` | End-of-week trap | Same chart, live annotation added | S55–S59 | **VISUAL** |
@@ -56,6 +56,13 @@ screen; `INFERRED` = the agent's reading of the image.
 | `V01_00-51-45_typical-week-drawn-on.png` | `[00:51:45]` | Weekly cycle | Same chart with live green annotation over the drop | S53, A-009 | **VISUAL** |
 | `V01_00-52-10_typical-week-more-drawing.png` | `[00:52:10]` | Weekly cycle | Further annotation | S54–S56 | **VISUAL** |
 | `V01_00-54-30_typical-week-final-state.png` | `[00:54:30]` | Weekly cycle | Final state of the annotated chart at lesson end | S60 | **VISUAL** |
+
+> **Four rows corrected 2026-08-10 (review R1 finding 7 and R2 finding N7, `E20`).** Each
+> claimed rule support the image does not carry: `[00:02:35]` cited `S1–S7` where two of
+> the seven are spoken only; `[00:19:20]` cited `A-013` where the bearing item is `A-012`;
+> `[00:30:35]` cited `S28–S33` where `S33` is a later recap; `[00:40:25]` cited `S29–S31`
+> where nothing on the slide concerns a session end. All four were checked against the
+> images, not against the transcript.
 
 ---
 

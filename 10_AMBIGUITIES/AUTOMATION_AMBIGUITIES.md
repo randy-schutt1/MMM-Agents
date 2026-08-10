@@ -9,22 +9,28 @@ Template: `00_SYSTEM/TEMPLATES/AMBIGUITY_TEMPLATE.md`
 ## STATUS
 
 ```text
-RECORDS:         18   (A-001 … A-018)
-LESSONS STUDIED:  1   (V01)
+RECORDS:         28   (A-001 … A-028)
+LESSONS STUDIED:  2   (V01, V02 — V02 not yet reviewed)
 RESOLVED:         1   (A-003 — "pendings", on visual evidence at [00:40:25])
-DO NOT CODE:     17
+DO NOT CODE:     27
 ```
 
 > **UPDATED 2026-08-10 (review R1, finding 6b).** This block previously read
 > `RECORDS: 0` and *"**Intentionally empty.** No course material has been studied, so no
 > course ambiguity has been observed."* Both statements were true at project start and
-> are now false — the file holds eighteen records. Corrected so the status does not
-> contradict the file's own contents.
+> are now false. Corrected so the status does not contradict the file's own contents.
+>
+> **UPDATED again 2026-08-10 (review R3).** The R1 correction read `RECORDS: 18 /
+> LESSONS STUDIED: 1`, which was accurate when written and went stale the moment the
+> V02 pass added `A-019`–`A-028`. This is the third occurrence of the same staleness
+> class in this one status block (`E20`); the counts above are arithmetic over the
+> records the file actually contains.
 
-All eighteen arise from **V01 alone**, which names seventeen load-bearing terms and
-defines none of them. `A-003` is the only one resolved, and it was resolved by text
-printed on a slide rather than by anything spoken. The remaining seventeen are
-`DO NOT CODE`.
+Eighteen (`A-001`–`A-018`) arise from **V01 alone**, which names seventeen load-bearing
+terms and defines none of them. Ten (`A-019`–`A-028`) were added by the V02 pass, which
+also extended six of the V01 records. `A-003` is the only record resolved, and it was
+resolved by text printed on a slide rather than by anything spoken. The remaining
+twenty-seven are `DO NOT CODE`.
 
 Records appear here only when an actual lesson uses an actual subjective phrase.
 
@@ -87,7 +93,7 @@ resolved record keeps its history.
 |---|---|---|---|---|
 | A-001 | "anchor point" | V01 `[00:34:47]` | DO NOT CODE | Foundational. Sets weekly direction and holding period. Wrong = every weekly-bias rule is wrong. |
 | A-002 | "trap move" / "false move" | V01 `[00:34:33]` | DO NOT CODE | Foundational. The lesson's central object. Wrong = the whole framing is misapplied. |
-| A-003 | "picks up the [?penings?]" → **"pendings"** | V01 `[00:39:12]` | **RESOLVED BY COURSE** | Unknown — the word itself is unrecovered. Sits at two steps of the core sequence. |
+| A-003 | "picks up the [?penings?]" → **"pendings"** | V01 `[00:39:12]` | **RESOLVED BY COURSE** | Contained. The word is recovered — *pendings* = pending orders, printed at `[00:40:25]`. It is *identified*, not *quantified*: nothing supports a numeric representation of where pending orders sit. |
 | A-004 | "level" (countable unit) | V01 `[00:35:38]` | DO NOT CODE — **materially constrained** by V02 slide `[00:18:00]` | High. V02's chart prints Level 1/2/3 as an ordinal sequence of legs. |
 | A-005 | "the trading zone" | V01 `[00:30:40]` | DO NOT CODE | Foundational. The stated entry filter for struggling traders. **Deferred twice: V01→V02, then V02 `[00:45:52]`→V03.** |
 | A-006 | "the blue box" / "the box" / "the red box" | V01 `[00:43:07]` | DO NOT CODE | High. Three box terms, no definition, one entry prohibition attached. |
@@ -131,13 +137,18 @@ A point established by the dealer, usually mid-week, after which price moves awa
 | V01 | `00:34:47` | "you identify the anchor point of the cycle, W or M formation, multi session over Tuesday, Wednesday or Monday, Tuesday" |
 | V01 | `00:35:05` | "If the anchor point is in place, you trade away from the anchor for two and a half to three more days." |
 | V01 | `00:35:55` | "if the dealer anchors in on Tuesday and rises Tuesday… he'll rise Wednesday, Thursday and complete the cycle on Friday" |
-| V01 | `00:36:38` | "if the dealer anchors in early because he completed the pattern… in the previous week" |
+| V01 | `00:36:17` | "if the dealer anchors in early because he completed the pattern… in the previous week" |
 | V01 | `00:51:22` | "When the dealer anchors in the middle of the week, you only are trading one direction till Friday away from the peak formation down short." |
 | V01 | `00:51:38` | "I want you to try to identify the anchor point and take shorts off of stop [hunt] high drop" |
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* That was true when written and became false when I-006 was `RESOLVED` and 22 frames were captured. Original wording retained so the change is visible.
+
+**Not defined by the frames, but no longer unseen.** 22 screenshots exist for V01
+(`04_SCREENSHOTS/V01/INDEX.md`). See the *Visual Evidence Update* at the foot of this
+record: `[00:50:55]` shows the structure the instructor describes and names none of it
+"anchor point".
 
 ### Counter-examples
 
@@ -211,7 +222,28 @@ A deliberate price movement made by the dealer to induce retail traders into the
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible. The determination below is the student's, made against the frames named, and was flagged as required work by review R2 Part 3.3.
+
+**Materially constrained by the frames; still not defined.** Read from `[00:30:35]`,
+`[00:38:50]` and `[00:48:35]`:
+
+- `[00:30:35]` is a text slide headed **"How To Beat The Market Maker"** / **"The Trap
+  Moves Are Made:"** followed by the six boundaries. It fixes the *taxonomy* — the term
+  is defined by occasion, exactly as the audio has it — and shows nothing of shape.
+- `[00:38:50]` prints **"Week Beginning Trap High"** on the chart itself, directly above
+  the advance enclosed by the pale-blue rectangle. This is the one place in V01 where the
+  word "trap" is pinned to a specific location on a specific price move.
+- `[00:48:35]` carries the printed title **"Trap Here..Higher Level Long Holders"**,
+  positioned above the dark-red rectangle that covers the area price ran into. This is a
+  slide title placed over a region, not a label attached to a candle.
+
+**What this adds:** it fixes *where on a chart the instructor applies the word* — at the
+top of a week-opening advance, and over the region traders are left holding. The audio
+gave only *when*.
+
+**What it does not add:** no shape, no size, no bar count, no invalidation, and no
+outcome. Both labelled instances are prepared examples with no stated result, and two
+instances cannot bound a definition. **Status unchanged: `DO NOT CODE`.**
 
 ### Counter-examples
 
@@ -256,7 +288,20 @@ Foundational. This is the lesson's central object and the thing the trader is to
 
 ### Course Meaning
 
-**The word itself has not been recovered.** It is transcribed as "penings" four times in identical construction, always as a thing the dealer collects at the same moment he "hits the stops". It is not an English word and no course meaning can be stated. Recording it as an ambiguity rather than guessing is the correct handling.
+> **CORRECTED 2026-08-10 (review R3, action 2 — R1 finding 10 as widened by R2).** The five fields flagged below were written before the word was recovered and were left unchanged when the trailing `RESOLVED BY COURSE` block was appended. A reader who stopped before that block learned the opposite of the truth. Each is corrected in place with its original wording retained.
+
+**The word is "pendings" — pending orders.** Original wording: *"**The word itself has
+not been recovered.** It is transcribed as "penings" four times in identical
+construction, always as a thing the dealer collects at the same moment he 'hits the
+stops'. It is not an English word and no course meaning can be stated. Recording it as
+an ambiguity rather than guessing is the correct handling."*
+
+That refusal was correct at the time and the resolution vindicates it: the word was
+never guessable from audio. `V01_00-40-25_beginning-of-session-chart.png` prints
+**"Trigger The Pendings"** on the chart, paired with **"Trigger The Stops"**. The
+recurring construction therefore names **two distinct pools of resting orders** the
+dealer collects at a boundary — stop orders and pending orders. See the trailing
+`RESOLVED BY COURSE` block for the full evidence.
 
 ### Evidence
 
@@ -268,7 +313,13 @@ Foundational. This is the lesson's central object and the thing the trader is to
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+**The word is printed on the `[00:40:25]` slide.** Original wording: *"**Unknown — no
+screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a
+slide while using this phrase, so the visual characteristics are precisely the part that
+was lost."* That diagnosis was exactly right — the missing channel was carrying the
+answer. `V01_00-40-25_beginning-of-session-chart.png` prints **"Trigger The Pendings"**
+above the pre-session range and **"Trigger The Stops"** below it, on a slide titled
+"Beginning Of Session". The instructor never reads either label aloud.
 
 ### Counter-examples
 
@@ -278,12 +329,21 @@ None. V01 shows no example where this was rejected or explicitly not applied. Co
 
 | # | Candidate measure | Rationale | Course support |
 |---|---|---|---|
-| 1 | (none proposed) | Proposing a measurable representation for a word that has not been read would be inventing the concept outright | NONE |
+| 1 | (none proposed) | The word is now read, but reading a word is not measuring an object. Nothing in V01 states where pending orders sit, how many there are, or how a chart would show them | NONE |
+
+> Original rationale for candidate 1, retained: *"Proposing a measurable representation
+> for a word that has not been read would be inventing the concept outright."* The reason
+> has changed; the conclusion has not.
 
 ```text
-Classification:          INFERRED MACHINE CANDIDATE
-Canonical Course Status: NOT A COURSE RULE
+Classification:          RESOLVED BY COURSE — the term is identified
+Canonical Course Status: COURSE TERM (printed on the [00:40:25] slide)
 ```
+
+> Original classification block, retained: `INFERRED MACHINE CANDIDATE` /
+> `NOT A COURSE RULE`. Superseded — the term is printed on the instructor's own slide,
+> so it is course vocabulary, not an agent inference. **This resolves the word, not a
+> rule:** no rule attaches to it and none may be written from it.
 
 ### Current Status
 
@@ -293,11 +353,20 @@ RESOLVED BY COURSE
 
 ### Required Research
 
-Re-listening to the audio at `[00:39:12]` and `[00:39:43]`. This is the cheapest open question in V01 to resolve and it sits at two of the twelve steps of the core sequence.
+**None outstanding for the word itself.** Original entry, retained: *"Re-listening to
+the audio at `[00:39:12]` and `[00:39:43]`. This is the cheapest open question in V01 to
+resolve and it sits at two of the twelve steps of the core sequence."* It was resolved
+instead by a printed slide label, at no audio cost. What remains open is not lexical:
+whether any later lesson attaches an identifiable chart location to pending orders. Watch
+V03 onward; do not go looking for one in V01.
 
 ### Impact If Wrong
 
-Unknown, which is itself the problem. It is a named object in the mechanism the whole lesson describes. It may be trivial or it may be a core concept.
+**Contained.** Original entry, retained: *"Unknown, which is itself the problem. It is a
+named object in the mechanism the whole lesson describes. It may be trivial or it may be
+a core concept."* Now that the word is read, the exposure is bounded: it names a pool of
+resting orders alongside stops at two steps of the core sequence. The live risk is no
+longer misreading the word — it is quantifying it, which nothing in V01 supports.
 
 ### Related
 
@@ -341,7 +410,14 @@ A discrete unit of price movement that can be counted. The instructor and his st
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+**Constrained by the frames.** See the *Visual Evidence Update* at the foot of this
+record: `[00:50:55]` shows horizontal dashed lines in yellow, red and cyan and prints
+*"Level Not Crossed Until Late Friday"* against one. Note that V02's slide `[00:18:00]`
+subsequently prints `Level 1` / `Level 2` / `Level 3` as an ordinal sequence of legs,
+which is a *different* reading of the same word; both are recorded, neither is adopted
+(see the V02 evidence table at the foot of this file).
 
 ### Counter-examples
 
@@ -414,7 +490,13 @@ An area or condition that qualifies a setup. The instructor makes it the mandato
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+**Screenshots exist and none bears on this term.** All 22 V01 frames were read
+(`04_SCREENSHOTS/V01/INDEX.md`). None prints the words "trading zone" or marks a region
+so named. That is a stronger and more useful statement than "no screenshot exists": the
+visual channel was recovered and the term still is not shown, which is consistent with
+the instructor deferring it — twice, V01→V02→V03.
 
 ### Counter-examples
 
@@ -476,7 +558,29 @@ Three distinct box terms appear in V01. **None is defined and it is not establis
 
 Read from captured frames `[00:38:50]`, `[00:40:25]`, `[00:44:40]`, `[00:48:35]`:
 
-The boxes are **shaded rectangles with both a time extent and a price extent**. Pale blue covers flat, low-range consolidation; dark red covers the extended area where price is described as trapped. At `[00:48:35]` each rectangle carries a numeric label (`R = 70.5`, `R = 51…`, `= 43.1`) — see `A-018` — so they bound a measured region rather than being decorative shading.
+The boxes are **shaded rectangles with both a time extent and a price extent**. At
+`[00:48:35]` each rectangle carries a numeric label (`R = 70.5`, `R = 51…`, `= 43.1`) —
+see `A-018` — so they bound a measured region rather than being decorative shading.
+
+> **NARROWED 2026-08-10 (review R2 finding N5, `E02`).** This paragraph previously
+> continued: *"Pale blue covers flat, low-range consolidation; dark red covers the
+> extended area where price is described as trapped."* The first half is contradicted by
+> one of the four frames it rests on. Corrected below; original wording retained.
+
+What the four frames actually show, frame by frame:
+
+| Frame | Pale blue covers | Dark red covers |
+|---|---|---|
+| `[00:38:50]` | the **sharp week-opening advance** from the week-open low to the "Week Beginning Trap High" — neither flat nor low-range | a later decline |
+| `[00:40:25]` | a low, flat pre-session range | the high area after a steep rise |
+| `[00:44:40]` | a flat sideways range at lower right | a decline mid-chart |
+| `[00:48:35]` | a flat low range at left, and a range at right | the area price ran into after the large up-candle |
+
+Three of four pale-blue rectangles sit over flat consolidation and the fourth sits over
+a directional advance. **No unifying rule for what blue marks is offered here**, because
+four frames do not supply one. Dark red is more consistent — in all four it covers the
+region price has run into and where traders are described as trapped — but four
+prepared examples are not a definition either.
 
 **What this does NOT settle.** Both candidate measures below remain live. A rectangle has two axes and the time axis carries information too: the blue rectangle's left edge sits on a vertical day-separator at `[00:38:50]`, the blue rectangle at `[00:44:40]` begins immediately after two vertical separators, and the blue rectangle at `[00:48:35]` abuts a dashed vertical pair. An earlier reading (`V01_INTERPRETATION.md` §10.1 `U2`, now **withdrawn**) declared the session-time reading wrong; review R1 finding 1 overturned that as unsupported. **Neither candidate is eliminated.**
 
@@ -506,7 +610,12 @@ DO NOT CODE
 
 ### Required Research
 
-A screenshot of `[00:43:53]` or `[00:45:55]`, or a later lesson that draws a box and names its colour. Note that the two candidate readings above are mutually exclusive, so this cannot be resolved by reasoning from the transcript.
+~~A screenshot of `[00:43:53]` or `[00:45:55]`.~~ **Both obtained** — `[00:43:58]` and
+`[00:46:05]` — and neither resolves it; see Visual Characteristics above. What is needed
+is **a later lesson that draws a box live or states what bounds it**. Note that the two
+candidate readings above are mutually exclusive, so this cannot be resolved by reasoning
+from the transcript, and R2 confirmed it cannot be resolved by further inspection of
+these four frames either.
 
 ### Impact If Wrong
 
@@ -522,29 +631,58 @@ High. An entry prohibition (`[00:43:07]`) and a wait condition (`[00:47:55]`) bo
 
 ---
 
-### Visual Evidence Update — 2026-08-10 — one candidate reading ELIMINATED
+### Visual Evidence Update — 2026-08-10 — WITHDRAWN, no candidate reading eliminated
 
-The boxes are **shaded rectangles drawn over price areas on the chart**:
+> **WITHDRAWN 2026-08-10 by review R1 finding 1 (`E02`, MAJOR) / confirmed R2 finding N1
+> / applied R3.** This block asserted that the visual evidence *eliminates* the
+> session-time reading of the boxes. It does not. It is the same overturned claim as the
+> withdrawn `U2` in `V01_INTERPRETATION.md` §10.1, and it survived here after the other
+> three locations were corrected — in the register downstream machine-spec work reads,
+> forty-five lines below the corrected *Visual Characteristics* text that contradicts it.
+> **The current statement of what the frames show is the *Visual Characteristics* section
+> above.** Both candidate measures remain live; `A-006` remains `DO NOT CODE`.
+>
+> The original text is retained below in full, per `REMEDIATION_PROTOCOL.md` §2 — it is
+> not deleted, and its refutation is recorded with it.
 
-- **Pale blue** over flat consolidation ranges —
-  `V01_00-40-25_beginning-of-session-chart.png` (over the low pre-session range),
-  `V01_00-44-40_end-of-week-chart.png` (lower right), `V01_00-48-35_...png` (two of them).
-- **Dark red** over the extended area where price has run and traders are described as
-  trapped — same frames, plus `V01_00-38-50_beginning-of-week-chart.png`.
+**ORIGINAL TEXT — WITHDRAWN, DO NOT CITE:**
 
-At `[00:48:35]` each rectangle carries a numeric label (`R = 70.5`, `R = 51…`, `= 43.1`),
-so they are **measured regions**, not shading for emphasis. See A-018.
+> The boxes are **shaded rectangles drawn over price areas on the chart**:
+>
+> - **Pale blue** over flat consolidation ranges —
+>   `V01_00-40-25_beginning-of-session-chart.png` (over the low pre-session range),
+>   `V01_00-44-40_end-of-week-chart.png` (lower right), `V01_00-48-35_...png` (two of them).
+> - **Dark red** over the extended area where price has run and traders are described as
+>   trapped — same frames, plus `V01_00-38-50_beginning-of-week-chart.png`.
+>
+> At `[00:48:35]` each rectangle carries a numeric label (`R = 70.5`, `R = 51…`, `= 43.1`),
+> so they are **measured regions**, not shading for emphasis. See A-018.
+>
+> **This eliminates candidate 1** ("a session range rectangle drawn on the chart,
+> colour-coded by session"). The boxes do not align with session boundaries; they are
+> drawn around price structures. Candidate 2 — a price zone bounding valid entries — is
+> consistent with what is shown, but is not confirmed: nothing on the slides states that
+> the box governs entry eligibility.
+>
+> Still unresolved: whether "the box" of `[00:43:07]` means the blue one, the red one, or
+> either; and how the rectangles are placed.
 
-**This eliminates candidate 1** ("a session range rectangle drawn on the chart,
-colour-coded by session"). The boxes do not align with session boundaries; they are
-drawn around price structures. Candidate 2 — a price zone bounding valid entries — is
-consistent with what is shown, but is not confirmed: nothing on the slides states that
-the box governs entry eligibility.
+**Why it is wrong.** The load-bearing sentence — *"The boxes do not align with session
+boundaries"* — is refuted by the three frames the block itself cites:
 
-Still unresolved: whether "the box" of `[00:43:07]` means the blue one, the red one, or
-either; and how the rectangles are placed.
+- `[00:38:50]` — two vertical dotted lines near the left edge; the pale-blue rectangle's
+  left edge sits on the second of them.
+- `[00:44:40]` — two vertical dotted separators at the right; the pale-blue rectangle
+  begins immediately to the right of the second.
+- `[00:48:35]` — a dashed vertical pair at the right; the pale-blue rectangle labelled
+  `R = 51…` begins at the second.
 
-**Status unchanged: `DO NOT CODE`.**
+A rectangle has two axes. Showing that it bounds a price region says nothing about
+whether its time edges are placed on session boundaries — and here they demonstrably
+are, on all three frames. The block also contains the claim narrowed under R2 finding
+N5: pale blue is *not* uniformly over flat consolidation (`[00:38:50]` contradicts it).
+
+**Status unchanged: `DO NOT CODE`. Both candidate measures live. `Q4` fully open.**
 ## A-007 — "second leg"
 
 ### Course Meaning
@@ -560,7 +698,23 @@ The preferred entry timing. "The best way to grab setups is to wait for a second
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+**A bearing frame exists and it defines nothing.** `[00:43:21]` ("the best way to grab
+setups is to wait for a second leg") is spoken over the "Beginning Of Session" chart;
+`V01_00-43-58_beginning-of-session-drawn-on.png` captures the instructor's live green
+marks on that chart 37 seconds later.
+
+**No leg is labelled, no legs are counted, and no first/second boundary is drawn.** The
+freehand is consistent with several readings and is deliberately **not** converted into a
+leg definition here — review R2 declined the same conversion for the same reason
+(R2 Part 3.3). Recording that the frame was examined and found non-determinative is the
+finding; it is materially different from "no screenshot exists", and it closes the
+cheap route to resolving this record.
+
+V02 makes this worse rather than better: at `[00:35:22]` the instructor says "**And I'm
+going to define what a second leg is**" and then defines it by gesture. See the V02
+evidence table at the foot of this file.
 
 ### Counter-examples
 
@@ -616,7 +770,30 @@ Named as the one element that varies from week to week — "the only difference 
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible. The determination below is the student's, made against the frames named, and was flagged as required work by review R2 Part 3.3.
+
+**Materially constrained by the frames; still not defined.** The words at `[00:38:57]`
+("this is the tracer Sunday Monday, right?"), `[00:39:02]` ("**These two lines.**") and
+`[00:39:03]` ("This is Sunday") are spoken over the "Beginning Of Week" chart, captured
+at `[00:38:50]`, `[00:39:10]` and `[00:39:40]`.
+
+`V01_00-38-50_beginning-of-week-chart.png` shows **exactly two vertical dotted lines near
+the left edge**, with the pale-blue rectangle beginning at the second. Two lines, in the
+week-open region, at the moment he says "these two lines… this is Sunday": the referent
+is almost certainly that pair of vertical day separators.
+
+**Recorded as constrained, not resolved,** for two reasons that matter:
+
+1. The deixis is not verifiable from a still frame — he is pointing with a cursor that
+   the capture does not track, and "these two lines" could in principle name the two
+   dotted lines, two of the four moving averages, or two horizontal levels. The dotted
+   pair is the best fit; it is not proof.
+2. Even granting the identification, **nothing states what draws the lines, what the
+   tracer measures, or why "where the tracer falls" is the one thing that varies week to
+   week** (`[00:52:50]`). Identifying a mark is not defining a concept.
+
+This is still a genuine gain: the record previously held that the tracer had no visual
+referent at all. **Status unchanged: `DO NOT CODE`.**
 
 ### Counter-examples
 
@@ -642,7 +819,10 @@ DO NOT CODE
 
 ### Required Research
 
-A screenshot of `[00:38:57]`. This term is unusual enough that it may be idiosyncratic to this instructor and may not recur; watch V02–V05.
+~~A screenshot of `[00:38:57]`.~~ **Obtained** — see Visual Characteristics above; it
+constrains the referent without defining the term. What is still needed is a lesson that
+says what the tracer *is*. This term is unusual enough that it may be idiosyncratic to
+this instructor and may not recur; watch V02–V05. (It does not appear in V02.)
 
 ### Impact If Wrong
 
@@ -672,7 +852,13 @@ Named formations, spoken four times in fourteen seconds while pointing at a char
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+**Constrained by the frames; no anatomy.** See the *Visual Evidence Update* at the foot
+of this record: `[00:51:45]` and `[00:52:10]` capture the instructor's live green marks
+over the decline he is naming. They fix *where* on the chart he is pointing. They yield
+no leg count, no proportion, no invalidation, and nothing on either frame is labelled
+"stop hunt high drop" or "straight drop".
 
 ### Counter-examples
 
@@ -698,7 +884,12 @@ DO NOT CODE
 
 ### Required Research
 
-A screenshot of `[00:51:42]`–`[00:51:56]`. Ten seconds of video would resolve what fourteen seconds of audio cannot. Until then this is a name with no referent.
+~~A screenshot of `[00:51:42]`–`[00:51:56]`. Ten seconds of video would resolve what
+fourteen seconds of audio cannot.~~ **Obtained** (`[00:51:45]`, `[00:52:10]`) — and the
+ten seconds did *not* resolve it. The frames show freehand strokes over the decline, not
+a labelled construction. It is no longer a name with no referent; it is a name with a
+location and no anatomy. What is needed is a later lesson that names the formation
+against a marked shape.
 
 ### Impact If Wrong
 
@@ -740,7 +931,15 @@ A structural anchor on the weekly cycle. Introduced only inside an anecdote abou
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+**Screenshots exist and none bears on this term.** All 22 V01 frames were read
+(`04_SCREENSHOTS/V01/INDEX.md`). None prints "peak formation". This is a more useful
+statement than "no screenshot exists", and it carries weight for `I7`: `[00:50:55]` is
+the lesson's fullest annotated depiction of the weekly cycle, it carries five printed
+labels, and **not one of them says "peak formation", "anchor point", "M" or "W"**. The
+visual channel therefore does *not* merge these terms. See `V01_INTERPRETATION.md`
+§10.3.
 
 ### Counter-examples
 
@@ -800,7 +999,30 @@ Treated throughout as already known. It appears in the student survey as somethi
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+**Printed evidence exists; still no anatomy.** Survey question 5 on
+`V01_00-16-55_survey-questions-1-to-9.png` prints *"Do you clearly see M's/W's before
+they **SHIFT**?"*.
+
+What that adds: the term is confirmed as the instructor's own printed vocabulary rather
+than an ASR reading, and the survey slide shows he treats seeing them "before they
+shift" as a rateable competence — i.e. as something that happens *in advance*, which is
+a stronger claim than anything he says aloud about M's and W's.
+
+What it does not add: **no chart slide in V01 labels an M or a W anywhere.** The
+`[00:50:55]` "Typical Week" chart, which would be the natural place, prints five
+annotations and names neither letter. No leg count, no proportion, no timing, no
+invalidation. **Status unchanged: `DO NOT CODE`.**
+
+> **Correction to review R2 Part 3.3.** R2 recorded that "SHIFT" is a term that appears
+> **nowhere** in the transcript and proposed logging it as a printed-only vocabulary
+> item. That is not correct and is not adopted. The instructor reads the question aloud
+> at `[00:17:45]` — *"Do you clearly see M's and W's before they shift away from the
+> level?"* — and again in garbled form at `[00:27:35]`. The slide is the *shortened*
+> form; the spoken version carries the extra qualifier *"away from the level"*, which is
+> the more informative of the two and ties the term to `A-004`. Verified against the
+> transcript at R3.
 
 ### Counter-examples
 
@@ -856,7 +1078,15 @@ An alternative cycle shape in which the turn occurs mid-week rather than at the 
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+**Printed evidence exists; no description.** Survey question 16 on
+`V01_00-19-20_survey-questions-10-to-18.png` prints *"Can you identify a mid week
+reversal  1-10"*. This confirms the term and its spelling as the instructor's, and
+confirms he treats identifying one as a rateable competence.
+
+No chart slide in V01 shows or labels a midweek reversal. **Status unchanged:
+`DO NOT CODE`.**
 
 ### Counter-examples
 
@@ -912,7 +1142,19 @@ A skill threshold that **gates two different rules**. Struggling traders must ta
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+**One printed item bears on candidate measure 1, and it does not close the gap.** Survey
+question 12 on `V01_00-19-20_survey-questions-10-to-18.png` prints *"Have you doubled a
+demo account?  Y  N"*. That is the printed origin of the `[00:20:00]` bar quoted in the
+candidate table below.
+
+It does **not** define the threshold. It is a yes/no fact about a student, asked in a
+self-rating survey, and the instructor attaches it to *going live* — not to relaxing the
+blue-box rule or to trading both directions. The gap this record exists to hold open is
+between "struggling" and "more proficient" as used at `[00:44:03]`, `[00:44:15]`,
+`[00:51:34]` and `[00:51:38]`, and nothing printed or spoken in V01 bridges it.
+**Status unchanged: `DO NOT CODE`.**
 
 ### Counter-examples
 
@@ -967,7 +1209,15 @@ Named once, as survey question 8 — "How are you at spotting fractional dispari
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+**Printed evidence exists; still no meaning.** Survey question 8 on
+`V01_00-16-55_survey-questions-1-to-9.png` prints *"How are you at spotting Fractional
+Disparity?  1 - 10"*, capitalised as a proper term.
+
+That settles the transcription — the phrase is real, is spelled this way, and is
+capitalised by the instructor as a named concept — and settles nothing else. Nothing in
+V01 explains it, and no chart slide illustrates it. **Status unchanged: `DO NOT CODE`.**
 
 ### Counter-examples
 
@@ -1022,7 +1272,12 @@ The inducement step of the core sequence: the dealer creates an appearance that 
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+**Constrained by the frames.** See the *Visual Evidence Update* at the foot of this
+record: four moving-average lines (yellow, red, cyan, white) are present on every chart
+slide, with **no period or setting printed anywhere**. The inversion warning below is
+unaffected and better supported.
 
 ### Counter-examples
 
@@ -1048,7 +1303,12 @@ DO NOT CODE
 
 ### Required Research
 
-Later lessons showing what the dealer displays at each stage. The `[00:39:26]` moving-average reference is the only indicator-adjacent content in V01 and it warrants a screenshot before anything is built on it.
+Later lessons showing what the dealer displays at each stage. ~~The `[00:39:26]`
+moving-average reference … warrants a screenshot before anything is built on it.~~ **The
+screenshots were taken and they showed four MA lines with no periods printed anywhere**
+(see the Visual Evidence Update below, and A-020 for the same negative result in V02).
+What is needed is a frame showing the platform's indicator list or a legend — no V01 or
+V02 frame carries one.
 
 ### Impact If Wrong
 
@@ -1092,7 +1352,24 @@ The state price enters after the end-of-week trap, in which a correct-looking po
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible. The determination below is the student's, made against the frame named, and was flagged as required work by review R2 Part 3.3.
+
+**Materially constrained by the frame; still not defined.** `[00:44:45]` — "you see an
+outside spike to the low and the dealer goes into chop" — is spoken over the "End Of
+Week" chart, captured at `[00:44:40]`.
+
+`V01_00-44-40_end-of-week-chart.png` shows the described sequence: a decline out of the
+dark-red rectangle, a **deep single-candle spike low** whose lower wick runs well below
+every surrounding candle, and then a sideways range that persists to the right of the
+two vertical dotted separators, where the pale-blue rectangle is drawn over it.
+
+**What this adds:** the words map onto a real, locatable sequence on the instructor's own
+example, so "chop" is not a figure of speech — it names a visible state, and it follows
+the spike rather than preceding it.
+
+**What it does not add:** no range, no duration, no bar count, no volatility measure, and
+no statement of when chop ends. One instance cannot bound any of them, and the frame
+carries no printed label for the region. **Status unchanged: `DO NOT CODE`.**
 
 ### Counter-examples
 
@@ -1117,7 +1394,10 @@ DO NOT CODE
 
 ### Required Research
 
-A later lesson, or a labelled example. "Outside spike to the low" at `[00:44:41]` is more concrete than most of V01's language and may be recoverable from a screenshot.
+A later lesson, or a labelled example. ~~"Outside spike to the low" at `[00:44:41]` …
+may be recoverable from a screenshot.~~ **Recovered** at `[00:44:40]` — see Visual
+Characteristics above. The sequence is visible; the *measure* of chop is not, and one
+instance cannot supply one.
 
 ### Impact If Wrong
 
@@ -1147,7 +1427,12 @@ The closest thing to an entry trigger in V01 — four words, spoken while pointi
 
 ### Visual Characteristics
 
-**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost.
+> **CORRECTED 2026-08-10 (review R3, action 3).** This field previously read: *"**Unknown — no screenshot exists for V01** (`SETUP_ISSUES.md` I-006). The instructor was pointing at a slide while using this phrase, so the visual characteristics are precisely the part that was lost."* 22 frames were subsequently captured and I-006 is `RESOLVED`. Original wording retained so the change is visible.
+
+**Constrained by the frame.** See the *Visual Evidence Update* at the foot of this
+record: `[00:48:35]` shows a single large green candle breaking upward out of the blue
+range immediately before the red trap area. The slide does not label it, and one
+unlabelled instance cannot bound a size threshold.
 
 ### Counter-examples
 
@@ -1173,7 +1458,10 @@ DO NOT CODE
 
 ### Required Research
 
-A screenshot of `[00:48:41]`, or later lessons using the phrase with more than one example. A single unlabelled instance cannot bound a size threshold.
+~~A screenshot of `[00:48:41]`~~ — **obtained** at `[00:48:35]`, and it is a single
+unlabelled instance, which cannot bound a size threshold. What is needed is later lessons
+using the phrase with **more than one** example, or one where the comparison basis is
+stated.
 
 ### Impact If Wrong
 

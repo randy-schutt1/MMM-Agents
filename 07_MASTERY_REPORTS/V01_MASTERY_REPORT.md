@@ -20,15 +20,17 @@ Student self-assessment against `00_SYSTEM/MASTERY_STANDARD.md`.
 ## STATUS
 
 ```text
-REVIEW REQUIRED  (resubmission — see "Revision R1" at the end of this file)
+REVIEW REQUIRED  (resubmission R3 — see "Revision R1" and "Revision R2" at the end
+                  of this file)
 ```
 
 > **Read the STATUS paragraph below as of the original submission.** It has since been
-> reviewed: `18_REVIEW/V01/V01_REVIEW_R1.md` returned `REVISE` (HIGH), answered all four
-> of the requests at the foot of this file, and directed corrections — four of which are
-> applied and documented in **`## Revision R1`**. Dimension F below is now split, not
-> wholly `NOT APPLICABLE`. This paragraph is left unedited as the original submission
-> record.
+> reviewed twice: `18_REVIEW/V01/V01_REVIEW_R1.md` returned `REVISE` (HIGH), answered all
+> four of the requests at the foot of this file, and directed corrections — four of which
+> are applied and documented in **`## Revision R1`**. `V01_REVIEW_R2.md` returned `REVISE`
+> (HIGH, 0 critical, 1 major) with fifteen required actions, all applied and documented in
+> **`## Revision R2`**. Dimension F below is now split, not wholly `NOT APPLICABLE`. This
+> paragraph is left unedited as the original submission record.
 
 **Not `PASS`.** Two dimensions are claimed `NOT APPLICABLE` under D-018 and that claim
 needs independent adjudication; one contradiction is foundational and unresolved; and
@@ -98,8 +100,8 @@ not — they are not in the lesson.
 ### E. Exceptions — `SATISFIED`
 
 Six recorded with timestamps (§9): the Friday extra-day extension `[00:35:43]`; the
-instructor's own acknowledged inconsistency in the day count `[00:36:17]`; early
-anchoring from a prior week `[00:36:38]`; the blue box as "more of a guide" for the
+instructor's own acknowledged inconsistency in the day count `[00:36:13]`–`[00:36:15]`; early
+anchoring from a prior week `[00:36:17]`; the blue box as "more of a guide" for the
 experienced `[00:44:03]`; both-directions trading once proficient `[00:51:34]`; and the
 midweek reversal as an alternative cycle start `[00:52:56]`.
 
@@ -122,7 +124,7 @@ Eight assignments were captured (§11). Their character:
 | H2 — three further survey items (% targets, session choice) | `NOT APPLICABLE` | Same. |
 | H3 — "face your demons", report other analysis baggage | `NOT APPLICABLE` | Same. |
 | H4 — `[00:37:58]` "on the one hour chart… look at the levels and the cycle" | ~~`NOT APPLICABLE`~~ → **`DEFERRED — BLOCKED BY I-007`** | An observational exercise. It requires **a chart and a declared data source, not a rule definition** — the instructor's framing is to look at the H1 chart and locate the cycle. My original reasoning ("depends on 'level' (A-004) … neither defined") was wrong: marking up a week's price action does not require "level" to be defined. Performable once `I-007` declares a source, feed and timezone. |
-| H5 — `[00:52:20]`, `[00:53:02]` mark the chart up, "go look at the pairs this week" | ~~`NOT APPLICABLE`~~ → **`DEFERRED — BLOCKED BY I-007`** | Same. "This week" being March 2012 is not disqualifying — the instruction is to observe whether the weekly shape repeats, which any sufficient history serves. This is the **only cheap empirical check available against `CL3`** ("Is it always like this?" — "Yeah"), the lesson's largest unevidenced claim, and closing it permanently would have discarded it. |
+| H5 — `[00:52:38]`–`[00:52:50]`, `[00:53:07]` mark the chart up, "go look at the pairs this week" | ~~`NOT APPLICABLE`~~ → **`DEFERRED — BLOCKED BY I-007`** | Same. "This week" being March 2012 is not disqualifying — the instruction is to observe whether the weekly shape repeats, which any sufficient history serves. This is the **only cheap empirical check available against `CL3`** ("Is it always like this?" — "Yeah"), the lesson's largest unevidenced claim, and closing it permanently would have discarded it. |
 | H6 — read your own broker account agreement | `NOT APPLICABLE` | No account exists. |
 | H7 — execute concepts in demo | `NOT APPLICABLE` | Ongoing instruction, no demo account — and V01 supplies no concept with an executable form. |
 | H8 — use the instructor's MT4 template | `NOT APPLICABLE` | The template is not in the library (confirmed: no template file exists under `01_SOURCE_VIDEOS/`). |
@@ -260,7 +262,10 @@ screenshot existed, and were deliberately not rewritten afterwards. §10 of
 `V01_INTERPRETATION.md` records the delta. Of the readings most at risk, the visuals:
 
 - **corrected one over-generalisation** — I had widened a closed slide-list of six
-  trap-move boundaries into "every session boundary" (`I9`/`G5`);
+  trap-move boundaries into "every session boundary" (`I9`/`G5`). **Qualified 2026-08-10
+  per review R1 finding 9:** `G5` had already caught this from the transcript alone and
+  had already forbidden writing "every session boundary" into any specification. What the
+  slide supplied was the *closed count of six*, not the correction;
 - **resolved one refusal** — "pendings", printed at `[00:40:25]`, never spoken;
 - ~~**eliminated one of two competing readings** of the boxes (`A-006`)~~ — **withdrawn
   by review R1 finding 1.** The visuals *constrained* the boxes (shaded rectangles
@@ -269,9 +274,16 @@ screenshot existed, and were deliberately not rewritten afterwards. §10 of
   `[00:38:50]`, `[00:44:40]` and `[00:48:35]`. Both candidates in `A-006` remain live;
 - **left `I7` open.**
 
-No transcript-only reading turned out to be fabricated. One was wider than its evidence,
-and it took a screenshot to catch — which is the argument for keeping the two passes
-separate and visible.
+No transcript-only reading turned out to be fabricated. One was wider than its evidence —
+which is the argument for keeping the two passes separate and visible.
+
+> **REWORDED 2026-08-10 (review R1 finding 9, `E20`).** This sentence read *"One was
+> wider than its evidence, and it took a screenshot to catch — …"*. It did not. `G5`,
+> written from the transcript alone, already recorded the enumeration as "a list, not a
+> principle" and already forbade writing "every session boundary" into any specification.
+> The screenshot supplied the closed count of **six**; the *catch* came from the
+> transcript-only generalisation audit. The same over-claim is corrected in
+> `V01_INTERPRETATION.md` §10.6.
 
 ---
 
@@ -335,7 +347,7 @@ source, feed and timezone the observations would be unreproducible
 (`STUDY_PROTOCOL.md` §6).
 
 **Finding 4 — trap-move count.** `V01_SOURCE_NOTES.md` §14 now records that the
-`[00:30:35]` slide and the spoken enumeration at `[00:36:38]`–`[00:37:09]` give **six**
+`[00:30:35]` slide and the spoken enumeration at `[00:36:49]`–`[00:37:28]` give **six**
 boundaries while the `[00:45:44]` recap gives **four**. The abbreviated-recap reading is
 recorded as a reading, not as a resolution, and the slide is treated as the higher-tier
 evidence.
@@ -402,3 +414,121 @@ NEXT:    a FRESH reviewer session writes 18_REVIEW/V01/V01_REVIEW_R2.md.
 The four R1 requests are answered in `V01_REVIEW_R1.md` and need not be re-asked:
 G `NOT APPLICABLE` upheld; `C-001` does not justify `BLOCKED`; `I7` stays open at
 `INFERRED / Low`; the empty concept library and chart-example set are correct.
+
+---
+
+## Revision R2 — 2026-08-10
+
+Applied per `REMEDIATION_PROTOCOL.md` §3, addressing
+`18_REVIEW/V01/V01_REVIEW_R2.md` (decision `REVISE`, confidence HIGH, 0 critical,
+1 major, 4 minor, 3 notes; 15 required actions).
+
+### Scope
+
+**All fifteen required actions are documentation fixes.** R2 stated explicitly that none
+requires re-studying the source, and that held: no underlying test was invalid, because
+no test was performed. Nothing was redone; nothing was deleted. Every superseded claim is
+retained in place and marked, so the correction stays legible.
+
+Where R2 supplied a visual determination as a *finding* rather than as text to paste
+(`A-002`, `A-008`, `A-016`, and reviewer question 2), the frames were re-opened and read
+before anything was written into a record. Two of R2's determinations did not survive
+that check and were corrected — see "Corrections to R2" below.
+
+| R2 action | Severity | Applied | Where |
+|---|---|---|---|
+| 1 — withdraw `A-006`'s trailing "one candidate reading ELIMINATED" block in place | **MAJOR** `E02` | ✅ | `AUTOMATION_AMBIGUITIES.md` `A-006` |
+| 2 — fix `A-003`'s five stale fields + the INDEX Risk cell | MINOR | ✅ | `AUTOMATION_AMBIGUITIES.md` `A-003` |
+| 3 — clear the stale "no screenshot exists" sentence from the remaining 16 records | MINOR | ✅ | all 16; three fresh determinations, three slide-text findings, one no-bearing-frame note, nine mechanical |
+| 4 — recite `S19`, `X3`, `X2`, `S29` and the three further `[00:36:38]` instances | MINOR `E11` | ✅ | source notes, interpretation, ambiguities, mastery report |
+| 5 — correct H5's citation in `D-019` and dimension F, marked in place | MINOR `E11` | ✅ | `DECISIONS.md` `D-019`, this file |
+| 6 — narrow the "pale blue sits over flat consolidation" claim | MINOR `E02` | ✅ | `A-006`, `V01_INTERPRETATION.md` §10.2 `C5` |
+| 7 — "eleven" → "seventeen" in §10 | MINOR | ✅ | `V01_INTERPRETATION.md` §10 |
+| 8 — the two remaining stale statements (transcript, `I-006`) | MINOR | ✅ | `V01_TRANSCRIPT.md`, `SETUP_ISSUES.md` |
+| 9 — four `INDEX.md` rows | MINOR | ✅ | `04_SCREENSHOTS/V01/INDEX.md` |
+| 10 — resolve §4's coverage against the 22 indexed frames | MINOR | ✅ | source notes §4 — `V14` added for `[00:54:30]`, then scoped |
+| 11 — reword "took a screenshot to catch" | NOTE | ✅ | `V01_INTERPRETATION.md` §10.6, this file |
+| 12 — bracket `S27`'s `[are]` | NOTE | ✅ | source notes `S27` |
+| 13 — `QUARANTINE_REGISTER.md` "Relocated" → "Copied" | NOTE | ✅ | `QUARANTINE_REGISTER.md` |
+| 14 — enumeration range → `[00:36:49]`–`[00:37:28]` | NOTE `E11` | ✅ | source notes §14, this file |
+| 15 — cite `[00:39:40]` as examined and non-determinative for `I7` | NOTE | ✅ | `V01_INTERPRETATION.md` §10.3 |
+
+### The MAJOR finding
+
+`A-006`'s trailing block asserted *"This eliminates candidate 1"* and *"The boxes do not
+align with session boundaries"* — the claim R1 overturned and R2 confirmed overturned. It
+is now withdrawn in place with the original text retained in full and its refutation
+recorded beside it: at `[00:38:50]`, `[00:44:40]` and `[00:48:35]` the pale-blue
+rectangle's left edge sits on, or begins at, a vertical dotted separator. All three
+frames were re-opened and checked here rather than taken on R2's word. `A-006` stays
+`DO NOT CODE`; both candidate measures stay live; `Q4` stays fully open.
+
+### Corrections to R2
+
+Two of R2's own claims did not survive verification and are **not** adopted:
+
+1. **R2 Part 3.3 on `A-011`** states that "SHIFT" — printed in survey question 5 — is a
+   term that appears *"nowhere in the transcript"*, and proposes logging it as a
+   printed-only vocabulary item. It is spoken at `[00:17:45]`: *"Do you clearly see M's
+   and W's before they shift away from the level?"*, and again in garbled form at
+   `[00:27:35]`. The slide is the **shortened** form; the spoken version carries the
+   extra qualifier *"away from the level"*, which is the more informative of the two.
+   Recorded in `A-011` with the correction stated.
+2. **R2 finding 7c** states that no item on the `[00:19:20]` slide bears on `A-013`.
+   Question 12 prints *"Have you doubled a demo account? Y N"*, which is the printed
+   origin of `A-013`'s candidate measure 1. The required change (`Rule supported` →
+   `H1, A-012`) is applied, because Q12 does not define the skill threshold — but the
+   basis is narrower than R2 stated, and `INDEX.md` now names Q12 explicitly.
+
+### Widened beyond the directed scope, and why
+
+Four defects of the classes R2 escalated were found while applying its list. Each is
+verified against the transcript or the frames, and each is recorded rather than swept in
+silently:
+
+- **The `[00:36:17]` cluster (`E11`).** Correcting `X2` exposed five further citations of
+  `[00:36:17]` for the instructor's acknowledgement *"It's more than what I've told you.
+  I understand that"*, which is at `[00:36:13]`–`[00:36:15]`; `[00:36:17]` is the next
+  statement. Corrected in `V01_SOURCE_NOTES.md` (×2), `V01_INTERPRETATION.md` (×2),
+  `V01_MASTERY_REPORT.md` and `CONTRADICTIONS.md`.
+- **`Trap move / false move` first use (`E11`).** Cited as `[00:33:33]`, which is neither
+  a transcript marker nor a passage about trap moves. First use is `[00:30:40]`.
+- **`S33` (`E11`).** Cited `[00:45:40]` ("so we're talking about trapping those by the
+  dealer"); the four-item recap is at `[00:45:44]`, which §14 already had right.
+- **Two status blocks stale again (`E20`).** `AUTOMATION_AMBIGUITIES.md` still read
+  `RECORDS: 18 / LESSONS STUDIED: 1` and `CONTRADICTIONS.md` `RECORDS: 2 /
+  LESSONS STUDIED: 1`. Both were corrected under R1 finding 6b and both went stale again
+  when the V02 pass added `A-019`–`A-028` and `C-003`–`C-004`. This is the **third**
+  occurrence of the same defect in the same two blocks, which is evidence for R2's
+  protocol implication rather than against it.
+
+### Not applied, deliberately
+
+**Seven cited timestamps in V01 files are not transcript markers** — `[00:25:51]`,
+`[00:30:44]`, `[00:35:38]`, `[00:38:02]`, `[00:39:43]`, `[00:40:26]` and the `[00:33:33]`
+fixed above. All but the last land *inside* the passage they cite, typically 2–4 seconds
+past the marker, so every one resolves to the correct words. They are left as they are
+and recorded as an open item: the fix is exactly the `STUDY_PROTOCOL.md` amendment R2
+proposed and deferred to the 25% cumulative review (`REVIEW_INDEX.md` open item 7).
+Retro-fitting a rule that has not been adopted yet would be applying an unwritten
+standard to old work.
+
+### Remaining open items
+
+Unchanged by this revision: `C-001` (day count, `UNRESOLVED`, foundational); `I7`
+(re-adjudicate at V02); H4/H5 pending `I-007`; the `[00:46:04]` / `[00:48:05]` /
+`[00:48:13]` audio re-check — note the `[00:46:05]` frame was captured and **does not**
+show the session times, so only the audio route remains; dimension B pending V02;
+`REVIEW_INDEX.md` open item 7 (citation-hygiene protocol amendment).
+
+`REVIEW_INDEX.md` open item 6 (the 16-record staleness) is **closed** by this revision.
+Open item 8 (`I-006` frame-rate staleness) is **closed** — `I-006` now points to `D-021`.
+
+### Status after this revision
+
+```text
+LESSON:  V01
+STUDENT STATUS: REVIEW REQUIRED (resubmission, R3)
+NEXT:    18_REVIEW/V01/V01_REVIEW_R3.md.
+         R1 and R2 are never edited (REVIEW_PROTOCOL.md §11).
+```

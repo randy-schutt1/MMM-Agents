@@ -84,7 +84,7 @@ Nothing below is a course rule. These are my readings of what was said.
 | I5 | Do not hold positions over the weekend | `[00:49:12]`, `[00:50:17]` — no screenshot | EXPLICIT | High | Rationale given at `[00:48:58]`–`[00:49:44]` and is mechanical rather than pattern-based. |
 | I6 | Once the anchor point is established, trade only away from it, one direction, until Friday | `[00:35:05]`, `[00:51:22]` — no screenshot | EXPLICIT, but conditional | Medium | Explicitly relaxed for proficient traders at `[00:51:34]`, with no test for proficiency. The duration is contradicted within the lesson (see C-001 in §8). |
 | I7 | The anchor point is the same object as, or is marked by, the peak formation high/low and an M or W formation | `[00:34:26]`, `[00:34:47]`, `[00:51:26]` — no screenshot | INFERRED | **Low** | The three terms are used adjacently and interchangeably-sounding, but no equivalence is stated. `[00:51:26]` "away from the peak formation" describes the anchor's location using the peak-formation term. This may be one concept, two, or three. **Do not encode as an equivalence.** |
-| I8 | The dealer's day-count after anchoring is roughly three days | `[00:35:05]`, `[00:35:15]`, `[00:35:55]` — no screenshot | UNRESOLVED | **Very low** | Three different numbers in fifty seconds, acknowledged as inconsistent by the instructor himself at `[00:36:17]` and left unresolved. See C-001. |
+| I8 | The dealer's day-count after anchoring is roughly three days | `[00:35:05]`, `[00:35:15]`, `[00:35:55]` — no screenshot | UNRESOLVED | **Very low** | Three different numbers in fifty seconds, acknowledged as inconsistent by the instructor himself at `[00:36:13]`–`[00:36:15]` and left unresolved. See C-001. |
 | I9 | Trap moves occur at session boundaries as a general property, not only at the specific boundaries named | `[00:36:49]`–`[00:37:32]` | IMPLIED | Medium | He enumerates week-open, each day open, London open, US open, session close, day close, week close. The enumeration is broad enough that "every boundary" is a fair reading — but he never states the general principle, and generalising it is mine, not his. |
 | I10 | The method is direction-agnostic; the short-only instruction is a training wheel | `[00:51:22]` with `[00:51:34]` | IMPLIED | Medium | "Only short trades will be warranted" is stated inside a scenario where the dealer anchored high. The next sentence relaxes it for proficient traders. Reading it as a permanent short-only rule would be a serious misreading. |
 | I11 | Something is "picked up" by the dealer alongside stops, at two points in the week-open sequence | `[00:39:12]`, `[00:39:43]`, `[00:40:00]`, `[00:40:46]` | UNRESOLVED | n/a | Transcribed "penings" four times. A recurring named object in the core sequence that cannot be read. Logged as A-003. |
@@ -171,7 +171,7 @@ Each gets a record in `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`.
 
 | Term | Where used | Logged as | Status |
 |---|---|---|---|
-| "anchor point" | `[00:34:47]`, `[00:35:05]`, `[00:35:55]`, `[00:36:38]`, `[00:51:22]`, `[00:51:38]` | A-001 | DO NOT CODE |
+| "anchor point" | `[00:34:47]`, `[00:35:05]`, `[00:35:55]`, `[00:36:17]`, `[00:51:22]`, `[00:51:38]` | A-001 | DO NOT CODE |
 | "trap move" / "false move" | `[00:34:33]`, `[00:36:38]`, `[00:36:49]`, `[00:37:14]`, `[00:45:40]` | A-002 | DO NOT CODE |
 | "picks up the [?penings?]" | `[00:39:12]`, `[00:39:43]`, `[00:40:00]`, `[00:40:46]` | A-003 | DO NOT CODE |
 | "level" (as a countable unit) | `[00:35:38]`, `[00:39:53]` | A-004 | DO NOT CODE |
@@ -232,7 +232,7 @@ inventing three parameters he never gave.
 
 C-001 is a genuine contradiction: the instructor asserts a duration "for sure", then
 gives a different range hedged with "likely", then narrates a third timeline, then at
-`[00:36:17]` acknowledges students have caught the inconsistency — and moves on
+`[00:36:13]`–`[00:36:15]` acknowledges students have caught the inconsistency — and moves on
 without resolving it. It is not a transcription artifact. It is foundational to any
 holding-period logic and is carried forward as an open item.
 
@@ -298,9 +298,14 @@ Screenshots became available after §§1–9 were written (`SETUP_ISSUES.md` I-0
 
 **Headline: the visual channel was carrying roughly half this lesson, and it was
 carrying labels.** The instructor's slides are not decorative — they print the
-terminology directly onto the charts. Four of the eleven undefined terms in §6 are
-resolved or materially constrained by text printed on a slide that was never spoken
+terminology directly onto the charts. Four of the **seventeen** undefined terms in §6
+are resolved or materially constrained by text printed on a slide that was never spoken
 aloud.
+
+> **CORRECTED 2026-08-10 (review R1 finding 5, `E20`).** This sentence read "four of the
+> **eleven** undefined terms in §6". §6 lists `A-001`…`A-017` and its own closing line
+> says "Seventeen". The denominator was wrong and made the visual channel's contribution
+> look larger than it is: four of seventeen, not four of eleven.
 
 ### 10.1 Resolved outright
 
@@ -320,7 +325,22 @@ aloud.
 | C2 | **Moving averages** (A-015) | Four MA lines are visibly present on every chart: **yellow, red, cyan, white**. This corroborates `[00:39:26]` "look at the moving averages fan out" as describing something real on the template | Still no periods stated anywhere. The §2 refusal to name periods stands, and is now better supported: the lines exist, their values do not appear |
 | C3 | **The anchor point** (A-001) | `[00:50:55]` shows the structure: a low under **Tues** marked *"Stops Are Triggered on The Weak long Holders"* and *"Lower Level Short Holders Are Now trapped"*, followed by *"A uni-directional Swing The Rest Of The Week"*, then *"Higher Level Longs Are Now Trapped"* under **Wed** | Still `DO NOT CODE`. The slide shows one instance; it does not define what forms an anchor or how to recognise it in real time |
 | C4 | **"big entry candle"** (A-017) | `[00:48:35]` shows a single large green candle breaking up out of the blue range immediately before the red trap area | Still `DO NOT CODE` — one unlabelled instance cannot bound a size threshold |
-| C5 | **The blue box / red box** (I2, A-006) — *replaces the withdrawn U2* | The boxes are **shaded rectangles with both a time extent and a price extent**. Pale blue sits over flat, low-range consolidation; dark red sits over the extended area where price is described as trapped. At `[00:48:35]` each rectangle carries a numeric label (`R = 70.5`, `R = 51…`, `= 43.1`), so they are measured regions, not decorations. **The price-zone reading is confirmed. The session-time reading is NOT excluded** — the blue rectangle's left edge sits on a vertical day-separator at `[00:38:50]`, the blue rectangle at `[00:44:40]` begins immediately after two vertical separators, and the blue rectangle at `[00:48:35]` abuts a dashed vertical pair. A rectangle has two axes and both carry information | Still `DO NOT CODE`. Both readings in `A-006`'s candidate-measure table remain live; neither is eliminated. `Q4` (which box is "the box" of `[00:43:07]`) remains **fully open** |
+| C5 | **The blue box / red box** (I2, A-006) — *replaces the withdrawn U2* | The boxes are **shaded rectangles with both a time extent and a price extent**. At `[00:48:35]` each rectangle carries a numeric label (`R = 70.5`, `R = 51…`, `= 43.1`), so they are measured regions, not decorations. **The price-zone reading is confirmed. The session-time reading is NOT excluded** — the blue rectangle's left edge sits on a vertical day-separator at `[00:38:50]`, the blue rectangle at `[00:44:40]` begins immediately after two vertical separators, and the blue rectangle at `[00:48:35]` begins at a dashed vertical pair. A rectangle has two axes and both carry information. **What the four frames do not supply is a rule for what blue marks** — see the note below | Still `DO NOT CODE`. Both readings in `A-006`'s candidate-measure table remain live; neither is eliminated. `Q4` (which box is "the box" of `[00:43:07]`) remains **fully open** |
+
+> **C5 NARROWED 2026-08-10 (review R2 finding N5, `E02`).** As first written, C5 said
+> *"Pale blue sits over flat, low-range consolidation; dark red sits over the extended
+> area where price is described as trapped."* The second half holds across all four
+> frames. **The first half is contradicted by `[00:38:50]`**, one of the four frames C5
+> cites: there the pale-blue rectangle spans the sharp week-opening advance from the
+> week-open low to the "Week Beginning Trap High", which is neither flat nor low-range.
+>
+> Three of four blue rectangles sit over flat consolidation and the fourth sits over a
+> directional advance. No unifying rule is offered, because four frames do not supply
+> one. The per-frame breakdown is in `AUTOMATION_AMBIGUITIES.md` `A-006`.
+>
+> Worth naming: this over-generalisation was **introduced by the remediation of R1
+> finding 1**, from wording R1 itself prescribed. A correction is new work and carries
+> the same generalisation risk as the claim it replaces.
 
 ### 10.3 NOT confirmed — my reading remains unsupported
 
@@ -336,6 +356,24 @@ Holders"), not by a pattern name.
 So the equivalence is neither confirmed nor refuted; it simply has no visual support
 either. `I7` stays `INFERRED / Low`, and G4's verdict — "not established" — stands
 unchanged. A future session should not read §10 as having settled it.
+
+**`[00:39:40]` — examined, and non-determinative for `I7`.** Added 2026-08-10 per review
+R2 (reviewer question 2 from R1). `V01_00-39-40_beginning-of-week-drawn-on.png` is the
+one frame in V01 that captures the instructor drawing live over the week-opening
+structure, so it is the natural place to look for him marking an anchor point. It was
+opened and read. The green freehand consists of:
+
+1. a zig-zag traced *along* the rising candles inside the pale-blue rectangle, ending in
+   an up-arrow near the "Week Beginning Trap High" label;
+2. horizontal strokes and a small scribble over the pre-open range to the left of the two
+   vertical dotted lines;
+3. a short stroke at the right edge of the blue rectangle.
+
+**No stroke isolates a turning point, and nothing he draws is annotated with a name.** He
+is tracing the *shape* of the week-opening advance and marking the range it came out of.
+This neither supports nor undermines `I7` — it is recorded here so that a later session
+does not re-open the frame expecting an answer, and does not mistake the freehand for a
+marked anchor point.
 
 Similarly **not** resolved by the visuals: A-005 (trading zone — still deferred to
 V02), A-013 (the skill threshold), A-011 (M/W anatomy), A-012 (midweek reversal),
@@ -372,6 +410,16 @@ as most likely to be wrong, the visuals **confirmed one** (I2's prohibition, wro
 referent), **corrected one** (I9/G5 over-generalisation), **left one open** (I7), and
 **resolved a word I had refused to guess** (A-003). None of my transcript-only
 readings turned out to be fabricated, but one was wider than the evidence — which is
-the exact failure mode §3 exists to catch, and it took a screenshot to catch it.
+the exact failure mode §3 exists to catch.
+
+> **REWORDED 2026-08-10 (review R1 finding 9, `E20`).** This sentence ended *"…and it
+> took a screenshot to catch it."* That over-claims for the visual channel. `G5` — written
+> from the transcript alone, before any frame existed — had **already** recorded the
+> enumeration as "a list, not a principle" and had **already** forbidden writing "every
+> session boundary" into any specification. The correction originated in the
+> transcript-only generalisation audit. What the `[00:30:35]` slide supplied was the
+> *closed count of six* and the confirmation that the list is the instructor's own, not a
+> summary of his speech. That is a real contribution and a narrower one than "it took a
+> screenshot to catch it".
 
 Items 2, 3, 4, 5 and 7 of §9 stand.

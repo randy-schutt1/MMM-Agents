@@ -11,6 +11,49 @@ Newest first.
 
 ---
 
+## [0.4.0] — 2026-08-10 — V01 PASSED at R3; V02 gate opens
+
+### Changed
+
+- **V01: `IN REMEDIATION` → `COMPLETE`.** `18_REVIEW/V01/V01_REVIEW_R3.md` returns
+  **`PASS`** (HIGH, 0 critical, 0 major). All 15 required actions from R2 applied and
+  verified against the source. The first lesson in the corpus to pass.
+- **`D-004` gate: V02 opens; V03 does not.** `COURSE_PROGRESS.md` gains an explicit
+  `V03 GATE: CLOSED` line. Logged with it: the V02 student pass ran while the V02 gate
+  still read `CLOSED` (`REVIEW_INDEX.md` open item 9).
+- `A-006`'s trailing "one candidate reading ELIMINATED" block **withdrawn in place** —
+  header changed, original text retained and marked `DO NOT CITE`, refutation recorded
+  beside it. This supersedes two statements in `[0.3.0]` below: *"`A-006` had one of its
+  two competing readings eliminated"* and *"eliminated one of two competing readings"*.
+  **Both are false.** The `[0.3.0]` entry is left unedited as the historical record;
+  this line is the correction.
+- `A-003` promoted from a record that contradicted itself in five fields to one that
+  states its resolution consistently throughout.
+- The stale *"no screenshot exists for V01"* assertion cleared from all 16 remaining
+  ambiguity records — three with fresh visual determinations (`A-002`, `A-008`, `A-016`,
+  all *materially constrained*, all still `DO NOT CODE`), three with slide-text evidence,
+  one with an explicit "frame exists, defines nothing" note.
+- **Eleven citations corrected across three review rounds.** Every quotation in the V01
+  corpus now resolves to a transcript marker carrying its words.
+- `SETUP_ISSUES.md` `I-006` now points to `D-021` (frame-rate speedup works at 40×)
+  rather than describing it as untested.
+
+### Notes
+
+- **This round was remediation and review in one session**, contrary to `D-003`, at the
+  project owner's direction. Disclosed at the head of `V01_REVIEW_R3.md`. Every
+  determination was verified against the primary source, and three of R2's own claims
+  were corrected in the process — but no independent session audited this round, and the
+  V02 reviewer is asked to spot-check `A-006` and `A-003`.
+- **Six timestamp approximations were deliberately left uncorrected.** They resolve to the
+  right passage; fixing them is the `STUDY_PROTOCOL.md` amendment deferred to the 25%
+  review, and applying an unadopted rule retroactively was judged the worse error.
+- `C-001` (the day-count contradiction) travels forward `UNRESOLVED`. **V02 did not
+  resolve it**, which matters — C-001 named "a later lesson refines it" as its most likely
+  route out.
+
+---
+
 ## [0.3.0] — 2026-08-10 — V01 screenshots; capture problem solved; V01 submitted for review
 
 ### Added

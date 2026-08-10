@@ -1022,3 +1022,119 @@ it is not a pass.
 Three sessions ran against this checkout today. Beyond the port collision, `git add -A`
 caused sessions to commit each other's in-progress files under unrelated messages
 (I-009 collision 2). This session staged explicit paths only.
+
+---
+
+## 2026-08-10 — Remediation of V01 (Review R2) + Review R3
+
+**One session, two roles, at the project owner's direction.** `DECISIONS.md` D-003
+separates remediation from review; this session did both. That departure is disclosed at
+the head of `18_REVIEW/V01/V01_REVIEW_R3.md` rather than glossed, and it is the single
+thing a reader should weigh against the `PASS`.
+
+### Objective
+
+Apply the 15 required actions in `18_REVIEW/V01/V01_REVIEW_R2.md` (`REVISE`, HIGH,
+0 critical, 1 major), then render R3.
+
+### Findings addressed
+
+- **[E02 / MAJOR] R2 finding N1** — `AUTOMATION_AMBIGUITIES.md` `A-006`'s trailing
+  "Visual Evidence Update — one candidate reading ELIMINATED" block still asserted the
+  claim R1 overturned, unmarked, 45 lines below the corrected text. **Withdrawn in
+  place**: header changed, original text retained in full and marked `DO NOT CITE`,
+  refutation recorded beside it. Verified independently at `[00:38:50]`, `[00:44:40]`
+  and `[00:48:35]` — on all three the pale-blue rectangle's left edge sits on or begins
+  at a vertical dotted separator, which refutes "the boxes do not align with session
+  boundaries" on the block's own evidence.
+- **[E02 / MINOR] N5** — "pale blue sits over flat, low-range consolidation" was
+  contradicted by `[00:38:50]`, one of the four frames it cited. Replaced with a
+  four-row per-frame table and an explicit refusal to offer a unifying rule for blue.
+- **[E11 / MINOR] R1 finding 3 + N2 + N3 + N4** — seven citations corrected: `S19`,
+  `X3`, the three further `[00:36:38]` instances, `X2`, `S29`, and H5 in `D-019` and the
+  mastery report. Each re-derived from the transcript. `D-019` carries a dated
+  `CITATION CORRECTED` note and is **not** superseded — its meaning is unchanged.
+- **[E20 / MINOR] R1 findings 5, 6a, 6c, 7, 8, 9, 11, 12 and N6, N7, N8** — all applied.
+
+### Work redone (not edited)
+
+None. No test was performed for V01, so no evidence layer existed to redo. Every one of
+the 15 actions is a documentation fix (`REMEDIATION_PROTOCOL.md` §3.3), which is what R2
+said it would be and what it turned out to be.
+
+### Study work performed
+
+R2 supplied visual determinations for `A-002`, `A-008` and `A-016` as **findings, not
+text to paste**. Nine frames were re-opened at full resolution and the determinations
+re-made before anything was written into a record. All three are recorded as *materially
+constrained*, none as resolved, each stating what it does **not** add. All three remain
+`DO NOT CODE`.
+
+### Corrections to R2 itself
+
+Three of R2's supporting statements did not survive verification. All would have entered
+the corpus as fact if pasted:
+
+1. *"SHIFT appears nowhere in the transcript"* — refuted. It is spoken at `[00:17:45]`
+   with the extra qualifier *"away from the level"*, which is more informative than the
+   printed slide and ties `A-011` to `A-004`.
+2. *"No item on the `[00:19:20]` slide bears on `A-013`"* — overstated. Q12 prints
+   *"Have you doubled a demo account?"*, the printed origin of `A-013`'s candidate
+   measure 1. R2's required change is still correct and is applied.
+3. *"A byte-identical copy remains at the original path"* — the original remains, but the
+   working copy has since gained appendices (3,097 lines vs 2,930).
+
+### Widened beyond the directed scope
+
+Four defects of the classes R2 escalated, found while applying its list, verified, and
+corrected rather than left:
+
+- `[00:36:17]` cited in **six** places for the day-count acknowledgement, which is at
+  `[00:36:13]`–`[00:36:15]`.
+- "Trap move / false move" first use cited `[00:33:33]` — not a marker, and not a passage
+  about trap moves. It is `[00:30:40]`.
+- `S33` cited `[00:45:40]`; the four-item recap is `[00:45:44]`.
+- `AUTOMATION_AMBIGUITIES.md` and `CONTRADICTIONS.md` status blocks stale for the **third**
+  time, invalidated again by the V02 pass adding `A-019`–`A-028` and `C-003`–`C-004`.
+
+### Deliberately not done
+
+Six cited timestamps in V01 files are not transcript markers — `[00:25:51]`, `[00:30:44]`,
+`[00:35:38]`, `[00:38:02]`, `[00:39:43]`, `[00:40:26]`. Each lands inside the passage it
+cites and resolves to the correct words. Fixing them **is** the `STUDY_PROTOCOL.md`
+amendment R2 proposed and deferred to the 25% review. Retro-fitting an unadopted rule in
+the round that certifies the lesson would apply a standard inconsistently, so they are
+left in place and named as the case for adopting it (`REVIEW_INDEX.md` open item 7).
+
+### Decision
+
+```text
+V01 R3: PASS — HIGH confidence. 0 critical, 0 major, 0 open minor, 2 open notes.
+ADVANCEMENT AUTHORIZED. V02 opens; V03 does not.
+```
+
+### Process finding
+
+`D-004` makes reviewer `PASS` the only progression gate and `COURSE_PROGRESS.md` recorded
+`V02 GATE: CLOSED`, yet a complete V02 student pass ran while V01 was in remediation.
+V01's `PASS` makes it moot and no V02 work is discarded — but the gate did not hold, which
+is the whole value of a gate. Logged as `REVIEW_INDEX.md` open item 9. **V03 is gated
+behind V02's reviewer `PASS`.**
+
+### Files updated
+
+`AUTOMATION_AMBIGUITIES.md`, `CONTRADICTIONS.md`, `V01_SOURCE_NOTES.md`,
+`V01_INTERPRETATION.md`, `V01_MASTERY_REPORT.md` (`## Revision R2` appended),
+`V01_TRANSCRIPT.md` (appendix note only — no transcribed speech touched),
+`04_SCREENSHOTS/V01/INDEX.md`, `00_SYSTEM/DECISIONS.md` (`D-019` citation note),
+`00_SYSTEM/SETUP_ISSUES.md` (`I-006`), `00_SYSTEM/QUARANTINE_REGISTER.md`,
+`00_SYSTEM/COURSE_PROGRESS.md`, `18_REVIEW/REVIEW_INDEX.md`, `CHANGELOG.md`, and
+`18_REVIEW/V01/V01_REVIEW_R3.md` (new). `R1` and `R2` untouched.
+
+`validate_project.py`: 97 passed, 0 warnings, 0 failures.
+
+### Next action
+
+An **independent** reviewer session for V02 writes `18_REVIEW/V02/V02_REVIEW_R1.md`. It
+should spot-check `A-006` and `A-003` while it is in those files, since no independent
+session has audited this round.

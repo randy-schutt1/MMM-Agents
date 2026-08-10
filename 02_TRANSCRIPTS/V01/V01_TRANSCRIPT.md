@@ -3017,8 +3017,19 @@ closely paraphrased. Deliverables and deadlines are recorded in
 
 ## SCREENSHOT-WORTHY MOMENTS
 
-Flagged during review of this transcript. **None has been captured** — see
-`SETUP_ISSUES.md` I-006. `04_SCREENSHOTS/V01/INDEX.md` records the status.
+Flagged during review of this transcript, **before any capture was possible**.
+
+> **UPDATED 2026-08-10 (review R1 finding 6a, `E20`).** This paragraph read: *"**None has
+> been captured** — see `SETUP_ISSUES.md` I-006."* That was true when written and is now
+> false. `I-006` is `RESOLVED`; **22 frames were captured** and are indexed in
+> `04_SCREENSHOTS/V01/INDEX.md`. Every moment flagged in the table below now has a frame
+> at or adjacent to it — `[00:02:35]`, `[00:09:50]`, `[00:16:55]` / `[00:19:20]`,
+> `[00:38:50]` / `[00:39:10]` / `[00:39:40]`, `[00:40:25]`, `[00:43:58]`, `[00:44:40]` /
+> `[00:46:05]`, `[00:48:35]`, `[00:51:45]` / `[00:52:10]` / `[00:54:30]`. The one flagged
+> moment whose *purpose* was not served is `[00:45:55]`–`[00:46:35]`: the frame exists at
+> `[00:46:05]`, but the garbled session times it was meant to recover are **not legible
+> on it**, so `N9`–`N11` remain unresolved. The original wording is retained above so the
+> pre-capture state of this file stays visible.
 
 Timestamps are where the visual is *discussed*; the slide is likely on screen from
 slightly earlier.

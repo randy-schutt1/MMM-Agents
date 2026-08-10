@@ -478,8 +478,8 @@ all"**. Work that is merely blocked is `DEFERRED`, never `NOT APPLICABLE`.
   the template is not in the library) → **`NOT APPLICABLE`**, correctly. These match
   D-018's own eligibility test: work no present-day agent can perform.
 - H4 `[00:37:58]` ("on the one hour chart… start looking at the levels and the cycle")
-  and H5 `[00:52:20]`, `[00:53:02]` ("mark the chart up once or twice", "go look at the
-  pairs this week") → **`DEFERRED`**. These are observational chart exercises. They
+  and H5 `[00:52:38]`–`[00:52:50]`, `[00:53:07]` ("mark the chart up once or twice", "go
+  look at the pairs this week") → **`DEFERRED`**. These are observational chart exercises. They
   require a chart and a declared data source, **not** a rule definition — the instructor's
   own framing is to mark up a week and see whether the shape repeats. They are blocked by
   `I-007`, not inapplicable.
@@ -505,6 +505,18 @@ closes. Every future mastery report claiming `NOT APPLICABLE` must show the dime
 has no subject matter, not merely that it is currently blocked. The reviewer audits the
 disposition, not just the conclusion.
 **Status:** ACTIVE
+
+> **CITATION CORRECTED 2026-08-10 per review R2 finding N4 (`E11`).** H5 was cited above
+> as `[00:52:20]`, `[00:53:02]`. Those markers carry *"Is this the cycle?"* and
+> *"Sometimes it might start on Thursday"* — neither is the assignment. The assignment is
+> at `[00:52:38]`–`[00:52:50]` ("if you haven't marked the chart up once or twice and
+> looked at Wow, same shit every week…") and `[00:53:07]` ("Go look at the pairs this
+> week"), which is what `V01_SOURCE_NOTES.md` §11 has always had. The error originated in
+> review R1 and was propagated into this record.
+>
+> **The decision's meaning is unchanged and it is not superseded** — this is a citation
+> fix made in place, as `DECISIONS.md` is append-only *as to meaning*, not as to
+> typography. D-019 remains `ACTIVE` in its original form.
 
 ---
 

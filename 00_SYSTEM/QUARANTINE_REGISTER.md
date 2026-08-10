@@ -84,7 +84,17 @@ source-traceability the project is built on, and it is specifically the failure 
   `[00:00:00]` → `[00:54:38]`, against a measured audio duration of 54:43.8. It
   preserves disfluency, crosstalk, student names, and ASR garble rather than
   smoothing them — a fabricated transcript does not contain its own transcription
-  errors. Relocated to `02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md`.
+  errors. **Copied** to `02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md`.
+
+> **CORRECTED 2026-08-10 (review R1 finding 12, `E20`).** This line read *"Relocated to
+> `02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md`"*, which was never accurate: the original file
+> remains at
+> `01_SOURCE_VIDEOS/.../01_Bootcamp1_Wk1_031812_Part1_55mins/TRANSCRIPT.md` (git-ignored,
+> preserved on disk). It was copied, not moved. The two files are no longer identical
+> either — the working copy has since gained the homework, screenshot-moment and
+> transcription-notes appendices, so it is 3,097 lines against the original's 2,930. The
+> **spoken content** is unchanged; only appendices were added. The original is retained
+> deliberately as the untouched artifact.
 - **The other 20 transcripts are UNVERIFIED.** No evidence against them, and none
   for them. Each must be checked against its own audio before that lesson is
   studied. Tracked as issue I-008.

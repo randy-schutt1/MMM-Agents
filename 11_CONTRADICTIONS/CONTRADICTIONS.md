@@ -9,19 +9,23 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 ## STATUS
 
 ```text
-RECORDS:         2   (C-001, C-002)
-LESSONS STUDIED: 1   (V01)
+RECORDS:         4   (C-001 … C-004)
+LESSONS STUDIED: 2   (V01, V02 — V02 not yet reviewed)
 UNRESOLVED:      1   (C-001 — foundational)
 ```
 
 > **UPDATED 2026-08-10 (review R1, finding 6b).** This block previously read
 > `RECORDS: 0` and *"**Intentionally empty.** No course material has been studied, so no
 > course contradiction has been observed."* Both statements were true at project start
-> and are now false — the file holds two records. Corrected so the status does not
-> contradict the file's own contents.
+> and are now false. Corrected so the status does not contradict the file's own contents.
+>
+> **UPDATED again 2026-08-10 (review R3).** The R1 correction read `RECORDS: 2 /
+> LESSONS STUDIED: 1`, accurate when written and stale the moment the V02 pass added
+> `C-003` and `C-004`. Same staleness class (`E20`), same file, second occurrence. The
+> counts above are arithmetic over the records the file contains.
 
-Both are **intra-lesson** contradictions within V01, and both originate with the
-instructor rather than with the reading of him. `C-001` (how long price runs away from
+`C-001` and `C-002` are **intra-lesson** contradictions within V01, and both originate
+with the instructor rather than with the reading of him. `C-001` (how long price runs away from
 the anchor point) is foundational and `UNRESOLVED` — the instructor was challenged on it
 at `[00:36:07]`, conceded at `[00:36:13]`, and moved on. Review R1 ruled that it does
 **not** justify `BLOCKED`, since no further work on V01 can resolve what the recording
@@ -150,8 +154,8 @@ a source-level inconsistency, not a transcription artifact.
 | 5 | Different instrument | None. No instrument is attached to either statement. | Rejected |
 | 6 | Different context | Partially: A speaks of "trading away from the anchor", B of the market "rising". These may be a trader-side window and a market-side move, which need not be identical — the trade window could reasonably be shorter than the move. **The lesson never says this.** | **Plausible, unstated — do not adopt** |
 | 7 | Stated exception | `[00:35:43]` adds "an extra day if it happens to fall on Friday", which extends but does not reconcile. | Partial |
-| 8 | Instructor shorthand | `[00:36:17]` — "It's more than what I've told you. I understand that." — reads as an admission of loose prior teaching. | **Plausible** |
-| 9 | Actual inconsistency in the course | The instructor's own acknowledgement at `[00:36:07]`–`[00:36:17]` is direct evidence for this. | **Most strongly supported** |
+| 8 | Instructor shorthand | `[00:36:13]`–`[00:36:15]` — "It's more than what I've told you. I understand that." — reads as an admission of loose prior teaching. | **Plausible** |
+| 9 | Actual inconsistency in the course | The instructor's own acknowledgement at `[00:36:07]`–`[00:36:15]` is direct evidence for this. | **Most strongly supported** |
 
 Explanations 6, 8 and 9 are all live. 6 is the only one that would make both
 statements true; it is also the one with no textual support, and adopting it would be
