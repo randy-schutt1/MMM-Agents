@@ -11,7 +11,7 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V01)
+VIDEOS IN PROGRESS:  2  (V01 in remediation, V02 awaiting review)
 VIDEOS PASSED:       0
 CURRENT LESSON:      V01 — re-reviewed R2 2026-08-10: REVISE (HIGH), 0 critical,
                      1 major. Still in remediation.
@@ -52,7 +52,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | Video | Session | Duration | Source Verified | Transcript | Notes | Screenshots | Homework | Manual Backtest | Student Mastery | Reviewer | Final Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ⏳ R1 REVISE → R2 REVISE → R3 due | IN REMEDIATION |
-| V02 | Wk1 P2 | 01:00:19 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED | ⬜ | AWAITING REVIEW |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -74,6 +74,21 @@ fabricate, interpolate, or infer Week 6 content.**
 | V21 | Wk10 | 01:14:47 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 
 ### Notes on the marks above
+
+- **V02 Transcript ✅** — verified 2026-08-10 against its own audio (four Whisper
+  spot-checks plus structural checks) and adopted at `02_TRANSCRIPTS/V02/V02_TRANSCRIPT.md`.
+  I-008 satisfied for V02. Its three companion files were confirmed fabricated (Q-002).
+- **V02 Screenshots ✅** — 25 captured 2026-08-10 by the **10× fast sweep** (D-021), not
+  by real-time recording: a 60-minute lesson swept in 6 minutes. An earlier capture this
+  session was of the wrong lesson entirely and was discarded — see `SETUP_ISSUES.md` I-009.
+- **V02 Homework ⚠️** — 11a (label the weekly cycle) attempted on real TradingView data
+  for a substituted week, first pass preserved, ungraded — 2012 hourly data is
+  account-gated. 11b (40 flashcards) `DEFERRED` on **A-011/A-007**, not on tooling.
+  `05_HOMEWORK/V02/V02_HOMEWORK.md`.
+- **V02 Manual Backtest ⏸** — `DEFERRED` under D-019, not `NOT APPLICABLE`. V02 states a
+  falsifiable structural claim ("does not cross the level for at least 3 days") but
+  A-004 leaves "the level" without a price, and the lesson states no entry, so there is
+  no decision point to hide.
 
 - **V01 Screenshots ✅** — 22 captured 2026-08-10 and indexed. I-006 is `RESOLVED`;
   method in `00_SYSTEM/SWF_CAPTURE_RECIPE.md`. A full-length synced mp4 is retained

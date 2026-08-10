@@ -73,7 +73,7 @@ Folders under `Bootcamp Notes/` were renamed to match: folder `NN_` now equals v
 | Video ID | Original Filename | Lesson Title | Duration | File Size | Relative Path | SHA-256 | Ordering Confidence | Processing Status |
 |---|---|---|---|---|---|---|---|---|
 | V01 | `Bootcamp1 Wk1 031812 Part1 (55mins).swf` | UNKNOWN | 00:54:43 | 17,806,443 (17.0 MB) | `Bootcamp/Bootcamp1 Wk1 031812 Part1 (55mins).swf` | `c7e660f4b187e0ef81c05d38cc031cb523b56ec22c0c96db4b4dd41303d84030` | CERTAIN | STUDENT COMPLETE |
-| V02 | `Bootcamp1 Wk1 031812 Part2 (60mins).swf` | UNKNOWN | 01:00:19 | 21,252,288 (20.3 MB) | `Bootcamp/Bootcamp1 Wk1 031812 Part2 (60mins).swf` | `03079acf739119884911075b8332482a42a6ea178bc0ddb5fed216b9d20bce9f` | CERTAIN | NOT STARTED |
+| V02 | `Bootcamp1 Wk1 031812 Part2 (60mins).swf` | UNKNOWN | 01:00:19 | 21,252,288 (20.3 MB) | `Bootcamp/Bootcamp1 Wk1 031812 Part2 (60mins).swf` | `03079acf739119884911075b8332482a42a6ea178bc0ddb5fed216b9d20bce9f` | CERTAIN | STUDIED — awaiting review |
 | V03 | `Bootcamp1 Wk2 032512 Part1 (71mins).swf` | UNKNOWN | 01:10:42 | 27,719,141 (26.4 MB) | `Bootcamp/Bootcamp1 Wk2 032512 Part1 (71mins).swf` | `efe256d81dddf546cc64a4d35c40920ab304562fb57bd2bcf46fed4bc773e273` | CERTAIN | NOT STARTED |
 | V04 | `Bootcamp1 Wk2 032512 Part2 (86mins).swf` | UNKNOWN | 01:25:41 | 29,915,614 (28.5 MB) | `Bootcamp/Bootcamp1 Wk2 032512 Part2 (86mins).swf` | `10d8fe7e0410a12c605abb19cebaae8ad5f39ec78a4ab2e8da553117fe60fb7c` | CERTAIN | NOT STARTED |
 | V05 | `Bootcamp1 Wk2 032512 Part3 (68mins).swf` | UNKNOWN | 01:08:21 | 37,342,683 (35.6 MB) | `Bootcamp/Bootcamp1 Wk2 032512 Part3 (68mins).swf` | `c606520de74d8b0f1d4800b026f252f9a89d4ecc66bb5db9ff3992dcf896fcc1` | CERTAIN | NOT STARTED |

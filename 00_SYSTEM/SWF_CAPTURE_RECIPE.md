@@ -3,7 +3,7 @@
 Written for a **fresh agent session with zero prior context**. Follow it top to bottom
 for V02, then V03, and so on. One video per session.
 
-Established and validated on V01, 2026-08-10.
+Established on V01, 2026-08-10. Fast-sweep method added on V02, same day.
 
 ---
 
@@ -69,8 +69,18 @@ WASM needs a real HTTP origin.
 mkdir -p serve
 cp ruffle-web/*.wasm ruffle-web/*.js serve/
 cp "01_SOURCE_VIDEOS/Forex Bootcamp/Bootcamp/<THE VIDEO>.swf" serve/vNN.swf   # a COPY
-cd serve && python3 -m http.server 8899 &
+
+# PICK A FRESH PORT AND PROVE IT IS YOURS -- see GOTCHA 4. Do not reuse 8899.
+PORT=89NN
+lsof -nP -iTCP:$PORT -sTCP:LISTEN && { echo "BUSY - pick another"; exit 1; }
+cd serve && python3 -m http.server $PORT & sleep 2
+lsof -nP -iTCP:$PORT -sTCP:LISTEN            # must be THIS session's python PID
+diff <(curl -s http://127.0.0.1:$PORT/vNN.swf | shasum -a 256 | cut -d' ' -f1) \
+     <(shasum -a 256 serve/vNN.swf           | cut -d' ' -f1) || exit 1
 ```
+
+> **A `200` from `curl -sI` proves nothing.** Another session's server will answer it
+> happily and then serve you its own lesson. Run the two checks above. **GOTCHA 4.**
 
 **Never modify the original `.swf`.** Work on a copy in the scratchpad
 (`SOURCE_INGESTION_PROTOCOL.md` §2).
@@ -110,6 +120,11 @@ window.addEventListener("load", async () => {
 ---
 
 ## 3. RECORD THE PLAYTHROUGH — REAL TIME, ~1 HOUR
+
+> **Not the default any more.** For screenshots use the 10× fast sweep in **§10**, which
+> does a 60-minute lesson in ~6 minutes. Use this real-time path only when you want the
+> synced audio+video mp4 as an archival asset. §§4–6 (offset, mux, sync verify) apply
+> only to this path.
 
 Run it in the background. Check the duration in `SOURCE_MANIFEST.md` and add ~40 s of
 margin.
@@ -282,34 +297,13 @@ Then: ambiguities (`A-NNN`), contradictions (`C-NNN`), `VNN_MASTERY_REPORT.md`,
 
 ---
 
-## 10. REALISTIC TIMINGS (measured on V01)
+## 10. THE FRAME-RATE SPEEDUP — TESTED, IT WORKS, 40×
 
-| Phase | Wall clock | Attention |
-|---|---|---|
-| Setup (npm, Ruffle download, serve) | ~3 min | active, first session only |
-| **Record playthrough** | **~1× video length (55 min)** | background |
-| Offset + mux + encode | ~3 min | active |
-| Sync verification | ~2 min | active |
-| Screen detection + extraction | ~3 min | active |
-| Reviewing and naming frames | ~10 min | active |
-| Transcript verification | ~10 min | active |
-| Source notes | ~30 min | active |
-| Interpretation | ~30 min | active |
-| Ambiguities / contradictions | ~20 min | active |
-| Mastery report + bookkeeping + commit | ~20 min | active |
+**Status: CONFIRMED WORKING, 2026-08-10 on V02. This is now the default method for
+screenshots.** Real-time capture (§3) is only needed when you specifically want a synced
+audio+video mp4.
 
-**~2.5 h of active work per lesson, plus ~1 h of unattended recording** that overlaps
-with reading the transcript. Across V02–V21 that is roughly 20 hours of recording — run
-it in the background, one video per session.
-
----
-
-## 11. THE FRAME-RATE SPEEDUP IDEA — TESTED ON V02, IT DOES NOT WORK
-
-**Status: RULED OUT, 2026-08-10. Do not re-attempt. Budget the full real-time hour for
-every remaining lesson.**
-
-### The idea, as it stood before testing
+### The patch
 
 The SWF header declares its frame rate, and it is patchable in a **working copy**:
 
@@ -319,70 +313,111 @@ V02: frameRate=3.0, frameCount=10861, at body offset 17
      (after the 8-byte file header and the RECT; decompress CWS bodies with zlib first)
 ```
 
-Raising 3 fps to 120 fps *should* have made Ruffle advance the root timeline ~40×
-faster. The arithmetic that made this look promising is real and still checks out:
-V02's 10861 frames ÷ 3 fps = 3620.3 s, against a measured audio length of 3619.8 s.
-**The root timeline is exactly as long as the presentation.** That is why the idea was
-worth testing.
+Parser/patcher: read `sig`/`version`/`fileLength` from the first 8 bytes; zlib-decompress
+the body for `CWS`; skip the RECT (5-bit `nbits`, then 4 × `nbits` bits, rounded up to a
+byte boundary — 17 bytes for a 1024×786 stage); `frameRate` is a `UI16` there (8.8 fixed,
+`raw / 256`), followed by `frameCount` as a `UI16`. Write back as `FWS` with
+`fileLength = 8 + len(body)` so you never have to recompress.
 
-### What was tested
+**Always patch a copy.** Verify the originals by SHA-256 against `SOURCE_MANIFEST.md`
+afterwards.
 
-Three runs, each loading a patched working copy from a local HTTP origin in headless
-Chrome via Playwright, clicking play, and reading the Camtasia player's own burned-in
-timecode against wall clock.
+### Measured speedup
 
-| Run | Declared fps | Wall clock 60 s | Player OSD read |
-|---|---|---|---|
-| 1 | **120.0** (40×) | 60 s | `01:00` |
-| 2 | **1.0** (⅓×) | 60 s | `01:00` |
-| 3 | 3.0 (unmodified control) | 60 s | `01:00` |
+| Wall clock | 120 fps patched | 3 fps control |
+|---|---|---|
+| 20 s | 13:20 | 00:20 |
+| 40 s | 26:40 | 00:40 |
+| 60 s | 40:00 | 01:00 |
 
-Screenshots at 0/10/20/30/45/60 s in run 1 advanced exactly 10, 20, 30, 45 and 60
-seconds of presentation content. At 60 s of wall clock the patched 120 fps copy was
-still displaying the opening title slide.
+**Exactly 40×, linear.** Both unknowns from the original proposal resolved favourably:
+the Camtasia player *does* follow the root timeline, and Ruffle's `requestAnimationFrame`
+tick is *not* a ceiling — it advances as many timeline frames per tick as the declared
+rate demands. The burned-in timecode advances correctly at speed, so every screenshot
+still proves its own timestamp.
 
-### Why the 1 fps run is the decisive one
+### Use 10×, not 40×
 
-A 120 fps run that shows no speedup is ambiguous — it could mean the header is honoured
-but something downstream caps the rate (the `requestAnimationFrame` ceiling that was
-listed as unknown #2). **Patching *down* to 1 fps removes that ambiguity.** No frame
-rate cap can explain a threefold *slowdown* failing to appear. Playback ran at exactly
-1× in all three runs, so the declared frame rate is not being used to drive the
-presentation at all.
+Patch 3.0 → **30.0 fps**. A 60-minute lesson then sweeps in ~6 minutes, and a screenshot
+every 0.5 s of wall clock gives exactly the 5-second sampling grid §7 wants. 40× works,
+but it compresses screenshot cadence until Playwright's own capture latency dominates and
+leaves less margin for correct delta-tile compositing. Speed is no longer the bottleneck.
 
-**Conclusion: unknown #1 was the real one.** The Camtasia player drives its slides from
-an internal timer or from audio position, not from the root timeline. The root timeline
-is the right length, but it is not the clock.
+```js
+// sweep.mjs — 10x, screenshot every 5 presentation-seconds
+const SPEED=10, PRES_S=<duration_s>, STEP_PRES=5;
+const STEP_MS=STEP_PRES*1000/SPEED;               // 500 ms wall
+const N=Math.ceil(PRES_S/STEP_PRES)+8;
+await p.goto(`http://127.0.0.1:${PORT}/index.html?scale=1&swf=v02_x10.swf`,{waitUntil:'load'});
+await p.waitForFunction('window.__ready === true',{timeout:60000});
+await p.waitForTimeout(2500);
+const t0=Date.now();
+await p.mouse.click(512,300);
+for(let i=0;i<N;i++){
+  const w=t0+i*STEP_MS-Date.now(); if(w>0) await p.waitForTimeout(w);
+  await p.screenshot({path:`sweep/s_${String(i).padStart(4,'0')}.png`});
+}
+```
 
-If you test a variant of this idea on some future file, use the same two-sided design —
-patch up *and* down. A one-sided test cannot distinguish "ignored" from "capped".
+Audio is unusable at any speedup, so this is a screenshots-only path. For the archival
+mp4 you still need one real-time pass (§3) — decide per lesson whether that is wanted.
 
-### Reusable code
+---
 
-The header parser and patcher are ~20 lines each and are worth rewriting if ever needed:
-read `sig`/`version`/`fileLength` from the first 8 bytes, zlib-decompress the body for
-`CWS`, skip the RECT (5-bit `nbits`, then 4 × `nbits` bits, rounded up to a byte
-boundary — 17 bytes for a 1024×786 stage), then `frameRate` is a `UI16` at that offset
-(8.8 fixed: `raw / 256`) followed by `frameCount` as a `UI16`. Write back as `FWS` with
-`fileLength = 8 + len(body)` to avoid recompressing.
+> ### GOTCHA 4 — VERIFY THE PORT AND THE BYTES, OR YOU WILL CAPTURE THE WRONG FILM
+>
+> **This cost an entire 61-minute capture, a wrong decision record (D-020), and two
+> confident-but-false findings about the source library.** Read it before you serve
+> anything.
+>
+> `python3 -m http.server 8899` **fails silently if the port is busy** — it prints an
+> "Address already in use" line and exits, leaving whatever was already there to answer.
+> Multiple agent sessions share this machine and this repo, and a previous lesson's
+> server is very likely still running on the port the recipe told you to use. That
+> server's `index.html` loads **its own** SWF and ignores your `?swf=` parameter.
+>
+> The trap is that everything downstream looks healthy: the page loads, Ruffle
+> initialises, `__ready` goes true, playback starts, the timecode burns in, a valid
+> hour-long `.webm` is produced. It is simply the wrong lesson.
+>
+> `curl -sI ... | head -3` returning `200` **does not confirm your server is running.**
+> It confirms *a* server is running. That is the check that failed here.
+>
+> ```bash
+> PORT=8917   # pick a fresh one per session; do not reuse 8899 by reflex
+> lsof -nP -iTCP:$PORT -sTCP:LISTEN && { echo "BUSY - pick another"; exit 1; }
+> cd serve && python3 -m http.server $PORT & sleep 2
+> lsof -nP -iTCP:$PORT -sTCP:LISTEN          # must show THIS session's python PID
+> diff <(curl -s http://127.0.0.1:$PORT/vNN.swf | shasum -a 256 | cut -d' ' -f1) \
+>      <(shasum -a 256 serve/vNN.swf          | cut -d' ' -f1) || exit 1
+> ```
+>
+> **Also give every served file a unique name.** Reusing `probe_tmp.swf` across files
+> lets browser/HTTP caching hand back a stale body — that produced a second false result
+> here, a survey of all 21 lessons that appeared to show every file declaring an
+> identical 54:44 duration. It was one file, twenty-one times.
+>
+> **And sanity-check content against the transcript early.** The port collision was
+> finally caught because the slides did not match what the instructor was saying. One
+> screenshot at a known timestamp, compared against the transcript, would have caught it
+> in the first two minutes instead of after an hour. Do that before any long capture.
 
-**Always patch a copy.** The originals were verified untouched by SHA-256 against
-`SOURCE_MANIFEST.md` after this session's work.
+---
 
-### What this means for V03–V21
+## 11. REALISTIC TIMINGS (V01 real-time; V02 fast-sweep)
 
-There is no shortcut. Each remaining lesson costs one real-time playthrough of its own
-length. That is ~18 hours across V03–V21, and it is unattended background time that
-overlaps with reading the transcript — which is the right way to schedule it, and is
-what §10's timings already assume.
+| Phase | Wall clock | Attention |
+|---|---|---|
+| Setup (npm, Ruffle download, serve, **port verification**) | ~4 min | active, first session only |
+| **Fast screenshot sweep @10×** | **~6 min per 60-min lesson** | background |
+| *(optional)* real-time pass for the archival mp4 | ~1× video length | background |
+| Screen detection + extraction | ~3 min | active |
+| Reviewing and naming frames | ~10 min | active |
+| Transcript verification (incl. Whisper spot-checks) | ~12 min | mostly unattended |
+| Source notes | ~30 min | active |
+| Interpretation | ~30 min | active |
+| Ambiguities / contradictions | ~20 min | active |
+| Mastery report + bookkeeping + commit | ~20 min | active |
 
-Two things make the hour cheaper than it looks, and both should be exploited:
-
-1. **Start the recording first, before anything else.** It is the long pole and needs no
-   attention. On V02 the recording was launched ~7 minutes into the session and the
-   transcript verification, quarantine audit, source notes, interpretation and register
-   updates were all completed while it ran. The capture cost effectively nothing.
-2. **The mp4 is a permanent asset.** Once made, any future timestamp is one
-   `ffmpeg -ss` away. There is no reason to ever record the same lesson twice, which
-   means the archival pass and the screenshot pass are the same pass. Do not treat them
-   as a value/cost tradeoff to be re-litigated per lesson — record once, keep it.
+**~2.5 h of active work per lesson.** The hour of unattended recording is no longer
+mandatory — it is now a per-lesson choice about whether the archival mp4 is wanted.

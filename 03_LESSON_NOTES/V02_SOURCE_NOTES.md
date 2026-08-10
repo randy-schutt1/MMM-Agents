@@ -11,7 +11,7 @@ instructor did not make. All of that goes in `V02_INTERPRETATION.md`.
 | Duration | 01:00:19 |
 | Notes taken | 2026-08-10 |
 | Source | `02_TRANSCRIPTS/V02/V02_TRANSCRIPT.md` |
-| Basis | Transcript. §§1–3 and 5–14 were written from the transcript alone, before any frame of this video existed. §4 is added afterwards from captured screenshots and is dated separately. |
+| Basis | Transcript, plus **25 screenshots captured 2026-08-10** (see §4 and `04_SCREENSHOTS/V02/INDEX.md`). §§1–3 and 5–14 were written from the transcript alone, before any frame of V02 existed; §4 was added afterwards. |
 
 > **Scope limit, stated up front.** Everything below is sourced from the ASR
 > transcript, which was verified against the audio before use (four independent
@@ -294,8 +294,127 @@ Recorded because their absence matters more than their presence.
 
 ## 4. CHART OBSERVATIONS
 
-*Placeholder — this section is written only after the screenshots exist, and is dated
-separately. §§1–3 and 5–14 above were completed before any frame of V02 was captured.*
+**Added 2026-08-10, after §§1–3 and 5–14 were complete.** 25 screenshots,
+`04_SCREENSHOTS/V02/INDEX.md`. Nothing above this section has been rewritten; the
+corrections the visuals forced are listed at the end of this section rather than folded
+back into the earlier text, so a reviewer can see which readings survived on audio alone.
+
+Items here are graded `VISUAL` — shown on screen. Where a slide is *printed* text it is
+authored material and is stronger evidence than the ASR for anything it covers.
+
+### 4a. Printed slides — content the audio did not carry
+
+| # | Time | Slide | What it adds beyond the audio |
+|---|---|---|---|
+| V1 | `[00:08:55]` | **Weekly Structure** | The four bullets are the authored source of §2d. Two things are printed that were not spoken: the trapped level is described as **"The LOW or HOW"** (HOW unexpanded), and the holding period is printed as **"For At Least 3 Days"** — see the C-001 note in 4d. |
+| V2 | `[00:28:00]` | **How To Beat The Market Maker** | "As A Trader You Must Understand How To Read These Moves / Anticipate When And How They Will Present. / Then, You Can Truly Beat The MM By Simply Trading Inline With Him". Matches `[00:27:57]`–`[00:28:17]` closely. |
+| V3 | `[00:33:10]` | **Market Maker Moves** | **"If Trade Does Not See Substantial Profit In 2 Hours, Take Profit Or Small Loss."** The audio gives the rule (`[00:34:23]`) but **never states the two-hour window.** This is a new numeric parameter, printed. Also prints "( NYC Reversal)" as the name for the session-changeover effect, which is not spoken. |
+| V4 | `[00:42:55]` | **Variations On The Theme** | A closed printed list of four variations: session in which moves come; severity of stop hunts (mild/extended); concealment behind news; blaming geopolitical events. The audio covers all four but as prose, so the fact that it is a *four-item list* is only visible here. |
+| V5 | `[00:45:55]` | **ForEx Trading Times** | The complete session table — see 4b. The single highest-value frame in the lesson. |
+| V6 | `[00:47:20]` | **Second Most Important Element** | Five printed bullets. Adds **"New Indicators Must Match Times"**, **"Don't Get Confused With Time Ribbon On The Bottom Of Broker's Platform (Server Times)"** — which decodes the ASR-garbled "work time ribbon" of `[00:46:12]` — and **"All Other Time References Are GARBAGE"**, the printed form of the Forex Factory dismissal at `[00:51:13]`. |
+| V7 | `[00:55:35]` | **R & D assignment** | The flashcard homework in exact form — see 4c. |
+
+### 4b. The session table — printed
+
+```text
+5pm High / Low Reset (The MM Spread Is Set)
+5pm to 8pm Dead Gap
+Asian Session:  8:30pm - 3:00am    Gap 3-3:30a
+London Session: 3:30am - 9:00am    Gap 9-9:30a
+New York Session: 9:30-5pm
+```
+
+Two of these are not in the audio at all: the **5pm high/low reset** (with the reason —
+the market maker's spread is set then) and the **5pm–8pm "dead gap"**. The Asian and
+London sessions get explicit start *and* end times plus their own gaps, where the audio
+gave only fragments ("3 to 3:30 is the gap, 4 o'clock session open").
+
+**No timezone is printed on the slide.** A-019 is materially constrained by this frame
+but not closed — see 4d.
+
+### 4c. The R&D homework — printed, and more precise than the audio
+
+```text
+R & D assignment  Cycle 1 Week 1
+Map out last weeks  Usd/Chf
+Develop 40 flash cards
+4 Majors: EUR/USD, GBP/USD, USD/CHF, USD/JPY
+5Ms
+5Ws
+Out of the 40, Pick one perfect M and W (only 1)
+Label it post it for review in the forum
+```
+
+This settles three things §11b had to leave loose:
+
+- The four majors are named as **pairs** — `EUR/USD, GBP/USD, USD/CHF, USD/JPY` — where
+  the audio said only "Euro, Pound, Swiss and Yen".
+- The arithmetic is confirmed: 4 pairs × (5 M's + 5 W's) = 40 cards.
+- **"Pick one perfect M and W (only 1)"** — the audio's "one perfect M and one perfect W"
+  was ambiguous about whether that meant one of each in total or one per pair. The
+  printed "(only 1)" settles it: one of each, in total.
+
+The garbled audio line at `[00:55:34]` — *"Map out last week's USDCHF in Europe"* — is
+resolved: the slide reads **"Map out last weeks Usd/Chf"**, with no "in Europe". That was
+ASR noise.
+
+The PowerPoint title bar in this frame reads **"Market Maker Boot Camp 3-18"**,
+independently confirming the session date.
+
+### 4d. The Weekly Market Structure chart — the densest single frame
+
+`[00:18:00]`, GBPUSD H1, split into day columns by vertical dividers. Printed labels:
+
+```text
+False Move Week Beginning        V-3        PFL
+Straight Away-Level 1 DNC
+Stop Hunt Low-Rise    Level 2
+Stop Hunt Low-Rise    Level 3
+33-Trade
+Level 3 Exit and Reverse
+Swing Traders Book- Day Traders Book
+```
+
+What this shows that the audio did not:
+
+- **Levels are numbered and sequential.** `Level 1`, `Level 2`, `Level 3` are consecutive
+  legs running left to right, roughly one per day column, each introduced by a
+  "Stop Hunt Low-Rise". The audio used "level" constantly without ever showing it was an
+  ordinal count. This is the clearest evidence yet for A-004.
+- **`33-Trade` is printed on the Level 3 move**, and `Level 3 Exit and Reverse` is
+  printed above its termination. The audio said only "day three, he issues a beautiful
+  33 trade". The label's placement ties "33" to **Level 3**, not to a day number.
+  A-023 is materially constrained by this — though the slide still does not say what the
+  two digits *mean*.
+- **`DNC` is attached specifically to `Straight Away-Level 1`**, matching `[00:18:44]`.
+  It is a label on one segment, not a general prohibition across the chart.
+- **`V-3` and `PFL`** are printed at the week's low, adjacent. The relationship between
+  them is not stated.
+- **`Swing Traders Book- Day Traders Book`** is printed over the Level 3 exit region —
+  presumably marking where each trader type takes profit. Not spoken, not explained.
+- Shaded rectangles carry `R =` values: `15.0`, `~25`, `29.6`, `53.8`, `61.4`, `70.7`,
+  `86.7`, `100.6`. Same label family as V01's A-018, now with eight samples on one chart
+  instead of three.
+
+### 4e. Corrections and upgrades the visuals forced
+
+| Section | Written from audio | What the visuals show | Disposition |
+|---|---|---|---|
+| §2g / §6 #8 | Exit if the trade has not reached 25–40 pips by session changeover; no time window stated | Slide V3 prints **"in 2 Hours"** | **Upgraded.** The rule has a stated clock. §6 condition 8 was incomplete, not wrong. |
+| §14 #20 | "the **wartime** … which **work time ribbon** to use" recorded as unrecoverable garble | Slide V6 prints "**Time Ribbon** On The Bottom Of Broker's Platform (**Server Times**)" | **Resolved.** It is "time ribbon", and the point is that the platform's bottom ribbon shows broker server time. |
+| §11b | "Euro, Pound, Swiss and Yen"; "one perfect M and one perfect W" ambiguous | Slide V7 prints the four pairs and "(only 1)" | **Resolved.** |
+| §14 #18 | ASR "GVP"; GBP the obvious but unconfirmed reading | Chart header at `[00:18:00]` reads **GBPUSD** | **Resolved.** GBP confirmed. |
+| §10 | Session times recorded as bare numbers with no timezone | Printed table adds 5pm reset and 5pm–8pm dead gap; still **no timezone** | **Materially constrained, not resolved.** A-019 stays open. |
+| §14 #15 → C-001 | Audio gives "at least three days" vs "two and a half to three or four days" eight seconds apart | Slide V1 prints **"For At Least 3 Days"** | **Constrained.** The *authored* doctrine is "at least 3 days"; "two and a half" appears only in speech. Recorded against C-001; does not close it, because the audio's lower bound is still spoken in the lesson. |
+| §3 "never defined" | "The box" listed as never defined | Not defined on any slide either | **Unchanged.** A-006 stays open. |
+| §3 "never defined" | "Second leg" — promised at `[00:35:22]`, given only by gesture | Slide V3 prints "If Second Leg Presents, Restart The Clock" — **uses** the term, does not define it | **Unchanged, and now doubly evidenced.** A-007 stays open. |
+| §3 "never defined" | "Mayonnaise" — a moving average, which one unstated | Charts show three coloured averages (white, cyan, red/yellow); none is labelled with a period | **Not resolved.** A-020 stays open. |
+| §14 #9 → A-021 | "M-A-A-W" vs "WVVM" for "the cycle" | No slide writes the sequence down | **Not resolved.** A-021 stays open. |
+| §14 #10 → A-022 | "Half-Batman" unexplained | Not drawn or labelled on any captured frame | **Not resolved.** A-022 stays open. |
+
+**Nothing in §§1–3 or §5–14 was found to be wrong.** The visuals added parameters and
+resolved transcription noise; they did not overturn a reading. That is a different
+outcome from V01, where the screenshots refuted an over-generalisation.
 
 ---
 

@@ -367,3 +367,59 @@ ahead of the lessons that need it. The audio route is now settled — `ffmpeg -v
 straight off the `.swf`, no third-party conversion — so the earlier concern about
 redoing the work if the audio route changed no longer applies; the remaining reason to
 keep this per-lesson is sequencing, not risk.
+
+---
+
+## I-009 — Concurrent sessions share this machine and this repository, and they collide
+
+**Status:** `OPEN` — mitigations adopted (D-022), root condition remains
+
+Three agent sessions ran against this checkout on 2026-08-10: the V02 student session,
+a V01 review R1 session, and a V01 review R2 session. They are not isolated from each
+other, and two distinct collisions caused real damage.
+
+### Collision 1 — a stale HTTP server served the wrong lesson for an hour
+
+The V01 session left `python3 -m http.server 8899` running. `SWF_CAPTURE_RECIPE.md` §2
+told the V02 session to serve on 8899. `python3 -m http.server` **exits silently when
+the port is busy**, so the V02 server never started, and every request went to the V01
+session's server — whose `index.html` is hardcoded to `v01.swf` and ignores the `?swf=`
+parameter.
+
+Consequences: a 61-minute capture of the wrong lesson; a frame-rate experiment whose
+treatment and control were the same unpatched file, producing a confident false negative
+recorded as D-020; a false conclusion that V02's `.swf` contained V01's video; and a
+false survey suggesting all 21 lessons declare a 54:44 duration.
+
+Nothing in the failure looked like a failure. The page loaded, Ruffle initialised,
+playback ran, the timecode burned in, and a valid hour-long `.webm` was produced.
+
+**What caught it:** the slides did not match what the instructor was saying at that
+timestamp. **Mitigations:** D-022 (verify the port owner and the served bytes; unique
+filename per served file; check content against the transcript before any long capture)
+and `SWF_CAPTURE_RECIPE.md` GOTCHA 4.
+
+### Collision 2 — `git add -A` cross-commits other sessions' work
+
+Sessions sharing one working tree that each run `git add -A` will commit each other's
+in-progress files under their own commit messages. Observed:
+
+| Commit | Message | Also contained |
+|---|---|---|
+| `6e4adac` | "adopt V02 transcript and record Q-002" | authored by the *review* session, not the V02 session |
+| `4068db7` | "apply V01 review R1 corrections" | `V02_SOURCE_NOTES.md`, `V02_INTERPRETATION.md` |
+| `58e3d03` | "correct stale RECORDS:0 status" | the 422-line A-019…A-025 block |
+
+No content was lost, but authorship and grouping in the history are wrong, so `git log`
+no longer identifies which session produced which artifact.
+
+**Mitigation:** stage explicit paths. **Never `git add -A` in this repository** while
+concurrent sessions are possible. Check `git status --porcelain` before staging and
+leave anything you did not write alone.
+
+### Residual risk
+
+These mitigations are conventions, not enforcement. A session that does not read this
+file will repeat both failures. The durable fixes — one working tree per session (git
+worktrees), and a port derived from the lesson number — are recommended but not yet
+adopted.

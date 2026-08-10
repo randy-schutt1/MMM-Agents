@@ -526,10 +526,50 @@ Not yet decided; record as new entries when the information exists.
 
 ---
 
-## D-020 — The SWF frame-rate speedup is ruled out; every lesson costs one real-time playthrough
+## D-020 — RETRACTED — "the SWF frame-rate speedup is ruled out"
+
+```text
+STATUS: RETRACTED 2026-08-10, same session, before push.
+        The finding was WRONG. Superseded by D-021.
+```
+
+**This decision is left in place rather than deleted, because the way it was reached
+matters more than the conclusion.** It recorded that the frame-rate speedup does not
+work, on the strength of three runs including a control. The runs were real and the
+reasoning about them was sound. The inputs were not: **none of the three runs was
+playing the file it was supposed to be playing.**
+
+A leftover `python3 -m http.server 8899` from the V01 session still owned port 8899.
+This session's own server silently failed to bind, and the check that was supposed to
+confirm it — `curl -sI http://127.0.0.1:8899/index.html` returning `200` — was answered
+by the V01 session's server. That server's `index.html` is hardcoded to load `v01.swf`
+and ignores the `?swf=` parameter entirely. So every browser render in this session,
+including all three frame-rate runs and a 61-minute "V02" capture, played **V01's
+unpatched SWF**. Patched files were written to disk and never served.
+
+The control run is the sharpest lesson. A control is supposed to protect against exactly
+this class of error, and this one did not, because the treatment and the control were
+*the same file*. A control only isolates the variable you think you are changing if you
+have independently confirmed you are changing it. **Verify the input reached the system
+under test before trusting any comparison between conditions.**
+
+What the retraction does and does not touch:
+
+| Invalidated | Unaffected |
+|---|---|
+| The frame-rate finding and this decision | V02 transcript verification (audio was read from disk with `ffmpeg`, never through the server) |
+| `SWF_CAPTURE_RECIPE.md` §11 as first rewritten | Q-002, the V02 fabrication audit (text analysis of files on disk) |
+| The 61-minute capture, its 3.52 s offset, its sync strip and its 21-state contact sheet | `V02_SOURCE_NOTES.md`, `V02_INTERPRETATION.md` (written from the transcript alone) |
+| A transient reading that V02's SWF contained V01's video | A-019…A-025, C-003, the C-001 re-test (all transcript-derived) |
+| A "screen" of all 21 files that appeared to show a shared 54:44 duration | SWF header/tag parsing (read from disk: 3.0 fps, 10861 frames) |
+
+The V02-contains-V01's-video alarm was the same artifact: the renders really were V01,
+because V01 is what was being served.
+
+**Original decision text follows, retained for the record.**
 
 **Date:** 2026-08-10
-**Decision:** The frame-rate patching idea recorded as untested in
+**Decision (RETRACTED):** The frame-rate patching idea recorded as untested in
 `SWF_CAPTURE_RECIPE.md` §11 was tested on V02 and **does not work**. §11 is rewritten
 from a proposal into a ruled-out record. Capture planning for V03–V21 assumes one
 real-time playthrough per lesson — roughly 18 further hours of unattended recording —
@@ -571,3 +611,84 @@ Camtasia export family.
 V02's frame count (10861) ÷ its declared 3 fps = 3620.3 s against a measured audio length
 of 3619.8 s — the root timeline really is exactly as long as the presentation. It is just
 not what the player uses as its clock.
+
+---
+
+## D-021 — The SWF frame-rate speedup WORKS at 40×; it is the default screenshot method
+
+**Date:** 2026-08-10
+**Supersedes:** D-020 (retracted — see above for why it was wrong)
+
+**Decision:** Patching the declared frame rate in a working copy of the `.swf` makes
+Ruffle advance the presentation proportionally faster. Measured at **exactly 40×** with
+a 120 fps patch. This becomes the default method for screenshot capture. Real-time
+capture is now only required when a synced audio+video mp4 is specifically wanted.
+
+**Measurements** (V02, patched copy vs unpatched control, both served from a
+port-verified local server):
+
+| Wall clock | 120 fps patched | 3 fps control |
+|---|---|---|
+| 20 s | 13:20 | 00:20 |
+| 40 s | 26:40 | 00:40 |
+| 60 s | 40:00 | 01:00 |
+
+40:00 of presentation in 60 s of wall clock is 40.0×, sustained and linear across all
+three sample points. **The `requestAnimationFrame` ceiling named as unknown #2 in the
+original §11 is not a constraint** — Ruffle advances as many timeline frames per tick as
+the declared rate requires, so the practical ceiling is well above the 20× that was
+feared. The player's burned-in timecode advances correctly at speed, so each screenshot
+still proves its own timestamp.
+
+**Chosen operating point: 10× (patch 3.0 → 30.0 fps), not 40×.** At 10× a full 60-minute
+lesson sweeps in about 6 minutes, and a screenshot every 0.5 s of wall clock yields the
+same 5-second sampling grid the recipe's thumbnail step already assumes. 40× is available
+but compresses the screenshot cadence to the point where Playwright's own capture latency
+becomes the limit, and it leaves less margin for correct delta-tile compositing. Speed is
+no longer the bottleneck, so the safer rate is the right default.
+
+**Effect on the V03–V21 estimate:** the ~18 hours of unattended real-time recording that
+D-020 budgeted is not required for screenshots. Per-lesson capture drops from ~60 minutes
+to ~6.
+
+**Evidence:** `SWF_CAPTURE_RECIPE.md` §11, rewritten from the corrected runs.
+
+**Alternatives considered:** *Standing by D-020 and re-recording in real time* — rejected;
+D-020's inputs were demonstrably wrong and the corrected test is unambiguous.
+*Adopting 40× as the default* — rejected for the cadence and compositing-margin reasons
+above; the marginal saving over 10× is minutes, and the risk is a silently corrupted
+frame.
+
+---
+
+## D-022 — Every locally served capture must verify the port and the bytes before use
+
+**Date:** 2026-08-10
+**Decision:** Before any Ruffle capture, the session must confirm (a) that the HTTP
+server on the chosen port is **its own**, and (b) that the bytes served for the target
+URL match the file on disk. Both checks, every time. A `200` response is not evidence of
+either.
+
+```bash
+PORT=8917
+lsof -nP -iTCP:$PORT -sTCP:LISTEN && { echo "PORT BUSY - pick another"; exit 1; }
+cd serve && python3 -m http.server $PORT & sleep 2
+lsof -nP -iTCP:$PORT -sTCP:LISTEN            # must be this session's PID
+diff <(curl -s http://127.0.0.1:$PORT/target.swf | shasum -a 256 | cut -d' ' -f1) \
+     <(shasum -a 256 serve/target.swf        | cut -d' ' -f1) || exit 1
+```
+
+Also: **give each served file a unique name.** Reusing one filename such as
+`probe_tmp.swf` across files lets HTTP/browser caching return a stale body, which
+produced a second false result in this session (a "screen" of all 21 lessons that
+appeared to show every file declaring the same 54:44 duration — it was one file, 21
+times).
+
+**Reason:** `python3 -m http.server` fails to bind a busy port and exits, leaving any
+previously running server on that port to answer instead. Multiple concurrent sessions
+share this machine and this repository, so a stale server from another session is not a
+remote possibility — it is what happened. The failure is silent, produces confident and
+internally consistent results, and cost this session a 61-minute capture, a wrong
+decision record, and two spurious findings about the source library.
+
+**Evidence:** D-020 retraction; `SETUP_ISSUES.md` I-009.

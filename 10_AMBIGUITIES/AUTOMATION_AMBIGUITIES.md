@@ -88,7 +88,7 @@ resolved record keeps its history.
 | A-001 | "anchor point" | V01 `[00:34:47]` | DO NOT CODE | Foundational. Sets weekly direction and holding period. Wrong = every weekly-bias rule is wrong. |
 | A-002 | "trap move" / "false move" | V01 `[00:34:33]` | DO NOT CODE | Foundational. The lesson's central object. Wrong = the whole framing is misapplied. |
 | A-003 | "picks up the [?penings?]" → **"pendings"** | V01 `[00:39:12]` | **RESOLVED BY COURSE** | Unknown — the word itself is unrecovered. Sits at two steps of the core sequence. |
-| A-004 | "level" (countable unit) | V01 `[00:35:38]` | DO NOT CODE | High. Used to bound expected move size ("one to three levels"). |
+| A-004 | "level" (countable unit) | V01 `[00:35:38]` | DO NOT CODE — **materially constrained** by V02 slide `[00:18:00]` | High. V02's chart prints Level 1/2/3 as an ordinal sequence of legs. |
 | A-005 | "the trading zone" | V01 `[00:30:40]` | DO NOT CODE | Foundational. The stated entry filter for struggling traders. **Deferred twice: V01→V02, then V02 `[00:45:52]`→V03.** |
 | A-006 | "the blue box" / "the box" / "the red box" | V01 `[00:43:07]` | DO NOT CODE | High. Three box terms, no definition, one entry prohibition attached. |
 | A-007 | "second leg" | V01 `[00:43:21]` | DO NOT CODE | **Foundational (raised from High at V02).** Three of V02's instructions route through it, and V02 promises a definition then withholds it. |
@@ -103,13 +103,16 @@ resolved record keeps its history.
 | A-016 | "goes into chop" | V01 `[00:44:45]` | DO NOT CODE | Medium. The stated end-of-week failure state. |
 | A-017 | "big entry candle" | V01 `[00:48:41]` | DO NOT CODE | Medium. The only entry-trigger language in the lesson. |
 | A-018 | `R = <number>` labels on the shaded boxes | V01 `[00:48:35]` | DO NOT CODE | Medium. If misread as a risk-to-reward ratio it would invent a target rule the lesson never states. |
-| A-019 | session times with **no timezone stated** | V02 `[00:50:32]` | DO NOT CODE | Foundational. Every timing rule in V02 is unusable without it, and the instructor explicitly declines to reason about DST. |
+| A-019 | session times with **no timezone stated** | V02 `[00:50:32]` | DO NOT CODE — **materially constrained** by slide `[00:45:55]` | Foundational. The full session table is now recovered from the slide; only the timezone is missing. |
 | A-020 | "mayonnaise" (a moving average) | V02 `[00:19:46]` | DO NOT CODE | High. Used as a support/resistance reference *and* as the distance test for whether a trade is worth taking. |
 | A-021 | the letter sequence for "the cycle" | V02 `[00:07:28]` / `[00:19:31]` | DO NOT CODE | Medium. Two incompatible strings ("M-A-A-W", "WVVM") for the same named object. |
 | A-022 | "half-Batman" | V02 `[00:20:37]` | DO NOT CODE | High. One of exactly two named continuations at outside structure high. |
-| A-023 | "33 trade" | V02 `[00:22:16]` | DO NOT CODE | Medium. Named but never decomposed; the obvious analogy to "22" is unconfirmed and may be wrong. |
+| A-023 | "33 trade" | V02 `[00:22:16]` | DO NOT CODE — **constrained** by V02 slide `[00:18:00]` | Medium. Printed on the **Level 3** move, tying it to level rather than calendar day. Digits still undecoded. |
 | A-024 | "slightly above" (22-trade overshoot tolerance) | V02 `[00:01:32]` | DO NOT CODE | Medium. Decides whether an otherwise-valid 22 setup is invalidated. |
 | A-025 | "a good close below" | V02 `[00:39:19]` | DO NOT CODE | Medium. The trigger for the only numeric exit rule in V02 (−15 scratch-out). |
+| A-026 | `HOW` (printed beside `LOW`) | V02 slide `[00:08:55]` | DO NOT CODE | Medium. Names the level the dealer moves away from; "High Of Week" is plausible but unstated. |
+| A-027 | "Swing Traders Book- Day Traders Book" | V02 slide `[00:18:00]` | DO NOT CODE | Medium. Printed over the Level 3 exit — reads like a target rule, and would invent one if adopted. |
+| A-028 | `V-3` | V02 slide `[00:18:00]` | DO NOT CODE | Low-Medium. Printed beside `PFL` at the week's low, unexplained. |
 
 ---
 
@@ -1659,3 +1662,138 @@ scattered through the originals so the V02 pass is auditable as a unit.
 | **A-007** — "second leg" | `[00:34:57]` "I'm only going to take second leg trades"; `[00:35:22]` "**And I'm going to define what a second leg is**"; `[00:35:25]` the "definition", which is "If you see this, that's not a trade. This is not a trade. That's a trade." | **Impact raised from High to Foundational.** V02 is materially worse than V01 here: the definition is promised and then given only by gesture. Three V02 instructions depend on it. |
 | **A-010** — "peak formation high/low" | `[00:07:07]`, `[00:18:06]`, `[00:15:46]` "they will not go below last week's peak formation" | Adds a new load-bearing claim built on the undefined object. Still no definition. Still not distinguished from the anchor point. |
 | **A-014** — "fractional disparity" | `[00:43:26]` "He handled the crosses fractional disparity" | **Second occurrence**, first outside a survey. Now clearly a live term in the instructor's vocabulary rather than a one-off. Still unexplained. |
+
+---
+
+## A-026 — `HOW` (printed beside `LOW`)
+
+### Course Meaning
+
+Unknown. Printed on the Weekly Structure slide as one of the two things the dealer moves
+away from after trapping traders.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V02 | slide `[00:08:55]` | "Market Makers' Trap Traders On The First Day Of The Trading Week And Tie Up Your Margin For The Remaining Days By Aggressively Moving Away From The **LOW or HOW**." Screenshot: `04_SCREENSHOTS/V02/V02_00-08-55_weekly-structure-text-slide.png` |
+
+### Assessment
+
+Read beside `LOW` in the same phrase, "High Of Week" is the natural expansion, and the
+symmetry of the sentence (the dealer moves away from whichever extreme he set) supports
+it. **The slide does not expand it and the audio never says it.** V01's quarantined
+`RULES.md` used "HOD/LOD" (high/low of *day*), which is a different unit — and that file
+is fabricated, so it is not evidence either way.
+
+Not adopted. The cost of guessing wrong is that every weekly-level reference points at a
+daily extreme, or vice versa.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A later slide or lesson that expands the abbreviation, or uses `HOW` in a sentence that
+fixes the period.
+
+---
+
+## A-027 — "Swing Traders Book- Day Traders Book"
+
+### Course Meaning
+
+Unknown. Printed text on the Weekly Market Structure chart, positioned over the Level 3
+exit region.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V02 | slide `[00:18:00]` | Printed above the final rise, beside "Level 3 Exit and Reverse". Screenshot: `04_SCREENSHOTS/V02/V02_00-18-00_weekly-market-structure-levels-chart.png` |
+
+The instructor does **not** read this label aloud at any point in the lesson.
+
+### Why it is recorded rather than interpreted
+
+"Book" in trading usually means "book profit". The label's placement at the exit region,
+naming two trader types, reads naturally as *this is where swing traders take profit and
+this is where day traders take profit* — i.e. a target rule differentiated by holding
+style. That would connect neatly to `[00:30:32]`, where he offers swing traders an
+ADR × 1.5 / × 2 hold.
+
+**It is not adopted, and the neatness is the reason to be suspicious.** Nothing states
+it. This is structurally the same trap as A-018: a suggestive label on a chart, which if
+read as a rule inserts a target the lesson never states. The connection to the swing
+option is exactly the kind of tidy inference that produced the quarantined files.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A lesson where he reads this label aloud or draws the two exits separately.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-018 (`R =` labels — same failure mode), A-004 (levels) |
+| Interpretation | `03_LESSON_NOTES/V02_INTERPRETATION.md` §10.4 X2 |
+
+---
+
+## A-028 — `V-3`
+
+### Course Meaning
+
+Unknown. Printed beside `PFL` at the week's low on the Weekly Market Structure chart.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V02 | slide `[00:18:00]` | `V-3` printed immediately left of and above `PFL`, at the bottom of the false-move leg. Screenshot: `04_SCREENSHOTS/V02/V02_00-18-00_weekly-market-structure-levels-chart.png` |
+
+### Candidate readings, none adopted
+
+| # | Reading | Note |
+|---|---|---|
+| 1 | A "V" formation with a 3-something (three touches? three candles?) | The course uses shape letters (M, W, V) — `[00:19:52]` "the real trade obviously is V-patterns of the low or W to the low" — so "V" as a shape is well supported. The "-3" is not. |
+| 2 | A level count running backwards from the low | Would conflict with Level 1/2/3 running forward from it on the same chart. |
+
+Reading 1 is the more likely and is still a guess.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-010 (peak formation), A-011 (M and W formation), A-004 (levels) |
+
+---
+
+## V02 VISUAL EVIDENCE ADDED TO EXISTING RECORDS
+
+The 25 screenshots captured on 2026-08-10 bear on six earlier records. Kept together so
+the visual pass is auditable as a unit.
+
+| ID | Visual evidence | Effect |
+|---|---|---|
+| **A-004** — "level" | Slide `[00:18:00]` prints `Level 1`, `Level 2`, `Level 3` as consecutive legs across day columns, each opened by a "Stop Hunt Low-Rise", terminating at "Level 3 Exit and Reverse" | **Materially constrained.** A level is an ordinal leg in a sequence, not a price line. Still no rule for when one level ends and the next begins, so it stays `DO NOT CODE`. |
+| **A-007** — "second leg" | Slide `[00:33:10]` prints "If Second Leg Presents, Restart The Clock" | **No progress, and the gap is now worse.** The term is load-bearing in *print* as well as in speech, and defined in neither. Remains Foundational. |
+| **A-018** — `R =` labels | Slide `[00:18:00]` carries eight `R =` values on one chart: `15.0`, `~25`, `29.6`, `53.8`, `61.4`, `70.7`, `86.7`, `100.6` | **More samples, same status.** The values scale with the visible height of each rectangle, which strengthens candidate 1 (range of the boxed area in pips) and further weakens the risk-to-reward reading — V02 states no stop and no target either. Still `DO NOT CODE`. |
+| **A-019** — session times | Slide `[00:45:55]` prints the full table: 5pm high/low reset, 5pm–8pm dead gap, Asian 8:30pm–3:00am (gap 3–3:30a), London 3:30am–9:00am (gap 9–9:30a), New York 9:30–5pm. Slide `[00:47:20]` adds "Time Ribbon … (Server Times)" and "All Other Time References Are GARBAGE" | **Materially constrained.** Everything except the timezone is now recovered. New York time is strongly indicated (V01 `[00:46:09]` "930 New York Eastern"; V02's "6:30 New York time") but **is not printed**, so the record stays open rather than closing on inference. |
+| **A-023** — "33 trade" | `33-Trade` printed on the **Level 3** move of slide `[00:18:00]` | **Constrained.** Ties "33" to level 3 rather than calendar day 3, correcting the natural reading of the audio's "day three". Digits still undecoded. |
+| **A-020** — "mayonnaise" | Charts show three coloured moving averages (white, cyan, red/yellow). **No legend, no period label on any captured frame** | **Not resolved.** The hoped-for resolution route in A-020's "Required Research" has been tried and failed for V02. |

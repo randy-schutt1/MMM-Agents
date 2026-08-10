@@ -939,3 +939,86 @@ edited (`REVIEW_PROTOCOL.md` §11).
 A Student/remediation session applies the 15 required actions in
 `V01_REVIEW_R2.md`. None requires re-studying V01. Then a **fresh** reviewer session
 writes `V01_REVIEW_R3.md`. R3 should be short.
+
+---
+
+## 2026-08-10 — Student session — V02 ingested through interpretation
+
+**Scope:** V02 (`Bootcamp1 Wk1 031812 Part2 (60mins).swf`, 01:00:19), one video per
+session. Stopped before independent review, per `REVIEW_PROTOCOL.md`.
+
+### A process failure, recorded first
+
+Three confident conclusions reported during this session were **wrong**: that the SWF
+frame-rate speedup does not work; that V02's `.swf` contained V01's video; and that all
+21 lessons declare a 54:44 duration.
+
+Single cause: a stale `python3 -m http.server 8899` left running by the V01 session owned
+the port `SWF_CAPTURE_RECIPE.md` §2 specified. `python3 -m http.server` exits silently on
+a busy port, so this session's server never started and every browser render was answered
+by the V01 session's server, whose `index.html` hardcodes `v01.swf` and ignores `?swf=`.
+A 61-minute capture, three frame-rate runs and a 21-file survey were all of V01.
+
+The frame-rate experiment included a control and the control did not help, because
+treatment and control were the same file. Caught only when slide content stopped matching
+what the instructor was saying.
+
+Corrections: D-020 retracted in place; D-021 and D-022 added; `SWF_CAPTURE_RECIPE.md` §10
+rewritten and GOTCHA 4 added; I-009 opened. Work that never touched the HTTP server —
+transcript verification, Q-002, source notes §§1–3/5–14, interpretation §§1–9, registers —
+is unaffected.
+
+### The frame-rate speedup works — 40×
+
+Re-tested against a correctly served file: 120 fps patched gives 40:00 of presentation in
+60 s of wall clock, linear, against a 3 fps control at 1:1. Neither of the two unknowns in
+the original proposal bit — the Camtasia player does follow the root timeline, and
+Ruffle's rAF tick is not a ceiling. Adopted at **10×** (D-021): a 60-minute lesson sweeps
+in ~6 minutes. **The ~18 hours of real-time recording budgeted for V03–V21 is not
+required for screenshots.**
+
+### Work completed
+
+| Artifact | Note |
+|---|---|
+| `02_TRANSCRIPTS/V02/V02_TRANSCRIPT.md` | Verified against audio — 1,026 monotonic timestamps, final `[01:00:16]` vs measured 3619.81 s, four Whisper spot-checks matching near-verbatim including "Subio", "half-Batman", "Screen Hunter". I-008 satisfied for V02. |
+| `QUARANTINE_REGISTER.md` Q-002 | V02's `NOTES/RULES/VISUAL_INDEX` checked individually and confirmed fabricated. `V02-R001` is V01's fake rule re-stamped verbatim at the same timestamp. All 8 "EMA" matches in the transcript are the substring inside "email". `VISUAL_INDEX.md` claims 50 screenshots against 1 real file. |
+| `V02_SOURCE_NOTES.md` | §§1–3, 5–14 transcript-only; §4 added after capture. |
+| `V02_INTERPRETATION.md` | §§1–9 transcript-only and unedited; §10 records the visual upgrade. |
+| `04_SCREENSHOTS/V02/` | 25 frames + `INDEX.md`, fast sweep, validated against the transcript at four timestamps before naming. |
+| `05_HOMEWORK/V02/` | 11a attempted on real TradingView data; 11b `DEFERRED` on A-011/A-007. |
+| `07_MASTERY_REPORTS/V02_MASTERY_REPORT.md` | `REVIEW REQUIRED`. |
+
+### What the visuals added
+
+The 2-hour session-changeover window and the full ForEx Trading Times table are printed
+on slides and **never spoken**. The `[00:18:00]` chart prints `Level 1/2/3` as an ordinal
+sequence of legs (A-004) and places `33-Trade` on **Level 3**, not calendar day 3 (A-023).
+The R&D slide gives the homework exactly, resolving three ambiguities the ASR left.
+
+The visuals did **not** resolve the foundational gaps: "second leg" (A-007) is now used in
+print as well as speech and defined in neither; "mayonnaise" (A-020), the cycle letters
+(A-021) and half-Batman (A-022) are absent from every frame.
+
+### Registers
+
+A-019 … A-028 added (ten). Six existing records extended. C-003 (M's and W's "will not
+fail", self-contradicted in one sentence) and C-004 (London open 3:30 printed vs 4:00
+spoken) added. **C-001 re-tested against V02 and not resolved** — which matters, because
+C-001 named "a later lesson refines it" as its most likely route out and V02 is that
+lesson.
+
+### Honest finding
+
+**V02 states no complete testable rule**, and the gap is in the same place as V01's: no
+entry trigger (everything routes through the undefined "second leg", which he promises to
+define at `[00:35:22]` and then defines by pointing at a screen), the trading zone
+deferred a second time to V03, stop loss explicitly deferred, no position sizing. What
+V02 does supply is exit and management parameters. For lesson 2 of 21 that is coherent;
+it is not a pass.
+
+### Note on concurrency
+
+Three sessions ran against this checkout today. Beyond the port collision, `git add -A`
+caused sessions to commit each other's in-progress files under unrelated messages
+(I-009 collision 2). This session staged explicit paths only.

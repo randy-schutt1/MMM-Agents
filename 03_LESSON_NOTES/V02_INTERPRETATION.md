@@ -9,7 +9,7 @@ Source facts belong in `V02_SOURCE_NOTES.md`.
 | Interpreted | 2026-08-10 |
 | Source notes | `03_LESSON_NOTES/V02_SOURCE_NOTES.md` |
 | Transcript | `02_TRANSCRIPTS/V02/V02_TRANSCRIPT.md` |
-| Screenshots available | Captured after §§1–9 were written. §10 records what the visuals changed. |
+| Screenshots available | **25, captured 2026-08-10** — `04_SCREENSHOTS/V02/INDEX.md`. §§1–9 were written *before* any screenshot existed and are left unedited; §10 records what the visuals changed. |
 
 ### Classification
 
@@ -286,7 +286,82 @@ what he actually asks for, in his own words, and only the first is unusable.
 
 ---
 
-## 10. VISUAL EVIDENCE UPGRADE
+## 10. VISUAL EVIDENCE UPGRADE — added 2026-08-10
 
-*Placeholder — written only after the screenshots exist, and dated separately.
-§§1–9 above are not edited.*
+25 screenshots, `04_SCREENSHOTS/V02/INDEX.md`. **§§1–9 above are unedited.** This section
+records what the visuals changed.
+
+The headline: on V01 the screenshots *refuted* a reading. On V02 they did not refute
+anything — they added parameters, closed transcription noise, and left every genuinely
+foundational gap exactly where it was. That asymmetry is itself worth noting, because it
+is easy to assume a visual pass always corrects something.
+
+### 10.1 Resolved outright
+
+| # | Was | Now | Evidence |
+|---|---|---|---|
+| R1 | The ASR-garbled "wartime … work time ribbon" (§6-adjacent, source §14 #20) was recorded as unrecoverable | It is "**Time Ribbon**", and the point is that a broker platform's bottom ribbon shows **server time**, which he tells students to distrust | Slide `[00:47:20]`: "Don't Get Confused With Time Ribbon On The Bottom Of Broker's Platform (Server Times)" |
+| R2 | The homework pair list was "Euro, Pound, Swiss and Yen"; whether "one perfect M and W" meant one in total or one per pair was ambiguous | Printed as `EUR/USD, GBP/USD, USD/CHF, USD/JPY` and "**Pick one perfect M and W (only 1)**" — one of each, in total | Slide `[00:55:35]` |
+| R3 | "Map out last week's USDCHF **in Europe**" — garbled, unresolved | The slide reads "Map out last weeks Usd/Chf". There is no "in Europe"; it was ASR noise | Slide `[00:55:35]` |
+| R4 | The example pair was ASR "GVP", with GBP the obvious but unconfirmed reading | Chart header reads **GBPUSD**, H1 | `[00:18:00]` |
+
+### 10.2 Materially upgraded — new parameters that were never spoken
+
+| # | Item | What the slide adds |
+|---|---|---|
+| U1 | **I21 / M3 — the session-changeover exit** | The slide prints "If Trade Does Not See Substantial Profit **In 2 Hours**, Take Profit Or Small Loss." The audio states the rule but never the window. I21 was incomplete, not wrong. This is the single most useful number the visuals added. |
+| U2 | **I30 / A-019 — session times** | A complete printed table, including two items absent from the audio entirely: the **5pm high/low reset** ("The MM Spread Is Set") and the **5pm–8pm "Dead Gap"**. Asian and London get start, end and their own gap windows. |
+| U3 | **I20 — the NYC reversal** | The session-changeover effect has a printed name: "New Session Brings New Targets For Market Makers **( NYC Reversal)**". Not spoken. |
+| U4 | **I28 — stop-hunt variability** | §3 G13 downgraded my "stop-hunt size is uninformative" reading to IMPLIED because it was mine, not his. The slide prints "Changing The Severity Of The Stop Hunts, **Mild Or Extended**" as one of four named variations — so the *variability* is explicitly doctrine. My inference that this **rules out a pip threshold** is still mine and stays IMPLIED. |
+| U5 | **A-004 — "level" as a countable unit** | The `[00:18:00]` chart prints `Level 1`, `Level 2`, `Level 3` as consecutive legs across day columns, each opened by a "Stop Hunt Low-Rise", ending at "Level 3 Exit and Reverse". Levels are an **ordinal sequence of legs**, not a price-line concept. Strongest evidence yet, from either lesson. |
+| U6 | **A-023 — the 33 trade** | `33-Trade` is printed **on the Level 3 move**. That ties "33" to level 3 rather than to calendar day 3, which is what the audio's "day three" suggested. Constrains the record; does not decode the digits. |
+| U7 | **C-001 — the day count** | The Weekly Structure slide prints "**For At Least 3 Days**". The *authored* doctrine is a floor of 3; "two and a half" appears only in speech. |
+
+### 10.3 NOT confirmed — my readings remain unsupported
+
+Recorded explicitly, because a visual pass that only lists wins is not an audit.
+
+| # | Reading | Status after the visuals |
+|---|---|---|
+| N1 | **I24 / A-007 — "second leg"** | Still undefined. Worse than neutral: slide `[00:33:10]` *uses* the term ("If Second Leg Presents, Restart The Clock") without defining it, so the lesson now both promises a definition verbally and depends on the term in print, and supplies neither. **The largest gap in V02 is unchanged.** |
+| N2 | **A-020 — "mayonnaise"** | The charts show three coloured moving averages (white, cyan, red/yellow). **None carries a visible period or legend.** I cannot assign the nickname. §5 Q2 hoped a screenshot would settle this; it did not. |
+| N3 | **A-021 — "M-A-A-W" vs "WVVM"** | No slide writes the cycle sequence down. Unresolved. |
+| N4 | **A-022 — half-Batman** | Not drawn, labelled or written anywhere in the 25 frames. Unresolved. |
+| N5 | **A-006 — "the box"** | No slide defines it. The `[00:18:00]` chart uses shaded rectangles freely, but nothing labels one "the box". Unresolved. |
+| N6 | **I18 — exactly two continuations at outside structure high** | No slide states the binary. G11 flagged this as weak; it stays weak. |
+| N7 | **I19 / M1 — ADR × 3** | No slide shows an ADR calculation or a projected target. The formula remains unevidenced in application. |
+| N8 | **A-005 — the trading zone** | Not shown. Still deferred to V03. |
+
+### 10.4 New ambiguities raised by the visuals
+
+| # | Item | Why it is new |
+|---|---|---|
+| X1 | **"HOW"** — Weekly Structure slide, "Aggressively Moving Away From The **LOW or HOW**" | Read beside `LOW` it is most plausibly "High Of Week", but the slide never expands it and the audio never says it. Logged as **A-026**. Not adopted. |
+| X2 | **"Swing Traders Book- Day Traders Book"** — printed over the Level 3 exit region of the `[00:18:00]` chart | Appears to mark where each trader type takes profit, which would make it a target rule. Nothing states that. Logged as **A-027**. Not adopted — inferring a target rule from a chart label is exactly the A-018 trap. |
+| X3 | **"V-3"** — printed beside `PFL` at the week's low | Unexplained. Possibly a formation name, possibly a count. Logged as **A-028**. |
+| X4 | **The 3:30 / 4:00 London-open discrepancy** | The slide prints London open **3:30am**; the audio at `[00:50:32]` says "3 to 3:30 is the gap, **4 o'clock session open**", immediately after saying the printed times are "for summer" and that "we back up the London session in the winter". The two disagree by 30 minutes. This looks like a daylight-saving transition — UK BST began 25 March 2012, a week after this lesson, and he explicitly flags "after March 25th". Logged as **C-004**, with that explanation recorded as plausible-but-unstated. |
+
+### 10.5 What the visuals did NOT change
+
+- The lesson still contains **no entry trigger, no stop-loss rule and no position sizing**.
+  §9's conclusion stands unaltered. The 2-hour window (U1) is an *exit* parameter.
+- The R-value labels on the `[00:18:00]` chart (`15.0` … `100.6`, eight of them) are the
+  same family as V01's A-018 and are **still not explained on screen**. Eight samples on
+  one chart make the "range of the boxed area in pips" hypothesis more attractive, since
+  the values scale with the visible height of each rectangle — but that remains a
+  hypothesis, and A-018's warning against reading `R` as risk-to-reward applies with
+  equal force here. Recorded against A-018; not promoted.
+- The instructor's framing of "the dealer" as a single intentional actor (G7) is
+  reproduced in the printed slides ("Market Makers' Trap Traders…"), which makes it his
+  authored position rather than conversational shorthand. It is still a teaching model,
+  not a microstructure claim.
+
+### 10.6 Effect on §9 (what I am not confident about)
+
+§9's list is unchanged except that **session times move from "unusable" to "usable with
+one caveat"**: the full table now exists, and only the timezone is missing. Given V01's
+"930 New York Eastern" (`V01 [00:46:09]`), the slide's "New York Session: 9:30-5pm", and
+this lesson's "6:30 New York time" for next week's start, **New York time is the strongly
+indicated reading** — but the slide does not print it, so A-019 stays open rather than
+being closed on inference. Everything else in §9 — second leg, day counts, the two-branch
+claim, mayonnaise, the cycle letters — is exactly where it was.

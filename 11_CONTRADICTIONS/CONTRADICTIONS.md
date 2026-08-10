@@ -91,6 +91,7 @@ An ignored contradiction is reviewer error code E13.
 | C-001 | How long price runs away from the anchor point | V01 `[00:35:05]` vs V01 `[00:35:15]` / `[00:35:55]` | UNRESOLVED | **Yes** |
 | C-002 | Whether the trading-zone / blue-box filter and the one-direction rule are mandatory | V01 `[00:44:15]` / `[00:51:22]` vs V01 `[00:44:03]` / `[00:51:34]` | STATED EXCEPTION — condition unmeasurable | No, but blocking for implementation |
 | C-003 | Whether M and W formations can fail | V02 `[00:38:40]` vs V02 `[00:38:40]` (same sentence) | UNRESOLVED — self-contradictory as spoken | No |
+| C-004 | London session open — 3:30am printed vs 4:00 spoken | V02 slide `[00:45:55]` vs V02 `[00:50:32]` | UNRESOLVED — daylight-saving explanation plausible but unstated | No, but blocking for any time-gated rule |
 
 ---
 
@@ -337,3 +338,75 @@ course") more likely, and explanation 4 ("a later lesson refines it") less likel
 range appears to be how the course talks about this quantity, not a slip in V01.
 
 C-001 remains `UNRESOLVED` and remains foundational. Re-test at V03.
+
+---
+
+## C-004 — London session open: 3:30am printed against 4:00 spoken
+
+### Concept
+
+What time the London session opens, which gates the pattern-arrival window that V02 calls
+one of the two things that matter ("timing and pattern… if the pattern hits at the right
+time, solid gold").
+
+### Source A — the slide
+
+| Field | Value |
+|---|---|
+| Video | V02 |
+| Timestamp | slide `[00:45:55]`, shown again `[00:50:50]` |
+| Screenshot | `04_SCREENSHOTS/V02/V02_00-45-55_forex-trading-times-slide.png` |
+| What is shown | `London Session 3:30am-9:00am Gap 9-9:30a`, and above it `Asian Session: 8:30pm -3:00am Gap 3-3:30a` |
+
+### Source B — the audio
+
+| Field | Value |
+|---|---|
+| Video | V02 |
+| Timestamp | `[00:50:32]` |
+| What is said | "3 to 3.30 is the gap, **4 o'clock session open**. After March 25th, after our breakout session next week." |
+
+### Conflict
+
+The slide puts the London open at **3:30am**; speaking over that same slide, he puts it at
+**4 o'clock**. Thirty minutes apart, in the same breath as the gap figure, which *does*
+match the slide (3–3:30).
+
+He is aware something moves. Immediately before, at `[00:50:18]`: "I know it starts March
+25th. These are the times that are up right now, or for summer. And we back up the London
+session in the winter."
+
+### Possible Explanations
+
+| # | Explanation | Supporting evidence | Assessment |
+|---|---|---|---|
+| 1 | **Daylight saving transition.** The slide shows one regime; the spoken 4:00 is what the London open becomes after the clocks change | UK BST began **25 March 2012**, one week after this 18 March lesson, and he names that exact date at `[00:50:18]`. US DST had already started 11 March 2012, so for one fortnight the usual UK–US offset is shifted by an hour — which is precisely the kind of thing that moves a New-York-clock London open from 3:30 to 4:00 | **Strongly supported and internally coherent.** But he never actually says "the open moves to 4:00 on the 25th"; that is the reader joining the pieces. |
+| 2 | Loose speech — "around 3, 4 o'clock" | `[00:50:42]` immediately after: "the pattern has to come in around 3, 4 o'clock, 3.30, 4.30 in that range into the new session" — which reads as a *window* rather than a precise open | **Plausible.** This sentence treats 3:30–4:30 as a band, which would make the "4 o'clock" of `[00:50:32]` approximate rather than exact. |
+| 3 | The slide is stale | No evidence. He presents it as current ("These are the times that are up right now"). | Weak |
+
+Explanations 1 and 2 are both live and are not mutually exclusive — the band in
+explanation 2 may exist precisely because the true open shifts seasonally.
+
+### Resolution
+
+```text
+UNRESOLVED
+```
+
+**Foundational: no**, but **blocking for any time-gated rule.** The lesson's own position
+is that timing is half the method, so a 30-minute ambiguity at the London open is not
+cosmetic. Note also that this conflict cannot be settled without A-019 — a 3:30 that is
+not attached to a timezone is not a time.
+
+### Required to resolve
+
+A later lesson stating the London open unambiguously with a timezone, or a lesson
+recorded after 25 March 2012 showing an updated version of the same slide. V03 is
+Week 2, 25 March 2012 — **the exact date he names** — so it is the natural place to
+check, and should be checked deliberately rather than incidentally.
+
+### Interim handling
+
+Carry both values. Do not encode a London open. Where a session boundary is needed
+downstream, record it as `3:30–4:00, timezone unresolved (A-019), seasonal shift
+suspected (C-004)`.
