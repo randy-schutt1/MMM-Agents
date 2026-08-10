@@ -202,3 +202,107 @@ The blanket quarantine is now supported by evidence at both ends it has been tes
 Each remaining lesson should still be confirmed individually — the check costs about
 ten minutes once the transcript is verified — but a session finding the same pattern
 in V03 should treat it as expected rather than surprising.
+
+---
+
+## Q-003 — V03's three derived files, checked individually and confirmed fabricated
+
+```text
+STATUS:        QUARANTINED — DO NOT USE (confirmed, not assumed)
+DATE:          2026-08-10
+QUARANTINED BY: Student session (V03)
+DECISION:      D-017 (Q-001 blanket action), now confirmed for V03 specifically
+```
+
+### Why this entry exists separately
+
+Same reason as Q-002: the Q-001 blanket quarantine was evidenced on V01 only. Before
+writing V03's notes this session checked V03's own three files against V03's own
+verified transcript. They fail, and they fail in the same template-stamped way as V01's
+and V02's. Three of three lessons checked now carry individually confirmed fabrications.
+
+Files: `_QUARANTINE_UNVERIFIED_NOTES/per_lesson/03_Bootcamp1_Wk2_032512_Part1_71mins/`
+— `NOTES.md` (18 lines), `RULES.md` (69 lines), `VISUAL_INDEX.md` (25 lines).
+
+### Finding 1 — the same fabricated rules, stamped a third time
+
+`RULES.md` records `V04-R001` (note the ID: the generator still used the pre-D-017
+alphabetical misordering under which this lesson was "Video 04") at `[00:05:00]`,
+quoted as the instructor saying *"Wait for the M15 candle to close before taking the
+5/13 EMA cross"*, marked `Source: Explicit`, `Coding Readiness: Ready`.
+
+This is **the same sentence, at the same timestamp, with the same two fields** as the
+fabricated `V01-R001` (Q-001 Finding 1) and `V02-R001` (Q-002 Finding 1). The parameter
+table beneath it sources EMA periods 5 / 13 / 50 / 200 / 800 to `[00:04:00]` marked
+`Explicit`, a stop-loss of 10–15 pips beyond HOD/LOD to `[00:18:00]`, and a "Peak Time
+Gap 30–90 mins" to `[00:22:00]` — all identical to the V01/V02 fabrications.
+
+What V03's verified transcript actually carries at those places:
+
+| Cited | Claim | What is actually said there |
+|---|---|---|
+| `[00:04:00]` | five EMA periods, `Explicit` | *"Okay, quarter of the week. Very important."* — the "one trade should not define you" talk. No moving average of any kind. |
+| `[00:05:00]` | M15 close before 5/13 EMA cross | *"…move on to the next segment of the journey… Let me do it in mail."* (mail segment begins). No indicator, no timeframe, no candle-close condition. Not even a marker — nearest are `[00:04:54]` and `[00:05:01]`. |
+| `[00:18:00]` | stop loss 10–15 pips beyond HOD/LOD, `Explicit` | *"They rise most of the time three levels textbook. They pull back and the day back in consolidation."* No stop distance is stated. |
+| `[00:22:00]` | "Peak Time Gap 30–90 mins", `Explicit` | *"…drill down to the mini view intraday looking for the stop hunt and then the micro view understanding the pushes."* No timing gap is stated. |
+
+Counted across the full 4,243-second transcript: `M15` 0 matches, `5/13` 0 matches,
+`EMA` 1 real match outside *email* (`[00:57:54]`, "Stop onto the 50 EMA out of the
+mail" — a single flashcard caption, not a parameter list), and none of the colour
+names (*mustard, water, mayo-as-colour-scheme, blueberry, raspberry*) occur.
+
+### Finding 2 — the new hazard: this time some of the fabricated vocabulary is real
+
+Unlike V02, where the fabricated files' vocabulary (TDI, shark fin, session tables) was
+almost entirely absent from the recording, **V03 genuinely discusses TDI (13 mentions),
+shark fin (3), railroad tracks (5), and stop hunts (8)**. The fabricated `NOTES.md`
+happens to name real V03 subjects — while still fabricating everything specific it says
+about them:
+
+- `NOTES.md` defines the TDI signal as *"Green Price Line crossing Red Signal Line
+  after breaking outside Blue Volatility Bands (Shark Fin)"*. The transcript never
+  states line colours or a crossing rule; what it states is position-based
+  (`[00:45:35]`–`[00:45:54]`: outside the volatility band and beyond the support/
+  resistance bands ⇒ "probably level three") and the instructor explicitly defers TDI:
+  *"I am going to cover TDI later"* `[01:01:53]`.
+- `NOTES.md` gives session clock times to the half-hour (Asian 7:00 PM–3:00 AM EST,
+  London 3:30–9:00 AM, NY 9:30 AM–5:00 PM). No session table is stated anywhere in
+  V03's audio.
+- `NOTES.md` claims *"Time Gap: 30 to 90 minutes between peak 1 and peak 2"* — never
+  stated in V03.
+- *"Asian Box"*, the headline topic, is never spoken in this recording (the spoken
+  terms are "Asian range" and "the first eight hours").
+
+This makes V03's fabrications **more** dangerous than V02's, not less: a future session
+skimming both the notes and the transcript would find the vocabulary corroborated and
+could be tempted to import the fabricated specifics. The Q-001 handling rule (do not
+mine quarantined material for leads) matters most exactly here.
+
+### Finding 3 — a 3-entry visual index for one image, and the one entry is wrong
+
+`VISUAL_INDEX.md` describes 3 numbered screenshots. The lesson's `SCREENSHOTS/` folder
+contains **one** file, `VIDEO_04_SCREENSHOT_001_00-02-00.jpg` — entries 002 and 003
+describe files that do not exist. Entry 001's description (*"Asian Box accumulation
+range with 5, 13, 50, 200, and 800 EMAs"*) does not match this session's verified
+capture of `[00:02:00]` (sweep frame at burned timecode `01:59`), which shows the
+housekeeping slide titled "Managing Your Expectations" ("I expect you to: Follow along
+free from distraction… Give me 2 Hrs a week!…"), not a chart. Its filename timestamp is
+additionally
+unverifiable — the image is a 1024×768 crop with no control bar and no burned-in
+timecode.
+
+### Disposition
+
+All three files stay quarantined. `TRANSCRIPT.md` from the same folder was checked
+independently and **passed** — it is adopted at `02_TRANSCRIPTS/V03/V03_TRANSCRIPT.md`
+(I-008 satisfied for V03). `VIDEO_04_SCREENSHOT_001_00-02-00.jpg` is a plausible frame
+of this lesson but its timestamp claim is unverified and nothing written about it in
+`VISUAL_INDEX.md` may be cited.
+
+### Running tally for the fabrication pattern
+
+V01, V02, V03: three of three lessons individually confirmed. The generator stamped one
+template across lessons, re-using the same fabricated sentences and timestamps
+regardless of content. Sessions processing V04–V21 should continue to confirm
+individually (the check costs ~10 minutes once the transcript is verified) and should
+treat finding the same pattern as expected.

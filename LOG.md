@@ -1355,3 +1355,146 @@ Explicit paths only (I-009): `05_HOMEWORK/V02/V02_HOMEWORK.md`,
 `18_REVIEW/V02/V02_REVIEW_R2.md`, by a **fresh session**. R2 should re-measure the chart
 independently rather than accept the new pipeline's self-description. **V03 stays
 closed.**
+
+---
+
+## 2026-08-10 — Reviewer Session
+
+### Lesson
+
+V02 — round R2.
+
+### Review Objective
+
+Verify the R1 remediation. Specifically: re-measure the homework chart independently rather
+than accept `V02_HOMEWORK.md` §1.1's self-description (mastery audit request #1 and R1's
+own closing instruction); confirm the five minor findings were applied; adjudicate whether
+the `C-001` non-resolution is right in both directions; and rule on the two items the
+remediation flagged rather than fixed.
+
+### Working-Tree Integrity — checked before anything else
+
+`HEAD` = `origin/<branch>` = `479ce72`, tracked tree clean, one untracked file
+(`05_HOMEWORK/V02/measure_usdchf_week.py`). The reviewed content is the pushed content.
+The untracked file was **excluded from the evidence base** — every finding was derived and
+written from my own measurement before it was opened — then flagged as Note 8 and left in
+place. It is not garbage: it runs, and it encodes the *correct* Sunday mapping.
+
+### Source Evidence Reviewed
+
+- `charts/USDCHF_1H_2026-08-10_tradingview-fxcm.png` — **re-measured from scratch.** Own
+  candle detection, own sub-pixel axis calibration (**52.276 px per 0.00100**, max residual
+  **0.088 pip**), own bar lattice (6 px, centres at `x ≡ 3 mod 6`), 177 bars extracted.
+  Two absolute checks the remediation did not use: the **printed last-bar OHLC** in the
+  chart header (my measurement matches it to **0.3 pip**, which is what actually
+  substantiates the `±0.5 pip` claim), and the chart's **own dotted vertical day
+  separators** at `x = 147, 273, 429, 573, 717, 861, 987, 1149`.
+- `V02_TRANSCRIPT.md` — verbatim body isolated (line 86, 1,026 markers, 58,424 chars) and
+  re-counted by regex for every changed count; all four quoted ASR passages retrieved and
+  compared character-by-character against the new disclosures.
+
+### Student Artifacts Reviewed
+
+`V02_HOMEWORK.md` (whole), `V02_MASTERY_REPORT.md` §B + `Revision R1`,
+`V02_SOURCE_NOTES.md` §§2e/2h/3, `CONTRADICTIONS.md`, `COURSE_PROGRESS.md`,
+`AUTOMATION_AMBIGUITIES.md` A-020, `V02_INTERPRETATION.md` (containment only), the full
+`9ab6645..479ce72` diff.
+
+### Findings
+
+**R1's MAJOR is CLOSED.** Every corrected price, day, direction and hour in §1.2
+reproduces to within 0.2 pip — week low 0.80552 (Sun 22:00), week high 0.81355 (Thu
+15:00), PFH 0.81150 (Mon 15:00), the rise being Thursday's at 75.4 pip in 13 hours, Friday
+opening at its high and falling 72.7. So does §1.3's `C-001` result: first bar above
+Monday's high is Thu 6 Aug 15:00, **72 hours exactly**. `E06`/`E19`-as-charged do not
+recur. All five minor findings verified applied by re-derivation, not by reading the
+corrected values ("second leg" 21, "the box"/"blue box" 9, "level count" 1, all confirmed).
+Containment verified by grep: no homework-derived value appears in the canonical layer.
+
+**3 MINOR, 0 MAJOR, 0 CRITICAL.**
+
+1. `E19` — the Fri 31 Jul → Sun 2 Aug boundary is one bar out. Bar `x=267` is Friday's
+   20:00, not Sunday's 21:00: the chart's own separators put 21 bars between `31` and
+   `Aug` (a full Friday, matching Fri 7 Aug) and 26 between `Aug` and `4` (Sunday 2 +
+   Monday 24); the two date labels §1.1 did **not** measure land on the correct bars to
+   0.88 px and 0.03 px while missing §1.1's mapping by 5.1 px and 6.0 px; and the single
+   open≠prior-close discontinuity in all 177 bars (**−12.63 pip at `x=273`**) is the
+   weekend gap. §1.1's *"self-validating on all six boundaries"* claim therefore does not
+   hold — the continuity test was applied at a weekend boundary, where continuity should
+   not be expected, and the mapping was chosen to zero out a real gap. **No conclusion in
+   the homework changes**; charged only because two files advertise §1.1 as the reusable
+   pipeline for dimension G.
+2. `E20` — the escalated `PFH`/`PFL` claim, adjudicated: **both abbreviations occur zero
+   times**; spelled out, high 1 and low 2. Still live in `V02_SOURCE_NOTES.md` §3 and
+   `V02_TRANSCRIPT.md`. The transcript-adoption decision (I-008) is **unaffected and
+   strengthened**. Recorded against **R1**, which signed off on the check.
+3. `E20` — `COURSE_PROGRESS.md`'s status view went stale in the same commit that declared
+   the SUMMARY authoritative. Fifth occurrence of this class.
+
+**`C-001` handled correctly, in both directions.** Not overreaching — the result is
+refused twice, on the counting convention (three conventions, three answers) and on the
+reader-selected level (`A-004`). Not too conservative — the datum is recorded in
+`CONTRADICTIONS.md` with its precondition, so open item 10's warning against quietly
+dropping it is satisfied. No day-count value is committed anywhere.
+
+**Credit where due.** The third ASR repair (`[00:45:39]` *"That will draw"* → *"I will
+draw"*) was found by the remediation and missed by R1, and disclosed unprompted along with
+a two-marker merge nobody asked about. The `PFH`/`PFL` escalation is the reason a reviewer
+error is visible at all. Neither is charged.
+
+**PROCESS MAJOR — the V03 gate did NOT hold, and is being breached as I write.** It had
+held at review start (`git status`: no V03 artifact). Re-running the integrity check before
+staging showed the tree had since gained, from another session: `02_TRANSCRIPTS/V03/`
+(`V03_TRANSCRIPT.md`, 1,230 entries, marked COMPLETE), empty `04_SCREENSHOTS/V03/` and
+`05_HOMEWORK/V03/`, and `QUARANTINE_REGISTER.md` +102 lines adding `Q-003`, whose own text
+says it was written *"before writing V03's notes"*. `COURSE_PROGRESS.md` reads `V03 GATE:
+CLOSED` and V02 is unpassed. **Second occurrence, and unlike R1's it is not moot** — V02 is
+`REVISE` with three corrections outstanding, one of them in the very measurement pipeline
+V03's chart work would inherit. Charged as **process**, kept out of V02's mastery counts.
+**Left untouched, unstaged, undeleted; no finding in R2 rests on it.** Disposition in
+`V02_REVIEW_R2.md` §7: stop the V03 pass until V02 passes, do **not** discard the V03 work,
+re-audit it afterwards, and enforce D-004 mechanically — two written rules failed in this
+repository today (D-004 and the status-block rule of Minor 3), and the answer to both is a
+check rather than another sentence.
+
+### Required Corrections
+
+Three, all narrow. §1.2 and §1.3 are **not** to be touched.
+1. Correct the Sun 2 Aug and Fri 31 Jul rows in `V02_HOMEWORK.md` §1.1 (Sunday = 2 bars,
+   open 0.80552, high 0.80737 at 23:00; Friday's open/low/close shift one bar), retaining
+   the existing rows superseded in place per `REMEDIATION_PROTOCOL.md` §2, and restate the
+   boundary reasoning using the chart's own day separators.
+2. Correct the `PFH`/`PFL` count in both files; state that I-008 is unaffected.
+3. Reconcile `COURSE_PROGRESS.md`'s PHASE STATUS row and `VIDEOS IN PROGRESS` to the
+   SUMMARY.
+
+Not required: 11b stays `DEFERRED`; G stays `DEFERRED`; A-019 stays open; the 2026-week
+substitution stands; the `C-001` handling stands as written; source notes and interpretation
+untouched.
+
+### Decision
+
+`REVISE` — confidence **HIGH**. 0 critical, 0 major, 3 minor. Advancement NOT AUTHORIZED.
+**V03 remains gated.**
+
+The generalisable lesson of the round, for `CUMULATIVE_25.md`: **a validity check must be
+applied where its assumption holds**, and **the parts of a source you did not read are not
+thereby ambiguous.** §1.1 measured six of eight date labels and declared the other two
+ambiguous when they are decisive to better than one pixel — while the chart had been
+drawing its own day boundaries the whole time.
+
+### Git
+
+Explicit paths only (I-009): `18_REVIEW/V02/V02_REVIEW_R2.md`,
+`18_REVIEW/REVIEW_INDEX.md`, `00_SYSTEM/COURSE_PROGRESS.md`, `LOG.md`, `CHANGELOG.md`.
+Student artifacts were **not** edited — the reviewer does not remediate.
+
+**Deliberately NOT staged and NOT deleted** (three items, all from other sessions):
+`05_HOMEWORK/V02/measure_usdchf_week.py`; `02_TRANSCRIPTS/V03/`, `04_SCREENSHOTS/V03/`,
+`05_HOMEWORK/V03/`; and the unstaged `00_SYSTEM/QUARANTINE_REGISTER.md` Q-003 append. All
+are reported in the review and none is incorporated into it.
+
+### Next Review Trigger
+
+Student resubmission of V02 after the three corrections → `18_REVIEW/V02/V02_REVIEW_R3.md`,
+by a fresh session per D-003. **V03 stays closed, and the in-progress V03 pass must stop.**

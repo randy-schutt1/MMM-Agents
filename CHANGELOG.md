@@ -11,6 +11,69 @@ Newest first.
 
 ---
 
+## [0.5.2] — 2026-08-10 — V02 R2: MAJOR closed, `REVISE` on three minors
+
+Reviewer round only. **No student artifact was edited** — the reviewer does not remediate.
+
+### Changed
+
+- **V02 R1's MAJOR is CLOSED.** `18_REVIEW/V02/V02_REVIEW_R2.md` re-measured the committed
+  USD/CHF PNG independently — own candle detection, own sub-pixel axis calibration
+  (52.276 px per 0.00100, max residual 0.088 pip), own bar lattice, 177 bars — and **every**
+  corrected price, day, direction and hour in `V02_HOMEWORK.md` §1.2 reproduces to within
+  0.2 pip, as does §1.3's 72-hour `C-001` result. `E06` closed.
+- **V02: `REVISE` (HIGH), 0 critical, 0 major, 3 minor.** Advancement not authorized.
+- **⚠ The D-004 V03 gate is being breached.** A V03 student pass appeared in the working
+  tree *during* R2 — transcript marked COMPLETE, `Q-003` register entry, two created
+  directories — while `V03 GATE: CLOSED` and V02 is unpassed. **Second occurrence, and
+  unlike the first it is not moot.** Recorded as a **process** MAJOR, kept out of V02's
+  mastery counts, left untouched and unstaged. **The V03 pass must stop until V02 passes;
+  the V03 work must not be deleted.** `REVIEW_INDEX.md` open item 9 escalated from
+  `OPEN — process` to a live breach.
+- **`REVIEW_INDEX.md` severity totals: no open MAJOR** for the first time since V01 R1.
+
+### Added
+
+- **Two chart-verification techniques that should become standard**, both used at R2 and
+  neither used before in this project:
+  1. **The chart header prints the last bar's own OHLC.** Comparing a measurement against
+     it is absolute ground truth for the calibration, independent of the axis labels. This
+     is what substantiates the `±0.5 pip` claim (measured error ≤ 0.3 pip) rather than
+     leaving it asserted.
+  2. **TradingView draws its own dotted vertical day separators.** They are in the PNG, in
+     `rgb(213,213,213)`, and they state the day boundaries outright — which is the one thing
+     both prior measurements of this chart got wrong.
+- **`REVIEW_INDEX.md` open items 12–14** — the §1.1 day-boundary correction, the untracked
+  measurement script, and the promotion of R1's proposed mechanical status-block check in
+  `validate_project.py` from suggestion to work item.
+
+### Methodological findings
+
+- **A validity check must be applied where its assumption holds.** §1.1's *"measured open
+  equals prior close"* test is sound *within* a session — it verified 174 of 176 bar
+  boundaries at R2 — and worthless **across a weekend**, which is the one boundary it was
+  used to settle. Choosing the day mapping that makes a real 12.6-pip weekend gap vanish is
+  not validation. This is the round's generalisable lesson and is carried to
+  `CUMULATIVE_25.md`.
+- **The parts of a source you did not read are not thereby ambiguous.** §1.1 measured six of
+  the eight date labels, got all six right, and declared the remaining two *"ambiguous"*.
+  Measured, they land on their bars to 0.88 px and 0.03 px. This is the R1 lesson — *a chart
+  is a source document* — one step further on.
+- **A stated rule did not prevent the defect it was written for — twice, in one day.**
+  `COURSE_PROGRESS.md`'s status view went stale inside the very commit that declared the
+  SUMMARY authoritative (fifth occurrence of that class); and D-004's V03 gate was breached
+  a second time while a review was naming it as the test. Both are written rules with no
+  enforcement. **The answer to both is a check, not another sentence** — status blocks are
+  arithmetic over their own file's contents, and a `VNN GATE: CLOSED` pre-flight guard in
+  `validate_project.py` is mechanically checkable. Promote both at the 25% review.
+- **Recorded against R1, not the student.** R1's provenance audit signed off on
+  *"`PFH`/`PFL` each appear once"*; both occur **zero** times. The conclusion it supported
+  (dropping the derived `Primary Topics` block) is **strengthened**, so I-008 stands. The
+  remediation escalated this rather than silently fixing it, which is the only reason the
+  reviewer error is visible — and is the behaviour the two-agent design exists to produce.
+
+---
+
 ## [0.5.1] — 2026-08-10 — V02 R1 remediation applied; awaiting R2
 
 ### Changed

@@ -11,16 +11,35 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V02 in remediation)
+VIDEOS IN PROGRESS:  1  (V02 — R2 REVISE, awaiting remediation round 2)
 VIDEOS PASSED:       1  (V01)
-CURRENT LESSON:      V02 — reviewed R1 2026-08-10: **REVISE** (HIGH), 0 critical,
-                     1 major, 5 minor. REMEDIATION COMPLETE 2026-08-10 —
-                     RESUBMITTED, AWAITING R2.
+CURRENT LESSON:      V02 — re-reviewed R2 2026-08-10: **REVISE** (HIGH), 0 critical,
+                     **0 major**, 3 minor. R1's MAJOR is CLOSED — R2 re-measured the
+                     committed chart independently and every corrected value
+                     reproduces to within 0.2 pip, as does the 72-hour C-001 result.
+                     Three narrow corrections remain: see
+                     18_REVIEW/V02/V02_REVIEW_R2.md §9.
+                     (R1 2026-08-10: REVISE (HIGH), 0 critical, 1 major, 5 minor —
+                     all ten required corrections applied and verified at R2.)
                      V01 — re-reviewed R3 2026-08-10: **PASS** (HIGH), 0 critical,
                      0 major. COMPLETE. All 15 of R2's required actions applied and
                      verified against the source; R2 finding N1 (A-006's trailing
                      block) closed by withdrawing it in place.
-NEXT ACTION:         ✅ DONE 2026-08-10 — all ten of V02 R1's required corrections are
+NEXT ACTION:         Apply V02 R2's **three** required corrections
+                     (18_REVIEW/V02/V02_REVIEW_R2.md §9), then resubmit for R3.
+                     (1) V02_HOMEWORK.md §1.1 — the Sun 2 Aug / Fri 31 Jul day
+                     boundary is one bar out and the "self-validating on all six
+                     boundaries" claim does not hold; the chart's own dotted day
+                     separators settle it. Retain the existing rows superseded in
+                     place. Do NOT touch §1.2 or §1.3 — both verified correct.
+                     (2) The PFH/PFL count in V02_SOURCE_NOTES.md §3 and
+                     V02_TRANSCRIPT.md — both abbreviations occur ZERO times.
+                     I-008's transcript adoption is unaffected and strengthened.
+                     (3) Reconcile this file's PHASE STATUS row and
+                     VIDEOS IN PROGRESS to the SUMMARY block above.
+                     → Then a FRESH session writes V02_REVIEW_R3.md (D-003).
+                     ---- R1 history, retained ----
+                     ✅ DONE 2026-08-10 — all ten of V02 R1's required corrections are
                      applied (see V02_MASTERY_REPORT.md "Revision R1"). Homework 11a
                      was REDONE from pixel measurement of the committed chart, with
                      the invalid first pass preserved in place per
@@ -42,6 +61,23 @@ V02 GATE:            OPEN as of V01 R3 PASS (D-004 satisfied).
                      discarded, but the gate did not hold — see REVIEW_INDEX.md open
                      item 9.
 V03 GATE:            CLOSED. D-004 requires reviewer PASS on V02 before V03 opens.
+                     ⚠ **BREACHED — LIVE, as of V02 R2 (2026-08-10).** The gate held
+                     at R2's start and did not hold at its end: an in-progress V03
+                     student pass appeared in the working tree from another session
+                     — 02_TRANSCRIPTS/V03/V03_TRANSCRIPT.md (1,230 entries, marked
+                     COMPLETE), 04_SCREENSHOTS/V03/ and 05_HOMEWORK/V03/ created,
+                     and QUARANTINE_REGISTER.md Q-003 appended, whose own text says
+                     it precedes "writing V03's notes". **Second occurrence of this
+                     violation** (see REVIEW_INDEX.md open item 9) and, unlike the
+                     first, NOT moot: V02 is REVISE with three corrections
+                     outstanding, one of them in the measurement pipeline V03's
+                     chart work would inherit.
+                     REQUIRED: stop the V03 pass until V02 receives reviewer PASS.
+                     Do NOT delete the V03 work — hold it uncommitted, or commit it
+                     explicitly labelled as produced in violation of D-004 — and
+                     re-audit it against a passed V02. R2 left it untouched and
+                     unstaged and drew no finding from it.
+                     See 18_REVIEW/V02/V02_REVIEW_R2.md §7.
                      V02 is REVISE, not PASS, so this gate is live and must hold.
                      Open item 9 records that the last gate did not; this is the test.
                      No V03 work of any kind until V02 R2 returns PASS.
@@ -221,7 +257,7 @@ points are set once the real lesson count is known at ingestion.
 | Phase | Name | Status |
 |---|---|---|
 | 0 | Environment | ✅ Complete |
-| 1 | Student | 🔄 In progress — V01 PASS, V02 in remediation (R1 REVISE) |
+| 1 | Student | 🔄 In progress — V01 PASS; V02 R2 REVISE (0 critical, 0 major, 3 minor), awaiting remediation round 2 |
 | 2 | Scholar | Not started |
 | 3 | Expert (Master Spec) | Not started |
 | 4 | Formalizer (Machine Spec) | Not started |
