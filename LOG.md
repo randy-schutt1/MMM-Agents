@@ -627,3 +627,93 @@ V02 is gated behind that `PASS`. When it opens, follow `00_SYSTEM/SWF_CAPTURE_RE
 in a fresh session, and spend 15 minutes first on the untested frame-rate-patch idea in
 §11 — if it works it removes the 1-hour real-time capture cost from the remaining 20
 videos.
+
+---
+
+## 2026-08-10 — Reviewer Session
+
+### Lesson
+V01
+
+### Review Objective
+Independent mastery audit, round 1. Fresh session; produced none of the V01 artifacts
+(`DECISIONS.md` D-003).
+
+### Source Evidence Reviewed
+Reviewed **before** any student artifact, per `REVIEW_PROTOCOL.md` §3.
+
+- `02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md` in full — all 974 markers, `[00:00:00]`–`[00:54:38]`.
+- Source `.swf` SHA-256 recomputed: `c7e660f4…d84030`. **Matches** the claimed hash.
+- Ten of the 22 screenshots opened and read at full resolution, including every image
+  the interpretation depends on: `[00:02:35]`, `[00:16:55]`, `[00:19:20]`, `[00:30:35]`,
+  `[00:38:50]`, `[00:39:10]`, `[00:39:40]`, `[00:40:25]`, `[00:43:58]`, `[00:44:40]`,
+  `[00:48:35]`, `[00:50:55]`, `[00:54:30]`. Burned-in timecode matched the filename in
+  every case.
+- Quarantine folder inspected on disk: 73 files, `.gitignore`-covered, zero Git-tracked.
+
+Not reviewed: the audio. The ASR-garbled session times remain unverified by the
+reviewer as well as by the student — which affects no finding, since no artifact
+asserts a value for them.
+
+### Student Artifacts Reviewed
+`V01_SOURCE_NOTES.md`, `V01_INTERPRETATION.md`, `V01_MASTERY_REPORT.md`,
+`04_SCREENSHOTS/V01/INDEX.md`, `AUTOMATION_AMBIGUITIES.md` (A-001…A-018),
+`CONTRADICTIONS.md` (C-001, C-002), `CONCEPT_INDEX.md`, `DECISIONS.md` D-017/D-018,
+`QUARANTINE_REGISTER.md`, `SETUP_ISSUES.md` I-006/I-007/I-008. `validate_project.py`
+re-run independently: 97/97.
+
+### Findings
+
+**No critical findings.** The evidence base was tested mechanically and is clean:
+144 quotations were located in a word-level stream of the transcript and compared with
+their cited timestamps. 122 land within 3 s; 20 more are passage-level citation; 2 are
+genuine misdatings; **0 quote words the recording does not contain.** No fabricated
+rule, no imported framework, no premature quantification, no hindsight contamination.
+
+**Two major findings.**
+
+1. `E02` — `V01_INTERPRETATION.md` §10.1 `U2` declares the session-time reading of the
+   blue/red boxes "wrong", under a heading titled "Resolved outright". The images show
+   rectangles with both a time extent and a price extent; blue rectangles abut vertical
+   day separators at `[00:38:50]`, `[00:44:40]` and `[00:48:35]`. The price-zone reading
+   is confirmed; the time reading was eliminated without evidence.
+
+2. `E10` — dimension F marks all eight homework items `NOT APPLICABLE` under D-018.
+   H4 `[00:37:58]` and H5 `[00:52:20]`/`[00:53:02]` are observational chart exercises
+   that need a chart, not a rule definition. They are `DEFERRED` — blocked by `I-007` —
+   not inapplicable. D-018 lacks the distinction, and as written the precedent would
+   permanently close performable work across all 21 lessons.
+
+Six minor and four note-level findings, all documentation-level: two misdated citations
+(S19, X3 at `[00:36:38]`; the quote is at `[00:36:17]`), an unlogged six-vs-four
+mismatch in the trap-move enumeration (`[00:30:35]` slide and `[00:36:38]`–`[00:37:09]`
+give six; the `[00:45:44]` recap gives four), three stale statements now contradicted by
+the repo's own state, and three over-claiming rows in the screenshot index.
+
+**Upheld on audit**, after adversarial testing rather than acceptance:
+dimension G `NOT APPLICABLE`; `C-001` does not justify `BLOCKED`; `I7` stays open at
+`INFERRED / Low`, re-adjudicated at V02; empty `08_CONCEPT_LIBRARY` and
+`09_CHART_EXAMPLES` are correct for a lesson that defines no concept. The quarantine is
+verified real and effective — nothing quarantined is discoverable as valid evidence.
+
+Two judgement calls deserve specific credit and should be preserved as practice: the
+refusal to read `R = 70.5` as a risk-to-reward ratio, and the inversion warning on the
+moving averages (V01's only MA mentions describe what the dealer *shows traders as
+bait*, so coding them as an entry signal would invert the lesson).
+
+### Required Corrections
+Eight, all `edit` — no work requires a `redo`, because no test was performed. Full
+detail in `18_REVIEW/V01/V01_REVIEW_R1.md` §REQUIRED CORRECTIONS. Plus one carried item:
+re-check `[00:46:04]`, `[00:48:05]`, `[00:48:13]` against the retained mp4 before any
+session-timing parameter is coded.
+
+### Decision
+REVISE — confidence HIGH. Advancement NOT AUTHORIZED.
+
+### Git
+Review written to `18_REVIEW/V01/V01_REVIEW_R1.md` (new file; nothing overwritten —
+`18_REVIEW/V01/` did not previously exist). `REVIEW_INDEX.md` and `COURSE_PROGRESS.md`
+updated.
+
+### Next Review Trigger
+Student resubmission of V01 after the eight corrections → `V01_REVIEW_R2.md`.

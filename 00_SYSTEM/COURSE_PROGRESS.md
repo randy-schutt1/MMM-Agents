@@ -13,10 +13,12 @@ PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
 VIDEOS IN PROGRESS:  1  (V01)
 VIDEOS PASSED:       0
-CURRENT LESSON:      V01 — student work COMPLETE, submitted for independent review
-NEXT ACTION:         independent reviewer session writes 18_REVIEW/V01/V01_REVIEW_R1.md
-                     (the student session does not audit itself)
-BLOCKED ON:          nothing. I-006 RESOLVED. I-007 open but not blocking (D-018).
+CURRENT LESSON:      V01 — reviewed R1 2026-08-10: REVISE (HIGH). In remediation.
+NEXT ACTION:         student session applies the 8 corrections in
+                     18_REVIEW/V01/V01_REVIEW_R1.md, then resubmits for R2.
+                     All 8 are documentation edits; no source study is required again.
+BLOCKED ON:          nothing. I-006 RESOLVED. I-007 open — now blocks V01 H4/H5,
+                     which R1 reclassified from NOT APPLICABLE to DEFERRED.
 ```
 
 ---
@@ -42,7 +44,7 @@ fabricate, interpolate, or infer Week 6 content.**
 
 | Video | Session | Duration | Source Verified | Transcript | Notes | Screenshots | Homework | Manual Backtest | Student Mastery | Reviewer | Final Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | — | — | REVIEW REQUIRED | ⬜ | AWAITING REVIEW |
+| V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED | ⏳ R1 REVISE | IN REMEDIATION |
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -69,10 +71,15 @@ fabricate, interpolate, or infer Week 6 content.**
 - **V01 Screenshots ✅** — 22 captured 2026-08-10 and indexed. I-006 is `RESOLVED`;
   method in `00_SYSTEM/SWF_CAPTURE_RECIPE.md`. A full-length synced mp4 is retained
   outside the repo, so any further timestamp can be extracted on demand.
-- **V01 Homework — and Manual Backtest —** marked `NOT APPLICABLE` under **D-018**:
-  the homework is a 2012 emailed survey, and the lesson states no entry, stop, target
-  or position size, so there is no rule to backtest. **The reviewer is asked to audit
-  both claims** (`V01_MASTERY_REPORT.md`).
+- **V01 Manual Backtest —** `NOT APPLICABLE` under **D-018**. **Audited and upheld**
+  by R1: the lesson states no entry, stop, target or position size, so there is no rule
+  whose application could be graded.
+- **V01 Homework ⏸** — R1 **partially overturned** the D-018 claim. H1–H3 and H6–H8
+  remain `NOT APPLICABLE` (a 2012 emailed survey, a broker agreement, a demo account, an
+  MT4 template). **H4 and H5 are `DEFERRED`, blocked by `I-007`** — they are
+  observational chart exercises needing a data source, not a rule definition, so they
+  stay on the books rather than being closed. See `18_REVIEW/V01/V01_REVIEW_R1.md`
+  finding 2.
 - **V02–V21 Transcript ⚠️** — a `TRANSCRIPT.md` exists for each, but it came from the
   same pre-ingestion process that produced the quarantined fabrications, and **none
   has been verified**. Not a tick. See `SETUP_ISSUES.md` I-008.

@@ -11,13 +11,13 @@ stays visible with its round number.
 ## STATUS
 
 ```text
-LESSONS REVIEWED: 0
+LESSONS REVIEWED: 1
 PASSED:           0
-IN REMEDIATION:   0
+IN REMEDIATION:   1  (V01)
 AWAITING REVIEW:  0
 ```
 
-No lesson has been studied or reviewed. See `README.md` §11.
+V01 reviewed 2026-08-10 (R1): `REVISE`, confidence HIGH. 0 critical, 2 major.
 
 ---
 
@@ -25,7 +25,7 @@ No lesson has been studied or reviewed. See `README.md` §11.
 
 | Video | Student Status | Review Version | Reviewer Decision | Critical Issues | Major Issues | Final |
 |---|---|---|---:|---:|---:|---|
-| _(no lessons reviewed)_ | | | | | | |
+| V01 | REVIEW REQUIRED | R1 | REVISE | 0 | 2 | ⏳ |
 
 ### Row template
 
@@ -63,7 +63,7 @@ keeps recurring is a training problem, not a lesson problem.
 | Code | Description | Count | Lessons |
 |---|---|---:|---|
 | E01 | Source misquote | 0 | |
-| E02 | Unsupported generalization | 0 | |
+| E02 | Unsupported generalization | 1 | V01 |
 | E03 | Missed qualifier | 0 | |
 | E04 | Wrong sequence | 0 | |
 | E05 | Wrong pattern boundary | 0 | |
@@ -71,17 +71,17 @@ keeps recurring is a training problem, not a lesson problem.
 | E07 | False negative | 0 | |
 | E08 | Hindsight contamination | 0 | |
 | E09 | Cherry-picking | 0 | |
-| E10 | Incomplete homework | 0 | |
-| E11 | Missing provenance | 0 | |
+| E10 | Incomplete homework | 1 | V01 |
+| E11 | Missing provenance | 1 | V01 |
 | E12 | Ambiguity treated as rule | 0 | |
-| E13 | Contradiction ignored | 0 | |
+| E13 | Contradiction ignored | 1 | V01 |
 | E14 | Outcome confused with correctness | 0 | |
 | E15 | Machine assumption introduced prematurely | 0 | |
 | E16 | Terminology drift | 0 | |
 | E17 | Missing negative examples | 0 | |
 | E18 | Invalid manual-backtest procedure | 0 | |
 | E19 | Data/timeframe inconsistency | 0 | |
-| E20 | Other | 0 | |
+| E20 | Other | 6 | V01 |
 
 **Escalation rule:** any code reaching 3 occurrences is a systematic weakness.
 Note it in the next cumulative review and consider whether the student protocol
@@ -94,9 +94,9 @@ itself needs strengthening — not just the individual lesson.
 | Severity | Total | Open |
 |---|---:|---:|
 | CRITICAL | 0 | 0 |
-| MAJOR | 0 | 0 |
-| MINOR | 0 | 0 |
-| NOTE | 0 | 0 |
+| MAJOR | 2 | 2 |
+| MINOR | 6 | 6 |
+| NOTE | 4 | 4 |
 
 A lesson with unresolved CRITICAL issues cannot pass.
 
@@ -108,7 +108,11 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 
 | # | From | Item | Where tracked | Status |
 |---|---|---|---|---|
-| _(none)_ | | | | |
+| 1 | V01 R1 | `C-001` — day-count away from the anchor is self-contradicted in source and unresolved by the instructor. No artifact may commit a value. Re-examine at every weekly-holding-period lesson and at the 25% cumulative review | `CONTRADICTIONS.md` C-001 | OPEN |
+| 2 | V01 R1 | `I7` — whether "anchor point", "peak formation high/low" and "M or W formation" are one concept. Stays `INFERRED / Low`; **re-adjudicate at V02** | `V01_INTERPRETATION.md` I7 / G4 | OPEN |
+| 3 | V01 R1 | H4 / H5 `DEFERRED` pending `I-007` (chart data source). Re-test when I-007 closes | `SETUP_ISSUES.md` I-007 | OPEN |
+| 4 | V01 R1 | Re-check `[00:46:04]`, `[00:48:05]`, `[00:48:13]` against the retained mp4 before any session-timing parameter is coded (`M3`) | `V01_INTERPRETATION.md` M3 / Q7 | OPEN |
+| 5 | V01 R1 | Dimension B (Recognition) deferred to after V02 defines the trading zone | `V01_MASTERY_REPORT.md` B | OPEN |
 
 ---
 
