@@ -44,10 +44,14 @@ NEXT ACTION:         **Begin V03.** The V03 gate is OPEN as of V02 R3 PASS.
                      reproduce. **Charged against R2, not the student** — the
                      remediation was required to state R2's number and did so
                      accurately.
-                     (c) DECISIONS.md — record the owner's V03 parallel-work
-                     override as a numbered decision, then reconcile the V03 GATE
-                     block below and REVIEW_INDEX.md open item 9 to it. **Owner
-                     action, not student action.**
+                     (c) ✅ DONE 2026-08-10. DECISIONS.md **D-023** records the
+                     owner's V03 parallel-work override as a numbered decision; the
+                     V03 GATE block below and REVIEW_INDEX.md open item 17 are
+                     reconciled to it. Open item 9 stays OPEN on its mechanism
+                     ground — a written gate with no enforcement failed twice in one
+                     day, and the validate_project.py pre-flight guard is still the
+                     fix. Recorded alongside it: **D-024**, the standing policy for
+                     how finding severity governs the gate (see PROGRESSION RULE).
                      (d) REVIEW_INDEX.md — close open item 12 (discharged by R2
                      correction 1); item 13 stays open; item 14 now carries six
                      instances and becomes a work item at the 25% review.
@@ -103,12 +107,16 @@ V03 GATE:            **OPEN as of V02 R3 PASS, 2026-08-10 (D-004 satisfied).**
                      The V03 work performed in parallel while this gate read CLOSED
                      was an **owner-authorized override**, confirmed by the project
                      owner as intentional and not an error to correct. It is NOT to
-                     be reverted, re-done or discarded. ⚠ **It is not yet recorded
-                     as a decision** — DECISIONS.md carries no entry for it (last
-                     entry D-022), so the history below still reads as an
-                     unresolved violation. R3 Note 3 asks the owner to record the
-                     override as a numbered decision and reconcile this block and
-                     REVIEW_INDEX.md open item 9 to it.
+                     be reverted, re-done or discarded. ✅ **Now recorded as a
+                     decision — DECISIONS.md D-023, 2026-08-10.** The breach history
+                     retained below is SUPERSEDED by that entry and must be read
+                     through it: it is the record of how the override came to be
+                     authorized, not a live instruction. R3 Note 3 is discharged;
+                     REVIEW_INDEX.md open item 17 is CLOSED.
+                     The override is one instance (V02 → V03) and is NOT precedent.
+                     Separately, the standing rule for how review findings affect
+                     this gate is now **D-024** — minors-only opens it, any
+                     CRITICAL or MAJOR keeps it closed. See PROGRESSION RULE below.
                      **The mechanism finding survives the override:** a written
                      gate with no enforcement failed twice in one day. Open item 9
                      stays open on that ground alone, and the concrete fix is
@@ -286,12 +294,37 @@ the row to `AWAITING REVIEW`, never to `COMPLETE`.
 ## PROGRESSION RULE
 
 ```text
-Lesson N must be COMPLETE (reviewer PASS)
-        before lesson N+1 may be opened.
+Lesson N+1 may be opened when lesson N's latest review carries
+        0 CRITICAL and 0 MAJOR findings.
+Lesson N itself becomes COMPLETE only on reviewer PASS.
 ```
 
-No exceptions. Working ahead while a lesson sits in remediation corrupts the
-dependency chain the mastery gate exists to protect.
+**The gate follows the finding severity, not the verdict word — see `DECISIONS.md`
+D-024.** D-004 still holds: only the reviewer opens the gate, and only a reviewer `PASS`
+moves a row to `COMPLETE`.
+
+| Lesson N's latest review | Gate for N+1 | Row status for N |
+|---|---|---|
+| `PASS` | **OPEN** | `COMPLETE` |
+| `REVISE`, 0 `CRITICAL` + 0 `MAJOR` (minors only) | **OPEN** — start N+1 now; the minors need not be applied first | `IN REMEDIATION` |
+| `REVISE` with any `CRITICAL` or `MAJOR` | **CLOSED** until fixed **and re-reviewed** | `IN REMEDIATION` |
+| `BLOCKED` | **CLOSED**, unconditionally | `IN REMEDIATION` |
+
+Outstanding minors from a gate-opening `REVISE` are **deferred, never dropped**: each is
+carried in `18_REVIEW/REVIEW_INDEX.md` as an open item and named in `NEXT ACTION` above,
+and all must be applied and verified before lesson N reaches `COMPLETE`. An open gate buys
+parallelism, not amnesty.
+
+Working ahead past a `CRITICAL` or `MAJOR` corrupts the dependency chain the mastery gate
+exists to protect — V02 R1's `MAJOR` sat in the pixel-measurement pipeline V03's chart
+work would have inherited, which is the concrete case. A `MINOR` is defined by
+`REVIEW_PROTOCOL.md` §8 as not altering the method, so it cannot carry that hazard.
+
+A session may **not** downgrade a `MAJOR` to a `MINOR` to open a gate. Dispute a severity
+in the next review round, like any other finding.
+
+The one authorized exception on record is `DECISIONS.md` D-023 (owner-authorized parallel
+V03 pass). It is not precedent.
 
 ---
 

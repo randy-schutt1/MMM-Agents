@@ -31,7 +31,15 @@ Exactly one per review:
 | `REVISE` | Substantially understood; specific deficiencies must be corrected first. |
 | `BLOCKED` | Foundational misunderstanding, missing evidence, invalid testing methodology, unresolved contradiction, or research-integrity problem. |
 
-The Student may not advance until the lesson receives `PASS`.
+A lesson is `COMPLETE` only on `PASS`.
+
+**The progression gate, however, follows finding severity, not the verdict word — see
+`DECISIONS.md` D-024.** A `REVISE` carrying only `MINOR` findings (0 `CRITICAL`, 0
+`MAJOR`) **opens** the gate for the next lesson, with the minors deferred and still owed;
+any `CRITICAL` or `MAJOR`, or a `BLOCKED`, keeps it **closed** until fixed **and
+re-reviewed**. Your severity classifications in §8 therefore carry a direct consequence —
+classify on the merits, and state the `CRITICAL` / `MAJOR` / `MINOR` counts explicitly in
+the executive block (§13) so the gate state follows mechanically from this file.
 
 Also record a confidence: `High` / `Medium` / `Low`.
 
@@ -305,6 +313,13 @@ systematic weaknesses over time.
 | `NOTE` | Useful observation requiring no correction. |
 
 **A lesson with unresolved `CRITICAL` issues cannot pass.**
+
+**Severity governs the progression gate — `DECISIONS.md` D-024.** A round with 0
+`CRITICAL` and 0 `MAJOR` opens the next lesson even when the verdict is `REVISE`; the
+`MINOR` findings are carried in `REVIEW_INDEX.md` and must still be applied before the
+lesson can reach `COMPLETE`. Any `CRITICAL` or `MAJOR` holds the gate closed until fixed
+and re-reviewed. Do not soften a `MAJOR` to a `MINOR` to unblock work, and do not inflate
+a `MINOR` to hold a lesson — §1 applies to severity as much as to verdicts.
 
 ---
 

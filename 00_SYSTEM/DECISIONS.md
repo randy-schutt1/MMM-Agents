@@ -81,6 +81,20 @@ rejected as insufficient for a system that will eventually trade real money.
 student mastery column from the reviewer column for exactly this reason.
 **Status:** ACTIVE
 
+> **CROSS-REFERENCE added 2026-08-10. D-004's meaning is unchanged and it is not
+> superseded** — this is a forward pointer only, of the same kind as D-019's citation fix.
+> Read D-004 together with:
+>
+> - **D-024 — what holds the gate closed.** A `REVISE` carrying **only `MINOR`** findings
+>   (0 `CRITICAL`, 0 `MAJOR`) **opens** the gate for lesson N+1; the minor fixes are still
+>   tracked and must be completed before lesson N reaches `COMPLETE`. Any `CRITICAL` or
+>   `MAJOR` finding, or a `BLOCKED`, keeps it **closed** until fixed **and re-reviewed**.
+>   D-004's core is untouched: only the reviewer opens the gate, and only a reviewer
+>   `PASS` makes a lesson `COMPLETE`.
+> - **D-023 — the one authorized exception on record.** The parallel V03 work performed
+>   while the V03 gate read `CLOSED` was an owner-authorized one-time override, not a
+>   breach to correct. It is not precedent.
+
 ---
 
 ## D-005 — Manual historical backtesting is part of the Student Phase
@@ -704,3 +718,176 @@ internally consistent results, and cost this session a 61-minute capture, a wron
 decision record, and two spurious findings about the source library.
 
 **Evidence:** D-020 retraction; `SETUP_ISSUES.md` I-009.
+
+---
+
+## D-023 — The parallel V03 work performed under a closed gate was an owner-authorized override of D-004, not an error
+
+**Date:** 2026-08-10
+**Decision:** The V03 student work that appeared in the working tree while
+`COURSE_PROGRESS.md` read `V03 GATE: CLOSED` — V03 transcript, `04_SCREENSHOTS/V03/`,
+`05_HOMEWORK/V03/`, `QUARANTINE_REGISTER.md` Q-003, and the V03 screenshot capture
+committed as `1c836df` and `9f60f22` — was started **deliberately and with the project
+owner's explicit authorization**, as a one-time override of the D-004 progression gate.
+It is **not** a discipline failure, **not** to be reverted, re-done, discarded or
+re-audited as tainted, and no session may treat it as such.
+
+The override is **retroactive in recording only, not in authorization**: the owner made
+the call at the time; what was missing was the written record. This entry supplies it.
+
+**Scope of the override — deliberately narrow:**
+
+| Covered | Not covered |
+|---|---|
+| Beginning V03 source-side work (transcript verification, screenshot capture, quarantine audit) while V02 was in remediation | Any V03 mastery report, review, or `PASS` claim while V02 was unpassed |
+| The specific artifacts named above, as committed | Any *future* instance — D-004 is not weakened, and this entry is not precedent |
+| One instance, V02 → V03, 2026-08-10 | Any lesson pair beyond V02 → V03 |
+
+D-004 remains `ACTIVE` and is **not superseded**. An override is a single authorized
+exception to a standing rule, recorded as such; it is not a change to the rule. The
+general standing refinement of when the gate holds is `D-024`, which is a rule change and
+is written separately for exactly that reason.
+
+**Reason:** the repository currently records an authorized action as an unresolved
+violation, in `COURSE_PROGRESS.md`'s `V03 GATE` block (*"⚠ BREACHED — LIVE"*, *"No V03
+work of any kind until V02 R2 returns PASS"*), in `REVIEW_INDEX.md` open items 9 and 17,
+and in `V02_REVIEW_R2.md` §7's required disposition (*"stop the V03 pass"*). Both the R2
+and R3 reviewers flagged this correctly on the evidence available to them — nothing was
+written down, so from the repository's point of view nothing was authorized. That gap is
+the expensive kind: a future session reading `COURSE_PROGRESS.md` will either halt work
+the owner authorized, or conclude the gate register is unreliable and stop trusting it.
+Under D-001 the repository *is* the project memory, so an owner decision that lives only
+in a chat session does not exist.
+
+**Evidence:** `18_REVIEW/V02/V02_REVIEW_R2.md` §7 and finding 9 (`MAJOR`, process,
+`E20`); `18_REVIEW/V02/V02_REVIEW_R3.md` NOTE 3 (*"the breach is now an authorized
+override, and the repository does not say so"*), which explicitly asks the owner to record
+it as a numbered decision and reconcile the three locations to it;
+`18_REVIEW/REVIEW_INDEX.md` open items 9 and 17; `COURSE_PROGRESS.md` `V03 GATE` block
+and `NEXT ACTION` carry-forward item (c), which names this as **owner action, not student
+action**. Project owner confirmation, 2026-08-10.
+
+**Alternatives considered:** *Reverting the V03 work to restore the gate's integrity* —
+rejected by the owner; the work is sound on its own terms, R2 examined it and drew no
+content finding from it, and discarding correct work to satisfy a rule the owner chose to
+waive is pure cost. *Leaving it unrecorded on the grounds that V02's R3 `PASS` opened the
+V03 gate anyway and the question is forward-moot* — rejected; forward-moot is not
+backward-clean. The three locations above still read as a live violation, and R3 named
+that as a documentation-integrity defect independent of the gate's current state.
+*Silently editing `COURSE_PROGRESS.md` and `REVIEW_INDEX.md` to remove the breach
+language* — rejected outright; that erases the record of a real process event, and the
+audit trail of how a rule came to be overridden is worth more than a tidy file.
+*Amending D-004 itself to permit parallel work* — rejected as the wrong instrument for a
+one-time exception; see D-024 for the part that genuinely is a rule change.
+
+**Consequences:** `COURSE_PROGRESS.md`'s `V03 GATE` block is reconciled to this entry,
+with its breach history retained in place rather than deleted. `REVIEW_INDEX.md` open
+item 17 (*"an owner-authorized override is recorded in the repository as an unresolved
+violation"*) is **CLOSED** by this entry. `V02_REVIEW_R2.md` is **not** edited —
+`REVIEW_PROTOCOL.md` §11 forbids overwriting an earlier review, and R3 is the correct
+place the update was made.
+
+**Open item 9 is NOT closed by this entry, and must not be.** Its mechanism finding
+survives the override intact: *a written gate with no enforcement failed twice in one
+day.* The override explains why the second occurrence was authorized; it says nothing
+about why an unauthorized one would have been caught. The concrete fix is unchanged — a
+pre-flight guard in `validate_project.py` that refuses `VNN` artifact creation while
+`VNN GATE` reads `CLOSED`, with an explicit owner-override flag that must name the
+decision entry authorizing it.
+**Status:** ACTIVE
+
+---
+
+## D-024 — Finding severity, not review verdict alone, determines whether the progression gate holds
+
+**Date:** 2026-08-10
+**Refines:** D-004, which remains `ACTIVE` and is **not superseded**. D-004 established
+*that* there is a gate and that the reviewer alone opens it. This entry defines *what
+holds it closed*.
+
+**Decision:** A review round's effect on the progression gate is determined by the
+severity of its findings, per `REVIEW_PROTOCOL.md` §8:
+
+| Review outcome | Gate for lesson N+1 | Lesson N's own status |
+|---|---|---|
+| `PASS` | **OPEN** | `COMPLETE` |
+| `REVISE` with **0 `CRITICAL` and 0 `MAJOR`** — minor findings only | **OPEN.** Work on lesson N+1 may begin immediately; the minor corrections do not have to be applied first | Stays `IN REMEDIATION`, **not** `COMPLETE` |
+| `REVISE` with **any `CRITICAL` or `MAJOR`** finding | **CLOSED.** No lesson N+1 work of any kind until those findings are fixed **and re-reviewed** in a fresh round | `IN REMEDIATION` |
+| `BLOCKED` | **CLOSED**, unconditionally | `IN REMEDIATION` |
+
+Three points that are part of the decision, not commentary on it:
+
+1. **Minor findings are deferred, never dropped.** Every outstanding minor from a
+   gate-opening `REVISE` is carried in `18_REVIEW/REVIEW_INDEX.md` as an open item and
+   named in `COURSE_PROGRESS.md`'s `NEXT ACTION`, and must be applied and verified before
+   lesson N can reach `COMPLETE`. Opening the gate buys parallelism, not amnesty.
+2. **An open gate is not a `PASS`.** Lesson N's row reaches `COMPLETE` only on a reviewer
+   `PASS` — D-004 and `COURSE_PROGRESS.md`'s Final Status legend are untouched on that
+   point. The gate and the lesson's status are two different facts and must not be
+   collapsed into one.
+3. **The reviewer's severity classification is the input, and it is not negotiable by the
+   student session.** A session may not downgrade a `MAJOR` to a `MINOR` in order to open
+   a gate. Disagreement with a severity is raised as a finding in the next review round,
+   the same as any other dispute.
+
+**Reason:** D-004 as written treats every non-`PASS` identically, which makes the gate
+maximally strict but also makes it expensive in exactly the cases where strictness buys
+nothing. `REVIEW_PROTOCOL.md` §8 already defines `MINOR` as *"documentation, wording, or
+completeness problem that does not alter the method"* — by the protocol's own definition,
+a minor finding cannot corrupt what lesson N+1 inherits, which is the entire hazard D-004
+exists to prevent (*"a misunderstanding to propagate into pattern definitions, Pine
+Script, backtests, and eventually capital loss"*). Holding an 18-lesson course on a
+wording fix converts a safety rule into bureaucracy, which `REVIEW_PROTOCOL.md` §1
+explicitly forbids.
+
+The V02 history is the worked example and the reason this is being written now rather
+than at the next collision. V02 R1 returned `REVISE` with 1 `MAJOR` — the gate correctly
+should have held, and the hazard was real: the `MAJOR` was in the pixel-measurement
+pipeline V03's chart work would have inherited. V02 R2 returned `REVISE` with 0
+`CRITICAL`, 0 `MAJOR`, 3 `MINOR` (plus a process finding charged against the project, not
+the lesson) — nothing there could contaminate V03, and V02 R3 subsequently confirmed
+`PASS` on the merits after those minors were applied. Under this decision R2 would have
+opened the gate on its own terms and no override would have been needed. **The rule this
+produces is the one that would have made D-023 unnecessary**, which is the test of whether
+a policy is right rather than merely convenient.
+
+The converse half matters as much and is stated as flatly: **a `CRITICAL` or `MAJOR`
+finding closes the gate, full stop.** Not "closes it pending judgement", not "closes it
+unless the finding looks localized". `REVIEW_PROTOCOL.md` §8 already holds that a lesson
+with unresolved `CRITICAL` issues cannot pass; this extends the same treatment to the
+gate, and to `MAJOR`. Fixed **and re-reviewed** — a student session applying its own fix
+and declaring itself satisfied is precisely the self-certification D-003 and D-004 exist
+to prevent.
+
+**Evidence:** `REVIEW_PROTOCOL.md` §8 (severity definitions), §2 (decision vocabulary),
+§9 (decision standards — `PASS` criterion 14, *"remaining issues are minor and do not
+corrupt downstream learning"*, which is this decision's principle already stated for the
+`PASS` case), §1 (*"The purpose is quality control, not bureaucracy"*).
+`18_REVIEW/V02/V02_REVIEW_R1.md` (1 `MAJOR`, gate correctly held),
+`18_REVIEW/V02/V02_REVIEW_R2.md` (0 `CRITICAL`, 0 `MAJOR`, 3 `MINOR`),
+`18_REVIEW/V02/V02_REVIEW_R3.md` (`PASS`). Project owner instruction, 2026-08-10.
+
+**Alternatives considered:** *Leaving D-004 absolute* — rejected; it is what forced an
+override on the first occasion the distinction mattered, and a rule that gets overridden
+the first time it binds is a rule that was mis-specified, not a rule that was disobeyed.
+*Opening the gate on any `REVISE` regardless of severity* — rejected outright; that
+deletes the gate. The V02 R1 `MAJOR` sat in the measurement pipeline V03 would have
+inherited, which is the concrete case for keeping the strict half strict. *Letting the
+reviewer decide per-round whether the gate opens* — rejected; it makes the gate a
+judgement call that varies by reviewer session, and the reviewer already encodes exactly
+the needed judgement in the severity classification. Deriving the gate mechanically from
+severity keeps it auditable and keeps `validate_project.py` able to enforce it.
+*Allowing minor fixes to be waived rather than deferred once the gate opens* — rejected;
+minors that are never applied accumulate silently into the corpus, and the project has
+already recorded staleness of exactly this kind six times (`V02_REVIEW_R3.md` NOTE 4).
+
+**Consequences:** `COURSE_PROGRESS.md`'s `PROGRESSION RULE` block, which read *"No
+exceptions"*, is restated in terms of this decision and points here. `REVIEW_PROTOCOL.md`
+§2 and §8 gain a cross-reference so a reviewer session classifying a finding can see that
+the classification now carries gate consequences. D-004 gains a forward pointer. Future
+review rounds must state their `CRITICAL` / `MAJOR` / `MINOR` counts explicitly enough
+that the gate state follows mechanically from the review file — R1–R3 of V01 and V02
+already do this in their executive blocks, so no format change is required. The
+`validate_project.py` pre-flight guard proposed under `REVIEW_INDEX.md` open item 9 should
+implement this table rather than D-004's simpler `PASS`-only reading.
+**Status:** ACTIVE
