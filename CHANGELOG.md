@@ -11,6 +11,57 @@ Newest first.
 
 ---
 
+## [0.2.0] — 2026-08-10 — Phase 1 opens: source ingested, V01 studied
+
+First release containing actual Market Maker Method content.
+
+### Added
+
+- **Source ingestion complete.** `00_SYSTEM/SOURCE_MANIFEST.md` populated with 42
+  SWF files — 21 lesson videos (`V01`–`V21`, 21:52:38 total, all ordering `CERTAIN`)
+  and 21 out-of-scope videos from two other series (`X01`–`X21`) — each with SHA-256,
+  measured duration, and byte size. Plus four image collections (`X22`–`X26`).
+- **`00_SYSTEM/QUARANTINE_REGISTER.md`** — new tracked file recording material that
+  must never be used as evidence, with the evidence for that judgement.
+- **V01 artifacts:** `02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md`,
+  `03_LESSON_NOTES/V01_SOURCE_NOTES.md`, `03_LESSON_NOTES/V01_INTERPRETATION.md`,
+  `04_SCREENSHOTS/V01/INDEX.md`.
+- **First course-level ambiguity and contradiction records:** `A-001`–`A-017` (all
+  `DO NOT CODE`), `C-001` (foundational, unresolved), `C-002`.
+- **`D-017`** — source arrangement, lesson order, duplicate handling, quarantine.
+- **`I-008`** — 20 of 21 transcripts are unverified.
+
+### Changed
+
+- `COURSE_PROGRESS.md` expanded from zero rows to 21 verified lesson rows.
+- Lesson folders under `Bootcamp Notes/` renumbered from alphabetical to
+  chronological order (19 of 21 folders changed). Any external reference to the old
+  numbering is now wrong. Source `.swf` files were not renamed.
+- `I-006` (screenshot capture) updated with an investigated root cause: these SWFs
+  contain no video stream, only a composited bitmap display list, so frame extraction
+  requires a Flash renderer rather than `ffmpeg`.
+
+### Removed
+
+- 63 fabricated per-lesson notes files, an 8-file synthesized master rulebook, and a
+  synthesized course-notes document — moved to a clearly-marked quarantine folder
+  under the Git-ignored source tree, not deleted. See `QUARANTINE_REGISTER.md` Q-001.
+- Stray housekeeping files from `01_SOURCE_VIDEOS/`: a 61 MB test-conversion `.mp4`,
+  a 392-file temporary jpeg folder, 14 `.DS_Store` files.
+
+### Notes
+
+- **Week 6 is genuinely missing** from the source material and is documented as
+  expected-missing. No session may fabricate or interpolate it.
+- V01 was studied **without screenshots**. Roughly its last 21 minutes is narration
+  over slides that could not be extracted, so about half the lesson's content was not
+  recovered. No V01 interpretation is classified `VISUAL`. Every affected artifact
+  states this.
+- V01 yields no executable rule: no stop, no target, no risk-to-reward, no position
+  size, and no indicator parameter is stated anywhere in the lesson.
+
+---
+
 ## [0.1.1] — 2026-08-10 — Checkpoint commit cadence; audit fixes
 
 ### Changed

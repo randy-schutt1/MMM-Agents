@@ -304,3 +304,197 @@ Note for that session: I-006 and I-007 are still open and will need decisions at
 first lesson and first manual backtest respectively.
 
 ---
+
+---
+
+## 2026-08-10 — Session 4 — Source Ingestion + V01 Study (Phase 1 opens)
+
+### Objective
+
+Run `SOURCE_INGESTION_PROTOCOL.md` against the now-accessible bootcamp library, then
+study V01 through interpretation. Deliberately stop before homework, manual backtest,
+chart examples, concept library, and mastery report.
+
+First session in which any source video has been seen by an agent.
+
+### Work Completed
+
+**Housekeeping.** Cleared stray files from `01_SOURCE_VIDEOS/`: a 61 MB
+`_DELETE_ME_test_conversion_*.mp4`, a `.tmp_swf_test/` folder of 392 stray jpegs from
+a prior extraction attempt, and 14 `.DS_Store` files. The two named items were moved
+to the session scratchpad rather than hard-deleted.
+
+**Ingestion (Steps 1–9).** All 42 SWFs hashed (SHA-256) and probed. `ffprobe
+format=duration` returns `N/A` for every file — these containers carry no duration
+field — so duration was taken from the last audio-packet PTS, validated against V01
+(3283.80 s = 00:54:43.8, matching both the `(55mins)` label and the final transcript
+timestamp `[00:54:38]`). All 42 filename labels agree with measured runtime to within
+one minute.
+
+Result: **21 lesson videos, 21:52:38 total, every row `CERTAIN`.**
+
+**Lesson order corrected.** On-disk folder numbering was an alphabetical artifact
+(`Wk1, Wk10, Wk2, …`) that put Week 10 in position 3 and shifted every folder from 03
+onward. Re-derived from the `MMDDYY` date in each filename, cross-checked against the
+instructor's week labels — the two agree completely. 19 of 21 folders renamed so
+folder `NN` = video `VNN`. Source `.swf` files not renamed.
+
+**Week 6 confirmed absent.** Session dates run 03/18, 03/25, 03/26, 04/01, 04/08,
+04/15, then jump to 05/06. Documented as expected-missing (manifest anomaly A-01) per
+Step 8. Not to be fabricated or interpolated by any future session.
+
+**Duplicates resolved.** All 21 lesson videos exist twice, byte-identical — flat in
+`Bootcamp/` and inside each `Bootcamp Notes/NN_.../` folder. Confirmed by matching
+checksums across all 21 pairs. Flat copy taken as canonical. 21 further SWFs (3 Dean
+Malone, 18 `SteveMauro060212`) inventoried as `X01`–`X21`, `NOT A LESSON`, out of
+scope pending an owner decision after V21.
+
+**Quarantine.** 72 files moved to
+`01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/`: `NOTES.md`,
+`RULES.md`, `VISUAL_INDEX.md` for all 21 lessons, the 8-file `00_MASTER/` rulebook,
+and `Forex_Bootcamp_Complete_Training_Notes.md`. Three independent findings against
+V01, each verified in this session rather than taken on report:
+
+1. `RULES.md` cites `V01-R001` at `[00:05:00]` — *"Wait for the M15 candle to close
+   before taking the 5/13 EMA cross"*, marked `Source: Explicit`, `Coding Readiness:
+   Ready`. `[00:04:51]`–`[00:05:32]` is the instructor complaining about last-minute
+   homework. Across the whole transcript `EMA` matches 14 times; 13 are the substring
+   inside *email*. The one real occurrence is `[00:19:15]`, survey question 10 — *"Do
+   you know how to read the EMAs in real time?"* — which states no periods, no cross,
+   and no candle-close condition. The same file's parameter table sources EMA periods
+   5/13/50/200/800 to `[00:04:00]`, where nothing concerns moving averages.
+2. `VISUAL_INDEX.md` claims 78 captured screenshots with filenames, byte sizes, and
+   per-image descriptions. One image exists and matches none of them.
+3. `MASTER_RULEBOOK.md` states `MR-001`–`MR-005` all marked `Source: Explicit`, none
+   carrying a video ID or timestamp — a Phase-3-shaped specification produced before
+   Phase 1 ran.
+
+Retained, not deleted, as the record of what was discarded and why. Registered in the
+new tracked `00_SYSTEM/QUARANTINE_REGISTER.md` (Q-001), since the files themselves sit
+under a Git-ignored path.
+
+**V01 transcript verified and adopted.** Checked before use, given its provenance:
+final timestamp `[00:54:38]` against measured 00:54:43.8; timestamps monotonic; it
+preserves its own ASR garble (*"the man is the water that catch up in the mustard"*),
+crosstalk, student names, and a 33-minute administrative opening. A fabricated
+transcript does not invent its own mishearings, and the quarantined `NOTES.md` for
+this same video describes content the transcript does not contain. Relocated to
+`02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md` with a full provenance header; body copied
+byte-for-byte and verified (974 timestamp markers identical).
+
+**V01 studied.** `V01_SOURCE_NOTES.md` and `V01_INTERPRETATION.md` written from the
+transcript alone. Nothing carried over from the quarantined files.
+
+### Findings
+
+**V01 is a framing lesson, not a mechanics lesson.** It teaches a thesis (the weekly
+cycle is manufactured; traps occur at week/session boundaries; an anchor point commits
+direction mid-week) and gives prohibitions. It delivers no executable method. Section
+6 of the source notes — Conditions Stated — has an **empty Confirmation column and an
+empty Invalidation column across all eight rows.** No stop-loss rule, no target, no
+risk-to-reward, no position size, and no indicator parameter appears anywhere in 54
+minutes.
+
+**Seventeen load-bearing terms are used and none is defined** — anchor point, trap
+move, level, trading zone, blue/red box, second leg, tracer, stop hunt high drop, peak
+formation, M and W, midweek reversal, and more. All 17 logged as `A-001` … `A-017`,
+all `DO NOT CODE`. The trading zone is explicitly deferred to V02.
+
+**Two contradictions logged.** `C-001` (foundational, `UNRESOLVED`): the duration of
+the move away from the anchor is given as "two and a half to three more days"
+asserted "for sure" at `[00:35:05]`, then as "four days, three and a half days, three
+days" hedged with "likely" at `[00:35:15]`. The instructor is told about the conflict
+by students at `[00:36:07]`, acknowledges it — *"It's more than what I've told you. I
+understand that"* — and moves on. `C-002`: the entry filter and direction restriction
+exist in strict and relaxed forms selected by an unmeasurable skill threshold (A-013).
+
+**The lesson assumes prior material.** `[00:34:33]` — *"**remember** we have the trap
+moves"* — and `[00:36:07]`, where students quote his earlier teaching back at him.
+V01 opens this bootcamp cycle, not his teaching. Some vocabulary may never be defined
+inside this 21-video library.
+
+**The one moving-average mention is bait, not signal.** `[00:39:26]` — *"Look at the
+moving averages fan out. He shows something to the traders. He shows longs"* —
+describes what the dealer displays to induce the wrong position. Logged as A-015 with
+an explicit inversion warning: coding it as an entry condition would build a system
+that does exactly what the lesson warns against. This is very likely the seed of the
+fabricated 5/13 EMA rule.
+
+### Screenshots — I-006 investigated, cause established
+
+`ffmpeg` aborts on these files after ~2 minutes with `pixel format change
+unsupported`. Direct SWF tag parsing shows why: V01 has 9,853 `SHOWFRAME` tags
+(3.0 fps × 3,284 s — the full duration) and **no video stream**. The screen is
+composited from bitmap tiles on a display list (389 `DefineBitsJPEG2`, 603
+`DefineBitsLossless`, 658 `DefineShape3`, 537 `PlaceObject2`). Extracting image tags
+directly yields one full 1024×768 keyframe at `00:00:00` plus 388 delta tiles of
+26×38 to 72×56 px — cursor sprites and changed regions, not frames. Producing viewable
+frames requires evaluating the display list, i.e. a Flash renderer. No `ffmpeg`
+invocation will do it.
+
+Ruffle checked and ruled out inside its time box: release v0.5.0 ships a GUI desktop
+player (`ruffle-0.5.0-macos-universal.tar.gz`); there is no headless exporter asset.
+Frame export lives only in the `ruffle_exporter` crate — a from-source Rust build,
+out of bounds after it hung a prior session. **No download was made, no build
+attempted.**
+
+Live route remains CloudConvert when the owner is at his own machine. TradingView
+recreations were **not** started; `04_SCREENSHOTS/V01/INDEX.md` records the ten
+priority moments and the rule that recreations go to `09_CHART_EXAMPLES/` with
+sidecars, never to `04_SCREENSHOTS/`.
+
+Consequence: roughly the last 21 minutes of V01 is narration over slides, spoken
+deictically ("this", "right here", "these two lines"). About half the lesson is in the
+visual channel and none was recovered. **No item in `V01_INTERPRETATION.md` is
+classified `VISUAL`.** Stated in every affected artifact.
+
+### Manual Backtesting
+
+None. Out of scope for this session by instruction.
+
+### Ambiguities / Contradictions
+
+First course-level records in the project: `A-001` … `A-017` (all `DO NOT CODE`),
+`C-001` (foundational, `UNRESOLVED`), `C-002` (stated exception, condition
+unmeasurable).
+
+### Decisions
+
+`D-017` — source arrangement, lesson order, duplicate handling, and quarantine of
+pre-ingestion notes.
+
+### Setup Issues
+
+`I-005` closed by ingestion. `I-006` updated with the investigated cause, still
+`OPEN`. `I-008` opened — 20 of 21 transcripts are unverified and must each be checked
+against their own audio before that lesson is studied.
+
+### Files Created/Updated
+
+Created: `00_SYSTEM/QUARANTINE_REGISTER.md`, `02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md`,
+`03_LESSON_NOTES/V01_SOURCE_NOTES.md`, `03_LESSON_NOTES/V01_INTERPRETATION.md`,
+`04_SCREENSHOTS/V01/INDEX.md`.
+Updated: `00_SYSTEM/SOURCE_MANIFEST.md`, `00_SYSTEM/COURSE_PROGRESS.md`,
+`00_SYSTEM/DECISIONS.md`, `00_SYSTEM/SETUP_ISSUES.md`,
+`10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`, `11_CONTRADICTIONS/CONTRADICTIONS.md`,
+`LOG.md`, `CHANGELOG.md`.
+
+### Validation
+
+`python3 scripts/validate_project.py` — **97 passed, 0 warnings, 0 failures.**
+
+### Next Action
+
+V01 homework, manual backtest, and mastery report — the deliverables this session
+stopped short of by instruction. Note before starting:
+
+- V01 assigns homework (source notes §11 H1–H8) but most of it is a student survey
+  emailed to an instructor in 2012. Only H4 ("on the one hour chart… look at the
+  levels and the cycle"), H5 ("mark the chart up… go look at the pairs this week"),
+  and H6 (read your broker agreement) are actionable now, and H4/H5 depend on
+  concepts V01 never defines. Worth deciding how a 2012 survey is handled before
+  writing `05_HOMEWORK/V01/`.
+- Manual backtesting V01 requires labelling "anchor points" — an `A-001` `DO NOT
+  CODE` concept. Consider whether V01 is backtestable at all, or whether observation
+  should begin after V02 defines the trading zone.
+- `I-007` (chart data source) is still open and blocks manual backtest.

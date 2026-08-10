@@ -344,15 +344,69 @@ data source for manual backtesting).
 
 ---
 
+## D-017 — Source library arrangement, lesson order, duplicate handling, and quarantine of pre-ingestion notes
+
+**Date:** 2026-08-10
+**Decision:** Four ingestion-time decisions, taken together because they were
+established by a single pass over the library.
+
+1. **Arrangement — in-repo, Git-ignored.** The library stays at
+   `01_SOURCE_VIDEOS/Forex Bootcamp/`, excluded by `.gitignore`.
+   `SOURCE_MANIFEST.md` is its Git-visible representation.
+2. **Lesson order — 21 lessons, all `CERTAIN`, ordered by session date.** The on-disk
+   folder numbering was an alphabetical artifact (`Wk1, Wk10, Wk2, …`) that placed
+   Week 10 third and shifted everything from position 03 on. Order was re-derived
+   from the `MMDDYY` date in each filename and cross-checked against the instructor's
+   week labels; the two agree completely. Folders under `Bootcamp Notes/` were
+   renumbered so folder `NN` = video `VNN`. **Source `.swf` files were not renamed.**
+3. **Duplicates — the flat `Bootcamp/` copy is canonical.** All 21 lesson videos exist
+   twice, byte-identical (confirmed by matching SHA-256): once flat in `Bootcamp/`,
+   once inside the corresponding `Bootcamp Notes/NN_.../` folder. The manifest records
+   the flat path. Duplicates get no `X` IDs. The 21 additional SWFs (3 Dean Malone, 18
+   `SteveMauro060212`) are inventoried as `X01`–`X21`, `NOT A LESSON`, out of scope.
+4. **Pre-ingestion derived notes — quarantined, not deleted.** 72 files moved to
+   `01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/`.
+
+**Reason:** (1)–(3) are required by `SOURCE_INGESTION_PROTOCOL.md` Steps 1, 7 and 8
+and had to be settled before V01 could be studied. (4) is the consequential one: the
+existing `NOTES.md` / `RULES.md` / `VISUAL_INDEX.md` and the `00_MASTER/` rulebook
+carry timestamps and `Source: Explicit` labels but are not traceable to the audio.
+`RULES.md` for V01 cites *"Wait for the M15 candle to close before taking the 5/13 EMA
+cross"* at `[00:05:00]`; `[00:05:00]` is the instructor complaining about last-minute
+homework, and the token `EMA` appears in the whole 54-minute transcript exactly once
+outside the word *email* — as survey question 10. `VISUAL_INDEX.md` describes 78
+screenshots where one image exists. Feeding any of it to a Student session would
+inject fabricated rules that look fully sourced.
+**Evidence:** `00_SYSTEM/QUARANTINE_REGISTER.md` Q-001; `SOURCE_MANIFEST.md`
+anomalies A-01 … A-08.
+**Alternatives considered:** *Deleting the fabricated files* — rejected; deletion
+destroys the record of what was discarded and why, and a future session would
+re-derive the same material and possibly trust it. *Keeping them in place with a
+warning header* — rejected; a warning at the top of a file does not survive being
+read in fragments by a future agent, and proximity to the real transcript is itself
+the hazard. *Renaming the `.swf` files to `V01.swf` etc.* — rejected; source files are
+read-only evidence and the manifest already carries the mapping. *Treating the
+`SteveMauro060212` series as additional lessons* — rejected; different course,
+different date, no evidence it belongs to this curriculum.
+**Consequences:** Folder numbering under `Bootcamp Notes/` changed for 19 of 21
+folders; any external reference to the old numbering is now wrong. V01 study proceeds
+from transcript only. `SETUP_ISSUES.md` gains I-008 (20 unverified transcripts).
+Week 6 is confirmed absent and documented as expected-missing; **no session may
+fabricate or interpolate it.**
+**Status:** ACTIVE
+
+---
+
 ## DECISIONS TO BE MADE AT INGESTION
 
 Not yet decided; record as new entries when the information exists.
 
 | Topic | Trigger |
 |---|---|
-| Source library location and arrangement (in-repo vs external path) | Ingestion |
-| Verified lesson count and ordering | Ingestion |
-| Handling of any duplicate or non-lesson files found | Ingestion |
+| ~~Source library location and arrangement~~ | **Decided — D-017** |
+| ~~Verified lesson count and ordering~~ | **Decided — D-017** |
+| ~~Handling of any duplicate or non-lesson files found~~ | **Decided — D-017** |
+| Whether the `SteveMauro060212` and Dean Malone series (X01–X21) enter the corpus | After V21 passes review |
 | Chart data source / broker feed for manual backtesting | First manual backtest |
 | Timezone convention for session and daily boundaries | First timing lesson |
 | Default timeframes used in manual study | First chart lesson |

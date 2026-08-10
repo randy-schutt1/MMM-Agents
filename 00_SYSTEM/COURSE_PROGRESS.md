@@ -9,40 +9,74 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ## SUMMARY
 
 ```text
-PHASE:               1 — STUDENT  (blocked, awaiting source videos)
-VIDEOS INGESTED:     0
-VIDEOS IN PROGRESS:  0
+PHASE:               1 — STUDENT  (unblocked; ingestion complete)
+VIDEOS INGESTED:     21
+VIDEOS IN PROGRESS:  1  (V01)
 VIDEOS PASSED:       0
-CURRENT LESSON:      none — ingestion not yet run
-NEXT ACTION:         run 00_SYSTEM/SOURCE_INGESTION_PROTOCOL.md
+CURRENT LESSON:      V01 — transcript adopted, source notes and interpretation written
+NEXT ACTION:         V01 homework, manual backtest, and mastery report
+                     (deliberately NOT started this session — see LOG.md 2026-08-10)
+BLOCKED ON:          I-006 — no screenshots for V01; CloudConvert route pending
 ```
 
 ---
 
-## EXPECTED COURSE LENGTH — UNVERIFIED
+## COURSE LENGTH — VERIFIED 2026-08-10
 
-The project owner expects **approximately 21 usable lesson videos**, in a folder
-that may hold **around 24 files**.
+**21 lesson videos**, total runtime **21:52:38**, all ordering `CERTAIN`. Every row
+below corresponds to a file that was hashed and probed during ingestion; see
+`00_SYSTEM/SOURCE_MANIFEST.md`.
 
-**This is not a verified fact and must not be treated as one.** The table below is
-deliberately empty rather than pre-filled with 21 or 24 placeholder rows. Rows are
-added only for videos that have been verified to exist during ingestion, in their
-verified order. If the real count turns out to be 18 or 26, the table simply gets
-that many rows.
+The owner's pre-ingestion expectation of "approximately 21" turned out to be exact.
+That is a coincidence worth naming rather than treating as confirmation — the count
+was established from the files, not from the expectation.
+
+**Week 6 is genuinely absent** from the source material (session dates run 03/18,
+03/25, 03/26, 04/01, 04/08, 04/15, then jump to 05/06). Confirmed by the project
+owner as expected-missing, not a copy error. It gets no row. **No session may
+fabricate, interpolate, or infer Week 6 content.**
 
 ---
 
 ## PROGRESS TABLE
 
-| Video | Source Verified | Transcript | Notes | Screenshots | Homework | Manual Backtest | Student Mastery | Reviewer | Final Status |
-|---|---|---|---|---|---|---|---|---|---|
-| _(no videos ingested)_ | | | | | | | | | |
+| Video | Session | Duration | Source Verified | Transcript | Notes | Screenshots | Homework | Manual Backtest | Student Mastery | Reviewer | Final Status |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ⚠️ | ⬜ | ⬜ | — | — | IN PROGRESS |
+| V02 | Wk1 P2 | 01:00:19 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V10 | Wk3 | 01:36:16 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V11 | Wk4 P1 | 00:50:56 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V12 | Wk4 P2 | 00:55:18 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V13 | Wk5 P1 | 01:05:22 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V14 | Wk5 P2 | 00:47:48 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V16 | Wk7 P2 | 00:44:35 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V17 | Wk8 P1 | 00:57:09 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V18 | Wk8 P2 | 00:46:08 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V19 | Wk9 P1 | 01:07:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V20 | Wk9 P2 | 00:45:49 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V21 | Wk10 | 01:14:47 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 
-### Row template — copy for each verified lesson
+### Notes on the marks above
 
-```text
-| V01 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
-```
+- **V01 Screenshots ⚠️** — zero captured, and the cause is understood rather than
+  merely unresolved. See `SETUP_ISSUES.md` I-006 and `04_SCREENSHOTS/V01/INDEX.md`.
+  Roughly the last 21 minutes of V01 is narration over slides, so this is a real gap
+  in the evidence base, not a formality. Every V01 artifact states it.
+- **V02–V21 Transcript ⚠️** — a `TRANSCRIPT.md` exists for each, but it came from the
+  same pre-ingestion process that produced the quarantined fabrications, and **none
+  has been verified**. Not a tick. See `SETUP_ISSUES.md` I-008.
+- **V01 Notes ✅** — `V01_SOURCE_NOTES.md` and `V01_INTERPRETATION.md` are written
+  from the transcript only. Nothing was carried over from the quarantined files.
+- **V01 Homework ⬜, Manual Backtest ⬜** — deliberately not started. This session's
+  scope stopped at interpretation.
 
 ---
 

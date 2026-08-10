@@ -211,6 +211,38 @@ be flagged to the reviewer, not hidden.
 **Do not** substitute generated, illustrative, or reconstructed images for real
 course screenshots under any circumstances.
 
+### Update 2026-08-10 — investigated at V01, still `OPEN`, cause now understood
+
+`ffmpeg` and `ffprobe` are both present. They are not sufficient, and the reason is
+structural rather than a tooling gap:
+
+- `ffmpeg` aborts on these files after roughly two minutes with
+  `pixel format change unsupported`.
+- Parsing the SWF tag stream directly shows why. V01 contains 9,853 `SHOWFRAME` tags
+  (3.0 fps × 3,284 s — the full 54:44) but **no video stream**. The screen is
+  composited from bitmap tiles placed on a display list: 389 `DefineBitsJPEG2`, 603
+  `DefineBitsLossless`, 658 `DefineShape3`, 537 `PlaceObject2`. Extracting the image
+  tags directly yields one full 1024×768 keyframe at `00:00:00` and 388 delta tiles
+  of 26×38 to 72×56 pixels — cursor sprites and changed regions, not frames.
+- Producing viewable frames therefore requires **evaluating the display list**, i.e.
+  a Flash renderer. No `ffmpeg` invocation will do it.
+- Ruffle was checked and ruled out inside its time box. Release v0.5.0 ships
+  `ruffle-0.5.0-macos-universal.tar.gz`, a GUI desktop player; there is no headless
+  exporter asset. Frame export lives only in the `ruffle_exporter` crate, which means
+  a from-source Rust build — out of bounds after it hung a prior session. No download
+  was made.
+
+**Live route:** CloudConvert, converting `.swf` to a real video container that
+`ffmpeg` can then sample normally. Blocked until the project owner is at his own
+machine (expected Thursday). Nothing else in the project is blocked behind this.
+
+**Interim handling:** V01's artifacts were produced from the transcript alone and say
+so, in `V01_SOURCE_NOTES.md` §4, `V01_INTERPRETATION.md` §9 item 1, and
+`04_SCREENSHOTS/V01/INDEX.md`. No item in `V01_INTERPRETATION.md` is classified
+`VISUAL`, because nothing visual was seen. The approved TradingView-recreation
+fallback has **not** been started; when it is, recreations go to `09_CHART_EXAMPLES/`
+with sidecars, never to `04_SCREENSHOTS/`.
+
 ---
 
 ## I-007 — Manual backtesting requires a chart data source
@@ -239,3 +271,39 @@ and timeframes — before observations are collected. See `STUDY_PROTOCOL.md` §
   not deleting the entry. The history of how the project's rules were settled is
   part of the audit trail.
 - New infrastructure conflicts get the next `I-0XX` number.
+
+---
+
+## I-008 — Twenty of twenty-one transcripts are unverified
+
+**Status:** `OPEN` — must be resolved per-lesson, before that lesson is studied
+
+Each lesson folder arrived with a `TRANSCRIPT.md` produced by a pre-ingestion process
+— the same process that produced the `NOTES.md`, `RULES.md`, and `VISUAL_INDEX.md`
+files subsequently found to be fabricated and quarantined
+(`00_SYSTEM/QUARANTINE_REGISTER.md` Q-001).
+
+**V01's transcript was checked and passed.** Length matches measured audio (final
+timestamp `[00:54:38]` against 00:54:43.8), timestamps are monotonic, and it preserves
+its own ASR errors, crosstalk, and off-topic stretches rather than smoothing them —
+a fabricated transcript does not invent its own mishearings. It was adopted and now
+lives at `02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md` with the verification recorded in its
+header.
+
+**V02–V21 have not been checked.** There is no evidence against them and none for
+them. Sharing a provenance with fabricated material is not proof of fabrication, but
+it is enough that adoption without checking would be negligent.
+
+**Required before each lesson is studied**, at minimum:
+
+1. Final timestamp against the measured duration in `SOURCE_MANIFEST.md`.
+2. Timestamps monotonic, with no implausible gaps.
+3. Spot-check several passages against the actual audio.
+4. Confirm the content is consistent with a live webinar rather than a clean summary
+   — disfluency, crosstalk, and administrative stretches present.
+
+A transcript that fails these is quarantined and re-transcribed, not repaired.
+
+**Why this is not resolvable in bulk now:** study is strictly sequential and gated
+(`SOURCE_INGESTION_PROTOCOL.md` §10). Verifying V02–V21 today would front-load work
+that may be redone anyway if CloudConvert conversion changes the audio route.
