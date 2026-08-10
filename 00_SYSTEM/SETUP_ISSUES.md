@@ -17,7 +17,8 @@ Status values: `OPEN` / `PROVISIONALLY HANDLED` / `RESOLVED` / `ACCEPTED AS-IS`.
 
 ## I-001 — Two different status vocabularies for the same gate
 
-**Status:** `PROVISIONALLY HANDLED` — human confirmation requested
+**Status:** `RESOLVED` — provisional handling confirmed by the project owner,
+2026-08-10 (see D-016)
 
 **Conflict**
 
@@ -50,14 +51,25 @@ satisfies Reviewer §36, which is the more specific statement about authority.
 delete the student's self-assessment step or imply the student can self-certify.
 Both alter the governing design.
 
-**Human confirmation requested:** confirm the two-vocabulary reading, or instruct
-that both actors use a single shared vocabulary.
+**RESOLUTION — 2026-08-10.** The project owner confirmed the two-vocabulary
+reading. It is now binding, not provisional:
+
+- Student mastery report status is `PASS` / `REVIEW REQUIRED` / `BLOCKED`, and is a
+  self-assessment and submission for review.
+- Reviewer decision is `PASS` / `REVISE` / `BLOCKED`, and is the sole authorization
+  to advance.
+- The two are never merged, and `COURSE_PROGRESS.md` keeps them in separate
+  columns.
+
+No implementation change was required — `MASTERY_STANDARD.md`,
+`REVIEW_PROTOCOL.md`, and `COURSE_PROGRESS.md` already reflect this.
 
 ---
 
 ## I-002 — Review report filename is specified two ways
 
-**Status:** `PROVISIONALLY HANDLED`
+**Status:** `RESOLVED` — provisional handling confirmed by the project owner,
+2026-08-10 (see D-016)
 
 **Conflict**
 
@@ -80,11 +92,17 @@ never replace the versioned files. This satisfies the non-negotiable requirement
 **Impact:** low. `TEMPLATES/REVIEW_TEMPLATE.md` and `REVIEW_PROTOCOL.md` §11 use
 the versioned form.
 
+**RESOLUTION — 2026-08-10.** Confirmed by the project owner. Versioned files
+`18_REVIEW/VXX/VXX_REVIEW_R<n>.md` are canonical and are never overwritten. An
+optional `VXX_REVIEW.md` pointer to the latest accepted round is permitted but must
+never replace the versioned files.
+
 ---
 
 ## I-003 — The two files specify different `00_SYSTEM/` contents
 
-**Status:** `PROVISIONALLY HANDLED`
+**Status:** `RESOLVED` — provisional handling confirmed by the project owner,
+2026-08-10 (see D-016)
 
 **Conflict**
 
@@ -113,11 +131,17 @@ exclusive.
 
 **Impact:** none. No content is lost by taking the union.
 
+**RESOLUTION — 2026-08-10.** Confirmed by the project owner. The two trees are read
+as partial views of one structure, and the union stands. Both governing files'
+directory listings are treated as non-exhaustive going forward — a file absent from
+one tree is not thereby forbidden.
+
 ---
 
 ## I-004 — "Do not progress" is stated at two different gates
 
-**Status:** `PROVISIONALLY HANDLED` — related to I-001
+**Status:** `RESOLVED` — provisional handling confirmed by the project owner,
+2026-08-10 (see D-016). Related to I-001.
 
 **Conflict**
 
@@ -134,6 +158,18 @@ precondition for *requesting review*, not for advancing.
 
 `STUDENT_SESSION_PROMPT.md` makes this explicit as a hard stop, so a student
 session cannot reach the wrong conclusion from its governing file alone.
+
+**RESOLUTION — 2026-08-10.** Confirmed by the project owner. Both conditions must
+hold, in this order:
+
+```text
+1. lesson passes the student mastery standard   → authorizes REQUESTING REVIEW
+2. lesson receives a reviewer PASS              → authorizes ADVANCING
+```
+
+Passing the mastery standard never advances the course by itself. This is now
+binding and is enforced in `STUDENT_SESSION_PROMPT.md`, `SESSION_START.md` §6, and
+`COURSE_PROGRESS.md`.
 
 ---
 

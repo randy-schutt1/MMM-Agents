@@ -307,6 +307,43 @@ finished, and partial artifacts explicitly marked `STATUS: PARTIAL`.
 
 ---
 
+## D-016 — Governing-file conflicts I-001 … I-004 resolved as read
+
+**Date:** 2026-08-10
+**Decision:** The provisional handling recorded for setup issues I-001, I-002,
+I-003, and I-004 is confirmed by the project owner and is now binding. Those four
+readings are no longer provisional and are not to be relitigated by a future
+session:
+
+| Issue | Confirmed resolution |
+|---|---|
+| I-001 | Student and Reviewer keep **separate status vocabularies**. Student: `PASS` / `REVIEW REQUIRED` / `BLOCKED` (self-assessment, a submission). Reviewer: `PASS` / `REVISE` / `BLOCKED` (sole authorization). Never merged; separate columns in `COURSE_PROGRESS.md`. |
+| I-002 | Versioned review files `18_REVIEW/VXX/VXX_REVIEW_R<n>.md` are canonical and never overwritten. An optional `VXX_REVIEW.md` pointer is permitted but never replaces them. |
+| I-003 | The two governing files' directory trees are **partial views of one structure**; the union stands. A file absent from one tree is not thereby forbidden. |
+| I-004 | Both gates apply in order: the mastery standard authorizes *requesting review*; only a reviewer `PASS` authorizes *advancing*. |
+
+**Reason:** These four conflicts sit at the foundation of the progression gate and
+the review audit trail. Leaving them provisional would mean every future session
+re-derives them from two files that genuinely disagree — and could derive them
+differently. A confirmed decision makes the reading stable across sessions and
+models, which is the point of D-001.
+**Evidence:** Project owner confirmation, 2026-08-10, in response to the Phase 0
+infrastructure report. Underlying analysis in `SETUP_ISSUES.md` I-001 … I-004.
+**Alternatives considered:** Merging the two vocabularies into one shared set —
+rejected; it would either delete the student's self-assessment step or imply the
+student can self-certify, and both alter the governing design. Deferring
+confirmation until the first lesson — rejected; the gate must be unambiguous
+*before* any lesson is studied, not after.
+**Consequences:** No implementation change was required; the infrastructure already
+reflected all four readings. `SETUP_ISSUES.md` I-001 … I-004 move from
+`PROVISIONALLY HANDLED` to `RESOLVED`, with resolution notes appended rather than
+replacing the original analysis. The remaining open setup issues are I-005 (no
+source videos — blocking), I-006 (screenshot capture tooling), and I-007 (chart
+data source for manual backtesting).
+**Status:** ACTIVE
+
+---
+
 ## DECISIONS TO BE MADE AT INGESTION
 
 Not yet decided; record as new entries when the information exists.

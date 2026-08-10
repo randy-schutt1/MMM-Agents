@@ -232,3 +232,75 @@ start a Student session with the ingestion instruction in
 I-001…I-004 provisional handling.
 
 ---
+
+## 2026-08-10 — Session 3 — Setup Issues I-001 … I-004 Confirmed
+
+### Objective
+
+Record the project owner's confirmation of the provisional handling for
+governing-file conflicts I-001 through I-004, converting four provisional readings
+into binding project rules.
+
+### Work Completed
+
+- `00_SYSTEM/SETUP_ISSUES.md`: I-001, I-002, I-003, I-004 moved from
+  `PROVISIONALLY HANDLED` to `RESOLVED`. Resolution notes were **appended** to each
+  entry; the original conflict analysis and provisional reasoning were left intact,
+  per the file's own rule that resolving an issue means appending the resolution
+  and changing the status, not deleting the entry.
+- `00_SYSTEM/DECISIONS.md`: recorded D-016, which states all four confirmed
+  resolutions in one place so a future session does not have to re-derive them from
+  two governing files that genuinely disagree.
+
+### Key Findings
+
+**No implementation change was required.** The Phase 0 infrastructure already
+reflected all four readings — `MASTERY_STANDARD.md`, `REVIEW_PROTOCOL.md`,
+`COURSE_PROGRESS.md`, `STUDENT_SESSION_PROMPT.md`, and `SESSION_START.md` §6 were
+built against the provisional handling and remain correct as written. The
+confirmation changes their status from "provisional reading" to "binding rule",
+not their content.
+
+Confirmed resolutions:
+
+- **I-001** — Student and Reviewer keep separate status vocabularies, never merged.
+- **I-002** — Versioned review files are canonical and never overwritten.
+- **I-003** — The governing files' directory trees are partial views; union stands.
+- **I-004** — Mastery standard authorizes requesting review; only a reviewer `PASS`
+  authorizes advancing.
+
+### Manual Backtesting
+
+None. Not applicable before source ingestion.
+
+### Ambiguities / Contradictions
+
+No course-level records (still zero of each). Remaining open infrastructure issues:
+I-005 (no source videos — blocking Phase 1), I-006 (screenshot capture tooling),
+I-007 (chart data source for manual backtesting).
+
+### Decisions
+
+D-016 — governing-file conflicts I-001 … I-004 resolved as read.
+
+### Files Created/Updated
+
+`00_SYSTEM/SETUP_ISSUES.md`, `00_SYSTEM/DECISIONS.md`, `LOG.md`.
+
+### Git
+
+```text
+<this commit> docs: confirm setup issues I-001..I-004 as resolved
+```
+
+### Next Action
+
+Unchanged and unblocked only by source access: **Phase 1 remains blocked on I-005.**
+When the bootcamp video library is locally accessible to an agent session, start a
+Student session using the first-run variant in
+`00_SYSTEM/STUDENT_SESSION_PROMPT.md`.
+
+Note for that session: I-006 and I-007 are still open and will need decisions at
+first lesson and first manual backtest respectively.
+
+---
