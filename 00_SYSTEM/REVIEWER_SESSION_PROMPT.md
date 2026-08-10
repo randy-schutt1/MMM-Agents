@@ -103,7 +103,9 @@ OUTPUT
 3. Update 18_REVIEW/REVIEW_INDEX.md — decision, issue counts, recurring errors.
 4. Update 00_SYSTEM/COURSE_PROGRESS.md — reviewer column and final status.
 5. Append a Reviewer Session entry to LOG.md.
-6. Commit and push.
+6. Commit and push. On a long audit, commit at checkpoints as you go - after the
+   source-evidence pass, after the findings are written, after the index and
+   progress updates - rather than saving everything for the end.
 
 Close with the executive block:
 

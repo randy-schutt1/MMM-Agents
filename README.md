@@ -314,6 +314,10 @@ Every numbered directory contains a `README.md` explaining its contract.
 - **Never commit source videos.** They are excluded by `.gitignore`. If media must
   ever be versioned, that requires an explicit decision recorded in
   `00_SYSTEM/DECISIONS.md` and the use of Git LFS — not normal Git history.
+- **Commit at checkpoints during a session, not once at the end** — roughly every
+  5–10 artifacts, or at any natural boundary (`DECISIONS.md` D-015). A session can
+  be interrupted, and uncommitted work is lost work. The commit sequence is also
+  audit-trail evidence of the order in which understanding was built.
 - Focused commits at logical checkpoints. Examples:
 
 ```text

@@ -66,6 +66,20 @@ Follow STUDY_PROTOCOL.md §1 in order:
 
 Use the templates in 00_SYSTEM/TEMPLATES/. Follow 00_SYSTEM/FILE_NAMING_STANDARD.md.
 
+COMMIT AS YOU GO
+
+Do not save all committing for the end of the session. Commit and push at each
+natural checkpoint above - after the transcript, after the notes, after the
+screenshots, after the homework, after a batch of backtest observations, after the
+mastery report. Roughly every 5-10 artifacts is a reasonable rhythm.
+
+A session can be interrupted at any point, and uncommitted work is lost work. The
+commit sequence is also evidence of the order in which understanding was built.
+
+A checkpoint commit does not require the lesson to be finished, but it must leave
+the repository coherent: nothing half-written that reads as complete, and any
+partial artifact marked STATUS: PARTIAL. LOG.md is still appended once, at close.
+
 HARD RULES
 
 - Never invent Market Maker Method content. If the source is unclear, mark it

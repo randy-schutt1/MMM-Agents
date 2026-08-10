@@ -274,6 +274,39 @@ is studied.
 
 ---
 
+## D-015 — Commit at frequent checkpoints, not at session end
+
+**Date:** 2026-08-10
+**Decision:** Commit and push at checkpoints *during* a session — roughly every
+5–10 artifacts, or at any natural boundary — rather than accumulating a session's
+entire output into one commit at the end. The number is a guideline, not a rule;
+the test is whether a checkpoint represents a coherent, self-contained unit of
+work.
+**Reason:** Three reasons, in order of importance. (1) An agent session can be
+interrupted, run out of context, or fail at any point; uncommitted work is lost
+work, and this project's memory *is* the repository. (2) Frequent commits produce a
+granular audit trail that shows the order in which understanding was built — which
+is exactly what the reviewer and the cumulative reviews need. A single commit of a
+whole lesson hides that sequence. (3) Small commits are reviewable; a 78-file
+commit is not.
+**Evidence:** Project owner instruction, 2026-08-10. Consistent with Student
+governing file §8 ("Create focused commits at logical checkpoints. Avoid giant
+commits containing unrelated work") and D-001.
+**Alternatives considered:** Committing once at session close — rejected; it was
+the pattern used for the Phase 0 build and it concentrated all risk at the end.
+Committing after every file — rejected as noise that obscures the audit trail
+rather than clarifying it.
+**Consequences:** `SESSION_CLOSE.md` §6 and `README.md` §13 describe checkpoint
+commits. Both session prompts instruct agents to commit as they go. `LOG.md` is
+still appended once per session at close — the log entry describes the session,
+and its `### Git` section lists all of the session's commits, not just the last.
+A checkpoint commit does not require the session's work to be complete, but it must
+leave the repository in a coherent state: no half-written file that reads as
+finished, and partial artifacts explicitly marked `STATUS: PARTIAL`.
+**Status:** ACTIVE
+
+---
+
 ## DECISIONS TO BE MADE AT INGESTION
 
 Not yet decided; record as new entries when the information exists.

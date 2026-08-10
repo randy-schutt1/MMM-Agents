@@ -98,6 +98,33 @@ git add <intentional files only>
 git commit -m "<clear message>"
 ```
 
+### Commit during the session, not only at the end
+
+**Do not save all committing for session close** (`DECISIONS.md` D-015). Commit and
+push at checkpoints as you work — roughly every 5–10 artifacts, or at any natural
+boundary:
+
+```text
+transcript complete                     → commit
+source notes + interpretation complete  → commit
+screenshots captured and indexed        → commit
+homework complete                       → commit
+first batch of backtest observations    → commit
+mastery report written                  → commit
+```
+
+Three reasons this matters here: a session can be interrupted at any point and
+uncommitted work is simply lost; the commit sequence is itself audit-trail evidence
+of the order in which understanding was built; and small commits can actually be
+reviewed.
+
+A checkpoint commit does **not** require the session to be finished. It does
+require the repository to be left coherent — nothing half-written that reads as
+complete, and any partial artifact explicitly marked `STATUS: PARTIAL` (§1).
+
+`LOG.md` is still appended **once**, at session close. Its `### Git` section lists
+every commit from the session, not just the last one.
+
 Message conventions:
 
 ```text
