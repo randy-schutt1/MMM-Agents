@@ -1,0 +1,148 @@
+# ==========================================================================
+# MMM-MASTERY .gitignore
+#
+# Governing rules:
+#   MMM_MASTER_STUDENT_RESEARCH_AGENT.md §9
+#   README.md §13
+#
+# Two priorities:
+#   1. Never commit proprietary bootcamp source media.
+#   2. Never commit secrets.
+# ==========================================================================
+
+# --------------------------------------------------------------------------
+# SOURCE VIDEOS — proprietary course material, large binaries.
+# Represented in Git only by 00_SYSTEM/SOURCE_MANIFEST.md (name + size +
+# duration + SHA-256 + path). Never modify the originals.
+# Committing these would require an explicit decision in DECISIONS.md and
+# Git LFS — not normal Git history.
+# --------------------------------------------------------------------------
+01_SOURCE_VIDEOS/**
+!01_SOURCE_VIDEOS/README.md
+!01_SOURCE_VIDEOS/.gitkeep
+
+# Video / audio formats anywhere in the tree
+*.mp4
+*.m4v
+*.mov
+*.avi
+*.mkv
+*.wmv
+*.flv
+*.webm
+*.mpg
+*.mpeg
+*.ts
+*.vob
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.flac
+
+# --------------------------------------------------------------------------
+# SECRETS AND CREDENTIALS — never commit
+# --------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+secrets/
+credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+id_rsa
+id_rsa.*
+*.token
+*_token
+*_secret
+*credentials*.json
+.netrc
+.htpasswd
+broker_config.json
+mt4_config.ini
+mt5_config.ini
+api_keys.*
+
+# --------------------------------------------------------------------------
+# OS / EDITOR NOISE
+# --------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*~
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --------------------------------------------------------------------------
+# TEMPORARY / GENERATED
+# --------------------------------------------------------------------------
+*.tmp
+*.temp
+*.log
+*.bak
+*.orig
+tmp/
+temp/
+scratch/
+.cache/
+
+# NOTE: *.log above is deliberate for stray tool logs, but the project journal
+# LOG.md is a tracked Markdown file and is unaffected (different extension).
+
+# --------------------------------------------------------------------------
+# PYTHON (validation / analysis tooling)
+# --------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# --------------------------------------------------------------------------
+# NODE (only if tooling is ever added)
+# --------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# --------------------------------------------------------------------------
+# LARGE DATA — market data used for manual/automated backtesting.
+# Keep raw price dumps local; record their provenance in
+# 06_MANUAL_BACKTEST/datasets/ documentation and in DECISIONS.md.
+# Small, intentional CSV samples can be force-added with `git add -f`.
+# --------------------------------------------------------------------------
+06_MANUAL_BACKTEST/datasets/**
+!06_MANUAL_BACKTEST/datasets/README.md
+!06_MANUAL_BACKTEST/datasets/.gitkeep
+*.parquet
+*.feather
+*.sqlite
+*.db
+
+# --------------------------------------------------------------------------
+# INTENTIONALLY TRACKED
+#
+# Screenshots (04_SCREENSHOTS/, 09_CHART_EXAMPLES/) are first-class evidence
+# and ARE committed. Keep them reasonably sized — prefer PNG at readable but
+# not excessive resolution. If the repository ever grows unwieldy, revisit
+# with an explicit decision in DECISIONS.md rather than deleting evidence.
+# --------------------------------------------------------------------------
