@@ -60,8 +60,9 @@ The original file opened with a metadata block claiming
 `Primary Topics: Peak Formation High (PFH) & Low (PFL), 3-Day Cycle Progression,
 Level Counting`. That block is a **derived claim by the same pre-ingestion process that
 produced the fabricated files**, not part of the transcription, and it is a poor
-description of the recording: across the whole hour `PFH` and `PFL` each appear once,
-and `level count` once. It has been dropped rather than carried forward. The verbatim
+description of the recording: across the whole hour the abbreviations `PFH` and `PFL`
+never appear at all — spelled out, "peak formation high" occurs once and "peak formation
+low" twice — and `level count` once. It has been dropped rather than carried forward. The verbatim
 body below is unaltered.
 
 ## TRANSCRIPTION NOTES
