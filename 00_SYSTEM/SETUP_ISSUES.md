@@ -194,7 +194,7 @@ Recorded as an expectation only (see `DECISIONS.md` D-014).
 
 ## I-006 — Screenshot capture may require human assistance
 
-**Status:** `OPEN` — to be resolved at first lesson
+**Status:** `RESOLVED` 2026-08-10 — a working, repeatable capture path exists (see the second update below)
 
 Both governing files treat screenshots as first-class evidence, and the reviewer
 audits chart recognition against them. Whether an agent session can capture frames
@@ -242,6 +242,42 @@ so, in `V01_SOURCE_NOTES.md` §4, `V01_INTERPRETATION.md` §9 item 1, and
 `VISUAL`, because nothing visual was seen. The approved TradingView-recreation
 fallback has **not** been started; when it is, recreations go to `09_CHART_EXAMPLES/`
 with sidecars, never to `04_SCREENSHOTS/`.
+
+### RESOLUTION 2026-08-10 — Ruffle (WASM) in headless Chrome
+
+The renderer that `ffmpeg` lacks exists as WebAssembly. Ruffle's `web-selfhosted`
+build, served over `http://` and driven by Playwright, renders these SWFs correctly at
+full 1024×786.
+
+Full method, commands and gotchas: **`00_SYSTEM/SWF_CAPTURE_RECIPE.md`**.
+
+Outcome for V01: a 54:44 mp4 with the SWF's own audio, sync verified against the
+player's burned-in timecode at twelve points across the full runtime — all twelve exact,
+zero drift. 22 curated screenshots extracted and indexed in
+`04_SCREENSHOTS/V01/INDEX.md`. Four previously undefined terms were resolved or
+materially constrained by text printed on slides that was never spoken aloud.
+
+Routes ruled out, recorded so they are not retried:
+
+| Route | Verdict |
+|---|---|
+| `ffmpeg` frame extraction | Impossible. No video stream; a composited bitmap display list. |
+| Direct SWF tag parsing | Yields one keyframe plus delta tiles, not frames. |
+| Ruffle desktop binary | GUI player only; no headless exporter in the release. |
+| Building `ruffle_exporter` from source | **Forbidden** — hung a prior session. |
+| Ruffle JS seek API | Does not exist. `goto_frame` / `seek` / `current_frame` are internal Rust symbols, absent from the JS bundle. |
+| SWF `ExternalInterface` | Dead end. This SWF registers zero callbacks (`addCallback` appears 0 times in its AS2 string pool). |
+| Camtasia scrubber drag | Works but lands imprecisely and non-linearly. Usable only closed-loop. |
+
+The approved TradingView-recreation fallback is **no longer needed for screenshots**. It
+remains available for illustrating concepts, and if used must go to
+`09_CHART_EXAMPLES/` with sidecars, never to `04_SCREENSHOTS/` — the prohibition below
+on substituting generated images for real course screenshots is unchanged.
+
+**Cost:** capture is real-time, ~1 hour per video. An untested faster path (patching the
+SWF header frame rate in a working copy) is described in the recipe.
+
+---
 
 ---
 

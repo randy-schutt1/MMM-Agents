@@ -13,10 +13,10 @@ PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
 VIDEOS IN PROGRESS:  1  (V01)
 VIDEOS PASSED:       0
-CURRENT LESSON:      V01 — transcript adopted, source notes and interpretation written
-NEXT ACTION:         V01 homework, manual backtest, and mastery report
-                     (deliberately NOT started this session — see LOG.md 2026-08-10)
-BLOCKED ON:          I-006 — no screenshots for V01; CloudConvert route pending
+CURRENT LESSON:      V01 — student work COMPLETE, submitted for independent review
+NEXT ACTION:         independent reviewer session writes 18_REVIEW/V01/V01_REVIEW_R1.md
+                     (the student session does not audit itself)
+BLOCKED ON:          nothing. I-006 RESOLVED. I-007 open but not blocking (D-018).
 ```
 
 ---
@@ -42,7 +42,7 @@ fabricate, interpolate, or infer Week 6 content.**
 
 | Video | Session | Duration | Source Verified | Transcript | Notes | Screenshots | Homework | Manual Backtest | Student Mastery | Reviewer | Final Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ⚠️ | ⬜ | ⬜ | — | — | IN PROGRESS |
+| V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | — | — | REVIEW REQUIRED | ⬜ | AWAITING REVIEW |
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -66,10 +66,13 @@ fabricate, interpolate, or infer Week 6 content.**
 
 ### Notes on the marks above
 
-- **V01 Screenshots ⚠️** — zero captured, and the cause is understood rather than
-  merely unresolved. See `SETUP_ISSUES.md` I-006 and `04_SCREENSHOTS/V01/INDEX.md`.
-  Roughly the last 21 minutes of V01 is narration over slides, so this is a real gap
-  in the evidence base, not a formality. Every V01 artifact states it.
+- **V01 Screenshots ✅** — 22 captured 2026-08-10 and indexed. I-006 is `RESOLVED`;
+  method in `00_SYSTEM/SWF_CAPTURE_RECIPE.md`. A full-length synced mp4 is retained
+  outside the repo, so any further timestamp can be extracted on demand.
+- **V01 Homework — and Manual Backtest —** marked `NOT APPLICABLE` under **D-018**:
+  the homework is a 2012 emailed survey, and the lesson states no entry, stop, target
+  or position size, so there is no rule to backtest. **The reviewer is asked to audit
+  both claims** (`V01_MASTERY_REPORT.md`).
 - **V02–V21 Transcript ⚠️** — a `TRANSCRIPT.md` exists for each, but it came from the
   same pre-ingestion process that produced the quarantined fabrications, and **none
   has been verified**. Not a tick. See `SETUP_ISSUES.md` I-008.

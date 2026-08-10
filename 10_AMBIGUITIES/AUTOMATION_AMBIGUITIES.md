@@ -75,7 +75,7 @@ resolved record keeps its history.
 |---|---|---|---|---|
 | A-001 | "anchor point" | V01 `[00:34:47]` | DO NOT CODE | Foundational. Sets weekly direction and holding period. Wrong = every weekly-bias rule is wrong. |
 | A-002 | "trap move" / "false move" | V01 `[00:34:33]` | DO NOT CODE | Foundational. The lesson's central object. Wrong = the whole framing is misapplied. |
-| A-003 | "picks up the [?penings?]" | V01 `[00:39:12]` | DO NOT CODE | Unknown — the word itself is unrecovered. Sits at two steps of the core sequence. |
+| A-003 | "picks up the [?penings?]" → **"pendings"** | V01 `[00:39:12]` | **RESOLVED BY COURSE** | Unknown — the word itself is unrecovered. Sits at two steps of the core sequence. |
 | A-004 | "level" (countable unit) | V01 `[00:35:38]` | DO NOT CODE | High. Used to bound expected move size ("one to three levels"). |
 | A-005 | "the trading zone" | V01 `[00:30:40]` | DO NOT CODE | Foundational. The stated entry filter for struggling traders. Deferred to V02. |
 | A-006 | "the blue box" / "the box" / "the red box" | V01 `[00:43:07]` | DO NOT CODE | High. Three box terms, no definition, one entry prohibition attached. |
@@ -90,6 +90,7 @@ resolved record keeps its history.
 | A-015 | "shows something to the traders" | V01 `[00:39:19]` | DO NOT CODE | Medium. The inducement mechanism in the core sequence. |
 | A-016 | "goes into chop" | V01 `[00:44:45]` | DO NOT CODE | Medium. The stated end-of-week failure state. |
 | A-017 | "big entry candle" | V01 `[00:48:41]` | DO NOT CODE | Medium. The only entry-trigger language in the lesson. |
+| A-018 | `R = <number>` labels on the shaded boxes | V01 `[00:48:35]` | DO NOT CODE | Medium. If misread as a risk-to-reward ratio it would invent a target rule the lesson never states. |
 
 ---
 
@@ -156,6 +157,20 @@ Foundational. Weekly directional bias, permitted trade direction, and holding pe
 
 ---
 
+### Visual Evidence Update — 2026-08-10
+
+Screenshots now exist. `04_SCREENSHOTS/V01/V01_00-50-55_typical-week-gbpusd-m15.png`
+shows the fullest depiction of the cycle: on `GBPUSD,M15`, a low under **Tues** printed
+*"Stops Are Triggered on The Weak long Holders"* and *"Lower Level Short Holders Are Now
+trapped"*, followed by *"A uni-directional Swing The Rest Of The Week"*, then *"Higher
+Level Longs Are Now Trapped"* under **Wed**.
+
+This shows the *structure* the instructor is describing. It does **not** define the
+anchor point: none of the five printed labels on that chart uses the words "anchor
+point", "peak formation", "M" or "W". One annotated instance is not a definition, and
+it gives no rule for recognising the turn before the swing has happened.
+
+**Status unchanged: `DO NOT CODE`.**
 ## A-002 — "trap move / false move"
 
 ### Course Meaning
@@ -251,7 +266,7 @@ Canonical Course Status: NOT A COURSE RULE
 ### Current Status
 
 ```text
-DO NOT CODE
+RESOLVED BY COURSE
 ```
 
 ### Required Research
@@ -271,6 +286,23 @@ Unknown, which is itself the problem. It is a named object in the mechanism the 
 
 ---
 
+### RESOLVED BY COURSE — 2026-08-10
+
+The word is **"pendings"** — pending orders.
+
+`04_SCREENSHOTS/V01/V01_00-40-25_beginning-of-session-chart.png` prints
+**"Trigger The Pendings"** directly on the chart above the pre-session range, paired
+with **"Trigger The Stops"** below it. The slide is titled "Beginning Of Session".
+
+So the recurring construction the ASR mangled — *"hits the stops or picks up the
+[pendings]"* — names two distinct pools of resting orders the dealer collects at a
+boundary: **stop orders** and **pending orders**.
+
+This was never guessable from audio, and the record correctly refused to guess. It was
+resolved by a label printed on a slide that the instructor never read aloud.
+
+Note the concept is now *identified*, not *quantified*. Nothing here supports a
+numeric representation of where pending orders sit.
 ## A-004 — "level (as a countable unit)"
 
 ### Course Meaning
@@ -329,6 +361,21 @@ High. It is the only unit in which V01 expresses expected move size. Quantifying
 
 ---
 
+### Visual Evidence Update — 2026-08-10
+
+`V01_00-50-55_typical-week-gbpusd-m15.png` shows horizontal dashed lines in yellow, red
+and cyan spanning the chart, and prints *"Level Not Crossed Until Late Friday"* against
+one of them.
+
+A "level" is therefore a **horizontal price line drawn on the instructor's template** —
+not a distance, not a swing count, and not a session boundary. That eliminates the third
+candidate measure below ("a structural swing count rather than a distance").
+
+What is still unknown: how the lines are derived, what spacing separates them, and
+whether "one to three levels out of the false move week beginning" `[00:39:53]` counts
+lines crossed or something else.
+
+**Status unchanged: `DO NOT CODE`.**
 ## A-005 — "the trading zone"
 
 ### Course Meaning
@@ -445,6 +492,29 @@ High. An entry prohibition (`[00:43:07]`) and a wait condition (`[00:47:55]`) bo
 
 ---
 
+### Visual Evidence Update — 2026-08-10 — one candidate reading ELIMINATED
+
+The boxes are **shaded rectangles drawn over price areas on the chart**:
+
+- **Pale blue** over flat consolidation ranges —
+  `V01_00-40-25_beginning-of-session-chart.png` (over the low pre-session range),
+  `V01_00-44-40_end-of-week-chart.png` (lower right), `V01_00-48-35_...png` (two of them).
+- **Dark red** over the extended area where price has run and traders are described as
+  trapped — same frames, plus `V01_00-38-50_beginning-of-week-chart.png`.
+
+At `[00:48:35]` each rectangle carries a numeric label (`R = 70.5`, `R = 51…`, `= 43.1`),
+so they are **measured regions**, not shading for emphasis. See A-018.
+
+**This eliminates candidate 1** ("a session range rectangle drawn on the chart,
+colour-coded by session"). The boxes do not align with session boundaries; they are
+drawn around price structures. Candidate 2 — a price zone bounding valid entries — is
+consistent with what is shown, but is not confirmed: nothing on the slides states that
+the box governs entry eligibility.
+
+Still unresolved: whether "the box" of `[00:43:07]` means the blue one, the red one, or
+either; and how the rectangles are placed.
+
+**Status unchanged: `DO NOT CODE`.**
 ## A-007 — "second leg"
 
 ### Course Meaning
@@ -613,6 +683,17 @@ High. These are the only named entry formations in V01 and they are prescribed t
 
 ---
 
+### Visual Evidence Update — 2026-08-10
+
+`V01_00-51-45_typical-week-drawn-on.png` and `V01_00-52-10_typical-week-more-drawing.png`
+capture the instructor's live green freehand marks over the decline he is naming while
+saying "stop [hunt] high drop… straight drop with a little pin right there".
+
+The marks show *where* on the chart he is pointing, which is more than the audio gave.
+They are freehand strokes over a sequence of candles, not a labelled construction, so
+they still do not yield an anatomy: no leg count, no proportion, no invalidation.
+
+**Status unchanged: `DO NOT CODE`.**
 ## A-010 — "peak formation high or low"
 
 ### Course Meaning
@@ -952,6 +1033,20 @@ Medium, with a specific inversion risk: this is the lesson's one mention of movi
 
 ---
 
+### Visual Evidence Update — 2026-08-10
+
+Four moving-average lines are visibly present on every chart slide in the lesson —
+**yellow, red, cyan and white**. This corroborates `[00:39:26]` "look at the moving
+averages fan out" as describing something genuinely on the instructor's template.
+
+**No period or setting appears anywhere on any slide.** The lines exist; their values do
+not. The refusal in `V01_INTERPRETATION.md` §2 to name EMA periods is unaffected and now
+better supported.
+
+The inversion warning stands and is strengthened: the MAs are shown in the context of
+what the dealer *displays to induce a position*, not as an entry signal.
+
+**Status unchanged: `DO NOT CODE`.**
 ## A-016 — "goes into chop"
 
 ### Course Meaning
@@ -1059,3 +1154,79 @@ Medium. It is the only entry-trigger language in the lesson. Attaching a number 
 | Type | Reference |
 |---|---|
 | Ambiguity | A-002, A-009 |
+
+### Visual Evidence Update — 2026-08-10
+
+`V01_00-48-35_trap-higher-level-long-holders.png` shows a single large green candle
+breaking upward out of the blue range immediately before the red trap area, under the
+printed title "Trap Here..Higher Level Long Holders".
+
+That is very likely the candle referred to at `[00:48:41]` — but the slide does not label
+it, and one unlabelled instance cannot bound a size threshold. Comparing it to
+neighbouring candles to derive a multiple would be exactly the premature quantification
+this log exists to prevent.
+
+**Status unchanged: `DO NOT CODE`.**
+
+---
+
+## A-018 — "R = <number>" labels attached to the shaded boxes
+
+### Course Meaning
+
+Unknown. Numeric labels printed against the blue and red rectangles on one chart slide.
+The instructor does not read them aloud or explain them anywhere in V01.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V01 | `[00:48:35]` | Dark-red rectangle labelled `R = 70.5`; pale-blue rectangle at right labelled `R = 51…` (truncated by the frame edge); pale-blue rectangle at left labelled `= 43.1`. Screenshot: `04_SCREENSHOTS/V01/V01_00-48-35_trap-higher-level-long-holders.png` |
+
+### Visual Characteristics
+
+Each label sits at the lower edge of a shaded rectangle. The values are in the 40–75
+range. The rectangles span both price and time, but the label is a single scalar.
+
+### Counter-examples
+
+None. Only one slide in V01 shows these labels; the other chart slides carry rectangles
+without visible `R =` text.
+
+### Possible Measurable Features
+
+| # | Candidate measure | Rationale | Course support |
+|---|---|---|---|
+| 1 | **Range of the boxed area, in pips** | The same MT4 template prints `Previous Days Range= 146.4` and `Current Days Range= 110.6` in its header at `[00:50:55]`, so "Range" is already a template concept expressed in pips at this magnitude. The labelled objects are rectangles spanning a price span. | PARTIAL — consistent, not stated |
+| 2 | A risk-to-reward ratio | "R" is conventional shorthand for R-multiple in retail trading | **NONE — and actively doubted.** V01 states no stop, no target and no position size, so there is nothing for an R-multiple to be computed from. Adopting this reading would manufacture a target rule out of a label. |
+
+```text
+Classification:          INFERRED MACHINE CANDIDATE
+Canonical Course Status: NOT A COURSE RULE
+```
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A later lesson using the same template and explaining the label, or a frame where the
+truncated `R = 51…` value is fully visible alongside a measurable box. Cheap to revisit:
+the full V01 mp4 is retained, so any nearby frame can be extracted in seconds.
+
+### Impact If Wrong
+
+Reading `R` as risk-to-reward would insert a target/risk rule into a lesson that states
+none — the exact fabrication pattern that caused 72 files to be quarantined
+(`00_SYSTEM/QUARANTINE_REGISTER.md` Q-001). This record exists mainly to make sure that
+misreading is never made silently.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-004 (level), A-006 (the boxes) |
+| Interpretation | `03_LESSON_NOTES/V01_INTERPRETATION.md` §10.4 |

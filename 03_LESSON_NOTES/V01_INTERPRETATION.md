@@ -9,7 +9,7 @@ Source facts belong in `V01_SOURCE_NOTES.md`.
 | Interpreted | 2026-08-10 |
 | Source notes | `03_LESSON_NOTES/V01_SOURCE_NOTES.md` |
 | Transcript | `02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md` |
-| Screenshots available | **None** — see `SETUP_ISSUES.md` I-006 |
+| Screenshots available | **22, captured 2026-08-10** — `04_SCREENSHOTS/V01/INDEX.md`. §§1–9 below were written *before* any screenshot existed and are left unedited; §10 records what the visuals changed. |
 
 ### Classification
 
@@ -21,10 +21,12 @@ Source facts belong in `V01_SOURCE_NOTES.md`.
 | `INFERRED` | Agent interpretation based on course material |
 | `UNRESOLVED` | Still ambiguous or contradictory |
 
-> **`VISUAL` is unavailable for this lesson.** No screenshot exists, so nothing here
-> can be graded on demonstrated chart evidence. Every reading below rests on speech
-> alone. Where the instructor was clearly pointing at something, that is recorded as
-> `UNRESOLVED`, not upgraded to `VISUAL` on the strength of his narration.
+> **§§1–9 were written with no screenshots available**, so nothing in them is graded
+> `VISUAL`; every reading there rests on speech alone. Screenshots were obtained
+> afterwards. **§§1–9 have deliberately NOT been rewritten.** §10 records the
+> upgrades, corrections and one refutation that the visuals produced, so the
+> difference between what audio alone supported and what the slides actually showed
+> stays visible to the reviewer.
 
 ---
 
@@ -286,3 +288,89 @@ An honest list.
    outside this library. If that prior material is never re-taught in V02–V21, some
    of the vocabulary in this corpus may stay permanently undefined, and I will not be
    able to tell the difference between "not yet taught" and "never taught here".
+
+---
+
+## 10. VISUAL EVIDENCE UPGRADE — added 2026-08-10
+
+Screenshots became available after §§1–9 were written (`SETUP_ISSUES.md` I-006 is now
+`RESOLVED`). Nothing above was edited. This section records what changed.
+
+**Headline: the visual channel was carrying roughly half this lesson, and it was
+carrying labels.** The instructor's slides are not decorative — they print the
+terminology directly onto the charts. Four of the eleven undefined terms in §6 are
+resolved or materially constrained by text printed on a slide that was never spoken
+aloud.
+
+### 10.1 Resolved outright
+
+| # | Item | Was | Now | Evidence |
+|---|---|---|---|---|
+| U1 | **"penings"** (I11, A-003) | `UNRESOLVED` — an unrecovered word appearing four times in the core sequence | **`VISUAL`.** The word is **"pendings"** — pending orders. The slide prints **"Trigger The Pendings"** directly above the pre-session range, alongside **"Trigger The Stops"** | `[00:40:25]` |
+| U2 | **The blue box / red box** (I2, A-006) | Two *mutually exclusive* readings offered: a session-time rectangle, or a price zone | **`VISUAL`.** They are shaded rectangles drawn over price areas — pale blue over flat consolidation ranges, dark red over the extended area where price is trapped. **The price-zone reading is correct; the session-time reading is wrong.** At `[00:48:35]` each rectangle carries a numeric label (`R = 70.5`, `R = 51…`, `= 43.1`), so they are measured regions, not decorations | `[00:38:50]`, `[00:40:25]`, `[00:44:40]`, `[00:48:35]` |
+| U3 | **Survey items 12–17** | Mapping "not reliable" — the instructor lost his place on air | **`VISUAL`.** Questions 1–18 legible on the slides, independent of the verbal stumble | `[00:16:55]`, `[00:19:20]` |
+| U4 | **Instrument** | "No example in this lesson is given with an instrument" except USDCHF/EURUSD in passing | **`VISUAL`.** The "Typical Week" chart header reads **`GBPUSD,M15`**. Never spoken aloud. GBP/USD is this project's designated primary research instrument, so this is materially useful | `[00:50:55]` |
+| U5 | **Trap-move enumeration** (I9) | `IMPLIED`, Medium — I generalised a spoken list into "session boundaries" | **`VISUAL` and `EXPLICIT`.** A titled slide lists exactly six: Beginning Of The Week (Sun / Mon); Beginning Of The Day; Beginning Of The Session; End Of The Session; End Of The Day; End Of The Week. **My generalisation to "every session boundary" was wider than the slide.** The slide is a closed list of six; I should not have widened it. G5 stands corrected | `[00:30:35]` |
+
+### 10.2 Materially constrained, still not defined
+
+| # | Item | What the visuals add | Status |
+|---|---|---|---|
+| C1 | **"level"** (A-004) | The `[00:50:55]` chart shows horizontal dashed lines in yellow, red and cyan spanning the chart, and prints *"Level Not Crossed Until Late Friday"* against one of them. So a "level" is a **horizontal price line on the instructor's template**, not a distance or a swing count | Still `DO NOT CODE` — spacing, derivation and count remain unstated |
+| C2 | **Moving averages** (A-015) | Four MA lines are visibly present on every chart: **yellow, red, cyan, white**. This corroborates `[00:39:26]` "look at the moving averages fan out" as describing something real on the template | Still no periods stated anywhere. The §2 refusal to name periods stands, and is now better supported: the lines exist, their values do not appear |
+| C3 | **The anchor point** (A-001) | `[00:50:55]` shows the structure: a low under **Tues** marked *"Stops Are Triggered on The Weak long Holders"* and *"Lower Level Short Holders Are Now trapped"*, followed by *"A uni-directional Swing The Rest Of The Week"*, then *"Higher Level Longs Are Now Trapped"* under **Wed** | Still `DO NOT CODE`. The slide shows one instance; it does not define what forms an anchor or how to recognise it in real time |
+| C4 | **"big entry candle"** (A-017) | `[00:48:35]` shows a single large green candle breaking up out of the blue range immediately before the red trap area | Still `DO NOT CODE` — one unlabelled instance cannot bound a size threshold |
+
+### 10.3 NOT confirmed — my reading remains unsupported
+
+**This is the important one.** `I7` proposed, at Low confidence, that "anchor point",
+"peak formation high/low" and "M or W formation" might be one concept.
+
+**The screenshots do not support it.** The `[00:50:55]` chart is the lesson's fullest
+depiction of the weekly cycle and its annotations are detailed — five separate printed
+labels — yet **none of them says "anchor point", "peak formation" or "M" or "W"**. The
+turn is described by what happens to traders ("Stops Are Triggered on The Weak long
+Holders"), not by a pattern name.
+
+So the equivalence is neither confirmed nor refuted; it simply has no visual support
+either. `I7` stays `INFERRED / Low`, and G4's verdict — "not established" — stands
+unchanged. A future session should not read §10 as having settled it.
+
+Similarly **not** resolved by the visuals: A-005 (trading zone — still deferred to
+V02), A-013 (the skill threshold), A-011 (M/W anatomy), A-012 (midweek reversal),
+A-014 (fractional disparity), C-001 (the day-count contradiction — the "Typical Week"
+chart shows one week, which cannot adjudicate a stated range of 2.5 to 4 days).
+
+### 10.4 New ambiguity raised by the visuals
+
+`A-018` — the **`R = <number>`** labels attached to the shaded rectangles at
+`[00:48:35]`. Values seen: `70.5`, `51…` (truncated), `43.1`.
+
+I considered and rejected reading these as risk-to-reward ratios. The same template
+prints `Previous Days Range= 146.4` and `Current Days Range= 110.6` in its header, and
+the labelled objects are rectangles spanning a price span — so `R` is most consistent
+with **Range in pips**. That reading is *not asserted*; it is logged for resolution.
+
+The §10 statement in the source notes stands: **no risk-to-reward ratio is stated in
+V01.** Had I read `R = 70.5` as "1:70.5 R:R" or similar, that would have been exactly
+the fabrication pattern this project exists to avoid.
+
+### 10.5 What the visuals did NOT change
+
+No item in §2's "Explicitly NOT interpreted" table moved. There is still **no stop
+rule, no target, no risk-to-reward, no position size, and no indicator parameter** in
+V01. The screenshots made the lesson far better evidenced; they did not make it a
+mechanics lesson. §6's Confirmation and Invalidation columns in the source notes
+remain empty, and that remains the single most important fact about V01.
+
+### 10.6 Effect on §9 (what I was not confident about)
+
+Item 1 of §9 — "roughly half the lesson is missing and I cannot see it" — is now
+**resolved**, and it resolved in a way worth recording: of the five things I flagged
+as most likely to be wrong, the visuals **confirmed one** (I2's prohibition, wrong
+referent), **corrected one** (I9/G5 over-generalisation), **left one open** (I7), and
+**resolved a word I had refused to guess** (A-003). None of my transcript-only
+readings turned out to be fabricated, but one was wider than the evidence — which is
+the exact failure mode §3 exists to catch, and it took a screenshot to catch it.
+
+Items 2, 3, 4, 5 and 7 of §9 stand.

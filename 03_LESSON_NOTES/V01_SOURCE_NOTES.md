@@ -11,7 +11,7 @@ instructor did not make. All of that goes in `V01_INTERPRETATION.md`.
 | Duration | 00:54:43 |
 | Notes taken | 2026-08-10 |
 | Source | `02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md` |
-| Basis | **Transcript only.** No screenshots exist (I-006), so no visual was read. |
+| Basis | Transcript, plus **22 screenshots captured 2026-08-10** (see §4 and `04_SCREENSHOTS/V01/INDEX.md`). §§1–3 and 5–14 were written from the transcript alone, before any frame existed; §4 and the correction table there were added afterwards. |
 
 > **Scope limit, stated up front.** Everything below is sourced from the ASR
 > transcript. Nothing is carried over from the `NOTES.md` / `RULES.md` /
@@ -51,8 +51,9 @@ remainder of the same Sunday session.
 ## 2. EXPLICIT TEACHINGS
 
 Direct statements. Quoted or closely paraphrased; wording not "improved". All
-`EXPLICIT` — nothing in this file is `VISUAL`, because no visual was available to
-read (see §4).
+`EXPLICIT` — these are things the instructor *said*. Items demonstrated on screen are
+recorded separately in §4 as `VISUAL`; the two are deliberately not merged, so a
+reader can tell which claims survive on audio alone.
 
 ### 2a. Course conduct and expectations
 
@@ -185,6 +186,13 @@ Recording these is the point of the section. Each is used as though already know
 
 ## 4. CHART OBSERVATIONS
 
+> **UPDATED 2026-08-10 — screenshots now exist.** The original version of this
+> section, written when frame extraction was believed impossible, is preserved
+> immediately below under "Original entry (superseded)". The visual observations
+> that follow it were read off actual frames.
+
+### Original entry (SUPERSEDED — screenshots were subsequently obtained)
+
 **No screenshot exists for this video.** Extraction is blocked — see
 `SETUP_ISSUES.md` I-006 and `04_SCREENSHOTS/V01/INDEX.md`.
 
@@ -206,6 +214,38 @@ visual is load-bearing and it is missing.
 The one image on disk (`VIDEO_01_SCREENSHOT_001_00-02-00.jpg`, manifest X26) is a
 survivor of an earlier extraction attempt. Its filename asserts `00:02:00`; that
 claim is unverified, and it is **not** cited as evidence anywhere.
+
+### Visual observations — read from captured frames, 2026-08-10
+
+Described neutrally: what is on screen, not what it means.
+
+| # | Timestamp | Instrument / TF | What is shown | Screenshot |
+|---|---|---|---|---|
+| V1 | `[00:30:35]` | Slide, no chart | Title **"How To Beat The Market Maker"**, subtitle **"The Trap Moves Are Made:"**, six bullets: The Beginning Of The Week (Sun / Mon); The Beginning Of The Day; The Beginning Of The Session; The End Of The Session; The End Of The Day; The End Of The Week | `V01_00-30-35_trap-moves-are-made-list.png` |
+| V2 | `[00:38:50]` | Candle chart, instrument and TF not shown | Slide titled **"Beginning Of Week"**. Four moving-average lines in yellow, red, cyan and white. A pale-blue shaded rectangle over the initial rise; a dark-red shaded rectangle over a later decline. Red down-arrows and green up-arrows placed at various candles. Two vertical dotted lines near the left edge | `V01_00-38-50_beginning-of-week-chart.png` |
+| V3 | `[00:39:10]` | As V2 | Same chart carrying the printed text **"Week Beginning Trap High"** above the area inside the blue rectangle | `V01_00-39-10_week-beginning-trap-high-label.png` |
+| V4 | `[00:39:40]` | As V2 | Same chart with green freehand marks added live by the instructor | `V01_00-39-40_beginning-of-week-drawn-on.png` |
+| V5 | `[00:40:25]` | Candle chart, instrument and TF not shown | Slide titled **"Beginning Of Session"**. Printed labels on the chart: **"Trigger The Pendings"**, **"Trigger The Stops"**, **"Beginning Of Sessions"**. A pale-blue rectangle covers a low, flat range at the left; a dark-red rectangle covers a high area after a steep rise | `V01_00-40-25_beginning-of-session-chart.png` |
+| V6 | `[00:43:58]` | As V5 | Same chart with green freehand marks added | `V01_00-43-58_beginning-of-session-drawn-on.png` |
+| V7 | `[00:44:40]` | Candle chart, instrument and TF not shown | Slide titled **"End Of Week"**. Dark-red rectangle over a decline; pale-blue rectangle at lower right; printed text "End Of Week" | `V01_00-44-40_end-of-week-chart.png` |
+| V8 | `[00:46:05]` | As V7 | Same chart with green freehand marks added | `V01_00-46-05_end-of-week-drawn-on.png` |
+| V9 | `[00:48:35]` | Candle chart; header partially visible reading `…64268 1.64316 1.64219 1.64256` | Printed title **"Trap Here..Higher Level Long Holders"**. A dark-red rectangle labelled **`R = 70.5`**; a pale-blue rectangle at right labelled **`R = 51…`** (truncated); a pale-blue rectangle at left labelled **`= 43.1`** | `V01_00-48-35_trap-higher-level-long-holders.png` |
+| V10 | `[00:50:55]` | **`GBPUSD,M15`** — stated in the chart header | Slide titled **"Typical Week"**. Header line reads `GBPUSD,M15 1.51323 1.51332 1.51244 1.51304`, `High= 1.5227`, `Low= 1.508`, `Close= 1.5187`, `Previous Days Range= 146.4`, `Current Days Range= 110.6`. Vertical dotted separators label **Sunday, Monday, Tues, Wed, Friday**. Horizontal dashed lines in yellow, red and cyan span the chart. Printed annotations: *"Stops Are Triggered on The Weak long Holders"* (with an up-arrow at a low under Tuesday), *"Lower Level Short Holders Are Now trapped"*, *"A uni-directional Swing The Rest Of The Week"*, *"Higher Level Longs Are Now Trapped"* (under Wed), *"Level Not Crossed Until Late Friday"* | `V01_00-50-55_typical-week-gbpusd-m15.png` |
+| V11 | `[00:51:45]` | As V10 | Same chart with green freehand marks over the decline | `V01_00-51-45_typical-week-drawn-on.png` |
+| V12 | `[00:52:10]` | As V10 | Further green freehand marks | `V01_00-52-10_typical-week-more-drawing.png` |
+| V13 | `[00:16:55]`, `[00:19:20]` | Slide, no chart | **"STUDENT RATING SELF EVALUATION"** — the survey, questions 1–18 fully legible | `V01_00-16-55_...png`, `V01_00-19-20_...png` |
+
+### Corrections to earlier sections arising from the visuals
+
+Recorded here rather than by editing the earlier text, so the change is visible.
+
+| Section | Original statement | Correction |
+|---|---|---|
+| §7 Examples | "Only E1 names instruments." | **GBP/USD is named on screen** at `[00:50:55]` — the "Typical Week" chart header reads `GBPUSD,M15`. The instructor does not say it aloud, which is why the transcript-only pass missed it. This is the course's designated primary research instrument, so it matters. |
+| §14 Unclear | *"picks up the penings"* — unresolved | **Resolved.** The `[00:40:25]` slide prints **"Trigger The Pendings"**. The word is *pendings* — pending orders. See A-003. |
+| §14 Unclear | Survey numbering unreliable for items 12–17 | **Resolved.** Questions 1–18 are legible on the `[00:16:55]` and `[00:19:20]` slides, independent of the instructor's verbal stumbling. |
+| §10 Numbers | "No indicator parameter of any kind is stated in this video." | **Still true as stated** — no periods or settings appear. But four moving-average lines are *visibly present* on every chart (yellow, red, cyan, white), and horizontal dashed levels are visibly present. Their values remain unstated. |
+| §10 Numbers | "no risk-to-reward ratio" | **Still true as stated.** The `R = 70.5` / `R = 51…` / `= 43.1` labels at `[00:48:35]` are attached to the shaded rectangles and are most consistent with **Range in pips** — the same template prints `Previous Days Range= 146.4`. This is **not asserted**; logged as A-018. |
 
 ---
 

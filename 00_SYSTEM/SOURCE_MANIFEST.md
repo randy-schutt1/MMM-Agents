@@ -72,7 +72,7 @@ Folders under `Bootcamp Notes/` were renamed to match: folder `NN_` now equals v
 
 | Video ID | Original Filename | Lesson Title | Duration | File Size | Relative Path | SHA-256 | Ordering Confidence | Processing Status |
 |---|---|---|---|---|---|---|---|---|
-| V01 | `Bootcamp1 Wk1 031812 Part1 (55mins).swf` | UNKNOWN | 00:54:43 | 17,806,443 (17.0 MB) | `Bootcamp/Bootcamp1 Wk1 031812 Part1 (55mins).swf` | `c7e660f4b187e0ef81c05d38cc031cb523b56ec22c0c96db4b4dd41303d84030` | CERTAIN | STUDENT IN PROGRESS |
+| V01 | `Bootcamp1 Wk1 031812 Part1 (55mins).swf` | UNKNOWN | 00:54:43 | 17,806,443 (17.0 MB) | `Bootcamp/Bootcamp1 Wk1 031812 Part1 (55mins).swf` | `c7e660f4b187e0ef81c05d38cc031cb523b56ec22c0c96db4b4dd41303d84030` | CERTAIN | STUDENT COMPLETE |
 | V02 | `Bootcamp1 Wk1 031812 Part2 (60mins).swf` | UNKNOWN | 01:00:19 | 21,252,288 (20.3 MB) | `Bootcamp/Bootcamp1 Wk1 031812 Part2 (60mins).swf` | `03079acf739119884911075b8332482a42a6ea178bc0ddb5fed216b9d20bce9f` | CERTAIN | NOT STARTED |
 | V03 | `Bootcamp1 Wk2 032512 Part1 (71mins).swf` | UNKNOWN | 01:10:42 | 27,719,141 (26.4 MB) | `Bootcamp/Bootcamp1 Wk2 032512 Part1 (71mins).swf` | `efe256d81dddf546cc64a4d35c40920ab304562fb57bd2bcf46fed4bc773e273` | CERTAIN | NOT STARTED |
 | V04 | `Bootcamp1 Wk2 032512 Part2 (86mins).swf` | UNKNOWN | 01:25:41 | 29,915,614 (28.5 MB) | `Bootcamp/Bootcamp1 Wk2 032512 Part2 (86mins).swf` | `10d8fe7e0410a12c605abb19cebaae8ad5f39ec78a4ab2e8da553117fe60fb7c` | CERTAIN | NOT STARTED |
@@ -189,6 +189,22 @@ artifacts.
 No duplicate-checksum anomaly beyond A-02. No corrupt or unreadable file. No file
 that appears to belong to a different course beyond A-03. No anomalous size or
 duration: all 42 filename labels match measured runtime within one minute.
+
+---
+
+## DERIVATIVES
+
+Written outside `01_SOURCE_VIDEOS/` per `SOURCE_INGESTION_PROTOCOL.md` §2. Not
+committed. Regenerable from source via `00_SYSTEM/SWF_CAPTURE_RECIPE.md`.
+
+| Derivative | Location | SHA-256 | Derived from | Purpose |
+|---|---|---|---|---|
+| `V01.mp4` (54:44, 1024×786 H.264+AAC) | `/Users/randyschutt/Desktop/Trading/MMM_DERIVATIVES/` | `e6c9b0988ea3d6b4b960a28bf4c6c1502fadb98d535bafe11dfdc7ab24e3c895` | V01 | Permanent frame access — any screenshot via `ffmpeg -ss`, no re-capture |
+| `V01_audio.mp3` (3283.83 s) | same | — | V01 | Audio track, `ffmpeg -vn -c copy` |
+
+All 22 V01 screenshots were extracted from `V01.mp4`, **not** from the `.swf` directly.
+The mp4's sync to the source was verified at twelve points across its full runtime
+against the player's burned-in timecode; all twelve exact.
 
 ---
 

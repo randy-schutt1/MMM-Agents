@@ -3,128 +3,97 @@
 | Field | Value |
 |---|---|
 | Video ID | V01 |
-| Captured | **None** — extraction blocked, see below |
-| Count | 0 |
+| Captured | 2026-08-10 — Ruffle (WASM) in headless Chrome via Playwright, recorded full-length, muxed with the SWF's own audio, frames extracted with `ffmpeg -ss` |
+| Count | 22 |
+| Derivative used | `V01.mp4` (1024×786, H.264, 3284.96 s) — a derivative held outside `01_SOURCE_VIDEOS/`, per `SOURCE_INGESTION_PROTOCOL.md` §2 |
+| Source SHA-256 | `c7e660f4b187e0ef81c05d38cc031cb523b56ec22c0c96db4b4dd41303d84030` |
+
+**Every image includes the player's own burned-in timecode in the bottom-right
+corner.** That is deliberate: each screenshot independently proves the timestamp its
+filename claims. Given this project quarantined 72 files for asserting timestamps
+that did not match their content (`QUARANTINE_REGISTER.md` Q-001), self-verifying
+evidence was judged worth 18 pixels of player chrome.
+
+---
+
+## SYNC VERIFICATION
+
+The mp4's own position was checked against the burned-in timecode at twelve points
+spanning the full runtime. **All twelve matched exactly; zero drift.**
+
+| mp4 position | 00:05 | 05:00 | 10:00 | 15:00 | 20:00 | 25:00 | 30:00 | 35:00 | 40:00 | 45:00 | 50:00 | 54:00 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Burned timecode | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ---
 
 ## INDEX
 
-| Screenshot | Timestamp | Concept | What to notice | Rule supported | Classification | Related homework |
-|---|---|---|---|---|---|---|
-| _(none captured)_ | | | | | | |
+`Classification`: `SOURCE` = instructor is stating it; `VISUAL` = demonstrated on
+screen; `INFERRED` = the agent's reading of the image.
+
+| Screenshot | Timestamp | Concept | What to notice | Rule supported | Classification |
+|---|---|---|---|---|---|
+| `V01_00-00-35_boot-camp-intro-slide.png` | `[00:00:35]` | Course framing | Slide text matches the transcript opening almost word for word | §1 overview | SOURCE |
+| `V01_00-02-35_managing-expectations-slide.png` | `[00:02:35]` | Student conduct | Five bullets: follow free from distraction; honest effort on assignments; execute in demo; refrain from negativity; take your time | S1–S7 | SOURCE |
+| `V01_00-06-15_contact-email-slide.png` | `[00:06:15]` | Admin | Contact address slide | — | SOURCE |
+| `V01_00-09-50_forum-layout-screenshot.png` | `[00:09:50]` | Admin | Screen capture of the reorganised forum; sections visible | H1 submission location | VISUAL |
+| `V01_00-14-10_student-folder-slide.png` | `[00:14:10]` | Admin | Template / student folder instructions | S9 | SOURCE |
+| `V01_00-16-55_survey-questions-1-to-9.png` | `[00:16:55]` | Curriculum | Titled **"STUDENT RATING SELF EVALUATION"**. Questions 1–9 legible | H1 | SOURCE |
+| `V01_00-19-20_survey-questions-10-to-18.png` | `[00:19:20]` | Curriculum | Questions 10–18 legible, including *"10. Do you know how to read the EMA's in real time?"* | H1, A-013 | SOURCE |
+| `V01_00-24-10_survey-target-and-baggage-questions.png` | `[00:24:10]` | Curriculum | IDEAL % gain target per month / per week; London vs NY; other analysis "baggage" | H2, H3 | SOURCE |
+| `V01_00-27-50_teaching-26-to-90-slide.png` | `[00:27:50]` | Admin | Reads "Teaching 26 to 90 day 1" | — | SOURCE |
+| `V01_00-30-35_trap-moves-are-made-list.png` | `[00:30:35]` | **Trap-move timing** | Slide **"How To Beat The Market Maker — The Trap Moves Are Made:"** listing six boundaries | **S28–S33** | **VISUAL** |
+| `V01_00-38-50_beginning-of-week-chart.png` | `[00:38:50]` | Weekly cycle | Slide titled **"Beginning Of Week"**. Candles, four MA lines (yellow/red/cyan/white), a blue shaded box and a red shaded box, red and green arrows | S34, S35 | **VISUAL** |
+| `V01_00-39-10_week-beginning-trap-high-label.png` | `[00:39:10]` | Weekly cycle | Same chart carrying the printed label **"Week Beginning Trap High"** | S34, W1 | **VISUAL** |
+| `V01_00-39-40_beginning-of-week-drawn-on.png` | `[00:39:40]` | Weekly cycle | Instructor's live green freehand annotation added over the same chart | Steps 1–12, §5 | **VISUAL** |
+| `V01_00-40-25_beginning-of-session-chart.png` | `[00:40:25]` | **Session traps** | Slide **"Beginning Of Session"**. Printed labels **"Trigger The Pendings"**, **"Trigger The Stops"**, **"Beginning Of Sessions"**. Blue box over the low flat range; red box over the post-run high | **S29–S31, A-003** | **VISUAL** |
+| `V01_00-43-58_beginning-of-session-drawn-on.png` | `[00:43:58]` | Session traps | Same chart with live green annotation | S39–S41 | **VISUAL** |
+| `V01_00-44-40_end-of-week-chart.png` | `[00:44:40]` | End-of-week trap | Slide **"End Of Week"**. Red box mid-chart, blue box at lower right, printed label "End Of Week" | S55–S57 | **VISUAL** |
+| `V01_00-46-05_end-of-week-drawn-on.png` | `[00:46:05]` | End-of-week trap | Same chart, live annotation added | S55–S59 | **VISUAL** |
+| `V01_00-48-35_trap-higher-level-long-holders.png` | `[00:48:35]` | Trap anatomy | Printed title **"Trap Here..Higher Level Long Holders"**. Boxes carry numeric labels **`R = 70.5`**, **`R = 51…`**, **`= 43.1`** | S45, S46, **A-018** | **VISUAL** |
+| `V01_00-50-55_typical-week-gbpusd-m15.png` | `[00:50:55]` | **Weekly cycle** | Slide **"Typical Week"**. Chart header reads **`GBPUSD,M15`** with `Previous Days Range= 146.4`, `Current Days Range= 110.6`. Vertical day separators labelled Sunday / Monday / Tues / Wed / Friday. Printed annotations: *"Stops Are Triggered on The Weak long Holders"*, *"Lower Level Short Holders Are Now trapped"*, *"A uni-directional Swing The Rest Of The Week"*, *"Higher Level Longs Are Now Trapped"*, *"Level Not Crossed Until Late Friday"* | **S20–S26, S49–S51** | **VISUAL** |
+| `V01_00-51-45_typical-week-drawn-on.png` | `[00:51:45]` | Weekly cycle | Same chart with live green annotation over the drop | S53, A-009 | **VISUAL** |
+| `V01_00-52-10_typical-week-more-drawing.png` | `[00:52:10]` | Weekly cycle | Further annotation | S54–S56 | **VISUAL** |
+| `V01_00-54-30_typical-week-final-state.png` | `[00:54:30]` | Weekly cycle | Final state of the annotated chart at lesson end | S60 | **VISUAL** |
 
 ---
 
-## WHY THERE ARE NO SCREENSHOTS
+## HOW THESE WERE PRODUCED
 
-`SETUP_ISSUES.md` I-006. The source files are Flash `.swf` screen recordings from
-2012, and every automated route tried in this session failed for a reason that is now
-understood rather than merely observed:
+Full method and gotchas: `00_SYSTEM/SWF_CAPTURE_RECIPE.md`.
 
-**1. `ffmpeg` cannot decode these files past roughly two minutes.** It aborts with
-`pixel format change unsupported`.
+Summary: `ffmpeg` cannot decode these SWFs — they contain **no video stream**, only a
+composited bitmap display list. Ruffle's WASM build renders them correctly in a
+headless browser. The lesson was played through at 1× while Playwright recorded the
+page, then the recording was trimmed to the measured playback-start offset and muxed
+with the audio extracted straight from the SWF (`ffmpeg -vn -c copy`).
 
-**2. The reason is structural, not a bug to work around.** Parsing the SWF tag
-stream directly shows what the container actually holds for V01:
-
-```text
-SHOWFRAME tags .................. 9,853   (3.0 fps × 3,284 s = the full 54:44)
-DefineBitsJPEG2 (JPEG images) ...   389
-DefineBitsLossless (bitmaps) ....   603
-DefineShape3 ....................   658
-PlaceObject2 ....................   537
-DefineSprite ....................   503
-```
-
-There is no video stream. The screen is composited from hundreds of small bitmap
-tiles placed onto a display list over time — the standard Camtasia-style
-screen-recording layout. Extracting the image tags directly yields **one** full
-1024×768 keyframe (at `00:00:00`) and 388 delta tiles of 26×38 to 72×56 pixels:
-cursor sprites and changed screen regions, not frames.
-
-Reconstructing viewable frames therefore requires evaluating the display list —
-i.e. a Flash renderer. No amount of `ffmpeg` invocation will produce them.
-
-**3. Ruffle was checked and ruled out within the time box.** The current release
-(v0.5.0) ships `ruffle-0.5.0-macos-universal.tar.gz` — a GUI desktop player. There is
-no headless `exporter` asset in the release. Frame export exists only in the
-`ruffle_exporter` crate, which means a from-source Rust build; that is explicitly
-out of bounds after it hung a previous session. **No download was made.**
-
-**4. What remains open.** CloudConvert, when the project owner is back at his own
-machine (currently expected Thursday), converting the `.swf` files to a real video
-container that `ffmpeg` can then sample normally. That is the live route.
-
-## PLACEHOLDERS — WHAT WOULD BE CAPTURED
-
-If extraction becomes available, these are the moments to capture, in priority order.
-Sourced from `02_TRANSCRIPTS/V01/V01_TRANSCRIPT.md` § SCREENSHOT-WORTHY MOMENTS.
-
-| Priority | Timestamp | What is shown | What it would resolve |
-|---|---|---|---|
-| 1 | `[00:38:57]`–`[00:40:23]` | The weekly-cycle diagram — "tracer" lines for Sunday/Monday, the rise, the pullback holding the level, the stop hunt, the drop away from the peak, the crossover, the anchor point | A-001 (anchor point), A-008 (tracer), A-015 (what the dealer shows). The single highest-value capture in the lesson. |
-| 2 | `[00:51:42]`–`[00:51:56]` | "Stop hunt high drop", "straight drop with a little pin" being pointed at | A-009. Fourteen seconds of audio names four formations and describes none. |
-| 3 | `[00:43:53]`–`[00:44:33]` | Chart with the "blue box"; the trade shown sits outside it | A-006. Would establish whether the box is a session range or a price zone — two mutually exclusive readings. |
-| 4 | `[00:45:55]`–`[00:46:35]` | The "red box" with US-session times marked | N9–N11 in the source notes — the session times are garbled beyond recovery in audio; the slide is the only route. |
-| 5 | `[00:34:47]`–`[00:35:15]` | Whatever is on screen while the anchor point is introduced | A-001, A-010, and I7 — whether anchor point and peak formation are the same object. |
-| 6 | `[00:16:02]`–`[00:22:07]` | Slide listing survey questions 1–18 | The instructor's numbering collapses at `[00:20:43]`; the slide is the only reliable copy. Curriculum evidence rather than trading evidence. |
-| 7 | `[00:44:36]`–`[00:45:02]` | End-of-week: short, outside spike to the low, chop | A-016. |
-| 8 | `[00:52:03]` | GBP chart from "when the pound was a dollar fifty" | CL3 — the instructor's own claim that the cycle is era-invariant. |
-| 9 | `[00:48:41]` | The "big entry candle" | A-017. |
-| 10 | `[00:09:42]`–`[00:11:53]` | Forum layout slide | Administrative only. Lowest value. |
-
-## FALLBACK — TRADINGVIEW RECREATIONS
-
-The project owner has approved recreating the referenced chart moments in TradingView
-where a real screenshot cannot be obtained.
-
-**Not started.** That is a separate, later step and was deliberately not begun in this
-session.
-
-When it is done, it must go to `09_CHART_EXAMPLES/`, **never** to `04_SCREENSHOTS/`,
-and each image needs a sidecar stating that it is a recreation, not a course
-screenshot. `SETUP_ISSUES.md` I-006 is unambiguous: *"Do not substitute generated,
-illustrative, or reconstructed images for real course screenshots under any
-circumstances."* A recreation is evidence of what a described setup looks like on a
-chart; it is never evidence of what the instructor showed.
-
-The only recreation candidate with a real anchor is `[00:40:26]` — USDCHF and EURUSD,
-week ending Friday 2012-03-16, the only instruments and date named in the lesson.
-Everything else in V01 is described without an instrument or a date, so a recreation
-would be illustrating the agent's reading rather than the instructor's example.
-
-## THE ONE EXISTING IMAGE
-
-`01_SOURCE_VIDEOS/.../01_Bootcamp1_Wk1_031812_Part1_55mins/SCREENSHOTS/VIDEO_01_SCREENSHOT_001_00-02-00.jpg`
-(manifest X26) survives from an earlier extraction attempt. Its filename asserts
-`00:02:00`; that claim is unverified. It has **not** been copied here and is **not**
-cited as evidence in any V01 artifact.
-
-The quarantined `VISUAL_INDEX.md` for this video described 78 screenshots in detail.
-One image exists, and its filename matches none of the descriptions. See
-`00_SYSTEM/QUARANTINE_REGISTER.md` Q-001.
-
----
+The source `.swf` was never modified.
 
 ## COVERAGE CHECK
 
 | Category | Captured? | Notes |
 |---|---|---|
-| Definitions / diagrams | ❌ | The weekly-cycle diagram at `[00:38:57]` is the lesson's central visual |
-| Annotated charts | ❌ | Six distinct charts referenced, none captured |
-| Setup formation | ❌ | |
-| Setup completion | ❌ | |
-| Pre-entry context | ❌ | |
-| Entry | ❌ | `[00:48:41]` "big entry candle" |
-| Stop location | — | No stop-placement rule is given anywhere in V01 |
-| Target location | — | No target is given anywhere in V01 |
+| Definitions / diagrams | ✅ | Trap-move list `[00:30:35]`; four titled chart slides |
+| Annotated charts | ✅ | Six, four of them with the instructor's live freehand drawing |
+| Setup formation | ⚠️ | Shown on the instructor's prepared examples only; no live formation walk-through |
+| Setup completion | ⚠️ | As above |
+| Pre-entry context | ✅ | `[00:40:25]` blue box → break → red box sequence |
+| Entry | ⚠️ | `[00:48:35]` is the closest; V01 states no entry trigger |
+| Stop location | — | **No stop-placement rule is stated anywhere in V01** |
+| Target location | — | **No target is stated anywhere in V01** |
 
-**Assessment.** Roughly the last 21 minutes of this lesson is narration over prepared
-slides — `[00:38:13]` "I'm not drawing. I just have a slide up. I'm going to show
-pictures." The instructor speaks deictically throughout: "this", "right here", "these
-two lines", "where I've drawn it". About half of what was taught is in the visual
-channel and none of it was recovered.
+The two `—` rows are lesson content gaps, not capture gaps. The two `⚠️` rows reflect
+that V01 teaches from prepared slides rather than working a setup live.
 
-Every artifact derived from V01 carries this limitation. It is the main reason no
-item in `V01_INTERPRETATION.md` is classified `VISUAL`.
+## SELECTION METHOD, AND WHAT WAS NOT KEPT
+
+Frames were sampled every 5 s across the full 54:44 (657 thumbnails) and compared
+pairwise; 20 distinct screen states emerged. Those, plus specific moments named in
+the transcript, produced 24 candidates, reviewed as contact sheets. Two were dropped
+as duplicates of an adjacent state.
+
+**The full 54:44 mp4 is retained outside the repository.** Any timestamp not indexed
+here can be extracted later with `ffmpeg -ss` in about a second. Nothing was lost by
+curating; this index is a selection, not the limit of what is available.

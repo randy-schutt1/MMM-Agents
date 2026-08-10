@@ -11,6 +11,53 @@ Newest first.
 
 ---
 
+## [0.3.0] — 2026-08-10 — V01 screenshots; capture problem solved; V01 submitted for review
+
+### Added
+
+- **`00_SYSTEM/SWF_CAPTURE_RECIPE.md`** — reusable, fresh-session recipe for processing
+  one lesson video end to end: Ruffle WASM in headless Chrome via Playwright, offset
+  calibration, mux, sync verification, screen-state detection, curation, and the study
+  order. Includes the routes already ruled out and three specific gotchas that each cost
+  a debugging cycle.
+- **22 screenshots** in `04_SCREENSHOTS/V01/`, indexed, each carrying the player's
+  burned-in timecode so it proves its own timestamp.
+- **`07_MASTERY_REPORTS/V01_MASTERY_REPORT.md`** — status `REVIEW REQUIRED`.
+- **`D-018`** — dimensions F and G may be `NOT APPLICABLE` where a lesson supplies
+  nothing to satisfy them. Sets the standard for all 21 lessons.
+- **`A-018`** — the `R = <number>` box labels, logged rather than guessed.
+- `V01_INTERPRETATION.md` **§10** — what the visuals changed, appended without editing
+  §§1–9.
+
+### Changed
+
+- **`I-006` (screenshot capture) `OPEN` → `RESOLVED`.** These SWFs contain no video
+  stream, so `ffmpeg` can never extract frames; Ruffle's WASM build renders them
+  correctly. CloudConvert is no longer needed.
+- `A-003` `DO NOT CODE` → **`RESOLVED BY COURSE`** — "pendings", printed on a slide,
+  never spoken aloud.
+- `A-004`, `A-006`, `A-015`, `A-001`, `A-009`, `A-017` gained visual-evidence updates.
+  `A-006` had one of its two competing readings eliminated.
+- `V01_SOURCE_NOTES.md` §4 replaced with thirteen real visual observations; the original
+  "no screenshot exists" text preserved and marked superseded.
+- V01 processing status → `STUDENT COMPLETE`; `COURSE_PROGRESS.md` → `AWAITING REVIEW`.
+
+### Notes
+
+- **Interpretation was written from the transcript alone, before any screenshot
+  existed, and was not rewritten afterwards.** The visuals corrected one
+  over-generalisation, resolved one word the record had refused to guess, eliminated one
+  of two competing readings, and left `I7` open. Keeping the two passes separate is what
+  makes that visible.
+- **GBP/USD appears on screen at `[00:50:55]` and is never spoken aloud** — the project's
+  designated primary research instrument, with the weekly cycle annotated.
+- V01 still yields **no executable rule**: no stop, target, risk-to-reward, position size
+  or indicator parameter. Better evidence did not make it a mechanics lesson.
+- The review is **not** in this release. `18_REVIEW/V01/V01_REVIEW_R1.md` must be written
+  by a separate session; the student cannot audit itself.
+
+---
+
 ## [0.2.0] — 2026-08-10 — Phase 1 opens: source ingested, V01 studied
 
 First release containing actual Market Maker Method content.

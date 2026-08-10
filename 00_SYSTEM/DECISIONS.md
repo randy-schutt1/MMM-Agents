@@ -397,6 +397,63 @@ fabricate or interpolate it.**
 
 ---
 
+## D-018 — Mastery dimensions F and G may be marked NOT APPLICABLE for lessons that state no testable rule
+
+**Date:** 2026-08-10
+**Decision:** In `07_MASTERY_REPORTS/VXX_MASTERY_REPORT.md`, dimension **F (Homework)**
+and dimension **G (Manual Backtesting)** of `MASTERY_STANDARD.md` may be recorded as
+`NOT APPLICABLE` when the lesson itself supplies nothing to satisfy them, provided
+the report states the specific justification and enumerates what was checked.
+
+A lesson is eligible for `F = NOT APPLICABLE` when it assigns no work that a present-day
+agent can perform — for example, work that consists of emailing a survey to the
+instructor in 2012.
+
+A lesson is eligible for `G = NOT APPLICABLE` when it states **no entry trigger, no
+stop, no target, and no position size** — i.e. there is no rule in it whose
+application to a historical chart could be graded.
+
+`NOT APPLICABLE` is not a pass. It is a positive claim that the dimension has no
+subject matter in this lesson, and the reviewer audits that claim like any other. If
+a reviewer finds a testable rule the student missed, the correct outcome is `REVISE`
+with the dimension reinstated.
+
+The remaining eight dimensions (A Recall, B Recognition, C Discrimination, D Sequence,
+E Exceptions, H Provenance, I Ambiguity, J Contradictions) always apply and are never
+waived.
+
+**Reason:** V01 forced the question. It is a framing lesson: it argues a thesis about
+the weekly cycle and issues prohibitions, but §6 of `V01_SOURCE_NOTES.md` has an empty
+Confirmation column and an empty Invalidation column across all eight rows, and no
+stop, target, risk-to-reward, position size, or indicator parameter is stated anywhere
+in its 54 minutes. Its homework is a 2012 student survey. Without this decision, V01
+could never reach `PASS` on the merits, the sequential gate would never open, and the
+course could not proceed past its first lesson — not because the study was deficient
+but because the standard was being applied to material it does not fit.
+
+The alternative failure mode is worse: if F and G must always be satisfied, a session
+under pressure to advance will manufacture a backtest of rules the lesson never stated.
+That is precisely the fabrication this project quarantined 72 files to avoid
+(`QUARANTINE_REGISTER.md` Q-001).
+**Evidence:** `V01_SOURCE_NOTES.md` §6, §10, §11; `MASTERY_STANDARD.md` dimensions F
+and G; project owner confirmation 2026-08-10.
+**Alternatives considered:** *Leave V01 open until a later lesson supplies testable
+rules, then backtest V01 retroactively* — rejected by the project owner; it stalls the
+sequential gate indefinitely and makes every lesson's completion depend on
+unknown future material. *Lower the bar for F and G rather than waive them* —
+rejected; a token backtest of a rule the lesson did not state is not a weaker test, it
+is a false one. *Treat V01 as `NOT A LESSON`* — rejected; it plainly teaches, and its
+concepts (anchor point, trap moves, the weekly cycle) are foundational to what follows.
+**Consequences:** Applies to all 21 lessons, not just V01 — this sets the standard.
+Most later lessons are expected to state testable rules and will therefore *not*
+qualify; the waiver is expected to be rare, and a session claiming it for a
+mechanics-heavy lesson should be treated with suspicion by the reviewer. Each use must
+name the justification in the mastery report. `MASTERY_STANDARD.md` is not rewritten;
+this decision governs its application and is cited from the report.
+**Status:** ACTIVE
+
+---
+
 ## DECISIONS TO BE MADE AT INGESTION
 
 Not yet decided; record as new entries when the information exists.

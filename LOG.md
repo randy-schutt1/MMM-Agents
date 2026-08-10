@@ -498,3 +498,132 @@ stopped short of by instruction. Note before starting:
   CODE` concept. Consider whether V01 is backtestable at all, or whether observation
   should begin after V02 defines the trading zone.
 - `I-007` (chart data source) is still open and blocks manual backtest.
+
+---
+
+## 2026-08-10 — Session 5 — V01 Screenshots, Full Capture, Mastery Submission
+
+### Objective
+
+Resolve I-006 (screenshot capture), upgrade V01's artifacts with visual evidence, and
+submit V01 for independent review. Explicitly **not** to run the review — the student
+does not audit itself.
+
+### Work Completed
+
+**Screenshot capture solved (I-006 → `RESOLVED`).** The renderer `ffmpeg` lacks exists
+as WebAssembly: Ruffle's `web-selfhosted` build, served over HTTP and driven by
+Playwright in headless Chrome, renders these SWFs correctly at 1024×786. Recorded V01's
+full 54:44 playthrough, trimmed to the measured playback-start offset, and muxed with
+audio taken straight from the SWF (`ffmpeg -vn -c copy`, 3283.83 s).
+
+Routes tested and ruled out, recorded in I-006 so they are not retried: Ruffle desktop
+(GUI only, no headless exporter); building `ruffle_exporter` (forbidden — hung a prior
+session); Ruffle's JS seek API (does not exist — `goto_frame`/`seek`/`current_frame`
+appear 0 times in the JS bundle; they are internal Rust symbols); SWF `ExternalInterface`
+(this SWF registers zero callbacks — `addCallback` appears 0 times in its AS2 string
+pool); Camtasia scrubber dragging (works, lands imprecisely and non-linearly).
+
+**Sync verified, zero drift.** The Camtasia player burns its own timecode into every
+frame, so each output frame is self-documenting. mp4 position vs burned timecode checked
+at 00:05, 05:00, 10:00, 15:00, 20:00, 25:00, 30:00, 35:00, 40:00, 45:00, 50:00, 54:00 —
+**all twelve exact.**
+
+**22 screenshots curated.** 657 thumbnails sampled at 5 s intervals and pairwise-diffed
+→ 20 distinct screen states; combined with transcript-flagged moments → 24 candidates,
+reviewed as contact sheets, 2 dropped as duplicates. Frames keep the player's control
+bar deliberately: the burned timecode makes each image prove its own timestamp.
+
+**Artifacts upgraded without rewriting history.** `V01_SOURCE_NOTES.md` §4 gained
+thirteen visual observations plus a corrections table; its original "no screenshot
+exists" text is preserved and marked superseded. `V01_INTERPRETATION.md` §§1–9 were left
+**unedited**; a new §10 records the delta.
+
+### Findings — what the visuals changed
+
+**Four terms resolved or constrained by text printed on slides that was never spoken
+aloud:**
+
+- **A-003 `RESOLVED BY COURSE`.** The word the ASR rendered "penings" — four occurrences
+  in the core sequence, which the record correctly refused to guess — is **"pendings"**.
+  The `[00:40:25]` slide prints **"Trigger The Pendings"** beside **"Trigger The Stops"**.
+  Two distinct pools of resting orders.
+- **A-006, one reading eliminated.** The blue and red "boxes" are shaded rectangles drawn
+  over *price areas* — pale blue over flat consolidation, dark red over the extended
+  trapped area. The session-time-rectangle reading is wrong. At `[00:48:35]` each carries
+  a numeric label, so they are measured regions.
+- **A-004 constrained.** A "level" is a horizontal price line on the template —
+  `[00:50:55]` shows yellow/red/cyan dashed lines and prints *"Level Not Crossed Until
+  Late Friday"*. Not a distance, not a swing count.
+- **A-015 corroborated.** Four MA lines (yellow, red, cyan, white) are visibly present.
+  Still no periods stated anywhere. The refusal to name EMA periods stands and is better
+  supported.
+
+**GBP/USD found, never spoken.** `[00:50:55]`'s chart header reads `GBPUSD,M15` — the
+project's designated primary research instrument, with the full weekly cycle annotated
+(*"Stops Are Triggered on The Weak long Holders"*, *"A uni-directional Swing The Rest Of
+The Week"*, *"Higher Level Longs Are Now Trapped"*, *"Level Not Crossed Until Late
+Friday"*, day separators Sunday→Friday). The transcript-only pass could not have found
+this.
+
+**One of my own readings corrected.** I had widened a *closed slide-list of six*
+trap-move boundaries into "trap moves occur at session boundaries as a general property"
+(I9/G5). The `[00:30:35]` slide lists exactly six. The generalisation was wider than the
+evidence — the failure mode §3 of the interpretation template exists to catch, caught
+only by a screenshot.
+
+**One reading NOT confirmed.** I7 — that anchor point ≈ peak formation ≈ M/W — remains
+`INFERRED / Low`. The lesson's fullest cycle chart carries five printed labels and
+**none** uses those words. Neither confirmed nor refuted; a future session must not read
+§10 as having settled it.
+
+**A new ambiguity, and a trap avoided.** A-018: the `R = 70.5` / `R = 51…` / `= 43.1`
+labels on the boxes. Read as *Range in pips* (the same template prints
+`Previous Days Range= 146.4`), **not asserted**, and explicitly not read as
+risk-to-reward — which would have manufactured a target rule from a label in a lesson
+that states no stop and no target.
+
+### Ambiguities / Contradictions
+
+18 ambiguity records (A-001…A-018); A-003 now `RESOLVED BY COURSE`, the rest
+`DO NOT CODE`. Contradictions unchanged: C-001 (foundational, unresolved), C-002.
+
+### Decisions
+
+`D-018` — mastery dimensions F (Homework) and G (Manual Backtesting) may be marked
+`NOT APPLICABLE` for a lesson that supplies nothing to satisfy them, with justification
+recorded. Sets the standard for all 21 lessons; expected to be rare after V01.
+
+### Mastery Submission
+
+`07_MASTERY_REPORTS/V01_MASTERY_REPORT.md` — status **`REVIEW REQUIRED`**, deliberately
+not `PASS`. F and G claimed `NOT APPLICABLE` under D-018; four specific questions put to
+the reviewer. Four QC boxes left unchecked and stated rather than omitted: no positive,
+negative or borderline chart examples, and no concept-library entries — because V01
+defines no concept precisely enough to classify against, and promoting an open
+`DO NOT CODE` ambiguity to a concept entry would launder it into a definition.
+
+### Files Created/Updated
+
+Created: `00_SYSTEM/SWF_CAPTURE_RECIPE.md`, `07_MASTERY_REPORTS/V01_MASTERY_REPORT.md`,
+22 PNGs in `04_SCREENSHOTS/V01/`.
+Updated: `04_SCREENSHOTS/V01/INDEX.md`, `03_LESSON_NOTES/V01_SOURCE_NOTES.md`,
+`03_LESSON_NOTES/V01_INTERPRETATION.md`, `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`,
+`00_SYSTEM/SETUP_ISSUES.md`, `00_SYSTEM/DECISIONS.md`, `00_SYSTEM/SOURCE_MANIFEST.md`,
+`00_SYSTEM/COURSE_PROGRESS.md`, `LOG.md`, `CHANGELOG.md`.
+
+Derivative retained outside the repo: `/Users/randyschutt/Desktop/Trading/MMM_DERIVATIVES/V01.mp4`.
+
+### Validation
+
+`python3 scripts/validate_project.py` — **97 passed, 0 warnings, 0 failures.**
+
+### Next Action
+
+**An independent reviewer session** writes `18_REVIEW/V01/V01_REVIEW_R1.md` per
+`REVIEW_PROTOCOL.md`. This session did not and must not perform it.
+
+V02 is gated behind that `PASS`. When it opens, follow `00_SYSTEM/SWF_CAPTURE_RECIPE.md`
+in a fresh session, and spend 15 minutes first on the untested frame-rate-patch idea in
+§11 — if it works it removes the 1-hour real-time capture cost from the remaining 20
+videos.
