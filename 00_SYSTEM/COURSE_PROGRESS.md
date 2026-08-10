@@ -14,17 +14,24 @@ VIDEOS INGESTED:     21
 VIDEOS IN PROGRESS:  1  (V02 in remediation)
 VIDEOS PASSED:       1  (V01)
 CURRENT LESSON:      V02 — reviewed R1 2026-08-10: **REVISE** (HIGH), 0 critical,
-                     1 major, 5 minor. IN REMEDIATION.
+                     1 major, 5 minor. REMEDIATION COMPLETE 2026-08-10 —
+                     RESUBMITTED, AWAITING R2.
                      V01 — re-reviewed R3 2026-08-10: **PASS** (HIGH), 0 critical,
                      0 major. COMPLETE. All 15 of R2's required actions applied and
                      verified against the source; R2 finding N1 (A-006's trailing
                      block) closed by withdrawing it in place.
-NEXT ACTION:         A student/remediation session applies V02 R1's ten required
-                     corrections (18_REVIEW/V02/V02_REVIEW_R1.md), then resubmits for
-                     R2. The MAJOR is homework 11a: its markup contradicts the chart
-                     it cites and falsely confirms the "at least 3 days" doctrine that
-                     C-001 has open. Preserve the original markup in place
-                     (REMEDIATION_PROTOCOL.md §2); do not overwrite it.
+NEXT ACTION:         ✅ DONE 2026-08-10 — all ten of V02 R1's required corrections are
+                     applied (see V02_MASTERY_REPORT.md "Revision R1"). Homework 11a
+                     was REDONE from pixel measurement of the committed chart, with
+                     the invalid first pass preserved in place per
+                     REMEDIATION_PROTOCOL.md §2. The "at least 3 days" confirmation is
+                     WITHDRAWN; the corrected week is recorded against C-001 as
+                     explicitly NON-RESOLVING and commits no day-count value.
+                     → **AWAITING R2.** A FRESH reviewer session must write
+                     18_REVIEW/V02/V02_REVIEW_R2.md. Per D-003 the session that
+                     applied these fixes must NOT review them, and per the R1 closing
+                     note R2 must re-measure the chart independently rather than
+                     accept the new pipeline's self-description.
 BLOCKED ON:          nothing. I-006 RESOLVED. I-007 open — blocks V01 H4/H5, which
                      R1 reclassified from NOT APPLICABLE to DEFERRED (D-019), and it
                      travels forward as an open research item rather than blocking
@@ -102,6 +109,13 @@ fabricate, interpolate, or infer Week 6 content.**
   anatomy is undefined across both V01 and V02. The *markup* is the round's MAJOR — it
   contradicts the chart it cites and must be redone. See
   `18_REVIEW/V02/V02_REVIEW_R1.md`.
+  **R1 remediation ✅ 2026-08-10:** the markup was **redone from pixel measurement** of
+  the committed PNG (method: `V02_HOMEWORK.md` §1.1; ±0.5 pip, self-validating on day
+  boundaries), with the invalid first pass preserved in place per
+  `REMEDIATION_PROTOCOL.md` §2. The "at least 3 days" confirmation is **withdrawn**; the
+  corrected week is recorded against `C-001` as **non-resolving** and commits no
+  day-count value. Labels remain unverified — no answer key exists — so dimension B
+  stays **FAIL**. Awaiting R2.
 - **V02 Manual Backtest ⏸** — `DEFERRED` under D-019, not `NOT APPLICABLE`. V02 states a
   falsifiable structural claim ("does not cross the level for at least 3 days") but
   A-004 leaves "the level" without a price, and the lesson states no entry, so there is
@@ -207,7 +221,7 @@ points are set once the real lesson count is known at ingestion.
 | Phase | Name | Status |
 |---|---|---|
 | 0 | Environment | ✅ Complete |
-| 1 | Student | ⛔ Blocked — no source videos |
+| 1 | Student | 🔄 In progress — V01 PASS, V02 in remediation (R1 REVISE) |
 | 2 | Scholar | Not started |
 | 3 | Expert (Master Spec) | Not started |
 | 4 | Formalizer (Machine Spec) | Not started |
@@ -219,5 +233,14 @@ points are set once the real lesson count is known at ingestion.
 | 10 | Forward Tester | Not started |
 | 11 | Risk Engine | Not started |
 | 12 | Execution Robot | Not started |
+
+> **CORRECTED 2026-08-10 (V02 review R1, finding 5, `E20`).** The Phase 1 row read
+> `⛔ Blocked — no source videos`. That was true at project start and became false when
+> ingestion completed; it contradicted this file's own SUMMARY block
+> (`PHASE: 1 — STUDENT (unblocked; ingestion complete)`) and the 21 ingested videos
+> recorded below. Same staleness class as the `CONTRADICTIONS.md` STATUS defect
+> (finding 4): a hand-maintained table duplicating state that lives elsewhere in the same
+> file. **The SUMMARY block at the top of this file is the authority for phase state;
+> this table is a view of it and must be reconciled against it, not edited independently.**
 
 Full phase definitions: `STUDY_PROTOCOL.md` §4.

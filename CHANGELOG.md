@@ -11,6 +11,42 @@ Newest first.
 
 ---
 
+## [0.5.1] — 2026-08-10 — V02 R1 remediation applied; awaiting R2
+
+### Changed
+
+- **V02: `IN REMEDIATION` → remediation complete, awaiting R2.** All ten of R1's required
+  corrections applied. Fix-only pass; no verdict rendered, per `D-003`.
+- **Homework 11a redone from measurement, not reworded** (`REMEDIATION_PROTOCOL.md` §2).
+  The invalid first pass is preserved in place as
+  `SUPERSEDED — INVALID READING (R1 MAJOR 1)`.
+- **The "at least 3 days" confirmation is WITHDRAWN.** The corrected week is recorded
+  against `C-001` as **explicitly non-resolving**, and commits no day-count value. The
+  measured result — price held below Monday's high for exactly 72 hours — is stated and
+  then declined, because three defensible counting conventions give three different
+  answers and the level itself was reader-selected (`A-004`).
+
+### Added
+
+- **A stated method for reading charts** (`V02_HOMEWORK.md` §1.1). This is the
+  methodological point of the release: `E06` entered the register because *sources* were
+  held to a citation standard and *price* was held to none. Chart readings are now
+  pixel-measured, calibrated by least squares against the axis labels, and
+  **self-validated** (measured daily open must equal the prior day's close). The first
+  pass had no check of any kind.
+- **A named authority for two chronically stale summary blocks.** `CONTRADICTIONS.md`'s
+  STATUS defect was R1's *fourth* occurrence of the same class, so the values were not
+  merely corrected: each file now names which block is authoritative (the INDEX table;
+  the SUMMARY block) so duplicates are reconciled rather than re-incremented.
+
+### Flagged
+
+- `PFH`/`PFL` are stated in two files to *"each appear once"* in V02. Recount: the
+  abbreviations appear **zero** times in the verbatim body. R1 recorded verifying this
+  claim, so it is escalated to R2 unedited rather than silently corrected.
+
+---
+
 ## [0.5.0] — 2026-08-10 — V02 reviewed: REVISE; V03 gate holds
 
 ### Added

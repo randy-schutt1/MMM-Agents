@@ -154,7 +154,30 @@ This is the central analogy of the lesson and he repeats it four times.
 | 58 | `[00:20:33]` | "**One of two things can happen when you hit outside structure high. The dealer can half-Batman to the low, or he can finish out the M formation in London and correct.**" | EXPLICIT |
 | 59 | `[00:22:00]` | "Understand that not every move right out of the box is going to pay out, because this move is counter to the dealer's bias." | EXPLICIT |
 | 60 | `[00:22:16]` | "And day three, he issues a beautiful **33 trade** where he makes an aggressive move and fills the ADR completely. Or more than the ADR." | EXPLICIT |
-| 61 | `[00:45:32]` | "That's why **second leg coming from an outside structure high / outside structure low is a lock.** I will draw this for you next week." | EXPLICIT |
+| 61 | `[00:45:32]` | "That's why **second leg coming from an outside structure high / outside structure low is a lock.** I will draw this for you next week." ⚠ **ASR REPAIRED — see disclosure below.** | EXPLICIT (repaired) |
+
+> **ASR REPAIR DISCLOSURE — item 61 — added 2026-08-10 (R1 finding 3, `E01`/`E16`).**
+> This file's own TRANSCRIPTION NOTES promise that garble is *"recorded as garbled rather
+> than repaired"*. Item 61 was repaired silently inside quotation marks and graded
+> `EXPLICIT`. The repair is retained — it is almost certainly right — but the transcript's
+> actual wording is now shown so a reader can see what was changed:
+>
+> | | Wording |
+> |---|---|
+> | **Transcript `[00:45:32]`, verbatim** | "That's why second leg coming from **an outside structure, higher outside structure low** is a lock." |
+> | **Transcript `[00:45:39]`, verbatim** | "**That** will draw this for you next week." |
+> | **As quoted in item 61** | "That's why second leg coming from **an outside structure high / outside structure low** is a lock. **I** will draw this for you next week." |
+>
+> Two separate repairs, both undisclosed: (a) *"higher outside structure"* → *"outside
+> structure high"*, and (b) *"That will draw"* → *"I will draw"*. The second was not
+> flagged by the review and is disclosed here for completeness. Item 61 also silently
+> **merges two markers** 7 seconds apart (`[00:45:32]` and `[00:45:39]`) into one quoted
+> block, which the single citation does not signal.
+>
+> **Nothing downstream changes.** The repaired reading is the one `A-007` and `C-003`
+> already rest on, and "outside structure high" is independently confirmed as the
+> instructor's term at `[00:20:21]` / `[00:20:29]` / `[00:20:33]`, where the ASR is clean.
+> The defect is disclosure, not substance.
 
 ### 2f. The news spike / typical week walkthrough
 
@@ -197,13 +220,37 @@ This is the central analogy of the lesson and he repeats it four times.
 | 86 | `[00:35:22]` | "And I'm going to define what a second leg is." | EXPLICIT |
 | 87 | `[00:35:25]` | The definition is given **only by pointing at the screen**: "If you see this, that's not a trade. This is not a trade. That's a trade." | EXPLICIT (but see §14 — the content is visual) |
 | 88 | `[00:35:52]` | "If you wait for this second leg entry, the statistical probability is huge in your favour." | EXPLICIT |
-| 89 | `[00:38:40]` | "**M's and W's will not fail**, and when they do, cut them quickly and control your loss." | EXPLICIT |
+| 89 | `[00:38:40]` | "**M's and W's will not fail**, and when they do, cut them quickly and control your loss." ⚠ **ASR REPAIRED — see disclosure below.** | EXPLICIT (repaired) |
 | 90 | `[00:39:09]` | "If you're in a trade and the dealer cuts the low or the high and starts going this way, don't sit there like a deer in the headlights." | EXPLICIT |
 | 91 | `[00:39:19]` | "The dealer gives you a good close below and opens the next candle and starts dropping and you're only down 15 — **eat it**." | EXPLICIT |
 | 92 | `[00:39:34]` | "**Scratch out at minus 15**, because then if you hit 25 or 30 on your next trade, you're up instead of even." | EXPLICIT |
 | 93 | `[00:39:42]` | "That's part of management, we're going to talk about it." *(Deferred.)* | EXPLICIT |
 | 94 | `[00:40:04]` | "You have to take the highest probability and the best profitability. Not, oh, just take a bunch of shit and see what sticks." | EXPLICIT |
 | 95 | `[00:40:22]` | "You've got to find the discipline to sit on your hands and **wait for the dealer to show you a second leg**." | EXPLICIT |
+
+> **ASR REPAIR DISCLOSURE — item 89 — added 2026-08-10 (R1 finding 3, `E01`/`E16`).**
+>
+> | | Wording |
+> |---|---|
+> | **Transcript `[00:38:40]`, verbatim** | "**MRWs** will not fail and when they do cut them quickly and control your loss." |
+> | **As quoted in item 89** | "**M's and W's** will not fail, and when they do, cut them quickly and control your loss." |
+>
+> The repair is retained. *"MRWs"* is not a term used anywhere in either lesson, whereas
+> "M's and W's" is used throughout, so the expansion is almost certainly correct — but it
+> was an inference presented inside quotation marks and graded `EXPLICIT` without
+> disclosure, which is what this file's own policy forbids.
+>
+> **This one is load-bearing and the disclosure matters more.** `C-003` (whether M and W
+> formations can fail) is built on this single sentence, and its whole force is that the
+> two halves contradict each other. Note that the contradiction survives the repair
+> intact: whatever "MRWs" resolves to, *"X will not fail"* followed immediately by *"and
+> when they do, cut them quickly"* is self-contradictory regardless. `C-003` does **not**
+> depend on the expansion being right — but a reader is now able to check that for
+> themselves instead of taking it on trust.
+>
+> Two other places in this file quote the same repaired sentence and are covered by this
+> disclosure: **§12 "Claims Made" item 8**, and **§14 "Unclear In The Source" item 15**
+> (the record that raised `C-003`).
 
 ### 2i. The Zaireen backtest anecdote
 
@@ -276,16 +323,24 @@ Terms the instructor actually defines in this video, in his words:
 
 Recorded because their absence matters more than their presence.
 
+> **CORRECTED 2026-08-10 (R1 finding 2, `E20`).** Three counts in this table were wrong:
+> "second leg" read `~12`, "the box"/"blue box" read `6`, "level count / counting the
+> levels" read `2`. All three have been recounted by regex over the transcript's
+> **verbatim body only** (from the first `[00:00:00]` marker; the header and the
+> transcriber's own notes are excluded) and the corrected values are below. The
+> `~12` for "second leg" was an estimate presented as a count — that is the actual defect,
+> and the tilde did not make it acceptable.
+
 | Term | Occurrences | Note |
 |---|---|---|
-| **Second leg** | ~12 | The single most important term in the lesson. He says at `[00:35:22]` "I'm going to define what a second leg is" and then defines it **entirely by gesture at the screen** — "If you see this, that's not a trade. This is not a trade. That's a trade." No verbal criterion is ever given. |
-| **The box** / **blue box** | 6 | Referred to constantly ("out of the box", "below the box", "slightly outside the blue box"). Never defined here. |
+| **Second leg** | **21** *(was `~12`)* | The single most important term in the lesson. He says at `[00:35:22]` "I'm going to define what a second leg is" and then defines it **entirely by gesture at the screen** — "If you see this, that's not a trade. This is not a trade. That's a trade." No verbal criterion is ever given. |
+| **The box** / **blue box** | **9** *(was `6`)* — 8 × "the box", 1 × "blue box" | Referred to constantly ("out of the box", "below the box", "slightly outside the blue box"). Never defined here. *(The bare word "box" occurs 17× in total; the 9 counted here are the definite-article usages that treat it as a specific named object.)* |
 | **Half-Batman** | 1 (`[00:20:37]`) | Used as a known term. Never explained. |
 | **Peak formation high / low** | 4 | Used as a known term; V02 never defines it. (`PFH`/`PFL` as abbreviations appear once each.) |
-| **Mayonnaise** | 3 (`[00:19:46]`, `[00:25:18]`, `[00:25:45]`) | Clearly a nickname for a moving average on his chart. **Which average is never stated.** No other food nickname occurs in this video. |
+| **Mayonnaise** | **3 confirmed** (`[00:19:46]`, `[00:25:18]`, `[00:25:45]`) **+ 1 probable** (`[00:05:00]`) | Clearly a nickname for a moving average on his chart. **Which average is never stated.** No other food nickname occurs in this video. **Added 2026-08-10 (R1 finding 9):** `[00:05:00]` reads *"this looks like perfect pins to the **manays**"* in the ASR. "Manays" is very likely a fourth "mayonnaise" but is **not adopted as confirmed** — it is a different string and no audio re-check has been done. Marked probable and counted separately. It is the only usage in which the average acts as a **magnet** that price runs to, which is why it matters: see `A-020`. |
 | **Vector candle** | 2 (`[00:43:55]`, `[00:43:59]`) | Used as a known term. |
 | **Trading zone** | 2 (`[00:37:10]`, `[00:45:52]`) | Explicitly deferred: "we'll talk about the trading zone next week". |
-| **Level count / counting the levels** | 2 (`[00:33:11]`) | "especially when you're new and you can't count the levels" — the skill is referenced as something not yet taught. |
+| **Level count / counting the levels** | **1** *(was `2`)* — `[00:33:11]` | "especially when you're new and you can't count the levels" — the skill is referenced as something not yet taught. The single occurrence is the whole basis for `A-004`, which makes the overcount worth correcting rather than shrugging at. |
 | **Spacer** | 1 (`[00:10:16]`) | ASR-uncertain. |
 | **Fractional disparity** | 1 (`[00:43:26]`) | "He handled the crosses fractional disparity." Used as a known term. |
 | **Shadow boxes** | 1 (`[00:53:25]`) | "You can put the shadow boxes on here if you want." |

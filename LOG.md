@@ -1261,3 +1261,97 @@ and belong to a separate session, per `D-003` and the R3 precedent.
 ### Next Review Trigger
 
 Student resubmission of V02 → `18_REVIEW/V02/V02_REVIEW_R2.md`. **V03 stays closed.**
+
+---
+
+## 2026-08-10 — Remediation of V02 (Review R1)
+
+### Objective
+
+Address the ten required corrections from `18_REVIEW/V02/V02_REVIEW_R1.md`
+(`REVISE`, HIGH — 0 critical, 1 major, 5 minor). **Fix-only pass.** No review verdict is
+rendered here; R2 belongs to a fresh session per `D-003`.
+
+### Findings Addressed
+
+- **[E06/E19 / MAJOR] Homework 11a markup contradicts the chart it cites** → markup
+  **redone from pixel measurement** of `charts/USDCHF_1H_2026-08-10_tradingview-fxcm.png`;
+  the invalid first pass preserved in place as
+  `SUPERSEDED — INVALID READING (R1 MAJOR 1)` per `REMEDIATION_PROTOCOL.md` §2. The
+  "at least 3 days" confirmation is **withdrawn**. The `±5 pips` accuracy claim is
+  withdrawn as untrue and replaced with a measured **±0.5 pip**.
+- **[E20 / MINOR] Occurrence counts in `V02_SOURCE_NOTES.md` §3** → recounted by regex
+  over the transcript's verbatim body only: "second leg" `~12`→**21**; "the box"/"blue
+  box" `6`→**9**; "level count / counting the levels" `2`→**1**. Independently
+  reproduced, not copied from the review.
+- **[E01/E16 / MINOR] Two ASR repairs made silently inside quotation marks** → disclosed
+  at the point of quotation with the transcript's verbatim wording, items 61 and 89.
+  **A third undisclosed repair was found in the same quote** (`[00:45:39]` "That will
+  draw" → "I will draw") and is disclosed too, along with the fact that item 61 silently
+  merges two markers 7 s apart.
+- **[E20 / MINOR] `CONTRADICTIONS.md` STATUS** → `UNRESOLVED: 3 (C-001 foundational;
+  C-003; C-004)`.
+- **[E20 / MINOR] `COURSE_PROGRESS.md` PHASE STATUS Phase 1** → `⛔ Blocked — no source
+  videos` → `🔄 In progress`.
+- **[E20 / MINOR] TradingView history figure** → `~7 months` withdrawn as unsourced;
+  reconciled against the evidence screenshot.
+- **[NOTE 9] Probable fourth "mayonnaise"** at `[00:05:00]` ("manays") → recorded as
+  **probable, not confirmed**, in `V02_SOURCE_NOTES.md` §3 and `A-020`.
+
+### Work Redone (not edited)
+
+The 11a chart reading was **re-derived from the image**, not adjusted:
+
+- Candle pixels selected by TradingView's exact body colours (±8).
+- **Artifact caught:** the dashed current-price line at `y=434` is drawn in the *exact*
+  bullish body colour and spans the chart. Uncorrected it reported the high of three
+  separate days as exactly `0.81025` — the current price. Removed by requiring vertical
+  continuity with `y=433`/`y=435`.
+- Price axis calibrated by least squares over 13 unobstructed label centres:
+  **52.27 px per 0.00100**, max residual **0.10 pip**.
+- Day boundaries taken from the x-axis label lattice (bar pitch 6 px; labels centred on
+  each day's first bar): Mon–Thu 24 bars, Fri 21, Sun 3.
+- **Self-validation:** measured daily open equals the previous day's close on all six
+  boundaries. This is what the first pass lacked — it had no check at all.
+
+Corrected week (USD/CHF 1H FXCM, UTC): week low **0.80552** Sun 2 Aug 22:00; week high
+**0.81356** Thu 6 Aug 15:00; Monday's high **0.81151** at 15:00 (first pass said
+`~0.8130`, a price not traded that day); the sharp rise the first pass placed on Friday is
+**Thursday's**, and Friday in fact opened at its high 0.81291 and fell to 0.80564.
+
+### C-001 handling
+
+Price held below Monday's high for **exactly 72 hours** before exceeding it. Recorded in
+`CONTRADICTIONS.md` as **explicitly non-resolving**: three defensible counting conventions
+give three different answers from the same series, and the choice of Monday's high as
+"the level" is the reader's — `A-004` holds that the course's "level" is an ordinal leg,
+not a price. **No day-count value is committed anywhere.**
+
+### Containment preserved
+
+R1 noted the error did not propagate. That was preserved deliberately: corrected numbers
+were added **only** to the homework file, `V02_MASTERY_REPORT.md` §B (which cited the
+withdrawn claim), and `CONTRADICTIONS.md` (as a non-resolving datum, which R1 required).
+`V02_SOURCE_NOTES.md` and `V02_INTERPRETATION.md` still do not cite the homework, and no
+new claim was introduced anywhere on the strength of one week.
+
+### Flagged, not fixed
+
+`V02_SOURCE_NOTES.md` §3 and `V02_TRANSCRIPT.md` both state `PFH`/`PFL` *"each appear
+once"*. Counting the verbatim body: the **abbreviations appear zero times**; spelled out,
+"peak formation high" once and "peak formation low" twice. R1 recorded verifying this
+claim, so it is **left unedited and escalated to R2** rather than silently corrected.
+
+### Git
+
+Explicit paths only (I-009): `05_HOMEWORK/V02/V02_HOMEWORK.md`,
+`03_LESSON_NOTES/V02_SOURCE_NOTES.md`, `07_MASTERY_REPORTS/V02_MASTERY_REPORT.md`,
+`11_CONTRADICTIONS/CONTRADICTIONS.md`, `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`,
+`00_SYSTEM/COURSE_PROGRESS.md`, `LOG.md`, `CHANGELOG.md`.
+**`18_REVIEW/` was not touched** — it is reviewer-owned.
+
+### Next Review Trigger
+
+`18_REVIEW/V02/V02_REVIEW_R2.md`, by a **fresh session**. R2 should re-measure the chart
+independently rather than accept the new pipeline's self-description. **V03 stays
+closed.**

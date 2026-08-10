@@ -10,8 +10,9 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 
 ```text
 RECORDS:         4   (C-001 … C-004)
-LESSONS STUDIED: 2   (V01, V02 — V02 not yet reviewed)
-UNRESOLVED:      1   (C-001 — foundational)
+LESSONS STUDIED: 2   (V01, V02 — V02 reviewed R1: REVISE, in remediation)
+UNRESOLVED:      3   (C-001 foundational; C-003; C-004)
+RESOLVED/OTHER:  1   (C-002 — STATED EXCEPTION, condition unmeasurable)
 ```
 
 > **UPDATED 2026-08-10 (review R1, finding 6b).** This block previously read
@@ -23,6 +24,19 @@ UNRESOLVED:      1   (C-001 — foundational)
 > LESSONS STUDIED: 1`, accurate when written and stale the moment the V02 pass added
 > `C-003` and `C-004`. Same staleness class (`E20`), same file, second occurrence. The
 > counts above are arithmetic over the records the file contains.
+>
+> **UPDATED again 2026-08-10 (V02 review R1, finding 4).** `UNRESOLVED` read `1 (C-001)`
+> while the INDEX below showed **three** `UNRESOLVED` records — C-001, C-003 and C-004.
+> Introduced by the R3 edit that was itself correcting this same block. **This is the
+> fourth occurrence of this staleness class in this one file**, so the cause is now
+> treated as structural rather than as four separate slips: the STATUS block duplicates
+> information that already exists in the INDEX table, and a hand-maintained duplicate of
+> a growing table goes stale by default.
+>
+> **Standing rule adopted:** every value in this STATUS block is arithmetic over the
+> INDEX table immediately below, and **the INDEX is the authority**. Any session touching
+> this file recounts the block from the INDEX rather than incrementing it from memory. If
+> the two ever disagree again, the INDEX wins and the block is the defect.
 
 `C-001` and `C-002` are **intra-lesson** contradictions within V01, and both originate
 with the instructor rather than with the reading of him. `C-001` (how long price runs away from
@@ -342,6 +356,51 @@ course") more likely, and explanation 4 ("a later lesson refines it") less likel
 range appears to be how the course talks about this quantity, not a slip in V01.
 
 C-001 remains `UNRESOLVED` and remains foundational. Re-test at V03.
+
+### Chart datum from V02 homework 11a — recorded, NOT counted as support
+
+**Added 2026-08-10 during V02 R1 remediation.** This entry exists so the datum is not
+lost. It is **not** evidence for or against any day count, and nothing anywhere may cite
+it as such.
+
+The V02 homework markup (`05_HOMEWORK/V02/V02_HOMEWORK.md` §1) originally stated that a
+real USD/CHF week held away from the Monday high *"Tuesday through Thursday — about three
+days — consistent with the printed 'For At Least 3 Days'"*. **That statement was false and
+is withdrawn** (V02 review R1, MAJOR 1): the markup had misread the chart, and price
+traded back *above* the Monday high on Thursday.
+
+The chart has since been re-measured from the committed PNG (method: `V02_HOMEWORK.md`
+§1.1; ±0.5 pip, self-validating on day boundaries). The corrected measurement:
+
+| | |
+|---|---|
+| Level taken | Mon 3 Aug 2026 high, **0.81151**, set `15:00` UTC |
+| First hourly bar above it | Thu 6 Aug 2026 `15:00` UTC, high **0.81356** |
+| Elapsed | **72 hours = exactly 3.00 days** |
+
+**Why this resolves nothing.** The same price series yields 2, 3 or 3 days depending on
+the counting convention used (hours elapsed / whole days closing below / days to the first
+daily close above) — and *the counting convention is exactly what C-001 is a contradiction
+about*. A week landing on precisely 72 hours can be read into or out of "at least three
+days" at will.
+
+More fundamentally: **"the level" here was selected by the reader, not by the
+instructor.** `A-004` records that the course's "level" is an ordinal leg, not a price
+line, and the instructor never says the level is the prior swing high. Taking Monday's
+high as the level is an unsourced choice, so the test measures a hypothesis the course
+did not state.
+
+```text
+EFFECT ON C-001: NONE.
+n = 1, on a substituted 2026 week, against a self-selected level and a
+self-selected counting convention. Does not resolve. Does not refute.
+NO DAY-COUNT VALUE IS COMMITTED ANYWHERE AS A RESULT OF THIS DATUM.
+```
+
+**Precondition for this test ever counting:** `A-004` must first settle what "the level"
+is as a price. If it does, the measurement pipeline in `V02_HOMEWORK.md` §1.1 is reusable
+and this week becomes the first observation of the manual backtest (dimension G), which
+`V02_REVIEW_R1.md` recommends. Until then it is an anecdote with a decimal point.
 
 ---
 

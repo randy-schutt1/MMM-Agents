@@ -1638,6 +1638,25 @@ A moving average plotted on the instructor's chart, referred to only by this nic
 | V02 | `[00:19:46]` | "That one in this example paid out because there was enough distance between the entry and the mayonnaise to make it worth your while." |
 | V02 | `[00:25:18]` | "Consolidates, straight rise out of here. Right back to the mayonnaise." |
 | V02 | `[00:25:45]` | "So now, support/resistance, you can use the low as resistance and look for an M formation here. And it just so happens to coincide with the mayonnaise." |
+| V02 | `[00:05:00]` | ⚠ **PROBABLE, NOT CONFIRMED.** ASR: "you can go, oh man, Steve, this looks like perfect pins to the **manays**." |
+
+> **Added 2026-08-10 (V02 review R1, finding 9).** `[00:05:00]`'s *"manays"* is very
+> likely a fourth "mayonnaise", but it is **a different string in the transcript and no
+> audio re-check has been performed**, so it is recorded as probable and is *not* adopted
+> as a confirmed fourth instance. Per `REVIEW_PROTOCOL.md` §15, an attractive reading is
+> not promoted to certain because it is convenient.
+>
+> **Why it is worth recording anyway.** It is the only usage in which the average behaves
+> as a **magnet that price travels to** — "perfect pins to the manays" — rather than as a
+> support/resistance reference (`[00:25:45]`) or a distance measure (`[00:19:46]`). If it
+> is genuine it slightly strengthens candidate 2 below (the slowest/most prominent
+> average), because a magnet across a multi-hour move suits a slow average. **It does not
+> change the status**, which stays `DO NOT CODE`.
+>
+> Also noted: the surrounding context is a **short** setup — `[00:04:56]` "You should not
+> be looking for longs is what I'm saying" — so the pin is downward to the average, not a
+> bounce off it. Recorded because direction would matter if this were ever coded, and it
+> is the sort of detail that gets lost when a probable reading is later promoted.
 
 ### Why it matters more than a nickname should
 

@@ -78,9 +78,26 @@ second-leg trades.
 
 I applied the vocabulary to an unseen USD/CHF week (`05_HOMEWORK/V02/V02_HOMEWORK.md`
 §1) and produced a plausible markup. **That is not recognition.** There is no answer key
-for that week, so nothing confirms my labels are right, and the exercise surfaced a real
-ambiguity I could not resolve — the decisive extreme fell on Monday, in a lesson that
-locates the anchor midweek.
+for that week, so nothing confirms my labels are right.
+
+> **CORRECTED 2026-08-10 (V02 review R1, required correction 4).** This paragraph
+> continued: *"…and the exercise surfaced a real ambiguity I could not resolve — the
+> decisive extreme fell on Monday, in a lesson that locates the anchor midweek."*
+> **That is withdrawn.** The markup it rested on had misread the chart (R1 MAJOR 1). On
+> re-measurement, **the week's decisive extreme is on Thursday 6 Aug** — the week's high,
+> 0.81356 at 15:00 UTC. Monday's high was 0.81151, the week's *first* extreme, not its
+> decisive one.
+>
+> **The observation that survives is a different and better one.** Thursday makes the
+> week's high at 15:00 and its own low at 02:00 — so the day that terminates the downward
+> legs and the day that produces the week's largest advance are **the same day**, hours
+> apart. The instructor's scheme labels "Level 3", "Reverse" and the terminal extreme as
+> distinct structural events; it has **no label for them collapsing onto one day**. That
+> is a genuine gap in the taught scheme, and unlike the withdrawn claim it is measured.
+>
+> **The grade does not change. Dimension B remains FAIL** — and the correction makes the
+> FAIL better-founded, not worse: the first pass could not identify the week's extremes
+> correctly, which is precisely what recognition would require.
 
 Per `MASTERY_STANDARD.md`'s honesty rule I will not claim recognition demonstrated only
 on my own unverified markup.
@@ -253,3 +270,98 @@ testable rule, and the honest disposition is to say so.
    assigned 2012 week acceptable, or should it have been `DEFERRED` outright?
 6. **My §2 conclusion** that V02 states no complete testable rule — the same finding as
    V01, and a reviewer should confirm I have not simply repeated V01's verdict by habit.
+
+---
+
+## Revision R1 — 2026-08-10
+
+Appended per `REMEDIATION_PROTOCOL.md` §3.5. **This report is not overwritten.** All ten
+required corrections from `18_REVIEW/V02/V02_REVIEW_R1.md` are applied.
+
+### The MAJOR finding, in my own words
+
+The one place this lesson's work left the documents and touched a chart, it read the
+chart wrong — and the wrong reading produced a **false confirmation of `C-001`**, the
+project's foundational unresolved contradiction. That is the worst available outcome for
+an error in this lesson, and the reviewer is right that it is worse than the pip counts
+make it look.
+
+The root cause is not carelessness about one number. It is that **I applied two different
+evidential standards in the same session without noticing.** Every claim drawn from the
+transcript carries a timestamp and was verified against the marker. Every price drawn
+from the chart was eyeballed off axis ticks and written down as though it had been
+measured — and then a tolerance (`±5 pips`) was asserted for it that had never been
+tested. A chart is a source document. It did not get the discipline a source document
+gets.
+
+### What was redone rather than reworded
+
+| Item | Action |
+|---|---|
+| 11a markup | **Redone from measurement.** Original preserved in place, marked `SUPERSEDED — INVALID READING (R1 MAJOR 1)`. New reading in `V02_HOMEWORK.md` §1.2, method in §1.1. |
+| Measurement method | New — candle-pixel detection, least-squares axis calibration (52.27 px/0.00100, max residual 0.10 pip), day boundaries from the x-axis label lattice. Self-validates: measured open = prior close on all six day boundaries. |
+| "three days" confirmation | **Withdrawn.** Replaced by the measured result and an explicit statement of why it resolves nothing (`V02_HOMEWORK.md` §1.3). |
+| `±5 pips` accuracy claim | Withdrawn as untrue. Corrected table states **±0.5 pip**, derived from ±1 px quantisation plus calibration residual, not asserted. |
+| §B "decisive extreme fell on Monday" | Corrected — it fell on **Thursday**. Replaced with the observation that survives. Grade unchanged: **FAIL**. |
+
+### What the corrected week actually showed
+
+Price held below Monday's high for **exactly 72 hours** before exceeding it. I want to be
+explicit that this is *not* the vindication it could be dressed up as. Three defensible
+counting conventions give three different answers from the same series, and the choice of
+Monday's high as "the level" is mine, not the instructor's — `A-004` says the course's
+"level" is an ordinal leg, not a price. **Effect on C-001: none.** It is recorded in
+`CONTRADICTIONS.md` under that framing and no day-count value is committed anywhere.
+
+Recording a 72-hour result and then declining to claim it is the correct handling, and it
+is the same discipline that should have been applied the first time.
+
+### Scope control
+
+The reviewer noted the error **did not propagate** — neither `V02_SOURCE_NOTES.md` nor
+`V02_INTERPRETATION.md` cites the homework, and `C-001`'s record was built from the
+transcript. **That containment is preserved deliberately.** The corrected numbers were
+added *only* to the homework file (source), the mastery report §B (which cited the wrong
+claim), and `CONTRADICTIONS.md` (explicitly as a non-resolving datum, because R1 required
+the result be recorded either way). Nothing was retro-fitted into the source notes or the
+interpretation, and no new claim was introduced anywhere on the strength of one week.
+
+### Minor findings
+
+All five applied: occurrence counts recounted by regex over the verbatim body (2–5, 6→9,
+2→1); both ASR repairs disclosed at the point of quotation with the transcript's actual
+wording, plus a third repair in the same quote that R1 did not catch; `CONTRADICTIONS.md`
+`UNRESOLVED: 3`; `COURSE_PROGRESS.md` Phase 1 row; TradingView history figure reconciled.
+
+Findings 4 and 5 are the same defect — a hand-maintained summary duplicating state held
+elsewhere in its own file — and R1 notes finding 4 is the **fourth** occurrence of it. I
+have not just corrected the values; each file now names which block is **authoritative**
+so the duplicate is reconciled rather than re-incremented. Whether that is sufficient is a
+question for R2.
+
+### Carried to R2 — not fixed, flagged
+
+While recounting §3 I found something R1 did not raise and **explicitly endorsed**:
+`V02_SOURCE_NOTES.md` §3 and `V02_TRANSCRIPT.md`'s "One thing was removed" both state that
+`PFH` and `PFL` *"each appear once"* in the hour. Counting the verbatim body, the
+**abbreviations appear zero times**; spelled out, "peak formation high" occurs once and
+"peak formation low" twice. I have **not** edited this — it is outside the required
+corrections, it sits in a source-adjacent file, and R1 recorded verifying it. R2 should
+settle it. Flagging rather than silently fixing, because a reviewer needs to know when a
+check they signed off on does not reproduce.
+
+### Dimension grades after remediation
+
+Unchanged. **B remains FAIL**, and is now better-founded. F (11a) moves from
+`ATTEMPTED — UNGRADED` to `REDONE FROM MEASUREMENT — LABELS STILL UNVERIFIED`; 11b stays
+`DEFERRED`; G stays `DEFERRED`; A-019 stays open; the 2026-week substitution stands.
+
+### What I am asking R2 to audit
+
+1. **Re-measure the chart independently.** Do not accept my §1.1 pipeline because it
+   describes itself as reproducible — the last table also described itself as ±5 pips.
+2. Whether §1.3 genuinely declines to claim the 72-hour result, or whether it claims it
+   while saying it does not.
+3. Whether adding the datum to `CONTRADICTIONS.md` at all was correct, or whether the
+   safer disposition was to leave `C-001` untouched by homework entirely.
+4. The `PFH`/`PFL` count above.
