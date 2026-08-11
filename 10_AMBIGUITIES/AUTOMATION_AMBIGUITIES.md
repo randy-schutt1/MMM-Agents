@@ -9,11 +9,19 @@ Template: `00_SYSTEM/TEMPLATES/AMBIGUITY_TEMPLATE.md`
 ## STATUS
 
 ```text
-RECORDS:         41   (A-001 … A-041)
-LESSONS STUDIED:  4   (V01, V02, V03, V04 — V03 REVISE R1 minors-only; V04 not yet reviewed)
-RESOLVED:         2   (A-003 — "pendings", on visual evidence at [00:40:25];
-                       A-026 — HOW = High Of the Week, spoken expansion V03 [00:26:40])
-DO NOT CODE:     39
+RECORDS:         49   (A-001 … A-049)
+LESSONS STUDIED:  5   (V01, V02, V03, V04 complete; V05 awaiting review)
+RESOLVED:         3   (A-003 — "pendings", on visual evidence at [00:40:25];
+                       A-026 — HOW = High Of the Week, spoken expansion V03 [00:26:40];
+                       A-043 — MT4 text tool = `Text` (icon A), not `Text label` (icon T),
+                               on the displayed Customizing-toolbar dialog. PLATFORM
+                               artifact, not methodology — see the record for why D-025
+                               does not bar this closure)
+DO NOT CODE:     46
+
+V05 NOTE: V05 is 100% GUEST material (D-025). It opened A-042…A-049 and added
+evidence to six earlier records. It CLOSED no record about the method, and
+under D-025 it cannot. A-043 is closed on a platform dialog, not on doctrine.
 ```
 
 > **UPDATED 2026-08-10 (review R1, finding 6b).** This block previously read
@@ -2794,3 +2802,478 @@ Kept together so the V04 pass is auditable as a unit.
 | **A-033** — "outside structure" | `[00:21:04]`–`[00:21:16]` *"Outside structure is when the dealer creates a spike vector to the high and then trade off that level in here with these candles. Outside structure, high outside structure."* Immediately followed by `[00:21:17]` *"Let me see if I got a I'll pull a flash card up for you"* and `[00:21:20]` *"Leave that"* — **the promised card is never shown** | **First definition attempt; still not codable.** V04 is the first lesson to answer "what is outside structure" directly, and the answer names two components: a **spike vector to the high**, then **trading off that level**. That is genuine progress over V03, where the term appeared only as a printed criterion. It remains `DO NOT CODE` because the "structure" whose outside is meant is still never bounded — the definition describes the dealer's *behaviour*, not the chart *boundary* a machine would test. The withdrawn flashcard is a near miss worth noting: the visual that would have settled it was queued and abandoned on air. |
 | **A-005** — "the trading zone" | `[00:26:15]`–`[00:26:23]` *"We're going to work on the trading zone. We're going to start talking about the 22, 33 trades, multi session M and W's"* | **Deferred a fourth time (V01 → V02 → V03 → V04).** Now promised as upcoming in two consecutive lessons. Also forward-points `A-023` (33 trade) and `A-024` (22 trade), which are likewise named-not-taught. |
 | **A-019** — session times | `[00:21:33]`–`[00:21:37]` *"From one to five AM New York, one to four AM New York, four or five hours. Take a break from eight to 11 New York time"*; `[00:21:41]` *"nothing's changed"* | **First timezoned times in the corpus — and they are not session boundaries.** Unlike every prior reference, these carry an explicit zone ("New York"). But they define **when to be at the screen**, not when a session starts or ends, and the instructor immediately marks them as a restatement. **No session-boundary table exists anywhere in V04**, spoken or printed — checked against all 1,037 sweep frames. `A-019` is unaffected on its actual question. |
+
+---
+
+# V05 RECORDS — A-042 … A-049
+
+> ## ⚠ EVERY V05 RECORD BELOW RESTS ON `GUEST` EVIDENCE
+>
+> V05 has **no instructor segment at all** (`V05_SOURCE_NOTES.md` header). Under
+> `DECISIONS.md` **D-025** nothing in it may close an `A-xxx`, and nothing in it may be
+> cited for or against an instructor rule. The records below are therefore of two kinds,
+> and the difference matters:
+>
+> - **Records about the METHOD** (`A-042`, `A-044`, `A-047`, `A-048`, `A-049`) — opened by
+>   V05 and **not closable by V05**. They stay `DO NOT CODE` and will need an instructor
+>   statement, from another lesson, to move.
+> - **Records about THIS LESSON'S OWN ASR or about a PLATFORM ARTIFACT** (`A-043`, `A-045`,
+>   `A-046`) — these ask *"what word was said"* or *"which button was meant"*, not *"what is
+>   the rule"*. A printed slide or a displayed dialog can answer those, because the artifact
+>   **is** the evidence. `A-043` is resolved on exactly that basis and the reasoning is set
+>   out in its record.
+
+---
+
+## A-042 — the operative detail is repeatedly deferred to the **DMR**, which this library does not contain
+
+### Course Meaning
+
+`DMR` is an abbreviation the V05 presenter uses nine times for a separate programme with its
+own video library, its own coaches and its own weekly cadence. It is **never expanded** and
+never described except by what it contains.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V05 | `[00:03:22]`–`[00:03:28]` | *"he sends me his accountability. That's one of the things we do with the DMR after you finish your session."* |
+| V05 | `[00:05:22]` | *"I've been telling people the DMR. I have my flashcards sitting on my table."* |
+| V05 | `[00:10:51]`–`[00:10:58]` | *"we covered that in the DMR last week on **levels and reset**. It is still in the DMR section videos."* |
+| V05 | `[00:26:45]`–`[00:26:51]` | *"We talk about that stuff in the DMR in detail. And what are the **namable pattern**? How big those **rare refracts** [railroad tracks] are supposed to be?"* |
+| V05 | `[00:33:17]` | *"In the DMR, we're going to be talking about **signature trades** and stuff like that… **Checklist**."* |
+| V05 | `[00:56:48]` | *"We call these **traps** in the DMR right here."* |
+| V05 | `[01:01:39]` | *"for the DMR, I kind of use the ellipse to show the moving average crossover"* |
+| V05 | `[01:07:03]` | *"He actually shows you how to do it by using an **EA** in the DMR"* |
+
+### Assessment
+
+**This is the most consequential record V05 opens, and it is not really about a word.**
+
+Four of the nine deferrals point at questions the bootcamp videos have left open across five
+lessons: **levels and reset** (`C-001`, `A-016`-adjacent), **what makes a pattern nameable**
+(`A-044`, and `A-011`'s M/W anatomy), **how big railroad tracks must be**, and **traps**
+(`A-049`). The presenter's consistent position is that the *detail* lives in the DMR and the
+bootcamp gives the *shape*.
+
+If that is right — and it is one guest's repeated testimony, not an established fact — then
+**some open records may be unresolvable from this corpus in principle**, not merely
+unresolved so far. The project currently draws no distinction between those two states, and
+it should. That is a governance question, not a coding question.
+
+**What must not be done:** treat the DMR's existence as licence to fill gaps by inference.
+`D-010`'s machine-rule firewall and `D-008` both point the other way — an unavailable source
+is a reason to leave a record open, never a reason to guess what it said.
+
+### Current Status
+
+```text
+DO NOT CODE — and, unusually, may be UNRESOLVABLE from this library.
+Flagged to REVIEW_INDEX.md as a corpus-scope question for the owner.
+```
+
+### Required Research
+
+1. Whether any later bootcamp lesson (V06–V21) defines levels/reset, nameable patterns or
+   traps **directly**. If one does, this record narrows sharply.
+2. Whether `DMR` is ever expanded anywhere in the corpus. It is not expanded in V01–V05.
+3. Owner decision: does the project acknowledge an out-of-corpus dependency, and if so how
+   are affected records dispositioned? `D-019` already separates `NOT APPLICABLE` from
+   `DEFERRED`; this may need a third state.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §2c |
+| Interpretation | `03_LESSON_NOTES/V05_INTERPRETATION.md` §2.3 |
+| Decision | `DECISIONS.md` D-008, D-010, D-019, D-025 |
+
+---
+
+## A-043 — which MT4 text tool is meant: "the one that says E / T / A"
+
+### Course Meaning
+
+Instruction on which of MT4's two text objects to use for chart labels.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V05 | `[00:09:52]`–`[00:10:00]` | *"And you're going to use that text. There's one that says **E** and one that says **T**. Just use the one that says **A**. Don't use the one that says **T**."* |
+| V05 | `[00:16:43]` | *"Just drop the E in there and just type whatever you want under text."* |
+| V05 | `[00:39:31]` | *"And then I click on the **E**, which is a text."* |
+| V05 | `[01:01:35]` | *"I use the trend line. I use **E** and I use the box."* |
+| V05 | frame `V05_00-06-20` (+ `hires/`) | MT4 **"Customizing toolbar"** dialog. **Available:** … `Rectangle`, `Triangle`, `Andrews' Pitchfork`, `Cycle Lines`, **`Text label`** (icon: a boxed **T**). **Selected:** `Crosshair`, `Vertical Line`, `Horizontal Line`, `Trendline`, `Ellipse`, **`Text`** (icon: a plain **A**), `Arrows` |
+
+### Assessment
+
+**RESOLVED on visual evidence, and the basis is stated carefully because the resolution
+comes from guest material.**
+
+The dialog shows MT4 carries exactly **two** text objects and that their toolbar icons are
+literally the letters **`A`** (`Text`, anchored to the chart) and **`T`** (`Text label`,
+anchored to the window). The spoken instruction *"use the one that says A. Don't use the one
+that says T"* therefore reads unambiguously as **use `Text`, not `Text label`**, and the
+recurring *"E"* is an ASR mishearing of *"A"* — the same vowel confusion the transcript makes
+elsewhere.
+
+**Why `D-025` does not bar this closure.** D-025 forbids guest material from closing records
+about the **methodology**, and from being cited for or against an **instructor rule**. This
+record is neither: it asks which button a guest meant, and it is answered by the **dialog he
+displayed**. The evidence is a printed artifact — D-025's expressly admissible class — and
+nothing about the market, the method, or any instructor statement turns on it. Closing it
+here creates no precedent for closing a method record on guest evidence, and none is claimed.
+
+**A reviewer who disagrees** should downgrade this to `EXTENDED, NOT CLOSED`; nothing
+downstream depends on it, because the tool choice affects only how a label anchors.
+
+### Current Status
+
+```text
+RESOLVED — Text (icon A), not Text label (icon T). Descriptive/platform evidence only.
+Not a coding rule; recorded because the transcript is self-contradictory here.
+```
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §3b, §9a R4 |
+| Visual | `04_SCREENSHOTS/V05/INDEX.md` frame 4a |
+| Decision | `DECISIONS.md` D-025 |
+
+---
+
+## A-044 — what makes a second leg a "nameable pattern"
+
+### Course Meaning
+
+The V05 presenter's own stated entry filter: the second leg must be a pattern he can *name*.
+The set of admissible names is never enumerated and the boundary is never given.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V05 | `[00:18:54]`–`[00:19:08]` | *"For me personally, I like to have my second leg as a **nameable pattern**. I have to be able to name my second leg. If it's not, there's just a bunch of little candles like this… Forget it's all garbage."* |
+| V05 | `[00:26:30]`–`[00:26:41]` | *"A namable pattern. This garbage right here. It's not a namable pattern. There's a bunch of candles going up and down. There's nothing there. You wait."* |
+| V05 | `[00:34:45]`–`[00:34:52]` | *"Second leg is railroad tracks. Nammable pattern… Take the trade."* |
+| V05 | `[00:26:45]`–`[00:26:51]` | *"We talk about that stuff in the DMR in detail. And what are the namable pattern?"* — **deferred out of the corpus** |
+| V05 | `[00:41:40]` | *"It's an anal pattern."* — ASR failure for "It's a nameable pattern" |
+
+### Assessment
+
+**A subjective filter whose author explicitly defers its definition** (`A-042`). The only
+positive instances given are `railroad tracks`, `shooting star` and `hammer`; the only
+negative instance is *"a bunch of little candles"*. No count, size, ratio or boundary is
+stated anywhere.
+
+It is also **guest normative material**, so under `D-025` it is excluded from doctrine
+regardless of whether it could be defined. It is recorded because the *concept* — that the
+second leg must be a recognisable named shape — is close to the instructor's own second-leg
+requirement (V04 `[00:15:49]`), and a future session must not quietly merge the two. **They
+are different claims by different speakers and only one is doctrine.**
+
+### Current Status
+
+```text
+DO NOT CODE — subjective by construction; definition deferred to the DMR (A-042).
+GUEST material: excluded from doctrine under D-025 independently of its vagueness.
+```
+
+### Required Research
+
+Whether the instructor ever states a nameability requirement in his own words, and if so
+whether he enumerates the admissible patterns. `A-011` (M/W anatomy undefined) is the same
+gap on a different object.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §5a |
+| Related records | `A-011`, `A-042`, `A-049` |
+
+---
+
+## A-045 — "COW cow is a quart of wood"
+
+### Course Meaning
+
+One entry in a list of on-chart abbreviations the presenter writes beside his markups.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V05 | `[00:21:22]`–`[00:21:36]` | *"These little abbreviations like **RR** is railroad tracks. **SS** is shooting star… Evening star will be **ES**. **COW cow is a quart of wood**. And morning star will be **MS**."* |
+
+### Assessment
+
+**Unrecoverable ASR garble, and deliberately not glossed.**
+
+The four neighbouring abbreviations are clean and unambiguous (`RR`, `SS`, `ES`, `MS`), which
+makes the corruption of this one conspicuous rather than systematic. The token `COW` appears
+**nowhere else in V01–V05**, and no curated V05 frame prints it, so there is no second
+instance to triangulate from.
+
+**No candidate expansion is offered here.** Guessing one would manufacture a term into a
+project whose central failure mode has been fabricated terminology (`Q-001`…`Q-005`), and a
+plausible-looking gloss is worse than a declared gap because it would survive into the
+concept library unchallenged.
+
+### Current Status
+
+```text
+DO NOT CODE — token unrecoverable. Recorded so a future session does not invent an
+expansion. Not load-bearing: nothing downstream references COW.
+```
+
+### Required Research
+
+An audio re-check at `[00:21:33]` with a better model. Cheap and not done here. If the audio
+is genuinely unclear, the record should be closed as **permanently unrecoverable** rather
+than left open indefinitely.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §5e |
+
+---
+
+## A-046 — the shooting-star / evening-star answer contradicts itself
+
+### Course Meaning
+
+An audience question asks whether *hammer* and *morning star* are the same thing. The answer
+given assigns **opposite names to the same description** roughly twenty seconds apart.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V05 | `[00:57:57]` | Question: *"All the terms hammer and morning are essentially the same thing."* |
+| V05 | `[00:58:06]`–`[00:58:11]` | *"See like this, I call it a **shooting star** because the **pin is to the downside**."* |
+| V05 | `[00:58:16]`–`[00:58:27]` | *"if it comes up between the pin above… then that's a **shooting star**. All right, but if the **pin was facing down**, then it would be an **evening star**."* |
+
+### Assessment
+
+The first clause makes *pin to the downside* a **shooting star**; the last makes *pin facing
+down* an **evening star**. Both cannot hold. Standard candlestick usage puts the long wick
+**above** the body for a shooting star, which agrees with neither clause cleanly.
+
+Whether this is ASR damage or the speaker misspeaking **cannot be determined from the
+transcript**, and no curated frame prints a labelled diagram of the four shapes.
+
+**Recorded verbatim and not repaired.** The specific failure this record exists to prevent is
+a future session "fixing" the passage by adopting whichever half matches its expectations —
+which would silently install a definition the course never gave. It is also guest material,
+so it could not define a course term in any case.
+
+### Current Status
+
+```text
+DO NOT CODE — internally inconsistent as transcribed. GUEST material, so it cannot
+define a course term regardless. DO NOT repair by selecting one clause.
+```
+
+### Required Research
+
+Audio re-check at `[00:58:06]`–`[00:58:27]`. Even a clean transcription may leave the
+inconsistency intact, in which case it is the speaker's and should be recorded as such.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §5f |
+| Interpretation | `03_LESSON_NOTES/V05_INTERPRETATION.md` §5.4 |
+
+---
+
+## A-047 — "M, A1, A2"
+
+### Course Meaning
+
+A three-part structure the V05 presenter attributes to the instructor and treats as familiar
+shorthand, and which appears as printed chart labels.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V05 | `[00:16:11]`–`[00:16:13]` | *"I know Steve taught us something. **M, A1, A2**, right?"* |
+| V05 | frames `V05_00-25-54`, `V05_01-04-58` ff. | **`A1`** and **`A2`** printed as yellow-boxed chart labels on the "MM Full Cycle drawn out" slide and on later live-MT4 markups, placed at structural highs |
+
+### Assessment
+
+**`A1` and `A2` appear nowhere in V01–V04** — not spoken, not printed. V05 introduces them,
+attributes them to the instructor, and never expands them.
+
+The frames **extend** the record: they establish that the labels **exist, are written on
+charts, and mark structural points**. They do not say what `A` stands for or how `A1` is
+distinguished from `A2`.
+
+**Under `D-025` this cannot close.** The attribution to the instructor is itself guest
+testimony — a guest's report of an instructor's teaching is still a guest statement — so it
+cannot even establish that the instructor uses these labels, only that the presenter believes
+he does.
+
+Plausible readings exist (`A` for *anchor*, given `A-010`; or a leg-labelling scheme). **None
+is adopted**; the corpus contains no evidence to choose between them.
+
+### Current Status
+
+```text
+DO NOT CODE — expansion unknown, attribution unverifiable, cannot close on guest
+evidence. Extended by V05 frames; not narrowed.
+```
+
+### Required Research
+
+Whether `A1`/`A2` appear in any instructor-presented lesson V06–V21, spoken or printed. Until
+then the terms have no standing beyond "a guest wrote them on a chart".
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §6, §9b item 6 |
+| Visual | `04_SCREENSHOTS/V05/INDEX.md` frame 17 |
+| Related records | `A-010` (anchor point / peak formation) |
+
+---
+
+## A-048 — "three to five-fifths of the high"
+
+### Course Meaning
+
+A distance the presenter wants price to travel toward a prior high before he will consider a
+setup present.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V05 | `[00:31:34]`–`[00:31:41]` | *"I like mine to come up anywhere from **three to five-fifths of the high**. It never did. It's too far away. I pass."* |
+
+### Assessment
+
+**"Five-fifths" is not a coherent quantity** in this context — five-fifths is one whole — and
+the phrase resists any reading that makes *"three to five-fifths"* a range. The most likely
+underlying words are **"three to five pips"**, which fits the sentence, fits the presenter's
+habit of quoting small pip distances (`[00:26:54]` *"10 pips"*, `[00:27:18]` *"20-pip
+candles"*, `[00:47:57]` *"25 pips"*), and fits the conclusion he draws — *"It's too far
+away. I pass."*
+
+**The repair is not made.** The audio was not re-checked at this marker, and this project does
+not smooth garble inside quotation marks (`E01`, charged against V02 R1). The same discipline
+applied to `A-041`.
+
+It is guest normative material in any case — a personal entry filter — so `D-025` excludes it
+from doctrine whether or not the number is recovered.
+
+### Current Status
+
+```text
+DO NOT CODE — quantity not recoverable as transcribed; GUEST normative regardless.
+```
+
+### Required Research
+
+A 10-second audio re-check at `[00:31:34]`.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §7 |
+| Precedent | `A-041` (same treatment of an unrepaired ASR quotation) |
+
+---
+
+## A-049 — stop hunt versus trap move: a clean discriminator the course has never stated
+
+### Course Meaning
+
+Two dealer actions the instructor uses constantly across V01–V04 — *stop hunt* and
+*trap* / *trap move* — and has **never distinguished on the record**. A V05 audience question
+forces the distinction and the guest gives a specific, testable answer.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V05 | `[01:02:22]` | Question (Cara): *"can you say something about how you can tell if candles with pins are stop and [hunt] moves or pick up pending order moves"* |
+| V05 | `[01:03:12]`, `[01:03:20]` | **Stop hunt:** *"stop hunts are usually pin bars… They'll throw a pin. **But they won't close above the moving averages.**"* |
+| V05 | `[01:04:22]`–`[01:04:27]` | *"when they're throwing pin bars all over the place like this, it's a stop hunt. **They don't really move that much.** They move, come back, they move, they come back."* |
+| V05 | `[01:03:39]`–`[01:03:46]` | **Trap move:** *"price comes above, it **closes** above the high, inducing along… And then it comes back in with a trap."* |
+| V05 | `[01:04:02]`–`[01:04:20]` | *"When they induce and trap is when they go and **close**, and they come back in and come back the other direction. Once they trap, they start moving… within one or two candles, you see a **shift bar**… they move away very quickly."* |
+| V05 | `[01:04:41]`–`[01:04:46]` | Challenged — *"A stop hunt isn't a trap move."* — he answers *"No, there's a difference between a stop hunt and a trap move."* |
+| V05 | `[01:05:53]`–`[01:06:24]` | Worked once more against the **200 EMA** |
+| V05 | `[01:06:35]`–`[01:06:40]` | *"sometimes they don't always do traps, but **traps are better moves**"* |
+
+### Assessment
+
+**The sharpest idea in V05, and it is excluded. This record exists to hold it at arm's
+length.**
+
+The discriminator has two limbs and both are mechanical: **(1)** does price *close* beyond
+the level, or merely *pin* beyond without closing; **(2)** what follows — an immediate
+directional shift within one or two candles, or continued oscillation. That is close to
+codable, which is exactly why it is dangerous.
+
+**It is `GUEST` material and `D-025` excludes it absolutely.** It may not enter
+`12_MASTER_SPEC/`, `13_MACHINE_SPEC/`, `08_CONCEPT_LIBRARY/` or any machine candidate; it may
+not be cited **for or against** any instructor statement about stop hunts; and it may not be
+merged with the instructor's usage into one rule set.
+
+**The failure mode this record guards against is specific.** A future session will encounter
+an instructor passage about stop hunts, remember this clean definition, and reconcile them.
+That would produce a rule the instructor never stated — `REVIEW_PROTOCOL.md` §17 failure
+mode 3 — and it would feel like good scholarship while doing it. **The quality of a guest
+statement is not a reason to promote it; if anything it is the reason the rule exists.**
+
+### Current Status
+
+```text
+DO NOT CODE — GUEST NORMATIVE, excluded under D-025.
+Held as a HIGH-PRIORITY RESEARCH QUESTION for V06-V21, not as a rule.
+```
+
+### Required Research
+
+Put the question to every remaining lesson: **does the instructor himself ever distinguish a
+stop hunt from a trap move, and if so on what criterion?** If he does, that statement — not
+this one — becomes the record, and this becomes corroboration at guest weight. If he never
+does, the corpus does not contain the distinction and the project must say so.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §5h |
+| Interpretation | `03_LESSON_NOTES/V05_INTERPRETATION.md` §2.4 |
+| Decision | `DECISIONS.md` D-025; `REVIEW_PROTOCOL.md` §17 failure mode 3 |
+| Related records | `A-042` (traps deferred to the DMR) |
+
+---
+
+## V05 EVIDENCE ADDED TO EXISTING RECORDS
+
+V05's transcript and its 30 screenshots bear on six earlier records. **None resolves, and
+under `D-025` none can** — V05 is wholly guest material, which may extend a record and never
+close one. Kept together so the V05 pass is auditable as a unit.
+
+| ID | V05 evidence | Effect |
+|---|---|---|
+| **A-020** — "mayonnaise" / MA nicknames | `EMA` occurs **twice** in the verbatim body — *"Nice close below the 50 EMA"* `[00:23:52]`, *"below the 200 EMA"* `[01:05:53]` — the **first genuine-audio occurrences of the token in the corpus** (V04: zero). The same objects appear as *"50 am in"*, *"the 50 M.A."*, *"the 50"*, *"moving averages"*. A crossover observation at `[00:45:38]`: *"When you notice the 50, 200 cross, you usually level two"* | **Extended with a negative datum; not narrowed.** Only **50** and **200** are ever named, and **no moving average is given a colour or a nickname anywhere in V05** — no *mayonnaise*, *mustard*, *water*, no `5`, `13` or `800`. A fourth lesson running fails `A-020`'s "Required Research" route. Stays `DO NOT CODE`. **Correction issued:** `V05_TRANSCRIPT.md` and `Q-005` both state *"EMA occurs 3 times"*; re-measured word-boundary over the verbatim body it is **twice** — the third listed item, *"closing below the 200"* `[01:06:02]`, does not contain the token. No conclusion in either file changes |
+| **A-039** — TDI is a required entry criterion never taught | `TDI` occurs 6× and is **never defined** — `[00:35:41]`, `[00:35:51]`, `[00:35:54]`, `[00:36:39]`, `[00:36:47]`, `[00:48:24]`. A slide is **titled** *"Mark up the TDI as well…"*. Trend-line usage on the panel: *"looking for shorts, the trend line goes on the top and on the top"* `[00:36:03]`. The presenter's own position: *"I don't use it anymore, but most of you guys should"* `[00:36:50]`. Frame `V05_00-36-54` at 2× prints the sub-panel header **`TDI_MMM 54.6718 55.0688 53.6150`** | **Extended, explicitly NOT narrowed.** V05 supplies the corpus's first **displayed name** for the indicator (`TDI_MMM`) and the first slide whose *title* instructs the student to mark it up — and still **no inputs, periods, bands, line names or decision rule**. A name is not a definition. Guest material cannot narrow a record about an instructor's entry criterion. **`A-039`'s prohibition on dropping condition (c) to make V04's rule testable is untouched.** Stays `DO NOT CODE` |
+| **A-032** — "shark fin" | Frame `V05_00-36-54` is **titled "Shark Fin…"** and prints **`Shark Fin`** inside a box drawn **on the oscillator sub-panel**, not on the price candles | **Located, still undefined.** V04 constrained the geometry (*"outside the band to back in"*); V05 adds **where the object lives** — it is a shape on the TDI panel. That is a genuine descriptive addition and it agrees with V04's band language. It still does not say which band, how far outside, or over how many bars. Stays `DO NOT CODE` |
+| **A-018** — `R = <number>` labels | Printed chart labels `R = 24.6`, `R = 18.8`, `R = 29.5` (frame `V05_00-25-54`) and `R = 39.0` (frame `V05_00-24-24`) | **Third lesson of printed instances, still no spoken equivalence.** V05 adds four more labels by a **third** presenter on a **third** platform, which strengthens the pattern that `R` is a routine annotation rather than a risk multiple. But V05 states **no stop and no target**, so there is nothing in this lesson to check an R-multiple reading against, and **no presenter states the equivalence in words**. Stays `DO NOT CODE` |
+| **A-010** / **A-011** — peak formation high/low, M and W | *"The anchor oblique [or peak] formation high or low is where the market makers start their move off the trapping volume"* `[00:10:33]`; *"So here's our anchor or peak"* `[00:11:58]`. Slide `V05_00-10-29` prints *"The Anchor or Peak formation High or Low…"* and *"Identify a Multi-Day, Multi Session **M or W** pattern; **3 Hits to the Hi or Lo**; Extended Peak formation and draw a BOX around the Anchor"* | **Terminology corroborated by a second independent speaker; anatomy still undefined.** The slide predicates *anchor* and *peak formation high or low* of one object, in print, matching V04 `[00:21:55]`'s spoken parallel — and it does so **symmetrically for the low side**, which V04's evidence did not. That is the closest the corpus has come to `REVIEW_INDEX` open item 2. **It cannot close it:** guest material, and D-025 bars closure. `A-011` gains nothing on M/W *anatomy* — *"3 Hits to the Hi or Lo"* is a count, not a geometry. Both stay `DO NOT CODE` |
+| **A-019** — session times with no timezone | Sessions are named — *"in Asia"* `[00:31:22]`, *"at the start of London"* `[00:24:46]`, *"in US session"* `[00:25:15]` — and **no clock time is attached to any of them.** `EST` occurs **0 times** in the verbatim body (word-boundary, case-sensitive) | **Unaffected on its actual question, and a fifth lesson of silence.** V05 uses session names as freely as V01–V04 and never bounds one. Notable because the quarantined `NOTES.md` for this very lesson asserts a full EST session clock (`Q-005`); the audio contains none. Stays `DO NOT CODE` |
