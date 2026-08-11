@@ -1769,3 +1769,76 @@ each checkpoint.
 
 **V03 independent review R1, in a fresh session.** The V04 gate is CLOSED until it
 returns; D-024 governs what reopens it.
+
+---
+
+## 2026-08-10 — Reviewer Session
+
+### Lesson
+
+V03 — independent review R1, in a fresh session (D-003 satisfied; this reviewer
+authored no V03 material).
+
+### Review Objective
+
+Independent mastery audit per REVIEW_PROTOCOL.md, run adversarially against the six
+audit items nominated in V03_MASTERY_REPORT.md §4.
+
+### Source Evidence Reviewed (first)
+
+Full read of `V03_TRANSCRIPT.md` (1,230 entries) before any student conclusion; the
+24 committed frames (5 inspected at full resolution, AJ chart re-cropped at 2×); the
+**complete 857-frame sweep**, found intact in the prior session's scratchpad,
+identity confirmed by pixel-exact match against the committed 12:39 slide,
+independently re-clustered into 76 screen states, every state visually reviewed;
+`Q-003`'s quarantined `RULES.md` opened directly and its fabrication confirmed
+verbatim; ECB reference rates fetched as an external check on the homework data.
+
+### Student Artifacts Reviewed (second)
+
+Source notes, interpretation, homework (+ raw JSON + 4 charts), mastery report,
+ambiguity records (A-026 resolution, A-029–A-036), contradiction updates (C-001–
+C-004), screenshot index, LOG/COURSE_PROGRESS/CONCEPT_INDEX, validate_project.py
+re-run.
+
+### Findings
+
+**0 CRITICAL, 0 MAJOR, 3 MINOR, 5 NOTES.** Everything load-bearing reproduced:
+425 marker citations checked for existence and 99 quote+timestamp pairs re-matched
+at exact marker resolution (all resolve — the student's 375-of-377 audit claim is
+confirmed, and its ±45 s window masked nothing); the §4e fifteen-R-label correction
+re-derived independently; A-026's "H-O-W high of the week" read directly at
+[00:26:40]; the homework's 116/116 chain validation and every derived figure
+recomputed from the committed JSON; the dataset corroborated externally (ECB fixes
+inside the harvested bar ranges, all four pairs, all five days); no DST transition
+falls inside the analysed week; **the C-004 negative claim verified on the full
+sweep — no session-times slide exists in V03** (mastery report audit item 6
+discharged). Minors: M1 ADR figures not re-derivable from committed data (E19);
+M2 transcript coverage block falsely claims "strictly monotonic, no duplicates"
+(E20 — three benign same-second duplicates); M3 the 2.5–3-day-window finding stated
+as 4-of-4 where 2-of-4 measure the taught object (E02 — scope before citing against
+C-001). Notes include the Easter-vote housekeeping slide absent from all coverage
+(N2) and the three-lesson manual-backtest debt (N4, carried open).
+
+### Required Corrections
+
+M1–M3, specified in `18_REVIEW/V03/V03_REVIEW_R1.md`. Documentation-precision only;
+no conclusion changes.
+
+### Decision
+
+**REVISE, confidence HIGH.** Under D-024 (0 critical, 0 major) the **V04 gate is
+OPEN**; the minors are owed before V03 reaches COMPLETE.
+
+### Git
+
+Explicit paths on every `git add`; staged diff read before commit; the untracked
+`05_HOMEWORK/V02/measure_usdchf_week.py` (open item 13, another session's artifact)
+left in place unstaged. Files: `18_REVIEW/V03/V03_REVIEW_R1.md` (new),
+`18_REVIEW/REVIEW_INDEX.md`, `00_SYSTEM/COURSE_PROGRESS.md`, `LOG.md`.
+
+### Next Review Trigger
+
+Student application of M1–M3 (verify at V03's next review touch, which may ride
+along with V04's R1 rather than opening a dedicated round); V04 R1 after the V04
+student pass.

@@ -11,9 +11,9 @@ stays visible with its round number.
 ## STATUS
 
 ```text
-LESSONS REVIEWED: 2
+LESSONS REVIEWED: 3
 PASSED:           2  (V01, V02)
-IN REMEDIATION:   0
+IN REMEDIATION:   1  (V03 — REVISE, minors only; V04 gate OPEN per D-024)
 AWAITING REVIEW:  0
 ```
 
@@ -103,6 +103,28 @@ failed twice in one day.
 > V02 R2 would have opened the V03 gate on its own terms and no override would have been
 > needed. Open item 9 remains **OPEN** on its mechanism ground, unchanged.
 
+V03 reviewed 2026-08-10 (R1): **`REVISE`**, confidence HIGH. **0 critical, 0 major,
+3 minor** — under D-024 the **V04 gate is OPEN**, with the minors owed before V03 reaches
+`COMPLETE`. This is the strongest student submission to date, and the review was run
+adversarially against the six audit items the mastery report itself nominated. Everything
+load-bearing reproduced: the citation audit was independently re-performed (425 marker
+citations checked for existence; **99 quote+timestamp pairs re-matched at exact marker
+resolution, all 99 resolving**), the §4e fifteen-`R =`-label correction re-derived from
+independent crops, A-026's spoken resolution read directly in a full-transcript pass, the
+homework's 116/116 chain validation and every derived table figure recomputed from the raw
+JSON, the dataset externally corroborated against ECB reference fixes on all five days and
+all four pairs, and — the round's substantive addition — **the C-004 negative claim was
+re-verified on the complete 857-frame sweep** (found intact in the prior session's
+scratchpad, identity confirmed pixel-exactly, re-clustered into 76 states, every state
+reviewed: no session-times slide exists in V03). The three minors are precision defects
+that change no conclusion: the homework's ADR figures do not re-derive from the committed
+data (E19), the transcript's coverage block claims "strictly monotonic, no duplicates"
+against three benign same-second duplicate markers (E20), and the 2.5–3-day-window
+finding is stated as 4-of-4 where only 2 of 4 measure the taught object (E02 — the datum
+must be scoped before it is cited against `C-001`). Reviewer-side housekeeping in this
+round: the DECISION TABLE below had never gained its V02 R3 row (same staleness class as
+open item 14); added with this update.
+
 ---
 
 ## DECISION TABLE
@@ -114,6 +136,8 @@ failed twice in one day.
 | V01 | REVIEW REQUIRED | R3 | PASS | 0 | 0 | ✅ |
 | V02 | REVIEW REQUIRED | R1 | REVISE | 0 | 1 | ⏳ |
 | V02 | REVIEW REQUIRED | R2 | REVISE | 0 | 0 | ⏳ |
+| V02 | REVIEW REQUIRED | R3 | PASS | 0 | 0 | ✅ |
+| V03 | REVIEW REQUIRED | R1 | REVISE | 0 | 0 | ⏳ |
 
 ### Row template
 
@@ -151,7 +175,7 @@ keeps recurring is a training problem, not a lesson problem.
 | Code | Description | Count | Lessons |
 |---|---|---:|---|
 | E01 | Source misquote | 1 | V02 (R1 ×1) — two ASR garbles repaired inside quotation marks |
-| E02 | Unsupported generalization | 3 | V01 (R1 ×1, R2 ×2) — all closed at R3 |
+| E02 | Unsupported generalization | 4 | V01 (R1 ×1, R2 ×2) — all closed at R3; V03 (R1 ×1 — duration finding scoped 4-of-4 where 2-of-4 is supported, open as M3) |
 | E03 | Missed qualifier | 0 | |
 | E04 | Wrong sequence | 0 | |
 | E05 | Wrong pattern boundary | 0 | |
@@ -168,8 +192,8 @@ keeps recurring is a training problem, not a lesson problem.
 | E16 | Terminology drift | 0 | |
 | E17 | Missing negative examples | 0 | |
 | E18 | Invalid manual-backtest procedure | 0 | |
-| E19 | Data/timeframe inconsistency | 1 | V02 (R1 ×1 as a co-code with `E06` — closed at R2; R2 ×1 — day boundary off by one bar, open) |
-| E20 | Other | 15 | V01 (R1 ×6, R2 ×2, R3 ×1) — all closed at R3; V02 (R1 ×4) — closed at R2; V02 (R2 ×2) — open |
+| E19 | Data/timeframe inconsistency | 2 | V02 (R1 ×1 as a co-code with `E06` — closed at R2; R2 ×1 — day boundary off by one bar, open); V03 (R1 ×1 — ADR figures not reproducible from committed data, open as M1) |
+| E20 | Other | 16 | V01 (R1 ×6, R2 ×2, R3 ×1) — all closed at R3; V02 (R1 ×4) — closed at R2; V02 (R2 ×2) — open; V03 (R1 ×1 — transcript coverage block overclaims "strictly monotonic, no duplicates", open as M2) |
 
 **Escalation rule:** any code reaching 3 occurrences is a systematic weakness.
 Note it in the next cumulative review and consider whether the student protocol
@@ -265,14 +289,19 @@ not reset — a closed finding still happened.
 
 ## SEVERITY TOTALS
 
-Cumulative across V01 R1–R3 and V02 R1.
+Last fully reconciled at V02 R1; the pre-V03 rows below are carried as found and were
+not re-audited by the V03 round (reconciling them against V02 R2/R3 is folded into
+open item 14's arithmetic-check work item). **V03 R1's delta is authoritative:
++3 MINOR (M1–M3, all open), +5 NOTE (N1, N2, N3, N5 closed as observations; N4 —
+the three-lesson manual-backtest debt — carried open).** The V02 R1 open MAJOR
+recorded below this table closed at R2/R3.
 
 | Severity | Total | Open | Closed |
 |---|---:|---:|---:|
 | CRITICAL | 0 | 0 | 0 |
-| MAJOR | 4 | 1 | 3 |
-| MINOR | 18 | 5 | 13 |
-| NOTE | 17 | 3 | 14 |
+| MAJOR | 4 | 0 | 4 |
+| MINOR | 21 | 8 | 13 |
+| NOTE | 22 | 4 | 18 |
 
 **Open MAJOR — V02 R1 finding 1.** The 11a homework markup contradicts the chart it
 cites (PFH misplaced by 15 pips; the reversal attributed to Friday when it is Thursday's
@@ -319,6 +348,11 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 | 15 | V02 R3 | **`level count` is presented as a verbatim transcript occurrence and the literal string occurs zero times.** The referent is real — *"you can't count the levels"*, `[00:33:11]` — and `A-004` rests on the passage, not the string. `V02_SOURCE_NOTES.md` §3 needs **no** change (its row is headed *"Level count / counting the levels"* and quotes the actual words); only `V02_TRANSCRIPT.md`'s "One thing was removed" paragraph does. Notable because it is the residue of the same false claim: three verbatim counts were asserted, two were checked and found to be zero, the third was carried forward unchecked in the edit that corrected the other two. **Non-blocking; fix at the next natural touch** — exact wording in `V02_REVIEW_R3.md` §3 | `V02_TRANSCRIPT.md` §"One thing was removed"; `18_REVIEW/V02/V02_REVIEW_R3.md` Minor 1 | OPEN |
 | 16 | V02 R3 | **The *"174 of 176"* continuity figure does not reproduce.** R3's independent measurement finds **172** boundaries continuous at the stated 0.15-pip threshold, or **175** above 0.8 pip; three genuine sub-pip gaps exist besides the weekend one (`x=285` −0.19 pip, `x=447` +0.77, `x=933` −0.77, confirmed visually at 4× zoom), so *"the only open ≠ prior-close discontinuity"* is overstated. **174 is unreachable under any threshold. Charged against R2, not the student** — required correction 1 instructed the student to state R2's number and the remediation did so accurately. Changes nothing and errs in the safe direction: continuity is *weaker* than claimed, which strengthens the corrected reasoning. **Non-blocking**; restate as 175 of 176 within 1 pip, only material discontinuity −12.6 pip at `x=273`, three sub-pip gaps besides | `V02_HOMEWORK.md` §1.1/§1.4; `V02_MASTERY_REPORT.md`; `COURSE_PROGRESS.md`; `18_REVIEW/V02/V02_REVIEW_R2.md` §1c | OPEN |
 | 17 | V02 R3 | **An owner-authorized override is recorded in the repository as an unresolved violation.** The project owner confirmed the parallel V03 work as an intentional override of the closed D-004 gate, but `DECISIONS.md` carries no entry for it (last entry D-022), so `COURSE_PROGRESS.md`'s `V03 GATE` block and open item 9 above still read as a live breach. A future session will either halt authorized work or conclude the gate register is unreliable. **Owner action:** record the override as a numbered decision and reconcile both locations to it. **Does not close item 9's mechanism finding** — a written gate with no enforcement failed twice in one day, and the `validate_project.py` pre-flight guard is still the fix | `DECISIONS.md`; `COURSE_PROGRESS.md`; `18_REVIEW/V02/V02_REVIEW_R3.md` Note 3 | ✅ **CLOSED 2026-08-10 — `DECISIONS.md` D-023** records the override as a numbered decision (scope: one instance, V02 → V03, source-side work only; not precedent; not to be reverted), and `COURSE_PROGRESS.md`'s `V03 GATE` block and `NEXT ACTION` item (c) are reconciled to it. `V02_REVIEW_R2.md` is deliberately left unedited per §11. Item 9 below is **not** closed by this — see its own row |
+
+| 18 | V03 R1 | **M1 — homework ADR figures not reproducible.** State the day-boundary convention and commit the five per-pair daily ranges (or recompute under a stated convention). The 0-of-4 conclusion survives every convention tried | `V03_HOMEWORK.md` §2.5 Finding B; `18_REVIEW/V03/V03_REVIEW_R1.md` M1 | OPEN |
+| 19 | V03 R1 | **M2 — transcript coverage block overclaims.** "Strictly monotonic, no duplicates" is false: three benign same-second adjacent duplicate markers (`[00:35:21]`, `[01:00:13]`, `[01:04:30]`); sequence is non-decreasing. Fix the wording | `V03_TRANSCRIPT.md` COVERAGE; `V03_REVIEW_R1.md` M2 | OPEN |
+| 20 | V03 R1 | **M3 — duration finding over-scoped.** "4 of 4 exceed the 2.5–3-day window" counts two pairs (USDJPY, USDCHF) whose low is the week-open bar with no formed anchor — supported sample is 2 of 4 (both 3.8 days, still exceeding). Scope it in homework §2.5A and mastery report §2 before it is cited against `C-001` | `V03_HOMEWORK.md` §2.5; `V03_MASTERY_REPORT.md` §2; `V03_REVIEW_R1.md` M3 | OPEN |
+| 21 | V03 R1 | **N4 — manual-backtest debt, three lessons deep.** Each deferral individually sound (no testable entry rule yet), but the obligation accrues: when the first testable rule lands (plausibly the V03 exit once A-033 "outside structure" is defined), the hidden-future backtest backlog must be discharged against it. The reviewer will require it | `V03_REVIEW_R1.md` N4; `06_MANUAL_BACKTEST/` | OPEN |
 
 ---
 

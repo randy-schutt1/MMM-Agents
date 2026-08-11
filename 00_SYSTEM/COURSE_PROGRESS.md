@@ -11,9 +11,20 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V03 — student pass complete, awaiting independent review)
+VIDEOS IN PROGRESS:  1  (V03 — reviewed R1: REVISE, minors only; V04 gate OPEN)
 VIDEOS PASSED:       2  (V01, V02)
-CURRENT LESSON:      **V03 — student pass COMPLETE 2026-08-10, submitted as
+CURRENT LESSON:      **V03 — reviewed R1 2026-08-10: `REVISE` (HIGH), 0 critical,
+                     0 major, 3 minor.** Under D-024 the V04 gate is OPEN; the three
+                     minors (M1 ADR reproducibility, M2 transcript coverage wording,
+                     M3 duration-finding scope) are owed before V03 reaches COMPLETE.
+                     All six mastery-report audit items were executed adversarially
+                     and discharged — including a full re-verification of the C-004
+                     negative on the complete 857-frame sweep (76 states, no
+                     session-times slide) and external corroboration of the homework
+                     data against ECB reference fixes. See
+                     18_REVIEW/V03/V03_REVIEW_R1.md.
+                     ---- student pass (prior) ----
+                     Student pass COMPLETE 2026-08-10, submitted as
                      REVIEW REQUIRED (not PASS).** Transcript verified and adopted;
                      24 screenshots indexed; source notes + interpretation adopted
                      from a hung prior session ONLY after a citation audit (377
@@ -46,10 +57,15 @@ CURRENT LESSON:      **V03 — student pass COMPLETE 2026-08-10, submitted as
                      0 major. COMPLETE. All 15 of R2's required actions applied and
                      verified against the source; R2 finding N1 (A-006's trailing
                      block) closed by withdrawing it in place.
-NEXT ACTION:         **Independent review of V03 (R1) — a FRESH reviewer session.**
-                     The student session must not review its own work (D-003/D-004).
-                     V04 GATE is CLOSED until that review returns; D-024 governs
-                     what reopens it.
+NEXT ACTION:         **Begin V04 (gate OPEN per D-024), and apply V03 R1's three
+                     minor corrections** (REVIEW_INDEX.md open items 18–20) so V03
+                     can reach COMPLETE at its next review touch. N4 (manual-backtest
+                     debt, three lessons deep) is carried: the first testable rule
+                     that lands must have the hidden-future backlog discharged
+                     against it.
+                     ---- prior ----
+                     Independent review of V03 (R1) — a FRESH reviewer session.
+                     DONE 2026-08-10: REVISE, 0 critical, 0 major, 3 minor.
                      Carried into that review, not blocking it: homework 11b remains
                      UNRESOLVED (no trading history to build flashcards from — same
                      evidential reason as V02's 11b), and manual backtesting for V03
@@ -128,7 +144,13 @@ V02 GATE:            OPEN as of V01 R3 PASS (D-004 satisfied).
                      read CLOSED. V01's PASS makes it moot and no V02 work is
                      discarded, but the gate did not hold — see REVIEW_INDEX.md open
                      item 9.
-V04 GATE:            **CLOSED.** V03's student pass is complete and submitted as
+V04 GATE:            **OPEN as of V03 R1, 2026-08-10 (D-024 satisfied: REVISE with
+                     0 CRITICAL, 0 MAJOR, 3 MINOR).** The minors are deferred, not
+                     waived — REVIEW_INDEX.md open items 18–20 must be applied before
+                     V03 is marked COMPLETE, and V03 R1's verdict is REVISE, not
+                     PASS.
+                     ---- prior ----
+                     CLOSED. V03's student pass is complete and submitted as
                      REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
                      verdict, not a student submission — "a student PASS never
                      advances the course by itself; it is a submission"
@@ -212,7 +234,7 @@ fabricate, interpolate, or infer Week 6 content.**
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
-| V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | **REVIEW REQUIRED** | — awaiting R1 | **AWAITING REVIEW** |
+| V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | **REVIEW REQUIRED** | **R1 REVISE (0 crit, 0 maj, 3 min)** | **IN REMEDIATION — V04 gate OPEN (D-024)** |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -388,7 +410,7 @@ points are set once the real lesson count is known at ingestion.
 | Phase | Name | Status |
 |---|---|---|
 | 0 | Environment | ✅ Complete |
-| 1 | Student | 🔄 In progress — V01 **PASS** (R3); V02 **PASS** (R3, 0 critical, 0 major, 2 minor non-blocking); V03 gate open, V03 next |
+| 1 | Student | 🔄 In progress — V01 **PASS** (R3); V02 **PASS** (R3); V03 **REVISE** (R1, minors only — V04 gate OPEN per D-024); V04 next |
 | 2 | Scholar | Not started |
 | 3 | Expert (Master Spec) | Not started |
 | 4 | Formalizer (Machine Spec) | Not started |
