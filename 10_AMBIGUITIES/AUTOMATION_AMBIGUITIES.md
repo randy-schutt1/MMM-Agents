@@ -9,11 +9,11 @@ Template: `00_SYSTEM/TEMPLATES/AMBIGUITY_TEMPLATE.md`
 ## STATUS
 
 ```text
-RECORDS:         36   (A-001 … A-036)
-LESSONS STUDIED:  3   (V01, V02, V03 — V03 not yet reviewed)
+RECORDS:         41   (A-001 … A-041)
+LESSONS STUDIED:  4   (V01, V02, V03, V04 — V03 REVISE R1 minors-only; V04 not yet reviewed)
 RESOLVED:         2   (A-003 — "pendings", on visual evidence at [00:40:25];
                        A-026 — HOW = High Of the Week, spoken expansion V03 [00:26:40])
-DO NOT CODE:     34
+DO NOT CODE:     39
 ```
 
 > **UPDATED 2026-08-10 (review R1, finding 6b).** This block previously read
@@ -30,11 +30,23 @@ DO NOT CODE:     34
 > **UPDATED again 2026-08-10 (V03 pass).** Counts re-derived after `A-029`–`A-036` were
 > added and `A-026` resolved. Updated in the same commit that added those records,
 > which is the discipline the three prior corrections were asking for.
+>
+> **UPDATED again 2026-08-10 (V04 pass).** Counts re-derived after `A-037`–`A-041` were
+> added. Nine earlier records gained V04 evidence and **none resolved**; the V04 evidence
+> block at the end of this file records each one. Updated in the same commit that added
+> the records.
 
 Eighteen (`A-001`–`A-018`) arise from **V01 alone**, which names seventeen load-bearing
 terms and defines none of them. Ten (`A-019`–`A-028`) were added by the V02 pass, which
 also extended six of the V01 records. Eight (`A-029`–`A-036`) were added by the V03 pass,
-which also extended seven earlier records and **resolved one** (`A-026`). Six of V03's
+which also extended seven earlier records and **resolved one** (`A-026`). Five (`A-037`–`A-041`)
+were added by the V04 pass, which also extended nine earlier records and resolved none.
+
+**A-039 is a different kind of record from the rest and is worth reading on its own.** It
+does not ask what a phrase means; it records that V04 states the course's first complete
+entry rule and that one of that rule's three necessary conditions (TDI) has been deferred
+to a future lesson twice. It carries an explicit prohibition: **no session may drop that
+condition in order to make the rule testable.** Six of V03's
 eight are the vocabulary of a single slide — the sample flashcard's entry-criteria list
 — which asks the student to verify conditions the course has never defined.
 
@@ -2445,3 +2457,326 @@ V03's transcript and its 24 screenshots bear on seven earlier records. One recor
 | **A-024** — "slightly above/below" | `[00:57:14]` *"Slightly below the tracer"* as the safety-trade location | **No progress; scope widened.** The same unquantified tolerance now governs a second, differently-named trade, so the record is load-bearing in more places than when it was opened. |
 | **A-005** — "the trading zone" | Printed on the V03 agenda slide `[00:12:09]` ("R & D / Weekly Cycle / Flash Cards / **Trading Zone**"); the recording ends after Q&A without reaching it | **Deferred a third time (V01 → V02 → V03).** The term is now on a printed agenda as a scheduled topic, which confirms it is a real course concept rather than a passing phrase, and confirms it has still never been taught. |
 | **A-019** — session times | No session-times slide appears anywhere in V03 (see `CONTRADICTIONS.md` C-004). Spoken only: `[00:55:05]` *"right before the US session at 9.30"*, `[01:03:21]` *"3 30 in the morning inside the shadow box"* — neither carries a timezone | **No progress.** Two more untimezoned references added to the pile. |
+
+---
+
+## A-037 — halving the Asian range ("27 divided by 2 … you have a 13.5 trading range")
+
+### Course Meaning
+
+Unknown whether this is a **method** or a **remark about one chart**. On the V04 flashcard
+chart the instructor measures the Asian range as 27 pips, then argues the tradeable range
+is half of it.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V04 | `[00:11:27]`–`[00:11:31]` | *"It actually is less than 27 pips. Here's why."* |
+| V04 | `[00:11:33]`–`[00:11:44]` | *"The dealer, mid-Asia, snatches the low away from traders that were in this range right here… He shifts it higher, right? Then he holds the level."* |
+| V04 | `[00:11:48]` | *"This is an Essenture Consolidation Zone, which 27 divided by 2, 28 is 14, so 13 and a half."* (ASR: *"Essenture"* = "in essence, the") |
+| V04 | `[00:11:56]` | *"In Essenture, you have a 13.5 trading range."* |
+| V04 | `[00:12:11]` | *"Your Asian range is technically 13 pips."* |
+| V04 | `[00:12:03]` | *"No Joe, there are two boxes I'll talk about it"* — **and he never does** |
+
+### Why it matters
+
+This is not cosmetic. V04's only entry condition (a) is *"25 to 50 pips above and below
+the blue box"* `[00:15:43]`. **If the box's effective edge moves, the 25–50 pip
+measurement moves with it.** A 13.5-pip box and a 27-pip box place the qualifying zone in
+two different places on the same chart.
+
+### The two readings
+
+| # | Reading | Support | Against |
+|---|---|---|---|
+| 1 | **A general method** — the tradeable Asian range is the post-shift consolidation zone, roughly half the full overnight range | The arithmetic is presented as a derivation (*"Here's why"*), and he restates the result twice in different words | Applied to exactly one chart; the divisor 2 is never justified; "mid-Asia snatches the low" is a description of *this* night, not a rule |
+| 2 | **A remark about this chart** — on this night the dealer shifted the low mid-session, so the range that actually held is the later, narrower one | The whole passage is inside a flashcard walkthrough of one example | He generalises freely elsewhere in the same segment |
+
+**Neither is adopted.** The "two boxes" remark at `[00:12:03]` is the strongest hint that
+there is a real distinction here with a name, and it is exactly the part he skips.
+
+### Possible Measurable Features
+
+| # | Candidate | Course support |
+|---|---|---|
+| 1 | `tradeable_range = full_asian_range / 2` | **NONE beyond one worked example.** The divisor is stated once, about one chart |
+| 2 | The consolidation zone bounded by the *post-shift* low and the range high | PARTIAL — this is what he describes, but neither boundary is defined |
+
+```text
+Classification:          INFERRED MACHINE CANDIDATE
+Canonical Course Status: NOT A COURSE RULE
+```
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A later lesson that either (a) explains "the two boxes", or (b) applies the halving to a
+second chart. One instance is an anecdote.
+
+### Impact If Wrong
+
+Adopting reading 1 as a rule would silently relocate the reference edge for V04's only
+stated entry condition on every chart in the corpus. Rejecting it if it *is* the method
+would put the qualifying zone 13 pips too far out.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-004 (the level), A-018 (`R =` labels), A-006 (the boxes) |
+| Interpretation | `03_LESSON_NOTES/V04_INTERPRETATION.md` Q4, Q5, §9.4 |
+
+---
+
+## A-038 — the ADR lookback window (GUEST presenter)
+
+### Course Meaning
+
+The guest presenter gates every entry on the day's range being ~90–95% of "the ADR", and
+never states over how many days the average is taken, or whose ADR it is.
+
+> **Speaker note.** This record is `GUEST`, not instructor. It is logged because the
+> guest's ADR gate is the single most-repeated numeric filter anywhere in V04, and a
+> future session mining the lesson for rules will meet it six times.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V04 | `[00:36:43]`–`[00:37:01]` | *"Was the ADR met? … if it normally runs 110 pips and it's sitting at 80 but you're getting a signal, am I going to take that trade? Normally I do not"* |
+| V04 | `[01:05:36]`–`[01:06:09]` | *"Basically, what I'm doing is measuring off the ADR… if it's behavior for the two previous days, and it's basically ran the same ADR, 110 pips, 80 pips, 120 pips, whatever it is, the two previous days, when it gets down to around 115 pips… that's how I know it by measuring the ADR"* |
+| V04 | `[01:07:01]`–`[01:07:22]` | *"There's two ways. For one… I've been looking at these same pairs for nearly three years now. At first, I basically have kept a tab, but a lot of these indicators they'll tell you… previous day it ran… current day it ran"* |
+| V04 | `[01:13:34]`–`[01:13:50]` | *"if the pair generally every day runs 100 pips, if it's not in the mid 90s, it's not ready"* |
+| V04 | `[01:17:17]`–`[01:17:25]` | *"if this pair runs 100 pips on average ADR, and it's at 94[,] 95 right now"* |
+| V04 | `[01:21:30]`–`[01:21:46]` | ADR **exceeded** ⇒ *"generally I pass on it… It simply isn't behaving itself"* |
+| V04 | frame `00:40:40` | Printed on the per-pair form: **`ADR`** |
+| V04 | frame `01:08:40` | The platform panel prints **`TDR / YDR / WADR / MADR / %DADR`** — see `A-040` |
+
+### The two incompatible bases in one lesson
+
+At `[01:05:36]` the reference is explicitly **the two previous days**. At `[01:13:34]` and
+`[01:17:17]` it is *"generally every day runs"* — an unbounded average. At `[01:07:01]` it
+is whatever the indicator reports, which (per `A-040`) offers weekly and monthly variants
+as well. **These are three different numbers on the same chart.**
+
+### Possible Measurable Features
+
+| # | Candidate | Course support |
+|---|---|---|
+| 1 | Mean true daily range over the **2** previous days | Stated once, `[01:05:36]` |
+| 2 | Mean over an unstated longer window | Implied by *"generally every day runs"* |
+| 3 | Whatever `%DADR` on his template reports | `A-040`; the template's own definition is not visible |
+
+```text
+Classification:          INFERRED MACHINE CANDIDATE
+Canonical Course Status: NOT A COURSE RULE  (and NOT an instructor rule at all)
+```
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+An instructor lesson that defines ADR, or a frame where the indicator's settings dialog is
+open. The `01:08:40` frame prints values but not periods.
+
+### Impact If Wrong
+
+A 2-day and a 20-day ADR differ by tens of pips on a volatile pair. The gate is *whether today is at 90–95% of it*, so the window choice decides whether a
+setup is taken at all.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-040 (the printed ADR family) |
+| Contradiction | C-005 (guest vs instructor) |
+| Interpretation | `03_LESSON_NOTES/V04_INTERPRETATION.md` I9, M6 |
+
+---
+
+## A-039 — TDI is a *required* entry criterion that the course has never taught
+
+### Course Meaning
+
+TDI confirmation is condition (c) of the only complete entry rule the course has stated,
+and TDI has been explicitly deferred to a future lesson twice.
+
+> **This record is not about a word's meaning.** It is about a **structural gap**: V04
+> states a rule that V04 does not equip a student to apply. It is filed here because it
+> blocks the same thing the other records block — application.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V04 | `[00:15:49]`–`[00:15:55]` | Condition (c), verbatim: *"TDI confirms blood in the water shark fin outside the band to back in"* |
+| V04 | `[00:13:43]`–`[00:13:51]` | *"Any else agrees TDI is overextended and forms an M or some type of divergence… It'll be outside the volatility ban. You'll have blood in the water on the secondary line"* |
+| V04 | `[00:13:53]` | *"I can't show you TDI because it's not here"* — **the example chart carries no TDI panel** |
+| V04 | `[00:22:11]` | *"I'm going to do the TDI next week"* |
+| V03 | `[01:01:53]` | *"I am going to cover TDI later, but just so you know what I'm talking about"* |
+
+### Why this is worse than an ordinary undefined term
+
+The other TDI-family records (`A-031` blood in the water, `A-032` shark fin) ask *what does
+this phrase mean*. This record notes that **all three of them sit inside a stated
+necessary condition**, and that the lesson which states the condition also declines to
+display the indicator. The result is that V04's criteria list — the most complete entry
+statement in the course — cannot be executed or graded from V04 alone.
+
+This is the direct reason `V04_MASTERY_REPORT.md` records dimension G as `DEFERRED` rather
+than attempting a backtest: grading rule *application* against a condition that must be
+partly invented is `E18` (invalid manual-backtest procedure).
+
+### Current Status
+
+```text
+DO NOT CODE — and DO NOT SUBSTITUTE.
+```
+
+Specifically: **no session may drop condition (c) in order to make the rule testable.** A
+two-condition version of V04's rule is a different rule with a different hit rate, and
+testing it while calling it the course's rule is the `E06`/`E18` failure.
+
+### Required Research
+
+The promised TDI lesson. V05 (`Bootcamp1 Wk2 032512 Part3`) is the next candidate; the
+instructor says *"next week"*, which would be V06 or later by session date.
+
+### Impact If Wrong
+
+Treating the rule as complete without TDI would produce a backtest of a rule the
+instructor did not state, whose results would then be attributed to him.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-031 (blood in the water), A-032 (shark fin), A-005 (trading zone — also deferred repeatedly) |
+| Interpretation | `03_LESSON_NOTES/V04_INTERPRETATION.md` §1, §4, §9.6 |
+
+---
+
+## A-040 — the printed ADR family: `TDR / YDR / WADR / MADR / %DADR`
+
+### Course Meaning
+
+Unknown. A block of range statistics printed by the guest presenter's chart template,
+never read aloud and never explained.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V04 | frame `01:08:40` (`V04_01-08-40_audcad-m15-r-labels-adr-panel.png`) | Top-right panel prints, with values: `HOD 1.0339 / 17`, `LOD 1.0285 / 37`, `TDR 55`, `YDR 91`, `WADR 101`, `MADR 111`, `%DADR 100` |
+| V04 | frame `01:08:40` | The chart legend separately prints `Previous Days Range: 118.3` and `Current Days Range: 12.9` |
+| V04 | `[01:07:07]`–`[01:07:22]` | *"a lot of these indicators they'll tell you… previous day it ran[,] it tells you right there, current day it ran, she tells you right there"* — he points at this panel without naming its fields |
+
+### The obvious expansions, and why they are not adopted
+
+`TDR` = today's daily range, `YDR` = yesterday's, `WADR` = weekly average daily range,
+`MADR` = monthly average daily range, `%DADR` = percent of average daily range completed.
+These are **conventional readings of the abbreviations, not course statements.** The
+numbers are broadly consistent with them (55 < 91 < 101 < 111 is a plausible
+today/yesterday/weekly/monthly ladder), which is suggestive and is not evidence.
+
+**It matters because `A-038` turns on exactly this.** If `WADR` and `MADR` are the
+available averages, then the guest's *"generally every day runs 100 pips"* is probably one
+of them, and his *"two previous days"* is not any of them.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A frame with the indicator's settings dialog open, or a lesson where a presenter reads the
+fields aloud.
+
+### Impact If Wrong
+
+Guessing the expansions would fix `A-038`'s window by assumption rather than by evidence —
+resolving one open record with another record's guess.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-038 (ADR lookback), A-018 (`R =` labels — also printed, also unexplained) |
+| Interpretation | `03_LESSON_NOTES/V04_INTERPRETATION.md` M6 |
+
+---
+
+## A-041 — `[00:22:49]` the forum/mail instruction is internally inconsistent
+
+### Course Meaning
+
+A single homework-administration line that, as transcribed, contradicts the same speaker
+four minutes later.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V04 | `[00:22:46]`–`[00:22:49]` | *"We're going to go at Thursday night as the homework again, but don't mail it to me. I don't need it posted in the forum."* |
+| V04 | `[00:26:27]`–`[00:26:40]` | *"I'm going to go post the homework assignment in the forum under my boot camp thread. And then I want you to go ahead work your charts and post them in there."* |
+| V04 | `[00:26:41]`–`[00:26:48]` | *"I'll post my answer key… I'll post the answer key in my section. Compare your charts to that."* |
+
+### Assessment
+
+Almost certainly an **ASR-inserted negation** — the sentence without the negation would be
+consistent with everything around it. **The repair is not made.** The audio was not
+re-checked at this marker, and this project does not smooth garble inside quotation marks
+(`E01`, charged against V02 R1).
+
+**Nothing downstream depends on it.** The assignment's *content* is unaffected either way;
+only the submission channel is in doubt, and no present-day session can submit to a 2012
+forum regardless.
+
+### Current Status
+
+```text
+DO NOT CODE — trivial; recorded for completeness and to prevent a future session
+"fixing" the quotation silently.
+```
+
+### Required Research
+
+A 10-second audio re-check at `[00:22:49]`. Cheap; simply not done here.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V04_SOURCE_NOTES.md` §8c |
+
+---
+
+## V04 EVIDENCE ADDED TO EXISTING RECORDS
+
+V04's transcript and its 26 screenshots bear on nine earlier records. **None resolves.**
+Kept together so the V04 pass is auditable as a unit.
+
+| ID | V04 evidence | Effect |
+|---|---|---|
+| **A-010** — "peak formation high or low" | `[00:21:55]`–`[00:22:02]` *"if you see an AM on the four hour that's your anchor point, if you got an AM on the four hour charge that's your peak formation high"* (ASR: *"an AM"* = the letter M; *"charge"* = chart) | **Materially advanced; not resolved.** For the first time the course predicates *anchor point* and *peak formation high* of the same subject — an M formation on the four-hour chart — in two parallel clauses. This is the direct evidence `REVIEW_INDEX` open item 2 has been waiting for since V01 R1. It remains open because: the sentence is scoped to the four-hour chart and says nothing about other scales; it says nothing about the **low** side (peak formation low / W); and it is one Q&A utterance, not a slide or a repeated definition. **Symmetry to the low side is NOT assumed.** Stays `DO NOT CODE` — the identity names the object, it still does not say how to *locate* one. |
+| **A-011** — "M and W formation" | The same passage; plus `[00:15:49]` *"M formation second leg, W formation second leg"* as a necessary entry condition; plus `[00:20:20]` *"On the 15 minute chart it'll make the M formation"* coordinated with a four-hour railroad track | **No definition added; load increased.** V04 makes the M/W the **second** condition of the only stated entry rule and equates it with the anchor point (`A-010`), so an undefined term is now load-bearing in two more places. V02 R1's finding — that M/W anatomy is undefined across the corpus — survives V04 intact. The guest's *"Gaby a nice ugly look in kindergarten ma'am there"* `[01:10:36]` (ASR: *"ma'am"* = M), *"It's like a pre-school M or maybe a kindergarten now"* `[01:12:09]` (ASR: *"now"* = M) and *"Maybe a preschool W right here"* `[00:44:04]` are evidence **against** any tight geometric definition: the course tolerates badly-formed instances and offers no boundary. |
+| **A-018** — `R =` labels | Frame `00:04:40` prints **`R = 27.0`** on the Asian-range box; on that same chart the instructor says *"What's the Asian range?"* `[00:08:08]` / *"27 pips"* `[00:08:09]` and *"27 pips range"* `[00:11:25]`. Further labels on the guest's platform: `R = 33.2 / 58.4 / 15.5` (frame `01:04:10`), `R = 52.4 / 65.9 / 54.6` (frame `01:08:40`), `R = 95.2` (frame `01:12:00`) | **Second agreeing pair, and the first with a *spoken* side.** V03 supplied a printed-vs-printed pairing (`R = 41.4` beside *"Asian Range =41"*). V04 supplies printed-vs-spoken, on a different chart, in a different lesson, to **0.0 discrepancy**. The risk-to-reward reading is now very hard to sustain on a second ground as well: V04 *does* state a stop (10–18 pips) and a target (50), and `R = 27.0` is not an R-multiple of either. **Still not closed** — no presenter states the equivalence in words, and the guest's `R = 95.2` box has no spoken range to check it against. Stays `DO NOT CODE`. |
+| **A-020** — "mayonnaise" | Frame `00:50:00` prints the chart caption **"Entered here after 4th retest Mayo"**; the surrounding speech `[00:49:46]`–`[00:49:51]` is *"you can see one, two, three, four times… It came up against the mail here"* | **Spelling corroborated a second time; referent still unknown.** V03 already settled the spelling from its criteria slide, so this is **not** a new resolution. What it adds: a **second, independent** printed instance, by a **different presenter**, on a **different platform**, in which "Mayo" is a **price level that price retests four times** — a stronger functional reading than V03's slide caption gave. The `A-020` "Required Research" route fails for a third lesson running: no captured V04 frame labels any average with a period. Stays `DO NOT CODE`. |
+| **A-030** — "brinks shadow" / "shadow box" | `[00:12:53]`–`[00:13:01]` *"stop on Zone, Gray Box. Timing Shadow Box or the Brink Spox"*; `[00:13:40]` *"It's in the shadow, the Brink Shadow"*; `[00:10:53]` *"It hit the stop hunt shadow in the bricks"*; visually, grey and white vertical bands on the frames from `00:04:40` on | **Constrained, not defined.** V04 confirms the object is a **vertical, time-based band drawn on the chart** (the bands are visible and price passes through them), and that "shadow box", "brick(s)" and "grey box" are used for it interchangeably. Still unstated: which clock hours it spans, and whether "grey box" and "shadow box" are the same band or two. The guest is unhelpfully explicit that they do not matter to him — *"really all these boxes, the shadow boxes, all the stuff they really don't matter, guys… They just really do not matter"* `[00:44:38]`–`[00:44:43]` — which is a `GUEST` opinion and **not** an instructor retraction. |
+| **A-031** — "blood in the water" / "bloodline" | `[00:15:49]` puts *"blood in the water"* inside the necessary entry condition; `[00:13:51]` *"You'll have blood in the water on the secondary line"*. **Separately**, the guest uses a bare *"the water"* 20 times as a **price destination**: *"my take profits are at the water, generally at the water"* `[00:46:19]`–`[00:46:24]`, *"it's usually three or four or five pips below the water in most cases"* `[00:46:27]`, *"I'm headed right back to the water"* `[01:19:53]` | **Widened, and a new ambiguity exposed inside it.** V03 established "blood in the water" as a **TDI** condition. The guest's *"the water"* is a **price level on the chart** he takes profit at. These cannot be the same object — a TDI oscillator line is not a price target. Either the course uses one word for two things, or one of the two usages is being misread. **Not resolved here**; recorded as `V04_INTERPRETATION.md` Q6. `[00:13:51]`'s *"on the secondary line"* is the best hint that the TDI sense names a specific plotted line. Stays `DO NOT CODE`. |
+| **A-032** — "shark fin" | `[00:15:49]`–`[00:15:55]` *"shark fin outside the band to back in"* — the most explicit geometric statement of the shape so far; guest usages `[00:40:12]`, `[00:48:46]` *"Also got a shark fin here"* `[00:48:46]`, *"It was not out of the water, but it wasn't shark fin"* `[00:48:47]` (garbled) | **Geometry constrained for the first time.** *"Outside the band to back in"* gives the shape a **direction and a boundary condition**: the line must exit the band and re-enter it. That is more than V03's usage carried. Still unstated: which band (`A-031`'s "secondary line"? the volatility band?), how far outside, and over how many bars. Stays `DO NOT CODE`. |
+| **A-033** — "outside structure" | `[00:21:04]`–`[00:21:16]` *"Outside structure is when the dealer creates a spike vector to the high and then trade off that level in here with these candles. Outside structure, high outside structure."* Immediately followed by `[00:21:17]` *"Let me see if I got a I'll pull a flash card up for you"* and `[00:21:20]` *"Leave that"* — **the promised card is never shown** | **First definition attempt; still not codable.** V04 is the first lesson to answer "what is outside structure" directly, and the answer names two components: a **spike vector to the high**, then **trading off that level**. That is genuine progress over V03, where the term appeared only as a printed criterion. It remains `DO NOT CODE` because the "structure" whose outside is meant is still never bounded — the definition describes the dealer's *behaviour*, not the chart *boundary* a machine would test. The withdrawn flashcard is a near miss worth noting: the visual that would have settled it was queued and abandoned on air. |
+| **A-005** — "the trading zone" | `[00:26:15]`–`[00:26:23]` *"We're going to work on the trading zone. We're going to start talking about the 22, 33 trades, multi session M and W's"* | **Deferred a fourth time (V01 → V02 → V03 → V04).** Now promised as upcoming in two consecutive lessons. Also forward-points `A-023` (33 trade) and `A-024` (22 trade), which are likewise named-not-taught. |
+| **A-019** — session times | `[00:21:33]`–`[00:21:37]` *"From one to five AM New York, one to four AM New York, four or five hours. Take a break from eight to 11 New York time"*; `[00:21:41]` *"nothing's changed"* | **First timezoned times in the corpus — and they are not session boundaries.** Unlike every prior reference, these carry an explicit zone ("New York"). But they define **when to be at the screen**, not when a session starts or ends, and the instructor immediately marks them as a restatement. **No session-boundary table exists anywhere in V04**, spoken or printed — checked against all 1,037 sweep frames. `A-019` is unaffected on its actual question. |

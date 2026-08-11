@@ -1,6 +1,6 @@
 # V04 — VISUAL INDEX
 
-26 curated frames from a 1,037-frame sweep of
+27 curated frames from a 1,037-frame sweep of
 `Bootcamp1 Wk2 032512 Part2 (86mins).swf`
 (SHA-256 `10d8fe7e…fe60fb7c`, duration 01:25:41).
 
@@ -61,6 +61,7 @@ that pass rather than after it:
 | 15 | `00-33-20_check-down-worksheet-twelve-pairs` | 00:33:20 | Blank worksheet, columns **Pair / Level - Direction / Confluence**, listing exactly **12 pairs**: AUDCHF, EURAUD, EURCHF, AUDJPY, EURJPY, GBPJPY, EURGBP, EURUSD, GBPUSD, AUDUSD, USDCHF, USDJPY | `[00:30:22]` *"I paired it down… to just 12 pairs"* |
 | 16 | `00-34-00_pre-trade-question-checklist-slide` | 00:34:00 | **The guest's pre-trade checklist, fully legible** — see the transcription below | `[00:33:53]`–`[00:37:15]`, which walks it line by line |
 | 17 | `00-40-40_trade-screen-checklist-tdi-adr` | 00:40:40 | Blank per-pair form: **TDI / Shark Fin / Stop / MM Candles / Divergence / Pivot / ADR / HOD LOD (Yesterday's)**, four copies | `[00:40:12]`–`[00:40:20]` |
+| 17b | `00-41-05_the-set-ups-title-slide` | 00:41:05 | Title slide reading **"The Set-Ups"** — the divider between the guest's method walkthrough and his ~20 worked trade examples | `[00:40:58]` *"what I thought would be best, is just try to teach you some of the setups that I look for"* |
 | 18 | `00-41-20_guest-trade-example-boxes` | 00:41:20 | First worked trade: red and pale-blue session boxes over 15-minute candles, oscillator sub-panel | `[00:41:11]` *"a trade that I took on Friday"* |
 | 19 | `00-50-00_annotation-entered-after-fourth-retest-mayo` | 00:50:00 | Printed chart caption: **"Entered here after 4th retest Mayo"** | `[00:49:46]`–`[00:49:56]` *"four times it came up against the mail"* |
 | 20 | `00-55-20_guest-chart-green-red-boxes` | 00:55:20 | Platform window, green and red session boxes, watchlist at left | `[00:54:51]` *"we're coming out of the box here"* |
@@ -153,8 +154,14 @@ looking at frames, so that this delta stays visible (`SWF_CAPTURE_RECIPE.md` §9
    target and *still* does not make the numbers work as an R-multiple (a 27.0 R-multiple
    on a 10–18 pip stop is absurd).
 
-   `A-018` is **extended, not resolved** — one agreeing pair is not a definition, and no
-   presenter states one.
+   **This is the second agreeing pair, and the first where one side is spoken.** V03
+   already supplied a printed-vs-printed pairing (`R = 41.4` beside the criteria text
+   *"Asian Range =41"*, recorded in the V03 evidence block of
+   `AUTOMATION_AMBIGUITIES.md`). V04 adds a printed-vs-*spoken* one, on a different chart
+   in a different lesson.
+
+   `A-018` is **extended, not resolved** — two agreeing pairs are not a definition, and no
+   presenter ever states one.
 5. **The handover has a visual marker.** Frame 13's MMFx title card sits between the
    instructor's last line and the guest's first, corroborating a speaker boundary that the
    transcript itself does not label.

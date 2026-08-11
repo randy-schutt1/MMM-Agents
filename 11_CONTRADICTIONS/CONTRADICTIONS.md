@@ -9,9 +9,10 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 ## STATUS
 
 ```text
-RECORDS:         4   (C-001 … C-004)
-LESSONS STUDIED: 3   (V01, V02 — V02 reviewed R3: PASS; V03 not yet reviewed)
-UNRESOLVED:      3   (C-001 foundational; C-003; C-004)
+RECORDS:         5   (C-001 … C-005)
+LESSONS STUDIED: 4   (V01, V02 reviewed R3: PASS; V03 REVISE R1 minors-only;
+                      V04 not yet reviewed)
+UNRESOLVED:      4   (C-001 foundational; C-003; C-004; C-005)
 RESOLVED/OTHER:  1   (C-002 — STATED EXCEPTION, condition unmeasurable)
 ```
 
@@ -42,6 +43,11 @@ RESOLVED/OTHER:  1   (C-002 — STATED EXCEPTION, condition unmeasurable)
 > rule above. The V03 pass added evidence to all four records and opened none, so only
 > `LESSONS STUDIED` moved (2 → 3); the V02 review state is also refreshed from R1 to its
 > final R3 `PASS`. Record counts are unchanged and were re-derived, not assumed.
+>
+> **UPDATED again 2026-08-10 (V04 pass).** Recounted from the INDEX per the standing rule.
+> The V04 pass **opens `C-005`** (two presenters teaching different entry systems inside
+> one lesson) and adds evidence to `C-001` and `C-004` without resolving either. Updated
+> in the same commit that added the record.
 
 `C-001` and `C-002` are **intra-lesson** contradictions within V01, and both originate
 with the instructor rather than with the reading of him. `C-001` (how long price runs away from
@@ -115,6 +121,7 @@ An ignored contradiction is reviewer error code E13.
 | C-002 | Whether the trading-zone / blue-box filter and the one-direction rule are mandatory | V01 `[00:44:15]` / `[00:51:22]` vs V01 `[00:44:03]` / `[00:51:34]` | STATED EXCEPTION — condition unmeasurable | No, but blocking for implementation |
 | C-003 | Whether M and W formations can fail | V02 `[00:38:40]` vs V02 `[00:38:40]` (same sentence) | UNRESOLVED — self-contradictory as spoken | No |
 | C-004 | London session open — 3:30am printed vs 4:00 spoken | V02 slide `[00:45:55]` vs V02 `[00:50:32]` | UNRESOLVED — daylight-saving explanation plausible but unstated | No, but blocking for any time-gated rule |
+| C-005 | Instructor vs guest presenter — different entry gate, session, second-leg dependence and stop reference, in one lesson | V04 `[00:15:34]`–`[00:15:57]` (instructor) vs V04 `[01:13:34]`–`[01:14:18]` (guest) | UNRESOLVED — pending a **scope ruling**, not pending evidence | No on the method; **yes on corpus hygiene** |
 
 ---
 
@@ -594,3 +601,165 @@ both values, encode no London open.
 
 **Required to resolve — updated.** V04 or V05 (same 25 March 2012 session date) or any
 later lesson showing an updated times slide. V03 is now struck off as checked and negative.
+
+---
+
+## C-005 — The instructor and the guest presenter teach different entry systems in one lesson
+
+### Concept
+
+What gates an entry, and in which session. V04 contains two complete, internally coherent
+accounts, delivered 30 minutes apart in the same recording, by two different people, with
+**no speaker labels anywhere in the transcript**.
+
+> **This record is unusual and the reason it exists should be stated first.** It is
+> **probably not a contradiction in the Market Maker Method at all.** The guest scopes his
+> statements to the US session and says so repeatedly. It is recorded because the two
+> voices sit in one undifferentiated transcript, and a future session mining V04 for rules
+> — or an automated extraction pass — has no way to know it is reading two people. The
+> hazard is not that the course contradicts itself; it is that **the corpus will
+> contradict itself if this is not written down.**
+
+### Source A — the instructor, `[00:00:00]`–`[00:26:56]`
+
+| Field | Value |
+|---|---|
+| Video | V04 |
+| Timestamp | `[00:15:34]`–`[00:15:57]` |
+| Screenshot | None for TDI — *"I can't show you TDI because it's not here"* `[00:13:53]` |
+| What is said | *"The criteria is this. … 25 to 50 pips above and below the blue box. M formation second leg, W formation second leg, TDI confirms blood in the water shark fin outside the band to back in. That's the criteria. Simple."* |
+
+Supporting: the session he works is the London stop-hunt window — *"From one to five AM
+New York, one to four AM New York"* `[00:21:33]`, *"You're looking for the dealer to
+exploit the shadow at the start of the London and to start of the US"* `[00:21:44]`. The
+three bursts are central — *"You're looking for the three bursts"* `[00:00:36]`.
+
+### Source B — the guest presenter, `[00:26:59]`–`[01:25:37]`
+
+| Field | Value |
+|---|---|
+| Video | V04 |
+| Timestamp | `[01:13:34]`–`[01:14:18]` |
+| Screenshot | `04_SCREENSHOTS/V04/V04_00-34-00_pre-trade-question-checklist-slide.png` |
+| What is said | *"first of all, I'm looking for the ADR to run. What I mean by that is if the pair generally every day runs 100 pips, if it's not in the mid 90s, it's not ready. … So I'm looking for one, the ADR to be met. Two, I'm looking for where it's at on TDI. … Three, what type of reversal candles is it giving me? … In the London, I'm sorry, in the US session, you generally don't get a lot of second lads [legs]. You just don't get them."* |
+
+### The three specific divergences
+
+| Topic | Source A (instructor) | Source B (guest) |
+|---|---|---|
+| **Session** | London stop-hunt window, 1–5 AM New York `[00:21:33]` | US session only. *"I think the only way I would ever trade the money session now is if somebody forced me to move overseas. Because I love the US session."* `[01:21:04]`–`[01:21:10]` |
+| **Second leg** | A **necessary** entry condition `[00:15:49]` | *"in the US session, you generally don't get a lot of second lads. You just don't get them."* `[01:14:13]`–`[01:14:18]`; *"more than 50% of the time it's a retracement, and then it continues the move"* `[00:54:11]`–`[00:54:14]` |
+| **Three pushes** | *"You're looking for the three bursts"* `[00:00:36]` | *"Jose, I do not look for three pushes because there's no pushes in the US session. The pushes come in the London session."* `[01:12:37]`–`[01:12:44]` |
+| **Primary gate** | Location relative to the blue box, ± TDI `[00:15:43]` | **ADR ~90–95% complete** `[01:13:34]`, `[01:17:17]` |
+| **Stop placement** | Sized from the **entry** — *"if your entry is here, your stop loss is right there. Ten fifteen pips"* `[00:04:24]`–`[00:04:30]` | Sized from the **low of the day** — *"My stop loss is seven pips plus the spread below the low of the day"* `[01:04:41]` |
+
+### Conflict
+
+Taken as statements about *the same system*, A and B are incompatible: B removes A's
+second condition, removes A's three bursts, replaces A's primary gate, and measures the
+stop from a different reference.
+
+Taken as statements about *two different sessions by two different traders*, they are
+consistent and B is explicitly derivative of A — the guest says so at length
+(*"every single thing that I know about trading, I learned from Steve"* `[00:42:25]`–`[00:42:29]`).
+
+**The transcript provides nothing that would let a reader tell which is happening.** There
+are no speaker labels; the handover is unannounced; the only marker is a title card at
+`00:27:20` that a text-only pass never sees.
+
+### Possible Explanations
+
+| # | Explanation | Supporting evidence | Assessment |
+|---|---|---|---|
+| 1 | **Different session, explicitly scoped** — B is A's method applied to a session where the second leg and the pushes do not occur | The guest scopes almost every claim ("in the US session…", 14 occurrences). He attributes the underlying method to the instructor throughout | **Strongly supported — the leading explanation** |
+| 2 | Different speaker authority — B is a practitioner's personal adaptation, not doctrine | *"this is just me"* `[00:46:19]`, *"that's simply just my opinion"* `[01:00:10]`, *"in my opinion, this is just my opinion"* `[01:06:31]` | **Strongly supported, and compatible with 1** |
+| 3 | Later refinement of an earlier rule | None — same recording, and B never claims to correct A | Rejected |
+| 4 | Different instrument | None. Both range over the majors | Rejected |
+| 5 | A genuine inconsistency in the course | Would require reading B as doctrine, which D-008 forbids without a decision | **Not supported** |
+
+Explanations 1 and 2 together account for every divergence without inventing anything.
+**They are not adopted as a resolution**, because adopting them would amount to ruling that
+the guest's material is out of scope — and that is a scope decision the project owner and
+the reviewer should make, not a student session.
+
+### Resolution
+
+```text
+UNRESOLVED — pending a scope ruling, not pending evidence
+```
+
+**Foundational: no**, on the method. **Yes, on corpus hygiene.**
+
+This is the distinguishing feature of this record: unlike `C-001`, no further course
+material will resolve it, because there is nothing factually in doubt. What is needed is a
+**ruling on how guest-presenter material is treated** across the corpus. Until that
+ruling exists, the interim handling is already in force and is strict:
+
+1. Every V04 artifact tags each statement `INSTRUCTOR` or `GUEST`.
+2. **No `GUEST` statement enters the canonical methodology**, the concept library, the
+   master spec or any machine candidate.
+3. No `GUEST` number is adopted — not the 7-pip stop, not the 35–50 pip target, not the
+   ADR gate.
+
+### Required to resolve
+
+A project-owner or reviewer decision on the status of non-instructor presenters, recorded
+in `DECISIONS.md`. **This should be raised before V05**, because the V03–V05 lessons share
+one session date and V05 may well contain more of the same guest — and because the
+question is about to recur for the third presenter, "Carl", who is queued at
+`[01:19:02]` and does not speak inside this file.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V04_SOURCE_NOTES.md` §3f |
+| Interpretation | `03_LESSON_NOTES/V04_INTERPRETATION.md` I9, §8.2 |
+| Ambiguity | A-038 (the guest's ADR window), A-039 (TDI required but untaught) |
+| Decision | D-008 (evidence hierarchy) |
+
+---
+
+## V04 EVIDENCE ADDED TO EXISTING RECORDS
+
+| ID | V04 evidence | Effect |
+|---|---|---|
+| **C-001** — duration away from the anchor | `[00:20:28]`–`[00:20:33]` *"Now you trade away from the high of the week for two and a half to three days until the dealer issues another signal."* | **New source; lands squarely on Source A; does NOT resolve.** This is a near-verbatim restatement of `C-001` Source A (V01 `[00:35:06]`–`[00:35:11]`, *"you trade away from the anchor for two and a half to three more days"*), three lessons later. It does **not** match Source B (V01 `[00:35:15]`–`[00:35:25]`, four / three-and-a-half / three days) and does **not** match V02 `[00:16:15]` (*"at least three days"*, no upper bound). **What it adds beyond a repetition:** a terminating condition Source A lacked — *"until the dealer issues another signal"* — which reframes the quantity from a fixed holding period into a typical duration with an event-driven exit. That is the first textual support this record has ever had for **explanation 6** (a trader-side window distinct from the market-side move), which was previously marked *"plausible, unstated — do not adopt"*. It is now *plausible and partially stated*, and still **not adopted**: "another signal" is itself undefined, Source B is never retracted, and the day-counting convention remains unstated. **Status unchanged: `UNRESOLVED`. No day-count value is committed anywhere.** |
+| **C-004** — London open, 3:30 printed vs 4:00 spoken | **Deliberate check performed, as `C-004`'s own "Required to resolve" field instructed.** Result: **negative on both halves.** | **No progress; V04 struck off as checked.** See the check record below. |
+
+### The `C-004` deliberate check on V04 — method and negative result
+
+`C-004`'s "Required to resolve — updated" field named V04 explicitly (*"V04 or V05 (same
+25 March 2012 session date) or any later lesson showing an updated times slide"*). The
+check was run deliberately, not incidentally, and both halves are negative.
+
+**Visual half.** The full 1,037-frame sweep was segmented into **47 distinct screen
+states** by anchor-based differencing (a new segment opens whenever a frame differs from
+its segment's anchor by more than a set threshold, so slow accumulating changes such as
+the instructor's 22 minutes of drawing are caught rather than collapsed). **One
+representative frame per state was rendered into contact sheets and every one was
+reviewed.** No forex-trading-times slide, no session-boundary table, and no clock-time
+graphic of any kind appears anywhere in V04.
+
+**Spoken half.** Every transcript entry containing a clock time, `am`/`pm`/`o'clock`, or
+the words *London*, *Asian*, *New York*, *US session* or *session open* was extracted and
+read — 47 entries. **The London open is never given a time in V04.**
+
+The only timezoned clock times in the lesson are `[00:21:33]`–`[00:21:37]`: *"From one to
+five AM New York, one to four AM New York, four or five hours. Take a break from eight to
+11 New York time."* These are **hours to be at the screen**, not session boundaries, and
+the instructor immediately marks them as a restatement (*"nothing's changed"* `[00:21:41]`).
+
+**Why this does not discriminate 3:30 from 4:00.** The 1–5 AM New York window *contains*
+both candidate values, so it is consistent with either and evidence for neither. The
+adjacent line — *"You're looking for the dealer to exploit the shadow at the start of the
+London and to start of the US"* `[00:21:44]` — confirms the window is meant to cover the
+London start but attaches no number to it. Reading a boundary out of a screen-time window
+would be exactly the joining-the-pieces this record has twice declined to do.
+
+**Status: `UNRESOLVED`, unchanged. Interim handling unchanged: carry both values, encode
+no London open.**
+
+**Required to resolve — updated again.** V05 (same 25 March 2012 session date) or any
+later lesson showing an updated times slide. **V03 and V04 are now both struck off as
+checked and negative.**
