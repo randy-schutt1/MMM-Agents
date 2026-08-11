@@ -2679,3 +2679,98 @@ runnable test.
 3. Then V05 review, V04 R2 review.
 
 ---
+
+## 2026-08-11 — Session — D-031: timezone as a tested variable; PT-001 unblocked
+
+### Objective
+
+Resolve the `A-019` timezone blocker on `PT-001` following owner direction, without
+closing an ambiguity the source itself declines to settle.
+
+### Owner direction
+
+*"Originally I thought it'd be Eastern Standard Time in New York, but we have to test
+daylight savings versus non-daylight savings. So just default to Eastern Standard Time
+in New York and then test with the extra if need be."*
+
+The instinct is right and is the reason this closed cleanly: an ambiguity that cannot be
+resolved from source **can** be converted into a measured variable.
+
+### Work Completed
+
+- **`D-031`** — session timezone is a tested variable. Two pre-registered arms:
+  **A** fixed `UTC−5`; **B** DST-aware `America/New_York`. **Binding rule: both are
+  always reported.** Divergence is a finding, never a selection criterion.
+- **`A-019` updated and deliberately kept OPEN.** `D-031` governs project method, not
+  course content, and may never be cited as instruction.
+- **`PT-001` unblocked** — §3 rewritten with the two-arm design, the two-draws caution,
+  and the straddle-a-DST-transition recommendation. Remaining prerequisites are `I-007`
+  (data source) and the `D-028` boundary dates — no longer the timezone.
+- `REVIEW_INDEX.md` item 37 updated, item 38 added. `CHANGELOG.md` 0.7.2.
+
+### Key Findings
+
+**The owner's stated default may be inverted, and the arithmetic is now on the record.**
+The bootcamp ran 2012-03-18 → 2012-06-17, **entirely inside US daylight saving**
+(2012: Mar 11 – Nov 4). So:
+
+```text
+V01 [00:46:09] "the US session starts at 9:30 New York Eastern"
+  = 09:30 EDT = 13:30 UTC during the recording period
+
+Fixed EST (UTC−5) chart      → displays 08:30   one hour early, every session
+America/New_York (DST-aware) → displays 09:30   matches
+```
+
+Arm B reproduces the instructor's own numbers during the window he spoke them; Arm A
+displaces every one by an hour. **This is evidence about the source and does not settle
+what the method requires** — his table may genuinely have been taught as fixed clock
+numbers (`A-019` candidate reading 1). Recorded, not acted on unilaterally.
+
+Supporting fragment for the market-anchored reading: `[00:50:26]` *"we back up the London
+session in the winter"* — part of his table already moves seasonally, which is what a
+DST-following table does and a fixed-offset table does not.
+
+**Two arms are two draws, not two chances to be right.** Flagged explicitly in `PT-001`
+§3b: if A returns 58% and B returns 61%, that is one draw each from possibly overlapping
+distributions, not a discovery that B is correct. Reporting only the better arm is
+`E09`+`E24`.
+
+**Design improvement found while writing this up:** the two arms are *identical* outside
+US daylight saving and differ by one hour inside it. Choosing a development window that
+**straddles a DST transition** therefore gives a within-sample comparison on the same
+instrument and regime — strictly stronger than two separate runs, at zero cost.
+
+### Manual Backtesting
+
+None. `PT-001` remains pre-registered and unrun.
+
+### Ambiguities / Contradictions
+
+`A-019` updated, **still OPEN**. No new records.
+
+### Decisions
+
+**D-031**.
+
+### Files Created/Updated
+
+`00_SYSTEM/DECISIONS.md`; `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`;
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-001_…md`; `18_REVIEW/REVIEW_INDEX.md`;
+`CHANGELOG.md`; `LOG.md`.
+
+### Git
+
+```text
+<this commit> docs: D-031 timezone as tested variable; PT-001 unblocked
+```
+
+### Next Action
+
+1. **Commit and push V05** — still uncommitted, still a single copy.
+2. Declare the chart data source and feed (`I-007`), then pin the `D-028` boundary dates
+   choosing a window that straddles a DST transition.
+3. `PT-001` becomes runnable at that point.
+4. V05 review, V04 R2 review.
+
+---

@@ -712,6 +712,62 @@ covered here — that is `DEFERRED` under `D-019` and may proceed once the tooli
 
 ---
 
+## D-031 — Session timezone is a tested variable, not an assumption
+
+**Date:** 2026-08-11
+**Decision:** The chart timezone used to place session windows is **not assumed**. Every
+manual backtest that depends on session boundaries runs **two pre-registered arms**, and
+**both are always reported**:
+
+| Arm | Definition | Meaning |
+|---|---|---|
+| **A — fixed offset** | `UTC−5` year-round ("EST", New York, no DST) | His table is a set of fixed clock numbers that never move |
+| **B — market-anchored** | `America/New_York` with DST active (i.e. `UTC−4` in summer) | His table tracks the wall clock of the market, shifting with DST |
+
+Owner direction 2026-08-11: treat the timezone as something to test rather than
+resolve, defaulting to fixed Eastern and testing the alternative.
+
+**Binding rule — this is the part that matters:** both arms are pre-registered before any
+chart is opened, and **both results are reported every time**. Divergence between them is
+a **finding**, never a selection criterion. Reporting only the better-performing arm is
+`E09` (cherry-picking) and `E24`, and is exactly how a timezone convention gets
+"validated" by noise.
+
+**Reason:** `A-019` cannot be closed from source — the instructor explicitly declines to
+specify (*"Listen, don't analyse it… These are the times"*, `[00:49:52]`) and says the
+person who taught him has died (`[00:49:22]`). An unresolvable ambiguity that materially
+moves every session boundary is better converted into a measured variable than into a
+guess.
+
+**Arithmetic that must not be lost.** The bootcamp was recorded **2012-03-18 →
+2012-06-17**, which lies **entirely within US daylight saving** (2012: Mar 11 – Nov 4).
+So New York local clock throughout the course was **EDT (UTC−4)**, not EST (UTC−5):
+
+```text
+His "US session starts at 9:30 New York Eastern"  (V01 [00:46:09])
+  = 09:30 EDT = 13:30 UTC   during the recording period
+
+Chart on fixed EST (UTC−5)      → that event displays at 08:30   ✗ one hour early
+Chart on America/New_York (DST) → that event displays at 09:30   ✓ matches
+```
+
+**Arm B therefore reproduces the instructor's own stated numbers during the period he
+recorded them; Arm A shifts every one of them by an hour.** This does not settle which
+arm the *method* wants — his table may genuinely have been taught as fixed numbers — but
+it is a fact about the source and belongs on the record.
+
+**Alternatives considered:** Picking one timezone and proceeding — rejected; a one-hour
+error in the Asian window moves the box high/low, which moves the 25–50 pip band, which
+changes every observation, invisibly. Deferring the second arm until "if need be" —
+rejected; the marginal cost is one shifted harvest of the same data, and deferred
+robustness checks reliably become skipped ones.
+**Consequences:** `PT-001` and every future session-dependent test carry both arms.
+`A-019` remains **OPEN** on the course's side — this decision governs project method, not
+what the course teaches, and no session may cite D-031 as evidence of instruction.
+**Status:** ACTIVE
+
+---
+
 ## DECISIONS TO BE MADE AT INGESTION
 
 Not yet decided; record as new entries when the information exists.

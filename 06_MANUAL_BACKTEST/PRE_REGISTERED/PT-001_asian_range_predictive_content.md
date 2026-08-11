@@ -2,7 +2,9 @@
 
 ```text
 STATUS:     PRE-REGISTERED — NOT YET RUN
-BLOCKED BY: A-019 (session times have no timezone) — ONE blocker, see §3
+BLOCKER:    A-019 RESOLVED FOR TESTING PURPOSES 2026-08-11 via D-031 (two-arm design).
+            A-019 itself remains OPEN — the source still declines to specify.
+REMAINING:  I-007 (no declared chart data source / feed) and the D-028 boundary dates.
 OWNER NOTE: recorded 2026-08-11 at the project owner's request so it is not forgotten
 ```
 
@@ -43,35 +45,59 @@ distribution of outcomes as matched entries with no regard to the box.
 
 ---
 
-## 3. THE ONE BLOCKER — `A-019`
+## 3. THE TIMEZONE — RESOLVED FOR TESTING BY `D-031`
 
-V02 `[00:37:xx]` prints session times on a slide:
+V02's printed slide gives the window but **no timezone**:
 
 ```text
-Asian Session:  8:30pm - 3:00am    Gap 3-3:30a
+5pm            High / Low Reset (The MM Spread Is Set)
+5pm – 8pm      Dead Gap
+Asian Session  8:30pm – 3:00am     Gap 3:00–3:30
+London Session 3:30am – 9:00am     Gap 9:00–9:30
+New York       9:30am – 5pm
 ```
 
-**No timezone is stated anywhere on the slide or in the audio.** That is `A-019`.
-Without it the window cannot be placed on a chart, and placing it by assumption would
-violate `D-030`.
+The instructor declines to specify — *"Listen, don't analyse it… These are the times"*
+`[00:49:52]` — and the person who taught him has died `[00:49:22]`. `A-019` therefore
+cannot close from source, and **is still open**.
 
-### Why this blocker may be cheaply resolvable — unlike the others
+Under `D-031` the ambiguity is **measured instead of guessed.**
 
-Unlike `A-011` or `A-039`, this probably does **not** require a future lesson. Existing
-evidence in V01–V04 bears on it:
+### 3a. The two arms — both pre-registered, both always reported
 
-| Evidence | Video | Marker |
+| Arm | Chart timezone | Asian window in UTC |
 |---|---|---|
-| *"It's 809 Eastern Time on 325"* | V04 | `[00:07:01]` |
-| *"We know that the US session starts at 930 [New York] Eastern"* | V01 | `[00:46:09]` |
-| London open printed 3:30am against 4:00 spoken — **caution: session times in this course are demonstrably messy** | — | `C-004` |
+| **A — fixed offset** | `UTC−5` year-round | 01:30 – 08:00 UTC, unchanging |
+| **B — market-anchored** | `America/New_York` (DST-aware) | 00:30 – 07:00 UTC in summer; 01:30 – 08:00 in winter |
 
-A focused evidence pass over V01–V05 for timezone statements could plausibly close
-`A-019` — or establish that it cannot be closed, which is equally useful. **That pass is
-the prerequisite work item, and it is small.**
+**Reporting rule (`D-031`, binding):** both arms are reported every time. Divergence is a
+finding. **Reporting only the better arm is `E09` + `E24`.**
 
-Do **not** assume US Eastern to unblock this test. `C-004` exists precisely because a
-plausible-looking session time in this course turned out to conflict with the source.
+### 3b. Two draws are not two chances to be right
+
+Running two arms means two samples. If A returns 58% and B returns 61%, that is **not**
+a discovery that B is the correct timezone — it is one draw each from distributions that
+may well overlap. Correct readings:
+
+| Outcome | What it means |
+|---|---|
+| Arms behave alike | The timezone is **not load-bearing**. A robustness result, and good news |
+| Arms diverge sharply | Real information — but needs a larger sample or independent confirmation before anyone concludes which reading is right |
+| One arm looks better | **Not a conclusion.** Report both, state the overlap |
+
+### 3c. Choose a test period that straddles a DST transition
+
+The two arms are **identical outside US daylight saving** and differ by one hour inside
+it. A period spanning a transition therefore yields a **within-sample** comparison on the
+same instrument and the same regime, which is far stronger than two separate runs — and
+it costs nothing but the choice of dates.
+
+### 3d. Fact of record, from `D-031`
+
+The bootcamp was recorded 2012-03-18 → 2012-06-17, **entirely within US daylight
+saving**. Arm B reproduces the instructor's own stated times during that window; Arm A
+displaces every one of them by an hour. This is evidence about the source. It does not
+settle which reading the *method* requires, and it must not be reported as if it did.
 
 ---
 
@@ -83,7 +109,7 @@ plausible-looking session time in this course turned out to conflict with the so
 | Timeframe | 15-minute, with 4-hour for context |
 | Period | DEVELOPMENT block only, per `D-028` (oldest 70%). Exact dates pinned when the data source is declared |
 | Holdout | **Not opened.** This test never touches the most recent 30% |
-| Asian window | `PENDING A-019` — filled only from source evidence, never assumed |
+| Asian window | **8:30pm – 3:00am** per the V02 printed slide, run in **both `D-031` arms** (see §3a) |
 | Box definition | High and low of the Asian window, per lesson |
 | Trigger | 15m close ≥25 pips and ≤50 pips beyond the box edge |
 | Decision point | That close. **No later bar is consulted for classification** |
@@ -123,8 +149,11 @@ Any report of this test carries this verbatim:
 
 ## 8. TO RUN THIS
 
-1. Close `A-019` from source evidence, or establish that it cannot be closed.
-2. Declare the chart data source, feed and timezone (`I-007`).
-3. Pin the `D-028` 70/30 boundary dates from the actual available range.
+1. ~~Close `A-019`~~ — **done for testing purposes** via `D-031`'s two-arm design.
+   `A-019` stays open on the course's side.
+2. Declare the chart data source and feed (`I-007`). The timezone is no longer a
+   blocker — it is a variable.
+3. Pin the `D-028` 70/30 boundary dates from the actual available range, choosing a
+   development window that **straddles a DST transition** (§3c).
 4. Write `BT_PT001_NNNN.md` observations from the template, §0 referencing this file.
 5. Run baselines **before** looking at the rule arm's aggregate result.

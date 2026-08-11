@@ -11,6 +11,32 @@ Newest first.
 
 ---
 
+## [0.7.2] — 2026-08-11 — Timezone as a tested variable; PT-001 unblocked
+
+### Added
+
+- **`D-031`** — session timezone is a **tested variable, not an assumption**. Two
+  pre-registered arms: **A** fixed `UTC−5`, **B** DST-aware `America/New_York`. **Both
+  always reported**; divergence is a finding, never a selection criterion.
+
+### Changed
+
+- **`A-019` updated and deliberately kept OPEN.** The source declines to specify, so it
+  cannot close from evidence; `D-031` governs project method only and may never be cited
+  as instruction.
+- **`PT-001` is unblocked** and now carries the two-arm design, the two-draws caution,
+  and a recommendation to choose a development window that **straddles a DST transition**
+  so the arms can be compared within one sample.
+
+### Fact of record
+
+The bootcamp ran **2012-03-18 → 2012-06-17, entirely within US daylight saving**. Arm B
+reproduces the instructor's own stated times during that window; **Arm A displaces every
+one of them by an hour.** That is evidence about the source, not a resolution of what the
+method requires — his table may genuinely have been taught as fixed clock numbers.
+
+---
+
 ## [0.7.1] — 2026-08-11 — Owner decisions; PT-001 pre-registered
 
 ### Added
