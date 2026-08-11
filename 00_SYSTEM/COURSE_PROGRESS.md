@@ -23,6 +23,16 @@ CURRENT LESSON:      **V03 — reviewed R1 2026-08-10: `REVISE` (HIGH), 0 critic
                      session-times slide) and external corroboration of the homework
                      data against ECB reference fixes. See
                      18_REVIEW/V03/V03_REVIEW_R1.md.
+                     ---- remediation (2026-08-10, post-R1) ----
+                     **ALL THREE MINORS APPLIED — PENDING VERIFICATION at R2:**
+                     M1 day-boundary convention stated (21:00 UTC FX day) and all
+                     twenty daily ranges committed, ADR recomputed to
+                     46.5/55.7/138.9/54.4; M2 coverage line restated as
+                     non-decreasing with the three same-second pairs named;
+                     M3 duration finding scoped to 2 of 4 in homework §2.5A/§4 and
+                     mastery report §2/§D. No conclusion changed (0 of 4 still reach
+                     3×ADR; both supported pairs still exceed the taught window).
+                     V03 stays REVIEW REQUIRED until a reviewer verifies the fixes.
                      ---- student pass (prior) ----
                      Student pass COMPLETE 2026-08-10, submitted as
                      REVIEW REQUIRED (not PASS).** Transcript verified and adopted;
@@ -57,9 +67,11 @@ CURRENT LESSON:      **V03 — reviewed R1 2026-08-10: `REVISE` (HIGH), 0 critic
                      0 major. COMPLETE. All 15 of R2's required actions applied and
                      verified against the source; R2 finding N1 (A-006's trailing
                      block) closed by withdrawing it in place.
-NEXT ACTION:         **Begin V04 (gate OPEN per D-024), and apply V03 R1's three
-                     minor corrections** (REVIEW_INDEX.md open items 18–20) so V03
-                     can reach COMPLETE at its next review touch. N4 (manual-backtest
+NEXT ACTION:         **Begin V04 (gate OPEN per D-024).** V03 R1's three minor
+                     corrections (REVIEW_INDEX.md open items 18–20) are **APPLIED
+                     2026-08-10 and await reviewer verification** — that verification
+                     is what moves V03 to COMPLETE, and it may ride along with V04's
+                     R1 rather than opening a dedicated round. N4 (manual-backtest
                      debt, three lessons deep) is carried: the first testable rule
                      that lands must have the hidden-future backlog discharged
                      against it.
@@ -234,7 +246,7 @@ fabricate, interpolate, or infer Week 6 content.**
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
-| V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | **REVIEW REQUIRED** | **R1 REVISE (0 crit, 0 maj, 3 min)** | **IN REMEDIATION — V04 gate OPEN (D-024)** |
+| V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | **REVIEW REQUIRED** | **R1 REVISE (0 crit, 0 maj, 3 min)** | **REMEDIATION APPLIED — M1–M3 fixed 2026-08-10, awaiting R2 verification; V04 gate OPEN (D-024)** |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |

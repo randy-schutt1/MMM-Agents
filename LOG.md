@@ -1842,3 +1842,73 @@ left in place unstaged. Files: `18_REVIEW/V03/V03_REVIEW_R1.md` (new),
 Student application of M1–M3 (verify at V03's next review touch, which may ride
 along with V04's R1 rather than opening a dedicated round); V04 R1 after the V04
 student pass.
+
+---
+
+## 2026-08-10 — V03 R1 REMEDIATION (M1–M3, minors only)
+
+### Scope
+
+Mechanical correction pass against `18_REVIEW/V03/V03_REVIEW_R1.md`. All three
+minors applied. No conclusion in any file changed. V03 stays `REVIEW REQUIRED`
+until a reviewer verifies the fixes; the V04 gate was already OPEN per D-024 and
+is untouched by this pass.
+
+### M1 (E19) — ADR figures now re-derivable
+
+The committed figures (47.0 / 54.8 / 148.2 / 56.5) could not be reconstructed
+under any convention, so they were **recomputed under an explicitly stated one**
+rather than reverse-engineered. Convention now written into `V03_HOMEWORK.md`
+§2.5 Finding B: the **FX day beginning 21:00 UTC**, which is the dataset's own
+week-open boundary and the only convention that divides the 30 bars into five
+whole days — day 1 = bars 0–5, day 2 = 6–11, day 3 = 12–17, day 4 = 18–23,
+day 5 = 24–29; a day's range is max(high of its six bars) − min(low of its six).
+All **twenty daily ranges are now committed in the file** (four pairs × five
+days), so the ADR column re-derives by inspection.
+
+New ADR: EURUSD 46.5, GBPUSD 55.7, USDJPY 138.9, USDCHF 54.4 → 3×ADR 139.6 /
+167.2 / 416.8 / 163.3, multiples 1.73× / 1.64× / 2.41× / 1.48×. The superseded
+figures are retained in an in-file correction note rather than deleted.
+**0 of 4 reached 3 × ADR — unchanged**, as it was under every convention the
+reviewer tested (1.46–2.61 across all of them).
+
+### M2 (E20) — transcript coverage wording
+
+`V03_TRANSCRIPT.md` I-008 block: *"1,230 timestamps, strictly monotonic, no
+duplicates"* → **"1,230 timestamps, 1,227 distinct, non-decreasing throughout
+(never decreasing), with three benign same-second adjacent pairs at
+`[00:35:21]`, `[01:00:13]` and `[01:04:30]`"**, plus a correction note. Counts
+re-verified this session by regex over the file (1,230 markers, 1,227 unique,
+adjacent duplicates exactly the three named, sequence never decreasing).
+**V02's identically-worded line was checked as well and is true as written**
+(1,026 markers, all distinct, no adjacent duplicates) — no change made there.
+
+### M3 (E02) — duration finding scoped to its real sample
+
+`V03_HOMEWORK.md` §2.5 Finding A: the table gains a per-pair *"does this measure
+the taught object?"* column (EURUSD low at bar 4 and GBPUSD low at bar 5 — both
+after the block low was cut, both **Yes**; USDJPY and USDCHF have the week's low
+at bar 0, no cut, no anchor formed, both **No**), an explicit statement that the
+finding is **supported 2 of 4, not 4 of 4**, the note that the two excluded pairs
+measure open-to-high of a trending week (a different object, retained unbolded as
+raw measurement), and the standing instruction that **any citation of this datum
+against `C-001` must carry the 2-of-4 scoping**. Same scoping applied to homework
+§4 point 3 and to `V03_MASTERY_REPORT.md` §2 (exit-rule table) and §D (sequence
+dimension row). Both supported pairs are 3.8 days — still exceeding the taught
+2.5–3 day window, so the direction of the evidence is unchanged.
+
+`CONTRADICTIONS.md` C-001 was left unedited: it does not yet cite the homework
+duration datum, and M3's requirement is that the scoping travel with the datum
+when it is first cited there.
+
+### Git
+
+Explicit paths on every `git add`; `git status` and `git log` checked first and
+the staged diff read before commit. The untracked
+`05_HOMEWORK/V02/measure_usdchf_week.py` (open item 13, another session's
+artifact) was left in place, unstaged, again.
+
+### Next Review Trigger
+
+**R2 verification of M1–M3** — may ride along with V04's R1. V03 reaches
+`COMPLETE` only when a reviewer confirms these three.

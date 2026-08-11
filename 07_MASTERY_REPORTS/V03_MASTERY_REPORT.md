@@ -140,7 +140,7 @@ philosophy and it is the opposite of what discrimination training requires.
 | What defines the setup | **Yes, mechanically** — the block's high and low, cut on one side |
 | What confirms it | **Partly** — a second-leg M/W back at the level, "high, high, high probability" `[00:24:38]`; but the confirming checklist is the undefined one |
 | What invalidates it | **No.** Nothing in V03 states an invalidation condition |
-| What typically follows | **Yes, with a caveat** — a 2.5–3 day run away from the extreme toward 3×ADR; my homework found 3.7–4.0 days and 0 of 4 reaching the target |
+| What typically follows | **Yes, with a caveat** — a 2.5–3 day run away from the extreme toward 3×ADR; my homework found 3.8 days in the 2 of 4 pairs where an anchor point actually formed (§2 scoping), and 0 of 4 reaching the target |
 
 The missing invalidation row is the same gap V01 and V02 left, now three lessons deep.
 
@@ -262,10 +262,12 @@ lessons. It fails to be testable on one word — **"outside structure" is undefi
 
 | Taught | Measured, 4 majors, one week |
 |---|---|
-| 2.5–3 day run | **3.7–4.0 days, 4 of 4** |
-| 3 × ADR target | **1.42×–2.26×, reached 0 of 4** |
+| 2.5–3 day run | **3.8 days, supported 2 of 4** (EURUSD, GBPUSD). USDJPY and USDCHF are excluded: the week's low is bar 0, so no anchor point formed and their 4.0 / 3.7 days measure open-to-high of a trending week, a different object |
+| 3 × ADR target | **1.48×–2.41×, reached 0 of 4** (ADR from this week's five 21:00-UTC daily ranges, committed in homework §2.5) |
 
-One week is one week and settles nothing. But it points the same way in 4 of 4, and it is
+One week is one week and settles nothing — and on the run-duration row the supported
+sample is two pairs, not four (review R1, M3/E02; the homework §2.5 Finding A scoping
+governs any citation of it). But both supported pairs point the same way, and this is
 the first quantitative evidence this project has produced bearing on `C-001`.
 
 **Conclusion: no rule from V03 should be encoded.** The block measurement could be, and

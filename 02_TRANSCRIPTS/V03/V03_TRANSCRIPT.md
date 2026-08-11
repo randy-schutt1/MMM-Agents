@@ -37,8 +37,13 @@ required that the transcript be checked before adoption, per `SETUP_ISSUES.md` I
 It was checked against all four I-008 criteria and **passed**:
 
 1. **Length matches the audio.** Final timestamp `[01:10:39]` against a measured
-   `01:10:42.7`. 1,230 timestamps, strictly monotonic, no duplicates, no implausible
-   jumps (largest gap 13 s).
+   `01:10:42.7`. **1,230 timestamps, 1,227 distinct, non-decreasing throughout (never
+   decreasing), with three benign same-second adjacent pairs at `[00:35:21]`,
+   `[01:00:13]` and `[01:04:30]`** — short entries that fall inside the same second at
+   1-second marker resolution. No implausible jumps (largest gap 13 s).
+   *(Corrected at review R1, M2/E20: this line previously read "strictly monotonic, no
+   duplicates", which was false as written — the three same-second pairs are real. The
+   underlying check passes; only the claim was overstated.)*
 2. **Spot-checked against the actual audio.** Four 60-second windows
    (`00:03:00`, `00:20:00`, `00:40:00`, `01:05:00`) were independently re-transcribed
    from the extracted audio with Whisper `base` and compared. All four matched

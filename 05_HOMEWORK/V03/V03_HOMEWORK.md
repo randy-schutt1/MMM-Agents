@@ -162,35 +162,71 @@ what the interpretation file already flags and what §4 below develops.
 
 ### 2.5 Two measured findings that bear on open register items
 
-**Finding A — the run took longer than the taught window, in all four pairs.**
+**Finding A — the run took longer than the taught window, in the two pairs where the
+taught object actually exists.**
 
 V03 teaches *"two and a half to three days"* of run away from the extreme (`[00:35:48]`,
 `[00:36:05]`). Measured low-to-high duration:
 
-| Pair | Low → high duration |
-|---|---|
-| EURUSD | 92 h = **3.8 days** |
-| GBPUSD | 92 h = **3.8 days** |
-| USDJPY | 96 h = **4.0 days** |
-| USDCHF | 88 h = **3.7 days** |
+| Pair | Low → high duration | Does this measure the taught object? |
+|---|---|---|
+| EURUSD | 92 h = **3.8 days** | **Yes** — the low forms at bar 4, after the block low was cut |
+| GBPUSD | 92 h = **3.8 days** | **Yes** — the low forms at bar 5, after the block low was cut |
+| USDJPY | 96 h = 4.0 days | **No** — the week's low *is* bar 0 (§2.4); no cut, no anchor formed |
+| USDCHF | 88 h = 3.7 days | **No** — same; the week's low *is* bar 0 |
 
-**All four exceed the taught 2.5–3 day window**, by 0.7 to 1.0 days. This is real
-evidence bearing on `C-001` (how long price runs away from the anchor point), which the
-register carries as foundational and unresolved. One week of four pairs is a small
-sample and settles nothing — but it points the same direction in 4 of 4, and it points
-*away* from the shorter end of the spread the instructor kept offering.
+**Scope: this finding is supported by 2 of 4, not 4 of 4.** The taught window describes
+how long price runs *after the week's extreme forms in a stop hunt*. In USDJPY and
+USDCHF no stop hunt occurred and no anchor point formed — §2.4 rejects both as pattern
+instances on exactly that ground — so their low→high durations measure **open-to-high of
+a trending week**, a different object. They are left in the table unbolded, as raw
+measurements kept on the record, and are excluded from the finding.
+
+**Both supported pairs exceed the taught 2.5–3 day window** (3.8 days, by 0.8 days).
+This is real evidence bearing on `C-001` (how long price runs away from the anchor
+point), which the register carries as foundational and unresolved. Two pairs in one week
+is a very small sample and settles nothing — but both point the same direction, and they
+point *away* from the shorter end of the spread the instructor kept offering. **Any
+citation of this datum against `C-001` must carry this 2-of-4 scoping.**
 
 **Finding B — the 3×ADR target was not reached in any pair.**
 
 V03 gives the swing target as *"three times ADR over three days"* `[00:34:58]`.
 Computing ADR from the week's own daily ranges:
 
+**Day-boundary convention (stated explicitly, so the figures re-derive).** A "day" here
+is the **FX day beginning at 21:00 UTC**, which is the dataset's own week-open boundary
+(the week starts Sun 02 Aug 21:00 UTC). The 30 bars split into exactly five days of six
+consecutive 4h bars: day 1 = bars 0–5, day 2 = bars 6–11, day 3 = bars 12–17, day 4 =
+bars 18–23, day 5 = bars 24–29. A day's range is `max(high of its six bars) −
+min(low of its six bars)`. No other convention divides this dataset into five whole
+days, which is why it was chosen.
+
+**The five daily ranges, in pips** (recomputed from
+`data/weekly_bars_2026-08-02.json` under the convention just stated):
+
+| Pair | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 | ADR (mean) |
+|---|---|---|---|---|---|---|
+| EURUSD | 58.5 | 31.9 | 34.2 | 44.9 | 63.1 | **46.5** |
+| GBPUSD | 88.8 | 37.1 | 47.1 | 31.0 | 74.6 | **55.7** |
+| USDJPY | 265.7 | 81.9 | 56.8 | 99.6 | 190.6 | **138.9** |
+| USDCHF | 60.0 | 26.3 | 37.7 | 75.5 | 72.7 | **54.4** |
+
 | Pair | ADR | 3 × ADR (target) | Actual low→high swing | Achieved |
 |---|---|---|---|---|
-| EURUSD | 47.0 p | 140.9 p | 80.5 p | 1.71× ADR |
-| GBPUSD | 54.8 p | 164.5 p | 91.2 p | 1.66× ADR |
-| USDJPY | 148.2 p | 444.6 p | 334.4 p | 2.26× ADR |
-| USDCHF | 56.5 p | 169.4 p | 80.4 p | 1.42× ADR |
+| EURUSD | 46.5 p | 139.6 p | 80.5 p | 1.73× ADR |
+| GBPUSD | 55.7 p | 167.2 p | 91.2 p | 1.64× ADR |
+| USDJPY | 138.9 p | 416.8 p | 334.4 p | 2.41× ADR |
+| USDCHF | 54.4 p | 163.3 p | 80.4 p | 1.48× ADR |
+
+**Correction note (review R1, M1/E19).** The figures first committed here were 47.0 /
+54.8 / 148.2 / 56.5, which did not re-derive from the committed JSON under any
+day-boundary convention (USDJPY was off by up to 14%) and were published without stating
+the convention or the underlying five ranges. The original convention could not be
+reconstructed, so the table above is a **fresh recomputation under the stated
+convention**, with every input range committed. The conclusion is unchanged: 0 of 4
+reached 3 × ADR under the old figures and under the new ones, and under every other
+convention the reviewer tested (multiples ranged 1.46–2.61 across all of them).
 
 **0 of 4 reached 3 × ADR.** Under the lesson's own exit rule — *"If ADR times three is
 met or not met, but the three day time window is, and you get an outside structure high,
@@ -199,9 +235,9 @@ have been exited **on time, not on target**. That makes the time clause the oper
 half of the rule in 4 of 4 cases, which is a point in the rule's favour: the instructor
 appears to have added the time clause precisely because the target usually is not met.
 
-Caveat stated plainly: ADR here is computed from **this week's own five daily ranges**,
-because V03 never defines the ADR lookback period. A 14-day or 20-day ADR would give
-different numbers. The lookback is undefined in the course, and that undefinedness is
+Caveat stated plainly: ADR here is computed from **this week's own five daily ranges**
+(committed above), because V03 never defines the ADR lookback period. A 14-day or 20-day
+ADR would give different numbers. The lookback is undefined in the course, and that undefinedness is
 itself the finding.
 
 ### 2.6 Per-pair bar tables
@@ -278,9 +314,10 @@ measurements.
    returned inside the block in 4 of 4 — but the direction that followed matched the
    "false move" reading in only 2 of 4. Nothing in V03 tells you in advance which you are
    looking at.
-3. **Two taught numbers did not survive contact with four weeks of real data**: the
-   2.5–3 day run window (actual 3.7–4.0 days, 4 of 4) and the 3 × ADR target (actual
-   1.42×–2.26×, 0 of 4 reached).
+3. **Two taught numbers did not survive contact with this week's real data**: the
+   2.5–3 day run window (actual 3.8 days in the **2 of 4** pairs where an anchor point
+   actually formed — see the scoping in §2.5 Finding A) and the 3 × ADR target (actual
+   1.48×–2.41×, 0 of 4 reached).
 4. **The measurement pipeline is now trustworthy in a way V02's was not.** 116 of 116
    bar transitions validated exactly, weekend gaps landed exactly on a 30-bar cadence,
    and two real-hover spot checks matched the harvest to the last decimal.
