@@ -2493,3 +2493,102 @@ session's work in progress and is expected.
 **A fresh reviewer session for V04 R2** (`D-003`). V04 stays `IN REMEDIATION` and reaches
 `COMPLETE` only on a reviewer `PASS` (`D-004`). V05 is unaffected — the gate has been open
 since R1 — but a V05 session must now apply **D-025** before writing notes.
+
+## 2026-08-11 — Session — Backtest Evidence Standard (D-026 / D-027)
+
+### Objective
+
+Close two methodological gaps identified by an external review of this repository,
+before the first manual-backtest observation is written.
+
+### The four questions asked, and the honest answers at the time
+
+| # | Question | Answer |
+|---|---|---|
+| 1 | Exhaustive, or search-for-matches? | **Exhaustive by design, never exercised.** `STUDY_PROTOCOL.md` §2 + reviewer checks 3 and 6. |
+| 2 | Losers/ambiguous filtered? | **Retained**, enforced at three layers (template checklist voids the observation, `INSUFFICIENT INFORMATION` is first-class, reviewer checks 7-9). |
+| 3 | Train/test split? | **NO.** Only Phase-8 language existed, and its boundaries were an unmade decision. |
+| 4 | Baseline? | **NONE.** Repository-wide grep for baseline / coin-flip / random entry / null hypothesis / control returned one hit, unrelated. |
+
+(1) and (2) needed no change. (3) and (4) are closed by this session.
+
+### Work Completed
+
+- **`00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md`** (new) — matched random-entry baseline
+  (>=200 iterations, distribution reported); period pre-registration; holdout reserve;
+  n>=30 for any quoted rate; intervals mandatory; `DESCRIPTIVE` / `EVIDENTIAL` /
+  `INVALID` classification; multiple-comparison discipline.
+- **`DECISIONS.md` D-026 / D-027** — baseline mandatory with a hard gate; period
+  pre-registration and holdout reserve. Two concrete parameters marked **`OWED NOW`**
+  in the open-decisions table (owner action).
+- **`REVIEW_PROTOCOL.md`** — §6.G checks **15-20**, error codes **E21-E25**. Missing or
+  post-hoc baseline is `CRITICAL`; the rest are `MAJOR`.
+- **`MANUAL_BACKTEST_TEMPLATE.md`** — new **§0 PRE-REGISTRATION** block completed before
+  any chart in the range is opened, four added integrity-checklist boxes, and **§9b
+  RESULT CLASSIFICATION**.
+- **`scripts/validate_project.py`** — `check_backtest_evidence_gate()`. Silent while no
+  observation exists; once one does, fails on: missing D-026/D-027, unresolved
+  `OWED NOW` parameters, missing §0 block, missing classification, or a bare percentage
+  with no interval/baseline/insufficiency label.
+- Wired into `STUDY_PROTOCOL.md` §2, `MASTERY_STANDARD.md` dimension G,
+  `06_MANUAL_BACKTEST/README.md`; `REVIEW_INDEX.md` open items **34-35**;
+  `CHANGELOG.md` 0.7.0.
+
+### Key Findings
+
+**The course supplies its own natural control and the project had not noticed.** V04's
+central claim is that *location* changes the outcome — the same M formation is a loser
+inside the blue box and a winner outside it (`[00:03:04]`-`[00:03:27]`). Running both
+arms removes the pattern confound. If they perform alike, the prohibition that forms
+V04's spine is not doing the work the course claims. This is now required where the
+sample permits, and a null result there is to be reported with equal prominence.
+
+**Adopted at zero cost.** `06_MANUAL_BACKTEST/` held **0** observations, so no existing
+work required rework. The V02/V03/V04 homework is `DESCRIPTIVE` and **already labels
+itself correctly** — `V04_HOMEWORK.md`: *"One week is one week — this is a single
+observation."* No retroactive correction was owed and none was made.
+
+### Verification
+
+The gate was **negative-tested**, not assumed. A deliberately sloppy `BT_V04_0001.md`
+(no pre-registration, bare "62%", no classification) was created in a scratch copy:
+validation returned **4 failures**, one per defect, then **99/0/0** after removal. A
+green run on zero observations proves nothing; this does.
+
+### Manual Backtesting
+
+None performed. This session governs how it will be done, not what it found.
+
+### Ambiguities / Contradictions
+
+No new course-level records. `A-039` still blocks the backtest debt.
+
+### Decisions
+
+**D-026**, **D-027**. Two parameters left `OWED NOW` for the owner — deliberately not
+invented by this session.
+
+### Files Created/Updated
+
+`00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md` (new); `DECISIONS.md`; `REVIEW_PROTOCOL.md`;
+`STUDY_PROTOCOL.md`; `MASTERY_STANDARD.md`; `TEMPLATES/MANUAL_BACKTEST_TEMPLATE.md`;
+`06_MANUAL_BACKTEST/README.md`; `18_REVIEW/REVIEW_INDEX.md`; `scripts/validate_project.py`;
+`CHANGELOG.md`; `LOG.md`.
+
+### Git
+
+```text
+<this commit> docs: add backtest evidence standard (D-026/D-027) with mechanical gate
+```
+
+### Next Action
+
+**Owner:** decide the two `OWED NOW` parameters in `DECISIONS.md` — development/holdout
+boundary, and baseline parameters. Until then `validate_project.py` will fail the moment
+a `BT_` file appears, which is the intended behaviour.
+
+**Project:** V05 is complete locally but **uncommitted** — commit and push it before any
+further work, then the V05 review and the V04 R2 review. The backtest debt discharges
+when `A-039` clears, under this standard.
+
+---

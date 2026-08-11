@@ -55,7 +55,24 @@ Conflating outcome with correctness is reviewer error code E14.
   stay, marked `SUPERSEDED` (`REMEDIATION_PROTOCOL.md` §2).
 - Test IDs are never reused.
 
-## BEFORE THE FIRST OBSERVATION
+## BEFORE THE FIRST OBSERVATION — HARD GATE
+
+**No `BT_*.md` may be written until `DECISIONS.md` carries the baseline (D-026) and the
+period pre-registration (D-027) for the rule under test.** `scripts/validate_project.py`
+enforces this mechanically. Specification: `00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md`.
+
+- **Baseline** — matched random entry, >=200 iterations, distribution reported. A hit
+  rate with no comparator is unreadable, not merely weak.
+- **Pre-registration** — period fixed before any chart in it is opened.
+- **Holdout** — the reserved block stays closed during the Student Phase.
+- **n >= 30** before any rate is quoted; below that, `SAMPLE INSUFFICIENT FOR INFERENCE`.
+- **Null results are reported with equal prominence.**
+
+Where the course supplies its own control, use it: V04 claims **location** changes the
+outcome — same M formation, loser inside the blue box, winner outside. That contrast
+removes the pattern confound and is stronger evidence than any bare hit rate.
+
+## ALSO BEFORE THE FIRST OBSERVATION
 
 The data source, broker/feed, timezone, and timeframes must be decided and recorded
 in `DECISIONS.md` — every record's reproducibility depends on it. See

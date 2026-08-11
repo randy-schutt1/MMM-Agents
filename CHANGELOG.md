@@ -11,6 +11,35 @@ Newest first.
 
 ---
 
+## [0.7.0] — 2026-08-11 — Backtest evidence standard
+
+### Added
+
+- `00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md` — baseline requirement, period
+  pre-registration, holdout reserve, sample sufficiency, and the DESCRIPTIVE /
+  EVIDENTIAL / INVALID classification.
+- `DECISIONS.md` **D-026** (baseline mandatory, hard gate) and **D-027** (period
+  pre-registration and holdout reserve).
+- `REVIEW_PROTOCOL.md` §6.G checks **15–20** and error codes **E21–E25**.
+- `MANUAL_BACKTEST_TEMPLATE.md` **§0 pre-registration block** (completed before any
+  chart in the range is opened) and **§9b result classification**.
+- `scripts/validate_project.py` — `check_backtest_evidence_gate()`: fails if a `BT_`
+  observation exists without D-026/D-027, without a §0 block, without a classification,
+  or quoting a bare percentage. Negative-tested on all four failure modes.
+
+### Context
+
+An external methodological review asked four questions: does a test run exhaustively
+or search for matches; are losers filtered; is there a train/test split; what is the
+baseline. Answers were: exhaustive by design but never exercised; retained and enforced
+at three layers; **no split**; **no baseline anywhere in the repository**.
+
+This release closes the last two. Adopted while `06_MANUAL_BACKTEST/` held **zero**
+observations, so **nothing required rework** — the standard exists before the first
+record, which is the only point at which that is free.
+
+---
+
 ## [0.6.0] — 2026-08-10 — V03 student pass; first ambiguity resolved on spoken evidence
 
 Student round. Clean retry after a prior session hung mid-write on `V03_SOURCE_NOTES.md`.

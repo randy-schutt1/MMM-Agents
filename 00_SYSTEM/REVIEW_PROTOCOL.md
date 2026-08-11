@@ -180,6 +180,33 @@ Audit the **procedure**, not the results. Check:
 13. Was the exact lesson rule being tested identified?
 14. Was the test really testing the lesson, or a later interpretation?
 
+**Checks 15–20 added 2026-08-11 per `DECISIONS.md` D-026 / D-027. Full specification:
+`00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md`.**
+
+15. **Baseline present?** Is there a matched random-entry baseline (same instrument,
+    session, window, stop/target, n; ≥200 iterations; distribution reported)? Absent
+    baseline → `E21`, **CRITICAL** — the result is unreadable, not merely weak.
+16. **Baseline pre-registered?** Was it recorded in `DECISIONS.md` *before* the test,
+    or chosen after the rule's result was known? Post-hoc → `E21`, **CRITICAL**.
+17. **Period pre-registered?** Instrument, range, timeframe and session boundaries
+    recorded before any chart in the range was opened. Changed mid-test without a new
+    test ID → `E22`, **MAJOR**.
+18. **Holdout intact?** Was reserved holdout data opened during the Student Phase?
+    → `E23`, **MAJOR**, and the block is development data from then on — confirm that
+    was disclosed rather than quietly ignored.
+19. **Sample sufficiency and interval.** n ≥ 30 for any quoted hit rate; below that,
+    is it labelled `SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only`? Is a
+    confidence interval reported alongside every rate? → `E24`, **MAJOR**.
+20. **Negative results retained.** Does the summary include the tests that found
+    nothing, and every test performed rather than only the favourable ones? Omission
+    → `E25`, **MAJOR** (**CRITICAL** if a conclusion rests on the surviving subset).
+
+**Where the course supplies its own control, was it used?** V04's claim is that
+location changes the outcome — same M formation, loser inside the blue box, winner
+outside. That is a natural experiment with the pattern confound removed. A test of
+the V04 rule that ignores it has left the strongest available evidence on the table;
+note it at least as `NOTE`, and as `MINOR` where the sample plainly permitted it.
+
 ### H. Hindsight / lookahead audit
 
 Actively search for contamination. Warning signs: setup boundaries defined using
@@ -304,6 +331,11 @@ E17 — Missing negative examples
 E18 — Invalid manual-backtest procedure
 E19 — Data/timeframe inconsistency
 E20 — Other
+E21 — No baseline, or baseline chosen after seeing the result
+E22 — Period not pre-registered, or changed mid-test without a new ID
+E23 — Holdout data inspected during the Student Phase
+E24 — Hit rate reported without sample size, interval, or baseline
+E25 — Negative or null result omitted from a summary
 ```
 
 Maintain recurring error counts in `18_REVIEW/REVIEW_INDEX.md` to reveal

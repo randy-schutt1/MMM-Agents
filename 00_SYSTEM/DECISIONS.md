@@ -553,6 +553,73 @@ disposition, not just the conclusion.
 
 ---
 
+## D-026 — Every manual backtest requires a pre-registered baseline
+
+**Date:** 2026-08-11
+**Decision:** No manual backtest result may be recorded, summarized, or cited without
+a **baseline defined in advance**. The required baseline is **matched random entry**
+(same instrument, session, eligible window, stop and target distances, and n; entry
+bar randomized; ≥200 iterations, distribution reported). Where the sample permits, the
+course's own inside-box / outside-box contrast is run as a second arm. Full
+specification: `BACKTEST_EVIDENCE_STANDARD.md` §2.
+
+A **hard gate** applies: no `BT_*.md` file may be written until the baseline decision
+for that rule exists in this file. `scripts/validate_project.py` fails the build if a
+backtest observation exists without it.
+
+**Reason:** A hit rate with no comparator is unreadable. The method claims ~1:2.8 R:R
+and *"in profit in 15 to 45 minutes, guaranteed"* (V04 `[00:08:56]`); against those
+claims a 60% hit rate cannot be distinguished from random entry in the same sessions,
+or from any long taken in a week that trended up. The repository had **zero** mentions
+of a baseline before this decision — an external methodological review identified the
+gap.
+**Evidence:** External review, 2026-08-11, four questions on backtest implementation.
+Repository grep for baseline / coin-flip / random entry / null hypothesis / control:
+one hit, unrelated.
+**Alternatives considered:** Baseline "where practical" — rejected; optional rigour is
+skipped exactly when a result looks good. Deferring to Phase 8 — rejected; the manual
+results would already be in the corpus, cited by later work, unlabelled.
+**Consequences:** Adds work to every test. `MANUAL_BACKTEST_TEMPLATE.md` gains a
+pre-registration block that must be filled before charts are opened.
+`REVIEW_PROTOCOL.md` §6.G gains checks 15–20 and codes `E21`–`E25`; a missing or
+post-hoc baseline is `CRITICAL`. Recorded before any observation existed, so **nothing
+required rework**.
+**Status:** ACTIVE
+
+---
+
+## D-027 — Test periods are pre-registered; a holdout is reserved
+
+**Date:** 2026-08-11
+**Decision:** The instrument, date range, timeframe and session boundaries of a
+manual backtest are recorded in this file **before any chart in that range is
+examined**. A contiguous holdout block — recommended: the most recent 30% of
+available history — is **not opened during the Student Phase** by any session for any
+reason. Changing a range mid-test creates a **new test ID**; the abandoned test is
+retained and marked. Full specification: `BACKTEST_EVIDENCE_STANDARD.md` §3.
+
+**Reason:** The rules themselves are genuinely pre-registered — transcribed from 2012
+lectures, fixed before any chart was opened, and never fitted to price data. That is
+stronger than a conventional train/test split on that axis, and it is **not
+sufficient**: it does nothing about a *period* selected, consciously or not, because
+it looked cooperative. The holdout also gives the end-of-course rule set one honest
+test against data no session has seen.
+**Evidence:** External review question 3 ("is there a train/test split"). Answer at
+the time: none for the manual phase; the only holdout language sat in
+`15_AUTOMATED_BACKTEST/README.md` for Phase 8, where boundaries were still an unmade
+decision.
+**Alternatives considered:** Relying on rule pre-registration alone — rejected for the
+reason above. Setting the boundaries here — rejected; the specific split is the
+owner's call and no agent may invent it. This decision requires that boundaries exist
+and be recorded, and supplies a recommended default only.
+**Consequences:** The concrete development/holdout boundary remains **an open decision
+owed by the owner** before the first observation (see the table below). Inspecting the
+holdout is `E23` and converts it into development data — which must then be disclosed,
+not quietly ignored.
+**Status:** ACTIVE
+
+---
+
 ## DECISIONS TO BE MADE AT INGESTION
 
 Not yet decided; record as new entries when the information exists.
@@ -566,7 +633,9 @@ Not yet decided; record as new entries when the information exists.
 | Chart data source / broker feed for manual backtesting | First manual backtest |
 | Timezone convention for session and daily boundaries | First timing lesson |
 | Default timeframes used in manual study | First chart lesson |
-| Development / validation / holdout dataset boundaries | Phase 4–8 |
+| **Manual-phase development / holdout boundary (D-027)** | **OWED NOW — before the first BT_ observation** |
+| **Baseline parameters per rule (D-026): iterations, eligible window, direction handling** | **OWED NOW — before the first BT_ observation** |
+| Development / validation / holdout dataset boundaries (automated, Phase 4–8) | Phase 4–8 |
 | Whether Git LFS is adopted for any media | Only if media must be versioned |
 
 ---
