@@ -10,10 +10,17 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 
 ```text
 RECORDS:         5   (C-001 … C-005)
-LESSONS STUDIED: 4   (V01, V02 reviewed R3: PASS; V03 REVISE R1 minors-only;
-                      V04 not yet reviewed)
+LESSONS STUDIED: 5   (V01, V02, V03, V04 complete; V05 awaiting review)
 UNRESOLVED:      4   (C-001 foundational; C-003; C-004; C-005)
 RESOLVED/OTHER:  1   (C-002 — STATED EXCEPTION, condition unmeasurable)
+
+V05 ADDED NO NEW RECORD, and this is a finding rather than an omission.
+V05 is 100% GUEST material. Under D-025 consequence 2 a guest/instructor
+divergence is a CORPUS-HYGIENE matter (C-005's category) and is NEVER logged
+as a contradiction against the instructor — so a lesson with no instructor
+segment cannot, by construction, produce an instructor-vs-instructor conflict.
+Divergences were looked for and the three candidates are dispositioned in the
+V05 note below. C-003 was checked against V05 and struck off as negative.
 ```
 
 > **UPDATED 2026-08-10 (review R1, finding 6b).** This block previously read
@@ -787,3 +794,56 @@ no London open.**
 **Required to resolve — updated again.** V05 (same 25 March 2012 session date) or any
 later lesson showing an updated times slide. **V03 and V04 are now both struck off as
 checked and negative.**
+
+> **UPDATED 2026-08-11 — V05 CHECKED AND NEGATIVE. Struck off.**
+>
+> V05 was named above as the next candidate because it shares the 2012-03-25 session date.
+> It does not help, and the check is reproducible:
+>
+> - **The lesson contains no clock time at all.** Scanning the verbatim body with the
+>   transcript's own markers excluded (`grep -vE '^\[[0-9]{2}:[0-9]{2}:[0-9]{2}\]$'`), a
+>   search for `HH:MM`, `N am/pm`, `o'clock`, `GMT`, `EST` and *"New York time"* returns
+>   **two** hits, and **both are the ASR garble *"the 50 am in"*** `[00:20:57]`, `[00:22:14]`
+>   — that is *"the 50 MA"*, not a time. **`EST` occurs 0 times.**
+> - **`London` occurs twice**, `[00:24:46]` *"So at the start of London…"* and `[00:31:26]`
+>   *"And look at what they did in London"* — the session is named as a phase and **no hour
+>   is attached to it**, which is exactly the V01–V04 pattern.
+> - **No times slide exists.** Checked against all 829 sweep frames; the 30 curated frames
+>   contain no session-clock table.
+>
+> **And even if V05 had stated a London open, it could not have resolved this record.** V05
+> is 100% guest-presented, and `D-025` bars guest material from closing an `A-xxx` or
+> `C-xxx` and from being cited for or against an instructor statement. **The check was run
+> anyway** — a negative result is worth recording either way, and running it costs nothing
+> — but a positive result would only have *extended* this record, not closed it.
+>
+> **Status: `UNRESOLVED`, unchanged. Carry both values, encode no London open.**
+> **Next candidate: V06 or any later lesson with an updated times slide. V03, V04 and V05
+> are all struck off as checked and negative.**
+
+---
+
+## V05 PASS — DIVERGENCES LOOKED FOR, NONE LOGGED AS A CONTRADICTION
+
+Recorded so the V05 pass is auditable as a unit, and so a later session can see that the
+question was asked rather than skipped.
+
+**The governing rule.** `D-025` consequence 2: *"A guest/instructor divergence is not a
+contradiction in the method and must not be logged against the instructor."* V05 has **no
+instructor segment**, so nothing in it can conflict with anything in it. Any conflict would
+be between a V05 guest statement and a V01–V04 instructor statement — which is the
+**corpus-hygiene** category `C-005` already occupies, not a new `C-nnn`.
+
+Three candidates were examined and dispositioned:
+
+| # | Apparent divergence | Disposition |
+|---|---|---|
+| 1 | **The day count.** V05 states *"3 Days of Drop Expect a Reversal"* (slide, `[00:15:49]`) and *"after 2 to 3 days of rise or fall but up to 5 days"* `[00:11:11]`. `C-001` is the instructor's own unresolved day-count self-contradiction | **Not logged.** Guest normative material may not be cited **for or against** an instructor rule, so V05's numbers cannot bear on `C-001` in either direction. `C-001` stays `UNRESOLVED` and is **not** advanced, retarded or reworded by this lesson. Recorded against `C-001` as a corpus-hygiene extension only |
+| 2 | **The accuracy figure.** V05 advertises *"80%+ accurate"* (slide) and *"80, 80, 85%"* `[00:50:08]`; V01 carries the course's **90–95%** claim | **Not logged as a contradiction.** Two different speakers making claims about **different subjects** — the guest is describing *his own setups*, not the course's published figure. They are not in conflict; they are unrelated assertions. Both are recorded with provenance under `D-009`, and **neither is evidence about the method's accuracy**. See `V05_INTERPRETATION.md` §5.2 |
+| 3 | **The second leg.** V05 requires the second leg to be a *"nameable pattern"* `[00:18:54]`; V04's instructor rule requires a second leg but states no nameability condition | **Not logged.** This is a guest *addition* to an instructor rule, not a conflict with it. It is exactly the merge `D-025` forbids — combining the two would produce a rule neither man stated. Logged instead as `A-044`, and flagged there so no future session performs the merge |
+
+**`C-003` was additionally checked against V05 and struck off as negative** — V05 contains
+zero clock times and no session-clock slide. See the update inside the `C-003` record.
+
+**Net effect of the V05 pass on this file: no new record; one required-research item
+discharged; `C-001` and `C-005` unchanged.**
