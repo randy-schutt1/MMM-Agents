@@ -2139,3 +2139,96 @@ throughout, and no V03 file was modified.
 **Independent review of V04 (R1)** by a fresh session (`D-003`). The mastery report
 nominates **seven** items for audit, the first two being the `C-005` scope call and the
 dimension-G `DEFERRED` disposition.
+
+---
+
+## 2026-08-10 — Reviewer Session
+
+### Lesson
+
+V03 — review round **R3** (closing round).
+
+### Review Objective
+
+Verify the single remaining minor from R2 — `M2′`/`E20`, the residual *"strictly
+monotonic, no duplicates"* sentence in `V03_TRANSCRIPT.md`'s `COVERAGE` block — was
+correctly applied by commit `492bb11`, and that the resulting text is **true**, re-derived
+from primary data rather than read against the commit message. R1's and R2's substantive
+adjudications were not re-opened; M1 and M3 closed at R2 and were not re-litigated.
+
+### Source Evidence Reviewed
+
+- `02_TRANSCRIPTS/V03/V03_TRANSCRIPT.md` — full independent line-anchored marker scan over
+  all 3,802 lines: totals, distinct count, every decreasing transition, every adjacent
+  same-second pair, the four largest gaps, first/last entry, and the line span the counted
+  markers occupy.
+- `02_TRANSCRIPTS/V01,V02,V04/*_TRANSCRIPT.md` — same scan on all three, to re-test the
+  "E20 class is empty project-wide" claim rather than inherit it.
+- `git show 492bb11` — the diff itself.
+- Repo-wide grep for `strictly monotonic`; `LOG.md` 1740–1752 and 1848–1917.
+- `scripts/validate_project.py` — **97 passed, 0 warnings, 0 failures.**
+
+### Student Artifacts Reviewed
+
+`V03_TRANSCRIPT.md` `COVERAGE` (lines 18–26) and `PROVENANCE`/I-008 criterion 1
+(lines 39–47), read against each other and against the scan.
+
+### Findings
+
+**0 CRITICAL, 0 MAJOR, 0 MINOR. `M2′` is discharged.**
+
+Both blocks now assert the same proposition, and every component of it reproduces:
+**1,230 markers, 1,227 distinct, 0 decreasing transitions, exactly 3 adjacent same-second
+pairs at `[00:35:21]` / `[01:00:13]` / `[01:04:30]`, largest gap 13 s at `[01:09:02]`
+(a clear maximum — next are 12 s, 12 s, 11 s), final entry `[01:10:39]`.** The
+distinct-count and duplicate-count are mutually consistent (1,230 − 1,227 = 3, all three
+duplicates adjacent). A counting artifact was explicitly ruled out: a naive whole-file
+scan returns 1,256 brackets, but all 1,230 counted entries fall between lines 115 and
+3,802, below the last `##` heading at line 87 — so none come from the header blocks.
+The diff touches one file and five lines, inside `COVERAGE` only; lines 39–47 are intact.
+
+No third instance of the claim survives. The `E20` monotonicity class is now **empty
+project-wide** on a fresh scan: V01 974 / 969 with five same-second pairs but no
+monotonicity claim; V02 1,026 / 1,026, genuinely strict, its identical wording true as
+written; V04 states the weaker true property.
+
+`LOG.md` 1746–1747 confirmed **untouched** by `492bb11` (which touches no log file) and
+properly superseded in-file by the `V03 R1 REMEDIATION` entry at line 1848 — M1's figures
+at ~1859–1875, M3's scoping at ~1892–1912, each naming the value it replaces. Correct
+append-only handling; **must not be "fixed" by a future session.**
+
+Four notes, all closed as observations: the fix commit appended no log entry (this entry
+fills the hole); a marker-scan counting trap that produces a phantom decreasing transition
+in V04 if its `COVERAGE` fence lines are not excluded (V04's own claim is **not**
+contradicted — 1,601 genuine entries, as stated); `V04_TRANSCRIPT.md` line 30's now-stale
+pointer to open item 19; and the clean validator run.
+
+### Required Corrections
+
+**None.** V03's remediation debt is discharged in full.
+
+### Decision
+
+**PASS** (confidence HIGH). **V03 is COMPLETE.** `REVIEW_INDEX.md` open item **19
+CLOSES**, completing items **18–20**. The V04 gate, already OPEN under `D-024` since
+V03 R1, is now open on V03's own `PASS`.
+
+### Bookkeeping
+
+`18_REVIEW/V03/V03_REVIEW_R3.md` written per protocol §11 (R1 and R2 untouched).
+`REVIEW_INDEX.md`: `STATUS` block, R3 narrative, `DECISION TABLE` V03 R3 row, `E20`
+row, severity totals (MINOR open 6 → 5; NOTE 27 → 31), open item 19 → CLOSED with its
+prior status retained. `COURSE_PROGRESS.md`: summary counts, V03 status block, V04 gate,
+"still owed" note, lesson table row, and the phase-1 line. A parallel V04 session is
+active in this working tree; no V04 file was touched.
+
+### Git
+
+Explicit paths on every `git add`; `git status` and `git log` checked first and the staged
+diff read before committing. The untracked `05_HOMEWORK/V02/measure_usdchf_week.py`
+(open item 13) was left untouched and unstaged.
+
+### Next Review Trigger
+
+**Independent review of V04 (R1)** by a fresh session (`D-003`) — unaffected by this
+decision, which only removes V03's dependence on the `D-024` deferral.

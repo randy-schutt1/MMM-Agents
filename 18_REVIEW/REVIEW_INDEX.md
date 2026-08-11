@@ -12,8 +12,8 @@ stays visible with its round number.
 
 ```text
 LESSONS REVIEWED: 3
-PASSED:           2  (V01, V02)
-IN REMEDIATION:   1  (V03 — R2 REVISE, 1 minor outstanding; V04 gate OPEN per D-024)
+PASSED:           3  (V01, V02, V03 — V03 PASS at R3, COMPLETE)
+IN REMEDIATION:   0
 AWAITING REVIEW:  1  (V04 — student pass complete 2026-08-10, REVIEW REQUIRED)
 ```
 
@@ -156,6 +156,28 @@ The V02 cross-check was re-tested independently and the remediation is right —
 genuinely strictly monotonic (1,026 / 1,026). **Open items 18 and 20 CLOSE. V03 does not
 reach `COMPLETE` this round**; the V04 gate was already OPEN per D-024 and is unaffected.
 
+**Student remediation applied 2026-08-10 (commit `492bb11`).** The `COVERAGE` block's
+residual sentence was replaced with the true statement; the verified I-008 wording at
+lines 39–47 was correctly left alone. **Open item 19 moves to APPLIED — PENDING
+VERIFICATION at R3.**
+
+V03 re-reviewed 2026-08-10 (R3): **`PASS`**, confidence HIGH. **0 critical, 0 major,
+0 minor.** Single-item closing round by a fresh session. `M2′` is discharged: the
+`COVERAGE` and `PROVENANCE`/I-008 blocks now assert the same proposition, and it is true —
+**1,230 markers, 1,227 distinct, zero decreasing transitions, exactly three adjacent
+same-second pairs at `[00:35:21]` / `[01:00:13]` / `[01:04:30]`, largest gap 13 s at
+`[01:09:02]`, final entry `[01:10:39]`** — every component re-derived this session by an
+independent marker scan, with the header-block counting artifact explicitly ruled out (all
+1,230 counted markers fall between lines 115 and 3,802, below the last `##` heading at 87).
+The diff was read rather than the commit message: one file, five lines, `COVERAGE` only.
+No third instance of the claim survives, and the **`E20` monotonicity class is now empty
+project-wide** on a fresh scan of all four transcripts (V01 makes no claim; V02 is
+genuinely strict at 1,026 / 1,026; V04 states the weaker true property). `LOG.md`
+1746–1747 confirmed untouched and properly superseded at `LOG.md` 1848 ff. — append-only
+handling is correct and must not be "fixed". `validate_project.py` clean: 97 / 0 / 0.
+**Open item 19 CLOSES, completing 18–20. V03 is `COMPLETE`** — the V04 gate, already OPEN
+under D-024, is now open on V03's own `PASS`.
+
 ---
 
 ## DECISION TABLE
@@ -170,6 +192,7 @@ reach `COMPLETE` this round**; the V04 gate was already OPEN per D-024 and is un
 | V02 | REVIEW REQUIRED | R3 | PASS | 0 | 0 | ✅ |
 | V03 | REVIEW REQUIRED | R1 | REVISE | 0 | 0 | ⏳ |
 | V03 | REVIEW REQUIRED | R2 | REVISE | 0 | 0 | ⏳ |
+| V03 | REVIEW REQUIRED | R3 | PASS | 0 | 0 | ✅ |
 
 ### Row template
 
@@ -225,7 +248,7 @@ keeps recurring is a training problem, not a lesson problem.
 | E17 | Missing negative examples | 0 | |
 | E18 | Invalid manual-backtest procedure | 0 | |
 | E19 | Data/timeframe inconsistency | 2 | V02 (R1 ×1 as a co-code with `E06` — closed at R2; R2 ×1 — day boundary off by one bar, open); V03 (R1 ×1 — ADR figures not reproducible from committed data, M1 — **✅ CLOSED at R2 2026-08-10**: all twenty daily ranges and all four ADR figures re-derived exactly from the raw JSON under the stated 21:00-UTC convention) |
-| E20 | Other | 16 | V01 (R1 ×6, R2 ×2, R3 ×1) — all closed at R3; V02 (R1 ×4) — closed at R2; V02 (R2 ×2) — open; V03 (R1 ×1 — transcript coverage block overclaims "strictly monotonic, no duplicates", M2 — **still OPEN after R2**: the correction was applied to the `PROVENANCE` I-008 criterion, whose wording verifies exactly, but the `COVERAGE` block R1 named still carries the false sentence, so the file now contradicts itself. Carried as R2 M2′. Not counted again — same occurrence, incompletely remediated) |
+| E20 | Other | 16 | V01 (R1 ×6, R2 ×2, R3 ×1) — all closed at R3; V02 (R1 ×4) — closed at R2; V02 (R2 ×2) — open; V03 (R1 ×1 — transcript coverage block overclaims "strictly monotonic, no duplicates", M2 — **✅ CLOSED at R3 2026-08-10**: applied to the `PROVENANCE` I-008 criterion at `683a12a` and to the `COVERAGE` block at `492bb11`; both blocks now assert the same true proposition, re-derived component by component at R3. Carried as R2 M2′, never double-counted — one occurrence, remediated in two commits. The **monotonicity class is now empty project-wide**: V01 makes no such claim, V02 is genuinely strict (1,026 / 1,026), V04 states the weaker true property) |
 
 **Escalation rule:** any code reaching 3 occurrences is a systematic weakness.
 Note it in the next cumulative review and consider whether the student protocol
@@ -333,12 +356,19 @@ finding — its single minor, M2′, is R1's M2 carried forward as incompletely 
 not a fresh defect, and is not double-counted. **2 of V03 R1's 3 minors close** (M1, M3),
 leaving MINOR open at 6.
 
+**V03 R3's delta:** +0 MINOR, +4 NOTE (N1 the missing log entry for `492bb11`, N2 the
+V04 marker-scan counting trap, N3 the now-stale pointer in `V04_TRANSCRIPT.md` line 30,
+N6 the clean validator run — all closed as observations; R3's N4 and N5 restate carried
+items and are **not** double-counted). R3 raised no new finding of any severity.
+**V03 R1's last remaining minor closes** (M2, via M2′), leaving MINOR open at 5 — none of
+them V03's. All of V03's own findings across three rounds are now closed.
+
 | Severity | Total | Open | Closed |
 |---|---:|---:|---:|
 | CRITICAL | 0 | 0 | 0 |
 | MAJOR | 4 | 0 | 4 |
-| MINOR | 21 | 6 | 15 |
-| NOTE | 27 | 4 | 23 |
+| MINOR | 21 | 5 | 16 |
+| NOTE | 31 | 4 | 27 |
 
 **Open MAJOR — V02 R1 finding 1.** The 11a homework markup contradicts the chart it
 cites (PFH misplaced by 15 pips; the reversal attributed to Friday when it is Thursday's
@@ -387,7 +417,7 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 | 17 | V02 R3 | **An owner-authorized override is recorded in the repository as an unresolved violation.** The project owner confirmed the parallel V03 work as an intentional override of the closed D-004 gate, but `DECISIONS.md` carries no entry for it (last entry D-022), so `COURSE_PROGRESS.md`'s `V03 GATE` block and open item 9 above still read as a live breach. A future session will either halt authorized work or conclude the gate register is unreliable. **Owner action:** record the override as a numbered decision and reconcile both locations to it. **Does not close item 9's mechanism finding** — a written gate with no enforcement failed twice in one day, and the `validate_project.py` pre-flight guard is still the fix | `DECISIONS.md`; `COURSE_PROGRESS.md`; `18_REVIEW/V02/V02_REVIEW_R3.md` Note 3 | ✅ **CLOSED 2026-08-10 — `DECISIONS.md` D-023** records the override as a numbered decision (scope: one instance, V02 → V03, source-side work only; not precedent; not to be reverted), and `COURSE_PROGRESS.md`'s `V03 GATE` block and `NEXT ACTION` item (c) are reconciled to it. `V02_REVIEW_R2.md` is deliberately left unedited per §11. Item 9 below is **not** closed by this — see its own row |
 
 | 18 | V03 R1 | **M1 — homework ADR figures not reproducible.** State the day-boundary convention and commit the five per-pair daily ranges (or recompute under a stated convention). The 0-of-4 conclusion survives every convention tried | `V03_HOMEWORK.md` §2.5 Finding B; `18_REVIEW/V03/V03_REVIEW_R1.md` M1 | ✅ **CLOSED 2026-08-10 — VERIFIED at R2.** Convention stated (21:00 UTC FX day; bars 0–5 / 6–11 / 12–17 / 18–23 / 24–29); all twenty daily ranges committed in §2.5; ADR recomputed to 46.5 / 55.7 / 138.9 / 54.4 with a correction note retaining the superseded figures. R2 re-derived every one of the twenty ranges from the raw JSON — all match to a tenth of a pip — plus 3×ADR, the four multiples (1.73 / 1.64 / 2.41 / 1.48), and the 116/116 bar continuity the split depends on. 21:00 UTC confirmed as the only 4h-aligned boundary yielding five whole days. 0 of 4 reaching 3×ADR holds with margin |
-| 19 | V03 R1 | **M2 — transcript coverage block overclaims.** "Strictly monotonic, no duplicates" is false: three benign same-second adjacent duplicate markers (`[00:35:21]`, `[01:00:13]`, `[01:04:30]`); sequence is non-decreasing. Fix the wording | `V03_TRANSCRIPT.md` COVERAGE; `V03_REVIEW_R1.md` M2 | ⚠️ **STILL OPEN after R2 — applied to the wrong location.** The corrected line ("1,230 timestamps, 1,227 distinct, non-decreasing throughout, three benign same-second adjacent pairs at `[00:35:21]`, `[01:00:13]`, `[01:04:30]`", plus a correction note) was added to the **`PROVENANCE AND VERIFICATION` I-008 criterion 1**, lines 39–46. R2 re-derived every component of it by regex and **all seven check out exactly** — that wording stands. But the sentence R1 charged lives in the **`COVERAGE`** block, lines 23–24, which was left untouched and still reads *"timestamps strictly monotonic, no duplicates"*; the file now asserts both propositions fourteen lines apart. **Required: replace `COVERAGE` lines 23–24 with the true statement; leave lines 39–46 alone.** V02's identical-sounding line was independently re-scanned at R2 and is confirmed **true as written** (1,026 markers, 1,026 distinct, zero decreasing transitions) — leaving it unchanged was correct. Note: `V01_TRANSCRIPT.md` has five same-second pairs (974 / 969) but makes no monotonicity claim, so nothing is false there — the E20 class is empty project-wide once this row closes. Carried as `V03_REVIEW_R2.md` M2′ |
+| 19 | V03 R1 | **M2 — transcript coverage block overclaims.** "Strictly monotonic, no duplicates" is false: three benign same-second adjacent duplicate markers (`[00:35:21]`, `[01:00:13]`, `[01:04:30]`); sequence is non-decreasing. Fix the wording | `V03_TRANSCRIPT.md` COVERAGE; `V03_REVIEW_R1.md` M2 | ✅ **CLOSED 2026-08-10 — VERIFIED at R3.** Commit `492bb11` replaced the `COVERAGE` sentence with the true statement and left the verified I-008 text at lines 39–47 untouched (diff read: one file, five lines). R3 re-derived every component from the transcript itself — 1,230 markers, 1,227 distinct, 0 decreasing transitions, exactly 3 adjacent same-second pairs at the three named markers, largest gap 13 s at `[01:09:02]`, final entry `[01:10:39]` — and ruled out the header-block counting artifact (all counted markers fall between lines 115 and 3,802; last `##` heading at 87). Both blocks now agree and both are true; no third instance survives; the `E20` monotonicity class is empty project-wide on a fresh scan of all four transcripts. **This closes items 18–20 as a set and takes V03 to `COMPLETE`.** `LOG.md` 1746–1747 re-confirmed untouched and properly superseded at 1848 ff. — do not "fix" them. **Prior status, retained for the record:** ⚠️ *STILL OPEN after R2 — applied to the wrong location.* The corrected line ("1,230 timestamps, 1,227 distinct, non-decreasing throughout, three benign same-second adjacent pairs at `[00:35:21]`, `[01:00:13]`, `[01:04:30]`", plus a correction note) was added to the **`PROVENANCE AND VERIFICATION` I-008 criterion 1**, lines 39–46. R2 re-derived every component of it by regex and **all seven check out exactly** — that wording stands. But the sentence R1 charged lives in the **`COVERAGE`** block, lines 23–24, which was left untouched and still reads *"timestamps strictly monotonic, no duplicates"*; the file now asserts both propositions fourteen lines apart. **Required: replace `COVERAGE` lines 23–24 with the true statement; leave lines 39–46 alone.** V02's identical-sounding line was independently re-scanned at R2 and is confirmed **true as written** (1,026 markers, 1,026 distinct, zero decreasing transitions) — leaving it unchanged was correct. Note: `V01_TRANSCRIPT.md` has five same-second pairs (974 / 969) but makes no monotonicity claim, so nothing is false there — the E20 class is empty project-wide once this row closes. Carried as `V03_REVIEW_R2.md` M2′ |
 | 20 | V03 R1 | **M3 — duration finding over-scoped.** "4 of 4 exceed the 2.5–3-day window" counts two pairs (USDJPY, USDCHF) whose low is the week-open bar with no formed anchor — supported sample is 2 of 4 (both 3.8 days, still exceeding). Scope it in homework §2.5A and mastery report §2 before it is cited against `C-001` | `V03_HOMEWORK.md` §2.5; `V03_MASTERY_REPORT.md` §2; `V03_REVIEW_R1.md` M3 | ✅ **CLOSED 2026-08-10 — VERIFIED at R2.** Homework §2.5 Finding A now carries a per-pair "does this measure the taught object?" column, an explicit 2-of-4 scope statement, and the instruction that any citation against `C-001` must carry it; homework §4 point 3 and mastery report §2 and §D re-scoped to match. R2 re-derived the basis from the raw OHLC: USDJPY and USDCHF have `cut_lo` = 0 bars — the block low is never taken out and *is* the week low at bar 0 — while EURUSD and GBPUSD cut at bar 2 and form their lows at bars 4 and 5, both 92 h = 3.8 days. Propagation confirmed at all four sites, plus a whole-repo sweep finding no surviving pre-correction figure (the stale numbers in `LOG.md` 1746–1747 are a historical journal entry, superseded at 1859/1892, and must **not** be edited). The `C-001` deferral was tested by reading the record rather than trusting it: the V03 evidence section cites only transcript restatements and the new exit rule, and no homework duration appears anywhere in the file — so the datum is genuinely not yet cited, and the standing "scoping travels with it" instruction is committed in both homework §2.5A and mastery report §2, where a future session will be standing when it bites |
 | 21 | V03 R1 | **N4 — manual-backtest debt, three lessons deep.** Each deferral individually sound (no testable entry rule yet), but the obligation accrues: when the first testable rule lands (plausibly the V03 exit once A-033 "outside structure" is defined), the hidden-future backtest backlog must be discharged against it. The reviewer will require it | `V03_REVIEW_R1.md` N4; `06_MANUAL_BACKTEST/` | OPEN |
 

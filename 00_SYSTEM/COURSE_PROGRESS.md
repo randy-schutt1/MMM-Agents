@@ -11,9 +11,8 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  2  (V03 — re-reviewed R2: REVISE, 1 minor left;
-                         V04 — student pass COMPLETE, AWAITING REVIEW)
-VIDEOS PASSED:       2  (V01, V02)
+VIDEOS IN PROGRESS:  1  (V04 — student pass COMPLETE, AWAITING REVIEW)
+VIDEOS PASSED:       3  (V01, V02, V03 — V03 PASS at R3, COMPLETE)
 CURRENT LESSON:      **V04 — student pass COMPLETE 2026-08-10, submitted as
                      REVIEW REQUIRED (not PASS).** Transcript verified and adopted
                      (I-008 satisfied for V04) with a 9-entry ASR-degeneration tail
@@ -48,6 +47,25 @@ CURRENT LESSON:      **V04 — student pass COMPLETE 2026-08-10, submitted as
                      See 07_MASTERY_REPORTS/V04_MASTERY_REPORT.md for the seven
                      items it asks the reviewer to audit.
                      ---- V03, in parallel ----
+                     **V03 — re-reviewed R3 2026-08-10: `PASS` (HIGH), 0 critical,
+                     0 major, 0 minor. V03 IS COMPLETE.** Closing single-item round.
+                     M2' DISCHARGED: commit 492bb11 corrected the COVERAGE block and
+                     left the verified I-008 text alone (diff read, not the commit
+                     message). Both blocks now assert the same proposition and it is
+                     true — 1,230 markers, 1,227 distinct, ZERO decreasing
+                     transitions, exactly three adjacent same-second pairs at
+                     [00:35:21]/[01:00:13]/[01:04:30], largest gap 13s at [01:09:02],
+                     final entry [01:10:39] — all re-derived this session, with the
+                     header-block counting artifact explicitly ruled out. No third
+                     instance survives; the E20 monotonicity class is now EMPTY
+                     project-wide (V01 makes no claim, V02 genuinely strict at
+                     1,026/1,026, V04 states the weaker true property). LOG.md
+                     1746-1747 confirmed untouched and properly superseded at
+                     LOG.md 1848ff — append-only, must not be "fixed". Open items
+                     18-20 ALL CLOSED. validate_project.py: 97 passed, 0 warnings,
+                     0 failures. The V04 gate, already OPEN under D-024, is now open
+                     on V03's own PASS. See 18_REVIEW/V03/V03_REVIEW_R3.md.
+                     ---- prior round ----
                      **V03 — re-reviewed R2 2026-08-10: `REVISE` (HIGH), 0 critical,
                      0 major, 1 minor.** Remediation-verification round. **M1 and M3
                      VERIFIED and CLOSED** — every one of the twenty committed daily
@@ -143,8 +161,9 @@ NEXT ACTION:         **Independent review of V04 (R1) — a FRESH reviewer sessi
                      drop V04's TDI condition in order to make the rule testable. A
                      two-condition version is a different rule with a different hit
                      rate (E06/E18).
-                     **Still owed on V03:** R2's single remaining minor (M2', the
-                     COVERAGE block sentence) before V03 can reach COMPLETE.
+                     **Nothing further owed on V03** — M2' applied at 492bb11 and
+                     VERIFIED at R3 2026-08-10. V03 is COMPLETE; open items 18-20
+                     are all closed.
                      ---- prior ----
                      **Begin V04 (gate OPEN per D-024).** V03 R1's three minor
                      corrections (REVIEW_INDEX.md open items 18–20) are **APPLIED
@@ -235,7 +254,13 @@ V02 GATE:            OPEN as of V01 R3 PASS (D-004 satisfied).
                      read CLOSED. V01's PASS makes it moot and no V02 work is
                      discarded, but the gate did not hold — see REVIEW_INDEX.md open
                      item 9.
-V04 GATE:            **OPEN as of V03 R1, 2026-08-10 (D-024 satisfied: REVISE with
+V04 GATE:            **OPEN on V03's own PASS as of V03 R3, 2026-08-10 (D-004
+                     satisfied outright).** It had been open since V03 R1 under
+                     D-024's severity rule; it now no longer depends on that rule.
+                     All three deferred minors (REVIEW_INDEX.md open items 18–20)
+                     are applied and verified, and V03 is COMPLETE.
+                     ---- prior ----
+                     **OPEN as of V03 R1, 2026-08-10 (D-024 satisfied: REVISE with
                      0 CRITICAL, 0 MAJOR, 3 MINOR).** The minors are deferred, not
                      waived — REVIEW_INDEX.md open items 18–20 must be applied before
                      V03 is marked COMPLETE, and V03 R1's verdict is REVISE, not
@@ -345,7 +370,7 @@ fabricate, interpolate, or infer Week 6 content.**
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
-| V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | **REVIEW REQUIRED** | **R1 REVISE (0 crit, 0 maj, 3 min)** | **REMEDIATION APPLIED — M1–M3 fixed 2026-08-10, awaiting R2 verification; V04 gate OPEN (D-024)** |
+| V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ✅ | ✅ | ✅ | ✅ | ⏸ | **REVIEW REQUIRED** | — | **AWAITING REVIEW** |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -521,7 +546,7 @@ points are set once the real lesson count is known at ingestion.
 | Phase | Name | Status |
 |---|---|---|
 | 0 | Environment | ✅ Complete |
-| 1 | Student | 🔄 In progress — V01 **PASS** (R3); V02 **PASS** (R3); V03 **REVISE** (R2, 1 minor left); **V04 AWAITING REVIEW**; V05 after V04's R1 |
+| 1 | Student | 🔄 In progress — V01 **PASS** (R3); V02 **PASS** (R3); V03 **PASS** (R3); **V04 AWAITING REVIEW**; V05 after V04's R1 |
 | 2 | Scholar | Not started |
 | 3 | Expert (Master Spec) | Not started |
 | 4 | Formalizer (Machine Spec) | Not started |
