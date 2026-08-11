@@ -2997,3 +2997,117 @@ Local commit only, explicit paths, `git status` and `git diff --staged` checked 
 ### Next Review Trigger
 
 Student remediation of `M7`–`M11` → `V05_REVIEW_R3.md` by a fresh session.
+
+---
+
+## 2026-08-11 — V05 R2 Remediation Session
+
+**Scope: `V05_REVIEW_R2.md` §5 items 1–5 (`M7`–`M11`) only.** A mechanical fix pass. No
+conclusion, grade, disposition or record status moves anywhere in the repository, and this
+was verified per file rather than asserted. Superseded text retained at every site that
+changed a claim (`REMEDIATION_PROTOCOL.md` §2), and `M11`'s citation fix supersedes nothing
+because it replaces a nonexistent marker with the real one.
+
+### `M7` (`E20`) — `C-003` → `C-004` at four sites
+
+The V05 contradiction check that was run, and struck off as negative, is **`C-004`** (*"London
+session open: 3:30am printed against 4:00 spoken"*) — its subject is clock times and the
+strike-off block sits physically inside the `C-004` material. **`C-003`** is *"Whether M and W
+formations can fail"* and **contains no V05 text at all**; it was never tested against V05.
+Corrected at `CONTRADICTIONS.md` line 23 (**the STATUS block**), at both sentences in
+§ "V05 PASS", and at `V05_MASTERY_REPORT.md` §J. **The check itself does not move** — V05
+contains zero clock times, and `C-004` stays `UNRESOLVED`: carry both values, encode no London
+open. **`V05_REVIEW_R1.md` was NOT edited**, per `REVIEW_PROTOCOL.md` §11 — its dimension O
+carries the same error and R2 records that where a superseded reviewer statement belongs.
+
+### `M8` (`E01`) — a count re-measured over the string it quotes
+
+Re-measured before the edit, not taken from the review: *"but up to five days"* occurs
+**exactly 2×** — body line 617 `[00:11:11]` and body line 1511 `[00:24:37]`. *"five days"*
+occurs 4×; the other two are *"sometimes five days depending"* and *"Remember three to five
+days"*, neither of which contains the quoted words. `V05_MASTERY_REPORT.md` §E now reads
+*"twice verbatim, `[00:11:11]` and `[00:24:37]`; the day-count expectation itself is stated
+four times."* The exception is still recorded and §E's grade does not move.
+
+### `M9` (`E20`) — frame 26's four printed `R = ` labels, read at magnification
+
+Frame 26 (`V05_00-40-04`) was **re-opened and magnified by this session** at 16×
+nearest-neighbour and 16× LANCZOS rather than accepted from either review's prose. Four `R = `
+labels are printed on the live MT4 chart:
+
+| Position | Reading |
+|---|---|
+| upper-centre | `R = 40.9` — legible |
+| centre-right | `R = 40.6` — legible |
+| lower-right | `R = 41.1` — legible |
+| left | `R = ` legible, **value NOT legible** — the cyan moving average runs directly through the digits; only a trailing glyph separates from it at any magnification tried |
+
+**R2's correction of R1B is upheld independently: `R = 74.6` is not supportable from this PNG
+and no number is transcribed for the fourth label.** That is the frame-27 OHLC / V04 `M6`
+precedent, and it is the same call the frame-26 sub-panel header already gets. Recorded in
+`04_SCREENSHOTS/V05/INDEX.md` row 26 and in `A-018`'s V05 row, scoped *printed, not spoken;
+live platform; three values legible, one not legible at this resolution*, and `A-018`'s
+*"V05 adds four more labels"* corrected to **"at least eight"** — the four platform-printed
+labels are the stronger evidentiary class because they are **auto-generated MT4 annotations**
+rather than hand-drawn deck labels, which is exactly the proposition `A-018` accumulates.
+**`A-018` is extended, NOT narrowed** — guest material under `D-025`, and V05 states no stop
+and no target, so nothing in this lesson checks an R-multiple reading. Stays `DO NOT CODE`.
+
+### `M10` (`E02`) — the framing sentence that generated `M8`
+
+`V05_SOURCE_NOTES.md` §4c headed its four-row table *"Repeated four times, **always with the
+same escape clause**"*. Checked row by row against the transcript including adjacent markers:
+**two of the four carry it, two do not** — `[00:15:47]` is followed by `[00:15:52]` *"I'm
+letting my money out."* / `[00:15:55]` *"So those are the things you're watching for."*, and
+`[00:16:35]` by `[00:16:36]` *"Expect a reversal."* / `[00:16:39]` *"You know how to draw the
+trend lines."* The framing sentence is restated as *"two of the four carry the explicit
+`up to five days` escape clause"* and the table gains an **Escape clause** column recording
+✅ / ❌ per row with the negatives' neighbourhoods quoted. The four rows were and remain
+individually accurate; no conclusion in §4c changes. **This is where `M8` started**, and the
+superseded block says so.
+
+### `M11` (`E11`) — the third member of the displaced citation cluster
+
+`A-042`'s evidence table cited `[01:01:39]`, which **is not a marker in this transcript**
+(`grep -c` returns 0); the words are at **`[00:57:39]`**, body line 3739. Corrected, and the
+fragment replaced with that marker's literal sentence — *"And obviously for the DMR, I kind of
+use the ellipse to show the moving average crossover"*. All three of V05's citation defects
+map `00:57:3x` → `01:0x:3x`; `152f4ea` closed two of them as `M1`, and this closes the third.
+
+**The mechanical marker-existence sweep R2 required was run, and it is CLEAN.** Every
+`[hh:mm:ss]` citation on a V05-attributed line across `AUTOMATION_AMBIGUITIES.md`,
+`CONTRADICTIONS.md`, `V05_SOURCE_NOTES.md`, `V05_INTERPRETATION.md`,
+`V05_MASTERY_REPORT.md`, `04_SCREENSHOTS/V05/INDEX.md` and `05_HOMEWORK/V05/` was matched
+against the **1,353** markers in `V05_TRANSCRIPT.md`. **No fourth cluster member exists.** The
+only seven non-resolving hits are six explicit V01/V02/V04 cross-citations (e.g. *"V04
+`[00:15:05]`"*) and one slide timecode — `CONTRADICTIONS.md` line 850's *"(slide,
+`[00:15:49]`)"*, which is frame 11's own burned-in time, not a transcript marker. None is a
+V05 marker citation, and none is touched here.
+
+### What was NOT done, and why
+
+`V05_REVIEW_R2.md` §5 item 6 — **dimension B's re-disposition and dimension G's stated
+reason** — remains **blocked on the owner** (open item 36). `D-019` grants `NOT APPLICABLE`
+for dimensions F and G only, so B's present label is unavailable, but the replacement label
+`EXCLUDED BY DECISION` does not exist yet and a student session applying an undefined label
+would be legislating. R2 §N3 upheld that refusal explicitly; it is upheld again here. The four
+owner actions (open items 35, 36, 40, and the parallel-session ruling) are likewise untouched.
+No review file was edited: `V05_REVIEW_R1.md`, `V05_REVIEW_R1B.md` and `V05_REVIEW_R2.md` all
+stand as written.
+
+### Verification
+
+`validate_project.py`: **97 passed, 0 warnings, 0 failures.** Register integrity re-checked —
+`A-001`…`A-049` and `C-001`…`C-005` contiguous, no duplicates, no gaps.
+`REVIEW_INDEX.md` open items 47–51 → **APPLIED — PENDING VERIFICATION at R3**; taxonomy rows
+`E01`/`E02`/`E11`/`E20` updated to match; the STATUS block records the sweep result.
+
+### Git
+
+Local commit only, explicit paths on `git add`, `git status` and `git diff --staged` checked
+before commit. **NOT pushed.** The untracked `05_HOMEWORK/V02/measure_usdchf_week.py` (open
+item 13) left untouched.
+
+### Next Review Trigger
+
+`V05_REVIEW_R3.md` by a fresh session. R2 expects R3 to close V05.

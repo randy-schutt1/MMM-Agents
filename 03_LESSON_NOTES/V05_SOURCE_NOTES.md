@@ -248,14 +248,21 @@ Stated as an ordered procedure at `[00:11:42]`–`[00:17:33]`:
 
 ### 4c. The three-day expectation (spoken)
 
-Repeated four times, always with the same escape clause:
+Repeated four times; **two of the four carry the explicit *"up to five days"* escape clause**:
 
-| Marker | Words |
-|---|---|
-| `[00:11:11]` | *"after two to three days of rise or fall, but up to five days"* |
-| `[00:15:47]` | *"you notice three days of drops you're expecting a reversal"* |
-| `[00:16:35]` | *"Three days of drop. Expect a reversal."* |
-| `[00:24:34]` | *"Level three, expect reversal. After three days of drop, but up to five days."* |
+| Marker | Words | Escape clause |
+|---|---|---|
+| `[00:11:11]` | *"after two to three days of rise or fall, but up to five days"* | ✅ |
+| `[00:15:47]` | *"you notice three days of drops you're expecting a reversal"* | ❌ none — `[00:15:52]` *"I'm letting my money out."*, `[00:15:55]` *"So those are the things you're watching for."* |
+| `[00:16:35]` | *"Three days of drop. Expect a reversal."* | ❌ none — `[00:16:36]` *"Expect a reversal."*, `[00:16:39]` *"You know how to draw the trend lines."* |
+| `[00:24:34]` | *"Level three, expect reversal. After three days of drop, but up to five days."* | ✅ |
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — V05 review R2 `M10`: the
+> framing sentence read *"Repeated four times, **always with the same escape clause**:"*.
+> The four rows were and are individually accurate, but the *"always"* is false for two of
+> them — checked row by row against the transcript including adjacent markers. This sentence
+> is the origin of the miscount corrected at `V05_MASTERY_REPORT.md` §E (`M8`). No
+> conclusion in §4c changes.)*
 
 ---
 

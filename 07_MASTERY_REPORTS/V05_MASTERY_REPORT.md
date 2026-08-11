@@ -89,11 +89,23 @@ chart, without thresholds, timeframe or invalidation, and it is guest material r
 
 ### E. Exceptions — **SATISFIED**
 
-Recorded: the day count's own escape clause (*"but up to five days"*, four times); the
+Recorded: the day count's own escape clause (*"but up to five days"* — **twice verbatim**,
+`[00:11:11]` and `[00:24:37]`; the day-count expectation itself is stated four times); the
 patterns-first alternative for students who dislike the cycle (`[00:33:28]`); the
 directional restriction relaxed for the more advanced (`[00:45:06]`); *"Will it do it all the
 time? Nope"* on waiting for price to leave the box (`[00:29:16]`); and the presenter's
 concession that he passes trades others would take (`[00:30:32]`).
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — V05 review R2 `M8`: this
+> read *"the day count's own escape clause (**"but up to five days"**, four times)"*.
+> Re-measured over the verbatim body, the literal string occurs **exactly twice** —
+> `[00:11:11]` *"This could be after two to three days of rise or fall, but up to five
+> days."* and `[00:24:37]` *"After three days of drop, but up to five days."* The string
+> *"five days"* occurs four times, but the other two — *"sometimes five days depending"* and
+> *"Remember three to five days"* — do not contain the quoted words. The four-times count
+> belongs to the day-count expectation, not to the quoted escape clause. The exception is
+> still recorded and the grade does not move; see `V05_SOURCE_NOTES.md` §4c, which is where
+> the miscount originated.)*
 
 ### F. Homework — **SUCCESS AFTER SOURCE REVIEW**, partial by decision
 
@@ -181,8 +193,13 @@ segment cannot produce an instructor-vs-instructor conflict, and `D-025` consequ
 guest/instructor divergence in `C-005`'s corpus-hygiene category. Three candidates were
 examined and dispositioned in `CONTRADICTIONS.md` § "V05 PASS".
 
-`C-003` named V05 as its next candidate; **checked and struck off as negative** — V05 contains
+`C-004` named V05 as its next candidate; **checked and struck off as negative** — V05 contains
 zero clock times, verified by a reproducible scan with the transcript's own markers excluded.
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — V05 review R2 `M7`: this
+> line named **`C-003`**. The record that named V05 as its next candidate, and that was
+> checked and struck off, is `C-004` — the London-open clock-time record. `C-003` is the
+> M/W-failure record and contains no V05 content. The check itself is unchanged.)*
 
 ---
 

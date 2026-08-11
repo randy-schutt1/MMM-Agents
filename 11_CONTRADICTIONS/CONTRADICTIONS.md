@@ -20,8 +20,17 @@ divergence is a CORPUS-HYGIENE matter (C-005's category) and is NEVER logged
 as a contradiction against the instructor — so a lesson with no instructor
 segment cannot, by construction, produce an instructor-vs-instructor conflict.
 Divergences were looked for and the three candidates are dispositioned in the
-V05 note below. C-003 was checked against V05 and struck off as negative.
+V05 note below. C-004 was checked against V05 and struck off as negative.
 ```
+
+> **UPDATED 2026-08-11 (V05 review R2, `M7`).** The line above read *"C-003 was checked
+> against V05 and struck off as negative"*, retained here per `REMEDIATION_PROTOCOL.md` §2.
+> The record actually checked is **`C-004`** (*"London session open: 3:30am printed against
+> 4:00 spoken"*) — the check is about clock times, and the strike-off block is physically
+> located inside the `C-004` material. **`C-003`** (*"Whether M and W formations can fail"*)
+> **contains no V05 text at all and was not tested against V05.** Fifth occurrence of this
+> block's staleness class (`E20`); the check itself reproduces and `C-004`'s disposition
+> does not move — still `UNRESOLVED`, carry both values, encode no London open.
 
 > **UPDATED 2026-08-10 (review R1, finding 6b).** This block previously read
 > `RECORDS: 0` and *"**Intentionally empty.** No course material has been studied, so no
@@ -842,8 +851,13 @@ Three candidates were examined and dispositioned:
 | 2 | **The accuracy figure.** V05 advertises *"80%+ accurate"* (slide) and *"80, 80, 85%"* `[00:50:08]`; V01 carries the course's **90–95%** claim | **Not logged as a contradiction.** Two different speakers making claims about **different subjects** — the guest is describing *his own setups*, not the course's published figure. They are not in conflict; they are unrelated assertions. Both are recorded with provenance under `D-009`, and **neither is evidence about the method's accuracy**. See `V05_INTERPRETATION.md` §5.2 |
 | 3 | **The second leg.** V05 requires the second leg to be a *"nameable pattern"* `[00:18:54]`; V04's instructor rule requires a second leg but states no nameability condition | **Not logged.** This is a guest *addition* to an instructor rule, not a conflict with it. It is exactly the merge `D-025` forbids — combining the two would produce a rule neither man stated. Logged instead as `A-044`, and flagged there so no future session performs the merge |
 
-**`C-003` was additionally checked against V05 and struck off as negative** — V05 contains
-zero clock times and no session-clock slide. See the update inside the `C-003` record.
+**`C-004` was additionally checked against V05 and struck off as negative** — V05 contains
+zero clock times and no session-clock slide. See the update inside the `C-004` record.
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — V05 review R2 `M7`: both
+> sentences above named **`C-003`**. The record checked is `C-004`, the clock-time /
+> London-open record, and the strike-off update sits inside the `C-004` material. The
+> `C-003` record contains no V05 text. The check and its negative result are unchanged.)*
 
 **Net effect of the V05 pass on this file: no new record; one required-research item
 discharged; `C-001` and `C-005` unchanged.**
