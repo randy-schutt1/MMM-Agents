@@ -2823,3 +2823,88 @@ commit. No V05 student artifact was edited by this session.
 
 Student remediation of V05's six minors and the dimension-B re-disposition → `V05_REVIEW_R2.md`
 by a fresh session.
+
+---
+
+## 2026-08-11 — V05 R1 Remediation Session
+
+### Scope
+
+The **six MINOR findings** of `18_REVIEW/V05/V05_REVIEW_R1.md` (`M1`–`M6`), and nothing else.
+`REVIEW_INDEX.md` open items **41–46** move to `APPLIED — PENDING VERIFICATION at R2`.
+
+**Deliberately NOT done, and why** — both were in R1 §8 but outside this session's instruction:
+
+- **§8 item 7 (open item 39)** — the `EMA` 3 → 2 correction in `V05_TRANSCRIPT.md`
+  § TRANSCRIPTION NOTES and `Q-005`. Still owed. Open item 39 stays `OPEN`.
+- **§8 item 8** — dimension **B**'s re-disposition and dimension **G**'s stated reason.
+  **Blocked on an owner ruling**: R1 §5.2 recommends a third disposition
+  `EXCLUDED BY DECISION`, which does not exist in `D-019` yet. Applying a label the standard
+  does not define would be a student session legislating. Open item 36 stays `OPEN`.
+
+### Corrections Applied
+
+- **`M1` (`E11`) — one quote, two wrong timestamps, neither a marker.**
+  `V05_SOURCE_NOTES.md` §3b `[01:07:36]` → **`[00:57:36]`**; `A-043`'s evidence table
+  `[01:01:35]` → **`[00:57:35]`–`[00:57:36]`**, split across the two markers it actually
+  spans (`[00:57:35]` *"I use the trend line."* / `[00:57:36]` *"I use E and I use the
+  box."*). Both re-verified against the transcript body, not against R1's prose.
+  **`A-043`'s closure does not move** — it rests on the toolbar dialog.
+- **`M2` (`E11`) — off by one marker.** `A-039`'s V05 extension row `[00:36:03]` →
+  **`[00:36:05]`**, and the fragment replaced with that marker's literal sentence.
+- **`M3` (`E01`) — a smoothed quotation.** The elision was **restored, not annotated**:
+  §4b now carries *"So the consolidation and level three second leg of that pattern, that
+  three hits to the high."* `[00:13:05]`–`[00:13:12]` and *"That's the third type, I guess
+  the third leg begins your level one drop."* `[00:13:13]` as two verbatim quotations with
+  no ellipsis. The excised words were a **level number** in the file's own evidence for the
+  level↔day relabelling. **No conclusion in §4b changes** — the relabelling rests on
+  `[00:12:50]` and `[00:12:57]`–`[00:13:03]`, both untouched.
+- **`M4` (`E20`) — the process-order contradiction. Resolved TOWARD the honest disclosure.**
+  `V05_INTERPRETATION.md`'s Screenshots row claimed V05 *"restored the recipe's evidence
+  order"*; `04_SCREENSHOTS/V05/INDEX.md` disclosed, unprompted, that **the order was not
+  preserved**. The interpretation now states the deviation first and in bold, names
+  `INDEX.md` § "⚠ PROCESS DEVIATION, DISCLOSED" as the **governing statement**, and carries
+  `INDEX.md`'s own consequence (*the audio-only separation is weaker for V05 than for
+  V01–V04*). What was genuinely held — source notes §§1–8 from transcript alone, visuals
+  confined to §9, one disclosed pre-sweep sanity frame — is stated as a partial, not as
+  restoration. **`INDEX.md` was NOT edited.** Superseded text retained
+  (`REMEDIATION_PROTOCOL.md` §2).
+- **`M5` (`E20`) — stale pointer.** `A-039`'s *Required Research* now records that **V05 was
+  checked and did not define TDI** — first *displayed* name (`TDI_MMM`), first slide titled
+  to mark the panel up, and still no inputs, periods, bands, line names or decision rule.
+  **A name is not a definition.** V06 or any later lesson named as next candidate.
+  Superseded text retained. Record stays `OPEN`, `DO NOT CODE`.
+- **`M6` (`E20`) — unrecorded sub-panel in curated frame 26.** The frame was **re-opened and
+  looked at**, not taken from R1's description. `V05_00-40-04` does render a multi-line
+  oscillator sub-panel beneath the price pane, with a header label in the same position as
+  frame 21's `TDI_MMM`. Recorded in `INDEX.md` row 26 and in `A-039`'s extension row, scoped
+  *"displayed, not taught; header not legible at this resolution"*. **Presence only — the
+  header is deliberately NOT transcribed**, the same call frame 27's OHLC row gets and the
+  binding V04 `M6` precedent. **It does not narrow `A-039`** (guest material, `D-025`).
+
+### Owner Decisions Outstanding — not resolvable by a student session
+
+- **R1 §5.1 / open item 40** — whether to carve out of `D-025` a numbered exception for
+  records whose **subject is a guest's own utterance or a visible platform/UI artifact**
+  rather than a taught trading method, making those closable on guest evidence alone.
+  R1 affirmed `A-043`'s closure on exactly this reasoning; the class is not yet written down.
+- **R1 §5.2 / open item 36** — whether to adopt a third disposition **`EXCLUDED BY
+  DECISION`** for dimensions permanently barred by a numbered decision, distinct from
+  `D-019`'s `NOT APPLICABLE` (*there was never anything here*) and `DEFERRED` (*this becomes
+  possible later*). V05's dimension **B** fits neither.
+
+### Verification
+
+`validate_project.py` re-run. Every corrected timestamp re-derived from
+`02_TRANSCRIPTS/V05/V05_TRANSCRIPT.md` in this session. Frame 26 re-opened. `git status` and
+`git diff --staged` checked before commit; explicit paths on `git add`.
+
+### Git
+
+**Local commit only — pushes are batched by the owner. NOT pushed.**
+The untracked `05_HOMEWORK/V02/measure_usdchf_week.py` (open item 13) left untouched.
+
+### Next
+
+`V05_REVIEW_R2.md` by a fresh session (`D-003`). V05 reaches `COMPLETE` only on a reviewer
+`PASS`. R2 must also account for open items 39 and 36, which this session did not close.

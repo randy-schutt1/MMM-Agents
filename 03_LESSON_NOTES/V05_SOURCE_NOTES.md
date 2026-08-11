@@ -183,7 +183,7 @@ here.** Three of the lesson's own open questions are explicitly deferred to it.
 > **`A-043` — the text tool is named three different ways in eight seconds.** *"one that
 > says E"*, *"the one that says A"*, *"the one that says T"* `[00:09:55]`–`[00:10:00]`, and
 > later *"I click on the E, which is a text"* `[00:39:31]` and *"Just drop the E in there"*
-> `[00:16:43]` and *"I use E"* `[01:07:36]`. The transcript alone cannot resolve which
+> `[00:16:43]` and *"I use E"* `[00:57:36]`. The transcript alone cannot resolve which
 > toolbar glyph is meant, only that **one of two similar buttons is correct and the other
 > is wrong.**
 
@@ -236,8 +236,9 @@ Stated as an ordered procedure at `[00:11:42]`–`[00:17:33]`:
 > *"remember level three becomes level one"* `[00:12:50]`
 > *"So the first move you see D one drop on the left hand side, day one drop. That is level
 > one drop."* `[00:12:57]`–`[00:13:03]`
-> *"the second leg of that pattern, that three hits to the high… the third leg begins your
-> level one drop"* `[00:13:05]`–`[00:13:13]`
+> *"So the consolidation and level three second leg of that pattern, that three hits to the
+> high."* `[00:13:05]`–`[00:13:12]`
+> *"That's the third type, I guess the third leg begins your level one drop."* `[00:13:13]`
 
 **Terminology latitude, explicitly granted:**
 

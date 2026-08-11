@@ -9,7 +9,13 @@ Source facts belong in `V05_SOURCE_NOTES.md`.
 | Interpreted | 2026-08-11 |
 | Source notes | `03_LESSON_NOTES/V05_SOURCE_NOTES.md` |
 | Transcript | `02_TRANSCRIPTS/V05/V05_TRANSCRIPT.md` |
-| Screenshots | **30, captured and examined AFTER §§1–8 of the source notes were written.** V05 restored the recipe's evidence order that V03 and V04 deviated from, so §§1–7 below rest on the transcript and §8 states separately what the frames changed. |
+| Screenshots | **30. ⚠ THE RECIPE'S EVIDENCE ORDER WAS *NOT* PRESERVED FOR V05 — see `04_SCREENSHOTS/V05/INDEX.md` § "⚠ PROCESS DEVIATION, DISCLOSED", which is the governing statement.** `SWF_CAPTURE_RECIPE.md` §9 requires the frames to be examined only *after* the transcript-derived writing; the inherited sweep had to be validated against frame content before it could be used, and having opened the frames this session read the whole deck. What *was* held: the source notes' §§1–8 were written from the transcript alone and cite transcript markers only, with visual evidence confined to §9 and one disclosed pre-sweep sanity frame (`V05_SOURCE_NOTES.md`, process disclosure); §§1–7 below rest on the transcript and §8 states separately what the frames changed. **But this session cannot claim it was blind to the slides, so the audio-only / visual-corroborated separation is weaker for V05 than for V01–V04.** |
+
+> **Correction (V05 R1 `M4`).** This row previously read *"V05 restored the recipe's evidence
+> order that V03 and V04 deviated from"* — superseded text retained per
+> `REMEDIATION_PROTOCOL.md` §2. That claim was **false and contradicted `INDEX.md`'s own
+> disclosure in the same session's work.** The disclosure in `INDEX.md` is correct and is
+> unchanged; this file has been reconciled to it.
 
 ### Classification
 
