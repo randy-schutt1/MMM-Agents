@@ -20,8 +20,9 @@ STATUS: COMPLETE
 Covered: 00:00:00 - 01:10:39
 Gaps:    None marked by the transcriber. 1,230 timestamped entries.
          Final entry is [01:10:39] against a measured audio length of 01:10:42.7.
-         Largest inter-entry gap is 13 s, at [01:09:02]; timestamps strictly
-         monotonic, no duplicates.
+         Largest inter-entry gap is 13 s, at [01:09:02]; of the 1,230 markers
+         1,227 are distinct, non-decreasing throughout, with three benign
+         same-second adjacent pairs at [00:35:21], [01:00:13] and [01:04:30].
 ```
 
 ## PROVENANCE AND VERIFICATION
