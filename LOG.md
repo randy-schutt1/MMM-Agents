@@ -2232,3 +2232,131 @@ diff read before committing. The untracked `05_HOMEWORK/V02/measure_usdchf_week.
 
 **Independent review of V04 (R1)** by a fresh session (`D-003`) — unaffected by this
 decision, which only removes V03's dependence on the `D-024` deferral.
+
+---
+
+## 2026-08-10 — Reviewer Session
+
+### Lesson
+
+V04 — `Bootcamp1 Wk2 032512 Part2 (86mins).swf`, R1.
+
+### Review Objective
+
+Independent mastery audit of V04, the first structurally atypical lesson in the course, plus
+an explicit **scope ruling on guest-presenter material** (`C-005`) requested by the student
+session and carried as `REVIEW_INDEX.md` open item 22.
+
+Fresh session; no V04 artifact was authored by this reviewer (`D-003`). Source read before
+student conclusions (`REVIEW_PROTOCOL.md` §3): `DECISIONS.md` D-001…D-024,
+`REVIEW_PROTOCOL.md`, `REVIEW_INDEX.md` and `MASTERY_STANDARD.md` first, then the V04
+transcript and frames, then the student's files.
+
+### Source Evidence Reviewed
+
+- `V04_TRANSCRIPT.md` — the speaker seam at `[00:26:51]`–`[00:27:02]` read directly; every
+  `Steve` and `Carl` occurrence in the body located and read in context; all 13 `TDI`
+  occurrences read; `[00:15:22]`–`[00:16:31]` (the criteria list), `[00:13:40]`–`[00:14:06]`,
+  `[00:22:02]`–`[00:22:21]`, `[00:04:52]`–`[00:05:14]`, `[00:17:51]`–`[00:18:14]`,
+  `[00:50:32]`–`[00:50:42]`, `[01:10:32]`–`[01:10:54]` read verbatim; the fenced tail read
+  in full.
+- V03 `[01:01:53]` and V01 `[00:35:03]`–`[00:35:11]` read at source for the cross-references.
+- Frames `01-04-10` and `01-08-40` opened and magnified 4× — Navigator account rows and the
+  indicator sub-panel title read off the pixels, burned-in player timecodes checked against
+  the filenames.
+- All 21 quarantined `RULES.md` files, and the V04 `NOTES.md` / `VISUAL_INDEX.md` folder.
+
+### Student Artifacts Reviewed
+
+`V04_TRANSCRIPT.md`, `V04_SOURCE_NOTES.md`, `V04_INTERPRETATION.md`,
+`04_SCREENSHOTS/V04/INDEX.md`, `V04_HOMEWORK.md` + its committed JSON and both harvest
+scripts, `V04_MASTERY_REPORT.md`, `AUTOMATION_AMBIGUITIES.md` A-030…A-041,
+`CONTRADICTIONS.md` C-004/C-005, `QUARANTINE_REGISTER.md` Q-004.
+
+### What was re-derived rather than read
+
+- **487 of 487** cited timestamps across five V04 artifacts resolved against parsed marker
+  sets for all four transcripts. Zero unresolved. `E11` absent for a third lesson.
+- **320** italic-quoted fragments extracted, ellipsis-split, gloss-stripped and matched
+  against the normalised genuine transcript body. 44 initial misses triaged: 42 legitimate
+  (printed slide/caption text, cross-lesson quotes each verified at source, the student's own
+  prose). **2 genuine** — finding M2.
+- Homework recomputed from the committed JSON with a script written this session:
+  **476/480** vs V03's dataset with the four differing fields identified individually;
+  **474/480** 4h↔15m with per-pair bar counts; every block figure and percentage; every
+  weekly extreme and its bar index; **23 bars = 92 h = 3.833 days** on both formed-anchor
+  pairs; **116/116** in-week 4h continuity. All match.
+- Fabrication template measured over all 21 `RULES.md`: both quotes 21/21, both timestamps
+  21/21, exactly 2 rules 21/21, **`NUMERICAL PARAMETERS` byte-identical, one hash, 21/21**;
+  `INFERRED VISUAL RULES` and `TERMS` two variants each. `EMA` occurs 0× in V04's transcript.
+- Transcript entry count re-parsed: **1,601**, matching the coverage block's 1,592 + 9.
+- Guest share of runtime: 3,518 s / 5,137 s = **68.5%**.
+
+### Findings
+
+**0 CRITICAL, 0 MAJOR, 7 MINOR, 5 NOTE.**
+
+`M1` (`E19`) USDCHF's 15-minute series mis-sliced at a partial week-open bar and its 27/30
+symptom misdiagnosed as ±0.4 pip harvest noise when bar 0's open differs by 28.1 pips —
+diagnosed here, `aggregate(m[4:16])` reproduces 4h bar 0 exactly; no conclusion changes.
+`M2` (`E01`) two smoothed quotations inside the transcript's own verbatim-proof paragraph.
+`M3` (`E20`/`E11`) `A-037`/`A-038` cross-references pointing at records that hold other
+subjects; correct targets `A-031`/`A-030`. `M4` (`E20`) stale "26 frames" and stale
+`VISUAL_INDEX` filename. `M5` (`E20`) homework validation 1's 569/549/20 figures not
+reproducible from committed data. `M6` (`E20`) a visible `Traders Dynamic Index Visual`
+panel in curated frames 21 and 22, unrecorded — does not weaken `A-039`. `M7` (`E20`) four
+quality-control boxes unchecked and undeclared, shared with V02 and V03.
+
+`N1` requires dimensions B and C to be re-dispositioned from `PARTIAL`/`FAIL` to `DEFERRED`
+under `D-019` — as labelled, V04 could never reach `PASS`, because the cause is in the
+source. `N2`–`N5` uphold the manual-backtest debt characterisation, the `I5` anchor-point
+recommendation at its stated grade, the `E11` de-escalation, and record the round's most
+transferable observation: the student predicted its residual defects would be in the
+interpretation prose; they were not — all four substantive minors landed in the **narrative
+describing mechanically checked work**, because that is the one part nothing recomputes.
+
+### The C-005 ruling
+
+**Guest-presenter material is admissible as SECONDARY, DESCRIPTIVE evidence and is EXCLUDED
+from the canonical methodology as NORMATIVE material.** Not full weight (the guest disclaims
+authority in his own words and describes a session where the instructor's necessary
+condition mostly does not occur — merging would synthesise a rule set neither man stated);
+not full exclusion (that would require retracting `A-040`, the *"Mayo"* corroboration and
+half of `INDEX.md`, all of which are facts about printed artifacts rather than claims about
+method). Speaker tagging is mandatory from V04 forward; a guest statement can never resolve
+an `A-xxx` or `C-xxx`; a guest/instructor divergence is a corpus-hygiene record, never a
+contradiction charged against the instructor; identification is provenance, not evidence.
+**Retroactive effect on V04: none — it ratifies the student's handling exactly.** Owner to
+record as `DECISIONS.md` D-025 before V05.
+
+The speaker identification was verified independently and is correct: *"Zen Jason … or
+Diana I. Alldredge"* read off frame 21's Navigator at 4× magnification (three account rows),
+and segment B refers to Steve in the third person 40+ times, decisively at `[01:24:53]`
+*"Steve is asking, do you ever take continuation trades?"*
+
+### Required Corrections
+
+`REVIEW_INDEX.md` open items 25–32; the executive block of
+`18_REVIEW/V04/V04_REVIEW_R1.md` lists all nine actions including the owner's D-025 entry.
+
+### Decision
+
+**REVISE**, confidence HIGH. **V05 gate OPEN** under `D-024`. V04 is `IN REMEDIATION` and
+does not reach `COMPLETE` until the seven minors and N1 are applied **and re-reviewed**.
+
+### Git
+
+Explicit paths on every `git add` and a pathspec on every `git commit`; `git status` and
+`git diff --staged` read before each. A **concurrent session's V03 R3 work was staged in this
+shared working tree** throughout the review — `18_REVIEW/V03/V03_REVIEW_R3.md` plus staged
+edits to `COURSE_PROGRESS.md`, `REVIEW_INDEX.md` and `LOG.md`. It was left untouched and
+unstaged, and the first commit used a pathspec restricted to `V04_REVIEW_R1.md` alone so
+none of it was swept in; that session committed and pushed independently as `cda36c1` before
+this session's bookkeeping began. The untracked
+`05_HOMEWORK/V02/measure_usdchf_week.py` (open item 13) was left untouched, as at every
+prior round. `validate_project.py`: 97 passed, 0 warnings, 0 failures.
+
+### Next Review Trigger
+
+Student remediation of V04's seven minors and N1, then a fresh round (R2). Independently,
+V05 may begin at any time — the gate is open.
