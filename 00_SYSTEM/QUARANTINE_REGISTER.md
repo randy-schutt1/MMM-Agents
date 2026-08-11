@@ -306,3 +306,163 @@ template across lessons, re-using the same fabricated sentences and timestamps
 regardless of content. Sessions processing V04–V21 should continue to confirm
 individually (the check costs ~10 minutes once the transcript is verified) and should
 treat finding the same pattern as expected.
+
+---
+
+## Q-004 — V04's three derived files, checked individually and confirmed fabricated; plus the first mechanical proof that ONE template was stamped across all 21 lessons
+
+```text
+STATUS:        QUARANTINED — DO NOT USE (confirmed, not assumed)
+DATE:          2026-08-10
+QUARANTINED BY: Student session (V04)
+DECISION:      D-017 (Q-001 blanket action), now confirmed for V04 specifically
+```
+
+### Why this entry exists separately
+
+Same reason as Q-002 and Q-003: the Q-001 blanket quarantine was evidenced on V01 only,
+and each lesson's own files are re-checked against that lesson's own verified transcript
+before its notes are written. V04's three files fail, in the same template-stamped way.
+**Four of four lessons checked now carry individually confirmed fabrications.**
+
+Files: `_QUARANTINE_UNVERIFIED_NOTES/per_lesson/04_Bootcamp1_Wk2_032512_Part2_86mins/`
+— `NOTES.md` (18 lines), `RULES.md` (69 lines), `VISUAL_INDEX.md` (25 lines).
+
+### Finding 1 — NEW: the template is now proven mechanically across all 21 lessons at once
+
+Q-001, Q-002 and Q-003 each established the fabrication for one lesson and *inferred* that
+the same generator produced the rest. **That inference is now a measurement.** Two greps
+over the whole quarantine tree:
+
+```text
+$ grep -rl "Wait for the M15 candle to close before taking the 5/13 EMA cross" \
+      _QUARANTINE_UNVERIFIED_NOTES/per_lesson/ | wc -l
+21
+$ grep -rl "Place your stop loss 10 to 15 pips beyond the High or Low of the Day" \
+      _QUARANTINE_UNVERIFIED_NOTES/per_lesson/ | wc -l
+21
+$ ls _QUARANTINE_UNVERIFIED_NOTES/per_lesson/*/RULES.md | wc -l
+21
+```
+
+**All 21 `RULES.md` files carry both sentences, and both are presented as
+`Source: Explicit` verbatim instructor statements at the same two timestamps —
+`[00:05:00]` and `[00:18:00]` — in every one of them.** The 21 lessons are 21 different
+recordings, on 10 different dates, running 43 to 96 minutes. No instructor says the same
+two sentences at the same two clock times in 21 consecutive sessions.
+
+This is worth stating plainly because it retires an open question rather than re-answering
+a settled one: **no further per-lesson fabrication audit can turn up a clean `RULES.md`.**
+The remaining per-lesson checks (V05–V21) are still worth their ~10 minutes for the
+*other* two files and for lesson-specific hazards like Finding 3 below, but the
+`RULES.md` verdict is now known in advance for every one of them.
+
+### Finding 2 — the fabricated content against V04's own verified transcript
+
+`RULES.md` records `V05-R001` — note the ID: the generator still used the pre-D-017
+alphabetical misordering under which this lesson was "Video 05" (Q-003 saw the same
+off-by-one in the other direction, V03's files carrying `V04-` IDs).
+
+What V04's verified transcript actually carries at the cited places:
+
+| Cited | Claim | What is actually there |
+|---|---|---|
+| `[00:02:00]` | screenshot of "Asian Box accumulation range with 5, 13, 50, 200, 800 EMAs" | The **"4-Trades"** slide (Stop Hunt High "M" Formation / Stop Hunt Low "W" Formation / Straight Away Rise / Straight Away Drop). No chart, no moving average. Verified against this session's own capture. |
+| `[00:04:00]` | five EMA periods, `Explicit` | **Not a marker.** Nearest are `[00:03:56]` and `[00:04:01]`, both mid-sentence in *"if the dealer takes your money away from you… you hit them again. You don't go on vacation. Control the losses to a reasonable amount."* No indicator of any kind. |
+| `[00:05:00]` | M15 close before 5/13 EMA cross | **Not a marker.** Nearest are `[00:04:59]` and `[00:05:03]`: *"If you take minus eighteen, you're out and then the dealer does this. / Again, you got them."* No indicator, no timeframe, no candle-close condition. |
+| `[00:15:00]` | screenshot of "London Open Stop Hunt false breakout forming 2nd leg M-formation at High of Day" | **Not a marker.** Nearest are `[00:14:58]` (*"Do not take any more garbage trades inside the range of the blue box"*) and `[00:15:05]` (*"Are you going to miss some good setups?"*). |
+| `[00:18:00]` | stop loss 10–15 pips beyond HOD/LOD, `Explicit` | A real marker — and it is the **homework assignment**: *"But I want you to do the assignment in the four hour chart."* No stop distance is stated. |
+| `[00:22:00]` | "Peak Time Gap 30–90 mins", `Explicit` | **Not a marker.** Nearest are `[00:21:59]` and `[00:22:02]`, mid-sentence in *"…that's your peak formation high, then you're looking for stop on high drop, stop on high drop W get out."* No timing gap is stated anywhere in the lesson. |
+| `[00:30:00]` | screenshot of "TDI Shark Fin … + 5/13 EMA cross" | **Not a marker.** Nearest are `[00:29:57]` and `[00:30:01]`, mid-digression about how many pairs the guest presenter watches (*"…and so this was my son, Ken"*). |
+
+**Six of the seven cited timestamps are not transcript markers at all.** The one that is
+carries the homework, not a rule.
+
+Token counts over the full 5,141-second transcript body:
+
+| Token | Occurrences in V04 |
+|---|---|
+| `EMA` (word-boundary) | **0** — the 13 raw substring hits are all *email* (7) and *emails* (6) |
+| `5/13` | **0** |
+| `Asian Box` (the headline topic of `NOTES.md`) | **0** — the spoken terms are *"Asian range"*, *"Asian accumulation range"*, *"the blue box"* |
+| `PFH` / `PFL` | **0** / **0** |
+| `mayo`, `raspberry` (2 of the 5 claimed EMA colour nicknames) | **0** / **0** |
+| `volatility band` (singular, as `NOTES.md` phrases it) | **0** (the transcript has *"volatility ban"* once, `[00:13:50]`) |
+| `pin bar` | **0** |
+| `railroad` | 4 — real, but never with the claimed 30–90-minute gap |
+
+The `NOTES.md` session table (Asian 7:00 PM–3:00 AM EST, London 3:30–9:00 AM, NY
+9:30 AM–5:00 PM) is stated nowhere in V04. What V04 actually says about session timing is
+*"From one to five AM New York, one to four AM New York, four or five hours. Take a break
+from eight to 11 New York time"* `[00:21:33]`–`[00:21:37]` — different numbers, different
+structure, and spoken by the instructor about **when to be at the screen**, not as a
+session-boundary definition.
+
+### Finding 3 — the Q-003 hazard recurs and is worse here
+
+Q-003 warned that V03's fabrications were *more* dangerous than V02's because some of the
+fabricated vocabulary was genuinely present in the lesson. That is truer for V04. The
+recording really does discuss TDI (11), shark fin (5), stop hunts (4), railroad tracks (4),
+M formations (9), the second leg, and 10–15-pip stops. A reader skimming `NOTES.md` and the
+transcript together would find the vocabulary corroborated everywhere — and every
+*specific* the fabricated files attach to that vocabulary is still invented:
+
+- the EMA set and their colour nicknames (0 EMA references in the lesson);
+- the 30–90-minute peak gap (never stated);
+- the session clock table (never stated);
+- *"2nd leg must fail to make a new extreme, showing rejection candles (Railroad tracks or
+  pin bars)"* — the lesson's actual second-leg criterion is different and is stated at
+  `[00:15:43]`–`[00:15:56]`;
+- `V05-R002`'s stop rule *"10 to 15 pips beyond the High or Low of the Day"* is
+  **adjacent to a real number and still wrong**: the instructor's figure is a 10–15–18-pip
+  stop measured from the *entry* `[00:04:24]`–`[00:04:43]`, and the guest presenter's is
+  *"seven pips plus the spread below the low of the day"* `[01:04:41]`, totalling 13–15 pips
+  all-in `[01:05:07]`. The fabricated rule reads as a plausible blend of the two and
+  matches neither.
+
+The Q-001 handling rule — **do not mine quarantined material for leads** — matters most
+exactly here.
+
+### Finding 4 — a 3-entry visual index for one image; the image is real, and both of its labels are wrong
+
+`VISUAL_INDEX.md` describes 3 numbered screenshots. The lesson's `SCREENSHOTS/` folder
+contains **one** file, `VIDEO_05_SCREENSHOT_001_00-02-00.jpg` — entries 002 and 003
+describe files that do not exist.
+
+Entry 001 is the interesting one, and it splits from the V03 case:
+
+- **The image is a genuine frame of this lesson.** It was matched against this session's
+  own 1,037-frame sweep: it is pixel-equivalent to sweep frame `s_0000` (mean absolute
+  difference **0.65** per RGB channel, i.e. JPEG-recompression noise), against **3.45 or
+  worse** for every other frame in the first three minutes. It shows PowerPoint's editing
+  view — ribbon, slide panel, "Click to add notes" — which exists in this recording only
+  during roughly its first 32 seconds; the presenter is in full-screen slideshow mode from
+  then on.
+- **Its filename timestamp is wrong.** `s_0000` carries the player's burned-in timecode
+  `00:00 / 85.4`. The file claims `00-02-00`. The frame at the real `[00:02:00]`
+  (`s_0024`, burned timecode `02:00 / 85.4`) is the *same slide in slideshow mode* — which
+  is presumably how the mislabelling survived a casual glance, and is a good argument for
+  this project's rule of keeping the control bar and its burned timecode in every
+  screenshot.
+- **Its description is fabricated.** *"Asian Box accumulation range with 5, 13, 50, 200,
+  and 800 EMAs"* describes nothing in the image, which is a four-line text slide.
+
+So: the timestamp claim is off by two minutes and the content claim is invented, but unlike
+V03's case the underlying image is authentic and locatable. Nothing written about it in
+`VISUAL_INDEX.md` may be cited.
+
+### Disposition
+
+All three files stay quarantined. `TRANSCRIPT.md` from the same folder was checked
+independently and **passed**, with a 9-entry ASR-degeneration tail fenced rather than
+deleted — it is adopted at `02_TRANSCRIPTS/V04/V04_TRANSCRIPT.md` (I-008 satisfied for
+V04). `VIDEO_05_SCREENSHOT_001_00-02-00.jpg` is an authentic frame of this lesson at
+`[00:00:00]`, not `[00:02:00]`; this session's own capture supersedes it and it is not
+used.
+
+### Running tally for the fabrication pattern
+
+V01, V02, V03, V04: four of four lessons individually confirmed — and per Finding 1 the
+`RULES.md` half of the pattern is now established for **all 21** by direct measurement
+rather than by inference. Sessions processing V05–V21 should still check `NOTES.md` and
+`VISUAL_INDEX.md` individually and should treat finding the same pattern as expected.
