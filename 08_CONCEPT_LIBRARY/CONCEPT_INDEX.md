@@ -11,8 +11,27 @@ Naming: `CL-NNN_concept-name.md`
 
 ```text
 CONCEPTS:        0
-LESSONS STUDIED: 1  (V01 — studied, reviewed R1: REVISE, in remediation)
+LESSONS STUDIED: 3  (V01 reviewed R2: PASS; V02 reviewed R3: PASS;
+                     V03 studied, not yet reviewed)
 ```
+
+> **UPDATED 2026-08-10 (V03 pass).** `LESSONS STUDIED` read `1` while V02 and V03 had
+> both been studied — the same staleness class this block was already corrected for
+> once. Recounted here. `CONCEPTS` is unchanged at 0 and the rationale below still
+> holds after three lessons.
+>
+> **V03 specifically.** V03 resolved exactly one register entry — `A-026`, `HOW` =
+> High Of the Week, on the spoken expansion at `[00:26:40]`. It is **not** promoted to
+> a concept entry, because it is an abbreviation expansion rather than a method
+> concept: knowing what the letters stand for supplies no rule for determining the
+> week's high in real time, which remains `A-010`/`A-033` territory and `DO NOT CODE`.
+> Promoting it would launder a label into a definition — rule 5.
+>
+> V03's own new vocabulary (`A-029`–`A-036`: `wt =` labels, brinks shadow, blood in
+> the water, shark fin, outside structure, safety trade, vectors, quarter of wood) is
+> eight more open ambiguities, not eight concepts. Six of them come from a single
+> slide — the sample flashcard's entry-criteria list — which asks the student to
+> verify conditions the course has never defined.
 
 **Intentionally empty — and empty for a different reason than at project start.**
 
