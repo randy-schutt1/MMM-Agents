@@ -534,3 +534,42 @@ manufacture some.**
 *Round R1B — a parallel second opinion, not a superseding round. `V05_REVIEW_R1.md` stands
 unaltered (`SETUP_ISSUES.md` I-002, `REVIEW_PROTOCOL.md` §11). Remediation of both rounds →
 `V05_REVIEW_R2.md`.*
+
+---
+
+## ⚠ STATUS — APPENDED AT V05 R2, 2026-08-11 (append-only; nothing above was altered)
+
+**This round is FOLDED into the V05 R1/R2 lineage. `18_REVIEW/V05/V05_REVIEW_R2.md` is now
+the operative list of what V05 owes; §5 and §8 above should be read as historical. This file is NOT
+superseded, NOT invalid, and NOT to be edited or deleted — it stands as written
+(`SETUP_ISSUES.md` I-002, `REVIEW_PROTOCOL.md` §11).**
+
+R2 re-derived all four minors and note `n1` from the transcript and the pixels, independently
+of this file's prose, and **confirmed every one of them as real and unremediated at `HEAD`**:
+
+| This round | Adopted at R2 as | Open item | R2 verdict |
+|---|---|---|---|
+| `m1` — `C-003` named for a `C-004` check | `M7` | 47 | ✅ **CONFIRMED VALID** |
+| `m2` — *"but up to five days"*, four times vs twice verbatim | `M8` | 48 | ✅ **CONFIRMED VALID** |
+| `m3` — unrecorded printed `R =` labels in frame 26 | `M9` | 49 | ✅ **CONFIRMED VALID** (with one correction to this round's reading — see R2 §2) |
+| `m4` — §4c *"always with the same escape clause"* | `M10` | 50 | ✅ **CONFIRMED VALID** |
+| `n1` — `A-042` cites `[01:01:39]`; words at `[00:57:39]` | `M11` | 51 | ✅ **CONFIRMED VALID — escalated `NOTE` → `MINOR`** |
+
+**Why this file was kept rather than voided.** `REVIEW_PROTOCOL.md` §11 and `SETUP_ISSUES.md`
+I-002 forbid overwriting a review round, and a valid review is not made invalid by having been
+produced concurrently. This round's two refusals — declining to write over `V05_REVIEW_R1.md`,
+and declining to race another session's uncommitted `REVIEW_INDEX.md` — were **correct**, and
+its §0.2 disclosure is why the collision was reconstructable at R2 at all.
+
+**The defect this round left behind** was not its existence but its invisibility: at R2 it was
+referenced **zero times** in `REVIEW_INDEX.md` and **zero times** in `LOG.md`, so the
+remediation session never saw its four findings. **That is now fixed** — R1B is recorded in
+`REVIEW_INDEX.md` as a parallel round of the V05 R1 lineage, and its findings are tracked as
+open items 47–51 under the labels `M7`–`M11`. The R1 round's true minor total is **10**
+(`M1`–`M6` + `m1`–`m4`), as this round asked. The gate is unaffected either way: 0 `CRITICAL`,
+0 `MAJOR`.
+
+**No further `R<n>B` file may be created** unless the owner adopts parallel review as policy —
+carried as R2 §8 owner action **D**.
+
+*See `V05_REVIEW_R2.md` §0 for the full reconciliation.*

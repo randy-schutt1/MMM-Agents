@@ -521,12 +521,23 @@ own merits. Every substantive claim is unsupported by the audio:
 
 | `NOTES.md` claim | V05's audio |
 |---|---|
-| *"EMAs: 5 (Mustard), 13 (Water), 50 (Mayo), 200 (Blueberry), 800 (Raspberry)"* | No moving average is given a period, colour or nickname anywhere. `EMA` occurs 3×, for the **50** and the **200** only. `800` occurs 0×. |
+| *"EMAs: 5 (Mustard), 13 (Water), 50 (Mayo), 200 (Blueberry), 800 (Raspberry)"* | No moving average is given a period, colour or nickname anywhere. `EMA` occurs **2×**, for the **50** and the **200** only — `[00:23:52]`, `[01:05:53]`. `800` occurs 0×. |
 | *"5/13 EMA Cross: Execution confirmation on M15 close"* | `5/13` 0×. No timeframe is ever named for entry. |
 | *"TDI Indicator: Green Price Line crossing Red Signal Line with Shark Fin confirmation outside Volatility Bands"* | `TDI` occurs 6× and is **never defined** — no lines, no bands, no rule. The speaker says *"I don't use it anymore"* `[00:36:50]`. |
 | *"Stop loss positioned 10–15 pips past High/Low of Day with minimum 1:3 Risk-to-Reward"* | 0×. No stop rule and no risk-to-reward ratio is stated in V05. |
 | Session clock table in EST (Asian 7:00 PM–3:00 AM, London 3:30 AM–9:00 AM, NY 9:30 AM–5:00 PM) | No session clock is stated. `EST` 0×. |
 | *"Peak Formation High (PFH) & Low (PFL)"* | `PFH` 0×, `PFL` 0×. *"peak formation"* occurs once, `[00:11:48]`. |
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — `REVIEW_INDEX.md` open item
+> 39, applied at V05 R2 2026-08-11. The first row previously read: "`EMA` occurs 3×, for the
+> **50** and the **200** only." **The literal token occurs twice**, at `[00:23:52]` *"Nice
+> close below the 50 EMA."* and `[01:05:53]` *"…below the 200 EMA."*; the third item the
+> transcript's own note had listed, *"They'll induce by closing below the 200."* `[01:06:02]`,
+> refers to the same object and **does not contain the token**. **No conclusion in `Q-005`
+> changes** — the falsification of the fabricated `NOTES.md` rests on `800` = 0, `5/13` = 0,
+> and the absence of any period, colour or nickname, all of which are unaffected and were
+> independently re-measured at R1 and R2. The paired correction is at
+> `V05_TRANSCRIPT.md` § TRANSCRIPTION NOTES.)*
 
 **And an independent falsification that needs no token counting:** the file is headed
 *"Instructor Core Concepts"* and every `VISUAL_INDEX.md` entry attributes the content to

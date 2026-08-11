@@ -2908,3 +2908,92 @@ The untracked `05_HOMEWORK/V02/measure_usdchf_week.py` (open item 13) left untou
 
 `V05_REVIEW_R2.md` by a fresh session (`D-003`). V05 reaches `COMPLETE` only on a reviewer
 `PASS`. R2 must also account for open items 39 and 36, which this session did not close.
+
+---
+
+## 2026-08-11 — Reviewer Session (V05 R2)
+
+### Lesson
+
+V05 — `Bootcamp1 Wk2 032512 Part3 (68mins).swf`
+
+### Review Objective
+
+Remediation verification of `V05_REVIEW_R1.md` against commit `152f4ea`; application of
+`REVIEW_INDEX.md` open item 39; and reconciliation of the orphaned parallel round
+`V05_REVIEW_R1B.md` into the review lineage per `SETUP_ISSUES.md` I-002.
+
+### Source Evidence Reviewed
+
+`02_TRANSCRIPTS/V05/V05_TRANSCRIPT.md` (markers and verbatim body, re-scanned); curated frame
+`V05_00-40-04.png` opened and magnified at 6× LANCZOS and 10× nearest-neighbour;
+`11_CONTRADICTIONS/CONTRADICTIONS.md` records `C-003` and `C-004` read in full;
+`00_SYSTEM/REVIEW_PROTOCOL.md`, `REMEDIATION_PROTOCOL.md` §2, `SETUP_ISSUES.md` I-002,
+`DECISIONS.md` D-003 / D-018 / D-019 / D-024 / D-025.
+
+### Student Artifacts Reviewed
+
+`V05_SOURCE_NOTES.md`, `V05_INTERPRETATION.md`, `V05_MASTERY_REPORT.md`,
+`04_SCREENSHOTS/V05/INDEX.md`, `AUTOMATION_AMBIGUITIES.md` (`A-018`, `A-039`, `A-042`,
+`A-043`, `A-020`), `QUARANTINE_REGISTER.md` `Q-005`, plus the review files `V05_REVIEW_R1.md`
+and `V05_REVIEW_R1B.md` (read and reconciled, **not** audited and **not** edited).
+
+### Findings
+
+**R1's six minors: all six VERIFIED APPLIED and CLOSED.** Each was re-derived from the
+transcript or the pixels before the remediation diff was read. `M4` verified in the correct
+direction — `git show 152f4ea -- 04_SCREENSHOTS/V05/INDEX.md` touches one line only (row 26,
+for `M6`), so the honest disclosure was not weakened to match the interpretation. `M6` verified
+in both halves — the sub-panel is present and its header is genuinely illegible at 9×, so the
+refusal to transcribe it is correct.
+
+**Open item 39 APPLIED.** `EMA` re-counted word-boundary over the verbatim body: **exactly 2**,
+at `[00:23:52]` and `[01:05:53]`; `[01:06:02]` is present and does not contain the token. Both
+sites corrected with superseded text retained.
+
+**Five minors OPEN, all adopted from R1B, all independently confirmed at `HEAD`:** `M7`
+`C-003`/`C-004` record identity at four sites including a STATUS block; `M8` *"but up to five
+days"* counted four times, verbatim twice; `M9` four unrecorded printed `R =` labels in frame
+26 leaving `A-018` undercounted; `M10` §4c's *"always with the same escape clause"* false for
+two of four rows; `M11` `A-042` citing the non-marker `[01:01:39]` for words at `[00:57:39]`.
+
+**Review-layer reconciliation.** `V05_REVIEW_R1B.md` is a complete, valid, committed parallel
+review — later than R1, not earlier; not a mid-write fragment. Its real defect was invisibility:
+zero references in `REVIEW_INDEX.md` and zero in `LOG.md`, so the remediation never saw it. It
+is folded into the lineage, its body unedited, an append-only status footer added, and it is
+**not** marked invalid — all five of its findings reproduce.
+
+### Required Corrections
+
+`M7`–`M11` (`V05_REVIEW_R2.md` §5), open items 47–51. Dimension B's re-disposition remains
+**blocked on the owner** (open item 36) and is carried, not charged.
+
+### Owner Items Confirmed Open, Not Resolved
+
+Open item 36 (a third disposition, provisionally `EXCLUDED BY DECISION` — and it should cover
+dimension **B**, which the student's own escalation omitted); open item 40 (a numbered `D-025`
+carve-out for records whose subject is a guest's own utterance or a platform artifact); open
+item 35 (`A-042`'s out-of-corpus DMR dependency); and a new one — whether parallel independent
+reviews are intended policy or a tooling accident to be guarded against.
+
+### Decision
+
+**REVISE** — confidence HIGH. 0 CRITICAL, 0 MAJOR, 5 MINOR. **V06 gate remains OPEN** under
+D-024. **V05 is NOT COMPLETE.**
+
+### Independence Note
+
+`D-003` is satisfied for every V05 artifact **except** the open-item-39 `EMA` correction, which
+this reviewer session applied on explicit owner instruction and therefore self-verified. Scope:
+two numerals and two retained-text blocks. Declared at `V05_REVIEW_R2.md` §3.1 rather than
+glossed. `validate_project.py`: 97 passed, 0 warnings, 0 failures.
+
+### Git
+
+Local commit only, explicit paths, `git status` and `git diff --staged` checked before commit.
+**NOT pushed** — pushes are batched by the owner. The untracked
+`05_HOMEWORK/V02/measure_usdchf_week.py` (open item 13) left untouched.
+
+### Next Review Trigger
+
+Student remediation of `M7`–`M11` → `V05_REVIEW_R3.md` by a fresh session.

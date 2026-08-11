@@ -156,14 +156,24 @@ Confidence is **MEDIUM**, for the same reasons as V01–V04: the ASR follows the
 but mangles domain vocabulary and proper nouns. Recurring garble a reader should not
 mistake for terminology is listed at criterion 3 above. Additional notes:
 
-- **`EMA` occurs 3 times** — *"Nice close below the 50 EMA"* `[00:23:52]`, and *"below the
-  200 EMA"* / *"closing below the 200"* `[01:05:53]`–`[01:06:02]`. This is the **first**
-  lesson in which the token appears in genuine audio (V04's transcript has zero). It is
-  used for the **50** and the **200** only; **no 5, 13 or 800 EMA is ever mentioned**, and
+- **`EMA` occurs 2 times** — *"Nice close below the 50 EMA."* `[00:23:52]` and *"…below the
+  200 EMA."* `[01:05:53]`. **A third item was previously listed here in error:**
+  *"They'll induce by closing below the 200."* `[01:06:02]` refers to the same object but
+  **does not contain the token**. Re-measured word-boundary and case-sensitive over the
+  verbatim body at V05 R1 and again at V05 R2; both passes return **2**. This is the
+  **first** lesson in which the token appears in genuine audio (V04's transcript has zero).
+  It is used for the **50** and the **200** only; **no 5, 13 or 800 EMA is ever mentioned**, and
   the moving averages are never given periods, colours or nicknames in this lesson. The
   same objects are elsewhere rendered *"50 am in"*, *"50 M.A."*, *"the 50"*, *"moving
   averages"*. See `A-020` (the unresolved moving-average nickname question) — **V05
   extends that record and, being GUEST material under D-025, does not close it.**
+
+  > *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — `REVIEW_INDEX.md` open
+  > item 39, applied at V05 R2 2026-08-11: "**`EMA` occurs 3 times** — *"Nice close below
+  > the 50 EMA"* `[00:23:52]`, and *"below the 200 EMA"* / *"closing below the 200"*
+  > `[01:05:53]`–`[01:06:02]`." **No conclusion in this note changes** — the point it makes,
+  > that no 5/13/800 EMA and no colour or nickname appears in V05, is unaffected and was
+  > independently re-confirmed at R1 and R2.)*
 - **`TDI` occurs 6 times** (`[00:35:41]`, `[00:35:51]`, `[00:35:54]`, `[00:36:39]`,
   `[00:36:47]`, `[00:48:24]`) and **the indicator is still never defined** — no inputs, no
   periods, no bands, no line names, no decision rule. The speaker's own position is *"I
