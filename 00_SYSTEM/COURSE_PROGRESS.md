@@ -11,9 +11,25 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  0
+VIDEOS IN PROGRESS:  1  (V03 — student pass complete, awaiting independent review)
 VIDEOS PASSED:       2  (V01, V02)
-CURRENT LESSON:      V02 — re-reviewed R3 2026-08-10: **PASS** (HIGH), 0 critical,
+CURRENT LESSON:      **V03 — student pass COMPLETE 2026-08-10, submitted as
+                     REVIEW REQUIRED (not PASS).** Transcript verified and adopted;
+                     24 screenshots indexed; source notes + interpretation adopted
+                     from a hung prior session ONLY after a citation audit (377
+                     markers checked, 375 verbatim, 96 quote matches, 5 minor
+                     defects corrected); AUTOMATION_AMBIGUITIES A-029..A-036 added,
+                     7 extended, **A-026 RESOLVED** (first resolution on spoken
+                     evidence); CONTRADICTIONS evidence on all four records with
+                     C-004's deliberate check performed and negative; homework 11a
+                     complete on real 4H data for 4 majors (11b UNRESOLVED,
+                     evidential); mastery report written. Four dimensions are
+                     sub-PASS by the student's own assessment (B PARTIAL, C FAIL,
+                     D PARTIAL, G DEFERRED). See 07_MASTERY_REPORTS/
+                     V03_MASTERY_REPORT.md §4 for the six items it asks the
+                     reviewer to audit.
+                     ---- prior ----
+                     V02 — re-reviewed R3 2026-08-10: **PASS** (HIGH), 0 critical,
                      0 major, 2 minor (both non-blocking). **COMPLETE.**
                      Both of R2's required corrections applied and independently
                      re-derived at R3 — the chart re-measured from the committed PNG
@@ -30,7 +46,16 @@ CURRENT LESSON:      V02 — re-reviewed R3 2026-08-10: **PASS** (HIGH), 0 criti
                      0 major. COMPLETE. All 15 of R2's required actions applied and
                      verified against the source; R2 finding N1 (A-006's trailing
                      block) closed by withdrawing it in place.
-NEXT ACTION:         **Begin V03.** The V03 gate is OPEN as of V02 R3 PASS.
+NEXT ACTION:         **Independent review of V03 (R1) — a FRESH reviewer session.**
+                     The student session must not review its own work (D-003/D-004).
+                     V04 GATE is CLOSED until that review returns; D-024 governs
+                     what reopens it.
+                     Carried into that review, not blocking it: homework 11b remains
+                     UNRESOLVED (no trading history to build flashcards from — same
+                     evidential reason as V02's 11b), and manual backtesting for V03
+                     is DEFERRED pending a testable entry rule.
+                     ---- prior, V02 R3 carry-forward (unchanged) ----
+                     **Begin V03.** The V03 gate was OPEN as of V02 R3 PASS.
                      Four non-blocking carry-forward items from R3 (§9), none of
                      which opens a remediation round:
                      (a) V02_TRANSCRIPT.md — restate the `level count` clause; the
@@ -103,6 +128,22 @@ V02 GATE:            OPEN as of V01 R3 PASS (D-004 satisfied).
                      read CLOSED. V01's PASS makes it moot and no V02 work is
                      discarded, but the gate did not hold — see REVIEW_INDEX.md open
                      item 9.
+V04 GATE:            **CLOSED.** V03's student pass is complete and submitted as
+                     REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
+                     verdict, not a student submission — "a student PASS never
+                     advances the course by itself; it is a submission"
+                     (MASTERY_STANDARD.md). No V04 artifact of any kind may be
+                     created until V03's R1 returns, and what it returns then
+                     governs per **D-024**: PASS or minors-only REVISE opens this
+                     gate; any CRITICAL or MAJOR keeps it closed until fixed AND
+                     re-reviewed.
+                     Note for whoever holds this next: the D-004 gate has been
+                     breached twice in this project's history, and REVIEW_INDEX.md
+                     open item 9 remains OPEN precisely because a written gate with
+                     no enforcement is what failed. The validate_project.py
+                     pre-flight guard is still unimplemented, so this block is
+                     currently the only thing holding the gate.
+
 V03 GATE:            **OPEN as of V02 R3 PASS, 2026-08-10 (D-004 satisfied).**
                      The V03 work performed in parallel while this gate read CLOSED
                      was an **owner-authorized override**, confirmed by the project
@@ -171,7 +212,7 @@ fabricate, interpolate, or infer Week 6 content.**
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
-| V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | **REVIEW REQUIRED** | — awaiting R1 | **AWAITING REVIEW** |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |

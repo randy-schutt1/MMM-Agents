@@ -1676,3 +1676,96 @@ evidence base.
 V03 student pass. **The V03 gate is now OPEN** (D-004 satisfied by this `PASS`). The V03
 work already performed in parallel is an owner-authorized override and is not to be
 reverted; it should be recorded as a numbered decision in `DECISIONS.md`.
+
+---
+
+## Session — 2026-08-10 — V03 student pass (clean retry after a hung session)
+
+### Situation inherited
+
+A prior session began V03 and **hung while writing `V03_SOURCE_NOTES.md`**, producing no
+output for a long time. This session was started as a clean retry. Verified state before
+touching anything:
+
+| Artifact | State found |
+|---|---|
+| `V03_TRANSCRIPT.md` | Committed (9f60f22 lineage), verified against I-008, adopted |
+| 24 screenshots + `INDEX.md` | Committed |
+| `V03_SOURCE_NOTES.md`, `V03_INTERPRETATION.md` | **Untracked**, 795 lines, unverified |
+| `AUTOMATION_AMBIGUITIES.md` | Stopped at `A-028` while the notes cited `A-029`–`A-033` |
+| `CONTRADICTIONS.md` | No V03 evidence at all |
+| Homework, mastery report | Absent |
+
+The hang landed between "notes written" and "registers touched", which is exactly where
+the inherited state was inconsistent.
+
+### Work performed, in commit order
+
+1. **Citation audit of the inherited notes before adopting them.** 377 markers checked
+   against the transcript (375 exist verbatim), 96 quote+timestamp pairs fuzzy-matched at
+   their cited marker with ellipsis-elided quotes split fragment-by-fragment. All resolve
+   to real spoken text. **5 minor defects found and fixed.** The notes were interrupted
+   honest work, not fabrication — a materially different finding from Q-001/Q-002/Q-003.
+2. **Visual verification of §4.** 4a/4c/4d/4f/4h transcribe their slides word for word;
+   the burned-in player clock corroborates each filename timestamp. §4e listed 13 `R =`
+   labels as complete when the frame carries **15** (two partially occluded) — corrected.
+3. **`AUTOMATION_AMBIGUITIES.md`:** `A-029`–`A-036` added, 7 records extended, **`A-026`
+   RESOLVED** — the project's first resolution on spoken evidence (`[00:26:40]`,
+   "H-O-W high of the week"). ID collision between the notes and the screenshot index
+   (both using `A-031`) reconciled across four files. STATUS recounted in the same commit.
+4. **`CONTRADICTIONS.md`:** evidence on all four records, **no new record opened**.
+   `C-004`'s deliberate V03 check performed as the record demanded → **negative**.
+   One candidate examined and deliberately not logged.
+5. **Homework 11a completed on real data, no substitution** — V03's slide prints "Any
+   date range", so the 2012-data blocker that forced V02's substitution does not apply.
+6. **`V03_MASTERY_REPORT.md`** — `REVIEW REQUIRED`.
+7. `COURSE_PROGRESS.md`, `CONCEPT_INDEX.md`, this log, `CHANGELOG.md`.
+
+### Homework method — the V02 lesson applied
+
+V02's `MAJOR` was a measurement error caused by pixel reading (the price line shared a
+colour with bullish candles). **This homework reads no pixels.** Every value is
+TradingView's own OHLC legend harvested as DOM text, with three validations:
+
+- **116 of 116** within-week bar transitions satisfied `open == previous close` exactly,
+  to 5 dp (3 dp JPY), across all four pairs. Zero breaks.
+- Weekend discontinuities landed at bar indices 25/26, 55, 85, 115 — **exactly 30 bars
+  apart**, and 30 × 4h = one 5-day FX week. V02's R2/R3 finding used as a positive test.
+- Two real-browser-hover spot checks matched the harvest to the last decimal, and their
+  crosshair labels pin the week open at `Sun 02 Aug '26 21:00` UTC — the Asian session,
+  as the lesson claims.
+
+Two of my own intermediate errors were caught **by these checks before submission**: a
+phase-lock that put EURUSD's window one bar out, and a day-label off by the Sunday open.
+
+### What the homework actually found
+
+- "dealer cuts one side of the block" — held **4 of 4**
+- "price closes back inside the block after the cut" — held **4 of 4**
+- "the cut is a false move and price runs the other way" — held **2 of 4**
+- taught 2.5–3 day run window — measured **3.7–4.0 days, 4 of 4** (bears on `C-001`)
+- taught 3 × ADR target — **reached 0 of 4** (1.42×–2.26×)
+
+### Honest gaps
+
+Homework 11b `UNRESOLVED` (no trading history to build flashcards from — same evidential
+reason as V02's 11b; fabricating cards would reproduce the quarantined artifact class).
+Manual backtesting `DEFERRED` (no testable entry rule to backtest). Recognition `PARTIAL`,
+Discrimination `FAIL`, Sequence `PARTIAL`. Concept library still zero entries, deliberately.
+
+`C-004`'s "no session-times slide" half rests on the prior session's 50-state sweep, of
+which only the 24 committed frames were personally examined this session. **Flagged in
+the mastery report rather than assumed sufficient.**
+
+### Git
+
+Explicit paths on every `git add`; `git diff --staged` read before every commit; six
+incremental commits so a hang could not lose the work a second time. The untracked
+`05_HOMEWORK/V02/measure_usdchf_week.py` from another session was left in place,
+unstaged and unmodified. `validate_project.py` 97 passed / 0 warnings / 0 failures at
+each checkpoint.
+
+### Next Review Trigger
+
+**V03 independent review R1, in a fresh session.** The V04 gate is CLOSED until it
+returns; D-024 governs what reopens it.

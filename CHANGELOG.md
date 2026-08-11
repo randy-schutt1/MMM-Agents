@@ -11,6 +11,53 @@ Newest first.
 
 ---
 
+## [0.6.0] — 2026-08-10 — V03 student pass; first ambiguity resolved on spoken evidence
+
+Student round. Clean retry after a prior session hung mid-write on `V03_SOURCE_NOTES.md`.
+
+### Added
+
+- **V03 student pass complete**, submitted as `REVIEW REQUIRED` (not `PASS`): source
+  notes, interpretation, homework 11a, and `07_MASTERY_REPORTS/V03_MASTERY_REPORT.md`.
+- **`A-029`–`A-036`** in `AUTOMATION_AMBIGUITIES.md`. Six of the eight are the vocabulary
+  of a single slide — the sample flashcard's entry-criteria list — which asks the student
+  to verify eleven conditions, six of which the course has never defined.
+- **`05_HOMEWORK/V03/`** — four majors, 4H, one real week, with the raw 120-bar OHLC
+  dataset committed alongside the analysis so a reviewer can recompute every number.
+
+### Changed
+
+- **`A-026` is RESOLVED — the first ambiguity this project has closed on *spoken*
+  evidence.** V03 `[00:26:40]` spells the abbreviation out: "H-O-W high of the week".
+  This settles the week-vs-day question and positively contradicts the quarantined
+  `RULES.md` reading of "HOD/LOD", which is one more independent confirmation that the
+  fabricated files invent detail. (`A-003`, the only prior resolution, was closed by text
+  printed on a slide.)
+- **`CONTRADICTIONS.md`: evidence on all four records, no new record opened.** `C-004`'s
+  "Required to resolve" field named V03 specifically as the place to check; that check was
+  performed and returned **negative** — no session-times slide, London open never
+  mentioned. V03 is struck off the resolution route.
+- `COURSE_PROGRESS.md`: V03 row → `AWAITING REVIEW`; **V04 GATE block added and CLOSED**.
+- `CONCEPT_INDEX.md`: still zero concepts (deliberate — `A-026` is an abbreviation
+  expansion, not a method concept); stale `LESSONS STUDIED` corrected 1 → 3.
+
+### Methodology
+
+- **Inherited artifacts are now audited before adoption, not trusted on sight.** The two
+  files left untracked by the hung session were adopted only after a mechanical citation
+  audit: 377 markers checked (375 verbatim), 96 quote+timestamp pairs matched at their
+  cited marker, **5 minor defects found and corrected**. The audit distinguished
+  *interrupted honest work* from the fabrication class quarantined in `Q-001`–`Q-003` —
+  a distinction this project had not previously had to make.
+- **Chart measurement no longer reads pixels.** V02's `MAJOR` came from pixel reading
+  corrupted by a price line sharing a colour with bullish candles. V03's homework harvests
+  the platform's own OHLC legend as DOM text and validates it three ways, including using
+  V02's R2/R3 weekend-gap finding as a *positive* test: the open-equals-previous-close
+  chain must hold within a week and break at weekends, and it did exactly that —
+  116 of 116 transitions exact, gaps landing exactly 30 bars apart.
+
+---
+
 ## [0.5.2] — 2026-08-10 — V02 R2: MAJOR closed, `REVISE` on three minors
 
 Reviewer round only. **No student artifact was edited** — the reviewer does not remediate.
