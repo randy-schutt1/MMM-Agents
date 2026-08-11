@@ -11,6 +11,36 @@ Newest first.
 
 ---
 
+## [0.7.1] — 2026-08-11 — Owner decisions; PT-001 pre-registered
+
+### Added
+
+- **`D-028`** — manual-phase development/holdout split is **70/30** (oldest 70%
+  development). Exact dates pinned at the first data-source decision, not invented now
+  (`I-007` still open).
+- **`D-029`** — baseline parameters: 1,000 iterations for headline results, random seed
+  recorded, entry window matched to the rule, **two arms** (direction-matched primary,
+  random-direction secondary).
+- **`D-030`** — blocked tests wait for the course; definitions are **never**
+  approximated. Generalizes `A-039`'s TDI prohibition to `A-011`, `A-004`, `A-002`,
+  `A-019`. Accruing backtest debt is correct behaviour, not a backlog to clear.
+- **`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-001_…md`** — the one test available before
+  the course teaches more: does the Asian range boundary carry predictive content?
+
+### Changed
+
+- `DECISIONS.md` open-decisions table: both `OWED NOW` items cleared.
+- `REVIEW_INDEX.md`: item 35 closed; items 36–37 added.
+
+### Finding
+
+**`PT-001` is blocked by exactly one thing — `A-019`, session times printed with no
+timezone** — and unlike every other blocker in V01–V04 this one plausibly closes from
+*existing* evidence rather than a future lesson. That makes a small timezone evidence
+pass the highest-leverage work item currently available.
+
+---
+
 ## [0.7.0] — 2026-08-11 — Backtest evidence standard
 
 ### Added

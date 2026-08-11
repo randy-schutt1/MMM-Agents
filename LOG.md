@@ -2592,3 +2592,90 @@ further work, then the V05 review and the V04 R2 review. The backtest debt disch
 when `A-039` clears, under this standard.
 
 ---
+
+## 2026-08-11 — Session — Owner decisions D-028/029/030; PT-001 pre-registered
+
+### Objective
+
+Record the owner's answers to the two decisions owed under D-026/D-027, record the
+owner's direction on blocked tests, and pre-register the one test that is available
+before the course teaches more.
+
+### Owner input, 2026-08-11
+
+1. **70/30 development/holdout** — approved.
+2. **Baseline parameters** — delegated to the agent's judgement.
+3. **"We have to wait until those things are taught… so we have to be patient."**
+4. **"The blue box boundary is the Asian range. He'll go over it."** Plus: record the
+   Asian-range test so it is not forgotten.
+
+### Work Completed
+
+- **D-028** — 70/30 split. Exact dates deliberately **not** pinned: `I-007` is open, no
+  data source is declared, so the available range is unknown and any dates written today
+  would be invented. The first session to declare a data source computes and appends them.
+- **D-029** — baseline parameters, per the delegation: 1,000 iterations for headline
+  results (200 floor for exploratory), **random seed recorded every run**, entry window
+  matched to the rule, and **two arms** — direction-matched primary (does the setup carry
+  information given direction?) and random-direction secondary (is there directional edge
+  at all?). Those two questions are routinely conflated; separating them costs nothing.
+- **D-030** — the owner's patience point recorded as a binding rule. This is the
+  machine-rule firewall (`D-010`) applied to *testing*, which is the more dangerous hole:
+  an approximated definition inside a test produces a **number**, and a number acquires
+  authority in a research corpus that a note never does.
+- **`PT-001`** pre-registered in full.
+- `REVIEW_INDEX.md` item 35 closed; 36–37 opened. `CHANGELOG.md` 0.7.1.
+
+### Key Findings
+
+**PT-001 is blocked by exactly ONE thing, and it is the cheap one.** The Asian range
+needs a window; V02 prints *"Asian Session: 8:30pm - 3:00am"* on a slide **with no
+timezone** — `A-019`. Unlike `A-011`, `A-004`, `A-002` or `A-039`, this plausibly closes
+from **existing** V01–V05 evidence rather than a future lesson: V04 `[00:07:01]` *"It's
+809 Eastern Time on 325"*, V01 `[00:46:09]` *"the US session starts at 930 Eastern"*.
+**A focused timezone evidence pass is therefore the highest-leverage work item currently
+available** — small, and it unblocks the only runnable test.
+
+`C-004` is the standing caution: London open is printed 3:30am against 4:00 spoken, so
+session times in this course are demonstrably messy. **US Eastern must not be assumed to
+unblock PT-001** (`D-030`).
+
+**On the owner's statement that the blue box is the Asian range:** V04 supports it —
+the instructor uses the two interchangeably (`C1`, `[00:14:36]` *"25 to 50 pips higher
+than the Asian range"* against `[00:15:43]` *"25 to 50 pips above and below the blue
+box"*). Recorded here as **owner statement corroborated by V04 evidence**, not as a
+resolution of `A-006`, whose open question is different: whether the box is a *temporal*
+session rectangle or a *positional* price zone. Both readings still survive the frames.
+
+### Manual Backtesting
+
+None. PT-001 is pre-registered and **not run** — it is blocked by `A-019`.
+
+### Ambiguities / Contradictions
+
+No new records. `A-019` is promoted in practical importance: it now gates the only
+runnable test.
+
+### Decisions
+
+**D-028**, **D-029**, **D-030**.
+
+### Files Created/Updated
+
+`00_SYSTEM/DECISIONS.md`; `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-001_…md` (new);
+`18_REVIEW/REVIEW_INDEX.md`; `CHANGELOG.md`; `LOG.md`.
+
+### Git
+
+```text
+<this commit> docs: record D-028/029/030 and pre-register PT-001
+```
+
+### Next Action
+
+1. **Commit and push V05** — still uncommitted, still a single copy.
+2. **Timezone evidence pass** to close or characterize `A-019` — small, and unblocks
+   PT-001.
+3. Then V05 review, V04 R2 review.
+
+---
