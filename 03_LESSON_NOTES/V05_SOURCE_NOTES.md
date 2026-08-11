@@ -375,6 +375,52 @@ Answering *"the terms hammer and morning are essentially the same thing"* `[00:5
 > the concept library in any case; it is recorded so a future session does not "fix" it by
 > picking whichever half it prefers.
 
+### 5g. How to draw the box — the only place in the corpus this is answered (spoken, Q&A)
+
+Four audience questions in a row press the presenter on box construction. **This is the
+only sustained treatment of the question anywhere in V01–V05**, and it is entirely guest,
+therefore entirely excluded as doctrine. Recorded because a reviewer should be able to see
+that the corpus's box-drawing rule is *still* unsourced from the instructor.
+
+| # | Question asked | Answer | Marker |
+|---|---|---|---|
+| B1 | *"Do you only extend your box drawing to the open close of a candle or do you include the wicks as well"* | *"Personally, I like to draw, draw where the candle closed. I kind of like leave the wicks behind, but I'm very well aware of where the low is."* … *"I kind of like body to body."* — **bodies, wicks excluded** | `[00:56:01]`, `[00:56:11]`, `[00:56:21]` |
+| B2 | *"What defines the beginning and end of the box?"* | From the **1-2-3 of the M**: *"So wherever two is, it's where my box is usually the low of my boxes and where one is usually where the high of my box is."* | `[00:58:54]`, `[00:59:21]`–`[00:59:28]` |
+| B3 | — (continues B2) | *"If it goes a little bit higher here, as long as it doesn't take out three, I'm still in one. One goes as close to three without taking it out."* | `[00:59:45]`–`[00:59:50]` |
+| B4 | *"what about the length of the box?"* | *"The length of the box really doesn't matter… as long as price stays within this oscillation. Once price breaks through it, my box ends."* | `[01:01:13]`–`[01:01:26]` |
+| B5 | *"Why do you leave your wicks out of your box"* | *"I don't know. I just guess it's because it's cleaner this way… And I'm probably psychological."* — **he explicitly declines to justify B1** | `[01:02:02]`–`[01:02:14]` |
+
+> **B5 is the important row.** Asked for the reason behind his own convention, the presenter
+> says he does not have one. A convention its own author declines to justify is not a
+> candidate rule, independently of D-025.
+
+### 5h. Stop hunt versus trap move — the sharpest idea in the lesson, and still excluded
+
+Asked by Cara *"how you can tell if candles with pins are stop [hunt] moves or … pending
+order moves"* `[01:02:22]`, the presenter gives a clean two-part discriminator:
+
+| Object | Stated discriminator | Markers |
+|---|---|---|
+| **Stop hunt** | *"stop hunts are usually pin bars… They'll throw a pin. **But they won't close above the moving averages.**"* Afterwards: *"they grab the money, they'll pull it right back in"*; *"when they're throwing pin bars all over the place like this, it's a stop hunt. **They don't really move that much.**"* | `[01:03:12]`, `[01:03:20]`, `[01:03:55]`, `[01:04:22]`–`[01:04:27]` |
+| **Trap move** | *"price comes above, it **closes** above the high, inducing along… And then it comes back in with a trap."* Afterwards: *"Once they trap, they start moving… within one or two candles, you see a **shift bar**"* — *"they move away very quickly"* | `[01:03:39]`–`[01:03:46]`, `[01:04:02]`–`[01:04:20]` |
+
+**The discriminator has two limbs:** (1) **close beyond** the level versus **pin beyond
+without closing**, and (2) what follows — **immediate directional shift** versus
+**oscillation back and forth**. He confirms the distinction is real when challenged —
+*"A stop hunt isn't a trap move."* / *"No, there's a difference between a stop hunt and a
+trap move."* `[01:04:41]`–`[01:04:46]` — works it once more against the **200 EMA** at
+`[01:05:53]`–`[01:06:24]`, and adds a preference: *"sometimes they don't always do traps,
+but traps are better moves"* `[01:06:35]`.
+
+> **This is precisely the material `D-025` exists to govern, so the handling is stated
+> explicitly.** It is a testable, falsifiable discriminator between two objects the
+> instructor uses constantly across V01–V04 and has **never** distinguished on the record.
+> It is nonetheless **GUEST, and therefore EXCLUDED as doctrine**: it may not enter the
+> master spec, the machine spec or the concept library, and it may not be cited **for or
+> against** any instructor statement about stop hunts. It is logged as an **open research
+> question** and as a descriptive extension only. **The temptation to promote it because it
+> is good is exactly the failure mode D-025 was written to prevent.** → **`A-049`.**
+
 ---
 
 ## 6. STATEMENTS THE PRESENTER ATTRIBUTES TO THE INSTRUCTOR — `GUEST (REPORTED)`
@@ -392,7 +438,7 @@ so that no future session mistakes them for V01–V04 instructor evidence.
 | `[00:17:30]` | *"we use the word level because that's what Steve uses"* | Consistent with V01–V04 usage |
 | `[00:22:54]` | *"You don't have to take every trade like Steve says"* | Consistent with V04 `[00:15:05]` |
 | `[00:23:39]` | *"Like Steve says, it's in the side of the Asian range"* (ASR; = "inside") | **This is the V04 prohibition, reported second-hand.** See note below |
-| `[00:29:36]` | *"he made out the structure for his 25 to 50 pips above or below the box"* | No such figure in V01–V04. → **`A-048`** |
+| `[00:29:36]` | *"Like Steve says, he made out the structure for his 25 to 50 pips above or below the box"* | **Matched, and the match was checked rather than assumed.** V04 `[00:15:43]` reads *"25 to 50 pips above and below the blue box"* — and that line sits inside V04's **instructor** segment (`[00:00:00]`–`[00:26:56]`), so the figure is already established from the instructor's own mouth. V05 therefore adds **nothing to its status**: corroboration only. **no ambiguity raised** |
 | `[00:29:46]` | *"where do people break out for you to put this stop? The middle of the box"* | No corpus counterpart |
 | `[00:32:22]` | *"Notice day one, day two, everything Steve said."* | Generic |
 | `[00:51:22]` | *"If you never see it in hindsight, you will never see it in foresight."* | Reported as *"Steve's favorite saying"* |
@@ -434,7 +480,7 @@ under D-025.** Recorded for completeness and to make the fabrication contrast in
 | 50–55 pips | `[00:56:56]` | Take-profit already hit (ASR *"bibs"*) | narration |
 | 50% retrace | `[00:36:32]` | Where to add the rest of a position after a *"foot soldier"* | self-report |
 | **3 candles** | `[00:52:32]` | *"Only if it comes back within three candles."* | **the one numeric filter in V05** |
-| 3–5 pips | `[00:31:34]` | ASR *"three to five-fifths of the high"* — probable "pips" | **unresolved, → `A-049`** |
+| 3–5 pips | `[00:31:34]` | ASR *"three to five-fifths of the high"* — probable "pips" | **unresolved, → `A-048`** |
 | 10 pips | `[00:26:54]` | Railroad tracks *"when they're 10 pips and then it doesn't work"* | negative example |
 | 20 pips | `[00:27:18]` | *"the 20-bit candles"* (ASR = pip) on a big railroad track | descriptive |
 | 50 EMA, 200 EMA | `[00:23:52]`, `[01:05:53]` | See note 1 | descriptive |
@@ -442,14 +488,26 @@ under D-025.** Recorded for completeness and to make the fabrication contrast in
 | 14, 18 | `[00:41:25]`, `[00:39:56]` | **Font sizes**, not indicator periods | platform setting |
 
 > **Note 1 — the moving averages, and what V05 does and does not settle.** `EMA` occurs
-> **3 times** in genuine audio — *"Nice close below the 50 EMA"* `[00:23:52]`, and *"below
-> the 200 EMA"* / *"closing below the 200"* `[01:05:53]`–`[01:06:02]` — the **first**
-> lesson in which the token appears at all (V04: zero). The same objects appear elsewhere
+> **twice** in genuine audio — *"Nice close below the 50 EMA"* `[00:23:52]` and *"below
+> the 200 EMA"* `[01:05:53]` — the **first** lesson in which the token appears at all
+> (V04: zero). The same objects appear elsewhere
 > as *"50 am in"* `[00:20:57]`, `[00:22:14]`, *"the 50"* `[00:26:10]`, `[00:26:27]`,
 > *"the 50 M.A."* `[00:46:19]`, *"moving averages"* `[00:24:30]`, `[00:34:32]`,
 > `[01:03:20]`. **Only 50 and 200 are ever mentioned. No 5, 13 or 800. No colours, no
 > nicknames, no periods assigned.** `A-020` (the moving-average nickname question) is
 > **EXTENDED by V05 and NOT CLOSED** — D-025 forbids closure on guest evidence.
+>
+> > **CORRECTION, issued against two already-committed files.** `V05_TRANSCRIPT.md`
+> > § TRANSCRIPTION NOTES and `QUARANTINE_REGISTER.md` `Q-005` both state *"`EMA` occurs
+> > 3 times"*. **The literal token occurs twice.** The third item in the transcript note's
+> > own list is *"closing below the 200"* `[01:06:02]`, which does not contain the token.
+> > Re-measured this session over the verbatim body only (`awk` from the
+> > `# VERBATIM TRANSCRIPT` heading), case-sensitively, word-boundary: **2 hits, at body
+> > lines 1271 and 3944.** **No conclusion in either file changes** — the point both were
+> > making, that no 5/13/800 EMA is ever mentioned and the averages get no colours or
+> > nicknames, is unaffected and is re-confirmed. Logged for the reviewer rather than
+> > silently fixed in the other two files, because they are committed and a correction
+> > that leaves no trace is worse than the error.
 >
 > **Note 2 — the accuracy claim is unverifiable and is recorded as a claim, not a result.**
 > *"The R&D and the flashcard should make your confidence in your setups and know that
@@ -493,8 +551,82 @@ and because absence is evidence a reviewer can check with `grep`.
 
 ## 9. VISUAL EVIDENCE — ADDED AFTER §§1–8 WERE WRITTEN
 
-*(This section is added from the curated frames in `04_SCREENSHOTS/V05/`. Nothing in
-§§1–8 was altered when it was written. See `04_SCREENSHOTS/V05/INDEX.md` for the full
-frame list; only what the frames **add or correct** is recorded here.)*
+*(Added from the 30 curated frames in `04_SCREENSHOTS/V05/`. **Nothing in §§1–8 was
+rewritten when this was written** — where a frame corrects something above, the correction
+is stated here and the original left standing, so a reviewer can see which conclusions
+survived on audio alone. `04_SCREENSHOTS/V05/INDEX.md` carries the full frame-by-frame
+description; only what the frames **add to or correct in this file** is recorded here.)*
 
-**PENDING — written after frame curation. See `04_SCREENSHOTS/V05/INDEX.md`.**
+**Everything below is still `GUEST` material.** A printed slide is descriptive evidence
+about *what the slide says*; it does not promote guest content to instructor weight.
+
+### 9a. What the frames RESOLVE
+
+| # | Resolved | Frame | Note |
+|---|---|---|---|
+| R1 | **`U5` — *"MRW pattern"* `[00:11:42]` is "M or W pattern"** | `00-10-29` "Find the Anchor" | Printed: *"Identify a Multi-Day, Multi Session **M or W** pattern"* |
+| R2 | **`U4` — *"Pre-hitch to the high"* `[00:11:48]` is "3 Hits to the Hi"** | `00-10-29`, `00-11-59` | Printed on the same slide (*"**3 Hits to the Hi or Lo**"*) and as a chart label |
+| R3 | **The §3a *"mock up your charts"* garble is "mark up your charts"** | `00-04-35` | The slide prints *"You need to know how to **mark up** your charts."* Flagged at §3a from the pre-sweep sanity frame; the curated frame is the citable evidence |
+| R4 | **`U1`/`A-043` — the text tool** | `00-06-20` + `hires/` | MT4's "Customizing toolbar" dialog shows **two** text objects whose icons are the literal letters: **`Text` (`A`)** and **`Text label` (`T`)**. *"use the one that says A. Don't use the one that says T"* therefore means **use `Text`, not `Text label`**, and the transcript's *"E"* is a mishearing of *"A"* |
+| R5 | ***"mona-leesa"* `[00:48:39]` is "Mona Lisa"** | `00-38-34` "Flash Card" | Printed: *"Once you have the **Mona Lisa** of the M & W pattern"* |
+
+> **On R4 and D-025.** Each resolution above is a fact about **what a printed or displayed
+> artifact shows** — the admissible descriptive class. None closes an ambiguity about the
+> **methodology**; every one closes an ambiguity about **this lesson's own ASR** or about a
+> **platform dialog**. `A-020`, `A-039`, `C-001` and every instructor-facing record remain
+> exactly as §§1–8 left them. **No guest frame has been used to close a method question.**
+
+### 9b. What the frames ADD
+
+1. **The session date is on screen.** Frame `00-40-04` shows the Windows taskbar clock
+   reading **`10:31 PM  3/25/2012`**. The header of this file dates V05 from the **filename
+   alone** and §1 notes no date is spoken. It is not spoken — but it **is displayed**, and
+   it agrees with the filename exactly. This is the strongest date evidence V05 has.
+2. **A real, checkable OHLC bar, read from platform text.** The same frame's MT4 status bar
+   reads profile `4 Majors`, bar `2012.01.04 01:15`,
+   `O: 1.56413  H: 1.56418  L: 1.56374  C: 1.56381  V: 352`, title bar
+   `FXDD - MetaTrader - Demo Account - [GBPUSD,M15]`. Internally consistent
+   (`L ≤ C ≤ O ≤ H`), which is the check that separates a reading from a guess.
+3. **`TDI_MMM` — the indicator's displayed name**, from frame `00-36-54` at 2×, plotting
+   three values. §7's *"`TDI` occurs 6 times and is never defined"* **stands**: a name is
+   not a definition, and no inputs, periods, bands or thresholds appear. `A-039` is
+   **extended, not narrowed**.
+4. **`Shark Fin` is drawn on the oscillator sub-panel, not on the candles** — frame
+   `00-36-54`. §5e listed *shark fin* among terms "used but not defined"; the frames now
+   locate the object. Still undefined.
+5. **`1/2 Batman` printed** on the same frame. **This is the corpus's first *printed*
+   rendering of a term the instructor speaks** — *"half-Batman"* V02 `[00:20:37]`,
+   *"half batman's"* V03 `[00:43:20]`. Same descriptive class as V04's *"Mayo"* caption:
+   evidence about **spelling and existence**, not about method.
+6. **`A1` and `A2` printed as chart labels** — frame `00-25-54`. §6 row `[00:16:11]` flags
+   *"M, A1, A2"* as undefined anywhere in the corpus. The frames show the labels **exist
+   and are placed on a chart**; they still do not say what they mean. `A-047` is
+   **extended, not closed**.
+7. **`R = 24.6` / `R = 18.8` / `R = 29.5` / `R = 39.0`** as chart labels (frames `00-25-54`,
+   `00-24-24`) — descriptive extension of `A-018` (the meaning of `R`), which V03 §4e
+   enumerated and did not close.
+8. **`Zen_man`** — a Windows user-profile folder in frame `00-38-19`'s Save As dialog. See
+   the ruling in `INDEX.md` § "THE ZEN_MAN FINDING". **It does not identify the speaker**,
+   and the audio runs the other way: at `[00:01:41]` he says of Zen *"even I can't get
+   that"*, which Zen cannot say about Zen. Read as: the deck reuses chart images captured
+   on Zen's machine. Under D-025 consequence 4 nothing depends on it.
+
+### 9c. What the frames CORRECT in §§1–8
+
+| Where | §§1–8 said | The frames show | Status |
+|---|---|---|---|
+| §1, §7 note on timeframes | V05 never names a timeframe | Never **spoken** — but frame `00-36-54`'s header prints **`GBPUSD,M15`** and frame `00-40-04`'s title bar prints **`[GBPUSD,M15]`** | **Narrowed, not overturned.** The spoken claim stands; "never named at all" would now be wrong |
+| §8, "no session clock" | no session clock is stated | Unchanged — no frame shows one either | **Confirmed** |
+| §5e, `COW` | garbled, not recoverable | No frame prints `COW` | **Still unresolved** (`A-045`) |
+
+### 9d. What the frames did NOT settle
+
+- **The presenter's name.** No frame names him.
+- **`C-001`** (the instructor's day-count self-contradiction). Four slides state a day
+  count; all four are guest and normative, so under D-025 **not one may be cited for or
+  against it**. `C-001` stays `UNRESOLVED`, and V05 cannot resolve it.
+- **`A-039` / TDI.** Displayed, named, marked up — still not taught.
+- **Most deck chart headers.** The deck's embedded screenshots are ~1024 px wide, so their
+  symbol strings are illegible at any magnification. They are **not** inferred from price
+  magnitude. Frame `00-09-24`'s Trendline dialog prints values ~`111.4` on `2012.03.22`,
+  implying a JPY-quoted pair; **the pair is not named and is not guessed.**
