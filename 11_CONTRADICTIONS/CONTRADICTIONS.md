@@ -10,7 +10,7 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 
 ```text
 RECORDS:         4   (C-001 … C-004)
-LESSONS STUDIED: 2   (V01, V02 — V02 reviewed R1: REVISE, in remediation)
+LESSONS STUDIED: 3   (V01, V02 — V02 reviewed R3: PASS; V03 not yet reviewed)
 UNRESOLVED:      3   (C-001 foundational; C-003; C-004)
 RESOLVED/OTHER:  1   (C-002 — STATED EXCEPTION, condition unmeasurable)
 ```
@@ -37,6 +37,11 @@ RESOLVED/OTHER:  1   (C-002 — STATED EXCEPTION, condition unmeasurable)
 > INDEX table immediately below, and **the INDEX is the authority**. Any session touching
 > this file recounts the block from the INDEX rather than incrementing it from memory. If
 > the two ever disagree again, the INDEX wins and the block is the defect.
+>
+> **UPDATED again 2026-08-10 (V03 pass).** Recounted from the INDEX per the standing
+> rule above. The V03 pass added evidence to all four records and opened none, so only
+> `LESSONS STUDIED` moved (2 → 3); the V02 review state is also refreshed from R1 to its
+> final R3 `PASS`. Record counts are unchanged and were re-derived, not assumed.
 
 `C-001` and `C-002` are **intra-lesson** contradictions within V01, and both originate
 with the instructor rather than with the reading of him. `C-001` (how long price runs away from
@@ -492,3 +497,100 @@ check, and should be checked deliberately rather than incidentally.
 Carry both values. Do not encode a London open. Where a session boundary is needed
 downstream, record it as `3:30–4:00, timezone unresolved (A-019), seasonal shift
 suspected (C-004)`.
+
+---
+
+## V03 EVIDENCE ADDED TO EXISTING RECORDS
+
+The V03 pass adds evidence to all four records and **opens no new one**. That is a
+finding in itself: V03 re-teaches week-1 material at a larger scale and, in doing so,
+repeats the same unresolved spreads rather than introducing fresh conflicts.
+
+One candidate was examined and deliberately **not** logged — *"swing trades pay… none"*
+`[00:34:15]` against *"the target for swing trading… three times ADR over three days"*
+`[00:34:58]`. Context separates them cleanly: the "none" describes holding a position
+through a net-zero week, the target describes the course's three-day swing. Logging it
+would manufacture a conflict the passage does not contain, which is the failure mode this
+file's PURPOSE section exists to prevent.
+
+### C-001 — how long price runs away from the anchor point
+
+**More evidence, same spread, and one new formulation.** V03 restates the run length five
+more times without narrowing it: *"Sunday, Monday, and Tuesday. Two or three days"*
+`[00:31:19]`, *"two and a half, three days"* `[00:32:00]`, *"three days cycle for three
+levels"* `[00:34:04]`, *"Two and a half to three days. Day one, day two, hold the level in
+day three"* `[00:35:48]`, *"Two and a half to three days of rise"* `[00:36:05]`.
+
+The new thing is that V03 gives the window an **exit rule** for the first time:
+
+> *"If ADR times three is met or not met, but the three day time window is, and you get an
+> outside structure high, you better take your money."* `[00:36:11]`–`[00:36:16]`
+
+This makes the day count load-bearing in a way it was not in V01. Previously an
+unresolved 2.5-vs-3-vs-4-day spread only blurred a description; now it gates an exit, so
+the ambiguity has a direct P&L consequence. **Still `UNRESOLVED`** — V03 states the window
+more often and no more precisely, and "outside structure" is itself undefined (A-033).
+
+### C-002 — whether the both-ways rule is gated on proficiency
+
+**New evidence, and it cuts against the V01 gating.** At `[00:36:23]`–`[00:36:24]` he says
+*"And go the other way. Trade both ways"* — spoken unconditionally, to the whole class,
+immediately after the exit rule above, with no proficiency qualifier anywhere near it.
+V01 `[00:44:03]` / `[00:51:34]` conditioned both-ways trading on the student being past a
+struggling stage (A-013).
+
+Two readings, neither adopted: the V01 gate has quietly lapsed by week 2, or "trade both
+ways" here means only *the direction reverses after the exit* rather than *you personally
+should now trade both directions*. The surrounding sentences (*"the dealer trades off of
+those numbers and back and forth… you're a trend trader"* `[00:36:29]`–`[00:36:34]`) fit
+the second reading, but the imperative *"Trade both ways"* is addressed to the student.
+**Status unchanged: `STATED EXCEPTION — condition unmeasurable`.**
+
+### C-003 — whether M and W formations can fail
+
+**Supports explanation 1 (rhetoric), does not resolve.** V02's *"M's and W's will not
+fail"* is answered in V03 by an explicitly hedged version of the same claim:
+
+> *"If you wait for the second leg, most of the time with the exception of the third leg,
+> which doesn't happen that often, you are going to make money."* `[00:25:43]`–`[00:25:48]`
+
+Same speaker, one week later, on the same object: *"most of the time"*, plus a named
+exception. This is strong evidence that V02's absolute was emphasis rather than doctrine —
+but it does not resolve C-003, because C-003 is a contradiction **internal to a single V02
+sentence**, and nothing in V03 revisits that sentence. **Still `UNRESOLVED`.**
+
+### C-004 — London session open, 3:30am printed vs 4:00 spoken
+
+**The deliberate check this record required has been performed. The result is negative,
+and it weakly cuts against the daylight-saving explanation without settling anything.**
+
+C-004's "Required to resolve" field named V03 specifically: *"V03 is Week 2, 25 March 2012
+— the exact date he names — so it is the natural place to check, and should be checked
+deliberately rather than incidentally."*
+
+What the V03 pass found:
+
+| Check | Result |
+|---|---|
+| An updated forex-trading-times slide | **None.** No session-times slide appears among V03's captured screen states. |
+| Any spoken restatement of the London open | **None.** The London open is never mentioned in V03. |
+| Any spoken session time at all | Two, neither with a timezone: *"Came back right before the US session at 9.30"* `[00:55:05]`, and *"if you're sitting in front of your screen at 3 30 in the morning inside the shadow box"* `[01:03:21]`. |
+
+The `[01:03:21]` "3 30 in the morning" is the interesting one. It is spoken **on 25 March
+2012 — the DST date itself**, the very day after which explanation 1 predicts the relevant
+boundary shifts to 4:00. He says 3:30, unprompted, in the ordinary course of describing
+when a student would be at the screen.
+
+**Why this does not resolve the record.** The `[01:03:21]` reference attaches "3 30" to
+the *shadow box* (A-030), which is not stated to be the London open — the Asian session on
+V02's slide also ends at 3:00 with a gap to 3:30, so a 3:30 reference is equally
+consistent with the Asian-session boundary. Reading it as the London open is exactly the
+kind of joining-the-pieces the record already declined to do for explanation 1.
+
+**What it does do** is remove V03 as the hoped-for resolution route and slightly weaken
+explanation 1: the one time-of-day he utters on the transition date is the slide's number,
+not the spoken 4:00. **Still `UNRESOLVED`**, and the interim handling is unchanged: carry
+both values, encode no London open.
+
+**Required to resolve — updated.** V04 or V05 (same 25 March 2012 session date) or any
+later lesson showing an updated times slide. V03 is now struck off as checked and negative.
