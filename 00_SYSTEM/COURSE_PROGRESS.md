@@ -11,9 +11,29 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V03 — reviewed R1: REVISE, minors only; V04 gate OPEN)
+VIDEOS IN PROGRESS:  1  (V03 — re-reviewed R2: REVISE, 1 minor left; V04 gate OPEN)
 VIDEOS PASSED:       2  (V01, V02)
-CURRENT LESSON:      **V03 — reviewed R1 2026-08-10: `REVISE` (HIGH), 0 critical,
+CURRENT LESSON:      **V03 — re-reviewed R2 2026-08-10: `REVISE` (HIGH), 0 critical,
+                     0 major, 1 minor.** Remediation-verification round. **M1 and M3
+                     VERIFIED and CLOSED** — every one of the twenty committed daily
+                     ranges, all four ADR figures and their multiples re-derived
+                     exactly from the raw JSON under the stated 21:00-UTC convention
+                     (0 of 4 reaching 3xADR holds with margin), and the 2-of-4
+                     duration scoping confirmed against the raw OHLC and verified
+                     propagated to homework §2.5A/§4 and mastery report §2/§D. The
+                     C-001 deferral was tested by reading the record and is
+                     legitimate — the datum is genuinely not yet cited there.
+                     **M2 does NOT close (carried as M2'):** the corrected wording
+                     verifies in every component but was applied to the transcript's
+                     PROVENANCE I-008 criterion only; the COVERAGE block R1 named
+                     still reads "strictly monotonic, no duplicates", so
+                     V03_TRANSCRIPT.md now contradicts itself. One sentence in
+                     COVERAGE lines 23-24 (plus REVIEW_INDEX item 19's status text)
+                     is the entire outstanding debt. **V03 stays REVIEW REQUIRED and
+                     does NOT reach COMPLETE.** V04 gate unaffected (still OPEN per
+                     D-024). See 18_REVIEW/V03/V03_REVIEW_R2.md.
+                     ---- prior round ----
+                     **V03 — reviewed R1 2026-08-10: `REVISE` (HIGH), 0 critical,
                      0 major, 3 minor.** Under D-024 the V04 gate is OPEN; the three
                      minors (M1 ADR reproducibility, M2 transcript coverage wording,
                      M3 duration-finding scope) are owed before V03 reaches COMPLETE.

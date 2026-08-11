@@ -13,7 +13,7 @@ stays visible with its round number.
 ```text
 LESSONS REVIEWED: 3
 PASSED:           2  (V01, V02)
-IN REMEDIATION:   1  (V03 — REVISE, minors only; V04 gate OPEN per D-024)
+IN REMEDIATION:   1  (V03 — R2 REVISE, 1 minor outstanding; V04 gate OPEN per D-024)
 AWAITING REVIEW:  0
 ```
 
@@ -137,6 +137,25 @@ homework §2.5 Finding A, homework §4 point 3, and mastery report §2 and §D. 
 changed anywhere: 0 of 4 still reach 3 × ADR, and both supported pairs still exceed the
 taught window. **Open items 18–20 move to APPLIED — PENDING VERIFICATION at R2.**
 
+V03 re-reviewed 2026-08-10 (R2): **`REVISE`**, confidence HIGH. 0 critical, 0 major,
+**1 minor**. Remediation-verification round by a fresh session; each of the three minors
+was re-derived from primary data rather than read for plausibility. **M1 and M3 verify
+cleanly and close.** M1: the 21:00-UTC FX day is the only convention that splits the
+30-bar dataset into five whole days, all twenty committed daily ranges reproduce exactly
+from the raw JSON, all four ADR figures and their multiples re-derive, and 0 of 4 reaching
+3 × ADR holds with margin (max 2.41×). M3: the 2-of-4 scoping is correct against the raw
+OHLC — USDJPY and USDCHF never cut their block low, whose level *is* the week low at
+bar 0 — and propagation was verified at all four named sites plus a whole-repo sweep for
+surviving pre-correction figures; the `C-001` non-citation was independently confirmed by
+reading the record, making the deferral legitimate. **M2 does not close.** The replacement
+wording is correct in every component, but it was applied to the `PROVENANCE` I-008
+criterion only — the `COVERAGE` block R1 explicitly named still reads *"strictly
+monotonic, no duplicates"*, so `V03_TRANSCRIPT.md` now contradicts itself fourteen lines
+apart. Carried as **R2 M2′ (`E20`)**; open item 19 stays open with a corrected status.
+The V02 cross-check was re-tested independently and the remediation is right — V02 is
+genuinely strictly monotonic (1,026 / 1,026). **Open items 18 and 20 CLOSE. V03 does not
+reach `COMPLETE` this round**; the V04 gate was already OPEN per D-024 and is unaffected.
+
 ---
 
 ## DECISION TABLE
@@ -150,6 +169,7 @@ taught window. **Open items 18–20 move to APPLIED — PENDING VERIFICATION at 
 | V02 | REVIEW REQUIRED | R2 | REVISE | 0 | 0 | ⏳ |
 | V02 | REVIEW REQUIRED | R3 | PASS | 0 | 0 | ✅ |
 | V03 | REVIEW REQUIRED | R1 | REVISE | 0 | 0 | ⏳ |
+| V03 | REVIEW REQUIRED | R2 | REVISE | 0 | 0 | ⏳ |
 
 ### Row template
 
@@ -204,8 +224,8 @@ keeps recurring is a training problem, not a lesson problem.
 | E16 | Terminology drift | 0 | |
 | E17 | Missing negative examples | 0 | |
 | E18 | Invalid manual-backtest procedure | 0 | |
-| E19 | Data/timeframe inconsistency | 2 | V02 (R1 ×1 as a co-code with `E06` — closed at R2; R2 ×1 — day boundary off by one bar, open); V03 (R1 ×1 — ADR figures not reproducible from committed data, M1 — **applied 2026-08-10, pending verification at R2**) |
-| E20 | Other | 16 | V01 (R1 ×6, R2 ×2, R3 ×1) — all closed at R3; V02 (R1 ×4) — closed at R2; V02 (R2 ×2) — open; V03 (R1 ×1 — transcript coverage block overclaims "strictly monotonic, no duplicates", M2 — **applied 2026-08-10, pending verification at R2**) |
+| E19 | Data/timeframe inconsistency | 2 | V02 (R1 ×1 as a co-code with `E06` — closed at R2; R2 ×1 — day boundary off by one bar, open); V03 (R1 ×1 — ADR figures not reproducible from committed data, M1 — **✅ CLOSED at R2 2026-08-10**: all twenty daily ranges and all four ADR figures re-derived exactly from the raw JSON under the stated 21:00-UTC convention) |
+| E20 | Other | 16 | V01 (R1 ×6, R2 ×2, R3 ×1) — all closed at R3; V02 (R1 ×4) — closed at R2; V02 (R2 ×2) — open; V03 (R1 ×1 — transcript coverage block overclaims "strictly monotonic, no duplicates", M2 — **still OPEN after R2**: the correction was applied to the `PROVENANCE` I-008 criterion, whose wording verifies exactly, but the `COVERAGE` block R1 named still carries the false sentence, so the file now contradicts itself. Carried as R2 M2′. Not counted again — same occurrence, incompletely remediated) |
 
 **Escalation rule:** any code reaching 3 occurrences is a systematic weakness.
 Note it in the next cumulative review and consider whether the student protocol
@@ -308,12 +328,17 @@ open item 14's arithmetic-check work item). **V03 R1's delta is authoritative:
 the three-lesson manual-backtest debt — carried open).** The V02 R1 open MAJOR
 recorded below this table closed at R2/R3.
 
+**V03 R2's delta:** +0 MINOR, +5 NOTE (all closed as observations). R2 raised no new
+finding — its single minor, M2′, is R1's M2 carried forward as incompletely remediated,
+not a fresh defect, and is not double-counted. **2 of V03 R1's 3 minors close** (M1, M3),
+leaving MINOR open at 6.
+
 | Severity | Total | Open | Closed |
 |---|---:|---:|---:|
 | CRITICAL | 0 | 0 | 0 |
 | MAJOR | 4 | 0 | 4 |
-| MINOR | 21 | 8 | 13 |
-| NOTE | 22 | 4 | 18 |
+| MINOR | 21 | 6 | 15 |
+| NOTE | 27 | 4 | 23 |
 
 **Open MAJOR — V02 R1 finding 1.** The 11a homework markup contradicts the chart it
 cites (PFH misplaced by 15 pips; the reversal attributed to Friday when it is Thursday's
@@ -361,9 +386,9 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 | 16 | V02 R3 | **The *"174 of 176"* continuity figure does not reproduce.** R3's independent measurement finds **172** boundaries continuous at the stated 0.15-pip threshold, or **175** above 0.8 pip; three genuine sub-pip gaps exist besides the weekend one (`x=285` −0.19 pip, `x=447` +0.77, `x=933` −0.77, confirmed visually at 4× zoom), so *"the only open ≠ prior-close discontinuity"* is overstated. **174 is unreachable under any threshold. Charged against R2, not the student** — required correction 1 instructed the student to state R2's number and the remediation did so accurately. Changes nothing and errs in the safe direction: continuity is *weaker* than claimed, which strengthens the corrected reasoning. **Non-blocking**; restate as 175 of 176 within 1 pip, only material discontinuity −12.6 pip at `x=273`, three sub-pip gaps besides | `V02_HOMEWORK.md` §1.1/§1.4; `V02_MASTERY_REPORT.md`; `COURSE_PROGRESS.md`; `18_REVIEW/V02/V02_REVIEW_R2.md` §1c | OPEN |
 | 17 | V02 R3 | **An owner-authorized override is recorded in the repository as an unresolved violation.** The project owner confirmed the parallel V03 work as an intentional override of the closed D-004 gate, but `DECISIONS.md` carries no entry for it (last entry D-022), so `COURSE_PROGRESS.md`'s `V03 GATE` block and open item 9 above still read as a live breach. A future session will either halt authorized work or conclude the gate register is unreliable. **Owner action:** record the override as a numbered decision and reconcile both locations to it. **Does not close item 9's mechanism finding** — a written gate with no enforcement failed twice in one day, and the `validate_project.py` pre-flight guard is still the fix | `DECISIONS.md`; `COURSE_PROGRESS.md`; `18_REVIEW/V02/V02_REVIEW_R3.md` Note 3 | ✅ **CLOSED 2026-08-10 — `DECISIONS.md` D-023** records the override as a numbered decision (scope: one instance, V02 → V03, source-side work only; not precedent; not to be reverted), and `COURSE_PROGRESS.md`'s `V03 GATE` block and `NEXT ACTION` item (c) are reconciled to it. `V02_REVIEW_R2.md` is deliberately left unedited per §11. Item 9 below is **not** closed by this — see its own row |
 
-| 18 | V03 R1 | **M1 — homework ADR figures not reproducible.** State the day-boundary convention and commit the five per-pair daily ranges (or recompute under a stated convention). The 0-of-4 conclusion survives every convention tried | `V03_HOMEWORK.md` §2.5 Finding B; `18_REVIEW/V03/V03_REVIEW_R1.md` M1 | **APPLIED 2026-08-10 — PENDING VERIFICATION at R2.** Convention stated (21:00 UTC FX day; bars 0–5 / 6–11 / 12–17 / 18–23 / 24–29); all twenty daily ranges committed in §2.5; ADR recomputed to 46.5 / 55.7 / 138.9 / 54.4 with a correction note retaining the superseded figures. 0 of 4 unchanged |
-| 19 | V03 R1 | **M2 — transcript coverage block overclaims.** "Strictly monotonic, no duplicates" is false: three benign same-second adjacent duplicate markers (`[00:35:21]`, `[01:00:13]`, `[01:04:30]`); sequence is non-decreasing. Fix the wording | `V03_TRANSCRIPT.md` COVERAGE; `V03_REVIEW_R1.md` M2 | **APPLIED 2026-08-10 — PENDING VERIFICATION at R2.** Line now reads "1,230 timestamps, 1,227 distinct, non-decreasing throughout (never decreasing), with three benign same-second adjacent pairs at `[00:35:21]`, `[01:00:13]`, `[01:04:30]`", plus a correction note. Counts re-verified this session. V02's identical-sounding line was checked and is **true as written** (1,026 markers, all distinct) — no change needed there |
-| 20 | V03 R1 | **M3 — duration finding over-scoped.** "4 of 4 exceed the 2.5–3-day window" counts two pairs (USDJPY, USDCHF) whose low is the week-open bar with no formed anchor — supported sample is 2 of 4 (both 3.8 days, still exceeding). Scope it in homework §2.5A and mastery report §2 before it is cited against `C-001` | `V03_HOMEWORK.md` §2.5; `V03_MASTERY_REPORT.md` §2; `V03_REVIEW_R1.md` M3 | **APPLIED 2026-08-10 — PENDING VERIFICATION at R2.** Homework §2.5 Finding A now carries a per-pair "does this measure the taught object?" column, an explicit 2-of-4 scope statement, and the instruction that any citation against `C-001` must carry it; homework §4 point 3 and mastery report §2 and §D re-scoped to match |
+| 18 | V03 R1 | **M1 — homework ADR figures not reproducible.** State the day-boundary convention and commit the five per-pair daily ranges (or recompute under a stated convention). The 0-of-4 conclusion survives every convention tried | `V03_HOMEWORK.md` §2.5 Finding B; `18_REVIEW/V03/V03_REVIEW_R1.md` M1 | ✅ **CLOSED 2026-08-10 — VERIFIED at R2.** Convention stated (21:00 UTC FX day; bars 0–5 / 6–11 / 12–17 / 18–23 / 24–29); all twenty daily ranges committed in §2.5; ADR recomputed to 46.5 / 55.7 / 138.9 / 54.4 with a correction note retaining the superseded figures. R2 re-derived every one of the twenty ranges from the raw JSON — all match to a tenth of a pip — plus 3×ADR, the four multiples (1.73 / 1.64 / 2.41 / 1.48), and the 116/116 bar continuity the split depends on. 21:00 UTC confirmed as the only 4h-aligned boundary yielding five whole days. 0 of 4 reaching 3×ADR holds with margin |
+| 19 | V03 R1 | **M2 — transcript coverage block overclaims.** "Strictly monotonic, no duplicates" is false: three benign same-second adjacent duplicate markers (`[00:35:21]`, `[01:00:13]`, `[01:04:30]`); sequence is non-decreasing. Fix the wording | `V03_TRANSCRIPT.md` COVERAGE; `V03_REVIEW_R1.md` M2 | ⚠️ **STILL OPEN after R2 — applied to the wrong location.** The corrected line ("1,230 timestamps, 1,227 distinct, non-decreasing throughout, three benign same-second adjacent pairs at `[00:35:21]`, `[01:00:13]`, `[01:04:30]`", plus a correction note) was added to the **`PROVENANCE AND VERIFICATION` I-008 criterion 1**, lines 39–46. R2 re-derived every component of it by regex and **all seven check out exactly** — that wording stands. But the sentence R1 charged lives in the **`COVERAGE`** block, lines 23–24, which was left untouched and still reads *"timestamps strictly monotonic, no duplicates"*; the file now asserts both propositions fourteen lines apart. **Required: replace `COVERAGE` lines 23–24 with the true statement; leave lines 39–46 alone.** V02's identical-sounding line was independently re-scanned at R2 and is confirmed **true as written** (1,026 markers, 1,026 distinct, zero decreasing transitions) — leaving it unchanged was correct. Note: `V01_TRANSCRIPT.md` has five same-second pairs (974 / 969) but makes no monotonicity claim, so nothing is false there — the E20 class is empty project-wide once this row closes. Carried as `V03_REVIEW_R2.md` M2′ |
+| 20 | V03 R1 | **M3 — duration finding over-scoped.** "4 of 4 exceed the 2.5–3-day window" counts two pairs (USDJPY, USDCHF) whose low is the week-open bar with no formed anchor — supported sample is 2 of 4 (both 3.8 days, still exceeding). Scope it in homework §2.5A and mastery report §2 before it is cited against `C-001` | `V03_HOMEWORK.md` §2.5; `V03_MASTERY_REPORT.md` §2; `V03_REVIEW_R1.md` M3 | ✅ **CLOSED 2026-08-10 — VERIFIED at R2.** Homework §2.5 Finding A now carries a per-pair "does this measure the taught object?" column, an explicit 2-of-4 scope statement, and the instruction that any citation against `C-001` must carry it; homework §4 point 3 and mastery report §2 and §D re-scoped to match. R2 re-derived the basis from the raw OHLC: USDJPY and USDCHF have `cut_lo` = 0 bars — the block low is never taken out and *is* the week low at bar 0 — while EURUSD and GBPUSD cut at bar 2 and form their lows at bars 4 and 5, both 92 h = 3.8 days. Propagation confirmed at all four sites, plus a whole-repo sweep finding no surviving pre-correction figure (the stale numbers in `LOG.md` 1746–1747 are a historical journal entry, superseded at 1859/1892, and must **not** be edited). The `C-001` deferral was tested by reading the record rather than trusting it: the V03 evidence section cites only transcript restatements and the new exit rule, and no homework duration appears anywhere in the file — so the datum is genuinely not yet cited, and the standing "scoping travels with it" instruction is committed in both homework §2.5A and mastery report §2, where a future session will be standing when it bites |
 | 21 | V03 R1 | **N4 — manual-backtest debt, three lessons deep.** Each deferral individually sound (no testable entry rule yet), but the obligation accrues: when the first testable rule lands (plausibly the V03 exit once A-033 "outside structure" is defined), the hidden-future backtest backlog must be discharged against it. The reviewer will require it | `V03_REVIEW_R1.md` N4; `06_MANUAL_BACKTEST/` | OPEN |
 
 ---

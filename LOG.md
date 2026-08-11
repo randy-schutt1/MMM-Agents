@@ -1912,3 +1912,96 @@ artifact) was left in place, unstaged, again.
 
 **R2 verification of M1–M3** — may ride along with V04's R1. V03 reaches
 `COMPLETE` only when a reviewer confirms these three.
+
+---
+
+## 2026-08-10 — Reviewer Session
+
+**V03 independent review, round 2 (`18_REVIEW/V03/V03_REVIEW_R2.md`).**
+Verdict **`REVISE`**, confidence HIGH — **0 critical, 0 major, 1 minor.**
+
+Remediation-verification round on commit `683a12a`. Fresh session; no V03 material
+and no part of the remediation was authored here (D-003). R1's substantive
+adjudications were not re-opened. Each of the three minors was **re-derived from
+primary data** rather than read for plausibility.
+
+### M1 (E19) — VERIFIED, CLOSED
+
+Three questions put to the raw JSON. **(1)** 21:00 UTC does produce clean 6-bar
+splits — the dataset is 30 consecutive 4h bars opening Sun 02 Aug 21:00 UTC, so
+30 ÷ 6 = 5 aligned to bar 0, and it is the *only* 4h-aligned boundary that yields
+five whole days (any other leaves a partial first and last day), which makes the
+file's stronger claim true rather than rhetorical. 116/116 open=prev-close
+continuity re-confirmed as the precondition. **(2)** All twenty committed daily
+ranges reproduce **exactly**, to a tenth of a pip; ADR 46.52 / 55.72 / 138.92 /
+54.44 → the committed 46.5 / 55.7 / 138.9 / 54.4; 3×ADR and the multiples
+(1.730 / 1.637 / 2.407 / 1.477) follow. **(3)** 0 of 4 reaching 3×ADR holds with
+margin — the largest multiple is 2.41×, not a boundary case — and the superseded
+figures were re-checked too, so the correction note is accurate. The E19 defect
+(a number bearing on `C-001` that is not re-derivable) is fully cured.
+
+### M2 (E20) — WORDING VERIFIED, PLACEMENT DEFECTIVE — STILL OPEN
+
+Every component of the replacement line was re-derived by regex and **all seven
+check out**: 1,230 markers, 1,227 distinct, zero decreasing transitions, exactly
+three adjacent same-second pairs at exactly `[00:35:21]` / `[01:00:13]` /
+`[01:04:30]`, largest gap 13 s at `[01:09:02]`, final `[01:10:39]`. **But the
+sentence lives in two places in the file.** The correction was applied to the
+`PROVENANCE AND VERIFICATION` I-008 criterion (lines 39–46); the **`COVERAGE`
+block (lines 23–24), which is what R1 quoted and what required correction 2
+named, still reads *"timestamps strictly monotonic, no duplicates"***. The file
+now asserts both propositions fourteen lines apart. Carried as **R2 M2′** — same
+E20 occurrence, incompletely remediated, not double-counted.
+
+The V02 cross-check was **independently re-tested, not trusted**: 1,026 markers,
+1,026 distinct, zero decreasing transitions — strictly monotonic with no
+duplicates is **true as written** for V02, and leaving it alone was correct.
+Swept the class a third time: `V01_TRANSCRIPT.md` has five same-second pairs
+(974 / 969) but makes no monotonicity claim, so nothing is false there. Once
+M2′ is applied the E20 class is empty project-wide.
+
+### M3 (E02) — VERIFIED, CLOSED
+
+Re-derived from the raw OHLC: USDJPY and USDCHF have `cut_lo` = **0 bars** — the
+block low is never taken out, and it *is* the week low at bar 0 — so no stop hunt
+occurs and no anchor exists to measure a run from; EURUSD and GBPUSD cut the block
+low at bar 2 and form their lows at bars 4 and 5, both 92 h = 3.83 days. The
+2-of-4 scoping is correct, consistent with §2.4's rejection of the same two pairs,
+and costs the finding no direction. Propagation confirmed at all four named sites
+plus a whole-repo grep for surviving pre-correction figures — clean. The stale
+numbers at `LOG.md` 1746–1747 are a historical journal entry superseded at
+1859/1892 and **must not be edited**; noted so a future session does not "fix" the
+record.
+
+The `C-001` deferral was tested by **reading the record**, not by accepting the
+claim: the `C-001` record and the V03 evidence section cite five transcript
+restatements and the new exit rule at `[00:36:11]`–`[00:36:16]`, and no
+homework-measured duration appears anywhere in the file. The datum is genuinely
+not yet cited, so pre-emptively editing `C-001` would have inserted a claim the
+record does not make. The standing instruction is committed in both homework
+§2.5A and mastery report §2 — where a future session will actually be standing
+when the obligation bites. Correct handling.
+
+### Reviewer-side updates
+
+`REVIEW_INDEX.md`: R2 row added to the DECISION TABLE; open items **18 and 20
+CLOSED**, item 19 re-opened with a corrected status (it had recorded the fix as
+applied to `COVERAGE` when it was applied to the I-008 criterion); `E19` marked
+closed and `E20`'s V03 entry marked still-open; severity totals updated (MINOR
+open 8 → 6). `COURSE_PROGRESS.md` reconciled. `validate_project.py`: 97 passed,
+1 warning, 0 failures — the warning is `V04: 27 screenshots but no INDEX.md`,
+belonging to a V04 session active in this working tree, not to V03.
+
+### Git
+
+Explicit paths on every `git add`; `git status` and `git log` checked first and
+the staged diff read before commit. A V04 student session is active in this same
+working tree — its untracked `05_HOMEWORK/V04/` and the untracked
+`05_HOMEWORK/V02/measure_usdchf_week.py` (open item 13) were left in place,
+unstaged, and no V04 file was touched.
+
+### Next Review Trigger
+
+**Application of M2′** — one sentence in `V03_TRANSCRIPT.md` `COVERAGE` lines
+23–24, plus `REVIEW_INDEX.md` item 19's status text. On its verification V03
+reaches `COMPLETE`. May ride along with V04's R1.
