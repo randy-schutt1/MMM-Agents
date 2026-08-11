@@ -1,6 +1,7 @@
 # V05 — SCREENSHOT INDEX
 
-28 curated frames from `Bootcamp1 Wk2 032512 Part3 (68mins).swf`.
+30 curated frames from `Bootcamp1 Wk2 032512 Part3 (68mins).swf`, plus 5 two-times-scale
+re-renders in `hires/` for the frames whose fine print is quoted.
 
 > ## ⚠ EVERY FRAME IN THIS DIRECTORY IS `GUEST` MATERIAL — `D-025` APPLIES TO ALL OF IT
 >
@@ -137,10 +138,32 @@ says). It agrees with the filename exactly.
 | `50:43`–`52:00` | Back to slides: "Evolution of a Trader", the `~SM~` quote, then the deck's end-of-show black frame |
 | `52:50`–`68:21` | Live MT4 desktop again, more chart markup, ending on the player's replay button |
 
-71 distinct screen states were detected across the 829 sweep frames (consecutive-frame
-mean-difference > 6.0, runs collapsed within 10 s). 28 are curated below. The other 43 are
-mostly incremental drawing steps on a chart already represented here and can be re-extracted
-from the sweep in seconds.
+80 distinct screen states were detected across the 829 sweep frames (consecutive-frame
+mean-difference > 6.0 over a 1024×760 crop that excludes the control bar, so the ticking
+timecode and moving progress bar cannot themselves register as content change; runs
+collapsed within 10 s). 30 are curated below. The rest are mostly incremental drawing steps
+on a chart already represented here and can be re-extracted from the sweep in seconds.
+
+### The `hires/` subfolder
+
+Five frames are also kept at **2048×1572**, re-rendered by a second 10× pass with the Ruffle
+stage at `scale=2`. They exist because specific fine print is **quoted** from them in this
+file and in `V05_SOURCE_NOTES.md`, and a reader should be able to check the quotation
+against the same pixels the reading was taken from:
+
+`V05_00-06-20_customizing-toolbar-available-selected-lists_2x.png`,
+`V05_00-10-30_find-the-anchor-slide_2x.png`, `V05_00-25-55_mm-full-cycle-a1-a2_2x.png`,
+`V05_00-36-55_shark-fin-slide-gbpusd-m15_2x.png`,
+`V05_00-38-20_save-as-dialog-desktop-folders_2x.png`.
+
+> **A limit of the 2× pass, stated because it bounds what may be claimed.** Rendering at 2×
+> upscales the stage; it does not add information the SWF does not carry. The deck's
+> embedded chart screenshots are themselves ~1024 px wide, so **the chart-header symbol
+> strings on most deck slides stay illegible at any magnification** and are not transcribed
+> anywhere in this file. The one deck slide whose header *is* legible is frame 21
+> (`GBPUSD,M15`), and it is legible because that slide's screenshot was captured at a larger
+> scale than the others. Where a header could not be read, this index says so rather than
+> inferring the pair from price magnitude.
 
 ---
 
@@ -162,6 +185,7 @@ not what constitutes a setup. No normative trading content.
 | # | File | Timecode | What is shown |
 |---|---|---|---|
 | 4 | `V05_00-05-55_slide-know-your-toolbar.png` | `05:55` | **"Know your Toolbar… Tools you will use"** — MT4 toolbar screenshot, annotation *"Right CLICK anywhere on the Toolbar to see a list of choices"*. |
+| 4a | `V05_00-06-20_customizing-toolbar-available-selected-lists.png` | `06:20` | MT4 **"Customizing toolbar"** dialog, both list boxes legible at 2× (`hires/`). **Available:** `Fibonacci Arcs`, `Fibonacci Expansion`, `Fibonacci Channel`, **`Rectangle`** (highlighted), `Triangle`, `Andrews' Pitchfork`, `Cycle Lines`, **`Text label`** (icon: a boxed **T**). **Selected:** `Crosshair`, `Vertical Line`, `Horizontal Line`, `Trendline`, `Ellipse`, **`Text`** (icon: a plain **A**), `Arrows`. Annotations *"Select"* → `Insert ->` and *"then Click"*. <br><br>**This frame settles `U1` / the text-tool question, and it does so descriptively.** The transcript at `[00:09:55]`–`[00:10:00]` is self-contradictory — *"There's one that says E and one that says T. Just use the one that says **A**. Don't use the one that says **T**."* The dialog shows MT4 carries exactly two text objects and that their **icons are literally the letters `A` and `T`**: `Text` (`A`) and `Text label` (`T`). So the instruction reads *use `Text`, not `Text label`*, and the transcript's *"E"* is an ASR mishearing of *"A"*. <br><br>**Why this is admissible.** It is a fact about **what a displayed dialog shows** — D-025's descriptive class — and it concerns a **platform artifact, not a market rule**. It resolves an ambiguity this session raised about V05's own ASR, not an open question about the methodology, so no instructor record is closed on guest evidence. See the flag in `V05_SOURCE_NOTES.md` §4a. |
 | 5 | `V05_00-06-40_slide-draw-rectangle-box-mt4.png` | `06:40` | Toolbar with the rectangle tool called out; a blue filled box drawn on a chart. Annotations *"Click this and draw Box"*, *"Double Click to make sure you see these dots."* |
 | 6 | `V05_00-07-35_slide-rectangle-properties-colour-width.png` | `07:35` | MT4 **Rectangle** properties dialog, Common tab. Fields legible: `Name: Rectangle 49536`, `Style: DarkOrange`. Annotations *"Click & Select Color"*, *"Select Width"*, *"Uncheck"* (pointing at `Draw object as background`). |
 | 7 | `V05_00-09-24_slide-trendline-parameters-uncheck-ray.png` | `09:24` | MT4 **Trendline** properties, **Parameters** tab. Both anchor points printed: `Time: 2012.03.22 13:15  Value: 111.402468` and `Time: 2012.03.22 18:15  Value: 111.483132`. Annotation *"Uncheck Ray"*. **The values imply a JPY-quoted pair** (~111.4) on a 2012-03-22 chart — three days before this session. Recorded as a fact about the dialog; the pair is **not** named on the slide and is not inferred here. |
@@ -188,7 +212,7 @@ not what constitutes a setup. No normative trading content.
 | 18 | `V05_00-33-29_slide-m-pattern.png` | `33:29` | **"If you do not like the Cycle… Go with the Patterns…"** / underlined **"M pattern"**. Chart with `M` labelled and an `Enter` box. |
 | 19 | `V05_00-35-19_slide-w-pattern-three-swipes.png` | `35:19` | Underlined **"W pattern"**. Chart labels `3 Swipes`, numbered `1` `2` `3`, `W`, `Divergence`. A **TDI-style sub-panel is visible at the bottom** with `Divergence` written on it. |
 | 20 | `V05_00-35-54_slide-mark-up-the-tdi-as-well.png` | `35:54` | **"Mark up the TDI as well…"** — chart plus a lower sub-panel carrying oscillator lines, with `Divergence` labelled on **both** the price chart and the sub-panel. <br><br>**Bearing on `A-039` (TDI is a required condition of V04's entry rule and has never been taught):** this is the **first slide in the corpus whose title instructs the student to mark up the TDI**, and it is still **"displayed, not taught"** — no inputs, no periods, no band construction, no numeric thresholds and no decision rule are recoverable from it. It also **cannot** narrow `A-039`: it is guest material, and under D-025 only an instructor statement can close a record. Recorded as a **descriptive extension** of `A-039`, exactly as V04's frames 21–22 were under review `M6`. **`A-039`'s prohibition on dropping condition (c) to make the rule testable is untouched.** |
-| 21 | `V05_00-36-54_slide-shark-fin-half-batman.png` | `36:54` | **"Shark Fin…"** — chart printing `1/2 Batman` at the peak and `Enter`; the lower sub-panel prints **`Shark Fin`** inside a drawn box. Descriptive evidence that `Shark Fin` names a shape **on the oscillator sub-panel**, and that `1/2 Batman` is a distinct printed term. Both **extend** `A-039`'s vocabulary and close nothing. |
+| 21 | `V05_00-36-54_slide-shark-fin-half-batman.png` | `36:54` | **"Shark Fin…"** — chart printing `1/2 Batman` at the peak and `Enter`; the lower sub-panel prints **`Shark Fin`** inside a drawn box. Descriptive evidence that `Shark Fin` names a shape **on the oscillator sub-panel**, and that `1/2 Batman` is a distinct printed term. Both **extend** `A-039`'s vocabulary and close nothing. <br><br>**Three further readings taken from the 2× re-render, which is the one deck slide whose embedded screenshot is large enough to read.** <br>• **Price-chart header: `GBPUSD,M15  1.58700 1.58719 1.58691 1.58703`.** Internally consistent as an OHLC quadruple — `L 1.58691 ≤ O 1.58700 ≤ C 1.58703 ≤ H 1.58719` — which is the same ordering check frame 26 uses, and the check that distinguishes a reading from a guess. **This is the only place in V05 where a deck slide names its own timeframe**, and it is `M15`. <br>• **Sub-panel header: `TDI_MMM 54.6718 55.0688 53.6150`.** The oscillator is **named `TDI_MMM`** on screen and plots **three** values. This is the first time the corpus has the indicator's *displayed name*. It remains **untaught**: no inputs, periods, band construction or thresholds are shown, so `A-039` is **extended, not narrowed**. <br>• **Date axis: `14 Feb 2012`, ticks `07:30` … `18:30`.** <br><br>**This refines "WHAT THE VISUALS ADDED" item 9 below.** The deck is **not** drawn from a single data period: this slide is **14 Feb 2012**, while frames 16 and 26 are **early Jan 2012**. The claim that the taught examples and the live demonstration share one dataset holds for the Jan frames only. |
 | 22 | `V05_00-38-19_slide-save-as-picture-zen-man-folder.png` | `38:19` | MT4 **Save As** dialog. Navigation pane prints `Libraries`, `Homegroup`, **`Zen_man` / `System Folder`**; `File name: M Pattern`; `Save as type: GIF File (*.gif)`. See § "THE ZEN_MAN FINDING" above. The preceding frame (sweep idx 457, `38:05`, not curated) shows the **Save As Picture** dialog with `Active workspace` selected and MT4's own notice permitting free reproduction of screenshots bearing its copyright notice. |
 | 23 | `V05_00-38-34_slide-flash-card.png` | `38:34` | **"Flash Card…"** — verbatim from a 2× upscale: <br>• *"Once you have the Mona Lisa of the M & W pattern, you need to make a Flash Card out of it."* <br>• *"You need to have the Flash Card handy when you trade so that you can cross reference it when you think you see your Pattern."* <br>• *"Write a Checklist of what makes the setup good while doing R&D.  (that's what R&D is for)"* <br>• *"The R&D and the flash card should make you confident in your setups and know that you are going to be **80%+ accurate**."* <br><br>**⚠ `D-009` — a new advertised accuracy claim.** *"80%+ accurate"* is recorded **with provenance as a hypothesis to test**, never as a performance requirement or a pass/fail criterion. It is a **second, lower, guest-sourced** figure alongside V01's instructor 90–95% claim, and the two are **not** reconciled here. `NORMATIVE — EXCLUDED` as well: it is guest material and may not be cited for or against the instructor's figure. |
 
@@ -206,6 +230,7 @@ not what constitutes a setup. No normative trading content.
 | 26 | `V05_00-40-04_live-mt4-gbpusd-m15-ohlc-status-bar.png` | `40:04` | Full Windows desktop, live MT4. **Title bar: `67342442: FXDD - MetaTrader - Demo Account - [GBPUSD,M15]`** — a **demo** account, broker FXDD, and `GBPUSD`, which is `D-007`'s primary research instrument. Taskbar clock **`10:31 PM  3/25/2012`** (see above). **MT4 status bar, read from the platform's own text at 9× magnification:** profile `4 Majors`, cursor bar **`2012.01.04 01:15`**, **`O: 1.56413  H: 1.56418  L: 1.56374  C: 1.56381  V: 352`**. The reading is **internally consistent as an OHLC bar** — `L ≤ C ≤ O ≤ H`, i.e. `1.56374 ≤ 1.56381 ≤ 1.56413 ≤ 1.56418`, so low is the lowest and high the highest of the four. That consistency is the check that the digits were read rather than guessed; a misread digit would almost certainly break the ordering. Chart is marked with `3 Hits to the Hi`, `Level 3`, cyan boxes and orange level rectangles. |
 | 27 | `V05_01-04-58_live-mt4-level-2-big-w-markup.png` | `64:58` | Live MT4, later markup: `Level 2` band, `BIG W` labelled at the right-hand rise, cyan entry boxes. **The status-bar OHLC row in this frame is NOT transcribed** — at 9× magnification its glyphs are genuinely ambiguous (the `L:` label is overwritten and the `H:` field reads implausibly), and an internally inconsistent reading is worse than a declared gap. Following the V04 review `M6` precedent: declining to transcribe an illegible readout is the correct call, and saying so beats a guess. |
 | 28 | `V05_01-07-38_live-mt4-reset-level-3-markup.png` | `67:38` | Live MT4, final substantive screen: `Level 3` band, **`RESET`** printed on the chart, full cycle marked. `RESET` is the term the "Find the Anchor" slide (frame 10) parenthesises as *"Level 1 in a Reset"*; this frame is descriptive evidence that the term is applied to a specific chart location. |
+| 29 | `V05_01-08-25_end-of-recording-replay.png` | `68:2x` | The recording's final state: the Camtasia player's **replay** button over a dimmed last chart. Carried for one reason only — it is the frame that shows the sweep reached the **end** of the film. Together with the burned total `68:2x` it closes the coverage claim: the capture ran from the title slide to the replay button with no fenced tail, so no section of V05 is unrepresented because the capture stopped early. |
 
 ---
 
@@ -231,6 +256,11 @@ not what constitutes a setup. No normative trading content.
    (`2012.01.04 01:15`, FXDD server time) with full OHLC, read from MT4's own status bar
    rather than from pixel colour, and internally consistent. Used in `V05_HOMEWORK.md`.
 8. **A second accuracy claim, `80%+`** (frame 23), recorded under `D-009` as a hypothesis.
+8a. **The text-tool instruction, made readable** (frame 4a). MT4's `Text` and `Text label`
+   objects carry the literal icons `A` and `T`, so the transcript's garbled *"E … T … A"*
+   resolves to *use `Text`, not `Text label`*. A platform fact, not a market rule.
+8b. **`TDI_MMM`, the indicator's displayed name**, and a legible `GBPUSD,M15` deck header
+   (frame 21) — the only deck slide that names its own timeframe.
 9. **The deck's charts and the live session are the same data period.** Frame 16's x-axis
    labels read `4 Jan 20:15`, `4 Jan 22:15`, `5 Jan 00:15`, `5 Jan 03:15` … and the live
    session's status bar reads `2012.01.04 01:15` — so the worked examples in the slides and
