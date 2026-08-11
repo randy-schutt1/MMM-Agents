@@ -364,10 +364,22 @@ Two upgrades over the audio: the ASR's "manays" is printed **"mayo"** (A-020), a
 
 ### 4e. The AJ chart (`V03_00-28-44_aj-four-hour-paint-day-boxes-r-values.png`)
 
-A student's AUD/JPY(?) chart (quote panel `86.279`) in MS Paint, weekday-labelled
-boxes each carrying `R = <number>`: 43.9, 62.3, 58.2, 34.4, 53.2, 33.7, 60.8, 47.2,
-46.2, 46.6, 103.1, 98.0, 117.3 — magnitudes consistent with daily ranges in pips,
-not with risk-reward ratios. (A-018.)
+A student's AUD/JPY(?) chart (quote panel `86.279`) in MS Paint, with day labels
+Thursday / Friday / Monday / Tuesday / Wednesday / Thursday / Friday across the
+series and shaded boxes carrying `R = <number>`.
+
+**Fifteen `R =` labels are legible, thirteen fully and two only partially**
+(the enumeration below is complete as to labels found; two values are not fully
+readable at capture resolution and are recorded as such rather than guessed):
+
+| Fully legible | 43.9, 62.3, 58.2, 34.4, 53.2, 33.7, 60.8, 47.2, 46.2, 46.6, 103.1, 98.0, 117.3 |
+|---|---|
+| **Partially occluded** | `R = 80.` — tenths digit hidden behind candles, so **80.x** |
+| **Partially occluded** | `= 47.0` — overprinted by the blue moving average and the Friday box; the `R` is faint but the value reads **47.0** |
+
+Magnitudes are consistent with daily ranges in pips, not with risk-reward ratios.
+(A-018.) The two occluded labels do not change that reading — both fall inside the
+same range as the legible thirteen.
 
 ### 4f. The homework slide (`V03_00-58-49_homework-rd-4-weekly-cycle-markups-slide.png`)
 
