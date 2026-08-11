@@ -125,8 +125,8 @@ Statements above that widen the source, checked deliberately:
 | Q2 | Is the first-8h block anchored to the broker week-open, and on what timezone feed? | Yes, for any coded version (A-019) |
 | Q3 | Is the swing exit (3-day AND outside structure) conjunctive or first-of? | Yes, for any coded exit |
 | Q4 | Is "mayo" the 200-period line? | Yes, for the vectors criterion (A-020) |
-| Q5 | What counts as one "vector"? (a 4h bar? an M15 push? a leg?) | Yes — the checklist's first condition (A-030) |
-| Q6 | What is the "shadow box" / "brinks shadow", and is the spoken "3 30 in the morning" its boundary? | Yes, for timing rules; interacts with C-004/A-019 (A-031) |
+| Q5 | What counts as one "vector"? (a 4h bar? an M15 push? a leg?) | Yes — the checklist's first condition (A-035) |
+| Q6 | What is the "shadow box" / "brinks shadow", and is the spoken "3 30 in the morning" its boundary? | Yes, for timing rules; interacts with C-004/A-019 (A-030) |
 | Q7 | Does "trade both ways" `[00:36:24]` retire V01's one-direction training rule, or is it the same proficiency-gated exception? | No for study; yes before any direction filter is coded (C-002 update) |
 
 ## 6. SUBJECTIVE LANGUAGE ENCOUNTERED

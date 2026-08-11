@@ -9,10 +9,11 @@ Template: `00_SYSTEM/TEMPLATES/AMBIGUITY_TEMPLATE.md`
 ## STATUS
 
 ```text
-RECORDS:         28   (A-001 … A-028)
-LESSONS STUDIED:  2   (V01, V02 — V02 not yet reviewed)
-RESOLVED:         1   (A-003 — "pendings", on visual evidence at [00:40:25])
-DO NOT CODE:     27
+RECORDS:         36   (A-001 … A-036)
+LESSONS STUDIED:  3   (V01, V02, V03 — V03 not yet reviewed)
+RESOLVED:         2   (A-003 — "pendings", on visual evidence at [00:40:25];
+                       A-026 — HOW = High Of the Week, spoken expansion V03 [00:26:40])
+DO NOT CODE:     34
 ```
 
 > **UPDATED 2026-08-10 (review R1, finding 6b).** This block previously read
@@ -25,12 +26,20 @@ DO NOT CODE:     27
 > V02 pass added `A-019`–`A-028`. This is the third occurrence of the same staleness
 > class in this one status block (`E20`); the counts above are arithmetic over the
 > records the file actually contains.
+>
+> **UPDATED again 2026-08-10 (V03 pass).** Counts re-derived after `A-029`–`A-036` were
+> added and `A-026` resolved. Updated in the same commit that added those records,
+> which is the discipline the three prior corrections were asking for.
 
 Eighteen (`A-001`–`A-018`) arise from **V01 alone**, which names seventeen load-bearing
 terms and defines none of them. Ten (`A-019`–`A-028`) were added by the V02 pass, which
-also extended six of the V01 records. `A-003` is the only record resolved, and it was
-resolved by text printed on a slide rather than by anything spoken. The remaining
-twenty-seven are `DO NOT CODE`.
+also extended six of the V01 records. Eight (`A-029`–`A-036`) were added by the V03 pass,
+which also extended seven earlier records and **resolved one** (`A-026`). Six of V03's
+eight are the vocabulary of a single slide — the sample flashcard's entry-criteria list
+— which asks the student to verify conditions the course has never defined.
+
+Two records are resolved: `A-003`, by text printed on a slide, and `A-026`, by a spoken
+expansion of the abbreviation. The remaining thirty-four are `DO NOT CODE`.
 
 Records appear here only when an actual lesson uses an actual subjective phrase.
 
@@ -1996,16 +2005,32 @@ is fabricated, so it is not evidence either way.
 Not adopted. The cost of guessing wrong is that every weekly-level reference points at a
 daily extreme, or vice versa.
 
+> **RESOLVED 2026-08-10 (V03 pass).** The assessment above is superseded by direct
+> evidence and is retained so the change is visible. V03 `[00:26:40]` spells the
+> abbreviation out in speech — *"**H-O-W high of the week**"* — immediately after
+> *"Lock off the first eight hours"* `[00:26:38]`, and pairs it at `[00:26:55]` with
+> *"Low of the week"*. This is an expansion stated by the instructor, not the
+> symmetry inference this record declined to adopt.
+>
+> The week-vs-day question the record was opened over is settled: **both extremes are
+> weekly**. V01's quarantined `RULES.md` reading of "HOD/LOD" (high/low of *day*) is
+> now positively contradicted rather than merely unsupported — one more independent
+> confirmation that the fabricated files invent detail.
+
 ### Current Status
 
 ```text
-DO NOT CODE
+RESOLVED — HOW = High Of the Week; LOW (beside it) = Low Of the Week.
+Source: V03 [00:26:40], [00:26:55] (spoken expansion).
+Codable as a label. It does NOT follow that the *levels* are codable — how the
+high and low of the week are determined in real time is A-010/A-033 territory and
+remains DO NOT CODE.
 ```
 
 ### Required Research
 
-A later slide or lesson that expands the abbreviation, or uses `HOW` in a sentence that
-fixes the period.
+None outstanding. (Formerly: a later slide or lesson that expands the abbreviation, or
+uses `HOW` in a sentence that fixes the period. V03 `[00:26:40]` is that sentence.)
 
 ---
 
@@ -2104,3 +2129,319 @@ the visual pass is auditable as a unit.
 | **A-019** — session times | Slide `[00:45:55]` prints the full table: 5pm high/low reset, 5pm–8pm dead gap, Asian 8:30pm–3:00am (gap 3–3:30a), London 3:30am–9:00am (gap 9–9:30a), New York 9:30–5pm. Slide `[00:47:20]` adds "Time Ribbon … (Server Times)" and "All Other Time References Are GARBAGE" | **Materially constrained.** Everything except the timezone is now recovered. New York time is strongly indicated (V01 `[00:46:09]` "930 New York Eastern"; V02's "6:30 New York time") but **is not printed**, so the record stays open rather than closing on inference. |
 | **A-023** — "33 trade" | `33-Trade` printed on the **Level 3** move of slide `[00:18:00]` | **Constrained.** Ties "33" to level 3 rather than calendar day 3, correcting the natural reading of the audio's "day three". Digits still undecoded. |
 | **A-020** — "mayonnaise" | Charts show three coloured moving averages (white, cyan, red/yellow). **No legend, no period label on any captured frame** | **Not resolved.** The hoped-for resolution route in A-020's "Required Research" has been tried and failed for V02. |
+
+---
+
+## A-029 — `wt = <number>` labels attached to shaded boxes
+
+### Course Meaning
+
+Unknown. Printed inside pale-blue rectangles on the intraday charts shown during the
+mail segment. Never spoken, never explained, and never referred to.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V03 | slide `[00:09:49]` | Three boxes on a 19–20 Mar intraday chart labelled `wt = 24.8`, `wt = 116.1`, `wt = 18.5`, alongside stepped blue `DayHi` / `DayLo` lines. Screenshot: `04_SCREENSHOTS/V03/V03_00-09-49_annotated-chart-blue-boxes-wt-values.png` |
+
+### Candidate readings, none adopted
+
+| # | Reading | Note |
+|---|---|---|
+| 1 | The same quantity as `R =` (A-018) under a different label — the height of the boxed area in pips | The magnitudes (18.5 – 116.1) sit in the same range as the `R =` values on the same instructor's charts, and the label sits inside a box the same way. Strongest reading. |
+| 2 | "weight" — a scoring or sizing figure | No course support whatever; recorded only because the letters suggest it. |
+| 3 | A time quantity ("wait time") | The values do not scale with the visible width of the boxes, which argues against it. |
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A frame where `wt =` and `R =` appear on the same chart, which would settle whether they
+are the same measure. None exists in V01–V03.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-018 (`R =` labels) |
+| Source | `03_LESSON_NOTES/V03_SOURCE_NOTES.md` §4h |
+
+---
+
+## A-030 — "brinks shadow" / "shadow box"
+
+### Course Meaning
+
+Unknown. Used as an established object — a region price is inside of — in both speech and
+print, with no definition anywhere in V01–V03.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V03 | slide `[00:44:19]` | Printed entry criterion: **"In brinks shadow"**. Screenshot: `04_SCREENSHOTS/V03/V03_00-44-19_flash-card-sample-entry-criteria-text.png` |
+| V03 | `[01:03:21]` | *"if you're sitting in front of your screen at 3 30 in the morning inside the shadow box"* |
+
+### Assessment
+
+The printed form settles the ASR's "in the brink shadow" as **"In brinks shadow"**, and
+pairs it with the spoken "shadow box" as apparently the same idea. What the shadow is
+cast *by* is never stated. The `[01:03:21]` usage attaches it to a clock time, which
+suggests a session-based window rather than a price structure — but "in" a box is spatial
+language, and the criteria slide lists it among structural conditions, not timing ones.
+Both readings cannot be right and the lesson does not choose.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A chart frame where the instructor draws or names the shadow box, or any sentence giving
+its boundaries.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-019 (session times), A-006 (the blue/red box) |
+| Source | `03_LESSON_NOTES/V03_SOURCE_NOTES.md` §3, §4d |
+
+---
+
+## A-031 — "blood in the water" / "bloodline"
+
+### Course Meaning
+
+Unknown. Used as a named, recognisable chart condition and listed as an entry criterion.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V03 | slide `[00:44:19]` | Printed entry criterion: **"Blood in the water"**, listed immediately after "Shark fin" |
+| V03 | transcript preamble | *"there's a shark fin, it crosses back in, hits the bloodline"* — recorded in the transcript's own terminology note |
+
+### Assessment
+
+The adjacency to "Shark fin" and the phrase "hits the bloodline" indicate both belong to
+the **TDI subgraph** vocabulary rather than to price. The instructor explicitly defers TDI
+coverage at `[01:01:53]` (*"I'm going to cover TDI later"*), so the terms are used before
+the indicator they apparently describe has been taught. Which line of the TDI is the
+"bloodline" is not stated.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-032 (shark fin), A-020 (mayonnaise) |
+
+---
+
+## A-032 — "shark fin"
+
+### Course Meaning
+
+Unknown. A named shape, listed as an entry criterion and used as if long established.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V03 | slide `[00:44:19]` | Printed entry criterion: **"Shark fin"** |
+| V03 | transcript preamble | *"there's a shark fin, it crosses back in, hits the bloodline"* — "crosses back in" implies a line crossing a band |
+
+### Assessment
+
+"Crosses back in" is band language, which points at the TDI rather than at a candle
+pattern. Whether the fin is the shape of the TDI line excursion or of price is not stated.
+As with A-031, the term is in use before TDI is taught.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-031 (blood in the water), A-011 (M and W formation) |
+
+---
+
+## A-033 — "outside structure"
+
+### Course Meaning
+
+Unknown. Printed as an entry criterion and spoken repeatedly as a condition on where price
+has travelled, with no definition of what the "structure" is or where its boundary lies.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V03 | slide `[00:44:19]` | Printed entry criterion: **"Outside structure"** |
+| V03 | `[00:16:40]`–`[00:17:12]` | Worked example narrated as "outside structure to the high" |
+
+### Assessment
+
+The most likely referent is the first-eight-hours block (§2a) — price outside the week's
+accumulation high/low. That reading is coherent and is **not stated**. It matters because
+"outside structure" is one of the two conditions in the swing-exit gesture the
+interpretation file parks as a machine candidate; coding it against the wrong boundary
+would change every exit.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+A frame where he marks the structure boundary while saying the phrase.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-004 (level), A-010 (peak formation) |
+| Interpretation | `03_LESSON_NOTES/V03_INTERPRETATION.md` §7 |
+
+---
+
+## A-034 — "safety trade"
+
+### Course Meaning
+
+Unknown. Named as a trade type with an approximate distance attached, but no entry rule.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V03 | `[00:57:14]`–`[00:57:15]` | *"Slightly below the tracer, right? The dealer makes the stop slightly below the tracer and rises."* |
+| V03 | `[00:57:30]` | *"comes back. 50 to 75 pips off of the level"* |
+
+### Assessment
+
+This is the closest V03 comes to a complete entry: a location (slightly below the tracer),
+a magnitude (50–75 pips off the level) and a name. It still lacks a trigger, a stop, and a
+target, and "slightly below" is the same unquantified tolerance already recorded as A-024.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-024 ("slightly above"), A-008 (the tracer) |
+
+---
+
+## A-035 — "vectors" (as a counted quantity)
+
+### Course Meaning
+
+Unknown. Counted on the sample card and listed on the notation checklist, so it is a
+quantity the student is expected to measure — but the course never says what one is.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V03 | slide `[00:41:54]` | **"Vectors"** is item 3 of the eight-item flashcard notation checklist |
+| V03 | slide `[00:44:19]` | **"3 vectors passed mayo"** — counted, and related to the "mayo" average |
+| V03 | `[00:42:33]` | Spoken in the same list: *"Time, position of the indicator, vectors, Asian range, distance out of Asia"* |
+
+### Assessment
+
+Being *countable* and *passing* something makes a vector most likely a directional price
+leg or an impulse candle group. Neither is stated. This is the most dangerous kind of
+ambiguity in the register: the course asks the student to record a number, which makes it
+look like objective data, while leaving the counting rule entirely to judgement.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-020 (mayonnaise — what is passed), A-007 (second leg) |
+
+---
+
+## A-036 — "quarter of wood" / `COW` (the dealer "lays on" the level)
+
+### Course Meaning
+
+**Partially defined by V03** — the only new term in this lesson the instructor actually
+explains — but the operative criterion is qualitative.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V03 | `[01:00:02]`–`[01:00:16]` | *"when the dealer just lays on the low or lays on the high. And he forms like what looks like a quarter of wood, just all sideways logs… the dealer would hit the level and just lay there"* |
+| V03 | slide `[00:54:39]` | A personal flashcard labelled **"COW on LOD"**. Screenshot: `04_SCREENSHOTS/V03/V03_00-54-39_cow-on-lod-flashcard.png` |
+
+### Assessment
+
+The concept is clear enough to recognise by eye — sideways consolidation sitting directly
+on a high or low — and the screenshot confirms the visual. What is missing is every number
+that would make it codable: how many bars constitute "laying there", how tight the range
+must be, and how close to the level counts as "on" it. `COW` is also never expanded on the
+recording; "quarter of wood" is the audio and `COW` is the card label, and the transcript
+garbles it once as *"Court of words are the low of the day"* `[00:54:39]`.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | A-016 ("goes into chop"), A-004 (level) |
+
+---
+
+## V03 EVIDENCE ADDED TO EXISTING RECORDS
+
+V03's transcript and its 24 screenshots bear on seven earlier records. One record
+**resolves**. Kept together so the V03 pass is auditable as a unit.
+
+| ID | V03 evidence | Effect |
+|---|---|---|
+| **A-026** — `HOW` | `[00:26:40]` spells the abbreviation out in speech: *"**H-O-W high of the week**"*, followed at `[00:26:55]` by *"Low of the week"* | **RESOLVED.** `HOW` = High Of the Week, and `LOW` beside it = Low Of the Week. This is a spoken expansion of the abbreviation, not an inference from symmetry, and it settles the week-vs-day question the record was opened over — the fabricated `RULES.md` reading of "HOD/LOD" (high/low of *day*) is now positively contradicted, not merely unsupported. Status changes from `DO NOT CODE` to `RESOLVED`. |
+| **A-008** — "the tracer" | `[00:14:06]` *"You count the first two bars a[s] the tracer"*, on the four-hour chart; `[00:57:15]` *"The dealer makes the stop slightly below the tracer and rises"*; `[01:08:16]` *"it just hits the tracer on the left"* | **Materially constrained; still not defined.** The tracer is now attached to a concrete object — the first two 4h bars of the week, i.e. the same eight-hour accumulation block as §2a — which is consistent with V01's "these two lines… Sunday Monday" if V01's two lines demarcate that same week-open window. It also behaves as a *price* reference, since stops sit "slightly below" it. Still unstated: whether the tracer is the bars, their high, their low, or the band between, which is exactly what a stop rule would need. Stays `DO NOT CODE`. |
+| **A-018** — `R =` labels | Student's AJ chart `[00:28:44]` carries fifteen `R =` labels on day-boxes (43.9, 62.3, 58.2, 34.4, 53.2, 33.7, 60.8, 47.2, 46.2, 46.6, 103.1, 98.0, 117.3, plus `80.x` and `47.0` partly occluded); the sample card `[00:43:09]` labels the Asian-range box `R = 41.4` while the criteria text beside it reads **"Asian Range =41"** | **Strongly constrained, still not closed.** The `R = 41.4` / "Asian Range =41" pairing on one chart is the first direct evidence tying `R =` to *the range of the boxed area in pips*, and the day-box magnitudes match daily ranges. The risk-to-reward reading is now very hard to sustain. It stays `DO NOT CODE` only because the equivalence is never stated in words and the rounding (41.4 → 41) is unexplained. |
+| **A-020** — "mayonnaise" | Criteria slide `[00:44:19]` prints **"3 vectors passed mayo"**; charts still show unlabelled coloured averages | **Spelling resolved, referent not.** The printed **"mayo"** settles that the ASR's "manays / mannees / minis" is one word the instructor spells this way, which retires the transcription question. The A-020 "Required Research" route — a legend or period label — fails again: no captured V03 frame labels any average. §14 item 12 records that one card is described as *"past the 200 in the shadow"* where another says *"passed mayo"*, which would make mayo the 200-period average; **this is not stated and is not adopted.** Stays `DO NOT CODE`. |
+| **A-024** — "slightly above/below" | `[00:57:14]` *"Slightly below the tracer"* as the safety-trade location | **No progress; scope widened.** The same unquantified tolerance now governs a second, differently-named trade, so the record is load-bearing in more places than when it was opened. |
+| **A-005** — "the trading zone" | Printed on the V03 agenda slide `[00:12:09]` ("R & D / Weekly Cycle / Flash Cards / **Trading Zone**"); the recording ends after Q&A without reaching it | **Deferred a third time (V01 → V02 → V03).** The term is now on a printed agenda as a scheduled topic, which confirms it is a real course concept rather than a passing phrase, and confirms it has still never been taught. |
+| **A-019** — session times | No session-times slide appears anywhere in V03 (see `CONTRADICTIONS.md` C-004). Spoken only: `[00:55:05]` *"right before the US session at 9.30"*, `[01:03:21]` *"3 30 in the morning inside the shadow box"* — neither carries a timezone | **No progress.** Two more untimezoned references added to the pile. |

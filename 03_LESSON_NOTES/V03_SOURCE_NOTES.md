@@ -358,7 +358,7 @@ S/L 18 pips
 ```
 
 Two upgrades over the audio: the ASR's "manays" is printed **"mayo"** (A-020), and
-"in the brink shadow" is printed **"In brinks shadow"** (new term, A-031). The card's
+"in the brink shadow" is printed **"In brinks shadow"** (new term, A-030). The card's
 `R = 41.4` label matching "Asian Range =41" supports reading `R =` as *range in pips*
 (bears on A-018 — see interpretation I6).
 
