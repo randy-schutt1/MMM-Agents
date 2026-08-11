@@ -2714,3 +2714,112 @@ round. `validate_project.py`: **97 passed, 0 warnings, 0 failures**.
 **Stop before the review.** `V05_REVIEW_R1.md` is written by a separate session
 (`REVIEW_PROTOCOL.md`); the student cannot audit itself. V06 does not begin until the V05
 gate opens under `D-024`.
+
+---
+
+## 2026-08-11 — Reviewer Session
+
+### Lesson
+
+V05 — `Bootcamp1 Wk2 032512 Part3 (68mins).swf`
+
+### Review Objective
+
+Independent mastery audit, round R1. Fresh session; authored no V05 artifact (`D-003`).
+Additionally tasked with verifying whether concurrent duplicate sessions had left duplicated
+or conflicting content in the repository.
+
+### Repository state verified FIRST, before any artifact was read
+
+`HEAD` = `b4b690b`, **no commits beyond it**. The V05 pipeline is exactly nine commits,
+`a34d2f2` → `b4b690b`, in correct protocol order. The `Zen_man` and on-screen-session-date
+findings are **inside `8223224`**, part of the main pipeline, not separate additions.
+`A-001`…`A-049` and `C-001`…`C-005` contiguous, **zero duplicate headings, zero gaps**. No
+doubled V05 blocks in `LOG.md`/`CHANGELOG.md`. `validate_project.py` 97/0/0. One untracked
+file, `05_HOMEWORK/V02/measure_usdchf_week.py` — open item 13, correctly left alone and left
+alone again by this round. **No duplication or collision damage exists; no cleanup required.**
+
+### Source Evidence Reviewed
+
+`V05_TRANSCRIPT.md` header, coverage block, speaker section, transcription notes and the full
+verbatim body scanned programmatically; the 30 curated frames and 5 `hires/` re-renders
+**opened and magnified**; `QUARANTINE_REGISTER.md` Q-005 plus all 21 quarantined `RULES.md`
+at population scale; `DECISIONS.md` D-001…D-025 (D-018, D-019, D-024, D-025 in full);
+`REVIEW_INDEX.md` including open items 1–40.
+
+### Student Artifacts Reviewed
+
+`V05_SOURCE_NOTES.md`, `V05_INTERPRETATION.md`, `04_SCREENSHOTS/V05/INDEX.md`,
+`V05_HOMEWORK.md` with its three scripts and two JSON datasets, `V05_MASTERY_REPORT.md`,
+the `A-042`…`A-049` records and the `V05 EVIDENCE ADDED TO EXISTING RECORDS` block,
+`CONTRADICTIONS.md` § "V05 PASS".
+
+### Findings
+
+**0 CRITICAL, 0 MAJOR, 6 MINOR, 5 NOTE.**
+
+Everything load-bearing reproduced. The transcript's coverage block is the **first in the
+project to assert strict monotonicity and be right** (1,353 / 1,353 / 0 / 0, gap 13 s at both
+named markers). `Steve` 21, `Zen` 2, `DMR` 9, `TDI` 6 — all exact. `C-003`'s strike-off
+re-measured: **zero clock-time tokens**. Quarantine discharged at full population per open
+item 33 — both template markers 21/21, exactly two rules 21/21, `NUMERICAL PARAMETERS`
+**one hash 21/21** — and Q-005's audio cross-check verified word for word. **356 citations
+checked, 354 resolve; 92 marker-cited quote fragments re-matched, 90 exact.**
+
+Screenshot claims checked against the pixels: `Zen_man / System Folder` confirmed; the taskbar
+clock reads **`10:31 PM 3/25/2012`**, the first in-recording corroboration of the session date;
+frame 26's status bar reads exactly as transcribed; `A-043`'s dialog shows **`A Text`** and
+**`T Text label`** precisely as claimed.
+
+Homework: the harvester parses TradingView's **Data Window `innerText`** — **no pixel sampled,
+no colour tested**. Every figure recomputed from the committed JSON reproduces exactly —
+480/480/480/476 bars, **1,912/1,912 continuity, zero breaks**, the full `by_day` table, and all
+eight extremes with prices, timestamps and pip ranges. The USDCHF anomaly that broke V04
+silently is now **caught by the tooling**, independently reproducing V04's corrected 476.
+
+The six minors: `M1` one quote cited at two different wrong timestamps, neither a marker;
+`M2` a citation off by one marker; `M3` a smoothed quotation dropping "level three";
+`M4` three V05 files disagreeing about V05's own evidence order; `M5` a stale pointer in
+`A-039`; `M6` an unrecorded oscillator sub-panel in curated frame 26.
+
+**A reviewer error is recorded rather than hidden:** R1 initially scored the six record
+extensions as missing, because they live in a consolidated block at the foot of
+`AUTOMATION_AMBIGUITIES.md` (V02's precedent) rather than inside each record. The block is
+real and the mastery report's claim is accurate; the finding was withdrawn before it was
+charged. Third consecutive round in which a reviewer's own first reading failed to survive its
+own verification step.
+
+### Rulings Rendered
+
+- **Open item 40 — `A-043`: AFFIRMED**, not downgraded. A record whose subject is a guest's
+  own utterance or a platform artifact, **not the method**, may be closed on descriptive guest
+  evidence. Owner to record the carve-out as a `D-025` refinement.
+- **Open item 36 — the third disposition: UPHELD.** Dimension **G**'s `NOT APPLICABLE` stands
+  on the purposive reading but its stated reason must change; **F** stands as graded;
+  **B**'s `NOT APPLICABLE` is **not available** (`D-019` grants it for F and G only) and is
+  carried as a NOTE-level required action, following V04 R1 `N1`. Reviewer recommends the
+  owner adopt **`EXCLUDED BY DECISION`**.
+- **Open item 39 — the `EMA` 3 → 2 correction: CONFIRMED.** Fix belongs in
+  `V05_TRANSCRIPT.md` § TRANSCRIPTION NOTES and `Q-005`.
+
+### Required Corrections
+
+Eight (`V05_REVIEW_R1.md` §8), plus three owner actions. All localised; none requires
+reprocessing any artifact.
+
+### Decision
+
+**REVISE**, confidence HIGH. **0 CRITICAL, 0 MAJOR** — the **V06 gate OPENS under D-024**,
+with the six minors owed before V05 can reach `COMPLETE`.
+
+### Git
+
+`18_REVIEW/V05/V05_REVIEW_R1.md` (new); `18_REVIEW/REVIEW_INDEX.md`; `LOG.md`.
+**Local commit only — pushes are batched until morning at the owner's instruction. NOT
+pushed.** Explicit paths on `git add`; `git status` and `git diff --staged` checked before
+commit. No V05 student artifact was edited by this session.
+
+### Next Review Trigger
+
+Student remediation of V05's six minors and the dimension-B re-disposition → `V05_REVIEW_R2.md`
+by a fresh session.
