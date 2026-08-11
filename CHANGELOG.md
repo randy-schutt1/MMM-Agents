@@ -11,6 +11,75 @@ Newest first.
 
 ---
 
+## [0.7.0] — 2026-08-11 — V05 student pass: the first lesson that yields no doctrine
+
+Student round. Clean retry after a prior V05 attempt hung. **V05 is the first lesson in the
+corpus with zero course-author runtime**, so `D-025` applies to 100% of it and the lesson
+contributes **no admissible rule at all** — a correct result, not a failed study.
+
+> **Numbering note.** This entry follows `[0.6.0]` directly because **V04's student pass and
+> its two review rounds were never changelogged** — they are recorded in `LOG.md`,
+> `18_REVIEW/V04/` and `COURSE_PROGRESS.md`, but not here. The gap is pre-existing and is
+> flagged rather than papered over by skipping a version. `D-025`, which governs this
+> lesson, was recorded during the V04 remediation and likewise has no changelog entry.
+
+### Added
+
+- **V05 student pass complete**, submitted as `REVIEW REQUIRED` (not `PASS`): source notes,
+  interpretation, 30 curated screenshots (+5 at 2×), homework on real data, mastery report,
+  `A-042`…`A-049`.
+- **`05_HOMEWORK/V05/scripts/tv_harvest_v05.mjs`** — a TradingView harvester that captures
+  each bar's **own Date and Time** alongside its OHLC, from the platform's Data Window.
+
+### Changed
+
+- **Week and day boundaries in homework are now READ, not INFERRED.** This is a
+  methodological change to how the project harvests price data, made in response to V04
+  review R1 finding `M1`. V04's harvesters captured OHLC only, so boundaries had to be
+  inferred from bar cadence, and that inference failed silently on USDCHF. The class of
+  error is now structurally unavailable.
+
+### Verified
+
+- **USDCHF's late session open is a reproducible property of the feed, not a one-off.** Its
+  week opens at 22:00 against 21:00 for the other majors, giving 476 15-minute bars rather
+  than 480 — **independently reproducing V04 review R1's corrected figure** from a different
+  week by a different method, with the cause directly visible. 1,912/1,912 continuity
+  transitions, zero breaks, across four pairs.
+- **The capture served the right film, proved at the byte level:** the decompressed original
+  and the working copy differ in **exactly one byte, at body offset 18** — the frameRate
+  `UI16` — with `frameCount` 12,304 unchanged. Four stale servers from earlier sessions were
+  found holding ports 8899/8917/8931/8945 (`D-022`, GOTCHA 4).
+
+### Corrected
+
+- **`EMA` occurs twice in V05, not three times** — a count carried by two already-committed
+  files (`V05_TRANSCRIPT.md`, `QUARANTINE_REGISTER.md` `Q-005`). Recorded in place rather
+  than silently patched elsewhere. No conclusion in either file changes.
+
+### Open questions raised for the owner
+
+- **`A-042` — an out-of-corpus dependency.** The V05 presenter repeatedly defers the
+  operative detail for levels/reset, nameable patterns, railroad-track size and traps to the
+  **DMR**, a programme this library does not contain. If that testimony holds, some `A-xxx`
+  records may be **unresolvable from this corpus in principle** rather than merely unresolved,
+  and the project has no way to express that distinction.
+- **A third disposition may be needed** alongside `NOT APPLICABLE` and `DEFERRED` (`D-018`,
+  `D-019`) for work that is **excluded by decision** rather than absent or postponed. V05 is
+  the first lesson to need it, and it is the sole reason its mastery report is
+  `REVIEW REQUIRED`.
+
+### Notes
+
+- **Nothing from V05 entered the master spec, machine spec or concept library**, including
+  the sharpest idea in the lesson — a clean stop-hunt vs trap-move discriminator, held as
+  research question `A-049`. The temptation to promote guest material because it is good is
+  the exact failure mode `D-025` exists to prevent.
+- **Speaker identification is now the first step of every remaining lesson.** Instructor
+  runtime across one session date runs ~100% (V03) → ~31% (V04) → 0% (V05).
+
+---
+
 ## [0.6.0] — 2026-08-10 — V03 student pass; first ambiguity resolved on spoken evidence
 
 Student round. Clean retry after a prior session hung mid-write on `V03_SOURCE_NOTES.md`.

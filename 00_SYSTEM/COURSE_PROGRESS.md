@@ -11,10 +11,97 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V05 — student pass in progress; gate OPEN per D-024,
-                        and D-025 applies before its notes are written)
+VIDEOS IN PROGRESS:  1  (V05 — STUDENT PASS COMPLETE 2026-08-11, AWAITING
+                        INDEPENDENT REVIEW R1; gate OPEN per D-024)
 VIDEOS PASSED:       4  (V01, V02, V03, V04 — V04 PASS at R2, COMPLETE)
-CURRENT LESSON:      **V04 — REVIEWED 2026-08-11 (R2): PASS, confidence HIGH,
+CURRENT LESSON:      **V05 — STUDENT PASS COMPLETE 2026-08-11, submitted as
+                     REVIEW REQUIRED (not PASS). AWAITING REVIEW R1.**
+
+                     V05 IS THE FIRST LESSON IN THE CORPUS THAT YIELDS NO
+                     DOCTRINE AT ALL, and that is a correct result rather than a
+                     failed study. It has ZERO course-author runtime: a single
+                     unnamed presenter — not Steve Mauro, and not V04's guest —
+                     speaks the whole 01:08:20, referring to Steve in the third
+                     person 21 times. D-025 therefore applies to 100% of the
+                     lesson. This is the first lesson decided entirely by that
+                     decision, and it is the reason D-025 was recorded before the
+                     lesson rather than after it.
+
+                     WHAT V05 CONTRIBUTES, GIVEN IT CONTRIBUTES NO RULES:
+                     (1) the corpus's first operational description of the STUDY
+                     LOOP — mark up, label, save, cut a flashcard at the decision
+                     candle — which is procedure, and therefore admissible;
+                     (2) terminology corroboration by a second independent
+                     speaker, including the corpus's first PRINTED rendering of
+                     "1/2 Batman", a term the instructor speaks in V02/V03;
+                     (3) A-042, the unwelcome finding that the operative detail
+                     for levels/reset, nameable patterns, railroad-track size and
+                     traps is repeatedly deferred to the DMR — a programme this
+                     library does not contain. If that testimony holds, some
+                     A-xxx records may be UNRESOLVABLE FROM THIS CORPUS IN
+                     PRINCIPLE, a distinction the project cannot currently express.
+
+                     WHAT WAS EXCLUDED, DELIBERATELY: the sharpest idea in the
+                     lesson — a clean two-limb stop-hunt vs trap-move
+                     discriminator (close beyond vs pin-without-close; immediate
+                     shift vs oscillation) — is GUEST material and is held as
+                     research question A-049, not promoted. The box-drawing
+                     conventions and the nameable-second-leg filter are likewise
+                     recorded and fenced. The temptation to promote them because
+                     they are good is the exact failure mode D-025 exists to
+                     prevent.
+
+                     WEEK-2 TREND WORTH CARRYING FORWARD: instructor runtime runs
+                     ~100% (V03) -> ~31% (V04) -> 0% (V05) across one session
+                     date. Whether structural or incidental is not settled, but
+                     the consequence holds either way — SPEAKER IDENTIFICATION
+                     MUST BE THE FIRST STEP OF EVERY REMAINING LESSON. A session
+                     that assumed V05 was the instructor would have written a full
+                     lesson of false doctrine and every downstream file would have
+                     inherited it.
+
+                     HOMEWORK completed on real data (FXCM 15m via TradingView,
+                     four majors, week of 2026-08-02), with a methodological
+                     improvement made because of V04's review: the harvester now
+                     captures each bar's OWN Date and Time from TradingView's Data
+                     Window, so week and day boundaries are a LOOKUP rather than
+                     an inference from bar cadence. It paid for itself immediately
+                     — USDCHF's week opens at 22:00, an hour after the other three,
+                     giving 476 bars not 480, which INDEPENDENTLY REPRODUCES V04
+                     review R1's corrected figure from a different week by a
+                     different method, with the cause visible rather than
+                     reconstructed. 1,912/1,912 continuity transitions, zero
+                     breaks. USDCHF's week low sits on its first available bar and
+                     is therefore boundary-limited; USDCHF is excluded from every
+                     week-low conclusion and the scoped result is reported for 3
+                     of 4 pairs. D-025 is enforced IN THE ARTIFACTS: the charts
+                     mark day separators, week extremes and body-to-body boxes,
+                     and deliberately omit levels, the anchor and every entry.
+
+                     SUBMITTED AS "REVIEW REQUIRED" FOR ONE REASON: the
+                     disposition of mastery dimensions F and G under D-018/D-019.
+                     V05 does not OMIT testable rules — it STATES several that are
+                     WITHHELD BY DECISION. D-018 grants NOT APPLICABLE only for
+                     lessons stating no testable rule, and D-019 insists NOT
+                     APPLICABLE and DEFERRED are different. V05 is a third case
+                     neither entry contemplates. Graded on the purposive reading,
+                     with the strict reading flagged. TWO ITEMS ESCALATED to the
+                     reviewer/owner: whether a third disposition is needed for
+                     work EXCLUDED BY DECISION, and whether the project
+                     acknowledges an out-of-corpus dependency (A-042).
+
+                     A-042..A-049 opened; six existing records extended and NONE
+                     narrowed or closed on guest evidence. A-043 is the sole
+                     closure — the MT4 text tool, settled by the Customizing-
+                     toolbar dialog, a PLATFORM artifact rather than methodology —
+                     and its record states how a disagreeing reviewer should
+                     downgrade it. No new contradiction (a lesson with no
+                     instructor segment cannot produce one); C-003 checked against
+                     V05 and STRUCK OFF as negative — zero clock times in the
+                     lesson. Concept library deliberately NOT updated: no V05
+                     material is eligible under D-025.
+
+                     PREVIOUS: **V04 — REVIEWED 2026-08-11 (R2): PASS, confidence HIGH,
                      0 CRITICAL / 0 MAJOR / 1 MINOR (non-blocking) / 3 NOTE.
                      V04 IS COMPLETE (D-004).** All seven minors, note N1 and the
                      owner action verified applied by a fresh session (D-003), each
@@ -519,7 +606,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ✅ | ✅ | ✅ | ✅ | ⏸ | REVIEW REQUIRED (resub) | ✅ R1 REVISE (0C/0M/7m) → **R2 PASS** | **COMPLETE** |
-| V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ✅ | ✅ | ✅ | ⚠️ | 🚫 | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -538,6 +625,34 @@ fabricate, interpolate, or infer Week 6 content.**
 | V21 | Wk10 | 01:14:47 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 
 ### Notes on the marks above
+
+- **V05 Transcript ✅** — verified 2026-08-11 against its own audio (five Whisper
+  spot-checks plus three independent duration derivations agreeing to within 0.3 s) and
+  adopted at `02_TRANSCRIPTS/V05/V05_TRANSCRIPT.md`. I-008 satisfied for V05, **no fenced
+  tail**. Its three companion files were confirmed fabricated (Q-005).
+- **V05 Screenshots ✅** — 30 curated from an 829-frame 10× sweep (D-021), plus 5 re-rendered
+  at 2× for frames whose fine print is quoted. Port and byte verification (D-022) mattered
+  again: four stale `http.server` processes from earlier sessions were holding 8899, 8917,
+  8931 and 8945, so a fresh port was taken and byte-verified. The working copy was proved to
+  be the right film at the byte level — **exactly one differing byte, at body offset 18**,
+  the frameRate `UI16` (3.0 → 30.0), with `frameCount` 12,304 unchanged in both.
+- **V05 Homework ⚠️** — completed on real FXCM 15m data for the four majors, week of
+  2026-08-02, **no substitution needed for the data**. Marked ⚠️ rather than ✅ because the
+  assignment is only **partly performable by decision**: H2 (mark up) is done in full, H3
+  (save) is **substituted and declared** (no MT4 here — a regenerable render replaces a
+  terminal screenshot), H4 (flashcards) is performed **in form but not content** (naming a
+  setup would need the excluded pattern criteria), H5 is the **mechanical half only**, and
+  H6 (patterns and entries) is **excluded outright** as guest normative material.
+- **V05 Manual Backtest 🚫** — **NOT PERFORMED, DELIBERATELY.** Backtesting V05 would select
+  entries by a guest's criteria and grade them, giving guest normative material exactly the
+  operational standing D-025 denies it. Graded `NOT APPLICABLE` on a **purposive** reading of
+  D-018; the **strict** reading gives a different answer, because V05 does not *omit* testable
+  rules — it *states* several that are **withheld by decision**. This is the single reason the
+  student status is `REVIEW REQUIRED` rather than `PASS`, and it is escalated in
+  `V05_MASTERY_REPORT.md`. 🚫 is used rather than ⏸ because ⏸ implies work that becomes
+  possible later, and **no future lesson makes a V05 guest rule testable.**
+- **V05 Concept library — deliberately NOT updated.** Correct under D-025: no V05 material is
+  eligible. Recorded here rather than omitted, so the gap is not read as an oversight.
 
 - **V02 Transcript ✅** — verified 2026-08-10 against its own audio (four Whisper
   spot-checks plus structural checks) and adopted at `02_TRANSCRIPTS/V02/V02_TRANSCRIPT.md`.

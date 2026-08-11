@@ -2594,3 +2594,123 @@ has been open since V04 R1 and now rests on a `PASS`. A V05 session must apply *
 before writing notes: establish how many voices the recording carries, mark the boundaries,
 and speaker-tag every source-note row. `REVIEW_INDEX.md` open item 33 discharges the
 `RULES.md` fabrication audit in one step; `NOTES.md` and `VISUAL_INDEX.md` are not covered.
+
+---
+
+## 2026-08-11 — Student Session — V05 student pass (clean retry after a hung attempt)
+
+**Lesson:** V05, `Bootcamp1 Wk2 032512 Part3 (68mins).swf`, SHA-256 `c606520d…f896fcc1`,
+01:08:21. **Status on close: student pass COMPLETE, submitted as `REVIEW REQUIRED`.**
+
+### Starting state
+
+A prior V05 attempt hung. On entry the transcript was already adopted and `Q-005` recorded
+(commit `a37f31d`); `04_SCREENSHOTS/V05/` and `05_HOMEWORK/V05/` were empty. Read
+`SWF_CAPTURE_RECIPE.md`, `DECISIONS.md` through `D-025`, `REVIEW_INDEX.md`, `Q-005`.
+
+### The finding that governed the whole session
+
+**V05 has no instructor segment at all** — a single unnamed presenter, not Steve Mauro and
+not V04's guest, speaks the whole 01:08:20. Under `D-025` the lesson is 100% secondary
+descriptive evidence, so **it yields no doctrine whatsoever**. This is the first lesson
+decided entirely by that decision, and establishing it *before* writing notes is what
+`D-025` consequence 3 exists to force.
+
+### Capture
+
+`D-022` / GOTCHA 4 mattered again: **four** stale `http.server` processes from earlier
+sessions were holding **8899, 8917, 8931 and 8945**. Took a fresh port (**8953**), confirmed
+the listener was this session's own PID, and byte-verified the served SWF against disk before
+capturing. Additionally proved the working copy was the right film at the byte level:
+decompressed both bodies and diffed — **equal length 44,111,472, exactly one differing byte
+at offset 18** (frameRate `UI16` 3.0 → 30.0), `frameCount` 12,304 in both.
+
+Content sanity-checked against the transcript **before** the long sweep, as the recipe
+requires: the probe frame at burned `05:00` prints MT4 toolbar/Meta-Editor instruction,
+matching `[00:04:57]`–`[00:05:05]` — and simultaneously corroborating `Q-005`, since the
+fabricated `RULES.md` claims a "5/13 EMA cross" rule at that marker.
+
+829-frame sweep at 10×, 414 s wall, **zero drift** (elapsed matched `i × 0.5 s` at every
+checkpoint). 80 distinct screen states detected with the control bar excluded from the diff
+crop, so the ticking timecode could not register as content change. 30 frames curated; a
+second 2× pass re-rendered 5 frames whose fine print is quoted.
+
+### Reconciliation with concurrent work
+
+A concurrent process produced an overlapping screenshot set and `INDEX.md` in the same
+working tree. Reconciled by content hash rather than by assumption: only 6 of my 26 copies
+were byte-identical, the other 20 were the same slides one second apart. **Kept the existing
+indexed set** (its filenames carry each frame's own burned-in OSD timecode, which is better
+practice than my computed index), removed my duplicates by explicit path, and contributed the
+two frames it lacked plus the `hires/` set. Verified its strongest claim independently before
+adopting it — the one-differing-byte proof above is that verification.
+
+### Corrections issued this session
+
+- **`EMA` occurs twice in V05, not three times.** `V05_TRANSCRIPT.md` § TRANSCRIPTION NOTES
+  and `QUARANTINE_REGISTER.md` `Q-005` both say three; the third listed item, *"closing below
+  the 200"* `[01:06:02]`, does not contain the token. Re-measured word-boundary,
+  case-sensitively, over the verbatim body only (body lines 1271, 3944). **Recorded in
+  `V05_SOURCE_NOTES.md` §7 rather than silently patched in two committed files.** No
+  conclusion in either changes.
+- Two citation defects in my own draft, found and fixed **before** commit: `[00:11:48]`
+  quoted verbatim with the ASR flagged rather than silently reconstructed; `[00:53:06]` →
+  `[00:53:08]`.
+- DMR mention count 12 → **9** during reconciliation.
+- `A-048` **withdrawn before it was written**: the *"25 to 50 pips above or below the box"*
+  attribution matches V04 `[00:15:43]`, which sits inside V04's **instructor** segment, so
+  V05 is corroboration and not a new ambiguity. V05 numbering made contiguous.
+
+### Homework — a method change made because of V04's review
+
+V04's harvesters captured OHLC only, so week boundaries were **inferred** from bar cadence;
+review R1 `M1` showed that inference failing on USDCHF. Built
+`tv_harvest_v05.mjs`, which reads **Date and Time together with the OHLC** from TradingView's
+Data Window, making boundaries a lookup.
+
+**It paid for itself on the first run.** USDCHF's week opens at **22:00**, an hour after the
+other three, giving **476** bars not 480 — verified directly (the 20:00–23:00 window holds 9
+bars for the other pairs and 5 for USDCHF; the last pre-week bar is `2026-07-31T20:45` for
+all four). This **independently reproduces V04 R1's corrected 476** from a different week by a
+different method, with the cause visible rather than reconstructed. **1,912/1,912 continuity
+transitions, zero breaks.** USDCHF's week low sits on its first available bar and is therefore
+**boundary-limited**; USDCHF is excluded from every week-low conclusion.
+
+`D-025` is enforced **in the artifacts**: charts mark day separators, week extremes and
+body-to-body boxes, and omit levels, the anchor and every entry. Each rendered image says so
+in its own footer. H3's MT4 save procedure is **substituted and declared**; H4's flashcards
+are performed **in form but not content**.
+
+### Records
+
+`A-042`…`A-049` opened. Six existing records extended, **none narrowed or closed on guest
+evidence**. `A-043` is the sole closure — the MT4 text tool, settled by the displayed
+Customizing-toolbar dialog (`Text` icon `A` vs `Text label` icon `T`), a **platform artifact,
+not methodology** — and its record tells a disagreeing reviewer how to downgrade it.
+**No new contradiction**, with reasoning: a lesson with no instructor segment cannot produce
+an instructor-vs-instructor conflict. **`C-003` checked against V05 and struck off as
+negative** — zero clock times in the lesson, by a reproducible scan with the transcript's own
+markers excluded. **Concept library deliberately not updated:** no V05 material is eligible.
+
+### Submitted as `REVIEW REQUIRED`, not `PASS`
+
+One reason: the `D-018`/`D-019` disposition of mastery dimensions **F and G**. V05 does not
+*omit* testable rules — it *states* several that are **withheld by decision**, which is a
+third case neither entry contemplates. Graded on the purposive reading with the strict reading
+flagged. Two items escalated: whether a third disposition is needed for work **excluded by
+decision**, and whether the project acknowledges an **out-of-corpus dependency** (`A-042`,
+the DMR).
+
+### Git
+
+Explicit paths on every `git add`; `git diff --staged` read before every commit; **no
+`git add -A`**. Eight checkpoint commits. The untracked
+`05_HOMEWORK/V02/measure_usdchf_week.py` (open item 13) was left alone, as at every prior
+round. `validate_project.py`: **97 passed, 0 warnings, 0 failures**.
+**Local commits only — pushes batched until morning at the owner's request.**
+
+### Next
+
+**Stop before the review.** `V05_REVIEW_R1.md` is written by a separate session
+(`REVIEW_PROTOCOL.md`); the student cannot audit itself. V06 does not begin until the V05
+gate opens under `D-024`.
