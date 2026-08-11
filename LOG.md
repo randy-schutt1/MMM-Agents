@@ -2493,3 +2493,104 @@ session's work in progress and is expected.
 **A fresh reviewer session for V04 R2** (`D-003`). V04 stays `IN REMEDIATION` and reaches
 `COMPLETE` only on a reviewer `PASS` (`D-004`). V05 is unaffected — the gate has been open
 since R1 — but a V05 session must now apply **D-025** before writing notes.
+
+---
+
+## 2026-08-11 — Reviewer Session — V04 R2: PASS, V04 COMPLETE
+
+**Session type:** Independent Reviewer (`D-003` satisfied — this session authored no V04
+artifact and applied none of the R1 corrections).
+**Scope:** verification of commit `3a13441`, the V04 R1 remediation (`REVIEW_PROTOCOL.md`
+§4). Dimensions R1 graded on untouched material were not re-audited.
+**Output:** `18_REVIEW/V04/V04_REVIEW_R2.md`.
+
+**Verdict: `PASS`, confidence HIGH — 0 CRITICAL, 0 MAJOR, 1 MINOR (non-blocking), 3 NOTE.
+V04 is `COMPLETE` (`D-004`). All nine items — M1–M7, N1 and the owner action — verify.**
+
+### How the fixes were checked
+
+Every item was re-derived from the committed data or the source file. The diffs were read
+only afterwards, to confirm the fix matched what the recomputation already said.
+
+- **`M1`, in both directions.** The **parent commit's** JSON was recomputed to confirm the
+  defect was real: exactly one 15m discontinuity in USDCHF's committed "week"
+  (`m[3]→m[4]`, **−12.7 pips**), zero in the other three pairs, a bar-0 reconstruction
+  missing the **open by 28.1 pips** and the high by 12.8, and `aggregate(m[4:16])` equal to
+  4h bar 0 on **all four fields**. The **current** JSON was then recomputed with an
+  independently written aggregator: **476/480 fields, 116/120 bars, zero in-week 15m
+  discontinuities in all four pairs**, all four residuals ≤ 0.3 pip and all in highs or
+  lows. Field-by-field diff of the two JSONs: only USDCHF changed, the new array is
+  **exactly `old[4:]`**, the three index fields each shifted by 4, and the 4h arrays are
+  untouched. `verify_reconstruction.py` was run as shipped — exits 0 — and read line by
+  line to confirm its checks are not tautological.
+- **An independent cross-check the remediation did not claim.** Each pair's re-indexed
+  `j_hi_15m` / `j_lo_15m` was mapped through the new partial-first-bar arithmetic onto the
+  4h grid: all four land in the 4h bar holding the same extreme, at an identical price.
+  This closes under the new indices and does **not** under the old ones — the re-index is
+  right, not merely consistent.
+- **The conclusion was re-checked on the 4-hour data**: 116/116 continuous; USDCHF's and
+  USDJPY's week lows on bar 0; EURUSD and GBPUSD week high/low at bars 27/4 and 28/5 →
+  23 bars × 4 h = **3.833 days** each. The scoped 2-of-4 result stands.
+- **`M2`** against the transcript **body** (lines 3047, 4138, 4142 — exact). **`M3`**
+  against the register (`A-031` = blood in the water; `A-030` = brinks shadow; `A-037` /
+  `A-038` confirmed to be the wrong subjects). **`M4`** by counting (27 PNGs, 3 scripts).
+  **`M7`** against `MASTERY_STANDARD.md` (19 boxes = 13 + 2 `DEFERRED` + 4 UNCHECKED, and
+  the declarations are true of the repository). **`N1`** against `D-019`'s own V01 F/G
+  worked example, with the retained `PARTIAL`/`FAIL` prose diffed rather than eyeballed.
+  **`D-025`** against R1's ruling text, with all four cross-references opened.
+- **`M6` by opening the frames.** Both were magnified before the new text was read. The
+  `Traders Dynamic Index Visual` panel, its coloured lines and its bands are there as
+  described; the six-value readout is **genuinely at the edge of legibility**, and
+  declining to transcribe it was the right call.
+
+### Two judgement calls the review was asked to make, and how they went
+
+- **`M5` — honest caveat vs. committing data. UPHELD.** The arrays were never written to
+  disk; re-harvesting today would produce a different dataset, and committing it would
+  attach data to claims never computed on it. That is provenance fabrication and is worse
+  than a declared gap. The figures are marked `UNREPRODUCED`, not withdrawn, nothing
+  downstream depends on them, and the reproducible half recomputes exactly (116/116).
+- **`M6` framing — accurate and appropriately conservative.** "Displayed, not taught" holds
+  on the merits: no inputs, periods, band construction or decision rule is recoverable.
+  Beyond what R1 asked, `A-039`'s *"the example chart carries no TDI panel"* line is now
+  correctly scoped to the instructor's Segment-A chart, which it always meant.
+
+### The one residual finding — `m1` (`E20`), non-blocking, open item 34
+
+The sentence *"the extreme's index and the 44-bar window shifted together by exactly four
+bars, so the bars examined are the same bars"* — in `V04_HOMEWORK.md` §1.2 and in
+`V04_MASTERY_REPORT.md` — is **true for USDCHF's high-side window** (bar-for-bar identical)
+and **false for the low-side one**: `j_lo` 4 → 0 was clipped at the head of the array in
+both datasets, so it went from 5 bars (four of them previous-week bars) to 1 and could not
+"shift". **The descriptor row it justifies is genuinely unchanged — 1/1/1/1 across all four
+tolerances on both datasets, recomputed at R2** — so the direction is safe and nothing
+downstream reads the justification. It is charged because it is one more instance of R1's
+own `N5` pattern, produced in the commit that quoted `N5` approvingly: the paragraph
+describing the check is the one part nothing recomputes. Fix it when either file is next
+edited; **do not open an R3** (`REVIEW_PROTOCOL.md` §9 criterion 14, §16; `V02_REVIEW_R3.md`
+precedent).
+
+### Not charged against V04
+
+`08_CONCEPT_LIBRARY/CONCEPT_INDEX.md`'s STATUS block is stale (`LESSONS STUDIED: 3 … V03
+studied, not yet reviewed`). It predates this remediation, V04 correctly declared the
+concept-library box UNCHECKED rather than touching the file, and it belongs with open item
+14 and the concept-library debt at `CUMULATIVE_25.md`.
+
+### Git
+
+Explicit paths on every `git add` and `git commit`; `git status` and `git diff --staged`
+read before committing. **A concurrent V05 student session is active in this shared working
+tree** — no V05 file was touched or staged, and the untracked
+`05_HOMEWORK/V02/measure_usdchf_week.py` (open item 13) was left alone, as at every prior
+round. `validate_project.py`: **97 passed, 0 warnings, 0 failures** (the R1 remediation
+reported 1 warning for the then-absent V05 transcript; the V05 session has since committed
+it). **Local commit only — pushes are batched until morning at the owner's request.**
+
+### Next Review Trigger
+
+**None for V04 — it is `COMPLETE`.** The next reviewer session is for **V05**, whose gate
+has been open since V04 R1 and now rests on a `PASS`. A V05 session must apply **`D-025`**
+before writing notes: establish how many voices the recording carries, mark the boundaries,
+and speaker-tag every source-note row. `REVIEW_INDEX.md` open item 33 discharges the
+`RULES.md` fabrication audit in one step; `NOTES.md` and `VISUAL_INDEX.md` are not covered.

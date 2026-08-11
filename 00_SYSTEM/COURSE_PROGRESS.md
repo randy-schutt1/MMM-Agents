@@ -11,10 +11,38 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V04 — R1 REVISE, REMEDIATION APPLIED, AWAITING R2;
-                        V05 gate OPEN per D-024)
-VIDEOS PASSED:       3  (V01, V02, V03 — V03 PASS at R3, COMPLETE)
-CURRENT LESSON:      **V04 — R1 REMEDIATION APPLIED 2026-08-11, AWAITING R2.**
+VIDEOS IN PROGRESS:  1  (V05 — student pass in progress; gate OPEN per D-024,
+                        and D-025 applies before its notes are written)
+VIDEOS PASSED:       4  (V01, V02, V03, V04 — V04 PASS at R2, COMPLETE)
+CURRENT LESSON:      **V04 — REVIEWED 2026-08-11 (R2): PASS, confidence HIGH,
+                     0 CRITICAL / 0 MAJOR / 1 MINOR (non-blocking) / 3 NOTE.
+                     V04 IS COMPLETE (D-004).** All seven minors, note N1 and the
+                     owner action verified applied by a fresh session (D-003), each
+                     re-derived from the data or the source file rather than read
+                     off the diff. M1 was re-derived in BOTH directions: the parent
+                     commit's JSON confirms the defect was real (one -12.7 pip
+                     discontinuity at m[3]->m[4]; bar-0 open off by 28.1 pips;
+                     aggregate(m[4:16]) equal to 4h bar 0 on all four fields) and
+                     the current JSON confirms the fix (476/480 fields, 116/120
+                     bars, ZERO in-week 15m discontinuities in all four pairs, all
+                     residuals <=0.3 pip and all in highs/lows). The new array is
+                     exactly old[4:], only USDCHF changed, the 4h series is
+                     untouched and continuous 116/116, and every pair's re-indexed
+                     15m extreme maps onto the 4h bar holding the same extreme at an
+                     identical price — which closes under the new indices and not
+                     under the old. The scoped 2-of-4 / 3.83-day result is unchanged.
+                     M5's honest-caveat route was reviewed on the merits and UPHELD:
+                     committing a fresh harvest would attach data to claims never
+                     computed on it. M6 was checked by opening and magnifying both
+                     frames — the six-value TDI readout is genuinely at the edge of
+                     legibility and declining to transcribe it was correct. The one
+                     residual minor (m1, open item 34) is a mechanism clause written
+                     during the remediation itself; the table it justifies is
+                     genuinely unchanged, so it does not withhold the PASS
+                     (REVIEW_PROTOCOL.md §9 criterion 14; V02 R3 precedent) and must
+                     NOT trigger an R3.
+                     ---- prior ----
+                     **V04 — R1 REMEDIATION APPLIED 2026-08-11, AWAITING R2.**
                      All seven minors (M1-M7) and note N1 applied, plus the owner
                      action: **DECISIONS.md D-025 records the C-005 ruling** —
                      guest-presenter material is SECONDARY DESCRIPTIVE evidence,
@@ -376,11 +404,18 @@ V04 GATE:            **OPEN on V03's own PASS as of V03 R3, 2026-08-10 (D-004
                      currently the only thing holding the gate.
 
 
-V05 GATE:            **OPEN as of V04 R1, 2026-08-10 (D-024 satisfied: REVISE with
-                     0 CRITICAL, 0 MAJOR, 7 MINOR).** The seven minors and N1 are
-                     deferred, not waived — REVIEW_INDEX.md open items 25-32 must be
-                     applied and verified before V04 is marked COMPLETE, and V04 R1's
-                     verdict is REVISE, not PASS.
+V05 GATE:            **OPEN, and now on the stronger ground of a PASS: V04 R2,
+                     2026-08-11 — PASS, 0 CRITICAL / 0 MAJOR / 1 MINOR
+                     (non-blocking). V04 is COMPLETE (D-004).** Open items 25-32 are
+                     CLOSED, verified at R2; item 22 was closed by D-025. One
+                     non-blocking documentation minor is carried as open item 34 and
+                     must NOT trigger an R3.
+                     ---- prior ----
+                     **OPEN as of V04 R1, 2026-08-10 (D-024 satisfied: REVISE with
+                     0 CRITICAL, 0 MAJOR, 7 MINOR).** The seven minors and N1 were
+                     deferred, not waived — REVIEW_INDEX.md open items 25-32 had to be
+                     applied and verified before V04 could be marked COMPLETE, and V04
+                     R1's verdict was REVISE, not PASS.
                      Carry into V05, and read this before starting it:
                      (a) **C-005 is RULED** — guest material is secondary DESCRIPTIVE
                      evidence, excluded as normative doctrine; speaker tagging is
@@ -483,7 +518,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
-| V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ✅ | ✅ | ✅ | ✅ | ⏸ | **REVIEW REQUIRED** | R1 **REVISE** (0C/0M/7m) | **IN REMEDIATION** |
+| V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ✅ | ✅ | ✅ | ✅ | ⏸ | REVIEW REQUIRED (resub) | ✅ R1 REVISE (0C/0M/7m) → **R2 PASS** | **COMPLETE** |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
