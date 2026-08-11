@@ -11,9 +11,44 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V03 — re-reviewed R2: REVISE, 1 minor left; V04 gate OPEN)
+VIDEOS IN PROGRESS:  2  (V03 — re-reviewed R2: REVISE, 1 minor left;
+                         V04 — student pass COMPLETE, AWAITING REVIEW)
 VIDEOS PASSED:       2  (V01, V02)
-CURRENT LESSON:      **V03 — re-reviewed R2 2026-08-10: `REVISE` (HIGH), 0 critical,
+CURRENT LESSON:      **V04 — student pass COMPLETE 2026-08-10, submitted as
+                     REVIEW REQUIRED (not PASS).** Transcript verified and adopted
+                     (I-008 satisfied for V04) with a 9-entry ASR-degeneration tail
+                     FENCED rather than deleted — 8 of those entries are timestamped
+                     up to 23 s PAST the end of the audio. Q-004 confirms V04's
+                     three derived files fabricated and adds the first MECHANICAL
+                     proof of the one-template theory: all 21 RULES.md files carry
+                     the same two fabricated "verbatim instructor statements" at the
+                     same two timestamps, so no future per-lesson RULES.md audit can
+                     come back clean. 27 screenshots via 10x sweep, indexed.
+                     **V04 is structurally unlike V01-V03: it has TWO presenters,
+                     and 69% of its runtime is NOT the course author.** Every source
+                     row is speaker-tagged; C-005 opened and is UNRESOLVED pending a
+                     SCOPE RULING, not pending evidence.
+                     Homework complete on real 4h AND 15m data, four majors, no
+                     substitution, four independent validations (476/480 OHLC fields
+                     agree with V03's independently committed dataset; 474/480
+                     between this session's own 4h and 15m harvests; a harvest
+                     defect was found by deliberate testing, measured at ~0.4 pip
+                     and disclosed). It independently REPRODUCES V03's corrected M3
+                     figure (2 of 4 formed anchors, both 3.83 days) from a fresh
+                     harvest and a separately written script.
+                     A-037..A-041 added, 10 records extended, none resolved.
+                     C-004 deliberately re-checked per its own "Required to resolve"
+                     field — all 47 screen states reviewed and all 47 time-related
+                     transcript entries read — NEGATIVE on both halves.
+                     Four dimensions are sub-PASS by the student's own assessment
+                     (B PARTIAL, C FAIL, E PARTIAL, G DEFERRED), all for ONE reason:
+                     V04 states the course's first near-complete entry rule and one
+                     of its three necessary conditions (TDI) has never been taught
+                     (A-039, which carries an explicit prohibition on dropping it).
+                     See 07_MASTERY_REPORTS/V04_MASTERY_REPORT.md for the seven
+                     items it asks the reviewer to audit.
+                     ---- V03, in parallel ----
+                     **V03 — re-reviewed R2 2026-08-10: `REVISE` (HIGH), 0 critical,
                      0 major, 1 minor.** Remediation-verification round. **M1 and M3
                      VERIFIED and CLOSED** — every one of the twenty committed daily
                      ranges, all four ADR figures and their multiples re-derived
@@ -87,7 +122,31 @@ CURRENT LESSON:      **V03 — re-reviewed R2 2026-08-10: `REVISE` (HIGH), 0 cri
                      0 major. COMPLETE. All 15 of R2's required actions applied and
                      verified against the source; R2 finding N1 (A-006's trailing
                      block) closed by withdrawing it in place.
-NEXT ACTION:         **Begin V04 (gate OPEN per D-024).** V03 R1's three minor
+NEXT ACTION:         **Independent review of V04 (R1) — a FRESH reviewer session
+                     (D-003).** V04's student pass is COMPLETE and submitted as
+                     REVIEW REQUIRED. Three things go into that review:
+                     (a) **C-005 needs an OWNER or REVIEWER SCOPE RULING on
+                     guest-presenter material.** 69% of V04 is presented by someone
+                     who is not the course author, and this student session fenced
+                     all of it as non-doctrine. That is a large exclusion for a
+                     student session to make unilaterally. **It should be settled
+                     before V05**, which shares V04's session date and in which a
+                     third presenter ("Carl", queued at V04 [01:19:02]) may speak.
+                     (b) **Manual backtesting for V04 is DEFERRED, not NOT
+                     APPLICABLE.** The debt is now FOUR lessons deep and its
+                     character has changed: for the first time a testable rule
+                     exists and is blocked on a single NAMED MISSING INPUT (TDI,
+                     A-039) rather than on the absence of any rule. When TDI is
+                     taught, the hidden-future backlog becomes dischargeable and
+                     should be discharged.
+                     (c) **A-039 carries an explicit prohibition** — no session may
+                     drop V04's TDI condition in order to make the rule testable. A
+                     two-condition version is a different rule with a different hit
+                     rate (E06/E18).
+                     **Still owed on V03:** R2's single remaining minor (M2', the
+                     COVERAGE block sentence) before V03 can reach COMPLETE.
+                     ---- prior ----
+                     **Begin V04 (gate OPEN per D-024).** V03 R1's three minor
                      corrections (REVIEW_INDEX.md open items 18–20) are **APPLIED
                      2026-08-10 and await reviewer verification** — that verification
                      is what moves V03 to COMPLETE, and it may ride along with V04's
@@ -198,6 +257,26 @@ V04 GATE:            **OPEN as of V03 R1, 2026-08-10 (D-024 satisfied: REVISE wi
                      pre-flight guard is still unimplemented, so this block is
                      currently the only thing holding the gate.
 
+
+V05 GATE:            **CLOSED.** V04's student pass is complete and submitted as
+                     REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
+                     verdict, not a student submission. No V05 artifact of any kind
+                     may be created until V04's R1 returns, and what it returns then
+                     governs per **D-024**: PASS or a minors-only REVISE opens this
+                     gate; any CRITICAL or MAJOR keeps it closed until fixed AND
+                     re-reviewed.
+                     Note for whoever holds this next: the D-004 gate has been
+                     breached twice in this project's history and REVIEW_INDEX.md
+                     open item 9 remains OPEN precisely because a written gate with
+                     no enforcement is what failed. The validate_project.py
+                     pre-flight guard is still unimplemented, so this block is
+                     currently the only thing holding the gate.
+                     Substantive carry-forward into V05: **C-005** asks for a scope
+                     ruling on guest-presenter material, and V05 shares V04's
+                     2012-03-25 session date — so V05 may contain more of the same
+                     guest, or the third presenter ("Carl"). Settling C-005 before
+                     V05 is studied would avoid re-litigating it per lesson.
+
 V03 GATE:            **OPEN as of V02 R3 PASS, 2026-08-10 (D-004 satisfied).**
                      The V03 work performed in parallel while this gate read CLOSED
                      was an **owner-authorized override**, confirmed by the project
@@ -267,7 +346,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | **REVIEW REQUIRED** | **R1 REVISE (0 crit, 0 maj, 3 min)** | **REMEDIATION APPLIED — M1–M3 fixed 2026-08-10, awaiting R2 verification; V04 gate OPEN (D-024)** |
-| V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ✅ | ✅ | ✅ | ✅ | ⏸ | **REVIEW REQUIRED** | — | **AWAITING REVIEW** |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -442,7 +521,7 @@ points are set once the real lesson count is known at ingestion.
 | Phase | Name | Status |
 |---|---|---|
 | 0 | Environment | ✅ Complete |
-| 1 | Student | 🔄 In progress — V01 **PASS** (R3); V02 **PASS** (R3); V03 **REVISE** (R1, minors only — V04 gate OPEN per D-024); V04 next |
+| 1 | Student | 🔄 In progress — V01 **PASS** (R3); V02 **PASS** (R3); V03 **REVISE** (R2, 1 minor left); **V04 AWAITING REVIEW**; V05 after V04's R1 |
 | 2 | Scholar | Not started |
 | 3 | Expert (Master Spec) | Not started |
 | 4 | Formalizer (Machine Spec) | Not started |

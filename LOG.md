@@ -2005,3 +2005,137 @@ unstaged, and no V04 file was touched.
 **Application of M2′** — one sentence in `V03_TRANSCRIPT.md` `COVERAGE` lines
 23–24, plus `REVIEW_INDEX.md` item 19's status text. On its verification V03
 reaches `COMPLETE`. May ride along with V04's R1.
+
+---
+
+## 2026-08-10 — V04 student pass (Student session)
+
+**Lesson:** V04 — `Bootcamp1 Wk2 032512 Part2 (86mins).swf`, 01:25:41, Week 2 part 2.
+**Gate:** V04 gate was **OPEN** per `D-024` (V03 R1 returned `REVISE` with 0 `CRITICAL`,
+0 `MAJOR`, 3 `MINOR`). Confirmed in `COURSE_PROGRESS.md` before any V04 artifact was created.
+**Outcome:** student pass complete, submitted as **REVIEW REQUIRED**. V04 → `AWAITING REVIEW`.
+
+### What V04 turned out to be
+
+Two things make this lesson different from V01–V03, and both shaped the whole pass.
+
+**1. It states the course's first near-complete entry rule.** At `[00:15:34]`–`[00:15:57]`
+the instructor delivers a labelled three-condition list — 25–50 pips beyond the blue box,
+second leg of an M/W, TDI shark fin out-and-back — and surrounds it with a stop (10–18
+pips), a trigger (the second leg's close), an invalidation, a re-entry doctrine and a
+2.5–3-day holding window. **But condition (c) requires TDI, which the course has deferred
+twice** (V03 `[01:01:53]`, V04 `[00:22:11]`), and which the instructor could not even
+display on his own example chart. So V04 states a rule it does not equip a student to
+apply. That single gap is why dimensions B, C and G are all sub-`PASS`.
+
+**2. 69% of the runtime is not the course's author.** The instructor teaches
+`[00:00:00]`–`[00:26:56]`; an unidentified guest presenter takes the remaining 59 minutes.
+The transcript has **no speaker labels** and the handover is unannounced. Every source row
+is now tagged `INSTRUCTOR` or `GUEST`, no `GUEST` statement enters the methodology, and
+`C-005` records the conflict — `UNRESOLVED` **pending a scope ruling, not pending
+evidence**, since no future lesson can settle it.
+
+### Capture
+
+10× fast sweep per `SWF_CAPTURE_RECIPE.md` §10 / `D-021`: 1,037 frames at 5
+presentation-second spacing, ~8.6 minutes wall clock. Original SWF SHA-256-verified
+unchanged after patching the working copy. **`D-022` port/byte verification mattered
+again** — ports 8899, 8917 and 8931 were all still held by stale servers from earlier
+sessions, exactly the GOTCHA 4 hazard. Took 8944, confirmed own PID, SHA-256-matched the
+served bytes. Content was sanity-checked against the transcript inside the first minute:
+the probe frame at `05:00` carries a hand-drawn "-180" and `[00:04:52]` says *"Don't stand
+aside minus one eighty."*
+
+### Transcript (I-008)
+
+Verified and adopted. Duration cross-checked two independent ways (audio 5141.03 s; SWF
+header 15,425 frames ÷ 3.0 fps = 5141.7 s). Five Whisper `base.en` windows re-transcribed
+and compared; all matched near-verbatim.
+
+**A real defect was found and fenced rather than deleted:** the final 9 entries
+`[01:25:40]`–`[01:26:04]` are a degenerate ASR repetition loop, and **8 of them are
+timestamped up to 23 seconds past the end of the audio file.** Retained inside an explicit
+fence; no artifact may cite them. The coverage block states the true weaker property
+(non-decreasing, 6 same-second pairs) rather than repeating V03's *"strictly monotonic"*
+overclaim (`M2`).
+
+### Q-004 — and a finding that retires a question for all 21 lessons
+
+V04's three derived files are individually confirmed fabricated (four of four lessons
+checked now). **New this pass:** two greps establish mechanically that **all 21 `RULES.md`
+files carry the same two fabricated "verbatim instructor statements" at the same two
+timestamps** — `[00:05:00]` and `[00:18:00]`. The one-template theory is now measured
+rather than inferred, and **no future per-lesson `RULES.md` audit can come back clean.**
+
+Also: `VISUAL_INDEX.md`'s single real image is **authentic but doubly mislabelled** — it is
+the frame at `[00:00:00]`, not `[00:02:00]` (matched to sweep frame `s_0000` at 0.65 mean
+absolute difference), and its description is invented.
+
+### Homework — completed on real data, no substitution
+
+*"The four majors, any time range"* `[00:18:04]` delegates the date, so a recent week is
+compliance. Week of Sun 02 Aug 2026 21:00 UTC. **No price read from a pixel** — platform
+OHLC legend as DOM text. Both harvest scripts committed.
+
+Four independent validations: the open==prev-close chain on the 30-bar weekend cadence;
+**476/480 OHLC fields agree with V03's independently committed dataset** (different
+session, different script, same week); **474/480 agree between this session's own 4h and
+15m harvests** (which is also what anchors the 15m series, since the crosshair date is
+canvas-drawn); and a deliberate harvest-stability test that **found a real defect** —
+28 ms vs 75 ms hover dwell disagree on 5/480 fields — measured at ~±0.4 pip and disclosed.
+
+Findings: the first-eight-hours block measured for all four majors; the week's high formed
+Thu/Fri in **4 of 4** and the literal claim *"track to the high on Sunday or Monday"* is
+**0 of 4**; duration from the early extreme to the opposite extreme is **3.83 days on both
+formed-anchor pairs** — which **independently reproduces V03's corrected `M3` figure** from
+a fresh harvest. **No M/W classification is claimed** on the 15-minute charts, because
+`A-011` leaves the pattern undefined; peak descriptors are reported across four tolerances
+instead. **`C-001` unaffected; no day-count value committed anywhere.**
+
+### Registers
+
+`A-037`–`A-041` added; **10 earlier records extended, none resolved.** `C-005` opened;
+`C-001` extended with a source that restates V01 Source A near-verbatim and adds the
+terminating condition it lacked. **`C-004` deliberately re-checked because its own
+"Required to resolve" field named V04** — all 1,037 frames segmented into 47 states with
+one representative per state reviewed, and all 47 time-related transcript entries read.
+**Negative on both halves; V03 and V04 are now both struck off.**
+
+### Defects in my own work, caught and fixed before commit
+
+Recorded because the mastery report asks the reviewer to assume more of the same exists in
+what was not mechanically checked.
+
+1. **`E01` — ASR garble repaired inside quotation marks** in ~20 places in the source-notes
+   draft (`"bibs"`→`"[pips]"`, `"an AM"`→`"an [M]"`). Caught by a verbatim audit of 172
+   quoted fragments; all restored, glosses moved outside the quotes. 171/172 now exact.
+2. **Three duplicate ambiguity IDs** — my draft's new records duplicated existing `A-018`,
+   `A-030` and `A-031`. Caught by reading the register before writing. Remapped to extensions.
+3. **An overclaim about "Mayo"** — I wrote that V04's printed caption settles the spelling;
+   **V03 had already done that.** Rescoped to what V04 actually adds.
+4. **A transposed digit** in USDJPY's block high (158.885 → 157.885) and an **inflated
+   transition count** (571 → 569) in the homework, both caught by recomputing every figure
+   from the committed file alone.
+5. **A misnamed index file** — `V04_VISUAL_INDEX.md` where the project convention is
+   `INDEX.md`; the V03 R2 reviewer's validator run flagged it. Renamed.
+
+### Bookkeeping
+
+`COURSE_PROGRESS.md` merged carefully around a **parallel session** that ran V03's
+remediation and R2 review in this same working tree during this pass — their V03 content
+was preserved, not overwritten. `V05 GATE: CLOSED` block added. `REVIEW_INDEX.md` gains
+`AWAITING REVIEW: 1` and open items **22–24**. `validate_project.py`: **97 passed,
+0 warnings, 0 failures.**
+
+### Git
+
+Explicit paths on every `git add`; `git status` and `git log` checked first and the staged
+diff read before every commit. Seven checkpoint commits, each pushed. The untracked
+`05_HOMEWORK/V02/measure_usdchf_week.py` (open item 13) was left untouched and unstaged
+throughout, and no V03 file was modified.
+
+### Next Review Trigger
+
+**Independent review of V04 (R1)** by a fresh session (`D-003`). The mastery report
+nominates **seven** items for audit, the first two being the `C-005` scope call and the
+dimension-G `DEFERRED` disposition.
