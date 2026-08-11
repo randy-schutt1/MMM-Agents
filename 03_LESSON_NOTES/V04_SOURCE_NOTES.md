@@ -190,7 +190,7 @@ smaller:
 > *"Your Asian range is technically 13 pips."* `[00:12:11]`
 
 **This is stated for this one chart and is not generalized into a rule.** Whether "halve
-the Asian range" is a method or an observation about this example is not said — `A-041`.
+the Asian range" is a method or an observation about this example is not said — `A-037`.
 
 Also noted: *"No Joe, there are two boxes I'll talk about it"* `[00:12:03]` — two boxes are
 acknowledged and **never explained in V04**. See §13.
@@ -201,7 +201,7 @@ acknowledged and **never explained in V04**. See §13.
 > If the trade sets up second leg or first leg in the shadow, when the first leg forms the
 > high of the day, that's the perfect entry."*
 (ASR: *"stop on Zone"* = stop-hunt zone; *"Brink Spox"* = brick box — the rendering is
-unstable across the lesson, see `A-038`) `[00:12:53]`–`[00:13:08]`
+unstable across the lesson, see `A-030`) `[00:12:53]`–`[00:13:08]`
 
 The full-confluence description of the sample card, `[00:13:37]`–`[00:13:57]`:
 
@@ -382,7 +382,7 @@ The guest's dominant filter, stated repeatedly and consistently:
 | How the LOD is recognised: *"Basically, what I'm doing is measuring off the ADR"* — using the two previous days' ranges as the reference | `[01:05:36]`–`[01:06:09]` |
 
 **The threshold is a proportion, expressed three times as ~90–95% of the recent daily
-range, and never as a formula.** Which ADR window (2 days? 20?) is never stated — `A-042`.
+range, and never as a formula.** Which ADR window (2 days? 20?) is never stated — `A-038`.
 
 ### 3d. Entry, stop, target
 
@@ -492,7 +492,7 @@ average "Mayo" is. `A-020` stays open on its actual question.
   `R = 95.2`.
 
 **`R = ` labels appear on every platform chart and `R` is never explained anywhere in V04.**
-`A-039`.
+`A-018`.
 
 ### 4i. What the visuals did NOT resolve
 
@@ -617,7 +617,7 @@ Assigned by the **instructor**, `[00:16:06]`–`[00:18:36]`, restated `[00:22:46
   > assignment in the forum under my boot camp thread. And then I want you to go ahead work
   > your charts and post them in there"*, which is the opposite. The likeliest reading is an
   > ASR-inserted *"don't"*, but the audio was **not** re-checked at this marker, so no
-  > repair is made inside the quotation marks. Recorded as `A-044`. Nothing downstream
+  > repair is made inside the quotation marks. Recorded as `A-041`. Nothing downstream
   > depends on it — the assignment's *content* is unaffected either way.
 - The instructor will post an **answer key**: *"I'll post my answer key… I'll post the answer
   key in my section. Compare your charts to that"* `[00:26:41]`–`[00:26:48]`.
@@ -688,7 +688,7 @@ against `D-009` — it is a hypothesis, never a target.
   recording… I showed you exactly how to do it"* `[00:20:55]`–`[00:20:59]`.
 - Forward: *"I'm going to do the TDI next week"* `[00:22:11]` — **TDI is deferred again**,
   as it was in V03 (`[01:01:53]` there). It is nonetheless a *necessary* entry criterion in
-  §2c. Recorded as `A-043`.
+  §2c. Recorded as `A-039`.
 - Forward: *"We're going to work on the trading zone. We're going to start talking about the
   22, 33 trades, multi session M and W's"* `[00:26:15]`–`[00:26:23]`. The **trading zone** was
   on V03's printed agenda and was not taught there either (V03 `A-005`).

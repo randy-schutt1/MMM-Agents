@@ -115,12 +115,22 @@ HOD LOD (Yesterday's)
 Recorded here because the project deliberately writes notes from the transcript **before**
 looking at frames, so that this delta stays visible (`SWF_CAPTURE_RECIPE.md` §9).
 
-1. **"Mayo" is the word.** Frame 19 prints *"Entered here after 4th retest **Mayo**"* on the
-   guest's own chart. The ASR renders this word as *"the mail"* throughout V04, as
-   *"mayonnaise"* in V02 and as *"manays"/"minis"* in V03. **The spelling is now settled;
-   the referent is not** — no frame or line states which moving average "Mayo" is, so
-   `A-020` stays open on its actual question. This is the V01 *"pendings"* pattern
-   repeating: a word the audio could not resolve, printed on screen.
+1. **"Mayo" printed a second time, by a different presenter.** Frame 19 prints *"Entered
+   here after 4th retest **Mayo**"* on the guest's own chart. The ASR renders this word as
+   *"the mail"* throughout V04, *"mayonnaise"* in V02, *"manays"/"minis"* in V03.
+
+   **This is corroboration, not a first — and the claim is scoped accordingly.**
+   `V03_INTERPRETATION.md` I5 already recorded a printed *"mayo"* on V03's criteria slide
+   (*"3 vectors passed mayo"*), so the **spelling was already settled before V04**. What
+   V04 adds is genuinely narrower and still worth having: a **second, independent** printed
+   instance, in a **different presenter's** hand, on a **different platform**, used as a
+   **price destination that price retests** rather than as a slide caption. That
+   strengthens "mayo is a real, shared course term for a chart line" and weakens any
+   reading of V03's slide as a one-off typo.
+
+   **It does not resolve `A-020`.** No frame and no line in V04 states which moving average
+   "Mayo" is. `A-020`'s actual open question — the period — is untouched. The record is
+   extended with this evidence, not closed.
 2. **The guest presenter is identifiable.** Frame 21's Navigator lists live accounts titled
    **"Zen Jason … Alldredge"** and **"Zen Jason … or Diana I. Alldredge"**. With the audio's
    *"my wife"* `[00:27:35]` and *"Diana's here with me now"* `[00:56:06]`, this identifies
@@ -130,10 +140,21 @@ looking at frames, so that this delta stays visible (`SWF_CAPTURE_RECIPE.md` §9
    *(Account numbers are visible in the frame and are deliberately not transcribed here.)*
 3. **The 12-pair claim is corroborated exactly.** Frame 15 lists twelve pairs; the audio says
    *"just 12 pairs"* `[00:30:22]` without enumerating them.
-4. **"R = " box labels are everywhere and are never explained aloud.** Frames 3, 21, 22 and
-   23 carry `R = 27.0 / 33.2 / 52.4 / 54.6 / 58.4 / 65.9 / 95.2`. The instructor never says
-   what `R` is in V04. This is the same object V03's review examined (its §4e R-label
-   enumeration). Carried as **`A-039`**.
+4. **"R = " box labels are everywhere and are never explained aloud — and V04 supplies the
+   first spoken cross-check for them.** Frames 3, 21, 22 and 23 carry
+   `R = 27.0 / 33.2 / 52.4 / 54.6 / 58.4 / 65.9 / 95.2`. Neither presenter ever says what
+   `R` is.
+
+   The useful part is frame 3: it is labelled **`R = 27.0`**, and on that same chart the
+   instructor says *"What's the Asian range? 27 pips"* `[00:08:09]` and *"27 pips range"*
+   `[00:11:25]`. **A printed `R` value and a spoken pip-range for the same box agree to
+   0.0.** That is independent support for `A-018` candidate 1 (`R` = the boxed range in
+   pips) and against candidate 2 (risk-multiple), from a lesson that states a stop and a
+   target and *still* does not make the numbers work as an R-multiple (a 27.0 R-multiple
+   on a 10–18 pip stop is absurd).
+
+   `A-018` is **extended, not resolved** — one agreeing pair is not a definition, and no
+   presenter states one.
 5. **The handover has a visual marker.** Frame 13's MMFx title card sits between the
    instructor's last line and the guest's first, corroborating a speaker boundary that the
    transcript itself does not label.
@@ -148,7 +169,7 @@ looking at frames, so that this delta stays visible (`SWF_CAPTURE_RECIPE.md` §9
   artifact is derived from these images. Where a number is quoted above it is **printed
   text in the platform's own legend or panel**, read as text (V02's `E06`/`E19` lesson, and
   the standing instruction for V04).
-- The `R =` values are transcribed as printed. **What `R` denotes is not claimed** (`A-039`).
+- The `R =` values are transcribed as printed. **What `R` denotes is not claimed** (`A-018`).
 - Session-box colours (red / pale-blue / grey / white) are described as seen. **No mapping
   from a colour to a named session is claimed** — V04 never states one.
 - Frames 18, 20, 24, 25, 26 are worked examples whose **pair and date are not legible** at
