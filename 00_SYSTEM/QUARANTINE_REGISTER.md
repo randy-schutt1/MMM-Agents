@@ -466,3 +466,113 @@ V01, V02, V03, V04: four of four lessons individually confirmed — and per Find
 `RULES.md` half of the pattern is now established for **all 21** by direct measurement
 rather than by inference. Sessions processing V05–V21 should still check `NOTES.md` and
 `VISUAL_INDEX.md` individually and should treat finding the same pattern as expected.
+
+---
+
+## Q-005 — V05's three derived files, checked individually and confirmed fabricated; `VISUAL_INDEX.md` indexes 12 duplicate image pairs as 24 distinct screenshots
+
+**Date:** 2026-08-11
+**Files:** `01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/per_lesson/05_Bootcamp1_Wk2_032512_Part3_68mins/`
+— `RULES.md`, `NOTES.md`, `VISUAL_INDEX.md`
+**Lesson:** V05, `Bootcamp1 Wk2 032512 Part3 (68mins).swf`, SHA-256 `c606520d…f896fcc1`
+**Disposition:** all three remain quarantined. `TRANSCRIPT.md` from the same folder was
+checked independently and **PASSED** — adopted at `02_TRANSCRIPTS/V05/V05_TRANSCRIPT.md`
+(I-008 satisfied for V05).
+
+### Finding 1 — `RULES.md` is the 21-lesson template, discharged in one step
+
+Per `REVIEW_INDEX.md` open item 33, the per-lesson `RULES.md` audit is a solved problem and
+may be discharged by confirming the three template markers. **Confirmed for V05:**
+
+| Template marker | V05 | Population |
+|---|---|---|
+| Rule 1 quote at `[00:05:00]` — *"Wait for the M15 candle to close before taking the 5/13 EMA cross."* | present | 21/21 |
+| Rule 2 quote at `[00:18:00]` — *"Place your stop loss 10 to 15 pips beyond the High or Low of the Day."* | present | 21/21 |
+| `NUMERICAL PARAMETERS` block byte-identical | present, hash `7ae7bb6ef413` | **21/21, one hash** |
+| Exactly two rules | present (`V06-R001`, `V06-R002`) | 21/21 |
+
+> **A measurement note that corrects nothing but is worth recording, because it is a trap.**
+> A first pass hashed from the `NUMERICAL PARAMETERS` heading **to end of file** and got
+> **two** hashes (16 + 5), appearing to contradict V04 R1's *"one hash, 21/21"*. Diffing the
+> two groups shows the entire difference is a **missing trailing newline** in five files.
+> Hashing the block itself gives **one** hash across all 21. **V04 R1's finding is correct
+> and is independently re-confirmed here**; the apparent discrepancy was an artifact of the
+> slice boundary. Future sessions: hash the block, not the tail.
+
+**Cross-checked against V05's real audio, and it fails on every load-bearing token:**
+
+- `[00:05:00]` **is not a marker in this transcript at all.** Nor are `[00:02:00]`,
+  `[00:04:00]` or `[00:22:00]`, all cited by the file. The real markers either side of
+  `[00:05:00]` are `[00:04:57]` (*"how to use scripts and customize them… using that
+  editor"*) and `[00:05:05]` (*"how to mock up your charts"*) — MT4 toolbar instruction,
+  not an entry rule.
+- `[00:18:00]` **does** exist and reads, in full: *"We have our levels."* It is not a stop
+  rule.
+- **`5/13` occurs 0 times. `5 EMA` 0. `13 EMA` 0. `800` 0. `Asian Box` 0. `PFH` 0. `PFL` 0.
+  `LOD` 0. `10 to 15 pips` 0.** (`HOD` returns one apparent hit — the letters inside
+  *"metHOD"* at `[00:51:33]`.)
+- The one nearby real number runs the **opposite** way: the presenter rejects a stop as too
+  wide at *"Like 25 pips, I don't like it"* `[00:47:57]`.
+
+### Finding 2 — `NOTES.md` is fabricated, and V05 falsifies it twice over
+
+Distinct per lesson (all 21 `NOTES.md` are pairwise distinct), so it was examined on its
+own merits. Every substantive claim is unsupported by the audio:
+
+| `NOTES.md` claim | V05's audio |
+|---|---|
+| *"EMAs: 5 (Mustard), 13 (Water), 50 (Mayo), 200 (Blueberry), 800 (Raspberry)"* | No moving average is given a period, colour or nickname anywhere. `EMA` occurs 3×, for the **50** and the **200** only. `800` occurs 0×. |
+| *"5/13 EMA Cross: Execution confirmation on M15 close"* | `5/13` 0×. No timeframe is ever named for entry. |
+| *"TDI Indicator: Green Price Line crossing Red Signal Line with Shark Fin confirmation outside Volatility Bands"* | `TDI` occurs 6× and is **never defined** — no lines, no bands, no rule. The speaker says *"I don't use it anymore"* `[00:36:50]`. |
+| *"Stop loss positioned 10–15 pips past High/Low of Day with minimum 1:3 Risk-to-Reward"* | 0×. No stop rule and no risk-to-reward ratio is stated in V05. |
+| Session clock table in EST (Asian 7:00 PM–3:00 AM, London 3:30 AM–9:00 AM, NY 9:30 AM–5:00 PM) | No session clock is stated. `EST` 0×. |
+| *"Peak Formation High (PFH) & Low (PFL)"* | `PFH` 0×, `PFL` 0×. *"peak formation"* occurs once, `[00:11:48]`. |
+
+**And an independent falsification that needs no token counting:** the file is headed
+*"Instructor Core Concepts"* and every `VISUAL_INDEX.md` entry attributes the content to
+*"Steve Mauro"*. **Steve Mauro does not speak in V05.** The lesson is presented start to
+finish by a third party who refers to Steve in the third person 21 times
+(`V05_TRANSCRIPT.md` § ONE SPEAKER). A file that misattributes the entire lesson to a
+presenter who is not on the recording was not written from the recording.
+
+### Finding 3 — `VISUAL_INDEX.md`: 27 entries, 27 files, **15 distinct images**
+
+This is the sharpest instance the project has found, and it differs in kind from V01's
+(78 entries / 1 file) and V04's (3 entries / 1 file). Here the **file inventory is
+accurate** — 27 entries, 27 files present in `SCREENSHOTS/`, every claimed filename
+resolves. What is fabricated is everything *about* them.
+
+1. **Twelve of the images are byte-identical duplicate pairs.** `extracted_jpeg_NNNN.jpg`
+   and `raw_extracted_NNNN.jpg` match on SHA-256 for all twelve of
+   `1012, 1013, 1017, 1019, 1020, 1022, 1023, 1025, 1027, 1029, 1030, 1032`. Across all 27
+   files there are **15 distinct images**. Each duplicate pair is indexed as **two
+   different screenshots, at two different timestamps, with two different descriptions.**
+2. **The timestamps are a generated grid, not observations.** They run
+   `07:00, 12:00, 17:00, 22:00, 27:00, 32:00, 37:00, 42:00, 47:00, 52:00, 57:00,`
+   **`62:00`**, then restart at `02:00` and cycle again — three passes of the same
+   12-step, 5-minute ladder. **`[00:62:00]` is not a valid time.** A minute field of 62 is
+   arithmetic that was never checked against a clock, and it appears twice.
+3. **Entry 001 contradicts itself.** Its `Timestamp:` is `[00:07:00]` while its
+   `Filename:` is `VIDEO_06_SCREENSHOT_001_00-02-00.jpg`. Neither is `[00:00:00]`.
+4. **The descriptions are template prose.** Every one of the 27 reads *"Steve Mauro
+   breaking down <lowercased title> and institutional market mechanics"* and *"Preserves
+   exact visual presentation and chart setups for Video 06"*. They describe TDI shark fins,
+   Asian Box accumulation and 5/13 EMA crosses — none of which V05's audio contains.
+
+### The mislabel worth carrying forward
+
+All three files, and the source `TRANSCRIPT.md`'s dropped header, call this lesson
+**"Video 06 of 21"**, and `RULES.md`'s rule IDs are `V06-R001` / `V06-R002`. That is the
+**pre-ingestion alphabetical numbering D-017 corrected** (the `Wk1, Wk10, Wk2, …` artifact
+that put Week 10 third). Under the adopted order this file is **V05**. A future session
+reading a quarantined file's own ID will be off by one from V03 onward — do not take
+lesson numbers from quarantined material.
+
+### Running tally for the fabrication pattern
+
+**V01, V02, V03, V04, V05 — five of five individually confirmed.** The `RULES.md` half is
+established for all 21 by direct measurement (Finding 1, re-confirmed this session).
+`NOTES.md` and `VISUAL_INDEX.md` remain pairwise distinct across the library and still
+require per-lesson examination for V06–V21 — and V05 shows why: its `VISUAL_INDEX.md`
+failure mode (duplicate images indexed as distinct screenshots on a generated time grid)
+would not have been caught by checking for V01's failure mode.
