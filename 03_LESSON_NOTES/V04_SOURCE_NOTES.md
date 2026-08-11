@@ -7,7 +7,7 @@
 | Session date | 2012-03-25 ("It's 809 Eastern Time on 325" `[00:07:01]`) |
 | Duration | 01:25:41 |
 | Transcript | `02_TRANSCRIPTS/V04/V04_TRANSCRIPT.md` — verified against audio 2026-08-10, 9-entry tail fenced |
-| Screenshots | `04_SCREENSHOTS/V04/` — 26 frames, indexed |
+| Screenshots | `04_SCREENSHOTS/V04/` — 27 frames, indexed in `04_SCREENSHOTS/V04/INDEX.md` |
 | Written | 2026-08-10 |
 
 > **Process disclosure — evidence-order deviation, same as V03.** `SWF_CAPTURE_RECIPE.md`

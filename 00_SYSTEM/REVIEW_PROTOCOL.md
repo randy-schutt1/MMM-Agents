@@ -41,6 +41,14 @@ re-reviewed**. Your severity classifications in §8 therefore carry a direct con
 classify on the merits, and state the `CRITICAL` / `MAJOR` / `MINOR` counts explicitly in
 the executive block (§13) so the gate state follows mechanically from this file.
 
+**Opening the gate does not waive `DECISIONS.md` D-025 — added 2026-08-11.** For any
+lesson with more than one voice, speaker tagging is **mandatory** and guest-presenter
+material is **secondary DESCRIPTIVE evidence, excluded as NORMATIVE doctrine**. Audit both
+halves: that no guest statement was admitted as a rule, **and** that descriptive guest
+evidence was not over-excluded. A guest statement may **extend** an `A-xxx`/`C-xxx` record
+and may **never close** one; a guest/instructor divergence is a corpus-hygiene record, not
+a contradiction in the method.
+
 Also record a confidence: `High` / `Medium` / `Low`.
 
 ---

@@ -2621,16 +2621,30 @@ and TDI has been explicitly deferred to a future lesson twice.
 |---|---|---|
 | V04 | `[00:15:49]`–`[00:15:55]` | Condition (c), verbatim: *"TDI confirms blood in the water shark fin outside the band to back in"* |
 | V04 | `[00:13:43]`–`[00:13:51]` | *"Any else agrees TDI is overextended and forms an M or some type of divergence… It'll be outside the volatility ban. You'll have blood in the water on the secondary line"* |
-| V04 | `[00:13:53]` | *"I can't show you TDI because it's not here"* — **the example chart carries no TDI panel** |
+| V04 | `[00:13:53]` | *"I can't show you TDI because it's not here"* — **the instructor's own example chart carries no TDI panel** (frames 3–12, Segment A) |
 | V04 | `[00:22:11]` | *"I'm going to do the TDI next week"* |
 | V03 | `[01:01:53]` | *"I am going to cover TDI later, but just so you know what I'm talking about"* |
+| V04 | frame `01:04:10` (`V04_01-04-10_gbpjpy-m15-platform-window.png`) | **DISPLAYED, NOT TAUGHT — `GUEST`, DESCRIPTIVE ONLY.** A sub-panel titled **`Traders Dynamic Index Visual`** is rendered across the lower third of the guest presenter's platform, with its coloured lines and volatility bands drawn |
+| V04 | frame `01:08:40` (`V04_01-08-40_audcad-m15-r-labels-adr-panel.png`) | **DISPLAYED, NOT TAUGHT — `GUEST`, DESCRIPTIVE ONLY.** Same panel, same title, on the AUDCAD,M15 chart |
+
+> **The two frames above were added 2026-08-11 per V04 review R1 finding `M6` (`E20`), and
+> they do NOT narrow this record.** They are `GUEST` material and therefore **descriptive
+> only** under the `C-005` ruling (`D-025`): guest evidence may **extend** an `A-xxx`
+> record and may **never close** one. A rendered indicator is not a taught indicator — no
+> inputs, periods, band construction, geometry or decision rule is recoverable from either
+> frame, and the numeric readout beside each panel title is illegible at this resolution
+> and is not transcribed. What they establish is **terminology only**: `TDI` denotes the
+> **Traders Dynamic Index**, an expansion no line of audio in V01–V04 states. The
+> structural gap this record exists for is unchanged, and so is the prohibition below.
 
 ### Why this is worse than an ordinary undefined term
 
 The other TDI-family records (`A-031` blood in the water, `A-032` shark fin) ask *what does
 this phrase mean*. This record notes that **all three of them sit inside a stated
-necessary condition**, and that the lesson which states the condition also declines to
-display the indicator. The result is that V04's criteria list — the most complete entry
+necessary condition**, and that the presenter who states the condition cannot display the
+indicator on his own chart. *(It is rendered later in the lesson on the **guest's**
+platform — frames 21 and 22 — which is descriptive evidence about the term and teaches
+nothing about the condition.)* The result is that V04's criteria list — the most complete entry
 statement in the course — cannot be executed or graded from V04 alone.
 
 This is the direct reason `V04_MASTERY_REPORT.md` records dimension G as `DEFERRED` rather

@@ -94,6 +94,14 @@ student mastery column from the reviewer column for exactly this reason.
 > - **D-023 — the one authorized exception on record.** The parallel V03 work performed
 >   while the V03 gate read `CLOSED` was an owner-authorized one-time override, not a
 >   breach to correct. It is not precedent.
+>
+> **Added 2026-08-11:**
+>
+> - **D-025 — what a lesson N+1 session must do before it starts, when the lesson has more
+>   than one voice.** An open gate is permission to begin, not permission to skip speaker
+>   tagging. Guest-presenter material is secondary **descriptive** evidence and is excluded
+>   as **normative** doctrine; tagging is mandatory before notes are written. This is a
+>   precondition on the work N+1 does, not a condition on the gate itself.
 
 ---
 
@@ -168,6 +176,17 @@ rules may not enter the canonical methodology. External frameworks (ICT, SMC,
 Wyckoff, Elliott Wave, generic price action) are not imported during the learning
 phase.
 **Status:** ACTIVE
+
+> **CROSS-REFERENCE added 2026-08-11. D-008's meaning is unchanged and it is not
+> superseded** — this is a forward pointer only, of the same kind as D-004's.
+> Read D-008 together with:
+>
+> - **D-025 — the hierarchy *inside* the course.** D-008 ranks the course against the
+>   agent; it does not distinguish speakers, because no lesson before V04 had more than
+>   one voice. Guest-presenter material is **secondary DESCRIPTIVE** evidence, sitting
+>   strictly below any instructor statement, and is **excluded as NORMATIVE** doctrine. It
+>   may **extend** an `A-xxx`/`C-xxx` record and may **never close** one. Speaker tagging
+>   is mandatory for any multi-voice lesson from V04 forward.
 
 ---
 
@@ -890,4 +909,109 @@ that the gate state follows mechanically from the review file — R1–R3 of V01
 already do this in their executive blocks, so no format change is required. The
 `validate_project.py` pre-flight guard proposed under `REVIEW_INDEX.md` open item 9 should
 implement this table rather than D-004's simpler `PASS`-only reading.
+**Status:** ACTIVE
+
+---
+
+## D-025 — Guest-presenter material is secondary DESCRIPTIVE evidence and is excluded as NORMATIVE doctrine
+
+**Date:** 2026-08-11
+**Refines:** D-008 (course evidence outranks agent interpretation), which remains `ACTIVE`
+and is **not superseded**. D-008 ranks *the course* against *the agent*. This entry ranks
+speakers *inside* the course, which D-008 did not contemplate because no lesson before V04
+had more than one voice.
+
+**Decision:** When a lesson contains material delivered by someone other than the course's
+author — a guest presenter, a coach, an invited student — that material is admissible as
+**SECONDARY, DESCRIPTIVE evidence** and is **EXCLUDED from the canonical methodology as
+NORMATIVE material.** The operative distinction is **normative versus descriptive**, not
+"in or out". Neither extreme is correct: guest material is not course doctrine, and it is
+not to be discarded.
+
+| Class | What it is | Treatment |
+|---|---|---|
+| **NORMATIVE** — what to do: entry criteria, gates, filters, stops, targets, sessions, thresholds, watchlists, schedules, holding periods | The V04 guest's ADR ~90–95% gate; 7 pips + spread below the LOD; 35–50 pip targets; *"don't trade Mondays"*; the 12-pair list **as a rule**; *"no second legs in the US session"* | **EXCLUDED from doctrine.** May not enter `12_MASTER_SPEC/`, `13_MACHINE_SPEC/`, `08_CONCEPT_LIBRARY/`, or any machine candidate. May not be cited as evidence **for or against** an instructor rule. May **never** be merged with instructor statements into one rule set. Recorded, speaker-tagged, fenced |
+| **DESCRIPTIVE** — that a term exists, how it is spelled, that an object is displayed, what a printed artifact says | The printed *"Mayo"* caption; the printed `TDI / Shark Fin / Stop / MM Candles / Divergence / Pivot / ADR / HOD LOD` form; the `TDR / YDR / WADR / MADR / %DADR` panel (`A-040`); the 12-pair worksheet **as a fact about the frame**; the visible `Traders Dynamic Index Visual` panel in frames 21 and 22 | **ADMISSIBLE**, at a weight **strictly below any instructor statement**. May **EXTEND** an `A-xxx` or `C-xxx` record. May **never CLOSE or RESOLVE** one, and may never outweigh an instructor statement |
+
+Four consequences that are part of this decision, not commentary on it:
+
+1. **A guest statement can never resolve an ambiguity or a contradiction.** `A-020`'s
+   period, `A-018`'s `R`, `A-031`'s *"water"* stay open regardless of how clearly or how
+   often a guest uses the terms. Descriptive guest evidence **extends** a record; only an
+   instructor statement can close one.
+2. **A guest/instructor divergence is not a contradiction in the method** and must not be
+   logged against the instructor. `C-005` is correctly filed as a **corpus-hygiene**
+   record, and that is the right category for every future instance.
+3. **Speaker tagging is MANDATORY from V04 forward** — in the transcript header and on
+   every source-note row — for any lesson with more than one voice. A session must
+   determine whether a lesson has guest content **before** writing notes from it, not
+   after. This is the mechanism that makes the rest of this decision enforceable.
+4. **Identifying a guest is provenance, not evidence.** Nothing in any artifact may depend
+   on the identification being right.
+
+**Reason:** V04 is the first lesson in the corpus where the course's author speaks for only
+~31% of the runtime; an unannounced, unlabelled handover at `[00:26:56]`→`[00:26:59]` gives
+the remaining ~69% to a guest presenter. Without a rule, the next session reading that
+transcript has two ways to go wrong and no way to tell which it has chosen.
+
+*Granting the guest full weight* would synthesise a rule set **neither man stated** —
+`REVIEW_PROTOCOL.md` §17 failure mode 3 (rule drift) in its purest form — and would do so
+inside the one lesson that finally states a complete entry rule. The guest disclaims
+authority in his own words (*"this is just me"* `[00:46:19]`, *"that's simply just my
+opinion"* `[01:00:10]`), attributes the entire method to the instructor, and describes a
+session in which the instructor's **necessary** condition, the second leg, *mostly does not
+occur* (*"in the US session, you generally don't get a lot of second lads [legs]. You just
+don't get them"* `[01:14:13]`–`[01:14:18]`).
+
+*Excluding the guest entirely* — from rules **and** interpretation — is the error in the
+opposite direction and it is not free. It would require retracting `A-040`, half of
+`04_SCREENSHOTS/V04/INDEX.md` §"What the visuals added", and the corroboration of the
+*"Mayo"* spelling, all of which are facts about **printed artifacts**, not claims about
+method. It would also discard the strongest available corroboration that the instructor's
+own vocabulary means what this project thinks it means — the guest's pre-trade checklist
+slide prints *"Has there been 3 levels of rise or correction?"*, *"Are we at or near the mid
+week Reversal?"*, *"3 Swipes / False Move / Trap"*, *"Was ADR met?"*: the instructor's
+terms, in print, written by someone who learned them directly from him. That is genuine
+evidence about **terminology**, and throwing it away buys nothing.
+
+**Evidence:** `18_REVIEW/V04/V04_REVIEW_R1.md` § "THE C-005 RULING — GUEST-PRESENTER
+MATERIAL" (the ruling in full, with the speaker identification independently verified at
+that round: 3,518 s of 5,137 s = 68.5% guest runtime; 40+ third-person references to Steve
+across segment B; `[01:24:53]` *"Steve is asking, do you ever take continuation trades?"* —
+the instructor in the audience, asking a question).
+`11_CONTRADICTIONS/CONTRADICTIONS.md` C-005. `02_TRANSCRIPTS/V04/V04_TRANSCRIPT.md`
+§ "TWO SPEAKERS — A PROVENANCE BOUNDARY THAT MATTERS". `DECISIONS.md` D-008.
+`REVIEW_PROTOCOL.md` §17 failure mode 3. `REVIEW_INDEX.md` open item 22.
+
+**Alternatives considered:** *Full weight — treat the guest as course doctrine* — rejected;
+it manufactures a rule set neither speaker stated, and it would let a practitioner's US-
+session habits overwrite the instructor's London stop-hunt method inside the very lesson
+that states it. *Full exclusion — strike guest material from rules **and** interpretation* —
+rejected; it destroys descriptive evidence about printed artifacts and terminology that
+costs nothing to keep and cannot mislead, because a printed caption makes no claim about
+what to do. *Case-by-case adjudication with no standing rule* — rejected; it makes
+admissibility a per-session judgement call, which is exactly the drift D-001 and D-004
+exist to prevent, and V05 begins under the same session date with a third presenter
+("Carl") already queued at `[01:19:02]`.
+
+**Consequences:**
+
+- **Retroactive effect on V04: NONE. This decision ratifies the work already done.** V04's
+  interim handling — tag every row, admit no `GUEST` row into the methodology, adopt no
+  `GUEST` number — is exactly the normative half of this ruling, and the descriptive uses
+  it made (`A-040`, the *"Mayo"* corroboration, the printed forms transcribed in source
+  notes §3b/§4f, the visible TDI panel added under review R1 `M6`) are exactly what the
+  descriptive half permits. **No V04 grade changes and no V04 artifact is rewritten on this
+  ground.** `C-005` stays open as a corpus-hygiene record; the *scope* question it raised
+  is now answered.
+- **Prospective effect on V05–V21: speaker tagging is mandatory.** Before writing notes
+  from any future lesson, the session must establish how many voices the recording carries
+  and mark the boundaries; where there is more than one, every source-note row carries a
+  speaker tag and the transcript header carries a speaker table. `REVIEW_INDEX.md` open
+  item 22 is discharged.
+- A future session that reads `C-005` must **not** take it as an instruction to *delete*
+  guest-derived corroboration. That misreading is what this entry exists to prevent.
+- `A-039` gains guest frames as **descriptive** evidence that TDI is displayed, and is
+  **not** narrowed by them — "displayed, not taught".
+
 **Status:** ACTIVE

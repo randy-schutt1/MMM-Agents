@@ -65,8 +65,8 @@ that pass rather than after it:
 | 18 | `00-41-20_guest-trade-example-boxes` | 00:41:20 | First worked trade: red and pale-blue session boxes over 15-minute candles, oscillator sub-panel | `[00:41:11]` *"a trade that I took on Friday"* |
 | 19 | `00-50-00_annotation-entered-after-fourth-retest-mayo` | 00:50:00 | Printed chart caption: **"Entered here after 4th retest Mayo"** | `[00:49:46]`–`[00:49:56]` *"four times it came up against the mail"* |
 | 20 | `00-55-20_guest-chart-green-red-boxes` | 00:55:20 | Platform window, green and red session boxes, watchlist at left | `[00:54:51]` *"we're coming out of the box here"* |
-| 21 | `01-04-10_gbpjpy-m15-platform-window` | 01:04:10 | Full trading platform, title bar **"MIG Bank Trading Station - Prime - [GBPJPY,M15]"**; watchlist of ~20 symbols; Navigator with a Scripts tree (`$$CloseAll`, `$Change_StopLosses_To_BreakEven`, `$Close_All_Orders_For_Symbol`, `$Delete_Pending_Orders`, `$Go_Long_With_Backup`, …); box labels **R = 33.2 / 58.4 / 15.5** | `[01:03:46]` *"This is GJ"*; `[00:53:36]` *"Yes, I do use the scripts that Steve provided"* |
-| 22 | `01-08-40_audcad-m15-r-labels-adr-panel` | 01:08:40 | **AUDCAD,M15.** Legend prints OHLC `1.03286 1.03299 1.03199 1.03220`, `High: 1.0403`, `Low: 1.0285`, `Previous Days Range: 118.3`, `Current Days Range: 12.9`. Top-right panel prints **HOD / LOD / TDR / YDR / WADR / MADR / %DADR** with values. Box labels **R = 52.4 / 65.9 / 54.6**. Order row dated **2011.11.17** | `[01:08:35]` *"This was a November trade"*; the ADR discussion `[01:05:36]`–`[01:06:09]` |
+| 21 | `01-04-10_gbpjpy-m15-platform-window` | 01:04:10 | Full trading platform, title bar **"MIG Bank Trading Station - Prime - [GBPJPY,M15]"**; watchlist of ~20 symbols; Navigator with a Scripts tree (`$$CloseAll`, `$Change_StopLosses_To_BreakEven`, `$Close_All_Orders_For_Symbol`, `$Delete_Pending_Orders`, `$Go_Long_With_Backup`, …); box labels **R = 33.2 / 58.4 / 15.5**. **A sub-panel across the lower third is titled `Traders Dynamic Index Visual`**, followed by a six-value numeric readout **whose digits are not legible at this resolution and are therefore not transcribed**; green / red / yellow lines and pale volatility bands are rendered — **displayed, not taught** (see below and `A-039`) | `[01:03:46]` *"This is GJ"*; `[00:53:36]` *"Yes, I do use the scripts that Steve provided"* |
+| 22 | `01-08-40_audcad-m15-r-labels-adr-panel` | 01:08:40 | **AUDCAD,M15.** Legend prints OHLC `1.03286 1.03299 1.03199 1.03220`, `High: 1.0403`, `Low: 1.0285`, `Previous Days Range: 118.3`, `Current Days Range: 12.9`. Top-right panel prints **HOD / LOD / TDR / YDR / WADR / MADR / %DADR** with values. Box labels **R = 52.4 / 65.9 / 54.6**. Order row dated **2011.11.17**. **A sub-panel across the lower third is titled `Traders Dynamic Index Visual`**, followed by a six-value numeric readout **whose digits are not legible at this resolution and are therefore not transcribed**; green / red / yellow lines and cyan volatility bands are rendered — **displayed, not taught** (see below and `A-039`) | `[01:08:35]` *"This was a November trade"*; the ADR discussion `[01:05:36]`–`[01:06:09]` |
 | 23 | `01-12-00_annotation-hit-limit-entered-at-lod` | 01:12:00 | Printed captions **"Hit Limit here"** and **"Entered here at LOD"**; box label **R = 95.2** | `[01:11:41]`–`[01:12:30]` the "kindergarten M" entry walkthrough |
 | 24 | `01-19-20_guest-platform-full-window` | 01:19:20 | Full platform window with watchlist and Navigator, one 15-minute chart | `[01:19:12]` *"This tree, this is from November"* |
 | 25 | `01-20-40_chart-magenta-level-example` | 01:20:40 | Chart with a prominent horizontal **magenta** line across it, two red boxes | `[01:20:13]` *"last chart here"* |
@@ -169,6 +169,31 @@ looking at frames, so that this delta stays visible (`SWF_CAPTURE_RECIPE.md` §9
    alongside `HOD / LOD` — a family of range measures the audio only gestures at
    (*"how do I determine the ADR… a lot of these indicators they'll tell you"*
    `[01:07:01]`–`[01:07:14]`). Carried as **`A-040`**.
+7. **TDI is on the screen — DISPLAYED, NOT TAUGHT.** *(Added 2026-08-11 per V04 review R1
+   finding `M6` (`E20`); this observation was missing from the first draft of the index.)*
+
+   Frames **21** (`01-04-10`) and **22** (`01-08-40`) each carry a sub-panel titled
+   **`Traders Dynamic Index Visual`** across the lower third — the guest presenter's own
+   platform, with the indicator's green / red / yellow lines and its volatility bands
+   rendered. The bands are the very object condition (c) refers to (*"outside the band to
+   back in"* `[00:15:49]`–`[00:15:55]`).
+
+   **This does not weaken `A-039` in the slightest, and it is recorded so that nobody
+   later mistakes it for a resolution.**
+
+   - **A rendered indicator is not a taught indicator.** No inputs, no periods, no band
+     construction, no geometry and no decision rule is recoverable from either frame. The
+     six-value readout beside each panel title is not legible at this resolution and is
+     deliberately not transcribed.
+   - The instructor's *"I can't show you TDI because it's not here"* `[00:13:53]` is about
+     **his** example chart in Segment A. These two frames are the **guest's** platform in
+     Segment B, and under the `C-005` ruling (`D-025`) guest material is admissible only
+     as **descriptive** evidence — it may extend `A-039`, and may never close it.
+   - What the frames do settle, descriptively, is **terminology**: `TDI` denotes the
+     **Traders Dynamic Index**, which no line of audio in V01–V04 states. That expansion
+     is now printed on screen rather than assumed.
+
+   Carried into `A-039`'s evidence table with the same *"displayed, not taught"* scoping.
 
 ## WHAT IS NOT CLAIMED
 

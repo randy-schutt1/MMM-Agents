@@ -121,7 +121,7 @@ An ignored contradiction is reviewer error code E13.
 | C-002 | Whether the trading-zone / blue-box filter and the one-direction rule are mandatory | V01 `[00:44:15]` / `[00:51:22]` vs V01 `[00:44:03]` / `[00:51:34]` | STATED EXCEPTION — condition unmeasurable | No, but blocking for implementation |
 | C-003 | Whether M and W formations can fail | V02 `[00:38:40]` vs V02 `[00:38:40]` (same sentence) | UNRESOLVED — self-contradictory as spoken | No |
 | C-004 | London session open — 3:30am printed vs 4:00 spoken | V02 slide `[00:45:55]` vs V02 `[00:50:32]` | UNRESOLVED — daylight-saving explanation plausible but unstated | No, but blocking for any time-gated rule |
-| C-005 | Instructor vs guest presenter — different entry gate, session, second-leg dependence and stop reference, in one lesson | V04 `[00:15:34]`–`[00:15:57]` (instructor) vs V04 `[01:13:34]`–`[01:14:18]` (guest) | UNRESOLVED — pending a **scope ruling**, not pending evidence | No on the method; **yes on corpus hygiene** |
+| C-005 | Instructor vs guest presenter — different entry gate, session, second-leg dependence and stop reference, in one lesson | V04 `[00:15:34]`–`[00:15:57]` (instructor) vs V04 `[01:13:34]`–`[01:14:18]` (guest) | UNRESOLVED as corpus hygiene. **Scope ruling made 2026-08-11 — `D-025`**: guest material is secondary DESCRIPTIVE evidence, excluded as NORMATIVE doctrine | No on the method; **yes on corpus hygiene** |
 
 ---
 
@@ -685,15 +685,33 @@ the reviewer should make, not a student session.
 ### Resolution
 
 ```text
-UNRESOLVED — pending a scope ruling, not pending evidence
+UNRESOLVED as a corpus-hygiene record.
+THE SCOPE RULING HAS BEEN MADE — DECISIONS.md D-025, 2026-08-11.
 ```
 
 **Foundational: no**, on the method. **Yes, on corpus hygiene.**
 
 This is the distinguishing feature of this record: unlike `C-001`, no further course
-material will resolve it, because there is nothing factually in doubt. What is needed is a
-**ruling on how guest-presenter material is treated** across the corpus. Until that
-ruling exists, the interim handling is already in force and is strict:
+material will resolve it, because there is nothing factually in doubt. What was needed is a
+**ruling on how guest-presenter material is treated** across the corpus.
+
+> **THE RULING — `D-025`, recorded 2026-08-11 from V04 review R1.** Guest-presenter
+> material is admissible as **SECONDARY, DESCRIPTIVE** evidence (that a term exists, how it
+> is spelled, that an object is displayed, what a printed artifact says) and is **EXCLUDED
+> as NORMATIVE** material (entry criteria, gates, filters, stops, targets, sessions,
+> thresholds, watchlists, schedules). Descriptive guest evidence may **EXTEND** an
+> `A-xxx`/`C-xxx` record and may **NEVER RESOLVE or CLOSE** one, and may never outweigh an
+> instructor statement. A guest/instructor divergence is **not a contradiction in the
+> method** and is filed as corpus hygiene — which is what this record is, and it is the
+> right category for every future instance. Speaker tagging is **mandatory** from V04
+> forward for any lesson with more than one voice.
+>
+> **This record stays open.** The ruling settles the *scope* question it raised; it does
+> not make the two accounts one account, and the hygiene hazard it exists to flag — two
+> voices in one undifferentiated transcript — is permanent. The interim handling below is
+> now the standing handling, ratified rather than replaced.
+
+The interim handling, in force since the record was opened and now ratified by `D-025`:
 
 1. Every V04 artifact tags each statement `INSTRUCTOR` or `GUEST`.
 2. **No `GUEST` statement enters the canonical methodology**, the concept library, the
@@ -703,11 +721,16 @@ ruling exists, the interim handling is already in force and is strict:
 
 ### Required to resolve
 
-A project-owner or reviewer decision on the status of non-instructor presenters, recorded
-in `DECISIONS.md`. **This should be raised before V05**, because the V03–V05 lessons share
-one session date and V05 may well contain more of the same guest — and because the
-question is about to recur for the third presenter, "Carl", who is queued at
-`[01:19:02]` and does not speak inside this file.
+~~A project-owner or reviewer decision on the status of non-instructor presenters, recorded
+in `DECISIONS.md`.~~ — **DISCHARGED 2026-08-11. The decision exists: `D-025`.** It was
+raised before V05, as this field required, and it applies prospectively to V05–V21 and to
+the third presenter, "Carl", who is queued at `[01:19:02]` and does not speak inside this
+file. V05 shares the same session date.
+
+What remains owed on this record is **not** a further ruling. It is the mechanical
+obligation `D-025` imposes on every future multi-voice lesson: establish the number of
+voices and the boundaries **before** writing notes, tag every source-note row, and carry a
+speaker table in the transcript header.
 
 ### Related
 
@@ -716,7 +739,8 @@ question is about to recur for the third presenter, "Carl", who is queued at
 | Source | `03_LESSON_NOTES/V04_SOURCE_NOTES.md` §3f |
 | Interpretation | `03_LESSON_NOTES/V04_INTERPRETATION.md` I9, §8.2 |
 | Ambiguity | A-038 (the guest's ADR window), A-039 (TDI required but untaught) |
-| Decision | D-008 (evidence hierarchy) |
+| Decision | **D-025 (the ruling — guest material is descriptive, never normative)**; D-008 (evidence hierarchy, which D-025 refines) |
+| Review | `18_REVIEW/V04/V04_REVIEW_R1.md` § "THE C-005 RULING" |
 
 ---
 

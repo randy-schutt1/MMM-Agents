@@ -2360,3 +2360,136 @@ prior round. `validate_project.py`: 97 passed, 0 warnings, 0 failures.
 
 Student remediation of V04's seven minors and N1, then a fresh round (R2). Independently,
 V05 may begin at any time — the gate is open.
+
+---
+
+## 2026-08-11 — V04 R1 REMEDIATION (7 minors + N1) and DECISIONS.md D-025
+
+### Objective
+
+Address the required corrections from `18_REVIEW/V04/V04_REVIEW_R1.md` — seven `MINOR`
+findings and note `N1` — and record the owner action, the `C-005` scope ruling, as
+`DECISIONS.md` **D-025**.
+
+Scope was held to exactly that (`REMEDIATION_PROTOCOL.md` §3.2, `REVIEW_PROTOCOL.md` §10).
+Nothing already verified at R1 was re-derived.
+
+### Findings Addressed
+
+- **[E19 / MINOR] M1 — USDCHF's 15-minute series mis-sliced at the week open → EVIDENCE
+  FIX, redone not reworded.** Diagnosed from the committed data: on this feed USDCHF's
+  first 4-hour bar of the week is a **partial bar of twelve** 15-minute bars, not sixteen
+  (the pair quotes an hour later than the other majors). The fixed 16-bar slicing therefore
+  began four bars early — the committed 480-bar window carried four **previous-week** bars
+  at its head, and the weekend gap (a −12.7 pip discontinuity, the only 15m discontinuity
+  in the dataset) sat *inside* what the file called "the week". The bar-0 reconstruction
+  missed by **28.1 pips on the OPEN**, which validation 4 says can never happen from dwell
+  latency; that contradiction is what should have caught it at the time. **The test worked;
+  the diagnosis failed.** Re-sliced: `bars_15m_week` 480 → **476 = 12 + 29 × 16** (the
+  complete week — nothing was missing from the tail), `offset_in_harvest` 261 → **265**,
+  `j_hi_15m` 363 → 359, `j_lo_15m` 4 → 0. Every pair now carries an explicit
+  **`bars_15m_in_4h_bar_0`** field (16 / 16 / 16 / **12**). USDCHF 27/30 → **28/30**; the
+  4h↔15m reconstruction **474/480 → 476/480**, its four residuals now genuinely ≤ 0.3 pip
+  and all in highs or lows. The ±0.4 pip misattribution is replaced by the real diagnosis
+  and the partial-first-bar behaviour is stated as a limit of the 15m pipeline V05 would
+  inherit.
+- **[E01 / MINOR] M2 — two "verification" quote fragments silently smoothed** in the one
+  file whose purpose is to establish that the transcript is verbatim → both restored to the
+  **adopted transcript's literal wording** (*"money **set up** here"* `[00:50:34]`;
+  *"**Gaby** a nice ugly **look in** kindergarten **ma'am** there"* `[01:10:36]`), the
+  paragraph now states which side of the comparison it quotes, and the correction is
+  disclosed in place rather than made silently.
+- **[E20/E11 / MINOR] M3 — two ambiguity cross-references orphaned** by the duplicate-ID
+  remap performed in the register before commit and never propagated back → *"the water"*
+  `A-037` → **`A-031`**; *"Timing Shadow Box / Brink Spox"* `A-038` → **`A-030`**.
+- **[E20 / MINOR] M4 — stale count and stale filename** → `V04_SOURCE_NOTES.md` *"26
+  frames"* → **27**; mastery report *"VISUAL_INDEX"* → **`INDEX.md`**, *"2 scripts"* → 3.
+- **[E20 / MINOR] M5 — validation 1 not reproducible from committed data** → restated over
+  the committed 30-bar week (**116/116 continuous**, recomputed mechanically) and the
+  harvest-wide **569 / 549 / 20** figures explicitly marked **UNREPRODUCED**. The arrays
+  were **not** fabricated back into the repo: they were never written to disk, and
+  re-harvesting today would produce a *different* dataset from the one every figure in the
+  file was computed on. Disclosure is the honest option and is what was done.
+- **[E20 / MINOR] M6 — visible TDI panel unrecorded** → frames 21 (`01-04-10`) and 22
+  (`01-08-40`) now record the **`Traders Dynamic Index Visual`** sub-panel in `INDEX.md`,
+  with a new §"What the visuals added" item 7, and in `A-039`'s evidence table — both
+  scoped **"displayed, not taught"** and both stating explicitly that this does **not**
+  narrow `A-039`, because the frames are `GUEST` material and therefore descriptive only
+  under D-025. The six-value numeric readout beside each panel title **is not legible at
+  this resolution and was deliberately not transcribed** (the frames were opened and
+  magnified before the descriptions were written).
+- **[E20 / MINOR] M7 — four quality-control boxes unchecked and undeclared** → new
+  **QUALITY-CONTROL CHECKLIST** section in the mastery report: 13 checked, 2 `DEFERRED`
+  (manual chart testing, failed valid setups — both blocked by `A-039`), **4 UNCHECKED and
+  stated** (concept library, positive / negative / borderline examples). The concept-library
+  box is explicitly **not** excused by `A-039` — that work could have been done and was not.
+  The project-wide instance goes to `CUMULATIVE_25.md`, per R1.
+- **[NOTE N1] Dimensions B and C mislabelled** → **B `PARTIAL` → `DEFERRED`**, **C `FAIL` →
+  `DEFERRED`**, both *"blocked by `A-039`"* under `D-019`, with the original text retained
+  **verbatim** beneath the new label. `NOT APPLICABLE` declined — there is plainly subject
+  matter. As labelled before, V04 could never have reached `PASS`, because the cause sits in
+  the source.
+
+### Decision Recorded — D-025
+
+`DECISIONS.md` **D-025 — Guest-presenter material is secondary DESCRIPTIVE evidence and is
+excluded as NORMATIVE doctrine.** Refines D-008 (which ranks the course against the agent
+but does not distinguish speakers, because no lesson before V04 had more than one voice).
+Normative content — entry criteria, gates, filters, stops, targets, sessions, thresholds,
+watchlists, schedules — is **excluded**: it may not enter `12_MASTER_SPEC/`,
+`13_MACHINE_SPEC/`, `08_CONCEPT_LIBRARY/` or any machine candidate, may not be cited for
+**or against** an instructor rule, and may never be merged with instructor statements.
+Descriptive content — that a term exists, how it is spelled, that an object is displayed,
+what a printed artifact says — is **admissible below any instructor statement**, may
+**EXTEND** an `A-xxx`/`C-xxx` record and may **NEVER RESOLVE or CLOSE** one. Speaker tagging
+is **mandatory** for any multi-voice lesson from V04 forward. **Retroactive effect on V04:
+none — it ratifies the existing work.** Prospective effect on V05–V21 is the tagging
+obligation, which bites immediately: V05 shares V04's session date and "Carl" is queued.
+
+Cross-referenced from `D-008` (forward pointer), `D-004`'s pointer block, the `PROGRESSION
+RULE` block in `COURSE_PROGRESS.md` and `REVIEW_PROTOCOL.md` §2 — an open gate is permission
+to begin, not permission to skip speaker tagging. `C-005` updated: the scope ruling is made,
+the record stays open as corpus hygiene, and its "Required to resolve" field is discharged.
+
+### Work Redone (not edited)
+
+Only `M1`. The USDCHF slice was re-derived from the committed 15-minute array rather than
+the paragraph describing it being reworded, and a new committed script,
+`05_HOMEWORK/V04/scripts/verify_reconstruction.py`, recomputes validation 3 end to end —
+the per-pair partial-first-bar length, the absence of any in-week discontinuity, and the
+116/120 bars / **476/480** fields total — exiting non-zero on mismatch. Every other item is
+a documentation fix under `REMEDIATION_PROTOCOL.md` §3.3.
+
+### Verification — no conclusion changed
+
+Checked rather than assumed, because `M1` touched data:
+
+- The **4-hour** series was never affected — continuous **116/116** — and every figure in
+  homework §2 and §3 is computed from it: block sizes and percentages, weekly extremes and
+  their bars, and the **3.83-day** duration on both formed anchors.
+- The **scoped 2-of-4 result stands**. USDCHF is excluded because its week low sits on 4h
+  **bar 0**, the week-open bar, where no anchor can have formed — a 4-hour fact the re-slice
+  does not touch. USDJPY is excluded on the same basis. EURUSD and GBPUSD remain the only
+  admissible pairs, both at 3.83 days.
+- The **§3.3 swing-descriptor tables are unchanged**, recomputed to confirm: USDCHF's
+  extreme index and its 44-bar window shifted by exactly four bars together, so the bars
+  examined are the same bars.
+- **`M6` does not weaken `A-039`**, and D-025 is the reason: guest frames are descriptive
+  evidence that may extend the record and may never close it. TDI is displayed; it is still
+  never taught.
+
+### Git
+
+Explicit paths on every `git add` and `git commit`; `git status` and `git diff --staged`
+read before committing. **A concurrent V05 student session is active in this shared working
+tree** — `02_TRANSCRIPTS/V05/` appeared untracked during this session and was left
+untouched and unstaged. The untracked `05_HOMEWORK/V02/measure_usdchf_week.py` (open item
+13) was left untouched, as at every prior round. `validate_project.py`: **97 passed, 1
+warning, 0 failures** — the warning is "V05 has no transcript", which is the concurrent
+session's work in progress and is expected.
+
+### Next Review Trigger
+
+**A fresh reviewer session for V04 R2** (`D-003`). V04 stays `IN REMEDIATION` and reaches
+`COMPLETE` only on a reviewer `PASS` (`D-004`). V05 is unaffected — the gate has been open
+since R1 — but a V05 session must now apply **D-025** before writing notes.

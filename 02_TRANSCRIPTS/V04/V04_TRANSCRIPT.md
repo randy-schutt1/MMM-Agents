@@ -85,10 +85,11 @@ fenced:
    have to tell you not to take shit that's inside the range of the blue box"*; *"you
    cannot go and tell somebody that you can pick the high and low and the reversal point
    … they will tell you that you are a berserk crazy, you need to be in a straight
-   jacket"*; *"there was a bunch of money sitting up here and they had to go after it —
-   this pair was the Euro"*; *"one two three swipes … gave you a nice ugly looking
-   kindergarten [M] there"*; *"here's the 32 button and it's well below that, it's
-   probably 25"*. Divergences are ASR-vs-ASR only and never of substance
+   jacket"*; *"There was a bunch of money set up here and they had to go after it. This
+   pair was the Euro."* `[00:50:34]`–`[00:50:40]`; *"One, two, three, swipes. Gaby a nice
+   ugly look in kindergarten ma'am there."* `[01:10:33]`–`[01:10:36]`; *"here's the 32
+   button and it's well below that, it's probably 25"*. Divergences are ASR-vs-ASR only
+   and never of substance
    (*"corrected a hundred plus bibs"* vs *"a hundred-plus-pips"*; *"that stuff cuts man"*
    vs *"that's tough cuts, man"*; *"Variation on the fame"* vs *"variation on the
    theme"*). **One numeric divergence is recorded rather than resolved:** at
@@ -96,6 +97,18 @@ fenced:
    my stop-offs to break even"* where the re-transcription hears *"more than 15 or 20
    pips"*. Neither reading is preferred here; the figure is treated as uncertain wherever
    it is cited.
+
+   > **CORRECTED 2026-08-11 per V04 review R1 finding `M2` (`E01`).** The six
+   > low-frequency specifics above are quoted from the **adopted transcript**, verbatim,
+   > and this sentence now says so — the paragraph previously left the side of the
+   > comparison unstated. Two of the six were **silently smoothed** when first written:
+   > *"there was a bunch of money **sitting up** here"* for the adopted *"money **set
+   > up** here"* `[00:50:34]`, and *"one two three swipes … **gave you** a nice ugly
+   > **looking** kindergarten [M] there"* for the adopted *"**Gaby** a nice ugly **look
+   > in** kindergarten **ma'am** there"* `[01:10:36]`. Both are restored above. That is
+   > the `E01` class charged at V02 R1, surviving in the one file whose purpose is to
+   > establish that the transcript is verbatim. Nothing downstream cited either fragment.
+
 3. **It contains its own errors.** Garbled ASR is preserved rather than smoothed —
    *"corrected a hundred plus bibs"* for "pips" `[00:03:27]`, *"Essenture Consolidation
    Zone"* for "in essence, the consolidation zone" `[00:11:48]`, *"all these criteria are
@@ -175,7 +188,7 @@ reader should not mistake for terminology:
 - *"the water"* (20×) — spoken as-is, and distinct from *"the mail"*; both are used as
   take-profit destinations by the guest presenter. V03 has *"blood in the water"* and
   *"bloodline"* for a TDI line; whether the guest's *"water"* is the same object is
-  **not** established here (**A-037**).
+  **not** established here (**A-031**).
 - *"lamb"* `[00:57:07]`, *"ma'am"* `[01:10:36]`, *"now"* `[01:11:47]`, `[01:12:09]`,
   *"AM"* `[00:21:53]`, `[00:21:59]`, *"M-o-form"* `[00:00:37]` — all garble for the
   letter **M** (the M formation).
@@ -189,7 +202,7 @@ reader should not mistake for terminology:
 - *"bibs"* `[00:03:27]` — pips.
 - *"Timing Shadow Box or the Brink Spox"* `[00:13:01]`, *"the Brink Shadow"* `[00:13:40]`,
   *"in the bricks"* `[00:10:53]` — one object, the "brick(s)" / shadow box; the rendering
-  is unstable and the term is never defined in this lesson (**A-038**).
+  is unstable and the term is never defined in this lesson (**A-030**).
 - *"the 19th of trade was, thanks Joe"* `[00:04:20]`, *"a small diet"* `[00:26:59]`,
   *"not the weather how to get my dig back in there"* `[00:19:34]`-`[00:19:42]`, *"the bottle box"*
   `[00:46:10]`, *"Gaby"* `[01:10:37]`, *"smypy"* `[00:30:58]`, *"Like sense?"* `[00:40:49]`
@@ -199,6 +212,16 @@ reader should not mistake for terminology:
   are spoken as-is and are not garble.
 - Speaker labels are absent throughout — see the section above. Student questions are
   identifiable only from context and from the presenters repeating the asker's name.
+
+> **CROSS-REFERENCES CORRECTED 2026-08-11 per V04 review R1 finding `M3` (`E20`/`E11`).**
+> The *"the water"* line cited **`A-037`** and the *"Timing Shadow Box / Brink Spox"* line
+> cited **`A-038`**. Both were pre-assigned IDs, orphaned by the duplicate-ID remap this
+> session performed in the register before commit (`V04_MASTERY_REPORT.md` §I) and not
+> propagated back into this file. `A-037` is *halving the Asian range* and `A-038` is *the
+> guest's ADR lookback window* — neither is the cited subject. The correct targets are
+> **`A-031`** ("blood in the water" / "bloodline") and **`A-030`** ("brinks shadow" /
+> "shadow box"), and both are now used above. Every other `A-0xx` reference in the V04
+> artifacts was checked at R1 and is correct.
 
 **No timestamp in this file has been independently re-derived** beyond the five spot-check
 windows above. Treat a timestamp as accurate to roughly a few seconds.

@@ -11,9 +11,37 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V04 — R1 REVISE, IN REMEDIATION; V05 gate OPEN per D-024)
+VIDEOS IN PROGRESS:  1  (V04 — R1 REVISE, REMEDIATION APPLIED, AWAITING R2;
+                        V05 gate OPEN per D-024)
 VIDEOS PASSED:       3  (V01, V02, V03 — V03 PASS at R3, COMPLETE)
-CURRENT LESSON:      **V04 — REVIEWED 2026-08-10 (R1): REVISE, confidence HIGH,
+CURRENT LESSON:      **V04 — R1 REMEDIATION APPLIED 2026-08-11, AWAITING R2.**
+                     All seven minors (M1-M7) and note N1 applied, plus the owner
+                     action: **DECISIONS.md D-025 records the C-005 ruling** —
+                     guest-presenter material is SECONDARY DESCRIPTIVE evidence,
+                     EXCLUDED as NORMATIVE doctrine; it may EXTEND an A-xxx/C-xxx
+                     record and may NEVER CLOSE one; speaker tagging is MANDATORY
+                     for V05-V21. D-025 ratifies V04's existing handling, so no V04
+                     grade changed on that ground.
+                     The one evidence fix was M1: USDCHF's 15-minute week was
+                     mis-sliced because its first 4h bar of the week is a PARTIAL
+                     bar of TWELVE 15m bars, not sixteen — four previous-week bars
+                     sat at the head of the slice, putting the weekend gap inside
+                     the "week", and the 28.1-pip bar-0 OPEN mismatch had been
+                     reported as +/-0.4 pip harvest noise. Re-sliced to 476 bars
+                     (12 + 29x16); USDCHF 27/30 -> 28/30 and the 4h<->15m total
+                     474/480 -> **476/480**; a new per-pair bars_15m_in_4h_bar_0
+                     field and scripts/verify_reconstruction.py make it mechanical.
+                     **No conclusion changed** — the 4h data was never affected
+                     (116/116 continuous), and USDCHF was already excluded from the
+                     scoped 2-of-4 / 3.83-day result on 4h grounds, which was
+                     re-verified rather than assumed. M5: validation 1's 569/549/20
+                     harvest-wide figures are now explicitly marked UNREPRODUCED.
+                     N1: dimensions B and C moved from PARTIAL/FAIL to **DEFERRED —
+                     blocked by A-039** under D-019, so V04 is no longer labelled in
+                     a way that could never reach PASS. V04 is still IN REMEDIATION,
+                     not COMPLETE: only a reviewer PASS at R2 does that (D-004).
+                     ---- prior ----
+                     **V04 — REVIEWED 2026-08-10 (R1): REVISE, confidence HIGH,
                      0 CRITICAL / 0 MAJOR / 7 MINOR / 5 NOTE. V05 gate OPEN under
                      D-024; V04 is IN REMEDIATION, not COMPLETE.** The R1 reviewer
                      rendered the **C-005 scope ruling**: guest-presenter material is
@@ -158,7 +186,32 @@ CURRENT LESSON:      **V04 — REVIEWED 2026-08-10 (R1): REVISE, confidence HIGH
                      0 major. COMPLETE. All 15 of R2's required actions applied and
                      verified against the source; R2 finding N1 (A-006's trailing
                      block) closed by withdrawing it in place.
-NEXT ACTION:         **Two tracks, and they may run in parallel — the V05 gate is
+NEXT ACTION:         **REQUEST A FRESH REVIEWER SESSION FOR V04 R2 (D-003).** The
+                     V04 R1 remediation is APPLIED 2026-08-11 and awaits independent
+                     verification — that verification is what moves V04 to COMPLETE.
+                     All seven minors, N1 and the owner action are done:
+                     M1 USDCHF 15m re-sliced (partial 12-bar week-open 4h bar
+                     diagnosed; 474/480 -> 476/480; verify_reconstruction.py added);
+                     M2 two smoothed quotations restored to the adopted wording;
+                     M3 A-037/A-038 repointed to A-031/A-030; M4 "26 frames" -> 27
+                     and VISUAL_INDEX -> INDEX.md; M5 validation 1 restated over the
+                     committed data with the 569/549/20 figures marked UNREPRODUCED;
+                     M6 the visible Traders Dynamic Index panel recorded in INDEX.md
+                     and A-039 as "displayed, not taught"; M7 the four unchecked QC
+                     boxes declared; N1 dimensions B and C re-dispositioned to
+                     DEFERRED under D-019. **DECISIONS.md D-025 is RECORDED** — the
+                     C-005 ruling now binds future sessions under D-001, and is
+                     cross-referenced from D-008, D-004's pointer block, the
+                     PROGRESSION RULE below and REVIEW_PROTOCOL.md §2.
+                     **No conclusion in any V04 artifact changed** — verified, not
+                     assumed: the 4h data is untouched and continuous 116/116, and
+                     the scoped 2-of-4 / 3.83-day result still excludes USDCHF on
+                     4h grounds. See V04_MASTERY_REPORT.md § REVISION R1.
+                     **V05 remains OPEN and unblocked**, and a V05 session must
+                     apply D-025 before writing notes: establish the number of
+                     voices first, tag every source-note row.
+                     ---- prior ----
+                     **Two tracks, and they may run in parallel — the V05 gate is
                      OPEN under D-024 (0 CRITICAL, 0 MAJOR at V04 R1).**
                      (1) **OWNER: record the C-005 ruling as DECISIONS.md D-025**,
                      before V05 is studied. The ruling itself is in
@@ -583,6 +636,16 @@ in the next review round, like any other finding.
 
 The one authorized exception on record is `DECISIONS.md` D-023 (owner-authorized parallel
 V03 pass). It is not precedent.
+
+**An open gate does not waive `D-025` — added 2026-08-11.** Before a session writes notes
+from lesson N+1 it must establish **how many voices** the recording carries and mark the
+boundaries. Where there is more than one, **speaker tagging is mandatory** — in the
+transcript header and on every source-note row — and guest-presenter material is
+**secondary DESCRIPTIVE evidence, excluded as NORMATIVE doctrine**: it may extend an
+`A-xxx`/`C-xxx` record and may never close one, and it may not enter `12_MASTER_SPEC/`,
+`13_MACHINE_SPEC/`, `08_CONCEPT_LIBRARY/` or any machine candidate. This is a precondition
+on the work, not a condition on the gate. It bites immediately: **V05 shares V04's session
+date and a third presenter ("Carl") is queued at `[01:19:02]`.**
 
 ---
 

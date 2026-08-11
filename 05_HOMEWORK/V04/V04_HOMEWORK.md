@@ -7,8 +7,8 @@
 | Attempted | 2026-08-10 |
 | Data source | TradingView, **FXCM** feed, 4-hour and 15-minute. **No login, no account, no paywalled feature, no CAPTCHA encountered or bypassed.** |
 | Charts | `05_HOMEWORK/V04/charts/` (8 files, rendered from the committed data — not screenshots) |
-| Raw data | `05_HOMEWORK/V04/data/v04_week_2026-08-02_4h_and_15m.json` — 120 × 4h bars + 1,920 × 15m bars, exact OHLC |
-| Scripts | `05_HOMEWORK/V04/scripts/` — both harvesters committed |
+| Raw data | `05_HOMEWORK/V04/data/v04_week_2026-08-02_4h_and_15m.json` — 120 × 4h bars + **1,916** × 15m bars, exact OHLC (**1,916, not 1,920**: USDCHF's week opens with a partial 4h bar of twelve 15m bars — §1.2 validation 3) |
+| Scripts | `05_HOMEWORK/V04/scripts/` — both harvesters, plus `verify_reconstruction.py` |
 | Week analysed | **Sun 02 Aug 2026 21:00 UTC → Fri 07 Aug 2026 17:00 UTC** (30 × 4h bars per pair) |
 
 **Completed on real data. No substitution was needed.**
@@ -73,18 +73,48 @@ screenshots. They exist to be looked at; **no measurement is taken from them.**
 ### 1.2 Four independent validations were run
 
 **1 — The open-equals-previous-close chain.** Within a trading week each 4h bar's open must
-equal the prior bar's close. Across the four pairs' full harvests (**569 bar
-transitions, 549 continuous, 20 breaks**), every break but one falls on the **30-bar
-cadence** — indices 15, 45, 75, 105, 135 (30 × 4h = 120 h = one five-day FX week). The one
-exception is a GBPUSD break at index 143, the last bar of the harvest, which is the
-still-forming current bar at the edge of the data and not a weekend. This is V02's R2/R3
-finding used as a positive test: continuity is *expected* to hold within a week and
-*expected* to break at weekends, and it does exactly that.
+equal the prior bar's close.
 
-USDCHF again shows only four breaks rather than five — its final weekend gap is genuinely
+**Over the committed data — 4 pairs × 30 bars = 116 transitions — the chain is
+116/116 continuous, zero breaks.** That is the reproducible half of this test and it is
+the half that matters: it is the evidence that the week slice used everywhere below is
+one unbroken trading week and contains no weekend. `scripts/verify_reconstruction.py`
+recomputes it from the committed JSON.
+
+> **REPRODUCIBILITY CAVEAT — added 2026-08-11 per V04 review R1 finding `M5` (`E20`).**
+> This paragraph originally reported **569 bar transitions, 549 continuous, 20 breaks**,
+> with break indices **15, 45, 75, 105, 135** and a GBPUSD exception at index **143**,
+> computed over the four pairs' **full ~144-bar harvests**. Those harvests are **not in
+> this repository** — the committed JSON holds only the 30-bar week per pair, so a reader
+> has 116 transitions available, not 569. **The 569 / 549 / 20 figures therefore cannot be
+> independently re-verified from what is committed, and they are marked UNREPRODUCED.**
+>
+> They are not withdrawn and no downstream number depends on them: their only role was to
+> locate the week boundary, and the same boundary is established by the committed data
+> alone (116/116 continuous within the week, and V03's independently harvested dataset for
+> the same week agrees on 476/480 fields — validation 2). `LOG.md` records this count
+> being corrected 571 → 569 by recomputation during the session, so this is a
+> **reproducibility** defect, not an accuracy one.
+>
+> **Why the arrays are not simply committed instead.** The full harvests were held in
+> session memory and were not written to disk; re-harvesting today would produce a
+> *different* dataset (a later "current bar", possibly revised feed values) and committing
+> it would mean re-deriving every figure in this file from data the original claims were
+> never computed on. Disclosing the gap is the honest option and is what is done here.
+> This is the same promise `REVIEW_INDEX` open item 13 records against V02 §1.1.
+
+For the record, the shape of the unreproduced result: every break but one fell on the
+**30-bar cadence** — indices 15, 45, 75, 105, 135 (30 × 4h = 120 h = one five-day FX
+week). The one exception was a GBPUSD break at index 143, the last bar of the harvest,
+which is the still-forming current bar at the edge of the data and not a weekend. This is
+V02's R2/R3 finding used as a positive test: continuity is *expected* to hold within a
+week and *expected* to break at weekends, and it did exactly that.
+
+USDCHF again showed only four breaks rather than five — its final weekend gap is genuinely
 zero to five decimals, the same behaviour V03 recorded. **Its week boundary is taken from
 the 30-bar cadence the other three pairs establish**, and that is disclosed rather than
-hidden.
+hidden. *(USDCHF's week boundary needed a second correction on the 15-minute side — see
+validation 3.)*
 
 **2 — Cross-check against V03's independently committed dataset.** V03's homework covered
 the same calendar week and the same four pairs, harvested in a different session by a
@@ -105,18 +135,73 @@ week, and none touches a weekly extreme.** Every open and every close matches ex
 one 4h bar. Aggregating the independently harvested 15m data and comparing against the
 independently harvested 4h data:
 
-| Pair | 4h bars reconstructed exactly | OHLC fields |
-|---|---|---|
-| EURUSD | **30/30** | 120/120 |
-| USDJPY | **30/30** | 120/120 |
-| GBPUSD | 28/30 | 118/120 |
-| USDCHF | 27/30 | 116/120 |
+| Pair | 4h bars reconstructed exactly | OHLC fields | Residual differences |
+|---|---|---|---|
+| EURUSD | **30/30** | 120/120 | — |
+| USDJPY | **30/30** | 120/120 | — |
+| GBPUSD | 28/30 | 118/120 | bar 22 low (0.1 pip), bar 29 high (0.1 pip) |
+| USDCHF | 28/30 | 118/120 | bar 27 low (0.3 pip), bar 28 high (0.1 pip) |
 
-**474 of 480 fields (98.75%).** Two harvests, two timeframes, two browser sessions,
-reconstructing each other. This is also what **anchors the 15m series to the calendar
-week** — the alignment offset was found by maximising this reconstruction, not by reading
-a date label. The offsets found (262, 261, 261, 261) agree across all four pairs, as they
-must for one shared calendar week.
+**476 of 480 fields (99.17%).** Two harvests, two timeframes, two browser sessions,
+reconstructing each other. **All four residual differences are ≤ 0.3 pip, all in highs or
+lows, never in an open or a close** — which is exactly the signature of the ±0.4 pip dwell
+defect measured in validation 4, and three of the four are the same fields validation 2
+found differing against V03's independent dataset.
+
+This is also what **anchors the 15m series to the calendar week** — the alignment offset
+was found by maximising this reconstruction, not by reading a date label. The offsets are
+**262, 261, 261, 265** (EURUSD, GBPUSD, USDJPY, USDCHF); the first three agree because the
+three pairs share one week open, and USDCHF's differs for the reason set out immediately
+below.
+
+#### USDCHF's 4-hour week opens with a PARTIAL bar of twelve 15-minute bars
+
+> **CORRECTED 2026-08-11 per V04 review R1 finding `M1` (`E19`). This paragraph previously
+> reported USDCHF at 27/30 and attributed the difference to the ±0.4 pip dwell defect.
+> That attribution was wrong, and the error it hid was two orders of magnitude larger.**
+
+On this feed **USDCHF's first 4-hour bar of the week contains only twelve 15-minute bars**
+— the pair's quoting session opens an hour later than the other three majors. The 15m
+slice was originally cut with a fixed **sixteen-bars-per-4h-bar** assumption, so it began
+four bars too early. The consequences, all recomputed from the committed data:
+
+- The committed 480-bar slice at `offset_in_harvest = 261` carried **four previous-week
+  bars at its head**.
+- Those four bars dragged the **weekend gap inside the week**: a **−12.7 pip**
+  discontinuity at `m[3] → m[4]`, which was the **only** 15m discontinuity anywhere in the
+  1,920 bars as then committed.
+- The reconstruction of 4h bar 0 therefore missed on the **open by 28.1 pips** and on the
+  **high by 12.8 pips**. **An open can never differ by dwell latency** — validation 4 says
+  so explicitly, and that contradiction is what should have caught this at the time. **The
+  test worked; the diagnosis failed.**
+
+**The fix, and it is exact.** Dropping the four leading bars leaves
+**476 = 12 + 29 × 16** bars, which is the *complete* week for this pair — nothing was
+missing from the tail. `aggregate(m[0:12])` now reproduces 4h bar 0 on **all four fields
+exactly**, and USDCHF rises from 27/30 to **28/30**, its two residuals now genuinely in
+the ±0.4 pip class. The committed JSON is re-sliced (`offset_in_harvest = 265`,
+`bars_15m_week` length 476, `j_hi_15m` / `j_lo_15m` re-indexed), and every pair now carries
+an explicit **`bars_15m_in_4h_bar_0`** field (16, 16, 16, **12**) so the aggregation is
+reproducible rather than assumed.
+
+**This is a limit of the 15-minute pipeline, and it is the pipeline V05 would inherit.**
+Any future session slicing a 15m week by a fixed bar count must read
+`bars_15m_in_4h_bar_0` rather than assume 16, and must assert zero in-week discontinuities
+before trusting the slice — `scripts/verify_reconstruction.py` does both and is committed
+for that purpose.
+
+**No conclusion in this file changes.**
+
+- The **4-hour data was never affected** — it is clean and continuous, 116/116, and every
+  block figure, weekly extreme and duration in §2 and §3 is computed from it.
+- USDCHF's week low is still `0.80552` at 4h bar 0, present in the corrected 15m series at
+  `m[0]`.
+- USDCHF is **already outside the scoped 2-of-4 result** in §3.2 — excluded because its
+  week low falls on the week-open bar, where no anchor can have formed. That exclusion is
+  a 4-hour fact and is **unchanged by this correction**.
+- The §3.3 swing-descriptor windows are unchanged: the extreme's index and the 44-bar
+  window shifted together by exactly four bars, so the bars examined are the same bars.
+  Recomputed and confirmed identical.
 
 **4 — A deliberate stability test of the harvest itself, which found a real defect.** The
 4h harvest was run twice, at a 28 ms and a 75 ms hover dwell. The two runs disagree on
@@ -135,6 +220,12 @@ pip on extremes of individual bars**.
   from that anchor by arithmetic, not read off the chart.**
 - **The FXCM feed is one broker's.** Weekly extremes differ by a pip or two between feeds.
 - **`A-019` is unresolved**, so "the first eight hours of the week" is feed-relative.
+- **The full 4h harvests behind validation 1's 569 / 549 / 20 continuity figures are not
+  committed**, so those three numbers are **unreproduced** — see the caveat in validation
+  1. Everything else in this file recomputes from the committed JSON.
+- **The 15m week slice depends on a per-pair first-bar length** (`bars_15m_in_4h_bar_0`),
+  not on a fixed 16. USDCHF's is 12. This was found by review, not by this session — see
+  validation 3.
 
 ---
 
@@ -312,8 +403,16 @@ are.
    not a two-peak structure. **No M/W classification is claimed**, because the course has
    never defined one (`A-011`).
 5. Method quality: **476/480** OHLC fields agree with V03's independent dataset;
-   **474/480** agree between this session's own 4h and 15m harvests. A harvest-stability
+   **476/480** agree between this session's own 4h and 15m harvests. A harvest-stability
    defect was found, measured (±0.4 pip on individual bar extremes) and disclosed.
+6. **Two defects were found by review and corrected on 2026-08-11** (V04 R1 `M1`, `M5`):
+   USDCHF's 15-minute week was mis-sliced at a **partial** week-open 4h bar of twelve 15m
+   bars, and the symptom was misdiagnosed as harvest noise (§1.2 validation 3); and
+   validation 1's 569 / 549 / 20 continuity figures are **not reproducible** from the
+   committed data and are now marked as such (§1.2 validation 1). **Neither changes any
+   conclusion above** — both live on the 15-minute side or in the harvest-wide narrative,
+   and every figure in §2 and §3 is computed from the 4-hour data, which is unaffected and
+   continuous 116/116.
 
 **Nothing here is graded**, because no answer key exists. These are observations, not
 scored answers.

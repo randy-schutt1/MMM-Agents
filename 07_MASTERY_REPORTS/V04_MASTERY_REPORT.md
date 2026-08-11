@@ -17,8 +17,13 @@ REVIEW REQUIRED
 **Not `PASS`, and the reason is specific rather than ritual.** V04 states the most complete
 entry rule the course has produced, and I cannot demonstrate mastery of it, because **one
 of its three necessary conditions has never been taught** (`A-039`). Dimensions B, C and G
-are all sub-`PASS` for that single reason. Claiming `PASS` would mean claiming I can apply
+are all `DEFERRED` for that single reason. Claiming `PASS` would mean claiming I can apply
 a rule I have been given two-thirds of.
+
+*(B and C read `PARTIAL` and `FAIL` when this report was first written; both were
+re-dispositioned to `DEFERRED` on 2026-08-11 under `D-019`, per review R1 finding `N1`.
+The substance is unchanged — a missing prerequisite is not a failure of mastery, and a
+`FAIL` whose cause sits in the source can never be cleared by studying harder.)*
 
 A student `PASS` would in any case be a submission, not an authorization
 (`MASTERY_STANDARD.md`, `D-004`).
@@ -60,7 +65,17 @@ The transcript carries **no speaker labels**; the handover is unannounced.
 Every V04 artifact tags each statement `INSTRUCTOR` or `GUEST`, and **no `GUEST` statement
 enters the methodology**. The guest's material conflicts with the instructor's on session,
 second-leg dependence, three-pushes and the primary entry gate — recorded as `C-005`, which
-is `UNRESOLVED` **pending a scope ruling, not pending evidence.**
+was `UNRESOLVED` **pending a scope ruling, not pending evidence.**
+
+> **THE SCOPE RULING HAS SINCE BEEN MADE, and it ratifies the handling described here.**
+> Review R1 ruled that guest-presenter material is admissible as **secondary DESCRIPTIVE**
+> evidence and **excluded as NORMATIVE** doctrine — neither full weight nor full exclusion.
+> Recorded as **`D-025`** on 2026-08-11. **No V04 grade changes and no V04 artifact needed
+> rewriting on this ground**: tagging every row, admitting no `GUEST` row into the
+> methodology and adopting no `GUEST` number is exactly the normative half of the ruling,
+> and the descriptive uses V04 actually made (`A-040`, the *"Mayo"* corroboration, the
+> printed forms in source notes §3b/§4f, and now the visible TDI panel) are exactly what
+> the descriptive half permits.
 
 **I am flagging this as the single most consequential thing for the reviewer to check**,
 because it is the sort of defect that is invisible until it has propagated. Nothing in the
@@ -73,8 +88,8 @@ repository before now has had to distinguish speakers.
 | Dim | Name | Result | One-line basis |
 |---|---|---|---|
 | A | Recall | **PASS** | The lesson's argument reconstructs without notes: location filter, not pattern filter |
-| B | Recognition | **PARTIAL** | Cannot recognise the taught setup on an unseen chart — condition (c) is unavailable |
-| C | Discrimination | **FAIL** | Cannot state what makes something *not* the setup, for the same reason |
+| B | Recognition | **DEFERRED** — blocked by `A-039` | Cannot recognise the taught setup on an unseen chart — condition (c)'s indicator has never been taught. Re-dispositioned from `PARTIAL` under `D-019`, per review R1 `N1` |
+| C | Discrimination | **DEFERRED** — blocked by `A-039` | Cannot state what makes something *not* the setup, for the same reason. Re-dispositioned from `FAIL` under `D-019`, per review R1 `N1` |
 | D | Sequence | **PASS** | Before / setup / confirm / invalidate / follows are all stated in V04, uniquely so far |
 | E | Exceptions | **PARTIAL** | One explicit hedge captured; the guest's exceptions are out of scope by `C-005` |
 | F | Homework | **FIRST-PASS SUCCESS** (ungraded — no answer key) | Completed on real 4h + 15m data, four independent validations |
@@ -92,7 +107,19 @@ everything else in Segment A is scaffolding for it. The stop is small because th
 at the extreme; the re-entry is mandatory because the dealer repeats the manoeuvre at the
 next level.
 
-### B. Recognition — **PARTIAL**
+### B. Recognition — **DEFERRED**, blocked by `A-039`
+
+> **RE-DISPOSITIONED 2026-08-11 from `PARTIAL` to `DEFERRED`, per review R1 finding `N1`,
+> under `D-019`.** The text below is retained **verbatim** beneath the new label, because
+> nothing in it was wrong — only the label was. The reason B is sub-`PASS` is that
+> condition (c)'s indicator has never been taught (`A-039`), which is `D-019`'s definition
+> of `DEFERRED` almost word for word: *"subject matter exists and the work is performable
+> in principle, but a prerequisite is missing."* The distinction is mechanical, not
+> cosmetic: as `PARTIAL`, this dimension could never reach `PASS`, because its blocker sits
+> in the **source** and will not clear until TDI is taught — the same trap `D-018` was
+> written to escape for dimensions F and G. `NOT APPLICABLE` is **not** available and is
+> not claimed: there is plainly subject matter here. Carried as an open item alongside the
+> manual-backtest debt until `A-039` clears.
 
 I can locate the Asian range and a 25–50 pip excursion beyond it on an unseen chart — the
 homework does exactly that. I **cannot** complete the recognition, because (b) has no
@@ -102,7 +129,16 @@ recognition of the setup.
 *(V01's dimension B was deferred pending V02's trading zone; that deferral is still live
 and is now four lessons old.)*
 
-### C. Discrimination — **FAIL**
+### C. Discrimination — **DEFERRED**, blocked by `A-039`
+
+> **RE-DISPOSITIONED 2026-08-11 from `FAIL` to `DEFERRED`, per review R1 finding `N1`,
+> under `D-019`.** Same reasoning as dimension B, and the review was explicit that the
+> substance is upheld — the self-criticism below is accurate and is retained **verbatim**
+> beneath the new label. What was wrong was calling a **missing prerequisite** a failure of
+> mastery. `D-019`: *"subject matter exists and the work is performable in principle, but
+> a prerequisite is missing."* The prerequisite is TDI (`A-039`), it is missing from the
+> source, and no amount of study of V04 supplies it. `NOT APPLICABLE` is **not** available
+> and is not claimed.
 
 The standard asks directly: *what would make this NOT the setup?* Truthfully, from V04 I
 can say only *"price is inside the box"* and *"it's the first leg, not the second"*. I
@@ -147,13 +183,34 @@ Method quality, since this is where V02 and V03 were both charged:
 - **No price read from a pixel.** Platform OHLC legend as DOM text.
 - **476/480** OHLC fields agree with V03's independently committed dataset for the same
   week (different session, different script).
-- **474/480** agree between this session's own 4h and 15m harvests — and that
+- **476/480** agree between this session's own 4h and 15m harvests — and that
   cross-timeframe reconstruction is what anchors the 15m series, since the crosshair date
   is canvas-drawn.
 - **A harvest defect was found by deliberate testing**, measured (±0.4 pip on individual
   bar extremes) and disclosed rather than discarded.
-- **Both scripts are committed**, discharging for V04 the reproducibility promise
-  `REVIEW_INDEX` open item 13 records against V02.
+- **Both harvest scripts are committed**, discharging for V04 the reproducibility promise
+  `REVIEW_INDEX` open item 13 records against V02 — **partially**: see the two corrections
+  below.
+
+> **TWO HOMEWORK DEFECTS FOUND BY REVIEW R1 AND CORRECTED 2026-08-11.** Neither changes a
+> conclusion, and both are recorded here rather than only in the homework file, because
+> this is the dimension that claims the method quality.
+>
+> - **`M1` (`E19`) — USDCHF's 15-minute series was mis-sliced.** Its first 4h bar of the
+>   week is a **partial bar of twelve** 15m bars on this feed; the fixed 16-bar assumption
+>   put four previous-week bars at the head of the slice, and the weekend gap inside the
+>   "week". I reported the 27/30 symptom as ±0.4 pip harvest noise when bar 0's **open**
+>   differed by **28.1 pips** — and an open cannot differ by dwell latency, which my own
+>   validation 4 says. **The test caught it; I misdiagnosed it.** Re-sliced; USDCHF is now
+>   28/30 and the 4h↔15m total is **476/480**, not 474/480. A third script,
+>   `verify_reconstruction.py`, is committed so the figure recomputes mechanically.
+> - **`M5` (`E20`) — validation 1's 569 / 549 / 20 continuity figures are not reproducible**
+>   from the committed data, which holds only the 30-bar week per pair. They are now marked
+>   **UNREPRODUCED** with the reason stated. The checkable part reproduces 116/116.
+>
+> The general lesson, which R1 `N5` put better than I did: **the checked artifact was
+> reliable; the paragraph describing the check was not, because it is the one part nothing
+> recomputes.**
 
 Findings are in the homework; the one I would flag is that it **independently reproduces
 V03's corrected `M3` figure** (2 of 4 formed anchors, both 3.83 days) from a fresh harvest.
@@ -269,12 +326,57 @@ Nominated deliberately, weighted toward where I think I am most likely to be wro
 
 | Item | Where |
 |---|---|
-| `C-005` needs a **scope ruling on guest-presenter material**, ideally before V05 (same session date, and a third presenter "Carl" is queued at `[01:19:02]`) | `CONTRADICTIONS.md` C-005 |
+| ~~`C-005` needs a **scope ruling on guest-presenter material**~~ — **RULED 2026-08-11.** Guest material is secondary DESCRIPTIVE evidence, excluded as NORMATIVE doctrine; may extend an `A-xxx`/`C-xxx` record, may never close one. Recorded as **`D-025`**, which also makes speaker tagging **mandatory** before any V05–V21 lesson with potential guest content (V05 shares the session date and "Carl" is queued at `[01:19:02]`) | `DECISIONS.md` D-025; `CONTRADICTIONS.md` C-005 |
+| **Dimensions B and C are `DEFERRED`, blocked by `A-039`** — re-dispositioned from `PARTIAL`/`FAIL` under `D-019` per review R1 `N1`. They stay **open** and are performed when TDI is taught, alongside dimension G | `REVIEW_INDEX` open items; `A-039` |
+| **Four quality-control boxes are UNCHECKED** — concept library, positive/negative/borderline examples. Declared above per `MASTERY_STANDARD.md`; the project-wide instance of the same gap goes to `CUMULATIVE_25.md` | this report, QC section |
 | Manual-backtest debt, now **four lessons deep**, and now blocked on a *named missing input* rather than on absence of a rule | `REVIEW_INDEX` open item 21; `A-039` |
 | `A-039` — TDI required but untaught. **Explicit prohibition: do not drop condition (c) to make the rule testable** | `AUTOMATION_AMBIGUITIES.md` A-039 |
 | Open item 2 (anchor point) — advanced, **not closed**; wants a second statement covering the W/low side | `V04_INTERPRETATION.md` §5 |
 | V03's three minors (open items 18–20) remain owed by a separate session | `REVIEW_INDEX.md` |
 | V01 dimension B deferral, now four lessons old | `V01_MASTERY_REPORT.md` B |
+
+## QUALITY-CONTROL CHECKLIST — UNCHECKED BOXES, DECLARED
+
+`MASTERY_STANDARD.md` §"Quality-control checklist" requires that **"any unchecked box must
+be stated in the mastery report, not omitted."** This section was missing from the first
+draft and is added 2026-08-11 per review R1 finding `M7` (`E20`).
+
+**Of the nineteen boxes: thirteen are checked, two are `DEFERRED`, four are UNCHECKED.**
+The four unchecked ones are stated here rather than left silently blank:
+
+| Box | State | Why |
+|---|---|---|
+| Concept library entries created/updated and indexed | **UNCHECKED** | `08_CONCEPT_LIBRARY/` is **empty** and has been for four lessons. V04 is the natural place for it to begin — it is the first lesson to state a complete entry rule and a body of named terms — and it did not begin here either. This is a real debt, not a technicality |
+| Positive examples exist | **UNCHECKED** | `09_CHART_EXAMPLES/` subdirectories are **empty**. Blocked by the same thing as dimension G: labelling an example "positive" requires condition (c), which requires TDI (`A-039`) |
+| Negative examples exist | **UNCHECKED** | Same blocker, and worse — a negative example needs the discrimination criteria dimension C is `DEFERRED` for |
+| Borderline examples exist where the concept is genuinely ambiguous | **UNCHECKED** | Same blocker. `A-011` (M/W anatomy undefined) means "borderline" cannot be defined without inventing the boundary the course withholds |
+
+Two things this declaration is careful **not** to do:
+
+1. **It does not excuse the concept-library box by pointing at `A-039`.** The three
+   example boxes are genuinely blocked; the concept library is not. Terms, speaker tags and
+   citations for V04 exist and could be indexed today. That box is unchecked because the
+   work was not done.
+2. **It does not claim this is a V04 lapse alone.** The condition is four lessons old and
+   V02's and V03's reports omit the same four boxes without declaring them — R1 charged
+   this as *"minor and shared"* and directed the underlying debt to `CUMULATIVE_25.md`.
+   V04 declares its own instance here; the project-wide pattern is raised at the 25% review.
+
+**The thirteen checked boxes:** transcript exists; transcript timestamps usable; source
+notes exist; interpretation in a separate file; screenshots captured and indexed; major
+rules have provenance; homework complete; unresolved ambiguity logged; contradictions
+logged; `COURSE_PROGRESS.md` updated; `LOG.md` updated; `scripts/validate_project.py`
+passes (re-run 2026-08-11 during this remediation: **97 passed, 1 warning, 0 failures** —
+the warning is "V05 has no transcript", which is expected); Git state clean after commit.
+
+**The two `DEFERRED` boxes**, neither of which is a silent blank either:
+
+- *Manual chart testing is complete where appropriate* — `DEFERRED` under `D-019`, blocked
+  by `A-039`. See dimension G.
+- *Failed valid setups are recorded, not hidden* — `DEFERRED` for the same reason and
+  stated rather than ticked: with no backtest performed there are **no** setups, valid or
+  failed, so ticking this box would assert compliance with a condition that was never
+  tested. It becomes live in the same lesson that discharges dimension G.
 
 ## FILES PRODUCED
 
@@ -282,8 +384,8 @@ Nominated deliberately, weighted toward where I think I am most likely to be wro
 02_TRANSCRIPTS/V04/V04_TRANSCRIPT.md          verified, 9-entry tail fenced
 03_LESSON_NOTES/V04_SOURCE_NOTES.md           speaker-tagged
 03_LESSON_NOTES/V04_INTERPRETATION.md         10 readings, generalization audit
-04_SCREENSHOTS/V04/                           27 frames + VISUAL_INDEX
-05_HOMEWORK/V04/                              homework, data, 8 charts, 2 scripts
+04_SCREENSHOTS/V04/                           27 frames + INDEX.md
+05_HOMEWORK/V04/                              homework, data, 8 charts, 3 scripts
 07_MASTERY_REPORTS/V04_MASTERY_REPORT.md      this file
 00_SYSTEM/QUARANTINE_REGISTER.md              Q-004
 10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md      A-037..A-041, 10 extended
@@ -292,3 +394,54 @@ Nominated deliberately, weighted toward where I think I am most likely to be wro
 
 **Stopping here.** `18_REVIEW/V04/V04_REVIEW_R1.md` must be written by a **separate**
 session (`D-003`).
+
+---
+
+## REVISION R1 — remediation of `18_REVIEW/V04/V04_REVIEW_R1.md`
+
+**Date:** 2026-08-11
+**Review being addressed:** R1 — `REVISE`, confidence `HIGH`, **0 CRITICAL, 0 MAJOR,
+7 MINOR, 5 NOTE**. V05 gate `OPEN` under `D-024`.
+**Scope:** the seven minors, note `N1`, and the owner action (record the `C-005` ruling).
+Nothing else was touched — `REMEDIATION_PROTOCOL.md` §3.2 and `REVIEW_PROTOCOL.md` §10.
+
+**Every item is a documentation fix except `M1`, which is an evidence fix and was redone
+rather than reworded** (`REMEDIATION_PROTOCOL.md` §2). **No finding changed any conclusion
+in any V04 artifact** — R1 said so, and re-deriving the affected figures confirmed it.
+
+| # | Finding | Class | What was done | Files |
+|---|---|---|---|---|
+| `M1` | `E19` — USDCHF's 15m series mis-sliced at a **partial** week-open 4h bar; the 27/30 symptom was misattributed to ±0.4 pip harvest noise when bar 0's **open** differed by **28.1 pips** | **Evidence fix — redone** | Diagnosed and re-sliced from the committed data: USDCHF's first 4h bar of the week holds **twelve** 15m bars, not sixteen, so the slice began four bars early and carried the weekend gap inside the "week". Dropped the four leading bars → **476 = 12 + 29 × 16**, the complete week; nothing was missing from the tail. `offset_in_harvest` 261 → **265**, `j_hi_15m` 363 → 359, `j_lo_15m` 4 → 0, and a new per-pair **`bars_15m_in_4h_bar_0`** field (16/16/16/**12**) makes the aggregation explicit. USDCHF 27/30 → **28/30**; the 4h↔15m total **474/480 → 476/480**. The misattribution is replaced by the real diagnosis, and the partial-bar behaviour is stated as a limit of the 15m pipeline. New script **`verify_reconstruction.py`** recomputes it mechanically and exits non-zero on mismatch | `data/…json`, `V04_HOMEWORK.md` §1.2/§1.3/§5, `scripts/README.md`, `scripts/verify_reconstruction.py` |
+| `M2` | `E01` — two of six spot-check fragments were silently smoothed | Documentation | Both restored to the **adopted transcript's literal wording** (*"money **set up** here"* `[00:50:34]`; *"**Gaby** a nice ugly **look in** kindergarten **ma'am** there"* `[01:10:36]`), the paragraph now states which side of the comparison it quotes, and the correction is disclosed in place | `V04_TRANSCRIPT.md` criterion 2 |
+| `M3` | `E20`/`E11` — two ambiguity cross-references orphaned by the duplicate-ID remap | Documentation | *"the water"* `A-037` → **`A-031`**; *"Timing Shadow Box / Brink Spox"* `A-038` → **`A-030`**. Correction disclosed | `V04_TRANSCRIPT.md` TRANSCRIPTION NOTES |
+| `M4` | `E20` — stale count and stale filename | Documentation | *"26 frames"* → **27**; *"VISUAL_INDEX"* → **`INDEX.md`** (and *"2 scripts"* → 3) | `V04_SOURCE_NOTES.md` line 10; this report, FILES PRODUCED |
+| `M5` | `E20` — validation 1 not reproducible from committed data | Documentation | **Restated over the committed data** (116/116 continuous, recomputed by `verify_reconstruction.py`) and the harvest-wide **569 / 549 / 20** figures **explicitly marked UNREPRODUCED**, with the reason the arrays cannot honestly be committed now: they were never written to disk, and re-harvesting today would produce a *different* dataset from the one every figure was computed on | `V04_HOMEWORK.md` §1.2 validation 1, §1.3 |
+| `M6` | `E20` — visible TDI panel unrecorded | Documentation | Frames 21 and 22 now record the **`Traders Dynamic Index Visual`** sub-panel, scoped **"displayed, not taught"**, with a new §"What the visuals added" item 7; added to `A-039`'s evidence table with the same scoping and an explicit statement that it does **not** narrow the record. The illegible six-value readout beside each panel title is deliberately **not** transcribed | `04_SCREENSHOTS/V04/INDEX.md`; `AUTOMATION_AMBIGUITIES.md` A-039 |
+| `M7` | `E20` — four QC boxes unchecked and undeclared | Documentation | New **QUALITY-CONTROL CHECKLIST** section above: 13 checked, 2 `DEFERRED`, **4 UNCHECKED and stated** (concept library, positive/negative/borderline examples), with the concept-library box explicitly *not* excused by `A-039`. `validate_project.py` re-run: 97 passed, 1 warning, 0 failures | this report |
+| `N1` | Dimensions B and C mislabelled | Documentation | **B: `PARTIAL` → `DEFERRED`. C: `FAIL` → `DEFERRED`**, both *"blocked by `A-039`"* under `D-019`, with the original text retained **verbatim** beneath the new label. `NOT APPLICABLE` declined — there is plainly subject matter here. Both carried as open items until TDI is taught | this report, dimension table and §§B, C |
+| Owner | Record the `C-005` ruling | Decision | **`D-025`** appended to `DECISIONS.md` — guest material is secondary **DESCRIPTIVE** evidence, **excluded as NORMATIVE** doctrine; may extend an `A-xxx`/`C-xxx` record, may never close one; speaker tagging mandatory V05–V21. Cross-referenced from `D-008`, `D-004`'s pointer block, `COURSE_PROGRESS.md` PROGRESSION RULE and `REVIEW_PROTOCOL.md` §2. `C-005` updated to record the ruling and stays open as corpus hygiene | `DECISIONS.md` D-025; `CONTRADICTIONS.md` C-005; `COURSE_PROGRESS.md`; `REVIEW_PROTOCOL.md` |
+
+### Was any conclusion affected? — checked, and no
+
+- **`M1` is the only finding that touched data.** The **4-hour** series was never affected:
+  it is continuous 116/116, and every figure in homework §2 and §3 — the block sizes and
+  percentages, the weekly extremes and their bars, the **3.83-day** duration on both formed
+  anchors — is computed from it and is unchanged.
+- **The scoped 2-of-4 result is unchanged**, and this was verified rather than assumed:
+  USDCHF is excluded because its week low falls on **4h bar 0**, the week-open bar, where
+  no anchor can have formed. That is a 4-hour fact and the re-slice does not touch it.
+  USDJPY is excluded on the same basis. **EURUSD and GBPUSD remain the only two admissible
+  pairs, both at 3.83 days.**
+- **The §3.3 swing-descriptor tables are unchanged**, recomputed to confirm: USDCHF's
+  extreme index and its 44-bar window shifted by exactly four bars **together**, so the
+  bars examined are the same bars.
+- **`M6` does not weaken `A-039`** and `D-025` is why: the frames are `GUEST` material and
+  therefore descriptive only — they may extend the record and may never close it. TDI is
+  displayed on the guest's platform; it is still never taught.
+- **`D-025` changes no V04 grade.** R1 checked for over- and under-application and found
+  V04's interim handling already matched the ruling on both halves.
+
+### Still owed before `COMPLETE`
+
+A reviewer `PASS` (`D-004`). This revision is a submission, not an authorization.
+`18_REVIEW/V04/V04_REVIEW_R2.md` must be written by a **separate** session (`D-003`).
