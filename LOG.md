@@ -6391,3 +6391,220 @@ retained at both sites.
 
 **V09 R2** — verification of items 73–78 by an **independent** session.
 
+
+---
+
+## 2026-08-13 — Student Session — V10
+
+### Lesson
+
+**V10** — `Bootcamp1 Wk3 040112 (96mins).swf`,
+SHA-256 `a37ba371ca2d5c807553c7b9a827a91c479509dd5223b64eadf85995481a3de1`, 01:36:16.
+**Printed banner** `Market Makers Boot Camp` / `Week 3` — the first title card since V08 — but
+**no topic title is asserted**. Session date **2012-04-01**, from the filename **and stated in the
+recording** at `[00:21:25]`.
+
+**Branch `video/v10`, in a dedicated worktree (`D-038`). No `I-009` collision.**
+Evidence ledgers written on the task branch, as `D-038a` expects.
+
+### Gate
+
+**Verified OPEN in `18_REVIEW/REVIEW_INDEX.md` before any V10 artifact was created** — V09 R1
+returned `REVISE` 0 CRITICAL / 0 MAJOR / 6 MINOR, which opens the gate under `D-024`.
+`COURSE_PROGRESS.md`'s V10 GATE block **already read OPEN** (reconciled by the V09 remediation
+session), so unlike V09 there was no staleness to fix.
+
+### ⭐ The five-lesson guest run ENDS. V10 is 100% course author.
+
+V05–V09 each carried **zero** author runtime. The V10 GATE carry-forward (a) called a new week and
+a new date *"a REASON TO EXPECT A CHANGE, not a reason to assume one"* and required it be **tested**.
+
+**Tested, on five non-acoustic strands fixed before the answer was known:** the speaker claims
+Steve's mailbox in the first person (`[00:07:12]`, printed `steve@marketmakersforex.com`); **all 13
+`Steve` tokens are vocative or self-quoting** — he voices students addressing him and answers in the
+first person, where V04–V09's guests referred to Steve in the **third person as an absent
+authority**; he reads mail whose slide prints *"Hello Steve"*; he claims authorship of the method,
+the course and the slides; and he owns the homework loop. **A scan for handover language returns zero
+matches in 96 minutes.** The cross-file acoustic screen was **NOT** run, as V07's carry-forward
+prohibits.
+
+### What V10 contributes
+
+**THE SAFETY TRADE** — the author's officially designated *"signature trade"*. Nine rules **printed
+on two consecutive slides** and narrated, plus target (*"plus 50"*), anchor distance (**25–75 pips**,
+printed), anticipation lead (12–24 h) and frequency (2 per pair per week).
+
+**And the first operational definition of `peak formation` in ten lessons.** `[01:14:06]`:
+*"the highest point on a chart within the week, or the lowest point on the chart within the week."*
+**`A-010` NARROWS on Tier 1 evidence alone** (`SOURCING_HIERARCHY.md` §3.2 case A) — **not blended**
+with `MMM-NOTES`. It is positional and needs no pattern recognition at all.
+
+**What V10 does NOT supply, recorded because absence is evidence:** **no stop loss anywhere** —
+`stop loss` occurs **zero** times; no session clock time; no ADR lookback; no EMA nickname mapping
+despite using two nicknames.
+
+### Artifacts
+
+| Artifact | Note |
+|---|---|
+| `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` | 1,184 markers, **strictly increasing** (zero decreasing, zero same-second — measured, not asserted), verified on four axes |
+| `04_SCREENSHOTS/V10/` | **32 frames + INDEX.md.** 32/32 burned timecodes read from a verification strip, all ≤ runtime |
+| `03_LESSON_NOTES/V10_SOURCE_NOTES.md`, `V10_INTERPRETATION.md` | Basis tags on every substantive row; every §6 rule is `AUDIO` or `AUDIO+PRINTED` |
+| `05_HOMEWORK/V10/` | H1 flashcards, H2 anchors + cross-check, 12/12 comprehension, 2 scripts, 2 data files |
+| `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-036…`, `06_MANUAL_BACKTEST/V10/BT_V10_0001.md` | Pre-registration `f58dce7`, runner `e53409e`, both before execution |
+| `07_MASTERY_REPORTS/V10_MASTERY_REPORT.md` | `REVIEW REQUIRED` |
+| Registers | **`A-076`–`A-079`** (4) + **`A-010` NARROWED**, **`C-016`–`C-017`** (2), **`Q-011`** |
+
+### The backtest — both claims contradicted, and the null did more damage than the magnitude
+
+`PT-036` / `BT_V10_0001`.
+
+**`M1` — weekly range 600–1000 pips: 0 of 180 weeks.** Median 243.8; 600 sits at the **99.44th
+percentile**; the claim overshoots by **3.28×**. **The pip-vs-point rescue fails too** — 600 "points"
+on a 5-digit feed is 60 pips, and only 4/180 weeks fall in [60,100]. **There is no unit reading on
+which the number describes GBP/USD here.** The one week above 600 is the EU referendum at 1789.5 —
+**1.8× the band's ceiling**. `N4`: a roster shifted +24 h is **indistinguishable** (medians 243.8 vs
+244.1), so `M1` measures five days of travel, not week structure.
+
+**`M2` — Friday close 25–50 off both extremes: 7.30% (A) / 5.62% (B)** against the word *"always"*.
+**The `N2` matched uniform-close null — computed per-Friday from that Friday's own range — expects
+7.12%.** Observed − null = **+0.19 pp**; on Arm B observed sits **below** the null. **`M2a` carries
+essentially no information beyond range width.** And `N3`: **Friday ranks fourth of five weekdays**;
+Thursday satisfies the band nearly twice as often. The claim's mechanism is weekend-specific by its
+own terms, and **there is no Friday effect at all.**
+
+**The safety trade was NOT tested, and not testing it is reported as a finding** with the hazard
+named: its anchor is **retrospective**, so a naive test would use the actual weekly extreme and
+commit **lookahead** (`E08`) while producing a flattering number. Five of seven conditions are
+`D-030`-blocked.
+
+**Open item 80's censoring bias was designed out AND verified** — `censored = 0` on both arms,
+enforced as a hard assert that would have **voided** both measures.
+
+**Predictions 6/6, and the record argues that down**: P1/P2 are one finding, P3/P4/P5 are one
+finding, only P6 was independent. **Honest count ≈ two independent forecasts plus one
+low-confidence call.** P7 was flagged structurally cheap before the run and is tallied separately.
+
+### Homework
+
+H1 done. **H2 is the honest one:** the assignment is *"Mark 10 Safety setups, 5 long 5 short"*, and
+five of the setup's seven conditions are undefined, so the **setup half is `DEFERRED` under `D-019`
+— not `NOT APPLICABLE`**, because it plainly has subject matter. The **anchor half was performed**:
+ten weekly anchors on real GBP/USD, selected by a **fixed index rule stated before any price was
+read**. H3 `NOT APPLICABLE` (`D-018`) — a 2012 forum.
+
+**Independent cross-check:** every anchor computed twice by paths sharing no code (raw M1 vs
+committed M15 aggregation), 10/10 exact on price and timestamp, gated by a non-zero exit — **and the
+write-up states what it is worth**: an M15 high *is* the max of its M1 constituents, so it
+corroborates the **aggregation**, not the market.
+
+**Comprehension 12/12 on 44 mechanical assertions**, answers committed at `54b97f2` before the
+scorer existed — **and `V10_HOMEWORK.md` §4 argues against crediting it**, in three specific ways,
+pointing the reviewer at `Q-011`, `C-016`/`C-017` and `BT_V10_0001` §1 instead.
+
+### `Q-011` — the fabrication finding gets stronger
+
+**`RULES.md` is not merely "templated": by exact `diff`, V10's is V01's file with SIX identifier
+strings swapped** — every rule, timestamp and parameter byte-identical to the copy `D-017` already
+disproved. **Six cited markers, six misses, zero partial hits.** `NOTES.md`'s headline framing
+(multi-timeframe analysis) is **contradicted in terms** by the lesson at `[01:13:47]`, not merely
+unsupported — the first of that kind. And the **second confirmed instance of `Q-010`'s sixth failure
+mode**: the one real image is a **genuine V10 frame — the title card** — carrying an entirely
+invented description of an "Asian Box accumulation range with 5, 13, 50, 200, and 800 EMAs".
+
+**Two self-corrections recorded rather than deleted:** an early `EMA` count of 24 that was `email`
+substring matches (true count **2**), and this session's stricter hash normaliser calling `RULES.md`
+unique where `diff` calls it V01's — **`Q-010`'s instrument was the better one.**
+
+### Three corrections the screenshot pass made to this session's own audio-only conclusions
+
+`SWF_CAPTURE_RECIPE.md` §9 keeps the passes separate so this can happen, and on V10 it did, twice
+against the session:
+
+1. **The lesson HAS a formal close** — printed on the end card, **never spoken**: *"Thank you all
+   GOOD NIGHT"*. This session had written from audio alone that it ends without a sign-off. Same
+   shape as V01's *"pendings"*.
+2. **The email-address note had its confidence exactly BACKWARDS.** The slide reads
+   `steve@marketmakersforex.com`, so the ASR's `marketmakers4x.com` is the *mis*-rendering.
+3. **The anchor distance was settled** — printed `25 to 75 pips off of the LOW/HOW anchor` — against
+   six spoken renderings in four forms.
+
+All three are corrected **in place with the superseded text retained**.
+
+### Contradictions, and two refusals
+
+**`C-016`** — the directional lock is *"one-day"* and *"good for three days"* **two seconds apart**,
+with *"at least two days"* twice more. It matters because **the safety trade has no stop**: its only
+non-target exit is time. **`C-017`** — the anchor distance is measured from the **LOW/HOW anchor in
+print** and from the **blue tracer in speech** (4 of 6 spoken instances). **The corpus's first
+printed-vs-spoken conflict.**
+
+**A tidy reconciliation was available for both and both are refused in writing**, per the `C-010`
+precedent. For `C-017` the refusal is argued: `D-008` would settle it by source class and is **not
+applied**, because `D-008` ranks *capture reliability* — it was written to stop an agent's reading
+outranking the course, not to adjudicate between two things one speaker said in one hour.
+
+### Citation discipline
+
+**408 marker citations across six files, ZERO orphans** (one labelled V09 cross-reference). A first
+sweep caught **18 off-by-a-few-seconds citations**, all corrected. **134 quotations checked; 127
+resolve verbatim in audio**, and the 7 that do not are 5 `PRINTED`-tagged slide texts, 1 project
+label, and 1 that is the **documented ASR garble** at `[00:15:12]` — all self-consistent.
+
+### ⚠ Process disclosures
+
+1. **`SWF_CAPTURE_RECIPE.md` §10's frame rate is not a constant.** §10 states the patch as
+   `3.0 → 30.0` fps from V01/V02. **V10 declares 2.0.** Applied literally it sweeps at **15×, not
+   10×**, and **fails silently** — well-formed, correctly-timecoded frames at 7.5-second spacing,
+   under-sampling the screen detector by a third. Same family as `GOTCHA 4`/`GOTCHA 5`: a varying
+   header field quoted as a constant. **POLICY ledger under `D-038a` — escalated, NOT patched from
+   this branch.** This session avoided it by reading the header first, as `GOTCHA 5` teaches.
+2. **`D-022` fired for real, for the third lesson running.** The first candidate port was **BUSY**,
+   held by another session's `http.server`. A fresh port was bound and confirmed by `lsof` to be
+   this session's own PID, and the served bytes were hashed against disk.
+3. **The runner crashed on first execution and produced no result** (`BT_V10_0001` §8) — an
+   off-by-one session-day label emptied the Friday set. Fixed before any number existed; **nothing
+   in `PT-036` changed.** Argued to be outside `COMMON_PROTOCOL.md` §9 rule 7, which governs
+   disagreements found *after* a result exists.
+4. **Evidence ordering met in substance, not perfectly.** The full transcript was read and the notes'
+   understanding formed before any frame was curated, but two image categories were opened earlier
+   because the protocol requires it (the quarantined image for `Q-011`; the `GOTCHA 4` sanity
+   frame). **Neither contributed a rule**, and basis tags let a reviewer verify that.
+
+### Escalations
+
+1. **Dimension B `D-030`-blocked for the SIXTH consecutive lesson** — open item **36** needs an
+   **owner** ruling.
+2. **`SWF_CAPTURE_RECIPE.md` §10's frame rate** — policy edit, integration branch.
+3. **`A-077` (the lock) is now the highest-value gap in the project** — the only thing between V10's
+   defined anchor and a prospectively identifiable setup.
+4. **`A-004` after ten lessons — and V10 shows the course ROUTING AROUND it** (`[01:16:36]`). This
+   may be a term the course never defines.
+5. **`C-017` is the first printed-vs-spoken conflict and the project has no standing rule for that
+   class.**
+6. **Two `PT` successors specified and not run** — `PT-037` (the path-length reading of `M1`, which
+   **must be pre-registered before measuring**) and `PT-038` (the safety trade, `D-030`-blocked).
+
+### Git
+
+Commits on `video/v10`, all with explicit paths (`git add -A` never used):
+
+```text
+2591720  transcript(V10) + Q-011 — four-axis verification; the guest run ENDS
+4c58436  screenshots(V10) — 32 curated frames, 32/32 burned timecodes verified
+cc45fce  notes(V10) — the safety trade; A-010 NARROWED; A-076..A-079, C-016, C-017
+f58dce7  pre-register(PT-036) — before the runner existed and before any bar was read
+e53409e  runner(PT-036) — before execution
+2856631  backtest(BT_V10_0001) — BOTH claims CONTRADICTED AS STATED
+54b97f2  homework(V10) — 12 comprehension answers, before the scorer
+d27c67f  homework(V10) — H1, H2 anchors + cross-check, comprehension 12/12
+```
+
+### Decision
+
+**STUDENT STATUS: `REVIEW REQUIRED`** — a submission, not an authorization (`D-016`/`I-001`).
+
+### Next Review Trigger
+
+**Independent review R1 of V10** (`D-003`). This session did not review itself and **did not merge
+to integration** — merge-back is a separate single-threaded act under `D-038`.
