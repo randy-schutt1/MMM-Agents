@@ -313,13 +313,34 @@ audio+video mp4.
 
 ### The patch
 
-The SWF header declares its frame rate, and it is patchable in a **working copy**:
+The SWF header declares its frame rate, and it is patchable in a **working copy**.
+
+> ### ⚠ THE DECLARED RATE VARIES ACROSS THIS LIBRARY. READ IT; DO NOT ASSUME IT.
+> **Corrected 2026-08-13 by `18_REVIEW/V10/V10_REVIEW_R1.md`, on open item 87 raised by the
+> V10 student session.** Until this correction §10 quoted `3.0` from V01/V02 as though it were
+> the library's constant, and instructed *"Patch 3.0 → 30.0 fps"*. **V10 declares 2.0.** A
+> session following the old prose on V10 would have patched 2.0 → 30.0 and swept at **15×, not
+> 10×** — and it **fails silently**, producing a complete, well-formed, correctly-timecoded
+> frame set at **7.5 presentation-seconds** apart instead of 5, under-sampling the screen-state
+> detector by a third. **Same family as `GOTCHA 4` and `GOTCHA 5`: a header field that varies
+> across the library, quoted as a constant, with no loud failure when it is wrong.**
+>
+> **THE RULE: read `frameRate` from the header of the file you are about to capture, and patch
+> it to `rate × SPEED`. Never type a literal.** `GOTCHA 5`'s stage-size probe already parses
+> the header immediately before this field, so the value is already in hand.
+
+**Measured examples — data points, NOT the library's constant:**
 
 ```text
 V01: frameRate=3.0, frameCount=9853,  at body offset 17
 V02: frameRate=3.0, frameCount=10861, at body offset 17
+V10: frameRate=2.0, frameCount=11553, at body offset 17
      (after the 8-byte file header and the RECT; decompress CWS bodies with zlib first)
 ```
+
+**V10 is the cross-check proving this field must be read:** 11,553 frames ÷ 2.0 fps = 5776.5 s,
+against measured audio of 5776.222 s and a `SOURCE_MANIFEST.md` duration of 5776 s — three
+independent figures agreeing, and none of them consistent with 3.0.
 
 Parser/patcher: read `sig`/`version`/`fileLength` from the first 8 bytes; zlib-decompress
 the body for `CWS`; skip the RECT (5-bit `nbits`, then 4 × `nbits` bits, rounded up to a
@@ -332,7 +353,7 @@ afterwards.
 
 ### Measured speedup
 
-| Wall clock | 120 fps patched | 3 fps control |
+| Wall clock | 120 fps patched | 3 fps control (V02's declared rate) |
 |---|---|---|
 | 20 s | 13:20 | 00:20 |
 | 40 s | 26:40 | 00:40 |
@@ -346,14 +367,25 @@ still proves its own timestamp.
 
 ### Use 10×, not 40×
 
-Patch 3.0 → **30.0 fps**. A 60-minute lesson then sweeps in ~6 minutes, and a screenshot
-every 0.5 s of wall clock gives exactly the 5-second sampling grid §7 wants. 40× works,
-but it compresses screenshot cadence until Playwright's own capture latency dominates and
-leaves less margin for correct delta-tile compositing. Speed is no longer the bottleneck.
+**Patch `declared_rate × 10`** — 3.0 → **30.0** on V01/V02, 2.0 → **20.0** on V10. A 60-minute
+lesson then sweeps in ~6 minutes, and a screenshot every 0.5 s of wall clock gives exactly the
+5-second sampling grid §7 wants — **but only if the multiplier really is 10, which is only true
+if the patched rate was derived from this file's own declared rate.**
+
+> *Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this sentence read:*
+> *"~~Patch 3.0 → **30.0 fps**.~~"* — corrected 2026-08-13, open item 87.
+
+40× works, but it compresses screenshot cadence until Playwright's own capture latency
+dominates and leaves less margin for correct delta-tile compositing. Speed is no longer the
+bottleneck.
 
 ```js
 // sweep.mjs — 10x, screenshot every 5 presentation-seconds
-const SPEED=10, PRES_S=<duration_s>, STEP_PRES=5;
+// DECLARED_FPS comes from THIS file's header (see the warning above).
+// Do NOT hardcode 3.0: V01/V02 declare 3.0, V10 declares 2.0.
+const SPEED=10, DECLARED_FPS=<read_from_header>;
+const PATCH_FPS=DECLARED_FPS*SPEED;               // 30.0 on V01/V02, 20.0 on V10
+const PRES_S=<duration_s>, STEP_PRES=5;
 const STEP_MS=STEP_PRES*1000/SPEED;               // 500 ms wall
 const N=Math.ceil(PRES_S/STEP_PRES)+8;
 await p.goto(`http://127.0.0.1:${PORT}/index.html?scale=1&swf=v02_x10.swf`,{waitUntil:'load'});

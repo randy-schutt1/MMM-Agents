@@ -1,0 +1,372 @@
+==============================================================================
+PT-036 — V10: the 600-1000 pip week, and the Friday close 25-50 off both extremes
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+both D-031 arms, always both reported
+==============================================================================
+
+PRE-REGISTRATION: 06_MANUAL_BACKTEST/PRE_REGISTERED/PT-036_weekly_range_and_the_friday_close.md (committed first, f58dce7)
+CLAIMS: M1 V10 [00:14:09] / [00:14:38];  M2 V10 [00:13:41]
+SPEAKER: the course author, 100% of V10's runtime (D-033)
+WINDOW: W-C' = 2013-01-06 -> 2016-06-30 = D-035 DEVELOPMENT exactly
+HOLDOUT: 2016-07-01 -> 2017-12-29 NOT OPENED (not on disk, D-036a)
+SOURCE: HistData GBP/USD M1 (D-036a); M15 aggregated locally
+WEEK RULE: Sunday 17:00 open; an intra-week holiday re-open is NEVER a
+           week boundary, and boundaries are never taken from C7's list
+SEED: 20260813   BOOTSTRAP ITERATIONS: 10000
+
+QA GATE (precondition, D-036a):
+  ==============================================================================
+HISTDATA GBP/USD M1 — DATA QA GATE
+==============================================================================
+files    : 4
+bars     : 1,297,781
+span     : 2013-01-01 17:00:00 -> 2016-06-30 23:59:00
+
+--- GATING CHECKS (must be clean) ---
+C1 parse integrity     : PASS
+C2 duplicate timestamps: PASS
+C3 ordering            : PASS
+C4 OHLC coherence      : PASS
+
+--- REPORTS (human review, not gates) ---
+C5 spike census        : 578 bars > 12x rolling median range
+      2016-06-07 00:10:00  range   180.1 pips   local median   2.0   x 90.1
+      2016-03-25 14:09:00  range     6.5 pips   local median   0.1   x 65.0
+      2014-07-11 16:59:00  range    41.3 pips   local median   0.7   x 59.0
+      2016-03-25 14:08:00  range     5.3 pips   local median   0.1   x 53.0
+      2014-06-12 16:00:00  range    52.7 pips   local median   1.3   x 40.5
+      2013-09-27 01:20:00  range    48.6 pips   local median   1.2   x 40.5
+      2014-04-16 20:18:00  range    21.7 pips   local median   0.6   x 36.2
+      2013-04-25 04:30:00  range   108.5 pips   local median   3.0   x 36.2
+      2016-03-25 14:10:00  range     3.5 pips   local median   0.1   x 35.0
+      2013-07-04 07:00:00  range    94.0 pips   local median   2.7   x 34.8
+      2016-03-24 20:55:00  range    27.0 pips   local median   0.8   x 33.8
+      2016-06-23 19:17:00  range   469.9 pips   local median  14.0   x 33.6
+      2016-03-25 14:01:00  range     6.7 pips   local median   0.2   x 33.5
+      2015-10-15 16:59:00  range    36.4 pips   local median   1.1   x 33.1
+      2016-03-25 14:07:00  range     6.5 pips   local median   0.2   x 32.5
+      ... 563 more
+
+C6 gap census          : 3 intra-week gaps >= 30m, 4:43:00 total
+      2015-01-01 13:33:00 -> 2015-01-01 17:00:00   3:27:00
+      2015-08-21 13:16:00 -> 2015-08-21 13:57:00   0:41:00
+      2013-04-11 19:11:00 -> 2013-04-11 19:46:00   0:35:00
+
+C7 week-open census    : 181 week opens (Sunday-delimited)
+      time-of-day : {'17:00': 170, '17:01': 2, '17:03': 2, '17:04': 2, '17:06': 2}
+      6 INTRA-WEEK RE-OPENS — these are NOT week boundaries:
+        2013-01-01 17:00:00 (Tue) — mid-week re-open after a closure
+        2013-12-26 06:02:00 (Thu) — mid-week re-open after a closure
+        2014-01-01 17:00:00 (Wed) — mid-week re-open after a closure
+        2014-06-02 15:01:00 (Mon) — mid-week re-open after a closure
+        2014-12-25 18:00:00 (Thu) — mid-week re-open after a closure
+        2015-01-01 13:01:00 (Thu) — mid-week re-open after a closure
+      Deriving week boundaries from re-opens would split those weeks in two.
+      3 week(s) not closing on a Friday — invisible to this census:
+        week of 2015-12-20 ends 2015-12-24 (Thu), 5 sessions
+        week of 2015-12-27 ends 2015-12-31 (Thu), 5 sessions
+        week of 2016-06-26 ends 2016-06-30 (Thu), 5 sessions
+      modal open by month: {1: '17:00', 2: '17:00', 3: '17:00', 4: '17:00', 5: '17:00', 6: '17:00', 7: '17:00', 8: '17:00', 9: '17:00', 10: '17:00', 11: '17:00', 12: '17:00'}
+      seasonal shift (DST): NO — fixed offset year-round
+
+C8 session completeness: 11 sessions below 60% of nominal bars
+      2013-01-01 Tue    405 bars  (nominal ~1440,  28.1%)  <- Dec/Jan holiday, a real market closure
+      2013-12-25 Wed      0 bars  (nominal ~1440,   0.0%)  <- Dec/Jan holiday, a real market closure
+      2014-01-01 Wed    392 bars  (nominal ~1440,  27.2%)  <- Dec/Jan holiday, a real market closure
+      2014-06-01 Sun      0 bars  (nominal ~ 420,   0.0%)  <- *** ABSENT AND UNEXPLAINED ***
+      2014-06-02 Mon    521 bars  (nominal ~1440,  36.2%)  <- *** SHORT AND UNEXPLAINED ***
+      2014-12-24 Wed    840 bars  (nominal ~1440,  58.3%)  <- Dec/Jan holiday, a real market closure
+      2014-12-25 Thu    360 bars  (nominal ~1440,  25.0%)  <- Dec/Jan holiday, a real market closure
+      2015-01-01 Thu    424 bars  (nominal ~1440,  29.4%)  <- Dec/Jan holiday, a real market closure
+      2015-12-24 Thu    840 bars  (nominal ~1440,  58.3%)  <- Dec/Jan holiday, a real market closure
+      2015-12-25 Fri      0 bars  (nominal ~1020,   0.0%)  <- Dec/Jan holiday, a real market closure
+      2016-01-01 Fri      0 bars  (nominal ~1020,   0.0%)  <- Dec/Jan holiday, a real market closure
+      A short session is not automatically a defect. Holidays are closures;
+      an unexplained absence is a hole. Only a human tells them apart.
+
+==============================================================================
+GATE: PASS — C1-C4 clean
+C5-C8 require human sign-off before any PT test is run.
+Any session flagged by C8 must have an explicit, PRE-REGISTERED disposition
+(include / exclude / report separately) in the test that spans it.
+==============================================================================
+
+  c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+
+  committed M15 aggregation verified for both arms
+
+================ ARM A ================
+  week roster (arm A) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 3  (2015-12-20, 2015-12-27, 2016-06-26)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+
+  EXCLUSIONS (PT-036 §7a, pre-registered by name):
+    data hole  week of 2014-06-01          EXCLUDED  (1)
+    truncated  week of 2016-06-26          EXCLUDED  (1)
+    Dec/Jan closure weeks                     INCLUDED, reported separately (6)
+    usable weeks for M1                       n = 180
+
+-- M1 : WEEKLY RANGE, peak formation high to peak formation low --
+   V10 [00:14:09] '600 to 1000 pips is the range'
+   anchor definition: V10 [01:14:06], the week's extreme (A-010)
+
+    n        180
+    min          76.6 pips
+    p05         138.0
+    p25         189.1
+    MEDIAN      243.8
+    p75         322.7
+    p95         444.5
+    max        1789.5
+    mean        269.3
+
+  O1  weeks with range in [600,1000] pips          0/180   =   0.00%   boot95 [ 0.00,  0.00]   wilson95 [ 0.00,  2.09]  n = 180
+      weeks with range >= 600 pips                 1/180   =   0.56%   boot95 [ 0.00,  1.67]   wilson95 [ 0.10,  3.08]  n = 180
+      (context) weeks with range >= 300 pips      56/180   =  31.11%   boot95 [24.44, 37.78]   wilson95 [24.80, 38.21]  n = 180
+
+  O2  SCALE DIAGNOSTIC (pre-registered; does NOT change M1's verdict)
+      median observed / 800 (band midpoint) = 0.305
+      claim overshoots median by a factor of  3.28x
+      600 pips sits at the 99.44th percentile of the observed distribution
+      pip-vs-point check: 600 'points' on a 5-digit feed = 60 pips;
+        weeks with range in [60,100] pips = 4/180
+
+  Dec/Jan closure weeks reported separately: n=6, median 208.0 pips, in-band 0
+
+  N4  SHIFTED-BOUNDARY CONTROL (+24h, Monday 17:00 anchors)
+      shifted roster n=181  median 244.1 pips  in-band 1/181 = 0.55%
+      TRUE roster    n=180  median 243.8 pips  in-band 0/180 = 0.00%
+      median difference (true - shifted) = -0.3 pips
+      READING: if these are indistinguishable, M1 measures how far GBP/USD
+               travels in five days, NOT anything about week structure.
+
+-- M2 : THE FRIDAY CLOSE, 25 to 50 pips off BOTH extremes --
+   V10 [00:13:41] 'the dealer will end always 25 to 50 pips off of the high
+                   and 25 to 50 pips off of the low'
+
+  §7b.1 CENSORING CHECK  censored/unresolved observations = 0
+        (PT-036 §2 asserts the design admits ZERO; non-zero VOIDS both measures)
+
+  M2 EXCLUSIONS: Thursday-closing weeks have no Friday session — excluded by name: ['2015-12-20', '2015-12-27']
+  usable Fridays for M2  n = 178   (exclusion count 2)
+
+  O3  Friday close distance from the day's HIGH (pips)
+    n        178
+    min           0.0 pips
+    p05          10.0
+    p25          26.3
+    MEDIAN       51.1
+    p75          91.2
+    p95         187.5
+    max        1347.1
+    mean         73.6
+
+  O3  Friday close distance from the day's LOW (pips)
+    n        178
+    min           0.0 pips
+    p05           3.6
+    p25          16.3
+    MEDIAN       40.1
+    p75          66.8
+    p95         131.1
+    max         442.4
+    mean         49.9
+
+  O3  JOINT: both distances in [25,50]  <-- M2a    13/178   =   7.30%   boot95 [ 3.93, 11.24]   wilson95 [ 4.32, 12.09]  n = 178
+      marginal: distance from HIGH in [25,50]     46/178   =  25.84%   boot95 [19.66, 32.58]   wilson95 [19.97, 32.74]  n = 178
+      marginal: distance from LOW  in [25,50]     47/178   =  26.40%   boot95 [20.22, 33.15]   wilson95 [20.48, 33.33]  n = 178
+
+  LITERAL 'always' reading: 13/178 — the claim as spoken
+    requires 100%. Reported so a reader may apply the strict standard (§6).
+
+  O4  DERIVED IMPLICATION — THIS INFERENCE IS THE AGENT'S, NOT THE LESSON'S
+      (V10_INTERPRETATION.md Q2. M2's verdict is taken from O3 alone.)
+      Friday range in [50,100] pips               72/178   =  40.45%   boot95 [33.15, 47.75]   wilson95 [33.51, 47.79]  n = 178
+      median Friday range = 107.0 pips
+
+  N2  UNIFORM-CLOSE NULL, matched per-Friday on that Friday's own range
+      P(close lands 25-50 from BOTH extremes | range R), uniform close:
+      = length of the admissible sub-interval / R
+      expected joint rate under the matched uniform null =   7.12%
+      OBSERVED joint rate                                =   7.30%
+      observed - null                                    =  +0.19 pp
+      READING: this removes the range-width artifact. A wide Friday cannot
+               satisfy M2a at all; a ~75-pip Friday satisfies it almost
+               automatically. The comparison is against THAT, not against 0.
+
+  O5 / N3  WEEKDAY CONTROL — is FRIDAY special, as the stated mechanism claims?
+      (mechanism: 'to trap the traders going into the weekend and hit them
+       with the gap' — weekend-specific by its own terms)
+      day       n  joint 25-50  med d_high  med d_low  med range
+      Mon     180       10.00%        36.8       34.2       93.7  n = 180
+      Tue     180        8.33%        47.4       40.7      102.8  n = 180
+      Wed     178        6.74%        45.1       49.8      111.1  n = 178
+      Thu     179       13.41%        40.6       47.6      100.2  n = 179
+      Fri     178        7.30%        51.1       40.1      107.0  n = 178
+
+      Friday joint rate           =   7.30%
+      best Mon-Thu/Sun joint rate =  13.41%
+      Friday - best other         =  -6.10 pp
+      §6 specificity threshold: Friday must exceed EVERY other day by >= 10 pp
+
+================ ARM B ================
+  week roster (arm B) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 2  (2015-12-20, 2015-12-27)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+
+  EXCLUSIONS (PT-036 §7a, pre-registered by name):
+    data hole  week of 2014-06-01          EXCLUDED  (1)
+    truncated  week of 2016-06-26          EXCLUDED  (1)
+    Dec/Jan closure weeks                     INCLUDED, reported separately (6)
+    usable weeks for M1                       n = 180
+
+-- M1 : WEEKLY RANGE, peak formation high to peak formation low --
+   V10 [00:14:09] '600 to 1000 pips is the range'
+   anchor definition: V10 [01:14:06], the week's extreme (A-010)
+
+    n        180
+    min          76.6 pips
+    p05         138.0
+    p25         189.1
+    MEDIAN      243.8
+    p75         322.7
+    p95         444.5
+    max        1789.5
+    mean        269.3
+
+  O1  weeks with range in [600,1000] pips          0/180   =   0.00%   boot95 [ 0.00,  0.00]   wilson95 [ 0.00,  2.09]  n = 180
+      weeks with range >= 600 pips                 1/180   =   0.56%   boot95 [ 0.00,  1.67]   wilson95 [ 0.10,  3.08]  n = 180
+      (context) weeks with range >= 300 pips      56/180   =  31.11%   boot95 [24.44, 37.78]   wilson95 [24.80, 38.21]  n = 180
+
+  O2  SCALE DIAGNOSTIC (pre-registered; does NOT change M1's verdict)
+      median observed / 800 (band midpoint) = 0.305
+      claim overshoots median by a factor of  3.28x
+      600 pips sits at the 99.44th percentile of the observed distribution
+      pip-vs-point check: 600 'points' on a 5-digit feed = 60 pips;
+        weeks with range in [60,100] pips = 4/180
+
+  Dec/Jan closure weeks reported separately: n=6, median 208.0 pips, in-band 0
+
+  N4  SHIFTED-BOUNDARY CONTROL (+24h, Monday 17:00 anchors)
+      shifted roster n=181  median 244.1 pips  in-band 1/181 = 0.55%
+      TRUE roster    n=180  median 243.8 pips  in-band 0/180 = 0.00%
+      median difference (true - shifted) = -0.3 pips
+      READING: if these are indistinguishable, M1 measures how far GBP/USD
+               travels in five days, NOT anything about week structure.
+
+-- M2 : THE FRIDAY CLOSE, 25 to 50 pips off BOTH extremes --
+   V10 [00:13:41] 'the dealer will end always 25 to 50 pips off of the high
+                   and 25 to 50 pips off of the low'
+
+  §7b.1 CENSORING CHECK  censored/unresolved observations = 0
+        (PT-036 §2 asserts the design admits ZERO; non-zero VOIDS both measures)
+
+  M2 EXCLUSIONS: Thursday-closing weeks have no Friday session — excluded by name: ['2015-12-20', '2015-12-27']
+  usable Fridays for M2  n = 178   (exclusion count 2)
+
+  O3  Friday close distance from the day's HIGH (pips)
+    n        178
+    min           1.2 pips
+    p05           9.6
+    p25          24.7
+    MEDIAN       50.6
+    p75          90.2
+    p95         184.1
+    max        1385.4
+    mean         72.8
+
+  O3  Friday close distance from the day's LOW (pips)
+    n        178
+    min           0.0 pips
+    p05           3.5
+    p25          17.6
+    MEDIAN       43.0
+    p75          66.7
+    p95         135.2
+    max         404.1
+    mean         51.2
+
+  O3  JOINT: both distances in [25,50]  <-- M2a    10/178   =   5.62%   boot95 [ 2.25,  8.99]   wilson95 [ 3.08, 10.03]  n = 178
+      marginal: distance from HIGH in [25,50]     40/178   =  22.47%   boot95 [16.29, 28.65]   wilson95 [16.96, 29.15]  n = 178
+      marginal: distance from LOW  in [25,50]     45/178   =  25.28%   boot95 [19.10, 32.02]   wilson95 [19.46, 32.14]  n = 178
+
+  LITERAL 'always' reading: 10/178 — the claim as spoken
+    requires 100%. Reported so a reader may apply the strict standard (§6).
+
+  O4  DERIVED IMPLICATION — THIS INFERENCE IS THE AGENT'S, NOT THE LESSON'S
+      (V10_INTERPRETATION.md Q2. M2's verdict is taken from O3 alone.)
+      Friday range in [50,100] pips               71/178   =  39.89%   boot95 [32.58, 47.19]   wilson95 [32.98, 47.22]  n = 178
+      median Friday range = 107.6 pips
+
+  N2  UNIFORM-CLOSE NULL, matched per-Friday on that Friday's own range
+      P(close lands 25-50 from BOTH extremes | range R), uniform close:
+      = length of the admissible sub-interval / R
+      expected joint rate under the matched uniform null =   7.00%
+      OBSERVED joint rate                                =   5.62%
+      observed - null                                    =  -1.38 pp
+      READING: this removes the range-width artifact. A wide Friday cannot
+               satisfy M2a at all; a ~75-pip Friday satisfies it almost
+               automatically. The comparison is against THAT, not against 0.
+
+  O5 / N3  WEEKDAY CONTROL — is FRIDAY special, as the stated mechanism claims?
+      (mechanism: 'to trap the traders going into the weekend and hit them
+       with the gap' — weekend-specific by its own terms)
+      day       n  joint 25-50  med d_high  med d_low  med range
+      Mon     180        7.22%        35.0       33.6       93.7  n = 180
+      Tue     180        7.78%        46.2       43.5      102.2  n = 180
+      Wed     178        6.18%        44.9       49.6      111.1  n = 178
+      Thu     179       14.53%        39.7       46.2       99.6  n = 179
+      Fri     178        5.62%        50.6       43.0      107.6  n = 178
+
+      Friday joint rate           =   5.62%
+      best Mon-Thu/Sun joint rate =  14.53%
+      Friday - best other         =  -8.91 pp
+      §6 specificity threshold: Friday must exceed EVERY other day by >= 10 pp
+
+================ DECISION INPUTS (verdict applied by a human vs §6) ==========
+This runner prints inputs, not verdicts — COMMON_PROTOCOL.md §9 rule 7 and the
+BT_V08_0001 / BT_V09_0001 precedent, where the runner's own decision logic was
+wrong and the pre-registration was right.
+
+  arm    M1 in-band  M1 median   M2a joint   N2 null  Fri-best  censored
+  A           0.00%      243.8       7.30%     7.12%    -6.10         0
+  B           0.00%      243.8       5.62%     7.00%    -8.91         0
+
+§6 thresholds (fixed before the run, may not be moved):
+  M1  CONFIRMED >=50% in-band | PARTIAL 20-50% | CONTRADICTED <20%
+  M2a CONFIRMED >=50% joint   | PARTIAL 20-50% | CONTRADICTED <20%
+  M2 specificity: Friday must exceed EVERY other day by >= 10 pp
+
+§6a PREDICTIONS committed before the run (scored in BT_V10_0001):
+  P1 M1 CONTRADICTED, <5% in-band
+  P2 median/800 factor in [0.15, 0.40]
+  P3 M2a CONTRADICTED, <20% joint
+  P4 M2 fails specificity
+  P5 N2 null within 10pp of observed M2a
+  P6 N4 shifted roster NOT distinguishable on M1
+  P7 arms differ negligibly on M1, detectably on M2  [flagged CHEAP]

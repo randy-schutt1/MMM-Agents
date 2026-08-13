@@ -1,0 +1,26 @@
+==============================================================================
+V10 COMPREHENSION PROBE — MECHANICAL SCORING
+==============================================================================
+transcript : 02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md
+markers    : 1184
+answers    : 05_HOMEWORK/V10/V10_COMPREHENSION_ANSWERS.md, committed 54b97f2
+             BEFORE this scorer existed.
+
+RIGHT  Q1  signature trade              (3 assertions)
+RIGHT  Q2  PFH/PFL defined              (3 assertions)
+RIGHT  Q3  blue box vs Asian range      (5 assertions)
+RIGHT  Q4  preconditions in order       (5 assertions)
+RIGHT  Q5  DNC                          (2 assertions)
+RIGHT  Q6  distance figure              (3 assertions)
+RIGHT  Q7  stop loss ABSENT             (2 assertions)
+RIGHT  Q8  lock duration conflict       (3 assertions)
+RIGHT  Q9  trade count                  (4 assertions)
+RIGHT  Q10 timing prohibition           (4 assertions)
+RIGHT  Q11 TDI deferred                 (3 assertions)
+RIGHT  Q12 session times ABSENT         (7 assertions)
+
+SCORE: 12 RIGHT / 0 WRONG  of 12
+ASSERTIONS CHECKED: 44
+
+Self-assessment recorded before scoring: 'Predicted score: 11 or 12 of 12',
+with Q6 and Q8 named as the likely markdowns.

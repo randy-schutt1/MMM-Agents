@@ -1879,3 +1879,140 @@ this record is cited as its independent corroboration.
 
 `D-039`, `D-040`, `SOURCING_HIERARCHY.md` §3.3; **`C-011`** (the asymmetry precedent);
 `A-065`; `MMM-NOTES` pp. 50, 51, 67; `03_LESSON_NOTES/V09_SOURCE_NOTES.md` §13.
+
+---
+
+## C-016 — V10 states the directional lock is good for **one day** and for **three days**, in adjacent sentences
+
+**Filed by:** V10 Student session, 2026-08-13
+**Type:** intra-lesson, **single speaker** (course author, 100% runtime) — not a speaker conflict
+**Severity of consequence:** it sets the holding period of the lesson's signature trade
+
+### The two statements
+
+| # | Marker | Statement |
+|---|---|---|
+| 1 | `[01:00:41]` | *"Safety trade — this is why it's safe, because you know the direction. You have a **one-day lock** on the directional bias"* |
+| 2 | `[01:00:43]` | *"You know the **lock is good for three days**"* |
+
+**They are two seconds apart, in one breath, by one speaker, about one object.**
+
+### A third figure, which is why this cannot be waved away as a slip
+
+The lesson also states the move's duration **twice more**, and gets a different number again:
+
+| Marker | Statement |
+|---|---|
+| `[00:41:45]`–`[00:41:49]` | *"The dealer will rise from that level for **at least two days**, offering you 50 pips"* |
+| `[01:32:07]`–`[01:32:11]` | *"Identifies the peak formation low and trades away from it for **two days**, goes long for two days"* |
+
+And a fourth, on the cycle:
+
+| Marker | Statement |
+|---|---|
+| `[01:26:39]`–`[01:26:50]` | *"**Sunday is not day one.** When the peak formation is formed, this is day one … peak formation day two, day three, looking for the reversal, **maybe one more day rise**"* |
+
+**So the corpus now holds `one day`, `two days`, `at least two days`, `three days`, and
+`three days + maybe one more` for what is presented as the same directional lock.**
+
+### What was considered, and refused
+
+A reconciliation is **available and is not adopted**: that the *lock* (the directional bias) lasts
+three days while the *tradeable rise* is two, with `[01:00:41]`'s *"one-day"* meaning "a lock
+established in one day" rather than "a lock lasting one day". **It is grammatically possible and it
+is a construction, not a reading.** The speaker does not say it. `SOURCING_HIERARCHY.md` §3.2's
+*"Do not blend"* and `D-030` both apply, and `REVIEW_PROTOCOL.md` §O forbids silently resolving.
+
+**Recorded as noticed and refused, per the `C-010` precedent** — where the tidy reconciliation was
+likewise available and likewise declined.
+
+### Why it matters beyond bookkeeping
+
+The safety trade has **no stop loss** anywhere in V10 (`V10_SOURCE_NOTES.md` §15). Its only
+stated exit besides *"plus 50"* is **time**. **A trade whose only non-target exit is a holding
+period, whose holding period is stated five different ways, has no defined exit.**
+
+### Disposition
+
+```text
+UNRESOLVED. Both figures preserved. NEITHER is carried into any artifact as
+the holding period. No V10 test depends on it (PT-036 measures range and
+close-position statistics, not trade duration).
+```
+
+### Related
+
+`A-077`, `A-010`, `C-010` (the refusal precedent), `D-030`, `REVIEW_PROTOCOL.md` §O;
+`03_LESSON_NOTES/V10_SOURCE_NOTES.md` §11, §15.
+
+---
+
+## C-017 — The anchor distance is measured from the **LOW/HOW anchor** in print and from the **blue tracer** in speech
+
+**Filed by:** V10 Student session, 2026-08-13
+**Type:** intra-lesson, **single speaker**, and it is a **printed-vs-spoken** conflict — the first
+of its kind in the corpus
+**Severity of consequence:** it determines the origin of the only distance measurement V10 gives
+
+### The conflict
+
+| Source | Statement | Reference object |
+|---|---|---|
+| **PRINTED**, frame `75:57` | *"Look for the stop hunt to come in around 25 to 75 pips off of the **LOW/HOW anchor**."* | The week's extreme (`A-010`) |
+| **SPOKEN**, `[00:49:39]` | *"25 75 pips off of the **blue tracer**"* | The tracer (`A-079`) |
+| **SPOKEN**, `[00:52:09]`–`[00:52:16]` | *"25 to 75 is easy to remember … off of the **blue tracer**"* | The tracer |
+| **SPOKEN**, `[00:58:30]` | *"This box is 50 75 pips off of the **blue tracer**"* | The tracer |
+| **SPOKEN**, `[01:23:16]` | *"25 to 50, 25 to 75 pips off of the **blue tracer**"* | The tracer |
+| **SPOKEN**, `[01:15:36]` | *"25 to 75 pips off of the **previous high [or] previous low**"* | Ambiguous — could be either |
+| **SPOKEN**, `[01:16:20]` | *"25 to 75 pips off of the **L. O. W. [or] H. O. W anchor point**"* | The week's extreme — **agrees with the slide** |
+
+**Four spoken instances say the tracer; one printed and one spoken say the LOW/HOW anchor; one is
+ambiguous.**
+
+### Why these are genuinely different objects and not two names for one thing
+
+The lesson treats them as distinct in the same file:
+
+- **LOW/HOW** = the week's extreme, defined at `[01:14:06]` as *"the highest point on a chart within
+  the week"*.
+- **The blue tracer** = a per-**day** object: `[01:19:45]` *"there's a tracer in here and [it]
+  **separates the day**. This is day one anchor, day two"*; `[00:35:40]` *"they're working the
+  tracer from **yesterday**"*.
+
+**A weekly extreme and a daily separator are not the same price**, except by coincidence in the
+week's first day. So *"25–75 pips off"* names two different measurements.
+
+### The deeper problem, which is why this cannot be resolved by preferring the slide
+
+`A-079` records that the lesson never establishes whether the tracer is a **horizontal price
+level** or a **vertical day separator**. `[01:19:45]`'s *"separates the day"* reads vertical;
+*"pips off of"* requires horizontal. **So the majority spoken reading is not merely in conflict with
+the slide — it may not be a measurable quantity at all.**
+
+### Resolution attempted and DECLINED
+
+`D-008`'s hierarchy ranks *original screenshots/charts/slides* **above** *transcript*, which would
+make the printed **LOW/HOW anchor** the winner outright. **That is not applied here, and the reason
+is stated rather than assumed:** `D-008` ranks source *classes* by reliability of **capture**, not
+by authorial intent, and it was written to stop an agent's reading from outranking the course — not
+to adjudicate between two things the same speaker said in the same hour. The slide is the better
+record of *what was written*; it is not evidence that the four spoken instances were errors.
+
+**Refused, explicitly:** treating *"blue tracer"* as a misspeak; treating the slide as
+authoritative on the merits; or blending the two into *"25–75 pips off the relevant anchor"* — a
+composite phrase **no source states** (`SOURCING_HIERARCHY.md` §3.2).
+
+### Disposition
+
+```text
+UNRESOLVED as to the REFERENCE POINT.
+The NUMBER (25 to 75 pips) is settled and is recorded in A-078 as
+RESOLVED BY COURSE on the printed slide.
+The reference point stays DO NOT CODE. A distance with a contested
+origin is not a measurable rule.
+```
+
+### Related
+
+`A-078` (the number), `A-079` (the tracer), `A-010` (the anchor), `D-008`, `D-030`,
+`SOURCING_HIERARCHY.md` §3.2; `04_SCREENSHOTS/V10/INDEX.md` frame `75:57`.

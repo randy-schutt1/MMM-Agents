@@ -11,7 +11,11 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  0
+VIDEOS IN PROGRESS:  1  (V10 — R1 returned REVISE 0C/0M/4m 2026-08-13,
+                        HIGH confidence. IN REMEDIATION: open items 91-94
+                        are OWED and NOT yet applied. D-003 reserves
+                        closure to an independent reviewer; V10 reaches
+                        COMPLETE only at R2.)
 VIDEOS PASSED:       9  (V01, V02, V03, V04, V05, V06 — all COMPLETE;
                         V07 — PASS at R3 2026-08-13, COMPLETE;
                         V08 — PASS at R2 2026-08-13, COMPLETE;
@@ -23,22 +27,68 @@ VIDEOS PASSED:       9  (V01, V02, V03, V04, V05, V06 — all COMPLETE;
                         they are CLOSED — SELF-VERIFIED AT OWNER
                         DIRECTION. Read REVIEW_INDEX.md's V09 status
                         block before relying on this row.)
-NEXT LESSON:         V10 — **GATE OPEN.** V09 R1 returned REVISE with
-                     0 CRITICAL / 0 MAJOR, which opens the next gate under
-                     D-024 with the six minors deferred and still owed.
-                     V10 may start. See the V10 GATE block below for what
-                     to carry into it.
-CURRENT LESSON:      **V10 — not yet started. V09 is closed out.**
+NEXT LESSON:         V11 — **GATE OPEN as of 2026-08-13.** V10 R1 returned
+                     REVISE with 0 CRITICAL / 0 MAJOR / 4 MINOR, HIGH
+                     confidence, which opens the next gate under D-024.
+                     **V11 may start.** V10's four minors (items 91-94) are
+                     deferred and still owed; V10 is NOT COMPLETE until they
+                     are applied AND re-reviewed. See the V11 GATE block
+                     below for what to carry into it.
 
-                     (Superseded text, retained per REMEDIATION_PROTOCOL.md
-                     §2 -- this block read, between V09 R1 and this round:
-                     "CURRENT LESSON: **V09 — NO PRINTED TITLE. R1 REVISE
-                     2026-08-13, 0 CRITICAL / 0 MAJOR / 6 MINOR.
-                     REMEDIATION APPLIED, PENDING VERIFICATION at R2.**"
-                     R2 verified items 73-78 independently and opened
-                     items 81-83; those three were applied and
-                     SELF-VERIFIED at owner direction, which is what
-                     closes V09 -- and is why every row above says so.)
+CURRENT LESSON:      **V10 — banner "Market Makers Boot Camp / Week 3", no topic
+                     title. STUDENT PASS COMPLETE 2026-08-13, submitted as
+                     REVIEW REQUIRED. R1 RETURNED REVISE 0C/0M/4m,
+                     HIGH confidence, 2026-08-13 — items 91-94 OWED.**
+
+                     ⭐ **THE FIVE-LESSON GUEST RUN ENDS. V10 IS 100% COURSE
+                     AUTHOR.** V05-V09 each carried ZERO author runtime. The V10
+                     GATE carry-forward (a) required this be TESTED, not assumed,
+                     and it was -- five non-acoustic strands fixed before the
+                     answer was known, zero handover language in 96 minutes, and
+                     the cross-file acoustic screen NOT run per V07's prohibition.
+
+                     WHAT V10 CONTRIBUTES: THE SAFETY TRADE, the author's
+                     designated "signature trade" -- nine rules PRINTED on two
+                     slides plus target (50 pips), anchor distance (25-75,
+                     printed), anticipation lead (12-24h) and frequency (2 per
+                     pair per week). AND THE FIRST OPERATIONAL DEFINITION OF
+                     PEAK FORMATION IN TEN LESSONS: [01:14:06] "the highest point
+                     on a chart within the week, or the lowest point on the chart
+                     within the week". A-010 NARROWS on Tier 1 alone.
+
+                     WHAT IT DOES NOT SUPPLY, and absence is evidence: NO STOP
+                     LOSS ANYWHERE ("stop loss" occurs 0 times), no session clock
+                     time, no ADR lookback, no EMA nickname mapping despite using
+                     two nicknames.
+
+                     PT-036/BT_V10_0001: BOTH quantitative claims CONTRADICTED AS
+                     STATED. Weekly range 600-1000 pips -> 0 of 180 weeks, median
+                     243.8, and the pip-vs-point rescue fails too. Friday close
+                     25-50 off both extremes -> 7.30%, sitting +0.19pp from its
+                     own matched uniform null, and FRIDAY RANKS FOURTH OF FIVE
+                     WEEKDAYS. The safety trade itself was NOT tested and not
+                     testing it is reported as a finding (D-030; 5 of 7
+                     conditions undefined).
+
+                     (Superseded text, retained per REMEDIATION_PROTOCOL.md §2 --
+                     between V09 R1 and V09's close this block read: "CURRENT
+                     LESSON: **V09 — NO PRINTED TITLE. R1 REVISE 2026-08-13,
+                     0 CRITICAL / 0 MAJOR / 6 MINOR. REMEDIATION APPLIED,
+                     PENDING VERIFICATION at R2.**", and immediately before
+                     V10 R1 it read "CURRENT LESSON: **V10 — not yet started.
+                     V09 is closed out.**" R2 verified items 73-78
+                     independently and opened items 81-83; those three were
+                     applied and SELF-VERIFIED at owner direction, which is
+                     what closes V09.)
+
+                     (Superseded text, retained per REMEDIATION_PROTOCOL.md §2 --
+                     before V10 this block read: "VIDEOS IN PROGRESS: 1"; "NEXT
+                     LESSON: V10 -- GATE OPEN ... V10 may start"; "CURRENT LESSON:
+                     V09 -- NO PRINTED TITLE. R1 REVISE 2026-08-13, 0 CRITICAL /
+                     0 MAJOR / 6 MINOR. REMEDIATION APPLIED, PENDING VERIFICATION
+                     at R2." V09's status is UNCHANGED by this session -- it
+                     remains IN REMEDIATION awaiting R2, and V10 proceeded under
+                     the gate D-024 opened.)
 
                      (Superseded text, retained per REMEDIATION_PROTOCOL.md
                      §2 -- before V09 R1 this block read:
@@ -898,6 +948,90 @@ V08 GATE:            **OPEN. V07 R1, 2026-08-13 — REVISE, 0 CRITICAL / 0 MAJOR
                      REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
                      verdict, not a student submission.
 
+V11 GATE:            **OPEN as of 2026-08-13 — V10 R1 returned REVISE with
+                     0 CRITICAL / 0 MAJOR / 4 MINOR, HIGH confidence, which
+                     opens the next gate under D-024. V11 MAY START.**
+                     V10 is NOT COMPLETE: items 91-94 are owed and V10
+                     reaches COMPLETE only at R2. The four minors are
+                     documentation and register hygiene; none moves a
+                     measurement, classification, disposition or rule.
+                     V10 R1 additionally CLOSED item 87 (the
+                     SWF_CAPTURE_RECIPE.md §10 frame-rate defect) by policy
+                     edit on the integration branch under D-038a, and
+                     renumbered V10's open items 81-85 to 86-90 to resolve
+                     a collision with V09 R2's concurrently-allocated 81-83.
+
+                     Superseded text, retained per project convention:
+                     "**CLOSED.** V10's student pass is complete and submitted as
+                     REVIEW REQUIRED, but D-004 opens the next gate on a
+                     *reviewer* verdict, never on a student submission. No V11
+                     artifact of any kind until V10's R1 returns, and what it
+                     returns then governs per **D-024**." 
+                     Carry into V11, and read this before starting it:
+                     (a) **SPEAKER IDENTIFICATION IS STILL THE FIRST STEP — AND
+                     THE PATTERN JUST BROKE.** Course-author runtime: ~100% (V03)
+                     -> ~31% (V04) -> 0% (V05-V09, five in a row) -> **100%
+                     (V10)**. V11 IS Bootcamp1 Wk4 040812 (51mins) Part1 — a NEW
+                     week and a NEW date (2012-04-08). DO NOT ASSUME IT
+                     CONTINUES THE AUTHOR, and do not assume it reverts. TEST IT,
+                     on non-acoustic strands fixed before the answer is known.
+                     Do not use the acoustic screen across files.
+                     (b) **V10 PREDICTS V11'S EXISTENCE AND ITS DATE, FROM INSIDE
+                     V10.** The end card at burned 96:16 — PRINTED, NEVER SPOKEN —
+                     reads "Looks like I will have a session for Easter Sunday...
+                     So same time next week". Easter 2012 was **2012-04-08**,
+                     which is exactly V11's filename date (Wk4 **040812**). This
+                     is a cheap, dated continuity check available BEFORE opening
+                     V11, and it is recorded as a PREDICTION for V11 to test, not
+                     as a finding about V11.
+                     (c) **V10 DEFERS THE TDI TO V11 BY NAME.** [01:13:03]: "do we
+                     use TDI to confirm these? Yes, that's next week's lesson my
+                     friend." A-039 has read "displayed, not taught" since V04.
+                     **If V11 teaches it, A-039 closes and a five-lesson debt
+                     discharges.** This is the single most specific forward
+                     commitment the corpus has ever carried.
+                     (d) **A-077 (THE LOCK) IS NOW THE HIGHEST-VALUE GAP IN THE
+                     PROJECT.** V10 defined the safety trade's ANCHOR — the week's
+                     extreme, [01:14:06] — which is retrospective. The "lock" is
+                     the lesson's real-time substitute for it and has **no stated
+                     distance and no stated duration**. It is the ONLY thing
+                     between a defined anchor and a prospectively identifiable
+                     setup. Any lesson attaching a number to "price has moved away
+                     and confirmed" discharges dimension B's block, V10's deferred
+                     H2, and PT-038.
+                     (e) **A-004 IS STILL THE LARGEST BLOCKER — AND V10 SHOWS THE
+                     COURSE ROUTING AROUND IT.** At [01:16:36] a student says they
+                     cannot identify level three; the answer supplies a workaround
+                     ("take the trade in line with the peak formation"), not a
+                     definition. Ten lessons in, this may be a term the course
+                     never defines. Worth an owner's attention.
+                     (f) **C-017 IS THE CORPUS'S FIRST PRINTED-VS-SPOKEN CONFLICT**
+                     and the project has NO standing rule for that class. D-008 is
+                     the nearest instrument; V10's session declined to apply it,
+                     with reasons. A ruling would settle a question that will
+                     recur.
+                     (g) **SWF_CAPTURE_RECIPE.md §10's FRAME RATE IS NOT A
+                     CONSTANT EITHER.** §10 says patch "3.0 -> 30.0 fps" from
+                     V01/V02. **V10 declares 2.0 fps.** Applied literally it
+                     sweeps at 15x not 10x and FAILS SILENTLY — well-formed,
+                     correctly-timecoded frames at 7.5s spacing, under-sampling
+                     the screen detector by a third. READ frameRate FROM THE
+                     HEADER, as GOTCHA 5 already teaches for the stage size. This
+                     is a POLICY-ledger edit owed on the integration branch
+                     (D-038a), NOT on a task branch.
+                     (h) **D-022 FIRED FOR REAL AGAIN.** V10's first candidate port
+                     was BUSY, held by another session's http.server. Three
+                     lessons running. Verify the port AND the bytes, every time.
+                     (i) **Q-011 STRENGTHENED THE FABRICATION FINDING.** RULES.md
+                     is not merely "templated" — by exact diff, V10's is V01's file
+                     with SIX identifier strings swapped, and D-017 already proved
+                     V01's false. NOTES.md remains the only one needing a real
+                     per-lesson audit (17 templates). V10 adds the SECOND instance
+                     of the sixth failure mode: a genuine frame, invented caption.
+                     (j) **D-038 IS IN FORCE.** V10 was done in a dedicated
+                     worktree on branch video/v10. No I-009 collision.
+
+                     ---- superseded, retained ----
 V10 GATE:            **OPEN.** V09's R1 returned **REVISE, 0 CRITICAL / 0 MAJOR /
                      6 MINOR** on 2026-08-13, and under **D-024** the progression
                      gate follows finding severity rather than the verdict word:
@@ -1230,7 +1364,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | REVISE R1 0C/0M/3m | **IN REMEDIATION** (items 64-66) |
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
-| V10 | Wk3 | 01:36:16 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V10 | Wk3 | 01:36:16 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ✅ **R1 REVISE 0C/0M/4m** | **IN REMEDIATION** (items 91-94) |
 | V11 | Wk4 P1 | 00:50:56 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V13 | Wk5 P1 | 01:05:22 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
