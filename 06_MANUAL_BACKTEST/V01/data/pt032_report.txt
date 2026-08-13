@@ -1,0 +1,231 @@
+==============================================================================
+PT-032 — The weekend gap, and the one mechanical rationale in V01
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-C' 2013-01-06 -> 2016-06-30. Re-issue of PT-019.
+⚠ EVERY GAP FIGURE IS BID-TO-BID WITH NO SPREAD AND IS A LOWER
+  BOUND on execution risk (§0b). The error runs IN FAVOUR of the
+  instructor's rationale, which is why it is declared first.
+⚠ Measure 4 is NOT a gap comparison on this corpus (§0c).
+==============================================================================
+
+==========================================================================
+--- ARM A ---
+==========================================================================
+  week roster (arm A) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 3  (2015-12-20, 2015-12-27, 2016-06-26)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+
+  ======================================================================
+  CO-PRIMARY BASELINE, RUN FIRST OF ALL (§7 step 5) — N3 week-anchor shift.
+  'Gaps' computed at SHIFTED boundaries, most of which fall inside
+  continuous trading and should therefore be NEAR ZERO.
+  ⚠ A NON-ZERO RESULT HERE MEANS THE HARVEST IS WRONG AND NO OTHER NUMBER
+    IN THIS TEST CAN BE TRUSTED (§5 row 5).
+  ======================================================================
+    median |shifted-boundary change|: median 0.1, 5-95% [0.1, 0.2]
+    N3 HARVEST CHECK: PASS — near zero, the harvest is sound
+
+  REALISED BOUNDARY INSTANTS, READ FROM M1 TIMESTAMPS (§7 step 4 —
+  'do not assume 17:00 for either'):
+    weeks whose open is LATE: 12 of 182   lags (min): [1, 2, 3, 4, 6, 8, 10, 1321]
+    realised week-close weekday: Thu=3, Fri=179
+
+  EXCLUSIONS, APPLIED AND COUNTED BY NAME:
+    2013-01-06  §3a — the gap INTO it needs the close of 2013-01-04, which
+                lies inside the corpus but OUTSIDE W-C'. Using it would
+                silently widen the pre-registered window (`D-027`).
+    2014-06-01  §3a″ — THE FABRICATED GAP. ~22 hours of MISSING data
+                sit between the 2014-05-30 close and the first bar seen at
+                2014-06-02 15:01. Measuring it would record absent data as a
+                weekend gap. EXCLUDED BY NAME.
+    2016-06-26  §3a — the gap INTO it is fully determined by data
+                before the boundary and is RETAINED, even though the week
+                itself is truncated.
+  WEEKEND GAPS USED: 180   (§3a‴ pre-registered: 180)
+
+  MEASURE 1 — distribution of the ABSOLUTE weekend gap, in pips.
+  ⚠ BID-TO-BID, NO SPREAD -> A LOWER BOUND on execution risk (§0b).
+    median   8.90   90th  27.22   99th 141.44   max 259.90
+    §3a: the 99th percentile at n = 180 is an order statistic over ~2
+    observations. THE TOP FIVE, ORDERED, reported beside it:
+      into 2016-06-26   -259.90 pips   closure   48.0 h
+      into 2014-09-07   -158.50 pips   closure   48.0 h
+      into 2016-02-21   -136.90 pips   closure   48.0 h
+      into 2016-06-19   +113.00 pips   closure   48.0 h
+      into 2013-02-24    -84.00 pips   closure   48.0 h
+
+  MEASURE 2 — share of weekends whose gap exceeds the instructor's own
+  stop and target numbers (V04 [00:04:43], [00:05:07]). Distances, so they
+  travel across vendors:
+    >   10 pips : 0.467 (84/180), 95% CI [0.395, 0.539]
+    >   15 pips : 0.306 (55/180), 95% CI [0.243, 0.376]
+    >   18 pips : 0.200 (36/180), 95% CI [0.148, 0.264]
+    >   50 pips : 0.044 (8/180), 95% CI [0.023, 0.085]  <<< subset < 30: any statement ABOUT these weekends is descriptive only
+
+  MEASURE 3 — GAP FILL: does price return to the previous week's close?
+    filled within  4 h : 0.739 (133/180), 95% CI [0.670, 0.798]
+    filled within 24 h : 0.894 (161/180), 95% CI [0.841, 0.931]
+    filled by the week's end: 0.944 (170/180), 95% CI [0.901, 0.970]
+    median time to fill (filled only): 0.62 h
+
+  MEASURE 4 — ⚠ RELABELLED PER §0c. On this corpus there is NO daily break,
+  so these are NOT gaps: they are CONTINUOUS-TRADING RETURNS across the 17:00
+  instant on Mon-Thu. Comparing a discontinuous weekend jump against a
+  continuous weekday return is a FLOOR, not an apples-to-apples null.
+    n = 714   (§3a‴ expected ~720, floor ~714; 8 instants excluded for not being bracketed within 15 min)
+    median  0.30   90th  1.60   99th  4.10   max  19.90
+    WEEKEND median 8.90 vs WEEKDAY-17:00 median 0.30  ->  ratio 29.7x
+    share of weekday instants over 18 pips: 0.001 (1/714), 95% CI [0.000, 0.008]
+
+  §0c — QA `C6`'s THREE real intra-week gaps >= 30 min in 3.5 years
+  (4h43m total). THREE OBSERVATIONS IS FAR BELOW ANY INFERENTIAL FLOOR;
+  listed for completeness, DESCRIPTIVE ONLY, and never compared:
+      2015-01-01 13:33  (see QA_REPORT.txt C6)
+      2015-08-21 13:16  (see QA_REPORT.txt C6)
+      2013-04-11 19:11  (see QA_REPORT.txt C6)
+
+  §3a′.1 — THE FOUR MID-WEEK HOLIDAY RE-OPENS. `C7` counts these as week
+  opens; they are NOT weekend gaps and are NEVER merged into Measure 1.
+  Reported separately and by name, as a distinct quantity:
+      re-open 2013-12-26:  13.70 pips across a  39.0 h closure
+      re-open 2014-01-01:   6.40 pips across a  25.0 h closure
+      re-open 2014-12-25:   4.30 pips across a  28.0 h closure
+      re-open 2015-01-01:   3.80 pips across a  20.1 h closure
+
+  §3a‴ — EXTENDED CLOSURES >= 72 h, RETAINED and flagged with their
+  realised duration. 'A 75-hour gap and a 48-hour gap are not the same
+  event and a distribution that silently mixes them is misleading.'
+      into 2015-12-27:   -7.10 pips across 75.1 h
+      into 2016-01-03:   +0.40 pips across 72.0 h
+    ordinary weekends: median closure 48.0 h
+
+  MEASURE 5 — DIRECTIONAL: is the gap's sign related to the PRIOR FRIDAY's
+  direction? ('the dealer squares his books' predicts a relationship; NO
+  relationship is the null.) §3a: the four cell COUNTS are reported.
+    prior UP  /gap UP  : 0.540 (34/63), 95% CI [0.418, 0.657]
+    prior UP  /gap DOWN: 0.460 (29/63), 95% CI [0.343, 0.582]
+    prior DOWN/gap UP  : 0.496 (58/117), 95% CI [0.407, 0.585]
+    prior DOWN/gap DOWN: 0.504 (59/117), 95% CI [0.415, 0.593]
+    gap CONTINUES the prior Friday's direction: 0.517 (93/180), 95% CI [0.444, 0.589]
+
+==========================================================================
+--- ARM B ---
+==========================================================================
+  week roster (arm B) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 2  (2015-12-20, 2015-12-27)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+
+  ======================================================================
+  CO-PRIMARY BASELINE, RUN FIRST OF ALL (§7 step 5) — N3 week-anchor shift.
+  'Gaps' computed at SHIFTED boundaries, most of which fall inside
+  continuous trading and should therefore be NEAR ZERO.
+  ⚠ A NON-ZERO RESULT HERE MEANS THE HARVEST IS WRONG AND NO OTHER NUMBER
+    IN THIS TEST CAN BE TRUSTED (§5 row 5).
+  ======================================================================
+    median |shifted-boundary change|: median 0.1, 5-95% [0.1, 0.2]
+    N3 HARVEST CHECK: PASS — near zero, the harvest is sound
+
+  REALISED BOUNDARY INSTANTS, READ FROM M1 TIMESTAMPS (§7 step 4 —
+  'do not assume 17:00 for either'):
+    weeks whose open is LATE: 12 of 182   lags (min): [1, 2, 3, 4, 6, 8, 10, 1321]
+    realised week-close weekday: Thu=2, Fri=180
+
+  EXCLUSIONS, APPLIED AND COUNTED BY NAME:
+    2013-01-06  §3a — the gap INTO it needs the close of 2013-01-04, which
+                lies inside the corpus but OUTSIDE W-C'. Using it would
+                silently widen the pre-registered window (`D-027`).
+    2014-06-01  §3a″ — THE FABRICATED GAP. ~22 hours of MISSING data
+                sit between the 2014-05-30 close and the first bar seen at
+                2014-06-02 15:01. Measuring it would record absent data as a
+                weekend gap. EXCLUDED BY NAME.
+    2016-06-26  §3a — the gap INTO it is fully determined by data
+                before the boundary and is RETAINED, even though the week
+                itself is truncated.
+  WEEKEND GAPS USED: 180   (§3a‴ pre-registered: 180)
+
+  MEASURE 1 — distribution of the ABSOLUTE weekend gap, in pips.
+  ⚠ BID-TO-BID, NO SPREAD -> A LOWER BOUND on execution risk (§0b).
+    median   8.90   90th  27.22   99th 141.44   max 259.90
+    §3a: the 99th percentile at n = 180 is an order statistic over ~2
+    observations. THE TOP FIVE, ORDERED, reported beside it:
+      into 2016-06-26   -259.90 pips   closure   48.0 h
+      into 2014-09-07   -158.50 pips   closure   48.0 h
+      into 2016-02-21   -136.90 pips   closure   48.0 h
+      into 2016-06-19   +113.00 pips   closure   48.0 h
+      into 2013-02-24    -84.00 pips   closure   48.0 h
+
+  MEASURE 2 — share of weekends whose gap exceeds the instructor's own
+  stop and target numbers (V04 [00:04:43], [00:05:07]). Distances, so they
+  travel across vendors:
+    >   10 pips : 0.467 (84/180), 95% CI [0.395, 0.539]
+    >   15 pips : 0.306 (55/180), 95% CI [0.243, 0.376]
+    >   18 pips : 0.200 (36/180), 95% CI [0.148, 0.264]
+    >   50 pips : 0.044 (8/180), 95% CI [0.023, 0.085]  <<< subset < 30: any statement ABOUT these weekends is descriptive only
+
+  MEASURE 3 — GAP FILL: does price return to the previous week's close?
+    filled within  4 h : 0.739 (133/180), 95% CI [0.670, 0.798]
+    filled within 24 h : 0.894 (161/180), 95% CI [0.841, 0.931]
+    filled by the week's end: 0.944 (170/180), 95% CI [0.901, 0.970]
+    median time to fill (filled only): 0.62 h
+
+  MEASURE 4 — ⚠ RELABELLED PER §0c. On this corpus there is NO daily break,
+  so these are NOT gaps: they are CONTINUOUS-TRADING RETURNS across the 17:00
+  instant on Mon-Thu. Comparing a discontinuous weekend jump against a
+  continuous weekday return is a FLOOR, not an apples-to-apples null.
+    n = 714   (§3a‴ expected ~720, floor ~714; 8 instants excluded for not being bracketed within 15 min)
+    median  0.20   90th  0.80   99th  3.09   max   6.90
+    WEEKEND median 8.90 vs WEEKDAY-17:00 median 0.20  ->  ratio 44.5x
+    share of weekday instants over 18 pips: 0.000 (0/714), 95% CI [0.000, 0.005]
+
+  §0c — QA `C6`'s THREE real intra-week gaps >= 30 min in 3.5 years
+  (4h43m total). THREE OBSERVATIONS IS FAR BELOW ANY INFERENTIAL FLOOR;
+  listed for completeness, DESCRIPTIVE ONLY, and never compared:
+      2015-01-01 13:33  (see QA_REPORT.txt C6)
+      2015-08-21 13:16  (see QA_REPORT.txt C6)
+      2013-04-11 19:11  (see QA_REPORT.txt C6)
+
+  §3a′.1 — THE FOUR MID-WEEK HOLIDAY RE-OPENS. `C7` counts these as week
+  opens; they are NOT weekend gaps and are NEVER merged into Measure 1.
+  Reported separately and by name, as a distinct quantity:
+      re-open 2013-12-26:  13.70 pips across a  39.0 h closure
+      re-open 2014-01-01:   6.40 pips across a  25.0 h closure
+      re-open 2014-12-25:   4.30 pips across a  28.0 h closure
+      re-open 2015-01-01:   3.80 pips across a  20.1 h closure
+
+  §3a‴ — EXTENDED CLOSURES >= 72 h, RETAINED and flagged with their
+  realised duration. 'A 75-hour gap and a 48-hour gap are not the same
+  event and a distribution that silently mixes them is misleading.'
+      into 2015-12-27:   -7.10 pips across 75.1 h
+      into 2016-01-03:   +0.40 pips across 72.0 h
+    ordinary weekends: median closure 48.0 h
+
+  MEASURE 5 — DIRECTIONAL: is the gap's sign related to the PRIOR FRIDAY's
+  direction? ('the dealer squares his books' predicts a relationship; NO
+  relationship is the null.) §3a: the four cell COUNTS are reported.
+    prior UP  /gap UP  : 0.531 (34/64), 95% CI [0.411, 0.648]
+    prior UP  /gap DOWN: 0.469 (30/64), 95% CI [0.352, 0.589]
+    prior DOWN/gap UP  : 0.500 (58/116), 95% CI [0.410, 0.590]
+    prior DOWN/gap DOWN: 0.500 (58/116), 95% CI [0.410, 0.590]
+    gap CONTINUES the prior Friday's direction: 0.511 (92/180), 95% CI [0.439, 0.583]
