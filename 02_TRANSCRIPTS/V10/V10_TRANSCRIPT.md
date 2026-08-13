@@ -40,7 +40,7 @@ across files** — V07's carry-forward prohibits it, and V09 and this session bo
 
 | # | Strand | Evidence |
 |---|---|---|
-| **1** | **The speaker owns the email address** | `[00:07:12]` *"my only valid email address right now is Steve at"* / `[00:07:16]` *"marketmakers4x.com"*. Not a reference to Steve — a **first-person claim of Steve's mailbox** |
+| **1** | **The speaker owns the email address** | `[00:07:12]` *"my only valid email address right now is Steve at"* / `[00:07:20]` *"marketmakers4x.com"*. Not a reference to Steve — a **first-person claim of Steve's mailbox** |
 | **2** | **Every one of the 13 `Steve` tokens is vocative or self-quoting** | The speaker voices students addressing **him**, then answers in the first person: `[00:35:53]` *"Why does Steve have this stupid little blue line on the chart"* → `[00:35:59]` *"No, it's on there because it serves a purpose"*. Also `[01:18:37]`, `[01:19:19]`, `[01:21:37]`, `[01:23:57]`, `[01:05:39]`. **In V04–V09 the guest speakers referred to Steve in the third person as an absent authority; here the name is only ever pointed at the microphone** |
 | **3** | **He reads mail addressed to himself, and the slide shows it** | `[00:12:53]` *"Hi, Steve. Thanks for your turn to me so quickly about the ADR correction"*. The rendered slide at burned timecode `08:38` prints an email opening **`Hello Steve`** — an artifact of the recording, not of the ASR |
 | **4** | **He claims authorship of the method and the course** | `[00:12:45]` *"Resemble what it is I do in fact teach you guys"*; `[00:04:14]` *"…said Steve I could rehearse **your** method"*; `[00:05:06]` *"on behalf of market makers 4x [and] compass FX we're gonna be hosting a seminar"*; `[01:28:11]`–`[01:28:22]` *"I wrote the lesson. I give it to my wife. She converts it to slides"* |
@@ -156,7 +156,7 @@ case/punctuation normalisation:
 
 | Marker | This transcript | Whisper `small.en` | The actual words, from context |
 |---|---|---|---|
-| `[00:15:12]` | *"I think it says **the incoming**, baby"* | *"…**they ain't coming**…"* | **they ain't coming** — Whisper is right. This is the lesson's own refrain, which *this same transcript renders correctly elsewhere*: `[00:16:37]` *"He **ain't coming** back baby"`, `[00:52:16]` *"because he **ain't coming** back, baby"*, `[01:17:05]` *"the price **ain't coming** back"* |
+| `[00:15:12]` | *"I think it says **the incoming**, baby"* | *"…**they ain't coming**…"* | **they ain't coming** — Whisper is right. This is the lesson's own refrain, which *this same transcript renders correctly elsewhere*: `[00:16:37]` *"He **ain't coming** back baby"`, `[00:52:16]` *"because he **ain't coming** back, baby"*, `[00:17:01]` *"the price **ain't coming** back"* |
 | `[00:15:12]` | *"that is **a lu** owns the rights to that"* | *"…**Lew**…"* | **Lou** — a person, named earlier at `[00:04:48]` *"Lou from New York is shot"* |
 | `[00:15:24]` | *"Those you **scorn** at home"* | *"…**scoring**…"* | **scoring** — *"those of you scoring at home"* |
 | `[00:15:02]` | *"and we **advise** the traders are trapped"* | *"…**are advised**…"* | are advised |
@@ -181,7 +181,7 @@ case/punctuation normalisation:
 3. **Proper nouns are unreliable, and this note had the direction BACKWARDS until the screenshot
    pass corrected it.** It originally read:
    > ~~*"marketmakersforks.com"* and *"Steve at MMM forex"* at `[00:07:38]`–`[00:07:44]` against
-   > the **correctly-rendered** `marketmakers4x.com` at `[00:07:16]`.~~
+   > the **correctly-rendered** `marketmakers4x.com` at `[00:07:20]`.~~
 
    **The printed slide at burned timecode `07:08` reads `steve@marketmakersforex.com`.** So
    `marketmakers4x.com` is the *mis*-rendering — the engine heard *"forex"* as *"4x"* — and

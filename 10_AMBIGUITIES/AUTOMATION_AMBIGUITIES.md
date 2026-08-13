@@ -5308,3 +5308,247 @@ DO NOT CODE
 ### Related
 
 `A-004`, `A-073`, `D-009` (no optimization toward a claimed rate).
+
+---
+
+## A-076 — `blue box`: the object every V10 trigger references, and it is never defined
+
+**Raised by:** V10 · `[00:15:49]`, `[00:46:16]`–`[00:46:27]`, `[01:01:42]`–`[01:01:53]`,
+`[01:26:06]`–`[01:26:13]` · frame `46:17` (printed)
+**Speaker:** course author (V10 is 100% author runtime)
+
+### What the lesson says
+
+- Printed, frame `46:17`: *"Dealer Makes A visible stop hunt (**preferably above or below blue box**)"*
+- `[01:26:13]`: *"A **true stop hunt is higher or lower than the blue box**"*
+- `[01:01:42]`–`[01:01:48]`: *"he doesn't exploit the Asian range … he doesn't break the Asian range"*
+  — used interchangeably with "blue box" for the same object on the same chart
+- `[00:15:49]`: *"when he extends the range **coming out of the blue box**"*
+
+### Why it is `DO NOT CODE`
+
+The lesson uses `blue box` as the **reference boundary for its own trigger condition**, and treats
+it as synonymous with *"the Asian range"*. **Neither is given a start time, an end time, or a
+construction rule.** V10 states **no clock time for any session** — `7:00`, `3:00 am`, `3:30`,
+`9:00`, `9:30`, `5:00 pm` all occur **zero** times in the body (`Q-011` §1). So even the
+identification `blue box = Asian range` does not yield a computable object, because the Asian
+session's boundaries are themselves unstated here and are `A-019` project-wide, which `D-031`
+converted into a **tested variable rather than a resolved one**.
+
+### The trap that makes this worse than a plain gap
+
+`[00:46:43]`–`[00:46:52]` — *"The obvious ones are still valid if he doesn't come above or below the
+blue box … **you're smarter than a box**"* — **explicitly admits setups that violate the boundary.**
+So the blue box is simultaneously (a) the definition of a *true* stop hunt, (b) a *preference*, and
+(c) **optional for experienced traders**. `V10_INTERPRETATION.md` Q5 reads this as a stated
+skill-tiering rather than a contradiction, and that reading is recorded as the student's, not the
+lesson's.
+
+**A session that codes `blue box = Asian session high/low` has supplied two things the course did
+not: the session's clock boundaries, and the decision that the strict tier is the rule.** `D-030`.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Related
+
+`A-019` (session timezone, converted to a tested variable by `D-031`), `A-077`, `A-007`
+(second leg), `D-030`, `D-010`; `04_SCREENSHOTS/V10/INDEX.md` frame `46:17`.
+
+---
+
+## A-077 — "the lock": V10's real-time substitute for a retrospective definition, with no threshold
+
+**Raised by:** V10 · `[00:44:47]`–`[00:45:00]`, `[01:05:31]`–`[01:05:38]`, `[01:14:13]`–`[01:14:19]`
+· frame `43:17` (printed)
+**Speaker:** course author
+
+### What the lesson says
+
+- Printed, frame `43:17`: *"Price has moved away from the area and **has confirmed the formation**"*
+- `[00:44:47]`–`[00:45:00]`: *"price will move away from this area which confirms the formation …
+  this is a **lock**. It's locked in"*
+- `[01:14:13]`–`[01:14:19]`: *"we are simply **waiting for the dealer to pull away** from there, and
+  we are waiting for a visible stop hunt … to confirm what we are seeing as a lock for the level"*
+- `[01:05:31]`–`[01:05:38]`: *"The dealer has now moved away from there for the last **15 hours, 16
+  hours**"*
+
+### Why this record exists, and why it is the important one
+
+**V10 defines `peak formation high/low` as the week's extreme** (`[01:14:06]`, and `A-010` narrows
+on it). That definition is **retrospective** — the week's extreme is only certain once the week
+ends. **The lock is the lesson's answer to that problem**: it is the causal, real-time evidence that
+an extreme has been set.
+
+**And it carries no threshold whatsoever.** How far price must move away, and for how long, are
+never stated. `[01:05:35]`'s *"15 hours, 16 hours"* is **narration of one chart**, not a rule —
+it is descriptive of the example on screen, and the lesson attaches no minimum to it.
+
+### The specific hazard, named
+
+Without a lock threshold, any backtest of the safety trade must either (a) invent one, or (b) use
+the **actual** weekly extreme — which is **lookahead bias** (`E08`), because the week's extreme is
+unknown at the decision candle. **(b) is the dangerous option precisely because it is easy and
+produces a good-looking number.** `V10_INTERPRETATION.md` Q3 records it; `PT-036` avoids the whole
+area by testing V10's context claims instead of its trade.
+
+### What was considered and refused
+
+> `INFERRED MACHINE CANDIDATE / NOT A COURSE RULE` — *"the extreme is unbroken for N hours AND
+> price has travelled M pips from it."* **N and M appear in no lesson and in no `MMM-NOTES` page.**
+> Recorded so the shape of the gap is visible; **it must not be coded**, and no V10 artifact uses it.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Related
+
+`A-010` (narrowed by V10 — the definition this record is the counterpart to), `A-076`, `A-007`,
+`D-030`, `D-010`, `E08`.
+
+---
+
+## A-078 — The safety trade's anchor distance: printed once as `25 to 75`, spoken six times in four renderings
+
+**Raised by:** V10 · `[00:49:39]`, `[00:52:03]`–`[00:52:09]`, `[00:58:30]`, `[01:15:36]`,
+`[01:16:20]`, `[01:23:16]` · **frame `75:57` (printed)**
+**Speaker:** course author
+
+### The six spoken renderings, in order
+
+| Marker | As transcribed | Reference object named |
+|---|---|---|
+| `[00:49:39]` | *"25 75 pips"* | *"off of the blue tracer"* |
+| `[00:52:03]`–`[00:52:09]` | *"**20** To 75 … **25 to 75 is easy to remember** … 20 to 75 pits"* | *"off of the blue tracer"* |
+| `[00:58:30]` | *"This box is **50** 75 pips"* | *"off of the blue tracer"* |
+| `[01:15:36]` | *"25 to 75 pips"* | *"off of the **previous high [or] previous low**"* |
+| `[01:16:20]` | *"25 to 75 pips"* | *"off of the **L. O. W. [or] H. O. W anchor point**"* |
+| `[01:23:16]` | *"**25 to 50** 25 to 75 pips"* | *"off of the blue tracer"* |
+
+### The number is RESOLVED by the printed slide; the reference point is NOT
+
+**Frame `75:57` prints:** *"Look for the stop hunt to come in around **25 to 75 pips** off of the
+**LOW/HOW anchor**."*
+
+**On the number, this closes it.** The printed form is `25 to 75`, and the speaker is heard
+self-correcting toward it in real time at `[00:52:09]` — *"25 to 75 is easy to remember"*. The
+variants `20`, `50 75` and `25 to 50` are **ASR renderings and verbal slips**, and the slide is the
+higher-quality evidence for a number (`D-008`: original slides outrank a transcript).
+
+**On the reference point it resolves nothing — it creates a conflict.** The slide says the
+**LOW/HOW anchor** (the week's extreme). Four of the six spoken instances say the **blue tracer**,
+which the lesson treats as a *different object* — a per-day separator (`[01:19:45]` *"there's a
+tracer in here and [it] separates the day"*). **These are not the same reference and the distance
+from one is not the distance from the other.** Filed as **`C-017`**.
+
+### Current Status
+
+```text
+NUMBER: 25 to 75 pips -- RESOLVED BY COURSE (printed, frame 75:57)
+REFERENCE POINT: DO NOT CODE -- see C-017
+```
+
+**The pair is deliberately split.** A session that adopts *"25–75 pips"* without also adopting a
+reference point has adopted **nothing computable**, and recording the number as resolved while its
+origin is contested is exactly the honest position.
+
+### Related
+
+`C-017`, `A-010`, `A-076`, `A-079`, `D-008`, `D-030`;
+`02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` TRANSCRIPTION NOTE 1.
+
+---
+
+## A-079 — `blue tracer`: named 13 times across V10, used as a reference level, never defined
+
+**Raised by:** V10 · `[00:23:52]`, `[00:35:16]`–`[00:35:59]`, `[00:48:23]`, `[00:49:39]`,
+`[01:19:45]`
+**Speaker:** course author
+
+### What the lesson says
+
+- `[00:35:53]`–`[00:35:59]`: a student question the speaker voices about himself — *"Why does Steve
+  have this stupid little blue line on the chart, is blue his favorite color? **No, it's on there
+  because it serves a purpose for the dealers**"* — and **the purpose is never stated**
+- `[00:48:23]`: *"The next day comes out, that's the tracer"*
+- `[01:19:45]`: *"there's a tracer in here and [it] **separates the day**. This is day one anchor, day two"*
+- `[00:35:40]`: *"Multi-session M — how do I know it's multi-session? Because they're **working the
+  tracer from yesterday**"*
+- `[00:23:52]`: *"Notice the blue tracer in play … He broke above yesterday's high"*
+
+### The gap
+
+Taken together the lesson strongly implies the tracer marks a **day boundary**, and `[00:23:52]`
+pairs it with *"yesterday's high"*. But **the lesson never states which day boundary, on which
+clock, nor whether the tracer is a vertical separator or a horizontal price level** — and
+`A-078`/`C-017` require it to be a **price** for *"25 to 75 pips off of the blue tracer"* to mean
+anything at all. `[01:19:45]`'s *"separates the day"* reads as **vertical**; `[00:49:39]`'s *"pips
+off of"* requires **horizontal**. Both are the same speaker in the same lesson.
+
+**This is the reason `C-017` is a genuine conflict and not a wording slip.** The candidate reading
+that would dissolve it — *"the tracer is the previous day's close/extreme, drawn as a horizontal
+line"* — is **plausible, and is refused**: no source states it, and adopting it would supply the
+course with a definition it has not given (`D-030`, `SOURCING_HIERARCHY.md` §3.2's *"Do not
+blend"*).
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Related
+
+`A-078`, `C-017`, `A-004`, `D-030`; `04_SCREENSHOTS/V10/INDEX.md` frames `21:47`, `34:22`.
+
+---
+
+## A-010 — STATUS CHANGE: NARROWED BY V10 (peak formation high / low)
+
+> **This is an update to an existing record, appended per `REMEDIATION_PROTOCOL.md` §2. The
+> original `A-010` entry above is UNEDITED.**
+
+**Trigger:** V10 `[01:13:58]`–`[01:14:06]`, corroborated in print at frame `43:17`.
+**Process:** `SOURCING_HIERARCHY.md` §3.1, all six steps. **Case A** (§3.2) — Tier 1 is clear and
+specific.
+
+**What V10 supplies:**
+
+> *"We're identifying the peak formation high, or high of the week, and the peak formation low, or
+> low of the week — **which is the highest point on a chart within the week, or the lowest point on
+> the chart within the week**."*
+
+Printed corroboration, frame `43:17`: *"PFH /PFL has formed as HOW or LOW (4hr Tie in)"*.
+
+**What this changes.** After nine lessons of use without definition, `peak formation high/low` has
+an **operational, positional, fully measurable** meaning: the week's extreme. It requires **no
+pattern recognition** — no leg count, no shape, no threshold.
+
+**What it does NOT change, and this is the load-bearing half:**
+
+- **It does not unblock the safety trade.** Five of its seven conditions still rest on undefined
+  terms (`V10_INTERPRETATION.md` Q6). `A-004`, `A-007`, `A-076`, `A-077` all remain open.
+- **It is retrospective.** The week's extreme is certain only at week's end. Using it prospectively
+  is **lookahead** (`E08`); the lesson's own answer is the **lock**, which has no threshold —
+  **`A-077`**.
+- **It does not fix the week's boundaries.** V10 states no week open.
+- **No Tier 2 text is blended in.** `MMM-NOTES` carries a *"peak formation highs and lows"* heading;
+  it is **not** consulted for the definition and **not** merged with it (`SOURCING_HIERARCHY.md`
+  §3.2 case A: *"Close/narrow the `A-xxx` on the course evidence alone. Do not blend."*).
+
+**Status: `NARROWED — RESOLVED BY COURSE as to the anchor's identity; OPEN as to prospective
+identification.`** Deliberately **not** closed: `V10_INTERPRETATION.md` Q8 records the honest doubt
+that `[01:14:06]` is a relative clause in a digression rather than a formal definition, stated once
+at minute 74. **Nothing in this session's work depends on the closure** — `PT-036` measures weekly
+ranges from OHLC and never uses the term.
+
+### Related
+
+`A-077` (the prospective counterpart), `A-004`, `A-007`, `D-030`, `D-040`,
+`SOURCING_HIERARCHY.md` §3.1/§3.2.
