@@ -5653,3 +5653,138 @@ divergence. `python3 scripts/validate_project.py` — **103 passed / 0 warnings 
 ### Next Review Trigger
 
 **None for V07 — the lesson is closed.** V08 R2 awaits remediation of items 64–66.
+
+---
+
+## 2026-08-13 — Remediation Session (V08 R1 minors, items 64–66)
+
+**Branch:** `fix/v08-r1-minors`, cut from the integration branch
+`claude/add-documents-repository-fdfb3u` at `a886585` after `git fetch --all --prune`, per `D-038`.
+`video/v08` and `review/v08` were confirmed **already merged** into the integration branch before
+branching, so V08's content and its R1 review were both present at the cut.
+
+**Scope:** the three `MINOR` items from `18_REVIEW/V08/V08_REVIEW_R1.md` — open items **64**
+(`M1`/`E11`), **65** (`M2`/`E20`) and **66** (`M3`/`E19`). `REMEDIATION_PROTOCOL.md` §3 rule 2
+honoured: nothing outside the reviewer's enumerated findings was reprocessed.
+
+**All three are documentation fixes, not evidence fixes** (`REMEDIATION_PROTOCOL.md` §3 rule 3).
+No test was re-run, no observation re-derived, no test ID reissued — because no underlying
+procedure was found invalid. R1 reproduced `PT-034` bit-for-bit and re-scored the homework
+independently.
+
+### Item 64 — `M1` (`E11`) — `C-009` Source A under-sourced
+
+`11_CONTRADICTIONS/CONTRADICTIONS.md` `C-009` gains a **Source A′** block citing **V07
+`[00:28:02]`–`[00:28:31]`**, tagged `GUEST`, cross-referenced to `V07_SOURCE_NOTES.md` **§6c**.
+
+**The citation was verified against `02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` in this session rather
+than copied from the review.** The marked lines read *"Yes, David, it's tough to know when second
+legs will be above or below the first leg"* `[00:28:02]`, *"You can only go by the second rail
+tracks"* `[00:28:15]`, and the flashcard-pass sentences through `[00:28:31]`. §6c's gloss — *"an
+admission of indeterminacy: the direction question is answered 'you can only go by' the
+confirmation candle, not by a prior rule"* — was read at source.
+
+**Nothing is superseded.** The defect was an omission of available corroboration, not an error, so
+the original Source A stands verbatim. The `PROVISIONAL` disposition is **unchanged**, as R1
+directed.
+
+**⚠ One deliberate narrowing of the review's own wording, flagged for R2.** `M1` describes V07's
+presenter as *"a different guest presenter"* and REVIEW_INDEX item 64 as *"a different equally-
+normative `GUEST`"*. **This session could not verify that and did not repeat it.**
+`V07_SOURCE_NOTES.md` records V07 as *"a single unidentified presenter"*; `V08_SOURCE_NOTES.md`
+records V08's as unnamed (`D-033` provision 2); and `SOURCE_MANIFEST.md` shows V07 and V08 are
+**Part 2 and Part 3 of the same day's bootcamp**, so they may be the **same** person. The added
+block therefore claims *a second **lesson***, not *a second **speaker***, and carries that limit —
+plus the narrower limit that V07 `[00:28:15]` attests the requirement **in use** rather than
+restating V08's two-candle specification — in its own text. Adopting the review's stronger framing
+would have written an unverified claim into a contradiction record to discharge a finding about
+under-sourcing, which is the failure this item exists to prevent.
+
+### Item 65 — `M2` (`E20`) — the null's entry-price convention
+
+Applied at **two** sites, and **`PT-034` was not edited** — `COMMON_PROTOCOL.md` §9 rule 7 binds a
+*completion* exactly as it binds a *correction*, and `git diff` confirms
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-034_crown_jewel_three_to_one.md` is byte-unchanged.
+
+1. **`00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md` §2.1a — new, and this is the binding half.** The
+   null's entry-**price** convention is now a **required pre-registration field**; §2.1's
+   held-constant table gains an *Entry PRICE convention* row; the requirement to state it **even
+   when it differs from the rule arm's** is spelled out; the specific bias it guards — giving a
+   null its bar's low for a long or high for a short — is named; and an unstated convention is set
+   at minimum a `MINOR` `E20` for reviewer enforcement.
+2. **`06_MANUAL_BACKTEST/V08/BT_V08_0001.md` §5** — the results file, at the section where the
+   nulls actually are (R1 and the task brief both say *"§4"*, which is `O3`; §5 `O4` is where
+   `N1`/`N1b` are computed and printed, so the block was placed there). It states **forward**:
+   `N1`/`N1b` enter at the chosen bar's **CLOSE**; the rule arm enters **extreme-anchored** at
+   `LOD + X`, or the bar's low where that price falls outside its range. Both traced to the
+   implementing functions (`precompute_close_entries()` / `entry_for()`), with a table making the
+   asymmetry explicit and the rationale stated so a reader can disagree with it.
+
+**No number changes and nothing is superseded.** The convention was fixed in committed code
+(`e3a8e66`) **before** the run (`1d206ab`) and never amended — ordering independently verified by
+R1 §0 row 12. Only its *location* was wrong, not its timing. The validating evidence is recorded
+with the block: `N1` returned **0.2424–0.2450** against a closed-form break-even of **25.00%**, so
+the convention introduced no measurable bias.
+
+### Item 66 — `M3` (`E19`) — the end-card frame's timecode
+
+**The timecode was verified in this session, not taken on the review's word.** The PNG's
+bottom-right player chrome was cropped and magnified: the burned-in elapsed field reads **`43:04`**
+(the total field is truncated at `43:0` by the frame edge).
+
+`git mv` to **`04_SCREENSHOTS/V08/V08_00-43-04_end-card-innermost-stage-unanswered.png`** — Git
+records it as `R`, so the blob and its history survive. **Three** prose references updated:
+`04_SCREENSHOTS/V08/INDEX.md` row 26; its *"What the frames settled"* item 7; and
+**`03_LESSON_NOTES/V08_SOURCE_NOTES.md` §12 item 4**, which R1 did not enumerate but which carried
+the same wrong timecode and was found by sweeping the repo for the old string. Row 26 now states
+the frame is the **post-playback end card**, making its relationship to the 00:43:03 runtime
+explicit.
+
+**Retention under `REMEDIATION_PROTOCOL.md` §2.** The rename is a file operation, not prose, so the
+old filename and all three old values are retained by **explicit naming** in a dated correction
+block in `INDEX.md`; `V08_SOURCE_NOTES.md` §12 additionally carries an inline `SUPERSEDED` bracket.
+
+**⚠ One residual found by this session and disclosed rather than glossed, for R2 to adjudicate.**
+`00:43:04` is **2,584 s**; the runtime is **2,583.75 s**. The *corrected* label therefore **still
+exceeds the runtime, by 0.25 s**, and a naive implementation of `Q-009`'s screen will still flag
+row 26. This is unavoidable rather than a further defect — a player's whole-second elapsed field
+cannot print `43:03.75` and shows the ceiling, so the frame **cannot** carry both its true burned
+timecode and a strictly-under-runtime label, and matching the artifact's own internal evidence is
+the correct choice. `INDEX.md` records the consequence for whoever implements the screen: **flag
+`timestamp > ceil(runtime)`, not `timestamp > runtime`**, or it false-positives on the legitimate
+final frame of any recording whose duration is not a whole number of seconds. Under that form
+`00:43:10` remains a true positive and `00:43:04` is not. A mechanical sweep of all **26** V08
+filenames confirmed row 26 was the only one over runtime.
+
+### NOTHING IS SELF-CERTIFIED
+
+**`D-003` reserves verification and closure to an independent reviewer.** This session neither
+re-reviewed V08 nor closed anything. Items 64–66 move to **`APPLIED — PENDING VERIFICATION at
+R2`**, not to `CLOSED`. Two of the three carry an explicit disagreement or residual addressed to
+R2 rather than resolved here, and both are stated in the artifacts themselves, not only in this
+log.
+
+### Files produced / updated
+
+- `11_CONTRADICTIONS/CONTRADICTIONS.md` — `C-009` Source A′ (item 64).
+- `00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md` — §2.1a new, §2.1 table row (item 65).
+- `06_MANUAL_BACKTEST/V08/BT_V08_0001.md` — §5 convention block (item 65).
+- `04_SCREENSHOTS/V08/V08_00-43-04_…png` — renamed from `…00-43-10…` (item 66).
+- `04_SCREENSHOTS/V08/INDEX.md` — row 26, item 7, dated correction block (item 66).
+- `03_LESSON_NOTES/V08_SOURCE_NOTES.md` — §12 item 4 (item 66).
+- `18_REVIEW/REVIEW_INDEX.md` — items 64–66 → APPLIED, PENDING VERIFICATION; STATUS block with
+  its superseded text retained.
+- `LOG.md` — this entry.
+
+**NOT edited, deliberately:** `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-034_crown_jewel_three_to_one.md`
+and `18_REVIEW/V08/V08_REVIEW_R1.md`.
+
+### Git
+
+Explicit paths on every `git add`; `git diff --staged` read before every commit. No `git add -A`.
+Branch **pushed, not merged** — `D-038` makes merge-back a separate deliberate act and R2 has not
+run. `python3 scripts/validate_project.py` — **103 passed / 0 warnings / 0 failures.**
+
+### Next Review Trigger
+
+**V08 R2**, on verification of items 64–66.
