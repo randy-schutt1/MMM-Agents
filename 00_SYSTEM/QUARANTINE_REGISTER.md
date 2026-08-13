@@ -946,3 +946,196 @@ screenshots for V07 are the 24 frames in `04_SCREENSHOTS/V07/`, captured from th
   screenshots (V05), SWF delta-tiles indexed as annotated charts (V06), and — new here —
   **the player's own chrome indexed as course content** (V07). Uniformity still should not be
   assumed for V08–V21; each needs its own check.
+
+---
+
+## Q-009 — V08's `NOTES.md` and `VISUAL_INDEX.md`, confirmed fabricated; and the fabrication is now shown to be ONE GENERATOR, not four independent failures
+
+```text
+STATUS:        QUARANTINED — DO NOT USE
+DATE:          2026-08-13
+QUARANTINED BY: V08 Student session
+DECISION:      D-017 (Q-001 blanket action). RULES.md is NOT re-derived here —
+                it is discharged by Q-007's mechanical template-marker test, as
+                Q-007 explicitly authorizes and COURSE_PROGRESS.md's V07 GATE
+                carry-forward item (e) instructs.
+```
+
+### Scope
+
+| File | Disposition | Basis |
+|---|---|---|
+| `RULES.md` | Already quarantined, **not re-audited** | **`Q-007`**, the mechanical template-marker discharge for `V07`–`V21` |
+| `NOTES.md` | **Fabricated — confirmed here** | Per-lesson audio cross-check, below |
+| `VISUAL_INDEX.md` | **Fabricated — confirmed here, and mechanically so** | Per-lesson image cross-check, below |
+| `TRANSCRIPT.md` | **SOUND — adopted** | `SETUP_ISSUES.md` I-008, four axes, recorded in `02_TRANSCRIPTS/V08/V08_TRANSCRIPT.md` § VERIFICATION |
+
+### Method
+
+Token counts are word-boundary matches over the **verbatim body only** of
+`02_TRANSCRIPTS/V08/V08_TRANSCRIPT.md` (header and timestamp lines excluded), **7,315 words**.
+Every image claim is checked against the files actually present in the lesson folder's
+`SCREENSHOTS/`, by SHA-256, by reading the real pixel dimensions, **and by opening and looking at
+each one**.
+
+---
+
+### 1. `NOTES.md` — fabricated
+
+`NOTES.md` states four blocks of doctrine. Measured against the lesson's own audio:
+
+| `NOTES.md` claims | Occurrences in V08's 7,315-word body |
+|---|---|
+| *"EMAs: 5 (Mustard), 13 (Water), 50 (Mayo), 200 (Blueberry), 800 (Raspberry)"* | **`EMA`: 0.** `mustard` 0, `blueberry` 0, `raspberry` 0 |
+| *"5/13 EMA Cross: Execution confirmation on M15 close"* | **`5/13`: 0.** `moving average`: 0 |
+| *"TDI Indicator: Green Price Line crossing Red Signal Line with Shark Fin confirmation outside Volatility Bands"* | **`TDI`: 0. `shark fin`: 0. `signal line`: 0. `volatility band`: 0. `divergence`: 0** |
+| *"Asian Session: 7:00 PM – 3:00 AM EST / London: 3:30 AM – 9:00 AM EST / New York: 9:30 AM – 5:00 PM EST"* | **`7:00` 0, `3:00 am` 0, `3:30` 0, `9:00` 0, `9:30` 0, `5:00 pm` 0. Six clock figures, six zeroes** |
+| *"Peak Formation High (PFH) & Low (PFL)"* | **`peak formation`: 0. `PFH`: 0. `PFL`: 0** |
+| *"M & W Pattern Anatomy: 2nd leg failure test with candlestick rejection (Railroad tracks, pin bars, star formations)"* | **`pin bar`: 0.** `star` occurs twice as a standalone token and **both are "Death Star"** — the deck's own metaphor for bad trading ideas (`[00:15:30]`, `[00:16:51]`). `railroad` occurs 3× **as an unexplained chart label** and is never defined |
+| *"Multi-Timeframe Alignment"* (header topic) | **`multi-timeframe` 0, `confluence` 0, `H4` 0, `H1` 0, `four hour` 0, `one hour` 0.** The lesson's single multi-timeframe remark is `[00:41:56]` *"I'm almost convinced there's going to be an M on the one minute time frame"*, immediately declined as *"advanced stuff"* he will not go into |
+| *"Institutional Mechanics: … institutional order flow … news events"* | **`institutional` 0, `order flow` 0, `news` 0** |
+
+**One claim is adjacent to something real, and it is the most dangerous entry in the file:**
+
+> *"Risk Management: Stop loss positioned **10–15 pips past High/Low of Day** with minimum
+> **1:3 Risk-to-Reward** ratio."*
+
+- The **1:3** is right by V08's own words — `[00:39:58]` *"bringing risk we reward to three to one
+  or greater"*.
+- The **10 pips** is adjacent to a real printed slide — `04_SCREENSHOTS/V08/V08_00-05-40…` prints
+  *"dealing **within 10 pips of HOD/LOD**"*.
+- **But the rule stated is not V08's.** V08's 10 pips is a **tolerance on how close your ENTRY
+  gets to the extreme**. `NOTES.md` converts it into a **stop-loss placement 10–15 pips PAST the
+  extreme** — a different object, on the other side of the price, doing a different job. The
+  string `10-15` and the phrase `stop loss` as a rule appear **nowhere** in the audio; the one
+  occurrence of *"stop loss"* is `[00:09:48]`, inside a caricature of a **doubter**: *"I moved my
+  stop loss and took a 25% hit on my account. Steve's thing just doesn't work."*
+
+> **This is the failure mode that makes these files dangerous rather than merely useless.** A
+> file that is wrong about everything is discarded on sight. A file that attaches a **real
+> number** to a **rule the lesson never states** reads as sourced, survives a skim, and puts an
+> invented stop rule into a corpus that is going to generate trading code. Recorded at length so
+> the next session recognises the shape rather than the instance.
+
+**Verdict: `NOTES.md` is fabricated.** Its trading content is imported from elsewhere in the
+course — the food-named EMA scheme is real corpus doctrine, and V08 does brush it twice (*"back
+to the water"* `[00:21:28]`, *"off the Mayo"* `[00:22:13]`, `[00:23:12]`) as casual references to
+already-named lines — but **presenting it as this lesson's content is misattribution**, and the
+session table, PFH/PFL, TDI block and stop rule are not in the course-adjacent category at all.
+Either way it is disqualified as V08 evidence.
+
+---
+
+### 2. `VISUAL_INDEX.md` — fabricated, and provably so without any judgement call
+
+Eleven entries. **Four independent mechanical proofs, before anyone looks at an image.**
+
+**Proof 1 — three timestamps are after the file ends.** The lesson is **00:43:03**
+(2,583.75 s measured; SWF header 7,752 frames ÷ 3.0 fps = 2,584.0 s). Screenshots 009, 010 and
+011 are timestamped **`[00:47:00]`, `[00:52:00]`, `[00:57:00]`**.
+
+**Proof 2 — the timestamps are a generated arithmetic sequence, not observations.** All eleven
+are exactly five minutes apart: `07:00, 12:00, 17:00, 22:00, 27:00, 32:00, 37:00, 42:00, 47:00,
+52:00, 57:00`. Screenshot 001 compounds it — its timestamp field says `[00:07:00]` while its own
+filename says `…_00-02-00.jpg`.
+
+**Proof 3 — four of the eleven are byte-identical duplicates of four others.** Verified by
+SHA-256:
+
+| Pair | Bytes | Sold as |
+|---|---|---|
+| `extracted_jpeg_1001.jpg` = `raw_extracted_1001.jpg` | 32,833 | Screenshots 002 `[00:12:00]` **and** 008 `[00:42:00]` |
+| `extracted_jpeg_1004.jpg` = `raw_extracted_1004.jpg` | 5,640 | Screenshots 003 `[00:17:00]` **and** 009 `[00:47:00]` |
+| `extracted_jpeg_1005.jpg` = `raw_extracted_1005.jpg` | 5,380 | Screenshots 004 `[00:22:00]` **and** 010 `[00:52:00]` |
+| `extracted_jpeg_1013.jpg` = `raw_extracted_1013.jpg` | 14,892 | Screenshots 005 `[00:27:00]` **and** 011 `[00:57:00]` |
+
+**Eleven claimed screenshots are seven distinct images.**
+
+**Proof 4 — the images are not what they are said to be.** Every file was opened and looked at:
+
+| Entry | Claimed | **Actually is** |
+|---|---|---|
+| 001 `[00:07:00]`, 1280×720 | *"Reversal Candlestick Patterns — Railroad Tracks, Evening Stars, High-Volume Pins"* | **the title slide** — *"Jim's Journey in Learning and Trading MMFX"* over a photograph of a bird. No chart, no candle |
+| 002 `[00:12:00]` / 008 `[00:42:00]`, 1280×720 | *"Railroad Track Structure on M15 — equal-bodied opposing candles at key market maker swing extremes"* | **the title slide again** — same image, different JPEG encode |
+| 003 `[00:17:00]` / 009 `[00:47:00]`, **558×50** | *"Morning Star / Evening Star Anatomy — 3-candle reversal confirmation at session High/Low of Day"* | **a 50-pixel-tall sliver of green text reading `Hopefully my Path can Sm`** — the left half of the slide caption *"Hopefully my Path can Smooth the way for others…"* (`[00:01:12]`) |
+| 004 `[00:22:00]` / 010 `[00:52:00]`, **558×50** | *"Multi-Timeframe Confluence (H4/H1/M15)"* | **the right half of the SAME SENTENCE — `ooth the way for others…`** |
+| 005 `[00:27:00]` / 011 `[00:57:00]`, 592×360 | *"TDI Divergence & Momentum Hooks — regular and hidden divergence between price peaks and TDI indicator peaks"* | **a photograph of the presenter's home office** — the *"trading sanctuary"* desk shot, `[00:01:25]`. No chart, no indicator |
+| 006 `[00:32:00]`, **267×51** | *"Session Recap & Execution Rules — final summary of weekly execution checklist and risk-to-reward targets"* | **the Camtasia Studio / TechSmith logo** |
+| 007 `[00:37:00]`, **137×14** | *"Reversal Candlestick Patterns — Railroad Tracks, Evening Stars, High-Volume Pins"* | **the words `Camtasia Studio 6`** |
+
+**One printed sentence, split across two SWF delta tiles, is indexed as two unrelated
+candlestick and multi-timeframe topics.** That single fact is sufficient on its own.
+
+**Proof 5 — the attribution is wrong on all eleven, in a way `D-033` makes material.** Every
+entry says *"**Steve Mauro** breaking down [topic] and institutional market mechanics."*
+**The course author does not speak in this lesson at all** — V08 carries 100% `GUEST` runtime
+(`V08_TRANSCRIPT.md` § ONE SPEAKER). Under `D-033` provision 1 speaker attribution is mandatory
+precisely because two speakers can both create doctrine; a file that misattributes every entry
+to the wrong speaker is disqualified on that ground alone, independently of its content.
+
+---
+
+### 3. THE FINDING THAT GENERALISES — FOUR LESSONS, FOUR DESCRIPTIONS, **TWO FILES**
+
+`COURSE_PROGRESS.md`'s V07 GATE carry-forward item (e) warns: *"Four lessons, four ways of being
+wrong. Do not assume uniformity."* **This audit finds the opposite, and the opposite is more
+useful:** the four ways of being wrong are **four outputs of one generator**.
+
+`extracted_png_27.png` and `extracted_png_290.png` are **byte-identical across V05, V06, V07 and
+V08** (SHA-256 `17e5622c255a…` and `9791aacf6433…`, present in exactly those four lesson folders
+and no others). They are the Camtasia player's own chrome. They are described as **eight
+different trading topics**:
+
+| File | V05 | V06 | V07 | V08 |
+|---|---|---|---|---|
+| `extracted_png_27.png` **= the Camtasia Studio logo** | *"Level 1 Drop & Asian Box"* | *"London Open Stop Hunt Mechanics"* | *"EMA Dynamic Support & Resistance"* | *"Session Recap & Execution Rules"* |
+| `extracted_png_290.png` **= the words "Camtasia Studio 6"** | *"Level 2 Retracement & EMA Cross"* | *"Reversal Candlestick Rejection"* | *"TDI Blood in the Water Setup"* | *"Reversal Candlestick Patterns"* |
+
+Their timestamps track only their **position in the folder listing** — V05 `07:00`/`12:00`,
+V06 `17:00`/`22:00`, V07 `22:00`/`27:00`, V08 `32:00`/`37:00` — stepping through the same
+five-minute arithmetic sequence in each file.
+
+> **This is a fabrication FINGERPRINT, and it is mechanically testable.** The generator (a) walks
+> the extracted-asset list in filename order, (b) assigns timestamps from a fixed 5-minute
+> sequence with no reference to the recording's length, and (c) writes a plausible
+> lesson-appropriate trading topic for each, from a topic pool, **without looking at the image**.
+> It does not distinguish a 1280×720 title slide from a 137×14 wordmark.
+
+**Recommendation to the reviewer and to V09–V21 sessions — the `Q-007` shape, applied to
+`VISUAL_INDEX.md`.** Three of these checks need no audio and no image inspection, and together
+they are close to conclusive:
+
+1. **Any timestamp exceeding the lesson's runtime** in `SOURCE_MANIFEST.md`.
+2. **A constant inter-entry timestamp delta** across all entries.
+3. **Any byte-duplicate pair** among the referenced files, or any referenced file smaller than
+   ~300×300 pixels described as a chart or slide.
+
+**This entry does NOT batch-discharge V09–V21**, and deliberately so: `Q-007` earned its
+discharge by measuring a marker across all 15 remaining lessons, and this session has measured
+four. The three checks above are offered as a **cheap screen a future session can run in
+minutes**, with the per-lesson audio cross-check still owed. Recorded as an open item for
+`REVIEW_INDEX.md`.
+
+---
+
+### Disposition
+
+All three files remain quarantined in place at
+`_QUARANTINE_UNVERIFIED_NOTES/per_lesson/08_Bootcamp1_Wk2_032612_Part3_43mins/`, covered by the
+tree's blanket `README_WHY_QUARANTINED.md`. **No file was moved, renamed or deleted**
+(`REMEDIATION_PROTOCOL.md` §2). The lesson's own `SCREENSHOTS/` folder is left untouched as
+source-side evidence; this project's screenshots for V08 are the **26 frames in
+`04_SCREENSHOTS/V08/`**, captured from the `.swf` by this session.
+
+### Running tally for the fabrication pattern
+
+- **`RULES.md`:** 21 of 21 covered (V01–V06 individually, V07–V21 by `Q-007`'s mechanical
+  discharge). Zero exceptions library-wide.
+- **`NOTES.md`:** **8 of 21 audited** (V01–V08), **8 fabricated, zero exceptions.**
+- **`VISUAL_INDEX.md`:** **8 of 21 audited** (V01–V08), **8 fabricated.** The count of *"distinct
+  failure modes"* stops being the useful statistic here: V08 exhibits **all** of the previously
+  named modes at once — duplicate pairs sold as separate screenshots (V05's mode), delta-tiles
+  indexed as charts (V06's), player chrome indexed as content (V07's) — **plus** two new
+  mechanical tells, timestamps past the end of the recording and a generated arithmetic timestamp
+  sequence. **The right conclusion is not that there are five modes but that there is one
+  generator**, and §3 above shows it directly.
