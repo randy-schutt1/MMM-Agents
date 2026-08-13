@@ -1654,6 +1654,40 @@ inverting the method.
 
 ---
 
+
+### UPDATE 2026-08-11 — converted to a tested variable (`D-031`). STILL OPEN.
+
+**This record is NOT closed.** The source still declines to specify, and `D-031` governs
+project method, not what the course teaches. No session may cite `D-031` as evidence of
+instruction.
+
+What changed is that the ambiguity is now **measured rather than guessed**. Every
+session-dependent test runs two pre-registered arms — fixed `UTC−5` and DST-aware
+`America/New_York` — and reports both.
+
+**Arithmetic added to the record so it is not re-derived.** The bootcamp was recorded
+2012-03-18 → 2012-06-17, entirely inside US daylight saving (2012: Mar 11 – Nov 4). New
+York local clock throughout the course was therefore **EDT (UTC−4)**:
+
+| Chart setting | Where V01's *"US session starts at 9:30 New York Eastern"* lands |
+|---|---|
+| Fixed EST (`UTC−5`) | **08:30** — one hour early, on every session of every day |
+| DST-aware `America/New_York` | **09:30** — matches his stated number |
+
+So the DST-aware reading reproduces the instructor's own numbers *during the window he
+spoke them*. That is evidence about the source, and it does **not** by itself settle
+which reading the method requires — his table may have been taught to him as fixed clock
+numbers, which is candidate reading 1 above.
+
+**Supporting fragment for the market-anchored reading:** `[00:50:26]` *"we back up the
+London session in the winter"* — i.e. at least part of his table already moves
+seasonally, which is what a market-anchored (DST-following) table does and a fixed-offset
+table does not.
+
+**Route to closure remains a later lesson or a slide that prints a timezone.** Empirical
+divergence between the two arms is *evidence about which reading the market rewards*; it
+is **not** proof of what the instructor meant, and must never be written up as such.
+
 ## A-020 — "mayonnaise"
 
 ### Course Meaning

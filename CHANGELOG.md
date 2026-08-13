@@ -11,6 +11,14 @@ Newest first.
 
 ---
 
+> ⚠ **MERGE NOTE 2026-08-12 — DUPLICATE VERSION NUMBER `[0.7.0]`, OWNER RECONCILIATION OWED.**
+> Two independent lines of work branched from `3a13441` and each claimed `[0.7.0]`: the V05
+> student-pass-and-review lineage (immediately below) and the backtest-evidence-standard lineage
+> (`[0.7.0]` … `[0.7.2]`, further below). **Neither was renumbered on merge** — both version
+> strings are already cited in committed files, so the owner should assign the canonical numbering
+> and fix the citing references in one pass. The newest-first ordering is therefore broken across
+> this region and the four `0.7.x` entries all carry 2026-08-11. No entry's content was altered.
+
 ## [0.7.0] — 2026-08-11 — V05 student pass: the first lesson that yields no doctrine
 
 Student round. Clean retry after a prior V05 attempt hung. **V05 is the first lesson in the
@@ -77,6 +85,91 @@ contributes **no admissible rule at all** — a correct result, not a failed stu
   the exact failure mode `D-025` exists to prevent.
 - **Speaker identification is now the first step of every remaining lesson.** Instructor
   runtime across one session date runs ~100% (V03) → ~31% (V04) → 0% (V05).
+
+---
+
+## [0.7.2] — 2026-08-11 — Timezone as a tested variable; PT-001 unblocked
+
+### Added
+
+- **`D-031`** — session timezone is a **tested variable, not an assumption**. Two
+  pre-registered arms: **A** fixed `UTC−5`, **B** DST-aware `America/New_York`. **Both
+  always reported**; divergence is a finding, never a selection criterion.
+
+### Changed
+
+- **`A-019` updated and deliberately kept OPEN.** The source declines to specify, so it
+  cannot close from evidence; `D-031` governs project method only and may never be cited
+  as instruction.
+- **`PT-001` is unblocked** and now carries the two-arm design, the two-draws caution,
+  and a recommendation to choose a development window that **straddles a DST transition**
+  so the arms can be compared within one sample.
+
+### Fact of record
+
+The bootcamp ran **2012-03-18 → 2012-06-17, entirely within US daylight saving**. Arm B
+reproduces the instructor's own stated times during that window; **Arm A displaces every
+one of them by an hour.** That is evidence about the source, not a resolution of what the
+method requires — his table may genuinely have been taught as fixed clock numbers.
+
+---
+
+## [0.7.1] — 2026-08-11 — Owner decisions; PT-001 pre-registered
+
+### Added
+
+- **`D-028`** — manual-phase development/holdout split is **70/30** (oldest 70%
+  development). Exact dates pinned at the first data-source decision, not invented now
+  (`I-007` still open).
+- **`D-029`** — baseline parameters: 1,000 iterations for headline results, random seed
+  recorded, entry window matched to the rule, **two arms** (direction-matched primary,
+  random-direction secondary).
+- **`D-030`** — blocked tests wait for the course; definitions are **never**
+  approximated. Generalizes `A-039`'s TDI prohibition to `A-011`, `A-004`, `A-002`,
+  `A-019`. Accruing backtest debt is correct behaviour, not a backlog to clear.
+- **`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-001_…md`** — the one test available before
+  the course teaches more: does the Asian range boundary carry predictive content?
+
+### Changed
+
+- `DECISIONS.md` open-decisions table: both `OWED NOW` items cleared.
+- `REVIEW_INDEX.md`: item 35 closed; items 36–37 added.
+
+### Finding
+
+**`PT-001` is blocked by exactly one thing — `A-019`, session times printed with no
+timezone** — and unlike every other blocker in V01–V04 this one plausibly closes from
+*existing* evidence rather than a future lesson. That makes a small timezone evidence
+pass the highest-leverage work item currently available.
+
+---
+
+## [0.7.0] — 2026-08-11 — Backtest evidence standard
+
+### Added
+
+- `00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md` — baseline requirement, period
+  pre-registration, holdout reserve, sample sufficiency, and the DESCRIPTIVE /
+  EVIDENTIAL / INVALID classification.
+- `DECISIONS.md` **D-026** (baseline mandatory, hard gate) and **D-027** (period
+  pre-registration and holdout reserve).
+- `REVIEW_PROTOCOL.md` §6.G checks **15–20** and error codes **E21–E25**.
+- `MANUAL_BACKTEST_TEMPLATE.md` **§0 pre-registration block** (completed before any
+  chart in the range is opened) and **§9b result classification**.
+- `scripts/validate_project.py` — `check_backtest_evidence_gate()`: fails if a `BT_`
+  observation exists without D-026/D-027, without a §0 block, without a classification,
+  or quoting a bare percentage. Negative-tested on all four failure modes.
+
+### Context
+
+An external methodological review asked four questions: does a test run exhaustively
+or search for matches; are losers filtered; is there a train/test split; what is the
+baseline. Answers were: exhaustive by design but never exercised; retained and enforced
+at three layers; **no split**; **no baseline anywhere in the repository**.
+
+This release closes the last two. Adopted while `06_MANUAL_BACKTEST/` held **zero**
+observations, so **nothing required rework** — the standard exists before the first
+record, which is the only point at which that is free.
 
 ---
 

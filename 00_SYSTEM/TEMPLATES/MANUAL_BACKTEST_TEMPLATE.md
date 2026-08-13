@@ -12,6 +12,45 @@ Test IDs are never reused. A superseded observation keeps its ID and is marked
 
 ---
 
+## 0. PRE-REGISTRATION — COMPLETE BEFORE OPENING ANY CHART IN THE RANGE
+
+> **HARD GATE (`DECISIONS.md` D-026 / D-027).** This section is filled in, committed,
+> and the corresponding `DECISIONS.md` entries recorded **before** the first chart in
+> the test period is examined. A `BT_` file whose §0 was written after the charts were
+> seen is `INVALID` — it is not fixable by editing, and `scripts/validate_project.py`
+> will fail if the decision records are missing.
+> Specification: `00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md`.
+
+| Field | Value |
+|---|---|
+| Rule under test (verbatim + source ref) | |
+| `DECISIONS.md` pre-registration entry | D-0XX |
+| Instrument | |
+| Timeframe | |
+| Date range (inclusive) | |
+| Session boundaries + timezone | |
+| Eligible entry window | |
+| Expected number of decision points | |
+| Development or holdout block? | **DEVELOPMENT** — holdout must not be opened (D-027) |
+| Pre-registered by / date | |
+| Charts opened after this section was committed? | YES / NO — must be YES |
+
+### Baseline — defined here, before any result exists
+
+| Field | Value |
+|---|---|
+| Baseline type | Matched random entry (**required**) |
+| Held constant | instrument, session, eligible window, stop distance, target distance, n |
+| Randomized | entry bar; direction: RANDOM / FIXED-TO-RULE (state which) |
+| Iterations | ≥ 200 |
+| Second arm — inside-box vs outside-box contrast | RUN / NOT APPLICABLE (justify) |
+| Third arm — buy-and-hold / drift | RUN / SKIPPED |
+| Baseline script | `scripts/…` |
+
+**Choosing or adjusting a baseline after seeing the rule's result is `E21`, CRITICAL.**
+
+---
+
 ## 1. IDENTIFICATION
 
 | Field | Value |
@@ -153,9 +192,35 @@ address about this situation.
 - [ ] This observation is retained regardless of result
 - [ ] Rule application was graded separately from trade outcome
 - [ ] No setup boundary was drawn using a future high or low
+- [ ] §0 pre-registration was committed **before** any chart in the range was opened
+- [ ] The baseline was defined in §0 and has not been altered since
+- [ ] This observation lies in the DEVELOPMENT block, not the reserved holdout
+- [ ] This test is recorded in the run log whether or not it found anything
 
 If any box is unchecked, this observation is **invalid** and must be redone with a
 new test ID. Do not fix it by editing the text. See `REMEDIATION_PROTOCOL.md` §2.
+
+---
+
+## 9b. RESULT CLASSIFICATION
+
+| Field | Value |
+|---|---|
+| n (decision points in this test) | |
+| Classification | `DESCRIPTIVE` (no baseline or n<30) / `EVIDENTIAL` / `INVALID` |
+| Hit rate | with 95% interval — **never a bare percentage** |
+| Baseline distribution | median, 5–95% range, iterations |
+| Rule vs baseline | percentile of the baseline distribution |
+| Verdict | e.g. *"cannot be distinguished from chance at this sample"* |
+
+If n < 30, write this verbatim and do not quote a rate without it:
+
+```text
+SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only.
+```
+
+**A null result stated plainly is worth more than a favourable one that cannot be
+read.** Report it with the same prominence.
 
 ---
 

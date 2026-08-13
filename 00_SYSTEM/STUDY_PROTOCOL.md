@@ -208,6 +208,25 @@ screenshot after, mistake classification, notes.
 Maintain cumulative summaries in `06_MANUAL_BACKTEST/cumulative/`. **Never delete
 individual observations**, including losers and mistakes.
 
+### Baseline, pre-registration and holdout — REQUIRED
+
+Before opening any chart in a test period, complete §0 of the observation template and
+record the matching entries in `DECISIONS.md`:
+
+- **Baseline** (D-026) — matched random entry, ≥200 iterations, distribution reported.
+  A hit rate with no comparator is not a result.
+- **Period pre-registration** (D-027) — instrument, range, timeframe, sessions, fixed
+  in advance. Changing the range mid-test creates a new test ID.
+- **Holdout** (D-027) — the reserved block is not opened during the Student Phase.
+
+Full specification: `00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md`. `scripts/validate_project.py`
+fails the build if an observation exists without these.
+
+Where the course supplies its own control, use it. V04's claim is that **location**
+changes the outcome — same M formation, loser inside the blue box, winner outside. That
+is a natural experiment with the pattern confound removed, and it is stronger evidence
+than any hit rate taken alone.
+
 ### Sample sufficiency
 
 There is no universal minimum count during the learning phase. Sufficiency depends

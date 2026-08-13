@@ -91,6 +91,7 @@ REQUIRED_SYSTEM_FILES = [
     "00_SYSTEM/SESSION_CLOSE.md",
     "00_SYSTEM/STUDENT_SESSION_PROMPT.md",
     "00_SYSTEM/REVIEWER_SESSION_PROMPT.md",
+    "00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md",
 ]
 
 REQUIRED_TEMPLATES = [
@@ -366,6 +367,68 @@ def check_lesson_artifact_consistency(root: Path, r: Report) -> None:
     r.ok(f"cross-checked {len(started)} started lesson(s)")
 
 
+def check_backtest_evidence_gate(root: Path, r: Report) -> None:
+    """
+    Enforce the D-026 / D-027 hard gate.
+
+    If any BT_*.md observation exists, the baseline and period pre-registration
+    decisions must exist too, and each observation must carry its own §0
+    pre-registration and result classification.
+
+    Silent-pass when no observation exists yet — the gate is not a burden until
+    the first backtest is written.
+    """
+    r.section("Backtest evidence gate (D-026 / D-027)")
+
+    bt_files = sorted((root / "06_MANUAL_BACKTEST").rglob("BT_*.md")) if (root / "06_MANUAL_BACKTEST").is_dir() else []
+
+    if not bt_files:
+        r.ok("no backtest observations yet — gate not engaged")
+        return
+
+    decisions = root / "00_SYSTEM" / "DECISIONS.md"
+    dtext = decisions.read_text(encoding="utf-8", errors="replace") if decisions.is_file() else ""
+
+    if "D-026" in dtext and "D-027" in dtext:
+        r.ok("D-026 and D-027 present in DECISIONS.md")
+    else:
+        r.fail("BT_ observations exist but D-026/D-027 are missing from DECISIONS.md — "
+               "baseline and period pre-registration are required BEFORE any observation")
+
+    # The concrete boundaries must have been decided, not left as OWED.
+    if "OWED NOW" in dtext:
+        r.fail("BT_ observations exist while DECISIONS.md still lists baseline/holdout "
+               "parameters as 'OWED NOW' — decide and record them before testing")
+    else:
+        r.ok("no outstanding 'OWED NOW' backtest decisions")
+
+    missing_pre, missing_class, bare_rate = [], [], []
+    rate_re = re.compile(r"\b\d{1,3}(?:\.\d+)?\s?%")
+    for f in bt_files:
+        t = f.read_text(encoding="utf-8", errors="replace")
+        rel = f.relative_to(root)
+        if "PRE-REGISTRATION" not in t.upper():
+            missing_pre.append(str(rel))
+        if not any(k in t for k in ("DESCRIPTIVE", "EVIDENTIAL", "INVALID")):
+            missing_class.append(str(rel))
+        # a percentage with no interval/baseline/insufficiency label nearby
+        if rate_re.search(t) and not any(
+            k in t.upper() for k in ("INTERVAL", "BASELINE", "SAMPLE INSUFFICIENT")
+        ):
+            bare_rate.append(str(rel))
+
+    for label, bucket, msg in (
+        ("pre-registration", missing_pre, "has no §0 PRE-REGISTRATION block"),
+        ("classification", missing_class, "has no DESCRIPTIVE/EVIDENTIAL/INVALID classification"),
+        ("bare rate", bare_rate, "quotes a percentage with no interval, baseline, or insufficiency label"),
+    ):
+        if bucket:
+            for f in bucket[:5]:
+                r.fail(f"{f} {msg}")
+        else:
+            r.ok(f"all {len(bt_files)} observation(s) carry a {label}")
+
+
 def check_git_hygiene(root: Path, r: Report) -> None:
     r.section("Git hygiene")
 
@@ -465,6 +528,7 @@ def main() -> int:
     check_progress_and_manifest(root, r)
     check_lesson_artifact_consistency(root, r)
     check_source_videos_dir(root, r)
+    check_backtest_evidence_gate(root, r)
     check_git_hygiene(root, r)
 
     return r.summary()

@@ -66,6 +66,12 @@ Was the lesson applied to historical GBP/USD examples, with future price hidden 
 the decision point, losers retained, and rule application graded separately from
 trade outcome?
 
+**And, per `DECISIONS.md` D-026 / D-027:** was a baseline defined *before* testing, was
+the period pre-registered, was the reserved holdout left closed, and is every quoted
+rate reported with its sample size and interval? A test without a baseline is
+`DESCRIPTIVE` at best and may **not** be cited as showing that a rule works
+(`00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md`).
+
 ### H. Provenance
 
 Can every important rule be traced to a video timestamp, screenshot, chart, or

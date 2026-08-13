@@ -553,6 +553,221 @@ disposition, not just the conclusion.
 
 ---
 
+## D-026 — Every manual backtest requires a pre-registered baseline
+
+**Date:** 2026-08-11
+**Decision:** No manual backtest result may be recorded, summarized, or cited without
+a **baseline defined in advance**. The required baseline is **matched random entry**
+(same instrument, session, eligible window, stop and target distances, and n; entry
+bar randomized; ≥200 iterations, distribution reported). Where the sample permits, the
+course's own inside-box / outside-box contrast is run as a second arm. Full
+specification: `BACKTEST_EVIDENCE_STANDARD.md` §2.
+
+A **hard gate** applies: no `BT_*.md` file may be written until the baseline decision
+for that rule exists in this file. `scripts/validate_project.py` fails the build if a
+backtest observation exists without it.
+
+**Reason:** A hit rate with no comparator is unreadable. The method claims ~1:2.8 R:R
+and *"in profit in 15 to 45 minutes, guaranteed"* (V04 `[00:08:56]`); against those
+claims a 60% hit rate cannot be distinguished from random entry in the same sessions,
+or from any long taken in a week that trended up. The repository had **zero** mentions
+of a baseline before this decision — an external methodological review identified the
+gap.
+**Evidence:** External review, 2026-08-11, four questions on backtest implementation.
+Repository grep for baseline / coin-flip / random entry / null hypothesis / control:
+one hit, unrelated.
+**Alternatives considered:** Baseline "where practical" — rejected; optional rigour is
+skipped exactly when a result looks good. Deferring to Phase 8 — rejected; the manual
+results would already be in the corpus, cited by later work, unlabelled.
+**Consequences:** Adds work to every test. `MANUAL_BACKTEST_TEMPLATE.md` gains a
+pre-registration block that must be filled before charts are opened.
+`REVIEW_PROTOCOL.md` §6.G gains checks 15–20 and codes `E21`–`E25`; a missing or
+post-hoc baseline is `CRITICAL`. Recorded before any observation existed, so **nothing
+required rework**.
+**Status:** ACTIVE
+
+---
+
+## D-027 — Test periods are pre-registered; a holdout is reserved
+
+**Date:** 2026-08-11
+**Decision:** The instrument, date range, timeframe and session boundaries of a
+manual backtest are recorded in this file **before any chart in that range is
+examined**. A contiguous holdout block — recommended: the most recent 30% of
+available history — is **not opened during the Student Phase** by any session for any
+reason. Changing a range mid-test creates a **new test ID**; the abandoned test is
+retained and marked. Full specification: `BACKTEST_EVIDENCE_STANDARD.md` §3.
+
+**Reason:** The rules themselves are genuinely pre-registered — transcribed from 2012
+lectures, fixed before any chart was opened, and never fitted to price data. That is
+stronger than a conventional train/test split on that axis, and it is **not
+sufficient**: it does nothing about a *period* selected, consciously or not, because
+it looked cooperative. The holdout also gives the end-of-course rule set one honest
+test against data no session has seen.
+**Evidence:** External review question 3 ("is there a train/test split"). Answer at
+the time: none for the manual phase; the only holdout language sat in
+`15_AUTOMATED_BACKTEST/README.md` for Phase 8, where boundaries were still an unmade
+decision.
+**Alternatives considered:** Relying on rule pre-registration alone — rejected for the
+reason above. Setting the boundaries here — rejected; the specific split is the
+owner's call and no agent may invent it. This decision requires that boundaries exist
+and be recorded, and supplies a recommended default only.
+**Consequences:** The concrete development/holdout boundary remains **an open decision
+owed by the owner** before the first observation (see the table below). Inspecting the
+holdout is `E23` and converts it into development data — which must then be disclosed,
+not quietly ignored.
+**Status:** ACTIVE
+
+---
+
+## D-028 — Manual-phase development / holdout split is 70 / 30
+
+**Date:** 2026-08-11
+**Decision:** Whatever contiguous GBP/USD history the project uses for manual
+backtesting is split by time: the **oldest 70% is DEVELOPMENT**, the **most recent 30%
+is HOLDOUT**. The holdout is not opened by any session, for any reason, during the
+Student Phase. Owner approved 2026-08-11.
+
+**Concrete dates are pinned at first use, not now.** `I-007` is still open — no chart
+data source, feed or timezone has been declared — so the available range is unknown and
+any dates written today would be invented. The first session to establish the data
+source computes the 70/30 boundary from the actual available range, records the exact
+dates by appending to this decision, and only then opens a chart.
+**Reason:** The rules are pre-registered by the course, but the *period* is not. A
+holdout is what stops a favourable-looking stretch from being chosen, consciously or
+not, and gives the end-of-course rule set one honest test against data no session has
+seen.
+**Evidence:** External methodological review, 2026-08-11 (question 3). Owner decision
+same day.
+**Alternatives considered:** 80/20 — rejected, leaves too thin a final exam for a
+method with this many conditional branches. Random or interleaved sampling — rejected;
+FX regimes cluster in time, so a random split leaks regime information across the
+boundary.
+**Consequences:** Opening the holdout is `E23` and converts it permanently into
+development data — which must then be **disclosed**, not quietly absorbed. Once the
+boundary dates are appended here, `validate_project.py` can check observation dates
+against them.
+**Status:** ACTIVE — boundary dates PENDING first data-source decision
+
+---
+
+## D-029 — Baseline parameters for matched random entry
+
+**Date:** 2026-08-11
+**Decision:** Owner delegated these to the agent's judgement, 2026-08-11. Standing
+parameters for the D-026 baseline:
+
+| Parameter | Value | Why |
+|---|---|---|
+| Iterations | **1,000** for any headline result; **200** floor for exploratory runs | 1,000 is cheap and tightens the percentile estimate enough that a borderline result is not an artifact of the draw |
+| Random seed | **Recorded in the observation**, every run | Without it the baseline is unreproducible, and an unreproducible control is not a control |
+| Eligible entry window | **The same session window the rule under test uses** | Comparing against entries at hours the rule would never fire is a strawman that flatters the rule |
+| Direction — primary arm | **Matched to the rule's direction** | Isolates the question actually asked: does the *setup* — timing and location — carry information, given direction? |
+| Direction — secondary arm | **Random** (run where feasible) | Answers the different and larger question: is there directional edge at all? The two arms failing differently is diagnostic |
+| Stop / target | **Identical to the rule's** | Any difference here changes the payoff geometry and invalidates the comparison |
+| Reported | median, 5–95% range, iterations, seed, **and the rule's percentile within the distribution** | A bare "baseline was 55%" hides the spread that determines whether the rule is distinguishable from it |
+
+**Reason:** A control that is not reproducible, or that is drawn from a different
+opportunity set than the rule, cannot support or refute anything. The two-arm design
+costs almost nothing and separates "the setup adds information" from "trading this
+instrument in this session has an edge" — which are routinely conflated.
+**Alternatives considered:** Single random-direction arm only — rejected; it conflates
+the two questions above. 200 iterations flat — rejected as the headline standard; the
+percentile estimate is noticeably noisier at borderline results, which is exactly where
+the number matters.
+**Consequences:** Every `BT_` observation records iterations, seed, and both arms where
+run. `BACKTEST_EVIDENCE_STANDARD.md` §2.1 is amended by this decision where they differ.
+**Status:** ACTIVE
+
+---
+
+## D-030 — Blocked tests wait for the course; definitions are never approximated
+
+**Date:** 2026-08-11
+**Decision:** Where a testable claim is blocked because the course has named a concept
+it has not yet defined — M/W anatomy (`A-011`), "the level" (`A-004`), "trap move"
+(`A-002`), TDI (`A-039`), session timezone (`A-019`) — the test **waits for the lesson
+that defines it**. No session may substitute an approximation, a plausible reading, a
+definition from another trading framework, or a "reasonable" numeric stand-in in order
+to make a blocked test runnable. Owner direction, 2026-08-11: *"We have to wait until
+those things are taught, which they are in the course, so we have to be patient."*
+
+**Reason:** This is the machine-rule firewall (`D-010`) applied to testing rather than
+to notes, and it closes the more dangerous hole. A test run against an invented
+definition produces a **number** — and a number in a research corpus acquires authority
+that a note never does. Whatever it measures gets attributed to the instructor, and the
+substitution is invisible a month later.
+**Evidence:** `A-039` already carries this prohibition for TDI specifically
+(*"a two-condition version of V04's rule is a different rule with a different hit
+rate"*). D-030 generalizes it to every definitional blocker.
+**Alternatives considered:** Testing an approximation and labelling it clearly —
+rejected. The label degrades faster than the number travels; `E06` + `E18` describe
+exactly this failure.
+**Consequences:** Manual-backtest debt will keep accruing across lessons, and that is
+the correct behaviour, not a backlog to be cleared by lowering the standard. Debt is
+tracked in `REVIEW_INDEX.md` and discharges in the lesson that supplies the missing
+definition. A test blocked only by a **measurement** gap (tooling, data access) is not
+covered here — that is `DEFERRED` under `D-019` and may proceed once the tooling exists.
+**Status:** ACTIVE
+
+---
+
+## D-031 — Session timezone is a tested variable, not an assumption
+
+**Date:** 2026-08-11
+**Decision:** The chart timezone used to place session windows is **not assumed**. Every
+manual backtest that depends on session boundaries runs **two pre-registered arms**, and
+**both are always reported**:
+
+| Arm | Definition | Meaning |
+|---|---|---|
+| **A — fixed offset** | `UTC−5` year-round ("EST", New York, no DST) | His table is a set of fixed clock numbers that never move |
+| **B — market-anchored** | `America/New_York` with DST active (i.e. `UTC−4` in summer) | His table tracks the wall clock of the market, shifting with DST |
+
+Owner direction 2026-08-11: treat the timezone as something to test rather than
+resolve, defaulting to fixed Eastern and testing the alternative.
+
+**Binding rule — this is the part that matters:** both arms are pre-registered before any
+chart is opened, and **both results are reported every time**. Divergence between them is
+a **finding**, never a selection criterion. Reporting only the better-performing arm is
+`E09` (cherry-picking) and `E24`, and is exactly how a timezone convention gets
+"validated" by noise.
+
+**Reason:** `A-019` cannot be closed from source — the instructor explicitly declines to
+specify (*"Listen, don't analyse it… These are the times"*, `[00:49:52]`) and says the
+person who taught him has died (`[00:49:22]`). An unresolvable ambiguity that materially
+moves every session boundary is better converted into a measured variable than into a
+guess.
+
+**Arithmetic that must not be lost.** The bootcamp was recorded **2012-03-18 →
+2012-06-17**, which lies **entirely within US daylight saving** (2012: Mar 11 – Nov 4).
+So New York local clock throughout the course was **EDT (UTC−4)**, not EST (UTC−5):
+
+```text
+His "US session starts at 9:30 New York Eastern"  (V01 [00:46:09])
+  = 09:30 EDT = 13:30 UTC   during the recording period
+
+Chart on fixed EST (UTC−5)      → that event displays at 08:30   ✗ one hour early
+Chart on America/New_York (DST) → that event displays at 09:30   ✓ matches
+```
+
+**Arm B therefore reproduces the instructor's own stated numbers during the period he
+recorded them; Arm A shifts every one of them by an hour.** This does not settle which
+arm the *method* wants — his table may genuinely have been taught as fixed numbers — but
+it is a fact about the source and belongs on the record.
+
+**Alternatives considered:** Picking one timezone and proceeding — rejected; a one-hour
+error in the Asian window moves the box high/low, which moves the 25–50 pip band, which
+changes every observation, invisibly. Deferring the second arm until "if need be" —
+rejected; the marginal cost is one shifted harvest of the same data, and deferred
+robustness checks reliably become skipped ones.
+**Consequences:** `PT-001` and every future session-dependent test carry both arms.
+`A-019` remains **OPEN** on the course's side — this decision governs project method, not
+what the course teaches, and no session may cite D-031 as evidence of instruction.
+**Status:** ACTIVE
+
+---
+
 ## DECISIONS TO BE MADE AT INGESTION
 
 Not yet decided; record as new entries when the information exists.
@@ -566,7 +781,9 @@ Not yet decided; record as new entries when the information exists.
 | Chart data source / broker feed for manual backtesting | First manual backtest |
 | Timezone convention for session and daily boundaries | First timing lesson |
 | Default timeframes used in manual study | First chart lesson |
-| Development / validation / holdout dataset boundaries | Phase 4–8 |
+| Manual-phase development / holdout boundary | ✅ **DECIDED — D-028** (70/30; exact dates pinned at first data-source decision) |
+| Baseline parameters (iterations, window, direction handling) | ✅ **DECIDED — D-029** |
+| Development / validation / holdout dataset boundaries (automated, Phase 4–8) | Phase 4–8 |
 | Whether Git LFS is adopted for any media | Only if media must be versioned |
 
 ---

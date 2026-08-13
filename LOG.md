@@ -3111,3 +3111,295 @@ item 13) left untouched.
 ### Next Review Trigger
 
 `V05_REVIEW_R3.md` by a fresh session. R2 expects R3 to close V05.
+
+---
+
+> **MERGE NOTE 2026-08-12.** The entries below were committed on a parallel line of work that
+> branched from `3a13441` (the backtest-evidence-standard / `D-026`…`D-031` lineage) and were
+> pushed before this branch's V05 entries. Both lines are dated 2026-08-11, so this journal is
+> not strictly chronological across the merge point. Nothing was edited or reordered within
+> either block. See the numbering collisions flagged in `18_REVIEW/REVIEW_INDEX.md` and
+> `CHANGELOG.md`.
+
+---
+
+## 2026-08-11 — Session — Backtest Evidence Standard (D-026 / D-027)
+
+### Objective
+
+Close two methodological gaps identified by an external review of this repository,
+before the first manual-backtest observation is written.
+
+### The four questions asked, and the honest answers at the time
+
+| # | Question | Answer |
+|---|---|---|
+| 1 | Exhaustive, or search-for-matches? | **Exhaustive by design, never exercised.** `STUDY_PROTOCOL.md` §2 + reviewer checks 3 and 6. |
+| 2 | Losers/ambiguous filtered? | **Retained**, enforced at three layers (template checklist voids the observation, `INSUFFICIENT INFORMATION` is first-class, reviewer checks 7-9). |
+| 3 | Train/test split? | **NO.** Only Phase-8 language existed, and its boundaries were an unmade decision. |
+| 4 | Baseline? | **NONE.** Repository-wide grep for baseline / coin-flip / random entry / null hypothesis / control returned one hit, unrelated. |
+
+(1) and (2) needed no change. (3) and (4) are closed by this session.
+
+### Work Completed
+
+- **`00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md`** (new) — matched random-entry baseline
+  (>=200 iterations, distribution reported); period pre-registration; holdout reserve;
+  n>=30 for any quoted rate; intervals mandatory; `DESCRIPTIVE` / `EVIDENTIAL` /
+  `INVALID` classification; multiple-comparison discipline.
+- **`DECISIONS.md` D-026 / D-027** — baseline mandatory with a hard gate; period
+  pre-registration and holdout reserve. Two concrete parameters marked **`OWED NOW`**
+  in the open-decisions table (owner action).
+- **`REVIEW_PROTOCOL.md`** — §6.G checks **15-20**, error codes **E21-E25**. Missing or
+  post-hoc baseline is `CRITICAL`; the rest are `MAJOR`.
+- **`MANUAL_BACKTEST_TEMPLATE.md`** — new **§0 PRE-REGISTRATION** block completed before
+  any chart in the range is opened, four added integrity-checklist boxes, and **§9b
+  RESULT CLASSIFICATION**.
+- **`scripts/validate_project.py`** — `check_backtest_evidence_gate()`. Silent while no
+  observation exists; once one does, fails on: missing D-026/D-027, unresolved
+  `OWED NOW` parameters, missing §0 block, missing classification, or a bare percentage
+  with no interval/baseline/insufficiency label.
+- Wired into `STUDY_PROTOCOL.md` §2, `MASTERY_STANDARD.md` dimension G,
+  `06_MANUAL_BACKTEST/README.md`; `REVIEW_INDEX.md` open items **34-35**;
+  `CHANGELOG.md` 0.7.0.
+
+### Key Findings
+
+**The course supplies its own natural control and the project had not noticed.** V04's
+central claim is that *location* changes the outcome — the same M formation is a loser
+inside the blue box and a winner outside it (`[00:03:04]`-`[00:03:27]`). Running both
+arms removes the pattern confound. If they perform alike, the prohibition that forms
+V04's spine is not doing the work the course claims. This is now required where the
+sample permits, and a null result there is to be reported with equal prominence.
+
+**Adopted at zero cost.** `06_MANUAL_BACKTEST/` held **0** observations, so no existing
+work required rework. The V02/V03/V04 homework is `DESCRIPTIVE` and **already labels
+itself correctly** — `V04_HOMEWORK.md`: *"One week is one week — this is a single
+observation."* No retroactive correction was owed and none was made.
+
+### Verification
+
+The gate was **negative-tested**, not assumed. A deliberately sloppy `BT_V04_0001.md`
+(no pre-registration, bare "62%", no classification) was created in a scratch copy:
+validation returned **4 failures**, one per defect, then **99/0/0** after removal. A
+green run on zero observations proves nothing; this does.
+
+### Manual Backtesting
+
+None performed. This session governs how it will be done, not what it found.
+
+### Ambiguities / Contradictions
+
+No new course-level records. `A-039` still blocks the backtest debt.
+
+### Decisions
+
+**D-026**, **D-027**. Two parameters left `OWED NOW` for the owner — deliberately not
+invented by this session.
+
+### Files Created/Updated
+
+`00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md` (new); `DECISIONS.md`; `REVIEW_PROTOCOL.md`;
+`STUDY_PROTOCOL.md`; `MASTERY_STANDARD.md`; `TEMPLATES/MANUAL_BACKTEST_TEMPLATE.md`;
+`06_MANUAL_BACKTEST/README.md`; `18_REVIEW/REVIEW_INDEX.md`; `scripts/validate_project.py`;
+`CHANGELOG.md`; `LOG.md`.
+
+### Git
+
+```text
+<this commit> docs: add backtest evidence standard (D-026/D-027) with mechanical gate
+```
+
+### Next Action
+
+**Owner:** decide the two `OWED NOW` parameters in `DECISIONS.md` — development/holdout
+boundary, and baseline parameters. Until then `validate_project.py` will fail the moment
+a `BT_` file appears, which is the intended behaviour.
+
+**Project:** V05 is complete locally but **uncommitted** — commit and push it before any
+further work, then the V05 review and the V04 R2 review. The backtest debt discharges
+when `A-039` clears, under this standard.
+
+---
+
+## 2026-08-11 — Session — Owner decisions D-028/029/030; PT-001 pre-registered
+
+### Objective
+
+Record the owner's answers to the two decisions owed under D-026/D-027, record the
+owner's direction on blocked tests, and pre-register the one test that is available
+before the course teaches more.
+
+### Owner input, 2026-08-11
+
+1. **70/30 development/holdout** — approved.
+2. **Baseline parameters** — delegated to the agent's judgement.
+3. **"We have to wait until those things are taught… so we have to be patient."**
+4. **"The blue box boundary is the Asian range. He'll go over it."** Plus: record the
+   Asian-range test so it is not forgotten.
+
+### Work Completed
+
+- **D-028** — 70/30 split. Exact dates deliberately **not** pinned: `I-007` is open, no
+  data source is declared, so the available range is unknown and any dates written today
+  would be invented. The first session to declare a data source computes and appends them.
+- **D-029** — baseline parameters, per the delegation: 1,000 iterations for headline
+  results (200 floor for exploratory), **random seed recorded every run**, entry window
+  matched to the rule, and **two arms** — direction-matched primary (does the setup carry
+  information given direction?) and random-direction secondary (is there directional edge
+  at all?). Those two questions are routinely conflated; separating them costs nothing.
+- **D-030** — the owner's patience point recorded as a binding rule. This is the
+  machine-rule firewall (`D-010`) applied to *testing*, which is the more dangerous hole:
+  an approximated definition inside a test produces a **number**, and a number acquires
+  authority in a research corpus that a note never does.
+- **`PT-001`** pre-registered in full.
+- `REVIEW_INDEX.md` item 35 closed; 36–37 opened. `CHANGELOG.md` 0.7.1.
+
+### Key Findings
+
+**PT-001 is blocked by exactly ONE thing, and it is the cheap one.** The Asian range
+needs a window; V02 prints *"Asian Session: 8:30pm - 3:00am"* on a slide **with no
+timezone** — `A-019`. Unlike `A-011`, `A-004`, `A-002` or `A-039`, this plausibly closes
+from **existing** V01–V05 evidence rather than a future lesson: V04 `[00:07:01]` *"It's
+809 Eastern Time on 325"*, V01 `[00:46:09]` *"the US session starts at 930 Eastern"*.
+**A focused timezone evidence pass is therefore the highest-leverage work item currently
+available** — small, and it unblocks the only runnable test.
+
+`C-004` is the standing caution: London open is printed 3:30am against 4:00 spoken, so
+session times in this course are demonstrably messy. **US Eastern must not be assumed to
+unblock PT-001** (`D-030`).
+
+**On the owner's statement that the blue box is the Asian range:** V04 supports it —
+the instructor uses the two interchangeably (`C1`, `[00:14:36]` *"25 to 50 pips higher
+than the Asian range"* against `[00:15:43]` *"25 to 50 pips above and below the blue
+box"*). Recorded here as **owner statement corroborated by V04 evidence**, not as a
+resolution of `A-006`, whose open question is different: whether the box is a *temporal*
+session rectangle or a *positional* price zone. Both readings still survive the frames.
+
+### Manual Backtesting
+
+None. PT-001 is pre-registered and **not run** — it is blocked by `A-019`.
+
+### Ambiguities / Contradictions
+
+No new records. `A-019` is promoted in practical importance: it now gates the only
+runnable test.
+
+### Decisions
+
+**D-028**, **D-029**, **D-030**.
+
+### Files Created/Updated
+
+`00_SYSTEM/DECISIONS.md`; `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-001_…md` (new);
+`18_REVIEW/REVIEW_INDEX.md`; `CHANGELOG.md`; `LOG.md`.
+
+### Git
+
+```text
+<this commit> docs: record D-028/029/030 and pre-register PT-001
+```
+
+### Next Action
+
+1. **Commit and push V05** — still uncommitted, still a single copy.
+2. **Timezone evidence pass** to close or characterize `A-019` — small, and unblocks
+   PT-001.
+3. Then V05 review, V04 R2 review.
+
+---
+
+## 2026-08-11 — Session — D-031: timezone as a tested variable; PT-001 unblocked
+
+### Objective
+
+Resolve the `A-019` timezone blocker on `PT-001` following owner direction, without
+closing an ambiguity the source itself declines to settle.
+
+### Owner direction
+
+*"Originally I thought it'd be Eastern Standard Time in New York, but we have to test
+daylight savings versus non-daylight savings. So just default to Eastern Standard Time
+in New York and then test with the extra if need be."*
+
+The instinct is right and is the reason this closed cleanly: an ambiguity that cannot be
+resolved from source **can** be converted into a measured variable.
+
+### Work Completed
+
+- **`D-031`** — session timezone is a tested variable. Two pre-registered arms:
+  **A** fixed `UTC−5`; **B** DST-aware `America/New_York`. **Binding rule: both are
+  always reported.** Divergence is a finding, never a selection criterion.
+- **`A-019` updated and deliberately kept OPEN.** `D-031` governs project method, not
+  course content, and may never be cited as instruction.
+- **`PT-001` unblocked** — §3 rewritten with the two-arm design, the two-draws caution,
+  and the straddle-a-DST-transition recommendation. Remaining prerequisites are `I-007`
+  (data source) and the `D-028` boundary dates — no longer the timezone.
+- `REVIEW_INDEX.md` item 37 updated, item 38 added. `CHANGELOG.md` 0.7.2.
+
+### Key Findings
+
+**The owner's stated default may be inverted, and the arithmetic is now on the record.**
+The bootcamp ran 2012-03-18 → 2012-06-17, **entirely inside US daylight saving**
+(2012: Mar 11 – Nov 4). So:
+
+```text
+V01 [00:46:09] "the US session starts at 9:30 New York Eastern"
+  = 09:30 EDT = 13:30 UTC during the recording period
+
+Fixed EST (UTC−5) chart      → displays 08:30   one hour early, every session
+America/New_York (DST-aware) → displays 09:30   matches
+```
+
+Arm B reproduces the instructor's own numbers during the window he spoke them; Arm A
+displaces every one by an hour. **This is evidence about the source and does not settle
+what the method requires** — his table may genuinely have been taught as fixed clock
+numbers (`A-019` candidate reading 1). Recorded, not acted on unilaterally.
+
+Supporting fragment for the market-anchored reading: `[00:50:26]` *"we back up the London
+session in the winter"* — part of his table already moves seasonally, which is what a
+DST-following table does and a fixed-offset table does not.
+
+**Two arms are two draws, not two chances to be right.** Flagged explicitly in `PT-001`
+§3b: if A returns 58% and B returns 61%, that is one draw each from possibly overlapping
+distributions, not a discovery that B is correct. Reporting only the better arm is
+`E09`+`E24`.
+
+**Design improvement found while writing this up:** the two arms are *identical* outside
+US daylight saving and differ by one hour inside it. Choosing a development window that
+**straddles a DST transition** therefore gives a within-sample comparison on the same
+instrument and regime — strictly stronger than two separate runs, at zero cost.
+
+### Manual Backtesting
+
+None. `PT-001` remains pre-registered and unrun.
+
+### Ambiguities / Contradictions
+
+`A-019` updated, **still OPEN**. No new records.
+
+### Decisions
+
+**D-031**.
+
+### Files Created/Updated
+
+`00_SYSTEM/DECISIONS.md`; `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`;
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-001_…md`; `18_REVIEW/REVIEW_INDEX.md`;
+`CHANGELOG.md`; `LOG.md`.
+
+### Git
+
+```text
+<this commit> docs: D-031 timezone as tested variable; PT-001 unblocked
+```
+
+### Next Action
+
+1. **Commit and push V05** — still uncommitted, still a single copy.
+2. Declare the chart data source and feed (`I-007`), then pin the `D-028` boundary dates
+   choosing a window that straddles a DST transition.
+3. `PT-001` becomes runnable at that point.
+4. V05 review, V04 R2 review.
+
+---
