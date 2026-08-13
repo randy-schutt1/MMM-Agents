@@ -8,6 +8,28 @@ Template: `00_SYSTEM/TEMPLATES/AMBIGUITY_TEMPLATE.md`
 
 ## STATUS
 
+> ## 📍 2026-08-13 — `D-040`: THE THREE-TIER SOURCING HIERARCHY NOW GOVERNS EVERY FILL-IN BELOW
+>
+> **Tier 1** the recordings (always wins) · **Tier 2** `MMM-NOTES` (`D-039`) · **Tier 3** generic
+> web research (closes nothing). Full statement: `00_SYSTEM/SOURCING_HIERARCHY.md`.
+>
+> **Nothing in this file changed status because of `D-040`.** What it adds is a **forward
+> obligation**: where a **later video** defines or clarifies a term that a record below was closed
+> or narrowed on from Tier 2 or Tier 3, **the video takes priority** and the entry **must be
+> reconciled at that point** — the `A-xxx` restated on the Tier 1 basis, the superseded text kept
+> visible, a `C-xxx` opened on a true contradiction. Six-step process: `SOURCING_HIERARCHY.md` §3.1.
+>
+> **The three records carrying a standing re-check obligation** — closed or resolved on a tier a
+> later video can overturn — are **`A-014`**, **`A-023`** (both `RESOLVED BY MMM-NOTES`) and
+> **`A-020`** (owner attestation + Tier 2 corroboration, explicitly *not* `RESOLVED BY COURSE`).
+> `SOURCING_HIERARCHY.md` §3.4.
+>
+> **One record was cross-referenced against `MMM-NOTES` on this pass and deliberately NOT changed:**
+> **`A-039`** (TDI). The notes carry a full TDI chapter at `MMM-NOTES` **p.45–47** naming the four
+> lines and their roles — and supply **zero numeric parameters**, which is what `A-039` asks for.
+> Recorded at `EXTERNAL_VOCABULARY_REFERENCE.md` **§9.2a**. `A-039` stays `DO NOT CODE` /
+> `DO NOT SUBSTITUTE`, unnarrowed: a structure is not a specification.
+
 > ## 📌 UPDATED 2026-08-13 — FIRST PASS OF THE `D-039` QUEUE
 >
 > **The counts in the block below are as at the V06 pass and are superseded**

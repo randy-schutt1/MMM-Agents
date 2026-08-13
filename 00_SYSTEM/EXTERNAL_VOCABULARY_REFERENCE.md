@@ -1,5 +1,21 @@
 # EXTERNAL VOCABULARY REFERENCE
 
+> ## 📍 THIS FILE IS TIERS 2 AND 3 OF A THREE-TIER HIERARCHY — READ `SOURCING_HIERARCHY.md` FIRST
+>
+> Added 2026-08-13 (`D-040`). Nothing below changed; this is a pointer, not an amendment.
+>
+> | Tier | Source | Where | May close an `A-xxx`? |
+> |---|---|---|---|
+> | **1** | The course recordings, V01–V21 | `01_SOURCE_VIDEOS/`, `02_TRANSCRIPTS/` | ✅ Yes |
+> | **2** | The Mauro seminar-notes PDF | **§9 of this file** | ⚠️ Yes but weaker (`D-039`) |
+> | **3** | Generic internet research | **§5 of this file** | ❌ Never |
+>
+> **The rule that governs this file's future:** a §5 or §9 entry is a **provisional occupant of a
+> gap**. When a **later video** defines or clarifies the term, **Tier 1 takes priority** and the
+> entry here **must be reconciled at that point** — annotated in place, superseded text kept
+> visible, the `A-xxx` restated on the Tier 1 basis. The six-step process is
+> `SOURCING_HIERARCHY.md` §3.1; §3 below is its Tier-3 instance and remains in force.
+
 > # ⛔ THIS FILE IS NOT COURSE MATERIAL
 >
 > **Nothing in this file was said, printed, or shown by any speaker in V01–V07 or any other
@@ -713,6 +729,45 @@ Every row is an **external candidate**. Every corresponding `A-xxx` is **UNCHANG
 | **trap / stop hunt** `A-002`, `A-049` | Stop hunt: *"a deliberate movement outside of the range to what will become the high or low of the day"*, 1–4am ET, two objectives (take stops, induce wrong-direction commitment), then spread widens and accumulation runs 30–90 min. *Trap* remains descriptive — volume-trapping via spikes contained by a trend line | 🟡 Sharper than §5.12 on stop hunt; **still no clean discriminator**, so `C-006` (V05 geometric vs V06 causal) is untouched and now has a third framing beside it |
 | **Asian box** V06 `[01:09:43]` | *"drawn around the Asian session and simply denotes the area of consolidation… **It is just a guide**"*, explicitly **not** a hard boundary: *"It does not mean that a range can only be broken outside of this box."* A second, smaller box marks the New York reversal window (~3 hours from NY open) | 🟡 Notable for what it **denies**: the box is advisory, which argues **against** ever coding a hard Asian-box boundary. No clock times given → `A-019`/`D-031` untouched |
 | **Hi-Lo** `A-056` | Confirms the object and the framing (the stop hunt *is* what defines HOD/LOD) and, like every other source, describes recognising it **after** the fact — *"There is often a second move to the HOD/LOD"*, which is the second-leg entry | 🟢→ still the same conclusion as §5.10: **the tradition has the same hole.** `A-056`'s gap is real and not an artifact of this corpus |
+
+#### 9.2a — `A-039` (TDI) — added 2026-08-13 on the `D-040` cross-reference pass
+
+**Why this is separate:** the 2026-08-13 §9.2 pass recorded the two TDI *signals* (`A-031` blood
+in the water, `A-032` shark fin) but gave **`A-039` itself no row**, even though the document
+carries a dedicated chapter — *"TDI (Traders Dynamic Index)"*, `MMM-NOTES` **p.45–47**. That
+omission is corrected here. **`A-039` is NOT narrowed and NOT closed by this entry**, and the
+reason is the entire point of it.
+
+**What the chapter supplies — structure, and Mauro's usage:**
+
+- The four lines are named and their roles given: an **RSI line**; a **trade signal line**
+  (*"provides entry signals when the RSI crosses over… much earlier than… the midline"*); a
+  **market baseline**, which *"replaces in many respects the usual midline of the RSI except that
+  it is a dynamic line"*; and **volatility bands**, *"similar to a Bollinger band but applied to
+  the market baseline of the indicator instead of price."* (p.45)
+- Band semantics: they act as close-based S/R, and *"when the bands re-contain the RSI line after
+  breakout, it is a sign of weakening and an impending reversal. **This represents a stop hunt.**"*
+- A cross-link the corpus also makes: *"The 5 and 13 EMA's happen to match up the TDI used by
+  Mauro"* (p.38), with the hedge that *"any other rapidly moving pair of EMA's would achieve
+  the same goal."*
+- An exit rule for the shark-fin entries: *"when the RSI gets the opposite Volatility band and
+  recrosses the Signal line again."* (p.46)
+
+**What it does NOT supply — and this is what `A-039` actually asks for:**
+
+> **Zero numeric parameters. Anywhere.** No RSI period, no signal-line period or type, no market
+> baseline period, no volatility-band period or standard-deviation multiple, no price source, no
+> timeframe. Searched across all 84 pages; the 13 `TDI` occurrences are structural or
+> usage-oriented without exception.
+
+**Effect: `A-039` stays exactly as it is — `DO NOT CODE`, `DO NOT SUBSTITUTE`.** The record's
+complaint is that TDI is a *required entry criterion the course never parameterised*; V05 supplied
+a displayed name (`TDI_MMM`) and no inputs, and the notes now supply a **structure** and no
+inputs. **A structure is not a specification** — reconstructing settings from *"an improved
+version of the RSI"* is precisely the approximation `D-030` forbids, and the standard TDI defaults
+circulating publicly are Tier 3 material that closes nothing (§1 banner). What the chapter *does*
+do is confirm that the four lines `A-031` and `A-032` depend on are real objects in this tradition,
+which is why those two are narrowed and this one is not.
 
 ### 9.3 What it does NOT answer — the honest negatives
 

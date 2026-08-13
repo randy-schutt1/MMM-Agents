@@ -4612,3 +4612,98 @@ read in full before committing.
 **V07 R2** — an independent reviewer verifies items 61–63. Owner merges `fix/v07-r1-minors`
 as a separate deliberate act per `D-038`. Open item 36 (dimension B vocabulary) remains owed
 and is untouched by this remediation.
+
+---
+
+## 2026-08-13 — `D-040`: the three-tier sourcing hierarchy is stated once, in one file
+
+**Branch:** `infra/add-steve-moro-reference-book` (off `fix/v07-r1-minors`, per `D-038`)
+**Owner instruction:** locate the Steve Mauro seminar-notes PDF, place it in the repo as a
+labelled secondary source, extract its contents, and set up a documented three-tier sourcing
+hierarchy for vocabulary gaps with an explicit reconciliation rule.
+
+### The PDF was already here — most of this task was done on 2026-08-13 by an earlier session
+
+The document is `Steve **Mauro**` (not "Moro"). Four **byte-identical** copies exist on the
+owner's disk (md5 `513d3846e791b42128d40d388079d5b4`, 3,064,761 bytes, 84 pp.) — three loose
+copies outside the repo, and one already committed at
+`00_SYSTEM/EXTERNAL_REFERENCE/EXTERNAL_Mauro_MMM_seminar_notes_anonymous.pdf`. The loose copies
+were left untouched by owner direction.
+
+Commits `7dc53db` → `14f0c70` had already delivered, before this session began:
+
+- the PDF in `00_SYSTEM/EXTERNAL_REFERENCE/` under a 108-line README carrying the provenance
+  warning (the title page reads *"Private Study Notes from Seminar of Steve Mauro — Authored by:
+  **Anonymous**"*);
+- a **2,906-line page-indexed `pypdf` text extract**, so any `MMM-NOTES p.N` citation is greppable
+  without opening a binary;
+- `EXTERNAL_VOCABULARY_REFERENCE.md` §9 — the PDF read **term by term** against the open records;
+- `D-039`, admitting the document as **normative** evidence on the owner's attestation;
+- a first pass of the `D-039` queue through `10_AMBIGUITIES/`, resolving `A-014`, `A-023`,
+  `A-020` and narrowing `A-031`, `A-032`, `A-055`, `A-005`, `A-022`.
+
+**Steps 1–3 and most of 5 were therefore already satisfied and were not redone.**
+
+### The conflict this session surfaced instead of resolving
+
+The instruction described the PDF as **Tier 2 — "not authoritative"**, and directed that it must
+**not** close ambiguity records. **`D-039` says the opposite**: it admits the document as
+normative, and `A-014` and `A-023` are **already closed on it**. Adopting the Tier-2 framing
+literally would have silently downgraded a standing owner decision and required reopening two
+resolved records.
+
+**Raised with the owner rather than assumed.** Owner adjudication, 2026-08-13: **`D-039`
+governs; the three tiers are a ranking layer only.** No record was reopened. This is recorded in
+`D-040`'s *"Alternatives considered"*.
+
+### What was actually built
+
+| File | Change |
+|---|---|
+| `00_SYSTEM/SOURCING_HIERARCHY.md` | **NEW.** The canonical statement: the three tiers, the search order, the four relationship cases, and the six-step reconciliation process |
+| `00_SYSTEM/DECISIONS.md` | **`D-040`** appended — the hierarchy as a binding decision, with an explicit list of what it does *not* change |
+| `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` | Header pointer (§5 = Tier 3, §9 = Tier 2); **new §9.2a** on `A-039` |
+| `00_SYSTEM/EXTERNAL_REFERENCE/README.md` | Header pointer — the PDF is Tier 2, and a Tier 2 fill-in is provisional |
+| `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` | Banner recording the forward obligation and the three standing re-check targets |
+
+**The reconciliation rule is the operative half.** Tier 2 and Tier 3 entries are *provisional
+occupants of a gap*. When a **later** video defines the term, **Tier 1 takes priority** and the
+fill-in **must be reconciled at that point** — never left standing to silently outrank course
+content, never blended into a composite definition no source states. The process is specified as
+six steps and four cases, not asserted as a slogan. `A-014`, `A-023` and `A-020` are named as the
+highest-priority re-check targets, because each is closed on a tier a later video can overturn.
+
+### The one substantive gap found in the earlier pass — `A-039`
+
+The 2026-08-13 pass recorded the two TDI *signals* (`A-031`, `A-032`) but gave **`A-039` itself no
+§9 row**, despite a dedicated *"TDI (Traders Dynamic Index)"* chapter at `MMM-NOTES` **p.45–47**.
+Read this session: the chapter names the four lines and their roles (RSI line, trade signal line,
+dynamic market baseline, volatility bands applied to the baseline rather than to price) and gives
+the shark-fin exit — and supplies **zero numeric parameters**: no period, no band deviation, no
+price source, no timeframe, across all 84 pages and all 13 `TDI` occurrences.
+
+**`A-039` was NOT narrowed and NOT closed.** A structure is not a specification, and
+reconstructing settings from *"an improved version of the RSI"* is the approximation `D-030`
+exists to forbid. Recorded at `EXTERNAL_VOCABULARY_REFERENCE.md` §9.2a.
+
+The §9.3 honest negatives were independently re-verified against the extract this session and all
+hold exactly: **zero occurrences** of `anchor`, `Brinks`, `shadow box`, `quarter of wood`,
+`tracer`, `vector`, and `800`.
+
+### Explicitly NOT done
+
+No `A-xxx` record was closed, reopened, or changed status. `push` is not unblocked;
+V05/V06/V07 dimension **B** stays **BLOCKED**. `D-030`, `D-025`, `D-033`, `D-039` are all
+untouched. The three loose duplicate PDFs outside the repo were left alone. **Not merged to the
+integration branch** — that is the owner's separate act per `D-038`.
+
+### Verification before commit
+`python3 scripts/validate_project.py` — clean, 103 passed / 0 warnings / 0 failures, both before
+and after. The 84-page PDF was already tracked, so no new binary entered the index. Explicit
+paths staged; `git diff --staged` read in full before committing.
+
+### Next
+The `D-039` queue is still only partly worked — the records not named in the 2026-08-13 banner
+have not been read against the source. Any session reaching a lesson that touches cross-pair
+analysis, the level-counting scheme, or the moving-average set must run `SOURCING_HIERARCHY.md`
+§3.1 against `A-014`, `A-023` and `A-020`.

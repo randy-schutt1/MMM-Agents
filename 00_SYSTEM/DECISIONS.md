@@ -2461,3 +2461,67 @@ provenance grounds* — rejected; the objection was made in writing, the owner r
 and re-litigating a scope call the owner has made with the evidence in front of them is not the
 agent's role.
 **Status:** ACTIVE
+
+---
+
+## D-040 — The three-tier sourcing hierarchy, and the mandatory reconciliation when a later video speaks
+
+**Date:** 2026-08-13
+**Decision:** Definitions and vocabulary for this project are sourced in a fixed order of
+precedence, recorded in full in `00_SYSTEM/SOURCING_HIERARCHY.md`:
+
+| Tier | Source | May close an `A-xxx`? |
+|---|---|---|
+| **1** | The course recordings — `01_SOURCE_VIDEOS/` V01–V21, transcripts, slides, screenshots | ✅ Yes — `RESOLVED BY COURSE` |
+| **2** | The Mauro seminar-notes PDF, cited `MMM-NOTES p.N` (`D-039`) | ⚠️ Yes but weaker — `RESOLVED BY MMM-NOTES`, only where it genuinely supplies a definition |
+| **3** | Generic internet research — `EXTERNAL_VOCABULARY_REFERENCE.md` §5 | ❌ Never |
+
+Search order is 1 → 2 → 3, stopping at the first tier that answers. A lower tier is consulted
+only because the higher tier is **silent** — never because it is unclear or harder to code.
+
+**The operative half of this entry is the reconciliation rule.** Tier 2 and Tier 3 entries are
+**provisional occupants of a gap**. Where a **later** Tier 1 statement — in any video, including
+ones not yet studied — defines or clarifies a term previously filled from Tier 2 or Tier 3, the
+**Tier 1 statement takes priority**, and the earlier fill-in **MUST be explicitly reconciled at
+that point**. It is never left standing to silently outrank real course content, and never blended
+with the course statement into a composite definition no source actually states. The six-step
+process — notice, classify, annotate in place, keep the superseded text visible per
+`REMEDIATION_PROTOCOL.md` §2, update the `A-xxx` to the Tier 1 basis, log it (and open a `C-xxx`
+on a true contradiction) — is specified in `SOURCING_HIERARCHY.md` §3.1, with the four
+relationship cases in §3.2.
+
+**Reason:** The precedence order already existed, but only implicitly, spread across `D-039`,
+`EXTERNAL_VOCABULARY_REFERENCE.md` §3 and §9.6, and `EXTERNAL_REFERENCE/README.md`. A rule a
+session has to reassemble from four files is a rule a session will get wrong — and the specific
+way it gets wrong is the dangerous one: a Tier 2 definition written down early, never re-checked,
+still sitting in the spec after the video that actually defines the term has been studied. Owner
+instruction, 2026-08-13, requiring the hierarchy be stated once, plainly, with the reconciliation
+process documented rather than merely asserted.
+
+**Evidence:** Owner instruction 2026-08-13 setting out the three tiers and the critical rule that
+*"if a LATER video ever defines or clarifies a term that was filled in from Tier 2 or 3, the later
+video's definition takes priority."* Owner adjudication, same session, that this hierarchy is a
+**ranking layer only** and does **not** downgrade `D-039`.
+
+### What this decision does NOT do
+
+- **It does not modify `D-039`.** The Tier 2 PDF stays **normative** and may still close a record.
+  `A-014` and `A-023` remain `RESOLVED BY MMM-NOTES` and are **not** reopened by this entry —
+  owner adjudication, 2026-08-13, asked directly and answered directly.
+- **It does not modify `D-030`.** `push` is not unblocked; V05/V06/V07 dimension **B** stays
+  **BLOCKED**.
+- **It does not modify `D-025` / `D-033`**, which continue to rank speakers *within* Tier 1. A
+  guest presenter is Tier 1 material subject to `D-033`, **not** demoted to Tier 2.
+- **It closes, reopens and changes the status of no `A-xxx` whatsoever.** Establishing an order of
+  precedence is not applying it. `SOURCING_HIERARCHY.md` §3.4 records the standing obligation to
+  re-check `A-014`, `A-023` and `A-020` against Tier 1 when a relevant lesson is reached; that is a
+  queue, not a disposition.
+
+**Alternatives considered:** *Leaving the ordering implicit across the four existing files* —
+rejected; that is the status quo this entry exists to fix, and the reconciliation trigger was
+stated nowhere as a **forward** obligation on future videos. *Folding the hierarchy into `D-039`
+by editing it* — rejected under this file's append-only rule. *Treating Tier 2 as non-closing, per
+the literal Tier-2 framing in the instruction* — **raised with the owner rather than assumed**,
+because it would have contradicted `D-039` and required reopening `A-014` and `A-023`; the owner
+ruled that `D-039` governs and the tiers are a ranking layer.
+**Status:** ACTIVE

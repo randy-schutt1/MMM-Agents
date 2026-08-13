@@ -1,5 +1,15 @@
 # EXTERNAL_REFERENCE
 
+> ## 📍 THE PDF IN THIS DIRECTORY IS **TIER 2** OF THREE — SEE `../SOURCING_HIERARCHY.md` (`D-040`)
+>
+> **Tier 1** the recordings (always wins) · **Tier 2** this PDF, cited `MMM-NOTES p.N` ·
+> **Tier 3** generic web research in `../EXTERNAL_VOCABULARY_REFERENCE.md` §5 (closes nothing).
+>
+> **A Tier 2 fill-in is provisional.** When a later video defines the term, the video takes
+> priority and the Tier 2 entry **must be reconciled**, not left standing —
+> `SOURCING_HIERARCHY.md` §3.1. Records currently closed on Tier 2 (`A-014`, `A-023`, and `A-020`
+> in part) carry a standing re-check obligation: §3.4.
+
 > # ⛔ NOTHING IN THIS DIRECTORY IS A LESSON
 >
 > Everything here came from **outside this library's video corpus**. Nothing here is a recording,
