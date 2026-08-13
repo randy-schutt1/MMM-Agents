@@ -1,0 +1,206 @@
+==============================================================================
+PT-028 — On which weekday does the week make its high and its low?
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-C' 2013-01-06 -> 2016-06-30. Re-issue of PT-010.
+⚠ THE SUNDAY AND FRIDAY CELLS ARE BELOW n = 30 AND ARE
+  DESCRIPTIVE ONLY. The 6x6 joint table carries NO chi-square.
+  The null is EXPOSURE-WEIGHTED, never 1/6 per weekday.
+==============================================================================
+
+==========================================================================
+--- ARM A ---
+==========================================================================
+  week roster (arm A) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 3  (2015-12-20, 2015-12-27, 2016-06-26)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+  TRADING WEEKS USED: 180   (2014-06-01 EXCLUDED BY NAME before the
+  exposure weights were computed — §3c: including it would encode 22 missing
+  hours as genuine zero exposure and bias the thinnest cell downward.)
+
+  PRIMARY BASELINE — exposure-weighted expectation over the hours ACTUALLY
+  PRESENT in each week (§3a), computed BEFORE any extreme was located:
+    weekday :     Sun     Mon     Tue     Wed     Thu     Fri
+    hours   :    6.92   23.73   23.67   23.54   23.54   16.72
+    share   :    5.9%   20.1%   20.0%   19.9%   19.9%   14.2%
+    expected:    10.5    36.0    35.8    35.6    35.7    25.4
+    cells below the n = 30 floor: ['Sun', 'Fri']  <<< DESCRIPTIVE ONLY, per §3d
+
+  SECOND BASELINE — N3 week-anchor shift, 1000 draws, seed 20260812.
+    modal weekday share of HIGHS under a shifted anchor: median 0.3483, 5-95% [0.2921, 0.4607]
+    (If extremes cluster mid-week under ANY week anchor, the finding is
+     about the middle of a 5-day span, not about Tuesday.)
+
+  THIRD BASELINE — randomly re-blocked 5-day (120 trading-hour) spans that
+  do NOT respect the calendar week, 1000 draws, binned with the same
+  relative widths as the realised weekday exposure:
+    modal-bin share of HIGHS: median 0.2416, 5-95% [0.1966, 0.2941]
+    (This separates 'the calendar week is a real unit for GBP/USD' from
+     'any 5-day span has a middle'.)
+
+  ======================================================================
+  OBSERVED — read after all three baselines
+  ======================================================================
+  MEASURE 1 — weekday of the week's high and of its low (n = 180 each)
+    weekday :     Sun     Mon     Tue     Wed     Thu     Fri
+    expected:    10.5    36.0    35.8    35.6    35.7    25.4
+    HIGHS   :      18      35      22      23      37      45
+    LOWS    :      14      30      30      28      18      60
+    hi/exp  :    1.72    0.97    0.61    0.65    1.04    1.77
+    lo/exp  :    1.33    0.83    0.84    0.79    0.50    2.37
+    ⚠ HIGH Sun cell: observed 18, expected 10.5 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ HIGH Tue cell: observed 22, expected 35.8 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ HIGH Wed cell: observed 23, expected 35.6 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ HIGH Fri cell: observed 45, expected 25.4 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ LOW Sun cell: observed 14, expected 10.5 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ LOW Wed cell: observed 28, expected 35.6 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ LOW Thu cell: observed 18, expected 35.7 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ LOW Fri cell: observed 60, expected 25.4 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+
+    chi-square on the SIX-CELL MARGINALS ONLY (§3d permits this and only
+    this), Monte-Carlo p from the exposure-weighted multinomial, 1000 draws:
+      HIGHS  chi2 =   30.49   p = 0.0000
+      LOWS   chi2 =   60.83   p = 0.0000
+
+    PRE-REGISTERED FOCAL PREDICTION — the MODE of both marginals falls on
+    Tuesday or Wednesday:
+      mode of HIGHS = Fri   mode of LOWS = Fri
+      FOCAL PREDICTION FAILS
+    observed modal share 0.3333 vs N3 median 0.3483 (pct 0.0) and re-blocked median 0.2416 (pct 70.1)
+
+  MEASURE 2 — hour-of-week of the HIGH, 4-hour bins (30 bins, 6.0 per bin).
+  COUNTS ONLY — §3d forbids per-bin inference at this density:
+    12 7 14 7 8 3 0 3 8 6 5 1 0 1 3 5 5 6 1 4 8 8 11 3 4 3 7 13 15 9
+    busiest bins: 112-116h (15), 8-12h (14), 108-112h (13), 0-4h (12)
+
+  MEASURE 3 — the 6x6 JOINT TABLE. RAW COUNTS, DESCRIPTIVE ONLY, NO chi2
+  and NO p-value (§3d point 3: 36 cells over 180 weeks averages 5.0 per cell):
+      low ->   Sun   Mon   Tue   Wed   Thu   Fri
+    hi Sun    0     0     1     5     4     8
+    hi Mon    0     0     1     7     4    23
+    hi Tue    1     1     0     2     4    14
+    hi Wed    2     7     7     1     1     5
+    hi Thu    6     8     6     8     0     9
+    hi Fri    5    14    15     5     5     1
+
+    THE INFERENTIALLY USABLE PART of Measure 3 — the SIGN of (high_day - low_day),
+    a single ordinal summary at n = 180:
+      high AFTER low  (+): 0.500 (90/180), 95% CI [0.428, 0.572]
+      high BEFORE low (-): 0.489 (88/180), 95% CI [0.417, 0.561]
+      same day        (0): 2
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — five largest-range weeks:
+    2016-06-19  range  1789.5 pips  ends Fri
+    2015-03-15  range   533.1 pips  ends Fri
+    2013-06-02  range   491.7 pips  ends Fri
+    2015-04-12  range   488.2 pips  ends Fri
+    2015-08-23  range   483.8 pips  ends Fri
+
+==========================================================================
+--- ARM B ---
+==========================================================================
+  week roster (arm B) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 2  (2015-12-20, 2015-12-27)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+  TRADING WEEKS USED: 180   (2014-06-01 EXCLUDED BY NAME before the
+  exposure weights were computed — §3c: including it would encode 22 missing
+  hours as genuine zero exposure and bias the thinnest cell downward.)
+
+  PRIMARY BASELINE — exposure-weighted expectation over the hours ACTUALLY
+  PRESENT in each week (§3a), computed BEFORE any extreme was located:
+    weekday :     Sun     Mon     Tue     Wed     Thu     Fri
+    hours   :    6.28   23.73   23.66   23.55   23.54   17.35
+    share   :    5.3%   20.1%   20.0%   19.9%   19.9%   14.7%
+    expected:     9.5    36.0    35.8    35.7    35.7    26.3
+    cells below the n = 30 floor: ['Sun', 'Fri']  <<< DESCRIPTIVE ONLY, per §3d
+
+  SECOND BASELINE — N3 week-anchor shift, 1000 draws, seed 20260812.
+    modal weekday share of HIGHS under a shifted anchor: median 0.3483, 5-95% [0.2905, 0.4663]
+    (If extremes cluster mid-week under ANY week anchor, the finding is
+     about the middle of a 5-day span, not about Tuesday.)
+
+  THIRD BASELINE — randomly re-blocked 5-day (120 trading-hour) spans that
+  do NOT respect the calendar week, 1000 draws, binned with the same
+  relative widths as the realised weekday exposure:
+    modal-bin share of HIGHS: median 0.2416, 5-95% [0.1966, 0.2994]
+    (This separates 'the calendar week is a real unit for GBP/USD' from
+     'any 5-day span has a middle'.)
+
+  ======================================================================
+  OBSERVED — read after all three baselines
+  ======================================================================
+  MEASURE 1 — weekday of the week's high and of its low (n = 180 each)
+    weekday :     Sun     Mon     Tue     Wed     Thu     Fri
+    expected:     9.5    36.0    35.8    35.7    35.7    26.3
+    HIGHS   :      18      34      22      24      35      47
+    LOWS    :      14      30      30      28      18      60
+    hi/exp  :    1.89    0.95    0.61    0.67    0.98    1.79
+    lo/exp  :    1.47    0.83    0.84    0.79    0.50    2.28
+    ⚠ HIGH Sun cell: observed 18, expected 9.5 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ HIGH Tue cell: observed 22, expected 35.8 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ HIGH Wed cell: observed 24, expected 35.7 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ HIGH Fri cell: observed 47, expected 26.3 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ LOW Sun cell: observed 14, expected 9.5 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ LOW Wed cell: observed 28, expected 35.7 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ LOW Thu cell: observed 18, expected 35.7 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+    ⚠ LOW Fri cell: observed 60, expected 26.3 — SAMPLE INSUFFICIENT FOR INFERENCE, descriptive only (§3d)
+
+    chi-square on the SIX-CELL MARGINALS ONLY (§3d permits this and only
+    this), Monte-Carlo p from the exposure-weighted multinomial, 1000 draws:
+      HIGHS  chi2 =   33.03   p = 0.0000
+      LOWS   chi2 =   57.52   p = 0.0000
+
+    PRE-REGISTERED FOCAL PREDICTION — the MODE of both marginals falls on
+    Tuesday or Wednesday:
+      mode of HIGHS = Fri   mode of LOWS = Fri
+      FOCAL PREDICTION FAILS
+    observed modal share 0.3333 vs N3 median 0.3483 (pct 0.2) and re-blocked median 0.2416 (pct 76.3)
+
+  MEASURE 2 — hour-of-week of the HIGH, 4-hour bins (30 bins, 6.0 per bin).
+  COUNTS ONLY — §3d forbids per-bin inference at this density:
+    11 7 13 8 8 4 0 2 7 6 7 1 0 1 2 5 5 5 3 4 3 12 10 4 5 2 8 9 18 10
+    busiest bins: 112-116h (18), 8-12h (13), 84-88h (12), 0-4h (11)
+
+  MEASURE 3 — the 6x6 JOINT TABLE. RAW COUNTS, DESCRIPTIVE ONLY, NO chi2
+  and NO p-value (§3d point 3: 36 cells over 180 weeks averages 5.0 per cell):
+      low ->   Sun   Mon   Tue   Wed   Thu   Fri
+    hi Sun    0     0     1     5     4     8
+    hi Mon    0     0     1     6     4    23
+    hi Tue    1     0     0     3     4    14
+    hi Wed    2     8     7     1     1     5
+    hi Thu    6     8     5     7     0     9
+    hi Fri    5    14    16     6     5     1
+
+    THE INFERENTIALLY USABLE PART of Measure 3 — the SIGN of (high_day - low_day),
+    a single ordinal summary at n = 180:
+      high AFTER low  (+): 0.500 (90/180), 95% CI [0.428, 0.572]
+      high BEFORE low (-): 0.489 (88/180), 95% CI [0.417, 0.561]
+      same day        (0): 2
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — five largest-range weeks:
+    2016-06-19  range  1789.5 pips  ends Fri
+    2015-03-15  range   533.1 pips  ends Fri
+    2013-06-02  range   491.7 pips  ends Fri
+    2015-04-12  range   488.2 pips  ends Fri
+    2015-08-23  range   483.8 pips  ends Fri
