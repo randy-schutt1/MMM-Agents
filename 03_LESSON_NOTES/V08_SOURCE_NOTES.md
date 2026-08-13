@@ -622,3 +622,117 @@ argument is in `V08_INTERPRETATION.md` §2.2; the record itself is amended in
 `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`.
 
 ---
+
+## 12. VISUAL EVIDENCE — ADDED AFTER §§1–11 WERE WRITTEN AND COMMITTED
+
+**§§1–11 above are not edited by this section.** They were written from the transcript alone and
+committed at `c83f4ca` before any contact sheet was built; where a frame corrects one of them
+that is recorded in §12c with the original left standing, per `REMEDIATION_PROTOCOL.md` §2.
+
+Full frame inventory and capture provenance: `04_SCREENSHOTS/V08/INDEX.md`. 26 curated frames,
+each carrying the player's burned-in timecode.
+
+**All frames are `GUEST` material and under `D-033` that demotes nothing.** A printed slide by
+this speaker is normative evidence at equal weight with the course author's.
+
+### 12a. What the frames RESOLVE
+
+| Resolved | Evidence | Was |
+|---|---|---|
+| **The lesson's title** — *"Jim's Journey in Learning and Trading MMFX"* | frame `00-00-05` | Would otherwise have come from a filename or the quarantined header, both forbidden |
+| **`FX scam`**, not *"FX scan"* | frame `00-08-55`, printed | ASR at `[00:08:58]` |
+| **`Prussion` [Prussian] based origins**, not *"Depression-based origins"* | frame `00-13-55`, printed | ASR at `[00:13:44]` |
+| **The four-stage model's band labels, verbatim** | frames `00-08-25`, `00-08-55` | §2's table was reconstructed from narration; the printed labels **match it on all four bands** |
+| **The two techniques are numbered doctrine**, not an aside | frame `00-27-20`: *"1. The High Low Drill / 2. Hard Righ Edge Pattern Training"* | §5 and §6 inferred the pairing from `[00:27:25]` |
+
+### 12b. What the frames ADD
+
+**1. A numeric tolerance for the high-low drill — and it is the lesson's own number.**
+
+Frame `00-05-40` prints:
+
+> **"Section 2: A VIEW TO A KILL. The High Low Drill and Elements of Mastery for dealing
+> WITHIN 10 PIPS OF HOD/LOD. How DOING the High Low Drill Teaches one the TIMING ASPECT of Price
+> Action or the SPEED of PRICE."**
+
+**The audio states no tolerance anywhere.** The transcript at `[00:05:35]` reads *"The high low
+drill and elements of mastery for dealing with **intent pips** of high day and low day"* —
+`intent pips` is the ASR's rendering of **in ten pips**, and the slide is what proves it. This is
+the `SWF_CAPTURE_RECIPE.md` §9 case exactly: a word the transcript garbled and the notes could
+not have recovered from audio.
+
+**Why it matters beyond vocabulary:** `10 pips of HOD/LOD` is an **operational target
+tolerance**, and it is the closest thing V07 or V08 supplies to a specification of what "Hi-Lo"
+is trying to hit. It does not make the extreme identifiable in advance — see §12d — but it
+converts *"within a few pips"* (V07 `[00:07:27]`, a hedge) into a stated number by a normative
+speaker. **`PT-034`'s imprecision grid takes `X = 10` from here rather than choosing one**, which
+is what keeps that grid clear of `D-010`.
+
+**2. The two load-bearing claims are printed, not spoken asides.**
+
+| Frame | Printed |
+|---|---|
+| `00-38-10` | *"It flushes out the big trading myth that one needs CONFIRMATION IN THE SAME DIRECTION to enter a trade…"* · *"Contrary to the MYTH it is the SAFEST PLACE TO ENTER TRADES"* · *"You will be Entering HERE"*, with a leader line to the low of the move |
+| `00-40-10` | *"When pulling it into live trading, the effects of this training are that entries will start to migrate toward the 'extremes' of 'M' and 'W' formations."* · *"Becomes the Crown Jewel of the Method as one can enter even Tighter Stops thus bringing Risk Reward to 3:1 or greater!"* |
+
+`C-009` and `A-056` are therefore weighing **prepared slide copy**, not a remark. That raises
+their weight; it does not change their content.
+
+**3. The lesson's central problem is a printed bullet.** Frame `00-27-45`: *"I can see an M or W
+Pattern clearly AFTER it forms but can't see it BEFORE it forms…"* — the sentence §1 identified
+as the pivot of the lesson, in print on the ring diagram.
+
+**4. The file's last frame confirms it ends unanswered.** Frame `00-43-10` shows the rings with
+three thresholds labelled and **a red question mark at the centre**, beside a `replay` button.
+§1's audio-only reading — *"it ends mid-argument… the recording stops before he answers"* — is
+**corroborated**, not corrected.
+
+**5. A TDI panel is on every chart in this lesson and is never mentioned.** Frames `00-20-00`,
+`00-34-00`, `00-40-10` and every gallery chart carry a `TDI_MMM` sub-window. **Displayed, not
+taught** — the same disposition `A-039` has carried since V04. It adds nothing to that record
+except one more instance.
+
+**6. The only account record in the lesson.** Frame `00-22-00` shows an MT4 terminal panel with
+two closed EUR/USD shorts, both closed `2012.03.22 10:08`, −36.8 and −37.9 pips, both carrying
+`S/L 1.32360` and `T/P 1.30596`.
+
+> **The `S/L` is a TRAILED stop, not an initial one, and must not be read as a stop distance.**
+> `1.32360` is **6.4 and 8.9 pips below the entries**; for a short that is *in profit*. The
+> initial risk is not visible in the frame and is not recoverable from it. Set out in full in
+> `04_SCREENSHOTS/V08/INDEX.md` § "FRAME 14 IN DETAIL", because a 6-pip number in an `S/L`
+> column next to a *"tighter stops… 3:1 or greater"* claim is precisely what would get quoted
+> and then coded.
+
+What it **does** corroborate is narrow and real: `[00:21:36]`–`[00:21:53]` narrates a EUR/USD
+setup and then says *"Oh, goodness. **I got that one too.**"* The panel shows two EUR/USD shorts
+closed in that week. **One "I took it" claim now has an account record behind it**; the other
+executions claimed in the gallery do not.
+
+**7. The slide says SETUPS.** Frame `00-17-00` prints **"29 SETUPS !!!"**. `C-007` — the drift
+from *29 set ups* `[00:16:22]` to *29 … trades* `[00:23:55]` — is therefore a drift **away from
+the deck's own word**, which makes it more likely loose speech and less likely a claim. Recorded
+in `C-007` itself.
+
+### 12c. What the frames CORRECT in §§1–11
+
+**One correction, and it is to a vocabulary row, not to a conclusion.**
+
+§8's vocabulary table lists **`ADR`** citing `[00:23:42]` only. Frame `00-05-40` shows the
+Section 2 slide using **`HOD/LOD`** as the drill's target object — and §8 does not list `HOD` or
+`LOD` at all, because the audio never uses those initialisms (it says *"high of the day or the
+low of the day"*, `[00:36:27]`). **§8 is left as written**; the addition is recorded here:
+`HOD/LOD` is V08's printed shorthand for the same objects, and it is the form V07's chart panels
+also printed (`Pips To HOD`, `Pips To LOD`).
+
+**Nothing else in §§1–11 is contradicted by any frame.** The four-stage model, the 29-setup
+count, the gallery walkthrough, the flashcard method, the high-low drill's structure and every
+number in §7 survive the visual pass unchanged.
+
+### 12d. What the frames did NOT settle
+
+| Still open | Why the frames do not close it |
+|---|---|
+| **`A-061` — *fast* / *slow*** | No frame prints a speed criterion. `00-05-40` names *"the SPEED of PRICE"* as the thing the drill teaches, which **restates** the concept without measuring it |
+| **`A-056` — how the extreme is identified in advance** | `10 pips of HOD/LOD` is a **tolerance on the target**, not a method for finding it in real time. Knowing you want to be within 10 pips of the low does not tell you which candle is the low |
+| **`A-063` — where the stop hunt box sits** | Frames show shaded boxes on every chart, but no frame states an anchor, a time, or a construction rule. The **size** is audio-only and stays a datum without a placement rule |
+| **The presenter's name** | No frame names the speaker. The title slide says *"Jim's Journey"*; `[00:17:29]` says *"Okay, Jim's right about that one"*. Unresolved, and nothing depends on it (`D-033` provision 2) |

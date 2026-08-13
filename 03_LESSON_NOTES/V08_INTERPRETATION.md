@@ -414,3 +414,82 @@ should have been closed rather than extended.
 
 ---
 
+
+## 8. AFTER THE SCREENSHOTS — WHAT CHANGED AND WHAT DID NOT
+
+**§§1–7 are not edited.** They were written from the transcript alone and committed before any
+contact sheet was built. This section is the visual pass, added last.
+
+### 8.1 One reading is strengthened enough to change how a test is designed
+
+`§2.2` concluded that V08 supplies three of the four components a Hi-Lo rule needs and not the
+fourth. **That stands.** But frame `00-05-40` supplies something §2.2 did not have — a **number**:
+
+> *"The High Low Drill and Elements of Mastery for dealing **within 10 pips of HOD/LOD**."*
+
+The audio never says it, and the transcript garbles it (`intent pips` = *in ten pips*). So the
+drill's **target tolerance** is specified after all, by a normative speaker, in print.
+
+**This does not close `A-056` and I am not closing it.** §2.2's argument was that the missing
+component is *how to know the extreme before it is the extreme*, and a tolerance on the target
+does not supply that — knowing you want to be within 10 pips of the low tells you nothing about
+which candle is the low. **The record asks for a method and this is a specification.**
+
+**What it does change is `PT-034`.** The imprecision grid needs a tolerance parameter, and
+`PT-033` had to invent its grid `X ∈ {0, 2, 5, 10}` because V07 offered only *"within a few
+pips"*. **V08 supplies `10` explicitly, so `PT-034` takes its headline tolerance from the lesson
+rather than from a session's judgement** — which removes a live `D-010` exposure from the design
+rather than merely disclosing one. That is the single most useful thing the visual pass produced.
+
+### 8.2 Two claims turn out to be prepared copy rather than remarks
+
+`C-009` (the confirmation requirement called a myth) and the `R:R ≥ 3:1` claim are both **printed
+slide text** — frames `00-38-10` and `00-40-10` — not spoken asides.
+
+**This raises their weight and changes nothing about their content.** §2.3's assessment of
+`C-009` as `PROVISIONAL` was based on the lesson supplying its own staging rule, and the staging
+rule is still there. But a reviewer weighing whether a guest genuinely contradicts *"our basic
+training"* should know that the contradiction was **written into the deck in advance**, with a
+leader line drawn to the entry point, rather than said once in passing.
+
+### 8.3 §5.1's tension survives the visual pass, and gets slightly sharper
+
+§5.1 recorded that a lesson arguing against accepting claims on authority validates itself with a
+gallery of 29 pre-selected narrated winners.
+
+Frame `00-17-00` prints **"29 SETUPS !!!"** in a yellow hazard box with radiating light rays.
+That is presentational, not evidential, and it is the frame the argument's persuasive weight sits
+on. **I record it as reinforcing §5.1 rather than as a new finding** — the substance is unchanged
+and I do not want to double-count a stylistic observation as a second charge.
+
+**One thing does cut the other way, and it is worth stating.** Frame `00-22-00` shows an actual
+MT4 terminal with two closed EUR/USD shorts from the gallery week — so at least one of the
+lesson's *"I took it"* claims has a **visible account record** behind it. That is a real, if
+narrow, piece of the do-it-yourself evidence the lesson keeps demanding. It does not rescue the
+gallery as a measurement (28 of 29 have no such record, and a curated set of winners is still
+`E09` by construction), but §5.1 would be unfair if it did not mention it.
+
+### 8.4 What I got wrong, stated plainly
+
+Reading the terminal panel at half resolution, I first read `S/L 1.32360` against an entry of
+`1.32424` as **a 6.4-pip initial stop** — which, next to a lesson claiming *"tighter stops…
+3:1 or greater"*, looked like the corroborating number of the whole session.
+
+**It is not that.** The closes are below the opens with positive profit, so both positions are
+**shorts**, and for a short a stop **below** the entry is *in profit* — a trailed stop, not the
+risk the trade was opened with. **The initial stop is not visible in that frame and cannot be
+recovered from it.**
+
+Recorded because the failure mode is the instructive part: the misreading was available at half
+resolution and died at 3× magnification, which is the V06 review's lesson (*read frames at full
+resolution before declaring anything about them*) arriving from the opposite direction — not a
+detail wrongly dismissed as illegible, but **a legible detail wrongly interpreted**. The
+prohibition written into `04_SCREENSHOTS/V08/INDEX.md` § "FRAME 14 IN DETAIL" exists so the next
+session does not make the same inference from the same pixels.
+
+### 8.5 The visual pass corrected nothing else
+
+The four-stage model's printed band labels match §2's audio-derived table on all four bands. The
+end card's literal `?` corroborates §1's reading that the lesson ends unanswered. Every number in
+`V08_SOURCE_NOTES.md` §7 survives. **`A-061`, `A-063` and the presenter's identity are exactly as
+open after the frames as before them.**
