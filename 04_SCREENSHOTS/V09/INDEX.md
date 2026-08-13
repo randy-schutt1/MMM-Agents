@@ -1,6 +1,6 @@
 # V09 — SCREENSHOT INDEX
 
-26 curated frames from `Bootcamp1 Wk2 032612 Part4 (53mins).swf`
+27 curated frames from `Bootcamp1 Wk2 032612 Part4 (53mins).swf`
 (SHA-256 `b0f36b5540de7a76397c80202cf6a721a2a18aa9011c5698238c6bcc624168d4`).
 
 ## HOW THESE WERE PRODUCED
@@ -16,7 +16,7 @@ verification performed **before** capture and recorded below.
 | Content sanity check, **before** the long capture | A 10-second probe render was compared against the transcript. Burned timecode `01:41 / 52:2x`; slide reads *"Risk in FOREX is DEFINED as what % of our account balance would be lost if our trade went to Stop Loss?"*; transcript `[00:01:17]` reads the same sentence. **Agreed, so the capture was trusted** |
 | Sweep | 640 frames, one every **5 presentation-seconds**, 320 s of wall clock |
 | Screen detection | Consecutive-frame greyscale diff, threshold `mean > 6.0`, runs collapsed within 10 presentation-seconds → **29 distinct screen states**. Contact sheets were built and **looked at** before anything was named |
-| Naming | Every filename's time was verified against the frame's **own burned-in player timecode**, read at 2× magnification. **26 of 26 match exactly, zero drift across 52 minutes** — see the verification block below |
+| Naming | Every filename's time was verified against the frame's **own burned-in player timecode**, read at 2× magnification. **27 of 27 match exactly, zero drift across 52 minutes** — see the verification block below |
 
 > ### ⚠ THE FIRST SWEEP WAS DISCARDED, AND WHY IT IS RECORDED RATHER THAN QUIETLY REDONE
 >
@@ -37,7 +37,7 @@ verification performed **before** capture and recorded below.
 > pre-click screenshot — that is a POLICY-ledger edit under `D-038a` and is therefore owed on
 > the integration branch, not made here.**
 
-### Timecode verification — all 26
+### Timecode verification — all 27
 
 Read from each frame's own burned-in player timecode, which is what makes a screenshot prove its
 own timestamp. `expected` is `frame_index × 5 s`.
@@ -45,10 +45,10 @@ own timestamp. `expected` is `frame_index × 5 s`.
 ```text
 00:00:10 ✓   00:01:15 ✓   00:02:05 ✓   00:02:50 ✓   00:03:45 ✓   00:04:40 ✓
 00:05:25 ✓   00:06:00 ✓   00:07:05 ✓   00:08:20 ✓   00:09:20 ✓   00:10:15 ✓
-00:11:40 ✓   00:14:35 ✓   00:16:00 ✓   00:17:05 ✓   00:21:40 ✓   00:22:45 ✓
+00:11:40 ✓   00:14:35 ✓   00:15:00 ✓   00:16:00 ✓   00:17:05 ✓   00:21:40 ✓   00:22:45 ✓
 00:25:00 ✓   00:26:00 ✓   00:26:40 ✓   00:28:45 ✓   00:31:50 ✓   00:34:35 ✓
 00:41:25 ✓   00:52:25 ✓
-26 / 26 exact.  Every value is < the measured runtime 00:52:26.8, so this set does
+27 / 27 exact.  Every value is < the measured runtime 00:52:26.8, so this set does
 not trip Q-009's first fabrication screen -- which V08's own set did (V08 R1 M3,
 REVIEW_INDEX.md open item 66).
 ```
@@ -71,18 +71,19 @@ REVIEW_INDEX.md open item 66).
 | 12 | `V09_00-10-15_equity-curve-minus-25-plus-50.png` | `10:15` | DIAGRAM | A green/red equity staircase labelled **`-25 pips S/L`**, **`+50 pip T/P`** | `[00:10:06]`–`[00:10:35]`, the *"eight wins and 11 losses"* example |
 | 13 | `V09_00-11-40_equity-curve-minus-15-plus-50.png` | `11:40` | DIAGRAM | A second staircase labelled **`-15 pip S/L`**, **`+50 pip T/P`** | `[00:10:56]`–`[00:11:17]`, the *"seven wins and 12 losses"* example. **The 15-pip stop is the HOD/LOD-skill stop** |
 | 14 | `V09_00-14-35_define-risk-two-numbered-rules.png` | `14:35` | SLIDE | *"1. Define Risk by choosing LOT SIZE which is -2% of Balance at Stop Out — Can then be able to withstand THREE CONSECUTIVE LOSSES / No Margin Issues ~ You can come back with SAME LOT SIZE / No Emotional turbulence because you have a PLAN to be able to ABSORB LOSSES. Just wait for NEXT MMFX SIGNAL. 2. Use greater than 1:1 Risk to Reward Ratio. T/P greater than S/L."* | `[00:12:46]`–`[00:14:35]` |
-| 15 | `V09_00-16-00_greater-than-fifty-percent-accuracy-upward-equity.png` | `16:00` | SLIDE | *"3. Simply Trading with greater than 50% accuracy will bring UPWARD EQUITY !!!"* and *"Think of what your equity curve will look like when you can hit 70% accuracy ?"* | `[00:15:36]`–`[00:15:59]`. **`A-067`** — 50% is a *sufficient* condition stated where the break-even is far lower |
-| 16 | `V09_00-17-05_no-impulsive-increases-in-lot-size.png` | `17:05` | SLIDE | Adds: *"Basic Idea is to keep a consistent RATIO of LOT size as your account grows or falls… AND to consistently Keep Take Profits LARGER then Stop Losses / **No Impulsive Increases in LOT SIZE to make up for a LOSS!!!**"* | `[00:16:11]`–`[00:17:03]` |
-| 17 | `V09_00-21-40_five-possible-errors-to-guard-against.png` | `21:40` | SLIDE | The complete list, printed: *"Possible Errors to Guard Against: 1. Moving your Stop Loss After you have placed it: 1st S/L is always the cheapest 2. Putting on Multiple Positions which add up to GREATER than your % Risk 3. Not having the DISCIPLINE to KEEP TO the Risk Plan as described 4. Miscalculating Lot size on NON USD quote Pairs -- use a lot size calculator! 5. Not having HARD Stop Losses and Take Profits WITH THE BROKER"* | `[00:18:31]`–`[00:22:13]` |
-| 18 | `V09_00-22-45_eighty-five-percent-win-rate-seven-wins-six-losses.png` | `22:45` | DIAGRAM | An equity staircase captioned *"Example of Equity Curve of **85% Win Rate** with 2:1 Risk Reward Profile"* and, one line below in the presenter's own green/red, *"**7 Wins, 6 Losses**"* | **`C-012`. 7 / 13 = 53.8%, not 85%.** The slide's caption and its own count disagree, and the audio at `[00:22:47]` repeats the caption |
-| 19 | `V09_00-25-00_possible-equity-gain-scenario-twenty-percent.png` | `25:00` | SLIDE | *"Possible Equity Gain Scenario: 1. 2% Risk at S/L 2. 2:1 or greater R/R — -25 pip S/L - 2% / +50 pip T/P + 4% 3. Only FIVE successful trades per Week = **20% Gains for the Week!**"* | `[00:24:20]`–`[00:24:57]` |
-| 20 | `V09_00-26-00_equity-scenario-with-compounding-spreadsheet.png` | `26:00` | SLIDE | The same slide with a spreadsheet revealed at the right | `[00:26:00]` |
-| 21 | `V09_00-26-40_compounding-spreadsheet-full.png` | `26:40` | SLIDE | The spreadsheet, **fully legible**: `Base 5,000.00`, `% profit 0.2000`, then Week 1–4 blocks. Column K: `6,000.00 · 7,200.00 · 8,640.00 · 10,368.00` … running to a red-boxed final row **`Week 4 · 137,370.55 · 824,223.31`** | **`C-013`.** `5,000 × 1.2^4 = 10,368.00` exactly, and the table compounds **20% per week for 28 consecutive weeks with no losing week and no losing trade** — in a lesson whose own worked examples are 6 wins / 14 losses |
-| 22 | `V09_00-28-45_live-mt4-eurusd-h1-level-count-and-reset.png` | `28:45` | LIVE | Full-screen MetaTrader. **Title bar, read from the platform's own text: `67352016: FXDD - MetaTrader - Demo Account - [EURUSD,H1]`.** Chart carries hand-drawn horizontal level lines, green/orange/yellow segments, the labels `1`, `2`, `3`, **`Reset`**, a vertical week divider, and a multi-line oscillator sub-panel beneath the price pane | **Broker/platform provenance** — `FXDD`, demo, **H1**. The account number **differs from V05's `67342442`** on the same broker, which is independent non-acoustic evidence of a different presenter |
-| 23 | `V09_00-31-50_live-mt4-gbpjpy-h1-level-two-long.png` | `31:50` | LIVE | Same platform, a `GJ`-watermarked H1 chart with a `(3)` label at the left, `Reset`, numbered levels and the same oscillator sub-panel | `[00:31:50]`–`[00:32:04]` |
-| 24 | `V09_00-34-35_ms-paint-presenter-email-address.png` | `34:35` | SLIDE | An **MS Paint** window on which the presenter has typed `jimn` and, below it, **`jimnicholson.dmr@hotmail.com`** | **Provenance only** (`D-025` c.4 / `D-033` p.2). Corroborates the spoken `[00:27:30]`. **Nothing in any V09 artifact depends on this** |
-| 25 | `V09_00-41-25_multi-chart-tile-view-during-grape-question.png` | `41:25` | LIVE | Nine tiled MT4 charts (`EU`, `GU`, `AU`, `EJ`, `GJ`, `UJ`, `EC`, `GF`, `UC` watermarks) at the moment the audience asks *"What is the grape?"* | `[00:41:25]` → **A-020 / C-010 reconciliation** |
-| 26 | `V09_00-52-25_final-frame-bird-photo.png` | `52:25` | SLIDE | Windows Photo Gallery displaying a photograph of a **fledgling bird on the ground** | Corroborates the audio-only reading that the file ends mid-sentence on `[00:52:23]` *"that was the whole idea of this bird right here — I mean he's got wings…"* |
+| 15 | `V09_00-15-00_can-have-more-losers-than-winners.png` | `15:00` | SLIDE | The same slide as frame 14 with one line added beneath rule 2: *"Can have MORE Losers than Winners and still have UPWARD EQUITY"* | `[00:14:58]`–`[00:15:00]`. **The lesson's own headline claim, printed** — and the premise `C-013`'s projection then abandons |
+| 16 | `V09_00-16-00_greater-than-fifty-percent-accuracy-upward-equity.png` | `16:00` | SLIDE | *"3. Simply Trading with greater than 50% accuracy will bring UPWARD EQUITY !!!"* and *"Think of what your equity curve will look like when you can hit 70% accuracy ?"* | `[00:15:36]`–`[00:15:59]`. **`A-067`** — 50% is a *sufficient* condition stated where the break-even is far lower |
+| 17 | `V09_00-17-05_no-impulsive-increases-in-lot-size.png` | `17:05` | SLIDE | Adds: *"Basic Idea is to keep a consistent RATIO of LOT size as your account grows or falls… AND to consistently Keep Take Profits LARGER then Stop Losses / **No Impulsive Increases in LOT SIZE to make up for a LOSS!!!**"* | `[00:16:11]`–`[00:17:03]` |
+| 18 | `V09_00-21-40_five-possible-errors-to-guard-against.png` | `21:40` | SLIDE | The complete list, printed: *"Possible Errors to Guard Against: 1. Moving your Stop Loss After you have placed it: 1st S/L is always the cheapest 2. Putting on Multiple Positions which add up to GREATER than your % Risk 3. Not having the DISCIPLINE to KEEP TO the Risk Plan as described 4. Miscalculating Lot size on NON USD quote Pairs -- use a lot size calculator! 5. Not having HARD Stop Losses and Take Profits WITH THE BROKER"* | `[00:18:31]`–`[00:22:13]` |
+| 19 | `V09_00-22-45_eighty-five-percent-win-rate-seven-wins-six-losses.png` | `22:45` | DIAGRAM | An equity staircase captioned *"Example of Equity Curve of **85% Win Rate** with 2:1 Risk Reward Profile"* and, one line below in the presenter's own green/red, *"**7 Wins, 6 Losses**"* | **`C-012`. 7 / 13 = 53.8%, not 85%.** The slide's caption and its own count disagree, and the audio at `[00:22:47]` repeats the caption |
+| 20 | `V09_00-25-00_possible-equity-gain-scenario-twenty-percent.png` | `25:00` | SLIDE | *"Possible Equity Gain Scenario: 1. 2% Risk at S/L 2. 2:1 or greater R/R — -25 pip S/L - 2% / +50 pip T/P + 4% 3. Only FIVE successful trades per Week = **20% Gains for the Week!**"* | `[00:24:20]`–`[00:24:57]` |
+| 21 | `V09_00-26-00_equity-scenario-with-compounding-spreadsheet.png` | `26:00` | SLIDE | The same slide with a spreadsheet revealed at the right | `[00:26:00]` |
+| 22 | `V09_00-26-40_compounding-spreadsheet-full.png` | `26:40` | SLIDE | The spreadsheet, **fully legible**: `Base 5,000.00`, `% profit 0.2000`, then Week 1–4 blocks. Column K: `6,000.00 · 7,200.00 · 8,640.00 · 10,368.00` … running to a red-boxed final row **`Week 4 · 137,370.55 · 824,223.31`** | **`C-013`.** `5,000 × 1.2^4 = 10,368.00` exactly, and the table compounds **20% per week for 28 consecutive weeks with no losing week and no losing trade** — in a lesson whose own worked examples are 6 wins / 14 losses |
+| 23 | `V09_00-28-45_live-mt4-eurusd-h1-level-count-and-reset.png` | `28:45` | LIVE | Full-screen MetaTrader. **Title bar, read from the platform's own text: `67352016: FXDD - MetaTrader - Demo Account - [EURUSD,H1]`.** Chart carries hand-drawn horizontal level lines, green/orange/yellow segments, the labels `1`, `2`, `3`, **`Reset`**, a vertical week divider, and a multi-line oscillator sub-panel beneath the price pane | **Broker/platform provenance** — `FXDD`, demo, **H1**. The account number **differs from V05's `67342442`** on the same broker, which is independent non-acoustic evidence of a different presenter |
+| 24 | `V09_00-31-50_live-mt4-gbpjpy-h1-level-two-long.png` | `31:50` | LIVE | Same platform, a `GJ`-watermarked H1 chart with a `(3)` label at the left, `Reset`, numbered levels and the same oscillator sub-panel | `[00:31:50]`–`[00:32:04]` |
+| 25 | `V09_00-34-35_ms-paint-presenter-email-address.png` | `34:35` | SLIDE | An **MS Paint** window on which the presenter has typed `jimn` and, below it, **`jimnicholson.dmr@hotmail.com`** | **Provenance only** (`D-025` c.4 / `D-033` p.2). Corroborates the spoken `[00:27:30]`. **Nothing in any V09 artifact depends on this** |
+| 26 | `V09_00-41-25_multi-chart-tile-view-during-grape-question.png` | `41:25` | LIVE | Nine tiled MT4 charts (`EU`, `GU`, `AU`, `EJ`, `GJ`, `UJ`, `EC`, `GF`, `UC` watermarks) at the moment the audience asks *"What is the grape?"* | `[00:41:25]` → **A-020 / C-010 reconciliation** |
+| 27 | `V09_00-52-25_final-frame-bird-photo.png` | `52:25` | SLIDE | Windows Photo Gallery displaying a photograph of a **fledgling bird on the ground** | Corroborates the audio-only reading that the file ends mid-sentence on `[00:52:23]` *"that was the whole idea of this bird right here — I mean he's got wings…"* |
 
 ## WHAT THE FRAMES ADDED THAT THE TRANSCRIPT DID NOT
 

@@ -1139,3 +1139,150 @@ source-side evidence; this project's screenshots for V08 are the **26 frames in
   mechanical tells, timestamps past the end of the recording and a generated arithmetic timestamp
   sequence. **The right conclusion is not that there are five modes but that there is one
   generator**, and §3 above shows it directly.
+
+---
+
+## Q-010 — V09's `NOTES.md` and `VISUAL_INDEX.md`, confirmed fabricated; the "one generator" finding is now MEASURED across all 21 lessons for `VISUAL_INDEX.md`, and V09's own audio refutes the EMA nickname table
+
+```text
+STATUS:        QUARANTINED — DO NOT USE
+DATE:          2026-08-13
+QUARANTINED BY: V09 Student session
+DECISION:      D-017 (Q-001 blanket action). RULES.md is NOT re-derived from audio here —
+                it is discharged by Q-007's mechanical template-marker test, as Q-007
+                explicitly authorizes and COURSE_PROGRESS.md's V08 GATE carry-forward
+                item (e) instructs. It IS re-measured mechanically, for a different
+                purpose: see §3.
+```
+
+### Scope
+
+| File | Disposition | Basis |
+|---|---|---|
+| `RULES.md` | Already quarantined, **not re-audited from audio** | `Q-007`, the mechanical template-marker discharge for `V07`–`V21` |
+| `NOTES.md` | **Fabricated — confirmed here** | Per-lesson audio cross-check, §1 |
+| `VISUAL_INDEX.md` | **Fabricated — confirmed here** | Per-lesson image cross-check, §2 |
+| `TRANSCRIPT.md` | **SOUND — adopted** | `SETUP_ISSUES.md` I-008, four axes, recorded in `02_TRANSCRIPTS/V09/V09_TRANSCRIPT.md` § VERIFICATION |
+
+### Method
+
+Token counts are matches over the **verbatim body only** of
+`02_TRANSCRIPTS/V09/V09_TRANSCRIPT.md` (header and timestamp lines excluded), **9,164 words**.
+Every image claim is checked against the files actually present in the lesson folder's
+`SCREENSHOTS/`, by SHA-256, by reading real pixel dimensions, **and by opening and looking**.
+
+---
+
+### 1. `NOTES.md` — fabricated
+
+| `NOTES.md` claims | Occurrences in V09's 9,164-word body |
+|---|---|
+| *"Session Timing: Asian Session 7:00 PM – 3:00 AM EST / London 3:30 AM – 9:00 AM EST / New York 9:30 AM – 5:00 PM EST"* | **`7:00` 0, `3:00 am` 0, `3:30` 0, `9:00` 0, `9:30` 0, `5:00 pm` 0. Six clock figures, six zeroes.** `asian` **0** (the lesson says *"the asia range"* once, `[00:46:52]`) |
+| *"Peak Formation High (PFH) & Low (PFL): Structural anchors formed at cycle turns"* | `peak formation` **3** — and **`PFH` 0, `PFL` 0**. The three real uses are unglossed chart-walkthrough labels (`[00:32:32]`, `[00:38:00]`, `[00:39:21]`); the abbreviations are invented |
+| *"M & W Pattern Anatomy: 2nd leg must fail to make a new extreme, showing rejection candles (Railroad tracks or pin bars)"* | **`railroad` 0, `pin bar` 0, `rejection` 0, `new extreme` 0** |
+| *"Time Gap: 30 to 90 minutes between peak 1 and peak 2 on M15 charts"* | **`30 to 90` 0, `M15` 0.** No time gap of any length is stated anywhere in this lesson |
+| *"TDI Indicator: Green Price Line crossing Red Signal Line after breaking outside Blue Volatility Bands (Shark Fin)"* | **`TDI` 0, `shark` 0, `signal line` 0, `volatility band` 0, `divergence` 0** |
+| *"Institutional Mechanics: … institutional order flow … news events"* | **`institutional` 0, `order flow` 0, `news` 0** |
+| *"Topic Focus: Trade Entry Filtering, Position Sizing, Minimum R:R Targets"* | **Position sizing and R:R targets are genuinely this lesson's subject** — the only claim in the file that is true, and it is a topic label, not a rule |
+
+**And the entry that is not merely unsupported but REFUTED by this lesson's own words:**
+
+> *"**EMAs: 5 (Mustard), 13 (Water), 50 (Mayo), 200 (Blueberry), 800 (Raspberry).**"*
+
+| Token | Occurrences in V09 |
+|---|---|
+| `mustard`, `water`, `mayo`, `ketchup`, `raspberry` | **0, 0, 0, 0, 0** |
+| `blueberry` | **6** |
+| `grape` | **3** |
+
+`[00:41:43]`, in the presenter's own words, answering an audience question:
+
+> *"**The blueberry is the 800 on the 15 minute time frame.**"*
+
+**`NOTES.md` says the blueberry is the 200 and invents *"raspberry"* for the 800. The lesson
+says the blueberry IS the 800.** This is the first time a lesson's own audio directly refutes
+the quarantined nickname table rather than merely failing to support it, and it independently
+reproduces the **off-by-one** finding `A-020`'s closure block already recorded from the other
+direction: the fabricated table is the real sequence shifted one rung, with `ketchup` dropped
+and `raspberry` invented for the end. **`raspberry` occurs 0× in genuine audio anywhere in the
+corpus, across nine audited lessons.**
+
+### 2. `VISUAL_INDEX.md` — fabricated
+
+It indexes **three** screenshots. The folder contains **one**.
+
+| Claim | Reality |
+|---|---|
+| `VIDEO_10_SCREENSHOT_001_00-02-00.jpg` — *"Asian Box accumulation range with 5, 13, 50, 200, and 800 EMAs"*, *"Setting up session boundaries and explaining accumulation mechanics"* | The file exists (1280×720, SHA-256 `60684428…`, **not** a byte-duplicate of any other lesson's). **It is V08's four-ring self-assessment diagram** — *"Validate the Method / Eliminate Skepticism / Learn to INSTANTLY recognize confirmation Candles"* around a red `?`. **No chart. No EMA. No box. No session boundary.** At `00:02:00` this lesson's real screen is the lot-size formula slide (`04_SCREENSHOTS/V09/V09_00-02-05_…`) and its audio is `[00:02:00]` *"We multiply our account balance by point / [00:02:03] O2 and divide our stop loss and pips into that number"* |
+| `VIDEO_10_SCREENSHOT_002_00-15-00.jpg` — *"London Open Stop Hunt false breakout forming 2nd leg M-formation at High of Day"* | **File does not exist.** At `00:15:00` the real screen is the defined-risk recap slide (`04_SCREENSHOTS/V09/V09_00-15-00_…`, burned timecode `15:00`), whose last printed line is *"Can have MORE Losers than Winners and still have UPWARD EQUITY"* |
+| `VIDEO_10_SCREENSHOT_003_00-30-00.jpg` — *"TDI Shark Fin setup with green line hooking inside volatility bands + 5/13 EMA cross"* | **File does not exist.** At `00:30:00` the real screen is a live MetaTrader chart watermarked `EC` (EUR/CAD), verified by opening the frame. `TDI` and `shark` occur **0×** in this lesson |
+
+> **WHERE THE ONE REAL IMAGE CAME FROM — and a correction this entry makes against itself.**
+>
+> The first reading recorded in this session's working notes was that the jpg had been *stolen
+> from V08's folder*. **That reading is wrong and is corrected here rather than deleted.** V09's
+> `.swf` renders **that same ring diagram as its own pre-playback splash frame** — this session
+> captured it directly from V09's own file before clicking play, and it is also this lesson's
+> genuine screen for the first ~15 seconds (`04_SCREENSHOTS/V09/V09_00-00-10_…`, burned timecode
+> `00:10`).
+>
+> So the image is **authentically V09's**. What is fabricated is everything asserted about it:
+> its timestamp, its content description, and its trading significance. **That is a worse
+> failure mode than theft, not a better one** — a stolen frame can be caught by hashing against
+> other lessons, which is exactly the screen `Q-009` proposed. **A real frame from the right
+> lesson with an invented description defeats that screen entirely**, and V09 is the first
+> audited instance of it. The screen that does catch it is the one `Q-009` listed third and
+> this session actually used: **open the image and compare it against the transcript at the
+> claimed time.**
+
+### 3. THE "ONE GENERATOR" FINDING, NOW MEASURED — and it extends to `VISUAL_INDEX.md`
+
+`Q-009` established that V08's fabrication was *"one generator, not four failure modes"*, from
+byte-identical PNGs. This session tested the stronger claim — that the **prose itself** is
+stamped from a template — mechanically, across all 21 lessons, by normalising away the only
+per-lesson tokens (`Bootcamp1 …swf`, `VNN-RNNN`, `VIDEO_NN_SCREENSHOT`, the `(Week … Part …)`
+suffix) and hashing what remained:
+
+| File | Distinct normalised hashes across 21 lessons | V09's group |
+|---|---|---|
+| `RULES.md` | **2** — 16 lessons share one hash, 5 share the other | The 16-lesson group, **which also contains V01**, whose copy `D-017` proved false against verified audio |
+| `VISUAL_INDEX.md` | **9** — the largest group holds **9 lessons** | The 9-lesson group (V03, V04, **V09**, V10, V11, V12, V13, V14, V21) |
+| `NOTES.md` | **17** — mostly per-lesson, one group of 5 (V16–V20) | V09's is unique |
+
+**`RULES.md` was already known to be templated (`Q-004`, `Q-007`). `VISUAL_INDEX.md` was not**,
+and the register's running tally has been counting its *"distinct failure modes"* lesson by
+lesson. **Nine lessons share one byte-identical `VISUAL_INDEX.md` after normalisation.** Its
+three screenshot descriptions — Asian Box + five EMAs, London stop hunt M-formation, TDI shark
+fin — are **the same three sentences in nine different lessons**, and at least two of the three
+name files that do not exist.
+
+Direct consequence: **`NOTES.md` is where the residual per-lesson variation lives, and it is
+therefore the only one of the three that still needs a genuine per-lesson audit.** For
+`VISUAL_INDEX.md` a future session can now cite this measurement, then run the one check the
+template cannot survive — *does the described image exist, and is it what the transcript says
+is on screen at that time?*
+
+**This entry does NOT batch-discharge V10–V21.** The measurement above establishes shared
+provenance; it does not establish falsity for a lesson whose audio nobody has read. The
+per-lesson audio cross-check is still owed for all of `NOTES.md`, and the existence/content
+check for `VISUAL_INDEX.md`.
+
+### Disposition
+
+All three files remain quarantined in place at
+`_QUARANTINE_UNVERIFIED_NOTES/per_lesson/09_Bootcamp1_Wk2_032612_Part4_53mins/`, covered by the
+tree's blanket `README_WHY_QUARANTINED.md`. **No file was moved, renamed or deleted**
+(`REMEDIATION_PROTOCOL.md` §2). The lesson's own `SCREENSHOTS/` folder is left untouched as
+source-side evidence; this project's screenshots for V09 are the **26 frames in
+`04_SCREENSHOTS/V09/`**, captured from the `.swf` by this session.
+
+### Running tally for the fabrication pattern
+
+- **`RULES.md`:** 21 of 21 covered. **Now also shown to be TWO templates library-wide**, with
+  V09 in the same 16-lesson group as V01.
+- **`NOTES.md`:** **9 of 21 audited** (V01–V09), **9 fabricated, zero exceptions.** V09 supplies
+  the first *refutation* rather than mere non-support, and it lands on the EMA nickname table.
+- **`VISUAL_INDEX.md`:** **9 of 21 audited** (V01–V09), **9 fabricated** — and now measured as
+  **9 distinct templates across the library, one of which covers 9 lessons including V09.**
+  V09 adds a sixth failure mode and it is the one that defeats the cheapest screen: **a genuine
+  frame from the correct lesson, carrying an entirely invented description.**
