@@ -5288,6 +5288,655 @@ VERIFICATION at R2` and now visible on the integration branch, so **V07 R2 is tr
 
 ---
 
+## 2026-08-13 — Reviewer Session — V07 INDEPENDENT REVIEW R2 (verification of open items 61–63)
+
+**Role:** Independent Reviewer / Teacher Agent.
+**Act:** verification of an applied remediation. **No V07 artifact was authored or edited by this
+session, and no remediation was performed** — `D-003` reserves those to other sessions, and a
+reviewer that fixes what it finds has stopped being a reviewer.
+**Branch:** `review/v07-r2`, cut from the integration branch at `f3f9006` after `git fetch --all`
+confirmed no divergence (`D-038`). `REVIEW_INDEX.md` and this entry are written here as **evidence
+ledgers** per `D-038a`, and merged with the finding.
+
+### Why a branch, when the content under review is already merged
+
+`D-038`'s rule is branch-per-session whenever concurrent sessions may write, and it does not carve
+out review rounds — `review/v08` is the precedent and it used a branch and a worktree. The one
+thing that differs here is that V07's artifacts are **already on the integration branch**, so there
+was nothing to isolate *from*: no worktree was needed, only a branch, and the merge-back is a
+separate single-threaded act. `D-038a` settles the ledger question that `review/v08` had to escalate
+— `REVIEW_INDEX.md` and `LOG.md` are evidence ledgers and belong with the work.
+
+### Method — every count re-derived, nothing taken on trust
+
+`D-003` means the remediation's claims get the same treatment R1's did: none. The verbatim body was
+extracted once (from `# VERBATIM TRANSCRIPT` to end of file, marker lines stripped) and **every
+count was taken twice, by two tools sharing no code** — a Python `re` word-boundary pass and a
+`grep -oiE` pass — before the remediated text was read. `wc -w` on that extraction returns **7,436**,
+exactly the body size `V07_SOURCE_NOTES.md` §10 states, which anchors the base. The transcript was
+verified untouched by `98d893a`.
+
+### Verdicts
+
+| Item | Verdict |
+|---|---|
+| **61** (`M1`, `E20`) | ✅ **CLOSED — VERIFIED.** `level` **53** + `levels` **3** = **56**, both methods agreeing. The two plausible sub-counts were measured too — compound `level <N>` **35**, marker entries containing the token **44** — so 26 matches nothing, independently confirming R1's diagnosis. §5 verified unedited at 56; `A-004` untouched |
+| **62** (`M2`, `E20`) | ✅ **CLOSED — VERIFIED.** *"the peak"* **5**, and **enumerated** rather than only counted: `[00:00:26]`, `[00:03:18]`, `[00:03:20]`, `[00:14:02]`, `[00:16:44]` — exactly the five markers the row listed, in order. A bare `peak`/`peaks` sweep returns the same five and no others. `peak formation`/`PFH`/`PFL` re-measured at 0/0/0 |
+| **63** (`M3`, `E01`+`E11`) | ⚠️ **PARTIALLY VERIFIED — STAYS OPEN.** §D half closed and correct; §H half **not verified** — see below |
+
+### The finding: the repair to §H is itself a false categorical claim
+
+R1 required §H's sentence be **repaired or scoped**. The remediation chose repair, explicitly
+declined to take R1's count on trust, ran its own sweep, and re-asserted: *"One quotation in the V07
+set contained a word that is not in the source… **no other instance exists**"*, with *"it's met"*
+and *"mayo"* named among reconstructions *"moved **outside** the quotes"*. **Three quotations
+falsify it:**
+
+1. `V07_SOURCE_NOTES.md` **§9a** — `[00:27:24]` quoted as *"30 minute of the water, 30 minute of the
+   **mayo**."*; the marker reads *"…30 minute of the **male**,"*. **§10 of the same file measures
+   `mayo` at 0** and says the audio only garbles it to *mail*/*male* — so the file again holds a
+   right record and a wrong record for one object, which is what item 61 had just been fixed for.
+   **§9's evidence table ten lines above renders it correctly**, reconstruction outside the quotes
+   with `A-020` provenance.
+2. `V07_SOURCE_NOTES.md` **§11** — the row headed *"`[00:25:26]`'s **unrecovered** word"* then quotes
+   *"it turns red when **it's met**"*; `[00:25:26]` reads *"…It turns red when **Beth**."*
+3. `04_SCREENSHOTS/V07/INDEX.md` **item 6** — same substitution, unbracketed, where **row 15 of its
+   own frame table brackets it correctly** as `[it's met]`.
+
+Charged as **one** `MINOR` (`E01`, co-code `E20`), not three: one falsified claim, three sites, one
+lapse of a single sweep. **Fourth instance of V04 R1's `N5` class** — narrative prose restating an
+evidence table and losing the table's quotation discipline in the restatement; in two of three cases
+the correct rendering is in the same file.
+
+**Materiality: none.** `A-020` is not moved, §10's `mayo` 0 row is correct, the ADR observation is
+correctly fenced as display behaviour rather than a course rule in both places. It is charged for
+R1's own reason: a categorical self-certification is what a later session relies on **instead of
+re-checking**, which is precisely what the remediation itself argued when it chose to repair.
+
+### The superseded-text convention — verified SATISFIED
+
+Checked by reading `git diff 98d893a^ 98d893a` in full rather than the commit's description of it.
+**21 lines deleted across four files, and every deletion is reproduced verbatim inside a dated
+retention block** naming round, open item and finding code — more than `REMEDIATION_PROTOCOL.md` §2
+asks for. No incorrect text was silently removed anywhere. The remediation also anticipated
+correctly that a re-run sweep would return a higher raw count because the retention blocks re-quote
+the defects on purpose: measured at **238 → 252** under this reviewer's definition, all 14 of the
+delta retention text.
+
+### Two NOTES, neither a required correction
+
+- **`N1`** — the sweep that earned the repaired claim is **not reproducible**; `98d893a` commits no
+  script. In a project that commits its homework scripts so a reviewer can re-execute them, a
+  load-bearing count from an uncommitted throwaway is an evidence gap, and it is the gap the three
+  instances passed through. Forwarded to `CUMULATIVE_25.md` as a candidate standing rule, not
+  invented as an obligation R1 never set.
+- **`N2`** — three sweeps of one corpus returned **239** (R1), **238** (this session, pre-remediation
+  tree, independently written matcher) and **167** (the remediation). R1 and this session agree to
+  one fragment; the 30% gap is the remediation's. One candidate mechanism was **tested**: a
+  `\*"(.+?)"\*` pattern without `DOTALL` returns 164 fragments over `V07_SOURCE_NOTES.md` and misses
+  the §9a quotation because it wraps across a line break; with `DOTALL` it returns 180 and catches
+  it. Candidate, not determination — without the script (`N1`) the cause cannot be established.
+
+### Scope discipline of the remediation — recorded in its favour
+
+Every prohibition in `V07_REVIEW_R1.md` §15 was obeyed, verified individually: `PT-033`, the
+sensitivity, the cross-check and the homework scripts were not re-run; no git history was rewritten
+for `I-009`; `R11` is still failing in the committed tree; `V07_SOURCE_NOTES.md` §6c and §5 are
+untouched and both still correct. The defect found here is a defect of a **sweep**, not of scope.
+
+### Dimension B
+
+Carried from R1 **unchanged** — NOT SATISFIED, blocked by `D-030`, structural, not attributable to
+the student, **no severity charge**. No owner directive was issued for this round either.
+`REVIEW_INDEX.md` open item **36** is now owed for the **fifth** lesson-round running. Restated,
+not re-argued, and not counted again.
+
+### Files produced / updated
+- `18_REVIEW/V07/V07_REVIEW_R2.md` — new.
+- `18_REVIEW/REVIEW_INDEX.md` — V07 R2 decision row; STATUS block updated with its superseded text
+  retained; items 61–62 → CLOSED — VERIFIED; item 63 → PARTIALLY VERIFIED, stays open; new open item
+  **70**; `E01` 5 → 6 and `E20` 33 → 34 with the count class recorded as **discharged**; severity
+  table and its arithmetic.
+- `LOG.md` — this entry.
+
+### Consequences
+**V07 does NOT reach `COMPLETE`.** Open item **70** is owed and item **63** stays open until it
+discharges. The **V08 gate is unchanged: OPEN** — R1's `D-024` authorization is undisturbed and
+nothing found here is CRITICAL or MAJOR. **Next review trigger: remediation of item 70, then R3.**
+`python3 scripts/validate_project.py` — **103 passed / 0 warnings / 0 failures.**
+
+---
+
+## 2026-08-13 — Remediation Session (V07 R2 item 70) — the false categorical claim corrected, and the sweep that failed twice replaced by committed code
+
+### Objective
+
+Discharge `REVIEW_INDEX.md` open item **70** — `V07_REVIEW_R2.md` `M1` (`E01`, co-code `E20`), the
+sole outstanding item keeping V07 from `COMPLETE`. Branch `fix/v07-r2-item70`, cut from the
+integration branch at `6d86272` after `git fetch --all --prune` confirmed no divergence (`D-038`).
+
+**This is a Student remediation session. It verifies nothing and closes nothing** — `D-003`
+reserves both to an independent reviewer.
+
+### The defect, and why it is the same defect twice
+
+R1's `M3` was a word substituted inside quotation marks. The remediation of `M3` was asked to
+**repair or scope** §H's categorical claim; it chose to repair, on the strength of a sweep it ran
+itself and **did not commit** — and the repair was false. R2 located **three** further instances,
+two of them the very reconstructions the repaired sentence named as having been moved outside the
+quotes.
+
+**The instructive part is not the three words. It is that a stronger categorical claim was asserted
+on weaker evidence than the claim it replaced.** `N1` said the sweep was unreproducible; `N2` showed
+three sweeps of one corpus returning 239 / 238 / **167**, a ~30% spread. This round treats `N1` as
+the finding.
+
+### Verification performed BEFORE any edit
+
+Both markers were re-derived from `02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` directly, not taken from
+the review's prose:
+
+```text
+[00:27:24]  The dashed ones like this are 30 minute versions, 30 minute of the water,
+            30 minute of the male,
+[00:25:26]  That brown line there is the ADR. It turns red when Beth.
+```
+
+**The review's claim is correct at both markers.** *mayo* does not occur in the V07 body at all,
+which §10 of `V07_SOURCE_NOTES.md` already measured at **0** — so that file held a right record and
+a wrong record for the same object, fourteen sections apart, inside the round that had just
+corrected it for the same fault.
+
+### Work completed
+
+- **`V07_MASTERY_REPORT.md` §H** — the false categorical claim corrected. It now states that
+  **four** quotations contained a word not in the source (one found at R1, three at R2), and it
+  **cites committed code** rather than asserting the completeness of a hand sweep.
+- **`V07_SOURCE_NOTES.md` §9a** — `[00:27:24]` restored to the literal *"30 minute of the water,
+  30 minute of the male,"*, with *mayo* outside the quotation marks carrying its `A-020`
+  provenance, exactly as §9's evidence table ten lines above already had it.
+- **`V07_SOURCE_NOTES.md` §11**, the `[00:25:26]` row — *met* taken out of the quotation and
+  bracketed as *"it turns red when [it's met]"*, matching `INDEX.md` row 15.
+- **`04_SCREENSHOTS/V07/INDEX.md` item 6** — same, bracketed, and given the marker and the
+  unrecovered source word it previously lacked.
+- **Superseded text retained at all four sites** per `REMEDIATION_PROTOCOL.md` §2, each block
+  naming round, open item, finding code and instance letter.
+
+### `N1` discharged — `05_HOMEWORK/V07/scripts/verify_quotes.py`, committed
+
+The substantive change of the round. Every quotation in the seven V07 artifacts is checked against
+the transcript body by **committed, re-runnable code**, in two tiers:
+
+- **Tier 1, cited** — a quotation with an `[HH:MM:SS]` in its own context must resolve to the
+  transcript exactly. Instances (a) and (b) are tier-1 catches.
+- **Tier 2, uncited** — a quotation with no marker is *not* required to match, but is flagged when
+  it **tracks a transcript sentence for ≥4 consecutive words and then diverges**, which is the
+  shape of this defect. **Instance (c) is a tier-2 catch and is reachable no other way**: it
+  carries no adjacent marker, so no citation-windowed sweep could ever have found it. That is the
+  mechanism behind `N2`'s 30% spread, and it is now closed rather than hypothesised.
+
+Three design choices were made against measurement rather than intuition, and are recorded in the
+script's own docstring: a similarity **ratio** for tier 2 was tried first and **rejected** (it
+cannot see *"it turns red when it's met"* against *"It turns red when Beth"*, because the two differ
+in length); the quotation pattern was narrowed so a match cannot run past its own closing mark and
+swallow the next quotation; and the citation window was stopped at Markdown table-row boundaries,
+because extending across them made every printed-slide row inherit its neighbour's marker.
+
+**Results.** Against the **pre-correction** tree: 338 fragments extracted, **exactly the three
+instances R2 found, and nothing else**. Against the **corrected** tree: **0 flags**. Non-transcript
+quotations are dispositioned rather than ignored — 64 by a reasoned allowlist (printed slide/chart
+text, labelled V04 quotes, a hypothesised ASR alternative, the declared second ASR pass), each entry
+carrying **its reason** so a later round audits the excuses instead of inheriting them, and 23 by
+the retention-block rule. Retained fragments rose 14 → 23 across this remediation: **the expected
+audit-trail inflation `V07_REVIEW_R2.md` §4 predicted**, not a regression.
+
+### One further flag, hand-checked and deliberately NOT edited
+
+`V07_MASTERY_REPORT.md` renders `[00:29:49]` as *"Do all the DM[R] speaker[s] agree on this?"*,
+bracketing a correction **inside** a token where the transcript reads *"Do all the **DMS** speaker
+agree on this?"*. Hand-checked: the bracket convention working as designed, not a substitution.
+**R2 did not raise it, and this remediation does not widen its own scope** (`REMEDIATION_PROTOCOL.md`
+§3.2). It is recorded in the script's allowlist **with its reason**, so it is visible rather than
+silently passing, and **R3 can rule** on whether intra-word bracketing should be spelled
+differently.
+
+### Prohibitions honoured, verified individually
+
+`V07_SOURCE_NOTES.md` §9's evidence table, §10's `mayo` **0** row, §5 and §6c are **unedited**;
+`INDEX.md` row 15 is **unedited**; items **61** and **62** were **not re-opened**; no V07 script,
+homework, backtest or probe was re-run; `R11` is **still failing**; no git history was rewritten;
+**no retention block was deleted**, including the ones that re-quote defective text.
+
+### Files produced / updated
+- `03_LESSON_NOTES/V07_SOURCE_NOTES.md` — §9a and §11 corrected, superseded text retained at both.
+- `04_SCREENSHOTS/V07/INDEX.md` — item 6 corrected, superseded text retained.
+- `07_MASTERY_REPORTS/V07_MASTERY_REPORT.md` — §H corrected, superseded text retained.
+- `05_HOMEWORK/V07/scripts/verify_quotes.py` — **new**, the discharge of `N1`.
+- `18_REVIEW/REVIEW_INDEX.md` — item 70 → ⚠️ **APPLIED — PENDING VERIFICATION at R3**; STATUS block
+  updated with its superseded text retained.
+- `LOG.md` — this entry.
+
+### Consequences
+**V07 still does not reach `COMPLETE`, and this session cannot make it do so.** Item **70** is
+applied and owed **verification**; item **63** stays open until 70 discharges; `D-003` reserves both
+to an independent reviewer. The **V08 gate is unchanged: OPEN**. **Next trigger: V07 R3**, which
+should **re-run `verify_quotes.py` rather than write a fourth sweep** — that is the point of
+committing it. For `CUMULATIVE_25.md`: this round is the argument for the standing rule `N1`
+proposed — **a numeric or categorical claim asserted in an artifact must be produced by committed,
+re-runnable code** — now with a worked instance showing a hand sweep failing twice on the same
+corpus and the committed one reproducing the reviewer's findings exactly.
+
+---
+
+## 2026-08-13 — Reviewer Session (V07 R3) — the closing round: items 70 and 63 verified, V07 COMPLETE
+
+### Lesson
+
+V07 — *"Best Trade Grabs"*.
+
+### Review Objective
+
+Independent verification of R2 open item **70** (and the residue of item **63**), plus a standard
+pass confirming nothing regressed. Three questions were put to this round explicitly: is
+`verify_quotes.py` a sound and reproducible check; is the flagged intra-word bracket a real defect;
+and did the remediation overwrite another session's work.
+
+### Review basis, and the `D-038` branch question
+
+Branch **`review/v07-r3`, cut FROM `fix/v07-r2-item70` at `cc74051`**. `git fetch --all` confirmed
+the fix branch is **1 ahead / 0 behind** the integration branch — a clean fast-forward, no
+divergence. **The V07 content under review was UNMERGED**, so reviewing from the integration branch
+would have reviewed an empty set; this follows `V08_REVIEW_R1.md` §3's precedent for exactly this
+situation. `REVIEW_INDEX.md` and `LOG.md` written here as evidence ledgers per `D-038a`.
+
+### `D-003` separation of duties
+
+**SATISFIED.** This session authored no V07 artifact and performed no remediation. Per
+`REVIEW_PROTOCOL.md` §3 the source was read first: `[00:27:24]` and `[00:25:26]` were read from
+`02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` **before** any remediated artifact text. R2's own verified
+numbers were re-derived from scratch by two tools sharing no code, because a closing round should
+not inherit the previous round's arithmetic either.
+
+### Source Evidence Reviewed
+
+`V07_TRANSCRIPT.md` verbatim body (7,436 words, `wc -w`, re-measured); markers `[00:25:26]`,
+`[00:27:24]`, `[00:28:28]`, `[00:28:31]`, `[00:29:34]`–`[00:29:55]`; the transcript's own
+ASR-garble inventory; `V01_SOURCE_NOTES.md` S63 and `V08_TRANSCRIPT.md` `[00:08:58]` for the
+bracket-convention precedent.
+
+### Student Artifacts Reviewed
+
+`V07_SOURCE_NOTES.md` §9, §9a, §10, §11, §5, §6c; `V07_MASTERY_REPORT.md` §D, §H;
+`04_SCREENSHOTS/V07/INDEX.md` item 6 and row 15; `V07_INTERPRETATION.md`;
+`05_HOMEWORK/V07/scripts/verify_quotes.py` (read line by line, re-run, and mutation-tested);
+`git diff 6d86272 cc74051` in full.
+
+### Findings
+
+**Items 70 and 63 — ✅ CLOSED, VERIFIED.** All three instances corrected at their sites and matching
+the transcript literally. `INDEX.md` item 6 **exceeds** what R2 required — it also adds the missing
+`[00:25:26]` citation and prints the literal *Beth*. §H's categorical claim is replaced by a
+**historical count** backed by committed code, which is the structurally correct fix rather than a
+third attempt at the same sentence. Superseded text retained at all four sites: `V07_SOURCE_NOTES.md`
+has exactly **two** deletion lines in the whole commit, both reproduced verbatim. Every prohibition
+honoured, verified individually — §9's table, §10's `mayo` **0** row, §5, §6c and `INDEX.md` row 15
+byte-identical to `6d86272`; `R11` re-run and **still FAIL**; no history rewritten.
+
+**`N1` — the verifier: re-run, then attacked.** 3 flags on the pre-correction tree at exactly R2's
+three sites, 0 after. Mutation testing then found **four precision bounds**: allowlist matching by
+`startswith` **can** excuse a longer differently-worded quotation, *although the docstring at line
+105 claims it cannot*; `MIN_WORDS = 3`; only `*`-emphasised quotations are extracted; and
+`in_blockquote()` is tested **before** the cited-FLAG branch. **All four were then searched by
+hand and are empty** — the 22 unemphasised ≥3-word fragments all have a near-miss run of 0, and
+every `RETAINED` fragment with a run ≥4 sits in a genuine retention block. **Recorded, not
+charged:** §H's surviving claim is true and R3 established it independently of the tool.
+
+**`N2` — the bracket-token item RULED, not deferred.** `DM[R] speaker[s]` against `[00:29:49]`'s
+*"DMS speaker"* is **not a defect**. The brackets are a visible signal — whose *absence* is exactly
+what R2 charged in instances (a)–(c) — so §H's *"or inside square brackets"* is not falsified;
+intra-word bracketing spans V01/V07/V08; the literal *DMS* is recorded in the transcript's own
+garble inventory; and *DM* is not a corpus object while *DMR* is heavily attested, so nothing can
+mislead. **The remediation was right to flag rather than fix it** — that behaviour is what would
+have prevented item 70 a round earlier.
+
+**`N3` — the possibly-overwritten file: investigated, FALSE ALARM, no work lost.** Seven tests:
+`verify_quotes.py` exists in **exactly one commit ever**; **not one of the 31 unreachable blobs is
+a Python file**; no stash; no `*.orig`/`*.rej`/`*~`/`*.bak`; `git status --untracked-files=all`
+clean; no sibling worktree holds one; and the committed diff carries no foreign content. **The
+decisive test is the clean untracked set** — R2, the only other session in this working directory,
+would have left its sweep visible at any other path, and R2's own LOG lists three files and no
+script, describing its sweep in prose *because* it was uncommitted. Most probably the session
+observed **its own in-run draft** (the docstring records its design iteration; mtimes fall ~7
+minutes inside the session). **Stated honestly: an untracked file leaves no git trace, so this is
+"no evidence of loss plus positive evidence of sole authorship", not proof of a negative.**
+`D-038` branch isolation is **not** implicated.
+
+**`N4` — the process gap that investigation exposed.** The concern was reported in session output
+but **never written to `LOG.md`** — its entry calls the script *"new"* with no mention of the
+observed pre-existing state. That omission is the only reason a forensic reconstruction was needed.
+Forwarded to `CUMULATIVE_25.md`: record the `git status` observed **at start**, not only the one
+produced at commit.
+
+### Required Corrections
+
+**None.** Three recommendations are recorded as explicitly **not owed** and must not open a round:
+tighten the allowlist match and fix the line-105 comment when `verify_quotes.py` is next touched;
+adopt V08's inline *"the ASR prints `DMS`"* form at the four `DM[R]` sites when they are next edited
+for another reason; and carry the `N1`/`N4` standing-rule candidates to `CUMULATIVE_25.md`.
+
+### Dimension B
+
+Carried from R1 and R2 **unchanged** — NOT SATISFIED, blocked by `D-030`, structural, not
+attributable to the student, **no severity charge**. No owner directive was issued for this round.
+Open item **36** is owed for the **sixth** lesson-round running. Restated, not re-argued, not
+counted again, and **it did not hold V07**.
+
+### Decision
+
+**PASS** — 0 CRITICAL / 0 MAJOR / 0 MINOR / 4 NOTE. **V07 is `COMPLETE`.** V08 gate undisturbed.
+
+### Files produced / updated
+
+- `18_REVIEW/V07/V07_REVIEW_R3.md` — new.
+- `18_REVIEW/REVIEW_INDEX.md` — V07 R3 decision row (**PASS**, ✅ COMPLETE); items **70** and **63**
+  → ✅ CLOSED — VERIFIED at R3; STATUS block moves V07 from `IN REMEDIATION` to `PASSED` with its
+  superseded text retained; severity table and R3 arithmetic.
+- `LOG.md` — this entry.
+
+### Git
+
+Explicit paths on every `git add`; `git diff --staged` read before every commit. No `git add -A`.
+Per `D-038` merge-back discipline the reviewer merges `fix/v07-r2-item70`, with these review commits
+on top, into the integration branch — the verdict being clean — after re-fetching to confirm no
+divergence. `python3 scripts/validate_project.py` — **103 passed / 0 warnings / 0 failures.**
+
+### Next Review Trigger
+
+**None for V07 — the lesson is closed.** V08 R2 awaits remediation of items 64–66.
+
+---
+
+## 2026-08-13 — Remediation Session (V08 R1 minors, items 64–66)
+
+**Branch:** `fix/v08-r1-minors`, cut from the integration branch
+`claude/add-documents-repository-fdfb3u` at `a886585` after `git fetch --all --prune`, per `D-038`.
+`video/v08` and `review/v08` were confirmed **already merged** into the integration branch before
+branching, so V08's content and its R1 review were both present at the cut.
+
+**Scope:** the three `MINOR` items from `18_REVIEW/V08/V08_REVIEW_R1.md` — open items **64**
+(`M1`/`E11`), **65** (`M2`/`E20`) and **66** (`M3`/`E19`). `REMEDIATION_PROTOCOL.md` §3 rule 2
+honoured: nothing outside the reviewer's enumerated findings was reprocessed.
+
+**All three are documentation fixes, not evidence fixes** (`REMEDIATION_PROTOCOL.md` §3 rule 3).
+No test was re-run, no observation re-derived, no test ID reissued — because no underlying
+procedure was found invalid. R1 reproduced `PT-034` bit-for-bit and re-scored the homework
+independently.
+
+### Item 64 — `M1` (`E11`) — `C-009` Source A under-sourced
+
+`11_CONTRADICTIONS/CONTRADICTIONS.md` `C-009` gains a **Source A′** block citing **V07
+`[00:28:02]`–`[00:28:31]`**, tagged `GUEST`, cross-referenced to `V07_SOURCE_NOTES.md` **§6c**.
+
+**The citation was verified against `02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` in this session rather
+than copied from the review.** The marked lines read *"Yes, David, it's tough to know when second
+legs will be above or below the first leg"* `[00:28:02]`, *"You can only go by the second rail
+tracks"* `[00:28:15]`, and the flashcard-pass sentences through `[00:28:31]`. §6c's gloss — *"an
+admission of indeterminacy: the direction question is answered 'you can only go by' the
+confirmation candle, not by a prior rule"* — was read at source.
+
+**Nothing is superseded.** The defect was an omission of available corroboration, not an error, so
+the original Source A stands verbatim. The `PROVISIONAL` disposition is **unchanged**, as R1
+directed.
+
+**⚠ One deliberate narrowing of the review's own wording, flagged for R2.** `M1` describes V07's
+presenter as *"a different guest presenter"* and REVIEW_INDEX item 64 as *"a different equally-
+normative `GUEST`"*. **This session could not verify that and did not repeat it.**
+`V07_SOURCE_NOTES.md` records V07 as *"a single unidentified presenter"*; `V08_SOURCE_NOTES.md`
+records V08's as unnamed (`D-033` provision 2); and `SOURCE_MANIFEST.md` shows V07 and V08 are
+**Part 2 and Part 3 of the same day's bootcamp**, so they may be the **same** person. The added
+block therefore claims *a second **lesson***, not *a second **speaker***, and carries that limit —
+plus the narrower limit that V07 `[00:28:15]` attests the requirement **in use** rather than
+restating V08's two-candle specification — in its own text. Adopting the review's stronger framing
+would have written an unverified claim into a contradiction record to discharge a finding about
+under-sourcing, which is the failure this item exists to prevent.
+
+### Item 65 — `M2` (`E20`) — the null's entry-price convention
+
+Applied at **two** sites, and **`PT-034` was not edited** — `COMMON_PROTOCOL.md` §9 rule 7 binds a
+*completion* exactly as it binds a *correction*, and `git diff` confirms
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-034_crown_jewel_three_to_one.md` is byte-unchanged.
+
+1. **`00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md` §2.1a — new, and this is the binding half.** The
+   null's entry-**price** convention is now a **required pre-registration field**; §2.1's
+   held-constant table gains an *Entry PRICE convention* row; the requirement to state it **even
+   when it differs from the rule arm's** is spelled out; the specific bias it guards — giving a
+   null its bar's low for a long or high for a short — is named; and an unstated convention is set
+   at minimum a `MINOR` `E20` for reviewer enforcement.
+2. **`06_MANUAL_BACKTEST/V08/BT_V08_0001.md` §5** — the results file, at the section where the
+   nulls actually are (R1 and the task brief both say *"§4"*, which is `O3`; §5 `O4` is where
+   `N1`/`N1b` are computed and printed, so the block was placed there). It states **forward**:
+   `N1`/`N1b` enter at the chosen bar's **CLOSE**; the rule arm enters **extreme-anchored** at
+   `LOD + X`, or the bar's low where that price falls outside its range. Both traced to the
+   implementing functions (`precompute_close_entries()` / `entry_for()`), with a table making the
+   asymmetry explicit and the rationale stated so a reader can disagree with it.
+
+**No number changes and nothing is superseded.** The convention was fixed in committed code
+(`e3a8e66`) **before** the run (`1d206ab`) and never amended — ordering independently verified by
+R1 §0 row 12. Only its *location* was wrong, not its timing. The validating evidence is recorded
+with the block: `N1` returned **0.2424–0.2450** against a closed-form break-even of **25.00%**, so
+the convention introduced no measurable bias.
+
+### Item 66 — `M3` (`E19`) — the end-card frame's timecode
+
+**The timecode was verified in this session, not taken on the review's word.** The PNG's
+bottom-right player chrome was cropped and magnified: the burned-in elapsed field reads **`43:04`**
+(the total field is truncated at `43:0` by the frame edge).
+
+`git mv` to **`04_SCREENSHOTS/V08/V08_00-43-04_end-card-innermost-stage-unanswered.png`** — Git
+records it as `R`, so the blob and its history survive. **Three** prose references updated:
+`04_SCREENSHOTS/V08/INDEX.md` row 26; its *"What the frames settled"* item 7; and
+**`03_LESSON_NOTES/V08_SOURCE_NOTES.md` §12 item 4**, which R1 did not enumerate but which carried
+the same wrong timecode and was found by sweeping the repo for the old string. Row 26 now states
+the frame is the **post-playback end card**, making its relationship to the 00:43:03 runtime
+explicit.
+
+**Retention under `REMEDIATION_PROTOCOL.md` §2.** The rename is a file operation, not prose, so the
+old filename and all three old values are retained by **explicit naming** in a dated correction
+block in `INDEX.md`; `V08_SOURCE_NOTES.md` §12 additionally carries an inline `SUPERSEDED` bracket.
+
+**⚠ One residual found by this session and disclosed rather than glossed, for R2 to adjudicate.**
+`00:43:04` is **2,584 s**; the runtime is **2,583.75 s**. The *corrected* label therefore **still
+exceeds the runtime, by 0.25 s**, and a naive implementation of `Q-009`'s screen will still flag
+row 26. This is unavoidable rather than a further defect — a player's whole-second elapsed field
+cannot print `43:03.75` and shows the ceiling, so the frame **cannot** carry both its true burned
+timecode and a strictly-under-runtime label, and matching the artifact's own internal evidence is
+the correct choice. `INDEX.md` records the consequence for whoever implements the screen: **flag
+`timestamp > ceil(runtime)`, not `timestamp > runtime`**, or it false-positives on the legitimate
+final frame of any recording whose duration is not a whole number of seconds. Under that form
+`00:43:10` remains a true positive and `00:43:04` is not. A mechanical sweep of all **26** V08
+filenames confirmed row 26 was the only one over runtime.
+
+### NOTHING IS SELF-CERTIFIED
+
+**`D-003` reserves verification and closure to an independent reviewer.** This session neither
+re-reviewed V08 nor closed anything. Items 64–66 move to **`APPLIED — PENDING VERIFICATION at
+R2`**, not to `CLOSED`. Two of the three carry an explicit disagreement or residual addressed to
+R2 rather than resolved here, and both are stated in the artifacts themselves, not only in this
+log.
+
+### Files produced / updated
+
+- `11_CONTRADICTIONS/CONTRADICTIONS.md` — `C-009` Source A′ (item 64).
+- `00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md` — §2.1a new, §2.1 table row (item 65).
+- `06_MANUAL_BACKTEST/V08/BT_V08_0001.md` — §5 convention block (item 65).
+- `04_SCREENSHOTS/V08/V08_00-43-04_…png` — renamed from `…00-43-10…` (item 66).
+- `04_SCREENSHOTS/V08/INDEX.md` — row 26, item 7, dated correction block (item 66).
+- `03_LESSON_NOTES/V08_SOURCE_NOTES.md` — §12 item 4 (item 66).
+- `18_REVIEW/REVIEW_INDEX.md` — items 64–66 → APPLIED, PENDING VERIFICATION; STATUS block with
+  its superseded text retained.
+- `LOG.md` — this entry.
+
+**NOT edited, deliberately:** `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-034_crown_jewel_three_to_one.md`
+and `18_REVIEW/V08/V08_REVIEW_R1.md`.
+
+### Git
+
+Explicit paths on every `git add`; `git diff --staged` read before every commit. No `git add -A`.
+Four commits on `fix/v08-r1-minors` — one per item, one for the ledgers — then pushed.
+`python3 scripts/validate_project.py` — **103 passed / 0 warnings / 0 failures.**
+
+**MERGED TO INTEGRATION, on the owner's instruction, later the same day.** The remediation branch
+was **first pushed unmerged** — `D-038` makes merge-back a separate, deliberate, single-threaded
+act and this session does not take it on its own initiative. The owner then directed the merge.
+Performed per `D-038`: re-fetched, verified **no divergence** (the integration branch had not
+moved from `a886585` since the branch was cut), merged **`--no-ff`** so the merge-back is legible
+in `git log`, validator re-run **clean after the merge**, then pushed.
+
+**The merge changes nothing about the items' status.** They remain `APPLIED — PENDING
+VERIFICATION at R2`. Merging is a code-movement act, not a verification act, and `D-003` reserves
+closure to an independent reviewer. Project precedent is explicit that a `REVISE` with 0
+`CRITICAL` / 0 `MAJOR` does not block a merge (V03–V07, and `V08_REVIEW_R1.md` §3 item 1).
+
+### Next Review Trigger
+
+**V08 R2**, on verification of items 64–66.
+
+---
+
+## 2026-08-13 — Reviewer Session (V08 R2) — the closing round: items 64–66 verified, the presenter question ruled, V08 COMPLETE
+
+### Lesson
+
+V08 — *"Jim's Journey in Learning and Trading MMFX"* (`Bootcamp1 Wk2 032612 Part3 (43mins).swf`).
+
+### Review Objective
+
+Independent verification of the remediation of `V08_REVIEW_R1.md`'s three `MINOR` findings
+(open items 64–66), plus a full standard pass for regression. `D-003`: this session authored
+**no** V08 artifact and **no** part of the remediation, and re-derived every claim from primary
+sources **before** reading the remediation's account of itself.
+
+### Review Basis
+
+Branch **`review/v08-r2`, cut from the integration branch at `a6ee013`**, in a **dedicated
+worktree** at `/Users/randyschutt/Desktop/Trading/MMM-Agents-review-v08-r2` (`D-038`).
+**`fix/v08-r1-minors` was ALREADY MERGED** when the round opened (`dd787d9` / `a6ee013`), so the
+review was taken on the integration tip rather than on the fix branch. `git fetch` confirmed the
+integration branch level with `origin` — 0 ahead, 0 behind.
+
+### Source Evidence Reviewed
+
+`02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` `[00:27:41]`–`[00:28:40]` and its whole `Ray`/`Jim` token
+set; `02_TRANSCRIPTS/V08/V08_TRANSCRIPT.md` `[00:00:32]`–`[00:06:05]`, `[00:17:29]`, `[00:20:49]`
+and its speaker-identification section; `02_TRANSCRIPTS/V06/V06_TRANSCRIPT.md` (`Ray` sweep);
+`00_SYSTEM/SOURCE_MANIFEST.md` (part ordering); `03_LESSON_NOTES/V02_SOURCE_NOTES.md` and
+`V03_SOURCE_NOTES.md` (the coach roster); and
+`04_SCREENSHOTS/V08/V08_00-43-04_end-card-innermost-stage-unanswered.png` **read as pixels**.
+
+### Student Artifacts Reviewed
+
+`11_CONTRADICTIONS/CONTRADICTIONS.md` `C-009` `Source A′`; `00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md`
+§2.1a; `06_MANUAL_BACKTEST/V08/BT_V08_0001.md` §5; `06_MANUAL_BACKTEST/V08/run_pt034.py`;
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-034_crown_jewel_three_to_one.md`;
+`04_SCREENSHOTS/V08/INDEX.md`; `03_LESSON_NOTES/V08_SOURCE_NOTES.md` §12.
+
+### Findings
+
+**Items 64, 65 and 66 are all ✅ CLOSED — VERIFIED. 0 `CRITICAL`, 0 `MAJOR`, 0 `MINOR`, 3 `NOTE`.**
+
+Nothing was taken on the remediation's word:
+
+- **Item 64** — the V07 `[00:28:02]`–`[00:28:31]` citation was **read at source**. All four
+  fragments verbatim; the `[00:28:28]` omission honestly marked with an ellipsis; and
+  `[00:28:31]`'s garble *"if it doesn't do what you expect **in** your flashcard isn't the same"*
+  **preserved** — the exact passage V07's item 63 was charged for smoothing to *"and"*, avoided
+  in the one file where tidying it would have been easiest. `GUEST` tag, §6c cross-reference and
+  `PROVISIONAL` all correct; Source A verbatim and the block purely additive.
+- **Item 65** — `entry_for()` and `precompute_close_entries()` were **read**, and both documented
+  descriptions are **exact** (`resolve(hi, lo, i, cl[i], d, n)` — the null's entry price is
+  literally the bar's close). **`PT-034` is byte-unchanged**: `git log --follow` shows exactly
+  one commit ever and `git diff a4ab65a HEAD` on the file is **empty**. All four `N1` medians
+  re-read from the committed output — 0.2450 / 0.2426 / 0.2424 / 0.2429 — so the claimed
+  `0.2424–0.2450` is exact, and the break-even recomputes to 0.250037. §2.1a goes **beyond**
+  R1's ask: it names the bias it guards and sets a reviewer-enforcement floor.
+- **Item 66** — the player chrome was cropped, linear-stretched and magnified 20×, and the
+  burned-in elapsed field **reads `43:04`**. Four references verified updated; an independent
+  repo sweep for the old string found **no fifth** (every survivor is a retention block, the R1
+  file, `LOG.md` history, or a real `[00:43:10]` marker in V01/V06). The rename preserves the
+  blob at 100 %. All 26 frame timecodes re-derived: row 26 is the only one over raw runtime, at
+  exactly `ceil(2583.745) = 2584`, and nothing flags under `> ceil(runtime)`.
+
+**`N1` — the presenter-identity question is RULED, not deferred a second time.**
+**V07's and V08's presenters are DIFFERENT MEN, `HIGH` confidence, on textual evidence only.**
+V08's speaker names **Ray** three times in the third person, at `[00:00:49]` — forty-nine seconds
+into Part 3 — as the man who *"was"* taking the questions, and again at `[00:05:59]` handing the
+baton; `Ray` occurs **zero** times in V07's body and **zero** in V06's. V07 is the Q&A part
+(sixteen named questioners read aloud); V08 reads none. Independently, V07's presenter defers to
+**Jim** ×3 and at `[00:07:43]` **disclaims** the high-of-day skill that V08's second half teaches
+under a deck titled *"Jim's Journey"*, and the programme roster names Ray and Jim as distinct
+coaches. Probable names (V07 = Ray, V08 = Jim) at `MEDIUM` — provenance, not evidence, per
+`D-033` provision 2 — held back by one residual stated rather than smoothed: V08 `[00:17:29]`
+*"Jim's right about that one"* is unexplained, and does **not** touch the different-men finding,
+which does not require the identification. **No cross-file F0 comparison was used**:
+`COURSE_PROGRESS.md` V06 GATE item (a) prohibits it, and the ruling is unchanged without it.
+**R1's *"a different guest presenter"* is SUPPORTED — and the remediation's refusal to write it
+unverified was still the right act**, so no finding is charged. Carried as item 71, a
+documentation follow-up not owed as a defect.
+
+**`N2` — a concurrency incident, charged to process and not to V08.** Partway through this review
+a concurrent session moved the **shared main working directory** onto `review/v09` (`bb4097b`), a
+tree descended from `f3f9006` that predates **both** the V07 R2/R3 merge **and** the entire V08
+remediation. The failure mode is **silent** — plausible file contents, no error, and a reviewer
+would have found the remediation's work simply absent. It surfaced only because `18_REVIEW/V07/`
+listed one file where three are committed ancestors. **Contained:** a dedicated worktree was
+created and every post-switch read re-run there before use; two stale `REVIEW_INDEX.md` reads
+were discarded and redone. **No conclusion rests on a read from the wrong tree**, and the main
+directory was left on `review/v09` as found. Carried as item 72.
+
+**`N3`** — the bracketed ASR expansion *"second rail[road] tracks"*, already ruled not-a-defect at
+V07 R3; recorded only so a future mechanical verbatim sweep does not re-charge a closed question.
+
+**Regression: none.** The remediation touched 8 files — additive but for three replaced timecode
+strings, each read individually. No script, data file, transcript, homework artifact or
+pre-registration was altered. `crosscheck_pt034_vs_pt033.py` re-runs to `CROSS-CHECK: PASS`.
+
+**Dimension B** carried from R1 **unchanged**: `NOT SATISFIED`, blocked by `D-030`, structural,
+not attributable to the student, **no severity charge**. Open item 36 is owed for the **fifth**
+lesson-round and needs an **owner** ruling; it is not a gate and it did not hold V08.
+
+### Required Corrections
+
+**None. Nothing is owed by V08.** Items 67 (a `PT-034` successor), 71 and 72 are carried as
+recommendations and process matters, none of them a gate.
+
+### Decision
+
+**`PASS`. CONFIDENCE `HIGH`. V08 is `COMPLETE`.** The V09 gate was already OPEN under `D-024` and
+is unaffected.
+
+### Git
+
+Commits on `review/v08-r2`, all with explicit paths (`git add -A` never used), `git diff --staged`
+inspected before each:
+
+```text
+18_REVIEW/V08/V08_REVIEW_R2.md   (new)
+18_REVIEW/REVIEW_INDEX.md        (STATUS, decision table, delta, severity totals,
+                                  E11/E19/E20 rows, items 64-66 closed, items 71-72 opened)
+LOG.md                           (this entry)
+```
+
+`REVIEW_INDEX.md` and `LOG.md` are written on the task branch as **evidence ledgers** per
+`D-038a`, and the branch is merged back by this reviewer as the deliberate `D-038` merge-back
+step, the verdict being clean.
+
+### Next Review Trigger
+
+**Independent review R1 of V09.** Its student submission exists on the unmerged branch
+`video/v09` (`bb4097b`) and was **not** part of this round.
+
+---
+
 ## 2026-08-13 — Student Session — V09
 
 ### Lesson

@@ -114,7 +114,7 @@ carries the player's burned-in timecode bottom-right, so each image proves its o
 | 23 | `V08_00-38-10_high-low-drill-confirmation-myth-safest-place.png` | 00:38:10 | Same chart, now annotated: **"It gives one insight into the TIMING of the Market Makers"** · **"It flushes out the big trading myth that one needs CONFIRMATION IN THE SAME DIRECTION to enter a trade…"** · **"Contrary to the MYTH it is the SAFEST PLACE TO ENTER TRADES"** · **"You will be Entering HERE"** with a leader line to the low. ★ **`C-009` in print** |
 | 24 | `V08_00-40-10_high-low-drill-crown-jewel-3-to-1.png` | 00:40:10 | Same chart, fully annotated: **"When pulling it into live trading, the effects of this training are that entries will start to migrate toward the 'extremes' of 'M' and 'W' formations."** and **"Becomes the Crown Jewel of the Method as one can enter even Tighter Stops thus bringing Risk Reward to 3:1 or greater!"** ★ **the R:R claim, printed** |
 | 25 | `V08_00-42-00_gbpcad-crosshair-on-the-low.png` | 00:42:00 | GBP/CAD chart (`GBPCAD,M15` tab active, `GC` watermark) blacked out except a **rifle-scope reticle** magnifying the candles at the low. The *"get out your microscope"* moment `[00:41:48]` |
-| 26 | `V08_00-43-10_end-card-innermost-stage-unanswered.png` | 00:43:10 | The rings with three thresholds labelled — **"Validate the Method"**, **"Eliminate Skepticism"**, **"Learn to INSTANTLY Recognize Confirmation Candles"** — and **the centre containing a red question mark**, beside a `replay` button. ★ **the file's final frame** |
+| 26 | `V08_00-43-04_end-card-innermost-stage-unanswered.png` | 00:43:04 ✎ | The rings with three thresholds labelled — **"Validate the Method"**, **"Eliminate Skepticism"**, **"Learn to INSTANTLY Recognize Confirmation Candles"** — and **the centre containing a red question mark**, beside a `replay` button. ★ **the file's final frame — the POST-PLAYBACK END CARD**: playback has stopped, which is why the `replay` button is showing, and why `43:04` sits at the very end of the **00:43:03** runtime rather than past it. See the correction note below |
 
 ---
 
@@ -178,10 +178,77 @@ Cross-referenced in `V08_SOURCE_NOTES.md` §12 and `V08_INTERPRETATION.md` §8. 
 | 4 | **The two techniques are numbered doctrine**, not an aside: *"1. The High Low Drill / 2. Hard Righ Edge Pattern Training"* | `00-27-20` |
 | 5 | **The R:R claim and the confirmation-myth claim are printed**, not spoken asides — which raises what `C-009` and `A-056` are weighing | `00-38-10`, `00-40-10` |
 | 6 | **The lesson's central problem is a printed slide bullet**: *"I can see an M or W Pattern clearly AFTER it forms but can't see it BEFORE it forms…"* | `00-27-45` |
-| 7 | **The end card confirms the file ends on an unanswered question** — the innermost ring holds a literal **"?"**. The audio-only reading in `V08_SOURCE_NOTES.md` §1 is corroborated, not corrected | `00-43-10` |
+| 7 | **The end card confirms the file ends on an unanswered question** — the innermost ring holds a literal **"?"**. The audio-only reading in `V08_SOURCE_NOTES.md` §1 is corroborated, not corrected | `00-43-04` ✎ |
 | 8 | **A TDI panel is displayed on every chart in this lesson** and is never mentioned in the audio. *Displayed, not taught* — the `A-039` formula, unchanged | `00-20-00`, `00-34-00`, `00-40-10` |
 
 **What the frames did NOT settle:** *fast* and *slow* remain undefined (`A-061`) — no frame prints
 a speed criterion. The stop hunt box's **placement** rule is still absent (`A-063`); frames show
 shaded boxes but nothing states where they are anchored. And no frame names the presenter, so
 `[00:17:29]`'s *"Okay, Jim's right about that one"* stays unresolved.
+
+---
+
+## ✎ CORRECTION, 2026-08-13 — ROW 26'S TIMECODE WAS WRONG BY ~6 SECONDS AND THE FILE HAS BEEN RENAMED
+
+Applied in remediation of `18_REVIEW/V08/V08_REVIEW_R1.md` **`M3`** (`E19`, `REVIEW_INDEX.md`
+open item **66**). Recorded here rather than as an inline `SUPERSEDED` block because the fix is a
+**file rename**, not a passage of prose — `REMEDIATION_PROTOCOL.md` §2's retention requirement is
+satisfied by naming the old value explicitly below, so the audit trail survives the rename.
+
+| Field | Before | After |
+|---|---|---|
+| Filename | `V08_00-43-10_end-card-innermost-stage-unanswered.png` **← SUPERSEDED, INCORRECT TIMECODE** | `V08_00-43-04_end-card-innermost-stage-unanswered.png` |
+| Row 26 timecode | `00:43:10` **← SUPERSEDED** | `00:43:04` |
+| "What the frames settled" item 7 | `00-43-10` **← SUPERSEDED** | `00-43-04` |
+| `V08_SOURCE_NOTES.md` §12 item 4 | `00-43-10` **← SUPERSEDED** | `00-43-04` |
+
+**What was wrong.** `00:43:10` is **past the lesson's measured runtime of 00:43:03** (2583.75 s,
+established on three independent bases in `V08_TRANSCRIPT.md` and re-measured by the R1
+reviewer). The recording does not contain a `00:43:10`. The label was simply mis-typed at
+capture.
+
+**How the correct value was established, in this remediation and not taken from the review.** The
+PNG was opened and the player chrome at the bottom-right of the frame was cropped and
+magnified. **The burned-in timecode reads `43:04 / 43:0…`** — the elapsed field reads `43:04` and
+the total field is truncated by the frame edge at `43:0`. This is an independent confirmation of
+the reviewer's reading, made by looking at the same pixels.
+
+**Why `43:04` is consistent with a 00:43:03 runtime and is not a second defect.** The frame is
+the **post-playback end card**: the `replay` button is visible, so playback has already
+terminated. A player's elapsed field at rest on the final frame rounds up to the ceiling of the
+duration. `43:04` is the end of the file; `43:10` was **six seconds beyond the frame's own
+timecode and seven seconds beyond the runtime**.
+
+**The frame is genuine and no content claim changes.** The literal red `?` at the centre of the
+innermost ring — the observation row 26 and item 7 exist to record — was confirmed by the R1
+reviewer reading the image and again here. **The defect was purely the label.**
+
+**Why a six-second label error was charged at all.** `Q-009` (`QUARANTINE_REGISTER.md`), authored
+in this same V08 submission, proposes as its **first** cheap fabrication screen: *"any timestamp
+exceeding the lesson's runtime in `SOURCE_MANIFEST.md`."* V08's own screenshot set tripped that
+screen. A future session running the test this project itself recommends would have had to stop
+and establish that the project's own capture was not a fabrication. **Internal consistency with a
+test the corpus authors against itself is worth more than six seconds normally would be.**
+
+**No other V08 frame trips the screen** — verified in this remediation by parsing the timecode
+out of all **26** filenames and comparing each against 2583.75 s. Row 26 was the only one.
+
+> #### ⚠ ONE RESIDUAL, STATED RATHER THAN GLOSSED
+>
+> **`00:43:04` is 2,584 s and the runtime is 2,583.75 s, so the corrected label still exceeds
+> the runtime — by 0.25 of a second.** A naive implementation of `Q-009`'s screen (*"any
+> timestamp exceeding the lesson's runtime"*) will therefore **still flag row 26**, and this note
+> exists so that the next session hits an explanation instead of a mystery.
+>
+> **This is not a further defect and the label is not wrong.** `43:04` is what the player's own
+> burned-in chrome prints on the final frame, and a player's whole-second elapsed field cannot
+> print `43:03.75`; it displays the ceiling. The frame therefore **cannot** be labelled with its
+> true timecode *and* fall strictly under the runtime. Choosing the burned-in value is correct:
+> the label now matches the artifact's own internal evidence, which is the property that
+> distinguishes a genuine capture from a fabricated one.
+>
+> **Consequence for `Q-009`'s screen, recorded for whoever implements it:** the screen needs a
+> **one-second tolerance** — flag `timestamp > ceil(runtime)`, not `timestamp > runtime` — or it
+> will produce a false positive on the legitimate final frame of any recording whose duration is
+> not a whole number of seconds. `00:43:10` exceeded `ceil(2583.75) = 2584` by six seconds and is
+> a true positive under either form; `00:43:04` equals it exactly and is not.

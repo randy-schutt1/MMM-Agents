@@ -231,10 +231,56 @@ against the marker range it is cited to. **20 citation errors were found and cor
 commit.** One citation does not resolve to a transcript marker (`[00:21:35]`, a screenshot
 timestamp) and is declared in both files.
 
-**One quotation in the V07 set contained a word that is not in the source. It was found at R1,
-it is corrected, and no other instance exists.** Four editorial reconstructions — *"it's met"*,
-*"the 15 minute"*, *"mayo"*, the 13/50/200 reading — were moved **outside** the quotes and
-labelled as inferred or as the second ASR pass.
+**Four quotations in the V07 set contained a word that is not in the source. One was found at R1
+(§D, `[00:28:31]`); three more were found at R2 and are corrected here.** As of this correction
+the claim is **machine-checked rather than asserted**, by
+`05_HOMEWORK/V07/scripts/verify_quotes.py`, which is **committed and re-runnable** — see the
+`N1` fold-in below. Editorial reconstructions — *"it's met"*, *"the 15 minute"*, *"mayo"*, the
+13/50/200 reading — are outside the quotes or inside square brackets, labelled as inferred or as
+the second ASR pass, at **every** site rather than at most of them.
+
+> *(Superseded sentence, retained per `REMEDIATION_PROTOCOL.md` §2 — corrected 2026-08-13, V07 R2
+> remediation, open item 70; `V07_REVIEW_R2.md` `M1`, `E01` with co-code `E20`.)*
+>
+> **This paragraph previously read:** *"**One quotation in the V07 set contained a word that is
+> not in the source. It was found at R1, it is corrected, and no other instance exists.** Four
+> editorial reconstructions — "it's met", "the 15 minute", "mayo", the 13/50/200 reading — were
+> moved **outside** the quotes and labelled as inferred or as the second ASR pass."*
+>
+> **Both sentences were false**, and they are retained here rather than deleted because the
+> failure is the record's most useful part. R2 located **three** further instances, two of them
+> the very reconstructions the second sentence named as having been moved outside the quotes:
+>
+> | Instance | Site | Quoted | Source |
+> |---|---|---|---|
+> | (a) | `V07_SOURCE_NOTES.md` §9a, `[00:27:24]` | *"30 minute of the **mayo**"* | *"30 minute of the **male**,"* |
+> | (b) | `V07_SOURCE_NOTES.md` §11, `[00:25:26]` row | *"it turns red when **it's met**"* | *"It turns red when **Beth**."* |
+> | (c) | `04_SCREENSHOTS/V07/INDEX.md`, frames-add item 6 | *"it turns red when **it's met**"* | same |
+>
+> All three are corrected at their sites, each with its own retention block. **No number, verdict
+> or audit trail moves** — `A-020` is untouched, §10's `mayo` **0** row is correct and unedited,
+> and the ADR observation is read off the frames rather than off the word.
+>
+> **Why the repair failed, stated plainly rather than glossed.** The superseded sentence was
+> itself a repair: R1 asked for the earlier categorical claim to be *repaired or scoped*, and this
+> report chose to repair, on the strength of a sweep it ran itself and **did not commit**. The
+> reasoning it gave was right — *"a later session will rely on it rather than re-checking"* — and
+> it applied to the repair. A **stronger** categorical claim (completeness of a search, not just a
+> count) was asserted on **weaker** evidence than the claim it replaced. The lesson is not "sweep
+> harder": it is that an uncommitted sweep cannot earn a categorical claim, which is exactly what
+> `V07_REVIEW_R2.md` `N1` said.
+>
+> **`N1` folded in, and it is the substantive change of this round.**
+> `05_HOMEWORK/V07/scripts/verify_quotes.py` is committed with this correction. It extracts every
+> emphasised quotation from all seven V07 artifacts and checks it against the transcript body in
+> **two tiers**: marker-cited quotations must resolve exactly, and uncited quotations are flagged
+> when they track a transcript sentence for four or more consecutive words and then diverge —
+> which is the shape of this defect. **Run against the pre-correction tree it reproduces exactly
+> the three instances above and nothing else**, instance (c) being a tier-2 catch that no
+> citation-windowed sweep could reach. That is why R2's three sweeps disagreed by ~30% (`N2`):
+> they were citation-windowed, and instances (b) and (c) sit outside any short window. **The
+> claim in this section is now falsifiable by re-running committed code**, and any later round
+> should re-run it rather than write a fourth sweep.
 
 > *(Superseded sentence, retained per `REMEDIATION_PROTOCOL.md` §2 — corrected 2026-08-13, V07 R1
 > remediation, open item 63; `V07_REVIEW_R1.md` `M3`.)*

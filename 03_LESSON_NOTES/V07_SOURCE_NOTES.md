@@ -358,7 +358,25 @@ The clearest technical content in the lesson comes from Martha asking what the l
 PERIOD in genuine audio**: *"this yellow one is a five moving average."*
 
 **`[00:27:24]` is the first time a NICKNAME is attached to a TIMEFRAME**: *"30 minute of the
-water, 30 minute of the mayo."*
+water, 30 minute of the male,"* — where *"male"* is the ASR's rendering of **"mayo"** (`A-020`,
+settled by print in V04/V06), exactly as §9's evidence table above renders it.
+
+> *(Superseded sentence, retained per `REMEDIATION_PROTOCOL.md` §2 — corrected 2026-08-13, V07 R2
+> remediation, open item 70; `V07_REVIEW_R2.md` `M1`, instance (a), `E01` with co-code `E20`.)*
+>
+> **This sentence previously quoted `[00:27:24]` as:** *"30 minute of the water, 30 minute of the
+> **mayo**."* **The source word is *male*.** Verified against `02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md`
+> at the marker for this correction, not taken from the review's prose: `[00:27:24]` reads *"The
+> dashed ones like this are 30 minute versions, 30 minute of the water, 30 minute of the male,"*.
+> ***mayo* does not occur in the V07 body at all** — §10 of this file measures it at **0** and
+> says the audio only garbles it to *mail*/*male*. **So this file held a right record and a wrong
+> record for the same object, fourteen sections apart** — the V05 `M4` intra-corpus-disagreement
+> class, recurring inside the round that was meant to close it. §9's evidence table and §10's
+> `mayo` **0** row were correct and are **not** edited.
+>
+> **No conclusion moves.** `A-020` is untouched: its whole point is that no period is ever
+> attached to *water* or *mayo*, and the reconstruction is now outside the quotation marks with
+> its provenance named, which is where §9's table already had it.
 
 **The two are never joined.** No sentence in V07 — or in V01–V06 — says what period *water* or
 *mayo* is. **`A-020`'s Required Research route fails for a sixth lesson running**, and it fails
@@ -475,7 +493,22 @@ band.
 | **What a flashcard physically is** | `V07_00-13-00` prints *"Flashcards (**Screenshots**)"*. The audio says *"flashcard"* 15× and never says what one is |
 | **That the homework rename is deliberate** | `V07_00-04-55` prints *"like Um.. ~~Homework~~.. I mean R&D."* with **Homework struck through in red** |
 | **The spelling of the entry method** | `V07_00-08-00` prints **"Hi-Lo"** |
-| **`[00:25:26]`'s unrecovered word** | `V07_00-13-55` prints `ADR Value= 1081, Reached= **No**, Today's Range= 732`; `V07_00-16-20` prints `ADR Value= 1023, Reached= **Yes**, Today's Range= 1030`. The flag flips when today's range reaches the ADR value — which is *"it turns red when it's met"*. **This is an observation about the indicator's display, not a course rule** |
+| **`[00:25:26]`'s unrecovered word** | `V07_00-13-55` prints `ADR Value= 1081, Reached= **No**, Today's Range= 732`; `V07_00-16-20` prints `ADR Value= 1023, Reached= **Yes**, Today's Range= 1030`. The flag flips when today's range reaches the ADR value — which is *"it turns red when [it's met]"*, the brackets marking the editorial reconstruction of the unrecovered word. **This is an observation about the indicator's display, not a course rule** |
+
+> *(Superseded cell text, retained per `REMEDIATION_PROTOCOL.md` §2 — corrected 2026-08-13, V07 R2
+> remediation, open item 70; `V07_REVIEW_R2.md` `M1`, instance (b), `E01` with co-code `E20`.)*
+>
+> **The `[00:25:26]` row previously read:** *"…which is *"it turns red when **it's met**"*."* —
+> unbracketed, inside the quotation marks. **The source word is *Beth*.** Verified against
+> `02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` at the marker for this correction: `[00:25:26]` reads
+> *"That brown line there is the ADR. It turns red when **Beth**."* **The row is headed *"'s
+> unrecovered word"* and then quoted a recovered version of it — the cell contradicted its own
+> label.** §9's evidence table at `[00:25:26]` was correct — it renders *Beth* and states that
+> *"the word itself is not reconstructed here"* — and is **not** edited.
+>
+> **No conclusion moves.** The `Reached=`/`Today's Range=` observation is unchanged, and it never
+> turned on the word: it is read off the two frames, not off the audio. The bracketing follows
+> `04_SCREENSHOTS/V07/INDEX.md` row 15, which had the convention right.
 
 ### 11b. What the frames ADD
 

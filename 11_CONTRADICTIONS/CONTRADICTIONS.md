@@ -1256,6 +1256,39 @@ consequential contradiction in the corpus to date.
 | Timestamp | `[00:37:07]`–`[00:37:16]` |
 | What is said | *"**In our basic training, we do say that you want to have a confirmation candle.** There's a **reversal candle** and a **candle in the direction that you want to go**. **We say start there. Enter after you see these two.**"* |
 
+### Source A′ — independent corroboration of the requirement, from a second lesson
+
+> **ADDED 2026-08-13 in remediation of `V08_REVIEW_R1.md` `M1` (`E11`, open item 64).** As
+> originally filed, Source A rested **only on V08** — i.e. on *one speaker reporting a rule and
+> then overriding it*. Nothing in the original Source A was wrong and nothing is superseded; the
+> defect was an **omission of available corroboration**, which this block supplies. The
+> `PROVISIONAL` disposition is **unchanged**.
+
+| Field | Value |
+|---|---|
+| Video | **V07** (`Bootcamp1 Wk2 032612 Part2 (48mins).swf`), `GUEST` — a **different lesson**, equally normative under `D-033` |
+| Speaker identity — stated as a limit | **NOT established, and deliberately not asserted here.** `V07_SOURCE_NOTES.md` records V07 as *"a single unidentified presenter [who] speaks the whole 00:48:05"*, citing `V07_TRANSCRIPT.md` § ONE SPEAKER; `V08_SOURCE_NOTES.md` records V08 as *"a presenter who is not the course author"*, name unresolved (`D-033` provision 2). V07 and V08 are **Part 2 and Part 3 of the same day's bootcamp** (`SOURCE_MANIFEST.md`), so they may well be the **same** person. `V08_REVIEW_R1.md` `M1` describes V07's as *"a different guest presenter"*; **this remediation could not verify that and does not repeat it.** The corroboration below therefore stands as *a second lesson*, **not** as *a second speaker* |
+| Timestamp | `[00:28:02]`–`[00:28:31]` |
+| Transcript | `02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` (verified verbatim against the transcript body in this remediation, not copied from the review) |
+| Cross-reference | `03_LESSON_NOTES/V07_SOURCE_NOTES.md` **§6c** — *"What decides which second legs come back past the first leg"* |
+| What is said | *"Yes, David, it's tough to know when second legs will be above or below the first leg."* `[00:28:02]` / *"**You can only go by the second rail[road] tracks.**"* `[00:28:15]` / *"If you're playing the high low and you're using high low to get your entry, then they may not come past the first entry. You'd have a choice to pass on that."* `[00:28:17]`–`[00:28:24]` / *"Your flashcard of the best looking entry is out there… If it doesn't do what you expect in your flashcard isn't the same, you may just decide to pass on it."* `[00:28:26]`–`[00:28:31]` |
+| What it establishes | `V07_SOURCE_NOTES.md` §6c records this as *"an admission of indeterminacy: the direction question is answered 'you can only go by' the confirmation candle, not by a prior rule."* **The confirmation requirement is here operating as the corpus's own decision criterion** — the thing a student is told is the *only* thing they can go by — in a lesson that is not V08. |
+
+**What this changes about the record, and what it does not.** It changes the shape of the
+conflict from *"a speaker reports a rule inside one lesson and overrides it thirty seconds
+later"* to **"a requirement the corpus relies on in V07 to answer a question it cannot otherwise
+answer is called a myth in V08."** The rule is no longer attested only in the same breath that
+overrides it. It changes **nothing** about the resolution: the staging rule below still defers
+the trained-state question, and the disposition stays `PROVISIONAL`. It does **not** upgrade the
+record to a two-speaker conflict — see the speaker-identity limit above.
+
+**One limit stated honestly.** V07 `[00:28:15]` is not a restatement of the two-candle
+specification in V08 `[00:37:07]`; it is the requirement *in use* — a second-leg direction
+question answered by deferring to the confirmation (*"the second rail[road] tracks"*) rather than
+to any prior rule. It corroborates that confirmation is load-bearing across the corpus. It does
+**not** independently attest V08's *"reversal candle + candle in the direction you want to go"*
+wording, which remains sourced to V08 alone.
+
 ### Source B — the override, by the same speaker, thirty seconds earlier and again after
 
 | Field | Value |
