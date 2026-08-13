@@ -1,0 +1,380 @@
+//@version=5
+// =============================================================================
+// MMM_Indicator.pine — Market Maker Method: EMAs + Session Boxes  (OVERLAY)
+// =============================================================================
+//
+// PURPOSE
+//   A CHART-MARKING / OBSERVATION aid for manual study under 06_MANUAL_BACKTEST/.
+//   It draws EMAs and session boxes. It generates NO entries, NO signals, NO
+//   trades, and encodes NO setup rule. It is deliberately an `indicator()`,
+//   never a `strategy()`.
+//
+// PHASE / GOVERNANCE NOTE — READ BEFORE EXTENDING THIS FILE
+//   `14_PINE/README.md` and `DECISIONS.md` D-006 gate Pine Script behind the
+//   Master Spec (Phase 3) and Machine Spec (Phase 4), which do not yet exist.
+//   This file is therefore deliberately NOT in `14_PINE/` and is NOT a Phase-5
+//   Observer component. It is a manual-backtest drawing tool, built at explicit
+//   owner request, and it must not be cited as spec, doctrine, or evidence.
+//   Anything it draws that is marked DEFAULT below is this file's invention.
+//
+// SOURCING (00_SYSTEM/SOURCING_HIERARCHY.md, D-040)
+//   TIER 1 = the course recordings + transcripts/notes/screenshots. Authoritative.
+//   TIER 2 = the Mauro seminar notes PDF, cited `MMM-NOTES p.N` (D-039). Normative
+//            but outranked by Tier 1.
+//   TIER 3 = generic internet material. NEVER normative. Closes nothing.
+//   NOT USED AT ALL: any lesson `RULES.md` / `NOTES.md` — quarantined fabricated
+//   content, QUARANTINE_REGISTER.md Q-001..Q-011. No parameter here comes from them.
+//
+// EVERY tunable below is tagged with exactly one of:
+//   [TIER 1]  — stated in the course recordings/slides
+//   [TIER 2]  — stated in MMM-NOTES
+//   [DEFAULT] — NOT source-verified. This file's choice. Change freely.
+//
+// COMPANION SCRIPT
+//   TDI is an oscillator and cannot share a pane with an overlay in Pine v5
+//   (`force_overlay` is a v6 feature). TDI therefore ships as a SECOND script:
+//   `MMM_TDI.pine`. Add both to the chart. See MMM_Indicator_README.md.
+// =============================================================================
+
+indicator(
+     title             = "MMM — EMAs & Session Boxes",
+     shorttitle        = "MMM Boxes",
+     overlay           = true,
+     max_boxes_count   = 500)
+
+// =============================================================================
+// SECTION 1 — EMAs
+// =============================================================================
+//
+// PERIODS — what the sources actually say:
+//
+//   5 / 13 / 50 / 200  [TIER 2] MMM-NOTES p.38, verbatim: "The specific EMA's
+//       used in Mauro's charts are the 5, 13, 50 and 200 bar EMA's." Roles are
+//       given on the same page: "The 5 and 13 EMA's are the signal lines";
+//       "The 50 EMA is the balance line and shows the intraday trend";
+//       "The 200 EMA is the home base defining the longer term trend."
+//
+//   800  [TIER 1] V09 [00:41:43]-[00:41:48], quoted in
+//       03_LESSON_NOTES/V09_SOURCE_NOTES.md §9: "This is the blueberry. The
+//       blueberry is the 800 on the 15 minute time frame." Explicit, unhedged,
+//       and the 15-MINUTE TIMEFRAME IS PART OF THE DEFINITION.
+//
+//   ⚠ CONTRADICTION C-010 (11_CONTRADICTIONS/CONTRADICTIONS.md): MMM-NOTES
+//       enumerates the set as 5/13/50/200 and contains ZERO occurrences of 800
+//       across 84 pages. Tier 1 outranks Tier 2, so the 800 stands — but the two
+//       sources genuinely disagree about the size of the set, and that is
+//       UNRESOLVED. The 800 is defaulted ON here; turn it off to see the
+//       Tier-2 set alone.
+//
+//   ⚠ The "800-on-15m == 200-on-1h" identity is spoken in V09 but is recorded
+//       NOTED, NOT ADOPTED (V09_SOURCE_NOTES §9b). This script does not act on
+//       it: every EMA is computed on the chart's own timeframe, nothing is
+//       resampled, and no timeframe is forced.
+//
+// COLOURS — [DEFAULT], ALL OF THEM. NOT SOURCE-VERIFIED.
+//   No colour for any moving average is stated anywhere in the corpus or in
+//   MMM-NOTES. 03_LESSON_NOTES/V05_SOURCE_NOTES.md §8 records the negative
+//   result explicitly: "No colours, no nicknames, no periods assigned."
+//   The quarantined per-lesson RULES.md files DO assert colours; they are
+//   fabricated (Q-001, whose evidence section shows the EMA periods sourced to
+//   a timestamp about homework deadlines) and are NOT used here.
+//   The five colours below are chosen only to be visually distinguishable.
+//
+// NICKNAMES — deliberately NOT applied to the plot titles.
+//   "blueberry = 800 on the 15m" is Tier 1 and is safe, so it appears in a
+//   comment. "Mayo"/"mayonnaise" is A-020 / C-010 and its PERIOD is still
+//   open — 03_LESSON_NOTES/V10_SOURCE_NOTES.md records V10 using `blueberry`
+//   and `Mayo` as line names with NO period attached. So no EMA here is
+//   labelled "Mayo". Naming it would invent the mapping the corpus withholds.
+
+grpEma = "EMAs  —  periods: TIER 1 / TIER 2  ·  colours: DEFAULT (not sourced)"
+
+emaSrc = input.source(close, "EMA source", group = grpEma,
+     tooltip = "[DEFAULT] No source (close/hl2/…) is specified by any source. `close` is the conventional choice.")
+
+show5   = input.bool(true,  "EMA 5    — signal line",   group = grpEma, inline = "e5")
+len5    = input.int(5,      "",  minval = 1,            group = grpEma, inline = "e5")
+col5    = input.color(color.new(#00E5FF, 0), "",        group = grpEma, inline = "e5")
+
+show13  = input.bool(true,  "EMA 13   — signal line",   group = grpEma, inline = "e13")
+len13   = input.int(13,     "",  minval = 1,            group = grpEma, inline = "e13")
+col13   = input.color(color.new(#FF9800, 0), "",        group = grpEma, inline = "e13")
+
+show50  = input.bool(true,  "EMA 50   — balance line",  group = grpEma, inline = "e50")
+len50   = input.int(50,     "",  minval = 1,            group = grpEma, inline = "e50")
+col50   = input.color(color.new(#2962FF, 0), "",        group = grpEma, inline = "e50")
+
+show200 = input.bool(true,  "EMA 200  — home base",     group = grpEma, inline = "e200")
+len200  = input.int(200,    "",  minval = 1,            group = grpEma, inline = "e200")
+col200  = input.color(color.new(#E91E63, 0), "",        group = grpEma, inline = "e200")
+
+show800 = input.bool(true,  "EMA 800  — 'blueberry' (15m)", group = grpEma, inline = "e800",
+     tooltip = "[TIER 1] V09 [00:41:43]: 'The blueberry is the 800 on the 15 minute time frame.' Note C-010: MMM-NOTES contains no 800 at all.")
+len800  = input.int(800,    "",  minval = 1,            group = grpEma, inline = "e800")
+col800  = input.color(color.new(#9C27B0, 0), "",        group = grpEma, inline = "e800")
+
+emaWidth = input.int(1, "EMA line width", minval = 1, maxval = 4, group = grpEma)
+
+// Computed unconditionally (Pine requires consistent series); visibility is
+// controlled by the `show*` flags on the plot itself.
+ema5   = ta.ema(emaSrc, len5)
+ema13  = ta.ema(emaSrc, len13)
+ema50  = ta.ema(emaSrc, len50)
+ema200 = ta.ema(emaSrc, len200)
+ema800 = ta.ema(emaSrc, len800)
+
+plot(show5   ? ema5   : na, "EMA 5",   color = col5,   linewidth = emaWidth)
+plot(show13  ? ema13  : na, "EMA 13",  color = col13,  linewidth = emaWidth)
+plot(show50  ? ema50  : na, "EMA 50",  color = col50,  linewidth = emaWidth)
+plot(show200 ? ema200 : na, "EMA 200", color = col200, linewidth = emaWidth)
+plot(show800 ? ema800 : na, "EMA 800", color = col800, linewidth = emaWidth)
+
+// =============================================================================
+// SECTION 2 — SESSION TIMEZONE   (A-019 / D-031)
+// =============================================================================
+//
+// ⚠ THE SINGLE MOST IMPORTANT CAVEAT IN THIS FILE.
+//
+// The course prints a complete session table (see SECTION 3) and prints NO
+// TIMEZONE ON IT. That is ambiguity record A-019 in
+// 10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md, still OPEN, still `DO NOT CODE`.
+// The instructor declines to specify (V02 [00:49:52] "Listen, don't analyse
+// it… These are the times") and says the man who taught him has died
+// (V02 [00:49:22]).
+//
+// DECISION D-031 converts the timezone from an assumption into a TESTED
+// VARIABLE with two pre-registered arms, BOTH of which must always be reported:
+//   ARM A — fixed UTC-5 year-round ("EST", no DST). The default.
+//   ARM B — America/New_York, DST-tracking (UTC-4 in summer).
+// Divergence between the arms is a FINDING, never a selection criterion.
+// Reporting only the better-looking arm is error class E09/E24 (cherry-picking).
+//
+// This input exists so both arms can actually be run. Run both. Report both.
+//
+// CROSS-SOURCE OBSERVATION (recorded, NOT treated as closing A-019):
+//   MMM-NOTES p.8 gives the same sessions in GMT with an ET gloss —
+//   "Gap time between 07:00 and 07:30 GMT / 03:00 and 03:30 ET". 07:00 GMT
+//   == 03:00 ET only at UTC-4, i.e. the Tier-2 document's own arithmetic is
+//   DST-tracking (Arm B). Under Arm B the Tier-2 GMT table and the Tier-1
+//   slide agree on Asian and London to the minute. They differ on the US close
+//   (p.8 has 20:30 GMT = 16:30 ET; the Tier-1 slide has 5pm). This is
+//   corroboration worth knowing and is NOT a resolution: it is one document's
+//   internal arithmetic, and A-019 asks what the COURSE meant. A-019 stays open.
+
+grpTz = "Session timezone  —  A-019 OPEN / D-031: run BOTH arms, report BOTH"
+
+tzChoice = input.string("Arm A — UTC-5 (fixed EST, D-031 default)", "Timezone arm",
+     options = ["Arm A — UTC-5 (fixed EST, D-031 default)",
+                "Arm B — America/New_York (DST-tracking)",
+                "UTC",
+                "Chart / exchange timezone"],
+     group = grpTz,
+     tooltip = "A-019 is UNRESOLVED. D-031 requires both arms be pre-registered and both results reported. This is not a preference setting.")
+
+tz = switch tzChoice
+    "Arm A — UTC-5 (fixed EST, D-031 default)" => "UTC-5"
+    "Arm B — America/New_York (DST-tracking)"  => "America/New_York"
+    "UTC"                                      => "UTC"
+    => syminfo.timezone
+
+// Day mask, TradingView session syntax: 1=Sun … 7=Sat.
+// [DEFAULT] "23456" (Mon-Fri). The corpus states no day mask for the intraday
+// session table. Mon-Fri is chosen because the Asian session opens 20:30 ET on
+// the calendar day BEFORE the London/NY sessions it precedes, so on this mask
+// the week's first Asian box opens Sunday evening ET only if "1" is included.
+// Include "1" if you want the Sunday-evening open drawn.
+sessDays = input.string("1234567", "Days included (1=Sun … 7=Sat)", group = grpTz,
+     tooltip = "[DEFAULT] Not source-specified. '1234567' draws every day. Use '23456' for Mon-Fri only.")
+
+// =============================================================================
+// SECTION 3 — SESSION BOXES
+// =============================================================================
+//
+// THE SESSION TABLE — [TIER 1], and the highest-value frame in V02.
+//   Slide "ForEx Trading Times", V02 [00:45:55], transcribed verbatim at
+//   03_LESSON_NOTES/V02_SOURCE_NOTES.md §4b:
+//
+//       5pm High / Low Reset (The MM Spread Is Set)
+//       5pm to 8pm Dead Gap
+//       Asian Session:    8:30pm - 3:00am    Gap 3-3:30a
+//       London Session:   3:30am - 9:00am    Gap 9-9:30a
+//       New York Session: 9:30-5pm
+//
+//   Defaults below are exactly these numbers. The timezone they are read in is
+//   SECTION 2's open question. The 5pm reset, the 5pm-8pm dead gap and the two
+//   changeover gaps are documented Tier 1 objects that this script does NOT
+//   draw — out of scope, not unsourced. See the README.
+//
+// THE BOX CONCEPT ITSELF — [TIER 2] MMM-NOTES p.40, "Colour-Coded Sessions":
+//
+//       "Two boxes can be drawn. The 1st is drawn around the Asian session and
+//        simply denotes the area of consolidation that is expected during this
+//        period… It is just a guide.
+//        The 2nd is a smaller box and highlights a time when there is a high
+//        probability of the midsession reversal (the New York Reversal). It
+//        starts at the beginning of the NY open and runs for about 3 hours."
+//
+//   Note carefully: the source describes TWO boxes, not three, and the second
+//   is explicitly the NY-open reversal window. Both are hedged as "a guide only".
+//
+// ⚠ "PRIME BOX" IS NOT A TERM FROM ANY SOURCE IN THIS REPOSITORY.
+//   The string "prime" occurs ZERO times in 03_LESSON_NOTES/ (V01-V10) and ZERO
+//   times in the MMM-NOTES text extract. It is not in the glossary, not in the
+//   ambiguity register, not in the contradictions register. It was supplied
+//   with the build request, not by the course.
+//   Handled as follows, and the two cases are NOT equivalent:
+//     · NY PRIME BOX  — mapped onto a REAL documented object: MMM-NOTES p.40's
+//       second box, NY open + ~3 hours. The WINDOW is [TIER 2]; only the NAME
+//       "prime" is unsourced. Nests inside the NY session box by construction.
+//     · LONDON PRIME BOX — NO source defines any London sub-box. [DEFAULT]
+//       ENTIRELY. Its default 03:30-07:30 is this file's construction from the
+//       nearest documented statement, MMM-NOTES p.51: "Trading hours should be
+//       from the end of the Asian session and into the London open for 4 hours."
+//       That is a screen-time recommendation, NOT a box, and p.51 is ambiguous
+//       about whether the 4 hours run from the Asian close (03:00) or the
+//       London open (03:30). Treat this box as a UI convenience with no
+//       evidentiary weight whatsoever. It is defaulted OFF.
+
+grpBox = "Session boxes  —  times: TIER 1 (V02 slide)  ·  see per-box tags"
+
+showBoxes  = input.bool(true, "Draw session boxes", group = grpBox)
+keepN      = input.int(20, "Sessions to keep (each box type)", minval = 1, maxval = 100, group = grpBox,
+     tooltip = "Older boxes are deleted. Pine caps total boxes at 500.")
+extendBars = input.int(0, "Extend boxes right by N bars", minval = 0, maxval = 100, group = grpBox,
+     tooltip = "[DEFAULT] Cosmetic only.")
+showLabels = input.bool(true, "Show box labels", group = grpBox)
+brdWidth   = input.int(1, "Border width", minval = 1, maxval = 4, group = grpBox)
+
+// --- Asian --------------------------------------------------------------- //
+// [TIER 1] 8:30pm-3:00am, V02 slide [00:45:55].
+// [TIER 2] corroborated: MMM-NOTES p.40 box 1 is drawn "around the Asian session".
+gAsia   = "▸ Asian range box   [TIER 1 times]"
+onAsia  = input.bool(true, "Enabled", group = gAsia)
+sesAsia = input.session("2030-0300", "Session", group = gAsia,
+     tooltip = "[TIER 1] V02 slide [00:45:55]: 'Asian Session: 8:30pm - 3:00am'.")
+bgAsia  = input.color(color.new(#FFEB3B, 90), "Fill",   group = gAsia, inline = "ca")
+bcAsia  = input.color(color.new(#FFEB3B, 20), "Border", group = gAsia, inline = "ca")
+txAsia  = input.string("ASIAN RANGE", "Label", group = gAsia)
+
+// --- London -------------------------------------------------------------- //
+// [TIER 1] 3:30am-9:00am, V02 slide [00:45:55].
+gLon   = "▸ London session box   [TIER 1 times]"
+onLon  = input.bool(true, "Enabled", group = gLon)
+sesLon = input.session("0330-0900", "Session", group = gLon,
+     tooltip = "[TIER 1] V02 slide [00:45:55]: 'London Session: 3:30am - 9:00am'.")
+bgLon  = input.color(color.new(#4CAF50, 92), "Fill",   group = gLon, inline = "cl")
+bcLon  = input.color(color.new(#4CAF50, 20), "Border", group = gLon, inline = "cl")
+txLon  = input.string("LONDON", "Label", group = gLon)
+
+// --- London "prime" ------------------------------------------------------ //
+// [DEFAULT] ENTIRELY UNSOURCED — see the block comment above. Defaulted OFF.
+gLonP   = "▸ London 'prime' box   ⚠ DEFAULT — NOT SOURCE-VERIFIED"
+onLonP  = input.bool(false, "Enabled", group = gLonP,
+     tooltip = "OFF by default. No source in this repository defines a London sub-box. 'prime' appears 0 times in the lesson notes and 0 times in MMM-NOTES.")
+sesLonP = input.session("0330-0730", "Session", group = gLonP,
+     tooltip = "[DEFAULT] Constructed from MMM-NOTES p.51 ('into the London open for 4 hours'), which is a screen-time recommendation, not a box. No evidentiary weight.")
+bgLonP  = input.color(color.new(#00BCD4, 85), "Fill",   group = gLonP, inline = "clp")
+bcLonP  = input.color(color.new(#00BCD4, 10), "Border", group = gLonP, inline = "clp")
+txLonP  = input.string("LONDON PRIME (default)", "Label", group = gLonP)
+
+// --- New York ------------------------------------------------------------ //
+// [TIER 1] 9:30am-5:00pm, V02 slide [00:45:55].
+gNy   = "▸ New York session box   [TIER 1 times]"
+onNy  = input.bool(true, "Enabled", group = gNy)
+sesNy = input.session("0930-1700", "Session", group = gNy,
+     tooltip = "[TIER 1] V02 slide [00:45:55]: 'New York Session: 9:30-5pm'. Note MMM-NOTES p.8 gives the US close as 20:30 GMT (=16:30 ET), a genuine minor divergence.")
+bgNy  = input.color(color.new(#2196F3, 92), "Fill",   group = gNy, inline = "cn")
+bcNy  = input.color(color.new(#2196F3, 20), "Border", group = gNy, inline = "cn")
+txNy  = input.string("NEW YORK", "Label", group = gNy)
+
+// --- New York "prime" (the NY Reversal window) --------------------------- //
+// WINDOW [TIER 2] MMM-NOTES p.40: "starts at the beginning of the NY open and
+// runs for about 3 hours". NAME "prime" [DEFAULT] — the source calls it the
+// NY Reversal box. 09:30 + 3h = 12:30, nesting inside the NY box above.
+gNyP   = "▸ NY 'prime' box (NY Reversal)   [TIER 2 window · name is DEFAULT]"
+onNyP  = input.bool(true, "Enabled", group = gNyP)
+sesNyP = input.session("0930-1230", "Session", group = gNyP,
+     tooltip = "[TIER 2] MMM-NOTES p.40: second box 'starts at the beginning of the NY open and runs for about 3 hours'. Source hedges it as 'a guide only'.")
+bgNyP  = input.color(color.new(#FF5722, 85), "Fill",   group = gNyP, inline = "cnp")
+bcNyP  = input.color(color.new(#FF5722, 10), "Border", group = gNyP, inline = "cnp")
+txNyP  = input.string("NY PRIME / REVERSAL", "Label", group = gNyP)
+
+// -------------------------------------------------------------------------
+// Box engine
+// -------------------------------------------------------------------------
+// Session boxes are only meaningful on intraday timeframes: on a daily or
+// higher chart a single bar spans every session, so no box could be honest.
+// Drawing is suppressed rather than approximated.
+intradayOk = timeframe.isintraday
+
+// Returns true when the current bar falls inside `sess` in timezone `tz`.
+f_in(string sess, string days) =>
+    not na(time(timeframe.period, sess + ":" + days, tz))
+
+// One persistent box-set per call site. `var` inside a function gives each
+// call site its own independent state, which is exactly what is wanted here.
+// `isIn` / `wasIn` are passed in (rather than computed with [1] inside the
+// function) so no history reference is made from within a function body.
+f_box(bool isIn, bool wasIn, color bg, color bc, string txt, int keep, int extMs) =>
+    var box[] store = array.new_box()
+    var box   cur   = na
+    var float hi    = na
+    var float lo    = na
+    if isIn
+        if not wasIn
+            hi := high
+            lo := low
+            cur := box.new(
+                 left        = time,
+                 top         = hi,
+                 bottom      = lo,
+                 right       = time + extMs,
+                 xloc        = xloc.bar_time,
+                 bgcolor     = bg,
+                 border_color= bc,
+                 border_width= brdWidth,
+                 text        = showLabels ? txt : "",
+                 text_color  = bc,
+                 text_size   = size.small,
+                 text_halign = text.align_left,
+                 text_valign = text.align_top)
+            array.push(store, cur)
+            if array.size(store) > keep
+                box.delete(array.shift(store))
+        else
+            hi := math.max(hi, high)
+            lo := math.min(lo, low)
+            box.set_top(cur, hi)
+            box.set_bottom(cur, lo)
+            box.set_right(cur, time + extMs)
+
+// Milliseconds per bar, for the optional right-extension.
+extMs = extendBars * timeframe.in_seconds(timeframe.period) * 1000
+
+draw = showBoxes and intradayOk
+
+inAsia = draw and onAsia  and f_in(sesAsia, sessDays)
+inLon  = draw and onLon   and f_in(sesLon,  sessDays)
+inLonP = draw and onLonP  and f_in(sesLonP, sessDays)
+inNy   = draw and onNy    and f_in(sesNy,   sessDays)
+inNyP  = draw and onNyP   and f_in(sesNyP,  sessDays)
+
+// Draw order: parent sessions first, then the nested "prime" boxes on top.
+f_box(inAsia, nz(inAsia[1], false), bgAsia, bcAsia, txAsia, keepN, extMs)
+f_box(inLon,  nz(inLon[1],  false), bgLon,  bcLon,  txLon,  keepN, extMs)
+f_box(inNy,   nz(inNy[1],   false), bgNy,   bcNy,   txNy,   keepN, extMs)
+f_box(inLonP, nz(inLonP[1], false), bgLonP, bcLonP, txLonP, keepN, extMs)
+f_box(inNyP,  nz(inNyP[1],  false), bgNyP,  bcNyP,  txNyP,  keepN, extMs)
+
+// A single, quiet warning when boxes are requested on a non-intraday chart,
+// so the absence of boxes is never mistaken for "no sessions found".
+// Held in a `var` and moved rather than re-created, so realtime bars do not
+// accumulate one label per closed bar.
+var label tfWarn = na
+if showBoxes and not intradayOk and barstate.islast
+    label.delete(tfWarn)
+    tfWarn := label.new(bar_index, high, "Session boxes need an intraday timeframe",
+         style     = label.style_label_down,
+         color     = color.new(color.orange, 20),
+         textcolor = color.white,
+         size      = size.small)

@@ -1,0 +1,181 @@
+//@version=5
+// =============================================================================
+// MMM_TDI.pine — Traders Dynamic Index  (SEPARATE PANE)
+// =============================================================================
+//
+// WHY THIS IS A SEPARATE FILE
+//   TDI is an oscillator on a 0-100 scale and must live in its own pane, so it
+//   is declared `overlay = false`. A single Pine v5 script occupies exactly one
+//   pane; `force_overlay` (which would allow mixing) is a Pine v6 feature and
+//   does not exist in v5. Splitting into two scripts is therefore not a
+//   stylistic choice, it is the only correct v5 implementation.
+//   Companion overlay script: `MMM_Indicator.pine` (EMAs + session boxes).
+//
+// =============================================================================
+// ⚠⚠ READ THIS BEFORE USING ANY NUMBER IN THIS FILE ⚠⚠
+// =============================================================================
+//
+// EVERY NUMERIC PARAMETER IN THIS SCRIPT IS UNSOURCED. WITHOUT EXCEPTION.
+//
+// AMBIGUITY RECORD A-039 (10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md) — status
+// `DO NOT CODE` / `DO NOT SUBSTITUTE`, still OPEN — records that TDI is treated
+// as a load-bearing entry criterion by the course and is NEVER TAUGHT. The
+// evidence trail across the ingested lessons:
+//
+//   V04  TDI named 6× as an entry condition, never defined.
+//   V05  Frame V05_00-36-54 prints the sub-panel header `TDI_MMM 54.6718
+//        55.0688 53.6150` — the corpus's first displayed NAME. A slide is
+//        titled "Mark up the TDI as well…". Still no inputs, periods, bands,
+//        line names or decision rule. "A name is not a definition."
+//   V07  Demoted in passing to "an extra confirmation"; "shoulder verges"
+//        (shoulder divergences) introduced and not defined.
+//   V08  The TDI_MMM sub-panel is on screen for the entire 43-minute lesson
+//        and is NEVER MENTIONED ALOUD.
+//
+// TIER 2 (MMM-NOTES p.45-47, the dedicated TDI chapter) supplies STRUCTURE and
+// nothing else. Recorded at EXTERNAL_VOCABULARY_REFERENCE.md §9.2a:
+//
+//   > "Zero numeric parameters. Anywhere. No RSI period, no signal-line period
+//   >  or type, no market baseline period, no volatility-band period or
+//   >  standard-deviation multiple, no price source, no timeframe. Searched
+//   >  across all 84 pages."
+//
+// What p.45-47 DOES establish — and this is the ONLY part of this file that is
+// source-backed — is that the four lines are real objects in this tradition:
+//   · an RSI line;
+//   · a trade signal line, which "provides entry signals when the RSI crosses
+//     over… much earlier than… the midline";
+//   · a market baseline, which "replaces in many respects the usual midline of
+//     the RSI except that it is a dynamic line";
+//   · volatility bands, "similar to a Bollinger band but applied to the market
+//     baseline of the indicator instead of price."
+//   Band semantics: "when the bands re-contain the RSI line after breakout, it
+//   is a sign of weakening and an impending reversal. This represents a stop hunt."
+//   Cross-link (p.38): "The 5 and 13 EMA's happen to match up the TDI used by
+//   Mauro" — immediately hedged with "any other rapidly moving pair of EMA's
+//   would achieve the same goal."
+//
+// THE PERIODS BELOW (13 / 2 / 7 / 34 / 1.6185) ARE THE PUBLICLY CIRCULATING
+// DEAN MALONE TDI DEFAULTS. Under SOURCING_HIERARCHY.md §1 those are TIER 3:
+// "EXTERNAL — NON-NORMATIVE, permanently. Closes nothing, unblocks nothing,
+// cited in no artifact." They are here ONLY so the panel renders something,
+// and reconstructing settings from "an improved version of the RSI" is
+// precisely the approximation D-030 forbids.
+//
+// CONSEQUENCES, STATED PLAINLY:
+//   · This panel MUST NOT be used to close A-039, A-031 ("blood in the water" —
+//     narrowed to the market-baseline cross, blocked downstream by A-039) or
+//     A-032 ("shark fin" — located on frame V07_00-18-25 as a red box drawn on
+//     a TDI sub-panel, still undefined).
+//   · Agreement between this panel and a chart in the course proves NOTHING,
+//     because the course's own settings are unknown. It cannot be back-solved
+//     from a rendering.
+//   · No backtest result that depends on these numbers may be reported as a
+//     test of the method. It would be a test of this file's guesses.
+// =============================================================================
+
+indicator(
+     title      = "MMM — TDI  ⚠ PARAMETERS NOT SOURCE-VERIFIED (A-039)",
+     shorttitle = "MMM TDI ⚠",
+     overlay    = false,
+     precision  = 2)
+
+// -------------------------------------------------------------------------
+// Inputs — every one of these is [TIER 3 / DEFAULT]. Change them freely;
+// nothing in this repository says what they should be.
+// -------------------------------------------------------------------------
+grpP = "TDI parameters  —  ⚠ ALL TIER 3 DEFAULTS, NONE SOURCE-VERIFIED (A-039)"
+
+src      = input.source(close, "RSI source", group = grpP)
+rsiLen   = input.int(13,  "RSI period",                minval = 1, group = grpP,
+     tooltip = "[TIER 3 DEFAULT] Public TDI default. MMM-NOTES states no RSI period anywhere in 84 pages.")
+fastLen  = input.int(2,   "Fast MA (RSI Price Line)",  minval = 1, group = grpP,
+     tooltip = "[TIER 3 DEFAULT] The source names this line and gives it no period.")
+slowLen  = input.int(7,   "Slow MA (Trade Signal Line)", minval = 1, group = grpP,
+     tooltip = "[TIER 3 DEFAULT] The source names this line and gives it no period.")
+bandLen  = input.int(34,  "Volatility band / Market Base Line period", minval = 2, group = grpP,
+     tooltip = "[TIER 3 DEFAULT] The source names both objects and gives neither a period.")
+bandMult = input.float(1.6185, "Volatility band std-dev multiple", minval = 0.1, step = 0.0001, group = grpP,
+     tooltip = "[TIER 3 DEFAULT] The source gives no multiple.")
+
+maType = input.string("SMA", "MA type for the two signal lines", options = ["SMA", "EMA", "WMA"], group = grpP,
+     tooltip = "[TIER 3 DEFAULT] The source does not say the lines are moving averages of any particular type.")
+
+f_ma(series float s, simple int len, simple string t) =>
+    switch t
+        "EMA" => ta.ema(s, len)
+        "WMA" => ta.wma(s, len)
+        => ta.sma(s, len)
+
+// -------------------------------------------------------------------------
+// Visibility toggles
+// -------------------------------------------------------------------------
+grpV = "Lines  —  colours are DEFAULT (no source states a TDI colour)"
+
+showRsi   = input.bool(true,  "RSI line",                group = grpV, inline = "v1")
+colRsi    = input.color(color.new(#B2B5BE, 40), "",      group = grpV, inline = "v1")
+showFast  = input.bool(true,  "Fast MA / RSI Price Line", group = grpV, inline = "v2")
+colFast   = input.color(color.new(#00E676, 0), "",       group = grpV, inline = "v2")
+showSlow  = input.bool(true,  "Slow MA / Trade Signal",  group = grpV, inline = "v3")
+colSlow   = input.color(color.new(#FF1744, 0), "",       group = grpV, inline = "v3")
+showBase  = input.bool(true,  "Market Base Line",        group = grpV, inline = "v4")
+colBase   = input.color(color.new(#FFD600, 0), "",       group = grpV, inline = "v4")
+showBands = input.bool(true,  "Volatility Bands",        group = grpV, inline = "v5")
+colBands  = input.color(color.new(#2962FF, 0), "",       group = grpV, inline = "v5")
+fillBands = input.bool(true,  "Shade between the bands", group = grpV)
+
+grpL = "Reference levels  —  [TIER 3 DEFAULT], not stated by any source"
+showLevels = input.bool(true, "Show 32 / 50 / 68 levels", group = grpL)
+lvlUp      = input.int(68, "Upper level", group = grpL, inline = "lv")
+lvlMid     = input.int(50, "Mid level",   group = grpL, inline = "lv")
+lvlDn      = input.int(32, "Lower level", group = grpL, inline = "lv")
+
+// -------------------------------------------------------------------------
+// Calculation
+//   RSI  →  the four TDI lines. Note the bands are built on the RSI series,
+//   not on price — that much IS what MMM-NOTES p.45 describes ("applied to the
+//   market baseline of the indicator instead of price"). The PERIODS used to
+//   build them are not.
+// -------------------------------------------------------------------------
+rsiVal = ta.rsi(src, rsiLen)
+
+baseLine = ta.sma(rsiVal, bandLen)                  // Market Base Line (BB basis)
+dev      = bandMult * ta.stdev(rsiVal, bandLen)
+bandUp   = baseLine + dev                           // upper Volatility Band
+bandDn   = baseLine - dev                           // lower Volatility Band
+
+fastMa = f_ma(rsiVal, fastLen, maType)              // RSI Price Line
+slowMa = f_ma(rsiVal, slowLen, maType)              // Trade Signal Line
+
+// -------------------------------------------------------------------------
+// Plots
+// -------------------------------------------------------------------------
+pUp   = plot(showBands ? bandUp   : na, "Volatility Band Up",   color = colBands, linewidth = 1)
+pDn   = plot(showBands ? bandDn   : na, "Volatility Band Down", color = colBands, linewidth = 1)
+fill(pUp, pDn, color = fillBands and showBands ? color.new(colBands, 92) : na, title = "Band fill")
+
+plot(showBase ? baseLine : na, "Market Base Line", color = colBase, linewidth = 2)
+plot(showRsi  ? rsiVal   : na, "RSI",              color = colRsi,  linewidth = 1)
+plot(showFast ? fastMa   : na, "Fast MA (RSI Price Line)",   color = colFast, linewidth = 2)
+plot(showSlow ? slowMa   : na, "Slow MA (Trade Signal Line)", color = colSlow, linewidth = 2)
+
+// Reference levels are drawn with `plot`, not `hline`: Pine v5 requires
+// `hline`'s price to be a const/input, so it cannot take a `showLevels ? … : na`
+// expression. `plot` accepts the series and keeps the toggle working.
+plot(showLevels ? lvlUp  : na, "Level upper", color = color.new(color.gray, 50), style = plot.style_linebr)
+plot(showLevels ? lvlMid : na, "Level mid",   color = color.new(color.gray, 20), style = plot.style_linebr)
+plot(showLevels ? lvlDn  : na, "Level lower", color = color.new(color.gray, 50), style = plot.style_linebr)
+
+// A persistent on-panel reminder that these numbers are guesses. Deliberately
+// not removable by an input — the caveat should travel with the chart.
+// Held in a `var` and moved rather than re-created, so realtime bars do not
+// accumulate one label per closed bar.
+var label warnLbl = na
+if barstate.islast
+    label.delete(warnLbl)
+    warnLbl := label.new(bar_index, 100,
+         "⚠ TDI parameters are NOT source-verified — A-039 DO NOT CODE",
+         style     = label.style_label_down,
+         color     = color.new(color.orange, 25),
+         textcolor = color.white,
+         size      = size.tiny)
