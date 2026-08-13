@@ -3403,3 +3403,59 @@ None. `PT-001` remains pre-registered and unrun.
 4. V05 review, V04 R2 review.
 
 ---
+
+## 2026-08-12 — Reviewer Session (V05 R3)
+
+### Lesson
+
+V05
+
+### Review Objective
+
+Remediation verification of `V05_REVIEW_R2.md` `M7`–`M11` (open items 47–51), applied at
+`5bcb720`. Convened by the owner after the branch merge (`9ad57b8`) was pushed.
+
+### Source Evidence Reviewed
+
+`V05_TRANSCRIPT.md` (marker set re-extracted: 1,353; the `M8`/`M10` neighbourhoods and
+`[00:57:39]` re-read from the body); frame 26 `V05_00-40-04` re-opened, all four `R = `
+labels re-cropped and read at 10× by this session.
+
+### Student Artifacts Reviewed
+
+`CONTRADICTIONS.md` (M7's four sites), `V05_MASTERY_REPORT.md` §E/§J, `V05_SOURCE_NOTES.md`
+§4c, `AUTOMATION_AMBIGUITIES.md` `A-042`/`A-018`, `04_SCREENSHOTS/V05/INDEX.md` row 26 —
+each re-derived from source **before** `git show 5bcb720` was read. Also verified: the
+merge commit touched no V05 artifact (diff `5bcb720..9ad57b8`).
+
+### Findings
+
+All five minors verified applied and correct; superseded text retained at every site that
+changed a claim. The `M11` marker-existence sweep was **re-run from scratch**: 7
+non-resolving citations, all accounted for (6 cross-lesson, 1 burned-in slide time) —
+identical to the remediation's stated result; the displaced cluster is closed at three.
+Frame 26's disputed left label read a third time: `R = ` legible, **value not legible**
+(cyan MA through the digits) — R2's refusal to transcribe R1B's `74.6` is upheld.
+Zero new findings. Three notes (`V05_REVIEW_R3.md` §3).
+
+### Required Corrections
+
+None for the student. Owner actions carried unchanged from R2 §5: open items 35, 36, 40;
+R1B naming; parallel-session ruling. Dimension-B/G re-labelling stays blocked on open
+item 36 and does not gate (§9 criterion 14).
+
+### Decision
+
+**PASS** — confidence HIGH. 0 critical, 0 major, 0 minor. **V05 is COMPLETE.**
+`REVIEW_INDEX.md` STATUS, decision table, lineage note and open items 47–51 updated.
+
+### Git
+
+`V05_REVIEW_R3.md` added; `REVIEW_INDEX.md`, `LOG.md`, `CHANGELOG.md` updated. Committed
+and pushed this session (owner instruction: push immediately).
+
+### Next Review Trigger
+
+V06 submission, or `CUMULATIVE_25.md` if that milestone arrives first.
+
+---
