@@ -11,13 +11,41 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V06 — STUDENT PASS COMPLETE 2026-08-12, AWAITING
-                        INDEPENDENT REVIEW R1)
-VIDEOS PASSED:       5  (V01, V02, V03, V04, V05 — V05 PASS at R3 2026-08-12,
-                        COMPLETE)
-CURRENT LESSON:      **V06 — "MICRO DAILY TRENDS". STUDENT PASS COMPLETE
-                     2026-08-12, submitted as REVIEW REQUIRED (not PASS).
-                     AWAITING REVIEW R1.**
+VIDEOS IN PROGRESS:  0
+VIDEOS PASSED:       6  (V01, V02, V03, V04 — V04 PASS at R2, COMPLETE;
+                        V05 — PASS at R3 2026-08-12, COMPLETE;
+                        V06 — PASS at R2 2026-08-13, COMPLETE)
+NEXT LESSON:         V07 — GATE OPEN under D-024 (V06 carries a reviewer PASS
+                     with 0 CRITICAL / 0 MAJOR). NOT YET STARTED.
+CURRENT LESSON:      **V06 — "MICRO DAILY TRENDS". REVIEWED 2026-08-13 (R2):
+                     PASS, confidence HIGH, 0 CRITICAL / 0 MAJOR / 0 MINOR
+                     open. V06 IS COMPLETE (D-004). THE V07 GATE IS OPEN.**
+
+                     R1 (2026-08-13) returned REVISE — 0 CRITICAL / 1 MAJOR /
+                     3 MINOR, open items 57-60. ALL FOUR CLOSED AND VERIFIED AT
+                     R2. The MAJOR (item 57) was a legible "3:45am or 9:45am
+                     est." on frame V06_00-48-29 transcribed as illegible, whose
+                     absence was then asserted as "no session clock appears on
+                     any of the 32 frames" in two files. Its required 31-frame
+                     re-sweep surfaced a FIFTH defect (M5: five wrong R-label
+                     values in V06_SOURCE_NOTES.md §11b, disagreeing with two
+                     files that were correct), fixed and closed in-round.
+                     DIMENSION B (Recognition) IS CARRIED AS "BLOCKED BY D-030,
+                     EXCLUDED FROM PASS/FAIL PER OWNER DIRECTIVE" — not graded,
+                     not a failure. PROCESS DISCLOSURE: the R2 remediation and
+                     verification were owner-directed and run by the session that
+                     wrote R1 (D-023 precedent), each verification against a
+                     primary-source re-read; CUMULATIVE_25.md should re-sample
+                     this round.
+
+                     *(Superseded SUMMARY text, retained per REMEDIATION_PROTOCOL
+                     §2 — before V06's review this block read `VIDEOS IN
+                     PROGRESS: 1 (V06 — STUDENT PASS COMPLETE 2026-08-12,
+                     AWAITING INDEPENDENT REVIEW R1)`, `VIDEOS PASSED: 5`, and
+                     `CURRENT LESSON: V06 … STUDENT PASS COMPLETE 2026-08-12,
+                     submitted as REVIEW REQUIRED (not PASS). AWAITING REVIEW
+                     R1.` The narrative below was written at submission time and
+                     is retained as written.)*
 
                      V06 IS THE SECOND CONSECUTIVE LESSON WITH ZERO COURSE-AUTHOR
                      RUNTIME, and the first in which that exclusion is expensive. A

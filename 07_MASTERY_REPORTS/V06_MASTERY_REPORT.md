@@ -43,6 +43,32 @@ This is a **submission for review**, not an authorization (`SETUP_ISSUES.md` I-0
 > **`STUDENT STATUS` therefore stands at `REVIEW REQUIRED`** — and would stand there under
 > `D-033` on dimension B alone.
 
+> ## ✅ REVIEWER CERTIFICATION 2026-08-13 — **V06 PASSES AT R2 AND IS COMPLETE**
+>
+> **Recorded here as a pointer, not as a re-grade of anything above.** `STUDENT STATUS`
+> above is deliberately left at `REVIEW REQUIRED`: under `D-004` that field is *"a submission
+> for review, not an authorization"*, and under `D-003` the certifying judgement is the
+> independent reviewer's, not this report's. V01–V05 carry the same unchanged submission
+> status after passing; **the authoritative pass/fail record is `18_REVIEW/REVIEW_INDEX.md`.**
+>
+> | Field | Value |
+> |---|---|
+> | Reviewer decision | **PASS**, confidence **HIGH** — `18_REVIEW/V06/V06_REVIEW_R2.md`, 2026-08-13 |
+> | Counts at R2 | **0 CRITICAL / 0 MAJOR / 0 MINOR open** (1 NOTE, closed as an observation) |
+> | Prior round | `V06_REVIEW_R1.md` — `REVISE`, 0 CRITICAL / 1 MAJOR / 3 MINOR |
+> | R1 open items 57–60 | ✅ **all CLOSED — VERIFIED at R2.** Remediated at `4c89db1`; item 57's required frame sweep surfaced a fifth defect (`M5`, §11b R-label values), fixed and closed in-round |
+> | Advancement | **AUTHORIZED. V06 is `COMPLETE`; the V07 gate OPENS under `D-024`.** |
+>
+> **Dimension B is still blocked, and the PASS does not say otherwise.** B was **carved out
+> of pass/fail by owner directive** (blocked by `D-030`, *push* undefined) — it is carried as
+> *"blocked, excluded from pass/fail"*, not as graded and not as a failure. Everything this
+> report says about B above remains true as written.
+>
+> **Process disclosure, carried from `V06_REVIEW_R2.md`'s header:** the R2 remediation and
+> verification were **owner-directed and performed by the session that wrote R1** (per the
+> `D-023` precedent), with every verification made against a primary-source re-read. The next
+> fully independent check is `CUMULATIVE_25.md`, which should re-sample this round.
+
 ---
 
 ## THE ONE-PARAGRAPH SUMMARY
