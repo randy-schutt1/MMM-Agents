@@ -5800,3 +5800,137 @@ closure to an independent reviewer. Project precedent is explicit that a `REVISE
 ### Next Review Trigger
 
 **V08 R2**, on verification of items 64–66.
+
+---
+
+## 2026-08-13 — Reviewer Session (V08 R2) — the closing round: items 64–66 verified, the presenter question ruled, V08 COMPLETE
+
+### Lesson
+
+V08 — *"Jim's Journey in Learning and Trading MMFX"* (`Bootcamp1 Wk2 032612 Part3 (43mins).swf`).
+
+### Review Objective
+
+Independent verification of the remediation of `V08_REVIEW_R1.md`'s three `MINOR` findings
+(open items 64–66), plus a full standard pass for regression. `D-003`: this session authored
+**no** V08 artifact and **no** part of the remediation, and re-derived every claim from primary
+sources **before** reading the remediation's account of itself.
+
+### Review Basis
+
+Branch **`review/v08-r2`, cut from the integration branch at `a6ee013`**, in a **dedicated
+worktree** at `/Users/randyschutt/Desktop/Trading/MMM-Agents-review-v08-r2` (`D-038`).
+**`fix/v08-r1-minors` was ALREADY MERGED** when the round opened (`dd787d9` / `a6ee013`), so the
+review was taken on the integration tip rather than on the fix branch. `git fetch` confirmed the
+integration branch level with `origin` — 0 ahead, 0 behind.
+
+### Source Evidence Reviewed
+
+`02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` `[00:27:41]`–`[00:28:40]` and its whole `Ray`/`Jim` token
+set; `02_TRANSCRIPTS/V08/V08_TRANSCRIPT.md` `[00:00:32]`–`[00:06:05]`, `[00:17:29]`, `[00:20:49]`
+and its speaker-identification section; `02_TRANSCRIPTS/V06/V06_TRANSCRIPT.md` (`Ray` sweep);
+`00_SYSTEM/SOURCE_MANIFEST.md` (part ordering); `03_LESSON_NOTES/V02_SOURCE_NOTES.md` and
+`V03_SOURCE_NOTES.md` (the coach roster); and
+`04_SCREENSHOTS/V08/V08_00-43-04_end-card-innermost-stage-unanswered.png` **read as pixels**.
+
+### Student Artifacts Reviewed
+
+`11_CONTRADICTIONS/CONTRADICTIONS.md` `C-009` `Source A′`; `00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md`
+§2.1a; `06_MANUAL_BACKTEST/V08/BT_V08_0001.md` §5; `06_MANUAL_BACKTEST/V08/run_pt034.py`;
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-034_crown_jewel_three_to_one.md`;
+`04_SCREENSHOTS/V08/INDEX.md`; `03_LESSON_NOTES/V08_SOURCE_NOTES.md` §12.
+
+### Findings
+
+**Items 64, 65 and 66 are all ✅ CLOSED — VERIFIED. 0 `CRITICAL`, 0 `MAJOR`, 0 `MINOR`, 3 `NOTE`.**
+
+Nothing was taken on the remediation's word:
+
+- **Item 64** — the V07 `[00:28:02]`–`[00:28:31]` citation was **read at source**. All four
+  fragments verbatim; the `[00:28:28]` omission honestly marked with an ellipsis; and
+  `[00:28:31]`'s garble *"if it doesn't do what you expect **in** your flashcard isn't the same"*
+  **preserved** — the exact passage V07's item 63 was charged for smoothing to *"and"*, avoided
+  in the one file where tidying it would have been easiest. `GUEST` tag, §6c cross-reference and
+  `PROVISIONAL` all correct; Source A verbatim and the block purely additive.
+- **Item 65** — `entry_for()` and `precompute_close_entries()` were **read**, and both documented
+  descriptions are **exact** (`resolve(hi, lo, i, cl[i], d, n)` — the null's entry price is
+  literally the bar's close). **`PT-034` is byte-unchanged**: `git log --follow` shows exactly
+  one commit ever and `git diff a4ab65a HEAD` on the file is **empty**. All four `N1` medians
+  re-read from the committed output — 0.2450 / 0.2426 / 0.2424 / 0.2429 — so the claimed
+  `0.2424–0.2450` is exact, and the break-even recomputes to 0.250037. §2.1a goes **beyond**
+  R1's ask: it names the bias it guards and sets a reviewer-enforcement floor.
+- **Item 66** — the player chrome was cropped, linear-stretched and magnified 20×, and the
+  burned-in elapsed field **reads `43:04`**. Four references verified updated; an independent
+  repo sweep for the old string found **no fifth** (every survivor is a retention block, the R1
+  file, `LOG.md` history, or a real `[00:43:10]` marker in V01/V06). The rename preserves the
+  blob at 100 %. All 26 frame timecodes re-derived: row 26 is the only one over raw runtime, at
+  exactly `ceil(2583.745) = 2584`, and nothing flags under `> ceil(runtime)`.
+
+**`N1` — the presenter-identity question is RULED, not deferred a second time.**
+**V07's and V08's presenters are DIFFERENT MEN, `HIGH` confidence, on textual evidence only.**
+V08's speaker names **Ray** three times in the third person, at `[00:00:49]` — forty-nine seconds
+into Part 3 — as the man who *"was"* taking the questions, and again at `[00:05:59]` handing the
+baton; `Ray` occurs **zero** times in V07's body and **zero** in V06's. V07 is the Q&A part
+(sixteen named questioners read aloud); V08 reads none. Independently, V07's presenter defers to
+**Jim** ×3 and at `[00:07:43]` **disclaims** the high-of-day skill that V08's second half teaches
+under a deck titled *"Jim's Journey"*, and the programme roster names Ray and Jim as distinct
+coaches. Probable names (V07 = Ray, V08 = Jim) at `MEDIUM` — provenance, not evidence, per
+`D-033` provision 2 — held back by one residual stated rather than smoothed: V08 `[00:17:29]`
+*"Jim's right about that one"* is unexplained, and does **not** touch the different-men finding,
+which does not require the identification. **No cross-file F0 comparison was used**:
+`COURSE_PROGRESS.md` V06 GATE item (a) prohibits it, and the ruling is unchanged without it.
+**R1's *"a different guest presenter"* is SUPPORTED — and the remediation's refusal to write it
+unverified was still the right act**, so no finding is charged. Carried as item 71, a
+documentation follow-up not owed as a defect.
+
+**`N2` — a concurrency incident, charged to process and not to V08.** Partway through this review
+a concurrent session moved the **shared main working directory** onto `review/v09` (`bb4097b`), a
+tree descended from `f3f9006` that predates **both** the V07 R2/R3 merge **and** the entire V08
+remediation. The failure mode is **silent** — plausible file contents, no error, and a reviewer
+would have found the remediation's work simply absent. It surfaced only because `18_REVIEW/V07/`
+listed one file where three are committed ancestors. **Contained:** a dedicated worktree was
+created and every post-switch read re-run there before use; two stale `REVIEW_INDEX.md` reads
+were discarded and redone. **No conclusion rests on a read from the wrong tree**, and the main
+directory was left on `review/v09` as found. Carried as item 72.
+
+**`N3`** — the bracketed ASR expansion *"second rail[road] tracks"*, already ruled not-a-defect at
+V07 R3; recorded only so a future mechanical verbatim sweep does not re-charge a closed question.
+
+**Regression: none.** The remediation touched 8 files — additive but for three replaced timecode
+strings, each read individually. No script, data file, transcript, homework artifact or
+pre-registration was altered. `crosscheck_pt034_vs_pt033.py` re-runs to `CROSS-CHECK: PASS`.
+
+**Dimension B** carried from R1 **unchanged**: `NOT SATISFIED`, blocked by `D-030`, structural,
+not attributable to the student, **no severity charge**. Open item 36 is owed for the **fifth**
+lesson-round and needs an **owner** ruling; it is not a gate and it did not hold V08.
+
+### Required Corrections
+
+**None. Nothing is owed by V08.** Items 67 (a `PT-034` successor), 71 and 72 are carried as
+recommendations and process matters, none of them a gate.
+
+### Decision
+
+**`PASS`. CONFIDENCE `HIGH`. V08 is `COMPLETE`.** The V09 gate was already OPEN under `D-024` and
+is unaffected.
+
+### Git
+
+Commits on `review/v08-r2`, all with explicit paths (`git add -A` never used), `git diff --staged`
+inspected before each:
+
+```text
+18_REVIEW/V08/V08_REVIEW_R2.md   (new)
+18_REVIEW/REVIEW_INDEX.md        (STATUS, decision table, delta, severity totals,
+                                  E11/E19/E20 rows, items 64-66 closed, items 71-72 opened)
+LOG.md                           (this entry)
+```
+
+`REVIEW_INDEX.md` and `LOG.md` are written on the task branch as **evidence ledgers** per
+`D-038a`, and the branch is merged back by this reviewer as the deliberate `D-038` merge-back
+step, the verdict being clean.
+
+### Next Review Trigger
+
+**Independent review R1 of V09.** Its student submission exists on the unmerged branch
+`video/v09` (`bb4097b`) and was **not** part of this round.
