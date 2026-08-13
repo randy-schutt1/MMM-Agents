@@ -2082,3 +2082,123 @@ origin is not a measurable rule.
 
 `A-078` (the number), `A-079` (the tracer), `A-010` (the anchor), `D-008`, `D-030`,
 `SOURCING_HIERARCHY.md` §3.2; `04_SCREENSHOTS/V10/INDEX.md` frame `75:57`.
+
+---
+
+## C-018 — `mayonnaise`: Tier 2 and the owner say **200**; V11 puts the word in the same breath as **"the 50"**
+
+**Filed by:** V11 Student session, 2026-08-13, branch `video/v11`
+**Type:** **Tier 1 (course recording) vs Tier 2 (`MMM-NOTES`) + owner attestation** —
+`SOURCING_HIERARCHY.md` §3.3, `D-039`, `D-040`
+**Status:** ⚠ **`CONFLICT — OWNER ADJUDICATION REQUIRED`. NOT ADJUDICATED HERE.**
+**Severity of consequence:** `A-020` is one of the **three highest-priority reconciliation targets
+in the project** (`SOURCING_HIERARCHY.md` §3.4) — a record closed on a tier a later video can
+overturn. This is the first lesson to test it.
+
+### Why this was looked for rather than stumbled on
+
+`SOURCING_HIERARCHY.md` §3.4 is mandatory: *"Any session reaching a lesson that touches cross-pair
+analysis, the level-counting scheme, or **the moving-average set** must re-check these three
+against the lesson and run §3.1 if Tier 1 speaks."* V11 touches the moving-average set. §3.1 step 1
+was run before the source notes were written. **This is what the check found.**
+
+### The conflict
+
+| Source | Tier | Statement |
+|---|---|---|
+| `MMM-NOTES` **p.66**, entry list | **2** | *"**Hold the Mayo – 200 Bounce**"* |
+| Project owner, attestation 2026-08-13 | — | Mayo = **200** (`D-039`, `A-020`'s closure block) |
+| **V11 `[00:46:45]`** | **1** | *"Look where the **averages** are. **There's the mayonnaise. There's the 50.**"* |
+
+**The audio is not in dispute.** The ASR transcript and an independent Whisper `small.en` pass
+produce the **same seven words** (`V11_TRANSCRIPT.md` § SPOT-CHECK RESULTS, clip `c1`). Whatever
+else is uncertain here, the utterance is verified by two engines.
+
+### ⭐ WHY THIS IS NOT SIMPLY *"THE RECORDING WINS"*
+
+§3.3's resolution rule is **the recording wins**. It is stated here that this rule **cannot be
+applied to close this record**, and the reason is the substance of this entry.
+
+**The recording is itself two-ways readable:**
+
+| Reading | Parse | Consequence |
+|---|---|---|
+| **A — apposition** | *"There's the mayonnaise[ — that is], there's the 50"* | **Mayo = 50.** `A-020` is contradicted |
+| **B — enumeration** | *"There's the mayonnaise[,] there's the 50"* — two of the several lines on screen, pointed at in turn | **Mayo ≠ 50.** `A-020` is untouched |
+
+**Three considerations, and they do not agree:**
+
+1. **The plural favours B.** The sentence opens *"Look where the **averages** are"*. He is
+   directing attention at more than one line, and the frame shows at least four.
+2. **⭐ The immediate context favours B strongly, and this is the load-bearing point.** Seven
+   seconds later, `[00:46:52]`: *"Remember I told you **there's the 50**. RSI will find resistance
+   where? Around 60, right?"* — **that *"the 50"* is unambiguously the RSI market baseline**, which
+   this same lesson has just spent fifteen minutes defining (printed at frames `31:25` and `30:10`:
+   *"Mid Point or Basis Level of 50"*, *"Above/Below Market base line (50)"*). The phrase *"the 50"*
+   occurs **14 times in V11** and every unambiguous instance is the sub-graph baseline. If
+   `[00:46:45]`'s *"the 50"* is also the baseline, **the sentence maps nothing at all** — he points
+   at a price-pane average, then at a sub-graph line, in one breath, while reading a downtrend off
+   both panes at once. Which is exactly what the passage is doing.
+3. **The frame cannot arbitrate, and it was extracted specifically to try.**
+   `04_SCREENSHOTS/V11/INDEX.md` §4 reports the negative in full: **at least four moving averages
+   (cyan, red, yellow, white), price below the slowest two, a literal blue box, an ADR panel — and
+   NO indicator legend, NO period label, NO settings dialog.** The price pane's upper-left is
+   occluded by the drawing toolbar. **`A-020`'s own *Required Research* — *"a screenshot showing
+   the chart's indicator list or a labelled average, at a timestamp where he says the word"* — is
+   STILL UNSATISFIED**, at the one timestamp in the corpus that finally met its first condition.
+
+### The governing precedent — `C-011`
+
+`C-011` established the asymmetry this record turns on, and `SOURCING_HIERARCHY.md` §3.3 carries
+the note verbatim:
+
+> *"'The video wins' is a rule about **which source is superseded**, not a promise that Tier 1
+> supplies a usable answer. … A session that treats a won contradiction as licence to adopt
+> whatever Tier 1 fragment is nearest has made the `D-030` error by another route."*
+
+**That is precisely the trap here**, and the trap is unusually well-baited: the fabricated,
+quarantined `NOTES.md` for this very lesson asserts *"50 (Mayo)"* (`Q-012` §2). **A session that
+adopted reading A would find itself agreeing with a document this project quarantined**, on a
+coincidence. That is not corroboration; it is a fabricated file containing one token that happens
+to match one available reading, which is `Q-001`'s original failure mode exactly, and `A-020`'s own
+*"What is NOT evidence"* section already warns against it in terms.
+
+### DISPOSITION — what this session does and does not do
+
+**Does:**
+- Files this record, tagged `MMM-NOTES` vs the **course author**, carrying **both** the page
+  (`p.66`) and the timestamp (`[00:46:45]`).
+- Annotates `A-020` with `CONFLICT — OWNER ADJUDICATION REQUIRED` and the V11 timestamp
+  (`SOURCING_HIERARCHY.md` §3.1 step 3), leaving all superseded text visible (step 4).
+- Records the negative screenshot result rather than omitting it.
+- Carries it to `REVIEW_INDEX.md` as an open item and surfaces it to the owner.
+
+**Does NOT — each named because each is a live temptation:**
+- **Does not reopen `A-020`.** A record closed on owner attestation is not reopened by an agent
+  finding an ambiguous sentence.
+- **Does not re-close `A-020` as `Mayo = 50`.** That adopts reading A on no better evidence than B.
+- **Does not blend.** *"Mayonnaise is the 200 and sometimes the 50"* is a composite no source
+  states; §3.1 forbids it in terms.
+- **Does not treat the quarantined `NOTES.md` as evidence** in either direction.
+- **Does not touch `C-010`** (the 800/blueberry record), which is a separate question about a
+  different nickname and is unaffected.
+
+### ⚠ A NOTE ON `SETUP_ISSUES.md`
+
+`SOURCING_HIERARCHY.md` §3.2 Case C also requires this be logged in `SETUP_ISSUES.md`.
+**`SETUP_ISSUES.md` is a POLICY ledger and may not be edited from a task branch (`D-038a`).** That
+step is therefore **OWED, NOT DONE**, and is carried as an explicit open item in
+`18_REVIEW/REVIEW_INDEX.md` for the integration step. Recorded rather than silently skipped.
+
+### The cheap next step
+
+**V12 is `Bootcamp1 Wk4 040812 Part2 (55mins).swf` — the same session, the same day, the same
+charts, 55 minutes.** If the nickname recurs there with a legend or a settings dialog visible,
+`A-020`'s *Required Research* is one frame away and this record closes on Tier 1 evidence. **That
+is a reason to keep going to V12, and it is noted for the ingestion plan.**
+
+### Related
+
+`A-020`, `C-010`, `C-011`, `D-039`, `D-040`, `SOURCING_HIERARCHY.md` §3.1/§3.2 Case C/§3.3/§3.4;
+`Q-012` §2; `02_TRANSCRIPTS/V11/V11_TRANSCRIPT.md` § SPOT-CHECK RESULTS clip `c1`;
+`04_SCREENSHOTS/V11/INDEX.md` §4; `03_LESSON_NOTES/V11_INTERPRETATION.md` Q2.
