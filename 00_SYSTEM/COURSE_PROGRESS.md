@@ -11,16 +11,94 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  2  (V07 — STUDENT PASS 2026-08-13, R1 returned REVISE
+VIDEOS IN PROGRESS:  3  (V07 — STUDENT PASS 2026-08-13, R1 returned REVISE
                         0C/0M/3m, IN REMEDIATION, three minors owed;
-                        V08 — STUDENT PASS COMPLETE 2026-08-13, submitted as
+                        V08 — R1 returned REVISE 0C/0M/3m 2026-08-13,
+                        IN REMEDIATION, open items 64-66 owed, COMPLETE at R2;
+                        V09 — STUDENT PASS COMPLETE 2026-08-13, submitted as
                         REVIEW REQUIRED, AWAITING INDEPENDENT REVIEW R1)
 VIDEOS PASSED:       6  (V01, V02, V03, V04, V05, V06 — all COMPLETE)
-NEXT LESSON:         V09 — **GATE CLOSED.** V08 carries a STUDENT status only, and
+NEXT LESSON:         V10 — **GATE CLOSED.** V09 carries a STUDENT status only, and
                      D-004 opens a gate on a REVIEWER verdict, never on a student
-                     submission. No V09 artifact of any kind until V08 R1 returns;
+                     submission. No V10 artifact of any kind until V09 R1 returns;
                      what it returns then governs per D-024.
-CURRENT LESSON:      **V08 — "JIM'S JOURNEY IN LEARNING AND TRADING MMFX".
+CURRENT LESSON:      **V09 — NO PRINTED TITLE. STUDENT PASS COMPLETE 2026-08-13,
+                     submitted as REVIEW REQUIRED (not PASS). AWAITING REVIEW R1.**
+
+                     THE V09 GATE WAS VERIFIED OPEN IN REVIEW_INDEX.md BEFORE ANY
+                     V09 ARTIFACT WAS CREATED. V08 R1 returned REVISE with 0
+                     CRITICAL / 0 MAJOR / 3 MINOR, which opens the gate under
+                     D-024 with the minors deferred and still owed. The V09 GATE
+                     block further down still read CLOSED when this session
+                     started: it was written before V08 R1 returned and was
+                     correct when written. REVIEW_INDEX.md is the authoritative
+                     register. Superseded text retained per REMEDIATION_PROTOCOL
+                     §2 rather than deleted.
+
+                     NO TITLE IS ASSERTED. Unlike V07 and V08 this file has NO
+                     title slide -- it opens with the presenter already speaking
+                     over the previous session's closing diagram. The quarantined
+                     header's "Advanced Execution Review, Homework Chart
+                     Walkthroughs & Trade Filtering" is fabricated (Q-010).
+
+                     FIFTH CONSECUTIVE LESSON WITH ZERO COURSE-AUTHOR RUNTIME
+                     (V05-V09), and THE FIRST WHOSE CONTINUITY WITH THE PREVIOUS
+                     LESSON WAS PREDICTED IN ADVANCE AND THEN CONFIRMED. The V08
+                     GATE carry-forward set the test: if V09 opens with V08's
+                     announced-but-missing section 3, it is the same presenter
+                     continuing. It does. Four non-acoustic strands. The acoustic
+                     screen was NOT run across files, as V07's carry-forward
+                     prohibits.
+
+                     WHAT V09 CONTRIBUTES -- and it is the corpus's first of its
+                     kind: THE POSITION-SIZING RULE. balance x 0.02 / stop_pips,
+                     CUMULATIVE across all open positions (stated twice, easiest
+                     thing in V09 to code wrong), same lot size through losses
+                     1-3, recalculate on loss 4 and after every win, 25/50 at 2:1
+                     and 15/50 once HOD/LOD entries are mastered. Every number
+                     re-derived in committed code: 6 of 7 close exactly.
+
+                     IT ALSO ANSWERS V08'S UNANSWERED QUESTION. V08 ends on a red
+                     "?" at the centre of its four-ring model; V09 [00:19:48]-
+                     [00:20:27] says the innermost ring is discipline in keeping
+                     to the risk plan.
+
+                     PT-034/BT_V09_0001: "highly unlikely we're gonna lose three
+                     or four times in a row" -- CONTRADICTED AS STATED, and the
+                     contradiction needs NO measurement: at V09's own advertised
+                     >50% accuracy, P(any 4-loss run in 200 trades) = 99.9%; you
+                     would need p >= 84.2%. The CLUSTERING half is VOID because
+                     N3, the pre-registered sanity control, FAILED and caught a
+                     real bias in this session's own estimator. CLUSTERING
+                     CONFIRMED is NOT reported despite the runner printing it.
+
+                     HOMEWORK: H1 done and cross-checked 16/16 against TWO
+                     independent sources (V09's worked example, and MMM-NOTES
+                     p.67's table, which never states the formula in words).
+                     Comprehension 9 right / 0 wrong / 1 manual, answers committed
+                     before the scorer existed. H3/H4 DEFERRED under D-019,
+                     blocked by A-004 -- and a substitute predictor was proposed,
+                     then REFUSED in writing.
+
+                     WHY REVIEW REQUIRED AND NOT PASS: DIMENSION B (Recognition)
+                     is D-030-blocked for the FIFTH lesson running and the project
+                     still has no vocabulary for that disposition (REVIEW_INDEX.md
+                     open item 36). Owner ruling owed.
+
+                     ONE CHECKLIST BOX IS UNCHECKED AND DISCLOSED: the recipe's
+                     transcript-first evidence order was NOT met. Auditing a
+                     fabricated VISUAL_INDEX.md and naming 27 frames both require
+                     opening images. Every substantive note row instead carries a
+                     basis tag (AUDIO / PRINTED / AUDIO+PRINTED / VISUAL) so a
+                     reviewer can strike every non-AUDIO row and see what survives.
+                     Submitted as a deviation, not as a compliant alternative.
+
+                     NO I-009 COLLISION. V09 ran in a dedicated worktree on branch
+                     video/v09 under D-038, with evidence ledgers written on the
+                     task branch as D-038a now expects.
+
+                     ---- V08, retained ----
+                     **V08 — "JIM'S JOURNEY IN LEARNING AND TRADING MMFX".
                      STUDENT PASS COMPLETE 2026-08-13, submitted as REVIEW
                      REQUIRED (not PASS). AWAITING REVIEW R1.**
 
@@ -791,6 +869,66 @@ V08 GATE:            **OPEN. V07 R1, 2026-08-13 — REVISE, 0 CRITICAL / 0 MAJOR
                      REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
                      verdict, not a student submission.
 
+V10 GATE:            **CLOSED.** V09's student pass is complete and submitted as
+                     REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
+                     verdict, never on a student submission. No V10 artifact of any
+                     kind until V09's R1 returns, and what it returns then governs
+                     per **D-024**.
+                     Carry into V10, and read this before starting it:
+                     (a) **SPEAKER IDENTIFICATION IS STILL THE FIRST STEP.**
+                     Course-author runtime: ~100% (V03) -> ~31% (V04) -> 0% (V05)
+                     -> 0% (V06) -> 0% (V07) -> 0% (V08) -> **0% (V09)**. FIVE
+                     consecutive lessons with no course author. **V10 IS
+                     Bootcamp1 Wk3 040112 (96mins) -- A NEW SESSION DATE
+                     (2012-04-01) AND A NEW WEEK.** V06-V09 all shared 2012-03-26;
+                     V10 does not. That is a REASON TO EXPECT A CHANGE, not a
+                     reason to assume one. TEST IT. Do not use the acoustic screen
+                     across files.
+                     (b) **V09 IS THE FRONT OF A PAIR THAT NOW READS AS ONE TALK.**
+                     V08+V09 are one presenter's ~95-minute session in two files,
+                     and the pattern was PREDICTED then CONFIRMED. If V10 opens
+                     mid-thought, check the previous file's closing frame first --
+                     V09's own splash frame was V08's end card, and that is the
+                     cheapest continuity check in the corpus.
+                     (c) **A-004 IS NOW THE PROJECT'S LARGEST SINGLE BLOCKER.**
+                     "Level" as a countable unit is undefined after NINE lessons
+                     and 50 uses in V09 alone. It blocks: dimension B, V09's own
+                     homework H3/H4 (DEFERRED, owed), A-070, A-073, A-075, and
+                     every one of V09's twelve directional calls. Any lesson that
+                     defines it discharges a queue.
+                     (d) **THE MOVING-AVERAGE SET IS NOW HALF-RECONCILED.** A-020's
+                     blueberry is RESOLVED BY COURSE on V09 [00:41:43] -- the 800
+                     on the 15-minute, with a TIMEFRAME that no source previously
+                     carried. C-010 is NARROWED and NOT closed: the 800-on-15m =
+                     200-on-1h identity would dissolve it, and adopting that means
+                     supplying MMM-NOTES with a timeframe it does not state.
+                     SOURCING_HIERARCHY §3.4's re-check obligation stays LIVE for
+                     A-014, A-023 and the mayo/water/mustard/ketchup half.
+                     (e) **TWO PT SUCCESSORS ARE OWED AND SPECIFIED.** (1) the
+                     clustering test PT-035 could not run, whose correct comparator
+                     is the shuffled-order control itself; (2) the resolution-
+                     censoring bias -- a day-end horizon censors a 50-pip target
+                     more than a 15/25-pip stop, which may affect other tests in
+                     the PT-002...PT-032 family that share that geometry.
+                     (f) **SWF_CAPTURE_RECIPE.md's play-button coordinate
+                     (512, 300) IS WRONG FOR AT LEAST ONE FILE.** On V09 it
+                     produced 638 frames of a static splash and everything
+                     downstream looked healthy. CONFIRM THE COORDINATE FROM A
+                     PRE-CLICK SCREENSHOT. The recipe fix is a POLICY-ledger edit
+                     owed on the integration branch (D-038a), not made on a task
+                     branch.
+                     (g) **Q-010 MEASURED THE FABRICATION GENERATOR.** Normalised
+                     across all 21 lessons: RULES.md is TWO templates (V09 sits
+                     with V01, whose copy D-017 proved false); VISUAL_INDEX.md is
+                     NINE, one covering nine lessons; NOTES.md is 17 and is
+                     therefore the only one still needing a real per-lesson audit.
+                     V09 adds a SIXTH failure mode that defeats the cheapest
+                     screen: a GENUINE frame from the CORRECT lesson carrying an
+                     entirely invented description.
+                     (h) **D-038 IS IN FORCE.** V09 was done in a dedicated
+                     worktree on branch video/v09. No I-009 collision.
+
+                     ---- superseded, retained ----
 V09 GATE:            **CLOSED.** V08's student pass is complete and submitted as
                      REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
                      verdict, never on a student submission. No V09 artifact of any
@@ -1040,8 +1178,8 @@ fabricate, interpolate, or infer Week 6 content.**
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ✅ | ✅ | ✅ | ⚠️ | 🚫 | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R1B REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
-| V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
-| V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | REVISE R1 0C/0M/3m | **IN REMEDIATION** (items 64-66) |
+| V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V10 | Wk3 | 01:36:16 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V11 | Wk4 P1 | 00:50:56 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
