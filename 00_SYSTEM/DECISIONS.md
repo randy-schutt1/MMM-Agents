@@ -1648,3 +1648,122 @@ permanently into development data, which must be **disclosed**.
 **Status:** ACTIVE — the split is final; the data-availability exit (A / B / C above) is an
 **OPEN OWNER DECISION**
 
+---
+
+## D-036 — A paid TradingView tier is ruled out as a `D-035` option-A exit; only an import-capable platform reaches the windows
+
+**Date:** 2026-08-13
+**Narrows:** `D-035` option **A** ("a deep-history vendor … a paid TradingView tier, a broker
+MT4/MT5 account with 2013 tick/minute history, or a bulk-download source"). `D-035`'s three-way
+owner decision **remains open**; this entry removes one candidate from inside option A and
+states what the surviving candidates actually require.
+**Amends nothing in `D-034`.** TradingView/FXCM remains the declared standing source until an
+owner decision amends it.
+
+**Decision:** **Buying a higher TradingView tier for its larger bar allowance does not solve
+the `PT-002`…`PT-021` data-availability blocker, and is recorded here as rejected on
+arithmetic rather than on cost.** The only candidates inside option A that reach `W-A`, `W-B`
+or `W-C′` are platforms that accept an **imported** third-party history file — in practice
+MetaTrader 4/5 fed from a bulk-download source — or a paid vendor whose *served depth*, not
+whose *bar allowance*, reaches 2013.
+
+**The arithmetic, and it is not close.** At 15 minutes the declared feed's session definition
+(`D-034` fact 1) gives **96 bars/day × 5 days = 480 bars/week**. Counting back from
+2026-08-13 to the START of each pre-registered window:
+
+| Window | Start | Days back | Weeks | 15-min bars required |
+|---|---|---|---|---|
+| **W-A** | 2015-01-04 | 4,239 | 605.6 | **≈ 291,000** |
+| **W-B** | 2014-01-05 | 4,603 | 657.6 | **≈ 316,000** |
+| **W-C** / **W-C′** *(same start)* | 2013-01-06 | 4,967 | 709.6 | **≈ 341,000** |
+
+Holidays trim ~1–2% and are immaterial at this magnitude. Against that requirement:
+
+| Option under consideration | Bars | Reaches back to | W-A | W-B | W-C′ |
+|---|---|---|---|---|---|
+| **Current TradingView plan** | 10,000 | ≈ 2026-03-20 (≈ 21 weeks) | ❌ | ❌ | ❌ |
+| **Upgraded TradingView plan** | 20,000 | ≈ 2025-10-25 (≈ 42 weeks) | ❌ | ❌ | ❌ |
+| **MetaTrader 4/5 — broker server history only** | broker-set | broker-dependent, commonly ≥ 2020 | ⚠ | ⚠ | ⚠ |
+| **MetaTrader 4/5 — third-party history imported** | unbounded in practice | 2000 (HistData) / 15+ yrs (Dukascopy) | ✅ | ✅ | ✅ |
+
+**Doubling the bar allowance closes ≈ 6% of the gap.** 20,000 bars buys about **ten months**
+of 15-minute history against a shortfall of **11.6 years** at the shallowest window. There is
+no TradingView tier in the 10k/20k family that changes the verdict, because the shortfall is
+two orders of magnitude, not a factor of two.
+
+**A second fact that must not be missed: the bar cap is not currently the binding constraint.**
+`PT-023` §1's depth probe found the feed itself stopping at **2026-05-31 ≈ 5,074 bars** —
+**shallower than the 10,000 bars the current plan already permits**. The limit being hit today
+is the FXCM feed's served depth, not the plan's allowance. An unlimited-bar plan on the same
+feed would return the same 2026-05-31 left edge. **Any option-A candidate must therefore be
+evaluated on served depth, and a bar-allowance number is not evidence of depth.**
+
+**What MetaTrader actually offers, sourced rather than assumed:**
+
+1. **MetaTrader imposes no meaningful bar-count ceiling.** `Max bars in history` and
+   `Max bars in chart` accept up to 2,147,483,647, and the chart setting can be set to
+   *Unlimited* (Tools → Options → Charts). MT5 stores **M1** and derives every intraday
+   timeframe from it, so **M15 depth equals M1 depth on that server**.
+2. **Depth is set by the broker, and brokers have been trimming it.** IC Markets published
+   that from **2022-06-10 pre-2020 history is no longer served to client trade accounts**;
+   Darwinex publishes tick data **from October 2017**; demo and live accounts on the same
+   broker frequently differ. **Opening an MT5 account and hoping for 2013 is not a plan** —
+   it is a second depth probe with an account attached.
+3. **The reliable path is import, not download.** MT4/MT5's History Center accepts CSV import
+   per timeframe. **HistData.com** publishes free GBP/USD **M1 bars in native MT4/MT5 format,
+   by pair/year/month, back to 2000**; **Dukascopy's Historical Data Export** publishes free
+   tick-through-monthly CSV going back 15+ years. Either covers 2013–2016 at the required
+   resolution outright.
+
+> **THE CONSEQUENCE THAT IS NOT FREE, AND IT IS THE REASON THIS IS NOT A DECISION TO ADOPT.**
+> Importing HistData or Dukascopy files makes **the bulk vendor the data source**, not FXCM.
+> That is an **amendment to `D-034`**, and it moves two vendor-dependent facts that `D-034`
+> carries forward as known:
+>
+> - **The 21:00 UTC week open is an FXCM fact.** `W-C` and `PT-008`–`PT-013` inherit it by name
+>   (`D-034` fact 1, `COMMON_PROTOCOL.md` §6). A different vendor has a different week open,
+>   which must be **re-measured and re-stated**, not carried over.
+> - **Quote levels differ by a small constant between vendors** (`D-034` fact 2). A window
+>   harvested from an imported file is not level-comparable with V02–V06 homework.
+>
+> Further, `E06`'s **text-only measurement rule** (`COMMON_PROTOCOL.md` §2) was written against
+> a DOM-readable chart. It must be restated for a CSV-fed platform before a single bar is read
+> — reading a value from an imported file is *more* auditable than a DOM read, not less, but
+> the rule has to say so in writing first.
+
+**Reason:** `D-035` left option A as a single line naming three dissimilar candidates, and the
+owner asked which of the concrete ones actually work before spending money. Two of them —
+10,000 and 20,000 bars — are answerable by arithmetic alone, cost nothing to check, and are
+**both wrong by a factor of ~15 to ~34**. Recording that here prevents a purchase that would
+close 6% of a gap, and prevents the same calculation being redone by a later session.
+**Evidence:** `COMMON_PROTOCOL.md` §3 (window definitions `W-A`/`W-B`/`W-C`), §3a (`W-C′`),
+§6 (the data-availability blocker row); `PT-002`…`PT-021` window declarations, read file by
+file and confirmed against §3; `D-034` (480 bars/week as an FXCM session fact; the mandatory
+depth probe; the two vendor-dependent facts); `D-035` options A/B/C; `PT-023` §1 (the
+2026-05-31 left edge, 368 drags). MetaTrader depth claims:
+[MetaTrader 5 Help — how the tester downloads historical data](https://www.metatrader5.com/en/terminal/help/algotrading/test_preparation);
+[Myforex MT4/MT5 download-historical-data guide](https://myforex.com/en/mt5guide/download-historicaldata.html);
+[IC Markets notice regarding client historical data](https://www.icmarkets.com/blog/notice-regarding-client-historical-data/);
+[Darwinex tick data](https://www.darwinex.com/tick-data);
+[HistData.com free forex data](https://www.histdata.com/download-free-forex-data/);
+[Dukascopy Historical Data Export](https://www.dukascopy.com/swiss/english/marketwatch/historical/).
+**Alternatives considered:** *Recording the upgrade as "probably insufficient" and leaving it
+open* — rejected; the shortfall is arithmetic, not judgement, and an open item invites the
+purchase. *Declaring HistData or Dukascopy as the new primary source in this entry* — rejected
+on the same authority grounds `D-034` used: choosing a source is the owner's decision, the
+week-open and level facts above must be re-measured before any such declaration, and no session
+should amend `D-034` by side-effect of a feasibility check. *Treating "MetaTrader" as a single
+option* — rejected; broker-served history and imported history have opposite verdicts, and
+collapsing them would have recorded a ⚠ where the honest answer is one ❌ and one ✅.
+*Recommending option C's daily-timeframe probe here* — declined as out of scope; it remains
+`D-035`'s cheapest next step and is untouched by this entry.
+**Consequences:** `D-035` option A is narrowed: **"a paid TradingView tier" is struck**, and
+the surviving candidates are (i) an import-capable platform fed from a bulk vendor, or (ii) a
+paid vendor evidenced by a **served-depth probe**, never by a bar allowance. `D-034`'s
+mandatory depth probe is reaffirmed as the acceptance test for any candidate feed. No window
+moves, no `PT` file is edited, no test is unblocked, and the seven `W-C` re-issues owed under
+`D-035` are still owed regardless of which source wins. If the owner picks an import path, that
+is a **new decision amending `D-034`**, and it must restate the week open, the level offset and
+the `E06` measurement rule for the new tool before any observation is collected.
+**Status:** ACTIVE — advisory to the still-**OPEN OWNER DECISION** in `D-035`
+
