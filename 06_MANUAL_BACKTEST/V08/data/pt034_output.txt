@@ -1,0 +1,217 @@
+==============================================================================
+PT-034 — V08's "Risk Reward to 3:1 or greater"
+==============================================================================
+Pre-registration: PRE_REGISTERED/PT-034_crown_jewel_three_to_one.md
+seed=20260813  iterations=1000  target=50 pips  stop=16.6667 pips (IMPLIED = target/3)
+window=2013-01-06 -> 2016-06-30   (W-C' DEVELOPMENT; holdout never opened)
+
+--- 1. FILE INTEGRITY (E06 as restated by D-036a) ---
+    GBPUSD_M15_ARMA.csv  sha256=857f91d74e663538fb6434d70e7e24d9cf0237b3678446f94e00e3210dc61ff4
+    GBPUSD_M15_ARMB.csv  sha256=eaf77f2b9fd33c713c7b66338f5b0ee4b2c1a4b43c3d3d57ff1cfbd8a8cc9b5c
+    QA gate: /Users/randyschutt/Desktop/Trading/MMM-Agents-v08/06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M1/QA_REPORT.txt — C1-C4 PASS (precondition, §7)
+
+--- 2. THE ARITHMETIC RESULT, WHICH NEEDS NO DATA (PT-034 §2) ---
+    Within a trading day, an entry within X pips of that day's extreme has
+    MAE <= X BY CONSTRUCTION — the extreme is the day's bound.
+    So realised R = 50/MAE >= 5.0 at X = 10, and the 3:1 claim CANNOT FAIL for any X <= 16.67 pips.
+    Stated before the run. O1 below is a pipeline self-test, NOT a finding.
+
+--- precomputing matched-random outcomes for ARMA (86824 bars) ---
+    done in 0.4s
+
+==============================================================================
+CELL ARMA/D-SESSION
+==============================================================================
+    days used = 902    excluded BY NAME (C8 hole) = 2 ['2014-06-01', '2014-06-02']    dropped <4 bars = 1
+    Dec/Jan closures INCLUDED and reported separately: 4
+
+    --- N1 / N1b : MATCHED RANDOM ENTRY — computed and printed BEFORE the rule arm ---
+    N1  target-before-stop rate: median=0.2450   5-95%=[0.2325, 0.2580]   iterations=1000  seed=20260813
+    N1b target-before-stop rate: median=0.2453   5-95%=[0.2228, 0.2683]   iterations=1000  seed=20260813
+
+    --- O1 / O2 / O3 / O4 : THE RULE ARM ---
+    X= 0 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  0.00  q25=  0.00  q75=  0.00   MAE=0 in 1804/1804   (X=0: MAE is 0 by construction)
+           realised R among target-reachers: median=     nan   n=0   (MAE=0 excluded and counted above)
+        O3 within-day f50=1193/1804=0.6613   f50_day=861/902=0.9545
+        O4 NO DEADLINE  target=1505  stop=298  unresolved=1
+           rate=0.8347  Wilson95=[0.8169, 0.8511]  n=1803   vs N1 percentile=100.0
+           bars to resolution: median=21   q95=98
+    X= 2 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  0.10  q25=  0.00  q75=  2.00   MAE=0 in 895/1804   median MAE/X=0.050
+           realised R among target-reachers: median=   25.00   n=539   (MAE=0 excluded and counted above)
+        O3 within-day f50=1171/1804=0.6491   f50_day=847/902=0.9390
+        O4 NO DEADLINE  target=1488  stop=315  unresolved=1
+           rate=0.8253  Wilson95=[0.8071, 0.8421]  n=1803   vs N1 percentile=100.0
+           bars to resolution: median=25   q95=104
+    X= 5 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  5.00  q25=  0.70  q75=  5.00   MAE=0 in 399/1804   median MAE/X=1.000
+           realised R among target-reachers: median=   10.00   n=846   (MAE=0 excluded and counted above)
+        O3 within-day f50=1146/1804=0.6353   f50_day=836/902=0.9268
+        O4 NO DEADLINE  target=1450  stop=353  unresolved=1
+           rate=0.8042  Wilson95=[0.7853, 0.8219]  n=1803   vs N1 percentile=100.0
+           bars to resolution: median=31   q95=107
+    X=10 pips   <-- HEADLINE (the lesson's own printed tolerance)
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median= 10.00  q25=  7.00  q75= 10.00   MAE=0 in 183/1804   median MAE/X=1.000
+           realised R among target-reachers: median=    5.00   n=934   (MAE=0 excluded and counted above)
+        O3 within-day f50=1091/1804=0.6048   f50_day=816/902=0.9047
+        O4 NO DEADLINE  target=1384  stop=419  unresolved=1
+           rate=0.7676  Wilson95=[0.7476, 0.7865]  n=1803   vs N1 percentile=100.0
+           bars to resolution: median=39   q95=122
+
+==============================================================================
+CELL ARMA/D-MIDNIGHT
+==============================================================================
+    days used = 1086    excluded BY NAME (C8 hole) = 1 ['2014-06-02']    dropped <4 bars = 0
+    Dec/Jan closures INCLUDED and reported separately: 5
+
+    --- N1 / N1b : MATCHED RANDOM ENTRY — computed and printed BEFORE the rule arm ---
+    N1  target-before-stop rate: median=0.2426   5-95%=[0.2316, 0.2537]   iterations=1000  seed=20260813
+    N1b target-before-stop rate: median=0.2422   5-95%=[0.2228, 0.2634]   iterations=1000  seed=20260813
+
+    --- O1 / O2 / O3 / O4 : THE RULE ARM ---
+    X= 0 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  0.00  q25=  0.00  q75=  0.00   MAE=0 in 2172/2172   (X=0: MAE is 0 by construction)
+           realised R among target-reachers: median=     nan   n=0   (MAE=0 excluded and counted above)
+        O3 within-day f50=1212/2172=0.5580   f50_day=880/1086=0.8103
+        O4 NO DEADLINE  target=1703  stop=469  unresolved=0
+           rate=0.7841  Wilson95=[0.7663, 0.8009]  n=2172   vs N1 percentile=100.0
+           bars to resolution: median=20   q95=105
+    X= 2 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  0.20  q25=  0.00  q75=  2.00   MAE=0 in 1040/2172   median MAE/X=0.100
+           realised R among target-reachers: median=   25.00   n=511   (MAE=0 excluded and counted above)
+        O3 within-day f50=1188/2172=0.5470   f50_day=863/1086=0.7947
+        O4 NO DEADLINE  target=1674  stop=498  unresolved=0
+           rate=0.7707  Wilson95=[0.7526, 0.7879]  n=2172   vs N1 percentile=100.0
+           bars to resolution: median=22   q95=107
+    X= 5 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  5.00  q25=  0.70  q75=  5.00   MAE=0 in 482/2172   median MAE/X=1.000
+           realised R among target-reachers: median=   10.00   n=805   (MAE=0 excluded and counted above)
+        O3 within-day f50=1156/2172=0.5322   f50_day=854/1086=0.7864
+        O4 NO DEADLINE  target=1611  stop=561  unresolved=0
+           rate=0.7417  Wilson95=[0.7229, 0.7597]  n=2172   vs N1 percentile=100.0
+           bars to resolution: median=26   q95=110
+    X=10 pips   <-- HEADLINE (the lesson's own printed tolerance)
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median= 10.00  q25=  5.50  q75= 10.00   MAE=0 in 250/2172   median MAE/X=1.000
+           realised R among target-reachers: median=    5.00   n=906   (MAE=0 excluded and counted above)
+        O3 within-day f50=1099/2172=0.5060   f50_day=833/1086=0.7670
+        O4 NO DEADLINE  target=1541  stop=631  unresolved=0
+           rate=0.7095  Wilson95=[0.6900, 0.7282]  n=2172   vs N1 percentile=100.0
+           bars to resolution: median=32   q95=114
+
+--- precomputing matched-random outcomes for ARMB (86824 bars) ---
+    done in 0.4s
+
+==============================================================================
+CELL ARMB/D-SESSION
+==============================================================================
+    days used = 1019    excluded BY NAME (C8 hole) = 2 ['2014-06-01', '2014-06-02']    dropped <4 bars = 1
+    Dec/Jan closures INCLUDED and reported separately: 4
+
+    --- N1 / N1b : MATCHED RANDOM ENTRY — computed and printed BEFORE the rule arm ---
+    N1  target-before-stop rate: median=0.2424   5-95%=[0.2313, 0.2533]   iterations=1000  seed=20260813
+    N1b target-before-stop rate: median=0.2426   5-95%=[0.2218, 0.2630]   iterations=1000  seed=20260813
+
+    --- O1 / O2 / O3 / O4 : THE RULE ARM ---
+    X= 0 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  0.00  q25=  0.00  q75=  0.00   MAE=0 in 2038/2038   (X=0: MAE is 0 by construction)
+           realised R among target-reachers: median=     nan   n=0   (MAE=0 excluded and counted above)
+        O3 within-day f50=1193/2038=0.5854   f50_day=863/1019=0.8469
+        O4 NO DEADLINE  target=1591  stop=446  unresolved=1
+           rate=0.7811  Wilson95=[0.7626, 0.7985]  n=2037   vs N1 percentile=100.0
+           bars to resolution: median=23   q95=102
+    X= 2 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  0.10  q25=  0.00  q75=  2.00   MAE=0 in 1009/2038   median MAE/X=0.050
+           realised R among target-reachers: median=   25.00   n=538   (MAE=0 excluded and counted above)
+        O3 within-day f50=1172/2038=0.5751   f50_day=847/1019=0.8312
+        O4 NO DEADLINE  target=1561  stop=476  unresolved=1
+           rate=0.7663  Wilson95=[0.7475, 0.7842]  n=2037   vs N1 percentile=100.0
+           bars to resolution: median=27   q95=108
+    X= 5 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  5.00  q25=  0.62  q75=  5.00   MAE=0 in 458/2038   median MAE/X=1.000
+           realised R among target-reachers: median=   10.00   n=836   (MAE=0 excluded and counted above)
+        O3 within-day f50=1143/2038=0.5608   f50_day=835/1019=0.8194
+        O4 NO DEADLINE  target=1508  stop=529  unresolved=1
+           rate=0.7403  Wilson95=[0.7208, 0.7589]  n=2037   vs N1 percentile=100.0
+           bars to resolution: median=32   q95=110
+    X=10 pips   <-- HEADLINE (the lesson's own printed tolerance)
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median= 10.00  q25=  5.82  q75= 10.00   MAE=0 in 232/2038   median MAE/X=1.000
+           realised R among target-reachers: median=    5.00   n=935   (MAE=0 excluded and counted above)
+        O3 within-day f50=1091/2038=0.5353   f50_day=817/1019=0.8018
+        O4 NO DEADLINE  target=1436  stop=602  unresolved=0
+           rate=0.7046  Wilson95=[0.6844, 0.7240]  n=2038   vs N1 percentile=100.0
+           bars to resolution: median=40   q95=122
+
+==============================================================================
+CELL ARMB/D-MIDNIGHT
+==============================================================================
+    days used = 1086    excluded BY NAME (C8 hole) = 1 ['2014-06-02']    dropped <4 bars = 0
+    Dec/Jan closures INCLUDED and reported separately: 5
+
+    --- N1 / N1b : MATCHED RANDOM ENTRY — computed and printed BEFORE the rule arm ---
+    N1  target-before-stop rate: median=0.2429   5-95%=[0.2321, 0.2528]   iterations=1000  seed=20260813
+    N1b target-before-stop rate: median=0.2431   5-95%=[0.2219, 0.2624]   iterations=1000  seed=20260813
+
+    --- O1 / O2 / O3 / O4 : THE RULE ARM ---
+    X= 0 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  0.00  q25=  0.00  q75=  0.00   MAE=0 in 2172/2172   (X=0: MAE is 0 by construction)
+           realised R among target-reachers: median=     nan   n=0   (MAE=0 excluded and counted above)
+        O3 within-day f50=1212/2172=0.5580   f50_day=879/1086=0.8094
+        O4 NO DEADLINE  target=1698  stop=474  unresolved=0
+           rate=0.7818  Wilson95=[0.7639, 0.7986]  n=2172   vs N1 percentile=100.0
+           bars to resolution: median=20   q95=107
+    X= 2 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  0.20  q25=  0.00  q75=  2.00   MAE=0 in 1050/2172   median MAE/X=0.100
+           realised R among target-reachers: median=   25.00   n=501   (MAE=0 excluded and counted above)
+        O3 within-day f50=1185/2172=0.5456   f50_day=863/1086=0.7947
+        O4 NO DEADLINE  target=1670  stop=502  unresolved=0
+           rate=0.7689  Wilson95=[0.7507, 0.7861]  n=2172   vs N1 percentile=100.0
+           bars to resolution: median=23   q95=107
+    X= 5 pips
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median=  5.00  q25=  0.70  q75=  5.00   MAE=0 in 480/2172   median MAE/X=1.000
+           realised R among target-reachers: median=   10.00   n=802   (MAE=0 excluded and counted above)
+        O3 within-day f50=1153/2172=0.5308   f50_day=853/1086=0.7855
+        O4 NO DEADLINE  target=1605  stop=567  unresolved=0
+           rate=0.7390  Wilson95=[0.7201, 0.7570]  n=2172   vs N1 percentile=100.0
+           bars to resolution: median=26   q95=110
+    X=10 pips   <-- HEADLINE (the lesson's own printed tolerance)
+        O1 self-test  MAE > X : 0    (pre-registered expectation: 0)
+        O2 MAE pips   median= 10.00  q25=  5.70  q75= 10.00   MAE=0 in 246/2172   median MAE/X=1.000
+           realised R among target-reachers: median=    5.00   n=904   (MAE=0 excluded and counted above)
+        O3 within-day f50=1098/2172=0.5055   f50_day=835/1086=0.7689
+        O4 NO DEADLINE  target=1533  stop=639  unresolved=0
+           rate=0.7058  Wilson95=[0.6863, 0.7246]  n=2172   vs N1 percentile=100.0
+           bars to resolution: median=32   q95=114
+
+==============================================================================
+VERDICT — PT-034 §6, judged on O4 at X=10 across ALL FOUR cells
+==============================================================================
+    ARMA/D-SESSION         rate=0.7676   vs N1 pct= 100.0   ABOVE N1 p95
+    ARMA/D-MIDNIGHT        rate=0.7095   vs N1 pct= 100.0   ABOVE N1 p95
+    ARMB/D-SESSION         rate=0.7046   vs N1 pct= 100.0   ABOVE N1 p95
+    ARMB/D-MIDNIGHT        rate=0.7058   vs N1 pct= 100.0   ABOVE N1 p95
+    spread across all four cells        = 0.0630
+    DAY-BOUNDARY effect  |session-midnight| = 0.0285   (COURSE_PROGRESS V07 item (c))
+    D-031 TIMEZONE effect      |armA-armB| = 0.0333
+
+    VERDICT: CONFIRMED AS TAUGHT      (break-even for a 3:1 payoff = 0.25)
+
+    AND, FIRST: §2's ARITHMETIC RESULT STANDS INDEPENDENTLY OF THIS VERDICT —
+    within the day the 3:1 claim is guaranteed, and therefore empty as stated.
+
+raw results -> /Users/randyschutt/Desktop/Trading/MMM-Agents-v08/06_MANUAL_BACKTEST/V08/data/pt034_results.json   (7.3s)
