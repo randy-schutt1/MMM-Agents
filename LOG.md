@@ -3459,3 +3459,83 @@ and pushed this session (owner instruction: push immediately).
 V06 submission, or `CUMULATIVE_25.md` if that milestone arrives first.
 
 ---
+
+## 2026-08-12 — Session — Bookkeeping: open item 13 discharged by `1fa087f`
+
+### Objective
+
+Close the record on `05_HOMEWORK/V02/measure_usdchf_week.py`, which the project owner
+committed directly in `1fa087f` after this journal had recorded, sixteen separate times,
+that the file was being left untracked and untouched on purpose. Documentation
+only — no study work, no review work, no new content.
+
+### Work Completed
+
+- **`REVIEW_INDEX.md` open item 13 → `CLOSED`**, citing `1fa087f`. The row's body is
+  unchanged; only its status cell moves. The closure is stated as covering the **tracking
+  half** of the item only — the file is now under version control, so §1.1's promise of a
+  reproducible method is discharged by a committed script rather than by a working-tree
+  artifact, and the standing *"leave it in place, do not delete"* instruction is spent.
+- **Item 12 deliberately untouched.** The substantive half of item 13's charge —
+  committed §1.1's *"settled"* against the script's *"uncertain by one bar"* — is item
+  12's business and is neither adjudicated nor re-opened here.
+- **This entry.** Every prior session that met this file logged what it did with it
+  (LOG.md 1578, 1670, 1764, 1836, 1908, 2000, 2134, 2228, 2356, 2486, 2585, 2708, 2739,
+  2905, 2995, 3108 — all variations on *"left in place, uncommitted, undeleted"*). The
+  commit that finally resolved it logged nothing. That gap is what this entry fills.
+
+### Key Findings
+
+**The file the journal kept describing was never anyone's to commit until the owner
+committed it.** Sixteen entries across two days recorded the same non-action, correctly:
+`D-003` independence and the R2 Note 8 instruction both told each session to leave another
+session's artifact alone. The instruction had no terminating condition that a session could
+satisfy by itself — which is precisely why it kept being restated instead of resolved.
+`1fa087f` supplies the condition from outside the review loop.
+
+`1fa087f` is 166 lines, matching the size V02 R2 (`V02_REVIEW_R2.md` line 90) and V02 R3
+(line 53) both recorded for the untracked copy, so nothing changed in the file between the
+review that noticed it and the commit that captured it.
+
+### Manual Backtesting
+
+None. No change to `06_MANUAL_BACKTEST/`; `PT-001` remains pre-registered and unrun.
+
+### Ambiguities / Contradictions
+
+None created, none closed. No `A-xxx` or `C-xxx` record touched.
+
+### Decisions
+
+None. No `DECISIONS.md` entry — committing a file the review record already instructed be
+kept is not a project-level decision.
+
+### Files Created/Updated
+
+`18_REVIEW/REVIEW_INDEX.md` (item 13 status cell); `LOG.md` (this entry). **No
+`CHANGELOG.md` entry** — that file records architecture, protocols, standards and phase
+transitions, and this is bookkeeping on a single open item. The precedent is
+`scripts/verify_reconstruction.py`, a committed script from the V04 R1 remediation that
+likewise carries no changelog entry.
+
+### Verification
+
+`scripts/validate_project.py`: **98 passed, 1 warning, 0 failures.** The single warning is
+`non-media files in 01_SOURCE_VIDEOS/ … .DS_Store` — a Finder artifact created outside this
+session, already covered by `.gitignore` line 74, therefore never a candidate for commit.
+Left in place rather than deleted: it is not project content and removing files the task
+did not touch is not this session's business.
+
+### Git
+
+Explicit paths on `git add` (two files, never `-A`); `git status` and `git diff --staged`
+read before committing. Committed and pushed this session, per the standing owner
+instruction to push immediately.
+
+### Next Action
+
+Unchanged and owner-blocked. V06 ingestion is **paused by owner instruction** — nothing in
+this session starts it. Open items 35, 36, 40 and the parallel-session ruling still await
+the owner; `I-007` (data source) and the `D-028` boundary dates still gate `PT-001`.
+
+---
