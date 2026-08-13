@@ -3685,3 +3685,172 @@ existing per-video protocol. Each of those sessions still owes its own `NOTES.md
 `VISUAL_INDEX.md` fabrication check; `RULES.md` no longer needs re-checking, citing `Q-007`.
 
 ---
+
+## 2026-08-12 — Student Session — V06 student pass ("Micro Daily Trends")
+
+### Lesson
+
+V06 — `Bootcamp1 Wk2 032612 Part1 (75mins).swf`, SHA-256 `382207b3…aac96e86`, 01:14:33.
+Gate verified OPEN in `18_REVIEW/REVIEW_INDEX.md` (V05 R3 `PASS`, 2026-08-12) **before any
+V06 artifact was created**. No override was needed and none was used.
+
+**A state discrepancy was found and reconciled, not papered over.** `REVIEW_INDEX.md`
+recorded V05's R3 `PASS` and `COMPLETE`; `COURSE_PROGRESS.md` still read *"V05 — AWAITING
+REVIEW R1"* in both its summary block and its table. `REVIEW_INDEX.md` is the gate authority
+under `D-004`, so the gate was genuinely open; `COURSE_PROGRESS.md` was stale — the eighth
+instance of the `E20` status-staleness class (open item 14). Reconciled in this session's
+bookkeeping commit.
+
+### Source Evidence Reviewed
+
+Transcript verified against extracted audio (`ffmpeg -vn -c copy` off the `.swf`, 4473.63 s)
+under all four `I-008` criteria. 903-frame Ruffle sweep at 10× on a **patched copy**
+(`D-021`), with `D-022`'s port and byte checks run **before** capture and a content
+sanity-check against the transcript inside the first minute (GOTCHA 4). Originals re-hashed
+after patching: unchanged.
+
+### Work Completed
+
+`02_TRANSCRIPTS/V06/V06_TRANSCRIPT.md`; `04_SCREENSHOTS/V06/` (32 frames + `INDEX.md`);
+`03_LESSON_NOTES/V06_SOURCE_NOTES.md`; `03_LESSON_NOTES/V06_INTERPRETATION.md`;
+`05_HOMEWORK/V06/` (document, 6 charts, 4 data files, 5 scripts);
+`07_MASTERY_REPORTS/V06_MASTERY_REPORT.md`; `QUARANTINE_REGISTER.md` `Q-006`;
+`A-050`–`A-054` and ten extended records; `C-006`; `COURSE_PROGRESS.md`; `CHANGELOG.md`.
+
+### Key Findings
+
+**1. V06 has zero course-author runtime — the second consecutive lesson — and this is the
+first time `D-025` costs the project something substantial.** V05 yielded no doctrine and
+gave up little. V06 states a complete tradeable system: rejection-of-price trigger, a
+nameable-pattern filter over a closed set of three, a moving-average location rule, a
+counting rule (the second leg takes out `2`), a 25–50 pip pullback band, a stop derived from
+moving-average spacing, a 2:1 reward preference, a **two-hour time stop** and a
+reversal-pattern exit. **All of it is excluded.** Doctrine produced: zero. Interpreted rules:
+zero. Concept library: deliberately untouched.
+
+**2. Speaker identification was run with a method rather than an impression.** 25 `Steve`
+tokens, 23 of them the speaker's own third-person references; the two inside read-aloud
+questions are each explained. Backed by an F0 profile with **V04 as a positive control** —
+the method finds V04's independently established handover at ≈26 minutes unprompted
+(≈182 Hz → ≈158 Hz), and finds nothing in V06 (37 of 38 two-minute blocks inside a 13.5 Hz
+band). Its limit is stated in three places: it screens for a handover **inside** a file and
+**cannot** identify a speaker across files.
+
+**3. Two ambiguity extensions that look like answers are recorded as weakening one.**
+`A-044` — V06 enumerates the admissible patterns for the first time in the corpus, and the
+DMR curriculum **prints six or seven** where the audio says three, and the presenter breaks
+his own filter at `[00:23:25]`. `A-011` — V06 supplies the first candle count ever attributed
+to the instructor for M/W, and its own reporter withdraws it four seconds later. **Neither
+closes anything.**
+
+**4. `A-018`'s first negative result.** V06 states a stop and a 2:1 ratio and never connects
+either to a printed `R = ` label. That is the corpus's best chance so far to test the
+"R = risk multiple" reading, and it comes out empty.
+
+**5. `C-006` — two guests, two incompatible definitions of "stop hunt", zero from the
+instructor.** V05's is geometric and chart-checkable; V06's is causal and partly
+unobservable (spread widening). Filed as corpus hygiene, `C-005` class, **not** charged
+against the instructor.
+
+**6. An error this session made and corrected before submission, recorded because the
+correction is the point.** An early draft of `INDEX.md` asserted six `R = ` values read off
+downscaled contact sheets. Three were re-checked at 2× magnification and **one was wrong**
+(`R = 41.5`, recorded as `40.0`). All unverified values were then removed rather than
+carried, leaving three transcribed and the rest declared **not transcribed** — the V04 `M6` /
+V05 R2 precedent that declining to transcribe an illegible value is correct.
+
+### Manual Backtesting
+
+**None, and the reasoning is in the homework's §0 rather than implied.** V06's rules are
+excluded by `D-025`, so there is nothing this project may test; `D-030` blocks it
+independently, since *push*, *pullback*, *nameable pattern* and ADR's lookback are all
+undefined. `06_MANUAL_BACKTEST/` untouched; `PT-001` still pre-registered and unrun; no
+`BT_*.md` created, so `D-026`/`D-027`'s gate is not engaged.
+
+### Homework
+
+Completed on real market data — TradingView **FXCM**, prices read from the platform's Data
+Window **DOM text**, never from a pixel (the V02 `MAJOR`, `E06`/`E19`).
+
+- **The assignment as stated is normative in its entirety** (*"find your anchor in today and
+  look for three pushes"*), so it was **not performed as stated**. What was performed, and
+  what was refused, is listed line by line. The most tempting measurement in the lesson — the
+  25–50 pip pullback band — was **refused**, because *pullback* has no definition in this
+  corpus (`D-030`).
+- **Headline result, methodological:** the undefined ADR lookback moves *"ADR ÷ 3"* by
+  **31–60 %** across five windows on four pairs. GBP/USD's push is 15 pips or 23 pips
+  depending on a parameter nobody has stated.
+- **Second result:** the lesson's two headline figures are on **different scales** — *"ADR ÷
+  3"* relative, *"25 to 50 pips"* absolute — so they can agree at only one volatility level.
+  Reported with the 2012-vs-2026 regime caveat as prominently as the result.
+- **USDCHF's late week open reproduced a third time** (476 = 480 − 4) from a fresh harvest,
+  caught by a bar-count check run **before** measuring — the standing V04 lesson applied.
+- **A negative reproducibility result:** against V05's committed JSON for the same week, all
+  1,912 timestamps and bar counts match exactly, but **120 USDJPY and 66 USDCHF bars differ
+  in OHLC by up to ~1 pip.** Any future claim of exact reproducibility on this feed is false
+  at that precision.
+- 1,908/1,908 continuity, four pairs. Daily extremes reported under **both** `D-031` timezone
+  arms, with no conclusion drawn from either.
+
+### Ambiguities / Contradictions
+
+`A-050`–`A-054` opened. Ten records extended (`A-020`, `A-044`, `A-049`, `A-042`, `A-030`,
+`A-018`, `A-019`, `A-038`, `A-036`/`A-045`, `A-011`); **none closed** — `D-025` bars it.
+`C-006` opened. `C-004` re-checked against V06 and struck off as negative. **`C-003`
+deliberately NOT tested** against V06 — its subject is M/W and V06's failure cases are about
+pushes; stretching them to fit would repeat the V05 R2 `M7` error. That non-test is stated in
+the status block rather than left silent.
+
+### Decisions
+
+**None recorded by this session.** Three items are **escalated** in the mastery report for
+the owner or reviewer to decide: (1) a third mastery disposition, `EXCLUDED BY DECISION`,
+for work that has subject matter but is forbidden by a standing ruling — re-escalated from
+V05 on stronger evidence; (2) whether the project needs to be able to say a record is
+**unresolvable in principle** (`A-042`, and now `C-006` from a second direction); (3) whether
+speaker identification should become a written **procedure** rather than a bare requirement.
+
+### Process Deviation, Disclosed
+
+`SWF_CAPTURE_RECIPE.md` §9's transcript-before-screenshots order was **not achieved**,
+because §§7–8 require looking at contact sheets before naming frames. §§1–10 of the source
+notes cite transcript markers only and were not rewritten when §11 arrived, but this session
+**cannot claim it was blind to the slides**. Stated as a deviation, worded identically in
+`V06_SOURCE_NOTES.md`, `V06_INTERPRETATION.md` §0 and `04_SCREENSHOTS/V06/INDEX.md` — the
+`V05 R1 M4` failure class, avoided by construction.
+
+### Files Created/Updated
+
+Created: `02_TRANSCRIPTS/V06/V06_TRANSCRIPT.md`; `04_SCREENSHOTS/V06/` (32 PNG + `INDEX.md`);
+`03_LESSON_NOTES/V06_SOURCE_NOTES.md`; `03_LESSON_NOTES/V06_INTERPRETATION.md`;
+`05_HOMEWORK/V06/V06_HOMEWORK.md` + `charts/` (6) + `data/` (4) + `scripts/` (5);
+`07_MASTERY_REPORTS/V06_MASTERY_REPORT.md`.
+Updated: `00_SYSTEM/QUARANTINE_REGISTER.md`; `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`;
+`11_CONTRADICTIONS/CONTRADICTIONS.md`; `00_SYSTEM/COURSE_PROGRESS.md`; `CHANGELOG.md`;
+`LOG.md`.
+
+### Verification
+
+`scripts/validate_project.py`: **99 passed, 0 warnings, 0 failures.**
+
+`check_quotes.py` over every V06 artifact — `V06_SOURCE_NOTES.md` 259 citations / 0
+non-resolving / 32 of 32 quotes matched; `V06_INTERPRETATION.md` 53 / 0 / 24 of 24;
+`V06_HOMEWORK.md` 21 / 0 / 11 of 11; `INDEX.md` 8 / 0 / 2 of 2; the new ambiguity records
+76 / 5 (all V05 markers, each labelled and each verified against `V05_TRANSCRIPT.md`) / 22 of
+22. The transcript header's two declared non-resolvers are `[00:18:00]` (the fabricated
+template's timestamp, cited to record that it does **not** exist) and V04 `[00:26:56]`.
+
+### Git
+
+Explicit paths on every `git add` — **never `-A`**; `git status` and `git diff --staged` read
+before each of the six commits. Committed at checkpoints throughout the session rather than
+in one lump (`D-015`).
+
+### Next Action
+
+**A fresh reviewer session for V06 R1 (`D-003`).** This session authored every V06 artifact
+and must not review any of them. The six things the reviewer should test hardest are listed
+in `COURSE_PROGRESS.md`'s `NEXT ACTION` block, headed by the one that matters most: **not
+"did the student find the rules" but "did the student keep them out".**
+
+---

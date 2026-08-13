@@ -11,6 +11,78 @@ Newest first.
 
 ---
 
+## [0.9.0] — 2026-08-12 — V06 student pass; D-025 applied to a lesson that costs something
+
+### Added
+
+- **`02_TRANSCRIPTS/V06/V06_TRANSCRIPT.md`** — I-008 verified and adopted. 1,304 markers,
+  strictly increasing, final `[01:14:32]` against measured audio 4473.63 s; SWF header and
+  manifest agree to within 0.7 s. Five Whisper `small.en` windows spanning the lesson all
+  match near-verbatim.
+- **`04_SCREENSHOTS/V06/`** — 32 curated frames from a 903-frame 10× Ruffle sweep, each
+  carrying the player's burned-in timecode, plus `INDEX.md` with a per-frame
+  `DESCRIPTIVE` / `NORMATIVE — EXCLUDED` verdict and a 4× transcription of the **DMR
+  Curriculum 2012**.
+- **`03_LESSON_NOTES/V06_SOURCE_NOTES.md`**, **`V06_INTERPRETATION.md`**,
+  **`07_MASTERY_REPORTS/V06_MASTERY_REPORT.md`**, **`05_HOMEWORK/V06/`**.
+- **`A-050`–`A-054`** and **`C-006`** (guest-vs-guest stop-hunt divergence, corpus-hygiene
+  class); **`Q-006`** (sixth of six fabrication audits).
+- **Three committed, re-runnable tools**, all under `05_HOMEWORK/V06/scripts/`:
+  - `check_quotes.py` — verifies that every `[HH:MM:SS]` citation in an artifact resolves
+    to a transcript marker **and** that every quoted fragment occurs in the cited window.
+    This is the `E01`/`E11` discipline from V05 R1–R2 turned into a gate the student runs
+    **before** submission rather than a finding the reviewer raises after it.
+  - `f0_profile.py` — a voice-pitch screen for an **unannounced speaker change inside one
+    file**, validated against V04's known handover, which it finds unprompted. Explicitly
+    **not** a cross-file speaker identifier.
+  - `measure_v06.py` / `render_v06.py` — the homework's measurements and figures, computed
+    from committed JSON.
+
+### Changed
+
+- **`00_SYSTEM/COURSE_PROGRESS.md`** — V05 reconciled to `COMPLETE` (its R3 `PASS` had been
+  recorded in `REVIEW_INDEX.md` but not here); V06 row and `V06 GATE` block added; `NEXT
+  ACTION` rewritten to name what the V06 reviewer should test hardest.
+- **`10_AMBIGUITIES/`** and **`11_CONTRADICTIONS/`** status blocks re-derived in the same
+  commit that added their records.
+
+### Notes — what this release is actually about
+
+- **V06 is the second consecutive lesson with zero course-author runtime, and the first
+  where `D-025` is expensive.** V05 was excluded and gave up little. **V06 states a complete
+  tradeable system** — trigger, pattern filter, location rule, counting rule, pullback band,
+  stop geometry, 2:1 target, two-hour time stop, reversal exit — **and all of it is
+  excluded.** Doctrine produced: **zero**. Interpreted rules: **zero**. Concept-library
+  entries: **zero**, deliberately.
+- **The reviewer's question changes shape here.** For V01–V04 it was *did the student find
+  the rules*. For V06 it is *did the student keep them out*.
+- **Two extensions that look like answers are recorded as weakening one.** `A-044`: V06
+  enumerates the admissible patterns for the first time in the corpus, and the DMR
+  curriculum prints six or seven where the audio says three. `A-011`: V06 supplies the first
+  candle count ever attributed to the instructor for M/W, and its own reporter withdraws it
+  four seconds later.
+- **`A-018` records the corpus's first negative result** on the *"R = risk multiple"*
+  reading: V06 states both a stop and a 2:1 ratio, and neither connects to any printed
+  `R = ` label.
+- **The homework's headline result is methodological, not market.** The undefined ADR
+  lookback moves *"ADR ÷ 3"* by **31–60 %** across five reasonable windows on four pairs —
+  GBP/USD's push is 15 pips or 23 pips depending on a parameter nobody has stated. That is
+  `D-030`'s prohibition demonstrated in numbers rather than argued.
+- **A negative reproducibility finding worth more than a clean one:** against V05's
+  committed JSON for the same week, all 1,912 timestamps and bar counts match exactly, but
+  120 USDJPY and 66 USDCHF bars differ in OHLC by up to ~1 pip. **Any future claim of exact
+  reproducibility on this feed is false at that precision.**
+- **A process deviation is disclosed rather than claimed away:** the recipe's §9
+  transcript-before-screenshots order was **not** achieved, because §§7–8 require looking at
+  contact sheets to curate. The disclosure is worded identically in the three files that
+  carry it — the `V05 R1 M4` failure class, avoided by construction.
+- **Three items are escalated to the owner/reviewer**, not decided here: a third mastery
+  disposition (`EXCLUDED BY DECISION`) for work that has subject matter but is forbidden;
+  whether the project needs to be able to say a record is **unresolvable in principle**; and
+  making speaker identification a written **procedure** rather than a bare requirement.
+
+---
+
 ## [0.8.0] — 2026-08-12 — V05 PASS at R3; lesson COMPLETE
 
 ### Added

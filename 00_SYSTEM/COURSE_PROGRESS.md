@@ -11,11 +11,121 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V05 — STUDENT PASS COMPLETE 2026-08-11, AWAITING
-                        INDEPENDENT REVIEW R1; gate OPEN per D-024)
-VIDEOS PASSED:       4  (V01, V02, V03, V04 — V04 PASS at R2, COMPLETE)
-CURRENT LESSON:      **V05 — STUDENT PASS COMPLETE 2026-08-11, submitted as
-                     REVIEW REQUIRED (not PASS). AWAITING REVIEW R1.**
+VIDEOS IN PROGRESS:  1  (V06 — STUDENT PASS COMPLETE 2026-08-12, AWAITING
+                        INDEPENDENT REVIEW R1)
+VIDEOS PASSED:       5  (V01, V02, V03, V04, V05 — V05 PASS at R3 2026-08-12,
+                        COMPLETE)
+CURRENT LESSON:      **V06 — "MICRO DAILY TRENDS". STUDENT PASS COMPLETE
+                     2026-08-12, submitted as REVIEW REQUIRED (not PASS).
+                     AWAITING REVIEW R1.**
+
+                     V06 IS THE SECOND CONSECUTIVE LESSON WITH ZERO COURSE-AUTHOR
+                     RUNTIME, and the first in which that exclusion is expensive. A
+                     single guest presenter speaks the whole 01:14:32; the token
+                     "Steve" occurs 25 times and 23 are his own third-person
+                     references. D-025 therefore governs 100% of the lesson.
+
+                     WHY V06 IS THE HARDEST TEST D-025 HAS FACED. V05 yielded no
+                     doctrine and gave up little — it stated no entry. V06 STATES A
+                     COMPLETE SYSTEM: a trigger (rejection of price), a filter (a
+                     nameable pattern from a closed set of three), a location rule
+                     (bounce or trap at a moving average), a counting rule (the
+                     second leg must take out 2), a 25-50 pip pullback band, a stop
+                     derived from moving-average spacing, a 2:1 reward preference, a
+                     TWO-HOUR TIME STOP and a reversal-pattern exit. It is the most
+                     nearly-complete trading system anywhere in V01-V06 and ALL OF
+                     IT IS EXCLUDED. The reviewer's question is not "did the student
+                     find the rules" — they are unmissable — but "DID THE STUDENT
+                     KEEP THEM OUT".
+
+                     WHAT V06 CONTRIBUTES, GIVEN IT CONTRIBUTES NO RULES:
+                     (1) the corpus's FIRST LESSON TITLE ESTABLISHED FROM THE
+                     RECORDING ITSELF — "Micro Daily Trends", printed on the title
+                     slide and spoken at [00:00:00], not taken from a filename;
+                     (2) the FIRST MOVING-AVERAGE NICKNAMES IN GENUINE AUDIO
+                     ("water", "mail"/"male", "blueberry") and the first PRINTED
+                     "Mayo", in the DMR curriculum — which settles the ASR spelling
+                     and attaches NO PERIOD, so A-020 is extended and still
+                     DO NOT CODE;
+                     (3) the DMR's own 12-week curriculum and its price ($102.50/mo)
+                     on screen — A-042 is extended and SHARPENED: the corpus now
+                     knows exactly which twelve topics it does not contain;
+                     (4) C-006 — V05 and V06 give INCOMPATIBLE definitions of "stop
+                     hunt", guest vs guest, and the instructor has defined neither
+                     anywhere in V01-V06. Corpus-hygiene class, NOT charged against
+                     the instructor.
+
+                     HOMEWORK completed on real data (TradingView FXCM, prices read
+                     from the platform's Data Window DOM text, never a pixel). Its
+                     headline result is METHODOLOGICAL: the undefined ADR lookback
+                     moves "ADR divided by 3" by 31-60% across five reasonable
+                     windows on four pairs — GBPUSD's push is 15 pips or 23 pips
+                     depending on a parameter nobody has stated. That is D-030's
+                     case made in numbers. It also found that the lesson's two
+                     headline figures are on DIFFERENT SCALES (one relative, one
+                     absolute) so they can agree at only one volatility level —
+                     reported WITH the 2012-vs-2026 regime caveat as prominently as
+                     the result. USDCHF's late week open REPRODUCED A THIRD TIME
+                     (476 = 480 - 4) from a fresh harvest, caught by a check run
+                     BEFORE measuring. And a NEGATIVE reproducibility result worth
+                     more than a clean one: against V05's committed JSON for the same
+                     week all 1,912 timestamps match exactly, but 120 USDJPY and 66
+                     USDCHF bars differ in OHLC by up to ~1 pip — any future claim of
+                     exact reproducibility on this feed is false at that precision.
+
+                     WHAT WAS EXCLUDED, DELIBERATELY: the assignment AS STATED
+                     ("find your anchor and look for three pushes") is normative in
+                     its ENTIRETY, so it was not performed as stated. The single most
+                     tempting measurement in the lesson — the 25-50 pip pullback band
+                     — was REFUSED, because "pullback" has no definition in this
+                     corpus and any threshold would be the agent's (D-030). The
+                     concept library was deliberately NOT updated: no V06 material is
+                     eligible under D-025.
+
+                     PROCESS DEVIATION, DISCLOSED IN THREE FILES IDENTICALLY: the
+                     recipe's §9 transcript-before-screenshots order was NOT achieved,
+                     because §§7-8 require looking at contact sheets to curate frames.
+                     §§1-10 of the source notes cite transcript markers only and were
+                     not rewritten when §11 arrived, but this session cannot claim it
+                     was blind to the slides. Stated as a deviation rather than
+                     claimed as clean (the V05 R1 M4 failure class).
+
+                     SUBMITTED AS "REVIEW REQUIRED" FOR THE SAME REASON V05 WAS, and
+                     the reason is now stronger: dimensions B (Recognition) and G
+                     (Manual backtesting) have abundant SUBJECT MATTER that is
+                     EXCLUDED BY DECISION. D-018 grants NOT APPLICABLE only where a
+                     lesson supplies no subject matter; D-019 insists NOT APPLICABLE
+                     and DEFERRED are different; neither fits work forbidden by a
+                     permanent evidentiary ruling. Graded on the purposive reading
+                     with the strict reading flagged. THREE ITEMS ESCALATED to the
+                     reviewer/owner: (1) a third disposition, EXCLUDED BY DECISION;
+                     (2) whether the project needs to say some records are
+                     UNRESOLVABLE IN PRINCIPLE (A-042, and now C-006 from a second
+                     direction); (3) that speaker identification is now a standing
+                     cost and should be a standing PROCEDURE, not just a requirement.
+
+                     A-050..A-054 opened; TEN existing records extended and NONE
+                     closed. In two cases the V06 evidence LOOKS like an answer and
+                     is recorded as weakening one: A-044 (the DMR curriculum prints
+                     six or seven admissible patterns where the audio says three, and
+                     the presenter breaks his own filter at [00:23:25]) and A-011 (the
+                     first candle count ever attributed to the instructor for M/W,
+                     withdrawn by its own reporter four seconds later). A-018 records
+                     the corpus's first NEGATIVE result on the "R = risk multiple"
+                     reading. C-004 re-checked against V06 and struck off as negative;
+                     C-003 deliberately NOT tested against V06 (its subject is M/W,
+                     V06's failure cases are about pushes — the V05 R2 M7 error, not
+                     repeated).
+
+                     PREVIOUS: **V05 — REVIEWED 2026-08-12 (R3): PASS, confidence
+                     HIGH, 0 CRITICAL / 0 MAJOR / 0 MINOR. V05 IS COMPLETE (D-004).**
+                     All five of R2's minors (M7-M11, open items 47-51) verified
+                     applied, each re-derived from source before the remediation diff
+                     was read. The M11 marker-existence sweep was re-run from scratch:
+                     7 non-resolving citations, all accounted for. Across four rounds
+                     V05 drew TEN MINORS, ZERO MAJOR, ZERO CRITICAL, and every one
+                     lived in counting, citing or cross-referencing — not one touched
+                     what V05 was understood to mean.
 
                      V05 IS THE FIRST LESSON IN THE CORPUS THAT YIELDS NO
                      DOCTRINE AT ALL, and that is a correct result rather than a
@@ -301,7 +411,49 @@ CURRENT LESSON:      **V05 — STUDENT PASS COMPLETE 2026-08-11, submitted as
                      0 major. COMPLETE. All 15 of R2's required actions applied and
                      verified against the source; R2 finding N1 (A-006's trailing
                      block) closed by withdrawing it in place.
-NEXT ACTION:         **REQUEST A FRESH REVIEWER SESSION FOR V04 R2 (D-003).** The
+NEXT ACTION:         **REQUEST A FRESH REVIEWER SESSION FOR V06 R1 (D-003).**
+                     V06's student pass is COMPLETE and submitted as REVIEW REQUIRED
+                     (not PASS). This session authored every V06 artifact and
+                     therefore MUST NOT review any of them.
+
+                     What the reviewer should test hardest, in the student's own
+                     estimation:
+                     (1) **DID THE STUDENT KEEP THE RULES OUT?** V06 states a complete
+                     tradeable system and D-025 excludes all of it. The failure mode
+                     to hunt is not an omission but a PROMOTION — any place where
+                     guest material has leaked into doctrine, a concept file, a
+                     machine candidate, or a closed A-xxx/C-xxx record.
+                     (2) **THE B AND G GRADES.** Both are NOT APPLICABLE on a
+                     purposive reading of D-018/D-019 and would be DEFERRED on a
+                     strict one. The student chose the purposive reading and flagged
+                     it; a reviewer reversing it would not be disputed.
+                     (3) **THE EVIDENCE-ORDER DEVIATION.** Recipe §9 was not achieved.
+                     Check that the three files disclosing it AGREE (the V05 R1 M4
+                     failure class) and that §§1-10 of the source notes genuinely
+                     cite no frame.
+                     (4) **THE HOMEWORK'S §3.** A 2012 rule of thumb is compared to
+                     2026 volatility. The caveats are stated; the question is whether
+                     stating them is enough, or whether the comparison invites the
+                     misreading it warns against.
+                     (5) **THE R = LABELS.** An earlier draft of INDEX.md asserted six
+                     values read off downscaled contact sheets; three were checked at
+                     magnification and one was WRONG. All unverified values were then
+                     removed. Verify that only R = 80.6, R = 41.5 and R = 67.3 are
+                     asserted and that the rest are declared not transcribed.
+                     (6) **THE ACOUSTIC SCREEN.** It is a measurement, not an
+                     identification. Check that no artifact depends on it, and that
+                     its stated limit (cannot identify a speaker across files) is
+                     honoured everywhere it is cited.
+
+                     Also owed, and NOT this session's to decide — the three
+                     escalations in 07_MASTERY_REPORTS/V06_MASTERY_REPORT.md:
+                     the EXCLUDED BY DECISION disposition; whether the project needs
+                     to express "unresolvable in principle"; and making speaker
+                     identification a written procedure rather than a bare
+                     requirement.
+
+                     ---- prior ----
+                     **REQUEST A FRESH REVIEWER SESSION FOR V04 R2 (D-003).** The
                      V04 R1 remediation is APPLIED 2026-08-11 and awaits independent
                      verification — that verification is what moves V04 to COMPLETE.
                      All seven minors, N1 and the owner action are done:
@@ -491,6 +643,42 @@ V04 GATE:            **OPEN on V03's own PASS as of V03 R3, 2026-08-10 (D-004
                      currently the only thing holding the gate.
 
 
+V06 GATE:            **OPEN on V05's own PASS: V05 R3, 2026-08-12 — PASS,
+                     0 CRITICAL / 0 MAJOR / 0 MINOR. V05 is COMPLETE (D-004).**
+                     No override was needed and none was used: the gate was verified
+                     OPEN in 18_REVIEW/REVIEW_INDEX.md before any V06 artifact was
+                     created.
+                     Carry into V07, and read this before starting it:
+                     (a) **SPEAKER IDENTIFICATION IS THE FIRST STEP, NOT A LATER
+                     ONE.** Instructor runtime across one session date runs ~100%
+                     (V03) -> ~31% (V04) -> 0% (V05) -> 0% (V06). A session that
+                     assumed the instructor was speaking would have written a full
+                     lesson of false doctrine TWICE. V06 [00:48:28]-[00:49:19]
+                     announces guest presenters for at least five more topics — that
+                     is a 2012 announcement about the DMR's schedule, NOT evidence
+                     about which recorded lessons are guest-led, so it must be
+                     checked per lesson rather than assumed. A committed, validated
+                     acoustic screen is at 05_HOMEWORK/V06/scripts/f0_profile.py;
+                     it detects a handover INSIDE a file (verified against V04's
+                     known one) and must NOT be used to identify a speaker ACROSS
+                     files.
+                     (b) **V07 SHARES V06's 2012-03-26 SESSION DATE** (as do V08 and
+                     V09), so the same presenter is a live possibility. Tag first.
+                     (c) **A-049 / C-006 is a standing question for every remaining
+                     lesson**: does the INSTRUCTOR ever distinguish a stop hunt from
+                     a trap move, and on what criterion? Two guests have now given
+                     two different answers and he has given none.
+                     (d) **The NOTES.md / VISUAL_INDEX.md audit is still per-lesson.**
+                     RULES.md is discharged in one step (open item 33), but V06 found
+                     a THIRD distinct VISUAL_INDEX.md failure mode — SWF delta-tiles
+                     of 267x51 and 137x14 pixels indexed as "Presentation Slide /
+                     Annotated Chart". Three lessons, three ways of being wrong.
+                     (e) **The three V06 escalations are owner/reviewer business**,
+                     not V07's: the EXCLUDED BY DECISION disposition, the
+                     unresolvable-in-principle question, and making speaker
+                     identification a written procedure.
+
+
 V05 GATE:            **OPEN, and now on the stronger ground of a PASS: V04 R2,
                      2026-08-11 — PASS, 0 CRITICAL / 0 MAJOR / 1 MINOR
                      (non-blocking). V04 is COMPLETE (D-004).** Open items 25-32 are
@@ -606,8 +794,8 @@ fabricate, interpolate, or infer Week 6 content.**
 | V02 | Wk1 P2 | 01:00:19 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ✅ | ✅ | ✅ | ✅ | ⏸ | REVIEW REQUIRED (resub) | ✅ R1 REVISE (0C/0M/7m) → **R2 PASS** | **COMPLETE** |
-| V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ✅ | ✅ | ✅ | ⚠️ | 🚫 | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
-| V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ✅ | ✅ | ✅ | ⚠️ | 🚫 | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R1B REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
+| V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ✅ | ✅ | ✅ | ⚠️ | 🚫 | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -818,7 +1006,7 @@ points are set once the real lesson count is known at ingestion.
 | Phase | Name | Status |
 |---|---|---|
 | 0 | Environment | ✅ Complete |
-| 1 | Student | 🔄 In progress — V01 **PASS** (R3); V02 **PASS** (R3); V03 **PASS** (R3); **V04 REVISE** (R1, 7 minors owed); **V05 gate OPEN** per D-024 |
+| 1 | Student | 🔄 In progress — V01 **PASS** (R3); V02 **PASS** (R3); V03 **PASS** (R3); V04 **PASS** (R2); V05 **PASS** (R3); **V06 AWAITING REVIEW R1**, gate for V07 governed by D-024 |
 | 2 | Scholar | Not started |
 | 3 | Expert (Master Spec) | Not started |
 | 4 | Formalizer (Machine Spec) | Not started |
