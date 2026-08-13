@@ -11,12 +11,30 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V10 — R1 returned REVISE 0C/0M/4m 2026-08-13,
-                        HIGH confidence. IN REMEDIATION: open items 91-94
-                        are OWED and NOT yet applied. D-003 reserves
-                        closure to an independent reviewer; V10 reaches
-                        COMPLETE only at R2.)
-VIDEOS PASSED:       9  (V01, V02, V03, V04, V05, V06 — all COMPLETE;
+VIDEOS IN PROGRESS:  0  (Superseded text, retained per REMEDIATION_PROTOCOL.md
+                        §2 -- this line previously read: "VIDEOS IN PROGRESS: 1
+                        (V10 — R1 returned REVISE 0C/0M/4m 2026-08-13, HIGH
+                        confidence. IN REMEDIATION: open items 91-94 are OWED
+                        and NOT yet applied. D-003 reserves closure to an
+                        independent reviewer; V10 reaches COMPLETE only at
+                        R2.)"
+                        ⚠ THE SUPERSEDED SENTENCE IS THE POINT. It said V10
+                        reaches COMPLETE only at R2, by an independent
+                        reviewer. THERE WAS NO R2. The owner authorised ONE
+                        session to both fix AND verify the four minors, so
+                        V10's COMPLETE is ⚠ SELF-VERIFIED AT OWNER DIRECTION
+                        and D-003 is NOT satisfied. See the V10 row below.)
+VIDEOS PASSED:       10 (Superseded text, retained: "VIDEOS PASSED: 9".
+                        V10 — ⚠ COMPLETE 2026-08-13, SELF-VERIFIED AT OWNER
+                        DIRECTION, NOT independently verified. R1's four
+                        MINORs -- items 91 (student half), 92, 93, 94 -- are
+                        applied and CLOSED — SELF-VERIFIED AT OWNER
+                        DIRECTION, NOT CLOSED — VERIFIED. Second use of this
+                        pattern, after V09's items 81-83 on the same date.
+                        Read REVIEW_INDEX.md's V10 notice under the DECISION
+                        TABLE before relying on this row. Still open and not
+                        gating: items 86, 88, 89, 91's policy half, 95, 96.
+                        V01, V02, V03, V04, V05, V06 — all COMPLETE;
                         V07 — PASS at R3 2026-08-13, COMPLETE;
                         V08 — PASS at R2 2026-08-13, COMPLETE;
                         V09 — ⚠ COMPLETE 2026-08-13, SELF-VERIFIED AT
@@ -27,18 +45,49 @@ VIDEOS PASSED:       9  (V01, V02, V03, V04, V05, V06 — all COMPLETE;
                         they are CLOSED — SELF-VERIFIED AT OWNER
                         DIRECTION. Read REVIEW_INDEX.md's V09 status
                         block before relying on this row.)
-NEXT LESSON:         V11 — **GATE OPEN as of 2026-08-13.** V10 R1 returned
-                     REVISE with 0 CRITICAL / 0 MAJOR / 4 MINOR, HIGH
-                     confidence, which opens the next gate under D-024.
-                     **V11 may start.** V10's four minors (items 91-94) are
-                     deferred and still owed; V10 is NOT COMPLETE until they
-                     are applied AND re-reviewed. See the V11 GATE block
-                     below for what to carry into it.
+NEXT LESSON:         V11 — **GATE OPEN as of 2026-08-13, and CONFIRMED OPEN on
+                     the same date after V10's four minors were closed.** V10 R1
+                     returned REVISE with 0 CRITICAL / 0 MAJOR / 4 MINOR, HIGH
+                     confidence, which is what opens the gate under D-024 — **the
+                     gate opened at R1 and never depended on the minors.**
+                     **V11 may start.** See the V11 GATE block below for what to
+                     carry into it.
+
+                     (Superseded text, retained per REMEDIATION_PROTOCOL.md §2 --
+                     this block previously ended: "V10's four minors (items 91-94)
+                     are deferred and still owed; V10 is NOT COMPLETE until they
+                     are applied AND re-reviewed." **They are applied. They were
+                     NOT re-reviewed** -- the owner authorised one session to fix
+                     and verify instead, so V10 is COMPLETE only in the qualified
+                     ⚠ SELF-VERIFIED AT OWNER DIRECTION sense. **A V11 session
+                     inherits that qualification along with the gate.**)
 
 CURRENT LESSON:      **V10 — banner "Market Makers Boot Camp / Week 3", no topic
-                     title. STUDENT PASS COMPLETE 2026-08-13, submitted as
-                     REVIEW REQUIRED. R1 RETURNED REVISE 0C/0M/4m,
-                     HIGH confidence, 2026-08-13 — items 91-94 OWED.**
+                     title. ⚠ COMPLETE 2026-08-13 — SELF-VERIFIED AT OWNER
+                     DIRECTION, NOT INDEPENDENTLY VERIFIED. R1 returned REVISE
+                     0C/0M/4m HIGH confidence; items 91 (student half), 92, 93
+                     and 94 are APPLIED and CLOSED — SELF-VERIFIED AT OWNER
+                     DIRECTION. There was no R2 and no independent PASS;
+                     D-003 is NOT satisfied.**
+
+                     WHAT THE FIX ROUND CHANGED, so the qualification can be
+                     weighed: nothing bearing on a measurement, classification,
+                     disposition or rule. M2 corrected the spoken census of the
+                     anchor-distance reference object from "four of six" to FIVE
+                     OF SEVEN ([01:00:20] was missing), which WIDENS the majority
+                     and STRENGTHENS C-017. M3 rescoped §15's "no hour is ever
+                     stated" to "no session-boundary clock time is stated",
+                     listing the four incidental times that falsified the stronger
+                     form -- see the correction to the WHAT IT DOES NOT SUPPLY
+                     block below. M4 added an ASR caution to C-016 as a FURTHER
+                     reason for UNRESOLVED. M1's student half proved to be an
+                     addition, not a correction: the two artifacts the review said
+                     cited "open item 82" never carried an item number at all.
+
+                     (Superseded text, retained per REMEDIATION_PROTOCOL.md §2 --
+                     this block previously read: "STUDENT PASS COMPLETE
+                     2026-08-13, submitted as REVIEW REQUIRED. R1 RETURNED REVISE
+                     0C/0M/4m, HIGH confidence, 2026-08-13 — items 91-94 OWED.")
 
                      ⭐ **THE FIVE-LESSON GUEST RUN ENDS. V10 IS 100% COURSE
                      AUTHOR.** V05-V09 each carried ZERO author runtime. The V10
@@ -57,9 +106,22 @@ CURRENT LESSON:      **V10 — banner "Market Makers Boot Camp / Week 3", no top
                      within the week". A-010 NARROWS on Tier 1 alone.
 
                      WHAT IT DOES NOT SUPPLY, and absence is evidence: NO STOP
-                     LOSS ANYWHERE ("stop loss" occurs 0 times), no session clock
-                     time, no ADR lookback, no EMA nickname mapping despite using
-                     two nicknames.
+                     LOSS ANYWHERE ("stop loss" occurs 0 times), NO SESSION-
+                     BOUNDARY CLOCK TIME, no ADR lookback, no EMA nickname
+                     mapping despite using two nicknames.
+
+                     (Superseded text, retained per REMEDIATION_PROTOCOL.md §2 --
+                     this line read "no session clock time" and is corrected under
+                     open item 93, V10_REVIEW_R1.md M3. Clock times DO occur --
+                     [00:02:24] "at 830", [00:05:09] "seven o'clock New York
+                     time", [00:42:52] "3 o'clock in the morning", [01:03:57]
+                     "5 6 o'clock at night" -- but every one is incidental and
+                     NONE delimits a session, which is the claim actually being
+                     made. Corrected here too because this block is a summary a
+                     later session reads INSTEAD of the source notes; leaving the
+                     unscoped form here would have reproduced the exact defect M3
+                     charged one file over. V10_SOURCE_NOTES.md §15 carries the
+                     full correction.)
 
                      PT-036/BT_V10_0001: BOTH quantitative claims CONTRADICTED AS
                      STATED. Weekly range 600-1000 pips -> 0 of 180 weeks, median

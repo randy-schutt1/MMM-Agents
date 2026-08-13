@@ -190,8 +190,16 @@ recorded and fenced `INFERRED MACHINE CANDIDATE / NOT A COURSE RULE` (`V10_INTER
 
 | | |
 |---|---|
-| **`C-016`** | the directional lock is *"one-day"* and *"good for three days"* **two seconds apart**, with *"at least two days"* twice more. Matters because the safety trade **has no stop** — its only non-target exit is time |
-| **`C-017`** | the anchor distance is measured from the **LOW/HOW anchor in print** and from the **blue tracer in speech** (4 of 6 spoken instances). **The corpus's first printed-vs-spoken conflict** |
+| **`C-016`** | the directional lock is *"one-day"* and *"good for three days"* **two seconds apart**, with *"at least two days"* twice more. Matters because the safety trade **has no stop** — its only non-target exit is time. **Both figures are ASR-rendered and neither is printed** — an ASR caution added 2026-08-13 under open item 94, as a **further** reason the record stays `UNRESOLVED` |
+| **`C-017`** | the anchor distance is measured from the **LOW/HOW anchor in print** and from the **blue tracer in speech** (**5 of 7** spoken instances). **The corpus's first printed-vs-spoken conflict** |
+
+> **⚠ CENSUS CORRECTED 2026-08-13 — `V10_REVIEW_R1.md` `M2` (`E20`, open item 92).**
+> **Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — the `C-017` cell above previously
+> read *"(4 of 6 spoken instances)"*.** `[01:00:20]` *"75 pips off of the blue tracer"* is a
+> seventh spoken instance and it names the tracer, so the census is **five of seven**. **The
+> grade, the disposition and the argument below are all unchanged** — the correction **widens** the
+> spoken majority and therefore strengthens `C-017` and this section's claim about it.
+> **⚠ Corrected AND self-verified by one session at owner direction; `D-003` is NOT satisfied.**
 
 **A tidy reconciliation was available for both and BOTH ARE REFUSED IN WRITING**, per the `C-010`
 precedent. For `C-017` the refusal is argued rather than asserted: `D-008` would settle it by source
@@ -268,6 +276,16 @@ prior rounds:
    well-formed, correctly-timecoded frames at 7.5-second spacing, under-sampling the detector by a
    third. **POLICY ledger under `D-038a` — escalated, NOT patched from this branch.** The fix is one
    line, and `GOTCHA 5`'s probe already parses the adjacent header field.
+   > **✅ DISCHARGED — `REVIEW_INDEX.md` open item 87, CLOSED at V10 R1, 2026-08-13.** Pointer
+   > added 2026-08-13. This escalation was allocated **82** on `video/v10` and renumbered to
+   > **87** by the V10 R1 reviewer at merge-back, the integration branch having concurrently given
+   > 81–83 to V09 R2 (`V10_REVIEW_R1.md` `M1`; open item 91 carries the cause and the `D-038a`
+   > policy gap behind it). **§10 was fixed on the integration branch under `D-038a`** — the
+   > header table relabelled as measured examples rather than a constant, V10's 2.0 row added, and
+   > the prose changed to *"patch `declared_rate × 10`"*. **The escalate-don't-patch handling was
+   > upheld as correct.** **Stated against the review:** `M1` records that this escalation
+   > *"cites open item 82"*; **it did not** — it carried no item number, so nothing here is
+   > superseded and this pointer is an addition.
 3. **`A-077` (the lock) is the highest-value gap V10 leaves.** It is the *only* thing standing
    between V10's now-defined anchor and a prospectively identifiable setup. Any lesson attaching a
    distance or a duration to *"price has moved away and confirmed"* discharges dimension B's block,

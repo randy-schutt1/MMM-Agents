@@ -71,7 +71,7 @@ nothing outside it cites them.
 | 23 | `01-01-22_audusd-15m-safety-trade-walkthrough` | `61:22` | `AUDUSD,M15`; shaded boxes with `R = 46.2 / 46.9 / 46.5 / 45.2 / 20.1` | Worked example of the rule set on the execution timeframe | ANNOTATED CHART |
 | 24 | `01-07-52_audusd-15m-no-visible-stop-hunt` | `67:52` | `AUDUSD,M15`; `R = 34.1 / 57.6 / 102.6`; a hand-drawn white ellipse around one formation | The **counter-example** — `[01:01:38]` *"He does not make a visible stop hunt … because he doesn't exploit the Asian range"*. A NEGATIVE example in the lesson's own voice | ANNOTATED CHART |
 | 25 | `01-10-42_usdcad-15m-peak-formation-walkthrough` | `70:42` | `USDCAD,M15 0.99536 …`; `R = 59.3 / 21.1 / 31.9` | Second instrument. Evidence the claim is not GBP-specific (`D-007` note) | ANNOTATED CHART |
-| 26 | `01-15-57_stop-hunt-25-to-75-pips-slide` | `75:57` | *"Add a moving average or Pivot for strong confluence"* / *"The dealer can repeat the level, but it must hold"* / **"Look for the stop hunt to come in around 25 to 75 pips off of the LOW/HOW anchor."** | **THE FIGURE, IN PRINT — and it settles a six-way ASR wobble.** Spoken renderings ranged over *25–75 / 20–75 / 50–75 / 25–50*. The printed form is **25 to 75**, and the reference point is the **LOW/HOW anchor**, not the blue tracer. See `A-078` | PRINTED — LOAD-BEARING |
+| 26 | `01-15-57_stop-hunt-25-to-75-pips-slide` | `75:57` | *"Add a moving average or Pivot for strong confluence"* / *"The dealer can repeat the level, but it must hold"* / **"Look for the stop hunt to come in around 25 to 75 pips off of the LOW/HOW anchor."** | **THE FIGURE, IN PRINT — and it settles a SEVEN-instance ASR wobble** (**corrected 2026-08-13 from *"six-way"*** under open item 92, `V10_REVIEW_R1.md` `M2`; superseded text retained per `REMEDIATION_PROTOCOL.md` §2 — `[01:00:20]` was missing from the census). **Spoken renderings ranged over *25–75 / 20–75 / 50–75 / 25–50*, and `[01:00:20]` drops the lower bound entirely (*"75 pips"*), which strengthens rather than weakens the case for the printed form.** The printed form is **25 to 75**, and the reference point is the **LOW/HOW anchor**, not the blue tracer. See `A-078` | PRINTED — LOAD-BEARING |
 | 27 | `01-20-27_gbpjpy-15m-double-bottom-anchor` | `80:27` | `GBPJPY,M15 131.209 131.318 131.199 131.277`; `R = 104.5 / 66.6 / 93.5 / 51.0 / 54.0` | The *"how do I know to take the W and not the M"* example (`[01:21:48]`). **Third instrument** | ANNOTATED CHART |
 | 28 | `01-23-42_gbpusd-15m-with-adr-low-and-pivot` | `83:42` | `GBPUSD,M15 1.60083 1.60098 1.60083 1.60088`; labelled `ADR Low`, `Pivot`, `M1`; TDI sub-panel; `R = 48.2 / 25.9 / 82.0 / 58.6` | **The project's primary instrument (`D-007`) in the instructor's own hands**, with the ADR and Pivot overlays the lesson mentions at `[01:16:02]` | ANNOTATED CHART |
 | 29 | `01-27-17_audusd-15m-with-tdi-visual-panel` | `87:17` | `AUDUSD,M15`; a sub-panel captioned **`Traders Dynamic Index Visual`**; platform tabs `EURUSD,M15 / AUDUSD,M15 / AUDUSD,M30 / GBPCHF,H1`; an order row dated `2012.03.23 15:16 … buy 50.00 audusd` | **Second frame showing TDI displayed but untaught.** The tab strip is descriptive evidence of the multi-pair, multi-timeframe workspace the lesson describes at `[01:33:29]` | CHART |
@@ -87,9 +87,11 @@ nothing outside it cites them.
 this section can exist. **On V10 the screenshots changed three things, and two of them were
 corrections to conclusions this session had already written down.**
 
-1. **They settled the safety trade's distance figure.** The audio gives it six times and the ASR
-   renders it four different ways. **The slide prints `25 to 75 pips off of the LOW/HOW anchor`**
-   (#26). Without it, `A-078` would have had to stay wholly open on the number *and* on the
+1. **They settled the safety trade's distance figure.** The audio gives it **seven** times
+   (**corrected 2026-08-13 from *"six times"*** — `V10_REVIEW_R1.md` `M2`, open item 92;
+   `[01:00:20]` was missing from the census, and superseded text is retained here per
+   `REMEDIATION_PROTOCOL.md` §2) and the ASR renders it several different ways.
+   **The slide prints `25 to 75 pips off of the LOW/HOW anchor`** (#26). Without it, `A-078` would have had to stay wholly open on the number *and* on the
    reference point; with it, the number is settled and only the *reference point* conflict
    survives (the speaker repeatedly says *"off of the blue tracer"*, which is a different object —
    see `C-017`).
@@ -107,6 +109,21 @@ supplying it. A reviewer can strike every `PRINTED`-only row and the lesson's co
 ---
 
 ## ESCALATION — A DEFECT IN `SWF_CAPTURE_RECIPE.md` §10, FOUND HERE
+
+> **REGISTER POINTER, ADDED 2026-08-13 — this escalation is `REVIEW_INDEX.md` open item 87, and it
+> is ✅ CLOSED.** It was allocated **82** on `video/v10` and **renumbered 86–90 → this item 87** by
+> the V10 R1 reviewer at merge-back, because the integration branch had concurrently given 81–83
+> to V09 R2 (`V10_REVIEW_R1.md` `M1`, open item 91; the RENUMBERING DISCLOSURE beneath
+> `REVIEW_INDEX.md`'s open-items table carries the full old→new map). **The escalation was
+> answered:** `SWF_CAPTURE_RECIPE.md` §10 was fixed on the integration branch under `D-038a` at
+> V10 R1 — the header table is relabelled as *measured examples, not the library's constant*,
+> V10's 2.0 row is added with its three-way duration cross-check, and the prose now reads
+> *"patch `declared_rate × 10`"* with a rule to read `frameRate` from the file in hand.
+>
+> **Stated for accuracy, against the review:** `V10_REVIEW_R1.md` `M1` records that this file
+> *"cites open item 82"*. **It did not** — this section referred to the escalation by description
+> and carried no item number at all, which is why the renumbering could not have orphaned it. The
+> pointer above is therefore an **addition**, not a correction, and nothing here is superseded.
 
 **§10 states the frame-rate patch as `3.0 → 30.0 fps`,** carried over from V01 and V02 which both
 declare 3.0. **V10 declares 2.0.** The recipe's §10 prose (*"Patch 3.0 → **30.0** fps"*) and its

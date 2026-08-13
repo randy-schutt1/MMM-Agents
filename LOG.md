@@ -7111,3 +7111,191 @@ Merge commit on `claude/add-documents-repository-fdfb3u`. Paths staged explicitl
 
 **V11 may start** — the gate is OPEN under `D-024`. **V10 R2** on student resubmission with
 items 91-94 applied.
+
+---
+
+## 2026-08-13 — V10 R1 REMEDIATION: items 91 (student half), 92, 93, 94 APPLIED and ⚠ SELF-VERIFIED AT OWNER DIRECTION
+
+### ⚠⚠ READ THIS FIRST — THIS ROUND DOES NOT SATISFY `D-003`
+
+**One session both FIXED and VERIFIED all four of `V10_REVIEW_R1.md`'s MINORs, on the owner's
+explicit authorisation**, given on the ground that all four are small documentation edits and
+citing the V09 R2 items 81–83 precedent set on this same date. **That authorisation is real and it
+is recorded here — but it does not manufacture independence.** There was **no R2** and **no
+independent `PASS`**. Every item carries the status **`CLOSED — SELF-VERIFIED AT OWNER
+DIRECTION`**, never `CLOSED — VERIFIED`, and the same string is used in `REVIEW_INDEX.md`
+(open-item rows, STATUS block, DECISION TABLE row and its notice), in `COURSE_PROGRESS.md`
+(SUMMARY, CURRENT LESSON, NEXT LESSON) and in every artifact block written this session. **The
+string exists for no other purpose than to be visibly different, so a later reader can never
+mistake it for an arm's-length verdict.**
+
+**This is the SECOND use of the pattern**, after V09 R2. Recorded in the same words deliberately,
+so the two are comparable and countable.
+
+### What was fixed
+
+| Item | Finding | What was done |
+|---|---|---|
+| **91** (student half) | `M1` — open-item ID collision; `video/v10` allocated 81–85 while integration gave 81–83 to V09 R2 | **Renumbering 81–85 → 86–90 VERIFIED COMPLETE by repo-wide sweep.** `grep -rn "item 8[1-5]"` over every `.md` returns **no V10-scoped hit**; every survivor is V09 R2's, which correctly keeps those numbers; 86–90 each appear exactly once with the mapped subjects. **⚠ AND THE REVIEW IS WRONG ON A POINT OF FACT** — see below |
+| **92** | `M2` — the spoken census of the anchor-distance reference object is *"four of six"* | Corrected to **five of seven** at **seven sites**, three more than the review named |
+| **93** | `M3` — §15's *"no hour is ever stated"* is falsified by four incidental clock times | Rescoped to **"No session-boundary clock time is stated"**, with all four times listed and characterised |
+| **94** | `M4` — `C-016` does not apply its own transcript's ASR caution to its own evidence | **ASR caution block added**, superseding nothing |
+
+### ⚠ `M1`: THE REVIEW'S FACTUAL CLAIM IS FALSE, AND IT IS CORRECTED IN PLACE RATHER THAN ABSORBED
+
+`V10_REVIEW_R1.md` `M1`, its REQUIRED CORRECTIONS item 1, its ADVANCEMENT block and the
+RENUMBERING DISCLOSURE all state that `04_SCREENSHOTS/V10/INDEX.md` § ESCALATION and
+`07_MASTERY_REPORTS/V10_MASTERY_REPORT.md` escalation 2 **cite *"open item 82"***, and that
+correcting them is the student's owed half.
+
+**They do not, and never did.** Both referred to the recipe defect **by description and carried no
+item number at all.** Verified by grepping `82` in each file: the only hits are the source `.swf`'s
+SHA-256 and an `R = 82.0` chart label in the frame table. **The renumbering therefore orphaned
+nothing, and there were no stale pointers to fix.**
+
+**What was actually owed is the opposite act, and it is done:** both artifacts have **gained** a
+pointer naming open item **87**, recording that it is ✅ `CLOSED`, that it was `82` on `video/v10`,
+and that the collision and the `D-038a` gap behind it are carried at item 91. **Nothing in either
+artifact is superseded** — each block says so on its face.
+
+**The review file itself is NOT edited** (`REMEDIATION_PROTOCOL.md` §6). The correction lives in
+`REVIEW_INDEX.md` item 91's status cell, in a retention block beneath the RENUMBERING DISCLOSURE
+whose wrong paragraph is left standing, and in both artifacts.
+
+**The policy half of item 91 stays OPEN and was not touched.** Amending `D-038a` requires an owner
+ruling; neither a student nor a reviewer session may make one.
+
+### `M2`: the sweep found three sites beyond the four the review named
+
+`[01:00:20]` was **re-derived from `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` at source** — body line
+2452 reads *"75 pips off of the blue tracer"*. So does `[00:54:02]` (line 2203), *"25 to 50 pips
+the dealer falls into the shadow box"* — an eighth **distance** utterance that names **no reference
+object** and is therefore **recorded in `A-078` and `C-017` but deliberately NOT counted** in
+either census.
+
+The review named `A-078`, `C-017`, `V10_MASTERY_REPORT.md` §J and this register's item text. **A
+repo-wide sweep for the undercount found three more:**
+
+- **`04_SCREENSHOTS/V10/INDEX.md`** — *"the audio gives it six times"*
+- **`05_HOMEWORK/V10/V10_COMPREHENSION_ANSWERS.md` Q6** — *"four of six spoken instances"*
+- **`02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` TRANSCRIPTION NOTE 1** — *"given six times"*, with its
+  own six-marker list
+
+**The transcript note is the one that mattered most to catch**, because it is the note `M4` relies
+on: leaving it stale would have left two V10 records disagreeing about the same census while a
+third cited one of them as authority.
+
+**The comprehension answer was NOT rewritten.** It is a preserved first attempt, committed before
+the scorer existed, so the correction is **appended as a block** and the original wording stands
+(`REMEDIATION_PROTOCOL.md` §2). **The transcript's verbatim body is UNTOUCHED** — only the header
+note is corrected.
+
+**The direction of the correction matters and is recorded everywhere it appears: a 5/7 spoken
+majority makes the misspeak reading `C-017` refuses LESS available than 4/6 did.** The correction
+strengthens the finding.
+
+### `M3`: rescoped, and `A-076` checked and left alone
+
+§15 now reads **"No session-boundary clock time is stated"**, states that sessions are named
+constantly and not one is given an opening or closing hour on any clock, and lists all four
+incidental times with what each actually is — `[00:02:24]` *"at 830"* (a chart students are being
+told to stop watching), `[00:05:09]` *"seven o'clock New York time"* (the seminar announcement),
+`[00:42:52]` *"3 o'clock in the morning"* (the speaker's own readiness, rhetorical), `[01:03:57]`
+*"5 6 o'clock at night"*. **All four re-derived at source; all four resolve verbatim.**
+
+**`A-076`'s parallel sentence was checked as the review directed and is CORRECT AS WRITTEN.** It
+reads *"V10 states no clock time for any session"* and backs it with six zero-counts (`7:00`,
+`3:00 am`, `3:30`, `9:00`, `9:30`, `5:00 pm`, all **0** in the body, `Q-011` §1). **It never
+overshot, it is left untouched, and it is cited in the fix as the model.**
+
+**The same unscoped sentence was ALSO found in `00_SYSTEM/COURSE_PROGRESS.md`'s V10 block**
+(*"no session clock time"*) and corrected there too — that block is a summary later sessions read
+*instead of* the source notes, so leaving it would have reproduced M3's exact defect one file over.
+
+### `M4`: a caution added, and what it does NOT license stated with it
+
+The block records that `[01:00:41]`'s *"one-day"* and `[01:00:43]`'s *"three days"* are **both ASR
+renderings and NEITHER is printed on any slide**, cites TRANSCRIPTION NOTE 1 (*"Numeric ranges
+wobble, and one of them is load-bearing"*) and the transcript's own **`MEDIUM–HIGH`** self-rating,
+and concludes it is a **further independent reason to refuse** the reconciliation: the refused
+reading is a *construction over the two numerals*, and a construction over figures that may be
+rendering artifacts is unsafe.
+
+**Re-derived, not taken on the review's word:** TRANSCRIPTION NOTE 1 and the confidence rating were
+read at source, and **the absence of any printed holding period was checked against all 32 curated
+frames** via `04_SCREENSHOTS/V10/INDEX.md`. That check is what makes *"neither is printed"* a
+verified claim rather than a repeated one.
+
+**The block also states what the caution does not license**, which the review did not ask for:
+it is **not** grounds to discard either figure (`D-030`, `SOURCING_HIERARCHY.md` §3.2 forbid
+selecting the convenient one), and the contradiction is **over-determined without them** — strike
+both ASR-suspect figures and `[00:41:45]` *"at least two days"*, `[01:32:07]` *"two days"* and
+`[01:26:39]` *"three days … maybe one more"* still state the duration three incompatible ways.
+
+**Nothing above the block is superseded** — the review is explicit that the omission *"strengthens
+nothing and undermines nothing in the disposition"*. `C-016`'s Related section now cites
+TRANSCRIPTION NOTE 1 and `A-078`. Cross-referenced to item **95**, the owner question about tagging
+this class at filing.
+
+### ⚠ A BOOKKEEPING DEFECT THIS ROUND FOUND AND DISCLOSED RATHER THAN QUOTED AROUND
+
+**`REVIEW_INDEX.md`'s SEVERITY TOTALS table is stale at V09 R1** — it still reads `MINOR 57 / 12
+open / 45 closed`, predating **V09 R2's +3** and **V10 R1's +4**, because **neither round posted
+the per-round arithmetic paragraph** that every round from V07 R1 onward had posted.
+
+This round's delta is therefore recorded as **−4 open MINOR / +4 closed MINOR** and **absolute
+figures are deliberately not quoted**, because quoting a total off a stale table would manufacture
+a number rather than record one. **A warning block is added under the table and item 96 is widened
+to cover it**: item 96 charged exactly this decay in `COURSE_PROGRESS.md`, and **the same shape is
+present in `REVIEW_INDEX.md` itself** — a maintained prose/delta layer above an unmaintained table,
+where the table is the part a reader scans. Reconciling it means re-auditing the pre-V03 rows
+carried unreconciled since V02 R1: a sweep, not an edit, and not one this session was authorised
+to make.
+
+### What did NOT change
+
+**No marker, quotation, figure, disposition, `DO NOT CODE` verdict, grade, machine-rule
+classification or conclusion moves anywhere.** `A-078`'s number stays `RESOLVED BY COURSE`; its
+reference point stays `DO NOT CODE`; `C-016` and `C-017` stay `UNRESOLVED`; `A-010` stays
+`NARROWED`; every `PT-036` figure and both `CONTRADICTED AS STATED` verdicts are untouched. **No
+pre-registration, runner or output file was opened for editing** (`COMMON_PROTOCOL.md` §9 rule 7).
+**Superseded text is retained at every site** per `REMEDIATION_PROTOCOL.md` §2.
+
+**Still OPEN and NOT covered by this round's verdict:** items **86** (recommended `PT-037`),
+**88** (printed-vs-spoken precedence — owner), **89** (`A-077`, the lock), **91's policy half**,
+**95** (owner question), **96** (bookkeeping sweep, now widened) and **36** (the `D-030`
+dimension-B disposition, owed for the sixth consecutive lesson-round). **`N1` and `N2` from R1 were
+recommended-not-required and were deliberately left undone**, to keep this round to the four
+minors the owner authorised.
+
+### Files
+
+- **Updated:** `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` (`A-078`);
+  `11_CONTRADICTIONS/CONTRADICTIONS.md` (`C-016`, `C-017`);
+  `03_LESSON_NOTES/V10_SOURCE_NOTES.md` §15; `07_MASTERY_REPORTS/V10_MASTERY_REPORT.md`
+  (§J, escalation 2); `04_SCREENSHOTS/V10/INDEX.md` (§ ESCALATION, screenshot-value block);
+  `05_HOMEWORK/V10/V10_COMPREHENSION_ANSWERS.md` Q6;
+  `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` TRANSCRIPTION NOTE 1 (**header only — body untouched**);
+  `18_REVIEW/REVIEW_INDEX.md` (STATUS, DECISION TABLE + notice, SEVERITY TOTALS warning, items 88,
+  91, 92, 93, 94, 96, RENUMBERING DISCLOSURE); `00_SYSTEM/COURSE_PROGRESS.md`; this log.
+- **NOT touched:** `18_REVIEW/V10/V10_REVIEW_R1.md` (`REMEDIATION_PROTOCOL.md` §6);
+  `00_SYSTEM/DECISIONS.md`; `06_MANUAL_BACKTEST/**`; the transcript body.
+
+### Git
+
+Branch `fix/v10-r1-minors`, cut from the integration branch at `9c00a60` after `git fetch --all`
+confirmed **zero divergence** (`D-038`). Paths staged **explicitly**; `git diff --staged` read
+before every commit; **`git add -A` never used.** Merge-back performed as its own deliberate
+`D-038` step, with a second `fetch` and a divergence check first.
+
+`scripts/validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+### Next Action
+
+**V11 may start — the gate is CONFIRMED OPEN under `D-024`**, and it opened at R1 on 0 CRITICAL /
+0 MAJOR, never depending on these four minors. **A V11 session inherits V10's qualification:
+V10 is `COMPLETE` only in the ⚠ SELF-VERIFIED AT OWNER DIRECTION sense.** If a later reviewer wants
+the independence this round lacks, the cheap re-derivations are: `[01:00:20]` and `[00:54:02]` in
+the transcript body (`M2`); `[00:02:24]`, `[00:05:09]`, `[00:42:52]`, `[01:03:57]` (`M3`); a scan
+of the 32 curated frames for any printed holding period (`M4`); and `grep -rn "item 8[1-5]"`
+(`M1`). **None of it takes long.**

@@ -1926,6 +1926,51 @@ is a construction, not a reading.** The speaker does not say it. `SOURCING_HIERA
 **Recorded as noticed and refused, per the `C-010` precedent** — where the tidy reconciliation was
 likewise available and likewise declined.
 
+> ### ⚠ ASR CAUTION — BOTH FIGURES ARE ASR-RENDERED AND NEITHER IS PRINTED. ADDED 2026-08-13
+>
+> **`18_REVIEW/V10/V10_REVIEW_R1.md` `M4` (`E20`, open item 94). Nothing above is superseded and
+> nothing above is wrong** — this block supplies a **caution the record should have applied to its
+> own evidence and did not**, which is the *omitted available self-caution* class. The
+> `UNRESOLVED` disposition is **UNCHANGED and is STRENGTHENED**, not weakened.
+>
+> **The caution, stated plainly.** `[01:00:41]`'s *"one-day"* and `[01:00:43]`'s *"three days"* are
+> **both ASR renderings of spoken audio, two seconds apart, and NEITHER is printed on any slide.**
+> No frame in `04_SCREENSHOTS/V10/` carries a holding period. There is therefore **no
+> higher-capture-reliability source to check either figure against**, which is exactly the
+> situation `A-078` had and this record does not.
+>
+> **The transcript says so about itself.** `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` rates its own
+> transcription confidence **`MEDIUM–HIGH`**, and its **TRANSCRIPTION NOTE 1** is headed
+> ***"Numeric ranges wobble, and one of them is load-bearing"*** — recording that the ASR renders
+> the safety trade's distance figure inconsistently across its instances (`20`/`25`/`50` for the
+> same number). **A file that demonstrably garbles numerals in one place is not a certain record
+> of numerals in another.**
+>
+> **Why this is a FURTHER reason to refuse reconciliation, not a reason to doubt the record.**
+> The reconciliation refused above is a *construction over the two figures* — it requires
+> `[01:00:41]` to mean "a lock established in one day". **If either numeral may itself be a
+> rendering artifact, no construction built on top of them is safe**, so the caution removes the
+> last ground on which the tidy reading could have been adopted. It does **not** license
+> discarding either figure: `D-030` and `SOURCING_HIERARCHY.md` §3.2 forbid selecting the
+> convenient one, and the contradiction is in any case **over-determined by the other three
+> figures** — `[00:41:45]` *"at least two days"*, `[01:32:07]` *"two days"* and `[01:26:39]`
+> *"three days … maybe one more day"* — none of which depends on the `[01:00:41]`/`[01:00:43]`
+> pair. **Strike both ASR-suspect figures entirely and the lesson still states the duration three
+> incompatible ways.**
+>
+> **Consistency with `A-078`, which is the charge.** `A-078` invokes ASR unreliability on numerals
+> as the express reason to prefer the printed slide. Here **there is no slide to prefer**, so the
+> same unreliability points the other way — toward `UNRESOLVED` — and the record should have said
+> so. Applying the caution in one place and not the other was the inconsistency; both now apply it.
+>
+> **⚠ Added AND self-verified by one session at owner direction; this does NOT satisfy `D-003`.**
+> TRANSCRIPTION NOTE 1 and the `MEDIUM–HIGH` rating were read at source in
+> `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md`, and the absence of any printed holding period was
+> checked against `04_SCREENSHOTS/V10/INDEX.md`. **No marker, quotation, figure or disposition in
+> this record changes.** See also open item **95** — the standing question of whether a `C-xxx`
+> resting solely on unprinted ASR numerals should carry this tag **at filing** rather than waiting
+> for a reviewer to notice it per lesson. This is the third such record in the corpus.
+
 ### Why it matters beyond bookkeeping
 
 The safety trade has **no stop loss** anywhere in V10 (`V10_SOURCE_NOTES.md` §15). Its only
@@ -1943,7 +1988,9 @@ close-position statistics, not trade duration).
 ### Related
 
 `A-077`, `A-010`, `C-010` (the refusal precedent), `D-030`, `REVIEW_PROTOCOL.md` §O;
-`03_LESSON_NOTES/V10_SOURCE_NOTES.md` §11, §15.
+`03_LESSON_NOTES/V10_SOURCE_NOTES.md` §11, §15;
+**`02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` TRANSCRIPTION NOTE 1 and its `MEDIUM–HIGH` confidence
+rating** (added 2026-08-13, open item 94); `A-078` (the same caution applied where a slide exists).
 
 ---
 
@@ -1962,12 +2009,31 @@ of its kind in the corpus
 | **SPOKEN**, `[00:49:39]` | *"25 75 pips off of the **blue tracer**"* | The tracer (`A-079`) |
 | **SPOKEN**, `[00:52:09]`–`[00:52:16]` | *"25 to 75 is easy to remember … off of the **blue tracer**"* | The tracer |
 | **SPOKEN**, `[00:58:30]` | *"This box is 50 75 pips off of the **blue tracer**"* | The tracer |
+| **SPOKEN**, **`[01:00:20]`** | *"**75 pips off of the blue tracer**"* — **ADDED 2026-08-13, open item 92** | The tracer |
 | **SPOKEN**, `[01:23:16]` | *"25 to 50, 25 to 75 pips off of the **blue tracer**"* | The tracer |
 | **SPOKEN**, `[01:15:36]` | *"25 to 75 pips off of the **previous high [or] previous low**"* | Ambiguous — could be either |
 | **SPOKEN**, `[01:16:20]` | *"25 to 75 pips off of the **L. O. W. [or] H. O. W anchor point**"* | The week's extreme — **agrees with the slide** |
 
-**Four spoken instances say the tracer; one printed and one spoken say the LOW/HOW anchor; one is
-ambiguous.**
+**FIVE of seven spoken instances say the tracer; one printed and one spoken say the LOW/HOW anchor;
+one is ambiguous.**
+
+> ### ⚠ CENSUS CORRECTED 2026-08-13 — it was *"four of six"* and is **five of seven**
+>
+> **`18_REVIEW/V10/V10_REVIEW_R1.md` `M2` (`E20`, open item 92).** **Superseded text, retained per
+> `REMEDIATION_PROTOCOL.md` §2 — the sentence above previously read:** *"Four spoken instances say
+> the tracer; one printed and one spoken say the LOW/HOW anchor; one is ambiguous."* The table
+> above was missing `[01:00:20]`, which names the tracer.
+>
+> **THE DISPOSITION DOES NOT CHANGE and the correction STRENGTHENS it.** A wider spoken majority
+> for the tracer makes the refused reading — that the spoken instances are misspeaks the slide
+> overrides — *less* available, not more. Nothing downstream moves: the number stays settled in
+> `A-078`, the reference point stays `DO NOT CODE`, and this record stays `UNRESOLVED`.
+> **⚠ Corrected AND self-verified by one session at owner direction; `D-003` is NOT satisfied.**
+> `[01:00:20]` was read out of `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` at source.
+>
+> **An eighth distance utterance is recorded and deliberately NOT counted:** `[00:54:02]` *"25 to
+> 50 pips the dealer falls into the shadow box"* names **no reference object**, so it belongs to
+> neither side of this conflict. See `A-078`.
 
 ### Why these are genuinely different objects and not two names for one thing
 

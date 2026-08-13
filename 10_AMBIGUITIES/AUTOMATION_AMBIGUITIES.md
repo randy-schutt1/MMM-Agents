@@ -5463,22 +5463,49 @@ DO NOT CODE
 
 ---
 
-## A-078 — The safety trade's anchor distance: printed once as `25 to 75`, spoken six times in four renderings
+## A-078 — The safety trade's anchor distance: printed once as `25 to 75`, spoken **seven** times
 
-**Raised by:** V10 · `[00:49:39]`, `[00:52:03]`–`[00:52:09]`, `[00:58:30]`, `[01:15:36]`,
-`[01:16:20]`, `[01:23:16]` · **frame `75:57` (printed)**
+**Raised by:** V10 · `[00:49:39]`, `[00:52:03]`–`[00:52:09]`, `[00:58:30]`, **`[01:00:20]`**,
+`[01:15:36]`, `[01:16:20]`, `[01:23:16]` · **frame `75:57` (printed)**
 **Speaker:** course author
 
-### The six spoken renderings, in order
+> ### ⚠ CENSUS CORRECTED 2026-08-13 — the count was SIX and is SEVEN
+>
+> **`18_REVIEW/V10/V10_REVIEW_R1.md` `M2` (`E20`, open item 92).** The record as filed headed this
+> section *"spoken six times in four renderings"*, listed six markers, and stated that **four of
+> the six** spoken instances name the blue tracer. **`[01:00:20]` — *"75 pips off of the blue
+> tracer"* — is a SEVENTH spoken instance and it names the tracer.** The corrected census is
+> **five of seven** naming the blue tracer, one naming the LOW/HOW anchor, one ambiguous.
+>
+> **Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2** — the heading previously read
+> *"printed once as `25 to 75`, spoken six times in four renderings"*, and the sub-heading below
+> read *"The six spoken renderings, in order"*.
+>
+> **NO CONCLUSION MOVES, and the correction runs in the direction that STRENGTHENS the record.**
+> The number stays `RESOLVED BY COURSE` on the printed slide; the reference point stays
+> `DO NOT CODE`; `C-017` stays `UNRESOLVED`. What changes is that the **spoken majority for the
+> tracer is wider than recorded** — 5/7 rather than 4/6 — which makes `C-017`'s refusal to treat
+> the spoken instances as misspeaks harder, not easier, to dismiss. **⚠ Corrected AND
+> self-verified by one session at owner direction; this does not satisfy `D-003`.** The seventh
+> instance was re-derived from `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` at source, not copied from
+> the review.
+
+### The seven spoken renderings, in order
 
 | Marker | As transcribed | Reference object named |
 |---|---|---|
 | `[00:49:39]` | *"25 75 pips"* | *"off of the blue tracer"* |
 | `[00:52:03]`–`[00:52:09]` | *"**20** To 75 … **25 to 75 is easy to remember** … 20 to 75 pits"* | *"off of the blue tracer"* |
 | `[00:58:30]` | *"This box is **50** 75 pips"* | *"off of the blue tracer"* |
+| **`[01:00:20]`** | *"**75 pips** off of the blue tracer"* — **ADDED 2026-08-13, item 92** | *"off of the blue tracer"* |
 | `[01:15:36]` | *"25 to 75 pips"* | *"off of the **previous high [or] previous low**"* |
 | `[01:16:20]` | *"25 to 75 pips"* | *"off of the **L. O. W. [or] H. O. W anchor point**"* |
 | `[01:23:16]` | *"**25 to 50** 25 to 75 pips"* | *"off of the blue tracer"* |
+
+**An eighth distance utterance exists and is recorded here rather than counted**, because it names
+no reference object at all: `[00:54:02]` *"25 to 50 pips the dealer falls into the shadow box"*,
+inside the safety-trade walkthrough. It is **not** included in the seven above and nothing in
+either census rests on it.
 
 ### The number is RESOLVED by the printed slide; the reference point is NOT
 
@@ -5491,10 +5518,14 @@ variants `20`, `50 75` and `25 to 50` are **ASR renderings and verbal slips**, a
 higher-quality evidence for a number (`D-008`: original slides outrank a transcript).
 
 **On the reference point it resolves nothing — it creates a conflict.** The slide says the
-**LOW/HOW anchor** (the week's extreme). Four of the six spoken instances say the **blue tracer**,
-which the lesson treats as a *different object* — a per-day separator (`[01:19:45]` *"there's a
-tracer in here and [it] separates the day"*). **These are not the same reference and the distance
-from one is not the distance from the other.** Filed as **`C-017`**.
+**LOW/HOW anchor** (the week's extreme). **Five of the seven** spoken instances say the **blue
+tracer**, which the lesson treats as a *different object* — a per-day separator (`[01:19:45]`
+*"there's a tracer in here and [it] separates the day"*). **These are not the same reference and
+the distance from one is not the distance from the other.** Filed as **`C-017`**.
+
+> **Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this sentence previously read:**
+> *"Four of the six spoken instances say the **blue tracer**…"* Corrected 2026-08-13 under open
+> item 92 (`V10_REVIEW_R1.md` `M2`); see the census-correction block at the head of this record.
 
 ### Current Status
 
