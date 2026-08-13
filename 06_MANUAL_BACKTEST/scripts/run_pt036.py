@@ -39,7 +39,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from mmm_lib import (  # noqa: E402
     PIP, load_m15, qa_gate, verify_against_committed, assert_development,
-    wilson_ci, m2s, header, nlabel,
+    wilson_ci, m2s, header, nlabel, session_day,
 )
 import mmm_week as W  # noqa: E402
 
@@ -47,7 +47,7 @@ SEED = 20260813          # `PT-036` §4 — fixed in the pre-registration
 ITERS = 10_000           # `PT-036` §4
 BAND_LO, BAND_HI = 600.0, 1000.0        # M1
 FRI_LO, FRI_HI = 25.0, 50.0             # M2
-WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"]
+WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri"]   # session-day labels, C-1
 
 
 # ---------------------------------------------------------------- helpers
@@ -89,33 +89,34 @@ def dist_block(x: np.ndarray, unit="pips") -> list[str]:
     ]
 
 
-def weekday_of(tm: np.ndarray) -> np.ndarray:
-    """Weekday index with Sunday=0, matching `mmm_week._weekday`."""
-    return W._weekday(tm)
-
-
-def sessions_for_week(m15, wk_row, arm):
+def sessions_for_week(m15, wk_row, arm, sday_all, swd_all):
     """Split one week's M15 bars into SESSION DAYS on the arm's own clock.
 
-    A session day runs 17:00 -> 17:00 (`mmm_lib` convention C-1), which is what
-    makes 'Friday' a well-defined object here: the Friday session is the one whose
-    session-day label is a Friday.
+    Uses `mmm_lib.session_day` (convention C-1: session day D is
+    [ D-1 17:00, D 17:00 )) rather than an offset from the week anchor. That is
+    what makes 'Friday' a well-defined object here: the Friday session is the one
+    whose SESSION-DAY label is a Friday, which is exactly the object V10's claim
+    is about ("the dealer will end ... going into the weekend").
+
+    NOTE, recorded because the first draft of this runner got it wrong and the
+    error was loud rather than silent: indexing sessions by
+    `(tm - week_anchor) // 1440` labels the Sunday-17:00 -> Monday-17:00 span as
+    "day 0 = Sunday", but under C-1 that span IS session day MONDAY. The mistake
+    produced an EMPTY Friday set and an IndexError, which is the good failure
+    mode. It is fixed by deriving the label from the session day itself.
     """
     a = wk_row["anchor"]
-    nxt = a + 5 * 24 * 60 + 2 * 24 * 60          # generous upper bound; masked below
-    m = (m15.tm >= a) & (m15.tm < nxt)
-    idx = np.where(m)[0]
+    nxt = a + 7 * 24 * 60
+    idx = np.where((m15.tm >= a) & (m15.tm < nxt))[0]
     if len(idx) == 0:
         return {}
-    tm = m15.tm[idx]
-    # session day index relative to the week anchor: 0=Sun, 1=Mon, ...
-    day = ((tm - a) // (24 * 60)).astype(int)
     out = {}
-    for d in np.unique(day):
-        if d > 5:
+    for d in np.unique(sday_all[idx]):
+        sel = idx[sday_all[idx] == d]
+        wd = int(swd_all[sel[0]])
+        if wd > 4:          # Sat/Sun session days do not occur in this corpus
             continue
-        sel = idx[day == d]
-        out[int(d)] = sel
+        out[wd] = sel
     return out
 
 
@@ -204,8 +205,10 @@ def run_arm(arm: str, out: list[str]):
 
     rows = []
     censored = 0
+    sday_all = session_day(m15.tm)
+    swd_all = (np.floor_divide(sday_all, 1) + 3) % 7      # Mon=0 ... Sun=6
     for _, r in wk.iterrows():
-        sess = sessions_for_week(m15, r, arm)
+        sess = sessions_for_week(m15, r, arm, sday_all, swd_all)
         for d, sel in sess.items():
             if len(sel) == 0:
                 continue
@@ -299,7 +302,7 @@ def run_arm(arm: str, out: list[str]):
     out.append(f"      {'day':<5} {'n':>5} {'joint 25-50':>12} {'med d_high':>11} "
                f"{'med d_low':>10} {'med range':>10}")
     best_non_fri = -1.0
-    for d in range(6):
+    for d in range(5):
         sub = S[S["dow_name"] == WEEKDAYS[d]]
         if len(sub) == 0:
             continue
