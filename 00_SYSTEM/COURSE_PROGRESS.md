@@ -11,22 +11,34 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V09 — R1 returned REVISE 0C/0M/6m 2026-08-13.
-                        IN REMEDIATION: open items 73-78 are APPLIED and
-                        PENDING VERIFICATION at R2 -- NOT closed. D-003
-                        reserves closure to an independent reviewer.
-                        V09 reaches COMPLETE only at R2.)
-VIDEOS PASSED:       8  (V01, V02, V03, V04, V05, V06 — all COMPLETE;
+VIDEOS IN PROGRESS:  0
+VIDEOS PASSED:       9  (V01, V02, V03, V04, V05, V06 — all COMPLETE;
                         V07 — PASS at R3 2026-08-13, COMPLETE;
-                        V08 — PASS at R2 2026-08-13, COMPLETE)
+                        V08 — PASS at R2 2026-08-13, COMPLETE;
+                        V09 — ⚠ COMPLETE 2026-08-13, SELF-VERIFIED AT
+                        OWNER DIRECTION, NOT independently verified.
+                        Items 73-78 WERE independently verified, at R2.
+                        Items 81-83 were NOT: the owner authorised ONE
+                        session to both fix and verify that round, and
+                        they are CLOSED — SELF-VERIFIED AT OWNER
+                        DIRECTION. Read REVIEW_INDEX.md's V09 status
+                        block before relying on this row.)
 NEXT LESSON:         V10 — **GATE OPEN.** V09 R1 returned REVISE with
                      0 CRITICAL / 0 MAJOR, which opens the next gate under
                      D-024 with the six minors deferred and still owed.
                      V10 may start. See the V10 GATE block below for what
                      to carry into it.
-CURRENT LESSON:      **V09 — NO PRINTED TITLE. R1 REVISE 2026-08-13,
-                     0 CRITICAL / 0 MAJOR / 6 MINOR. REMEDIATION APPLIED,
-                     PENDING VERIFICATION at R2.**
+CURRENT LESSON:      **V10 — not yet started. V09 is closed out.**
+
+                     (Superseded text, retained per REMEDIATION_PROTOCOL.md
+                     §2 -- this block read, between V09 R1 and this round:
+                     "CURRENT LESSON: **V09 — NO PRINTED TITLE. R1 REVISE
+                     2026-08-13, 0 CRITICAL / 0 MAJOR / 6 MINOR.
+                     REMEDIATION APPLIED, PENDING VERIFICATION at R2.**"
+                     R2 verified items 73-78 independently and opened
+                     items 81-83; those three were applied and
+                     SELF-VERIFIED at owner direction, which is what
+                     closes V09 -- and is why every row above says so.)
 
                      (Superseded text, retained per REMEDIATION_PROTOCOL.md
                      §2 -- before V09 R1 this block read:
