@@ -1,0 +1,108 @@
+{
+  "_what_this_is": "Committed answers + reasoning traces for the V09 comprehension probe. Written and COMMITTED BEFORE the scorer (comprehension_probe.py) was written. The scorer checks each answer mechanically against 02_TRANSCRIPTS/V09/V09_TRANSCRIPT.md and against closed-form arithmetic. Reasoning is recorded so a reviewer can see WHY an answer was given, not just whether it was right — REVIEW_PROTOCOL.md dimension L (teach-back) applied to myself.",
+  "_rules": "No answer may be revised after the scorer runs. A wrong answer stays wrong and is analysed in V09_HOMEWORK.md.",
+
+  "Q1": {
+    "question": "Under V09's rule, what lot size do you use on the SECOND consecutive losing trade?",
+    "answer": "The same lot size as the first.",
+    "reasoning": "V09 [00:08:30]-[00:08:40] and printed frame 10 list losses 1, 2 and 3 each as 'come back with the SAME LOT SIZE'. The rationale at [00:05:36] is that a 2% setback per loss leaves margin intact, so there is no forced reduction. Only the FOURTH loss triggers recalculation.",
+    "check": "transcript_contains",
+    "expect_any": ["come back with the same lot size"]
+  },
+
+  "Q2": {
+    "question": "After four consecutive 2% losses on a $12,500 account, what is the balance and what percentage is that down?",
+    "answer": "$11,500, down 8.0% of the ORIGINAL balance.",
+    "reasoning": "Because size is HELD CONSTANT through the four losses, each costs the same dollars ($250), not the same percentage. 4 x $250 = $1,000; $12,500 - $1,000 = $11,500; $1,000/$12,500 = 8.0%. The tempting wrong answer is 1 - 0.98^4 = 7.76%, which assumes size is recalculated after every loss — V09's rule explicitly does not.",
+    "check": "arithmetic",
+    "expect": {"balance": 11500.0, "pct": 8.0}
+  },
+
+  "Q3": {
+    "question": "Is V09's 2% a per-trade limit or an account-wide limit?",
+    "answer": "Account-wide. Cumulative across all simultaneously open positions.",
+    "reasoning": "[00:19:18]-[00:19:40] is explicit and is stated twice: 'I don't mean two percent GJ two percent GU two percent EU another two percent UJ ... a cumulative risk that's never greater than two percent across your account ... your overall exposure should be two percent'. It is also printed as error #2 on frame 17. Three simultaneous pairs means 0.667% each, not 2% each. This is the single easiest thing in V09 to code wrong.",
+    "check": "transcript_contains",
+    "expect_any": ["cumulative risk", "overall exposure"]
+  },
+
+  "Q4": {
+    "question": "V09 gives two risk-to-reward geometries. What are they, and what gates the better one?",
+    "answer": "2:1 at -25/+50 pips for everyone; 3:1 at -15/+50 once the trader has mastered HOD/LOD entries.",
+    "reasoning": "[00:04:49]-[00:04:55] gives the 2:1 as what to use 'until one develops the HOD/LOD skill'. [00:03:33]-[00:03:56] gives the 3:1 as what 'mastering HOD/LOD entries can allow'. The gate is the ENTRY SKILL, not account size or experience in years. Note the second is arithmetically 3.33:1 (50/15), described as '3:1'.",
+    "check": "arithmetic",
+    "expect": {"rr_beginner": 2.0, "rr_ideal_stated": 3.0, "rr_ideal_actual": 3.3333}
+  },
+
+  "Q5": {
+    "question": "V09 says '>50% accuracy will bring UPWARD EQUITY'. At its own 2:1 geometry, what hit rate is actually required to break even?",
+    "answer": "33.33%. The >50% claim is TRUE but is far above the threshold.",
+    "reasoning": "Break-even for a stop S and target T is S/(S+T) = 25/75 = 33.33%. So >50% is sufficient, not necessary — and the lesson's own four demonstrations all run BELOW 50% (8/19, 7/19, 6/20, 7/13) while showing positive equity, which is the correct weaker claim demonstrated four times. The slide one before prints it correctly: 'Can have MORE Losers than Winners and still have UPWARD EQUITY'.",
+    "check": "arithmetic",
+    "expect": {"breakeven_2to1": 0.333333, "breakeven_3to1": 0.230769}
+  },
+
+  "Q6": {
+    "question": "What does V09 say the innermost ring of V08's four-stage model is?",
+    "answer": "The discipline to keep to the risk plan.",
+    "reasoning": "V08 ends on a literal red '?' at the centre of the rings. V09 [00:19:48]-[00:20:27] gives error #3 as 'not having the DISCIPLINE to KEEP TO the Risk Plan as described' and immediately frames it as the ring: 'that inner shell has like I don't know what it's titanium or diamond, it's really thick ... it's the circle within the circle'. This is the cross-file answer, and it is audio-only — no frame states it.",
+    "check": "transcript_contains",
+    "expect_any": ["circle within the circle"]
+  },
+
+  "Q7": {
+    "question": "Does V09 state where to place a stop loss?",
+    "answer": "No. It states stop SIZES (25 and 15 pips) and never states an anchor.",
+    "reasoning": "Searching the transcript for a placement rule returns nothing: no 'beyond the high', no 'below the low', no structural anchor of any kind. Error #1 ('moving your stop loss after you have placed it') PRESUPPOSES a placement rule without giving one. The temptation is to assemble V08's printed 10-pip HOD/LOD entry tolerance with V09's 15-pip stop into 'stop = extreme +/- 15' — neither lesson says that, and the quarantined RULES.md asserts almost exactly it, which is the strongest argument for refusing it. Registered as A-066.",
+    "check": "transcript_absent",
+    "expect_absent": ["beyond the high", "beyond the low", "10 to 15 pips", "below the low of the day", "above the high of the day"]
+  },
+
+  "Q8": {
+    "question": "Whose practice is 'the grape', and does it belong in the course's moving-average set?",
+    "answer": "The presenter's own. It does NOT belong in the course set.",
+    "reasoning": "[00:41:25] 'that's the name that I'VE given to the 800 moving average on the one hour chart ... it's just my own little twist'; [00:42:16] 'Steve doesn't teach it. This is my my twist on it.' The BLUEBERRY is different and IS course furniture — [00:41:31] calls it 'YOUR blueberry on your charts' and [00:41:43] defines it as the 800 on the 15-minute. The distinction matters because conflating them would put a guest's private indicator into the corpus's EMA set.",
+    "check": "transcript_contains",
+    "expect_any": ["steve doesn't teach it"]
+  },
+
+  "Q9": {
+    "question": "V09 projects 20% gains per week from five successful trades. Is the arithmetic wrong?",
+    "answer": "No. The arithmetic is exact. What is omitted is the losing trades.",
+    "reasoning": "5 winners x 4% = 20%. $5,000 x 1.2^4 = $10,368.00, which is exactly the '10,000 368' he says at [00:26:00], and 1.2^28 x 5,000 = $824,223.31, exactly the spreadsheet's final cell. Nothing is miscalculated. The projection simply assumes zero losing trades for 28 consecutive weeks, in a lesson whose four worked examples all lose more often than they win, and which states the loss cost itself at [00:24:46] ('2% if we don't get it'). That is why C-013 is filed as a contradiction, not an arithmetic error.",
+    "check": "arithmetic",
+    "expect": {"week4": 10368.0, "week28": 824223.31}
+  },
+
+  "Q10": {
+    "question": "Can V09's homework H3 (the USD/JPY arrow drill) be performed by this project today?",
+    "answer": "No. It is DEFERRED, blocked by A-004.",
+    "reasoning": "H3's predictor is the level count: 'try to sus levels in it, and then at the end of every day pop in an arrow in the direction he thinks it's going to go' [00:47:57]-[00:49:01]. 'Level' as a countable unit is undefined at V09 — A-004 has been open since V02 and V09 uses the word at 50 markers without defining it. Performing H3 would require inventing a level-counting rule, which is exactly D-030. It is DEFERRED under D-019, not NOT APPLICABLE: the subject matter exists and the work is performable in principle, it is blocked by a missing prerequisite the course itself is expected to supply.",
+    "check": "manual",
+    "expect_note": "disposition DEFERRED, blocker A-004"
+  },
+
+  "_prediction_for_the_equity_simulation": {
+    "_what": "COMMITTED BEFORE run_equity_path.py was written or run. Applies V09's OWN stated rule (2% at stop, hold size through 3 losses, recalculate on the 4th and after every win) to the trade sequences PT-035 already generated. No new predictor and no invented rule — this is execution of a fully specified algorithm, not a test of an entry.",
+    "P-E1": {
+      "claim": "The 4-loss recalculation trigger will fire on the MAJORITY of 200-trade sequences, at both geometries, in both arms.",
+      "confidence": "HIGH",
+      "reasoning": "PT-035 measured run4_obs at 27-49% of all 4-blocks. Over 197 overlapping blocks the probability of at least one is overwhelming."
+    },
+    "P-E2": {
+      "claim": "Peak-to-trough drawdown of the equity path will EXCEED 8% in the great majority of sequences.",
+      "confidence": "HIGH",
+      "reasoning": "The 8% figure is what FOUR losses cost. It is not a cap on drawdown: the rule permits a 5th, 6th and 7th loss after recalculating, each costing 2% of a now-smaller balance. PT-035 measured a median longest-loss-run of 13-22 trades at the matched-random hit rate. The 8% number is widely readable as a floor on how bad it gets and it is not one, and I expect the gap to be large."
+    },
+    "P-E3": {
+      "claim": "The median terminal equity across sequences will be BELOW the starting balance at both geometries.",
+      "confidence": "MEDIUM-HIGH",
+      "reasoning": "PT-035 measured p_hat at 0.28 (25/50) and 0.17 (15/50), both BELOW their break-evens of 0.333 and 0.231 — largely because of the resolution-censoring bias PT-035 §3 diagnosed. A below-break-even hit rate compounds downward regardless of sizing discipline. Sizing cannot rescue a negative edge and I expect this to show it plainly."
+    },
+    "P-E4": {
+      "claim": "Despite P-E3, NO sequence will be fully wiped out (terminal equity > 0), because fixed-fractional sizing cannot reach zero.",
+      "confidence": "HIGH",
+      "reasoning": "Each loss removes a fraction of a shrinking balance, so the path is asymptotic to zero, never at it. This is the one genuine protection the rule delivers and I expect it to hold in 1000/1000 sequences."
+    }
+  }
+}
