@@ -144,15 +144,23 @@ await p.goto('http://127.0.0.1:8899/index.html?scale=1', { waitUntil: 'load' });
 await p.waitForFunction('window.__ready === true', { timeout: 60000 });
 await p.waitForTimeout(3000);
 const t0 = Date.now();
-await p.mouse.click(512, 300);            // <-- starts the Camtasia player
+await p.mouse.click(PLAY_X, PLAY_Y);      // <-- starts the Camtasia player. NOT a constant:
+                                          //     read it from the stage size, GOTCHA 5
 while (Date.now() - t0 < RUN_MS) { await p.waitForTimeout(60000);
   console.log('elapsed_min', ((Date.now()-t0)/60000).toFixed(1)); }
 await ctx.close(); await b.close();       // ctx.close() finalises the .webm
 ```
 
-- The SWF does **not** autoplay: the Camtasia player shows a play button. The
-  `mouse.click(512, 300)` is what starts it. Without it you record an hour of a static
-  splash screen.
+- The SWF does **not** autoplay: the Camtasia player shows a play button, and a click on it is
+  what starts playback. **Without it you record an hour of a static splash screen — and nothing
+  downstream looks wrong when that happens.** ⚠ **The click coordinate is NOT a constant.** It
+  depends on the file's declared stage size, and this library holds two. **Read `GOTCHA 5` before
+  you use any number here**, and set `PLAY_X` / `PLAY_Y` from it:
+
+  ```text
+  1024 x 786 stage  ->  (512, 300)     eighteen of the twenty-one files
+  1280 x 738 stage  ->  (512, 325)     V08, V09, V21
+  ```
 - `ctx.close()` must be called or the `.webm` is never finalised.
 - Console output is extremely noisy (AVM1 warnings). Filter with `grep -v "^\[console\]"`.
 
@@ -352,12 +360,27 @@ await p.goto(`http://127.0.0.1:${PORT}/index.html?scale=1&swf=v02_x10.swf`,{wait
 await p.waitForFunction('window.__ready === true',{timeout:60000});
 await p.waitForTimeout(2500);
 const t0=Date.now();
-await p.mouse.click(512,300);
+
+// PLAY_X/PLAY_Y come from the stage size -- see GOTCHA 5. Do NOT hardcode (512,300).
+const before = await p.screenshot();
+await p.mouse.click(PLAY_X, PLAY_Y);
+await p.waitForTimeout(1500);
+const after = await p.screenshot();
+if (Buffer.compare(before, after) === 0) {
+  console.error('PLAY CLICK MISSED -- the stage did not change in 1.5 s. Aborting.');
+  await ctx.close(); await b.close();
+  process.exit(1);                       // <-- non-zero. Do not sweep a splash screen.
+}
+
 for(let i=0;i<N;i++){
   const w=t0+i*STEP_MS-Date.now(); if(w>0) await p.waitForTimeout(w);
   await p.screenshot({path:`sweep/s_${String(i).padStart(4,'0')}.png`});
 }
 ```
+
+**The before/after guard is not optional and it is not belt-and-braces.** It is the only check
+that has ever caught this failure at the time it happened rather than an hour later. See
+`GOTCHA 5`.
 
 Audio is unusable at any speedup, so this is a screenshots-only path. For the archival
 mp4 you still need one real-time pass (§3) — decide per lesson whether that is wanted.
@@ -401,6 +424,72 @@ mp4 you still need one real-time pass (§3) — decide per lesson whether that i
 > finally caught because the slides did not match what the instructor was saying. One
 > screenshot at a known timestamp, compared against the transcript, would have caught it
 > in the first two minutes instead of after an hour. Do that before any long capture.
+
+---
+
+> ### GOTCHA 5 — THE PLAY-BUTTON COORDINATE IS PER-STAGE-SIZE, NOT A CONSTANT — AND IT HAS ALREADY COST TWO CAPTURES
+>
+> **Added 2026-08-13 by the V09 R1 reviewer**, from `18_REVIEW/V09/V09_REVIEW_R1.md` §16. This is a
+> `D-038a` policy-ledger edit: the V08 and V09 sessions both hit this, both diagnosed it correctly,
+> and neither could fix it here from a task branch.
+>
+> **The failure, twice, in the same shape.** V08's first sweep produced **529 identical frames** of
+> the Camtasia splash. V09's first sweep produced **638**. In both cases the recipe's
+> `mouse.click(512, 300)` **missed the play button**, which sits at approximately **`(512, 325)`**
+> on those files. **Nothing downstream looked wrong either time**: the port was verified, the bytes
+> matched, `__ready` went true, and hundreds of valid PNGs were written. Both were caught only by
+> **opening a frame and looking at it**.
+>
+> **The cause, measured rather than reasoned about.** The stage rectangle is a declared field in the
+> SWF header, and this library holds **two** sizes:
+>
+> ```text
+> 1280 x 738   Bootcamp1 Wk2 032612 Part3 (43mins).swf     <- V08
+> 1280 x 738   Bootcamp1 Wk2 032612 Part4 (53mins).swf     <- V09
+> 1280 x 738   Bootcamp1 Wk10 061712 (75mins).swf          <- V21
+> 1024 x 786   ...the other eighteen files
+> ```
+>
+> The Playwright viewport in §3 and §10 is `1024 x 786`. Ruffle fits a `1280 x 738` stage into it at
+> scale **0.8**, letterboxed vertically — visible in the committed frames as uniform dark bands at
+> roughly rows `0-160` and `685-785`, which V06/V07 frames do not have. **So every viewport
+> coordinate calibrated on a 1024x786 file is displaced on a 1280x738 one.** It is not a per-file
+> oddity, it is a property of a header field, and it is checkable in seconds.
+>
+> **Read the stage size FIRST. It costs one command:**
+>
+> ```bash
+> python3 - "$SWF" <<'EOF'
+> import sys, zlib
+> d = open(sys.argv[1], 'rb').read(8192)
+> body = zlib.decompressobj().decompress(d[8:]) if d[:3] == b'CWS' else d[8:]
+> bits = ''.join(f'{b:08b}' for b in body[:24]); nb = int(bits[:5], 2); p = 5; v = []
+> for _ in range(4):
+>     x = int(bits[p:p+nb], 2) - ((1 << nb) if bits[p] == '1' else 0); v.append(x); p += nb
+> print('stage', (v[1]-v[0])//20, 'x', (v[3]-v[2])//20)
+> EOF
+> ```
+>
+> | Stage | Play coordinate |
+> |---|---|
+> | `1024 x 786` | `(512, 300)` |
+> | `1280 x 738` | `(512, 325)` |
+>
+> **Do not trust the table alone.** A third stage size may exist in material this project has not
+> opened, and the burned-in player chrome is not guaranteed to sit in the same place forever.
+> **Confirm the target from a pre-click screenshot**, or use the general fix below, which needs no
+> table at all.
+>
+> ### THE GENERAL FIX — SCREENSHOT BEFORE AND AFTER THE CLICK, AND ABORT IF THEY ARE IDENTICAL
+>
+> This is V08's own remedy, adopted here as the standard rather than left in one lesson's index.
+> It is in the §10 script above. It does not care what the stage size is, it costs 1.5 seconds, and
+> it converts a silent hour-long failure into a non-zero exit **at the moment it happens**.
+>
+> **The lesson generalises past this coordinate**, and it is the same one `D-020`'s retraction and
+> `GOTCHA 4` record in different costumes: **verify the input reached the system under test before
+> you trust any output.** A pipeline that produces well-formed artifacts is not evidence that it
+> produced the right ones.
 
 ---
 
