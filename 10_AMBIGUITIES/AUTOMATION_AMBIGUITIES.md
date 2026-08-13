@@ -9,20 +9,42 @@ Template: `00_SYSTEM/TEMPLATES/AMBIGUITY_TEMPLATE.md`
 ## STATUS
 
 ```text
-RECORDS:         49   (A-001 … A-049)
-LESSONS STUDIED:  5   (V01, V02, V03, V04 complete; V05 awaiting review)
+RECORDS:         54   (A-001 … A-054)
+LESSONS STUDIED:  6   (V01-V05 complete; V06 student pass complete, awaiting review)
 RESOLVED:         3   (A-003 — "pendings", on visual evidence at [00:40:25];
                        A-026 — HOW = High Of the Week, spoken expansion V03 [00:26:40];
                        A-043 — MT4 text tool = `Text` (icon A), not `Text label` (icon T),
                                on the displayed Customizing-toolbar dialog. PLATFORM
                                artifact, not methodology — see the record for why D-025
                                does not bar this closure)
-DO NOT CODE:     46
+DO NOT CODE:     51
+
+V06 NOTE: V06 is 100% GUEST material (D-025), the SECOND consecutive such lesson.
+It opened A-050…A-054 and added evidence to TEN earlier records. It CLOSED none,
+and under D-025 it cannot.
+
+The V06 pass is the sharpest test this register has had, because V06 supplies
+plausible ANSWERS to four open records — A-044 (it enumerates the admissible
+patterns), A-049 (it defines stop hunt vs trap move), A-011 (it reports a
+9-candle M/W minimum attributed to the instructor) and A-020 (it prints "Mayo"
+as a moving-average nickname) — and NOT ONE of them may be closed on it. In two
+cases the V06 evidence actively WEAKENS the answer it appears to give: the DMR
+curriculum prints six or seven admissible patterns where the audio says three,
+and the 9-candle count is withdrawn by its own reporter four seconds after he
+gives it. A-018 records the first NEGATIVE result on the "R = risk multiple"
+reading — V06 states both a stop and a ratio, and neither connects to any
+printed R label.
 
 V05 NOTE: V05 is 100% GUEST material (D-025). It opened A-042…A-049 and added
 evidence to six earlier records. It CLOSED no record about the method, and
 under D-025 it cannot. A-043 is closed on a platform dialog, not on doctrine.
 ```
+
+> **UPDATED 2026-08-12 (V06 pass).** Counts re-derived after `A-050`–`A-054` were added;
+> ten earlier records gained V06 evidence and **none resolved**. The V06 evidence block at
+> the end of this file records each one. Updated in the same commit that added the records,
+> which is the discipline the four prior corrections to this block were asking for. The
+> superseded block is retained above in full, per `REMEDIATION_PROTOCOL.md` §2.
 
 > **UPDATED 2026-08-10 (review R1, finding 6b).** This block previously read
 > `RECORDS: 0` and *"**Intentionally empty.** No course material has been studied, so no
@@ -3332,3 +3354,309 @@ close one. Kept together so the V05 pass is auditable as a unit.
 > rather than guessed. **`A-018` is extended, not narrowed** — guest material under `D-025`,
 > and V05 states no stop and no target, so nothing in the lesson checks an R-multiple
 > reading. Stays `DO NOT CODE`.)*
+
+---
+
+## A-050 — "one, two, three" versus "one to three": one object, two renderings, one of them a range
+
+### Course Meaning
+
+The V06 presenter's name for the structure whose middle point the second leg must break. He
+counts `1`, `2`, `3` aloud onto the chart and the slides print hand-drawn `1 2 3`; the adopted
+transcript renders the phrase **both** as *"one, two, three"* and as *"one to three"*.
+
+### Evidence
+
+| Video | Timestamp | Rendering in the adopted transcript |
+|---|---|---|
+| V06 | `[00:09:19]` | *"this is my **one, two, three** pattern"* |
+| V06 | `[00:13:50]` | *"This is my **one, two, three**."* |
+| V06 | `[00:18:53]`–`[00:19:02]` | *"it has to take out **one, two, three**"* / *"It's got to take out two."* |
+| V06 | `[00:22:07]` | *"I took out number two, **one, two, three**."* |
+| V06 | `[01:10:11]`, `[01:10:25]` | *"out of the **one to three** patterns"* / *"break that **one to three** pattern, my pattern"* |
+| **V05** | `[00:33:54]` | *"I want to make sure that Steve is right about the **one to three**"* — the same rendering, a different lesson, the same ASR pipeline. **A V05 marker**, resolvable against `02_TRANSCRIPTS/V05/V05_TRANSCRIPT.md` |
+
+An independent Whisper `small.en` re-transcription of the 4200 s window hears **"one, two,
+three"** in both places where the adopted text reads *"one to three"*.
+
+### Assessment
+
+**Almost certainly one object — a three-point structure whose points are counted 1, 2, 3 — and
+the *"one to three"* rendering is an ASR artifact.** Three independent supports: the presenter
+counts the digits aloud elsewhere in the same lesson; the slides print `1`, `2`, `3` as separate
+hand-drawn numerals beside the same structure; and the re-transcription hears the comma form.
+
+**It is recorded rather than silently normalised for two reasons.** First, the project does not
+repair quotations (`E01`): the adopted transcript says what it says. Second, *"one to three"*
+reads naturally in English as a **range** — *"levels one to three"* — which is a different and
+entirely plausible object in this course, and a future session skimming for level language could
+adopt the wrong one without noticing there was a choice.
+
+**GUEST material under D-025 in both lessons**, so nothing here may enter doctrine regardless of
+which reading is right.
+
+### Current Status
+
+```text
+DO NOT CODE — GUEST, and a transcription ambiguity on top.
+Read "one to three" as "one, two, three" ONLY with this record cited. Do not
+normalise the transcript.
+```
+
+### Required Research
+
+Whether the instructor uses a `1-2-3` structure name in his own voice, and if so whether his
+count matches this one. `A-011` (M/W anatomy) is the adjacent record.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V06_SOURCE_NOTES.md` §4d |
+| Transcript | `02_TRANSCRIPTS/V06/V06_TRANSCRIPT.md` § PROVENANCE criterion 2 |
+| Related records | `A-011`, `A-044` |
+
+---
+
+## A-051 — "blue tracer" / "white tracer": pointed at ten times, never defined
+
+### Course Meaning
+
+An on-chart object the V06 presenter treats as the marker of trapped volume. It is deictic
+throughout — *"right here"*, *"this one"* — and no construction rule is ever given.
+
+### Evidence
+
+| Video | Timestamp | Usage in context |
+|---|---|---|
+| V06 | `[00:11:05]` | *"Your trap, the volume trap is up here. The blue tracer."* |
+| V06 | `[00:17:03]`–`[00:17:05]` | *"Where is my trap volume right here? The blue tracer. And right here, the blue tracer."* |
+| V06 | `[00:26:25]` | *"You see the blue tracer is the big fat W."* |
+| V06 | `[00:27:19]` | *"Oh, there's a blue tracer right here."* |
+| V06 | `[00:31:59]` | *"Notice this white tracer right here."* |
+| V06 | `[00:42:14]` | *"That's why this blue tracer tells you where the last trap was done."* |
+| V06 | `[00:42:31]` | *"You see the blue tracer? Volume is trapped."* |
+| V06 | `[00:42:41]` | *"This tracer price is still dropping from here."* |
+| V06 | `[00:57:46]`–`[00:58:04]` | The **only** construction statement, and it is about the drawing tool, not the rule: *"Please show how you come up with the trap volume line."* → *"I just draw them. I just go in there and I use my little trend line and I draw the trend line and then I double click on the trend line and I right click on it, trend line property, then I change it to the batches [dashes]. I draw it."* |
+| **V05** | `[00:18:28]`, `[01:05:01]`, `[00:31:47]`, `[00:37:14]` | *"blue tracer"*, *"white tracer"* and *"previous days traces"* — the same undefined object, a lesson earlier. **These four are V05 markers**, resolvable against `02_TRANSCRIPTS/V05/V05_TRANSCRIPT.md`, not V06's |
+
+### Assessment
+
+**A hand-drawn horizontal line whose *placement rule* is the entire question, and the one time
+he is asked, he answers about the menu path.** `[00:57:49]` — *"I just draw them"* — is the
+whole of it.
+
+What can be said from the evidence: the tracer marks a **prior rejection point** where the
+presenter believes volume was trapped (`[00:42:14]`), it is usually at a **second leg**
+(`[00:42:21]`), and it functions as a **target** (`[00:27:24]` *"That's where it's going to
+go"*). What cannot be said: which candle, which price within that candle, on what timeframe, or
+how far back to look.
+
+**Two presenters across two lessons use the term as though it were standard, and neither
+defines it.** That pattern — a shared undefined object — is the same shape as `A-029`
+(`wt = <number>` labels).
+
+### Current Status
+
+```text
+DO NOT CODE — GUEST NORMATIVE, excluded under D-025, and undefined besides.
+```
+
+### Required Research
+
+Whether the instructor draws or names a tracer in his own voice. If he does, that statement
+becomes the record and this becomes corroboration at guest weight.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V06_SOURCE_NOTES.md` §4e |
+| Related records | `A-029`, `A-002`, `A-049` |
+
+---
+
+## A-052 — who wrote "most of the scripts"
+
+### Course Meaning
+
+A single unattributed line in the V06 Q&A that bears on speaker identification and on the
+provenance of the course's MT4 scripts.
+
+### Evidence
+
+| Video | Timestamp | Text |
+|---|---|---|
+| V06 | `[01:03:32]` | The question: *"Can you define scripts real quick for me and tell me where to learn more about them?"* |
+| V06 | `[01:03:38]` | *"I don't know if we're going to do a session, one of these sessions on scripts and indicators and stuff, but send Steve an email."* |
+| V06 | `[01:03:49]`–`[01:03:51]` | *"Maybe we can do a session on it."* / *"I'm not ready to do a session on it, how about that?"* |
+| V06 | `[01:03:53]` | *"Since you wrote most of the scripts."* |
+
+### Assessment
+
+**The attribution of `[01:03:53]` is genuinely uncertain and is left uncertain.** Two readings,
+neither preferred here:
+
+1. **The presenter reads out a student's follow-up.** A student, having been told to email
+   Steve, points out that the presenter wrote the scripts. This fits the lesson's rhythm — he
+   reads dozens of typed questions aloud — and fits *"I'm not ready to do a session on it"*
+   immediately before.
+2. **A student's line is being paraphrased or the presenter is quoting himself to Steve.**
+   Less natural, but the transcript carries no speaker labels and the audio has one voice, so
+   nothing in the recording distinguishes a read-out line from an original one.
+
+**What it is not evidence of.** It is **not** evidence that the presenter is Steve — the same
+passage tells the audience to email Steve about it, and `V06_TRANSCRIPT.md` § ONE SPEAKER
+establishes the third-person relation 23 times over. It is recorded because a future session
+scanning for *"who built the tooling"* will find this line, and it should find this record with
+it.
+
+### Current Status
+
+```text
+DO NOT CODE — not a rule. An open provenance question about the MT4 scripts.
+Identification is provenance, not evidence (D-025 consequence 4); nothing in any
+artifact depends on resolving it.
+```
+
+### Required Research
+
+Whether any lesson states who wrote the course's scripts and indicators. `A-039` (TDI) is the
+adjacent record, since the same question applies to the indicator.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `02_TRANSCRIPTS/V06/V06_TRANSCRIPT.md` § ONE SPEAKER |
+| Related records | `A-039`, `A-042` |
+
+---
+
+## A-053 — `SS` and `MS`: printed chart labels, never spoken, never expanded
+
+### Course Meaning
+
+Two two-letter labels the V06 presenter prints on his own charts. Neither is spoken anywhere in
+the lesson and neither is expanded anywhere in the corpus.
+
+### Evidence
+
+| Video | Frame | What is printed |
+|---|---|---|
+| V06 | `V06_00-13-09`, `V06_00-15-49`, `V06_00-23-54`, `V06_00-24-49`, `V06_00-52-59`, `V06_01-14-09` | **`SS`**, beside a boxed candle group, on six separate frames |
+| V06 | `V06_00-31-30`, `V06_00-34-39` | **`MS`**, on two frames. On `V06_00-31-30` an `MS` label sits beside a printed **`Stop Hunt`** annotation |
+
+`SS` and `MS` occur **0 times** in the verbatim body as standalone tokens.
+
+### Assessment
+
+**Two candidate readings for `SS`, both speculative, neither adopted:** *shooting star* — a
+pattern the DMR curriculum names in print (`V06_00-48-29`) and which V05's presenter names in
+audio — or *stop sweep* / *stop hunt*, given the neighbouring annotation on `V06_00-31-30`. For
+`MS`: *morning star*, also named in the DMR curriculum, or *market structure*, or *momentum
+shift*.
+
+**No expansion is adopted.** The corpus contains no expansion of either, and guessing one would
+manufacture terminology — the exact failure the quarantined `VISUAL_INDEX.md` files exhibit.
+This record exists so the labels are on the record as **seen and not understood**, which is a
+different and more honest state than being unrecorded.
+
+Recorded also because the V04 `M6` / V05 `M9` finding class is precisely *printed labels visible
+in a curated frame and absent from the index*. **These are indexed.**
+
+### Current Status
+
+```text
+DO NOT CODE — GUEST, printed only, no expansion in the corpus.
+Do not adopt an expansion. Record sightings; wait for a spoken one.
+```
+
+### Required Research
+
+Whether any lesson expands `SS` or `MS` in speech or in print. Watch V07–V09 in particular:
+they share V06's session date and, per `[00:48:28]`, the following day's presentation is on
+**entry candles**, which is where a candle-pattern abbreviation would most likely be spelled out.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `04_SCREENSHOTS/V06/INDEX.md` frames 10, 12, 17, 18, 21, 22, 27, 31 |
+| Related records | `A-044`, `A-046`, `A-032` |
+
+---
+
+## A-054 — is push three taken, avoided, or diagnostic? The lesson uses it three ways
+
+### Course Meaning
+
+The V06 presenter assigns push three three different roles inside one lesson without
+reconciling them.
+
+### Evidence
+
+| Video | Timestamp / frame | Role assigned to push three |
+|---|---|---|
+| V06 | `[00:05:32]`, and frames `V06_00-11-55`, `V06_01-14-09` which label `Push 3` | **A component of the complete cycle** — *"the intraday cycle with 3 pushes just like they do 3 levels"* |
+| V06 | `[01:12:24]`–`[01:12:41]` | **Something to avoid** — *"look for three of those, I mean two pushes… you're trading push one and push two. The third one is going to be a reversal, so be careful with that one."* |
+| V06 | `[00:37:41]`–`[00:37:47]` | **A diagnostic of being counter-trend by its absence** — *"That's why you don't get three pushes… There is no third push."* |
+
+### Assessment
+
+**Probably not a contradiction, and deliberately not logged as one.** The natural reconciliation
+— *three pushes complete the cycle; you personally take one and two; the absence of a third
+means you were counter-trend* — is coherent and is what a listener would supply.
+
+**But the lesson does not supply it, and this project's rule is that the agent's reconciliation
+is interpretation, not instruction** (`D-008`). The self-correction at `[01:12:24]` — *"look for
+three of those, I mean two pushes"* — is the presenter changing the number mid-sentence, which
+is the sharpest single piece of evidence that the usage is loose rather than layered.
+
+Filed as an ambiguity rather than in `CONTRADICTIONS.md` because it is **one speaker's loose
+usage inside one lesson**, which `REVIEW_PROTOCOL.md` treats as vagueness, not as conflicting
+teaching. `C-006` is the V06 record that genuinely is a conflict, and it is between two
+different speakers.
+
+### Current Status
+
+```text
+DO NOT CODE — GUEST NORMATIVE, excluded under D-025, and internally loose besides.
+The obvious reconciliation is the AGENT'S, is recorded as such in
+V06_INTERPRETATION.md §5.3, and is not doctrine.
+```
+
+### Required Research
+
+Whether the instructor states, in his own voice, whether the final level of a cycle is traded.
+`C-001` (how long price runs away from the anchor) and `A-004` (*"the level"*) are the adjacent
+records.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V06_SOURCE_NOTES.md` §5 |
+| Interpretation | `03_LESSON_NOTES/V06_INTERPRETATION.md` §5.3 |
+| Related records | `A-004`, `C-001`, `C-006` |
+
+---
+
+## V06 EVIDENCE ADDED TO EXISTING RECORDS
+
+V06's transcript and its 32 screenshots bear on ten earlier records. **None resolves, and under
+`D-025` none can** — V06 is wholly guest material, which may extend a record and never close
+one. Kept together so the V06 pass is auditable as a unit.
+
+| ID | V06 evidence | Effect |
+|---|---|---|
+| **A-020** — "mayonnaise" / MA nicknames | **The largest single addition this record has ever had, and it still does not move it.** Genuine audio: *"water"* ×4 (`[00:27:00]`, `[00:45:26]`, `[00:53:33]`, `[00:53:43]`), *"mail"*/*"male"* ×2 (`[00:53:43]`, `[01:06:36]`), *"blueberry"* ×2 (`[00:29:48]`, `[00:29:54]`) — **the first moving-average nicknames in genuine audio anywhere in the corpus.** Print: the DMR curriculum (`V06_00-48-29`) reads ***"2 Pins to the Mayo or Water"*** and, in a second week, *"2 Pins to water or mayo"* | **Extended; the ASR spelling settled; the actual question untouched.** *"mail"* / *"male"* is **"Mayo"** — settled by print, and corroborating V04's printed *"Mayo"* caption from an unrelated document. **But no period is attached to any nickname, in audio or in print, in either lesson.** `[01:06:36]` puts *"200"* and *"male"* in one sentence without equating them, and `[00:29:48]`'s *"water mail"* pairs two nicknames with no period at all. `mustard` 0×, `raspberry` 0×. A **fifth** lesson fails this record's Required Research route. Stays `DO NOT CODE` |
+| **A-044** — what makes a second leg a "nameable pattern" | V06 **enumerates and closes** the set in speech: *"You have three identifiable patterns, you have your railroad tracks, you have your quarter wood, and you have your star pattern"* `[00:07:22]`–`[00:07:34]`, *"Pretty much all you're looking for are these three patterns"* `[00:07:44]`, *"If you can name the pattern, you can take the trade"* `[00:08:00]`. Negative case: *"There was no nameable pattern. There was not a trap with a whole bunch of little candles, garbage."* `[00:27:55]`–`[00:27:56]` | **Extended, and simultaneously undercut — which is why it cannot be adopted even as guest testimony about guest practice.** Three problems: (1) it is a **second guest** answering a **first guest's** requirement, and two guests agreeing is not doctrine; (2) the **DMR curriculum prints six or seven** admissible patterns (*"2 Pins to the Mayo or Water… Shooting Star, Evening Star, Morning Star and RR Tracks"* plus *"Confirmed M & W"*) where the audio says three; (3) **the presenter breaks the filter in the same lesson** — *"here's some sort of a non-nameable pattern, but it closed below 13. Take another position."* `[00:23:25]`–`[00:23:33]`. Stays `DO NOT CODE` |
+| **A-049** — stop hunt versus trap move | V06 answers the same question and **gives a different answer from V05's.** Stop hunt: identified by **whom it hurts** and by **spread widening** — *"they hunt the stops of those people who got the correct directional move… they widened the spread, they took the stop out"* `[01:00:35]`–`[01:00:41]`. Trap: *"They have to induce first to do the trap, they cannot do a trap on pinbars"* `[01:00:57]`; *"only when this green candle closes is the trap complete"* `[01:01:12]`. And the framing answer: *"the reason really doesn't matter, because all it is is they went there to grab money"* `[00:59:55]` | **Extended and, importantly, NOT converged.** V05's discriminator is geometric (pin vs close, oscillation vs shift) and chart-checkable; V06's is causal and **partly unobservable on a candle chart** (spread widening is a feed event). The **close** criterion for the trap is common to both. **Two guests, two accounts, zero instructor definitions** — logged as `C-006` (corpus hygiene, `C-005` class), not charged against the instructor. `A-049`'s research question is unchanged and sharper. Stays `DO NOT CODE` |
+| **A-042** — the operative detail deferred to the DMR | The deferral recurs — *"Do we show that in the DMR? Yes."* `[00:46:12]`, of the advanced bounce-off-the-13 entry. And for the first time the **DMR's own curriculum is on the record**: frame `V06_00-48-29`, twelve weeks, named topics including **Levels**, **Entry Candles**, **Hi/Lo Drill**, **Brinks & Safe Trade**, **Swing Trade**, **Counter Trend Trades**. Frame `V06_00-47-39` prices it at *"$102.50 per month"* | **Extended and sharpened rather than narrowed.** The corpus now knows **exactly which twelve topics** the deferral points at, and that the DMR is a **separate paid programme** run by the coaches. A syllabus is a table of contents, not content. If anything this strengthens `A-042`'s uncomfortable implication — that some records may be **unresolvable from this corpus in principle**. Stays open |
+| **A-030** — "brinks shadow" / "shadow box" | Frame `V06_00-48-29`, DMR curriculum week 10: *"**Brinks & Safe Trade** – Two great setups taught by Steve in class. Brinks Trade – 2nd Leg of a M or W pattern Falling inside the **Shadow Box**…"* | **First printed occurrence in the corpus; extended, not closed.** It ties *Shadow Box* to the **Brinks** trade and to a **second leg** — consistent with the spoken evidence — and it attributes both setups to the instructor (*"taught by Steve in class"*). It still does not say what a Shadow Box **is**: no boundary, no construction, no timeframe. A guest programme's syllabus cannot close a record about the instructor's term. Stays `DO NOT CODE` |
+| **A-018** — `R = <number>` labels | Printed on at least **nine** V06 frames. Two values read at 2× and transcribed this session: **`R = 80.6`** and **`R = 41.5`** (frame `V06_00-15-49`), **`R = 67.3`** (frame `V06_00-26-24`). The remainder are recorded as **present with the value not transcribed**, per the V04 `M6` / V05 R2 precedent. V06 also states a reward ratio in words — *"I usually like 2 to 1"* `[01:03:17]` — and a stop geometry — *"if my stop is about 13-pips, I'm looking for minimum moves. 26-pips"* `[01:03:19]`–`[01:03:26]` | **Fourth lesson of printed instances, and the first NEGATIVE result.** V05 had no stop and no target, so nothing checked an R-multiple reading. **V06 has both, and they do not connect**: the transcribed labels (80.6, 41.5, 67.3) are not multiples of a 13-pip stop, of 26 pips, or of anything else stated, and **no presenter ever says the letter `R` aloud**. That is the corpus's best opportunity so far to test *"R = risk multiple"* and it comes out empty. Stays `DO NOT CODE` |
+| **A-019** — session times with no timezone | Sessions are named — *"in Asia"* `[01:09:55]`, *"here's my Asian low"* `[00:31:58]`, *"U.S. session"* `[00:31:14]`, *"They don't usually run like London"* `[00:31:20]`, *"one session and one leg and the second session in the New York"* `[00:41:05]` — and **no clock time is attached to any of them.** `EST` occurs **0 times**. **No session clock appears on any of the 32 frames either** | **Sixth consecutive lesson of silence; unaffected on its actual question.** Notable for the same reason as V05: the quarantined `NOTES.md` for this very lesson asserts a complete EST session clock (`Q-006`), and the audio and the slides between them contain none of it. Stays `DO NOT CODE` |
+| **A-038** — the ADR lookback window | `ADR` occurs **3 times** — `[00:02:00]`, `[00:05:45]`, `[00:05:54]` — and is used as the **denominator of a push-size rule** (*"Each push is approximately ADR divided by 3"*, attributed to Steve at `[00:05:50]`). It is printed on frame `V06_00-05-29` in the same form | **Extended, and the stakes raised.** V04's guest used ADR as a gate; V06's uses it as a **sizing unit**. Two guests, two different operational roles, **and still no definition and no lookback anywhere in the corpus.** `D-030` applies with full force: a session that picks an ADR window to make this testable is inventing the rule it then measures. Stays `DO NOT CODE` |
+| **A-036** / **A-045** — "quarter of wood" / `COW` | Spoken twice — *"you have your quarter wood"* `[00:07:34]` (as one of the three named patterns) and *"They threw a quarter wood"* `[00:26:29]` — and printed as **`COW`** on frames `V06_00-18-44`, `V06_00-26-24`, `V06_00-31-30`, `V06_00-36-50`. Also *"It gives me a cow, but I'm sleeping, so I couldn't eat it"* `[00:19:13]` | **Extended; the term's *status* clarified, its *geometry* not.** V06 places `quarter wood` in a **closed list of three admissible entry patterns**, which is the first time the corpus sees it treated as a first-class pattern rather than an aside. It still supplies **no candle count, no proportion, no construction**. `A-045`'s ASR question (*"COW cow is a quart of wood"*) is untouched. Stays `DO NOT CODE` |
+| **A-011** — M and W anatomy | Reported, then rejected, in four seconds: *"Steve says that M or W should be minimum nine candles, right? Thirty to ninety minutes"* `[00:53:03]`–`[00:53:08]`, immediately followed by *"So, there is no such thing as the minimum because if the multi-day or multi-session M or W could be twenty thirty candles, I don't know."* `[00:53:12]`–`[00:53:18]` | **Extended by a datum that arrives and departs in the same breath.** This is the **first candle count ever attributed to the instructor** for M/W — and it is reported by a guest who **immediately disputes its generality**, ending on *"I don't know"*. Under `D-025` a guest cannot close this record; and even setting D-025 aside, a number its own reporter withdraws is not a definition. `A-011` stays exactly where it was. Stays `DO NOT CODE` |

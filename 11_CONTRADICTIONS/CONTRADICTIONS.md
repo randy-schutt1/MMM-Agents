@@ -9,10 +9,30 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 ## STATUS
 
 ```text
-RECORDS:         5   (C-001 … C-005)
-LESSONS STUDIED: 5   (V01, V02, V03, V04 complete; V05 awaiting review)
-UNRESOLVED:      4   (C-001 foundational; C-003; C-004; C-005)
+RECORDS:         6   (C-001 … C-006)
+LESSONS STUDIED: 6   (V01-V05 complete; V06 student pass complete, awaiting review)
+UNRESOLVED:      5   (C-001 foundational; C-003; C-004; C-005; C-006)
 RESOLVED/OTHER:  1   (C-002 — STATED EXCEPTION, condition unmeasurable)
+
+V06 ADDED ONE RECORD, C-006, and it is a CORPUS-HYGIENE record of the C-005
+class — NOT a contradiction charged against the instructor. V06 is 100% GUEST
+material, so under D-025 consequence 2 it cannot produce an instructor-vs-
+instructor conflict, exactly as V05 could not. What it CAN produce, and did, is
+a GUEST-vs-GUEST divergence: V05 and V06 each answer an audience question about
+stop hunt vs trap move, three days apart in the source and one lesson apart in
+this repository, and the two answers do not describe the same test. Both are
+recorded so that a later session finding either in isolation knows the other
+exists. The instructor has defined neither term anywhere in V01-V06.
+
+C-004 was re-checked against V06 and struck off as negative: V06 states NO clock
+time for any session (EST 0x, and no session clock on any of its 32 frames), so
+it bears on the London-open question in neither direction. C-003 (whether M and
+W formations can fail) was NOT tested against V06 - V06's failure cases are about
+PUSHES, not about M/W formations, and stretching them to fit C-003 would be the
+error V05 review R2 M7 charged.
+
+> **UPDATED 2026-08-12 (V06 pass). The V05 note below is retained unchanged per**
+> **`REMEDIATION_PROTOCOL.md` §2; the V06 note above supersedes its counts only.**
 
 V05 ADDED NO NEW RECORD, and this is a finding rather than an omission.
 V05 is 100% GUEST material. Under D-025 consequence 2 a guest/instructor
@@ -861,3 +881,101 @@ zero clock times and no session-clock slide. See the update inside the `C-004` r
 
 **Net effect of the V05 pass on this file: no new record; one required-research item
 discharged; `C-001` and `C-005` unchanged.**
+
+---
+
+## C-006 — Two guest presenters give incompatible definitions of "stop hunt", and the instructor has never defined it
+
+### Concept
+
+What distinguishes a **stop hunt** from a **trap move**. V05 and V06 — consecutive lessons,
+both 100% guest-presented — each answer an audience question on exactly this point, and the two
+answers do not describe the same test.
+
+> **This record is a `C-005`-class CORPUS-HYGIENE record and is filed as one.** Under
+> `DECISIONS.md` **D-025** consequence 2, a guest divergence *is not a contradiction in the
+> method* and **must not be logged against the instructor**. He has never defined either term
+> on the record in V01–V06; there is nothing of his for this to conflict with.
+>
+> It is written down because the hazard is real and is the same one `C-005` names: **the corpus
+> will contradict itself if this is not recorded.** Two confident, specific, mechanical-sounding
+> definitions of one term now sit in the corpus, three days apart in the source material and
+> one lesson apart in this repository, and a later session — or an extraction pass — reading
+> either in isolation would take it for the course's meaning.
+
+### Source A — the V05 presenter, answering Cara
+
+| Field | Value |
+|---|---|
+| Video | V05 (2012-03-25), `GUEST` |
+| Timestamp | `[01:03:12]`, `[01:03:20]`, `[01:03:39]`–`[01:03:46]`, `[01:04:02]`–`[01:04:27]` |
+| Screenshot | None — spoken over slides |
+| What is said | **Stop hunt:** *"stop hunts are usually pin bars… They'll throw a pin. But they won't close above the moving averages."* / *"when they're throwing pin bars all over the place like this, it's a stop hunt. They don't really move that much."* **Trap:** *"price comes above, it closes above the high, inducing along… And then it comes back in with a trap."* / *"Once they trap, they start moving… within one or two candles, you see a shift bar."* |
+| Test it implies | **Geometric, and checkable on a candle chart.** (1) Does price *close* beyond the level or merely pin beyond it? (2) Is there an immediate directional shift, or continued oscillation? |
+
+### Source B — the V06 presenter, answering Franco
+
+| Field | Value |
+|---|---|
+| Video | V06 (2012-03-26), `GUEST` |
+| Timestamp | `[00:59:55]`–`[01:00:02]`, `[01:00:08]`–`[01:00:41]`, `[01:00:44]`–`[01:01:29]` |
+| Screenshot | None — spoken over a slide chart |
+| What is said | **Framing:** *"the answer is no, the reason really doesn't matter, because all it is is they went there to grab money, that's all it is."* / *"A stop hunt is the same thing, but not really as a trap move."* **Stop hunt:** *"let's say you were correct, you saw an M pattern, you took the short… This pinbar coming down, it widened the spread, that's the stop hunt move. They hunt the stops of those people who got the correct directional move. You got the move, your stop was too tight, it came in here, they widened the spread, they took the stop out."* **Trap:** *"A trap move is when they induce you to go in one direction, they hang out, people pile in to go short, and then when they come right back against you, that's the trap."* / *"They have to induce first to do the trap, they cannot do a trap on pinbars."* / *"only when this green candle closes is the trap complete."* |
+| Test it implies | **Causal, and only partly observable.** A stop hunt is identified by **whom it damages** — traders who had the *right* direction but too tight a stop — and by **spread widening**, which is a broker-feed event a candle chart does not show. |
+
+### Where they agree, and where they do not
+
+| Point | V05 | V06 | Same? |
+|---|---|---|---|
+| A trap requires a **close** beyond the level | Yes, explicitly | Yes, explicitly — *"only when this green candle closes is the trap complete"* | **Agree** |
+| A trap requires a prior **inducement** | Implied (*"inducing along"*) | Stated as necessary — *"They have to induce first"* | **Agree** |
+| A stop hunt is a **pin without a close** | Yes — the defining feature | Not stated as the criterion; the pinbar is incidental to the description | **Diverge** |
+| A stop hunt is defined by **who is hurt** | Not mentioned | Yes — the defining feature | **Diverge** |
+| **Spread widening** is part of the definition | Not mentioned | Yes | **Diverge** |
+| Follow-through distinguishes them | Yes — shift bar vs oscillation | Not used as a criterion | **Diverge** |
+| Does the distinction matter operationally? | Treated as materially useful | *"the reason really doesn't matter"* `[00:59:55]` | **Diverge, and this is the sharpest one** |
+
+### Assessment
+
+**Not strictly inconsistent — a spread-widening pin *is* a pin that does not close — but the two
+are doing different work, and only one of them can be applied to a chart.**
+
+The most useful reading, and it is an `INFERRED` reading of the agent's, is that *stop hunt* is
+functioning in this coaching community as a **loose functional label for "the dealer went and
+took money"**, rather than as a defined pattern, and that V06's *"the reason really doesn't
+matter"* is the honest statement of the community's actual position. **That reading is recorded
+in `V06_INTERPRETATION.md` §2.3 as interpretation and is not adopted here.**
+
+**The consequence for `A-002` and `A-049` deserves to be stated plainly, because it is
+uncomfortable:** if the term has no single referent to recover, those records may be
+**unresolvable in principle from this corpus**, not merely unresolved — the same structural gap
+`A-042` opened for content deferred to the DMR. The project currently has no vocabulary for that
+distinction. **This record does not assert it; it flags it as a question the owner may need to
+answer.**
+
+### Disposition
+
+```text
+UNRESOLVED — and CANNOT be resolved by any guest statement.
+CORPUS HYGIENE (C-005 class). NOT charged against the instructor.
+Neither definition may be adopted, coded, merged, or cited for or against any
+instructor statement about stop hunts (D-025).
+Both are recorded so that a later session finding either one in isolation knows
+the other exists.
+```
+
+### Required Research
+
+**Does the instructor himself ever distinguish a stop hunt from a trap move, and on what
+criterion?** If he does, his statement becomes the record, both guest accounts become
+corroboration at guest weight, and this record closes. If he never does across V07–V21, then the
+corpus does not contain the distinction and the project must say so rather than synthesise one.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V06_SOURCE_NOTES.md` §4j; `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §5h |
+| Interpretation | `03_LESSON_NOTES/V06_INTERPRETATION.md` §2.3 |
+| Decision | `DECISIONS.md` D-025 consequence 2 |
+| Related records | `A-002` (trap move), `A-049` (the V05 discriminator), `C-005` (the class this belongs to) |
