@@ -1,0 +1,126 @@
+==============================================================================
+PT-002 (W-A ARM ONLY) — Do DAILY extremes cluster at the six printed boundaries?
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-A 2015-01-04 -> 2015-12-31 (DAILY extremes only).
+           PT-002's W-C weekly arm is NON-CONFORMING under `D-035`
+           and is re-issued as PT-025. It is NOT run here.
+==============================================================================
+N3       : NOT RUN — `PT-002` §4 scopes it to weekly extremes (PT-025's arm)
+
+--- ARM A — BASELINES FIRST (`COMMON_PROTOCOL.md` §9.1) ---
+  C-6 n = 256 (2 excluded for incomplete sessions: 2015-08-21 (1 slots missing), 2015-12-24 (12 slots missing))
+
+  THIRD BASELINE — analytic exposure-weighted covered fraction of the
+  trading week (overlap-corrected, over realised bars) — `PT-002` §3a:
+    band +/-15 min : expected share 0.1667
+    band +/-30 min : expected share 0.2500
+    band +/-60 min : expected share 0.4167
+  per-category covered fraction at the headline band (+/-30), overlaps NOT removed between categories:
+    week_open      0.0063
+    day_open       0.0481
+    session_open   0.1562
+    session_close  0.1499
+    day_close      0.0457
+    week_close     0.0040
+
+  PRIMARY BASELINE — N2 circular clock shift, 1000 draws, seed 20260812:
+    band +/-15 min : median 0.2328, 5-95% [0.1495, 0.3228]
+    band +/-30 min : median 0.3228, 5-95% [0.2232, 0.4515]
+    band +/-60 min : median 0.4951, 5-95% [0.3505, 0.6068]
+
+  RECONCILIATION — why N2 exceeds the analytic expectation (§4 row 3).
+  Position of the extreme within the SHIFTED session day, N2 frame:
+    first 10% of the day : 0.1824   (uniform 0.1042)
+    last  10% of the day : 0.1616   (uniform 0.1042)
+    middle 20%           : 0.1673   (uniform 0.2083)
+  The distribution is U-SHAPED — the arcsine law for the argmax of a
+  random-walk path. A day boundary is therefore MORE likely to sit near
+  that day's extreme than uniform time predicts, wherever the boundary is
+  placed. N2 absorbs this by construction because it re-derives the days;
+  the analytic uniform-time expectation cannot represent it at all.
+  VERDICT: the disagreement is a STRUCTURAL PROPERTY OF THE PATH, not a
+  harvest bug. N2 remains the pre-registered PRIMARY and governs the
+  verdict; the analytic figure is retained and reported, not discarded.
+
+  OBSERVED (read after both baselines) — n = 256 days, 512 extremes
+    band +/-15 : observed 0.230 (118/512), 95% CI [0.196, 0.269]
+                 expected 0.1667 | N2 median 0.2328 | N2 percentile 46.9
+    band +/-30 : observed 0.338 (173/512), 95% CI [0.298, 0.380]
+                 expected 0.2500 | N2 median 0.3228 | N2 percentile 60.6
+    band +/-60 : observed 0.539 (276/512), 95% CI [0.496, 0.582]
+                 expected 0.4167 | N2 median 0.4951 | N2 percentile 74.3
+
+  PER-BOUNDARY BREAKDOWN at +/-30 min (§3a: expected share stated beside observed):
+    week_open      observed    9/512 = 0.0176 | expected 0.0063 | ratio 2.77  <<< cell n<30, descriptive only
+    day_open       observed   29/512 = 0.0566 | expected 0.0481 | ratio 1.18  <<< cell n<30, descriptive only
+    session_open   observed   92/512 = 0.1797 | expected 0.1562 | ratio 1.15
+    session_close  observed  116/512 = 0.2266 | expected 0.1499 | ratio 1.51
+    day_close      observed   28/512 = 0.0547 | expected 0.0457 | ratio 1.20  <<< cell n<30, descriptive only
+    week_close     observed    8/512 = 0.0156 | expected 0.0040 | ratio 3.92  <<< cell n<30, descriptive only
+
+  highs within +/-30: 0.340 (87/256), 95% CI [0.285, 0.400]
+  lows  within +/-30: 0.336 (86/256), 95% CI [0.281, 0.396]
+
+--- ARM B — BASELINES FIRST (`COMMON_PROTOCOL.md` §9.1) ---
+  C-6 n = 222 (70 excluded for incomplete sessions: 2015-03-09 (4 slots missing), 2015-03-14 (92 slots missing), 2015-03-16 (4 slots missing), 2015-03-21 (92 slots missing), 2015-03-23 (4 slots missing), 2015-03-28 (92 slots missing), 2015-03-30 (4 slots missing), 2015-04-04 (92 slots missing), +62 more)
+
+  THIRD BASELINE — analytic exposure-weighted covered fraction of the
+  trading week (overlap-corrected, over realised bars) — `PT-002` §3a:
+    band +/-15 min : expected share 0.1667
+    band +/-30 min : expected share 0.2500
+    band +/-60 min : expected share 0.4167
+  per-category covered fraction at the headline band (+/-30), overlaps NOT removed between categories:
+    week_open      0.0025
+    day_open       0.0475
+    session_open   0.1562
+    session_close  0.1537
+    day_close      0.0495
+    week_close     0.0046
+
+  PRIMARY BASELINE — N2 circular clock shift, 1000 draws, seed 20260812:
+    band +/-15 min : median 0.2275, 5-95% [0.1602, 0.301]
+    band +/-30 min : median 0.322, 5-95% [0.2328, 0.4126]
+    band +/-60 min : median 0.4951, 5-95% [0.3529, 0.5995]
+
+  RECONCILIATION — why N2 exceeds the analytic expectation (§4 row 3).
+  Position of the extreme within the SHIFTED session day, N2 frame:
+    first 10% of the day : 0.1826   (uniform 0.1042)
+    last  10% of the day : 0.1613   (uniform 0.1042)
+    middle 20%           : 0.1675   (uniform 0.2083)
+  The distribution is U-SHAPED — the arcsine law for the argmax of a
+  random-walk path. A day boundary is therefore MORE likely to sit near
+  that day's extreme than uniform time predicts, wherever the boundary is
+  placed. N2 absorbs this by construction because it re-derives the days;
+  the analytic uniform-time expectation cannot represent it at all.
+  VERDICT: the disagreement is a STRUCTURAL PROPERTY OF THE PATH, not a
+  harvest bug. N2 remains the pre-registered PRIMARY and governs the
+  verdict; the analytic figure is retained and reported, not discarded.
+
+  OBSERVED (read after both baselines) — n = 222 days, 444 extremes
+    band +/-15 : observed 0.227 (101/444), 95% CI [0.191, 0.269]
+                 expected 0.1667 | N2 median 0.2275 | N2 percentile 49.7
+    band +/-30 : observed 0.302 (134/444), 95% CI [0.261, 0.346]
+                 expected 0.2500 | N2 median 0.3220 | N2 percentile 39.1
+    band +/-60 : observed 0.466 (207/444), 95% CI [0.420, 0.513]
+                 expected 0.4167 | N2 median 0.4951 | N2 percentile 37.9
+
+  PER-BOUNDARY BREAKDOWN at +/-30 min (§3a: expected share stated beside observed):
+    week_open      observed    5/444 = 0.0113 | expected 0.0025 | ratio 4.44  <<< cell n<30, descriptive only
+    day_open       observed   24/444 = 0.0541 | expected 0.0475 | ratio 1.14  <<< cell n<30, descriptive only
+    session_open   observed   85/444 = 0.1914 | expected 0.1562 | ratio 1.23
+    session_close  observed   90/444 = 0.2027 | expected 0.1537 | ratio 1.32
+    day_close      observed   25/444 = 0.0563 | expected 0.0495 | ratio 1.14  <<< cell n<30, descriptive only
+    week_close     observed    6/444 = 0.0135 | expected 0.0046 | ratio 2.94  <<< cell n<30, descriptive only
+
+  highs within +/-30: 0.347 (77/222), 95% CI [0.287, 0.412]
+  lows  within +/-30: 0.257 (57/222), 95% CI [0.204, 0.318]
