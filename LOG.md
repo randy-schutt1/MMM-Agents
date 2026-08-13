@@ -4401,3 +4401,125 @@ express that (third lesson running; `REVIEW_INDEX.md` open item 36 is the live p
 ### Next
 **A fresh independent reviewer session writes `18_REVIEW/V07/V07_REVIEW_R1.md`** (`D-003` — this
 session must not review its own work). **The V08 gate is CLOSED** until it returns.
+
+---
+
+## 2026-08-13 — Reviewer Session
+
+### Lesson
+V07 — *"Best Trade Grabs"* (`Bootcamp1 Wk2 032612 Part2 (48mins).swf`, 00:48:06)
+
+### Review Objective
+Independent mastery audit, R1. **`D-003` satisfied** — this session authored no V07
+artifact. Source read first per `REVIEW_PROTOCOL.md` §3; every load-bearing count
+re-derived mechanically; every script re-run from the committed tree.
+
+### Source Evidence Reviewed
+`02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` in full (all 1,875 lines, header and body);
+four load-bearing frames re-read at full resolution (`V07_00-04-00`, `V07_00-13-55`,
+`V07_00-18-25`, `V07_00-19-15`); `00_SYSTEM/REVIEW_PROTOCOL.md`, `SETUP_ISSUES.md` I-009,
+git history of every V07 artifact.
+
+### Student Artifacts Reviewed
+`V07_SOURCE_NOTES.md`, `V07_INTERPRETATION.md`, `04_SCREENSHOTS/V07/INDEX.md`,
+`05_HOMEWORK/V07/V07_HOMEWORK.md` + all four scripts, `PT-033`, `BT_V07_0001.md` + all
+three scripts, `V07_MASTERY_REPORT.md`.
+
+### What Was Re-Derived Rather Than Accepted
+- **Transcript structure** — 539 markers, 539 distinct, strictly increasing, final
+  `[00:48:05]`, 7,436 words. Coverage block reproduces exactly, **including its gap
+  enumeration** (named by end-marker; all seven values check out).
+- **Citation sweep** — 300 distinct marker citations across seven artifacts; every
+  non-resolving one declared in advance by the student.
+- **Quote sweep** — **239 marker-cited quotes machine-matched against the body. One
+  defect (`M3`).**
+- **§10's measured negatives** — every cell re-counted. **Two wrong (`M1`, `M2`)**;
+  all others correct.
+- **Backtest** — `run_pt033.py` re-run: **bit-exact**, `pt033_results.json`
+  byte-identical to the committed file, verdict `INDETERMINATE` reproduces.
+  `sensitivity_pt033.py` re-run: exact (118 stub days, 15.0 p, 0.8462 → 0.9546).
+- **Pre-registration ordering** — `PT-033` `81f9ae4` **08:22:38** precedes runner and
+  results `a5ae7dc` **08:29:13**; the runner did not exist in Git beforehand, and it is
+  standalone (no dependency on the concurrently-modified `mmm_lib.py`).
+- **Homework** — all three scripts re-run: **bit-exact**, including the 16-cell census
+  and the raw-M1 cross-check.
+- **Comprehension probe** — re-run: **75 items, 1 failure, `R11` still failing.**
+- **`validate_project.py`** — 103 passed, 0 warnings, 0 failures.
+
+### Findings
+**0 CRITICAL, 0 MAJOR, 3 MINOR, 4 NOTE.**
+
+- **`M1`** (`E20`, count class) — `V07_SOURCE_NOTES.md` §10 states *level* at 26 uses;
+  it is **56**, and §5 of the same file says 56. Conclusion unaffected.
+- **`M2`** (`E20`, same class) — §10's *"the peak"* row says 4×, lists five markers,
+  true count **5**. Row self-inconsistent; conclusion unaffected.
+- **`M3`** (`E01`+`E11`) — `V07_MASTERY_REPORT.md` §D renders `[00:28:31]`'s *"in your
+  flashcard"* as *"and your flashcard"* and cites `[00:28:28]`. **Falsifies §H's
+  categorical claim** that no quotation mark in any V07 artifact contains a word not in
+  the source. Only defect in 239 checked quotes.
+- **`N1`** — the `I-009` git recurrence: **real event, zero damage** (see below).
+- **`N2`** — §H's "163 citations" is stale, not wrong (§9b was added after the sweep ran).
+- **`N3`** — the `R11` probe failure is genuine, still failing in committed code, and
+  correctly written up as source-notes §9b with its provenance. Verified, not taken on trust.
+- **`N4`** — dimension B's missing vocabulary, third lesson running (open item 36).
+
+### The Concurrent-Commit Concern — Audited From Git, Not From The Report
+`V07_TRANSCRIPT.md` was indeed swept into **`8785c41`** (the HistData/D-036a commit) by a
+concurrent session. **Six checks, all clean: content complete (539 markers, ends
+`[00:48:05]`, agrees with measured audio three ways); working tree == committed blob;
+exactly one commit ever touched the file; `git fsck` reports ZERO dangling commits; no
+authorship git ever held was lost; no branch divergence.** The audit trail is intact.
+What is wrong is grouping and commit-message accuracy — a documentation defect, fully
+disclosed in three places, and correctly **not** repaired by rewriting shared history.
+**No finding charged against the student.** The session's diagnosis went further than
+required and improved project method: `git add <paths>` writes into a **shared index**, so
+staging discipline cannot prevent this; the corrected form is
+`git commit -m "msg" -- <paths>`. **This reviewer used that form.**
+
+### Dimension B — Scored, Not Carved Out
+No owner directive was issued for this round, so B was scored under the standard protocol.
+**NOT SATISFIED — blocked by `D-030`, structural, not attributable to the student, and
+carrying NO severity charge**: the cause is a course that names eight objects and defines
+none, and charging it would penalise the discipline the project mandates while rewarding
+its violation. It is not smuggled into a `PASS` either — `REVIEW_PROTOCOL.md` §9's PASS
+criteria 6–7 are unmet, which is part of why this round is `REVISE`.
+
+### Dispositions Set For The Student
+- **Dimension F** — the demo-account `NOT APPLICABLE` is **UPHELD** (`D-018` bars the
+  account; `D-019`'s test finds nothing for an agent to do, now or later; matches V01 H6/H7).
+- **Dimension B** — scored as above and escalated to the owner.
+
+### Required Corrections
+1. `V07_SOURCE_NOTES.md` §10 — *level* 26 → **56** (do not change §5).
+2. `V07_SOURCE_NOTES.md` §10 — *"the peak"* 4× → **5×** (the marker list is correct).
+3. `V07_MASTERY_REPORT.md` §D — restore *"in your flashcard"*, re-cite to `[00:28:31]`,
+   and repair or scope §H's categorical sentence (do not edit source-notes §6c).
+
+**Explicitly not required:** re-running any script (all reproduce bit-exactly), rewriting
+git history, or "fixing" the failing `R11` probe.
+
+### Decision
+**REVISE** — confidence **HIGH**. 0 CRITICAL / 0 MAJOR / 3 MINOR.
+**ADVANCEMENT AUTHORIZED under `D-024`: the V08 gate OPENS**, with the three minors
+deferred and still owed. V07 reaches `COMPLETE` only when they are applied and verified
+at R2.
+
+The submission is the strongest student work in this repository to date on every
+dimension the protocol can score — a pre-registered backtest that reproduces bit-exactly
+and returns an honest `INDETERMINATE`, a prediction scored part-wrong against itself, two
+self-disclosed defects (the Arm-B stub days and the `C8` hole) measured rather than
+assumed away, a preserved misleading first attempt turned into a finding about the
+assignment, and a comprehension probe allowed to fail in the committed tree. The three
+findings are corrections of the record, not of the method.
+
+### Git
+`18_REVIEW/V07/V07_REVIEW_R1.md` (new); `18_REVIEW/REVIEW_INDEX.md` (STATUS with
+superseded text retained, decision row, `E01`/`E11`/`E20` ledgers, severity totals,
+open items 61–63); this entry. Committed with `git commit -m "…" -- <paths>` per the
+corrected `I-009` mitigation — a concurrent session was actively committing in this
+working tree throughout the review and its files were read for context and **not touched**.
+
+### Next Review Trigger
+Student remediation of open items 61–63, then **V07 R2**. `CUMULATIVE_25.md` should pick
+up the `E20` count class (now at seven instances), the `A-039`/`A-056` untaught-component
+pattern, and the day-boundary decision gap `PT-033` exposed.
