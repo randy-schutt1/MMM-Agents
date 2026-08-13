@@ -458,9 +458,35 @@ in-progress files under their own commit messages. Observed:
 No content was lost, but authorship and grouping in the history are wrong, so `git log`
 no longer identifies which session produced which artifact.
 
-**Mitigation:** stage explicit paths. **Never `git add -A` in this repository** while
-concurrent sessions are possible. Check `git status --porcelain` before staging and
-leave anything you did not write alone.
+| `8785c41` | "feat(data): D-036a — the CSV corpus is in…" | `02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` (1,875 lines) — the **V07 ingestion** session's finished work, already **staged in the shared index** and swept in by the **data-source** session |
+
+**THE STATED MITIGATION IS NOT SUFFICIENT, AND `8785c41` PROVES IT.** That session did
+exactly what this file said: it never ran `git add -A`, and it staged only its own five
+explicit paths. It still cross-committed, because **`git add <paths>` adds to a shared
+index that another session had already staged into.** Staging explicitly controls what
+*you* add; it does not control what is *already there*. `git status --porcelain` run
+**after** staging shows the contamination — by which point the only thing left is to
+notice it before committing, which is a habit, not a control.
+
+**Mitigation, corrected:**
+
+```bash
+git status --porcelain                 # BEFORE staging, and read it
+git commit -m "message" -- <paths>     # commits ONLY these paths, whatever is in the index
+```
+
+**Order matters:** `-m` must come *before* the `--`. Everything after `--` is parsed as a
+pathspec, so `git commit -- <paths> -m "msg"` fails with
+`pathspec '-m' did not match any file(s)`.
+
+`git commit -- <paths>` bypasses the index for the named files and is the only form here
+that is safe under concurrency. **Never `git add -A`.** Leave anything you did not write
+alone, and if you find foreign content already staged, do not unstage it — the other
+session may be mid-commit; commit around it with the `--` form.
+
+**Do not rewrite pushed history to repair these.** All three instances lost no content,
+and a rebase while a concurrent session holds the same working tree can destroy work that
+was never committed. Record the collision and move on.
 
 ### Residual risk
 
