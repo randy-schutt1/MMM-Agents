@@ -4,6 +4,16 @@ Every test in this directory was written **before** any chart in its window was 
 That is the whole point of the directory: a prediction locked in before the outcome is
 known is evidence; the same prediction written afterwards is a story.
 
+> **RUN STATUS UPDATED 2026-08-13 (branch `infra/gbpusd-historical-data`).**
+> **21 of the 33 files have now been RUN AND REPORTED.** The eight `D-035` re-issues
+> (`PT-025`…`PT-032`) and **`PT-002`'s W-A daily arm** were run against the `D-036a` corpus in
+> this round; the twelve day-scale tests were run at `df7eab6` / `9eb2d0c`. Every disposition,
+> including every null, is tabulated in **`../cumulative/CUMULATIVE_SUMMARY.md`**.
+>
+> **Nothing in the `MUST NEVER RUN` list below was run**, and **no `PT` file was edited.** The
+> status line immediately below is the one this directory was written under and is retained
+> unedited rather than corrected away.
+
 ```text
 STATUS:  33 test FILES pre-registered · 2 run (PT-023, PT-024)
          PT-001 ... PT-032 are accounted for below. PT-033 was written by a CONCURRENT

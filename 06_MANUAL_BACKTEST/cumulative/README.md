@@ -1,6 +1,9 @@
 # CUMULATIVE BACKTEST SUMMARIES
 
-## STATUS: EMPTY — NO OBSERVATIONS TO SUMMARIZE
+## STATUS: `CUMULATIVE_SUMMARY.md` COVERS ALL 21 TESTS RUN TO DATE
+
+*(was: "EMPTY — NO OBSERVATIONS TO SUMMARIZE", retained rather than deleted so the
+progression is visible.)*
 
 Aggregate views across lessons: `CUMULATIVE_SUMMARY.md`,
 `CUMULATIVE_VXX_TO_VYY.md`.
