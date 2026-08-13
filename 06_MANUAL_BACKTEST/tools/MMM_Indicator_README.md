@@ -22,8 +22,9 @@ adding an entry condition to it, stop — that work belongs in `14_PINE/` after 
 
 **2. Nothing it renders is evidence.**
 Per `14_PINE/README.md`: *"Compilation is not validation."* A beautiful chart demonstrates
-nothing. In particular, agreement between the TDI panel here and a TDI panel in the course
-proves nothing, because **the course's own TDI settings are unknown** (see A-039 below).
+nothing. The TDI panel's settings now come from the owner's actual MT4 tooling rather than from
+internet defaults (see A-039 below) — but *matching a rendering* still is not *validating a
+method*, and the band's std-dev multiple remains unrecovered.
 
 **3. It contains parameters that are outright guesses, and they are labelled as such.**
 Every input in both files carries one of three tags — `[TIER 1]`, `[TIER 2]`, `[DEFAULT]` — in
@@ -85,6 +86,23 @@ below rest on entirely different evidence.
 | NY "prime" box **window** (NY open + ~3h → 09:30–12:30) | 3 hours | **2** | `MMM-NOTES` **p.40**: the second box *"starts at the beginning of the NY open and runs for about 3 hours"*, flagged as the **New York Reversal** window. |
 | TDI's four lines and their roles (structure only) | — | **2** | `MMM-NOTES` **p.45–47**, recorded at `EXTERNAL_VOCABULARY_REFERENCE.md` §9.2a. |
 
+### 🔧 Recovered from tooling — a new evidence class, tagged `[TOOLING]`
+
+Owner-supplied MT4 artifacts in `~/Desktop/Trading/Indicators/`. **This is neither Tier 1 nor
+Tier 2** — see the A-039 section for why that distinction is being kept rather than quietly
+collapsed.
+
+| Parameter | Value | Source |
+|---|---|---|
+| TDI RSI period | **21** | `Ultimate Blue.tpl`, block `name=!SM_TDI`: `RSI_Period=21` |
+| TDI RSI price | `close` | `RSI_Price=0` (MT4 `PRICE_CLOSE`) |
+| TDI fast MA (RSI Price Line) | 2, SMA | `RSI_Price_Line=2`, `RSI_Price_Type=0` (MT4 `MODE_SMA`) |
+| TDI slow MA (Trade Signal Line) | 7, SMA | `Trade_Signal_Line=7`, `Trade_Signal_Type=0` |
+| TDI band / base-line period | 34 | `Volatility_Band=34` |
+| Shark-fin levels | **63 / 37** | `SharkFin_Upper_Level=63`, `SharkFin_Lower_Level=37`, plus dedicated "Upper/Lower Shark Fin" buffers in the `.ex4` |
+| Panel levels | 68 / 63 / 50 / 37 / 32 | the template's `level_0`…`level_4` |
+| TDI line colours | DodgerBlue / LightSteelBlue / MidnightBlue / FireBrick | template `color_1`…`color_5` as MT4 BGR integers; they decode to exact MT4 web colours. **Buffer→line mapping is inferred**, not proven — buffers 1 and 3 share a colour and weight so they are read as the two bands. |
+
 ### ⚠ Defaults — NOT source-verified
 
 | Parameter | Default | Why it is a default |
@@ -95,8 +113,7 @@ below rest on entirely different evidence.
 | Day mask | `1234567` | The corpus states no day mask for the intraday table. |
 | **London "prime" box (whole object)** | `03:30–07:30`, **OFF by default** | **No source defines any London sub-box.** See below. |
 | The name *"prime"* on the NY box | — | The source calls it the **NY Reversal** box. The *window* is Tier 2; only the *name* is invented. |
-| **Every numeric TDI parameter** | 13 / 2 / 7 / 34 / 1.6185 | **Tier 3 public defaults. See the A-039 section.** |
-| TDI colours, MA type, 32/50/68 levels | — | Not stated by any source. |
+| **TDI volatility-band std-dev multiple** | 1.6185 | **Still a guess.** The MT4 indicator exposes no input for it, so it is compiled into the `.ex4` and the template cannot reveal it. Remains the Tier-3 public value. See the A-039 section. |
 | Box styling, label text, right-extension | — | Cosmetic. |
 
 ---
@@ -152,7 +169,7 @@ GMT table and the Tier-1 slide agree on Asian and London **to the minute**. That
 worth knowing. It is one document's internal arithmetic, and `A-019` asks what **the course**
 meant — so the record stays open and both arms stay.
 
-### 3. Every number in the TDI panel is a guess — A-039
+### 3. The TDI panel's numbers now come from tooling, not guesswork — but A-039 is still open
 
 **`A-039`** is `DO NOT CODE` / `DO NOT SUBSTITUTE`, still open. It records that TDI is treated as
 a load-bearing entry criterion and is **never taught**:
@@ -173,15 +190,54 @@ From `EXTERNAL_VOCABULARY_REFERENCE.md` §9.2a:
 > baseline period, no volatility-band period or standard-deviation multiple, no price source, no
 > timeframe. Searched across all 84 pages."*
 
-The defaults shipped here — RSI 13, fast 2, slow 7, bands 34 @ 1.6185 — are the publicly
-circulating Dean Malone TDI defaults, i.e. **Tier 3**: *"EXTERNAL — NON-NORMATIVE, permanently.
-Closes nothing, unblocks nothing, cited in no artifact."* They are present only so the panel
-renders. Reconstructing settings from *"an improved version of the RSI"* is precisely the
-approximation **`D-030`** forbids.
+**UPDATED 2026-08-13 — the numbers are no longer guesses, but the record is still open.**
+
+This section previously said every TDI number here was a Tier-3 internet default. The owner has
+since supplied the actual MT4 tooling in `~/Desktop/Trading/Indicators/`:
+
+- **`Ultimate Blue.tpl`** — an MT4 chart template whose saved indicator block is literally
+  `name=!SM_TDI`, carrying the inputs the chart was running (md5 `ea22c8cf…`).
+- **`MM4XSF_TDI.ex4`** — the compiled indicator (md5 `42e97991…`), whose embedded strings read
+  *"Copyright 2011, CompassFX"*, internal name **`mm4x-tdi`**, with buffers named *MarketBase
+  Line*, *RSI Price Line*, *Trade Signal Line*, *Upper/Lower Shark Fin*, *Upper/Lower VB Break*,
+  *MBL Slope* — and a parameter-name list **identical** to the template block, so it is the same
+  indicator under a different filename.
+
+`!SM_TDI` / `MM4X` read as Steve Mauro / Market Maker 4X, and the buffer names line up
+one-for-one with the four lines `MMM-NOTES` p.45 describes. The recovered values are in the
+`[TOOLING]` table above and are now the script's defaults.
+
+> **The headline: `RSI_Period=21`, not 13.** The Tier-3 default this file previously shipped was
+> **wrong**, and wrong on the single most consequential number in the indicator — everything
+> drawn with RSI 13 was a different oscillator. That is exactly the failure mode A-039's
+> `DO NOT SUBSTITUTE` exists to prevent, and it is now a demonstrated one rather than a
+> hypothetical.
+
+**Still not recovered: the standard-deviation multiple.** The MT4 indicator exposes no input for
+it, so it is compiled into the `.ex4` and the template cannot reveal it. `bandMult` is still
+1.6185 and still a guess. Four of the five numbers that shape this oscillator are now traceable
+to an artifact; this one is not.
+
+**This does NOT close `A-039`, and the distinction is deliberate.** `SOURCING_HIERARCHY.md` ranks
+the recordings (Tier 1) and the Mauro PDF (Tier 2). An MT4 template on the owner's disk is
+**neither** — it is a new evidence class with no tier and no admitting decision, and the Mauro
+PDF itself needed **`D-039`**, an explicit owner attestation, before it could close anything.
+Provenance is also weaker than it first looks: the files are dated **2016** and **2019**, the
+bootcamp was recorded in **2012**, and nothing in the template proves the settings are the
+instructor's rather than a later user's. So the tag is `[TOOLING]`, kept visibly distinct from
+`[TIER 1]` / `[TIER 2]`, and `A-039` stays **OPEN** and `DO NOT CODE` pending a register entry
+and an owner ruling.
+
+**`A-032` is materially advanced and should be written up separately.** The indicator carries
+first-class `SharkFin_Upper_Level` / `SharkFin_Lower_Level` inputs (**63 / 37**) and dedicated
+*Upper/Lower Shark Fin* buffers. That record has carried the phrase since V03 with no definition
+and exactly one located instance (frame `V07_00-18-25`). Thresholds are not a definition of the
+pattern — but this is the first time the corpus has had numbers attached to the term at all.
+Writing that up belongs in the ambiguity register, as a deliberate act; this tool does not do it.
 
 **Therefore:** this panel may **not** be used to close `A-039`, `A-031` (*"blood in the water"*,
-narrowed to the market-baseline cross, blocked downstream by A-039) or `A-032` (*"shark fin"*,
-located on frame `V07_00-18-25` as a red box drawn on a TDI sub-panel, still undefined). And no
+narrowed to the market-baseline cross, blocked downstream by A-039) or `A-032` (*"shark fin"*).
+And no
 backtest result depending on these numbers may be reported as a test of the method — it would be
 a test of this file's guesses. The script carries a permanent, non-removable on-panel warning
 label to that effect.
@@ -259,6 +315,33 @@ Both scripts compile as-is with no external dependencies.
   *blueberry = 800 on the 15m* is safe, and it appears as a comment.
 
 ---
+
+## Two adjacent finds in the same folder — recorded, NOT acted on
+
+Found while extracting the TDI parameters. Neither changes this tool; both are logged so they
+are not lost, and both need proper register treatment rather than a quiet adoption here.
+
+**1. `!sm_WorkTime_v1.5b` corroborates the 800 EMA (bears on `C-010`).** The same
+`Ultimate Blue.tpl` carries an `sm`-prefixed session tool whose inputs include `Alert50EMA`,
+`Alert200EMA` and — decisively — **`Alert800EMA`** (with `Alert800Pips=30`). `C-010` is the
+contradiction that the corpus uses an 800 which `MMM-NOTES` never mentions in 84 pages. Here is
+a second artifact in the same lineage treating the 800 as a first-class object, which cuts the
+same way Tier 1 does. It does **not** close `C-010`, which is about what the *sources* say.
+
+The same indicator also has `draw_asian_box` / `draw_euro_box` / `draw_ny_box` /
+`draw_mktopen_box` and a `DrawStopHuntBox` — i.e. the session-box concept, in the tooling.
+**Its clock times are not usable as evidence**: the companion binary is named
+`sm_WorkTime_no_autogmt`, meaning GMT auto-detection is off and the times are raw **broker
+server time** with an unknown offset. They do not reconcile with the V02 slide under any single
+consistent offset, so they are **not** imported into the session boxes and `A-019` is untouched.
+Worth noting that `draw_mktopen_box=true` defines *two* one-hour windows (`10:00–11:00` and
+`16:00–17:00`) — structurally the closest thing yet seen to a "prime box", still unnamed as such.
+
+**2. `4X-2010-SEMA4X` does NOT carry the 5/13/50/200/800 set.** The template's EMA indicator has
+`Period1=36`, `Period2=60`, `Period3=156`, `Period4=408` — four periods, none of them the
+documented set, on an unrecorded timeframe. **Not adopted, and the EMA script is unchanged.**
+Recorded because a future session will find this file and should know it was seen and rejected
+rather than missed.
 
 ## Related records
 
