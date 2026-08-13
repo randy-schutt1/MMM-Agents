@@ -16,22 +16,26 @@ VIDEOS IN PROGRESS:  2  (V09 — R1 returned REVISE 0C/0M/6m 2026-08-13.
                         PENDING VERIFICATION at R2 -- NOT closed. D-003
                         reserves closure to an independent reviewer.
                         V09 reaches COMPLETE only at R2.
-                        V10 — STUDENT PASS COMPLETE 2026-08-13, submitted as
-                        REVIEW REQUIRED, AWAITING INDEPENDENT REVIEW R1.
-                        A student status is a SUBMISSION, not a pass — D-016.)
+                        V10 — R1 returned REVISE 0C/0M/4m 2026-08-13, HIGH
+                        confidence. IN REMEDIATION: open items 91-94 are
+                        OWED and NOT yet applied. V10 reaches COMPLETE only
+                        at R2. A student status is a SUBMISSION, not a
+                        pass — D-016.)
 VIDEOS PASSED:       8  (V01, V02, V03, V04, V05, V06 — all COMPLETE;
                         V07 — PASS at R3 2026-08-13, COMPLETE;
                         V08 — PASS at R2 2026-08-13, COMPLETE)
-NEXT LESSON:         V11 — **GATE CLOSED.** V10's student pass is complete and
-                     submitted as REVIEW REQUIRED, but D-004 opens the next gate
-                     on a *reviewer* verdict, never on a student submission.
-                     No V11 artifact of any kind until V10's R1 returns, and
-                     what it returns then governs per **D-024**: PASS or a
-                     minors-only REVISE opens the gate; any CRITICAL or MAJOR
-                     keeps it closed until fixed AND re-reviewed.
+NEXT LESSON:         V11 — **GATE OPEN as of 2026-08-13.** V10 R1 returned
+                     REVISE with 0 CRITICAL / 0 MAJOR / 4 MINOR, which opens
+                     the gate under D-024. **V11 may start.** V10's four
+                     minors (items 91-94) are deferred and still owed; V10
+                     is NOT COMPLETE until they are applied AND re-reviewed.
+                     Read the V11 GATE block below before starting: speaker
+                     identification is still the first step, and V10 broke
+                     the pattern in both directions.
 CURRENT LESSON:      **V10 — banner "Market Makers Boot Camp / Week 3", no topic
                      title. STUDENT PASS COMPLETE 2026-08-13, submitted as
-                     REVIEW REQUIRED. AWAITING INDEPENDENT REVIEW R1.**
+                     REVIEW REQUIRED. R1 RETURNED REVISE 0C/0M/4m,
+                     HIGH confidence, 2026-08-13 — items 91-94 OWED.**
 
                      ⭐ **THE FIVE-LESSON GUEST RUN ENDS. V10 IS 100% COURSE
                      AUTHOR.** V05-V09 each carried ZERO author runtime. The V10
@@ -930,11 +934,25 @@ V08 GATE:            **OPEN. V07 R1, 2026-08-13 — REVISE, 0 CRITICAL / 0 MAJOR
                      REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
                      verdict, not a student submission.
 
-V11 GATE:            **CLOSED.** V10's student pass is complete and submitted as
+V11 GATE:            **OPEN as of 2026-08-13 — V10 R1 returned REVISE with
+                     0 CRITICAL / 0 MAJOR / 4 MINOR, HIGH confidence, which
+                     opens the next gate under D-024. V11 MAY START.**
+                     V10 is NOT COMPLETE: items 91-94 are owed and V10
+                     reaches COMPLETE only at R2. The four minors are
+                     documentation and register hygiene; none moves a
+                     measurement, classification, disposition or rule.
+                     V10 R1 additionally CLOSED item 87 (the
+                     SWF_CAPTURE_RECIPE.md §10 frame-rate defect) by policy
+                     edit on the integration branch under D-038a, and
+                     renumbered V10's open items 81-85 to 86-90 to resolve
+                     a collision with V09 R2's concurrently-allocated 81-83.
+
+                     Superseded text, retained per project convention:
+                     "**CLOSED.** V10's student pass is complete and submitted as
                      REVIEW REQUIRED, but D-004 opens the next gate on a
                      *reviewer* verdict, never on a student submission. No V11
                      artifact of any kind until V10's R1 returns, and what it
-                     returns then governs per **D-024**.
+                     returns then governs per **D-024**." 
                      Carry into V11, and read this before starting it:
                      (a) **SPEAKER IDENTIFICATION IS STILL THE FIRST STEP — AND
                      THE PATTERN JUST BROKE.** Course-author runtime: ~100% (V03)
@@ -1332,7 +1350,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | REVISE R1 0C/0M/3m | **IN REMEDIATION** (items 64-66) |
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
-| V10 | Wk3 | 01:36:16 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V10 | Wk3 | 01:36:16 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ✅ **R1 REVISE 0C/0M/4m** | **IN REMEDIATION** (items 91-94) |
 | V11 | Wk4 P1 | 00:50:56 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V13 | Wk5 P1 | 01:05:22 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
