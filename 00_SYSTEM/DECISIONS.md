@@ -1232,3 +1232,75 @@ exist to prevent, and V05 begins under the same session date with a third presen
   **not** narrowed by them — "displayed, not taught".
 
 **Status:** ACTIVE
+
+---
+
+## D-032 — Guest material may be TESTED, never adopted; a test is not a citation
+
+**Date:** 2026-08-13
+**Status:** **PROVISIONAL — OWNER RATIFICATION REQUESTED.** Written by the session that was
+directed to act on it, so the direction is on the record rather than living only in a chat
+session (`D-001`, and the `D-023` failure this avoids repeating). If the owner disagrees with
+any clause, this entry is superseded and `PT-022` and its observations are marked
+`WITHDRAWN — SCOPE`, not deleted.
+
+**Refines:** `D-025`, which remains `ACTIVE` and is **not superseded**.
+
+**Owner direction, 2026-08-13, in substance:** V06 is to receive *"a genuine manual backtest…
+pre-register a testable prediction/rule from V06's lecture content BEFORE looking at outcome
+data, then manually backtest it against real historical market data… and record the result
+honestly whether it confirms or contradicts the rule as taught."*
+
+**Decision:** Guest-presenter material may be **empirically tested** under the pre-registered
+discipline, provided every one of the following holds. Testing is not adoption, and a measured
+result about a guest's claim is not a claim about the method.
+
+| Permitted | Still forbidden, unchanged from `D-025` |
+|---|---|
+| Pre-registering a guest claim as a hypothesis and measuring it | Entering the claim, or any result about it, into `12_MASTER_SPEC/`, `13_MACHINE_SPEC/`, `08_CONCEPT_LIBRARY/` or any machine candidate |
+| Reporting the result, confirming or contradicting, with equal prominence | Citing the result **for or against** any instructor statement |
+| Recording the observation in `06_MANUAL_BACKTEST/` under a `PT-NNN` file | **Closing** any `A-xxx` or `C-xxx` record on it |
+| Using **instructor-sourced** objects (e.g. V02's printed session table) to operationalise the test | Merging the guest's rule with an instructor rule into one rule set |
+| | Treating a confirmation as evidence the **method** works |
+
+**Three constraints that are part of this decision, not commentary:**
+
+1. **`D-030` is untouched and binds harder here than anywhere.** A guest claim that requires a
+   concept the course has named and not defined — *push*, *pullback*, *nameable pattern*, ADR's
+   lookback — **remains untestable**. Only claims decidable from measurements may be tested.
+   The value of this decision is exactly that it does **not** create a route around `D-030`.
+2. **A guest test carries a mandatory scope statement** on every report of it, in the form
+   `PT-001` §7 establishes, naming the speaker, the exclusion, and what the result does **not**
+   license.
+3. **A confirmed guest claim does not become a rule.** It becomes a *measured fact about a
+   claim a coach made*. The distinction is the whole content of this entry, and a future session
+   that loses it has lost `D-025`.
+
+**Reason:** `D-025` was written to stop guest material becoming doctrine, and it does. What it
+did not contemplate is whether guest material may be **measured**. Reading it as a bar on
+measurement has a perverse consequence: the corpus would record the most mechanically complete
+system it contains as untested **forever**, while the project's own standard
+(`BACKTEST_EVIDENCE_STANDARD.md` §4.3) requires that every testable claim examined be reported.
+Testing a claim and refusing to adopt it are compatible; indeed a **contradicted** guest claim
+is the strongest possible support for `D-025` having excluded it.
+
+**Evidence:** `DECISIONS.md` `D-025`, `D-030`; `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-001` §7
+(the scope-statement form); `COMMON_PROTOCOL.md` §8 (which reads V05/V06 as contributing
+nothing — that reading is **narrowed by this entry to the normative half only**, and
+`COMMON_PROTOCOL.md` governs `PT-002…PT-021`, which are unaffected). Project owner direction,
+2026-08-13.
+
+**Alternatives considered:** *Reading `D-025` as barring measurement, and declining the
+direction* — rejected; the decision's own text bars adoption, citation and closure, none of
+which a fenced test performs, and the owner is the authority on scope. *Testing the guest's
+full push rule* — rejected outright under `D-030`: *push*, *pullback* and *nameable pattern*
+are undefined, and a test of an approximated definition produces a number that outlives its
+caveat. *Recording nothing and simply running the test* — rejected; that is the `D-023` failure,
+where an authorized action lived only in a conversation and read afterwards as a violation.
+
+**Consequences:** `PT-022` is written under this entry and cites it. `PRE_REGISTERED/INDEX.md`'s
+coverage table, which reads *"V06 — none — `D-025`"*, is updated with the reason for the change
+rather than silently corrected. **`PT-002`…`PT-021` are unaffected**: none of them draws on V05
+or V06 and none is re-scoped here. If the owner declines to ratify, `PT-022` and its
+observations are marked `WITHDRAWN — SCOPE` and retained.
+

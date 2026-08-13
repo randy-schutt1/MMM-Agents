@@ -5,8 +5,11 @@ That is the whole point of the directory: a prediction locked in before the outc
 known is evidence; the same prediction written afterwards is a story.
 
 ```text
-STATUS:  21 tests pre-registered · 0 run
-GATE:    I-007 (no chart data source declared) blocks ALL of them
+STATUS:  22 tests pre-registered · 1 run (PT-022)
+GATE:    I-007 (no STANDING chart data source declared) blocks PT-001 ... PT-021.
+         PT-022 declares its own source, feed and chart timezone in its observation
+         and pins the D-028 boundary; I-007 stays OPEN project-wide, because a
+         standing declaration is the owner's to make, not one test's.
 ```
 
 ---
@@ -36,6 +39,7 @@ GATE:    I-007 (no chart data source declared) blocks ALL of them
 | **PT-019** | The weekend gap, and the one mechanical rationale in V01 | **V01** | W-C |
 | **PT-020** | The London-open asymmetric conditional | **V03** | W-B |
 | **PT-021** | DNC and the straightaway test | V02 | W-B |
+| **PT-022** | *"They don't usually run like London"* — is the New York window's realised range smaller? | **V06 — GUEST** | W-A |
 
 Shared machinery — units, the no-pixel measurement rule, the three windows, the two
 `D-031` timezone arms, the four null models, the fixed seed, and the `D-030` exclusion
@@ -50,7 +54,23 @@ list — is in **`COMMON_PROTOCOL.md`**. Each file still carries its own pre-reg
 | **V03** | PT-008, 016, 020 (+ PT-009, 011) | The first-8-hours block, the box-size filter, the one crisp conditional |
 | **V04** | PT-014, 015, 017 (+ PT-001) | The prescriptive lesson: the excursion band, its missing ceiling, and `CL1` |
 | **V05** | **none** | `D-025` — zero course-author runtime |
-| **V06** | **none** | `D-025` — zero course-author runtime, and the most complete system in the corpus is entirely inadmissible |
+| **V06** | **PT-022** | See the note below. `D-025` still excludes every normative statement in V06 from the methodology; `D-032` permits one measurable claim to be **tested** |
+
+> **CHANGED 2026-08-13, and the superseded reading is retained above the change rather than
+> corrected away.** This table previously read **"V06 — none — `D-025` — zero course-author
+> runtime, and the most complete system in the corpus is entirely inadmissible."** That was
+> correct as a statement about **adoption** and it remains correct: nothing in V06 has entered
+> or may enter the methodology.
+>
+> What changed is scope, by owner direction recorded as **`D-032`**: *guest material may be
+> tested, never adopted; a test is not a citation.* `PT-022` measures one arithmetic claim —
+> whether the New York session window's realised range is smaller than London's — chosen because
+> it is the **only** claim in V06 that survives `D-030`. Every other claim in that lesson needs
+> *push*, *pullback*, *nameable pattern* or a moving-average type, none of which the course has
+> defined, and all of them stay untestable.
+>
+> **`COMMON_PROTOCOL.md` §8 is narrowed by the same entry, to the normative half only, and
+> `PT-002`…`PT-021` are unaffected** — none of them draws on V05 or V06.
 
 By kind: **7 clock/session-structure**, **6 weekly-structure**, **5 Asian-range/location**,
 **2 management**, **1 mechanical (gap)**. No two tests ask the same question, and the four
