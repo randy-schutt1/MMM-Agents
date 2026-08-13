@@ -1,0 +1,82 @@
+{
+  "tier1_v09": {
+    "checks": 7,
+    "reconciled": 7
+  },
+  "tier2_mmm_notes": {
+    "checks": 9,
+    "reconciled": 9
+  },
+  "table": [
+    {
+      "balance": 5000,
+      "risk_frac": 0.02,
+      "stop_pips": 15,
+      "usd_per_pip": 6.6667,
+      "standard_lots": 0.6667
+    },
+    {
+      "balance": 5000,
+      "risk_frac": 0.02,
+      "stop_pips": 25,
+      "usd_per_pip": 4.0,
+      "standard_lots": 0.4
+    },
+    {
+      "balance": 10000,
+      "risk_frac": 0.02,
+      "stop_pips": 15,
+      "usd_per_pip": 13.3333,
+      "standard_lots": 1.3333
+    },
+    {
+      "balance": 10000,
+      "risk_frac": 0.02,
+      "stop_pips": 25,
+      "usd_per_pip": 8.0,
+      "standard_lots": 0.8
+    },
+    {
+      "balance": 12500,
+      "risk_frac": 0.02,
+      "stop_pips": 15,
+      "usd_per_pip": 16.6667,
+      "standard_lots": 1.6667
+    },
+    {
+      "balance": 12500,
+      "risk_frac": 0.02,
+      "stop_pips": 25,
+      "usd_per_pip": 10.0,
+      "standard_lots": 1.0
+    },
+    {
+      "balance": 25000,
+      "risk_frac": 0.02,
+      "stop_pips": 15,
+      "usd_per_pip": 33.3333,
+      "standard_lots": 3.3333
+    },
+    {
+      "balance": 25000,
+      "risk_frac": 0.02,
+      "stop_pips": 25,
+      "usd_per_pip": 20.0,
+      "standard_lots": 2.0
+    },
+    {
+      "balance": 100000,
+      "risk_frac": 0.02,
+      "stop_pips": 15,
+      "usd_per_pip": 133.3333,
+      "standard_lots": 13.3333
+    },
+    {
+      "balance": 100000,
+      "risk_frac": 0.02,
+      "stop_pips": 25,
+      "usd_per_pip": 80.0,
+      "standard_lots": 8.0
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+==============================================================================
+V09 COMPREHENSION PROBE — scoring answers committed at 97d2c1b
+==============================================================================
+transcript body: 9,156 words
+
+------------------------------------------------------------------------------
+Q1. Under V09's rule, what lot size do you use on the SECOND consecutive losing trade?
+    ANSWER: The same lot size as the first.
+    check   in transcript? YES  "come back with the same lot size"
+    ==> RIGHT
+
+------------------------------------------------------------------------------
+Q10. Can V09's homework H3 (the USD/JPY arrow drill) be performed by this project today?
+    ANSWER: No. It is DEFERRED, blocked by A-004.
+    MANUAL — disposition DEFERRED, blocker A-004
+
+------------------------------------------------------------------------------
+Q2. After four consecutive 2% losses on a $12,500 account, what is the balance and what percentage is that down?
+    ANSWER: $11,500, down 8.0% of the ORIGINAL balance.
+    check   balance: claimed 11500.0  re-derived 11500  OK
+    check   pct: claimed 8.0  re-derived 8  OK
+    ==> RIGHT
+
+------------------------------------------------------------------------------
+Q3. Is V09's 2% a per-trade limit or an account-wide limit?
+    ANSWER: Account-wide. Cumulative across all simultaneously open positions.
+    check   in transcript? YES  "cumulative risk"
+    check   in transcript? YES  "overall exposure"
+    ==> RIGHT
+
+------------------------------------------------------------------------------
+Q4. V09 gives two risk-to-reward geometries. What are they, and what gates the better one?
+    ANSWER: 2:1 at -25/+50 pips for everyone; 3:1 at -15/+50 once the trader has mastered HOD/LOD entries.
+    check   rr_beginner: claimed 2.0  re-derived 2  OK
+    check   rr_ideal_stated: claimed 3.0  re-derived 3  OK
+    check   rr_ideal_actual: claimed 3.3333  re-derived 3.33333  OK
+    ==> RIGHT
+
+------------------------------------------------------------------------------
+Q5. V09 says '>50% accuracy will bring UPWARD EQUITY'. At its own 2:1 geometry, what hit rate is actually required to break even?
+    ANSWER: 33.33%. The >50% claim is TRUE but is far above the threshold.
+    check   breakeven_2to1: claimed 0.333333  re-derived 0.333333  OK
+    check   breakeven_3to1: claimed 0.230769  re-derived 0.230769  OK
+    ==> RIGHT
+
+------------------------------------------------------------------------------
+Q6. What does V09 say the innermost ring of V08's four-stage model is?
+    ANSWER: The discipline to keep to the risk plan.
+    check   in transcript? YES  "circle within the circle"
+    ==> RIGHT
+
+------------------------------------------------------------------------------
+Q7. Does V09 state where to place a stop loss?
+    ANSWER: No. It states stop SIZES (25 and 15 pips) and never states an anchor.
+    check   absent? YES  "beyond the high"
+    check   absent? YES  "beyond the low"
+    check   absent? YES  "10 to 15 pips"
+    check   absent? YES  "below the low of the day"
+    check   absent? YES  "above the high of the day"
+    ==> RIGHT
+
+------------------------------------------------------------------------------
+Q8. Whose practice is 'the grape', and does it belong in the course's moving-average set?
+    ANSWER: The presenter's own. It does NOT belong in the course set.
+    check   in transcript? YES  "steve doesn't teach it"
+    ==> RIGHT
+
+------------------------------------------------------------------------------
+Q9. V09 projects 20% gains per week from five successful trades. Is the arithmetic wrong?
+    ANSWER: No. The arithmetic is exact. What is omitted is the losing trades.
+    check   week4: claimed 10368.0  re-derived 10368  OK
+    check   week28: claimed 824223.31  re-derived 824223  OK
+    ==> RIGHT
+
+==============================================================================
+SCORE: 9 right, 0 wrong, 1 manual (9/9 of auto-scored)
+==============================================================================
+
+Reasoning traces are in v09_comprehension_ANSWERS.json and were committed
+before this scorer existed. A wrong answer is analysed in V09_HOMEWORK.md
+and is NOT revised.

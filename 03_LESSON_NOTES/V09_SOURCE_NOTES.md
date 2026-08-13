@@ -506,10 +506,26 @@ Terms this lesson uses fluently and never defines. **All `DO NOT CODE`.**
 > placed by an invented rule produces a **number**, and a number acquires authority a note never
 > does.
 >
-> **So the homework performs H1/H2 in full and substitutes nothing for H3/H4.** Instead
-> `05_HOMEWORK/V09` runs the exercise **H3's *structure* licenses without its blocked
-> predictor**: a committed, pre-registered, next-day-scored prediction whose predictor is one of
-> V09's **own explicit numbers**. The substitution is declared there, not smuggled.
+> **So the homework performs H1/H2 in full and substitutes NOTHING for H3/H4**, which are
+> `DEFERRED` under `D-019` and carried until a lesson defines a level.
+>
+> **An earlier draft of this paragraph proposed running "H3's structure with one of V09's own
+> explicit numbers as the predictor", and that was dropped.** V09's explicit numbers are risk
+> parameters, not directional signals, and dressing one up as an arrow predictor would have been
+> the `D-030` substitution wearing a disclosure. **The superseded text is retained above the
+> change per `REMEDIATION_PROTOCOL.md` §2** — see the strikethrough note below.
+>
+> What `05_HOMEWORK/V09` §3 does instead applies the **same commit-before-you-look discipline** to
+> something V09 specifies in full: its own sizing algorithm, executed literally on real trade
+> sequences under four predictions committed in advance.
+>
+> <details><summary>superseded draft text, retained</summary>
+>
+> *"Instead `05_HOMEWORK/V09` runs the exercise H3's structure licenses without its blocked
+> predictor: a committed, pre-registered, next-day-scored prediction whose predictor is one of
+> V09's own explicit numbers. The substitution is declared there, not smuggled."*
+>
+> </details>
 
 ---
 
