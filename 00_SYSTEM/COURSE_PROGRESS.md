@@ -11,76 +11,77 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  1  (V07 — STUDENT PASS COMPLETE 2026-08-13, submitted as
+VIDEOS IN PROGRESS:  2  (V07 — STUDENT PASS 2026-08-13, R1 returned REVISE
+                        0C/0M/3m, IN REMEDIATION, three minors owed;
+                        V08 — STUDENT PASS COMPLETE 2026-08-13, submitted as
                         REVIEW REQUIRED, AWAITING INDEPENDENT REVIEW R1)
-VIDEOS PASSED:       6  (V01, V02, V03, V04 — V04 PASS at R2, COMPLETE;
-                        V05 — PASS at R3 2026-08-12, COMPLETE;
-                        V06 — PASS at R2 2026-08-13, COMPLETE)
-NEXT LESSON:         V08 — **GATE CLOSED.** V07 carries a STUDENT status only, and
+VIDEOS PASSED:       6  (V01, V02, V03, V04, V05, V06 — all COMPLETE)
+NEXT LESSON:         V09 — **GATE CLOSED.** V08 carries a STUDENT status only, and
                      D-004 opens a gate on a REVIEWER verdict, never on a student
-                     submission. No V08 artifact of any kind until V07 R1 returns;
+                     submission. No V09 artifact of any kind until V08 R1 returns;
                      what it returns then governs per D-024.
-CURRENT LESSON:      **V07 — "BEST TRADE GRABS". STUDENT PASS COMPLETE 2026-08-13,
-                     submitted as REVIEW REQUIRED (not PASS). AWAITING REVIEW R1.**
+CURRENT LESSON:      **V08 — "JIM'S JOURNEY IN LEARNING AND TRADING MMFX".
+                     STUDENT PASS COMPLETE 2026-08-13, submitted as REVIEW
+                     REQUIRED (not PASS). AWAITING REVIEW R1.**
 
-                     THE V07 GATE WAS VERIFIED OPEN IN REVIEW_INDEX.md BEFORE ANY
-                     V07 ARTIFACT WAS CREATED. D-004 satisfied outright on V06's
-                     own PASS — not a D-024 minors-only opening.
+                     THE V08 GATE WAS VERIFIED OPEN IN REVIEW_INDEX.md BEFORE ANY
+                     V08 ARTIFACT WAS CREATED. V07 R1 returned REVISE with 0
+                     CRITICAL / 0 MAJOR / 3 MINOR, which opens the gate under
+                     D-024 with the minors deferred and still owed.
 
-                     TITLE AND SESSION DATE COME FROM INSIDE THE RECORDING for the
-                     first time in this corpus: the title slide prints "Best Trade
-                     Grabs / MMFx Breakout Session 03-26-2012" (frame
-                     V07_00-00-10). The quarantined NOTES.md calls the lesson
-                     "Time Mapping, Session Overlaps & Peak Formation Tracking",
-                     which is fabricated (Q-008).
+                     TITLE FROM INSIDE THE RECORDING, as V07 established: the
+                     title slide prints "Jim's Journey in Learning and Trading
+                     MMFX" (frame V08_00-00-05). The quarantined header calls the
+                     lesson "Candlestick Reversal Triggers, Railroad Tracks,
+                     Multi-Timeframe Alignment", which Q-009 shows is fabricated.
 
-                     THIRD CONSECUTIVE LESSON WITH ZERO COURSE-AUTHOR RUNTIME
-                     (V05, V06, V07). Speaker identification was step one, before
-                     any note: "Steve" occurs twice, both third-person, and one of
-                     them queues Steve as the NEXT QUESTIONER. Under D-033 that
-                     does not demote anything — the material is normative at equal
-                     weight — but D-030 still blocks 8 of the 10 interpreted rules.
+                     FOURTH CONSECUTIVE LESSON WITH ZERO COURSE-AUTHOR RUNTIME
+                     (V05-V08). Speaker identification was step one: 15
+                     third-person references to Steve, one of them congratulating
+                     him from the podium at [00:19:52]. Under D-033 this demotes
+                     nothing.
 
-                     WHY REVIEW REQUIRED AND NOT PASS — two dimensions, both named:
-                     (1) DIMENSION B (Recognition) is D-030-blocked, as V06's was,
-                     and the project still has no vocabulary for that disposition
-                     (REVIEW_INDEX.md open item 36 is the live proposal). This is
-                     the THIRD lesson to hit it.
-                     (2) DIMENSION F carries one NOT APPLICABLE — practise on a
-                     demo account — that a reviewer may reasonably overturn to
-                     DEFERRED, as V01 R1 overturned two of eight.
+                     THE LESSON IS INCOMPLETE AND THAT IS A FINDING, not an
+                     artifact of the file. The presenter plans three sections plus
+                     the DMR over ~2 hours; this 43-minute file carries section 1
+                     and most of section 2 and ENDS MID-ARGUMENT on an unanswered
+                     question. The final frame shows a literal "?" at the centre of
+                     his own ring diagram, corroborating the audio-only reading.
 
-                     WHAT V07 CONTRIBUTES: the base-rate objection stated from
-                     INSIDE the course ("M's and W's are everywhere… how do we
-                     differentiate which ones work"), which is D-026's own argument
-                     made by a speaker who now carries normative authority; the
-                     first level -> expected-pattern mapping, used as a reason to
-                     PASS trades; the first four-way second-leg GEOMETRY taxonomy,
-                     two endorsed and one declined for want of research; "Hi-Lo"
-                     named as a primary method, recommended in print, and never
-                     taught (A-056); and a student asking on the record whether all
-                     the DMR speakers agree about second legs, and not being told
-                     that they do.
+                     WHAT V08 CONTRIBUTES: the first account anywhere in V01-V08 of
+                     what "Hi-Lo" actually asks a trader to do (A-056 EXTENDED, not
+                     closed); the confirmation requirement called a MYTH by a
+                     normative speaker, in printed slide text, which under D-033
+                     provision 3 is a real method-level contradiction on an entry
+                     condition (C-009); the corpus's first R:R claim (3:1, printed);
+                     the stop hunt box's SIZE, 25 pips (A-063); a FRACTIONAL level
+                     count (A-062); and -- printed only, garbled in the audio as
+                     "intent pips" -- a 10-pip tolerance from HOD/LOD.
 
-                     FIRST TEST IN THE PROJECT TO REACH THE PRE-REGISTERED
-                     HISTORICAL WINDOWS. PT-033 / BT_V07_0001 ran on the HistData
-                     corpus D-036a landed the same day: 904-1,087 days of GBP/USD,
-                     2013-01-06 -> 2016-06-30, wholly inside DEVELOPMENT, holdout
-                     never on disk. Verdict INDETERMINATE under the pre-registered
-                     rule. Two findings that were not the question asked: O2
-                     collapses into O1 at perfect hindsight, and THE DAY BOUNDARY
-                     MOVES THE RESULT BY ~14 POINTS while the D-031 timezone arm
-                     does not — corroborated by a second vendor whose day boundary
-                     falls between the two tested.
+                     PT-034 / BT_V08_0001: the 3:1 claim's headline form is
+                     ARITHMETICALLY GUARANTEED and was shown so BEFORE the run --
+                     within a day, an entry within X pips of the day's extreme
+                     cannot draw down more than X. The empirical arm returned
+                     CONFIRMED AS TAUGHT (70.5-76.8% vs a matched-random null of
+                     24.2-24.5%, break-even 25.00%), and the observation DISCLOSES
+                     A DEFECT IN ITS OWN PRE-REGISTERED DECISION RULE rather than
+                     editing it. Independent cross-check against PT-033 -- different
+                     session, no shared code -- passes every pre-registered band.
 
-                     ⚠ I-009 RECURRED AGAINST THIS SESSION'S WORK. A concurrent
-                     session committing in the same working tree swept
-                     02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md — staged by this session
-                     — into 8785c41, a commit about the HistData corpus. No content
-                     lost; authorship and message wrong. NOT rewritten: rewriting
-                     shared history while another session is active is worse than
-                     the defect. Recorded in LOG.md and in the mastery report's
-                     escalations.
+                     THE HOMEWORK PRODUCED A CLEAN NEGATIVE. Twelve hard-right-edge
+                     flashcards, predictions committed before the key was opened,
+                     using V08's own "the fast move is false" as the predictor:
+                     5/12 = 0.42 against an always-TARGET baseline of 0.83. The
+                     "fast -> TARGET" half matched the base rate; the "slow -> STOP"
+                     half went 1/7 and was actively anti-predictive.
+
+                     WHY REVIEW REQUIRED AND NOT PASS: DIMENSION B (Recognition) is
+                     D-030-blocked for the FOURTH lesson running and the project
+                     still has no vocabulary for that disposition (REVIEW_INDEX.md
+                     open item 36). Owner ruling owed.
+
+                     NO I-009 COLLISION. V08 ran in a dedicated worktree on branch
+                     video/v08 under D-038, the first full lesson under that policy.
 
                      ---- V06, retained ----
                      **V06 — "MICRO DAILY TRENDS". REVIEWED 2026-08-13 (R2):
@@ -770,21 +771,75 @@ V04 GATE:            **OPEN on V03's own PASS as of V03 R3, 2026-08-10 (D-004
                      currently the only thing holding the gate.
 
 
-V08 GATE:            **CLOSED.** V07's student pass is complete and submitted as
+V08 GATE:            **OPEN. V07 R1, 2026-08-13 — REVISE, 0 CRITICAL / 0 MAJOR /
+                     3 MINOR (open items 61-63). Under D-024 a minors-only REVISE
+                     OPENS the next gate**, with the three minors deferred and
+                     still owed before V07 can reach COMPLETE. V07 R1's own
+                     executive block says so: "ADVANCEMENT: AUTHORIZED — under
+                     D-024 the V08 gate OPENS."
+                     The gate was verified OPEN in 18_REVIEW/REVIEW_INDEX.md
+                     BEFORE any V08 artifact was created. No override was needed
+                     and none was used.
+                     *(The block below read CLOSED until this update. It was
+                     written before V07 R1 returned and was correct when written;
+                     REVIEW_INDEX.md is the authoritative register and recorded
+                     the opening. Retained per REMEDIATION_PROTOCOL.md §2 rather
+                     than deleted.)*
+
+                     ---- superseded, retained ----
+                     **CLOSED.** V07's student pass is complete and submitted as
                      REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
-                     verdict, not a student submission — "a student PASS never
-                     advances the course by itself; it is a submission"
-                     (MASTERY_STANDARD.md). No V08 artifact of any kind may be
-                     created until V07's R1 returns, and what it returns then
-                     governs per **D-024**: PASS or a minors-only REVISE opens this
-                     gate; any CRITICAL or MAJOR keeps it closed until fixed AND
+                     verdict, not a student submission.
+
+V09 GATE:            **CLOSED.** V08's student pass is complete and submitted as
+                     REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
+                     verdict, never on a student submission. No V09 artifact of any
+                     kind until V08's R1 returns, and what it returns then governs
+                     per **D-024**: PASS or a minors-only REVISE opens this gate;
+                     any CRITICAL or MAJOR keeps it closed until fixed AND
                      re-reviewed.
-                     Note for whoever holds this next: the D-004 gate has been
-                     breached twice in this project's history and REVIEW_INDEX.md
-                     open item 9 remains OPEN precisely because a written gate with
-                     no enforcement is what failed. The validate_project.py
-                     pre-flight guard is still unimplemented, so this block is
-                     currently the only thing holding the gate.
+                     Carry into V09, and read this before starting it:
+                     (a) **SPEAKER IDENTIFICATION IS STILL THE FIRST STEP.**
+                     Course-author runtime: ~100% (V03) -> ~31% (V04) -> 0% (V05)
+                     -> 0% (V06) -> 0% (V07) -> **0% (V08)**. FOUR consecutive
+                     lessons with no course author. **V09 SHARES V08's 2012-03-26
+                     SESSION DATE.** There is a specific, testable hypothesis for
+                     once: V08 is the FRONT HALF of a talk its presenter says will
+                     run about two hours, and its section 3 -- "how to not GET
+                     killed", a defined-risk lesson -- is announced twice and is
+                     NOT in the file. If V09 opens with that section, V09 is the
+                     same presenter continuing. TEST IT, do not assume it, and do
+                     not use the acoustic screen across files.
+                     (b) **V08 LEFT A STOP-SIDE PROMISE UNPAID.** [00:40:05] says
+                     the 3:1 claim "is going to have a lot of ramifications in
+                     about 35, 40 minutes when we get into that section". If V09
+                     holds section 3, it is the corpus's first stop rule and the
+                     single most valuable thing in the next lesson.
+                     (c) **A-061 IS THE HIGHEST-VALUE GAP V08 LEAVES.** "The fast
+                     move is false; the slow and steady move is the correct move"
+                     is an ENTRY CUE with no measurable boundary, and speed is the
+                     only forward-looking element the high-low drill offers. A
+                     session's own reading of it scored 0.42 against a 0.83
+                     baseline on 12 flashcards (05_HOMEWORK/V08). Watch for any
+                     lesson that attaches a measure to it.
+                     (d) **A-056 IS EXTENDED, NOT CLOSED.** V08 supplies where to
+                     enter, where in the structure, what cues it, and -- printed
+                     only -- a 10-pip tolerance from HOD/LOD. It does not supply
+                     how to identify the extreme before it is one.
+                     (e) **THE VISUAL_INDEX.md FABRICATION IS ONE GENERATOR, not
+                     four failure modes** (Q-009). extracted_png_27.png and
+                     extracted_png_290.png are BYTE-IDENTICAL across V05-V08 and
+                     described as eight different trading topics. Three cheap
+                     checks screen it: a timestamp past the runtime, a constant
+                     timestamp delta, byte-duplicates or sub-300px files called
+                     charts. NOT a batch discharge -- the per-lesson audio
+                     cross-check is still owed.
+                     (f) **THE DAY-BOUNDARY DECISION NOW HAS TWO DATA POINTS.**
+                     PT-034 reproduced PT-033's ~14-point day-boundary effect on a
+                     within-day observable (13.8) and found only 2.9 on a
+                     no-deadline one. Owner decision still open.
+                     (g) **D-038 IS IN FORCE.** V08 was done in a dedicated
+                     worktree on branch video/v08. No I-009 collision occurred.
 
 V07 GATE:            **OPEN on V06's own PASS: V06 R2, 2026-08-13 — PASS,
                      0 CRITICAL / 0 MAJOR / 0 MINOR. V06 is COMPLETE (D-004).**
@@ -985,7 +1040,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ✅ | ✅ | ✅ | ⚠️ | 🚫 | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R1B REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
-| V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V10 | Wk3 | 01:36:16 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V11 | Wk4 P1 | 00:50:56 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |

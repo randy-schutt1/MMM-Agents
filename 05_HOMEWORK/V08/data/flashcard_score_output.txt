@@ -1,0 +1,23 @@
+==========================================================================
+V08 FLASHCARD DRILL — SCORED
+==========================================================================
+entry = day LOW + 10 pips (the lesson's printed tolerance); TARGET +50, STOP -16.67
+
+  card 01  2015-09-27  predicted=TARGET     actual=STOP       MISS  bars=89
+  card 02  2013-10-14  predicted=STOP       actual=TARGET     MISS  bars=18
+  card 03  2013-05-09  predicted=TARGET     actual=TARGET     OK   bars=62
+  card 04  2015-12-28  predicted=STOP       actual=TARGET     MISS  bars=100
+  card 05  2013-05-06  predicted=TARGET     actual=TARGET     OK   bars=77
+  card 06  2015-02-02  predicted=TARGET     actual=TARGET     OK   bars=11
+  card 07  2015-02-26  predicted=STOP       actual=TARGET     MISS  bars=16
+  card 08  2013-05-15  predicted=TARGET     actual=TARGET     OK   bars=26
+  card 09  2016-02-21  predicted=STOP       actual=TARGET     MISS  bars=9
+  card 10  2013-12-30  predicted=STOP       actual=TARGET     MISS  bars=23
+  card 11  2013-08-26  predicted=STOP       actual=TARGET     MISS  bars=5
+  card 12  2013-07-31  predicted=STOP       actual=STOP       OK   bars=33
+
+  score: 5/12 = 0.42
+  ALWAYS-TARGET baseline on this set: 10/12 = 0.83
+  A score at or below the always-TARGET baseline means the predictions carried
+  NO information beyond the base rate. That is the honest comparison and it is
+  printed whether or not it flatters the result.

@@ -1,0 +1,89 @@
+==============================================================================
+V08 COMPREHENSION PROBE
+==============================================================================
+transcript: 02_TRANSCRIPTS/V08/V08_TRANSCRIPT.md   body words: 7318
+
+--- POSITIVE (23) — each MUST be found ---
+  P01 PASS  ~[00:00:00]  He opens by promising a journey through how HE learned the method
+  P02 PASS  ~[00:00:32]  He names the course author in the third person in the first minute
+  P03 PASS  ~[00:00:26]  He plans THREE sections plus the DMR, about two hours
+  P04 PASS  ~[00:05:55]  Section 3 is the defined-risk lesson — and it is not in this file
+  P05 PASS  ~[00:06:21]  The model has four distinct levels, worked from the ideal outward
+  P06 PASS  ~[00:06:44]  The innermost ring is steady equity growth
+  P07 PASS  ~[00:11:21]  The validation exercise: two hours a week after Friday's close, ten or more pairs
+  P08 PASS  ~[00:15:24]  The gallery is the week of March 19th 2012
+  P09 PASS  ~[00:16:22]  The count is 29 setups
+  P10 PASS  ~[00:19:31]  The stop hunt box has a stated size of 25 pips
+  P11 PASS  ~[00:27:50]  The lesson's pivot: he can see M/W after they form, not before
+  P12 PASS  ~[00:28:00]  The technique is to chop the chart back to the hard right edge
+  P13 PASS  ~[00:28:19]  It took him three months to see M/W even AFTER they formed
+  P14 PASS  ~[00:31:56]  Eight hours to build ten movies, and his trading instantly improved
+  P15 PASS  ~[00:33:30]  The worked example is CAD/JPY, M15, Monday March 19th 2012, 1:30 AM EDT
+  P16 PASS  ~[00:36:15]  The fast move is false; the slow and steady move is correct
+  P17 PASS  ~[00:36:58]  He calls the confirmation requirement a MYTH
+  P18 PASS  ~[00:37:07]  and states the basic-training rule he is contradicting
+  P19 PASS  ~[00:37:27]  Entering at the extreme is called the SAFEST place to enter
+  P20 PASS  ~[00:38:55]  The drill is to be practised on DEMO
+  P21 PASS  ~[00:39:58]  The crown-jewel claim: tighter stops, risk-reward three to one or greater
+  P22 PASS  ~[00:40:34]  He draws a physical line on a previous trap area
+  P23 PASS  ~[00:42:58]  The lesson ends on an unanswered question about the innermost area
+
+--- NEGATIVE (20) — each MUST be ABSENT ---
+  N01 PASS  (0 hits)  QUARANTINED NOTES.md: the 5/13 EMA cross confirms on the M15 close
+  N02 PASS  (0 hits)  QUARANTINED NOTES.md: EMAs nicknamed Mustard / Water / Mayo / Blueberry / Raspberry
+  N03 PASS  (0 hits)  QUARANTINED NOTES.md: 200 EMA is "Blueberry"
+  N04 PASS  (0 hits)  QUARANTINED NOTES.md: 800 EMA is "Raspberry"
+  N05 PASS  (0 hits)  QUARANTINED NOTES.md: TDI green line crossing red signal line
+  N06 PASS  (0 hits)  QUARANTINED NOTES.md: Shark Fin confirmation outside the volatility bands
+  N07 PASS  (0 hits)  QUARANTINED NOTES.md: Peak Formation High / Low (PFH / PFL)
+  N08 PASS  (0 hits)  QUARANTINED NOTES.md: Asian session 7:00 PM - 3:00 AM EST
+  N09 PASS  (0 hits)  QUARANTINED NOTES.md: London session 3:30 AM - 9:00 AM EST
+  N10 PASS  (0 hits)  QUARANTINED NOTES.md: New York session 9:30 AM - 5:00 PM EST
+  N11 PASS  (0 hits)  QUARANTINED NOTES.md: stop loss 10-15 pips past the High/Low of Day
+  N12 PASS  (0 hits)  QUARANTINED VISUAL_INDEX.md: Morning Star / Evening Star anatomy
+  N13 PASS  (0 hits)  QUARANTINED VISUAL_INDEX.md: multi-timeframe confluence H4/H1/M15
+  N14 PASS  (0 hits)  QUARANTINED VISUAL_INDEX.md: TDI divergence and momentum hooks
+  N15 PASS  (0 hits)  QUARANTINED VISUAL_INDEX.md: high-volume pin bars
+  N16 PASS  (0 hits)  PLAUSIBLE BUT ABSENT: a stated stop-loss distance in pips
+  N17 PASS  (0 hits)  PLAUSIBLE BUT ABSENT: any mention of the ATR
+  N18 PASS  (0 hits)  PLAUSIBLE BUT ABSENT: a named candlestick pattern (doji / hammer / engulfing)
+  N19 PASS  (0 hits)  PLAUSIBLE BUT ABSENT: risk expressed as a percentage of the account per trade
+  N20 PASS  (0 hits)  IMPORTED FROM V07, NOT IN V08: "shark fin in TDI"
+
+--- REASONING (10) — predicates, not phrase matches ---
+  R01 PASS  The day x session tally sums to the headline 29
+        day x session figures sum to 29; headline says 29; 10 figures: ['two@london', 'one@new york', 'one@london', 'one@new york', 'five@london', 'one@new york', 'eight@london', 'one@new york', 'six@london', 'three@new york']
+  R02 PASS  MA nicknames are used but "EMA" is never said — A-020/A-064 non-joining
+        EMA=0 (must be 0); mayo=2 mail/male=3 water=1, sum must be >=5
+  R03 PASS  C-007: announced as SET UPS, closed as TRADES
+        announced-as-setups=True; closed-as-trades=True
+  R04 PASS  C-008: "go off my faith" precedes "big scientific reason"
+        faith at char 26096, scientific at char 27377; faith must come first
+  R05 PASS  C-009: the rule, the myth, and the demo staging rule are all three present
+        rule=True myth=True staging-rule-on-demo=True
+  R06 PASS  Section 3 is announced twice and never delivered
+        "how to not get killed" occurs 2x (need >=2); blow-up-an-account=True
+  R07 PASS  The 10-pip tolerance is NOT in the audio — the ASR garbles it as "intent pips"
+        ASR garble present=True; clean phrasing present=False (must be False)
+  R08 PASS  The only forward cue for the extreme is speed, and it carries no number
+        speed-cue=True; any numeric speed criterion=False (must be False)
+  R09 PASS  GBP/USD appears in the 29-chart gallery exactly once
+        "pound dollar" occurs 1x; expected exactly 1
+  R10 PASS  The two-hour mark is a HOLD rule, not a deadline
+        verb after the two-hour mark = 'hold'; must be "hold"
+
+--- VISUAL (5) — the AUDIO side of a frame claim ---
+  V01 PASS  Frame 00-05-40 prints "within 10 pips of HOD/LOD" — the AUDIO must NOT contain it
+        HOD/LOD initialisms in audio: must be absent
+  V02 PASS  Frame 00-08-55 prints "FX scam" — the AUDIO must have the ASR's "scan"
+        "another fx scan" present in audio
+  V03 PASS  Frame 00-13-55 prints "Prussion" — the AUDIO must have "Depression-based"
+        "depression-based origins" present in audio
+  V04 PASS  Frames show a TDI panel throughout — the AUDIO must never mention TDI
+        TDI occurrences in audio: must be 0
+  V05 PASS  Frame 00-17-00 prints "29 SETUPS" — the AUDIO must say "set ups" at the headline
+        audio headline uses "set ups"
+
+==============================================================================
+58/58 passed
+ALL PROBES PASS

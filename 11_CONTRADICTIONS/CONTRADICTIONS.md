@@ -1064,3 +1064,186 @@ reasons are recorded here so the absence is auditable rather than assumed.
 | **C-001** — duration of the move away from the anchor | V07 states no anchor, no duration and no day count. Nothing bears on it in either direction |
 | **C-003** — whether M and W formations can fail | **Tempting and declined.** V07 has two explicit failure cases — *"even though the entry was perfect… It didn't really give us anything out of that trade"* `[00:01:06]`–`[00:01:21]`, and *"the second leg didn't pay out till the next day"* `[00:02:38]`. **Both are about SECOND LEGS, not about M/W formations as such**, and stretching them to fit `C-003` is the error V05 review R2 `M7` charged. Recorded in `V07_SOURCE_NOTES.md` §2 as evidence *bearing on* `C-003`, not as resolving it |
 | **C-004** — London open, 3:30am printed against 4:00 spoken | V07 states **no clock time for any session**: `EST` 0×, and all six candidate boundary times 0× (verified by reasoning probe `R08`). No session clock appears on any of the 24 curated frames either. Bears on it in neither direction — the same negative result V06 returned |
+
+---
+
+## C-007 — Twenty-nine "set ups" become twenty-nine "trades" inside eight minutes
+
+### Concept
+
+Whether the week of 2012-03-19 produced 29 **opportunities** or 29 **executions**. The
+distinction is the difference between a claim about the market and a claim about a track record.
+
+### Source A — the count, as announced
+
+| Field | Value |
+|---|---|
+| Video | V08 (2012-03-26), `GUEST` |
+| Timestamp | `[00:15:41]`–`[00:16:22]` |
+| Screenshot | `04_SCREENSHOTS/V08/V08_00-17-00_weather-report-29-setups.png` |
+| What is said | A day-by-day, session-by-session tally — *"two M&W set ups in the London session on Monday… five… eight… six… and three in the New York session"* — closing at `[00:16:22]` *"Oh my God, that's **29 set ups**."* |
+| Printed | The slide reads **"29 SETUPS !!!"** |
+
+### Source B — the count, as closed
+
+| Field | Value |
+|---|---|
+| Video | V08, same lesson, `GUEST` |
+| Timestamp | `[00:23:55]` |
+| What is said | *"Ladies and gentlemen, 29th Steve Marr market maker FX **trades** from last week. Are you still doubting?"* (`Steve Marr` = Steve Mauro — ASR) |
+
+### Assessment
+
+**The deck says SETUPS; the closing line says TRADES.** In between, the speaker narrates the
+29 charts and names **four** he personally took: `[00:18:19]` *"I took it"*; `[00:20:50]`
+*"Like Ray, I jumped on this one as well"*; `[00:21:52]` *"Oh, goodness, I got that one too"*;
+and — corroborated by an account record — the EUR/USD short visible in frame
+`V08_00-22-00`. **Four is not twenty-nine.**
+
+### Resolution
+
+```text
+RESOLVED — WORDING, not a claim. The speaker's own slide and his own tally both say
+SETUPS, and the deck is the prepared artifact. The drift at [00:23:55] is loose
+speech in a rhetorical closing line, and it drifts AWAY from the deck's own word.
+```
+
+**Recorded despite being resolved, and the reason is the point.** This project exists partly to
+notice the moment an **opportunity count** becomes a **performance count**, because that is one of
+the standard routes by which an unmeasured hit rate enters a corpus. Here it happens in eight
+minutes, in one lesson, by one speaker, with no intent visible — which is exactly how it happens
+in general.
+
+**Binding consequence:** the 29 may be cited **only** as a claimed count of setups. No artifact
+in this repository may cite V08 as evidence of 29 executed trades, or of any win rate. And note
+the count is in any case blocked by `D-030` for testing (`A-060`) — it counts M/W formations,
+whose anatomy is undefined.
+
+---
+
+## C-008 — "Go off my faith here" and "big scientific reason", four sentences apart
+
+### Concept
+
+The evidentiary status of the mechanism claimed for the hard-right-edge flashcard drill.
+
+### Source A — the disclaimer
+
+| Field | Value |
+|---|---|
+| Video | V08, `GUEST` |
+| Timestamp | `[00:29:31]`, `[00:29:48]` |
+| What is said | *"strong ideas held in the conscious mind will sink and lodge into the subconscious mind. The catch is those ideas or pictures have to be clear and exact."* then *"I'm not going to go into why and how and all this stuff and **the studies that actually validate this** and **go off my faith here**."* |
+
+### Source B — the assertion
+
+| Field | Value |
+|---|---|
+| Video | V08, `GUEST` |
+| Timestamp | `[00:31:16]` |
+| Screenshot | `04_SCREENSHOTS/V08/V08_00-29-35_subconscious-strong-ideas-lodge.png` |
+| What is said | *"**Big scientific reason** that we're doing it this way guys."* |
+
+### Assessment
+
+He claims validating studies exist, declines to name any, says explicitly that he is proceeding
+on faith, and then within ninety seconds calls the mechanism scientific. **No source is cited
+anywhere in the lesson.**
+
+### Resolution
+
+```text
+PROVISIONAL — a contradiction in the JUSTIFICATION offered for a technique, not in the
+technique. It does not conflict with any other statement in the corpus, and no rule
+depends on it.
+```
+
+**What this record explicitly does NOT say.** It does **not** say the drill is ineffective.
+Deliberate practice with immediate feedback is a well-established route to perceptual expertise,
+and the drill's *design* — truncate the chart at the decision point, replay forward, judge before
+the outcome is visible — is structurally the **same discipline `D-027` imposes on backtesting**.
+**The technique may be excellent and its stated justification still unevidenced.** The lesson
+merges those two questions; this record separates them and takes no position on the first.
+
+**Why it is logged at all:** an unsourced *"big scientific reason"* is the kind of sentence that
+gets quoted downstream as though the corpus had established something. It has not.
+
+---
+
+## C-009 — A normative speaker calls the course's own confirmation requirement a "myth"
+
+### Concept
+
+Whether an entry requires confirmation. This is an **entry condition**, which makes it the most
+consequential contradiction in the corpus to date.
+
+### Source A — the course's rule, as stated by this speaker
+
+| Field | Value |
+|---|---|
+| Video | V08 (2012-03-26), `GUEST` |
+| Timestamp | `[00:37:07]`–`[00:37:16]` |
+| What is said | *"**In our basic training, we do say that you want to have a confirmation candle.** There's a **reversal candle** and a **candle in the direction that you want to go**. **We say start there. Enter after you see these two.**"* |
+
+### Source B — the override, by the same speaker, thirty seconds earlier and again after
+
+| Field | Value |
+|---|---|
+| Video | V08, `GUEST` |
+| Timestamp | `[00:36:58]`, `[00:37:18]`, `[00:37:27]` |
+| Screenshot | `04_SCREENSHOTS/V08/V08_00-38-10_high-low-drill-confirmation-myth-safest-place.png` — **printed slide text**, not an aside |
+| What is said | *"The high low drill also flushes out the big trading **myth** that one needs confirmation in the same direction to enter a trade."* / *"As you study the high low drill, you will begin to **enter at the extremes and you will not have a confirmation**. I know that's scary."* / *"**Contrary to the myth, it's actually the safest place to enter trades.** Obviously, you're not in stop out. You're really not in drawdown."* |
+| Printed | *"It flushes out the big trading myth that one needs CONFIRMATION IN THE SAME DIRECTION to enter a trade…"* · *"Contrary to the MYTH it is the SAFEST PLACE TO ENTER TRADES"* · *"You will be Entering HERE"*, with a leader line to the low |
+
+### Why this is a CONTRADICTION and not a hygiene note
+
+Under **`D-025`** this would have been filed as corpus hygiene: a guest diverging from the course
+was, by that decision, *"not a contradiction in the method"*.
+
+**`D-033` provision 3 inverts that explicitly** — *"with equal authority, two speakers stating
+incompatible rules is a genuine `C-xxx` conflict in the method, not a corpus-hygiene note."*
+V08's speaker carries **normative authority at equal weight** with the course author. He states
+the course's rule in the course's own voice (*"in **our** basic training, **we** do say"*) and
+then calls it a myth. **That is the corpus contradicting itself on an entry condition.**
+
+### What the lesson itself offers, and how far it goes
+
+The lesson supplies its **own reconciliation**, stated three times:
+
+> `[00:39:00]` *"**Take your trades at confirmed entries. Yes** — but make sure that when you're
+> trying to catch these lows, **you do this on demo**."*
+> `[00:38:55]` *"That's why we do this drill on demo."*
+> `[00:39:23]` *"this is your **isolated skill** that you want to learn **in addition to** the
+> other aspects."*
+
+**That is a STAGING rule and it resolves a different question from the one this record asks.** It
+tells a student what to *do this week*: confirmed entries live, extreme entries on demo, until the
+skill is trained. It does **not** say which entry is correct for a trained trader — and
+`[00:37:27]`'s *"it's actually the safest place to enter trades"* is not hedged, while
+`[00:39:32]` says the trained outcome is that *"entries will start to migrate toward the
+extremes"*. **The end state the lesson describes is the one without confirmation.**
+
+### Resolution
+
+```text
+PROVISIONAL — a real conflict on an entry condition, with an explicit staging rule that
+DEFERS it rather than dissolving it.
+
+NOT RESOLVED: which entry is correct once the skill is trained.
+RESOLVED, by the lesson itself: what a student should do before it is.
+```
+
+### What is blocked, and what is not
+
+- **Neither rule is codable.** *Reversal candle* is named and never shaped; *the extreme* is
+  arithmetic in hindsight but has no forward identification method (`A-056`, `A-061`). `D-030`
+  blocks both sides.
+- **This record must not be "resolved" by preferring the printed slide.** Both statements are the
+  same speaker's, thirty seconds apart, and both are printed or spoken with equal conviction.
+- **It must not be merged into one rule** — **enter at the extreme, confirmed** is a synthesis
+  neither statement makes, and `REVIEW_PROTOCOL.md` §17 failure mode 3 is exactly that move.
+
+### Required to resolve
+
+A statement from any speaker on which entry applies **after** the drill is trained. Failing that,
+this is a genuine open conflict in the method and should be reported as one.

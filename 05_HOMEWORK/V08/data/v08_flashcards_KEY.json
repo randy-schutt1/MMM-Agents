@@ -1,0 +1,76 @@
+{
+  "cards": [
+    {
+      "card": 1,
+      "day": "2015-09-27",
+      "outcome": "STOP",
+      "bars": 89
+    },
+    {
+      "card": 2,
+      "day": "2013-10-14",
+      "outcome": "TARGET",
+      "bars": 18
+    },
+    {
+      "card": 3,
+      "day": "2013-05-09",
+      "outcome": "TARGET",
+      "bars": 62
+    },
+    {
+      "card": 4,
+      "day": "2015-12-28",
+      "outcome": "TARGET",
+      "bars": 100
+    },
+    {
+      "card": 5,
+      "day": "2013-05-06",
+      "outcome": "TARGET",
+      "bars": 77
+    },
+    {
+      "card": 6,
+      "day": "2015-02-02",
+      "outcome": "TARGET",
+      "bars": 11
+    },
+    {
+      "card": 7,
+      "day": "2015-02-26",
+      "outcome": "TARGET",
+      "bars": 16
+    },
+    {
+      "card": 8,
+      "day": "2013-05-15",
+      "outcome": "TARGET",
+      "bars": 26
+    },
+    {
+      "card": 9,
+      "day": "2016-02-21",
+      "outcome": "TARGET",
+      "bars": 9
+    },
+    {
+      "card": 10,
+      "day": "2013-12-30",
+      "outcome": "TARGET",
+      "bars": 23
+    },
+    {
+      "card": 11,
+      "day": "2013-08-26",
+      "outcome": "TARGET",
+      "bars": 5
+    },
+    {
+      "card": 12,
+      "day": "2013-07-31",
+      "outcome": "STOP",
+      "bars": 33
+    }
+  ]
+}
