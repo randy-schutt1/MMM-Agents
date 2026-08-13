@@ -348,3 +348,133 @@ nothing here to compare against.
   from the clock times.
 - **The regime caveat cuts both ways.** §3's mismatch is evidence about 2026 data, not about
   2012 instruction, and a future session must not cite it as though the lesson were shown wrong.
+
+---
+
+## 9. INDEPENDENT CROSS-CHECK AGAINST A SECOND DATA VENDOR
+
+**Added 2026-08-13 at the owner's direction: cross-check the homework's conclusions by an
+additional independent method rather than a single pass.**
+
+§4.2 already compared this session's harvest against **V05's committed harvest** — but that is
+the *same platform, same feed, same script*, a day apart. It tests the harvester's determinism,
+not the data. This section uses a genuinely different vendor.
+
+| | Source 1 | Source 2 |
+|---|---|---|
+| Vendor | **TradingView / FXCM** | **Yahoo Finance** |
+| Transport | Data Window **DOM text**, driven by synthetic mouse moves | Chart **JSON API**, `query1.finance.yahoo.com/v8/finance/chart/<SYM>=X` |
+| Timestamps | chart-clock strings | **UTC epoch integers** |
+| Rendering involved | a chart is drawn, then its text panel is read | **none — nothing is rendered at all** |
+
+The JSON path is a *stronger* form of the no-pixel rule than DOM text: there is no chart in the
+loop to misread. Script: `scripts/crosscheck_second_source.py`, committed and re-runnable.
+
+**A constraint that shaped the design:** Yahoo serves only ~7 days of 15-minute FX history but
+~60 days at 30 minutes. So the comparison aggregates **FXCM's 15m bars up to 30m** and compares
+like with like — **236 matched 30-minute bars per pair** across the analysed week.
+
+### 9.1 The chart timezone, derived instead of assumed
+
+§5 of this file reports times as *"chart clock"* and never proved what that clock was. It is now
+derived: for each candidate UTC offset, count matched bars whose **high and low both** agree
+within 3 pips, and take the argmax.
+
+| Pair | Best offset | Agreement at that offset | Agreement at UTC+0 |
+|---|---|---|---|
+| GBPUSD | **UTC+0** | 219 / 236 | 219 / 236 |
+| USDJPY | **UTC+0** | 227 / 236 | 227 / 236 |
+| USDCHF | **UTC+0** | 230 / 236 | 230 / 236 |
+| EURUSD | UTC−2 | 52 / 237 | **2 / 236** |
+
+**The TradingView chart was on UTC.** Three pairs agree unanimously and overwhelmingly. **The
+homework's implicit assumption is confirmed by an independent vendor**, and the `D-031` arm
+arithmetic in §5 (Arm A = chart − 5 h, Arm B = chart − 4 h) is therefore correct as applied.
+
+**EURUSD's disagreement is a vendor price bias, not a timezone.** The signed median difference
+(Yahoo − FXCM) is **+3.11 pips on highs and +3.94 pips on lows** — a *constant offset in one
+direction*, which no time shift can produce. Against a 3-pip tolerance that offset alone knocks
+every bar out of agreement, so the argmax wanders to a meaningless offset. **Reported rather
+than dropped**: it is the one place the cross-check disagrees with itself, and the explanation
+is checkable from the signed medians rather than asserted.
+
+### 9.2 The week extremes — the numbers §2.3 and §5 actually report
+
+| Pair | FXCM high | Yahoo high | diff | FXCM low | Yahoo low | diff |
+|---|---|---|---|---|---|---|
+| EURUSD | `1.15808` | `1.15821` | **1.3 p** | `1.15003` | `1.15048` | **4.5 p** |
+| GBPUSD | `1.35089` | `1.35075` | **1.4 p** | `1.34175` | `1.34187` | **1.2 p** |
+| USDJPY | `158.574` | `158.576` | **0.2 p** | `155.228` | `155.215` | **1.3 p** |
+| USDCHF | `0.81356` | `0.81358` | **0.2 p** | `0.80559` | `0.80558` | **0.1 p** |
+
+**Two independent vendors agree on all eight of the week's extremes to within 4.5 pips, and on
+six of the eight to within 1.4 pips.** EURUSD's 4.5 pips is almost exactly its systematic bias
+from §9.1. This is the homework's headline measurement standing up to a vendor it was not
+derived from.
+
+### 9.3 USDCHF's late week open — the cross-check REFUSES to answer, and that is the result
+
+The obvious question: is `476 = 480 − 4` a fact about the **market** or about the **FXCM feed**?
+
+Across **13 consecutive week opens** on the second source, **all four pairs open at the same
+timestamp, every week**: Sunday **23:00 UTC**, including USDCHF, including the analysed week.
+
+**That does not settle it, and reporting it as though it did would be wrong.** Yahoo carries
+**no bar before 23:00 UTC for any pair**, while FXCM opens three pairs at 21:00 and USDCHF at
+22:00. **The disputed hour — 21:00 to 22:00 — lies entirely outside what the second vendor
+serves.** It cannot see the hour in question, so it can neither confirm nor refute that USDCHF
+traded in it.
+
+> **`Q3` — UNRESOLVED.** The second source is blind to the exact interval at issue.
+
+**What the attempt did establish, and it is worth more than the question it failed to answer:**
+
+> **The week-open timestamp is vendor-dependent.** FXCM opens the FX week at **21:00 UTC**;
+> Yahoo opens it at **23:00 UTC**; both are perfectly consistent week after week. So
+> **"480 bars in a trading week" is a property of the FXCM feed's session definition, not a
+> property of the market.**
+
+That has a direct consequence for this project. §4.1 of this file, V05's homework, and V04
+review R1 all treat 480 (and USDCHF's 476) as if it were a market fact reproduced three times.
+**It was reproduced three times on one vendor.** Any future backtest whose week boundary is
+load-bearing — `PT-008`, `PT-009`, `PT-010`, `PT-012`, `PT-013`, `PT-019`, all of which use
+weekly windows — **will get a different week from a different provider**, and a two-hour
+difference at the open is more than enough to move a weekly extreme.
+
+### 9.4 How far apart are two vendors on the same bar?
+
+The question no single-source measurement can ask, and the one that bounds what
+*"reproducible"* can mean for retail FX data.
+
+| Pair | bars | median \|ΔH\| | median \|ΔL\| | 95th \|ΔH\| | 95th \|ΔL\| | max \|ΔH\| | max \|ΔL\| |
+|---|---|---|---|---|---|---|---|
+| EURUSD | 236 | 3.11 | 3.94 | 4.16 | 5.33 | 8.5 | 37.3 |
+| GBPUSD | 236 | 0.33 | 1.09 | 1.63 | 4.13 | 5.7 | 44.6 |
+| USDJPY | 236 | 0.10 | 0.70 | 0.50 | 2.40 | 2.5 | 6.1 |
+| USDCHF | 236 | 0.10 | 0.30 | 0.50 | 1.00 | 5.9 | 6.9 |
+
+*(pips; EURUSD's medians are its systematic bias, §9.1)*
+
+**Typical agreement is sub-pip to a few pips; worst-case disagreement reaches 37–45 pips on a
+single bar's low.** The large outliers are one-off bad prints, which retail FX feeds have.
+
+**This sharpens §4.2's finding rather than repeating it.** There, two harvests of the *same*
+feed differed by up to ~1 pip. Here, two *different vendors* differ by up to ~45 pips on an
+individual bar. **Any rule whose trigger depends on a specific bar's low — a stop placement, a
+breach of a level by a few pips, a 25-vs-50-pip band — can fire on one vendor and not on
+another.** That is a first-order constraint on every backtest this project will run, and it was
+invisible until a second source was consulted.
+
+### 9.5 What this cross-check changed, and what it did not
+
+| Homework claim | Status after cross-check |
+|---|---|
+| Week extremes (§2.3, §5) | **CONFIRMED** by an independent vendor, ≤4.5 pips |
+| Chart timezone = UTC, and the `D-031` arm arithmetic built on it (§5) | **CONFIRMED**, 3 of 4 pairs, ~230/236 bars |
+| 480 / 480 / 480 / **476** bar counts (§4) | **UNCHANGED as a measurement, RESCOPED as a claim** — it is an FXCM-feed fact, not a market fact |
+| USDCHF's missing hour is market structure | **NOT ESTABLISHED, and never was.** §4.1 called it *"a property of the feed's session open for this symbol"*, which was the careful reading and survives; anything stronger does not |
+| ADR family (§2) and the scale comparison (§3) | **UNTOUCHED** — daily-bar arithmetic, not re-derived here. A daily-resolution second source is the follow-up |
+
+**The honest summary: the cross-check confirmed what the homework measured and demoted what
+the homework implied.** The numbers held; one of the inferences drawn around them did not.
+
