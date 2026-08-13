@@ -1,0 +1,218 @@
+==============================================================================
+PT-027 — Does the first move out of the week's opening range reverse?
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-C' 2013-01-06 -> 2016-06-30. Re-issue of PT-009.
+block    : supplied by PT-026 (run first, per §7 step 2).
+           PT-008 is superseded and was NOT run to supply it.
+⚠ OUTCOME 3 IS AN UPPER BOUND — bid-only, no spread, no slippage.
+==============================================================================
+
+==========================================================================
+--- ARM A ---
+==========================================================================
+  week roster (arm A) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 3  (2015-12-20, 2015-12-27, 2016-06-26)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+  WEEKS USED: 180   M15 85732   M1 1281521
+  §3a: 2014-06-01 EXCLUDED by name — no observable week open, so no block
+       and no trigger. Six Dec/Jan closure weeks INCLUDED, reported
+       separately. ['2015-12-20', '2015-12-27'] end THURSDAY — Outcome 1's reversal window and
+       Outcome 3's holding window are SHORTER; realised times reported.
+
+  ======================================================================
+  HEADLINE — 8-hour clock block
+  ======================================================================
+  weeks yielding a first-breach trigger: 180 of 180   (0 weeks never closed beyond either edge)
+
+  OUTCOME 1 — reversal back through the OPPOSITE edge before the week's close:
+    0.794 (143/180), 95% CI [0.730, 0.847]
+    hours to the reversal, when it happens: median 8.0, IQR [3.2, 31.4]
+
+  OUTCOME 2 — trap geometry:
+    week's extreme on the BREACH side: 0.550 (99/180), 95% CI [0.477, 0.621]
+    hours from trigger to the week's extreme (X as a DISTRIBUTION, not a pre-set threshold):
+      median 81.0, IQR [56.8, 102.6], 5-95% [22.7, 109.0]
+    §3a conditional cell (reversal AND extreme on the breach side): 62
+
+  OUTCOME 3 — THE PROHIBITION PRICED. Position taken IN THE BREACH
+  DIRECTION at the trigger, stop 18 / target 50 (V04's own numbers).
+  ⚠ BID-ONLY, NO SPREAD, NO SLIPPAGE -> AN UPPER BOUND (§0c).
+    target hit : 0.189 (34/180), 95% CI [0.138, 0.252]
+    stopped    : 0.811 (146/180), 95% CI [0.748, 0.862]
+    unresolved at the week close: 0
+    expectancy : -5.16 pips/trade (median -18.00), n = 180
+    C-4 same-bar stop/target ties (resolved STOP FIRST, adverse): 0
+
+  THIRD BASELINE — SECOND AND LATER breaches of the same block in the
+  same week (the course's own contrast: V01 forbids the FIRST move,
+  V02-V03 endorse the RETURN):
+    weeks producing a second-or-later breach: 171
+    total later-breach entries: 1586
+    target hit : 0.277 (424/1533), 95% CI [0.255, 0.300]
+    expectancy : +1.17 pips/trade (n = 1586)
+
+  PRIMARY BASELINE — N1 matched random entry, same weeks, same
+  eligible hours, direction matched to the breach, SAME 18/50 stop and
+  target, 1000 iterations, seed 20260812:
+    pool: 79792 eligible M15 entries across 180 weeks
+    target-hit rate : median 0.2545, 5-95% [0.2024, 0.3059]
+    expectancy      : median -0.2028, 5-95% [-3.55, 3.161]
+    OBSERVED target-hit 0.189 -> N1 percentile 2.5
+    OBSERVED expectancy -5.16 -> N1 percentile 0.9
+
+  ======================================================================
+  SENSITIVITY — two-4h-bars block (§0b)
+  ======================================================================
+  weeks yielding a first-breach trigger: 180 of 180   (0 weeks never closed beyond either edge)
+
+  OUTCOME 1 — reversal back through the OPPOSITE edge before the week's close:
+    0.806 (145/180), 95% CI [0.742, 0.857]
+    hours to the reversal, when it happens: median 7.0, IQR [3.2, 30.2]
+
+  OUTCOME 2 — trap geometry:
+    week's extreme on the BREACH side: 0.550 (99/180), 95% CI [0.477, 0.621]
+    hours from trigger to the week's extreme (X as a DISTRIBUTION, not a pre-set threshold):
+      median 81.5, IQR [57.7, 103.1], 5-95% [23.0, 109.2]
+    §3a conditional cell (reversal AND extreme on the breach side): 64
+
+  OUTCOME 3 — THE PROHIBITION PRICED. Position taken IN THE BREACH
+  DIRECTION at the trigger, stop 18 / target 50 (V04's own numbers).
+  ⚠ BID-ONLY, NO SPREAD, NO SLIPPAGE -> AN UPPER BOUND (§0c).
+    target hit : 0.189 (34/180), 95% CI [0.138, 0.252]
+    stopped    : 0.811 (146/180), 95% CI [0.748, 0.862]
+    unresolved at the week close: 0
+    expectancy : -5.16 pips/trade (median -18.00), n = 180
+    C-4 same-bar stop/target ties (resolved STOP FIRST, adverse): 0
+
+  THIRD BASELINE — SECOND AND LATER breaches of the same block in the
+  same week (the course's own contrast: V01 forbids the FIRST move,
+  V02-V03 endorse the RETURN):
+    weeks producing a second-or-later breach: 171
+    total later-breach entries: 1613
+    target hit : 0.272 (424/1559), 95% CI [0.250, 0.295]
+    expectancy : +0.85 pips/trade (n = 1613)
+
+  PRIMARY BASELINE — N1 matched random entry, same weeks, same
+  eligible hours, direction matched to the breach, SAME 18/50 stop and
+  target, 1000 iterations, seed 20260812:
+    pool: 80512 eligible M15 entries across 180 weeks
+    target-hit rate : median 0.2545, 5-95% [0.2023, 0.3041]
+    expectancy      : median -0.2322, 5-95% [-3.636, 2.967]
+    OBSERVED target-hit 0.189 -> N1 percentile 1.9
+    OBSERVED expectancy -5.16 -> N1 percentile 0.9
+
+==========================================================================
+--- ARM B ---
+==========================================================================
+  week roster (arm B) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 2  (2015-12-20, 2015-12-27)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+  WEEKS USED: 180   M15 85732   M1 1281521
+  §3a: 2014-06-01 EXCLUDED by name — no observable week open, so no block
+       and no trigger. Six Dec/Jan closure weeks INCLUDED, reported
+       separately. ['2015-12-20', '2015-12-27'] end THURSDAY — Outcome 1's reversal window and
+       Outcome 3's holding window are SHORTER; realised times reported.
+
+  ======================================================================
+  HEADLINE — 8-hour clock block
+  ======================================================================
+  weeks yielding a first-breach trigger: 180 of 180   (0 weeks never closed beyond either edge)
+
+  OUTCOME 1 — reversal back through the OPPOSITE edge before the week's close:
+    0.794 (143/180), 95% CI [0.730, 0.847]
+    hours to the reversal, when it happens: median 8.0, IQR [3.2, 31.4]
+
+  OUTCOME 2 — trap geometry:
+    week's extreme on the BREACH side: 0.550 (99/180), 95% CI [0.477, 0.621]
+    hours from trigger to the week's extreme (X as a DISTRIBUTION, not a pre-set threshold):
+      median 81.0, IQR [56.8, 102.6], 5-95% [22.7, 109.0]
+    §3a conditional cell (reversal AND extreme on the breach side): 62
+
+  OUTCOME 3 — THE PROHIBITION PRICED. Position taken IN THE BREACH
+  DIRECTION at the trigger, stop 18 / target 50 (V04's own numbers).
+  ⚠ BID-ONLY, NO SPREAD, NO SLIPPAGE -> AN UPPER BOUND (§0c).
+    target hit : 0.189 (34/180), 95% CI [0.138, 0.252]
+    stopped    : 0.811 (146/180), 95% CI [0.748, 0.862]
+    unresolved at the week close: 0
+    expectancy : -5.16 pips/trade (median -18.00), n = 180
+    C-4 same-bar stop/target ties (resolved STOP FIRST, adverse): 0
+
+  THIRD BASELINE — SECOND AND LATER breaches of the same block in the
+  same week (the course's own contrast: V01 forbids the FIRST move,
+  V02-V03 endorse the RETURN):
+    weeks producing a second-or-later breach: 171
+    total later-breach entries: 1586
+    target hit : 0.277 (424/1533), 95% CI [0.255, 0.300]
+    expectancy : +1.17 pips/trade (n = 1586)
+
+  PRIMARY BASELINE — N1 matched random entry, same weeks, same
+  eligible hours, direction matched to the breach, SAME 18/50 stop and
+  target, 1000 iterations, seed 20260812:
+    pool: 79792 eligible M15 entries across 180 weeks
+    target-hit rate : median 0.2545, 5-95% [0.2024, 0.3059]
+    expectancy      : median -0.2028, 5-95% [-3.55, 3.161]
+    OBSERVED target-hit 0.189 -> N1 percentile 2.5
+    OBSERVED expectancy -5.16 -> N1 percentile 0.9
+
+  ======================================================================
+  SENSITIVITY — two-4h-bars block (§0b)
+  ======================================================================
+  weeks yielding a first-breach trigger: 180 of 180   (0 weeks never closed beyond either edge)
+
+  OUTCOME 1 — reversal back through the OPPOSITE edge before the week's close:
+    0.806 (145/180), 95% CI [0.742, 0.857]
+    hours to the reversal, when it happens: median 8.5, IQR [3.5, 30.2]
+
+  OUTCOME 2 — trap geometry:
+    week's extreme on the BREACH side: 0.556 (100/180), 95% CI [0.483, 0.626]
+    hours from trigger to the week's extreme (X as a DISTRIBUTION, not a pre-set threshold):
+      median 81.6, IQR [57.7, 103.2], 5-95% [25.1, 109.5]
+    §3a conditional cell (reversal AND extreme on the breach side): 65
+
+  OUTCOME 3 — THE PROHIBITION PRICED. Position taken IN THE BREACH
+  DIRECTION at the trigger, stop 18 / target 50 (V04's own numbers).
+  ⚠ BID-ONLY, NO SPREAD, NO SLIPPAGE -> AN UPPER BOUND (§0c).
+    target hit : 0.189 (34/180), 95% CI [0.138, 0.252]
+    stopped    : 0.811 (146/180), 95% CI [0.748, 0.862]
+    unresolved at the week close: 0
+    expectancy : -5.16 pips/trade (median -18.00), n = 180
+    C-4 same-bar stop/target ties (resolved STOP FIRST, adverse): 0
+
+  THIRD BASELINE — SECOND AND LATER breaches of the same block in the
+  same week (the course's own contrast: V01 forbids the FIRST move,
+  V02-V03 endorse the RETURN):
+    weeks producing a second-or-later breach: 171
+    total later-breach entries: 1612
+    target hit : 0.266 (414/1559), 95% CI [0.244, 0.288]
+    expectancy : +0.41 pips/trade (n = 1612)
+
+  PRIMARY BASELINE — N1 matched random entry, same weeks, same
+  eligible hours, direction matched to the breach, SAME 18/50 stop and
+  target, 1000 iterations, seed 20260812:
+    pool: 80976 eligible M15 entries across 180 weeks
+    target-hit rate : median 0.2515, 5-95% [0.1977, 0.3095]
+    expectancy      : median -0.4342, 5-95% [-3.779, 3.295]
+    OBSERVED target-hit 0.189 -> N1 percentile 2.7
+    OBSERVED expectancy -5.16 -> N1 percentile 1.3
