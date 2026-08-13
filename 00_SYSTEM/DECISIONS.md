@@ -649,6 +649,30 @@ boundary dates are appended here, `validate_project.py` can check observation da
 against them.
 **Status:** ACTIVE — boundary dates PENDING first data-source decision
 
+> ### APPENDED 2026-08-13 — FIRST BOUNDARIES PINNED, AND THEY ARE SCOPED
+>
+> `D-028` requires that *"the first session to establish the data source computes the 70/30
+> boundary from the actual available range, records the exact dates by appending to this
+> decision, and only then opens a chart."* Executed here for the two series `PT-023` and
+> `PT-024` used. Computed **before any window statistic was read**, by
+> `06_MANUAL_BACKTEST/V06/run_pt023.py`.
+>
+> | Series | `T0` | `T1` | Boundary `B` (oldest 70%) | DEVELOPMENT | HOLDOUT |
+> |---|---|---|---|---|---|
+> | GBP/USD **15-minute, TradingView/FXCM** | 2026-07-20 23:15 | 2026-08-13 10:30 | **2026-08-06** | 07-20 → 08-05 | 08-06 → 08-13, **not opened** |
+> | GBP/USD **30-minute, Yahoo Finance** | 2026-05-21 23:00 | 2026-08-13 08:00 | **2026-07-19** | 05-21 → 07-17 | 07-19 → 08-13, **not opened** |
+>
+> **These are SCOPED boundaries and must not be read as the project-wide `D-028` split.** Each
+> is the 70/30 point of *one series on one vendor at one timeframe*, and the two disagree by
+> three weeks because the vendors serve different depths. A standing project-wide boundary
+> requires a standing data-source decision — **`I-007`, which is still OPEN and is the owner's
+> to make.** Recording a scoped boundary executes `D-028` for the tests that needed it; it does
+> not discharge `D-028` for the project.
+>
+> **`D-028`'s meaning is unchanged and it is not superseded** — this is the append the decision
+> itself instructs, of the same kind as `D-019`'s citation fix.
+
+
 ---
 
 ## D-029 — Baseline parameters for matched random entry

@@ -94,7 +94,24 @@ def main():
     out_path = sys.argv[sys.argv.index('--out')+1] if '--out' in sys.argv else None
     raw = json.load(open(path))
     sym = 'GBPUSD'
-    rec = raw[sym]
+    if 'chart' in raw:                      # Yahoo Finance response (PT-024)
+        r0 = raw['chart']['result'][0]
+        q0 = r0['indicators']['quote'][0]
+        bs = []
+        for i, ts in enumerate(r0['timestamp']):
+            if q0['open'][i] is None:
+                continue
+            ts -= ts % 1800
+            bs.append({'t': datetime.utcfromtimestamp(ts).isoformat(timespec='minutes'),
+                       'o': q0['open'][i], 'h': q0['high'][i],
+                       'l': q0['low'][i], 'c': q0['close'][i]})
+        seen = {}
+        for b in bs:
+            seen[b['t']] = b            # de-duplicate the 30m grid
+        rec = {'feed': 'Yahoo Finance chart API', 'interval': '30',
+               'bars': [seen[k] for k in sorted(seen)]}
+    else:
+        rec = raw[sym]
     bars, dropped = drop_live_edge(rec['bars'])
     bars = sorted(bars, key=lambda b: b['t'])
 
