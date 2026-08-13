@@ -134,17 +134,45 @@ would size their expectations by it.** That is a method-level consequence, so it
 
 The interpretive residue not covered there:
 
-**`MEDIUM` — the 800/200 identity is probably why the two sources disagree.** If the seminar
-notes describe a set plotted on one timeframe and the recordings describe the same lines carried
-across timeframes, then *"5, 13, 50, 200"* and *"…and the 800"* can be **the same four or five
-lines seen from different charts**. That is a tidy explanation and this session believes it is
-more likely than not.
+**`LOW` — the 800/200 identity does NOT explain why the two sources disagree, and the arithmetic
+is what settles it.** Downgraded from `MEDIUM` on 2026-08-13 per `V09_REVIEW_R1.md` `M5` (`E02`,
+open item 77).
 
-**It is not adopted, and the reason is worth stating plainly.** `SOURCING_HIERARCHY.md` §3.2
-Case A ends *"**Do not blend.**"* The tidy explanation requires reading a timeframe into Tier 2
-that Tier 2 does not state. A hypothesis that reconciles two sources by supplying a fact neither
-contains is **exactly** the composite definition the reconciliation rule forbids. `C-010` stays
-open with the hypothesis recorded in it.
+The tidy reading was: if the seminar notes describe a set plotted on one timeframe and the
+recordings describe the same lines carried across timeframes, then *"5, 13, 50, 200"* and *"…and
+the 800"* could be **the same lines seen from different charts**. **Applied to the whole
+enumeration it fails.**
+
+`MMM-NOTES` p.38 enumerates **four** averages — *"the 5, 13, 50 and 200"*. The identity the guest
+states is a **factor of four** (`800 × 15m = 12,000 min = 200 × 60m`). So reading that set on the
+1-hour maps it onto the 15-minute as:
+
+```text
+notes on H1:      5      13      50     200
+same lines on M15:   20      52     200     800
+corpus's set:      5      13      50     200     800   (A-020)
+```
+
+**One member lands. The other three do not** — the corpus carries a 5, a 13 and a 50, not a 20, a
+52 and a 200. And the reading **collides with `A-020` itself**, whose attested mapping requires
+**mayo = 200 and blueberry = 800 to be two different lines on one chart**; identifying them as one
+line seen twice contradicts the very record the reconciliation would have to be consistent with.
+
+**So the hypothesis reconciles one member of a four-member enumeration and breaks the other
+three.** `C-010`'s own Assessment block already names the better explanation — **chronology**,
+that the 800 entered the method after the notes were written, which the notes' *"any other rapidly
+moving pair of EMA's would achieve the same goal"* supports.
+
+**It was not adopted, and that refusal was correct — for two reasons now, not one.**
+`SOURCING_HIERARCHY.md` §3.2 Case A ends *"**Do not blend**"*, and reading a timeframe into Tier 2
+is exactly the composite definition the rule forbids. **The arithmetic above is the independent
+second reason, and it is the stronger one:** the route does not reach even if the blending
+objection is waived. `C-010` stays **open**.
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this passage previously graded
+> the hypothesis **`MEDIUM`** and stated *"this session believes it is more likely than not"*,
+> refusing it on the blending ground alone. The **decision** is unchanged; only the confidence and
+> the reasoning are. `V09_REVIEW_R1.md` `M5`.)*
 
 ---
 
@@ -198,5 +226,5 @@ wrong?"*).
 | A slide or lesson defining *level* as a countable unit | Q7's map, and would unblock H3's arrow drill (`A-004`) |
 | A later lesson stating a **stop-placement** rule that is not `extreme ± n` | Q3's refused hypothesis — confirming the refusal was right |
 | A later lesson stating a stop placement that **is** `extreme ± 15` | Q3's refused hypothesis — confirming it was true, and confirming that **refusing to adopt it here was still correct**, because it was not this lesson's evidence |
-| `MMM-NOTES` or a lesson showing the notes' `200` is plotted on the 1-hour | Q5's hypothesis, promoting it from unadopted to supported |
+| `MMM-NOTES` or a lesson showing the notes' `200` is plotted on the 1-hour | **Nothing, on its own** — corrected 2026-08-13, `V09_REVIEW_R1.md` `M5`. It would land the `200 → 800` member and leave the notes' `5`, `13` and `50` mapping onto a `20`, a `52` and a `200` the corpus does not carry, and would still collide with `A-020`'s mayo = 200. **What would promote the hypothesis is a source stating the timeframe of the WHOLE set on both sides**, not of one member. *(Superseded row: "Q5's hypothesis, promoting it from unadopted to supported".)* |
 | Any V09 claim failing arithmetic re-derivation | §2 of the source notes — which is why `05_HOMEWORK/V09` re-derives all of it in committed code rather than asserting it |

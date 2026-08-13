@@ -99,8 +99,8 @@ applies a level-counting scheme the course has never defined (`A-004`) to charts
 
 | # | Statement | Marker | Basis |
 |---|---|---|---|
-| 1 | *"Risk in forex is defined as what percent of your account balance would be lost if your trade went to stop loss?"* | `[00:01:17]`–`[00:01:21]` | `AUDIO+PRINTED` (frame 2) |
-| 2 | *"What makes the risk defined is the lot size we choose to put on."* | `[00:01:53]` | `AUDIO+PRINTED` (frame 3) |
+| 1 | *"Risk in forex is defined as what percent of your account balance would be lost if your trade went to stop loss?"* | `[00:01:17]`–`[00:01:21]` | `AUDIO+PRINTED` (frame burned `01:15`) |
+| 2 | *"What makes the risk defined is the lot size we choose to put on."* | `[00:01:53]` | `AUDIO+PRINTED` (frame burned `02:05`) |
 
 **This is a definition, not a heuristic**, and it is the first time the corpus supplies one for
 any quantity.
@@ -109,7 +109,7 @@ any quantity.
 
 > `[00:02:00]`–`[00:02:03]` *"We multiply our account balance by point O2 and divide our stop
 > loss and pips into that number that will determine the lot size."*
-> Printed (frame 3): *"We multiply our account balance by **.02** and divide our **Stop Loss in
+> Printed (frame burned `02:05`): *"We multiply our account balance by **.02** and divide our **Stop Loss in
 > pips** into that number. That will determine the lot size."*
 
 ```text
@@ -131,13 +131,13 @@ arithmetic is correct and internally consistent.** This is checked, not assumed 
 `05_HOMEWORK/V09/scripts/verify_v09_arithmetic.py` re-derives every number V09 states.
 
 > **`A-065` is opened on the `0.02` itself.** He gives it as *"2% is a good place to start"*
-> (`[00:08:28]`, `PRINTED` frame 10) and never states a rule for choosing a different one. The
+> (`[00:08:28]`, `PRINTED`, frame burned `08:20`) and never states a rule for choosing a different one. The
 > constant is **explicit**; the **policy governing it is not**. Per `D-010` this is recorded and
 > not coded.
 
 ### 2c. The loss-recovery cycle — the operative rule
 
-Printed in full on frame 10 (`[00:08:20]`–`[00:08:43]`, `AUDIO+PRINTED`):
+Printed in full on the frame burned `08:20` (`[00:08:20]`–`[00:08:43]`, `AUDIO+PRINTED`):
 
 | Event | Action |
 |---|---|
@@ -152,24 +152,24 @@ only set back two percent at each loss we are sure to avoid margin issues for th
 fourth trade which will be the one that negates the loss."*
 
 **Direction of travel, stated as the summary of the whole system** (`[00:09:14]`–`[00:09:23]`,
-`AUDIO+PRINTED` frame 11): *"as you hit winning trades you **increase** your lot size and as you
+`AUDIO+PRINTED`, frame burned `09:20`): *"as you hit winning trades you **increase** your lot size and as you
 hit losing cycles of three or four consecutive stopouts you **diminish** your lot size."*
 
 **The recalculation is worked, and it reconciles** (`[00:06:01]`–`[00:07:14]`,
-`AUDIO+PRINTED` frames 8–9):
+`AUDIO+PRINTED`, frames burned `06:00` and `07:05`):
 
 | Step | Value | Check |
 |---|---|---|
 | Start | $12,500 | |
 | After 4 losses at 2% | *"12,500 is now 11,500"* | 4 × $250 = $1,000. **$11,500 ✓** |
-| Drawdown described as | *"down eight percent of original equity"* | $1,000 / $12,500 = **8.0% ✓**. The slide (frame 8) prints *"drawn down **to** 8% of original equity"*, which literally says the balance IS 8%; the audio's *"down eight percent"* is the right sense. **Loose wording, correct arithmetic — recorded here, not registered as an ambiguity** |
+| Drawdown described as | *"down eight percent of original equity"* | $1,000 / $12,500 = **8.0% ✓**. The slide burned `06:00` prints *"drawn down **to** 8% of original equity"*, which literally says the balance IS 8%; the audio's *"down eight percent"* is the right sense. **Loose wording, correct arithmetic — recorded here, not registered as an ambiguity** |
 | New size | *"2% of 11,500 is 9.2 minis or 0.92 lots"* | $230 / 25 pips = **$9.20/pip ✓** |
 | First 2:1 winner | *"brings us back up to 11,960"* | $11,500 + (50 × $9.20) = **$11,960 ✓** |
 | Second winner | *"brings the account balance up to 12,500"* | $11,960 × 0.02 / 25 = $9.568/pip; +50 pips = $478.40 → **$12,438.40**, not $12,500. **Off by $61.60 — see `C-014`** |
 
 ### 2d. Cumulative exposure — the rule that is easiest to miss
 
-`[00:19:18]`–`[00:19:43]`, `AUDIO+PRINTED` (frame 17 error 2):
+`[00:19:18]`–`[00:19:43]`, `AUDIO+PRINTED` (the five-errors frame, burned `21:40` — error 2):
 
 > *"When I say two percent of risk on your account I don't mean two percent GJ two percent GU
 > two percent EU another two percent UJ… Talking about a **cumulative risk that's never greater
@@ -186,25 +186,37 @@ speech and once as printed error #2. It materially changes the meaning of everyt
 
 | Geometry | Stop | Target | Gate | Markers | Basis |
 |---|---|---|---|---|---|
-| **Beginner — 2:1** | **25 pips** | **50 pips** | *"Until one develops the HOD/LOD skill"* | `[00:04:49]`–`[00:04:55]` | `AUDIO+PRINTED` (frames 6, 12) |
-| **Ideal — 3:1** | **15 pips** | **50 pips** | *"Mastering HOD/LOD entries"* | `[00:03:33]`–`[00:03:56]` | `AUDIO+PRINTED` (frames 5, 13) |
+| **Beginner — 2:1** | **25 pips** | **50 pips** | *"Until one develops the HOD/LOD SKILL"* — **the PRINTED wording** (frame burned `04:40`). The audio says *"high low-day"* | `[00:04:49]`–`[00:04:55]` | quoted string is `PRINTED` (frames burned `04:40`, `10:15`); the rule itself is `AUDIO+PRINTED` |
+| **Ideal — 3:1** | **15 pips** | **50 pips** | *"Mastering **HOD/LOD** entries"* — **the PRINTED wording** (frame burned `03:45`). The audio says *"high low-day"* | `[00:03:33]`–`[00:03:56]` | quoted string is `PRINTED` (frames burned `03:45`, `11:40`); the rule itself is `AUDIO+PRINTED` |
 
 > **The printed slides resolve an ASR garble, and it is the most useful single thing the frames
 > supplied.** The transcript renders the gate as *"high low-day"* / *"high-low"* throughout.
-> Frames 5 and 6 print **`HOD/LOD`** — High Of Day / Low Of Day, a term the corpus already
+> The frames burned `03:45` and `04:40` print **`HOD/LOD`** — High Of Day / Low Of Day, a term the corpus already
 > carries from V08's high-low drill. **This is the V01 *"pendings"* case exactly.**
+>
+> **⚠ AND THE EXPANSION MAY NOT BE CARRIED INSIDE A QUOTATION OF THE AUDIO.** Corrected
+> 2026-08-13 per `V09_REVIEW_R1.md` `M1` (`E01`, open item 73). Every quotation below that is
+> tagged `AUDIO` now carries the transcript's literal wording, with the expansion **outside** the
+> quote marks. Where the printed form is what is being quoted, the row says so.
 
-**His own arithmetic on the 3:1 arm** (`[00:03:49]`–`[00:04:05]`, `AUDIO`): *"Example solid
-HOD/LOD entries can warrant a 15-pip stop loss. Three stop outs is then minus 45 pips, one win
-is plus 50 pips, that nets out to plus five pips."* — **correct**, and note it is 50/15 = **3.33:1**,
-described as *"3:1"*. Recorded, not corrected.
+**His own arithmetic on the 3:1 arm** (`[00:03:49]`–`[00:04:05]`, `AUDIO`, transcript wording
+verbatim): *"Example solid high low-day entries can warrant a 15-pip stop loss. Three stop outs
+is then minus 45 pips, one win is plus 50 pips, that nets out to plus five pips."* — *high
+low-day* is the ASR's rendering of **HOD/LOD**, printed on the frame burned `03:45`. **The arithmetic is correct**,
+and note it is 50/15 = **3.33:1**, described as *"3:1"*. Recorded, not corrected.
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this paragraph previously read
+> `**His own arithmetic on the 3:1 arm** (`[00:03:49]`–`[00:04:05]`, `AUDIO`): *"Example solid
+> HOD/LOD entries can warrant a 15-pip stop loss…"*`, i.e. it substituted the printed expansion
+> for the spoken words **inside quotation marks under an `AUDIO` tag**. The substitution was
+> explained in the box above and was still a misquotation. `V09_REVIEW_R1.md` `M1`.)*
 
 **Break-even, computed here and stated as this project's arithmetic, not his:** at 2:1 the
 break-even hit rate is 33.3%; at 3:1 it is 25%; at 3.33:1 it is 23.1%.
 
 > ### `A-067` — *"greater than 50% accuracy will bring UPWARD EQUITY"* is TRUE, and it is not the threshold
 >
-> `[00:15:36]`, printed on frames 15 and 16. It is a **sufficient** condition presented in the
+> `[00:15:36]`, printed on the frames burned `16:00` and `17:05`. It is a **sufficient** condition presented in the
 > rhetorical position of a **necessary** one — *"I gotta just stop this whole thing and freeze
 > this frame"* `[00:15:43]`. The frame at `00:15:00` prints the correct weaker claim one slide
 > earlier: *"Can have **MORE Losers than Winners** and still have UPWARD EQUITY"*. **Both are
@@ -218,10 +230,10 @@ Four hand-drawn staircases, each a claim about win/loss ratios under a stated ge
 
 | # | Marker | Geometry | Stated record | Arithmetic check (this project's) |
 |---|---|---|---|---|
-| 1 | `[00:10:35]` | 2:1 (−25/+50), frame 12 | *"eight wins and 11 losses"* | 8 × 50 − 11 × 25 = **+125 pips ✓ positive** |
-| 2 | `[00:11:17]` | 3.33:1 (−15/+50), frame 13 | *"seven wins and 12 losses"* | 7 × 50 − 12 × 15 = **+170 pips ✓ positive** |
-| 3 | `[00:12:06]` | *"jumping out when it hits you 15"* | *"six wins and 14 losses"* | **Under-specified** — see below |
-| 4 | `[00:22:47]` | 2:1, frame 18 | *"an **85 win rate**… seven wins and six losses"* | 7/13 = **53.8%. See `C-012`** |
+| 1 | `[00:10:35]` | 2:1 (−25/+50), frame burned `10:15` | *"eight wins and 11 losses"* | 8 × 50 − 11 × 25 = **+125 pips ✓ positive** |
+| 2 | `[00:11:17]` | 3.33:1 (−15/+50), frame burned `11:40` | *"seven wins and 12 losses"* | 7 × 50 − 12 × 15 = **+170 pips ✓ positive** |
+| 3 | `[00:12:06]` | *"jumping out when it hits you 15"* | *"six wins and 14 count them 14 losses"* (`[00:12:06]`); restated *"six wins 14 losses"* (`[00:12:38]`) | **Under-specified** — see below |
+| 4 | `[00:22:47]` | 2:1, frame burned `22:45` | *"an **85 win rate**… seven wins and six losses"* | 7/13 = **53.8%. See `C-012`** |
 
 **Demonstration 3 is the one that does not close, and it is recorded as an ambiguity rather than
 an error.** `[00:11:41]`–`[00:11:46]` describes taking 15 pips *out* (*"you're jumping out when
@@ -236,13 +248,13 @@ recorded as **`A-068`**, `DO NOT CODE`.
 
 ## 5. THE FIVE ERRORS TO GUARD AGAINST — `GUEST`
 
-Printed complete on frame 17, spoken `[00:18:31]`–`[00:22:40]`. `AUDIO+PRINTED`.
+Printed complete on the frame burned `21:40`, spoken `[00:18:31]`–`[00:22:40]`. `AUDIO+PRINTED`.
 
 | # | Printed text | Spoken gloss |
 |---|---|---|
 | 1 | *"Moving your Stop Loss After you have placed it: 1st S/L is always the cheapest"* | `[00:18:48]`, attributed to a named participant: *"the seebull always says the first stop loss is always the cheapest"* |
 | 2 | *"Putting on Multiple Positions which add up to GREATER than your % Risk"* | `[00:19:13]`–`[00:19:40]` — the cumulative-2% rule of §2d |
-| 3 | *"Not having the DISCIPLINE to KEEP TO the Risk Plan as described"* | `[00:19:48]`–`[00:20:27]`, framed as V08's **innermost ring**: *"that inner shell has like I don't know what it's titanium or diamond… it's the circle within the circle"* |
+| 3 | *"Not having the DISCIPLINE to KEEP TO the Risk Plan as described"* | `[00:19:48]`–`[00:20:27]`, framed as V08's **innermost ring**: *"that inner shell has like I don't know what it's it's titanium or diamond… it's the circle within the circle"* — the doubled *"it's"* is the speaker's own stutter and is left standing (`V09_REVIEW_R1.md` `M1`; it previously read *"what it's titanium"*) |
 | 4 | *"Miscalculating Lot size on NON USD quote Pairs -- use a lot size calculator!"* | `[00:20:48]`–`[00:21:31]` — *"USD JPY on a USD based account is going to be a larger unit than a pair that ends in USD"* |
 | 5 | *"Not having HARD Stop Losses and Take Profits WITH THE BROKER"* | `[00:21:44]`–`[00:22:40]` — explicitly against stealth-EA stop management; *"there's going to be times where your platform goes down"* |
 
@@ -255,7 +267,7 @@ single most important cross-file result in this lesson.
 
 ## 6. THE EQUITY PROJECTION — `GUEST`
 
-`[00:24:20]`–`[00:26:40]`, `AUDIO+PRINTED` (frames 19–21).
+`[00:24:20]`–`[00:26:40]`, `AUDIO+PRINTED` (frames burned `25:00`, `26:00`, `26:40`).
 
 | Component | Value |
 |---|---|
@@ -264,7 +276,7 @@ single most important cross-file result in this lesson.
 | Per trade | **−2% on a loss, +4% on a win** |
 | Claim | *"only **five successful trades per week** brings **20% gains** for the week"* |
 | Compounding | *"In four weeks you doubled your account with a $5,000 account. You now have 10,000 368"* |
-| Spreadsheet (frame 21) | `Base 5,000.00`, `% profit 0.2000`, Week 4 = `10,368.00`, running 28 weeks to **`824,223.31`** |
+| Spreadsheet (frame burned `26:40`) | `Base 5,000.00`, `% profit 0.2000`, Week 4 = `10,368.00`, running 28 weeks to **`824,223.31`** |
 
 **Arithmetic check:** 5 × 4% = 20% ✓. $5,000 × 1.2⁴ = **$10,368.00** ✓ exactly. The 28-week
 terminal value is $5,000 × 1.2²⁸ = **$824,223.31** ✓ exactly.
@@ -288,7 +300,7 @@ A live pass over **twelve pairs**, calling a **level count** and a directional b
 
 | Object | Marker | What he says | Basis |
 |---|---|---|---|
-| **Weekly divider** | `[00:28:11]` | *"I divide the week with a weekly divider. **I draw in by hand.** We do have an indicator in process to be made that will do this for us"* | `AUDIO`; visible on frames 22–23 |
+| **Weekly divider** | `[00:28:11]` | *"I divide the week with a weekly divider. **I draw in by hand.** We do have an indicator in process to be made that will do this for us"* | `AUDIO`; visible on the frames burned `28:45` and `31:50` |
 | **High-low tracer** | `[00:28:19]` | *"our days are depicted by the **high low tracer** as you can see monday tuesday wednesday thursday friday"* | `AUDIO` |
 | **The grape / the blueberry** | `[00:33:21]`, `[00:41:25]`–`[00:42:16]` | See §9 | `AUDIO` |
 
@@ -317,7 +329,7 @@ Recorded because a level-count call is an **observation of his method in use**, 
 | USD/CAD | Level 2 **down** | `[00:41:13]` |
 
 **Two pairs discussed but not in the recap:** USD/JPY (`[00:35:31]`, explicitly excluded from the
-DMR — see §11) and the `GF`/`UF` charts shown on frames 25 and in the tile view.
+DMR — see §11) and the `GF`/`UF` charts shown in the tile view (frame burned `41:25`).
 
 **None of this is codable and none of it is offered as such.** The count depends on
 `A-004` (*"level"* as a countable unit), which the course has still not defined at V09.
@@ -357,8 +369,12 @@ side** and they're **killing people on this side**."*
 
 > *"When the market makers start their cycle, **induce once, induce twice, induce the third
 > time**. We want to try to get people long. They form a pin up here because they're going to
-> pull it back the other way and they're going to grab their pips, and experience shows me that
+> pull it back the other way and they're going to grab their pips, and experiences show me that
 > they can grab all their stuff at **50 pips**"* (`[00:44:44]`).
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this quotation previously read
+> *"…and **experience shows** me…"*; the transcript reads *"**experiences show** me"*. Nothing
+> turns on it, and an `AUDIO`-tagged quotation may not be tidied. `V09_REVIEW_R1.md` `M1`.)*
 
 `[00:46:28]`, `AUDIO`: *"I honestly look more towards **inducements, which would be three pushes,
 three accelerations, the third being the longest**."*
@@ -405,14 +421,28 @@ section discharges that obligation for `A-020`.
 
 ### 9a. What the audience asked and what he answered
 
-`[00:41:25]`–`[00:42:16]`, `AUDIO`, verbatim across five markers:
+`[00:41:25]`–`[00:42:16]`, `AUDIO`, verbatim across five markers. **Two ASR artefacts are left
+standing in the quotation and named outside it** — corrected 2026-08-13 per `V09_REVIEW_R1.md`
+`M1`:
 
-> *"What is the grape, Fred? That's the name that I've given to the **800 moving average on the
-> one hour chart**. Don't concern yourself with it. It's just my own little twist of the thing
-> that will be **your blueberry** on your charts. Okay. This is the blueberry. **The blueberry is
-> the 800 on the 15 minute time frame.** Okay, which makes this **a 200**. I synchronized my
-> EMAs. I'm a little out of the box… I like to keep my EMAs consistent throughout all time
-> [frames]. **Steve doesn't teach it.** It's okay. This is my my twist on it."*
+> *"What is the **grade** Fred? That's the name that I've given to the **800 moving average on
+> the one hour chart**. Don't concern yourself with it. It's just my own little twist twist of the
+> thing that will be **your blueberry** on your charts. Okay. This is the blueberry. **The
+> blueberry is the 800 on the 15 minute time frame.** Okay, which makes this **a 200**. I
+> synchronized my EMAs. I'm a little out of the box… I like to keep my EMAs consistent
+> throughout all time [frames]. **Steve doesn't teach it.** It's okay. This is my my twist on
+> it."*
+
+| ASR rendering, left in the quote | The word | How it is established |
+|---|---|---|
+| *"the **grade**"* `[00:41:25]` | **grape** | The transcript itself renders it correctly twice — `[00:33:21]` *"We have the **grape** up here"* and `[00:41:31]` *"that will be your blueberry"* answering the same question. It is a one-letter ASR slip on a term the same file gets right elsewhere |
+| *"my own little twist **twist**"* | a stutter | Left as spoken |
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this block previously opened
+> *"What is the grape, Fred?"* and dropped the doubled *"twist"*, i.e. it silently corrected the
+> audio **inside quotation marks** in a block that introduces itself as *"verbatim across five
+> markers"*. The reading is unchanged; the quotation now is what it claims to be.
+> `V09_REVIEW_R1.md` `M1`.)*
 
 ### 9b. What this establishes, and what it does not — the four claims separated
 
@@ -444,6 +474,17 @@ and `Mayo = 200` remains on owner attestation + `MMM-NOTES` p.66.
 |---|---|
 | The corpus's 800 now rests on **Tier 1 course evidence**, not owner attestation alone. `C-010`'s resolution — *the recordings win* — is **strengthened** | It does **not** close `C-010` |
 | It supplies a **candidate reconciliation**: if the notes' `200` is read on the 1-hour and the corpus's `800` on the 15-minute, **they are the same line** | The notes list `5, 13, 50, 200` as one set on one chart; nothing in Tier 2 says which timeframe. **Reading a timeframe into the notes to make them agree is exactly the blending `SOURCING_HIERARCHY.md` §3.2 forbids** |
+
+> ### ⚠ AND THE CANDIDATE RECONCILIATION FAILS ARITHMETICALLY — ADDED 2026-08-13
+>
+> `V09_REVIEW_R1.md` `M5` (open item 77). The row above refuses the reconciliation on
+> `SOURCING_HIERARCHY.md` §3.2's *"do not blend"*, which is correct. **There is a second and
+> stronger reason.** The identity is a factor of four, so reading the notes' full enumeration
+> `5, 13, 50, 200` on the 1-hour maps it onto the 15-minute as `20, 52, 200, 800` — and the corpus
+> carries a **5, a 13 and a 50**, not a 20, a 52 and a 200. It also collides with `A-020`, whose
+> mapping needs **mayo = 200 and blueberry = 800 to be two lines on one chart**. **One member of
+> four lands.** Full working in `CONTRADICTIONS.md` `C-010` and `V09_INTERPRETATION.md` Q5, whose
+> grade is downgraded `MEDIUM` → `LOW`.
 
 **So `C-010` is annotated with the V09 evidence and stays OPEN.** Recording the candidate
 reconciliation without adopting it is the whole of what this project's rules permit here.

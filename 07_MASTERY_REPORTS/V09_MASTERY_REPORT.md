@@ -42,7 +42,7 @@ was needed and none was used.**
 | Field | Finding |
 |---|---|
 | **Title** | **NONE PRINTED.** No title slide exists; the file opens with the presenter already speaking over the previous session's closing diagram. **No title is asserted in any V09 artifact.** The quarantined header's *"Advanced Execution Review, Homework Chart Walkthroughs & Trade Filtering"* is fabricated (`Q-010`) |
-| **Speaker** | **100% `GUEST`. FIFTH consecutive lesson with zero course-author runtime** (V05–V09). Four third-person references to Steve, one of them `[00:42:16]` *"Steve doesn't teach it… this is my my twist on it"*. Self-identified at `[00:27:30]` and printed on frame 24 |
+| **Speaker** | **100% `GUEST`. FIFTH consecutive lesson with zero course-author runtime** (V05–V09). Four third-person references to Steve, one of them `[00:42:16]` *"Steve doesn't teach it… this is my my twist on it"*. Self-identified at `[00:27:30]` and printed on the frame burned `34:35` |
 | **`D-033`** | The tag **demotes nothing**. Every V09 statement is normative at equal weight; tagging is provenance (`D-033` provisions 1–2) |
 | **Cross-file continuity** | **PREDICTED, TESTED, CONFIRMED** — see below |
 
@@ -143,11 +143,11 @@ before execution**.
 
 | Result | |
 |---|---|
-| **Claim verdict** | **CONTRADICTED AS STATED.** `run4_obs` 27.4–48.7% in all four cells against a §6 threshold of 10% fixed before any number existed |
+| **Claim verdict** | **CONTRADICTED AS STATED — carried on §2c/`O4` CLOSED FORM ALONE.** ⚠ Corrected 2026-08-13 (`V09_REVIEW_R1.md` `M2`, open item 74): `PT-035` §6's decision table returns **`INDETERMINATE`** whenever `N3` fails, and `N3` failed, so the **measured** route (`run4_obs` 27.4–48.7% against a 10% threshold) is `INDETERMINATE` and is no longer the basis of the verdict. *(Previously: "`run4_obs` 27.4–48.7% in all four cells against a §6 threshold of 10% fixed before any number existed".)* |
 | **The verdict needs no measurement** | At V09's own advertised `>50%`, P(any 4-loss run in 200 trades) = **99.9%**; at `PT-034`'s measured 73%, still **54.1%**. `O4`: you need **p ≥ 84.2%** |
 | **Clustering** | **VOID.** `N3` failed and §7b said in advance that voids `O3` |
 | **`O1`** | 6/7 of V09's numbers reconcile in code; the 7th is `C-014` |
-| Predictions | **3 RIGHT, 1 WRONG, 1 VOID** |
+| Predictions | **2 RIGHT, 1 WRONG, 1 VOID, 1 PART-VOID** — `P3` re-scored 2026-08-13 per `M2`. *(Previously "3 RIGHT, 1 WRONG, 1 VOID".)* |
 
 **Two defects are disclosed rather than absorbed**, and both were found by machinery this session
 built to catch itself:
@@ -159,6 +159,11 @@ built to catch itself:
 2. **The runner's decision logic does not encode §7b's gate.** The pre-registration is right and
    the runner is wrong; **neither is edited** (`COMMON_PROTOCOL.md` §9 rule 7). `BT_V08_0001`
    precedent, second application.
+   ⚠ **And it does not encode §6's either — this session missed that, and the reviewer found it.**
+   `PT-035` §6's empirical decision table carries the same *"or `N3` fails"* trigger, one decision
+   above the one this session caught. **The pre-registration was right twice and the runner was
+   wrong twice.** Corrected in `BT_V09_0001` §5 and re-scored at `P3`; the verdict is unchanged
+   because §2c's closed form never depended on the measurement. `V09_REVIEW_R1.md` `M2`.
 
 **A third finding is disclosed against this run's own interest:** 34.6–49.8% of drawn trades were
 unresolved at the horizon and discarded, which biases `p̂` **downward** because a 50-pip target is
@@ -289,6 +294,11 @@ hedges it himself with *"essentially"*, and 0.49% is inside that word.
    the **comparator** and `run4_obs` never touches it. **A reviewer may read §7b more strictly.
    If so, the verdict still follows from §6's closed form**, which is why §6 is written as the
    quotable half.
+   ✅ **CHALLENGED, AND THE CHALLENGE WENT FURTHER THAN EXPECTED.** `V09_REVIEW_R1.md` `M2` upheld
+   the stricter reading **and found a second instance this session did not anticipate**: §6's
+   empirical decision table carries its own *"or `N3` fails"* trigger, which was neither applied
+   nor mentioned. Corrected in `BT_V09_0001` §5. **The prediction that the verdict would survive
+   on §6's closed form was right**, and it is now the only route the verdict is carried on.
 3. **`A-065`'s `CODABLE AS STATED` status is new** and may be judged too permissive. The defence
    is in the record: coding 2% exactly as V09 gives it imports nothing invented, and the record
    forbids extension explicitly.
@@ -314,7 +324,7 @@ hedges it himself with *"essentially"*, and 0.49% is inside that word.
 | # | Item | For |
 |---|---|---|
 | **1** | **Dimension B has been `D-030`-blocked for five consecutive lessons** (V05–V09) and the project still has no vocabulary for that disposition. `REVIEW_INDEX.md` **open item 36** is owed an owner ruling; a student session cannot supply one | **OWNER** |
-| **2** | **`SWF_CAPTURE_RECIPE.md` §3/§10's play-button coordinate `(512, 300)` is WRONG for V09** and produced 638 frames of a static splash before it was caught by opening a frame. The recipe should record that the coordinate is **per-file** and must be confirmed from a pre-click screenshot. **This is a POLICY-ledger edit under `D-038a` and is therefore owed on the integration branch, not made here** | **OWNER / integration** |
+| **2** | ✅ **DISCHARGED 2026-08-13 — see Revision R1.** `SWF_CAPTURE_RECIPE.md` §3/§10's play-button coordinate `(512, 300)` is wrong for V09 and produced 638 frames of a static splash. **It was also wrong for V08**, whose own `INDEX.md` records the identical failure — this escalation originally claimed the coordinate worked *"on V01–V08"* and `V09_REVIEW_R1.md` `M6` charged that. **The cause is the declared stage size:** V08, V09 and V21 are `1280 × 738`; the other eighteen files are `1024 × 786`; the recipe's viewport is `1024 × 786`, so the first class is letterboxed and every calibrated coordinate is displaced. The `D-038a` disposition was correct — the fix was **made by the V09 R1 reviewer** on the integration branch (`89bb858`, `GOTCHA 5`) | **OWNER / integration — DONE** |
 | **3** | **A successor to `PT-035` is specified and not run.** The correct clustering comparator is the shuffled-order control itself (chronological vs shuffled, composition held fixed). It was **not** pre-registered, so it was **not** computed — inventing it after seeing the registered statistic fail is the move `D-026`/`E21` exist to prevent. Owed under a new `PT` number | **REVIEWER** |
 | **4** | **A second successor: the resolution-censoring bias.** `PT-035`'s intraday horizon censors a 50-pip target more than a 15/25-pip stop, biasing every hit rate in the batch downward. **This may affect other tests in the `PT-002`…`PT-032` family** that use a day-end horizon with asymmetric geometry | **REVIEWER** |
 | **5** | **`C-010` is narrowed and a tidy reconciliation is available and refused.** If the owner judges that reading a timeframe into `MMM-NOTES` is acceptable, `C-010` closes immediately. This session judged it forbidden by §3.2's *"Do not blend"* and flags the call rather than making it silently | **OWNER** |
@@ -341,3 +351,67 @@ GUEST OR HOST:   GUEST, 100% — fifth consecutive lesson with zero course-autho
 NEXT:            INDEPENDENT REVIEW R1 (D-003). This session does not review itself and
                  does not merge to integration.
 ```
+
+---
+
+## REVISION R1 — 2026-08-13 — the six `MINOR` findings of `V09_REVIEW_R1.md`, APPLIED
+
+**Appended, not overwritten** (`REMEDIATION_PROTOCOL.md` §3 step 5). Everything above is the
+original submission and is retained unedited except where a correction block is inserted in place
+with the superseded text beside it.
+
+```text
+STUDENT STATUS:  REVIEW REQUIRED  (unchanged — D-016/I-001)
+REMEDIATION:     items 73-78 APPLIED — PENDING VERIFICATION at R2
+                 NOT closed. D-003 reserves verification to an independent
+                 reviewer, and this remediation closes nothing.
+```
+
+### What was found, and what class of fix each needed
+
+**All six are documentation fixes.** `REMEDIATION_PROTOCOL.md` §2's redo-do-not-reword rule is
+checked and does **not** bite: no test was invalid, no sample was cherry-picked, no classification
+depended on hindsight, and no rule lost its provenance. **`PT-035` was not re-run and must not
+be** — its output is unchanged and byte-identical, and `COMMON_PROTOCOL.md` §9 rule 7 forbids
+editing a pre-registration or a runner to match what was found.
+
+| Item | Finding | Fix | Where |
+|---|---|---|---|
+| **73** | `M1` `E01` — four silent ASR corrections inside quotation marks under `AUDIO` tags | Every quotation restored to the transcript's literal wording, the expansion moved **outside** the quote marks, and the two `HOD/LOD` gate rows retagged as quoting the **printed** form. Superseded text retained at all four sites | `V09_SOURCE_NOTES.md` §3, §5, §7e, §9a |
+| **74** | `M2` `E20` — `PT-035` §6's `INDETERMINATE`-on-`N3`-failure trigger neither applied nor disclosed | The clause is quoted in full, the **measured** arm is reported as `INDETERMINATE`, and `CONTRADICTED AS STATED` is carried on the §2c/`O4` closed form **alone**. `P3` re-scored *right on its measurement, void on its verdict clause*. **`PT-035` and `run_pt035.py` untouched** | `BT_V09_0001.md` §1, §5, §6; this report §G |
+| **75** | `M3` `E19` — the COVERAGE block claimed four 10-second gaps; there are seven | Corrected to **seven**, all listed, superseded text retained. Re-measured: 721/718 markers, 0 decreasing, 3 same-second pairs, 11 s twice — every other assertion in the block reproduces | `V09_TRANSCRIPT.md` COVERAGE |
+| **76** | `M4` `E11` — fourteen frame cross-references at ordinal ≥15 off by one | **Structural fix rather than arithmetic:** every cross-reference now names the frame by its **burned-in player timecode**, which no future insertion can invalidate. The numbered column is now an index into `INDEX.md`'s own table and nothing outside that file cites it | `V09_SOURCE_NOTES.md`; `04_SCREENSHOTS/V09/INDEX.md`; `A-065`, `A-067`; `C-013`, `C-015`; this report |
+| **77** | `M5` `E02` — the `C-010` candidate reconciliation held at *"more likely than not"* | Grade downgraded **`MEDIUM` → `LOW`**, with the set-level arithmetic written out: the factor-of-four identity lands **one member of four** and collides with `A-020`'s mayo = 200. Q8's falsification row corrected. **`C-010` stays OPEN; its disposition is unchanged** | `V09_INTERPRETATION.md` Q5, Q8; `C-010`; `V09_SOURCE_NOTES.md` §9d |
+| **78** | `M6` `E20` — the capture-bug escalation claimed the coordinate worked *"on V01–V08"* | Corrected: it **also failed on V08**, whose own `INDEX.md` records it. The reviewer's stage-geometry cause (V08/V09/V21 at 1280×738 vs the other eighteen at 1024×786) is cited. **The reviewer's half — the `SWF_CAPTURE_RECIPE.md` fix — is already DONE at `89bb858`** | `04_SCREENSHOTS/V09/INDEX.md`; this report, escalation 2 |
+
+### What this revision does NOT change
+
+- **No conclusion of the lesson moves.** The position-sizing rule, the loss-recovery cycle, the
+  innermost-ring answer, `A-020`'s `RESOLVED BY COURSE` status, `C-010`'s refusal to close, and
+  `PT-035`'s `CONTRADICTED AS STATED` verdict are all exactly as submitted.
+- **No number was recomputed and no test re-run.** `data/pt035_output.txt` is untouched.
+- **Nothing is closed.** Items 73–78 are `APPLIED — PENDING VERIFICATION`, in the V07/V08
+  precedent. `D-003` reserves closure to an independent reviewer at R2.
+
+### The one thing worth saying plainly about this round
+
+**Item 74 is the finding this session should have made against itself and did not.** It caught the
+identical defect one decision lower — the runner failing to encode §7b's gate for the clustering
+arm — wrote it up at length, voided its own headline result on it, and then applied the empirical
+arm's verdict word without checking whether the same clause covered it. **The pre-registration was
+right twice; the runner was wrong twice; this session found one of the two.** The correction costs
+the verdict nothing, because §2c's closed form never depended on a measurement — but the reason
+the verdict is safe is that a *previous* self-discipline held, not that this one did.
+
+### Process disclosure — a `D-003` deviation, at owner direction
+
+**This remediation was performed by the same session that wrote `V09_REVIEW_R1.md`, on the
+owner's explicit instruction.** The project's normal loop puts a separate session between review
+and fix, and `LOG.md` carries the reason in its own words: *"a reviewer that fixes what it finds
+has stopped being a reviewer."*
+
+**Two things follow, and both are honoured here.** Nothing is marked closed — `REVIEW_INDEX.md`
+items 73–78 read `APPLIED — PENDING VERIFICATION at R2`, exactly as the V07 and V08 minors
+remediations did. And **V09 R2 must be an independent session**; it cannot be this one, and it
+should re-derive each of the six from source rather than from this table.
+

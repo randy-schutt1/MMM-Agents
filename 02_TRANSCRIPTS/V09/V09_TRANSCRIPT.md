@@ -27,10 +27,20 @@ Entries: 721 markers, 718 distinct.
          block was charged at R1 for asserting strictness where it was false,
          and V08's was strict and said so. V09's is not, and says so.)
          Largest inter-entry gap 11 s, twice: at [00:07:03] and [00:44:56].
-         Next largest 10 s, four times: [00:23:05], [00:45:41], [00:49:35],
-         [00:49:47].
+         Next largest 10 s, SEVEN times: [00:02:38], [00:03:23], [00:19:18],
+         [00:23:05], [00:45:41], [00:49:35], [00:49:47].
          Final entry [00:52:23] against measured audio 3146.815 s (00:52:26.8).
 ```
+
+> **Corrected 2026-08-13 — `18_REVIEW/V09/V09_REVIEW_R1.md` `M3` (`E19`, open item 75).**
+> The line above previously read *"Next largest 10 s, **four times**: `[00:23:05]`, `[00:45:41]`,
+> `[00:49:35]`, `[00:49:47]`."* **There are seven**, and three were unlisted. The superseded text
+> is retained here per `REMEDIATION_PROTOCOL.md` §2.
+>
+> **Every other assertion in the block was re-derived by the reviewer and reproduces exactly** —
+> 721 markers, 718 distinct, zero decreasing transitions, three same-second adjacent pairs at the
+> named markers, and 11 s twice at the named markers. The defect was one cell in a block that
+> declares itself `MEASURED` and invites the check. **The check was taken, and it found this.**
 
 **The ~3.8 s tail is not a gap and not a fence.** A Whisper `small.en` pass over
 `00:51:40`–end returns *"…that was the whole idea of this bird right here. He's got way"*

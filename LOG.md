@@ -6303,3 +6303,91 @@ correcting the *"the coordinate that starts the Camtasia player on V01–V08"* s
 written before this verdict returned and was correct when written; `REVIEW_INDEX.md` is the
 authoritative register and it records the opening. Reconciling `COURSE_PROGRESS.md` is the V10
 session's first bookkeeping act, exactly as V09's was.
+
+---
+
+## 2026-08-13 — Remediation Session (V09 R1 minors, items 73–78)
+
+### Objective
+
+Address the six required corrections in `18_REVIEW/V09/V09_REVIEW_R1.md` §15.
+
+**Branch:** `fix/v09-r1-minors`, cut from the integration branch at `c8d4d80` after `git fetch`
+confirmed no divergence (`D-038`, `fix/v08-r1-minors` precedent).
+
+### ⚠ PROCESS DISCLOSURE FIRST — A `D-003` DEVIATION, AT OWNER DIRECTION
+
+**This remediation was performed by the same session that wrote `V09_REVIEW_R1.md`, because the
+owner instructed it directly.** The project's normal loop puts an independent session between
+review and fix, and this file states the reason in its own words at the V07 R2 entry: *"a reviewer
+that fixes what it finds has stopped being a reviewer."*
+
+**What is done about it, rather than around it:**
+
+1. **Nothing is closed.** `REVIEW_INDEX.md` items 73–78 read
+   `APPLIED — PENDING VERIFICATION at R2`, exactly as the V07 and V08 minors remediations did.
+   `D-003` reserves closure to an independent reviewer and this session closes nothing.
+2. **V09 R2 must be an independent session**, and it should re-derive each of the six **from
+   source** rather than from the remediation's own account of itself — which is precisely what the
+   V08 R2 round did, and why it was able to confirm that the `[00:28:31]` garble had been
+   preserved rather than smoothed.
+3. The deviation is recorded here and in `V09_MASTERY_REPORT.md` Revision R1, not smoothed over.
+
+### Findings Addressed
+
+**All six are documentation fixes.** `REMEDIATION_PROTOCOL.md` §2's redo-do-not-reword rule was
+checked against each and does **not** bite: no test was invalid, no sample cherry-picked, no
+classification hindsight-dependent, no rule left unsourced. **`PT-035` was not re-run, and
+`run_pt035.py` and the pre-registration are byte-unchanged** — `COMMON_PROTOCOL.md` §9 rule 7.
+
+| Item | Class | What changed |
+|---|---|---|
+| **73** | `E01` | All four `AUDIO`-tagged quotations restored to the transcript's literal wording — *"high low-day"*, *"the grade Fred"*, *"experiences show me"*, the doubled *"it's it's"* — with the expansions moved **outside** the quote marks and a table naming each ASR artefact. The two `HOD/LOD` gate rows retagged as quoting the **printed** form, which is what they always were. **The transcript body is untouched.** Re-verified against the body: all four now match |
+| **74** | `E20` | `BT_V09_0001` §1 and §5 now quote `PT-035` §6's decision table in full, report the **measured** arm as **`INDETERMINATE`** on the `N3` failure, and carry `CONTRADICTED AS STATED` on the **§2c/`O4` closed form alone**. `P3` re-scored *right on its measurement, void on its verdict clause*; the prediction tally moves 3/1/1 → 2/1/1/1. Propagated to the mastery report §G and to its self-assessment item 2 |
+| **75** | `E19` | The COVERAGE block's 10-second gap count corrected **four → seven**, all seven markers listed |
+| **76** | `E11` | **Structural, not arithmetic.** Every frame cross-reference in `V09_SOURCE_NOTES.md`, `04_SCREENSHOTS/V09/INDEX.md`, `A-065`, `A-067`, `C-013`, `C-015` and the mastery report now names the frame by its **burned-in player timecode**. Ordinals survive only inside `INDEX.md`'s own table, which nothing outside that file cites |
+| **77** | `E02` | `V09_INTERPRETATION.md` Q5 downgraded **`MEDIUM` → `LOW`** with the set-level arithmetic written out; Q8's falsification row corrected; the same reasoning added to `C-010` and to `V09_SOURCE_NOTES.md` §9d. **`C-010` stays OPEN and its disposition is unchanged** |
+| **78** | `E20` | The *"V01–V08"* claim corrected in both files, citing `04_SCREENSHOTS/V08/INDEX.md`'s record of the identical failure and the reviewer's stage-geometry cause. **The reviewer's half was already discharged at `89bb858`** (`SWF_CAPTURE_RECIPE.md` `GOTCHA 5`) |
+
+### Work Redone (not edited)
+
+**None, and that is the correct answer here.** No finding touched the validity of a test, a
+sample, or a classification. `data/pt035_output.txt` and `pt035_results.json` are untouched and
+still reproduce byte-identically.
+
+### Verification performed by this session on its own fixes
+
+- Item 73: re-matched all four corrected quotations against the marker-stripped transcript body —
+  **4/4 exact**.
+- Item 75: re-derived the gap distribution — **7 gaps of 10 s, 2 of 11 s, 721/718 markers, zero
+  decreasing transitions** — unchanged from the review's measurement.
+- Item 76: swept all five files for surviving bare frame ordinals in V09 regions — **none**,
+  except `INDEX.md`'s own table and one correct in-table reference.
+- `validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+**None of this is verification in the `D-003` sense.** It is a session checking its own work, and
+it is recorded as that.
+
+### Decision
+
+```text
+V09:  REVISE (R1) -> REMEDIATION APPLIED -> AWAITING R2
+      Items 73-78 APPLIED, PENDING VERIFICATION. NOT CLOSED.
+      Items 79 and 80 are unaffected: 79 is recommended-not-owed, and
+      80 is an escalation for a scoped investigation, not a defect.
+      V10 gate remains OPEN under D-024 -- this remediation neither
+      opens nor closes it.
+```
+
+### Git
+
+`COURSE_PROGRESS.md` reconciled in the same round: `VIDEOS IN PROGRESS` 3 → **1**, `VIDEOS PASSED`
+6 → **8** (V07 and V08 had reached `COMPLETE` at R3 and R2 and the block had not been updated —
+the status-staleness class, open item 14), `NEXT LESSON` and the `V10 GATE` block moved to
+**OPEN**, and `GOTCHA 5`'s stage-size requirement added as a V10 carry-forward. Superseded text
+retained at both sites.
+
+### Next Review Trigger
+
+**V09 R2** — verification of items 73–78 by an **independent** session.
+
