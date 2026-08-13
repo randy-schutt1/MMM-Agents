@@ -587,3 +587,123 @@ established for all 21 by direct measurement (Finding 1, re-confirmed this sessi
 require per-lesson examination for V06–V21 — and V05 shows why: its `VISUAL_INDEX.md`
 failure mode (duplicate images indexed as distinct screenshots on a generated time grid)
 would not have been caught by checking for V01's failure mode.
+
+---
+
+## Q-006 — V06's three derived files, checked individually and confirmed fabricated; `VISUAL_INDEX.md` calls two SWF delta-tiles and one duplicated pair "Presentation Slide / Annotated Chart"
+
+**Date:** 2026-08-12
+**Files:** `01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/per_lesson/06_Bootcamp1_Wk2_032612_Part1_75mins/`
+— `RULES.md`, `NOTES.md`, `VISUAL_INDEX.md`
+**Lesson:** V06, `Bootcamp1 Wk2 032612 Part1 (75mins).swf`, SHA-256 `382207b3…aac96e86`
+**Disposition:** all three remain quarantined. `TRANSCRIPT.md` from the same folder was
+checked independently and **PASSED** — adopted at `02_TRANSCRIPTS/V06/V06_TRANSCRIPT.md`
+(I-008 satisfied for V06).
+
+### Finding 1 — `RULES.md` is the 21-lesson template, discharged in one step
+
+Per `REVIEW_INDEX.md` open item 33 the per-lesson `RULES.md` audit is a solved problem and
+may be discharged by confirming the template markers. **Confirmed for V06:**
+
+| Template marker | V06 | Population |
+|---|---|---|
+| Rule 1 quote at `[00:05:00]` — *"Wait for the M15 candle to close before taking the 5/13 EMA cross."* | present | **21/21, re-measured this session** |
+| Rule 2 quote at `[00:18:00]` — *"Place your stop loss 10 to 15 pips beyond the High or Low of the Day."* | present | 21/21 |
+| `NUMERICAL PARAMETERS` block byte-identical | present, hash `e75ace74e1f1` | **21/21, one hash** |
+| Exactly two rules | present (`V07-R001`, `V07-R002`) | 21/21 |
+
+> **The hash differs from the one Q-005 records (`7ae7bb6ef413`) because the slice differs,
+> not because the block does.** Q-005 hashed the block after stripping; this session hashed
+> `sed -n '/# NUMERICAL PARAMETERS/,/# AMBIGUITIES/p'`, inclusive of both delimiter lines,
+> across four spread-out lessons (01, 05, 06, 21) and got **one** value, `e75ace74e1f1`, in
+> all four. Both measurements support the same proposition — **one block, 21 files** — and
+> Q-005's own warning about slice boundaries is the reason this note exists rather than a
+> contradiction being recorded.
+
+**Cross-checked against V06's real audio, and it fails on every load-bearing token:**
+
+- `[00:05:00]` **is** a marker in this transcript, and it reads, in full: *"one day of it and
+  you're looking for 3 levels of drop."* Chart-structure narration, not an entry rule.
+- `[00:18:00]` **is not a marker at all.** Nor are `[00:22:00]` or `[00:07:00]`, both cited by
+  the quarantined files. `[00:04:00]` **is** a marker and reads *"Look back to the 4-hour chart
+  and you're going to realize you're only in level 2"* — not an EMA parameter list.
+- **`5/13` occurs 0 times. `5 EMA` 0. `800 EMA` 0. `Asian Box` 0. `Shark Fin` 0. `PFH` 0.
+  `PFL` 0. `HOD` 0. `LOD` 0. `10 to 15 pips` 0.**
+- The one place V06 states a stop distance runs a different way entirely: *"if I take this
+  trade here and if my stop is about 13-pips, I'm looking for minimum moves. 26-pips, I would
+  prefer at least 30-pips"* `[01:03:19]`–`[01:03:26]` — a stop derived from **moving-average
+  spacing**, not from a fixed 10–15 pip buffer beyond a daily extreme.
+- **`13 EMA` does occur 3 times in genuine audio** (`[00:17:58]`, `[00:31:03]`, `[00:59:03]`).
+  This is worth stating plainly because it is the first time a template token has had a real
+  counterpart: it is **not** evidence for the template. The template's claim is a *5/13 cross
+  confirmed on an M15 close*; V06's three uses are *"Price did not close above the 13 EMA"*,
+  *"If it hits with 13 EMA, that's even better"* and *"13 EMA or 50% retrace of the shift
+  bar"*. No cross, no `5`, no timeframe. **A token in common is not a rule in common.**
+
+### Finding 2 — `NOTES.md` is fabricated, and V06 falsifies it on its own subject matter
+
+Distinct per lesson (all 21 `NOTES.md` are pairwise distinct), so it was examined on its own
+merits. Its stated subject is wrong before any rule is checked:
+
+| `NOTES.md` claim | V06's audio and slides |
+|---|---|
+| *"Topic Focus: Asian Accumulation Boxes, London Session Breakouts & Stop Hunts"* | The lesson's title, **printed on its own title slide and spoken as its first words**, is **"Micro Daily Trends"**. `Asian` occurs 5× in 74 minutes, never as a defined box; the subject is **intraday pushes** (`push`/`pushes` 89×) |
+| *"Session Timing: Asian 7:00 PM–3:00 AM EST; London 3:30 AM–9:00 AM EST; New York 9:30 AM–5:00 PM EST"* | **No session clock is stated anywhere.** `EST` occurs 0×. The nearest thing to a session statement is *"U.S. session you're looking for anywhere from 30 to 50 pips… They don't usually run like London"* `[00:31:14]`–`[00:31:20]` — a target size, not a clock |
+| *"EMAs: 5 (Mustard), 13 (Water), 50 (Mayo), 200 (Blueberry), 800 (Raspberry)"* | **Partly true by coincidence, and this is the one row that needs care.** V06 genuinely contains *"water"* (4×), *"mail"/"male"* (2×) and *"blueberry"* (2×) as moving-average nicknames, and the DMR curriculum in frame `V06_00-48-29` prints *"2 Pins to the **Mayo or Water**"*. But **no period is attached to any nickname anywhere in V06**, `mustard` occurs 0×, `raspberry` occurs 0×, and the pairing table is not derivable from this lesson. The file states as fact a five-row mapping the lesson does not contain. See `A-020` |
+| *"5/13 EMA Cross: Execution confirmation on M15 close"* | `5/13` 0×. No timeframe is named for entry. The presenter's stated entry precondition is *"You've got to wait for the rejection of price before entering your trade"* `[00:08:06]` |
+| *"TDI Indicator: Green Price Line crossing Red Signal Line with Shark Fin confirmation outside Volatility Bands"* | `TDI` occurs **once**, at `[00:49:16]`, reading out a **future curriculum item**. `shark` 0×. Nothing is shown or defined |
+| *"Risk Management: Stop loss positioned 10–15 pips past High/Low of Day with minimum 1:3 Risk-to-Reward ratio"* | 0×. V06 states *"I usually like 2 to 1"* `[01:03:17]` — a **different ratio**, stated by a guest, in a different construction |
+| *"Level Count Progression: 3 levels of drop or rise following peak formations before cycle reset"* | This one is close to something V06 does say — and that is exactly why the file is dangerous rather than merely wrong. A reader who spot-checks the plausible row and stops will certify the six rows above along with it |
+
+### Finding 3 — `VISUAL_INDEX.md` indexes two SWF delta-tiles and one duplicated pair as five "Presentation Slide / Annotated Chart" screenshots
+
+It claims *"Total Captured Presentation & Annotated Chart Screenshots: 5"*. Five files do
+exist in the sibling `SCREENSHOTS/` folder. **Four of the five entries are false:**
+
+| # | Claimed | Measured (PIL, this session) |
+|---|---|---|
+| 001 | *"Presentation Title & Session Mapping — Session schedule overview and Asian accumulation range rules"* at `[00:07:00]`, file `VIDEO_07_SCREENSHOT_001_00-02-00.jpg` | **1024×768 and genuine** — but it is the **title slide reading "Micro Daily Trends"**, which is neither a session map nor an Asian range rule. The timestamp `[00:07:00]` and the filename's `00-02-00` disagree with each other, and the slide is on screen from `[00:00:00]` |
+| 002 | *"Asian Range High/Low Definition — Defining 15-25 pip Asian box boundaries"*, `extracted_jpeg_1008.jpg` | 444×322. **Byte-identical to entry 005** (SHA-256 `3077b92f…`) |
+| 003 | *"London Open Stop Hunt Mechanics — Rapid vector push above Asian High"*, `extracted_png_27.png` | **267×51 pixels.** A Camtasia delta tile. It cannot depict a chart |
+| 004 | *"Reversal Candlestick Rejection — Railroad track pattern forming at London High of Day"*, `extracted_png_290.png` | **137×14 pixels.** Likewise |
+| 005 | *"Trade Entry & 5/13 EMA Confirmation"*, `raw_extracted_1008.jpg` | 444×322. **The same bytes as entry 002**, indexed again under a second filename at a different timestamp |
+
+Three further defects of the same family as Q-005's:
+
+1. **The timestamps are a generated grid** — `[00:07:00]`, `[00:12:00]`, `[00:17:00]`,
+   `[00:22:00]`, `[00:27:00]`: exactly five minutes apart, ascending, in a 74-minute lesson.
+   **Three of the five — `[00:07:00]`, `[00:12:00]`, `[00:22:00]` — are not markers in the
+   transcript at all;** the other two, `[00:17:00]` and `[00:27:00]`, land on real markers by
+   coincidence of the grid, and neither carries anything resembling its claimed content
+   (`[00:17:00]` is *"Where is my trap volume right here?"*, `[00:27:00]` is *"It also hits the
+   water."*).
+2. **Every description is template prose**, attributing the lesson to *"Steve Mauro breaking
+   down &lt;lowercased title&gt; and institutional market mechanics"*. **Steve Mauro does not
+   speak in this lesson at all** (`V06_TRANSCRIPT.md` § "ONE SPEAKER"). The attribution is
+   not merely unsourced, it is the opposite of what the recording contains.
+3. **It claims to preserve visuals for "Video 07".** See the mislabel note below.
+
+**For contrast, and as the measure of what the quarantined index was worth:** this session's
+own sweep of the same file produced **903 frames on a 5-second grid**, from which **32** were
+curated into `04_SCREENSHOTS/V06/`, each carrying the player's burned-in timecode so it proves
+its own timestamp.
+
+### The mislabel worth carrying forward
+
+All three files call this lesson **"Video 07 of 21"**, and `RULES.md`'s rule IDs are
+`V07-R001` / `V07-R002`. That is the **pre-ingestion alphabetical numbering D-017 corrected**.
+Under the adopted order this file is **V06**. The same off-by-one appears in the sibling audio
+file's name, **`audio_07.mp3`**, which sits in folder `06_…` — it was checked this session and
+is the **correct** audio for V06 (duration 4473.626 s, matching the SWF's own extracted audio
+to the millisecond, though re-encoded and therefore a different checksum). **Do not take
+lesson numbers from quarantined material, and do not take them from the loose media filenames
+either.**
+
+### Running tally for the fabrication pattern
+
+**V01, V02, V03, V04, V05, V06 — six of six individually confirmed.** The `RULES.md` half is
+established for all 21 by direct measurement (Finding 1). `NOTES.md` and `VISUAL_INDEX.md`
+remain pairwise distinct across the library and still require per-lesson examination for
+V07–V21 — and V06 shows a **third** distinct failure mode: not V01's phantom-file inflation and
+not V05's duplicate-pair inflation, but **sub-slide fragments of the SWF's own delta-tile
+stream, indexed as if they were slides**. Three lessons, three different ways of being wrong.
