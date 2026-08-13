@@ -3539,3 +3539,70 @@ this session starts it. Open items 35, 36, 40 and the parallel-session ruling st
 the owner; `I-007` (data source) and the `D-028` boundary dates still gate `PT-001`.
 
 ---
+
+## 2026-08-12 — Session — `validate_project.py`: the `.DS_Store` warning, fixed at the check
+
+### Objective
+
+Take the repository back to **0 warnings**. Continuation of the entry immediately above,
+which recorded `98 passed, 1 warning, 0 failures` and left the warning in place. The owner
+asked for it fixed; this entry records the fix and supersedes that entry's disposition
+(the entry itself is left as written, per this journal's append-only rule).
+
+### Work Completed
+
+- **`scripts/validate_project.py`, `check_source_videos_dir()`** — `.DS_Store` added to the
+  allowlist beside `README.md` and `.gitkeep`, with a comment stating why.
+- **`01_SOURCE_VIDEOS/.DS_Store` deleted.** Verified as `Apple Desktop Services Store`
+  before removal; gitignored at `.gitignore:74`, so it was never tracked and nothing left
+  the repository's history.
+
+### Key Findings
+
+**Deleting the file is not a fix; it is a fix with a timer on it.** Finder rewrites
+`.DS_Store` the next time anyone opens `01_SOURCE_VIDEOS/`, and this project's source
+directory is opened by hand every ingestion. A check that goes yellow on a file the
+operating system recreates teaches the reader to skim past the warning line — which is the
+failure mode that produced the `E20` status-block class six times over. So the fix belongs
+in the check, and the deletion is only housekeeping alongside it.
+
+**The check's scope is unchanged and still bites.** It exists to catch *generated study
+artifacts* — transcripts, JSON, screenshots — written into the source-media directory.
+`.DS_Store` is OS metadata, not a study artifact and not a candidate for commit; it is the
+one class of file that can be excluded without weakening what the check was written to
+find. Any real stray still warns.
+
+### Manual Backtesting
+
+None.
+
+### Ambiguities / Contradictions
+
+None.
+
+### Decisions
+
+None. A one-name allowlist entry in a structural linter is not a project-level decision and
+gets no `DECISIONS.md` or `CHANGELOG.md` entry.
+
+### Files Created/Updated
+
+`scripts/validate_project.py` (four comment lines and one set literal); `LOG.md` (this
+entry). `01_SOURCE_VIDEOS/.DS_Store` deleted (untracked).
+
+### Verification
+
+`scripts/validate_project.py`: **99 passed, 0 warnings, 0 failures.** The count rises by one
+because the check now reports its `PASS` branch — `01_SOURCE_VIDEOS/ holds no generated
+artifacts` — instead of its warning branch.
+
+### Git
+
+Explicit paths on `git add`; `git status` and `git diff --staged` read before committing.
+Committed and pushed this session.
+
+### Next Action
+
+Unchanged. V06 ingestion stays paused by owner instruction.
+
+---

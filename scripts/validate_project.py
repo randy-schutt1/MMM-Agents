@@ -485,9 +485,13 @@ def check_source_videos_dir(root: Path, r: Report) -> None:
     d = root / "01_SOURCE_VIDEOS"
     if not d.is_dir():
         return
+    # .DS_Store is Finder metadata, not a generated study artifact. It is gitignored,
+    # it reappears whenever anyone opens this folder in Finder, and warning about it
+    # trains the reader to ignore this check. The check exists to catch transcripts,
+    # JSON and screenshots being written into the source-media directory.
     strays = [
         p.name for p in d.iterdir()
-        if p.is_file() and p.name not in {"README.md", ".gitkeep"}
+        if p.is_file() and p.name not in {"README.md", ".gitkeep", ".DS_Store"}
         and p.suffix.lower() not in MEDIA_EXTENSIONS
     ]
     if strays:
