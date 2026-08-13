@@ -1,0 +1,298 @@
+==============================================================================
+PT-014 — Excursion size distribution beyond the Asian box (W-B)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-B 2014-01-05 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-014_excursion_size_distribution_beyond_the_box.md
+BASELINE : N2 circular clock shift (sham box), 1,000 draws, seed 20260812
+           + volatility normalisation (2nd baseline, PT-014 §4)
+NOTE     : DESCRIPTIVE by pre-registration (PT-014 §6) whatever it shows.
+
+----- ARM A -----
+W-B M15 bars: 49,421   span 2014-01-05T17:00 -> 2015-12-31T16:45
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+session days included (C-5+C-6): 512   box bars/day min 26 max 26   post bars/day min 56 max 56
+
+[N2 baseline — computed BEFORE the rule arm's aggregate was read]
+  draws                 : 1000 of 1000 (a draw is dropped only if the shifted clock yields no session day)
+  median pooled excursion: median 6.95, 5-95% [0, 25.16]
+  share no excursion     : median 0.06357, 5-95% [0, 0.3644]
+  share in 25-50 (pooled): median 0.1626, 5-95% [0.07824, 0.2237]
+  modal 5-pip bin (lower): median 0, 5-95% [0, 0]
+
+[MEASURE 1/2 — the distribution, every day included]
+  pooled observations (520 days x 2 edges): n = 1024
+  median 21.6 pips   mean 35.2   p90 88.9   max 397.6
+  MODAL 5-pip bin: [0, 5) with 296 of 1024 (0.289)
+  5-pip histogram (pooled, both edges):
+    [    0,    5)    296  ############################################################
+    [    5,   10)     72  ###############
+    [   10,   15)     76  ###############   <- 10, V02 [00:44:59] 'maybe they'll only do 10 pips'
+    [   15,   20)     43  #########
+    [   20,   25)     67  ##############
+    [   25,   30)     42  #########   <- 25, floor of V04 [00:15:43]
+    [   30,   35)     42  #########
+    [   35,   40)     36  #######
+    [   40,   45)     39  ########
+    [   45,   50)     41  ########
+    [   50,   55)     36  #######   <- 50, ceiling of V04 [00:15:43]
+    [   55,   60)     28  ######
+    [   60,   65)     18  ####
+    [   65,   70)     17  ###
+    [   70,   75)     27  #####
+    [   75,   80)     17  ###
+    [   80,   85)     14  ###
+    [   85,   90)     11  ##
+    [   90,   95)      7  #
+    [   95,  100)     12  ##
+    [  100,  105)      9  ##   <- 100, V02 [00:44:59] 'then they'll do it 100 pips'
+    [  105,  110)     13  ###
+    [  110,  115)      5  #
+    [  115,  120)      5  #
+    [  120,  125)      6  #
+    [  125,  130)      4  #
+    [  130,  135)      3  #
+    [  135,  140)      5  #
+    [  140,  145)      3  #
+    [  145,  150)      5  #
+    [  150,  inf)     25
+
+  named bands (pooled, both edges):
+         exactly 0 : 0.228 (233/1024), 95% CI [0.203, 0.254]
+        0 < e < 10 : 0.132 (135/1024), 95% CI [0.112, 0.154]
+      10 <= e < 25 : 0.182 (186/1024), 95% CI [0.159, 0.206]
+     25 <= e <= 50 : 0.195 (200/1024), 95% CI [0.172, 0.221]
+     50 < e <= 100 : 0.183 (187/1024), 95% CI [0.160, 0.207]
+           e > 100 : 0.081 (83/1024), 95% CI [0.066, 0.099]
+
+  the day's LARGER excursion (one per day):
+    median 51.4 pips; modal 5-pip bin [40,45) n=35
+         exactly 0 : 0.000 (0/512), 95% CI [0.000, 0.007]
+        0 < e < 10 : 0.029 (15/512), 95% CI [0.018, 0.048]
+      10 <= e < 25 : 0.139 (71/512), 95% CI [0.111, 0.171]
+     25 <= e <= 50 : 0.312 (160/512), 95% CI [0.274, 0.354]
+     50 < e <= 100 : 0.359 (184/512), 95% CI [0.319, 0.402]
+           e > 100 : 0.160 (82/512), 95% CI [0.131, 0.194]
+
+  CONDITIONAL ON A BREACH (zeros dropped) — reported second, deliberately:
+    n = 791   median 33.7   modal bin [10,15) n=76
+    share in 25-50: 0.253 (200/791), 95% CI [0.224, 0.284]
+
+[MEASURE 3 — the 'it won't come out of the box' case]
+  days with NO excursion beyond either edge: 0.000 (0/512), 95% CI [0.000, 0.007]
+  days breaching BOTH edges                : 0.545 (279/512), 95% CI [0.502, 0.588]
+  days breaching exactly one edge          : 0.455 (233/512), 95% CI [0.412, 0.498]
+
+[MEASURE 4 — first excursion vs larger excursion; timing]
+  days with an identifiable first breach: 512
+  first-breached edge is also the LARGER excursion: 0.682 (349/512), 95% CI [0.640, 0.721]
+  first breach side: high 233  low 279  same bar 0
+  hour-of-day of the day's maximum excursion (arm clock):
+    03:00    14  #########
+    04:00    35  ########################
+    05:00    26  ##################
+    06:00    17  ###########
+    07:00    28  ###################
+    08:00    65  ############################################
+    09:00    34  #######################
+    10:00    74  ##################################################
+    11:00    56  ######################################
+    12:00    33  ######################
+    13:00    26  ##################
+    14:00    35  ########################
+    15:00    32  ######################
+    16:00    37  #########################
+  hour-of-day of the FIRST breach (arm clock):
+    03:00   378  ##################################################
+    04:00    99  #############
+    05:00    13  ##
+    06:00     9  #
+    07:00     3  
+    08:00     4  #
+    09:00     4  #
+    11:00     1  
+    12:00     1  
+
+[MEASURE 5 — excursion scaled by the box's own range, dimensionless]
+  larger excursion / box range: n = 512  median 1.689  p25 1.030  p75 2.734
+  larger excursion / day's own post-box range (2nd baseline, volatility normalised): median 0.603
+  box range itself: median 31.0 pips  p10 17.5  p90 51.5
+
+[FORECAST FOR THE DEPENDENT TESTS — not a PT-014 measure, `INDEX.md` §3]
+  days with a first close >= 10 pips beyond an edge: 0.926 (474/512), 95% CI [0.900, 0.945]
+  PT-015 strata as pre-registered (day assigned by its FIRST qualifying close):
+    S1 10-24   n =  417
+    S2 25-50   n =   44
+    S3 51-100  n =   12   <<< BELOW n=30
+    S4 >100    n =    0   <<< BELOW n=30
+  contrast — the same strata by the day's MAXIMUM excursion (NOT the pre-registered rule, shown only to make the gap visible):
+    S1 10-24   n =   71
+    S2 25-50   n =  160
+    S3 51-100  n =  184
+    S4 >100    n =   82
+
+[RULE ARM vs N2 — percentile of the observed value within the null]
+  median pooled excursion  obs 21.60  -> pct 72.7
+  share no excursion       obs 0.000  -> pct 0.0
+  share in 25-50 (pooled)  obs 0.195  -> pct 60.4
+
+[stability note — by calendar year, descriptive]
+  2014: n_days 255  median pooled 16.4  share 25-50 0.198  share no-exc 0.000
+  2015: n_days 257  median pooled 27.3  share 25-50 0.193  share no-exc 0.000
+
+----- ARM B -----
+W-B M15 bars: 49,421   span 2014-01-05T17:00 -> 2015-12-31T16:45
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+session days included (C-5+C-6): 512   box bars/day min 26 max 26   post bars/day min 56 max 56
+
+[N2 baseline — computed BEFORE the rule arm's aggregate was read]
+  draws                 : 1000 of 1000 (a draw is dropped only if the shifted clock yields no session day)
+  median pooled excursion: median 7.3, 5-95% [0, 24.95]
+  share no excursion     : median 0.05868, 5-95% [0, 0.3447]
+  share in 25-50 (pooled): median 0.165, 5-95% [0.08435, 0.22]
+  modal 5-pip bin (lower): median 0, 5-95% [0, 0]
+
+[MEASURE 1/2 — the distribution, every day included]
+  pooled observations (520 days x 2 edges): n = 1024
+  median 23.8 pips   mean 36.9   p90 90.3   max 222.7
+  MODAL 5-pip bin: [0, 5) with 258 of 1024 (0.252)
+  5-pip histogram (pooled, both edges):
+    [    0,    5)    258  ############################################################
+    [    5,   10)     71  #################
+    [   10,   15)     77  ##################   <- 10, V02 [00:44:59] 'maybe they'll only do 10 pips'
+    [   15,   20)     54  #############
+    [   20,   25)     67  ################
+    [   25,   30)     55  #############   <- 25, floor of V04 [00:15:43]
+    [   30,   35)     38  #########
+    [   35,   40)     34  ########
+    [   40,   45)     44  ##########
+    [   45,   50)     36  ########
+    [   50,   55)     38  #########   <- 50, ceiling of V04 [00:15:43]
+    [   55,   60)     32  #######
+    [   60,   65)     25  ######
+    [   65,   70)     19  ####
+    [   70,   75)     24  ######
+    [   75,   80)     18  ####
+    [   80,   85)     15  ###
+    [   85,   90)     15  ###
+    [   90,   95)      7  ##
+    [   95,  100)      8  ##
+    [  100,  105)     11  ###   <- 100, V02 [00:44:59] 'then they'll do it 100 pips'
+    [  105,  110)     12  ###
+    [  110,  115)      6  #
+    [  115,  120)      4  #
+    [  120,  125)      7  ##
+    [  125,  130)      6  #
+    [  130,  135)      6  #
+    [  135,  140)      2  
+    [  140,  145)      1  
+    [  145,  150)      3  #
+    [  150,  inf)     31
+
+  named bands (pooled, both edges):
+         exactly 0 : 0.191 (196/1024), 95% CI [0.168, 0.217]
+        0 < e < 10 : 0.130 (133/1024), 95% CI [0.111, 0.152]
+      10 <= e < 25 : 0.193 (198/1024), 95% CI [0.170, 0.219]
+     25 <= e <= 50 : 0.202 (207/1024), 95% CI [0.179, 0.228]
+     50 < e <= 100 : 0.196 (201/1024), 95% CI [0.173, 0.222]
+           e > 100 : 0.087 (89/1024), 95% CI [0.071, 0.106]
+
+  the day's LARGER excursion (one per day):
+    median 53.1 pips; modal 5-pip bin [40,45) n=36
+         exactly 0 : 0.000 (0/512), 95% CI [0.000, 0.007]
+        0 < e < 10 : 0.023 (12/512), 95% CI [0.013, 0.041]
+      10 <= e < 25 : 0.115 (59/512), 95% CI [0.090, 0.146]
+     25 <= e <= 50 : 0.311 (159/512), 95% CI [0.272, 0.352]
+     50 < e <= 100 : 0.379 (194/512), 95% CI [0.338, 0.422]
+           e > 100 : 0.172 (88/512), 95% CI [0.142, 0.207]
+
+  CONDITIONAL ON A BREACH (zeros dropped) — reported second, deliberately:
+    n = 828   median 33.6   modal bin [10,15) n=77
+    share in 25-50: 0.250 (207/828), 95% CI [0.222, 0.281]
+
+[MEASURE 3 — the 'it won't come out of the box' case]
+  days with NO excursion beyond either edge: 0.000 (0/512), 95% CI [0.000, 0.007]
+  days breaching BOTH edges                : 0.617 (316/512), 95% CI [0.574, 0.658]
+  days breaching exactly one edge          : 0.383 (196/512), 95% CI [0.342, 0.426]
+
+[MEASURE 4 — first excursion vs larger excursion; timing]
+  days with an identifiable first breach: 512
+  first-breached edge is also the LARGER excursion: 0.646 (331/512), 95% CI [0.604, 0.687]
+  first breach side: high 264  low 248  same bar 0
+  hour-of-day of the day's maximum excursion (arm clock):
+    03:00     8  ######
+    04:00    24  #################
+    05:00    35  #########################
+    06:00    20  ##############
+    07:00    21  ###############
+    08:00    36  #########################
+    09:00    55  #######################################
+    10:00    50  ###################################
+    11:00    71  ##################################################
+    12:00    46  ################################
+    13:00    39  ###########################
+    14:00    30  #####################
+    15:00    32  #######################
+    16:00    45  ################################
+  hour-of-day of the FIRST breach (arm clock):
+    03:00   367  ##################################################
+    04:00   102  ##############
+    05:00    30  ####
+    06:00     4  #
+    07:00     2  
+    08:00     1  
+    09:00     2  
+    10:00     2  
+    12:00     2  
+
+[MEASURE 5 — excursion scaled by the box's own range, dimensionless]
+  larger excursion / box range: n = 512  median 1.967  p25 1.268  p75 3.224
+  larger excursion / day's own post-box range (2nd baseline, volatility normalised): median 0.604
+  box range itself: median 26.7 pips  p10 14.3  p90 46.5
+
+[FORECAST FOR THE DEPENDENT TESTS — not a PT-014 measure, `INDEX.md` §3]
+  days with a first close >= 10 pips beyond an edge: 0.949 (486/512), 95% CI [0.927, 0.965]
+  PT-015 strata as pre-registered (day assigned by its FIRST qualifying close):
+    S1 10-24   n =  429
+    S2 25-50   n =   46
+    S3 51-100  n =    9   <<< BELOW n=30
+    S4 >100    n =    0   <<< BELOW n=30
+  contrast — the same strata by the day's MAXIMUM excursion (NOT the pre-registered rule, shown only to make the gap visible):
+    S1 10-24   n =   59
+    S2 25-50   n =  159
+    S3 51-100  n =  194
+    S4 >100    n =   88
+
+[RULE ARM vs N2 — percentile of the observed value within the null]
+  median pooled excursion  obs 23.80  -> pct 78.3
+  share no excursion       obs 0.000  -> pct 0.0
+  share in 25-50 (pooled)  obs 0.202  -> pct 68.5
+
+[stability note — by calendar year, descriptive]
+  2014: n_days 255  median pooled 18.9  share 25-50 0.200  share no-exc 0.000
+  2015: n_days 257  median pooled 28.9  share 25-50 0.204  share no-exc 0.000
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always
+==============================================================================
+                                 ARM A (UTC-5)    ARM B (NY/DST)
+session days                               512               512
+median pooled excursion                   21.6              23.8
+median larger excursion                   51.4              53.1
+share no excursion                       0.000             0.000
+share pooled in 25-50                    0.195             0.202
+share larger in 25-50                    0.312             0.311
+median box range (pips)                   31.0              26.7
+median exc / box range                   1.689             1.967
+first breach is larger                   0.682             0.646
+modal 5-pip bin (pooled)                 [0,5)             [0,5)

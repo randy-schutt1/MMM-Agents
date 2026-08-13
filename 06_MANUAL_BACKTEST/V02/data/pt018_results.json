@@ -1,0 +1,198 @@
+{
+ "A": {
+  "arm": "A",
+  "n_days": 512,
+  "n_trig": 383,
+  "resolved_early": 195,
+  "no_horizon": 6,
+  "live": 182,
+  "progressed": {
+   "n": 32,
+   "n_target": 20,
+   "n_stop": 3,
+   "n_open": 9,
+   "n_resolved": 23,
+   "hit_rate": 0.8695652173913043,
+   "expectancy": 36.92812500000003,
+   "pct_hit_vs_N1": 60.9,
+   "pct_exp_vs_N1": 85.7
+  },
+  "stalled": {
+   "n": 150,
+   "n_target": 22,
+   "n_stop": 53,
+   "n_open": 75,
+   "n_resolved": 75,
+   "hit_rate": 0.29333333333333333,
+   "expectancy": 5.611333333333342,
+   "pct_hit_vs_N1": 81.3,
+   "pct_exp_vs_N1": 90.2
+  },
+  "early": {
+   "n": 195,
+   "n_target": 24,
+   "n_stop": 171,
+   "n_open": 0,
+   "n_resolved": 195,
+   "hit_rate": 0.12307692307692308,
+   "expectancy": -9.63076923076923
+  },
+  "ranking": {
+   "T+1h": {
+    "live": 240,
+    "stalled": 214,
+    "stalled_hit": 0.3333333333333333,
+    "prog_hit": 0.631578947368421,
+    "gain": -2.128504672897212
+   },
+   "T+2h": {
+    "live": 182,
+    "stalled": 150,
+    "stalled_hit": 0.29333333333333333,
+    "prog_hit": 0.8695652173913043,
+    "gain": 0.5193333333332824
+   },
+   "T+3h": {
+    "live": 144,
+    "stalled": 117,
+    "stalled_hit": 0.3125,
+    "prog_hit": 0.875,
+    "gain": -0.8444444444443153
+   }
+  },
+  "sensitivities": {
+   "cut30": {
+    "stalled": 161,
+    "progressed": 21,
+    "gain": 0.47826086956518044
+   },
+   "cut40": {
+    "stalled": 177,
+    "progressed": 5,
+    "gain": -0.09152542372883055
+   }
+  },
+  "per_hour": {
+   "PROGRESSED": 13.470857471812357,
+   "STALLED": -0.45741203786310525,
+   "RESOLVED<2h": -69.82251940700198
+  },
+  "n1": {
+   "share_stalled": "median 0.9082, 5-95% [0.8717, 0.9397]",
+   "stalled_hit": "median 0.2466, 5-95% [0.1639, 0.3374]",
+   "stalled_exp": "median 3.511, 5-95% [0.9993, 6.268]",
+   "prog_hit": "median 0.8333, 5-95% [0.6, 1]",
+   "prog_exp": "median 31.62, 5-95% [21.91, 40.18]",
+   "gain_of_timestop": "median 0.2269, 5-95% [-2.042, 2.519]"
+  },
+  "counterfactual": {
+   "n": 150,
+   "let_run": 5.611333333333342,
+   "cut_now": 6.130666666666625,
+   "gain": 0.5193333333332824,
+   "pct": 57.8,
+   "perm_p": 0.803,
+   "per_all_trades": 0.20339425587465368,
+   "wr_run": 0.5266666666666666,
+   "wr_cut": 0.7333333333333333
+  }
+ },
+ "B": {
+  "arm": "B",
+  "n_days": 512,
+  "n_trig": 393,
+  "resolved_early": 189,
+  "no_horizon": 8,
+  "live": 196,
+  "progressed": {
+   "n": 31,
+   "n_target": 19,
+   "n_stop": 4,
+   "n_open": 8,
+   "n_resolved": 23,
+   "hit_rate": 0.8260869565217391,
+   "expectancy": 34.04193548387097,
+   "pct_hit_vs_N1": 48.1,
+   "pct_exp_vs_N1": 65.2
+  },
+  "stalled": {
+   "n": 165,
+   "n_target": 25,
+   "n_stop": 65,
+   "n_open": 75,
+   "n_resolved": 90,
+   "hit_rate": 0.2777777777777778,
+   "expectancy": 5.062424242424235,
+   "pct_hit_vs_N1": 62.6,
+   "pct_exp_vs_N1": 73.7
+  },
+  "early": {
+   "n": 189,
+   "n_target": 21,
+   "n_stop": 168,
+   "n_open": 0,
+   "n_resolved": 189,
+   "hit_rate": 0.1111111111111111,
+   "expectancy": -10.444444444444445
+  },
+  "ranking": {
+   "T+1h": {
+    "live": 250,
+    "stalled": 230,
+    "stalled_hit": 0.3082191780821918,
+    "prog_hit": 0.6666666666666666,
+    "gain": -0.7708695652173878
+   },
+   "T+2h": {
+    "live": 196,
+    "stalled": 165,
+    "stalled_hit": 0.2777777777777778,
+    "prog_hit": 0.8260869565217391,
+    "gain": -0.004848484848490209
+   },
+   "T+3h": {
+    "live": 153,
+    "stalled": 122,
+    "stalled_hit": 0.28,
+    "prog_hit": 0.9047619047619048,
+    "gain": -1.1680327868850098
+   }
+  },
+  "sensitivities": {
+   "cut30": {
+    "stalled": 177,
+    "progressed": 19,
+    "gain": 0.17175141242937197
+   },
+   "cut40": {
+    "stalled": 191,
+    "progressed": 5,
+    "gain": -0.0026178010471138435
+   }
+  },
+  "per_hour": {
+   "PROGRESSED": 12.386978213799694,
+   "STALLED": -1.0099162936221273,
+   "RESOLVED<2h": -57.87540216576619
+  },
+  "n1": {
+   "share_stalled": "median 0.9023, 5-95% [0.8639, 0.9369]",
+   "stalled_hit": "median 0.2615, 5-95% [0.178, 0.3521]",
+   "stalled_exp": "median 3.966, 5-95% [1.236, 6.702]",
+   "prog_hit": "median 0.8333, 5-95% [0.6361, 1]",
+   "prog_exp": "median 31.89, 5-95% [23.18, 39.61]",
+   "gain_of_timestop": "median 0.1285, 5-95% [-2.31, 2.541]"
+  },
+  "counterfactual": {
+   "n": 165,
+   "let_run": 5.062424242424235,
+   "cut_now": 5.057575757575745,
+   "gain": -0.004848484848490209,
+   "pct": 46.7,
+   "perm_p": 0.998,
+   "per_all_trades": -0.0020356234096714615,
+   "wr_run": 0.49696969696969695,
+   "wr_cut": 0.6606060606060606
+  }
+ }
+}

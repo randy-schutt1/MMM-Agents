@@ -1,0 +1,220 @@
+==============================================================================
+PT-017 — 'In profit in 15 to 45 minutes. Guaranteed.' — CL1 (W-B)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-B 2014-01-05 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-017_in_profit_in_fifteen_to_fortyfive_minutes.md
+GOVERNING: `D-009` — CL1 is a hypothesis to test, never a target. No parameter
+           here may be adjusted to bring the result closer to 15-45 minutes.
+RESOLUTION: trigger on 15m closes (as pre-registered); time-to-profit measured
+           at M1 = 1-minute resolution, finer than the preferred 5-minute.
+SCOPE    : this is a LOCATION trigger, not the instructor's entry, which is
+           the close of a second leg (`A-007`) confirmed by TDI (`A-039`) —
+           neither defined in V01-V06. `PT-017` §6 is binding.
+
+----- ARM A -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+trigger — first 15m close 25-50 pips beyond a box edge, direction away:
+  fired on 0.748 (383/512), 95% CI [0.709, 0.784] of session days
+  side: short (high breach) 172  long (low breach) 211
+  median excursion at trigger: 30.1 pips
+  entry price = that bar's close. NO slippage or spread model is invented
+  (`PT-017` §3); the corpus is BID data, so spread would worsen every
+  figure below. Stated here rather than modelled.
+
+[BASELINES — run and printed BEFORE the trigger population's checkpoints]
+
+  N1 — matched random entry, same hours, direction matched, 1,000 iters, seed 20260812
+    share in profit at t+ 15: median 0.496, 5-95% [0.4509, 0.5391]
+    share in profit at t+ 30: median 0.4973, 5-95% [0.4543, 0.5428]
+    share in profit at t+ 45: median 0.4986, 5-95% [0.4555, 0.54]
+    share in profit at t+ 60: median 0.4972, 5-95% [0.4551, 0.5402]
+    share in profit at t+120: median 0.497, 5-95% [0.4529, 0.5463]
+    ever in profit           : median 0.9869, 5-95% [0.9765, 0.9948]
+    median time to >0 pips   : median 0, 5-95% [0, 0] min
+    ever reaching +10 pips   : median 0.624, 5-95% [0.5875, 0.6684]
+    median time to +10 pips  : median 35, 5-95% [29, 43] min   <- Measure 2's own baseline
+    median MAE before profit : median 0.9, 5-95% [0.7, 1] pips
+    N1 secondary, RANDOM direction (`D-029` / `PT-017` §4 third arm):
+      share in profit at t+ 15: median 0.4947, 5-95% [0.4536, 0.5383]
+      share in profit at t+ 30: median 0.4973, 5-95% [0.4521, 0.5391]
+      share in profit at t+ 45: median 0.4959, 5-95% [0.4533, 0.5402]
+      share in profit at t+ 60: median 0.4972, 5-95% [0.4556, 0.5406]
+      share in profit at t+120: median 0.4993, 5-95% [0.4543, 0.5438]
+
+  SECOND BASELINE — the natural control (`PT-017` §4): the same measures on days
+  where NO qualifying 25-50 excursion occurred, entered at the same clock times.
+  Isolates the trigger from the hour.
+  untriggered session days: 129; entries placed: 129
+  NATURAL CONTROL (untriggered days): n = 129
+    M1 — ever in profit before 17:00   : 1.000 (129/129), 95% CI [0.971, 1.000]
+    M1 — median time to first >0 pips  : 0 min   (of those that got there)
+    M1 — share reaching >0 within 45m  : 0.977 (126/129), 95% CI [0.934, 0.992]
+    M2 — ever reaching +10 pips        : 0.682 (88/129), 95% CI [0.598, 0.756]
+    M2 — median time to +10 pips       : 56 min
+    M3 — share in profit at checkpoint (nan = the day ended first):
+        t+ 15 min : 0.519 (67/129), 95% CI [0.434, 0.604]   median P&L +0.3 pips
+        t+ 30 min : 0.434 (56/129), 95% CI [0.352, 0.520]   median P&L -1.0 pips
+        t+ 45 min : 0.457 (59/129), 95% CI [0.374, 0.543]   median P&L -0.7 pips
+        t+ 60 min : 0.453 (58/128), 95% CI [0.370, 0.539]   median P&L -1.2 pips
+        t+120 min : 0.472 (60/127), 95% CI [0.388, 0.559]   median P&L -1.6 pips
+    M4 — MAE before first profit       : median 0.9, p90 4.1 pips
+    M4 — share whose MAE-before-profit >= the 18-pip stop : 0.023 (3/129), 95% CI [0.008, 0.066]
+
+[RULE ARM — the trigger population, unstopped path, M1 resolution]
+  TRIGGERED (25-50 pip location trigger): n = 383
+    M1 — ever in profit before 17:00   : 0.979 (375/383), 95% CI [0.959, 0.989]
+    M1 — median time to first >0 pips  : 0 min   (of those that got there)
+    M1 — share reaching >0 within 45m  : 0.971 (372/383), 95% CI [0.949, 0.984]
+    M2 — ever reaching +10 pips        : 0.778 (298/383), 95% CI [0.734, 0.817]
+    M2 — median time to +10 pips       : 24 min
+    M3 — share in profit at checkpoint (nan = the day ended first):
+        t+ 15 min : 0.525 (201/383), 95% CI [0.475, 0.574]   median P&L +0.6 pips
+        t+ 30 min : 0.533 (204/383), 95% CI [0.483, 0.582]   median P&L +0.9 pips
+        t+ 45 min : 0.530 (203/383), 95% CI [0.480, 0.579]   median P&L +0.9 pips
+        t+ 60 min : 0.495 (189/382), 95% CI [0.445, 0.545]   median P&L -0.1 pips
+        t+120 min : 0.509 (192/377), 95% CI [0.459, 0.559]   median P&L +0.3 pips
+    M4 — MAE before first profit       : median 2.0, p90 9.3 pips
+    M4 — share whose MAE-before-profit >= the 18-pip stop : 0.047 (18/383), 95% CI [0.030, 0.073]
+
+  percentile of the rule arm within N1:
+    share in profit at t+ 15: obs 0.525  -> pct 86.3
+    share in profit at t+ 30: obs 0.533  -> pct 90.6
+    share in profit at t+ 45: obs 0.530  -> pct 89.4
+    share in profit at t+ 60: obs 0.495  -> pct 45.8
+    share in profit at t+120: obs 0.509  -> pct 68.4
+    ever in profit           : obs 0.979 -> pct 5.3
+    median time to >0 pips   : obs 0 min -> pct 0.0  (LOW percentile = faster than the null)
+    ever reaching +10 pips   : obs 0.778 -> pct 100.0
+    median time to +10 pips  : obs 24 min -> pct 0.0  (LOW percentile = faster than the null)
+    median MAE before profit : obs 2.0 -> pct 100.0
+
+[THE LIVED VERSION — the same trigger with the 18/50 stop and target in place]
+  n = 383   target 66 / stop 227 / open 90
+  hit rate (of resolved): 0.225 (66/293), 95% CI [0.181, 0.276]
+  expectancy: +0.41 pips  boot 95% CI (-2.106697127937325, 3.055345953002618)
+
+[`CL1` READ AGAINST THE PRE-REGISTERED WORDING — `D-009`: a hypothesis, never a target]
+  "in profit in 15 to 45 minutes": share first reaching >0 pips within 45 min = 0.971 (372/383), 95% CI [0.949, 0.984]
+  share whose FIRST profit falls inside the 15-45 minute band itself = 0.021
+  "Guaranteed" is refuted by construction: any share below 1.000 refutes it, and
+  the observed share is below 1.000 on every arm and every reading.
+
+----- ARM B -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+trigger — first 15m close 25-50 pips beyond a box edge, direction away:
+  fired on 0.768 (393/512), 95% CI [0.729, 0.802] of session days
+  side: short (high breach) 179  long (low breach) 214
+  median excursion at trigger: 30.4 pips
+  entry price = that bar's close. NO slippage or spread model is invented
+  (`PT-017` §3); the corpus is BID data, so spread would worsen every
+  figure below. Stated here rather than modelled.
+
+[BASELINES — run and printed BEFORE the trigger population's checkpoints]
+
+  N1 — matched random entry, same hours, direction matched, 1,000 iters, seed 20260812
+    share in profit at t+ 15: median 0.4954, 5-95% [0.4559, 0.5365]
+    share in profit at t+ 30: median 0.4947, 5-95% [0.4555, 0.5358]
+    share in profit at t+ 45: median 0.4973, 5-95% [0.4548, 0.5411]
+    share in profit at t+ 60: median 0.4973, 5-95% [0.4548, 0.5422]
+    share in profit at t+120: median 0.4955, 5-95% [0.454, 0.5413]
+    ever in profit           : median 0.9873, 5-95% [0.9771, 0.9949]
+    median time to >0 pips   : median 0, 5-95% [0, 0] min
+    ever reaching +10 pips   : median 0.6463, 5-95% [0.6081, 0.687]
+    median time to +10 pips  : median 34.5, 5-95% [29.5, 42.5] min   <- Measure 2's own baseline
+    median MAE before profit : median 0.9, 5-95% [0.8, 1] pips
+    N1 secondary, RANDOM direction (`D-029` / `PT-017` §4 third arm):
+      share in profit at t+ 15: median 0.4948, 5-95% [0.4545, 0.5361]
+      share in profit at t+ 30: median 0.496, 5-95% [0.4545, 0.5393]
+      share in profit at t+ 45: median 0.4973, 5-95% [0.4528, 0.5387]
+      share in profit at t+ 60: median 0.4986, 5-95% [0.4518, 0.5404]
+      share in profit at t+120: median 0.4985, 5-95% [0.454, 0.543]
+
+  SECOND BASELINE — the natural control (`PT-017` §4): the same measures on days
+  where NO qualifying 25-50 excursion occurred, entered at the same clock times.
+  Isolates the trigger from the hour.
+  untriggered session days: 119; entries placed: 119
+  NATURAL CONTROL (untriggered days): n = 119
+    M1 — ever in profit before 17:00   : 0.983 (117/119), 95% CI [0.941, 0.995]
+    M1 — median time to first >0 pips  : 0 min   (of those that got there)
+    M1 — share reaching >0 within 45m  : 0.958 (114/119), 95% CI [0.905, 0.982]
+    M2 — ever reaching +10 pips        : 0.773 (92/119), 95% CI [0.690, 0.839]
+    M2 — median time to +10 pips       : 74 min
+    M3 — share in profit at checkpoint (nan = the day ended first):
+        t+ 15 min : 0.429 (51/119), 95% CI [0.343, 0.518]   median P&L -0.7 pips
+        t+ 30 min : 0.521 (62/119), 95% CI [0.432, 0.609]   median P&L +0.6 pips
+        t+ 45 min : 0.445 (53/119), 95% CI [0.359, 0.535]   median P&L -1.0 pips
+        t+ 60 min : 0.479 (57/119), 95% CI [0.391, 0.568]   median P&L -0.3 pips
+        t+120 min : 0.496 (57/115), 95% CI [0.406, 0.586]   median P&L +0.0 pips
+    M4 — MAE before first profit       : median 1.0, p90 4.0 pips
+    M4 — share whose MAE-before-profit >= the 18-pip stop : 0.025 (3/119), 95% CI [0.009, 0.072]
+
+[RULE ARM — the trigger population, unstopped path, M1 resolution]
+  TRIGGERED (25-50 pip location trigger): n = 393
+    M1 — ever in profit before 17:00   : 0.982 (386/393), 95% CI [0.964, 0.991]
+    M1 — median time to first >0 pips  : 0 min   (of those that got there)
+    M1 — share reaching >0 within 45m  : 0.975 (383/393), 95% CI [0.954, 0.986]
+    M2 — ever reaching +10 pips        : 0.786 (309/393), 95% CI [0.743, 0.824]
+    M2 — median time to +10 pips       : 27 min
+    M3 — share in profit at checkpoint (nan = the day ended first):
+        t+ 15 min : 0.515 (202/392), 95% CI [0.466, 0.564]   median P&L +0.5 pips
+        t+ 30 min : 0.527 (206/391), 95% CI [0.477, 0.576]   median P&L +0.9 pips
+        t+ 45 min : 0.519 (203/391), 95% CI [0.470, 0.568]   median P&L +0.9 pips
+        t+ 60 min : 0.506 (198/391), 95% CI [0.457, 0.556]   median P&L +0.1 pips
+        t+120 min : 0.493 (188/381), 95% CI [0.444, 0.543]   median P&L -0.2 pips
+    M4 — MAE before first profit       : median 1.9, p90 9.3 pips
+    M4 — share whose MAE-before-profit >= the 18-pip stop : 0.046 (18/393), 95% CI [0.029, 0.071]
+
+  percentile of the rule arm within N1:
+    share in profit at t+ 15: obs 0.515  -> pct 79.6
+    share in profit at t+ 30: obs 0.527  -> pct 89.7
+    share in profit at t+ 45: obs 0.519  -> pct 80.6
+    share in profit at t+ 60: obs 0.506  -> pct 62.6
+    share in profit at t+120: obs 0.493  -> pct 46.3
+    ever in profit           : obs 0.982 -> pct 16.2
+    median time to >0 pips   : obs 0 min -> pct 0.0  (LOW percentile = faster than the null)
+    ever reaching +10 pips   : obs 0.786 -> pct 100.0
+    median time to +10 pips  : obs 27 min -> pct 0.4  (LOW percentile = faster than the null)
+    median MAE before profit : obs 1.9 -> pct 100.0
+
+[THE LIVED VERSION — the same trigger with the 18/50 stop and target in place]
+  n = 393   target 65 / stop 237 / open 91
+  hit rate (of resolved): 0.215 (65/302), 95% CI [0.173, 0.265]
+  expectancy: -0.06 pips  boot 95% CI (-2.5218320610686935, 2.556234096692085)
+
+[`CL1` READ AGAINST THE PRE-REGISTERED WORDING — `D-009`: a hypothesis, never a target]
+  "in profit in 15 to 45 minutes": share first reaching >0 pips within 45 min = 0.975 (383/393), 95% CI [0.954, 0.986]
+  share whose FIRST profit falls inside the 15-45 minute band itself = 0.025
+  "Guaranteed" is refuted by construction: any share below 1.000 refutes it, and
+  the observed share is below 1.000 on every arm and every reading.
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always
+==============================================================================
+                                             ARM A       ARM B
+n triggered days                               383         393
+ever in profit (share)                       0.979       0.982
+median min to first >0 pip                       0           0
+share first profit within 45 min             0.971       0.975
+share in profit at t+15                      0.525       0.515
+share in profit at t+30                      0.533       0.527
+share in profit at t+45                      0.530       0.519
+share in profit at t+60                      0.495       0.506
+share in profit at t+120                     0.509       0.493
+pct of N1 at t+45                             89.4        80.6
+median min to +10 pips                          24          27
+pct of N1, time to +10                         0.0         0.4
+median MAE before profit                       2.0         1.9
+share MAE-before-profit >= 18                0.047       0.046
+18/50 hit rate                               0.225       0.215
+18/50 expectancy (pips)                      +0.41       -0.06

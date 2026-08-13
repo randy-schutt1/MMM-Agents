@@ -1,0 +1,178 @@
+==============================================================================
+PT-015 — Does a 50-pip ceiling exist? Excursion strata (W-B)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-B 2014-01-05 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-015_does_the_fifty_pip_ceiling_exist.md
+STRATA   : S1 10-24 | S2 25-50 | S3 51-100 | S4 >100  — the instructor's own
+           numbers (V02 [00:44:59], V04 [00:15:43]). MERGING IS FORBIDDEN.
+BASELINE : N1 matched random entry per stratum + random-direction secondary;
+           S1 as the natural low-side comparator; volatility-matched S2/S3.
+DEPENDS  : PT-014 / BT_V04_0001 forecast S3 thin and S4 empty BEFORE this ran.
+
+----- ARM A -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+session days: 512   days with a first qualifying close (>=10 pips): 474
+trade grid: 28,825 eligible M15 entry bars x 2 directions, stop 18 / target 50, resolved on M1
+
+[BASELINES — run and printed BEFORE any stratum's result is read]
+  N1 S1 (n = 416, direction matched, 1,000 iters, seed 20260812):
+      hit rate   median 0.1972, 5-95% [0.1545, 0.2399]
+      expectancy median -0.2157, 5-95% [-1.935, 1.575] pips
+      median MAE median 15, 5-95% [13.25, 17] pips
+    N1 secondary, RANDOM direction (`D-029`):
+      hit rate   median 0.1991, 5-95% [0.1535, 0.2414]
+      expectancy median -0.06875, 5-95% [-1.81, 1.628] pips
+  N1 S2 (n = 44, direction matched, 1,000 iters, seed 20260812):
+      hit rate   median 0.2, 5-95% [0.07692, 0.3478]
+      expectancy median -0.1409, 5-95% [-5.342, 5.634] pips
+      median MAE median 14.72, 5-95% [9.697, 18.25] pips
+    N1 secondary, RANDOM direction (`D-029`):
+      hit rate   median 0.1905, 5-95% [0.07394, 0.3333]
+      expectancy median -0.2761, 5-95% [-5.502, 5.777] pips
+  N1 S3 (n = 12, direction matched, 1,000 iters, seed 20260812):
+      hit rate   median 0.1667, 5-95% [0, 0.5]
+      expectancy median -0.3833, 5-95% [-9.526, 11.65] pips
+      median MAE median 14.6, 5-95% [6.6, 18.85] pips
+    N1 secondary, RANDOM direction (`D-029`):
+      hit rate   median 0.1667, 5-95% [0, 0.5]
+      expectancy median -0.8625, 5-95% [-10.54, 10.44] pips
+  N1 S4: n = 0 — no baseline possible
+
+[RULE ARM — the four pre-registered strata, NOT merged]
+  S1  10 <= e < 25 pips: n = 416
+    target / stop / open        : 63 / 290 / 63
+    hit rate (of resolved)      : 0.178 (63/353), 95% CI [0.142, 0.222]
+    expectancy (pips/trade)     : -3.29   boot 95% CI (-5.778467548076911, -0.7511658653846179)
+    MAE median / p90 (pips)     : 18.9 / 25.5
+    median hold to exit (min)   : 72
+    intrabar stop/target ties   : 0 (convention C-4, stop first)
+    vs N1: hit rate at pct 23.5; expectancy at pct 0.2
+  S2  25 <= e <= 50 pips: n = 44
+    target / stop / open        : 11 / 30 / 3
+    hit rate (of resolved)      : 0.268 (11/41), 95% CI [0.157, 0.419]
+    expectancy (pips/trade)     : +1.99   boot 95% CI (-6.605056818181842, 10.920965909090905)
+    MAE median / p90 (pips)     : 18.6 / 23.8
+    median hold to exit (min)   : 45
+    intrabar stop/target ties   : 0 (convention C-4, stop first)
+    vs N1: hit rate at pct 78.2; expectancy at pct 72.9
+  S3  50 < e <= 100 pips: n = 12 <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+    target / stop / open        : 0 / 11 / 1
+    hit rate (of resolved)      : 0.000 (0/11), 95% CI [0.000, 0.259]  <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+    expectancy (pips/trade)     : -13.77   boot 95% CI (-18.0, -5.300000000000126)
+    MAE median / p90 (pips)     : 19.7 / 27.5
+    median hold to exit (min)   : 54
+    intrabar stop/target ties   : 0 (convention C-4, stop first)
+    vs N1: hit rate at pct 0.0; expectancy at pct 0.7
+    >>> SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only. No rate above may be quoted without this label.
+  S4  e > 100 pips: n = 0 — no trades
+
+[SECOND BASELINE — S1 as the natural low-side comparator for S2 (`PT-015` §4)]
+  mean expectancy S2 - S1 = +5.28 pips; label-shuffle permutation two-sided p = 0.205 (1,000 shuffles, seed 20260812)
+  hit rate S1 0.178 (63/353), 95% CI [0.142, 0.222]
+  hit rate S2 0.268 (11/41), 95% CI [0.157, 0.419]
+
+[THIRD BASELINE — volatility-matched S2 vs S3 pairing (`PT-015` §4). 'The third arm decides the test.']
+  matched pairs: 12   median |prior-TR difference| = 1.2 pips
+  prior TR: S3 median 86.3, matched S2 median 86.0, unmatched S2 median 105.5 pips
+  paired mean expectancy  S3 -13.77  S2 +10.33  diff -24.10 pips
+  permutation two-sided p = 0.030
+  >>> n = 12 <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+
+[context — prior true range by stratum, pips]
+  S1: median prior TR 92.8   median box range 30.5
+  S2: median prior TR 105.5   median box range 34.8
+  S3: median prior TR 86.3   median box range 27.0
+
+----- ARM B -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+session days: 512   days with a first qualifying close (>=10 pips): 486
+trade grid: 28,821 eligible M15 entry bars x 2 directions, stop 18 / target 50, resolved on M1
+
+[BASELINES — run and printed BEFORE any stratum's result is read]
+  N1 S1 (n = 428, direction matched, 1,000 iters, seed 20260812):
+      hit rate   median 0.2008, 5-95% [0.1634, 0.243]
+      expectancy median -0.1203, 5-95% [-1.898, 1.72] pips
+      median MAE median 16.1, 5-95% [14.1, 18] pips
+    N1 secondary, RANDOM direction (`D-029`):
+      hit rate   median 0.2043, 5-95% [0.1645, 0.248]
+      expectancy median 0.003037, 5-95% [-1.67, 1.904] pips
+  N1 S2 (n = 46, direction matched, 1,000 iters, seed 20260812):
+      hit rate   median 0.2, 5-95% [0.07985, 0.3438]
+      expectancy median -0.09783, 5-95% [-5.366, 5.791] pips
+      median MAE median 15.95, 5-95% [10.85, 18.35] pips
+    N1 secondary, RANDOM direction (`D-029`):
+      hit rate   median 0.2, 5-95% [0.07407, 0.3333]
+      expectancy median -0.2837, 5-95% [-5.75, 5.511] pips
+  N1 S3 (n = 9, direction matched, 1,000 iters, seed 20260812):
+      hit rate   median 0.1667, 5-95% [0, 0.5]
+      expectancy median -0.5056, 5-95% [-11.28, 12.63] pips
+      median MAE median 16.1, 5-95% [6.395, 19.3] pips
+    N1 secondary, RANDOM direction (`D-029`):
+      hit rate   median 0.2, 5-95% [0, 0.5]
+      expectancy median -0.4, 5-95% [-11.77, 12.74] pips
+  N1 S4: n = 0 — no baseline possible
+
+[RULE ARM — the four pre-registered strata, NOT merged]
+  S1  10 <= e < 25 pips: n = 428
+    target / stop / open        : 81 / 281 / 66
+    hit rate (of resolved)      : 0.224 (81/362), 95% CI [0.184, 0.269]
+    expectancy (pips/trade)     : -0.52   boot 95% CI (-2.954082943925242, 1.9822546728972008)
+    MAE median / p90 (pips)     : 18.8 / 24.7
+    median hold to exit (min)   : 70
+    intrabar stop/target ties   : 0 (convention C-4, stop first)
+    vs N1: hit rate at pct 80.9; expectancy at pct 36.2
+  S2  25 <= e <= 50 pips: n = 46
+    target / stop / open        : 11 / 28 / 7
+    hit rate (of resolved)      : 0.282 (11/39), 95% CI [0.165, 0.438]
+    expectancy (pips/trade)     : +4.59   boot 95% CI (-3.702391304347837, 13.408695652173861)
+    MAE median / p90 (pips)     : 18.4 / 24.0
+    median hold to exit (min)   : 114
+    intrabar stop/target ties   : 0 (convention C-4, stop first)
+    vs N1: hit rate at pct 83.1; expectancy at pct 90.6
+  S3  50 < e <= 100 pips: n = 9 <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+    target / stop / open        : 0 / 8 / 1
+    hit rate (of resolved)      : 0.000 (0/8), 95% CI [0.000, 0.324]  <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+    expectancy (pips/trade)     : -12.36   boot 95% CI (-18.0, -1.0666666666668358)
+    MAE median / p90 (pips)     : 20.5 / 22.8
+    median hold to exit (min)   : 29
+    intrabar stop/target ties   : 0 (convention C-4, stop first)
+    vs N1: hit rate at pct 0.0; expectancy at pct 3.0
+    >>> SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only. No rate above may be quoted without this label.
+  S4  e > 100 pips: n = 0 — no trades
+
+[SECOND BASELINE — S1 as the natural low-side comparator for S2 (`PT-015` §4)]
+  mean expectancy S2 - S1 = +5.11 pips; label-shuffle permutation two-sided p = 0.240 (1,000 shuffles, seed 20260812)
+  hit rate S1 0.224 (81/362), 95% CI [0.184, 0.269]
+  hit rate S2 0.282 (11/39), 95% CI [0.165, 0.438]
+
+[THIRD BASELINE — volatility-matched S2 vs S3 pairing (`PT-015` §4). 'The third arm decides the test.']
+  matched pairs: 9   median |prior-TR difference| = 1.3 pips
+  prior TR: S3 median 91.8, matched S2 median 90.7, unmatched S2 median 98.7 pips
+  paired mean expectancy  S3 -12.36  S2 +8.72  diff -21.08 pips
+  permutation two-sided p = 0.142
+  >>> n = 9 <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+
+[context — prior true range by stratum, pips]
+  S1: median prior TR 92.6   median box range 26.3
+  S2: median prior TR 98.7   median box range 31.2
+  S3: median prior TR 91.8   median box range 23.0
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always
+==============================================================================
+stratum      n (A)   hit (A)   exp (A)   n (B)   hit (B)   exp (B)
+S1             416     0.178     -3.29     428     0.224     -0.52
+S2              44     0.268     +1.99      46     0.282     +4.59
+S3              12     0.000    -13.77       9     0.000    -12.36
+S4               0       n/a       n/a       0       n/a       n/a

@@ -1,0 +1,183 @@
+==============================================================================
+PT-018 — The two-hour time stop — is 'not in profit yet' predictive? (W-B)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-B 2014-01-05 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-018_two_hour_time_stop.md
+CLAIM    : slide [00:33:10] 'If Trade Does Not See Substantial Profit In 2 Hours,
+           Take Profit Or Small Loss'; audio [00:34:23] 'The time clock is not
+           negotiable... 25, 30, 40 pips - then out. Scratch out.'
+CLASSIFIER: PROGRESSED if unrealised P&L >= +25 pips at T+2h, else STALLED.
+           +25 is the LOWEST of the instructor's three; 30 and 40 are run as
+           PRE-REGISTERED sensitivities, not as alternatives to choose among.
+SCOPE    : a MANAGEMENT rule on a PROXY entry. Measure 3 NOT MODELLED (`A-007`).
+
+----- ARM A -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+entry proxy — first 15m close 25-50 pips beyond a box edge, direction away, stop 18 / target 50
+  triggered on 0.748 (383/512), 95% CI [0.709, 0.784] of session days
+
+  >>> MEASURE 3 — the second-leg clock reset (V02 [00:34:51], 'If you see a second leg,
+      restart the clock') is NOT MODELLED. `A-007` is undefined across V01-V06 and
+      `D-030` forbids approximating it. This therefore measures a STRICTER rule than
+      the one taught, and the bias favours finding the time stop WORSE than it is.
+
+[PRIMARY BASELINE — N1 matched random entry, classified identically at T+2h]
+  `PT-018` §4: 'Establishes the base rate at which ANY position that is flat at
+   2 hours goes on to lose. This is the comparison that decides whether the rule adds anything.'
+    share of live positions STALLED at T+2h : median 0.9082, 5-95% [0.8717, 0.9397]
+    STALLED    eventual hit rate            : median 0.2466, 5-95% [0.1639, 0.3374]
+    STALLED    expectancy if let run        : median 3.511, 5-95% [0.9993, 6.268] pips
+    PROGRESSED eventual hit rate            : median 0.8333, 5-95% [0.6, 1]
+    PROGRESSED expectancy if let run        : median 31.62, 5-95% [21.91, 40.18] pips
+    VALUE OF THE TIME STOP under N1         : median 0.2269, 5-95% [-2.042, 2.519] pips per STALLED trade
+
+[RULE ARM — the trigger population classified at T+2h, cut = +25 pips]
+  RESOLVED before T+2h (stop or target already fired): 195
+  NO HORIZON (17:00 arrived before T+2h, unclassifiable): 6
+  live and classifiable at T+2h: 182
+    PROGRESSED (>= +25 pips): 32
+    STALLED    (<  +25 pips): 150
+  share of live positions STALLED: 0.824 (150/182), 95% CI [0.762, 0.873]
+
+  MEASURE 1 — eventual outcome by class:
+    PROGRESSED: n = 32
+      eventual target / stop / open at 17:00 : 20 / 3 / 9
+      eventual hit rate (of resolved)        : 0.870 (20/23), 95% CI [0.679, 0.955]  <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+      expectancy if LET RUN                  : +36.93 pips  boot 95% CI (28.89953125000001, 44.25046875000005)
+    STALLED: n = 150
+      eventual target / stop / open at 17:00 : 22 / 53 / 75
+      eventual hit rate (of resolved)        : 0.293 (22/75), 95% CI [0.202, 0.404]
+      expectancy if LET RUN                  : +5.61 pips  boot 95% CI (1.9332166666666046, 9.574866666666736)
+    RESOLVED before T+2h (not subject to the rule): n = 195
+      eventual target / stop / open at 17:00 : 24 / 171 / 0
+      eventual hit rate (of resolved)        : 0.123 (24/195), 95% CI [0.084, 0.177]
+      expectancy if LET RUN                  : -9.63 pips  boot 95% CI (-12.42051282051282, -6.143589743589744)
+    STALLED vs N1: hit rate pct 81.3; expectancy pct 90.2
+    PROGRESSED vs N1: hit rate pct 60.9; expectancy pct 85.7
+    PROGRESSED - STALLED mean expectancy = +31.32 pips; permutation two-sided p = 0.000
+
+  MEASURE 2 — THE COUNTERFACTUAL, IN PIPS OF EXPECTANCY (`PT-018` §7 step 4: never a win-rate delta alone)
+    STALLED positions, n = 150
+      LET RUN to stop/target/17:00 : +5.61 pips (boot 95% CI (1.9332166666666046, 9.574866666666736))
+      CLOSED at T+2h at the mark   : +6.13 pips (boot 95% CI (4.705033333333241, 7.519599999999881))
+      VALUE OF THE TIME STOP       : +0.52 pips per STALLED trade
+      percentile within N1         : 57.8
+      paired permutation p         : 0.803
+      spread over ALL 383 trades : +0.203 pips/trade
+      win rate, let run 0.527 vs closed at T+2h 0.733 (reported SECOND, never alone — `PT-018` §5)
+
+  MEASURE 4 — the same classification at T+1h and T+3h, so '2 hours' is RANKED, not assumed
+    T+1h: live 240  STALLED 214 (unclassifiable 1)  STALLED hit 0.333  PROGRESSED hit 0.632  time-stop value -2.13 pips/STALLED trade
+    T+2h: live 182  STALLED 150 (unclassifiable 6)  STALLED hit 0.293  PROGRESSED hit 0.870  time-stop value +0.52 pips/STALLED trade
+    T+3h: live 144  STALLED 117 (unclassifiable 10)  STALLED hit 0.312  PROGRESSED hit 0.875  time-stop value -0.84 pips/STALLED trade
+
+  PRE-REGISTERED SENSITIVITIES — the instructor's other two thresholds (30 / 40 pips)
+    cut = +30 pips: STALLED 161  PROGRESSED 21  STALLED hit 0.329 (27/82), 95% CI [0.237, 0.437]  time-stop value +0.48 pips
+    cut = +40 pips: STALLED 177  PROGRESSED 5  STALLED hit 0.398 (37/93), 95% CI [0.304, 0.499]  time-stop value -0.09 pips
+
+  THIRD BASELINE — expectancy PER HOUR OF EXPOSURE (`PT-018` §4). Positions are open
+  for different durations by construction, so per-trade expectancy is not comparable.
+    PROGRESSED: median hold 194 min; expectancy per hour of exposure +13.47 pips/h (resolved trades only, n = 23)
+    STALLED: median hold 223 min; expectancy per hour of exposure -0.46 pips/h (resolved trades only, n = 75)
+    RESOLVED<2h: median hold 34 min; expectancy per hour of exposure -69.82 pips/h (resolved trades only, n = 183)
+
+----- ARM B -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+entry proxy — first 15m close 25-50 pips beyond a box edge, direction away, stop 18 / target 50
+  triggered on 0.768 (393/512), 95% CI [0.729, 0.802] of session days
+
+  >>> MEASURE 3 — the second-leg clock reset (V02 [00:34:51], 'If you see a second leg,
+      restart the clock') is NOT MODELLED. `A-007` is undefined across V01-V06 and
+      `D-030` forbids approximating it. This therefore measures a STRICTER rule than
+      the one taught, and the bias favours finding the time stop WORSE than it is.
+
+[PRIMARY BASELINE — N1 matched random entry, classified identically at T+2h]
+  `PT-018` §4: 'Establishes the base rate at which ANY position that is flat at
+   2 hours goes on to lose. This is the comparison that decides whether the rule adds anything.'
+    share of live positions STALLED at T+2h : median 0.9023, 5-95% [0.8639, 0.9369]
+    STALLED    eventual hit rate            : median 0.2615, 5-95% [0.178, 0.3521]
+    STALLED    expectancy if let run        : median 3.966, 5-95% [1.236, 6.702] pips
+    PROGRESSED eventual hit rate            : median 0.8333, 5-95% [0.6361, 1]
+    PROGRESSED expectancy if let run        : median 31.89, 5-95% [23.18, 39.61] pips
+    VALUE OF THE TIME STOP under N1         : median 0.1285, 5-95% [-2.31, 2.541] pips per STALLED trade
+
+[RULE ARM — the trigger population classified at T+2h, cut = +25 pips]
+  RESOLVED before T+2h (stop or target already fired): 189
+  NO HORIZON (17:00 arrived before T+2h, unclassifiable): 8
+  live and classifiable at T+2h: 196
+    PROGRESSED (>= +25 pips): 31
+    STALLED    (<  +25 pips): 165
+  share of live positions STALLED: 0.842 (165/196), 95% CI [0.784, 0.886]
+
+  MEASURE 1 — eventual outcome by class:
+    PROGRESSED: n = 31
+      eventual target / stop / open at 17:00 : 19 / 4 / 8
+      eventual hit rate (of resolved)        : 0.826 (19/23), 95% CI [0.629, 0.930]  <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+      expectancy if LET RUN                  : +34.04 pips  boot 95% CI (24.876532258064532, 42.03064516129033)
+    STALLED: n = 165
+      eventual target / stop / open at 17:00 : 25 / 65 / 75
+      eventual hit rate (of resolved)        : 0.278 (25/90), 95% CI [0.196, 0.378]
+      expectancy if LET RUN                  : +5.06 pips  boot 95% CI (1.3993030303030831, 8.684075757575798)
+    RESOLVED before T+2h (not subject to the rule): n = 189
+      eventual target / stop / open at 17:00 : 21 / 168 / 0
+      eventual hit rate (of resolved)        : 0.111 (21/189), 95% CI [0.074, 0.164]
+      expectancy if LET RUN                  : -10.44 pips  boot 95% CI (-13.322751322751323, -7.2063492063492065)
+    STALLED vs N1: hit rate pct 62.6; expectancy pct 73.7
+    PROGRESSED vs N1: hit rate pct 48.1; expectancy pct 65.2
+    PROGRESSED - STALLED mean expectancy = +28.98 pips; permutation two-sided p = 0.000
+
+  MEASURE 2 — THE COUNTERFACTUAL, IN PIPS OF EXPECTANCY (`PT-018` §7 step 4: never a win-rate delta alone)
+    STALLED positions, n = 165
+      LET RUN to stop/target/17:00 : +5.06 pips (boot 95% CI (1.3993030303030831, 8.684075757575798))
+      CLOSED at T+2h at the mark   : +5.06 pips (boot 95% CI (3.5466363636363436, 6.5528333333331705))
+      VALUE OF THE TIME STOP       : -0.00 pips per STALLED trade
+      percentile within N1         : 46.7
+      paired permutation p         : 0.998
+      spread over ALL 393 trades : -0.002 pips/trade
+      win rate, let run 0.497 vs closed at T+2h 0.661 (reported SECOND, never alone — `PT-018` §5)
+
+  MEASURE 4 — the same classification at T+1h and T+3h, so '2 hours' is RANKED, not assumed
+    T+1h: live 250  STALLED 230 (unclassifiable 2)  STALLED hit 0.308  PROGRESSED hit 0.667  time-stop value -0.77 pips/STALLED trade
+    T+2h: live 196  STALLED 165 (unclassifiable 8)  STALLED hit 0.278  PROGRESSED hit 0.826  time-stop value -0.00 pips/STALLED trade
+    T+3h: live 153  STALLED 122 (unclassifiable 9)  STALLED hit 0.280  PROGRESSED hit 0.905  time-stop value -1.17 pips/STALLED trade
+
+  PRE-REGISTERED SENSITIVITIES — the instructor's other two thresholds (30 / 40 pips)
+    cut = +30 pips: STALLED 177  PROGRESSED 19  STALLED hit 0.313 (31/99), 95% CI [0.230, 0.410]  time-stop value +0.17 pips
+    cut = +40 pips: STALLED 191  PROGRESSED 5  STALLED hit 0.361 (39/108), 95% CI [0.277, 0.455]  time-stop value -0.00 pips
+
+  THIRD BASELINE — expectancy PER HOUR OF EXPOSURE (`PT-018` §4). Positions are open
+  for different durations by construction, so per-trade expectancy is not comparable.
+    PROGRESSED: median hold 195 min; expectancy per hour of exposure +12.39 pips/h (resolved trades only, n = 23)
+    STALLED: median hold 206 min; expectancy per hour of exposure -1.01 pips/h (resolved trades only, n = 90)
+    RESOLVED<2h: median hold 32 min; expectancy per hour of exposure -57.88 pips/h (resolved trades only, n = 180)
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always
+==============================================================================
+                                               ARM A       ARM B
+triggered trades                                 383         393
+resolved before T+2h                             195         189
+unclassifiable (no 2h horizon)                     6           8
+live at T+2h                                     182         196
+  PROGRESSED n                                    32          31
+  STALLED n                                      150         165
+PROGRESSED eventual hit rate                   0.870       0.826
+STALLED eventual hit rate                      0.293       0.278
+PROGRESSED expectancy, let run                +36.93      +34.04
+STALLED expectancy, let run                    +5.61       +5.06
+STALLED closed at T+2h                         +6.13       +5.06
+VALUE OF THE TIME STOP (pips)                  +0.52       -0.00
+  percentile within N1                          57.8        46.7
+  permutation p                                0.803       0.998
+  spread over all trades                      +0.203      -0.002

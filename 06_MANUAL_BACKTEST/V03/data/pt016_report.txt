@@ -1,0 +1,258 @@
+==============================================================================
+PT-016 — 'Asian range... less than 50' as a filter (W-B)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-B 2014-01-05 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-016_asian_range_under_fifty_pips_filter.md
+CAVEAT   : `PT-016` §1a — the threshold is the course author's but is quoted
+           from teaching OUTSIDE this 21-video library. No result here
+           authorises `< 50 pips` as a course rule or a spec entry.
+ORDER    : distribution + continuous curve + random-median control are
+           computed BEFORE the 50-pip cut is applied (`PT-016` §7 step 3).
+
+----- ARM A -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+session days: 512   trade grid: 28,825 eligible entry bars x 2 directions
+
+[1. THE BOX-RANGE DISTRIBUTION — computed before the 50-pip cut is applied]
+  median 31.0  mean 33.6  p10 17.5  p25 22.4  p75 40.9  p90 51.5  max 132.6
+    [    0,   10)     3  #
+    [   10,   20)    90  ##############################
+    [   20,   30)   151  ##################################################
+    [   30,   40)   132  ############################################
+    [   40,   50)    82  ###########################
+    [   50,   60)    22  #######   <<< the instructor's cut, V03 [00:44:48]
+    [   60,   70)    16  #####
+    [   70,   80)     8  ###
+    [   80,   90)     2  #
+    [   90,  100)     2  #
+    [  100,  110)     1  
+    [  110,  120)     3  #
+    [  120,  130)     0  
+  share of days with box < 50 pips: 0.895 (458/512), 95% CI [0.865, 0.918]
+
+[2. THE CONTINUOUS CURVE — outcome as a function of box range, 10-pip bins]
+   (the safeguard: it shows whether anything happens AT 50, without anyone having chosen 50)
+             bin     n   med exc   exc/TR      both   trig     hit      exp
+    [   0,  10)     3      21.1    0.517     1.000      0     n/a      n/a
+    [  10,  20)    90      44.7    0.638     0.722     61   0.152    +1.33
+    [  20,  30)   151      48.0    0.585     0.616    111   0.215    +0.60
+    [  30,  40)   132      55.3    0.569     0.500    102   0.253    +0.81
+    [  40,  50)    82      55.6    0.529     0.427     67   0.211    -2.01
+    [  50,  60)    22      61.4    0.508     0.318     19   0.235    -0.56
+    [  60,  70)    16      50.0    0.439     0.312     11   0.200    -2.79
+    [  70,  80)     8      60.8    0.392     0.625      7   0.500   +15.01
+    [  80,  90)     2      40.7    0.323     0.000      2   1.000   +26.15
+    [  90, 100)     2      39.6    0.269     0.000      1   0.000   -18.00
+    [ 100, 110)     1     139.1    0.578     0.000      1   0.000   -18.00
+    [ 110, 120)     1      24.1    0.174     0.000      0     n/a      n/a
+    [ 120, 130)     2     113.8    0.404     0.000      1   0.000   -18.00
+
+[3. SECOND BASELINE — the random-median split (`PT-016` §4)]
+  median split point (no doctrinal claim attached): 31.0 pips
+  median-LOW (box < 31.0): n = 256
+    (a) max excursion beyond box : median 45.5 pips  mean 57.3
+    (a) volatility-normalised    : median 0.592 of the day's own true range
+    (b) day's HIGH beyond box hi : 0.789 (202/256), 95% CI [0.735, 0.835]
+    (b) day's LOW  beyond box lo : 0.863 (221/256), 95% CI [0.816, 0.900]
+    (b) BOTH extremes beyond box : 0.652 (167/256), 95% CI [0.592, 0.708]
+    (b) either edge (tautological here): 1.000 (256/256), 95% CI [0.985, 1.000]
+    (c) trigger fired on         : 0.715 (183/256), 95% CI [0.657, 0.767] of days
+    (c) hit rate (of resolved)   : 0.205 (24/117), 95% CI [0.142, 0.287]
+    (c) expectancy               : +1.41 pips  boot 95% CI (-2.0524316939891114, 4.887172131147593)
+  median-HIGH (box >= 31.0): n = 256
+    (a) max excursion beyond box : median 57.9 pips  mean 67.3
+    (a) volatility-normalised    : median 0.532 of the day's own true range
+    (b) day's HIGH beyond box hi : 0.695 (178/256), 95% CI [0.636, 0.748]
+    (b) day's LOW  beyond box lo : 0.742 (190/256), 95% CI [0.685, 0.792]
+    (b) BOTH extremes beyond box : 0.438 (112/256), 95% CI [0.378, 0.499]
+    (b) either edge (tautological here): 1.000 (256/256), 95% CI [0.985, 1.000]
+    (c) trigger fired on         : 0.781 (200/256), 95% CI [0.727, 0.828] of days
+    (c) hit rate (of resolved)   : 0.239 (42/176), 95% CI [0.182, 0.307]
+    (c) expectancy               : -0.50 pips  boot 95% CI (-4.358112500000013, 3.258062500000024)
+
+[4. PRIMARY BASELINE — N1 matched random entry WITHIN EACH ARM (`PT-016` §4)]
+  N1 arm L (n = 341, direction matched, 1,000 iters, seed 20260812):
+      hit rate   median 0.1979, 5-95% [0.1523, 0.2474]
+      expectancy median -0.1375, 5-95% [-2.078, 1.806] pips
+    N1 secondary, RANDOM direction: hit median 0.1977, 5-95% [0.1487, 0.2447]; expectancy median -0.09604, 5-95% [-2.1, 1.78] pips
+  N1 arm H (n = 42, direction matched, 1,000 iters, seed 20260812):
+      hit rate   median 0.2, 5-95% [0.05263, 0.3333]
+      expectancy median -0.1381, 5-95% [-5.758, 5.437] pips
+    N1 secondary, RANDOM direction: hit median 0.1923, 5-95% [0.05882, 0.35]; expectancy median -0.1679, 5-95% [-5.573, 5.943] pips
+
+[5. RULE ARM — the instructor's 50-pip cut]
+  arm L  box range < 50 pips: n = 458
+    (a) max excursion beyond box : median 50.6 pips  mean 62.3
+    (a) volatility-normalised    : median 0.580 of the day's own true range
+    (b) day's HIGH beyond box hi : 0.747 (342/458), 95% CI [0.705, 0.784]
+    (b) day's LOW  beyond box lo : 0.825 (378/458), 95% CI [0.788, 0.857]
+    (b) BOTH extremes beyond box : 0.572 (262/458), 95% CI [0.526, 0.617]
+    (b) either edge (tautological here): 1.000 (458/458), 95% CI [0.992, 1.000]
+    (c) trigger fired on         : 0.745 (341/458), 95% CI [0.703, 0.782] of days
+    (c) hit rate (of resolved)   : 0.219 (56/256), 95% CI [0.172, 0.273]
+    (c) expectancy               : +0.28 pips  boot 95% CI (-2.3482917888563466, 3.070344574780042)
+  arm H  box range >= 50 pips: n = 54
+    (a) max excursion beyond box : median 58.9 pips  mean 61.7
+    (a) volatility-normalised    : median 0.439 of the day's own true range
+    (b) day's HIGH beyond box hi : 0.704 (38/54), 95% CI [0.572, 0.809]
+    (b) day's LOW  beyond box lo : 0.611 (33/54), 95% CI [0.478, 0.730]
+    (b) BOTH extremes beyond box : 0.315 (17/54), 95% CI [0.207, 0.447]
+    (b) either edge (tautological here): 1.000 (54/54), 95% CI [0.934, 1.000]
+    (c) trigger fired on         : 0.778 (42/54), 95% CI [0.651, 0.868] of days
+    (c) hit rate (of resolved)   : 0.270 (10/37), 95% CI [0.154, 0.430]
+    (c) expectancy               : +1.48 pips  boot 95% CI (-6.9005357142857235, 10.213571428571537)
+  arm L vs its own N1: hit rate pct 77.9; expectancy pct 65.2
+  arm H vs its own N1: hit rate pct 81.4; expectancy pct 67.5
+
+[6. DOES THE 50-PIP CUT SEPARATE BETTER THAN THE MEANINGLESS ONE?]
+    measure                         50-pip cut    median cut
+    median excursion L-H                -8.400       -12.350
+    share BOTH-edge breach L-H           0.257         0.215
+    hit rate L-H                        -0.052        -0.034
+    expectancy L-H (pips)               -1.196         1.904
+  If the median cut separates as well as the 50-pip cut, then 50 is doing
+  nothing that 'big box vs small box' does not already do (`PT-016` §4).
+
+[7. THIRD BASELINE — volatility control, measure (a) normalised]
+  raw    : arm L median excursion 50.6 vs arm H 58.9 pips  (diff -8.4)
+  normed : arm L 0.580 vs arm H 0.439 of the day's own true range  (diff +0.141)
+  permutation on raw excursion   : diff -8.4 pips, two-sided p = 0.102
+  permutation on normalised      : diff +0.141, two-sided p = 0.000
+
+----- ARM B -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+session days: 512   trade grid: 28,821 eligible entry bars x 2 directions
+
+[1. THE BOX-RANGE DISTRIBUTION — computed before the 50-pip cut is applied]
+  median 26.7  mean 29.6  p10 14.3  p25 19.6  p75 36.0  p90 46.5  max 138.7
+    [    0,   10)    10  ###
+    [   10,   20)   124  ####################################
+    [   20,   30)   171  ##################################################
+    [   30,   40)   113  #################################
+    [   40,   50)    57  #################
+    [   50,   60)    21  ######   <<< the instructor's cut, V03 [00:44:48]
+    [   60,   70)     8  ##
+    [   70,   80)     3  #
+    [   80,   90)     2  #
+    [   90,  100)     0  
+    [  100,  110)     1  
+    [  110,  120)     2  #
+    [  120,  130)     0  
+  share of days with box < 50 pips: 0.928 (475/512), 95% CI [0.902, 0.947]
+
+[2. THE CONTINUOUS CURVE — outcome as a function of box range, 10-pip bins]
+   (the safeguard: it shows whether anything happens AT 50, without anyone having chosen 50)
+             bin     n   med exc   exc/TR      both   trig     hit      exp
+    [   0,  10)    10      27.1    0.581     0.800      4   0.000    -8.62
+    [  10,  20)   124      47.5    0.683     0.734     91   0.167    -0.70
+    [  20,  30)   171      51.9    0.585     0.690    133   0.293    +4.58
+    [  30,  40)   113      60.3    0.583     0.558     91   0.179    -3.44
+    [  40,  50)    57      58.2    0.544     0.491     46   0.132    -6.28
+    [  50,  60)    21      70.7    0.529     0.286     17   0.267    +1.49
+    [  60,  70)     8      38.0    0.369     0.250      4   0.250    -1.00
+    [  70,  80)     3      79.2    0.517     0.000      3   0.667   +27.33
+    [  80,  90)     2      45.3    0.345     0.000      2     n/a    -0.95
+    [ 100, 110)     1     120.4    0.527     0.000      1   0.000   -18.00
+    [ 120, 130)     2     110.8    0.386     0.000      1   0.000   -18.00
+
+[3. SECOND BASELINE — the random-median split (`PT-016` §4)]
+  median split point (no doctrinal claim attached): 26.7 pips
+  median-LOW (box < 26.7): n = 254
+    (a) max excursion beyond box : median 48.9 pips  mean 61.8
+    (a) volatility-normalised    : median 0.625 of the day's own true range
+    (b) day's HIGH beyond box hi : 0.850 (216/254), 95% CI [0.801, 0.889]
+    (b) day's LOW  beyond box lo : 0.866 (220/254), 95% CI [0.819, 0.903]
+    (b) BOTH extremes beyond box : 0.717 (182/254), 95% CI [0.658, 0.768]
+    (b) either edge (tautological here): 1.000 (254/254), 95% CI [0.985, 1.000]
+    (c) trigger fired on         : 0.744 (189/254), 95% CI [0.687, 0.794] of days
+    (c) hit rate (of resolved)   : 0.231 (30/130), 95% CI [0.167, 0.310]
+    (c) expectancy               : +1.99 pips  boot 95% CI (-1.6045238095238357, 5.740251322751314)
+  median-HIGH (box >= 26.7): n = 258
+    (a) max excursion beyond box : median 58.9 pips  mean 66.2
+    (a) volatility-normalised    : median 0.549 of the day's own true range
+    (b) day's HIGH beyond box hi : 0.740 (191/258), 95% CI [0.684, 0.790]
+    (b) day's LOW  beyond box lo : 0.779 (201/258), 95% CI [0.725, 0.825]
+    (b) BOTH extremes beyond box : 0.519 (134/258), 95% CI [0.459, 0.580]
+    (b) either edge (tautological here): 1.000 (258/258), 95% CI [0.985, 1.000]
+    (c) trigger fired on         : 0.791 (204/258), 95% CI [0.737, 0.836] of days
+    (c) hit rate (of resolved)   : 0.203 (35/172), 95% CI [0.150, 0.270]
+    (c) expectancy               : -1.97 pips  boot 95% CI (-5.554485294117601, 1.7131985294117797)
+
+[4. PRIMARY BASELINE — N1 matched random entry WITHIN EACH ARM (`PT-016` §4)]
+  N1 arm L (n = 365, direction matched, 1,000 iters, seed 20260812):
+      hit rate   median 0.2018, 5-95% [0.1611, 0.2477]
+      expectancy median -0.1619, 5-95% [-1.842, 1.833] pips
+    N1 secondary, RANDOM direction: hit median 0.2036, 5-95% [0.1613, 0.2501]; expectancy median -0.02781, 5-95% [-1.934, 1.929] pips
+  N1 arm H (n = 28, direction matched, 1,000 iters, seed 20260812):
+      hit rate   median 0.2, 5-95% [0.05556, 0.3846]
+      expectancy median -0.2571, 5-95% [-7.353, 7.476] pips
+    N1 secondary, RANDOM direction: hit median 0.2, 5-95% [0.05882, 0.375]; expectancy median -0.1875, 5-95% [-7.004, 7.254] pips
+
+[5. RULE ARM — the instructor's 50-pip cut]
+  arm L  box range < 50 pips: n = 475
+    (a) max excursion beyond box : median 52.6 pips  mean 64.0
+    (a) volatility-normalised    : median 0.595 of the day's own true range
+    (b) day's HIGH beyond box hi : 0.804 (382/475), 95% CI [0.766, 0.837]
+    (b) day's LOW  beyond box lo : 0.844 (401/475), 95% CI [0.809, 0.874]
+    (b) BOTH extremes beyond box : 0.648 (308/475), 95% CI [0.604, 0.690]
+    (b) either edge (tautological here): 1.000 (475/475), 95% CI [0.992, 1.000]
+    (c) trigger fired on         : 0.768 (365/475), 95% CI [0.728, 0.804] of days
+    (c) hit rate (of resolved)   : 0.209 (58/278), 95% CI [0.165, 0.260]
+    (c) expectancy               : -0.25 pips  boot 95% CI (-2.719486301369859, 2.4610068493150448)
+  arm H  box range >= 50 pips: n = 37
+    (a) max excursion beyond box : median 59.1 pips  mean 64.6
+    (a) volatility-normalised    : median 0.507 of the day's own true range
+    (b) day's HIGH beyond box hi : 0.676 (25/37), 95% CI [0.515, 0.804]
+    (b) day's LOW  beyond box lo : 0.541 (20/37), 95% CI [0.384, 0.690]
+    (b) BOTH extremes beyond box : 0.216 (8/37), 95% CI [0.114, 0.372]
+    (b) either edge (tautological here): 1.000 (37/37), 95% CI [0.906, 1.000]
+    (c) trigger fired on         : 0.757 (28/37), 95% CI [0.599, 0.866] of days
+    (c) hit rate (of resolved)   : 0.292 (7/24), 95% CI [0.149, 0.492]  <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+    (c) expectancy               : +2.34 pips  boot 95% CI (-7.660714285714323, 13.300089285714197)
+  arm L vs its own N1: hit rate pct 60.1; expectancy pct 46.5
+  arm H vs its own N1: hit rate pct 81.3; expectancy pct 71.4
+
+[6. DOES THE 50-PIP CUT SEPARATE BETTER THAN THE MEANINGLESS ONE?]
+    measure                         50-pip cut    median cut
+    median excursion L-H                -6.500       -10.100
+    share BOTH-edge breach L-H           0.432         0.197
+    hit rate L-H                        -0.083         0.027
+    expectancy L-H (pips)               -2.586         3.960
+  If the median cut separates as well as the 50-pip cut, then 50 is doing
+  nothing that 'big box vs small box' does not already do (`PT-016` §4).
+
+[7. THIRD BASELINE — volatility control, measure (a) normalised]
+  raw    : arm L median excursion 52.6 vs arm H 59.1 pips  (diff -6.5)
+  normed : arm L 0.595 vs arm H 0.507 of the day's own true range  (diff +0.088)
+  permutation on raw excursion   : diff -6.5 pips, two-sided p = 0.359
+  permutation on normalised      : diff +0.088, two-sided p = 0.013
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always
+==============================================================================
+                                         ARM A       ARM B
+median box range (pips)                   31.0        26.7
+share of days box < 50                   0.895       0.928
+arm L n                                    458         475
+arm H n                                     54          37
+arm L median excursion                    50.6        52.6
+arm H median excursion                    58.9        59.1
+arm L exc/TR                             0.580       0.595
+arm H exc/TR                             0.439       0.507
+arm L hit rate                           0.219       0.209
+arm H hit rate                           0.270       0.292
+arm L expectancy                         +0.28       -0.25
+arm H expectancy                         +1.48       +2.34
+perm p, raw excursion                    0.102       0.359
+perm p, normalised                       0.000       0.013

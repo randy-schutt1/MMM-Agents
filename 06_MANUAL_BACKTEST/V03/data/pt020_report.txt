@@ -1,0 +1,184 @@
+==============================================================================
+PT-020 — The London-open asymmetric conditional (W-B)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-B 2014-01-05 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-020_london_open_asymmetric_conditional.md
+CLAIM    : V03 [00:39:49]-[00:40:10] 'If the dealer cuts the high at the
+           beginning of the London, you sell. If he extends the low at the
+           beginning of the session, forget it. Why? ... I don't know if it's a
+           straightaway or if it's a stop hunt. So I don't take it.'
+SCOPE    : BROAD reading only (`PT-020` §3b). The narrow reading needs `A-001`
+           (the anchor), which is undefined, so it is not testable today.
+C-004    : OPEN. The 03:30-04:30 window spans both readings; the sub-window
+           split reports them separately and resolves nothing.
+
+----- ARM A -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+
+[BRANCH FREQUENCY — `PT-020` §7 step 4: report these WITH the outcome table]
+  branch H (cuts the high)   : 0.270 (138/512), 95% CI [0.233, 0.310]
+  branch L (extends the low) : 0.338 (173/512), 95% CI [0.298, 0.380]
+  branch N (neither)         : 0.393 (201/512), 95% CI [0.351, 0.436]
+  days breaching BOTH edges inside 03:30-04:30 (assigned by whichever came first): 1
+  N1 eligible pool = the same 03:30-04:30 window: 2060 entry bars
+
+[BASELINES — run and printed BEFORE branch H's result is read]
+  N1 branch H (n = 138, short, 1,000 iters, seed 20260812, drawn from 03:30-04:30):
+      hit rate   median 0.2823, 5-95% [0.2185, 0.3492]
+      expectancy median 2.839, 5-95% [-1.319, 6.787] pips
+      outcome SD median 29.56, 5-95% [27.32, 31.06] pips   <- the dispersion null
+  N1 branch L (n = 173, short, 1,000 iters, seed 20260812, drawn from 03:30-04:30):
+      hit rate   median 0.282, 5-95% [0.2245, 0.3425]
+      expectancy median 2.768, 5-95% [-0.9002, 6.495] pips
+      outcome SD median 29.49, 5-95% [27.6, 30.92] pips   <- the dispersion null
+
+  THIRD BASELINE — the direction-symmetry control (`PT-020` §4, 'the sharpest arm'):
+    the MIRROR rule — LONG after a low-side breach. If the mirror performs like
+    branch H, the asymmetry is in the instructor's framing rather than in GBP/USD.
+  MIRROR (long after a low breach): n = 173
+    >>> DISPERSION FIRST (`PT-020` §3, the variance claim):
+        outcome SD 26.48   IQR 21.40   MAD 0.00 pips
+    target / stop / open : 31 / 125 / 17
+    hit rate (of resolved): 0.199 (31/156), 95% CI [0.144, 0.268]
+    expectancy            : -2.87 pips  boot 95% CI (-6.969378612716702, 1.0856213872833096)
+
+  SECOND BASELINE — the natural control (`PT-020` §4): branch N days, entered
+    SHORT at 04:30. Isolates the breach from the hour.
+  BRANCH N (short at 04:30): n = 201
+    >>> DISPERSION FIRST (`PT-020` §3, the variance claim):
+        outcome SD 27.96   IQR 38.70   MAD 0.00 pips
+    target / stop / open : 41 / 137 / 23
+    hit rate (of resolved): 0.230 (41/178), 95% CI [0.175, 0.297]
+    expectancy            : -0.25 pips  boot 95% CI (-4.003308457711455, 3.306803482587054)
+
+[RULE ARM]
+  BRANCH H — 'cuts the high, you sell': n = 138
+    >>> DISPERSION FIRST (`PT-020` §3, the variance claim):
+        outcome SD 29.47   IQR 64.10   MAD 0.00 pips
+    target / stop / open : 35 / 89 / 14
+    hit rate (of resolved): 0.282 (35/124), 95% CI [0.211, 0.367]
+    expectancy            : +2.25 pips  boot 95% CI (-2.6739311594203, 7.405978260869574)
+    vs N1: hit rate pct 49.2; expectancy pct 40.4; OUTCOME SD pct 48.2
+  BRANCH L — 'extends the low, forget it' (same short, taken anyway, to price what standing aside avoids): n = 173
+    >>> DISPERSION FIRST (`PT-020` §3, the variance claim):
+        outcome SD 28.54   IQR 42.30   MAD 0.00 pips
+    target / stop / open : 38 / 116 / 19
+    hit rate (of resolved): 0.247 (38/154), 95% CI [0.185, 0.320]
+    expectancy            : +0.66 pips  boot 95% CI (-3.4019075144508673, 4.947499999999959)
+    vs N1: hit rate pct 16.0; expectancy pct 16.0; OUTCOME SD pct 19.2
+
+[THE VARIANCE CLAIM, TESTED DIRECTLY — is branch L more dispersed than branch H?]
+  outcome SD  : H 29.47  vs  L 28.54 pips  (L - H = -0.94)
+  outcome IQR : H 64.10  vs  L 42.30 pips
+  permutation on MEAN |deviation from own median| (scale test), L - H: -1.59 pips, two-sided p = 0.623
+  permutation on OUTCOME SD, L - H: -0.94 pips, two-sided p = 0.572
+  permutation on OUTCOME IQR, L - H: -21.80 pips, two-sided p = 0.493
+  permutation on mean expectancy, L - H: -1.59 pips, two-sided p = 0.623
+
+[SUB-WINDOW SPLIT — the `C-004` split. Reported separately; resolves nothing]
+  03:30-04:00 branch H: n = 100  hit 0.233 (21/90), 95% CI [0.158, 0.331]  expectancy -0.84  SD 27.87
+  03:30-04:00 branch L: n = 124  hit 0.270 (30/111), 95% CI [0.196, 0.360]  expectancy +1.83  SD 29.26
+  04:00-04:30 branch H: n = 38  hit 0.412 (14/34), 95% CI [0.264, 0.578]  expectancy +10.38  SD 32.32
+  04:00-04:30 branch L: n = 49  hit 0.186 (8/43), 95% CI [0.097, 0.326]  expectancy -2.30  SD 26.68
+
+----- ARM B -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+
+[BRANCH FREQUENCY — `PT-020` §7 step 4: report these WITH the outcome table]
+  branch H (cuts the high)   : 0.318 (163/512), 95% CI [0.279, 0.360]
+  branch L (extends the low) : 0.355 (182/512), 95% CI [0.315, 0.398]
+  branch N (neither)         : 0.326 (167/512), 95% CI [0.287, 0.368]
+  days breaching BOTH edges inside 03:30-04:30 (assigned by whichever came first): 4
+  N1 eligible pool = the same 03:30-04:30 window: 2060 entry bars
+
+[BASELINES — run and printed BEFORE branch H's result is read]
+  N1 branch H (n = 163, short, 1,000 iters, seed 20260812, drawn from 03:30-04:30):
+      hit rate   median 0.2817, 5-95% [0.2245, 0.3444]
+      expectancy median 2.586, 5-95% [-1.15, 6.342] pips
+      outcome SD median 29.64, 5-95% [27.63, 31.13] pips   <- the dispersion null
+  N1 branch L (n = 182, short, 1,000 iters, seed 20260812, drawn from 03:30-04:30):
+      hit rate   median 0.2795, 5-95% [0.2317, 0.3396]
+      expectancy median 2.459, 5-95% [-0.6629, 5.993] pips
+      outcome SD median 29.53, 5-95% [27.91, 31.03] pips   <- the dispersion null
+
+  THIRD BASELINE — the direction-symmetry control (`PT-020` §4, 'the sharpest arm'):
+    the MIRROR rule — LONG after a low-side breach. If the mirror performs like
+    branch H, the asymmetry is in the instructor's framing rather than in GBP/USD.
+  MIRROR (long after a low breach): n = 182
+    >>> DISPERSION FIRST (`PT-020` §3, the variance claim):
+        outcome SD 28.98   IQR 38.40   MAD 0.00 pips
+    target / stop / open : 43 / 122 / 17
+    hit rate (of resolved): 0.261 (43/165), 95% CI [0.200, 0.332]
+    expectancy            : +0.87 pips  boot 95% CI (-3.361387362637319, 5.195151098901169)
+
+  SECOND BASELINE — the natural control (`PT-020` §4): branch N days, entered
+    SHORT at 04:30. Isolates the breach from the hour.
+  BRANCH N (short at 04:30): n = 167
+    >>> DISPERSION FIRST (`PT-020` §3, the variance claim):
+        outcome SD 29.87   IQR 68.00   MAD 0.00 pips
+    target / stop / open : 43 / 101 / 23
+    hit rate (of resolved): 0.299 (43/144), 95% CI [0.230, 0.378]
+    expectancy            : +3.58 pips  boot 95% CI (-0.6856437125748767, 8.405299401197533)
+
+[RULE ARM]
+  BRANCH H — 'cuts the high, you sell': n = 163
+    >>> DISPERSION FIRST (`PT-020` §3, the variance claim):
+        outcome SD 31.08   IQR 68.00   MAD 0.00 pips
+    target / stop / open : 51 / 95 / 17
+    hit rate (of resolved): 0.349 (51/146), 95% CI [0.277, 0.430]
+    expectancy            : +6.31 pips  boot 95% CI (1.4302607361963358, 10.955644171779117)
+    vs N1: hit rate pct 95.8; expectancy pct 94.8; OUTCOME SD pct 94.1
+  BRANCH L — 'extends the low, forget it' (same short, taken anyway, to price what standing aside avoids): n = 182
+    >>> DISPERSION FIRST (`PT-020` §3, the variance claim):
+        outcome SD 28.80   IQR 41.97   MAD 0.00 pips
+    target / stop / open : 41 / 126 / 15
+    hit rate (of resolved): 0.246 (41/167), 95% CI [0.186, 0.316]
+    expectancy            : +0.09 pips  boot 95% CI (-4.0002747252747195, 4.216126373626384)
+    vs N1: hit rate pct 13.4; expectancy pct 11.0; OUTCOME SD pct 22.2
+
+[THE VARIANCE CLAIM, TESTED DIRECTLY — is branch L more dispersed than branch H?]
+  outcome SD  : H 31.08  vs  L 28.80 pips  (L - H = -2.28)
+  outcome IQR : H 68.00  vs  L 41.97 pips
+  permutation on MEAN |deviation from own median| (scale test), L - H: -6.23 pips, two-sided p = 0.048
+  permutation on OUTCOME SD, L - H: -2.28 pips, two-sided p = 0.097
+  permutation on OUTCOME IQR, L - H: -26.03 pips, two-sided p = 0.098
+  permutation on mean expectancy, L - H: -6.23 pips, two-sided p = 0.048
+
+[SUB-WINDOW SPLIT — the `C-004` split. Reported separately; resolves nothing]
+  03:30-04:00 branch H: n = 115  hit 0.359 (37/103), 95% CI [0.273, 0.455]  expectancy +7.32  SD 31.35
+  03:30-04:00 branch L: n = 121  hit 0.278 (32/115), 95% CI [0.205, 0.366]  expectancy +1.47  SD 30.05
+  04:00-04:30 branch H: n = 48  hit 0.326 (14/43), 95% CI [0.205, 0.475]  expectancy +3.90  SD 30.60
+  04:00-04:30 branch L: n = 61  hit 0.173 (9/52), 95% CI [0.094, 0.297]  expectancy -2.66  SD 26.16
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always
+==============================================================================
+                                               ARM A       ARM B
+branch H n                                       138         163
+branch L n                                       173         182
+branch N n                                       201         167
+H outcome SD (the variance claim)              29.47       31.08
+L outcome SD                                   28.54       28.80
+H outcome IQR                                  64.10       68.00
+L outcome IQR                                  42.30       41.97
+  SD-difference p (L - H)                      0.572       0.097
+  IQR-difference p (L - H)                     0.493       0.098
+H hit rate                                     0.282       0.349
+L hit rate                                     0.247       0.246
+H expectancy                                   +2.25       +6.31
+L expectancy                                   +0.66       +0.09
+H pct vs N1 (expectancy)                        40.4        94.8
+MIRROR (long after low) hit rate               0.199       0.261
+MIRROR expectancy                              -2.87       +0.87
+branch N (short at 04:30) expectancy           -0.25       +3.58

@@ -1,0 +1,160 @@
+==============================================================================
+PT-021 — DNC and the straightaway test (W-B)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-B 2014-01-05 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-021_straightaway_versus_stop_hunt_dnc.md
+CLAIM    : V02 [00:18:44] 'DNC. Do not counter trade back into the range.'
+           [00:18:58] 'This is a straightaway... the dealer didn't make a stop
+           hunt below the box.'  [00:19:06] 'if the dealer comes back in here,
+           that's a trade.'
+DESIGN   : the closest the corpus comes to a PRE-SPECIFIED CONTROL GROUP
+           (`BACKTEST_EVIDENCE_STANDARD.md` §2.2). SA vs SW is the course's own
+           contrast: same instrument, box, session and geometry; only the prior
+           opposite-side breach differs.
+
+----- ARM A -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+class assignment FROZEN to pt021_classes_armA.csv before any outcome was computed (`PT-021` §7 step 3)
+
+[MEASURE 3 — frequency. A rule's firing rate matters as much as its accuracy]
+  class SA (straightaway)    : 0.574 (294/512), 95% CI [0.531, 0.616]
+  class SW (stop-hunt-first) : 0.195 (100/512), 95% CI [0.163, 0.232]
+  neither (no qualifying move >= 25 pips): 0.230 (118/512), 95% CI [0.196, 0.269]
+
+[BASELINES — run and printed BEFORE the classes are compared]
+  N1 SA (n = 293, direction matched, 1,000 iters, seed 20260812):
+      counter-trade hit rate   median 0.195, 5-95% [0.1479, 0.2486]
+      counter-trade expectancy median -0.2705, 5-95% [-2.25, 1.997] pips
+    N1 secondary, RANDOM direction: hit median 0.1953, 5-95% [0.1497, 0.2484]; expectancy median -0.184, 5-95% [-2.234, 2.031] pips
+  N1 SW (n = 100, direction matched, 1,000 iters, seed 20260812):
+      counter-trade hit rate   median 0.1957, 5-95% [0.1071, 0.2857]
+      counter-trade expectancy median -0.246, 5-95% [-3.933, 3.56] pips
+    N1 secondary, RANDOM direction: hit median 0.1967, 5-95% [0.1136, 0.2909]; expectancy median -0.015, 5-95% [-3.569, 3.578] pips
+
+[MEASURE 1 — continuation: max favourable excursion in the BREACH direction]
+  SA: n = 294
+    next 4 hours   : median 22.2 pips  mean 30.3  p90 71.9
+    to 17:00 close : median 28.6 pips  mean 40.2  p90 97.4
+  SW: n = 100
+    next 4 hours   : median 17.8 pips  mean 27.4  p90 59.9
+    to 17:00 close : median 17.9 pips  mean 31.6  p90 75.2
+  SA - SW median continuation, next 4h: +4.4 pips, two-sided p = 0.266
+  SA - SW median continuation, to 17:00: +10.7 pips, two-sided p = 0.022
+
+[MEASURE 2 — THE DNC TEST. The prohibited counter-trade, priced in BOTH classes.]
+  `PT-021` §3: 'the only way to test a prohibition honestly is to price the
+   prohibited trade in both classes'. The prohibition predicts this LOSES in
+   class SA and is ACCEPTABLE in class SW.
+  SA: n = 293
+    target / stop / open : 53 / 186 / 54
+    hit rate (of resolved): 0.222 (53/239), 95% CI [0.174, 0.279]
+    expectancy            : -0.45 pips  boot 95% CI (-3.4814334470989494, 2.6620477815699832)
+    outcome SD / IQR      : 26.6 / 29.5 pips
+    vs N1: hit rate pct 80.1; expectancy pct 43.7
+  SW: n = 100
+    target / stop / open : 14 / 50 / 36
+    hit rate (of resolved): 0.219 (14/64), 95% CI [0.135, 0.334]
+    expectancy            : +2.15 pips  boot 95% CI (-2.532600000000072, 6.999149999999975)
+    outcome SD / IQR      : 24.8 / 35.4 pips
+    vs N1: hit rate pct 67.6; expectancy pct 85.1
+
+  PRIMARY BASELINE — the course's own contrast, SA vs SW:
+    mean expectancy SA - SW = -2.60 pips; permutation two-sided p = 0.404
+    hit rate SA 0.222 (53/239), 95% CI [0.174, 0.279]
+    hit rate SW 0.219 (14/64), 95% CI [0.135, 0.334]
+
+[THIRD BASELINE — volatility control. A day with breaches on BOTH sides is
+  by construction a wider day; `PT-021` §5 calls this 'the likeliest confound
+  in the whole batch'. Outcomes normalised by the day's own PRIOR true range.]
+  SA: median prior TR 99.9 pips  median box 33.1  expectancy / prior TR -0.0116
+  SW: median prior TR 91.8 pips  median box 26.2  expectancy / prior TR +0.0430
+  prior-TR difference SA - SW: +8.1 pips, two-sided p = 0.217  (is the confound even present?)
+  NORMALISED expectancy SA - SW: -0.0546 of prior TR, two-sided p = 0.142
+
+----- ARM B -----
+COMPLETENESS (C-6): n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+class assignment FROZEN to pt021_classes_armB.csv before any outcome was computed (`PT-021` §7 step 3)
+
+[MEASURE 3 — frequency. A rule's firing rate matters as much as its accuracy]
+  class SA (straightaway)    : 0.514 (263/512), 95% CI [0.470, 0.557]
+  class SW (stop-hunt-first) : 0.279 (143/512), 95% CI [0.242, 0.320]
+  neither (no qualifying move >= 25 pips): 0.207 (106/512), 95% CI [0.174, 0.244]
+
+[BASELINES — run and printed BEFORE the classes are compared]
+  N1 SA (n = 263, direction matched, 1,000 iters, seed 20260812):
+      counter-trade hit rate   median 0.2025, 5-95% [0.1507, 0.257]
+      counter-trade expectancy median -0.1589, 5-95% [-2.228, 2.196] pips
+    N1 secondary, RANDOM direction: hit median 0.2052, 5-95% [0.1503, 0.2614]; expectancy median 0.03042, 5-95% [-2.356, 2.422] pips
+  N1 SW (n = 142, direction matched, 1,000 iters, seed 20260812):
+      counter-trade hit rate   median 0.2025, 5-95% [0.1348, 0.2772]
+      counter-trade expectancy median -0.0757, 5-95% [-2.98, 3.068] pips
+    N1 secondary, RANDOM direction: hit median 0.2, 5-95% [0.1325, 0.2785]; expectancy median -0.09789, 5-95% [-3.093, 3.186] pips
+
+[MEASURE 1 — continuation: max favourable excursion in the BREACH direction]
+  SA: n = 263
+    next 4 hours   : median 21.8 pips  mean 29.3  p90 67.6
+    to 17:00 close : median 27.9 pips  mean 40.4  p90 97.4
+  SW: n = 143
+    next 4 hours   : median 20.6 pips  mean 29.7  p90 60.3
+    to 17:00 close : median 23.1 pips  mean 35.5  p90 78.2
+  SA - SW median continuation, next 4h: +1.3 pips, two-sided p = 0.762
+  SA - SW median continuation, to 17:00: +4.8 pips, two-sided p = 0.291
+
+[MEASURE 2 — THE DNC TEST. The prohibited counter-trade, priced in BOTH classes.]
+  `PT-021` §3: 'the only way to test a prohibition honestly is to price the
+   prohibited trade in both classes'. The prohibition predicts this LOSES in
+   class SA and is ACCEPTABLE in class SW.
+  SA: n = 263
+    target / stop / open : 43 / 168 / 52
+    hit rate (of resolved): 0.204 (43/211), 95% CI [0.155, 0.263]
+    expectancy            : -0.98 pips  boot 95% CI (-3.9673764258555226, 1.9583745247148128)
+    outcome SD / IQR      : 26.1 / 29.4 pips
+    vs N1: hit rate pct 51.1; expectancy pct 25.4
+  SW: n = 142
+    target / stop / open : 21 / 81 / 40
+    hit rate (of resolved): 0.206 (21/102), 95% CI [0.139, 0.294]
+    expectancy            : +0.10 pips  boot 95% CI (-3.966901408450659, 4.210651408450746)
+    outcome SD / IQR      : 25.0 / 32.6 pips
+    vs N1: hit rate pct 53.9; expectancy pct 53.8
+
+  PRIMARY BASELINE — the course's own contrast, SA vs SW:
+    mean expectancy SA - SW = -1.08 pips; permutation two-sided p = 0.679
+    hit rate SA 0.204 (43/211), 95% CI [0.155, 0.263]
+    hit rate SW 0.206 (21/102), 95% CI [0.139, 0.294]
+
+[THIRD BASELINE — volatility control. A day with breaches on BOTH sides is
+  by construction a wider day; `PT-021` §5 calls this 'the likeliest confound
+  in the whole batch'. Outcomes normalised by the day's own PRIOR true range.]
+  SA: median prior TR 97.1 pips  median box 29.7  expectancy / prior TR -0.0241
+  SW: median prior TR 96.4 pips  median box 24.2  expectancy / prior TR -0.0009
+  prior-TR difference SA - SW: +0.7 pips, two-sided p = 0.931  (is the confound even present?)
+  NORMALISED expectancy SA - SW: -0.0232 of prior TR, two-sided p = 0.462
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always
+==============================================================================
+                                               ARM A       ARM B
+class SA n                                       294         263
+class SW n                                       100         143
+neither n                                        118         106
+SA counter-trade hit rate                      0.222       0.204
+SW counter-trade hit rate                      0.219       0.206
+SA counter-trade expectancy                    -0.45       -0.98
+SW counter-trade expectancy                    +2.15       +0.10
+SA outcome SD                                   26.6        26.1
+SW outcome SD                                   24.8        25.0
+SA - SW expectancy diff                        -2.60       -1.08
+  permutation p                                0.404       0.679
+SA median continuation, 4h                      22.2        21.8
+SW median continuation, 4h                      17.8        20.6
