@@ -6131,3 +6131,125 @@ a94d009  registers(V09) — A-065..A-075, C-012..C-015, A-020/C-010 reconciliati
 
 **Independent review R1 of V09** (`D-003`). This session did not review itself and **did not merge
 to integration** — merge-back is a separate single-threaded act under `D-038`.
+
+---
+
+## 2026-08-13 — Reviewer Session (V09 R1)
+
+### Lesson
+
+**V09** — **no printed title** · `Bootcamp1 Wk2 032612 Part4 (53mins).swf`,
+SHA-256 `b0f36b5540de7a76397c80202cf6a721a2a18aa9011c5698238c6bcc624168d4`, 00:52:26.
+
+**Role:** Independent Reviewer / Teacher Agent. `D-003`: this session authored **no** V09
+artifact and performed **no** remediation.
+
+**Branch:** `review/v09`, branched **FROM `video/v09` at `bb4097b`**, which was **unmerged and
+diverged 11 commits each way** from the integration branch. Reviewing it from integration would
+have reviewed an empty set — the `V08_REVIEW_R1.md` §3 precedent.
+
+### Review Objective
+
+Independent mastery audit of the V09 student submission, plus adjudication of the nine items the
+submission and the review brief put forward for checking.
+
+### Source Evidence Reviewed
+
+The `.swf` itself (re-hashed, audio re-extracted and re-measured, header parsed);
+`02_TRANSCRIPTS/V09/V09_TRANSCRIPT.md` in full, with its timestamp structure re-derived
+mechanically; the pre-ingestion `audio_10.mp3`; **six frames read as images** —
+`V09_00-00-10` (the ring diagram), `V09_00-02-05` (the printed formula), `V09_00-22-45` (the 85%
+caption), `V09_00-28-45` (the FXDD title bar, and its oscillator sub-panel **magnified**), plus
+`V08_00-43-10_end-card…` for the strand-4 comparison; and the SWF headers of **all 21** files in
+`01_SOURCE_VIDEOS/Forex Bootcamp/Bootcamp/`.
+
+### Student Artifacts Reviewed
+
+`03_LESSON_NOTES/V09_SOURCE_NOTES.md`; `V09_INTERPRETATION.md`; `04_SCREENSHOTS/V09/INDEX.md`;
+`05_HOMEWORK/V09/` (all scripts and data); `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-035_…md` **at its
+commit `0f709d2`**; `06_MANUAL_BACKTEST/V09/BT_V09_0001.md` and `run_pt035.py`;
+`07_MASTERY_REPORTS/V09_MASTERY_REPORT.md`; `Q-010`; `A-065`–`A-075`; `C-012`–`C-015`;
+`COURSE_PROGRESS.md`.
+
+### Findings
+
+**`REVISE`, `HIGH` confidence. 0 `CRITICAL`, 0 `MAJOR`, 6 `MINOR`, 8 `NOTE`.**
+
+Nothing load-bearing was accepted on the submission's authority:
+
+- **`PT-035` re-ran to a byte-identical `data/pt035_output.txt`**, and all three homework scripts
+  re-ran to byte-identical output.
+- **The headline binomial result was re-derived from first principles** in this reviewer's own
+  run-length recursion, not checked against the runner: P(≥1 four-loss run in 200) = **99.93%** at
+  p = 0.50, **54.13%** at p = 0.73, and the ≤5%-in-100 threshold at **p ≥ 84.19%**. Every reported
+  figure confirms. A shared bug in `run_pt035.py` would survive a re-run and not survive this.
+- **The continuity prediction is genuine and is verified in Git:** `3026a81` at **11:10:45** and
+  `d9e4f9e` at **11:59:51**, both authored by the **V08** session, against V09's first artifact at
+  **13:21:36**. Strand 4 was confirmed by **comparing V08's end card and V09's opening frame
+  image-to-image**. The unrun acoustic screen is **not a gap** — running it was prohibited.
+- **The `N3` self-correction is real, not narrated.** The committed runner output prints
+  `CLUSTERING CONFIRMED` and scores `P4 RIGHT`; `BT_V09_0001` withdraws both and scores `P4`
+  **VOID**, with correct sampling-without-replacement algebra.
+- **312 marker citations machine-checked, ZERO orphans**; 217 quotations checked; all seven of the
+  mastery report's citation counts re-derived and reconciling.
+- **The capture bug is confirmed and generalised** from the SWF headers of all 21 files: **V08,
+  V09 and V21 declare a 1280×738 stage; the other 18 declare 1024×786.** It is stage geometry,
+  not a per-file fluke — confirmed against the letterbox bands in the committed pixels.
+
+**The six `MINOR`s:** `M1` four silent ASR corrections inside quotation marks under `AUDIO` tags;
+`M2` `PT-035` §6's `INDETERMINATE`-on-`N3`-failure clause neither applied nor disclosed for the
+empirical arm; `M3` a false MEASURED count in the transcript's COVERAGE block (four 10-second gaps
+claimed, seven measured); `M4` fourteen frame cross-references off by one across five files; `M5`
+the candidate `C-010` reconciliation held at *"more likely than not"* when it breaks three of four
+set members and collides with `A-020`; `M6` the capture-bug escalation's claim that the coordinate
+worked on V01–V08, when V08's own index records the identical failure.
+
+**Rulings on what the submission asked:** the evidence-order deviation is **NOT charged** — the
+basis-tag replacement was tested and the position-sizing system, the innermost-ring answer and the
+`A-020` resolution all survive on `AUDIO`-only rows. `A-065`'s `CODABLE AS STATED — DO NOT EXTEND`
+is **UPHELD**. `C-014` is **already at the note grade** and needs no change. **`C-010`'s refusal to
+close is UPHELD** — and on stronger ground than the submission gives, which retires its own
+escalation 5 to the owner. The censoring-bias concern is **well-founded and escalated**, with the
+scope tightened from `PT-002`…`PT-032` to the tests that actually race asymmetric barriers.
+
+**Dimension B: NOT SATISFIED, blocked by `D-030`, scored rather than carved out, carrying NO
+severity charge.** Fifth consecutive lesson; open item **36** escalated for the fifth time.
+
+**`N8` is against this reviewer, not the student.** `REVIEW_INDEX.md` item 72 — the concurrent
+session that moved the shared main working directory onto `review/v09` partway through the V08 R2
+round — **was this session**, and this round did **not** use a dedicated worktree. Disclosed in the
+review rather than left to be inferred.
+
+### Required Corrections
+
+Six, all `MINOR`, carried as open items **73–78**. Plus **79** (the `PT-035` successor,
+recommended not owed) and **80** (the censoring-bias investigation, escalated). None blocks V10.
+
+### Decision
+
+```text
+LESSON:      V09
+DECISION:    REVISE
+CONFIDENCE:  HIGH
+CRITICAL 0 / MAJOR 0 / MINOR 6 / NOTE 8
+ADVANCEMENT: AUTHORIZED under D-024. The V10 gate OPENS.
+             V09 reaches COMPLETE only at R2.
+```
+
+### Git
+
+`18_REVIEW/V09/V09_REVIEW_R1.md` written on `review/v09`. The integration branch was merged
+**into** `review/v09` first — it had advanced through V07 R2/R3 and, mid-round, V08 R2 — so this
+round's `REVIEW_INDEX.md` and `LOG.md` additions sit on top of that work rather than reverting it.
+Both are **evidence ledgers** under `D-038a` and are written here.
+
+**This round DOES merge back, and it must.** `SWF_CAPTURE_RECIPE.md` is a **policy ledger** under
+`D-038a` and the confirmed capture fix can be made nowhere else. The merge-back is the deliberate
+single-threaded `D-038` act and carries `video/v09` with it, which `D-024` permits — 0 `CRITICAL`,
+0 `MAJOR`. The recipe fix is committed **separately**, on the integration branch, after the merge.
+
+`validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+### Next Review Trigger
+
+**V09 R2**, on student resubmission with items **73–78** applied.

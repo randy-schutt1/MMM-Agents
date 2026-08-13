@@ -29,7 +29,7 @@ MINOR:      6   (M1 — E01 quote fidelity; M2 — E20 a pre-registered
                  unadopted reconciliation held at MEDIUM that fails at
                  the set level; M6 — E20 the capture-bug escalation
                  mischaracterises the coordinate's history)
-NOTE:       7
+NOTE:       8
 
 DIMENSION B: NOT SATISFIED — blocked by D-030, structural and NOT
              attributable to the student. Scored, not carved out.
@@ -152,7 +152,8 @@ words are the words at that marker.
    TRANSCRIPTION NOTES promise. Nothing was smoothed at the source.
 3. **The tool that would have caught it did not exist on this branch.** `05_HOMEWORK/V07/scripts/verify_quotes.py`
    was committed to the integration branch at the V07 R2/R3 remediation, *after* `video/v09`
-   branched. This is a genuine mitigating fact, not an excuse offered for the student.
+   branched — and it is V07-specific in any case. This is a genuine mitigating fact, not an excuse
+   offered for the student.
 
 **Required:** run `verify_quotes.py` (now reachable from integration) over the seven V09
 artifacts, and for each hit either move the correction outside the quote marks with its marker,
@@ -355,14 +356,16 @@ has made it (§16).
 **Findings of fact, established by `git fetch` and inspection at the start of this round:**
 
 ```text
-video/v09          bb4097b   NOT MERGED into claude/add-documents-repository-fdfb3u (a6ee013)
-                             DIVERGED: 11 commits each way. Not a fast-forward.
+video/v09          bb4097b   NOT MERGED into claude/add-documents-repository-fdfb3u
+                             DIVERGED: 11 commits each way at a6ee013. Not a fast-forward.
+                             Integration advanced to 4a291fe (V08 R2 merge) mid-round.
 origin/video/v09   bb4097b   in sync — the work is pushed
 review/v09                   THIS REVIEW. Branched FROM video/v09 at bb4097b.
 ```
 
-The integration side of the divergence is the V07 R2/R3 rounds and the V08 R1 minors
-remediation (`fix/v08-r1-minors`, items 64–66 applied). **None of it touches a V09 artifact**, so
+The integration side of the divergence is the V07 R2/R3 rounds, the V08 R1 minors remediation
+(`fix/v08-r1-minors`, items 64–66 applied) and — landing **during** this round — the V08 R2 round
+that verified them and made **V08 `COMPLETE`**. **None of it touches a V09 artifact**, so
 the review is unaffected by it — but three of its files are ledgers `video/v09` also appended to
 (`LOG.md`, `CONTRADICTIONS.md`, `REVIEW_INDEX.md`), and `REVIEW_INDEX.md` in particular is
 **217 lines newer on integration**.
@@ -449,6 +452,25 @@ covers a 0.49% gap, and it explicitly carries the $11,960 figure as exact and th
 approximate. The structural observation attached to it — that full restoration after four 2%
 losses needs `4 / (1 − 0.08) ≈ 4.35` winning units, not 4 — is **correct**, re-derived here, and
 is the useful part of the record.
+
+### N8 — `NOTE` — a process collision this round CAUSED, disclosed against this reviewer
+
+**One further fact belongs here and it is against this reviewer, not against the student.**
+`REVIEW_INDEX.md` open item **72**, filed by the V08 R2 round, records that *"a concurrent session
+moved the shared main working directory onto `review/v09` (`bb4097b`) partway through this
+review"*. **That session was this one.** This review was launched in the repository's **shared
+main working directory**, which was on `review/v08-r2` at the time, and creating `review/v09` there
+moved it out from under a review that was still running. Two things follow, both stated plainly:
+
+1. **`D-038` recommends a dedicated worktree and this round did not use one.** That is the exact
+   condition `D-038` exists to remove, and it was not met here.
+2. **The V08 R2 round detected it and absorbed it** — it re-ran every affected read in its own
+   clean worktree and discarded two stale `REVIEW_INDEX.md` reads. No conclusion of that round
+   rests on a read from the wrong tree, and none of this round's measurements were taken from a
+   tree another session was writing to.
+
+Recorded because item 72 is charged to `PROCESS` rather than to a lesson, and the process it
+names is this reviewer's.
 
 ---
 
@@ -578,11 +600,14 @@ built the case for the tooling.
 | **19 sample / interval** | ✅ n far above the 30 floor; Wilson 95% on every rate; the <30 rule pre-labelled |
 | **20 negatives retained** | ✅ **`P2` WRONG and `P4` VOID are both reported at full length**, and `P2`'s cause is diagnosed against the run's own interest |
 
-**Open item 65 is CLOSED-VERIFIED.** V08 R1 `M2` required the next `PT` carrying a matched-random
-null to fix the null's entry price in the pre-registration. `PT-035` §4's `N1` table does exactly
-that — *"The CLOSE of the selected M15 bar. Identical in every arm and every cell of this test"* —
-and states why. This reviewer confirmed the text is in the `0f709d2` commit, i.e. in the
-pre-registration and not in the runner.
+**V08 R1 `M2`'s forward requirement is independently discharged here.** That finding required
+the next `PT` carrying a matched-random null to fix the null's entry price **in the
+pre-registration**. `PT-035` §4's `N1` table does exactly that — *"The CLOSE of the selected M15
+bar. Identical in every arm and every cell of this test"* — and states why. This reviewer
+confirmed the text is in the `0f709d2` commit, i.e. in the pre-registration and not in the runner.
+**Open item 65 was already `CLOSED — VERIFIED` at V08 R2** on the `BACKTEST_EVIDENCE_STANDARD.md`
+§2.1a route; this is a second, independent discharge of the same requirement by the first test
+that had to obey it, and it is recorded rather than double-counted.
 
 **What raises this above a routine pass**, and it is worth stating plainly: **the test killed
 half of its own result with a control it wrote in advance.** `N3` was not required by any project
@@ -769,8 +794,11 @@ the fifth time.**
 
 Specific, per `REVIEW_PROTOCOL.md` §10. **Six items, all `MINOR`. None blocks V10.**
 
-1. **`M1`** — Run `05_HOMEWORK/V07/scripts/verify_quotes.py` (reachable from integration) over the
-   seven V09 artifacts. For each of the four hits named in `M1`, either move the correction
+1. **`M1`** — Run `05_HOMEWORK/V07/scripts/verify_quotes.py` (reachable from integration since the
+   V07 R2/R3 rounds) over the seven V09 artifacts. **It needs generalising first** — its
+   `TRANSCRIPT`, `ARTIFACTS` list and printed-slide allowlist are V07-specific — and generalising
+   it so it takes a lesson identifier is the better fix, because this class has now been charged
+   in five lessons. For each of the four hits named in `M1`, either move the correction
    **outside** the quote marks with its marker, or retag the row `PRINTED` where a slide is the
    real source. **Do not edit `02_TRANSCRIPTS/V09/V09_TRANSCRIPT.md`'s body.**
 
@@ -941,8 +969,9 @@ source.
 
 Logged in `LOG.md` under **2026-08-13 — Reviewer Session (V09 R1)**, on branch `review/v09`.
 `18_REVIEW/REVIEW_INDEX.md` updated in the same round: decision-table row, STATUS block, error
-counts, severity totals, and open items **71–76** (`M1`–`M6`) plus **77** (the `PT-035` successor)
-and **78** (the censoring-bias investigation). Open item **65** is recorded **CLOSED-VERIFIED**.
+counts, severity totals, and open items **73–78** (`M1`–`M6`) plus **79** (the `PT-035` successor)
+and **80** (the censoring-bias investigation). Item numbering is allocated against the **merged**
+integration state, whose highest existing item is **72** (V08 R2) — `D-038a` consequence 1.
 
 **Merged**, and deliberately — see §3. The `SWF_CAPTURE_RECIPE.md` fix (§16) is a policy-ledger
 edit and is committed separately on the integration branch.
