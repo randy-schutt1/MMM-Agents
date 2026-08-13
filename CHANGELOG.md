@@ -87,7 +87,7 @@ method requires — his table may genuinely have been taught as fixed clock numb
 ### Changed
 
 - `DECISIONS.md` open-decisions table: both `OWED NOW` items cleared.
-- `REVIEW_INDEX.md`: item 35 closed; items 36–37 added.
+- `REVIEW_INDEX.md`: item 53 closed; items 54–55 added *(renumbered from 35/36–37 on 2026-08-12 — see the resolved merge note in `REVIEW_INDEX.md`)*.
 
 ### Finding
 

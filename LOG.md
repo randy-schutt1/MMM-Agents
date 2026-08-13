@@ -3253,7 +3253,7 @@ before the course teaches more.
   an approximated definition inside a test produces a **number**, and a number acquires
   authority in a research corpus that a note never does.
 - **`PT-001`** pre-registered in full.
-- `REVIEW_INDEX.md` item 35 closed; 36–37 opened. `CHANGELOG.md` 0.7.1.
+- `REVIEW_INDEX.md` item 53 closed; 54–55 opened. `CHANGELOG.md` 0.7.2. *(Item numbers and version renumbered 2026-08-12 from 35/36–37 and 0.7.1 — see the resolved merge notes in `REVIEW_INDEX.md` and `CHANGELOG.md`.)*
 
 ### Key Findings
 
@@ -3335,7 +3335,7 @@ resolved from source **can** be converted into a measured variable.
 - **`PT-001` unblocked** — §3 rewritten with the two-arm design, the two-draws caution,
   and the straddle-a-DST-transition recommendation. Remaining prerequisites are `I-007`
   (data source) and the `D-028` boundary dates — no longer the timezone.
-- `REVIEW_INDEX.md` item 37 updated, item 38 added. `CHANGELOG.md` 0.7.2.
+- `REVIEW_INDEX.md` item 55 updated, item 56 added. `CHANGELOG.md` 0.7.3. *(Item numbers and version renumbered 2026-08-12 from 37/38 and 0.7.2 — see the resolved merge notes.)*
 
 ### Key Findings
 
