@@ -37,7 +37,8 @@ the code comments and in the TradingView tooltips. The table below is the same i
 | Component | File | Pane |
 |---|---|---|
 | Five EMAs — 5, 13, 50, 200, 800; each independently toggleable, each with its own colour and period input | `MMM_Indicator.txt` | overlay |
-| Session boxes — Asian, London, London "prime", New York, NY "prime"; each independently toggleable | `MMM_Indicator.txt` | overlay |
+| Session boxes — Asian, London, London "prime", New York, NY "prime", the 5pm–8pm dead gap, and two "mktopen" open-hour boxes; each independently toggleable | `MMM_Indicator.txt` | overlay |
+| The 5pm high/low reset, as a vertical line on the dead gap's opening bar | `MMM_Indicator.txt` | overlay |
 | TDI — RSI line, Fast MA, Slow MA / Trade Signal, Market Base Line, Volatility Bands | `MMM_TDI.txt` | separate |
 
 ### Why two files rather than one
@@ -82,6 +83,8 @@ below rest on entirely different evidence.
 | Asian session | 8:30pm – 3:00am | **1** | V02 slide *"ForEx Trading Times"* `[00:45:55]`, transcribed at `03_LESSON_NOTES/V02_SOURCE_NOTES.md` §4b. Corroborated Tier 2 by `MMM-NOTES` p.8 (`00:30–07:00 GMT`). |
 | London session | 3:30am – 9:00am | **1** | Same slide. Corroborated by `MMM-NOTES` p.8 (`07:30–13:00 GMT`). |
 | New York session | 9:30am – 5:00pm | **1** | Same slide. ⚠ Tier 2 p.8 gives the US close as `20:30 GMT` = **16:30 ET**, a genuine half-hour divergence from the Tier-1 slide's 5pm. Tier 1 wins; the divergence is noted, not hidden. |
+| **5pm high/low reset** | 5:00pm | **1** | Same slide: *"5pm High / Low Reset (The MM Spread Is Set)"*. One of two lines `V02_SOURCE_NOTES.md` §4b flags as appearing **only** on the slide and never in the audio. |
+| **Dead gap** | 5:00pm – 8:00pm | **1** | Same slide: *"5pm to 8pm Dead Gap"*. The other slide-only line. |
 | The session-box concept, and that the Asian box is one of them | — | **2** | `MMM-NOTES` **p.40**, *"Colour-Coded Sessions"*: *"Two boxes can be drawn. The 1st is drawn around the Asian session and simply denotes the area of consolidation that is expected during this period… It is just a guide."* |
 | NY "prime" box **window** (NY open + ~3h → 09:30–12:30) | 3 hours | **2** | `MMM-NOTES` **p.40**: the second box *"starts at the beginning of the NY open and runs for about 3 hours"*, flagged as the **New York Reversal** window. |
 | TDI's four lines and their roles (structure only) | — | **2** | `MMM-NOTES` **p.45–47**, recorded at `EXTERNAL_VOCABULARY_REFERENCE.md` §9.2a. |
@@ -94,6 +97,8 @@ collapsed.
 
 | Parameter | Value | Source |
 |---|---|---|
+| **EMA 50 / 200 / 800 colours** | **Aqua / White / Blue** | `3M-shadow-boxes-15M.tpl` — a **15-minute** template, `method=1` (MT4 `MODE_EMA`), colours `16776960` / `16777215` / `16711680`. The 800-on-15m independently corroborates Tier-1 V09. **5 and 13 are not in that template and stay `[DEFAULT]`.** ⚠ the 200 is white — invisible on a white background. |
+| "mktopen" open-hour **window length** | 2 × 1 hour | `!sm_WorkTime_v1.5b` `Begin_5a=10:00/End_5a=11:00`, `Begin_5b=16:00/End_5b=17:00` — independently reproduced by the 284 rectangles in `3M-shadow-boxes-15M.tpl`. **Their ET placement is NOT sourced — see below. Ships disabled.** |
 | TDI RSI period | **21** | `Ultimate Blue.tpl`, block `name=!SM_TDI`: `RSI_Period=21` |
 | TDI RSI price | `close` | `RSI_Price=0` (MT4 `PRICE_CLOSE`) |
 | TDI fast MA (RSI Price Line) | 2, SMA | `RSI_Price_Line=2`, `RSI_Price_Type=0` (MT4 `MODE_SMA`) |
@@ -107,7 +112,8 @@ collapsed.
 
 | Parameter | Default | Why it is a default |
 |---|---|---|
-| **All five EMA colours** | cyan / orange / blue / pink / purple | **No colour for any moving average is stated anywhere** — not in the corpus, not in `MMM-NOTES`. `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §8 records the negative result outright: *"No colours, no nicknames, no periods assigned."* Chosen only to be distinguishable. |
+| **EMA 5 and 13 colours** | cyan / orange | **No colour for any moving average is stated in any source** — `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §8: *"No colours, no nicknames, no periods assigned."* 50/200/800 have since been recovered from tooling (above); 5 and 13 are not in that template, so these two remain invented. |
+| **"mktopen" boxes' ET placement** | 03:00–04:00 and 09:00–10:00 | The artifacts record **broker server** time and no artifact states the offset. A GMT+3 server fits well (see below) but **that is a curve-fit by this session, not a source**. Ships **disabled**. |
 | EMA source | `close` | Not specified by any source. |
 | **Session timezone** | Arm A, `UTC-5` | **This is the big one — see the next section.** |
 | Day mask | `1234567` | The corpus states no day mask for the intraday table. |
@@ -298,10 +304,14 @@ Both scripts compile as-is with no external dependencies.
 
 **Methodological**
 
-- The **5pm high/low reset**, the **5pm–8pm dead gap**, and the two **changeover gaps**
-  (3:00–3:30a, 9:00–9:30a) are all printed on the same Tier-1 V02 slide and are **not drawn** by
-  this tool. That is a scope decision, not a sourcing gap — they are documented and available to
-  a future version.
+- The **5pm high/low reset** and the **5pm–8pm dead gap** are now drawn (added 2026-08-13). The
+  two **changeover gaps** (3:00–3:30a, 9:00–9:30a), printed on the same Tier-1 V02 slide, are
+  still **not** drawn — a scope decision, not a sourcing gap, and available to a future version.
+- The reset is drawn as a **vertical line marking the 17:00 boundary**, not as a pair of
+  high/low levels. The slide says the high/low *resets* there; it does not say the levels are
+  plotted, and inventing a rendering the source does not describe would be an approximation.
+  The tooling's own `!SM_Daily_HiLo` does plot such levels, which is a reasonable future
+  addition once the class in the draft decision is adopted.
 - **`C-010` is unresolved.** The corpus uses an 800 that `MMM-NOTES` does not contain anywhere in
   84 pages, while `MMM-NOTES` enumerates the set as *"the 5, 13, 50 and 200"*. Tier 1 outranks
   Tier 2 so the 800 stands and is defaulted ON — but the two sources genuinely disagree about the
@@ -316,7 +326,14 @@ Both scripts compile as-is with no external dependencies.
 
 ---
 
-## Two adjacent finds in the same folder — recorded, NOT acted on
+## Other finds in the owner's `~/Desktop/Trading/Indicators/`
+
+The owner approved (2026-08-13) admitting these artifacts as a **new evidence class scoped to
+parameters only** — never doctrine. The admitting decision is drafted at
+[`DRAFT_D-041_platform_artifacts.md`](DRAFT_D-041_platform_artifacts.md) and is **NOT adopted**:
+`DECISIONS.md` is a **policy ledger**, editable only on the integration branch (`D-038a`), so
+writing it from this branch would be the exact breach that rule names. Until it is adopted the
+`[TOOLING]` tag is provisional and closes no record.
 
 Found while extracting the TDI parameters. Neither changes this tool; both are logged so they
 are not lost, and both need proper register treatment rather than a quiet adoption here.
@@ -330,12 +347,41 @@ same way Tier 1 does. It does **not** close `C-010`, which is about what the *so
 
 The same indicator also has `draw_asian_box` / `draw_euro_box` / `draw_ny_box` /
 `draw_mktopen_box` and a `DrawStopHuntBox` — i.e. the session-box concept, in the tooling.
-**Its clock times are not usable as evidence**: the companion binary is named
-`sm_WorkTime_no_autogmt`, meaning GMT auto-detection is off and the times are raw **broker
-server time** with an unknown offset. They do not reconcile with the V02 slide under any single
-consistent offset, so they are **not** imported into the session boxes and `A-019` is untouched.
-Worth noting that `draw_mktopen_box=true` defines *two* one-hour windows (`10:00–11:00` and
-`16:00–17:00`) — structurally the closest thing yet seen to a "prime box", still unnamed as such.
+**Its clock times are raw broker server time** (the companion binary is named
+`sm_WorkTime_no_autogmt`, so GMT auto-detection is off) and no artifact states the offset.
+
+`draw_mktopen_box=true` defines **two one-hour windows**, `10:00–11:00` and `16:00–17:00` — and
+those are reproduced independently by find 3 below. Both are now in the script as the
+**"mktopen" open-hour boxes, shipped disabled**; see the timezone caveat there. `A-019` is
+untouched and `D-031`'s two arms are undisturbed.
+
+**3. `3M-shadow-boxes-15M.tpl` — the richest single file in the folder.** Two payloads.
+
+*The EMA colours* (adopted, `[TOOLING]`): a **15-minute** template with three EMAs
+(`method=1` = `MODE_EMA`) at 50 = **aqua**, 200 = **white**, 800 = **blue**. An 800 EMA on a
+15-minute chart independently corroborates Tier-1 V09.
+
+> **A lead for `A-020`, deliberately NOT adopted.** The 800 being *blue* makes "blueberry" read
+> as plain colour-naming — which makes **white = 200 = "mayonnaise"** a strong candidate for
+> A-020's still-open half (the *period* behind "Mayo"). It is inference from colour semantics
+> with no speaker behind it, which is exactly what **`D-030`** forbids adopting. No EMA in the
+> script is labelled "Mayo". Logged as the best lead A-020 has had; the register decides.
+
+*284 drawn rectangles* (Mar–May 2015), whose start/end times cluster hard:
+
+```text
+03:30 → 10:00   (6.5h, x50)      10:00 → 11:00   (1h, x42)
+10:00 → 16:30   (6.5h, x142)     16:00 → 17:00   (1h, x42)
+16:30 → 23:45   (x50)
+```
+
+The two one-hour clusters are the same numbers as `sm_WorkTime`'s `mktopen` windows — two
+artifacts, different mechanisms, identical values. If the broker ran **GMT+3** (common for MT4;
+the sample straddles a DST switch) the three large boxes align closely with `MMM-NOTES` p.8's GMT
+table — Asian `00:30–07:00 GMT` **to the minute** — and the two small ones land on the London
+open and the NY equities open. **That offset is a curve-fit by this session, not a sourced fact**,
+which is precisely the `A-019` question, so it is registered as a `D-031`-style arm and the boxes
+ship off.
 
 **2. `4X-2010-SEMA4X` does NOT carry the 5/13/50/200/800 set.** The template's EMA indicator has
 `Period1=36`, `Period2=60`, `Period3=156`, `Period4=408` — four periods, none of them the
