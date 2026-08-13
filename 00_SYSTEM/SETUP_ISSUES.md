@@ -298,7 +298,10 @@ on substituting generated images for real course screenshots is unchanged.
 
 ## I-007 — Manual backtesting requires a chart data source
 
-**Status:** `OPEN` — to be resolved before the first manual backtest
+**Status:** ✅ **RESOLVED 2026-08-13 — `DECISIONS.md` `D-034`.** The original text is retained
+below unedited; the resolution is appended at the end of the entry, per this file's own rule
+("Resolving an issue means appending the resolution and changing the status — not deleting the
+entry").
 
 Manual backtesting on GBP/USD requires historical chart access with the ability to
 hide future candles at the decision point (e.g. TradingView bar replay). Whether an
@@ -309,6 +312,32 @@ This affects the credibility of every manual backtest record, so it must be deci
 and recorded in `DECISIONS.md` — including the data source, broker/feed, timezone,
 and timeframes — before observations are collected. See `STUDY_PROTOCOL.md` §6
 (reproducibility).
+
+### RESOLUTION — 2026-08-13, `DECISIONS.md` `D-034`
+
+**Declared source:** **TradingView, FXCM feed** (`FX:GBPUSD`), no login and no account;
+**platform text only** (Data Window / OHLC legend DOM — no pixel reads, per the `E06`/`E19`
+`MAJOR` in `18_REVIEW/V02/V02_REVIEW_R1.md`); **chart timezone recorded per harvest, never
+assumed** (it is the input to `D-031`'s two arms); **15-minute primary**, 1h / 4h / 1D where a
+test says so; **Yahoo Finance as a corroboration second vendor only**.
+
+This formalises the convention already in unbroken use — V02, V03, V04, V05 and V06 homework
+each declare TradingView + FXCM in their header tables, and no competing feed appears anywhere
+in V01–V06. Nothing new was invented.
+
+**Both original questions are answered.** The agent session drives the tool (harvesting bar
+text via the committed harvesters in `05_HOMEWORK/V05/scripts/` and `05_HOMEWORK/V06/scripts/`);
+"hide future candles at the decision point" is satisfied **structurally rather than visually** —
+the harvest is timestamped and the analysis is scripted, so a decision point is enforced in code
+rather than by what is on screen, which is stronger and reproducible.
+
+> **What this resolution does NOT resolve.** `D-034` adds a **mandatory history-depth probe**
+> per timeframe, and the probe already on record shows TradingView/FXCM serves 15-minute
+> GBP/USD back only to **2026-05-31**. The pre-registered windows `W-A`/`W-B`/`W-C` (2013–2017)
+> are therefore **unreachable at 15 minutes on the declared feed.** `PT-002`…`PT-021` remain
+> blocked — no longer by `I-007`, but by **data availability**, which is a `D-019` measurement
+> gap and an **open owner decision** recorded in `D-035` (options A / B / C). A session must not
+> read this entry's `RESOLVED` as "the manual backtest batch may now run".
 
 ---
 

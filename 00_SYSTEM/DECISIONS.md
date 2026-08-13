@@ -672,6 +672,15 @@ against them.
 > **`D-028`'s meaning is unchanged and it is not superseded** — this is the append the decision
 > itself instructs, of the same kind as `D-019`'s citation fix.
 
+> ### APPENDED 2026-08-13 (later, same day) — THE PROJECT-WIDE BOUNDARY IS NOW PINNED
+>
+> The scoped boundaries above stand, and the project-wide split they explicitly declined to
+> make has since been made: **`D-035` pins it at 2016-07-01** over the corpus
+> `2013-01-06 → 2017-12-29` (DEVELOPMENT `2013-01-06 → 2016-06-30`; HOLDOUT
+> `2016-07-01 → 2017-12-29`), following `D-034`'s data-source declaration which closed
+> `I-007`. This decision's status line — *"boundary dates PENDING first data-source decision"* —
+> is **discharged by `D-035`**. `D-028` itself is still not superseded.
+
 
 ---
 
@@ -802,10 +811,10 @@ Not yet decided; record as new entries when the information exists.
 | ~~Verified lesson count and ordering~~ | **Decided — D-017** |
 | ~~Handling of any duplicate or non-lesson files found~~ | **Decided — D-017** |
 | Whether the `SteveMauro060212` and Dean Malone series (X01–X21) enter the corpus | After V21 passes review |
-| Chart data source / broker feed for manual backtesting | First manual backtest |
-| Timezone convention for session and daily boundaries | First timing lesson |
-| Default timeframes used in manual study | First chart lesson |
-| Manual-phase development / holdout boundary | ✅ **DECIDED — D-028** (70/30; exact dates pinned at first data-source decision) |
+| ~~Chart data source / broker feed for manual backtesting~~ | ✅ **DECIDED — D-034** (TradingView, FXCM feed; `I-007` closed 2026-08-13) |
+| Timezone convention for session and daily boundaries | ⚖️ **CONVERTED — D-031** (tested as two arms, not resolved); `A-019` stays OPEN |
+| ~~Default timeframes used in manual study~~ | ✅ **DECIDED — D-034** (15m primary; 1h / 4h / 1D where a test says so) |
+| Manual-phase development / holdout boundary | ✅ **DECIDED — D-028** (70/30) · ✅ **PINNED — D-035** (boundary **2016-07-01**) |
 | Baseline parameters (iterations, window, direction handling) | ✅ **DECIDED — D-029** |
 | Development / validation / holdout dataset boundaries (automated, Phase 4–8) | Phase 4–8 |
 | Whether Git LFS is adopted for any media | Only if media must be versioned |
@@ -1255,14 +1264,28 @@ exist to prevent, and V05 begins under the same session date with a third presen
 - `A-039` gains guest frames as **descriptive** evidence that TDI is displayed, and is
   **not** narrowed by them — "displayed, not taught".
 
-**Status:** ACTIVE
+**Status:** **SUPERSEDED IN PART by `D-033`, 2026-08-13.** The normative exclusion — the
+entire "EXCLUDED from doctrine" column, and consequences 1 and 2 — is **reversed**. What
+survives is consequence 3 (speaker tagging is mandatory) and consequence 4 (identification
+is provenance, not evidence), both of which `D-033` re-adopts explicitly. The text above is
+retained unedited per this file's append-only rule and per `REMEDIATION_PROTOCOL.md` §2; it
+is the record of what the project believed between 2026-08-11 and 2026-08-13 and it is the
+reason a large number of records were left open in that period.
 
 ---
 
 ## D-032 — Guest material may be TESTED, never adopted; a test is not a citation
 
 **Date:** 2026-08-13
-**Status:** **PROVISIONAL — OWNER RATIFICATION REQUESTED.** Written by the session that was
+**Status:** **SUPERSEDED by `D-033`, 2026-08-13 (same day).** `D-032` was the narrow opening —
+guest material may be *measured* but not *adopted*. `D-033` removes the distinction it was
+built on by granting guest material full normative authority, so the "still forbidden" column
+below no longer binds. **`PT-022`/`PT-023`/`PT-024` and `BT_V06_0001` are not withdrawn and
+not re-scoped**: work performed under a narrower fence remains valid under a wider one, and
+their mandatory scope statements are now *historical* rather than binding. Retained unedited.
+The original status line follows.
+
+**Original status:** **PROVISIONAL — OWNER RATIFICATION REQUESTED.** Written by the session that was
 directed to act on it, so the direction is on the record rather than living only in a chat
 session (`D-001`, and the `D-023` failure this avoids repeating). If the owner disagrees with
 any clause, this entry is superseded and `PT-022` and its observations are marked
@@ -1327,4 +1350,301 @@ coverage table, which reads *"V06 — none — `D-025`"*, is updated with the re
 rather than silently corrected. **`PT-002`…`PT-021` are unaffected**: none of them draws on V05
 or V06 and none is re-scoped here. If the owner declines to ratify, `PT-022` and its
 observations are marked `WITHDRAWN — SCOPE` and retained.
+
+---
+
+## D-033 — Guest-presenter material is NORMATIVE evidence on equal footing with the course author
+
+**Date:** 2026-08-13
+**Supersedes:** `D-025` **in part** (the normative exclusion, and consequences 1 and 2) and
+`D-032` **in whole** (the test-but-never-adopt fence, which this entry makes unnecessary).
+Neither is deleted; both are marked in place and retained unedited.
+**Does NOT supersede:** `D-030` (definitions are never approximated), `D-010` (machine-rule
+firewall), `D-008` (course evidence outranks agent interpretation), `D-009`, `D-026`–`D-029`,
+`D-031`. See the "What this decision does not do" block below — it is the load-bearing half.
+
+**Owner direction, 2026-08-13:** guest-presented content is to be treated as **equal in
+authority to main-host content** — *"all knowledge is created equal."* Guest material is not
+to be demoted.
+
+**Decision:** Material delivered by any speaker inside a course lesson — the course author, a
+guest presenter, a coach, an invited student — is **admissible as NORMATIVE evidence at equal
+weight**. Specifically, guest material:
+
+| May now | Previously, under `D-025` |
+|---|---|
+| Define rules, gates, filters, thresholds, stops, targets, sessions, watchlists | Excluded from doctrine entirely |
+| Enter `12_MASTER_SPEC/`, `13_MACHINE_SPEC/`, `08_CONCEPT_LIBRARY/` and machine candidates | Barred from all four |
+| **CLOSE or RESOLVE** an `A-xxx` or `C-xxx` record on its own | Could `EXTEND` only, never close |
+| Be cited **for or against** any other statement in the corpus | Barred both ways |
+| Be adopted, not merely tested (`D-032`'s distinction dissolves) | Testable at most, from `D-032` onward |
+| Be graded on all ten mastery dimensions like any other lesson | Dimensions withheld "by decision" |
+
+**Three provisions of `D-025` are re-adopted verbatim and remain binding**, because none of
+them demotes anything — they are provenance hygiene, and the reversal does not touch them:
+
+1. **Speaker tagging stays MANDATORY** (`D-025` consequence 3) — transcript header speaker
+   table, speaker tag on every source-note row, established *before* notes are written. Equal
+   authority is not anonymity: the corpus must still record **who said what**, because two
+   speakers can now both create doctrine and a future contradiction between them has to be
+   attributable.
+2. **Identifying a guest is provenance, not evidence** (`D-025` consequence 4). Nothing may
+   depend on the identification being right.
+3. **A guest/instructor divergence is now a real contradiction and IS logged as one.** This
+   inverts `D-025` consequence 2 rather than re-adopting it: with equal authority, two
+   speakers stating incompatible rules is a genuine `C-xxx` conflict in the method, not a
+   corpus-hygiene note. `C-005` is affected — see the consequences below.
+
+### What this decision does NOT do — read this before citing it
+
+- **`D-030` is untouched and still binds.** A claim that needs a concept the course has named
+  and never defined — *push*, *pullback*, *nameable pattern*, "the level" (`A-004`), M/W
+  anatomy (`A-011`), the second leg (`A-007`), TDI (`A-039`), ADR's lookback — **remains
+  untestable and uncodable no matter who said it.** Equal speaker authority changes *whose*
+  statements count; it does not supply a missing definition. **A session that reads `D-033` as
+  unblocking the `D-030` list has misread it.** Concretely: V06 dimension **B (Recognition)**
+  is blocked because *push* is undefined, and it stays blocked.
+- **It is not retroactive re-grading.** No mastery grade, review verdict or gate state changes
+  by operation of this entry. Where a dimension or a record was blocked by `D-025`, the
+  blocking condition is recorded as **CHANGED**, and re-assessment is the independent
+  reviewer's job under `D-003`/`D-004`, not the job of the session that wrote this decision.
+- **It does not make guest material *outrank* anything.** Equal is equal. `D-008` still ranks
+  course evidence above agent interpretation, and no speaker's statement acquires priority
+  over another's by seniority, runtime share, or how well it fits an existing artifact.
+
+**Reason:** The owner is the authority on the corpus's scope, and this is the owner's ruling.
+The recorded cost of `D-025` supports it. Two consecutive lessons (V05, V06) carry **zero
+course-author runtime**; V06 states the most nearly complete trading system anywhere in
+V01–V06 — trigger, filter, location rule, counting rule, stop, target, time stop, exit — and
+`D-025` excluded all of it, producing a lesson that yielded *"zero doctrine"* by its own
+mastery report. `D-032` was already an admission that the exclusion had over-reached, and it
+bought a narrow measurement carve-out at the price of a distinction ("a confirmed claim is a
+measured fact about a claim a coach made, not a rule") that every future session would have
+had to keep straight. Removing the demotion removes that maintenance burden entirely.
+
+**Evidence:** Owner direction, 2026-08-13. `DECISIONS.md` `D-025`, `D-032`.
+`07_MASTERY_REPORTS/V05_MASTERY_REPORT.md` §F/§G and its Escalation (V05's `D-018`/`D-019`
+disposition problem exists **only** because of the exclusion);
+`07_MASTERY_REPORTS/V06_MASTERY_REPORT.md` `STUDENT STATUS: REVIEW REQUIRED`;
+`10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` STATUS block (*"It CLOSED none, and under D-025 it
+cannot"*); `11_CONTRADICTIONS/CONTRADICTIONS.md` C-005;
+`06_MANUAL_BACKTEST/PRE_REGISTERED/INDEX.md` §2 (*"V05 — none — `D-025`"*);
+`06_MANUAL_BACKTEST/PRE_REGISTERED/COMMON_PROTOCOL.md` §8.
+
+**Alternatives considered:** *Leaving `D-025` in force and widening `D-032` further* —
+rejected; the owner's direction is about authority, not about measurement, and stacking a
+third carve-out on a rule the owner has reversed would leave the corpus governed by a
+distinction nobody wants. *Superseding `D-030` alongside it, on the reading that it is "a
+related guest ruling"* — **rejected on the facts**: `D-030` names no speaker and applies to
+instructor material identically (`A-004`, `A-011`, `A-019` are all instructor terms). It is
+the machine-rule firewall applied to testing, and reversing it would license invented
+definitions across the whole corpus, which no part of the owner's direction asks for. Flagged
+to the owner rather than assumed either way. *Deleting `D-025` and `D-032`* — rejected;
+append-only is `D-001`'s discipline and `REMEDIATION_PROTOCOL.md` §2's requirement, and the
+period during which the exclusion was in force explains the shape of a dozen artifacts.
+
+**Consequences:**
+
+- **`D-025`** marked `SUPERSEDED IN PART`; **`D-032`** marked `SUPERSEDED`. Both retained
+  unedited. `PT-022`/`PT-023`/`PT-024` and `BT_V06_0001.md` stand as run; their mandatory
+  `D-032` scope statements become historical annotations, not live constraints.
+- **`10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`** — the standing bar on closing a record with
+  guest evidence is lifted. Records left open *solely* on that ground are flagged
+  `CLOSURE UNBLOCKED BY D-033 — RE-ASSESS` in the STATUS block. **No record is closed by this
+  decision**; each still needs the ordinary evidentiary judgement, in a session that does the
+  reading. `A-043`'s narrow platform-artifact closure needs no special justification any more.
+- **`11_CONTRADICTIONS/CONTRADICTIONS.md`** — `C-005` changes category: a guest/instructor
+  divergence is now a method-level conflict. `C-005` is **not** re-adjudicated here; it is
+  flagged for the reviewer.
+- **`18_REVIEW/REVIEW_INDEX.md` open item 40** — the proposed `D-025` carve-out for records
+  whose subject is a guest's own utterance or a platform artifact is **MOOT**: it was an
+  exception to a bar that no longer exists.
+- **`COMMON_PROTOCOL.md` §8** and **`PRE_REGISTERED/INDEX.md` §2** are corrected in place with
+  the superseded reading retained above the change, as `D-032`'s own edit did.
+- **V05 and V06 mastery reports** gain a `D-033` note recording that the blocking condition has
+  changed. **Neither is re-graded here.** Authoring V05/V06-derived test cases for the GBP/USD
+  suite is follow-up work, not this session's.
+- **Speaker tagging remains a gate item for every V07–V21 lesson.**
+
+**Status:** ACTIVE
+
+---
+
+## D-034 — The GBP/USD chart data source is declared: TradingView, FXCM feed (closes `I-007`)
+
+**Date:** 2026-08-13
+**Closes:** `SETUP_ISSUES.md` `I-007` (open since 2026-08-10).
+**Governs:** every manual backtest under `D-005`/`D-026`/`D-027`, and
+`06_MANUAL_BACKTEST/PRE_REGISTERED/COMMON_PROTOCOL.md` §1 and §6.
+
+**Decision:** The **standing** chart data source for the manual phase is the convention
+already in unbroken use across V02–V06 homework, declared here rather than invented:
+
+| Field | Value |
+|---|---|
+| Platform | **TradingView** |
+| Feed | **FXCM** (`FX:GBPUSD`) |
+| Access | **No login, no account, no paywalled feature.** No CAPTCHA is encountered or bypassed |
+| Measurement | **Platform text only** — `Date`, `Time`, `Open`, `High`, `Low`, `Close` read together from the Data Window / OHLC legend DOM. **No price is ever read from a pixel** (`COMMON_PROTOCOL.md` §2) |
+| Reference harvester | `05_HOMEWORK/V05/scripts/tv_harvest_v05.mjs` — each bar carries its own timestamp, so no boundary is inferred from bar cadence |
+| Chart timezone | **Recorded explicitly per harvest, never assumed.** The chart clock is an input to `D-031`'s two arms, not a detail |
+| Timeframes | 15-minute primary; 1-hour, 4-hour and 1-day where a test says so |
+| Second vendor | **Yahoo Finance chart API** (`query1.finance.yahoo.com/v8/finance/chart/`) is the **corroboration** source only — used to cross-check the primary, as in `05_HOMEWORK/V06/scripts/crosscheck_second_source.py` and `PT-024`. It is not a substitute primary, and a test that runs on it says so in its own file |
+
+**The convention was verified, not assumed.** Every homework file in the corpus that opened a
+chart names the same platform and the same feed:
+
+| Lesson | Declared source |
+|---|---|
+| V02 | TradingView, FXCM feed, 1-hour, no account |
+| V03 | TradingView, FXCM feed, 4-hour, no account, no login |
+| V04 | TradingView, **FXCM**, 4-hour and 15-minute, no login |
+| V05 | TradingView, **FXCM**, 15-minute, no login |
+| V06 | TradingView, **FXCM**, 15-minute and 1-day, no login |
+
+V01's homework is `DEFERRED` (H4/H5, blocked by `I-007` itself) and opened no chart, so it is
+silent rather than inconsistent. **There is no competing feed anywhere in V01–V06.** Yahoo
+appears once, in V06, and is explicitly framed there as a second source for cross-checking.
+
+**Two vendor-dependent facts that this decision carries forward as known, not as surprises:**
+
+1. **The FX week open is vendor-dependent.** FXCM opens the week at **21:00 UTC**; Yahoo at
+   **23:00 UTC**; both consistently, week after week (`V06_HOMEWORK.md` §4, cross-check
+   script). *"480 bars in a trading week"* is therefore a fact about the FXCM feed's session
+   definition, not about the market. **Every week-boundary test (`W-C`, `PT-008`–`PT-013`)
+   inherits FXCM's 21:00 UTC week open** and must state it.
+2. **Quotes differ by a small constant offset between vendors** — Yahoo minus FXCM measured at
+   **+3.11 pips on highs, +3.94 pips on lows** (`V06_HOMEWORK.md` §4). A cross-vendor
+   comparison is a corroboration of *shape*, not of *level*.
+
+**A MANDATORY depth probe, because declaring a feed does not make history appear.**
+Before any window is opened at a given timeframe, the running session performs and records a
+**history-depth probe** at that timeframe — walking the chart back until the left-edge date
+stops moving, **reading dates only, never OHLC** — and records the earliest served timestamp
+in the observation. The reference implementation is `PT-023`'s `probe_back.mjs` (368 drags).
+
+> **The probe already on record, and it is bad news for `PT-002`…`PT-021`.** Measured
+> 2026-08-13: **TradingView/FXCM serves 15-minute GBP/USD back to 2026-05-31 and no further** —
+> about **2.5 months**. `COMMON_PROTOCOL.md` §3's windows **W-A (2015)**, **W-B (2014–15)** and
+> **W-C (2013–17)** are therefore **out of reach at 15-minute resolution on the declared feed.**
+> This is why `PT-022` was superseded `PERIOD UNOBTAINABLE`.
+>
+> **Closing `I-007` does not by itself unblock `PT-002`…`PT-021`.** It removes the *declaration*
+> blocker. A **data-availability** blocker remains, and it is a different thing — a measurement
+> gap under `D-019`, not a definitional one under `D-030`. See `D-035` and the follow-up item
+> recorded there.
+
+**Reason:** `I-007` has blocked the manual phase since 2026-08-10 and has already forced two
+test re-issues. The project does not need a *new* source; it needs the one it has been using
+for five lessons to be written down as binding. Declaring the de facto standard costs nothing,
+invents nothing, and makes every prior homework retroactively conformant rather than
+retroactively irregular.
+**Evidence:** `05_HOMEWORK/V02…V06/*_HOMEWORK.md` header tables (quoted above);
+`05_HOMEWORK/V05/scripts/tv_harvest_v05.mjs`; `05_HOMEWORK/V06/scripts/crosscheck_second_source.py`
+and `05_HOMEWORK/V06/data/crosscheck_second_source_output.txt`;
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-023` §1 (the depth probe);
+`18_REVIEW/V02/V02_REVIEW_R1.md` (the `E06`/`E19` pixel-read `MAJOR` that produced the
+text-only rule); `00_SYSTEM/SETUP_ISSUES.md` `I-007`.
+**Alternatives considered:** *Declaring a paid deep-history vendor that reaches 2013* —
+rejected **here**, not on the merits but on authority and evidence: no such feed has ever been
+used in this project, choosing one is a cost and account decision that belongs to the owner,
+and `I-007`'s own text says the decision must be recorded before observations are collected,
+not guessed by a session. Recorded as the open follow-up in `D-035`. *Declaring Yahoo as
+primary because its daily history is deeper* — rejected; it has been used exactly once, as a
+cross-check, and promoting the corroboration source to primary would invalidate the
+comparison that makes it useful. *Leaving `I-007` open until a deep-history feed exists* —
+rejected; that conflates two separable blockers and leaves five lessons of chart work
+formally unsourced.
+**Consequences:** `COMMON_PROTOCOL.md` §1 ("Data source — UNDECLARED") and §6 (the `I-007`
+row) are updated. `SETUP_ISSUES.md` `I-007` moves to `RESOLVED — D-034`, appended not deleted.
+The `DECISIONS TO BE MADE AT INGESTION` table's *"Chart data source / broker feed"* and
+*"Default timeframes used in manual study"* rows are marked decided. Every future `BT_` and
+`PT_` file states platform, feed, chart timezone and the depth probe for its timeframe.
+**Status:** ACTIVE
+
+---
+
+## D-035 — The project-wide `D-028` 70/30 boundary is pinned at 2016-07-01
+
+**Date:** 2026-08-13
+**Executes:** `D-028`, which fixes the 70/30 ratio and requires *"the first session to
+establish the data source"* to compute and record the concrete dates. `D-034` establishes the
+data source; this entry does the arithmetic. **`D-028` is not superseded** — its meaning is
+unchanged and this is the append it asks for, recorded as its own entry because it is a
+project-wide pin rather than the per-series scoped pins already appended under `D-028`.
+
+**Decision:** The manual-phase GBP/USD corpus is the **union of the three pre-registered
+windows** in `COMMON_PROTOCOL.md` §3 — `W-A` (2015), `W-B` (2014-01-05 → 2015-12-31) and
+`W-C` (2013-01-06 → 2017-12-29) — i.e. **2013-01-06 → 2017-12-29**, 1,818 days. Split by
+time at the oldest 70%:
+
+| Block | Range | Days | Rule |
+|---|---|---|---|
+| **DEVELOPMENT** | **2013-01-06 → 2016-06-30** | 1,272 | Open freely during the Student Phase |
+| **HOLDOUT** | **2016-07-01 → 2017-12-29** | 546 | **Not opened by any session, for any reason, during the Student Phase** (`D-027`, `D-028`) |
+
+`B = T0 + 0.70 × (T1 − T0)` = `2013-01-06 + 1,272 days` = **2016-07-01**, rounded down to the
+start of a calendar day, matching the rule `PT-023` §2 pre-registered. The corpus boundaries
+were chosen on **calendar grounds before any chart was opened** (`COMMON_PROTOCOL.md` §3
+attestation) and this arithmetic reads no price, so the pin is not outcome-informed.
+
+**Three consequences that must not be discovered later:**
+
+1. **`W-A` and `W-B` lie wholly inside DEVELOPMENT.** ✅ `PT-002`…`PT-007`, `PT-014`–`PT-018`,
+   `PT-020`, `PT-021` and `PT-001` conform on the boundary test.
+2. **`W-C` STRADDLES the boundary** — it runs to 2017-12-29, 546 days into HOLDOUT.
+   ⚠ **`PT-008`, `PT-009`, `PT-010`, `PT-011`, `PT-012`, `PT-013` and `PT-019` do not conform.**
+   Per `COMMON_PROTOCOL.md` §3a and `D-027`, each must be **re-issued under a new `PT` number**
+   with a window inside DEVELOPMENT — the natural one being `W-C′ = 2013-01-06 → 2016-06-30`
+   (~180 weeks, still comfortably over `n ≥ 30`). **The originals are retained and marked, not
+   edited into conformance.** This session does not re-issue them; it records the defect.
+3. **The 2016 events split across the boundary.** The EU referendum (2016-06-23) falls in
+   **DEVELOPMENT**, one week before the boundary; the October flash crash (2016-10-07) falls in
+   **HOLDOUT** and is therefore **not** available to the Student Phase at all. This is a
+   consequence of a ratio fixed on 2026-08-11, not a choice made about those events, and
+   `COMMON_PROTOCOL.md` §3 disclosure 1 (the sensitivity appendix) applies to whatever remains.
+
+> **THE REMAINING BLOCKER, STATED PLAINLY.** `I-007` is closed (`D-034`) and the `D-028`
+> boundary is pinned (this entry). **`PT-002`…`PT-021` still cannot run**, for a third and
+> different reason: **the declared feed does not serve the data.** TradingView/FXCM reaches
+> back **2.5 months** at 15 minutes; `W-A`/`W-B`/`W-C′` are 2013–2016. That is a **measurement
+> blocker** (`D-019` `DEFERRED`), not a definitional one (`D-030`), and it has exactly three
+> honest exits, all of which are **the owner's to choose**:
+>
+> | Option | What it costs |
+> |---|---|
+> | **A — a deep-history vendor** for the manual phase (a paid TradingView tier, a broker MT4/MT5 account with 2013 tick/minute history, or a bulk-download source), declared as an amendment to `D-034` | Money and/or an account; the `E06` text-only measurement rule must survive the change of tool |
+> | **B — re-issue the batch onto reachable windows** under new `PT` numbers, on the ~2.5 months the feed serves | Guts the design: `n` collapses for weekly-structure tests, and `COMMON_PROTOCOL.md` §3's "proximity to the 2012 regime" rationale is lost entirely |
+> | **C — split by timeframe**: run the daily-resolution tests (`PT-010`, `PT-012`, `PT-019`, parts of `PT-008`/`PT-013`) on whatever daily depth a probe shows the feed serves, and hold the 15-minute tests for option A | Requires a **daily-timeframe depth probe** (`D-034`), which no session has run. Cheapest next step and it is diagnostic either way |
+>
+> **No option is chosen here.** `D-030`'s discipline — wait rather than approximate — is the
+> project's standing answer to a blocker, and inventing a data source the project has never
+> used is the exact failure `I-007` was written to prevent. **Recorded as an open owner
+> decision.**
+
+**Reason:** `D-028` has carried *"boundary dates PENDING first data-source decision"* since
+2026-08-11 and the two boundaries appended to it since are **scoped** to single vendor/timeframe
+series, explicitly *"not the project-wide split"*. With `D-034` declaring the standing source,
+the project-wide pin is owed. Pinning it against the pre-registered windows rather than against
+one vendor's served depth is what makes it stable: the windows were fixed on calendar grounds
+before any chart existed, so the split cannot be re-cut by a later change of feed.
+**Evidence:** `DECISIONS.md` `D-027`, `D-028` (and its 2026-08-13 scoped append), `D-034`;
+`06_MANUAL_BACKTEST/PRE_REGISTERED/COMMON_PROTOCOL.md` §3, §3a;
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-023` §1–§2 (the depth probe and the boundary rule).
+**Alternatives considered:** *Pinning the boundary so that `W-C` fits wholly inside
+DEVELOPMENT* — **rejected, and this is the important one**: it would mean choosing the split
+to suit the tests, which is the selection pressure `D-027` and `D-028` exist to remove.
+Better to report seven non-conforming tests than to move a holdout to accommodate them.
+*Pinning against the feed's served depth (2026-05-31 → today)* — rejected; that is the scoped
+per-series pin already appended to `D-028`, and it is not a project-wide split. *Leaving the
+project-wide boundary unpinned until a deep-history feed is chosen* — rejected; the boundary
+is computable from windows fixed before any chart was opened, and pinning it now is strictly
+safer than pinning it after someone has seen 2013 data.
+**Consequences:** `COMMON_PROTOCOL.md` §3a's `PROVISIONAL — PENDING D-028` marking is
+resolved for `W-A`/`W-B` and converted into a **re-issue obligation** for the seven `W-C`
+tests. `PRE_REGISTERED/INDEX.md`'s gate block is updated. `validate_project.py` may now check
+observation dates against 2016-07-01. Opening the holdout remains `E23` and converts it
+permanently into development data, which must be **disclosed**.
+**Status:** ACTIVE — the split is final; the data-availability exit (A / B / C above) is an
+**OPEN OWNER DECISION**
 
