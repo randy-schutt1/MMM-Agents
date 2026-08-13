@@ -9,10 +9,20 @@ STATUS:  24 tests pre-registered · 2 run (PT-023, PT-024)
          PT-022 SUPERSEDED — PERIOD UNOBTAINABLE (feed depth), retained unedited
          PT-023 RUN AND REPORTED, expected n<30 — re-issued on a second vendor as PT-024
          All three carry the same question, nulls, seed and decision rules
-GATE:    I-007 (no STANDING chart data source declared) blocks PT-001 ... PT-021.
-         PT-022 declares its own source, feed and chart timezone in its observation
-         and pins the D-028 boundary; I-007 stays OPEN project-wide, because a
-         standing declaration is the owner's to make, not one test's.
+GATE:    UPDATED 2026-08-13. I-007 is CLOSED (D-034: TradingView, FXCM feed) and the
+         project-wide D-028 boundary is PINNED at 2016-07-01 (D-035).
+         PT-001 ... PT-021 ARE STILL BLOCKED, for two different reasons now:
+           1. DATA AVAILABILITY — the declared feed serves 15m GBP/USD back only to
+              2026-05-31. W-A / W-B / W-C (2013-2017) are out of reach at 15 minutes.
+              A D-019 measurement gap, NOT a D-030 definitional one. Owner decision
+              owed: D-035's options A / B / C.
+           2. W-C STRADDLES the pinned holdout boundary, so PT-008, PT-009, PT-010,
+              PT-011, PT-012, PT-013 and PT-019 must be RE-ISSUED under new PT numbers
+              with a conforming window (COMMON_PROTOCOL.md 3a). Not done here.
+         The prior gate line, retained: "I-007 (no STANDING chart data source declared)
+         blocks PT-001 ... PT-021. PT-022 declares its own source, feed and chart
+         timezone in its observation and pins the D-028 boundary; I-007 stays OPEN
+         project-wide, because a standing declaration is the owner's to make."
 ```
 
 ---
@@ -58,8 +68,8 @@ list — is in **`COMMON_PROTOCOL.md`**. Each file still carries its own pre-reg
 | **V02** | PT-003, 004, 005, 006, 007, 011, 012, 013, 018, 021, 014 | The densest lesson and the densest coverage. Six of these come from the **printed session table and slides**, which no prior work has touched |
 | **V03** | PT-008, 016, 020 (+ PT-009, 011) | The first-8-hours block, the box-size filter, the one crisp conditional |
 | **V04** | PT-014, 015, 017 (+ PT-001) | The prescriptive lesson: the excursion band, its missing ceiling, and `CL1` |
-| **V05** | **none** | `D-025` — zero course-author runtime |
-| **V06** | **PT-022** (superseded) → **PT-023** + **PT-024** (both run, both reported) | See the note below. `D-025` still excludes every normative statement in V06 from the methodology; `D-032` permits one measurable claim to be **tested** |
+| **V05** | **none** ⚠️ **and this is now a GAP, not a ruling** | ~~`D-025` — zero course-author runtime~~ → **`D-033`, 2026-08-13: guest material is normative on equal footing.** V05 is a methods-of-study lesson, so it may yield few testable claims regardless — but the *exclusion* is gone and the lesson must be re-read for testable content. **Owed, not done here** |
+| **V06** | **PT-022** (superseded) → **PT-023** + **PT-024** (both run, both reported) ⚠️ **more are now owed** | ~~`D-025` excludes every normative statement; `D-032` permits one claim to be tested~~ → **`D-033`**: the exclusion is reversed and `D-032`'s fence is superseded. V06's stated system — trigger, filter, location rule, counting rule, stop, target, time stop, exit — **is now admissible doctrine and testable as such.** **But `D-030` is untouched**, and it independently blocks every part that needs *push*, *pullback*, *nameable pattern* or a moving-average type. Which V06 claims survive `D-030` on a fresh reading is **follow-up work** |
 
 > **CHANGED 2026-08-13, and the superseded reading is retained above the change rather than
 > corrected away.** This table previously read **"V06 — none — `D-025` — zero course-author
@@ -76,6 +86,26 @@ list — is in **`COMMON_PROTOCOL.md`**. Each file still carries its own pre-reg
 >
 > **`COMMON_PROTOCOL.md` §8 is narrowed by the same entry, to the normative half only, and
 > `PT-002`…`PT-021` are unaffected** — none of them draws on V05 or V06.
+
+> **CHANGED AGAIN 2026-08-13 (later, same day) — `D-033`, and the note above is now history
+> too.** Owner direction: *"all knowledge is created equal."* `D-025`'s normative exclusion is
+> **superseded**, and `D-032`'s narrower test-but-never-adopt fence is superseded with it.
+> Guest-presented material — V05, V06, V04 Segment B — is **normative evidence on equal footing
+> with the course author**: it may define rules and thresholds, enter the master and machine
+> specs and the concept library, close `A-xxx`/`C-xxx` records, and be cited for or against any
+> other statement.
+>
+> **Three things this does not do**, because each is the way a future session will misread it:
+>
+> 1. **`D-030` is untouched.** *push*, *pullback*, *nameable pattern*, M/W anatomy, "the level",
+>    the second leg, TDI, ADR's lookback — all still undefined by the course, all still
+>    untestable, **whoever said them**. `COMMON_PROTOCOL.md` §7's exclusion list is unchanged.
+> 2. **`PT-022`/`PT-023`/`PT-024` and `BT_V06_0001` are not withdrawn or re-scoped.** Work done
+>    under a narrower fence is valid under a wider one; their `D-032` scope statements are now
+>    historical annotations rather than live constraints.
+> 3. **`PT-002`…`PT-021` are still unaffected** — none draws on V05 or V06, no window moves, no
+>    pre-registration is edited. What changes is that V05/V06-derived tests are now **owed**,
+>    under new `PT` numbers, by a later session.
 
 By kind: **7 clock/session-structure**, **6 weekly-structure**, **5 Asian-range/location**,
 **2 management**, **1 mechanical (gap)**. No two tests ask the same question, and the four
@@ -124,8 +154,12 @@ Two things are worth stating positively rather than as absences:
 
 1. **Do not edit a `PT-NNN` file to match what was found.** A changed window is a new test
    ID (`D-027`); the abandoned one is retained and marked.
-2. **Do not run any of these before `I-007` closes** and the `D-028` boundary dates are
-   pinned and checked against every window (`COMMON_PROTOCOL.md` §3a).
+2. ~~**Do not run any of these before `I-007` closes** and the `D-028` boundary dates are
+   pinned and checked against every window (`COMMON_PROTOCOL.md` §3a).~~ **Both conditions are
+   now met — `D-034` and `D-035` — and the check was run: W-A and W-B conform, W-C does not.**
+   The rule that replaces this one: **do not run any of these until the data-availability
+   blocker is resolved** (`D-035` options A / B / C), and **do not run a W-C test at all** until
+   it has been re-issued under a new `PT` number with a window inside DEVELOPMENT.
 3. **Do not read a price from a pixel** (`COMMON_PROTOCOL.md` §2).
 4. **Do not report one `D-031` arm.** Both, every time.
 5. **Do not report only the tests that found something.** All 21, including the nulls —

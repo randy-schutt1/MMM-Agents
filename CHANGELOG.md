@@ -11,6 +11,58 @@ Newest first.
 
 ---
 
+## [0.11.0] — 2026-08-13 — "All knowledge is created equal": D-025 reversed, I-007 closed, the holdout pinned
+
+Three owner-directed decisions in one session. **No lesson was studied, no grade issued, no
+record closed.**
+
+### Added
+
+- **`DECISIONS.md` `D-033` — guest-presenter material is NORMATIVE evidence on equal footing
+  with the course author.** Owner direction: *"all knowledge is created equal."* Guest material
+  may now define rules and thresholds, enter `12_MASTER_SPEC/` / `13_MACHINE_SPEC/` /
+  `08_CONCEPT_LIBRARY/`, **close** an `A-xxx`/`C-xxx` on its own, and be cited for or against any
+  other statement. Speaker tagging stays **mandatory** — equal authority is not anonymity.
+- **`DECISIONS.md` `D-034` — the chart data source is declared, closing `I-007`** (open since
+  2026-08-10). **TradingView, FXCM feed**, no login, platform text only, chart timezone recorded
+  per harvest, 15m primary, Yahoo as corroboration only. This **formalises the existing
+  convention** — V02–V06 homework all name the same platform and feed, and no competing feed
+  exists in the corpus. Adds a **mandatory history-depth probe** per timeframe.
+- **`DECISIONS.md` `D-035` — the project-wide `D-028` 70/30 boundary is pinned at `2016-07-01`**
+  over the corpus `2013-01-06 → 2017-12-29` (DEVELOPMENT to 2016-06-30; HOLDOUT thereafter).
+
+### Changed
+
+- **`D-025` marked `SUPERSEDED IN PART`** (its normative exclusion and consequences 1–2) and
+  **`D-032` marked `SUPERSEDED`**. Both retained unedited per `REMEDIATION_PROTOCOL.md` §2.
+  `PT-022`/`PT-023`/`PT-024` and `BT_V06_0001` are **not** withdrawn — work done under a narrower
+  fence is valid under a wider one.
+- **Guest/instructor divergence is now a real contradiction**, inverting `D-025` consequence 2.
+  `C-005` and `C-006` flagged for re-assessment; V05's "nil return" finding no longer sound as
+  reasoned.
+- **`SETUP_ISSUES.md` `I-007` → `RESOLVED`**, appended not deleted.
+- V05 and V06 mastery reports gain *"blocking condition changed"* blocks. **Neither is
+  re-graded**; both stay `REVIEW REQUIRED`.
+- `REVIEW_INDEX.md` open item **40 CLOSED as MOOT** (the `D-025` carve-out was an exception to a
+  bar that no longer exists); items 3 and 55 updated.
+
+### Not changed, and this is the load-bearing part
+
+- **`D-030` is untouched and still `ACTIVE`.** The task described it as a related guest-content
+  ruling; **it is not one** — it names no speaker and bites hardest on *instructor* terms
+  (`A-004`, `A-011`, `A-019`, `A-039`). Equal speaker authority supplies no missing definition.
+  **V06 dimension B (Recognition) stays blocked**, exactly as its own report predicted.
+
+### Known blockers after this session
+
+- 🔴 **`PT-001`…`PT-021` still cannot run.** `I-007` is closed and the boundary is pinned, but
+  the declared feed serves 15-minute GBP/USD back only to **2026-05-31**, and the windows are
+  2013–2017. A `D-019` **measurement** gap; **open owner decision**, options A/B/C in `D-035`.
+- ⚠️ **`W-C` straddles the pinned boundary** — `PT-008`–`PT-013` and `PT-019` must be re-issued
+  under new `PT` numbers. Moving the boundary to fit them was rejected as selection pressure.
+
+---
+
 ## [0.10.0] — 2026-08-13 — V06 gets a real backtest; D-032; the probe that failed usefully
 
 ### Added

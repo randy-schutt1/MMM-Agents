@@ -31,6 +31,30 @@ W formations can fail) was NOT tested against V06 - V06's failure cases are abou
 PUSHES, not about M/W formations, and stretching them to fit C-003 would be the
 error V05 review R2 M7 charged.
 
+> ## ⚖️ THE CATEGORY RULE IN THE NOTES ABOVE IS INVERTED — 2026-08-13, `D-033`
+>
+> Owner direction: guest-presenter material is **NORMATIVE evidence on equal footing with the
+> course author** — *"all knowledge is created equal."* `D-025` is superseded in part, and
+> **consequence 2 is not merely lifted, it is reversed**: with equal authority, a
+> guest/instructor divergence is a **genuine conflict in the method** and is logged as a
+> contradiction, not filed as corpus hygiene. The notes above are retained unedited per
+> `REMEDIATION_PROTOCOL.md` §2 and are now **historical**.
+>
+> **No record is re-categorised or re-adjudicated by this entry** — that needs a session that
+> does the reading, and `C-005`'s own re-reading has consequences for `A-039`, `A-038` and the
+> V04 grade that a flag cannot pre-judge. Flagged for follow-up:
+>
+> | Record | Effect of `D-033` |
+> |---|---|
+> | **`C-005`** — instructor vs guest, different entry gate / session / second-leg dependence / stop reference, inside V04 | ⚠️ **RE-ASSESS AS A METHOD CONTRADICTION.** Its `Resolution` block records *"the scope ruling has been made — `D-025`"*; that ruling is now superseded. The two accounts are equally authoritative and they **do not agree**, which is the definition of a `C-xxx`. It is also the sharpest live case: the guest states the instructor's **necessary** condition (the second leg) *mostly does not occur* in the US session |
+> | **`C-006`** — guest vs guest on stop hunt vs trap move (V05 vs V06) | ⚠️ **RE-ASSESS.** Filed as "of the `C-005` class" i.e. hygiene. Two equal-authority speakers giving incompatible tests is now an ordinary contradiction. Ties to `A-049` |
+> | **The V05 "nil return" finding** | ⚠️ **NO LONGER SOUND AS REASONED.** Its logic was *"a lesson with no instructor segment cannot, by construction, produce an instructor-vs-instructor conflict."* Under `D-033` there is no such construction: a guest statement can conflict with an instructor statement, or with another guest's. **The three candidates dispositioned in the V05 note below must be re-examined.** Whether any survives is a reading, not a ruling |
+> | **`C-001`, `C-003`, `C-004`** | ⛔ **UNCHANGED.** All three are instructor-vs-instructor and never depended on the guest rule |
+>
+> **Speaker tagging stays mandatory** (`D-025` consequence 3, re-adopted by `D-033`). It matters
+> *more* now: with two speakers both able to create doctrine, an untagged transcript makes a
+> contradiction unattributable.
+
 > **UPDATED 2026-08-12 (V06 pass). The V05 note below is retained unchanged per**
 > **`REMEDIATION_PROTOCOL.md` §2; the V06 note above supersedes its counts only.**
 
@@ -747,6 +771,21 @@ material will resolve it, because there is nothing factually in doubt. What was 
 > voices in one undifferentiated transcript — is permanent. The interim handling below is
 > now the standing handling, ratified rather than replaced.
 
+> **⚖️ THE RULING ABOVE IS SUPERSEDED — 2026-08-13, `D-033`.** Retained unedited; it is the rule
+> that governed this record from 2026-08-11 to 2026-08-13. Owner direction: guest material is
+> **NORMATIVE on equal footing** — it may define rules and thresholds, enter the specs and the
+> concept library, and **close** an `A-xxx`/`C-xxx` on its own. Numbered handling items 2 and 3
+> below (*"no `GUEST` statement enters the canonical methodology"*, *"no `GUEST` number is
+> adopted"*) **no longer bind**; item 1 (speaker tagging) does, and is re-adopted by `D-033`.
+>
+> **What this does to this record: it makes it larger, not smaller.** `C-005` was filed as
+> corpus hygiene *because* the guest's account had no normative standing to conflict with the
+> instructor's. It now does. **`C-005` should be re-assessed as a live method contradiction** —
+> different entry gate, different session, different second-leg dependence, different stop
+> reference, two equally authoritative speakers, one lesson. **Not re-adjudicated here**, and
+> deliberately so: the re-reading bears on `A-038`, `A-039` and V04's grade, and belongs to a
+> session that does the work rather than to the session that recorded the decision.
+
 The interim handling, in force since the record was opened and now ratified by `D-025`:
 
 1. Every V04 artifact tags each statement `INSTRUCTOR` or `GUEST`.
@@ -775,7 +814,7 @@ speaker table in the transcript header.
 | Source | `03_LESSON_NOTES/V04_SOURCE_NOTES.md` §3f |
 | Interpretation | `03_LESSON_NOTES/V04_INTERPRETATION.md` I9, §8.2 |
 | Ambiguity | A-038 (the guest's ADR window), A-039 (TDI required but untaught) |
-| Decision | **D-025 (the ruling — guest material is descriptive, never normative)**; D-008 (evidence hierarchy, which D-025 refines) |
+| Decision | ~~**D-025 (the ruling — guest material is descriptive, never normative)**~~ → **D-033, 2026-08-13 (guest material is NORMATIVE on equal footing; D-025 superseded in part, D-032 superseded)**; D-008 (evidence hierarchy) |
 | Review | `18_REVIEW/V04/V04_REVIEW_R1.md` § "THE C-005 RULING" |
 
 ---

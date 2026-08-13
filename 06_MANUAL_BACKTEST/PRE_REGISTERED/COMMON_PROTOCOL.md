@@ -11,7 +11,8 @@ ATTESTATION: The session that wrote this file and PT-002…PT-021 opened NO char
 ```
 
 Governing: `00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md` · `DECISIONS.md` `D-005`, `D-007`,
-`D-009`, `D-010`, `D-025`, `D-026`, `D-027`, `D-028`, `D-029`, `D-030`, `D-031`.
+`D-009`, `D-010`, ~~`D-025`~~ → **`D-033`**, `D-026`, `D-027`, `D-028` → **`D-035`**, `D-029`,
+`D-030`, `D-031`, **`D-034`**.
 
 This file holds the machinery **shared** by PT-002 … PT-021 so that twenty files do not
 repeat it twenty times and drift. **It does not replace a test's own pre-registration**:
@@ -28,7 +29,7 @@ decision point and its own outcome table. If this file and a `PT-NNN` file ever 
 | Instrument | **GBP/USD only** (`D-007`). No other pair appears in this batch |
 | Pip | `0.0001`. A "pip" anywhere in PT-002…PT-021 means exactly this |
 | Timeframes | 15-minute primary; 1-hour and 4-hour where a test says so |
-| Data source | **UNDECLARED — `I-007` is OPEN.** See §6 |
+| Data source | ~~**UNDECLARED — `I-007` is OPEN.**~~ **DECLARED 2026-08-13 — `D-034`: TradingView, FXCM feed (`FX:GBPUSD`), no login, platform text only, chart timezone recorded per harvest.** `I-007` is CLOSED. See §6 — a **data-availability** blocker replaces it and it is not the same thing |
 
 ## 2. MEASUREMENT — THE HARD RULE
 
@@ -94,6 +95,28 @@ DEVELOPMENT. If the pinned boundary falls inside a window, that test is **re-iss
 a new PT number** with a conforming window; the original file is retained and marked. It
 is not edited into conformance.
 
+> **RESOLVED 2026-08-13 — `D-035` pins the boundary at `2016-07-01`, and the clause above now
+> bites.** The superseded `PROVISIONAL — PENDING D-028` marking is retained immediately above
+> rather than corrected away, because it is what these files were written under.
+>
+> | Window | Range | Verdict against `DEVELOPMENT 2013-01-06 → 2016-06-30` |
+> |---|---|---|
+> | **W-A** | 2015-01-04 → 2015-12-31 | ✅ **conforms** — wholly inside DEVELOPMENT |
+> | **W-B** | 2014-01-05 → 2015-12-31 | ✅ **conforms** |
+> | **W-C** | 2013-01-06 → 2017-12-29 | ❌ **STRADDLES the boundary** by 546 days |
+>
+> **Consequence, and it is not optional.** The seven W-C tests — **`PT-008`, `PT-009`,
+> `PT-010`, `PT-011`, `PT-012`, `PT-013`, `PT-019`** — must be **re-issued under new `PT`
+> numbers** with a conforming window (the natural one being `W-C′ = 2013-01-06 → 2016-06-30`,
+> ~180 weeks, still well over `n ≥ 30`). The originals are retained and marked
+> `ABANDONED — PERIOD CHANGED`; **they are not edited.** The session that recorded `D-035` did
+> not re-issue them — it recorded the defect. **This is follow-up work owed before any W-C
+> test runs**, and it is separate from the data-availability blocker in §6.
+>
+> Also pinned by the same entry: the EU referendum (2016-06-23) falls in **DEVELOPMENT**; the
+> October 2016 flash crash (2016-10-07) falls in **HOLDOUT** and is therefore unavailable to
+> the Student Phase. Disclosure 1 above applies to whatever remains inside `W-C′`.
+
 ## 4. THE TWO TIMEZONE ARMS — `D-031`, BINDING
 
 Every test in this batch that references a clock time runs **both** arms, and **both are
@@ -153,10 +176,11 @@ time:
 
 | Blocker | Effect |
 |---|---|
-| **`I-007`** — no chart data source, feed or timezone is declared | **Nothing here may be run until it closes.** The feed determines the week open and therefore W-C's week boundaries |
-| **`D-028` dates unpinned** | §3a |
-| **`D-030`** — definitions are never approximated | §7 |
-| **`D-025`** — guest material is excluded as normative | §8 |
+| ~~**`I-007`** — no chart data source, feed or timezone is declared~~ | ✅ **CLOSED 2026-08-13 — `D-034`.** TradingView / FXCM, no login, platform text only. The feed's week open is **21:00 UTC**, and that is the boundary W-C and `PT-008`–`PT-013` inherit; every such test must state it |
+| ~~**`D-028` dates unpinned**~~ | ✅ **PINNED 2026-08-13 — `D-035`: boundary `2016-07-01`.** See §3a — W-A and W-B conform; **the seven W-C tests do not** |
+| 🔴 **DATA AVAILABILITY — the blocker that replaced `I-007`, and it still stops this batch** | The declared feed serves 15-minute GBP/USD back only to **2026-05-31** (depth probe, `PT-023` §1). **W-A / W-B / W-C are out of reach at 15 minutes.** This is a `D-019` **measurement** gap, not a `D-030` definitional one — resolvable by tooling or by an owner decision, and `D-035` records the three options. **Nothing in this batch may be run until it is resolved** |
+| **`D-030`** — definitions are never approximated | §7 — **unchanged by `D-033`**, and this is the part a future session is most likely to get wrong |
+| ~~**`D-025`** — guest material is excluded as normative~~ | ⚖️ **REVERSED 2026-08-13 — `D-033`.** Guest material is normative on equal footing with the course author. §8 is corrected in place |
 
 ## 7. WHAT THIS BATCH DELIBERATELY DOES NOT TEST — `D-030`
 
@@ -186,16 +210,40 @@ Excluded by `D-030`, with the record that blocks each one:
 a number in this corpus acquires authority a note never does** (`D-030`). That is the
 failure this section exists to prevent.
 
-## 8. `D-025` — WHY V05 AND V06 CONTRIBUTE NOTHING HERE
+## 8. ~~`D-025` — WHY V05 AND V06 CONTRIBUTE NOTHING HERE~~ — **REVERSED 2026-08-13, `D-033`**
 
-V05 and V06 carry **zero course-author runtime**. V06 in particular states the most nearly
-complete trading system anywhere in V01–V06 — entry, filter, stop, target, time stop, exit
-— and **all of it is guest material and all of it is excluded**. So is Segment B of V04
-(69% of that lesson): the ADR ~90–95% gate, the 7-pips-plus-spread stop, the 35–50 pip
-target, the 12-pair watchlist, *"don't trade Mondays"*.
+> **CHANGED BY OWNER DIRECTION, and the superseded reading is retained below the change rather
+> than corrected away** — the same handling `D-032` used on `INDEX.md` §2.
+>
+> **`D-033`, 2026-08-13: guest-presenter material is NORMATIVE evidence on equal footing with
+> the course author** — *"all knowledge is created equal."* `D-025`'s normative exclusion is
+> superseded, and `D-032`'s narrower "test but never adopt" fence is superseded with it. The
+> paragraphs below were correct under the decision set of 2026-08-11 → 2026-08-13 and are
+> **no longer the rule**.
+>
+> **What this changes for this batch: nothing, mechanically.** `PT-002`…`PT-021` were built
+> only from measurements and none of them draws on V05, V06 or V04 Segment B — so no test here
+> is re-scoped, no window moves, and no pre-registration is touched. What changes is that the
+> absence is **no longer a ruling**: V05/V06-derived tests are now permissible and are
+> **owed**. Authoring them is follow-up work under a new `PT` range, not an edit to any file in
+> this directory.
+>
+> **What does NOT change: `D-030` (§7) is untouched.** V06's system needs *push*, *pullback*,
+> *nameable pattern* and a moving-average type, none of which the course defines — so most of
+> it stays untestable on the definitional ground, exactly as it did before, and equal speaker
+> authority supplies no missing definition. A session that reads `D-033` as unblocking §7 has
+> misread it.
 
-No test in this batch draws a condition, a threshold, a session or a target from any of
-it. A future session must not read the absence as an oversight: it is the ruling.
+*(Superseded text, retained unedited:)*
+
+> V05 and V06 carry **zero course-author runtime**. V06 in particular states the most nearly
+> complete trading system anywhere in V01–V06 — entry, filter, stop, target, time stop, exit
+> — and **all of it is guest material and all of it is excluded**. So is Segment B of V04
+> (69% of that lesson): the ADR ~90–95% gate, the 7-pips-plus-spread stop, the 35–50 pip
+> target, the 12-pair watchlist, *"don't trade Mondays"*.
+>
+> No test in this batch draws a condition, a threshold, a session or a target from any of
+> it. A future session must not read the absence as an oversight: it is the ruling.
 
 ## 9. INTEGRITY RULES FOR THE RUN SESSION
 

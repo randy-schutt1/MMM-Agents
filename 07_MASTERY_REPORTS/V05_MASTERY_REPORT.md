@@ -25,6 +25,37 @@
 
 Everything else in the lesson is, I believe, complete and honest.
 
+> ## ⚖️ BLOCKING CONDITION CHANGED 2026-08-13 — `D-033`. NOT A RE-GRADE.
+>
+> **Owner direction, recorded as `D-033`:** guest-presenter material is **NORMATIVE evidence on
+> equal footing with the course author** — *"all knowledge is created equal."* `D-025`'s
+> normative exclusion is superseded (`D-032`'s narrower fence with it). V05 is 100% guest
+> material, so this reaches the whole report.
+>
+> **Nothing here is re-graded by this note** — `D-003`/`D-004` make that the independent
+> reviewer's call. What changes is the ground:
+>
+> - **The escalation this report exists for is largely DISSOLVED.** `REVIEW REQUIRED` was
+>   raised because *"V05 does not omit testable rules — it states several and they are withheld
+>   by decision (`D-025`)"*, creating a **third case** that `D-018` (`NOT APPLICABLE`) and
+>   `D-019` (`DEFERRED`) did not contemplate. **That third case no longer exists.** The rules are
+>   no longer withheld, so F and G fall back to the ordinary `D-018`/`D-019` analysis a
+>   non-guest lesson would get. **Dimension G — "NOT APPLICABLE, and this is the contested
+>   grade" — is the one to re-assess first**: its whole stated reason was that backtesting V05
+>   *"would give guest normative material exactly the operational standing `D-025` denies it"*,
+>   and `D-025` no longer denies it.
+> - **Dimension F** — the rows marked *"excluded under D-025"* (H5's levels/anchor/cycle labels,
+>   H6 patterns and entries, H4's setup naming) are **no longer excluded on that ground.** H1,
+>   H3, H7, H8 are unaffected: their blockers are MT4 access, trade history and a 2012 coach.
+> - **`A-043`** no longer needs its narrow platform-artifact justification; closing a record on
+>   guest evidence is now ordinary. The *"What I am least confident about"* items 2 and 4 are
+>   answered by the owner: item 4's alternative — *"a coach speaking inside an official session
+>   with the author's evident sanction is closer to doctrine than `D-025` allows"* — **is the
+>   position the owner has now adopted.**
+> - **Unchanged:** `D-030` binds exactly as before. The concept-library row's *"no V05 material
+>   is eligible"* is no longer true as a reason, but V05 is a methods-of-study lesson and may
+>   still yield little; that is a reading, not a ruling.
+
 ---
 
 ## THE ONE-PARAGRAPH SUMMARY

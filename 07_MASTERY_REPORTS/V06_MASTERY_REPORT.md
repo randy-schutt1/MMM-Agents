@@ -21,6 +21,28 @@ by `D-030` independently of `D-025`, and no owner ruling about guest material ca
 
 This is a **submission for review**, not an authorization (`SETUP_ISSUES.md` I-001).
 
+> ## ⚖️ BLOCKING CONDITION CHANGED 2026-08-13 — `D-033`. NOT A RE-GRADE.
+>
+> **Owner direction, recorded as `D-033`:** guest-presenter material is **NORMATIVE evidence on
+> equal footing with the course author** — *"all knowledge is created equal."* `D-025`'s
+> normative exclusion is superseded; `D-032`'s narrower test-but-never-adopt fence is superseded
+> with it. **V06 is 100% guest material, so this changes the ground under most of this report.**
+>
+> **Nothing above or below is re-graded, re-scored or re-certified by this note.** Under `D-003`
+> and `D-004` that is the independent reviewer's job, not the job of the session that recorded
+> the decision. What is recorded here is that **the blocking condition has changed**, so the
+> reviewer re-assesses rather than inherits.
+>
+> | | Status under `D-025`/`D-032` | Status under `D-033` |
+> |---|---|---|
+> | **Dimension B — Recognition** | Ungraded; blocked by `D-030` **and** `D-025` | ⚠️ **STILL BLOCKED — by `D-030` alone, which is untouched.** Recognition needs *push* identified on unseen charts and *push* is undefined in the corpus. **`D-033` does not unblock B**, and this report already said so: *"no owner ruling about guest material can unblock it."* That sentence survives the reversal intact |
+> | **Dimension G — Manual backtesting** | `PERFORMED` under `D-032`'s narrow carve-out | **Unchanged as a grade.** The fence it was performed under is now wider, not narrower; `PT-022`/`PT-023`/`PT-024` and `BT_V06_0001.md` stand as run and are **not** withdrawn. Their mandatory `D-032` scope statements become historical annotations |
+> | **The rest of the lesson's content** | *"produced zero doctrine"* — trigger, filter, location rule, counting rule, stop, target, time stop, exit all excluded | ⚠️ **RE-ASSESSMENT OWED.** Those statements are now **admissible doctrine**. Whether each is *usable* is a separate question answered by `D-030`, not by `D-025` — and several are not, for the same reason B is blocked. The reviewer should expect the corpus contribution of V06 to be re-stated, and dimensions that were graded around the exclusion (`C`, `D`, `E`, the concept-library checklist row) to be re-examined |
+> | **Concept library — "NO, deliberately, no V06 material is eligible under `D-025`"** | Correct then | ⚠️ **No longer correct as a reason.** Eligibility is restored; what enters is a judgement for a session that does the reading, constrained by `D-030` |
+>
+> **`STUDENT STATUS` therefore stands at `REVIEW REQUIRED`** — and would stand there under
+> `D-033` on dimension B alone.
+
 ---
 
 ## THE ONE-PARAGRAPH SUMMARY

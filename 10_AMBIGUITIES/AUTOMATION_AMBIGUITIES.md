@@ -40,6 +40,34 @@ evidence to six earlier records. It CLOSED no record about the method, and
 under D-025 it cannot. A-043 is closed on a platform dialog, not on doctrine.
 ```
 
+> ## ⚖️ THE BAR ON CLOSING A RECORD WITH GUEST EVIDENCE IS LIFTED — 2026-08-13, `D-033`
+>
+> Owner direction: guest-presenter material is **NORMATIVE evidence on equal footing with the
+> course author** — *"all knowledge is created equal."* `D-025`'s normative exclusion is
+> superseded and `D-032`'s test-but-never-adopt fence with it. **The STATUS block above is
+> retained unedited and its two NOTEs are now historical**: *"It CLOSED none, and under D-025 it
+> cannot"* was true when written and is no longer the rule.
+>
+> **NOT ONE RECORD IS CLOSED BY THIS ENTRY.** Removing a categorical bar is not the same as
+> supplying evidence: each record still needs the ordinary evidentiary judgement, made by a
+> session that does the reading, and several will still fail it on the merits. What follows is a
+> **flag list for follow-up**, not a disposition.
+>
+> | Record | Why it was open | Status after `D-033` |
+> |---|---|---|
+> | `A-044` — what makes a second leg a *"nameable pattern"* | V06 **enumerates** the admissible patterns; guest, so it could not close | ⚠️ **RE-ASSESS.** Real judgement needed: the report notes the DMR curriculum prints six or seven patterns where the audio says three. **A guest/guest internal conflict now belongs in `CONTRADICTIONS.md`, not in a footnote** |
+> | `A-049` — stop hunt vs trap move | V06 **defines** the discriminator; guest, so it could not close | ⚠️ **RE-ASSESS.** Complicated by `C-006`, a **second and incompatible** guest account. Two equal-authority speakers disagreeing is now a live contradiction |
+> | `A-011` — M/W anatomy | V06 reports a **9-candle minimum**, attributed to the instructor; guest, so it could not close | ⚠️ **RE-ASSESS — but expect it to stay OPEN.** The 9-candle figure is **withdrawn by its own reporter four seconds after he gives it.** That is an evidentiary defect, not a `D-025` defect, and `D-033` does nothing for it. **Load-bearing across `D-030` and V06 dimension B — do not close casually** |
+> | `A-020` — *"Mayo"* / the moving averages | V05/V06 print *"Mayo"* as a moving-average nickname; guest, so it could not close | ⚠️ **PARTIAL AT BEST.** The **spelling** was already settled. The open half is the **period**, and *"no period is printed anywhere in V01–V06"* — nobody's authority supplies a number nobody stated |
+> | `A-038`, `A-042`, `A-045`–`A-048`, `A-050`–`A-054` | Opened by V05/V06, i.e. entirely guest-sourced | ⚠️ **Eligible for closure on their own evidence now.** Most are undefined-term records that no speaker resolves; `A-042` (the method lives in the DMR) is unaffected — the DMR is still not in this library |
+> | `A-043` — the MT4 text tool | Closed 2026-08-11 on a **platform dialog**, with a narrow justification for why `D-025` did not bar it | ✅ **Closure stands and no longer needs the special argument.** The proposed `D-025` carve-out for guest-utterance / platform-artifact records (`REVIEW_INDEX.md` open item 40) is **MOOT** — an exception to a bar that no longer exists |
+> | `A-004`, `A-007`, `A-019`, `A-031`, `A-032`, `A-039`, `A-018` | Open because **no speaker of any kind** ever defined the term | ⛔ **UNCHANGED.** `D-033` is about *whose* statements count, not about statements nobody made. `D-030` still forbids approximating any of them |
+>
+> **The general rule going forward:** a record closes on evidence, from any speaker. Speaker
+> tagging stays **mandatory** (`D-025` consequence 3, re-adopted by `D-033`) — equal authority is
+> not anonymity, and with two speakers now both able to create doctrine, attribution matters
+> *more*, not less.
+
 > **UPDATED 2026-08-12 (V06 pass).** Counts re-derived after `A-050`–`A-054` were added;
 > ten earlier records gained V06 evidence and **none resolved**. The V06 evidence block at
 > the end of this file records each one. Updated in the same commit that added the records,

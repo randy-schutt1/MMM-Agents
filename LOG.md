@@ -4002,3 +4002,122 @@ reviewer's list: whether the two backtest re-issues constitute period-shopping (
 attackable thing here), and whether `D-032` should be ratified, amended or rejected.
 
 ---
+
+## 2026-08-13 — Owner Policy Session — D-033 reverses the guest demotion; D-034 closes I-007; D-035 pins the D-028 boundary
+
+### Objective
+
+Execute two owner instructions and record them as decisions. **Not a study session and not a
+review session** — no lesson was studied, no grade was issued, no record was closed.
+
+1. **Reverse the guest-content demotion.** Owner direction: guest-presented content is equal in
+   authority to main-host content — *"all knowledge is created equal."*
+2. **Formalise the data source (`I-007`) and pin the `D-028` 70/30 boundary dates**, both of
+   which gate `PT-001`…`PT-021`.
+
+### Work Completed
+
+**`D-033` — guest material is NORMATIVE on equal footing with the course author.** Supersedes
+`D-025` **in part** (the normative exclusion and consequences 1–2) and `D-032` **in whole** (its
+test-but-never-adopt fence is now unnecessary). Both retained unedited and marked in place, per
+`REMEDIATION_PROTOCOL.md` §2. Guest material may now define rules and thresholds, enter
+`12_MASTER_SPEC/` / `13_MACHINE_SPEC/` / `08_CONCEPT_LIBRARY/` and machine candidates, **close**
+an `A-xxx` or `C-xxx` on its own, and be cited for or against any other statement.
+
+Three provisions carry over rather than being reversed: **speaker tagging stays mandatory**
+(equal authority is not anonymity — with two speakers both able to create doctrine, attribution
+matters more), identification is provenance not evidence, and — **inverted** — a guest/instructor
+divergence is now a **genuine method contradiction** rather than a corpus-hygiene note.
+
+> **A correction to the instruction as given, made deliberately and on the record.** The task
+> named **`D-030`** as a related guest-content ruling to be superseded. **It is not one.**
+> `D-030` is *"blocked tests wait for the course; definitions are never approximated"* — it names
+> no speaker and bites hardest on **instructor** terms (`A-004` "the level", `A-011` M/W anatomy,
+> `A-019` session timezone, `A-039` TDI). The actual guest-content companion to `D-025` is
+> **`D-032`**, and that is what `D-033` supersedes instead. Reversing `D-030` would license
+> invented definitions across the whole corpus, which no part of the owner's direction asks for.
+> **`D-030` is left `ACTIVE` and untouched, and this is flagged to the owner rather than assumed
+> either way.** The concrete consequence: **V06 dimension B (Recognition) stays blocked** —
+> recognition needs *push* identified on unseen charts and *push* is undefined, which the V06
+> report already stated (*"no owner ruling about guest material can unblock it"*).
+
+**`D-034` — the chart data source is declared, closing `I-007`** (open since 2026-08-10).
+Nothing was invented: every homework file that opened a chart names the same platform and feed,
+so the de facto standard was written down as binding. **TradingView, FXCM feed (`FX:GBPUSD`)**,
+no login / no account / no paywalled feature; **platform text only**, never a pixel (the
+`E06`/`E19` `MAJOR` from V02 R1); **chart timezone recorded per harvest, never assumed**;
+15-minute primary; **Yahoo Finance as a corroboration second vendor only**. Verified across V02
+(1h), V03 (4h), V04 (4h + 15m), V05 (15m), V06 (15m + 1D) — **no competing feed exists anywhere
+in V01–V06**, and V01 opened no chart. Two vendor-dependent facts carried forward as known: the
+FXCM week opens at **21:00 UTC** (Yahoo at 23:00), so *"480 bars in a week"* is a feed fact not a
+market fact; and Yahoo−FXCM runs a constant **+3.11/+3.94 pip** offset. `D-034` also makes a
+**history-depth probe mandatory per timeframe** before any window is opened.
+
+**`D-035` — the project-wide `D-028` boundary is pinned at `2016-07-01`.** Corpus = the union of
+the three pre-registered windows, `2013-01-06 → 2017-12-29` (1,818 days). Oldest 70% =
+DEVELOPMENT `2013-01-06 → 2016-06-30`; HOLDOUT `2016-07-01 → 2017-12-29`. The windows were fixed
+on calendar grounds before any chart existed and this arithmetic reads no price, so the pin is
+not outcome-informed.
+
+### Findings — three, and two of them are unwelcome
+
+1. **Closing `I-007` does not unblock `PT-002`…`PT-021`.** The depth probe already on record
+   (`PT-023` §1, 368 drags, dates only) shows **TradingView/FXCM serves 15-minute GBP/USD back
+   only to 2026-05-31** — about 2.5 months. `W-A` (2015), `W-B` (2014–15) and `W-C` (2013–17) are
+   **out of reach at 15-minute resolution**. This is a **`D-019` measurement** gap, not a
+   **`D-030`** definitional one, and it is an **open owner decision** with three honest exits
+   recorded in `D-035`: (A) declare a deep-history vendor as an amendment to `D-034`; (B) re-issue
+   the batch onto reachable windows, which guts the design; (C) split by timeframe and run a
+   **daily-timeframe depth probe** first — cheapest, and diagnostic either way.
+2. **`W-C` straddles the pinned holdout boundary by 546 days.** `PT-008`, `PT-009`, `PT-010`,
+   `PT-011`, `PT-012`, `PT-013` and `PT-019` therefore **do not conform** and must be re-issued
+   under new `PT` numbers with a window inside DEVELOPMENT (`W-C′ = 2013-01-06 → 2016-06-30`,
+   ~180 weeks, still well over `n ≥ 30`). Originals retained and marked, never edited. **The
+   alternative — moving the boundary so `W-C` fits — was rejected outright**: choosing the split
+   to suit the tests is precisely the selection pressure `D-027`/`D-028` exist to remove.
+   Consequence of the honest pin: the EU referendum (2016-06-23) lands in DEVELOPMENT, the
+   October 2016 flash crash (2016-10-07) lands in HOLDOUT and is unavailable to the Student Phase.
+3. **`REVIEW_INDEX.md` open item 40 is MOOT.** The proposed `D-025` carve-out for records whose
+   subject is a guest's own utterance or a platform artifact was an exception to a bar that no
+   longer exists. `A-043`'s closure **stands** and no longer needs its special argument.
+
+### What was deliberately NOT done
+
+- **No re-grade, no re-certification.** V05 and V06 mastery reports each gain a *"blocking
+  condition changed"* block and nothing else; both stay `REVIEW REQUIRED`. Re-assessment is the
+  independent reviewer's job under `D-003`/`D-004`.
+- **No ambiguity or contradiction closed.** `A-044`, `A-049`, `A-011`, `A-020`, `C-005`, `C-006`
+  and V05's "nil return" finding are **flagged for re-assessment**, with the honest note that
+  `A-011` should probably stay open anyway (its 9-candle figure is withdrawn by its own reporter
+  four seconds later — an evidentiary defect `D-033` does nothing for) and `A-020`'s open half is
+  a **period nobody ever stated**.
+- **No V05/V06 test cases authored**, and no `PT` file re-issued. Both are follow-up work.
+- **`PT-022`/`PT-023`/`PT-024` and `BT_V06_0001` not withdrawn** — work done under a narrower
+  fence is valid under a wider one.
+
+### Files Touched
+
+Updated: `00_SYSTEM/DECISIONS.md` (`D-033`, `D-034`, `D-035`; `D-025` and `D-032` marked
+superseded in place; `D-028` append; ingestion table); `00_SYSTEM/SETUP_ISSUES.md` (`I-007`
+resolved, appended not deleted); `06_MANUAL_BACKTEST/PRE_REGISTERED/COMMON_PROTOCOL.md` (§1, §3a,
+§6, §8); `06_MANUAL_BACKTEST/PRE_REGISTERED/INDEX.md` (gate block, §2 coverage, §5);
+`07_MASTERY_REPORTS/V05_MASTERY_REPORT.md`; `07_MASTERY_REPORTS/V06_MASTERY_REPORT.md`;
+`10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`; `11_CONTRADICTIONS/CONTRADICTIONS.md`;
+`18_REVIEW/REVIEW_INDEX.md` (open items 3, 40, 55); `CHANGELOG.md`; `LOG.md`.
+
+### Verification
+
+`scripts/validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+### Git
+
+Explicit paths on every `git add`; `git diff --staged` read before each commit; `git fetch` and
+divergence check before push.
+
+### Next Action
+
+**Owner decision owed on the data-availability exit (`D-035` options A / B / C).** Nothing in
+`PT-001`…`PT-021` may run until it is made — and option C's daily-timeframe depth probe is the
+cheapest next move whichever way the owner leans. **Second, and independent: a fresh reviewer
+session** to re-assess V05 and V06 against `D-033`, and to re-read `C-005` as a live method
+contradiction. **Third:** re-issue the seven `W-C` tests under conforming windows.
