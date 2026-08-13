@@ -3606,3 +3606,82 @@ Committed and pushed this session.
 Unchanged. V06 ingestion stays paused by owner instruction.
 
 ---
+
+## 2026-08-12 — Session — Batch quarantine pre-verification, `RULES.md` V07–V21
+
+### Objective
+
+Owner-requested proactive batch pass, ahead of any per-video ingestion: check every
+remaining lesson's `RULES.md` (`V07` through `V21`, the last video in the corpus) against
+the fabrication signature independently confirmed for `V01`–`V06` (`Q-001`…`Q-006`), and
+flag/quarantine any that match — so future per-video Student sessions don't re-derive this
+check from scratch. Scoped to `RULES.md` only. `NOTES.md`, `INDEX.md`, and
+`VISUAL_INDEX.md` were explicitly out of scope and not touched, per owner instruction —
+those remain pairwise distinct across the library and still need per-lesson examination
+when each video's real ingestion runs.
+
+### Work Completed
+
+- **Located** all 21 `RULES.md` files. All 21 already physically sit under
+  `_QUARANTINE_UNVERIFIED_NOTES/per_lesson/NN_.../RULES.md` (moved there at `D-017`/`Q-001`,
+  before this session), already covered by the tree-wide `README_WHY_QUARANTINED.md` header.
+  Nothing needed to be moved.
+- **Verified, did not assume.** Re-ran the three-marker mechanical test `REVIEW_INDEX.md`
+  open item 33 authorizes for a one-step discharge, across `V07`–`V21`: both fabricated quotes
+  (`[00:05:00]` M15/5-13-EMA line; `[00:18:00]` 10–15-pip stop line) present in all 15;
+  exactly two `## Rule ID:` entries in all 15; the `NUMERICAL PARAMETERS` block hashed
+  identical across all 15 — and, as a cross-check, re-hashing `V01`–`V06` the same way
+  returned the same hash, confirming it is the one block already established at `Q-004`, not
+  a coincidentally-matching new one. **Zero exceptions** — no `RULES.md` in the corpus
+  differs from the confirmed pattern.
+- **`00_SYSTEM/QUARANTINE_REGISTER.md`** — added `Q-007`, covering `V07`–`V21` `RULES.md` as
+  a single batch entry (they are mechanically identical, so 15 near-duplicate per-video
+  entries would misrepresent 15 separate audits as having been run; `Q-007` states plainly
+  that this is the template-marker discharge, not a fresh audio cross-check, and that
+  `NOTES.md`/`VISUAL_INDEX.md` remain unaudited for these 15).
+
+### Key Findings
+
+**All 21 lessons' `RULES.md` now carry either an individual audio-cross-check confirmation
+(`V01`–`V06`) or a mechanical template-marker discharge (`V07`–`V21`) — no exceptions found.**
+This closes the `RULES.md` half of the fabrication question for the whole corpus; nothing
+found here overturns or narrows `Q-001`–`Q-006`. The `NOTES.md`/`VISUAL_INDEX.md` half stays
+open for 15 lessons and should not be assumed uniform — `V01`, `V05`, and `V06` alone already
+show three distinct fabrication mechanisms for those two file types.
+
+### Manual Backtesting
+
+None.
+
+### Ambiguities / Contradictions
+
+None.
+
+### Decisions
+
+None. This discharges an audit the register and `REVIEW_INDEX.md` open item 33 already
+authorized in one step; it states no new project-level rule and gets no `DECISIONS.md` entry.
+
+### Files Created/Updated
+
+`00_SYSTEM/QUARANTINE_REGISTER.md` (new entry `Q-007`); `LOG.md` (this entry). No files
+under `01_SOURCE_VIDEOS/` were moved, renamed, or deleted; that directory is git-ignored and
+carries no tracked changes from this session.
+
+### Verification
+
+`scripts/validate_project.py` run before push; see Git section for result.
+
+### Git
+
+Explicit paths on `git add`; `git status` and `git diff --staged` read before committing.
+Committed and pushed this session.
+
+### Next Action
+
+`V07`–`V21` ingestion (transcripts, notes, homework, etc.) is unstarted and out of scope for
+this session — proceeds one video at a time in its own dedicated session, per the owner's
+existing per-video protocol. Each of those sessions still owes its own `NOTES.md` and
+`VISUAL_INDEX.md` fabrication check; `RULES.md` no longer needs re-checking, citing `Q-007`.
+
+---

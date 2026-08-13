@@ -707,3 +707,62 @@ remain pairwise distinct across the library and still require per-lesson examina
 V07–V21 — and V06 shows a **third** distinct failure mode: not V01's phantom-file inflation and
 not V05's duplicate-pair inflation, but **sub-slide fragments of the SWF's own delta-tile
 stream, indexed as if they were slides**. Three lessons, three different ways of being wrong.
+
+---
+
+## Q-007 — V07–V21 `RULES.md`, batch-discharged via the template-marker test (`REVIEW_INDEX.md` open item 33)
+
+```text
+STATUS:        QUARANTINED — DO NOT USE (discharged via template-marker test, not
+                a fresh per-lesson audio cross-check)
+DATE:          2026-08-12
+QUARANTINED BY: Batch pre-verification pass (proactive, ahead of per-video ingestion)
+DECISION:      D-017 (Q-001 blanket action); RULES.md half already proven for all 21
+                by direct measurement at Q-004 / REVIEW_INDEX.md open item 33
+```
+
+### Scope of this entry
+
+This is **not** a per-lesson ingestion pass. It is a proactive batch check of `RULES.md`
+only, run ahead of V07–V21's individual Student sessions, so that step doesn't have to be
+re-derived from scratch 15 times. `NOTES.md` and `VISUAL_INDEX.md` are **explicitly out of
+scope here** — per Q-001 through Q-006 they are pairwise distinct across the library and
+still require their own per-lesson audio cross-check when each video's real ingestion runs.
+`TRANSCRIPT.md`, `NOTES.md`, `INDEX.md` and `VISUAL_INDEX.md` were not touched.
+
+### What was checked
+
+Per the discharge method item 33 authorizes ("a future session may discharge the per-lesson
+audit in one step by confirming those three markers and citing `V04_REVIEW_R1.md` + `Q-004`"),
+all three template markers were re-measured mechanically across every `RULES.md` from
+`per_lesson/07_.../` through `per_lesson/21_.../` (folder `NN` = video `VNN` per D-017):
+
+| Template marker | Result, V07–V21 |
+|---|---|
+| Rule 1 quote at `[00:05:00]` — *"Wait for the M15 candle to close before taking the 5/13 EMA cross."* | present, all 15 |
+| Rule 2 quote at `[00:18:00]` — *"Place your stop loss 10 to 15 pips beyond the High or Low of the Day."* | present, all 15 |
+| Exactly two `## Rule ID:` entries | true, all 15 |
+| `NUMERICAL PARAMETERS` block (sed range `/# NUMERICAL PARAMETERS/,/# AMBIGUITIES/`), hashed | **one hash across all 15** — and re-hashing V01–V06 the same way returns the **identical** hash, confirming this is the same one block established at Q-004/Q-005/Q-006, not a new variant |
+
+Zero exceptions. No `RULES.md` in `V07`–`V21` differs from the confirmed fabrication
+signature — none required flagging as a pattern exception per step 4 of this pass's brief.
+
+### Disposition
+
+All 15 files (`V07`–`V21` `RULES.md`) remain quarantined in place at
+`_QUARANTINE_UNVERIFIED_NOTES/per_lesson/NN_.../RULES.md`, already covered by the blanket
+`README_WHY_QUARANTINED.md` warning header for the whole quarantine tree. No files were
+moved, renamed, or deleted. This entry is the flag: a future Student session opening
+`V07`–`V21` can cite `Q-007` (or the original `Q-004` measurement) instead of re-running the
+`RULES.md` audit, but still owes `NOTES.md` and `VISUAL_INDEX.md` their own per-lesson check
+per the Q-001…Q-006 precedent.
+
+### Running tally for the fabrication pattern
+
+**`RULES.md`: 21 of 21 lessons now covered by either individual audio cross-check (V01–V06,
+`Q-001`…`Q-006`) or the mechanical template-marker discharge (V07–V21, this entry) — zero
+exceptions found across the whole library.** `NOTES.md` and `VISUAL_INDEX.md` remain
+unaudited for V07–V21 and are NOT covered by this entry; each still needs its own per-lesson
+check, on its own merits, when that video's ingestion actually runs (they have shown three
+distinct failure modes so far — V01, V05, V06 — so uniformity should not be assumed for them
+the way it has now been proven for `RULES.md`).
