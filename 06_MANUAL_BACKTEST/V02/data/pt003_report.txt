@@ -1,0 +1,254 @@
+==============================================================================
+PT-003 — Is 5pm the day boundary? The printed High/Low Reset (W-A)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-A 2015-01-04 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-003_five_pm_high_low_reset.md
+CLAIM    : V02 printed session table [00:45:55], first line:
+           '5pm    High / Low Reset (The MM Spread Is Set)'  — printed and
+           NEVER SPOKEN (`V02_INTERPRETATION.md` §10.2 U2).
+DESIGN   : all 24 hourly anchors, three metrics, both `D-031` arms, in ONE
+           pass so no ordering of the computation can influence what is looked
+           at first (`PT-003` §7 step 3).
+C-6      : an anchored day enters only with all 96 of its 15-minute buckets;
+           exclusions counted per anchor in the sweep table.
+SCOPE    : NOT a test of 'The MM Spread Is Set' — broker spread is invisible
+           to candle data (`PT-003` §6).
+
+----- ARM A -----
+W-A M15 bars: 24,755   span 2015-01-04T17:00 -> 2015-12-31T16:45
+
+[N2 BASELINE — circular clock shift, 1,000 draws, seed 20260812.]
+  Computed and printed BEFORE any anchor is ranked.
+  usable draws: 1000 of 1000
+  Metric 1 (mean |high-low| gap, bars)      : median 39.51, 5-95% [36.02, 60.79]
+  Metric 2 (share of extremes near anchor)  : median 0.2201, 5-95% [0.07767, 0.5194]
+  Metric 3 (mean Gini of intraday range)    : median 0.3389, 5-95% [0.3363, 0.3452]
+  MATCHED BASIS (Mon-Thu block starts only) — see the confound note below:
+  Metric 1 : median 39.51, 5-95% [35.01, 60.79]
+  Metric 2 : median 0.2201, 5-95% [0.06494, 0.5194]
+  Metric 3 : median 0.3428, 5-95% [0.3383, 0.3452]
+  NOTE, stated rather than glossed: a circular clock shift of a 24-hour
+  anchoring metric IS the anchor sweep at 15-minute granularity. N2 and the
+  second baseline are therefore the same object at different resolutions, and
+  that is a property of this test's design, not a defect. Both are reported.
+
+[THE 24-ANCHOR SWEEP — 17:00 is one row of a table it does not headline]
+   anchor  n days  excl    M1 gap   M2 near   M3 gini
+  00:00      206   104     37.63    0.0971    0.3388
+  01:00      206   104     38.11    0.1068    0.3384
+  02:00      206   104     39.51    0.2330    0.3387
+  03:00      206   104     42.05    0.3689    0.3385
+  04:00      206   104     48.85    0.4563    0.3380
+  05:00      206   104     55.63    0.5049    0.3390
+  06:00      206   104     56.30    0.3932    0.3393
+  07:00      206   104     58.88    0.3786    0.3394
+  08:00      206   104     60.79    0.4029    0.3397
+  09:00      206   104     61.96    0.5194    0.3428
+  10:00      206   104     59.67    0.3981    0.3438
+  11:00      206   104     53.22    0.4612    0.3448
+  12:00      206   104     47.78    0.2864    0.3449
+  13:00      206   104     43.48    0.2184    0.3447
+  14:00      205   104     41.03    0.2341    0.3449
+  15:00      204   105     39.10    0.2206    0.3453
+  16:00      204   105     37.04    0.0833    0.3448
+  17:00      256     2     37.71    0.1172    0.3373   <<< the printed reset
+  18:00      206   104     37.07    0.0874    0.3362
+  19:00      206   104     35.64    0.0777    0.3369
+  20:00      206   104     35.99    0.1214    0.3379
+  21:00      206   104     37.13    0.1505    0.3382
+  22:00      206   104     36.81    0.1262    0.3385
+  23:00      206   104     37.77    0.0777    0.3389
+
+  >>> STRUCTURAL CONFOUND IN THE RAW SWEEP, FOUND BEFORE ANY RANKING <<<
+  17:00 keeps 256 anchored days; every other anchor keeps ~206.
+  Cause: 17:00 is the ONLY anchor aligned with the market's own weekly open
+  and close. A 24h block anchored at 17:00 is exactly one trading session, so
+  Sunday-17:00 -> Monday-17:00 is complete and Friday-17:00 -> Saturday has no
+  bars at all (it is not a block). Every OTHER anchor loses all 52 Sunday
+  starts and all ~50 Friday starts to the weekend gap.
+  Consequence: the raw ranking compares 17:00's 256 days against 00:00's 206
+  DIFFERENT days. That is not a like-for-like ranking, and the advantage is
+  a property of the CLOCK ALIGNMENT, not of price behaviour.
+  Handling: the matched-basis sweep below restricts EVERY anchor to Mon-Thu
+  block starts. No pre-registered threshold, window or metric is changed; the
+  pre-registered comparison is made valid. BOTH sweeps are reported.
+
+[MATCHED-BASIS SWEEP — every anchor restricted to Mon-Thu block starts]
+   anchor  n days    M1 gap   M2 near   M3 gini
+  00:00      206     37.63    0.0971    0.3388
+  01:00      206     38.11    0.1068    0.3384
+  02:00      206     39.51    0.2330    0.3387
+  03:00      206     42.05    0.3689    0.3385
+  04:00      206     48.85    0.4563    0.3380
+  05:00      206     55.63    0.5049    0.3390
+  06:00      206     56.30    0.3932    0.3393
+  07:00      206     58.88    0.3786    0.3394
+  08:00      206     60.79    0.4029    0.3397
+  09:00      206     61.96    0.5194    0.3428
+  10:00      206     59.67    0.3981    0.3438
+  11:00      206     53.22    0.4612    0.3448
+  12:00      206     47.78    0.2864    0.3449
+  13:00      206     43.48    0.2184    0.3447
+  14:00      205     41.03    0.2341    0.3449
+  15:00      204     39.10    0.2206    0.3453
+  16:00      204     37.04    0.0833    0.3448
+  17:00      204     36.00    0.1078    0.3439   <<< the printed reset
+  18:00      154     34.85    0.0455    0.3442
+  19:00      154     34.79    0.0584    0.3432
+  20:00      154     35.43    0.1039    0.3427
+  21:00      154     36.47    0.1429    0.3426
+  22:00      154     35.71    0.1169    0.3426
+  23:00      154     35.68    0.0714    0.3428
+
+[RANK OF 17:00 AMONG THE 24 CANDIDATES — all three metrics, none preferred]
+  M1 mean |high-low| gap (bars)
+    17:00 = 37.7148   rank 17/24 descending (8/24 ascending)
+    highest 09:00 = 61.9563   lowest 19:00 = 35.6359
+    percentile within N2: 27.7
+    MATCHED BASIS: 17:00 = 36.0049   rank 19/24 descending   percentile within N2 23.0
+  M2 share of extremes within 30 min of the anchor
+    17:00 = 0.1172   rank 18/24 descending (7/24 ascending)
+    highest 09:00 = 0.5194   lowest 23:00 = 0.0777
+    percentile within N2: 29.1
+    MATCHED BASIS: 17:00 = 0.1078   rank 17/24 descending   percentile within N2 24.8
+  M3 mean Gini concentration of intraday range
+    17:00 = 0.3373   rank 22/24 descending (3/24 ascending)
+    highest 15:00 = 0.3453   lowest 18:00 = 0.3362
+    percentile within N2: 9.4
+    MATCHED BASIS: 17:00 = 0.3439   rank 8/24 descending   percentile within N2 67.3
+
+----- ARM B -----
+W-A M15 bars: 24,755   span 2015-01-04T17:00 -> 2015-12-31T16:45
+
+[N2 BASELINE — circular clock shift, 1,000 draws, seed 20260812.]
+  Computed and printed BEFORE any anchor is ranked.
+  usable draws: 1000 of 1000
+  Metric 1 (mean |high-low| gap, bars)      : median 39.55, 5-95% [35.73, 61.08]
+  Metric 2 (share of extremes near anchor)  : median 0.2268, 5-95% [0.08252, 0.4854]
+  Metric 3 (mean Gini of intraday range)    : median 0.3388, 5-95% [0.3365, 0.345]
+  MATCHED BASIS (Mon-Thu block starts only) — see the confound note below:
+  Metric 1 : median 39.55, 5-95% [35.1, 61.08]
+  Metric 2 : median 0.2268, 5-95% [0.07143, 0.4854]
+  Metric 3 : median 0.3428, 5-95% [0.3384, 0.345]
+  NOTE, stated rather than glossed: a circular clock shift of a 24-hour
+  anchoring metric IS the anchor sweep at 15-minute granularity. N2 and the
+  second baseline are therefore the same object at different resolutions, and
+  that is a property of this test's design, not a defect. Both are reported.
+
+[THE 24-ANCHOR SWEEP — 17:00 is one row of a table it does not headline]
+   anchor  n days  excl    M1 gap   M2 near   M3 gini
+  00:00      206   104     37.96    0.0922    0.3385
+  01:00      206   104     37.88    0.0971    0.3385
+  02:00      206   104     38.61    0.1602    0.3385
+  03:00      206   104     39.80    0.2621    0.3385
+  04:00      206   104     44.75    0.4078    0.3383
+  05:00      206   104     50.40    0.4660    0.3387
+  06:00      206   104     55.17    0.4709    0.3392
+  07:00      206   104     57.25    0.4223    0.3394
+  08:00      206   104     60.00    0.3689    0.3396
+  09:00      206   104     62.12    0.4272    0.3410
+  10:00      206   104     60.83    0.4612    0.3435
+  11:00      206   104     57.90    0.4417    0.3443
+  12:00      206   104     52.12    0.4272    0.3445
+  13:00      206   104     45.67    0.2233    0.3449
+  14:00      206   103     42.33    0.2282    0.3447
+  15:00      204   105     40.49    0.2598    0.3452
+  16:00      204   105     38.27    0.1471    0.3450
+  17:00      222    70     38.16    0.1126    0.3417   <<< the printed reset
+  18:00      239    37     37.29    0.1088    0.3369
+  19:00      206   104     35.93    0.0922    0.3364
+  20:00      206   104     35.73    0.0777    0.3371
+  21:00      206   104     36.40    0.1262    0.3380
+  22:00      206   104     36.74    0.1311    0.3383
+  23:00      206   104     37.37    0.1117    0.3386
+
+  >>> STRUCTURAL CONFOUND IN THE RAW SWEEP, FOUND BEFORE ANY RANKING <<<
+  17:00 keeps 222 anchored days; every other anchor keeps ~206.
+  Cause: 17:00 is the ONLY anchor aligned with the market's own weekly open
+  and close. A 24h block anchored at 17:00 is exactly one trading session, so
+  Sunday-17:00 -> Monday-17:00 is complete and Friday-17:00 -> Saturday has no
+  bars at all (it is not a block). Every OTHER anchor loses all 52 Sunday
+  starts and all ~50 Friday starts to the weekend gap.
+  Consequence: the raw ranking compares 17:00's 256 days against 00:00's 206
+  DIFFERENT days. That is not a like-for-like ranking, and the advantage is
+  a property of the CLOCK ALIGNMENT, not of price behaviour.
+  Handling: the matched-basis sweep below restricts EVERY anchor to Mon-Thu
+  block starts. No pre-registered threshold, window or metric is changed; the
+  pre-registered comparison is made valid. BOTH sweeps are reported.
+
+[MATCHED-BASIS SWEEP — every anchor restricted to Mon-Thu block starts]
+   anchor  n days    M1 gap   M2 near   M3 gini
+  00:00      206     37.96    0.0922    0.3385
+  01:00      206     37.88    0.0971    0.3385
+  02:00      206     38.61    0.1602    0.3385
+  03:00      206     39.80    0.2621    0.3385
+  04:00      206     44.75    0.4078    0.3383
+  05:00      206     50.40    0.4660    0.3387
+  06:00      206     55.17    0.4709    0.3392
+  07:00      206     57.25    0.4223    0.3394
+  08:00      206     60.00    0.3689    0.3396
+  09:00      206     62.12    0.4272    0.3410
+  10:00      206     60.83    0.4612    0.3435
+  11:00      206     57.90    0.4417    0.3443
+  12:00      206     52.12    0.4272    0.3445
+  13:00      206     45.67    0.2233    0.3449
+  14:00      206     42.33    0.2282    0.3447
+  15:00      204     40.49    0.2598    0.3452
+  16:00      204     38.27    0.1471    0.3450
+  17:00      204     36.96    0.0980    0.3445   <<< the printed reset
+  18:00      187     35.45    0.0909    0.3441
+  19:00      154     34.63    0.0584    0.3440
+  20:00      154     35.13    0.0649    0.3431
+  21:00      154     36.05    0.1234    0.3427
+  22:00      154     36.01    0.1234    0.3428
+  23:00      154     35.71    0.0974    0.3426
+
+[RANK OF 17:00 AMONG THE 24 CANDIDATES — all three metrics, none preferred]
+  M1 mean |high-low| gap (bars)
+    17:00 = 38.1577   rank 16/24 descending (9/24 ascending)
+    highest 09:00 = 62.1214   lowest 20:00 = 35.7330
+    percentile within N2: 40.3
+    MATCHED BASIS: 17:00 = 36.9559   rank 18/24 descending   percentile within N2 31.1
+  M2 share of extremes within 30 min of the anchor
+    17:00 = 0.1126   rank 18/24 descending (7/24 ascending)
+    highest 06:00 = 0.4709   lowest 20:00 = 0.0777
+    percentile within N2: 24.4
+    MATCHED BASIS: 17:00 = 0.0980   rank 18/24 descending   percentile within N2 16.0
+  M3 mean Gini concentration of intraday range
+    17:00 = 0.3417   rank 8/24 descending (17/24 ascending)
+    highest 15:00 = 0.3452   lowest 19:00 = 0.3364
+    percentile within N2: 69.7
+    MATCHED BASIS: 17:00 = 0.3445   rank 6/24 descending   percentile within N2 77.3
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always
+==============================================================================
+                                                     ARM A       ARM B
+M1 gap: 17:00 value                                37.7148     38.1577
+M2 near: 17:00 value                                0.1172      0.1126
+M3 gini: 17:00 value                                0.3373      0.3417
+M1 rank of 17:00 (of 24, descending)                    17          16
+M2 rank of 17:00 (of 24, descending)                    18          18
+M3 rank of 17:00 (of 24, descending)                    22           8
+M1 percentile within N2                               27.7        40.3
+M2 percentile within N2                               29.1        24.4
+M3 percentile within N2                                9.4        69.7
+  --- MATCHED BASIS (Mon-Thu block starts, like-for-like) ---
+M1 rank of 17:00 (matched)                              19          18
+M2 rank of 17:00 (matched)                              17          18
+M3 rank of 17:00 (matched)                               8           6
+M1 percentile within N2 (matched)                     23.0        31.1
+M2 percentile within N2 (matched)                     24.8        16.0
+M3 percentile within N2 (matched)                     67.3        77.3
+anchored days at 17:00 (excluded)                  256 (2)    222 (70)

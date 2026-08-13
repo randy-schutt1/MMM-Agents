@@ -1,0 +1,163 @@
+==============================================================================
+PT-006 — The NYC Reversal at session changeover (W-A)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-A 2015-01-04 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-006_nyc_reversal_at_session_changeover.md
+CLAIM    : V02 [00:34:05] 'The new session brings a new target and a new market
+           maker on duty.'  [00:34:09] 'The new guy came on and he changes the
+           direction.'  Slide [00:33:10] 'New Session Brings New Targets For
+           Market Makers ( NYC Reversal)' — a printed name never spoken.
+SCOPE    : does NOT test 'a new market maker on duty' — that is a claim about
+           who is behind the price, which candle data cannot observe
+           (`PT-006` §6, `V01_INTERPRETATION.md` §3 G7).
+
+----- ARM A -----
+COMPLETENESS (C-6, all 96 session slots required): n = 256 (2 excluded: 2015-08-21, 2015-12-24)
+
+[N2 BASELINE — circular clock shift, 1,000 draws, seed 20260812, before the 09:30 number is read]
+  reversal rate between two arbitrary adjacent windows of the same lengths: median 0.5122, 5-95% [0.4466, 0.5813]  (1000 draws)
+
+[THIRD BASELINE — the serial-correlation control (`PT-006` §4). 'The arm that decides
+  what the result means: mean reversion at a 5-hour horizon would produce a reversal
+  rate above 50% with no market maker involved at all.']
+  `PT-006` §4 says 'two adjacent windows of the same lengths INSIDE the London
+  session' — but London is 5.5h and the tested pair is 5.5h + 1h, which does not
+  fit inside it. Two DECLARED variants are run and BOTH are reported; neither
+  is preferred and nothing is approximated away.
+  W2 — two EQUAL halves wholly inside London (03:30-06:15 | 06:15-09:00): 0.476 (121/254), 95% CI [0.416, 0.538]
+  W1 — the TESTED GEOMETRY (5.5h + 1h) with its boundary moved to 06:00, mid-London: 0.486 (124/255), 95% CI [0.426, 0.547]
+
+[SECOND BASELINE — all 24 candidate changeover hours, same geometry]
+    00:30  n= 252  reversal 0.5675   (143/252)
+    01:30  n= 256  reversal 0.5234   (134/256)
+    02:30  n= 254  reversal 0.5157   (131/254)
+    03:30  n= 255  reversal 0.5255   (134/255)   <<< the Asian->London changeover
+    04:30  n= 254  reversal 0.5236   (133/254)
+    05:30  n= 254  reversal 0.5197   (132/254)
+    06:30  n= 254  reversal 0.4685   (119/254)
+    07:30  n= 255  reversal 0.4706   (120/255)
+    08:30  n= 255  reversal 0.5490   (140/255)
+    09:30  n= 256  reversal 0.4375   (112/256)   <<< the NYC changeover
+    10:30  n= 256  reversal 0.4570   (117/256)
+    11:30  n= 255  reversal 0.5137   (131/255)
+    12:30  n= 254  reversal 0.5669   (144/254)
+    13:30  n= 253  reversal 0.4862   (123/253)
+    14:30  n= 254  reversal 0.5433   (138/254)
+    15:30  n= 253  reversal 0.5217   (132/253)
+    16:30  n= 203  reversal 0.5172   (105/203)
+    17:30  n= 201  reversal 0.6219   (125/201)
+    18:30  n= 199  reversal 0.4121   (82/199)
+    19:30  n= 203  reversal 0.4975   (101/203)
+    20:30  n= 203  reversal 0.5074   (103/203)
+    21:30  n= 201  reversal 0.5771   (116/201)
+    22:30  n= 202  reversal 0.5050   (102/202)
+    23:30  n= 252  reversal 0.5198   (131/252)
+
+[RULE ARM — the NYC Reversal at 09:30]
+  prior session : open(03:30) -> close(09:00)  [the printed London session]
+  post window   : open(09:30) -> close(10:30)  [the printed first NY hour]
+  PRIMARY — share of days on which the two signs DIFFER: 0.438 (112/256), 95% CI [0.378, 0.499]
+  days with a flat leg (sign = 0), reported not dropped: 0   days with a missing bar in a leg: 0
+  percentile within N2: 2.7
+  rank among the 24 candidate changeover hours: 23/24 descending
+  vs the within-session controls: W2 0.4764   W1 0.4863
+
+  SECOND MEASURE — the same test at 30 min, 2 h, and to the 17:00 close
+    post = 30 min   : 0.465 (119/256), 95% CI [0.405, 0.526]
+    post = 1 h      : 0.438 (112/256), 95% CI [0.378, 0.499]
+    post = 2 h      : 0.473 (121/256), 95% CI [0.412, 0.534]
+    post = to 17:00 : 0.414 (106/256), 95% CI [0.355, 0.475]
+
+  THIRD MEASURE — the OTHER changeover, Asian -> London at 03:30
+    prior = Asian open(20:30) -> close(03:00); post = open(03:30) -> close(04:30)
+    with the Asian session's OWN length (6.5h prior): 0.549 (139/253), 95% CI [0.488, 0.610]
+    with the tested 5.5h geometry, for comparability: 0.525 (134/255), 95% CI [0.464, 0.586]
+
+----- ARM B -----
+COMPLETENESS (C-6, all 96 session slots required): n = 222 (70 excluded: 2015-03-09, 2015-03-14, 2015-03-16, 2015-03-21, 2015-03-23, 2015-03-28, 2015-03-30, 2015-04-04, 2015-04-06, 2015-04-11, 2015-04-13, 2015-04-18, 2015-04-20, 2015-04-25, 2015-04-27, 2015-05-02, 2015-05-04, 2015-05-09, 2015-05-11, 2015-05-16, 2015-05-18, 2015-05-23, 2015-05-25, 2015-05-30, 2015-06-01, 2015-06-06, 2015-06-08, 2015-06-13, 2015-06-15, 2015-06-20, 2015-06-22, 2015-06-27, 2015-06-29, 2015-07-04, 2015-07-06, 2015-07-11, 2015-07-13, 2015-07-18, 2015-07-20, 2015-07-25, 2015-07-27, 2015-08-01, 2015-08-03, 2015-08-08, 2015-08-10, 2015-08-15, 2015-08-17, 2015-08-21, 2015-08-22, 2015-08-24, 2015-08-29, 2015-08-31, 2015-09-05, 2015-09-07, 2015-09-12, 2015-09-14, 2015-09-19, 2015-09-21, 2015-09-26, 2015-09-28, 2015-10-03, 2015-10-05, 2015-10-10, 2015-10-12, 2015-10-17, 2015-10-19, 2015-10-24, 2015-10-26, 2015-10-31, 2015-12-24)
+
+[N2 BASELINE — circular clock shift, 1,000 draws, seed 20260812, before the 09:30 number is read]
+  reversal rate between two arbitrary adjacent windows of the same lengths: median 0.5099, 5-95% [0.4417, 0.5922]  (1000 draws)
+
+[THIRD BASELINE — the serial-correlation control (`PT-006` §4). 'The arm that decides
+  what the result means: mean reversion at a 5-hour horizon would produce a reversal
+  rate above 50% with no market maker involved at all.']
+  `PT-006` §4 says 'two adjacent windows of the same lengths INSIDE the London
+  session' — but London is 5.5h and the tested pair is 5.5h + 1h, which does not
+  fit inside it. Two DECLARED variants are run and BOTH are reported; neither
+  is preferred and nothing is approximated away.
+  W2 — two EQUAL halves wholly inside London (03:30-06:15 | 06:15-09:00): 0.518 (115/222), 95% CI [0.453, 0.583]
+  W1 — the TESTED GEOMETRY (5.5h + 1h) with its boundary moved to 06:00, mid-London: 0.541 (120/222), 95% CI [0.475, 0.605]
+
+[SECOND BASELINE — all 24 candidate changeover hours, same geometry]
+    00:30  n= 222  reversal 0.5495   (122/222)
+    01:30  n= 219  reversal 0.6027   (132/219)
+    02:30  n= 222  reversal 0.4910   (109/222)
+    03:30  n= 221  reversal 0.5068   (112/221)   <<< the Asian->London changeover
+    04:30  n= 220  reversal 0.5136   (113/220)
+    05:30  n= 221  reversal 0.5747   (127/221)
+    06:30  n= 219  reversal 0.4977   (109/219)
+    07:30  n= 221  reversal 0.4208   (93/221)
+    08:30  n= 221  reversal 0.5294   (117/221)
+    09:30  n= 221  reversal 0.5068   (112/221)   <<< the NYC changeover
+    10:30  n= 222  reversal 0.4054   (90/222)
+    11:30  n= 221  reversal 0.5249   (116/221)
+    12:30  n= 222  reversal 0.5270   (117/222)
+    13:30  n= 220  reversal 0.5318   (117/220)
+    14:30  n= 220  reversal 0.5409   (119/220)
+    15:30  n= 219  reversal 0.5251   (115/219)
+    16:30  n= 201  reversal 0.5920   (119/201)
+    17:30  n= 202  reversal 0.5099   (103/202)
+    18:30  n= 201  reversal 0.5124   (103/201)
+    19:30  n= 200  reversal 0.4550   (91/200)
+    20:30  n= 202  reversal 0.5297   (107/202)
+    21:30  n= 204  reversal 0.5000   (102/204)
+    22:30  n= 201  reversal 0.5821   (117/201)
+    23:30  n= 216  reversal 0.4815   (104/216)
+
+[RULE ARM — the NYC Reversal at 09:30]
+  prior session : open(03:30) -> close(09:00)  [the printed London session]
+  post window   : open(09:30) -> close(10:30)  [the printed first NY hour]
+  PRIMARY — share of days on which the two signs DIFFER: 0.507 (112/221), 95% CI [0.441, 0.572]
+  days with a flat leg (sign = 0), reported not dropped: 1   days with a missing bar in a leg: 0
+  percentile within N2: 44.3
+  rank among the 24 candidate changeover hours: 16/24 descending
+  vs the within-session controls: W2 0.5180   W1 0.5405
+
+  SECOND MEASURE — the same test at 30 min, 2 h, and to the 17:00 close
+    post = 30 min   : 0.502 (110/219), 95% CI [0.437, 0.568]
+    post = 1 h      : 0.507 (112/221), 95% CI [0.441, 0.572]
+    post = 2 h      : 0.520 (115/221), 95% CI [0.455, 0.585]
+    post = to 17:00 : 0.484 (107/221), 95% CI [0.419, 0.550]
+
+  THIRD MEASURE — the OTHER changeover, Asian -> London at 03:30
+    prior = Asian open(20:30) -> close(03:00); post = open(03:30) -> close(04:30)
+    with the Asian session's OWN length (6.5h prior): 0.491 (108/220), 95% CI [0.426, 0.557]
+    with the tested 5.5h geometry, for comparability: 0.507 (112/221), 95% CI [0.441, 0.572]
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always
+==============================================================================
+                                                   ARM A       ARM B
+n days                                               256         222
+09:30 reversal rate                               0.4375      0.5068
+  n (both legs non-flat)                             256         221
+  percentile within N2                               2.7        44.3
+  rank of 09:30 among 24                              23          16
+within-London control W2                          0.4764      0.5180
+within-London control W1                          0.4863      0.5405
+03:30 changeover (Asian prior)                    0.5494      0.4909
+09:30, post = 30 min                              0.4648      0.5023
+09:30, post = 2 h                                 0.4727      0.5204
+09:30, post = to 17:00                            0.4141      0.4842

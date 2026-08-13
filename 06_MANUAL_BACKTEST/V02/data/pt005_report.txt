@@ -1,0 +1,168 @@
+==============================================================================
+PT-005 — 'Take a trade at 8 and then 9:30 when the dealer hits your stops' (W-B)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-B 2014-01-05 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-005_new_york_opens_at_930_not_8.md
+CLAIM    : V02 [00:51:03]-[00:51:20] 'Forex Factory shows New York open at 8...
+           Take a trade at 8 o'clock and then 9:30 when the dealer hits your
+           stops, come back next week and tell me.'
+ENTRY    : mechanical, at the 08:00 bar close, EVERY trading day, NO filter of
+           any kind. Both directions run as separate arms (he names none).
+SCOPE    : the 08:00 entry is a MEASUREMENT DEVICE, not a strategy; its win
+           rate is not a result about the method (`PT-005` §6).
+
+----- ARM A -----
+COMPLETENESS (C-6, 08:00-17:00 required): n = 512 (5 excluded for incomplete sessions: 2014-06-02 (28 slots missing), 2014-12-24 (12 slots missing), 2015-01-01 (34 slots missing), 2015-08-21 (1 slots missing), 2015-12-24 (12 slots missing))
+trade grid: 49,421 entry bars x 2 directions, stop 18 / target 50, resolved on M1
+
+  >>> `PT-005` §5 warns the entry-relative grid is the arm that decides this
+  test. IT IS DEGENERATE HERE, BY CONSTRUCTION, AND THAT IS ITSELF THE FINDING:
+  every trade enters at exactly 08:15, so wall-clock stop-out time = 08:15 +
+  elapsed, deterministically. The two grids are an affine relabelling of each
+  other and carry identical information. A fixed entry time CANNOT separate
+  '09:30 matters' from 'entry + 75 minutes matters'. The separation is supplied
+  instead by N1 and N2, which BOTH vary the entry hour. Nothing is approximated
+  and no substitute arm is invented.
+
+[BASELINES — computed and printed BEFORE the observed stop-out histogram]
+  N1 pool (entries drawn at random from 08:00-12:00): 8192 bars
+  N1 dir long: share of stop-outs landing in 09:30-10:00 (wall clock) median 0.07516, 5-95% [0.05128, 0.1012]
+  N1 dir short: share of stop-outs landing in 09:30-10:00 (wall clock) median 0.08648, 5-95% [0.06402, 0.1162]
+  N2 dir long: same share under a randomised clock median 0.09692, 5-95% [0.01037, 0.2229]  (991 usable draws)
+  N2 dir short: same share under a randomised clock median 0.1004, 5-95% [0.01493, 0.25]  (991 usable draws)
+
+[RULE ARM — entry at the 08:00 bar close, EVERY trading day, no filter]
+
+  LONG-only arm: n = 512
+    target / stop / open at 17:00 : 103 / 288 / 121
+    hit rate (of resolved)        : 0.263 (103/391), 95% CI [0.222, 0.309]
+    expectancy                    : +2.51 pips
+    MEASURE 1 — time-of-day of the STOP-OUT (257 stop-outs inside 08:00-12:00 of 288 total):
+      08:00-08:30    29  #############
+      08:30-09:00    87  ########################################
+      09:00-09:30    37  #################
+      09:30-10:00    30  ##############   <<< the claim's window
+      10:00-10:30    33  ###############
+      10:30-11:00    19  #########
+      11:00-11:30    13  ######
+      11:30-12:00     9  ####
+    share of stop-outs in 09:30-10:00 : 0.104 (30/288), 95% CI [0.074, 0.145]
+    percentile within N1 96.3   within N2 52.1
+    MEASURE 1b — the SAME data on the entry-relative grid (affine relabelling, see above):
+      0-30m:29  30-60m:87  60-90m:37  90-120m:30  120-150m:33  150-180m:19  180-210m:13  210-240m:9
+    MEASURE 2 — MAE accrued in each 30-min slot (raw path, unstopped), mean pips:
+      08:00 11.53  08:30  8.40  09:00  8.37  09:30  9.94  10:00  9.10  10:30 11.18  11:00  8.48  11:30  8.04
+      peak MAE slot: 08:00-08:30   (is NOT the claim's window)
+
+  SHORT-only arm: n = 512
+    target / stop / open at 17:00 : 78 / 324 / 110
+    hit rate (of resolved)        : 0.194 (78/402), 95% CI [0.158, 0.236]
+    expectancy                    : -1.28 pips
+    MEASURE 1 — time-of-day of the STOP-OUT (299 stop-outs inside 08:00-12:00 of 324 total):
+      08:00-08:30    47  ###############
+      08:30-09:00   125  ########################################
+      09:00-09:30    41  #############
+      09:30-10:00    30  ##########   <<< the claim's window
+      10:00-10:30    29  #########
+      10:30-11:00    15  #####
+      11:00-11:30     6  ##
+      11:30-12:00     6  ##
+    share of stop-outs in 09:30-10:00 : 0.093 (30/324), 95% CI [0.066, 0.129]
+    percentile within N1 63.6   within N2 43.8
+    MEASURE 1b — the SAME data on the entry-relative grid (affine relabelling, see above):
+      0-30m:47  30-60m:125  60-90m:41  90-120m:30  120-150m:29  150-180m:15  180-210m:6  210-240m:6
+    MEASURE 2 — MAE accrued in each 30-min slot (raw path, unstopped), mean pips:
+      08:00 13.76  08:30 11.54  09:00 10.63  09:30 12.40  10:00 10.81  10:30 10.84  11:00  8.33  11:30  7.56
+      peak MAE slot: 08:00-08:30   (is NOT the claim's window)
+
+----- ARM B -----
+COMPLETENESS (C-6, 08:00-17:00 required): n = 512 (73 excluded for incomplete sessions: 2014-03-15 (36 slots missing), 2014-03-22 (36 slots missing), 2014-03-29 (36 slots missing), 2014-04-05 (36 slots missing), 2014-04-12 (36 slots missing), 2014-04-19 (36 slots missing), 2014-04-26 (36 slots missing), 2014-05-03 (36 slots missing), +65 more)
+trade grid: 49,421 entry bars x 2 directions, stop 18 / target 50, resolved on M1
+
+  >>> `PT-005` §5 warns the entry-relative grid is the arm that decides this
+  test. IT IS DEGENERATE HERE, BY CONSTRUCTION, AND THAT IS ITSELF THE FINDING:
+  every trade enters at exactly 08:15, so wall-clock stop-out time = 08:15 +
+  elapsed, deterministically. The two grids are an affine relabelling of each
+  other and carry identical information. A fixed entry time CANNOT separate
+  '09:30 matters' from 'entry + 75 minutes matters'. The separation is supplied
+  instead by N1 and N2, which BOTH vary the entry hour. Nothing is approximated
+  and no substitute arm is invented.
+
+[BASELINES — computed and printed BEFORE the observed stop-out histogram]
+  N1 pool (entries drawn at random from 08:00-12:00): 8192 bars
+  N1 dir long: share of stop-outs landing in 09:30-10:00 (wall clock) median 0.1045, 5-95% [0.07712, 0.1329]
+  N1 dir short: share of stop-outs landing in 09:30-10:00 (wall clock) median 0.1139, 5-95% [0.08546, 0.1412]
+  N2 dir long: same share under a randomised clock median 0.1106, 5-95% [0.01232, 0.1961]  (991 usable draws)
+  N2 dir short: same share under a randomised clock median 0.1071, 5-95% [0.01196, 0.2115]  (991 usable draws)
+
+[RULE ARM — entry at the 08:00 bar close, EVERY trading day, no filter]
+
+  LONG-only arm: n = 512
+    target / stop / open at 17:00 : 98 / 310 / 104
+    hit rate (of resolved)        : 0.240 (98/408), 95% CI [0.201, 0.284]
+    expectancy                    : +1.02 pips
+    MEASURE 1 — time-of-day of the STOP-OUT (276 stop-outs inside 08:00-12:00 of 310 total):
+      08:00-08:30    23  ###############
+      08:30-09:00    60  ########################################
+      09:00-09:30    50  #################################
+      09:30-10:00    60  ########################################   <<< the claim's window
+      10:00-10:30    34  #######################
+      10:30-11:00    18  ############
+      11:00-11:30    19  #############
+      11:30-12:00    12  ########
+    share of stop-outs in 09:30-10:00 : 0.194 (60/310), 95% CI [0.153, 0.241]
+    percentile within N1 100.0   within N2 93.5
+    MEASURE 1b — the SAME data on the entry-relative grid (affine relabelling, see above):
+      0-30m:23  30-60m:60  60-90m:50  90-120m:60  120-150m:34  150-180m:18  180-210m:19  210-240m:12
+    MEASURE 2 — MAE accrued in each 30-min slot (raw path, unstopped), mean pips:
+      08:00  9.00  08:30  8.89  09:00 10.59  09:30  9.81  10:00  9.78  10:30 11.08  11:00  9.38  11:30 10.85
+      peak MAE slot: 10:30-11:00   (is NOT the claim's window)
+
+  SHORT-only arm: n = 512
+    target / stop / open at 17:00 : 79 / 326 / 107
+    hit rate (of resolved)        : 0.195 (79/405), 95% CI [0.159, 0.236]
+    expectancy                    : -1.13 pips
+    MEASURE 1 — time-of-day of the STOP-OUT (299 stop-outs inside 08:00-12:00 of 326 total):
+      08:00-08:30    31  ###############
+      08:30-09:00    84  ########################################
+      09:00-09:30    56  ###########################
+      09:30-10:00    55  ##########################   <<< the claim's window
+      10:00-10:30    28  #############
+      10:30-11:00    18  #########
+      11:00-11:30    17  ########
+      11:30-12:00    10  #####
+    share of stop-outs in 09:30-10:00 : 0.169 (55/326), 95% CI [0.132, 0.213]
+    percentile within N1 100.0   within N2 85.0
+    MEASURE 1b — the SAME data on the entry-relative grid (affine relabelling, see above):
+      0-30m:31  30-60m:84  60-90m:56  90-120m:55  120-150m:28  150-180m:18  180-210m:17  210-240m:10
+    MEASURE 2 — MAE accrued in each 30-min slot (raw path, unstopped), mean pips:
+      08:00  9.96  08:30  9.31  09:00 12.12  09:30 11.10  10:00 10.09  10:30 11.13  11:00  9.20  11:30  8.33
+      peak MAE slot: 09:00-09:30   (is NOT the claim's window)
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always
+==============================================================================
+                                                   ARM A       ARM B
+LONG n                                               512         512
+LONG stop-outs                                       288         310
+LONG share of stop-outs in 09:30-10:00             0.104       0.194
+LONG   percentile within N1                         96.3       100.0
+LONG   percentile within N2                         52.1        93.5
+LONG peak MAE slot                                 08:00       10:30
+SHORT n                                              512         512
+SHORT stop-outs                                      324         326
+SHORT share of stop-outs in 09:30-10:00            0.093       0.169
+SHORT   percentile within N1                        63.6       100.0
+SHORT   percentile within N2                        43.8        85.0
+SHORT peak MAE slot                                08:00       09:00

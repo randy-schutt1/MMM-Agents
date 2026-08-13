@@ -1,0 +1,240 @@
+==============================================================================
+PT-004 — Are the printed Dead Gap and session gaps actually quiet? (W-A)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-A 2015-01-04 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-004_dead_gap_and_session_gaps.md (AMENDED)
+AMENDMENT: adds a disclosure row on where the week open falls, and REQUIRES the
+           two `D-031` arms be compared on the SUNDAY INSTANCE specifically.
+           No trigger, window, metric, comparator or threshold moved.
+CLAIM    : V02 slide [00:45:55] prints three inactive windows; [00:50:32] says
+           '3 to 3:30 is the gap, 4 o'clock session open'.
+C-004    : OPEN. 03:30-04:00 is measured as a FOURTH window so the two readings
+           can be compared on the same data. This test resolves nothing.
+SCOPE    : NOT a test of any trading rule; NOT a test of 'The MM Spread Is Set'.
+
+----- ARM A -----
+COMPLETENESS (C-6, all 96 session slots required): n = 256 (2 excluded for incomplete sessions: 2015-08-21, 2015-12-24)
+  Dispositions per `QA_REPORT.txt` C8: Dec/Jan flagged sessions are real market
+  CLOSURES; they still cannot support a full-window measurement and are
+  excluded and named. No day is excluded for being unrepresentative.
+
+[SECOND BASELINE — the full 24-hour profile, built BEFORE any named window]
+  mean per-bar true range, pips, by slot (slot 0 = 17:00):
+    17:00   9.68   6.47   6.60   6.15   6.79   5.42   5.22   5.33
+    19:00   6.09   5.01   5.62   6.13   7.86   6.56   6.49   7.40
+    21:00   6.92   6.33   7.21   6.63   6.42   5.64   5.68   5.59
+    23:00   5.39   5.08   5.11   4.76   5.25   4.81   5.52   5.58
+    01:00   6.04   5.98   6.73   7.39  12.60  10.82  12.49  13.50
+    03:00  16.34  15.31  14.08  15.40  15.69  15.71  20.09  15.42
+    05:00  15.49  13.79  14.00  13.73  14.41  12.60  12.48  13.15
+    07:00  14.83  12.85  13.11  13.01  14.82  15.31  22.93  16.46
+    09:00  15.94  15.84  16.65  16.57  19.26  16.43  16.29  19.94
+    11:00  16.59  15.17  13.38  13.64  12.80  11.42  11.03  10.96
+    13:00  11.06   9.89   9.42  10.16  12.16   9.36   9.75   9.58
+    15:00   9.16   7.87   6.92   7.75   8.09   6.35   6.73   8.45
+  quietest 6 slots : 23:45 (4.76), 00:15 (4.81), 19:15 (5.01), 23:15 (5.08), 23:30 (5.11), 18:30 (5.22)
+  busiest 6 slots  : 08:30 (22.93), 04:30 (20.09), 10:45 (19.94), 10:00 (19.26), 09:30 (16.65), 11:00 (16.59)
+
+[N2 BASELINE — circular clock shift, 1,000 draws, seed 20260812, computed before any comparison]
+  i   Dead Gap 17:00-20:00: M1 median 9.835, 5-95% [5.496, 15.99] | M2 median 17.5, 5-95% [7.899, 30.96] | M3 median 0.3301, 5-95% [0.1569, 0.7379]
+  ii  gap 03:00-03:30: M1 median 10.92, 5-95% [5.115, 17.7] | M2 median 7.425, 5-95% [3.382, 13.19] | M3 median 0.01942, 5-95% [0, 0.09709]
+  iii gap 09:00-09:30: M1 median 9.908, 5-95% [5.113, 17.68] | M2 median 7.267, 5-95% [3.383, 13.19] | M3 median 0.02451, 5-95% [0, 0.09223]
+  iv  03:30-04:00 (C-004): M1 median 9.959, 5-95% [5.113, 17.68] | M2 median 7.425, 5-95% [3.383, 12.89] | M3 median 0.01942, 5-95% [0, 0.09709]
+
+[RULE ARM — the named windows and their immediate neighbours]
+
+  i   Dead Gap 17:00-20:00   n = 256
+                            M1 per-bar TR  M2 |net move|  M3 extreme in
+    BEFORE     14:00-17:00          8.514         12.490         0.2734
+    THE WINDOW 17:00-20:00          6.209          8.275         0.1758
+    AFTER      20:00-23:00          6.561         10.632         0.1055
+    percentile within N2: M1 20.1   M2 9.6   M3 11.5
+    quieter than BOTH neighbours on M1? YES   on M2? YES
+    M3 detail: daily HIGH inside 0.078 (20/256), 95% CI [0.051, 0.118]; daily LOW inside 0.098 (25/256), 95% CI [0.067, 0.140]
+
+  ii  gap 03:00-03:30   n = 256
+                            M1 per-bar TR  M2 |net move|  M3 extreme in
+    BEFORE     02:30-03:00         12.991         10.030         0.0781
+    THE WINDOW 03:00-03:30         15.825         11.857         0.0859
+    AFTER      03:30-04:00         14.739         11.093         0.0898
+    percentile within N2: M1 86.8   M2 90.2   M3 92.5
+    quieter than BOTH neighbours on M1? NO   on M2? NO
+    M3 detail: daily HIGH inside 0.047 (12/256), 95% CI [0.027, 0.080]; daily LOW inside 0.039 (10/256), 95% CI [0.021, 0.070]
+
+  iii gap 09:00-09:30   n = 256
+                            M1 per-bar TR  M2 |net move|  M3 extreme in
+    BEFORE     08:30-09:00         19.695         12.988         0.0859
+    THE WINDOW 09:00-09:30         15.894         10.886         0.0352
+    AFTER      09:30-10:00         16.609         11.310         0.0273
+    percentile within N2: M1 86.7   M2 85.1   M3 60.0
+    quieter than BOTH neighbours on M1? YES   on M2? YES
+    M3 detail: daily HIGH inside 0.016 (4/256), 95% CI [0.006, 0.039]; daily LOW inside 0.020 (5/256), 95% CI [0.008, 0.045]
+
+  iv  03:30-04:00 (C-004)   n = 256
+                            M1 per-bar TR  M2 |net move|  M3 extreme in
+    BEFORE     03:00-03:30         15.825         11.857         0.0859
+    THE WINDOW 03:30-04:00         14.739         11.093         0.0898
+    AFTER      04:00-04:30         15.701         11.507         0.0664
+    percentile within N2: M1 73.7   M2 86.4   M3 93.0
+    quieter than BOTH neighbours on M1? YES   on M2? YES
+    M3 detail: daily HIGH inside 0.051 (13/256), 95% CI [0.030, 0.085]; daily LOW inside 0.039 (10/256), 95% CI [0.021, 0.070]
+
+[WEEKDAY HANDLING — `PT-004` §3, unchanged: Sunday and Friday reported SEPARATELY]
+  Instances are labelled by the CALENDAR weekday on which the window STARTS.
+  Window (i) 17:00-20:00 of session day D physically occurs on the EVENING of
+  D-1, so the 'Sunday instance' is the one belonging to session day Monday —
+  and it is the WEEK OPEN.
+
+  window (i) 17:00-20:00 by start weekday:
+    start     n  M1 per-bar TR  M2 |net move|  M3 extreme in
+    Mon      52          5.006          7.477         0.0769
+    Tue      52          5.448          7.690         0.2500
+    Wed      51          5.590          8.327         0.0392
+    Thu      49          6.572          9.608         0.1429
+    Sun      52          8.439          8.352         0.3654  <<< WEEK OPEN
+  There is no Friday-evening instance of window (i): the week closes at Friday
+  17:00, so Fri 17:00-20:00 contains no bars and forms no session day. The
+  Friday effect appears instead in the BEFORE comparator 14:00-17:00 of session
+  day Friday, which ends exactly at the weekly close:
+    14:00-17:00 on session-day Friday : n = 49  M1 8.709  M2 10.757
+    14:00-17:00 on all other days     : n = 207  M1 8.468  M2 12.900
+
+  WEEK-OPEN POSITION on Sunday instances, MEASURED on this arm:
+    first bar of the session day at 17:00  x52
+  Sunday instance of window (i): n = 52  M1 8.439  M2 8.352  M3 0.3654
+  non-Sunday instances         : n = 204  M1 5.641  M2 8.256  M3 0.1275
+
+  SUNDAY INSTANCE SPLIT BY SEASON (the amendment: position is arm- AND
+  season-dependent). US DST in force on the session day:
+    US DST         n =  34  M1 7.741  M2 7.882  M3 0.2353   week open at: 17:00 x34
+    standard time  n =  18  M1 9.756  M2 9.239  M3 0.6111   week open at: 17:00 x18
+
+----- ARM B -----
+COMPLETENESS (C-6, all 96 session slots required): n = 222 (70 excluded for incomplete sessions: 2015-03-09, 2015-03-14, 2015-03-16, 2015-03-21, 2015-03-23, 2015-03-28, 2015-03-30, 2015-04-04, 2015-04-06, 2015-04-11, 2015-04-13, 2015-04-18, 2015-04-20, 2015-04-25, 2015-04-27, 2015-05-02, 2015-05-04, 2015-05-09, 2015-05-11, 2015-05-16, 2015-05-18, 2015-05-23, 2015-05-25, 2015-05-30, 2015-06-01, 2015-06-06, 2015-06-08, 2015-06-13, 2015-06-15, 2015-06-20, 2015-06-22, 2015-06-27, 2015-06-29, 2015-07-04, 2015-07-06, 2015-07-11, 2015-07-13, 2015-07-18, 2015-07-20, 2015-07-25, 2015-07-27, 2015-08-01, 2015-08-03, 2015-08-08, 2015-08-10, 2015-08-15, 2015-08-17, 2015-08-21, 2015-08-22, 2015-08-24, 2015-08-29, 2015-08-31, 2015-09-05, 2015-09-07, 2015-09-12, 2015-09-14, 2015-09-19, 2015-09-21, 2015-09-26, 2015-09-28, 2015-10-03, 2015-10-05, 2015-10-10, 2015-10-12, 2015-10-17, 2015-10-19, 2015-10-24, 2015-10-26, 2015-10-31, 2015-12-24)
+  Dispositions per `QA_REPORT.txt` C8: Dec/Jan flagged sessions are real market
+  CLOSURES; they still cannot support a full-window measurement and are
+  excluded and named. No day is excluded for being unrepresentative.
+
+[SECOND BASELINE — the full 24-hour profile, built BEFORE any named window]
+  mean per-bar true range, pips, by slot (slot 0 = 17:00):
+    17:00   9.35   6.46   6.55   6.75   8.09   6.02   6.06   5.59
+    19:00   6.74   5.14   5.29   5.47   5.46   4.93   5.54   5.67
+    21:00   7.15   6.09   5.96   6.86   6.07   6.04   7.00   6.56
+    23:00   6.08   5.38   5.48   5.25   5.30   4.78   5.05   5.15
+    01:00   5.69   5.52   6.26   6.40   8.11   7.63   8.16   9.74
+    03:00  13.72  12.46  12.97  13.67  15.96  15.78  15.94  15.58
+    05:00  15.28  15.34  19.05  14.70  15.14  13.06  13.46  13.86
+    07:00  14.89  13.30  12.82  13.35  14.83  13.78  16.34  14.15
+    09:00  15.06  15.29  21.94  17.25  17.10  16.38  16.94  18.30
+    11:00  18.98  16.17  14.95  17.17  15.20  13.83  12.67  13.04
+    13:00  12.25  10.91  10.46  10.60  11.17   9.78   9.41  10.17
+    15:00  11.91   9.34   9.18   8.97   8.58   7.30   7.01   8.18
+  quietest 6 slots : 00:15 (4.78), 20:15 (4.93), 00:30 (5.05), 19:15 (5.14), 00:45 (5.15), 23:45 (5.25)
+  busiest 6 slots  : 09:30 (21.94), 05:30 (19.05), 11:00 (18.98), 10:45 (18.30), 09:45 (17.25), 11:45 (17.17)
+
+[N2 BASELINE — circular clock shift, 1,000 draws, seed 20260812, computed before any comparison]
+  i   Dead Gap 17:00-20:00: M1 median 9.674, 5-95% [5.68, 15.82] | M2 median 16.59, 5-95% [8.341, 30.07] | M3 median 0.335, 5-95% [0.165, 0.733]
+  ii  gap 03:00-03:30: M1 median 10.72, 5-95% [5.166, 17.1] | M2 median 7.509, 5-95% [3.523, 11.99] | M3 median 0.02427, 5-95% [0, 0.07767]
+  iii gap 09:00-09:30: M1 median 9.956, 5-95% [5.166, 17.36] | M2 median 7.14, 5-95% [3.433, 12.9] | M3 median 0.02913, 5-95% [0, 0.07805]
+  iv  03:30-04:00 (C-004): M1 median 10.62, 5-95% [5.166, 17.1] | M2 median 7.197, 5-95% [3.516, 11.99] | M3 median 0.02427, 5-95% [0, 0.07767]
+
+[RULE ARM — the named windows and their immediate neighbours]
+
+  i   Dead Gap 17:00-20:00   n = 222
+                            M1 per-bar TR  M2 |net move|  M3 extreme in
+    BEFORE     14:00-17:00          9.251         16.000         0.3063
+    THE WINDOW 17:00-20:00          6.459          8.341         0.1937
+    AFTER      20:00-23:00          6.111         10.123         0.0901
+    percentile within N2: M1 31.8   M2 3.8   M3 23.4
+    quieter than BOTH neighbours on M1? NO   on M2? YES
+    M3 detail: daily HIGH inside 0.090 (20/222), 95% CI [0.059, 0.135]; daily LOW inside 0.104 (23/222), 95% CI [0.070, 0.151]
+
+  ii  gap 03:00-03:30   n = 222
+                            M1 per-bar TR  M2 |net move|  M3 extreme in
+    BEFORE     02:30-03:00          8.952          6.339         0.0450
+    THE WINDOW 03:00-03:30         13.093          9.423         0.0721
+    AFTER      03:30-04:00         13.324          9.882         0.0721
+    percentile within N2: M1 61.1   M2 62.6   M3 87.6
+    quieter than BOTH neighbours on M1? NO   on M2? NO
+    M3 detail: daily HIGH inside 0.050 (11/222), 95% CI [0.028, 0.087]; daily LOW inside 0.023 (5/222), 95% CI [0.010, 0.052]
+
+  iii gap 09:00-09:30   n = 222
+                            M1 per-bar TR  M2 |net move|  M3 extreme in
+    BEFORE     08:30-09:00         15.248         11.122         0.0405
+    THE WINDOW 09:00-09:30         15.176         10.749         0.0586
+    AFTER      09:30-10:00         19.599         12.932         0.0721
+    percentile within N2: M1 77.7   M2 80.0   M3 81.3
+    quieter than BOTH neighbours on M1? YES   on M2? YES
+    M3 detail: daily HIGH inside 0.027 (6/222), 95% CI [0.012, 0.058]; daily LOW inside 0.032 (7/222), 95% CI [0.015, 0.064]
+
+  iv  03:30-04:00 (C-004)   n = 222
+                            M1 per-bar TR  M2 |net move|  M3 extreme in
+    BEFORE     03:00-03:30         13.093          9.423         0.0721
+    THE WINDOW 03:30-04:00         13.324          9.882         0.0721
+    AFTER      04:00-04:30         15.871         11.565         0.0586
+    percentile within N2: M1 63.1   M2 66.9   M3 88.8
+    quieter than BOTH neighbours on M1? NO   on M2? NO
+    M3 detail: daily HIGH inside 0.032 (7/222), 95% CI [0.015, 0.064]; daily LOW inside 0.041 (9/222), 95% CI [0.021, 0.075]
+
+[WEEKDAY HANDLING — `PT-004` §3, unchanged: Sunday and Friday reported SEPARATELY]
+  Instances are labelled by the CALENDAR weekday on which the window STARTS.
+  Window (i) 17:00-20:00 of session day D physically occurs on the EVENING of
+  D-1, so the 'Sunday instance' is the one belonging to session day Monday —
+  and it is the WEEK OPEN.
+
+  window (i) 17:00-20:00 by start weekday:
+    start     n  M1 per-bar TR  M2 |net move|  M3 extreme in
+    Mon      52          5.366          6.813         0.0769
+    Tue      52          5.830          7.040         0.2692
+    Wed      51          6.606          7.902         0.0980
+    Thu      49          6.923         11.469         0.1837
+    Sun      18          9.756          9.239         0.6111  <<< WEEK OPEN
+  There is no Friday-evening instance of window (i): the week closes at Friday
+  17:00, so Fri 17:00-20:00 contains no bars and forms no session day. The
+  Friday effect appears instead in the BEFORE comparator 14:00-17:00 of session
+  day Friday, which ends exactly at the weekly close:
+    14:00-17:00 on session-day Friday : n = 49  M1 8.880  M2 14.153
+    14:00-17:00 on all other days     : n = 173  M1 9.355  M2 16.524
+
+  WEEK-OPEN POSITION on Sunday instances, MEASURED on this arm:
+    first bar of the session day at 17:00  x18
+  Sunday instance of window (i): n = 18  M1 9.756  M2 9.239  M3 0.6111
+  non-Sunday instances         : n = 204  M1 6.168  M2 8.262  M3 0.1569
+
+  SUNDAY INSTANCE SPLIT BY SEASON (the amendment: position is arm- AND
+  season-dependent). US DST in force on the session day:
+    standard time  n =  18  M1 9.756  M2 9.239  M3 0.6111   week open at: 17:00 x18
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always
+==============================================================================
+                                                   ARM A       ARM B
+i   Dead Gap 17:00-20:00 M1 per-bar TR             6.209       6.459
+i   Dead Gap 17:00-20:00 M2 |net move|             8.275       8.341
+i   Dead Gap 17:00-20:00 pct N2 M1                  20.1        31.8
+ii  gap 03:00-03:30 M1 per-bar TR                 15.825      13.093
+ii  gap 03:00-03:30 M2 |net move|                 11.857       9.423
+ii  gap 03:00-03:30 pct N2 M1                       86.8        61.1
+iii gap 09:00-09:30 M1 per-bar TR                 15.894      15.176
+iii gap 09:00-09:30 M2 |net move|                 10.886      10.749
+iii gap 09:00-09:30 pct N2 M1                       86.7        77.7
+iv  03:30-04:00 (C-004) M1 per-bar TR             14.739      13.324
+iv  03:30-04:00 (C-004) M2 |net move|             11.093       9.882
+iv  03:30-04:00 (C-004) pct N2 M1                   73.7        63.1
+  --- THE AMENDMENT: the Sunday instance of window (i) ---
+Sunday M1                                         8.4388      9.7565
+Sunday M2                                         8.3519      9.2389
+Sunday M3                                         0.3654      0.6111
+non-Sunday M1                                     5.6408      6.1682
+non-Sunday M2                                     8.2559      8.2618

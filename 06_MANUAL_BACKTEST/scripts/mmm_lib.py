@@ -440,6 +440,100 @@ def completeness_line(days: pd.DataFrame) -> str:
     return f"n = {len(days)} ({k} excluded for incomplete sessions: {who})"
 
 
+# ---------------------------------------------------------------- C-6, general form
+#
+# ADDED 2026-08-13 for PT-003/004/005/006/007. PURE ADDITION: no existing function is
+# changed, so PT-014/015/016/017/018/020/021 (committed df7eab6) are untouched and are
+# not recomputed. `build_days()` keeps its own box/post-specific C-6; the functions
+# below generalise the same rule to tests whose measured window is not the box.
+#
+# C-6 restated for an arbitrary window set: a session day is EXCLUDED if any 15-minute
+# bucket of any window the test measures is absent from the corpus. Same rule, same
+# rationale, same reporting obligation (count and name every exclusion beside n), and
+# the same treatment for a real market closure as for a data hole — a half-covered
+# Christmas Eve is a closure AND cannot support a full-window measurement.
+#
+# `QA_REPORT.txt` C8 requires that "any session flagged by C8 must have an explicit,
+# PRE-REGISTERED disposition (include / exclude / report separately) in the test that
+# spans it." These functions are that disposition, applied mechanically.
+
+SESSION_ANCHOR = 17 * 60          # C-1: the session day starts at 17:00
+
+
+def session_slot(mod):
+    """Position of a minute-of-day within the session day: slot 0 = 17:00, 95 = 16:45."""
+    return ((np.asarray(mod) - SESSION_ANCHOR) % DAY) // 15
+
+
+def slot_presence(b: Bars, offset_min: int = 0):
+    """Which of the 96 fifteen-minute slots of each session day exist in the corpus.
+
+    Returns (session_days, presence[n_days, 96]). `offset_min` carries the N2 circular
+    clock shift so the null is scored under the same completeness rule as the rule arm.
+    """
+    tm = b.tm - int(offset_min)
+    sd = session_day(tm)
+    slot = session_slot(minute_of_day(tm))
+    uniq = np.unique(sd)
+    pos = {int(d): i for i, d in enumerate(uniq)}
+    P = np.zeros((len(uniq), 96), dtype=bool)
+    P[np.array([pos[int(x)] for x in sd]), slot] = True
+    return uniq, P
+
+
+def required_slots(ranges):
+    """Boolean mask over the 96 session slots covered by a list of (from, to) minutes.
+
+    Ranges are half-open [from, to) in minute-of-day terms and may wrap midnight.
+    """
+    need = np.zeros(96, dtype=bool)
+    for a, b_ in ranges:
+        n = int(((b_ - a) % DAY) // 15)
+        s0 = int(session_slot(a))
+        for k in range(n):
+            need[(s0 + k) % 96] = True
+    return need
+
+
+def complete_days(b: Bars, ranges, offset_min: int = 0):
+    """C-6 for an arbitrary window set.
+
+    Returns (session_days, keep_mask, excluded) where `excluded` names every day
+    dropped, so a runner can report them beside n instead of losing them.
+    """
+    uniq, P = slot_presence(b, offset_min)
+    need = required_slots(ranges)
+    ok = P[:, need].all(axis=1)
+    excluded = [dict(day=day2s(uniq[i]), missing=int((~P[i][need]).sum()))
+                for i in np.where(~ok)[0]]
+    return uniq, ok, excluded
+
+
+def completeness_line_general(uniq, ok, excluded, max_named=8) -> str:
+    """The honest form `n` must take when C-6 removed anything."""
+    k = len(excluded)
+    if not k:
+        return (f"n = {int(ok.sum())} (0 excluded for incomplete sessions; every "
+                f"included day has every 15-minute bucket the test measures)")
+    named = ", ".join(f"{d['day']} ({d['missing']} slots missing)"
+                      for d in excluded[:max_named])
+    more = "" if k <= max_named else f", +{k - max_named} more"
+    return (f"n = {int(ok.sum())} ({k} excluded for incomplete sessions: "
+            f"{named}{more})")
+
+
+def gini(x) -> float:
+    """Gini-style concentration of a non-negative series (`PT-003` Metric 3)."""
+    x = np.asarray(x, dtype=float)
+    x = x[np.isfinite(x)]
+    if len(x) == 0 or x.sum() <= 0:
+        return float("nan")
+    x = np.sort(np.clip(x, 0, None))
+    n = len(x)
+    i = np.arange(1, n + 1)
+    return float((2.0 * np.sum(i * x) - (n + 1) * np.sum(x)) / (n * np.sum(x)))
+
+
 def first_close_beyond(m15: Bars, days: pd.DataFrame, lo=10.0, hi=np.inf):
     """The batch's ONE implementation of "first 15m close N pips beyond a box edge".
 
