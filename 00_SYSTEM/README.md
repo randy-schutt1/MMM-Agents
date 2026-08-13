@@ -6,8 +6,14 @@ Everything here is **derived from** the two governing files at the repository ro
 Where this directory and a governing file disagree, the governing file wins —
 record the disagreement in `SETUP_ISSUES.md`.
 
-**No file in this directory contains Market Maker Method trading content.** These
-are process documents.
+**No file in this directory contains Market Maker Method trading content taken from the
+course.** These are process documents.
+
+> **One exception, and it is an exception to the wording only, not to the rule.**
+> `EXTERNAL_VOCABULARY_REFERENCE.md` (added 2026-08-13) contains trading vocabulary — all of it
+> **third-party and internet-sourced, none of it from any lesson in this library.** It is
+> non-normative reference material for a human reader, it changes no project state, and it is
+> never cited as evidence. Read its banner before using it.
 
 ## FILES
 
@@ -28,6 +34,8 @@ are process documents.
 | `SETUP_ISSUES.md` | Infrastructure conflicts and open blockers, I-001 … |
 | `STUDENT_SESSION_PROMPT.md` | Copy-paste prompt to start a Student session |
 | `REVIEWER_SESSION_PROMPT.md` | Copy-paste prompt to start a Reviewer session |
+| `EXTERNAL_VOCABULARY_REFERENCE.md` | ⛔ **NOT COURSE MATERIAL.** Third-party, internet-sourced candidate definitions for terms the corpus names and never defines. Non-normative, permanently. Closes no record, unblocks no test, never cited as a source |
+| `EXTERNAL_REFERENCE/` | ⛔ **NOT COURSE MATERIAL.** Outside-the-corpus documents held for reference only — currently the anonymous Mauro seminar-notes PDF. Never cited as evidence; read its `README.md` first |
 | `TEMPLATES/` | Eleven reusable artifact templates |
 
 ## READING ORDER FOR A NEW AGENT

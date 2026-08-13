@@ -8,6 +8,64 @@ Template: `00_SYSTEM/TEMPLATES/AMBIGUITY_TEMPLATE.md`
 
 ## STATUS
 
+> ## 📍 2026-08-13 — `D-040`: THE THREE-TIER SOURCING HIERARCHY NOW GOVERNS EVERY FILL-IN BELOW
+>
+> **Tier 1** the recordings (always wins) · **Tier 2** `MMM-NOTES` (`D-039`) · **Tier 3** generic
+> web research (closes nothing). Full statement: `00_SYSTEM/SOURCING_HIERARCHY.md`.
+>
+> **Nothing in this file changed status because of `D-040`.** What it adds is a **forward
+> obligation**: where a **later video** defines or clarifies a term that a record below was closed
+> or narrowed on from Tier 2 or Tier 3, **the video takes priority** and the entry **must be
+> reconciled at that point** — the `A-xxx` restated on the Tier 1 basis, the superseded text kept
+> visible, a `C-xxx` opened on a true contradiction. Six-step process: `SOURCING_HIERARCHY.md` §3.1.
+>
+> **The three records carrying a standing re-check obligation** — closed or resolved on a tier a
+> later video can overturn — are **`A-014`**, **`A-023`** (both `RESOLVED BY MMM-NOTES`) and
+> **`A-020`** (owner attestation + Tier 2 corroboration, explicitly *not* `RESOLVED BY COURSE`).
+> `SOURCING_HIERARCHY.md` §3.4.
+>
+> **One record was cross-referenced against `MMM-NOTES` on this pass and deliberately NOT changed:**
+> **`A-039`** (TDI). The notes carry a full TDI chapter at `MMM-NOTES` **p.45–47** naming the four
+> lines and their roles — and supply **zero numeric parameters**, which is what `A-039` asks for.
+> Recorded at `EXTERNAL_VOCABULARY_REFERENCE.md` **§9.2a**. `A-039` stays `DO NOT CODE` /
+> `DO NOT SUBSTITUTE`, unnarrowed: a structure is not a specification.
+
+> ## 📌 UPDATED 2026-08-13 — FIRST PASS OF THE `D-039` QUEUE
+>
+> **The counts in the block below are as at the V06 pass and are superseded**
+> (`REMEDIATION_PROTOCOL.md` §2). Current: **RECORDS 58** (`A-001`…`A-058`).
+>
+> `D-039` admitted the Mauro seminar notes (`MMM-NOTES`) as normative evidence. This is the
+> **first pass** of the follow-up queue at `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.2 —
+> **it is not the whole queue**, and the records not listed here have not yet been read against
+> the source.
+>
+> | Record | Change | On what |
+> |---|---|---|
+> | `A-020` — the moving-average nicknames | ✅ **RESOLVED — OWNER ATTESTATION** (explicitly *not* `RESOLVED BY COURSE`; no lesson defines it) | Owner, 2026-08-13: *"800 EMA is the blueberry"*, plus the earlier condiment confirmation; `MMM-NOTES` p.66 corroborates **Mayo = 200** only |
+> | `A-014` — *"fractional disparity"* | ✅ **RESOLVED BY `MMM-NOTES`** — cross-pair level analysis; the source calls it explicitly optional | `MMM-NOTES` p.52 |
+> | `A-023` — the *"33 trade"* | ✅ **RESOLVED BY `MMM-NOTES`** — 3 levels over 3 days **+** an intraday Level III. **Does NOT resolve `A-024`'s 22 trade** | `MMM-NOTES` p.64 |
+> | `A-031` — *"blood in the water"* | 🟡 **NARROWED** — it is the **TDI market base line cross**. Blocked downstream by `A-039` (TDI untaught) | `MMM-NOTES` p.45–46 |
+> | `A-022` — *"half-Batman"* | 🟡 **NARROWED** — an M/W whose second leg is absent; logic recovered, geometry not | `MMM-NOTES` p.19 |
+> | `A-055` — `M0`–`M3` | 🟡 **NARROWED** — mid-pivots is now the leading hypothesis, **not adopted**: the notes say `M1`–`M4`, the frame says `M0`–`M3` | `MMM-NOTES` p.42 |
+> | `A-005` — *"the trading zone"* | 🟡 **NARROWED** — a band 25–50 pips beyond the Asian range. Every boundary is hedged in the source; blocked by `A-019`/`D-031` | `MMM-NOTES` p.59 |
+>
+> **THREE THINGS THIS PASS DID NOT DO, DELIBERATELY:**
+>
+> 1. **`push` is not unblocked and V05/V06/V07 dimension B stays BLOCKED.** The notes give push
+>    *sizes* and withdraw the regularity in the next sentence. A size is not a recognition rule.
+> 2. **`A-011` (M/W anatomy) stays OPEN.** The notes add a real geometric constraint — the second
+>    leg is *less extreme* than the first — and still supply **no leg count and no invalidation
+>    rule**. Note they also make an RRT a two-candle M/W, which cuts against the withdrawn
+>    nine-candle figure rather than rescuing it.
+> 3. **`A-038` (ADR lookback) got HARDER.** The notes say *"the last 2 weeks"*; the guests said
+>    2 days and an unbounded average. That is **three** admissible numbers from three admissible
+>    sources — a contradiction to log, not a resolution.
+>
+> **`C-010` was opened** by this work: the notes enumerate the EMA set as *"the 5, 13, 50 and
+> 200"* and contain **no `800` in 84 pages**, while the corpus uses *"blueberry"*. Under `D-039`
+> **the recordings win** — the corpus's 800 stands.
+
 ```text
 RECORDS:         54   (A-001 … A-054)
 LESSONS STUDIED:  6   (V01-V05 complete; V06 student pass complete, awaiting review)
@@ -160,6 +218,8 @@ hedge is error code E03.
 | `RESEARCH CANDIDATE` | A measurable hypothesis is defined but unvalidated. | 4 |
 | `EMPIRICALLY VALIDATED` | Tested against manually labelled history. | 6 |
 | `RESOLVED BY COURSE` | A later lesson defines it explicitly. Cite the evidence. | any |
+| `RESOLVED BY MMM-NOTES` | The admitted seminar notes define it (`D-039`). **Weaker than `RESOLVED BY COURSE`** — the notes are an attested account of seminars this project did not record, and the recordings outrank them (`C-010` class). Cite `MMM-NOTES` + page. | any |
+| `RESOLVED — OWNER ATTESTATION` | The owner has testified to the meaning (`D-039`). **Weakest of the three** and used only where no lesson and no admitted document supplies it. Must say so on its face; never re-labelled `RESOLVED BY COURSE`. | any |
 
 Promotion requires evidence, never convenience. Records are never deleted — a
 resolved record keeps its history.
@@ -174,7 +234,7 @@ resolved record keeps its history.
 | A-002 | "trap move" / "false move" | V01 `[00:34:33]` | DO NOT CODE | Foundational. The lesson's central object. Wrong = the whole framing is misapplied. |
 | A-003 | "picks up the [?penings?]" → **"pendings"** | V01 `[00:39:12]` | **RESOLVED BY COURSE** | Contained. The word is recovered — *pendings* = pending orders, printed at `[00:40:25]`. It is *identified*, not *quantified*: nothing supports a numeric representation of where pending orders sit. |
 | A-004 | "level" (countable unit) | V01 `[00:35:38]` | DO NOT CODE — **materially constrained** by V02 slide `[00:18:00]` | High. V02's chart prints Level 1/2/3 as an ordinal sequence of legs. |
-| A-005 | "the trading zone" | V01 `[00:30:40]` | DO NOT CODE | Foundational. The stated entry filter for struggling traders. **Deferred twice: V01→V02, then V02 `[00:45:52]`→V03.** |
+| A-005 | "the trading zone" | V01 `[00:30:40]` | DO NOT CODE — **narrowed** by `MMM-NOTES` p.59 (`D-039`) | Foundational. The stated entry filter for struggling traders. **Deferred twice: V01→V02, then V02 `[00:45:52]`→V03.** |
 | A-006 | "the blue box" / "the box" / "the red box" | V01 `[00:43:07]` | DO NOT CODE | High. Three box terms, no definition, one entry prohibition attached. |
 | A-007 | "second leg" | V01 `[00:43:21]` | DO NOT CODE | **Foundational (raised from High at V02).** Three of V02's instructions route through it, and V02 promises a definition then withholds it. |
 | A-008 | "the tracer" | V01 `[00:38:57]` | DO NOT CODE | Medium. Named as the only thing that varies week to week. |
@@ -183,16 +243,16 @@ resolved record keeps its history.
 | A-011 | "M and W formation" | V01 `[00:17:45]` | DO NOT CODE | Foundational. Assumed known; never described in V01. |
 | A-012 | "midweek reversal" | V01 `[00:21:43]` | DO NOT CODE | Medium. The stated alternative to a Sunday/Monday cycle start. |
 | A-013 | "struggling" vs "more experienced" / "more proficient" | V01 `[00:44:03]` | DO NOT CODE | High. Two rules are conditional on it and it is unmeasurable. |
-| A-014 | "fractional disparity" | V01 `[00:18:16]` | DO NOT CODE | Unknown. Named once in a survey, never explained. |
+| A-014 | "fractional disparity" | V01 `[00:18:16]` | **RESOLVED BY `MMM-NOTES`** p.52 (`D-039`) — remains DO NOT CODE | Unknown. Named once in a survey, never explained. |
 | A-015 | "shows something to the traders" | V01 `[00:39:19]` | DO NOT CODE | Medium. The inducement mechanism in the core sequence. |
 | A-016 | "goes into chop" | V01 `[00:44:45]` | DO NOT CODE | Medium. The stated end-of-week failure state. |
 | A-017 | "big entry candle" | V01 `[00:48:41]` | DO NOT CODE | Medium. The only entry-trigger language in the lesson. |
 | A-018 | `R = <number>` labels on the shaded boxes | V01 `[00:48:35]` | DO NOT CODE | Medium. If misread as a risk-to-reward ratio it would invent a target rule the lesson never states. |
 | A-019 | session times with **no timezone stated** | V02 `[00:50:32]` | DO NOT CODE — **materially constrained** by slide `[00:45:55]` | Foundational. The full session table is now recovered from the slide; only the timezone is missing. |
-| A-020 | "mayonnaise" (a moving average) | V02 `[00:19:46]` | DO NOT CODE | High. Used as a support/resistance reference *and* as the distance test for whether a trade is worth taking. |
+| A-020 | "mayonnaise" (a moving average) | V02 `[00:19:46]` | **RESOLVED — OWNER ATTESTATION** (`D-039`), *not* by course. See `C-010` | High. Used as a support/resistance reference *and* as the distance test for whether a trade is worth taking. |
 | A-021 | the letter sequence for "the cycle" | V02 `[00:07:28]` / `[00:19:31]` | DO NOT CODE | Medium. Two incompatible strings ("M-A-A-W", "WVVM") for the same named object. |
-| A-022 | "half-Batman" | V02 `[00:20:37]` | DO NOT CODE | High. One of exactly two named continuations at outside structure high. |
-| A-023 | "33 trade" | V02 `[00:22:16]` | DO NOT CODE — **constrained** by V02 slide `[00:18:00]` | Medium. Printed on the **Level 3** move, tying it to level rather than calendar day. Digits still undecoded. |
+| A-022 | "half-Batman" | V02 `[00:20:37]` | DO NOT CODE — **narrowed** by `MMM-NOTES` p.19 (`D-039`) | High. One of exactly two named continuations at outside structure high. |
+| A-023 | "33 trade" | V02 `[00:22:16]` | **RESOLVED BY `MMM-NOTES`** p.64 (`D-039`) — digits decoded; remains DO NOT CODE; **constrained** by V02 slide `[00:18:00]` | Medium. Printed on the **Level 3** move, tying it to level rather than calendar day. ~~Digits still undecoded.~~ **Decoded 2026-08-13**: 3 levels over 3 days + an intraday Level III. |
 | A-024 | "slightly above" (22-trade overshoot tolerance) | V02 `[00:01:32]` | DO NOT CODE | Medium. Decides whether an otherwise-valid 22 setup is invalidated. |
 | A-025 | "a good close below" | V02 `[00:39:19]` | DO NOT CODE | Medium. The trigger for the only numeric exit rule in V02 (−15 scratch-out). |
 | A-026 | `HOW` (printed beside `LOW`) | V02 slide `[00:08:55]` | DO NOT CODE | Medium. Names the level the dealer moves away from; "High Of Week" is plausible but unstated. |
@@ -612,6 +672,59 @@ Foundational. It is stated as the gating filter on every entry for the lesson's 
 |---|---|
 | Ambiguity | A-006 (the boxes may be part of it) |
 | Interpretation | `03_LESSON_NOTES/V01_INTERPRETATION.md` Q2 |
+
+---
+
+### 🟡 NARROWED — `MMM-NOTES` — 2026-08-13 (`D-039`) — NOT CLOSED
+
+> Text above retained unedited per `REMEDIATION_PROTOCOL.md` §2.
+
+**The admitted notes carry a chapter titled *The Trading Zone*** (`MMM-NOTES` p.59), and the
+definition is **spatial**, not temporal:
+
+> 1. *"The ideal Asian range is **50 pips or less**… the area of circular trading."*
+> 2. ***"The trading zone is set 25 to 50 pips higher (or lower) than the Asian range."*** Reason
+>    given: *"most people put their stops 25 to 50 pips behind the trades."* Instrument-relative —
+>    *"In pairs that do not move quite as quickly (CAD) the range is often smaller, conversely, in
+>    pairs where price movement is more volatile (eg GBPJPY) the range is larger."*
+> 3. *"Setups occur in the last hour of the Asian range or the first 2–3 hours of the European
+>    session"* — with discretion: *"This setup can occur earlier or later than these times."*
+
+So the trading zone is **a band 25–50 pips beyond the Asian range**, sited there because that is
+where retail stops sit. That is a real answer to a record the instructor **deferred twice**
+(V01→V02, then V02 `[00:45:52]`→V03) and never delivered.
+
+**Why NARROWED and not RESOLVED — and this record deserves more caution than most:**
+
+1. **Every boundary is hedged in the source itself.** *"25 to 50"* is a range, not a number;
+   *"often smaller"* / *"larger"* by instrument with no rule for how much; *"can occur earlier or
+   later"* for the timing. Under the rule at the head of this file, **the hedge is part of the
+   teaching, and recording the number without it is `E03`.** There is no single value here to code.
+2. **It is anchored to the Asian range, which the corpus does not define.** The V06 audience says
+   *"Asian box"* and the presenter never bounds it; no session clock is stated anywhere in V01–V07
+   (`A-019`), and `D-031` requires the timezone be **tested in two arms, never assumed**. A zone
+   defined as *"25–50 pips beyond the Asian range"* inherits that entire unresolved dependency —
+   **it cannot be drawn without first assuming the thing `D-031` forbids assuming.**
+3. **The course's own use may be narrower.** `A-005` records the trading zone as *"the stated
+   entry filter for struggling traders"* (V01 `[00:30:40]`). The notes present it as a general
+   setup location, with no mention of trader competence (`A-013`). Those are not obviously the
+   same claim, and the instructor's own version is the one that was promised and withheld.
+
+```text
+DO NOT CODE — narrowed. The zone's construction is recovered in outline.
+Blocked downstream by the undefined Asian range (A-019 / D-031), and every
+boundary in the source is hedged.
+```
+
+**Required Research — sharpened.** No longer *"what is the trading zone?"* but: **does the
+instructor's deferred definition match this one**, is it conditional on trader competence
+(`A-013`), and what fixes the Asian range's boundaries?
+
+| Type | Reference |
+|---|---|
+| Decision | `D-039` |
+| Ambiguity | `A-019` (session times), `A-013` (struggling vs proficient), `A-037` (halving the Asian range), `A-002` |
+| Reference | `MMM-NOTES` p.59; `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.2 |
 
 ---
 
@@ -1335,6 +1448,47 @@ Unknown. It cannot be assessed without knowing what it is. Logged so it is not s
 
 ---
 
+### ✅ RESOLVED — `MMM-NOTES` — 2026-08-13 (`D-039`)
+
+> Text above retained unedited per `REMEDIATION_PROTOCOL.md` §2.
+
+**The admitted notes carry a chapter titled *Fractional Disparity*** (`MMM-NOTES` p.52). It is
+**cross-pair level analysis**:
+
+> Looking across one-hour charts to see *"what level each of the pairs is in and to understand
+> interactions between the pairs."* Worked example: as the commodity pairs (AUD, CAD) reach a
+> choppy **Level III** while EUR, GBP and CHF are still at **Level II**, *"their crosses will be
+> handled"* — so if AUD is chopping at Level III, then AUDEUR / AUDJPY / AUDCHF *"are being
+> worked"* and may offer the cleaner setup. Secondary use: a rapid move in EURUSD is expected to
+> *"take 1–2 candles… to have a ripple effect"* into a cross such as EURGBP.
+
+**This closes the record.** `A-014` recorded the term as *"named once in a survey, never
+explained"*, impact *"Unknown"*. It now has a definite referent, and the referent explains the
+survey context — it is a diagnostic skill about reading pairs against each other, which is
+exactly the sort of thing a competence survey would ask about.
+
+**Two things the source itself says, which must travel with the closure:**
+
+1. **It is explicitly optional.** *"These observations are not essential for understanding this
+   model, or for making a profit."* (`MMM-NOTES` p.52.) So the *"Impact If Wrong"* above resolves
+   **downward** — this is not a load-bearing concept, and no rule anywhere depends on it.
+2. **It is not quantified and closing this record does not make it codable.** *"Level"* is
+   `A-004`, still open; *"choppy"* is a judgement word of exactly the kind this register logs;
+   *"being worked"* is undefined. **The term is now understood; it is still `DO NOT CODE`.**
+
+```text
+RESOLVED BY MMM-NOTES — meaning recovered.
+Remains DO NOT CODE: every component of the definition is itself unquantified.
+```
+
+| Type | Reference |
+|---|---|
+| Decision | `D-039` |
+| Ambiguity | `A-004` (*"level"* — the unit this definition is built from) |
+| Reference | `MMM-NOTES` p.52 |
+
+---
+
 ## A-015 — "shows something to the traders"
 
 ### Course Meaning
@@ -1824,6 +1978,72 @@ failure mode.
 
 ---
 
+### ✅ RESOLVED — OWNER ATTESTATION — 2026-08-13 (`D-039`)
+
+> **Everything above is retained unedited** per `REMEDIATION_PROTOCOL.md` §2. It was correct for
+> as long as this record was open, and the *Required Research* it names — a chart legend at a
+> timestamp where he says the word — **is still the only thing that would resolve this from the
+> course itself.** That is not what happened here, and the distinction is the point of this block.
+
+**The mapping, as now recorded:**
+
+| Nickname | Period | Authority |
+|---|---|---|
+| Mustard | 5 | Owner attestation (implied by the set); `MMM-NOTES` p.38 lists a 5 |
+| Ketchup | 13 | Owner attestation; `MMM-NOTES` p.38 lists a 13 |
+| Water | 50 | Owner attestation; `MMM-NOTES` p.38 lists a 50 as *"the balance line"* |
+| **Mayo** | **200** | **Owner attestation 2026-08-13 + `MMM-NOTES` p.66, entry list: *"Hold the Mayo – 200 Bounce"*** |
+| **Blueberry** | **800** | **Owner attestation 2026-08-13, verbatim: *"800 EMA is the blueberry"*** — and **nothing else**; see `C-010` |
+
+**Status:**
+
+```text
+RESOLVED — OWNER ATTESTATION.  NOT "RESOLVED BY COURSE".
+```
+
+**Why the distinction is not pedantry, and must survive in this record.** The `STATUS VALUES`
+table at the head of this file defines `RESOLVED BY COURSE` as *"a later lesson defines it
+explicitly."* **No lesson does.** No speaker in V01–V07 attaches a period to any nickname, and
+none is expected to. This record closes on the owner's testimony under `D-039`, which is a
+different and weaker warrant than a lesson, and any future session citing this mapping should
+cite it that way — **`OWNER-ATTESTED`, not the instructor.**
+
+**What the admitted notes could and could not carry.** `MMM-NOTES` corroborates **Mayo = 200**
+from inside the admitted source, independently of the owner. It carries **nothing** for
+*Blueberry*: the document enumerates the EMA set as *"the 5, 13, 50 and 200"* and contains **no
+`800` anywhere in 84 pages**. That gap is logged as **`C-010`** — the corpus's 800 stands, and
+the notes' four-line enumeration does not.
+
+**A by-product worth recording: the quarantined `NOTES.md` mapping is OFF BY ONE.** The *What is
+NOT evidence* section above quotes `Q-002`'s fabricated file as asserting *5 Mustard, 13 Water,
+50 Mayo, 200 Blueberry, 800 Raspberry*. Against the confirmed mapping, that is the **real
+sequence shifted one place** — it drops *Ketchup* entirely, slides Water/Mayo/Blueberry each up
+a rung, and invents *Raspberry* for the 800. This is **independent corroboration of the `Q-002`
+quarantine**, and it is the most useful kind: a fabricated document that had picked up genuine
+tokens but could not get their order right. `raspberry` occurs **0×** in genuine audio anywhere
+in the corpus. The quarantine stands and this record should be cited in support of it.
+
+**What stays open — the record closes, the caution does not.** Two of this record's own points
+survive its closure and are **not** answered by the mapping:
+
+1. **The *decision rules* built on the average are still undefined.** `[00:19:46]` makes
+   *"enough distance between the entry and the mayonnaise"* a viability filter. Knowing the line
+   is a 200 EMA gives the line, **not the threshold** — *"enough distance"* is untouched, is
+   still a `DO NOT CODE` judgement phrase of exactly the kind this register exists for, and
+   `D-030` still forbids picking a number for it.
+2. **`[00:05:00]`'s *"manays"* is still PROBABLE, not confirmed.** No audio re-check has been
+   performed. Resolving the nickname's period does not promote a disputed ASR string.
+
+### Related — added 2026-08-13
+
+| Type | Reference |
+|---|---|
+| Decision | `D-039` (admission of `MMM-NOTES`; owner attestation as warrant) |
+| Contradiction | **`C-010`** — the corpus's `800` vs the notes' four-EMA enumeration |
+| Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.4; `MMM-NOTES` p.38, p.66 |
+
+---
+
 ## A-021 — the letter sequence for "the cycle"
 
 ### Course Meaning
@@ -1924,6 +2144,51 @@ draws while saying it. The latter is likely: he is annotating a chart live at th
 
 ---
 
+### 🟡 NARROWED — `MMM-NOTES` — 2026-08-13 (`D-039`) — NOT CLOSED
+
+> Text above retained unedited per `REMEDIATION_PROTOCOL.md` §2.
+
+**The admitted notes carry a chapter titled *The Anatomy of the Half Batman Pattern***
+(`MMM-NOTES` p.19), and it gives the pattern's **logic**, not its geometry:
+
+> *"This pattern commonly occurs at a **Level I Consolidation** and is similar to the Straight
+> Away trade. Essentially, **there is no need for a 2nd move back to the high** because there are
+> already traders trapped from further up and the MM does not want to provide an opportunity for
+> them to close their trade at a profit, or even a small loss. Instead, price is moved down
+> providing an inevitable loss to the traders."*
+
+**So a half-Batman is an M/W with its second leg missing** — the shape stops after one peak
+because the inducement the second leg would supply has already been done higher up. The name now
+makes sense: half of the two-humped silhouette.
+
+**Why NARROWED and not RESOLVED:**
+
+1. **No geometry, no invalidation, no count.** *"No need for a 2nd move"* says what is absent,
+   not what must be present. Nothing here would let a session label one on a chart, and the
+   distinction from *"the Straightaway"* — which the notes call it *"similar to"* — is not drawn.
+2. **Its stated location depends on an open record.** *"Level I Consolidation"* is `A-004`, which
+   is still open, so the one locational constraint offered is expressed in an undefined unit.
+3. **The corpus's own usage is not obviously the same.** `A-022` records it as *one of exactly two
+   named continuations at outside structure high* (V02 `[00:20:37]`); the notes place it at a
+   **Level I consolidation**. Those may be the same place described two ways, or they may not —
+   and asserting they are is the agent's inference, not the source's.
+
+```text
+DO NOT CODE — narrowed. The logic is recovered; the shape is not.
+```
+
+**Required Research — sharpened.** No longer *"what is a half-Batman?"* but: **is the corpus's
+"outside structure high" the notes' "Level I consolidation"**, and what marks the pattern
+complete in the absence of a second leg?
+
+| Type | Reference |
+|---|---|
+| Decision | `D-039` |
+| Ambiguity | `A-004`, `A-011` (the full M/W this is half of), `A-033` (outside structure) |
+| Reference | `MMM-NOTES` p.19 |
+
+---
+
 ## A-023 — "33 trade"
 
 ### Course Meaning
@@ -1965,6 +2230,50 @@ is visible.
 |---|---|
 | Ambiguity | A-007 (second leg) |
 | Interpretation | `03_LESSON_NOTES/V02_INTERPRETATION.md` Q7 |
+
+---
+
+### ✅ RESOLVED — `MMM-NOTES` — 2026-08-13 (`D-039`) — the digits are decoded
+
+> Text above retained unedited per `REMEDIATION_PROTOCOL.md` §2.
+
+**The admitted notes carry a chapter titled *The 33 Trade*** (`MMM-NOTES` p.64):
+
+> *"The 33 Trade refers to having a **3 level rise over 3 days** in combination with a **Level III
+> rise on an intraday chart**. If this is identified it is a **strong sell signal**."* Worked
+> example: day 3 of a rise following a peak formation low, **and** three levels of movement on the
+> intraday cycle ⇒ *"a reversal is imminent."*
+
+**The two digits are the two nested counts** — three levels on the three-day cycle, three levels
+on the intraday cycle. This is what the record asked for: `A-023` recorded the digits as
+*"undecoded"*.
+
+**It also confirms, rather than contradicts, the corpus's own constraint.** `A-023` notes the
+label is printed on the **Level 3** move of V02's slide `[00:18:00]`, *"tying it to level rather
+than calendar day"*. The notes agree and go further: it is tied to level on **both** cycles at
+once. The V02 slide placement is now explained rather than merely observed.
+
+**A detail worth keeping, because it inverts a natural assumption:** the notes state that in these
+areas *"the final consolidation will last longer than usual and… the day will close at or near the
+high"*, and that this is **additional evidence a reversal is imminent rather than suggesting the
+trade is invalid.** A session reasoning from first principles would read a strong close as
+invalidating a sell signal. The source says the opposite.
+
+**What does NOT follow, and the naming standard forbids assuming it:** this is the *33* trade
+only. `A-024`'s *"22 trade"* is a **separate record** and the notes do not contain it — the
+obvious *"2 levels over 2 days"* extrapolation is **not stated by any source** and must not be
+adopted. `A-024`'s *"slightly above"* tolerance is untouched.
+
+```text
+RESOLVED BY MMM-NOTES — the digits are decoded.
+Remains DO NOT CODE: "level" (A-004) is the unit this is counted in, and is open.
+```
+
+| Type | Reference |
+|---|---|
+| Decision | `D-039` |
+| Ambiguity | `A-004` (*"level"*), `A-024` (the 22 trade — **not** resolved by this), `A-010` (peak formation low) |
+| Reference | `MMM-NOTES` p.64 |
 
 ---
 
@@ -2352,6 +2661,53 @@ DO NOT CODE
 | Type | Reference |
 |---|---|
 | Ambiguity | A-032 (shark fin), A-020 (mayonnaise) |
+
+---
+
+### 🟡 NARROWED — `MMM-NOTES` — 2026-08-13 (`D-039`) — NOT CLOSED
+
+> Text above retained unedited per `REMEDIATION_PROTOCOL.md` §2.
+
+**The admitted notes name the line.** `MMM-NOTES` p.46, listing the three scaling-in entries on
+the TDI:
+
+> *"the appearance of the shark fin (1st) · **the Market base line cross (referred to as Blood in
+> the Water)** (2nd) · break out of the opposite volatility band during the trend run (3rd)"*
+
+**This answers the record's actual question.** The *Assessment* above reasons that the term
+belongs to TDI vocabulary and notes *"which line of the TDI is the 'bloodline' is not stated."*
+It is now stated: **the market base line** — the TDI's dynamic replacement for the RSI midline
+(`MMM-NOTES` p.45). The corpus's own V04 evidence is **consistent**: `[00:13:43]` puts *"blood in
+the water"* on *"the secondary line"*, and the market base line is a secondary line, not the RSI
+itself.
+
+**Why this NARROWS and does not CLOSE — three reasons, and the third is the binding one:**
+
+1. **A named line is not a decision rule.** *"Blood in the water"* is cited in V04 as part of
+   entry condition (c). Knowing which line crosses does not supply the threshold, the direction
+   convention, or what counts as a cross.
+2. **`bloodline` is not covered.** The notes give *"Blood in the Water"*; the corpus's V03
+   preamble has *"hits the bloodline"*, which reads as a **line being touched**, not a cross
+   occurring. Whether the two phrases denote the same object is unestablished.
+3. **`A-039` is upstream and still blocks.** The market base line is a **TDI** construct, and
+   `A-039` records that TDI has never been taught — no inputs, no periods, no band construction.
+   The corpus's frames print `TDI_MMM`, a **custom build** whose parameters are illegible. Naming
+   a line inside an indicator the project cannot reconstruct does not make the line locatable.
+   **`A-039`'s `DO NOT SUBSTITUTE` applies unchanged.**
+
+```text
+DO NOT CODE — narrowed, not resolved.
+The line is named; the indicator it lives in is still untaught (A-039).
+```
+
+**Required Research — sharpened.** No longer *"which line?"* but: **the promised TDI lesson**, or
+a frame showing `TDI_MMM`'s settings dialog, plus any usage that distinguishes *bloodline* from
+*blood in the water*.
+
+| Type | Reference |
+|---|---|
+| Decision | `D-039` |
+| Reference | `MMM-NOTES` p.45–46; `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.2 |
 
 ---
 
@@ -3738,6 +4094,75 @@ together.
 |---|---|
 | Source | `04_SCREENSHOTS/V07/INDEX.md` frame 17; `03_LESSON_NOTES/V07_SOURCE_NOTES.md` §11b |
 | Related records | `A-053`, `A-029`, `A-018` |
+
+---
+
+### 🟡 NARROWED — `MMM-NOTES` — 2026-08-13 (`D-039`) — NOT CLOSED, and the mismatch is the reason
+
+> Text above retained unedited per `REMEDIATION_PROTOCOL.md` §2. Note that it **prohibits**
+> reconciling these labels with any external level system. `D-039` admits `MMM-NOTES` as evidence
+> about *this* method, which lifts that prohibition **for this source only** — not for Murrey
+> math, not for anything else.
+
+**The admitted notes describe an `M`-prefixed level set, and it is neither of the two readings the
+Assessment above anticipated.** `MMM-NOTES` p.42 makes them **mid-pivots** — the midpoints between
+adjacent standard pivot levels:
+
+| Standard pivot | Mid-pivot between |
+|---|---|
+| R2 | |
+| | **M4** |
+| R1 | |
+| | **M3** |
+| Central Pivot Point | |
+| | **M2** |
+| S1 | |
+| | **M1** |
+| S2 | |
+
+With a stated use: *"The **HOD** is more likely to be located at the **M3 or M4** mid-pivot
+points… the **LOD** is more likely to be located at or near the **M1 or M2**"*, and — tying it to
+`A-038`/`A-040` — *"the pivot levels are a grid of the ADR because they are based on the high,
+low, and close of the previous day's candle."* A red previous day suggests an **M1/M3 day**, a
+green one an **M2/M4 day**.
+
+**Why this fits the corpus frame well:** it explains the *placement* the record found otherwise
+inexplicable — printed **beside `Pivot` and `ADR High`**, as **ordered price levels** rather than
+one line. A mid-pivot set is exactly what sits in that company on an MT4 price scale.
+
+**⚠️ AND WHY IT DOES NOT CLOSE — the label sets do not match:**
+
+```text
+MMM-NOTES p.42 :  M1  M2  M3  M4     (four, starting at 1)
+V07_00-18-25   :  M0  M1  M2  M3     (four, starting at 0)
+```
+
+**There is no `M0` in the notes and no `M4` on the frame.** Three explanations are available and
+**none is adopted**: (a) the same set with different zero-indexing by a different indicator
+author; (b) the student's chart is showing only four of a wider set, offset from the notes'
+window; (c) a different level system that happens to share the `M` prefix — the very confusion the
+original Assessment warned about.
+
+**Reading (a) is the tempting one and it is precisely the trap.** Assuming an off-by-one is a
+labelling quirk would let a session map `M3`(frame) onto `M4`(notes) — i.e. onto the level the
+notes associate with the **HOD** — and the frame is from a lesson about **Hi-Lo entry at the HOD**
+(`A-056`). That is a coincidence attractive enough to be dangerous, and it is not evidence.
+
+```text
+DO NOT CODE — narrowed. A mid-pivot reading is now the leading hypothesis and is
+NOT adopted while the M0/M4 offset is unexplained.
+The prohibition on reconciling with Murrey math or any other external set STANDS.
+```
+
+**Required Research — sharpened.** No longer *"what are these labels?"* but: **does any lesson or
+frame show an `M4`, or an `M0`, or the indicator's settings dialog?** A single frame showing five
+`M` levels, or the same chart at a different scroll position, would settle the offset.
+
+| Type | Reference |
+|---|---|
+| Decision | `D-039` |
+| Ambiguity | `A-038`, `A-040` (ADR — the notes tie pivots to it), `A-056` (Hi-Lo — the HOD claim) |
+| Reference | `MMM-NOTES` p.42 |
 
 ---
 

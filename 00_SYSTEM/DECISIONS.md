@@ -2397,4 +2397,207 @@ obligations attach:
    whether the next lesson may start; a verdict left unmerged holds a gate closed that is
    actually open. Prompt merge-back is what keeps it an evidence ledger rather than a policy one.
 
+---
+
+## D-039 — The Mauro seminar-notes PDF is admitted as NORMATIVE evidence on the owner's attestation
+
+**Date:** 2026-08-13
+**Decision:** `00_SYSTEM/EXTERNAL_REFERENCE/EXTERNAL_Mauro_MMM_seminar_notes_anonymous.pdf`
+(84 pp., SHA-256 `67bdd3ff2a81aaa3f09a9745bdee94ea60363f93026849836161016f2e56b6f7`) is
+**admissible evidence about the method**, on the owner's direct attestation, 2026-08-13:
+*"I've read the pdf and can attest that it's in alignment with the instructor and should be
+trusted."* The open question left by `00_SYSTEM/EXTERNAL_REFERENCE/README.md` — whether the
+document may close a record — is **answered YES, subject to the ordinary evidentiary judgement
+every other source is subject to.** The document's `EXTERNAL — NON-NORMATIVE` status, asserted
+in `EXTERNAL_VOCABULARY_REFERENCE.md` §9 and written before this attestation existed, is
+**superseded for this document only.**
+
+**This is the `D-033` shape, and it carries `D-033`'s central caution verbatim: NOT ONE RECORD
+IS CLOSED BY THIS ENTRY.** Admitting a source is not the same as reading it against a record.
+Each `A-xxx` still needs the ordinary judgement, made by a session that does the reading, and
+several will still fail it on the merits. `EXTERNAL_VOCABULARY_REFERENCE.md` §9.2 is a **flag
+list for follow-up**, not a disposition.
+
+**Scope — what is admitted.** The **PDF only.** The web material in `EXTERNAL_VOCABULARY_REFERENCE.md`
+§5 is **NOT** admitted and stays `EXTERNAL — NON-NORMATIVE` under that file's §1 banner and §3
+reconciliation rule. This matters more than it looks: §9.0 records that the PDF is very probably
+the **upstream original** the §5 web sources were copied from, so a §5 page agreeing with the PDF
+is **the same document quoted twice** and adds nothing. Admitting the original does not
+retroactively admit its copies, and a session must not cite a web page as corroboration of the PDF.
+
+**Reason:** The owner is the authority on the corpus's scope — the same authority exercised in
+`D-025`, `D-033` and `D-035` — and the owner has read the document and attested to its alignment
+with the instructor's teaching. The agent's standing objection was **provenance**: the document
+is anonymous and self-describes as *"Private Study Notes from Seminar of Steve Mauro — Authored
+by: Anonymous"*. That objection was raised in full, in writing, before the attestation
+(`EXTERNAL_REFERENCE/README.md`; `EXTERNAL_VOCABULARY_REFERENCE.md` §9.0), and the owner has
+ruled with it in view. An anonymous document read and vouched for by the project owner is no
+longer anonymous testimony — it is the owner's testimony about a document, which is a different
+and admissible thing.
+
+**Evidence:** Owner attestation 2026-08-13 (above). Corroborating internal evidence that the
+document is of this method and not another: its table of contents contains **seven** of this
+corpus's idiosyncratic named objects — *Fractional Disparity* (`A-014`), *The Trading Zone*
+(`A-005`), *The 33 Trade* (`A-023`), *The Anatomy of the Half Batman Pattern* (`A-022`),
+*Anatomy of an M and W Formation* (`A-011`), *Midweek reversals* (`A-012`), *peak formation
+highs and lows* (`A-010`) — which no unrelated trading school would share by chance.
+`EXTERNAL_VOCABULARY_REFERENCE.md` §9.1.
+
+### What this decision does NOT do — read this before citing it
+
+- **`D-030` is NOT superseded and still binds.** `D-030` forbids *approximating* a definition the
+  course has not supplied. Where this document **actually supplies** a definition, the blocker is
+  discharged **by evidence**, which is what `D-030` always contemplated (*"the test waits for the
+  lesson that defines it"* — the standard is a definition, not a video). Where it does **not**,
+  `D-030` is untouched. **A session that reads `D-039` as a general unblocking has misread it**,
+  exactly as `D-033` warned.
+- **Specifically, `push` is NOT unblocked, and V05/V06/V07 dimension B stays BLOCKED.** The
+  document gives push *sizes* (25–50 pips beyond the Asian range in *"3 pushes or candles"*) and
+  then **withdraws the regularity in the next sentence**: *"it is not that simple and the 3 pushes
+  may occur in increments of different sizes… do not simply expect a straight 3 candle movement."*
+  The hedge is part of the teaching; recording the number without it is `E03`. **A push-size is
+  not a push-recognition rule**, and Recognition is what dimension B grades. This is the single
+  most likely over-reach from this entry and it is refused in advance.
+- **It does not make the document outrank the recordings.** `D-008` still ranks course evidence
+  above agent interpretation, and where this document and a lesson differ, **the lesson is the
+  corpus.** The document describes seminars; `01_SOURCE_VIDEOS/` is what this project studies.
+
+> ### THE VIDEOS WIN, AND A DIVERGENCE IS A FINDING — owner direction, 2026-08-13
+>
+> Owner direction, same day, in the same exchange as the attestation: *"if at any time the videos
+> contradict the pdf then we can call it out."*
+>
+> **This is mandatory, not permissive.** A session that notices a lesson stating something this
+> document contradicts **must** log it as a `C-xxx` in `11_CONTRADICTIONS/CONTRADICTIONS.md`,
+> tagged `MMM-NOTES` vs the speaker, with the page and the timestamp. It is **never** resolved by:
+> reading the lesson down to fit the notes; treating the notes as "what he really meant"; treating
+> the lesson as a misspeak; or quietly preferring whichever is more codable.
+>
+> **Resolution rule when they conflict: the recording wins.** The notes are an attested account of
+> seminars this project did not record; the videos are the primary material this project exists to
+> study. Where the recording is clear, it is doctrine and the note is superseded on that point —
+> annotate `EXTERNAL_VOCABULARY_REFERENCE.md` §9.2 accordingly and leave the superseded text
+> visible per `REMEDIATION_PROTOCOL.md` §2.
+>
+> **Two live candidates already exist and are flagged now, not discovered later:** the **800 EMA /
+> "blueberry"** (in V06 audio, absent from the document — consequence 4) and the **ADR lookback**
+> (*"last 2 weeks"* in the document vs. the guests' 2-day and unbounded bases — consequence 3).
+> Neither is adjudicated here. Both are the exact shape this direction anticipates.
+>
+> This cuts the other way too and that is the point: **a divergence is evidence about the corpus,
+> not noise to be tidied.** If the recordings and an attested account of the same teacher diverge,
+> that is a genuine and interesting finding about the course, and the register exists to hold it.
+- **It is not retroactive re-grading.** No mastery grade, review verdict or gate state changes by
+  operation of this entry. Re-assessment is the independent reviewer's job under `D-003`/`D-004`,
+  not the job of the session that wrote this decision.
+- **It does not admit anything else in `EXTERNAL_REFERENCE/`.** The directory's ⛔ banner still
+  governs every other file placed there. Admission is per-document and per-attestation.
+
+**Consequences:**
+
+1. **Source tagging becomes mandatory for this document, as speaker tagging is for guests**
+   (`D-025` consequence 3, re-adopted by `D-033`). Any citation carries the tag **`MMM-NOTES`**
+   with a page number, e.g. *(`MMM-NOTES` p.45)*. Equal authority is not anonymity — with a third
+   admissible source class now in play (author, guest, notes), attribution matters **more**.
+2. **`EXTERNAL_VOCABULARY_REFERENCE.md` §9 is now a follow-up queue.** The records it flags —
+   `A-031` (blood in the water = the TDI market base line cross), `A-055` (`M0`–`M3` = mid-pivots),
+   `A-005` (the trading zone = 25–50 pips beyond the Asian range), `A-014`, `A-023`, `A-022`,
+   `A-011`, `A-007` — are **eligible for closure on their own evidence** and each needs a session
+   that reads the source, applies the judgement, and cites the page. Expect some to survive: `A-011`
+   gains a geometric constraint but still no leg count or invalidation rule.
+3. **`A-038` (ADR lookback) is NOT resolved and gets harder, not easier.** The document states
+   *"the average daily trading range of the last 2 weeks"*. The corpus's guests used a **2-day**
+   basis and an **unbounded** one. That is now **three** admissible numbers from three admissible
+   sources — which under `D-033`'s logic is a live `C-xxx` contradiction, not a resolution.
+4. **A genuine coverage gap is on the record and must not be papered over.** The document's EMA set
+   is **5/13/50/200 with no 800**, while the corpus's V06 audio uses *"blueberry"*. And
+   **"anchor point" does not occur once in 84 pages**, nor do *Brinks*, *shadow box*, *quarter of
+   wood*/`COW`, *tracer* or *vector*. The attestation is that the document **aligns** with the
+   instructor, which is not a claim that it is **complete**. `A-001` in particular remains open
+   with no external route at all.
+5. **`A-020` is eligible but is not closed here.** The document prints *"Hold the Mayo – 200
+   Bounce"*, and the owner separately confirmed the condiment mapping on 2026-08-13. A session may
+   now close the *Mayo = 200 EMA* half citing (`MMM-NOTES` p.66) plus this entry. It must **also**
+   record that the 800/blueberry line is **not** covered by this document, so the record closes in
+   part, not in whole.
+6. **A future relocation is worth considering and is not done here.** A normative source arguably
+   does not belong under a directory whose `README.md` opens *"⛔ NOTHING IN THIS DIRECTORY IS
+   COURSE MATERIAL"*. Left in place deliberately: moving a source file mid-branch churns paths for
+   no evidentiary gain, and the banners in both files are corrected by this entry. Flagged for the
+   owner as a tidy-up, not an obligation.
+
+**Alternatives considered:** *Admitting it as background only — trusted but non-citable* —
+rejected as incoherent with the attestation; the owner said trusted, and a source you may believe
+but never cite is a source you cannot use. *Admitting it and closing the flagged records in the
+same session* — rejected on `D-033`'s precedent and `D-003`/`D-004`: the session that writes the
+admitting decision is the worst-placed session to also exercise the judgement it authorises.
+*Admitting the §5 web material along with it* — rejected; §9.0 shows those are probably copies of
+this document, and admitting copies would manufacture false corroboration. *Declining on
+provenance grounds* — rejected; the objection was made in writing, the owner read it and ruled,
+and re-litigating a scope call the owner has made with the evidence in front of them is not the
+agent's role.
+**Status:** ACTIVE
+
+---
+
+## D-040 — The three-tier sourcing hierarchy, and the mandatory reconciliation when a later video speaks
+
+**Date:** 2026-08-13
+**Decision:** Definitions and vocabulary for this project are sourced in a fixed order of
+precedence, recorded in full in `00_SYSTEM/SOURCING_HIERARCHY.md`:
+
+| Tier | Source | May close an `A-xxx`? |
+|---|---|---|
+| **1** | The course recordings — `01_SOURCE_VIDEOS/` V01–V21, transcripts, slides, screenshots | ✅ Yes — `RESOLVED BY COURSE` |
+| **2** | The Mauro seminar-notes PDF, cited `MMM-NOTES p.N` (`D-039`) | ⚠️ Yes but weaker — `RESOLVED BY MMM-NOTES`, only where it genuinely supplies a definition |
+| **3** | Generic internet research — `EXTERNAL_VOCABULARY_REFERENCE.md` §5 | ❌ Never |
+
+Search order is 1 → 2 → 3, stopping at the first tier that answers. A lower tier is consulted
+only because the higher tier is **silent** — never because it is unclear or harder to code.
+
+**The operative half of this entry is the reconciliation rule.** Tier 2 and Tier 3 entries are
+**provisional occupants of a gap**. Where a **later** Tier 1 statement — in any video, including
+ones not yet studied — defines or clarifies a term previously filled from Tier 2 or Tier 3, the
+**Tier 1 statement takes priority**, and the earlier fill-in **MUST be explicitly reconciled at
+that point**. It is never left standing to silently outrank real course content, and never blended
+with the course statement into a composite definition no source actually states. The six-step
+process — notice, classify, annotate in place, keep the superseded text visible per
+`REMEDIATION_PROTOCOL.md` §2, update the `A-xxx` to the Tier 1 basis, log it (and open a `C-xxx`
+on a true contradiction) — is specified in `SOURCING_HIERARCHY.md` §3.1, with the four
+relationship cases in §3.2.
+
+**Reason:** The precedence order already existed, but only implicitly, spread across `D-039`,
+`EXTERNAL_VOCABULARY_REFERENCE.md` §3 and §9.6, and `EXTERNAL_REFERENCE/README.md`. A rule a
+session has to reassemble from four files is a rule a session will get wrong — and the specific
+way it gets wrong is the dangerous one: a Tier 2 definition written down early, never re-checked,
+still sitting in the spec after the video that actually defines the term has been studied. Owner
+instruction, 2026-08-13, requiring the hierarchy be stated once, plainly, with the reconciliation
+process documented rather than merely asserted.
+
+**Evidence:** Owner instruction 2026-08-13 setting out the three tiers and the critical rule that
+*"if a LATER video ever defines or clarifies a term that was filled in from Tier 2 or 3, the later
+video's definition takes priority."* Owner adjudication, same session, that this hierarchy is a
+**ranking layer only** and does **not** downgrade `D-039`.
+
+### What this decision does NOT do
+
+- **It does not modify `D-039`.** The Tier 2 PDF stays **normative** and may still close a record.
+  `A-014` and `A-023` remain `RESOLVED BY MMM-NOTES` and are **not** reopened by this entry —
+  owner adjudication, 2026-08-13, asked directly and answered directly.
+- **It does not modify `D-030`.** `push` is not unblocked; V05/V06/V07 dimension **B** stays
+  **BLOCKED**.
+- **It does not modify `D-025` / `D-033`**, which continue to rank speakers *within* Tier 1. A
+  guest presenter is Tier 1 material subject to `D-033`, **not** demoted to Tier 2.
+- **It closes, reopens and changes the status of no `A-xxx` whatsoever.** Establishing an order of
+  precedence is not applying it. `SOURCING_HIERARCHY.md` §3.4 records the standing obligation to
+  re-check `A-014`, `A-023` and `A-020` against Tier 1 when a relevant lesson is reached; that is a
+  queue, not a disposition.
+
+**Alternatives considered:** *Leaving the ordering implicit across the four existing files* —
+rejected; that is the status quo this entry exists to fix, and the reconciliation trigger was
+stated nowhere as a **forward** obligation on future videos. *Folding the hierarchy into `D-039`
+by editing it* — rejected under this file's append-only rule. *Treating Tier 2 as non-closing, per
+the literal Tier-2 framing in the instruction* — **raised with the owner rather than assumed**,
+because it would have contradicted `D-039` and required reopening `A-014` and `A-023`; the owner
+ruled that `D-039` governs and the tiers are a ranking layer.
 **Status:** ACTIVE

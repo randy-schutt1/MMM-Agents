@@ -8,6 +8,50 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 
 ## STATUS
 
+> ## 📌 UPDATED 2026-08-13 — `C-011` ADDED, CLOSING §9.6's SECOND FLAGGED DIVERGENCE
+>
+> **Counts in the `C-010` block below are superseded** (`REMEDIATION_PROTOCOL.md` §2). As at this
+> branch, before merge-back: **RECORDS 8 · UNRESOLVED 7 · RESOLVED/OTHER 1**. ⚠️ **These counts and
+> this record's original number are themselves superseded by the merge-back banner at the top of
+> this section** — this record was filed as `C-008` and is now `C-011`.
+>
+> `EXTERNAL_VOCABULARY_REFERENCE.md` §9.6 flagged **two** video-versus-notes divergences on
+> 2026-08-13 and required a `C-xxx` for each. Only one was filed. **`C-011` files the second** —
+> the **ADR lookback window**: the notes state *"the last 2 weeks"* (`MMM-NOTES` p.43); V04's guest
+> gives *"the two previous days"* `[01:05:36]` **and** an unbounded *"generally every day runs"*
+> `[01:13:34]`.
+>
+> **Owner ruling, 2026-08-13** (recorded in `D-040`): the notes are authoritative **unless a video
+> directly contradicts them, in which case the video always wins.** Both flagged divergences are
+> now filed, and on both the notes are **superseded on that specific point** — the `800`/blueberry
+> line stands (`C-010`), and *"2 weeks"* is **not** the ADR window (`C-011`).
+>
+> **Neither record closes or narrows anything.** `A-038` still has three incompatible corpus bases
+> and stays `DO NOT CODE`: "the video wins" defeats the Tier 2 figure **without** installing a
+> replacement.
+
+> ## 📌 UPDATED 2026-08-13 — `C-010` ADDED, A NEW CLASS OF RECORD
+>
+> **Counts in the block below are as at `C-006` and are superseded** (`REMEDIATION_PROTOCOL.md`
+> §2). As at this branch, before merge-back: **RECORDS 7 · UNRESOLVED 6 · RESOLVED/OTHER 1**.
+> ⚠️ **Superseded by the merge-back banner at the top of this section** — this record was filed as
+> `C-007` and is now `C-010`.
+>
+> **`C-010` is the first VIDEO-vs-NOTES record**, a class that did not exist until `D-039`
+> admitted the Mauro seminar notes (`MMM-NOTES`) as normative evidence. Prior classes were
+> instructor-vs-instructor, instructor-vs-guest and guest-vs-guest — all *inside* the corpus.
+> `C-010` is the corpus against an admitted account *of* the corpus's method.
+>
+> **The resolution rule for this class is fixed and does not need re-deciding per record**
+> (`D-039`, owner direction *"if at any time the videos contradict the pdf then we can call it
+> out"*): **the recordings win.** Where a lesson is clear it is doctrine and the note is
+> superseded on that point. A divergence is a **mandatory** record, never smoothed away by
+> reading the lesson down to fit the notes.
+>
+> `C-010` itself: the notes enumerate the EMA set as *"the 5, 13, 50 and 200"* and contain **no
+> `800` anywhere in 84 pages**; the corpus has *"blueberry"* in V06 audio, confirmed by the owner
+> as the **800 EMA**. The corpus's 800 stands.
+
 ```text
 RECORDS:         6   (C-001 … C-006)
 LESSONS STUDIED: 7   (V01-V06 COMPLETE; V07 student pass complete 2026-08-13,
@@ -1247,3 +1291,201 @@ RESOLVED, by the lesson itself: what a student should do before it is.
 
 A statement from any speaker on which entry applies **after** the drill is trained. Failing that,
 this is a genuine open conflict in the method and should be reported as one.
+
+---
+
+## C-010 — The moving-average SET: the corpus uses an `800` the admitted seminar notes do not contain
+
+> **RENUMBERED at merge-back, 2026-08-13.** This record was filed as **`C-007`** on
+> `infra/external-vocabulary-reference` / `infra/add-steve-moro-reference-book`. `video/v08`
+> independently allocated `C-007` to a different contradiction and merged first (`46d09ed`), so
+> under `D-038a` consequence 1 the later arrival is renumbered: **`C-007` → `C-010`.** Any
+> reference to `C-007` predating this merge, in a document not renumbered here, means *this*
+> record if it concerns the moving-average set, and `video/v08`'s record otherwise.
+
+### Concept
+
+How many moving averages the method uses, and which. The corpus and the newly-admitted seminar
+notes (`D-039`, tagged `MMM-NOTES`) give **different sets**, and the difference is a whole line.
+
+> **Logged under `D-039`'s standing direction**, owner, 2026-08-13: *"if at any time the videos
+> contradict the pdf then we can call it out."* This is the **first** record filed under that
+> direction. It is a **video-versus-notes** divergence, not a speaker-versus-speaker one, so it
+> is a new class for this file — see the Disposition.
+
+### Source A — the corpus
+
+| Field | Value |
+|---|---|
+| Material | V05, V06 audio; V02 term-count sweeps |
+| Evidence | *"blueberry"* spoken **2×** in V06 — `[00:29:48]`, `[00:29:54]` — as a moving-average nickname, alongside *"water"* (4×) and *"mayo"*/*"mail"* (2×). Recorded in `A-020` and in the V06 evidence block of `AUTOMATION_AMBIGUITIES.md` |
+| Owner attestation, 2026-08-13 | ***"800 EMA is the blueberry."*** |
+| Set implied | **At least five lines**, including an **800** |
+
+### Source B — the admitted seminar notes
+
+| Field | Value |
+|---|---|
+| Material | `MMM-NOTES` p.38 (`EXTERNAL_REFERENCE/`), admitted by `D-039` |
+| Evidence | *"The specific EMA's used in Mauro's charts are the **5, 13, 50 and 200** bar EMA's."* Roles given: 5/13 = *"the signal lines"*; 50 = *"the balance line… shows the intraday trend"*; 200 = *"home base defining the longer term trend. Price always returns to home base."* |
+| Corroborating absence | **`800` occurs ZERO times in the whole 84-page document** (verified against `EXTERNAL_Mauro_MMM_seminar_notes_TEXT_EXTRACT.md`). So do the words *blueberry*, *mayo* (except once, see below), *ketchup*, *mustard* |
+| Set implied | **Four lines**, topping out at 200 |
+
+### The nicknames are NOT the contradiction — the set is
+
+This must be stated precisely, because the two things are easy to conflate:
+
+- The **nickname mapping is not in dispute.** The owner has confirmed **Mayo = 200** and
+  **Blueberry = 800**, and the notes independently print ***"Hold the Mayo – 200 Bounce"***
+  (`MMM-NOTES` p.66) in their entry list, which corroborates the *Mayo* half from inside the
+  admitted source.
+- The **contradiction is the existence of an 800 line at all.** The notes enumerate the EMA set
+  explicitly and exhaustively — *"the specific EMA's used… are the 5, 13, 50 and 200"* — and an
+  800 is not merely unmentioned, it is **excluded by an enumeration that claims to be complete.**
+  The corpus has a speaker using an 800 nickname in genuine audio.
+
+### Assessment
+
+**Both can be true, and the likeliest reconciliation is chronology — but that is inference, and
+it is not adopted.**
+
+The notes describe seminars; the recordings are dated **March 2012**. If the 800 entered the
+method after these notes were written — or if the note-taker simply recorded the four lines
+their own chart carried — then there is no conflict in the teaching, only a gap in the account.
+The notes' own framing supports this reading: *"any other rapidly moving pair of EMA's would
+achieve the same goal"* (`MMM-NOTES` p.38) is not the language of a closed, canonical set.
+
+**But `D-039` is explicit that a divergence is a finding, not a tidy-up**, and the agent's
+plausible chronology is exactly the sort of smoothing the direction forbids. Recorded as a
+divergence; the reconciliation is offered as `INFERRED` and is not doctrine.
+
+**Resolution under `D-039`: the recordings win.** The corpus uses an 800 line. Anything built
+from this method must account for it, and a session that adopts the notes' four-line set because
+it is the tidier enumeration would be dropping a line the course's own speakers use.
+
+### What this does and does not do to `A-020`
+
+- **Does not block `A-020`'s closure.** `A-020` asks what the nicknames mean and what periods
+  attach. Both halves are now answered — Mayo = 200 (notes + owner), Blueberry = 800 (owner).
+- **Does mean `A-020` closes on OWNER ATTESTATION, not on the notes and not on the course.** The
+  notes can only carry *Mayo*. See `A-020`'s disposition and `D-039` consequence 5.
+- **Does leave one thing genuinely open**, and it is not this record's to solve: **no period is
+  attached to *water* (50?) or to any other nickname by any speaker in V01–V07**, and the
+  50 = *"balance line"* reading is the notes', not the course's.
+
+### Disposition
+
+```text
+STATUS: OPEN — RECORDED, NOT RESOLVED
+CLASS:  VIDEO-vs-NOTES divergence (the first under D-039)
+RULE:   The recordings win. The corpus's 800 stands.
+```
+
+**Required to close:** a lesson or frame in which the instructor or a guest states the full
+moving-average set, or states the 800's period and role directly. Failing that, this record
+stands permanently as an accurate description of a real difference between the corpus and the
+admitted account of it.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | `A-020` (the nicknames and their periods) |
+| Decision | `D-039` (admission of the notes; the videos-win rule) |
+| Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.4, §9.6; `MMM-NOTES` p.38, p.66 |
+
+---
+
+## C-011 — The ADR lookback window: the notes say two weeks, the corpus says two days and "generally every day"
+
+> **RENUMBERED at merge-back, 2026-08-13.** This record was filed as **`C-008`** on
+> `infra/add-steve-moro-reference-book`. `video/v08` independently allocated `C-008` to a different
+> contradiction and merged first (`46d09ed`), so under `D-038a` consequence 1 the later arrival is
+> renumbered: **`C-008` → `C-011`.** Any reference to `C-008` predating this merge, in a document
+> not renumbered here, means *this* record if it concerns the ADR lookback window, and
+> `video/v08`'s record otherwise.
+
+### Concept
+
+Over how many days the Average Daily Range is averaged. This is the **second** video-versus-notes
+record and the **second** of the two divergences `EXTERNAL_VOCABULARY_REFERENCE.md` §9.6 flagged
+as *"unadjudicated"* on 2026-08-13. §9.6's own rule required a `C-xxx` be filed; **it was not, and
+that omission is corrected here.**
+
+> **Logged under `D-039`'s standing direction and `D-040`'s Tier 1 > Tier 2 rule.** Owner ruling,
+> 2026-08-13: the notes are authoritative **unless a video directly contradicts them, in which
+> case the video always wins.** This record exists so that the notes' *"2 weeks"* is **not**
+> treated as authoritative on this point.
+
+### Source A — the corpus (Tier 1)
+
+| Field | Value |
+|---|---|
+| Material | V04, **guest presenter** — see the speaker note below |
+| Basis 1 | *"if it's behavior for the **two previous days**, and it's basically ran the same ADR, 110 pips, 80 pips, 120 pips, whatever it is, the two previous days"* `[01:05:36]`–`[01:06:09]` |
+| Basis 2 | *"if the pair **generally every day** runs 100 pips, if it's not in the mid 90s, it's not ready"* `[01:13:34]` — an **unbounded** average |
+| Basis 3 | Whatever the template's indicator reports; the panel prints `TDR / YDR / WADR / MADR / %DADR` (frame `01:08:40`), periods not visible — `A-040` |
+| Window implied | **Three incompatible answers, all in one lesson** |
+
+### Source B — the admitted seminar notes (Tier 2)
+
+| Field | Value |
+|---|---|
+| Material | `MMM-NOTES` (`EXTERNAL_REFERENCE/`), admitted by `D-039` |
+| Evidence | *"an ADR indicator which tells us the average daily trading range of the **last 2 weeks**"* (`MMM-NOTES` **p.43**) — i.e. ~10 trading days |
+| Window implied | **A single, clean, stated number** — the only stated window found in any source anywhere |
+
+### Why this is a contradiction and not merely a gap
+
+The notes supply exactly the datum `A-038` has been missing since V04, and it is **the tidiest
+number on offer**: bounded, specific, and immediately codable. That is precisely what makes it
+dangerous. A ~10-day mean and a **2-day** mean differ by tens of pips on a volatile pair, and the
+gate is *whether today has run 90–95% of it* — so the window choice decides whether a setup is
+taken at all. Adopting *"2 weeks"* because it is the only clean figure would be substituting a
+Tier 2 number for a Tier 1 statement that says something different.
+
+### Speaker note — this record is GUEST-vs-NOTES, and that cuts BOTH ways
+
+`A-038` is a **`GUEST`** record. Under `D-033` guest material cannot close a record on its own.
+Two consequences, and they pull in opposite directions:
+
+- **The notes do not win by default.** A guest is still **Tier 1** (`D-040` §1.1) — guest material
+  is *not* demoted to Tier 2. The video-wins rule applies here in full.
+- **But the corpus does not supply a usable answer either.** Tier 1's own three bases are mutually
+  incompatible, so "the video wins" defeats the notes' figure **without** installing a replacement.
+
+### Assessment
+
+**Both accounts may describe real practice at different times or by different traders**, and the
+guest is explicit that his own method is personal (*"I've been looking at these same pairs for
+nearly three years now"*). That reconciliation is **`INFERRED` and is not adopted** — `D-039`
+forbids smoothing a divergence into a chronology the sources do not state.
+
+**Resolution under `D-039` / `D-040`: the recordings win, and the notes' "2 weeks" is superseded
+on this point.** It must not be cited as the ADR window, and it must not be recorded as
+corroboration of any of the three corpus bases.
+
+### What this does and does not do to `A-038`
+
+- **Does NOT narrow or close `A-038`.** The corpus had three incompatible bases before this record
+  and has three after. A fourth number from Tier 2 makes four, not one — as
+  `EXTERNAL_VOCABULARY_REFERENCE.md` §9.2 already stated.
+- **`A-038` stays `DO NOT CODE`**, and `D-030` applies with full force: the window is still never
+  approximated.
+- **Its Required Research is unchanged** — an instructor lesson defining ADR, or a frame with the
+  indicator's settings dialog open.
+- **`A-040` is untouched.** Which of `TDR/YDR/WADR/MADR/%DADR` the template actually gates on
+  remains unread.
+
+```text
+Status: UNRESOLVED — Tier 2 figure SUPERSEDED by Tier 1; Tier 1 supplies no replacement
+```
+
+| Field | Value |
+|---|---|
+| Class | **VIDEO-vs-NOTES** (`C-010` class), and **GUEST**-vs-notes within it |
+| Ambiguity | `A-038` (the guest's ADR window); `A-040` (the template's ADR variants) |
+| Decision | `D-039` (admission of the notes; the videos-win rule); `D-040` (Tier 1 > Tier 2) |
+| Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.2, §9.6; `00_SYSTEM/SOURCING_HIERARCHY.md` §3.3; `MMM-NOTES` p.43 |
+
+---

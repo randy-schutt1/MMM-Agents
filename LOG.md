@@ -4918,3 +4918,370 @@ only; `git add -A` never used; `git diff --staged` inspected before each commit.
 `V09` — the gate is **OPEN** under `D-024` (V08 R1: `REVISE`, 0 `CRITICAL` / 0 `MAJOR` / 3 `MINOR`),
 with open items 64–66 owed. **Item 69 must be discharged before
 `infra/add-steve-moro-reference-book` is merged.**
+
+---
+
+## 2026-08-13 — Remediation Session (V07 R1 items 61–63) — the three MINORs applied on a dedicated branch
+
+**Process note, stated up front.** This session authored **no** V07 artifact and performed
+**no** review. It applied the three corrections `V07_REVIEW_R1.md` §15 requires and stopped.
+**Nothing here is self-certified:** `D-003` reserves verification to an independent reviewer,
+so all three open items move to `APPLIED — PENDING VERIFICATION at R2`, never to `CLOSED`.
+
+**Branch isolation, per `D-038` (adopted earlier the same day).** Work was done on
+`fix/v07-r1-minors`, branched from the integration branch after a `git fetch` with a clean
+tree and zero divergence (`0 0` against `origin`). **Merge-back was deliberately not
+performed** — `D-038` makes integration its own single-threaded act, and it is the owner's.
+
+### Item 61 (`M1`, `E20` count class) — APPLIED
+`03_LESSON_NOTES/V07_SOURCE_NOTES.md` §10's *level* row: **26 uses → 56 uses**
+(`level` 53 + `levels` 3). **Re-derived from the verbatim body this session, not taken from
+the review's prose** — the `level <N>` compound form is 35 and entries containing the token
+are 44, so 26 matches no measurement of the object. **§5, which already said 56, was NOT
+edited**, as the review requires. The row's conclusion is unaffected and was already
+understated: *level* is used constantly and never defined; `A-004` remains untouched.
+
+### Item 62 (`M2`, same class) — APPLIED
+Same file, same table, the *"the peak"* row: **4× → 5×**. Re-measured this session at exactly
+the five markers the row already listed (`[00:00:26]`, `[00:03:18]`, `[00:03:20]`,
+`[00:14:02]`, `[00:16:44]`) — **the marker list was right and is unchanged**, and the
+`peak formation` / `PFH` / `PFL` zero counts are unchanged. The row no longer contradicts
+itself on its face.
+
+### Item 63 (`M3`, `E01` + co-code `E11`) — APPLIED
+`07_MASTERY_REPORTS/V07_MASTERY_REPORT.md` §D, the Sequence table's **Invalidates** cell.
+Both defects fixed in one edit, re-derived from `V07_TRANSCRIPT.md`:
+
+- **The quotation** now reads *"If it doesn't do what you expect **in** your flashcard isn't
+  the same"* — the transcript's literal wording. The previous *"**and** your flashcard"* was
+  the *sensible* reading of a garbled ASR passage, which is exactly why it must not be made
+  silently inside quotation marks (V04 `M2` / V05 `M3` class, third instance).
+- **The citation** now reads `[00:28:31]`. `[00:28:28]` exists and carries a **different**
+  sentence — *"We'll say whether it's something that you will take."*
+
+**§H repaired rather than merely scoped, and the repair was earned.** The falsified sentence
+— *"No quotation mark in any V07 artifact contains a word that is not in the source"* — now
+states that one such quotation existed, was found at R1, and is corrected. Before re-asserting
+a clean claim, a **fresh sweep was run this session rather than trusting the reviewer's 239**:
+every `*"…"*` fragment carrying an adjacent `[HH:MM:SS]` citation across all seven V07
+artifacts was re-matched against the transcript body — **167 marker-cited quotes, and after
+the §D fix, zero contain a word that is not in the source.** The nine flags raised were each
+opened by hand and cleared, none a §H exception:
+
+| Flag | Disposition |
+|---|---|
+| *"Go Trader 4"*, *"Exit +50 pips & 8.57% gain"* (×2), the `V07_00-04-00` bullet slide | **Printed** slide/chart text, labelled `PRINTED` at the point of use — printed source is source |
+| *"And so I have 12 pairs that I look at."* (`[00:38:19]`) | A **V04** quote at a **V04** marker, labelled as such and declared in advance in the transcript header's sweep block |
+| *"essentially every day"* | **The student's own first reading**, framed as such. Not a source quote |
+| *"an M pattern"* (`[00:14:10]`) | A **hypothesised ASR alternative** (*"could be ASR garble for…"*), offered as a candidate. `A-057` logged rather than reconstructed |
+| *"tell the whole story"* (`[00:00:32]`) | Every word is in the spoken source (*"do they tell **us** the whole story?"*) **and the string is verbatim in the printed source**, slide `V07_00-00-35`. An un-elided partial, not a substituted word — outside the sentence's class either way |
+| *"…I made it dotted in the 13, 50 and the 200"* (`[00:25:44]`) | Elision marked with an explicit `…`; the reading is the declared second ASR pass |
+
+**`N2` folded into the same edit as the review directed** (*"do not refresh it as a separate
+task"*): §H's *"163 citations"* is now recorded as **true when measured and since gone stale**
+— 190 occurrences / 171 distinct (182 / 168 excluding §11) — with the cause named, §9b having
+been added after the sweep ran in response to probe `R11`'s failure. The 163 is left in place
+as the record of what the pre-commit sweep actually covered.
+
+**`V07_SOURCE_NOTES.md` §6c was NOT edited**, as the review requires — it renders the same
+passage correctly.
+
+### Superseded text, retained at all three sites
+Per `REMEDIATION_PROTOCOL.md` §2 and the convention prior rounds established (V05 R1 `M4`,
+V06 R1/R2), **no incorrect text was deleted**. Each correction carries the old wording
+verbatim in a dated block naming the round, the open item and the finding: one block beneath
+§10's table covering `M1` and `M2` together, one beneath §D's table, one inside §H. A note in
+§H records that **re-running the sweep now returns a higher raw count precisely because those
+retained blocks re-quote the defective renderings on purpose** — expected, not a regression.
+
+### Explicitly NOT done, per `V07_REVIEW_R1.md` §15
+No re-run of `PT-033`, the sensitivity, the cross-check or any homework script (all reproduce
+bit-exactly). No git history rewritten for `I-009`. **`R11` left failing in the committed
+tree.** No re-review, no certification, no merge to the integration branch.
+
+### Verification before commit
+`python3 scripts/validate_project.py` — clean. Explicit paths staged; `git diff --staged`
+read in full before committing.
+
+### Next
+**V07 R2** — an independent reviewer verifies items 61–63. Owner merges `fix/v07-r1-minors`
+as a separate deliberate act per `D-038`. Open item 36 (dimension B vocabulary) remains owed
+and is untouched by this remediation.
+
+---
+
+## 2026-08-13 — `D-040`: the three-tier sourcing hierarchy is stated once, in one file
+
+**Branch:** `infra/add-steve-moro-reference-book` (off `fix/v07-r1-minors`, per `D-038`)
+**Owner instruction:** locate the Steve Mauro seminar-notes PDF, place it in the repo as a
+labelled secondary source, extract its contents, and set up a documented three-tier sourcing
+hierarchy for vocabulary gaps with an explicit reconciliation rule.
+
+### The PDF was already here — most of this task was done on 2026-08-13 by an earlier session
+
+The document is `Steve **Mauro**` (not "Moro"). Four **byte-identical** copies exist on the
+owner's disk (md5 `513d3846e791b42128d40d388079d5b4`, 3,064,761 bytes, 84 pp.) — three loose
+copies outside the repo, and one already committed at
+`00_SYSTEM/EXTERNAL_REFERENCE/EXTERNAL_Mauro_MMM_seminar_notes_anonymous.pdf`. The loose copies
+were left untouched by owner direction.
+
+Commits `7dc53db` → `14f0c70` had already delivered, before this session began:
+
+- the PDF in `00_SYSTEM/EXTERNAL_REFERENCE/` under a 108-line README carrying the provenance
+  warning (the title page reads *"Private Study Notes from Seminar of Steve Mauro — Authored by:
+  **Anonymous**"*);
+- a **2,906-line page-indexed `pypdf` text extract**, so any `MMM-NOTES p.N` citation is greppable
+  without opening a binary;
+- `EXTERNAL_VOCABULARY_REFERENCE.md` §9 — the PDF read **term by term** against the open records;
+- `D-039`, admitting the document as **normative** evidence on the owner's attestation;
+- a first pass of the `D-039` queue through `10_AMBIGUITIES/`, resolving `A-014`, `A-023`,
+  `A-020` and narrowing `A-031`, `A-032`, `A-055`, `A-005`, `A-022`.
+
+**Steps 1–3 and most of 5 were therefore already satisfied and were not redone.**
+
+### The conflict this session surfaced instead of resolving
+
+The instruction described the PDF as **Tier 2 — "not authoritative"**, and directed that it must
+**not** close ambiguity records. **`D-039` says the opposite**: it admits the document as
+normative, and `A-014` and `A-023` are **already closed on it**. Adopting the Tier-2 framing
+literally would have silently downgraded a standing owner decision and required reopening two
+resolved records.
+
+**Raised with the owner rather than assumed.** Owner adjudication, 2026-08-13: **`D-039`
+governs; the three tiers are a ranking layer only.** No record was reopened. This is recorded in
+`D-040`'s *"Alternatives considered"*.
+
+### What was actually built
+
+| File | Change |
+|---|---|
+| `00_SYSTEM/SOURCING_HIERARCHY.md` | **NEW.** The canonical statement: the three tiers, the search order, the four relationship cases, and the six-step reconciliation process |
+| `00_SYSTEM/DECISIONS.md` | **`D-040`** appended — the hierarchy as a binding decision, with an explicit list of what it does *not* change |
+| `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` | Header pointer (§5 = Tier 3, §9 = Tier 2); **new §9.2a** on `A-039` |
+| `00_SYSTEM/EXTERNAL_REFERENCE/README.md` | Header pointer — the PDF is Tier 2, and a Tier 2 fill-in is provisional |
+| `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` | Banner recording the forward obligation and the three standing re-check targets |
+
+**The reconciliation rule is the operative half.** Tier 2 and Tier 3 entries are *provisional
+occupants of a gap*. When a **later** video defines the term, **Tier 1 takes priority** and the
+fill-in **must be reconciled at that point** — never left standing to silently outrank course
+content, never blended into a composite definition no source states. The process is specified as
+six steps and four cases, not asserted as a slogan. `A-014`, `A-023` and `A-020` are named as the
+highest-priority re-check targets, because each is closed on a tier a later video can overturn.
+
+### The one substantive gap found in the earlier pass — `A-039`
+
+The 2026-08-13 pass recorded the two TDI *signals* (`A-031`, `A-032`) but gave **`A-039` itself no
+§9 row**, despite a dedicated *"TDI (Traders Dynamic Index)"* chapter at `MMM-NOTES` **p.45–47**.
+Read this session: the chapter names the four lines and their roles (RSI line, trade signal line,
+dynamic market baseline, volatility bands applied to the baseline rather than to price) and gives
+the shark-fin exit — and supplies **zero numeric parameters**: no period, no band deviation, no
+price source, no timeframe, across all 84 pages and all 13 `TDI` occurrences.
+
+**`A-039` was NOT narrowed and NOT closed.** A structure is not a specification, and
+reconstructing settings from *"an improved version of the RSI"* is the approximation `D-030`
+exists to forbid. Recorded at `EXTERNAL_VOCABULARY_REFERENCE.md` §9.2a.
+
+The §9.3 honest negatives were independently re-verified against the extract this session and all
+hold exactly: **zero occurrences** of `anchor`, `Brinks`, `shadow box`, `quarter of wood`,
+`tracer`, `vector`, and `800`.
+
+### Explicitly NOT done
+
+No `A-xxx` record was closed, reopened, or changed status. `push` is not unblocked;
+V05/V06/V07 dimension **B** stays **BLOCKED**. `D-030`, `D-025`, `D-033`, `D-039` are all
+untouched. The three loose duplicate PDFs outside the repo were left alone. **Not merged to the
+integration branch** — that is the owner's separate act per `D-038`.
+
+### Verification before commit
+`python3 scripts/validate_project.py` — clean, 103 passed / 0 warnings / 0 failures, both before
+and after. The 84-page PDF was already tracked, so no new binary entered the index. Explicit
+paths staged; `git diff --staged` read in full before committing.
+
+### Next
+The `D-039` queue is still only partly worked — the records not named in the 2026-08-13 banner
+have not been read against the source. Any session reaching a lesson that touches cross-pair
+analysis, the level-counting scheme, or the moving-average set must run `SOURCING_HIERARCHY.md`
+§3.1 against `A-014`, `A-023` and `A-020`.
+
+---
+
+## 2026-08-13 — the `D-040` ruling is applied, and §9.6's second divergence is finally filed as `C-011`
+
+**Branch:** `infra/add-steve-moro-reference-book` (continued; no merge)
+
+### The owner's ruling
+
+> Treat the Mauro PDF as **authoritative/normative — same as `D-039` already established — UNLESS
+> a video directly contradicts it, in which case the video always wins.** Keep `A-014` and `A-023`
+> **CLOSED**; do not reopen them.
+
+This **confirms `D-039` as-is** and makes the override explicit for future cases. It matches the
+hierarchy already committed in `b1cb0a3`, so `SOURCING_HIERARCHY.md` and `D-040` needed no
+reversal — only the ruling stated in the owner's own words, which is now §1.2's opening block.
+
+**`A-014` and `A-023` were not touched.** Both remain `RESOLVED BY MMM-NOTES`. No `A-xxx` record
+had its status changed by any part of this work.
+
+### The real finding: `C-011` was owed and had never been filed
+
+`EXTERNAL_VOCABULARY_REFERENCE.md` §9.6 flagged **two** video-versus-notes divergences on
+2026-08-13 and its own rule required a `C-xxx` for **each**. Only one was ever filed:
+
+| Divergence | Record | Was it filed? |
+|---|---|---|
+| The moving-average set — notes enumerate *"5, 13, 50 and 200"* with **zero** `800` in 84 pp.; V06 audio has *"blueberry"*, owner-confirmed as the **800** | **`C-010`** | ✅ Already filed, and thorough |
+| **ADR lookback** — notes say *"the average daily trading range of the **last 2 weeks**"* (`MMM-NOTES` **p.43**); V04's guest says ***"the two previous days"*** `[01:05:36]` **and** an unbounded *"generally every day runs"* `[01:13:34]` | **`C-011`** | ❌ **Never filed — corrected here** |
+
+Both sat in §9.6 marked *"⚠️ Unadjudicated"*, which under the ruling is no longer accurate: the
+videos win both, so the notes are **superseded on those two specific points** and must not be
+cited as authoritative there. §9.6's table, `SOURCING_HIERARCHY.md` §3.3 and the
+`CONTRADICTIONS.md` STATUS block were all updated to say so.
+
+### The asymmetry `C-011` makes concrete, and why `A-038` did NOT move
+
+`C-010` and `C-011` resolve differently in an instructive way. In `C-010` Tier 1 is coherent — the
+corpus uses an 800 — so the notes lose and the corpus's answer stands. In `C-011` **Tier 1 is
+itself incoherent**: the guest gives *two previous days* and *"generally every day runs"* in one
+lesson, with a third variant implied by the template's `TDR/YDR/WADR/MADR/%DADR` panel (`A-040`).
+
+So *"the video wins"* **defeats the notes' clean *"2 weeks"* without installing a replacement.**
+`A-038` had three incompatible bases before this record and has three after — a fourth number from
+Tier 2 makes four, not one. **`A-038` stays `DO NOT CODE`, unnarrowed**, with `D-030` in full
+force and its Required Research unchanged. This is recorded prominently in both `C-011` and
+`SOURCING_HIERARCHY.md` §3.3, because the tempting error is precisely to read a won contradiction
+as licence to adopt whichever Tier 1 fragment is nearest to hand.
+
+Note also that `A-038` is a **`GUEST`** record: under `D-040` §1.1 a guest is still **Tier 1** and
+is *not* demoted to Tier 2, so the video-wins rule applies in full — but `D-033` still means guest
+material cannot close the record on its own.
+
+### Files changed
+`11_CONTRADICTIONS/CONTRADICTIONS.md` (**`C-011` added**, STATUS counts → 8 records / 7 unresolved
+/ 1 resolved-other) · `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` (§9.6 table: both rows now
+`FILED`) · `00_SYSTEM/SOURCING_HIERARCHY.md` (§1.2 ruling block; §3.3 table + the asymmetry note)
+· `LOG.md`.
+
+### Verification before commit
+`python3 scripts/validate_project.py` — clean. Explicit paths staged; `git diff --staged` read in
+full. **Not merged to the integration branch** — the owner's separate act per `D-038`.
+
+---
+
+## 2026-08-13 — record-ID collision with `video/v08`: this branch's `C-007`/`C-008` renumbered to `C-010`/`C-011`
+
+**Branch:** `infra/add-steve-moro-reference-book` · **Act:** merge-back preparation, per `D-038a`
+consequence 1 ("Allocate record identifiers against the latest integration branch … re-check them
+at merge-back … The merging session renumbers the later arrival and fixes its cross-references").
+
+### The collision
+
+`video/v08` and this branch ran concurrently under `D-038` isolation and each allocated `C-007`
+and `C-008` — to **four distinct contradictions**. `git` could not detect it: the two branches
+appended to different regions of `11_CONTRADICTIONS/CONTRADICTIONS.md`, so the merge is a clean
+textual addition on both sides and the duplicate identifier survives it silently. `D-038a` names
+this exact pair as the worked example of the failure mode.
+
+| ID | `video/v08` (merged first, `46d09ed`) | This branch (later arrival) |
+|---|---|---|
+| `C-007` | Twenty-nine "set ups" become twenty-nine "trades" inside eight minutes | The moving-average SET: the corpus's `800` against the notes' four-EMA enumeration |
+| `C-008` | *"Go off my faith here"* and *"big scientific reason"*, four sentences apart | The ADR lookback window: notes *"2 weeks"* vs corpus *"2 previous days"* |
+
+`video/v08` also holds `C-009` (a normative speaker calls the confirmation requirement a "myth"),
+so `C-009` is **taken** and the next free identifiers are `C-010` and `C-011`.
+
+### Resolution
+
+**Merged-first wins the number.** `video/v08`'s `C-007`/`C-008` are untouched. This branch's two
+records are renumbered **`C-007` → `C-010`** and **`C-008` → `C-011`**, with the original numbers
+recorded in a provenance banner on each record so no citation from before the merge is orphaned.
+
+### Files changed — every reference, not only the records
+
+| File | References renumbered |
+|---|---|
+| `11_CONTRADICTIONS/CONTRADICTIONS.md` | 13 — both record headings, both STATUS banners, the class-label row; two banner count-lines marked superseded; provenance banner added to each record |
+| `LOG.md` | 9 — the `D-040` application entry and its finding tables |
+| `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` | 6 — `A-020` disposition, the `RESOLVED BY MMM-NOTES` class row, the blueberry/`800` decode table and its contradiction row |
+| `00_SYSTEM/SOURCING_HIERARCHY.md` | 3 — §3.3 table rows for the MA set and the ADR lookback, and the asymmetry note |
+| `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` | 3 — §9.6's two `FILED` rows and the closing note |
+
+**34 references in 5 files**; zero occurrences of `C-007`/`C-008` remain on this branch.
+
+### Cross-check for further collisions — systematic, not assumed
+
+Every identifier namespace was re-derived on both sides against the merge base `823458d`, rather
+than checking only the one namespace the collision was known to be in:
+
+| Namespace | Integration adds | This branch adds | Collision |
+|---|---|---|---|
+| `C-xxx` | `C-007`, `C-008`, `C-009` | `C-007`, `C-008` | ⚠️ **YES — resolved above** |
+| `D-xxx` | `D-038a` | `D-039`, `D-040` | None |
+| `A-xxx` | `A-059`…`A-064` | *none* (records moved, none created) | None |
+| `Q-xxx` | `Q-009` | *none* (`Q-002` cited only) | None |
+| `PT-xxx` | `PT-034` | *none* (`PT-033` cited only) | None |
+| `I-xxx` | *none* (`I-010` pre-dates the split) | *none* (`I-008`/`I-009` cited only) | None |
+| `18_REVIEW/REVIEW_INDEX.md` items | 64–69 | *none created* — 61–63 updated in place | None |
+
+### Verification before commit
+`python3 scripts/validate_project.py` — clean. Explicit paths staged; `git diff --staged` read in
+full.
+
+---
+
+## 2026-08-13 — Merge-back — `infra/add-steve-moro-reference-book` (and its two ancestors) integrated; open item 69 discharged
+
+**Act:** integration, single-threaded, per `D-038`. No new research, no new record, no review.
+
+### The topology, established before anything was touched
+
+Three branch names were nominated as possibly-unmerged. They are **one chain, not three parallel
+lines** — `git log --graph` settles it and assuming otherwise would have produced two redundant
+merges:
+
+```
+823458d (D-038)
+ └─ 98d893a  fix/v07-r1-minors  — V07 R1 items 61-63 applied
+     ├─ 7dc53db … 10a8dc6  infra/external-vocabulary-reference
+     └─ 14f0c70  merge: external-vocabulary-reference INTO fix/v07-r1-minors
+         └─ b1cb0a3 (D-040) → 1728287 (C-008) → 6ba1024 (renumber)
+                              infra/add-steve-moro-reference-book
+```
+
+`fix/v07-r1-minors` and `infra/external-vocabulary-reference` are both **ancestors** of
+`infra/add-steve-moro-reference-book` (`git merge-base --is-ancestor`, verified for each). Merging
+the tip carries all three. Already merged and confirmed so: `video/v08` (`46d09ed`), `review/v08`
+(`a025b97`), `infra/gbpusd-historical-data` (`23fe5e4`).
+
+### Open item 69 discharged first, then the merge
+
+`C-007`/`C-008` were renumbered to `C-010`/`C-011` **on the task branch at `6ba1024`, before the
+merge**, so the collision never reached the integration branch. 34 references in 5 files; see that
+commit's LOG entry for the per-file breakdown and the namespace-by-namespace collision sweep.
+`infra/external-vocabulary-reference` needed no separate treatment — being an ancestor, its `C-007`
+is the same record.
+
+### Conflicts: four files, all of them two sessions appending at the same place
+
+| File | Conflict | Resolution |
+|---|---|---|
+| `00_SYSTEM/DECISIONS.md` | `D-038a` (integration) vs `D-039`/`D-040` (branch), appended at the same point | **Both kept**, in numeric order. No decision text altered |
+| `11_CONTRADICTIONS/CONTRADICTIONS.md` | `C-007`–`C-009` (V08) vs `C-010`/`C-011` (branch) | **Both kept**, in numeric order — which is what the renumbering was for |
+| `LOG.md` | V08 session entry vs the remediation and `D-040` entries | **Both kept** |
+| `18_REVIEW/REVIEW_INDEX.md` | 4 hunks — STATUS block, `E11`, `E19`/`E20`, rows 61–69 | **Hand-merged, not taken from one side.** STATUS now carries **both** lessons in remediation (V07 applied-pending-R2 *and* V08); rows 61–63 take the branch's `APPLIED` dispositions, rows 64–69 the integration side's V08 findings; the `E11`/`E20` ledger cells take the integration side's higher counts (14/3/33 — they include the V08 findings) with the branch's `APPLIED 2026-08-13, pending R2 verification` annotation folded into the V07 segments |
+
+Taking either side wholesale in `REVIEW_INDEX.md` would have silently dropped real content — the
+V08 findings on one side, the V07 remediation dispositions on the other. Both survive.
+
+### Verification after the merge, re-derived rather than assumed
+- **No duplicate `D-`, `A-` or `C-` heading identifier.** `C-001`…`C-011` present exactly once each;
+  `D-` tail reads `D-037, D-038, D-038a, D-039, D-040`.
+- **No duplicate `Q-`, `I-` or `PT-` record.** One apparent `Q-004` repeat is a `LOG.md` sub-heading
+  citing the record, present identically at the merge base `823458d` — pre-existing, not introduced.
+- **No duplicate `REVIEW_INDEX.md` open-item number.** Rows 61–69 each appear once.
+- **No conflict marker anywhere** in the tree.
+- `python3 scripts/validate_project.py` — **103 passed / 0 warnings / 0 failures.**
+
+### Consequences
+`REVIEW_INDEX.md` open item **69 → CLOSED**. Open items **61–63** are `APPLIED — PENDING
+VERIFICATION at R2` and now visible on the integration branch, so **V07 R2 is triggered**. Items
+**64–67** (V08 R1) remain OPEN and are owed. The V09 gate is unchanged: OPEN under `D-024`.
