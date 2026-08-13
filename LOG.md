@@ -4180,3 +4180,57 @@ row, E07/E20 counts, severity delta + totals, open items 57–60); this entry.
 
 ### Next Review Trigger
 Student resubmission of V06 (items 57–60).
+
+---
+
+## 2026-08-13 — Remediation Session (V06 R1 items 57–60) — owner-directed same-session remediation
+
+**Process note, stated up front:** the owner directed this session — the same session that
+produced `V06_REVIEW_R1.md` — to perform the remediation and then re-review as R2. Recorded
+here per the `D-023` precedent (owner authorization on the record, not in a chat log). The
+R1 findings being remediated were this session's own, so R2's verification is of fixes
+against primary sources this session re-read frame-by-frame, not self-certification of
+student work it authored — the V06 student artifacts remain another session's.
+
+### Item 57 (M1, MAJOR) — APPLIED
+- Frame 26 (`V06_00-48-29`) fully re-transcribed at 2×–4×: Week 10's *"and more
+  specifically at **3:45am or 9:45am est.**"* and Safe Trade tail completed; Week 1
+  ("Anchor patterns", "Research & Development"), Week 4 ("Trading the A and V of the MM
+  Trend Cycle"), Week 5 ("Hard **Ridge** Edge" [sic]), Week 9, 11, 12 completed; **Week 13
+  (Trade Management & Position Sizing) found partially cut at the frame edge — the syllabus
+  has at least thirteen weeks, not twelve.** Superseded readings tabled in the INDEX notice.
+- Both false "no session clock on any of the 32 frames" sentences corrected
+  (`04_SCREENSHOTS/V06/INDEX.md` summary; `V06_SOURCE_NOTES.md` §11d), superseded text kept.
+- `A-019` extended (first printed `est` in the corpus) and `A-030` extended (Brinks fire
+  times) in `AUTOMATION_AMBIGUITIES.md`; `V06_SOURCE_NOTES.md` §11b Week-10 quote completed;
+  DMR syllabus week-count corrected.
+- **Sweep of the other frames performed as required, and it found a further defect:**
+  every `R = ` label re-read at 2× across ten frames. Full ledger added to the INDEX
+  (24.3, 28.9, 31.1, 41.5, 44.4, 67.3, 80.6, 82.7). `V06_SOURCE_NOTES.md` §11b's original
+  R-label cell carried **five wrong values of eight claims** (21.1→31.1; a 24.3 attributed
+  to `V06_00-15-49` which carries 80.6/41.5; 47.3→67.3; 38.8→80.6; 26.9→28.9), disagreeing
+  with the INDEX and the `A-018` register row (both of which were right) on the same frames
+  — the V05 R1B `M9` class. Cell corrected, superseded text retained, `A-018` row completed.
+  Charged as `V06_REVIEW_R2.md` **M5** so the error statistics capture it.
+
+### Item 58 (M2) — APPLIED
+`V06_TRANSCRIPT.md` § ONE SPEAKER: token total corrected to **26** (accounting stated),
+read-aloud class corrected to **three** (adding `[01:11:39]`, the Isubio quotation), own
+third-person references 23. Superseded text retained.
+
+### Item 59 (M3) — APPLIED
+`V06_SOURCE_NOTES.md` §10: `Asia` corrected to **2×** (`[00:50:25]`, `[01:09:55]`).
+
+### Item 60 (M4) — APPLIED
+Dated `D-033` supersession notices added under all five live `D-025` fences
+(`V06_TRANSCRIPT.md`, `V06_SOURCE_NOTES.md`, `V06_INTERPRETATION.md`, `V06_HOMEWORK.md`,
+`04_SCREENSHOTS/V06/INDEX.md`), each noting `D-030` still blocks the *push*-family
+material. **`V06_INTERPRETATION.md` §9 added**: the restated V06 corpus contribution under
+`D-033` — seven doctrine-eligible statements (eligibility, not promotion) and the
+`D-030`-blocked remainder, per `V06_REVIEW_R1.md` §13.2.
+
+### Verification before commit
+`check_quotes.py` 0 failures; `validate_project.py` clean.
+
+### Next
+R2 verification review, this session, owner-directed.

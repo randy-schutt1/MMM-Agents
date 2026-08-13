@@ -78,6 +78,17 @@
 >
 > Where the presenter **attributes** something to Steve (§8), that attribution is itself only
 > guest testimony. A guest's report of a rule is still a guest statement.
+>
+> ### ⚖️ 2026-08-13 — THE FENCE ABOVE IS SUPERSEDED IN PART BY `D-033` (item 60)
+>
+> The owner has ruled guest material **NORMATIVE at equal weight** (`DECISIONS.md` `D-033`):
+> the prohibitions above on entering doctrine, being cited, and closing records **no longer
+> bind**. The fence is retained unedited because it governed how this file was written and
+> explains its shape. What still binds: **speaker tagging** (every row stays `GUEST` as
+> provenance, not demotion) and **`D-030`** — nothing here that depends on *push*, *pullback*,
+> *nameable pattern* or an ADR lookback may be operationalised, because those terms remain
+> undefined regardless of who said them. See `V06_INTERPRETATION.md` §9 for the restated
+> corpus contribution under `D-033`.
 
 This file contains only what the lesson says. Interpretation lives in `V06_INTERPRETATION.md`.
 
@@ -575,7 +586,7 @@ lesson asserts several of these.
 | Not present | Measurement |
 |---|---|
 | Any **session clock time** | `EST` 0×; no hour is attached to Asian, London or US anywhere. `A-019` gains a **sixth** consecutive lesson of silence |
-| A **defined Asian box** | **`Asian` occurs 4× and `Asia` once.** *"Here's my Asian low"* `[00:31:58]`; *"closing inside the Asian range"* `[00:32:05]`; a student's losing trade *"was an Asian session"* `[00:49:53]`; and — the instance that matters most and was missing from the first draft of this row — **an audience question that says "Asian box" outright**: *"when there is the move in the Asian box, say 30 pips down, and then it comes out of the box and does a stop and high, do you start your count of the pushes from the stop and high, or is the first push in Asia?"* `[01:09:43]`–`[01:09:55]`. **The presenter answers about push counting and never defines the box, its boundary, or any rule attached to it.** The conclusion is unchanged and is now stated on the strongest evidence rather than the weakest: the term is in the room, and the lesson does not define it |
+| A **defined Asian box** | **`Asian` occurs 4× and `Asia` twice** *(count corrected 2026-08-13, R1 item 59 — the previous correction said "plus one `Asia`"; the second `Asia` is `[00:50:25]` "level three will happen in Asia and won't come back", inside David's read-out email)*. *"Here's my Asian low"* `[00:31:58]`; *"closing inside the Asian range"* `[00:32:05]`; a student's losing trade *"was an Asian session"* `[00:49:53]`; and — the instance that matters most and was missing from the first draft of this row — **an audience question that says "Asian box" outright**: *"when there is the move in the Asian box, say 30 pips down, and then it comes out of the box and does a stop and high, do you start your count of the pushes from the stop and high, or is the first push in Asia?"* `[01:09:43]`–`[01:09:55]`. **The presenter answers about push counting and never defines the box, its boundary, or any rule attached to it.** The conclusion is unchanged and is now stated on the strongest evidence rather than the weakest: the term is in the room, and the lesson does not define it |
 
 > *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2. This row previously read:
 > *"`Asian` 5×, all in passing ("here's my Asian low" `[00:31:58]`, "closing inside the Asian
@@ -620,9 +631,20 @@ disclosure at the top of this file for the honest limits of that separation in V
 |---|---|---|
 | **The intraday-cycle slide, in print** | `V06_00-05-29` | Six bullets that match §3a–§3c almost word for word, plus two printed abbreviations **never spoken in this lesson**: *"once you identify the **HOD** or **LOD**"*. `HOD` and `LOD` occur **0×** in the audio. The quarantined `RULES.md` uses `HOD`/`LOD` too — **this frame is where the real printed usage lives, and it is a coincidence of vocabulary, not corroboration of that file** |
 | **The printed chart vocabulary** | `V06_00-13-09`, `V06_00-15-49`, `V06_00-24-49`, `V06_01-14-09` and others | Labels drawn on the presenter's own charts: `M`, `W`, `RR`, `SS`, `COW`, `Enter`, `Push 1/2/3`, `Level 1/2/3`, `3 Hits to the Hi`, `RESET`, `BIG W`, `BIG M`, `Straight Away`, `False Move`, `Stop Hunt`, `MS`, `Pull back`, `R = <number>` |
-| **`R = ` labels, a fourth lesson of them** | `V06_00-15-49` (`R = 24.3`), `V06_00-21-59` (`R = 24.3`), `V06_00-26-24` (`R = 47.3`), `V06_00-29-09` (`R = 44.4`), `V06_00-09-19` (`R = 21.1`), `V06_01-13-35` (`R = 26.9`, `R = 24.3`), `V06_00-52-59` (`R = 38.8`) | **`A-018` extended.** As in V05 these are auto-printed platform annotations, and **V06 states a reward ratio — *"I usually like 2 to 1"* `[01:03:17]` — without ever connecting it to an `R` label.** That is the closest the corpus has come to a check, and it comes out **negative**: the numbers (21.1, 24.3, 26.9, 38.8, 44.4, 47.3) are not multiples of anything stated. Stays `DO NOT CODE` |
+| **`R = ` labels, a fourth lesson of them** | Corrected 2026-08-13 (R1 remediation, every frame re-read at 2×): `V06_00-09-00` and `V06_00-09-19` (`R = 31.1`, same AUDUSD markup), `V06_00-13-09` and `V06_00-15-49` (`R = 41.5`), `V06_00-15-49` and `V06_00-52-59` (`R = 80.6`), `V06_00-21-59` (`R = 24.3`), `V06_00-26-24` (`R = 67.3`), `V06_00-29-09` (`R = 44.4`), `V06_00-34-39` (`R = 82.7`), `V06_01-13-35` (`R = 24.3`, `R = 28.9`), `V06_01-14-09` (`R = 24.3`) | **`A-018` extended.** As in V05 these are auto-printed platform annotations, and **V06 states a reward ratio — *"I usually like 2 to 1"* `[01:03:17]` — without ever connecting it to an `R` label.** That is the closest the corpus has come to a check, and it comes out **negative**: the corrected value set (24.3, 28.9, 31.1, 41.5, 44.4, 67.3, 80.6, 82.7) is not multiples of anything stated — the negative conclusion survives the correction unchanged. Stays `DO NOT CODE` |
+
+> *(Superseded R-label cell, retained per `REMEDIATION_PROTOCOL.md` §2 — the row above previously
+> read: `V06_00-15-49` (`R = 24.3`), `V06_00-21-59` (`R = 24.3`), `V06_00-26-24` (`R = 47.3`),
+> `V06_00-29-09` (`R = 44.4`), `V06_00-09-19` (`R = 21.1`), `V06_01-13-35` (`R = 26.9`,
+> `R = 24.3`), `V06_00-52-59` (`R = 38.8`) — and its conclusion cited the value set
+> (21.1, 24.3, 26.9, 38.8, 44.4, 47.3). **Five of those eight claims do not survive a re-read of
+> the frames** (`21.1` → `31.1`; no `24.3` on `V06_00-15-49`, which carries `80.6` and `41.5`
+> as `04_SCREENSHOTS/V06/INDEX.md` and `A-018`'s register row correctly recorded; `47.3` →
+> `67.3`; `38.8` → `80.6`; `26.9` → `28.9`). This cell disagreed with the INDEX and the register
+> on the same frames — the V05 R1B `M9` class again. Found during the V06 R1 item-57 frame
+> re-sweep; charged as `V06_REVIEW_R2.md` `M5`.)*
 | **`SS` and `MS`** | `V06_00-15-49`, `V06_00-31-30`, `V06_00-34-39` | Two-letter chart labels **never spoken and never expanded**. On `V06_00-31-30` an `MS` label sits beside a printed *"Stop Hunt"* annotation. Logged as `A-053` |
-| **The DMR Curriculum 2012, in full** | `V06_00-48-29` | A 12-week syllabus, legible at 4×: *Week 1 Patterns & Timing*; *Week 2* hard-right-edge marking, *"Students can use only AU & EU and can add EJ and UCHF to make it 4 pairs in TOTAL"*; *Week 3* demo trade, *"Selecting only Confirmed M & W for entries"*; *Week 4/5/6* pattern sets including *"2 Pins to the Mayo or Water along with Shooting Star, Evening Star, Morning Star and RR Tracks"*; ***Week 7 = Levels***; ***Week 8 = Entry Candles*** (*"The Entry Candle confirms the PATTERN and validates the trade setup"*); ***Week 9 = Hi/Lo Drill*** (*"Want to catch the HOD or LOD within a few pips"*); ***Week 10 = Brinks & Safe Trade*** — *"Two great setups taught by Steve in class. Brinks Trade - 2nd Leg of a M or W pattern Falling inside the **Shadow Box**… Safe Trade - After the Anchor formation, the MM induce traders to trade toward…"*; ***Week 11 = Swing Trade***; ***Week 12 = Counter Trend Trades*** |
+| **The DMR Curriculum 2012, in full** | `V06_00-48-29` | A syllabus of **at least thirteen** weeks — twelve fully legible plus *Week 13 = Trade Management & Position Sizing* partially cut at the frame's bottom edge *(count corrected 2026-08-13, R1 item 57; previously "A 12-week syllabus")* — legible at 4×: *Week 1 Patterns & Timing*; *Week 2* hard-right-edge marking, *"Students can use only AU & EU and can add EJ and UCHF to make it 4 pairs in TOTAL"*; *Week 3* demo trade, *"Selecting only Confirmed M & W for entries"*; *Week 4/5/6* pattern sets including *"2 Pins to the Mayo or Water along with Shooting Star, Evening Star, Morning Star and RR Tracks"*; ***Week 7 = Levels***; ***Week 8 = Entry Candles*** (*"The Entry Candle confirms the PATTERN and validates the trade setup"*); ***Week 9 = Hi/Lo Drill*** (*"Want to catch the HOD or LOD within a few pips"*); ***Week 10 = Brinks & Safe Trade*** — *"Two great setups taught by Steve in class. Brinks Trade - 2nd Leg of a M or W pattern Falling inside the **Shadow Box** **and more specifically at 3:45am or 9:45am est.** Safe Trade - After the Anchor formation, the MM induce traders to trade towards the PEAK formation before trapping them and moving away from it."* *(completed 2026-08-13, R1 remediation item 57 — both previously-elided clauses are legible at the committed resolution)*; ***Week 11 = Swing Trade***; ***Week 12 = Counter Trend Trades*** |
 | **`A-030` extended** | `V06_00-48-29` | *"Shadow Box"* appears **in print**, attached to the **Brinks trade** and to a *2nd leg of an M or W falling inside it*. `A-030` (*"brinks shadow" / "shadow box"*) has had only spoken evidence until now. **Printed by a guest programme: extends, does not close** |
 | **The forum announcement page** | `V06_00-47-39` | *"Market Maker's FOREX"* masthead, *"WHEN THE SIGNALS APPEAR……TRADE WITHOUT FEAR!"*, and a forum post signed *"Kar Chen - New Jersey / Administrator"* describing the DMR's price — *"The Cost is $102.50 per month ($100.00 plus $2.50 Paypal fee)"* — and *"Steve has given us a wonderful gift…… the Market Makers Method"* |
 | **The MT4 rectangle dialog** | `V06_01-13-35`, `V06_01-13-50` | The answer to the closing question, shown twice: *Rectangle → Common → Style: Blue → **"Draw object as background"*** checked (outline only) versus unchecked (solid fill). **This is the platform mechanism behind V05's box-drawing convention**, and it is pure `DESCRIPTIVE` platform evidence |
@@ -642,7 +664,16 @@ correct and its scope is stated; this note is the correction of the impression i
 
 - **No moving-average period is attached to any nickname**, in audio or in print. `A-020`
   stays `DO NOT CODE`.
-- **No session clock appears on any of the 32 frames.** `A-019` is untouched.
+- **No *session-boundary* clock appears on any of the 32 frames — but one frame does print
+  clock times with a timezone, and this bullet originally denied it.** *(Corrected 2026-08-13,
+  R1 remediation, item 57; superseded wording: "No session clock appears on any of the 32
+  frames. `A-019` is untouched.")* Frame `V06_00-48-29`, Week 10, prints ***"Brinks Trade -
+  2nd Leg of a M or W pattern Falling inside the Shadow Box and more specifically at 3:45am
+  or 9:45am est."*** — the corpus's **first printed `est`** and the first clock times printed
+  in any curated frame, attached to a specific setup rather than to a session boundary.
+  `A-019` is therefore **extended** (a course-community document writing `est` in 2012), not
+  untouched; its actual question — the timezone of the instructor's session table — remains
+  open, and the audio-scoped measurement (`EST` 0× spoken) stands.
 - **`SS` and `MS` are never expanded** anywhere, spoken or printed (`A-053`).
 - **The DMR curriculum is a syllabus, not content.** `A-042` is extended and stays open — and
   the frame makes the gap *sharper*, because it now shows exactly which twelve topics the

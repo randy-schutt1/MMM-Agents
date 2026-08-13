@@ -64,6 +64,13 @@ for V01–V04**, on the same footing as V05.
 >
 > The right posture, as for V05: **read V06 as testimony about how one coach trades, not as the
 > course.**
+>
+> **⚖️ 2026-08-13 — the box above is SUPERSEDED IN PART by `D-033` (item 60):** the owner has
+> ruled guest material **NORMATIVE at equal weight**, so "none of it is doctrine" is no longer
+> the operative description and §4's "Interpreted rules: none" is a statement about the rules
+> in force when this file was written, not about the corpus today. Retained unedited. `D-030`
+> still blocks the *push*-family material. **§9 below restates V06's corpus contribution under
+> `D-033`.**
 
 ---
 
@@ -389,3 +396,43 @@ Full detail in `V06_SOURCE_NOTES.md` §11 and `04_SCREENSHOTS/V06/INDEX.md`. Wha
 | Nine-plus `R = ` labels, two transcribed | `A-018` extended. **The negative result is the interesting one**: V06 states a `2 to 1` ratio and never connects it to an `R` label, so the corpus's best chance so far to test the "R = risk multiple" reading comes out **empty** |
 | The presenter's desktop, and the MT4 rectangle dialog | Corroborates V05's descriptive half (how markups are saved and drawn) from a second lesson. No rule content either way |
 | **Nothing in the frames changed §4** | Doctrine produced remains **zero**. The frames are more normative than the audio, not less |
+
+---
+
+## 9. THE V06 CORPUS CONTRIBUTION, RESTATED UNDER `D-033` — ADDED 2026-08-13 (R1 remediation, items 57/60; `V06_REVIEW_R1.md` §13.2)
+
+`D-033` makes every statement in this lesson admissible doctrine-candidate material. What is
+*usable* is decided by `D-030`, not by speaker status. The split, statement by statement, from
+`V06_SOURCE_NOTES.md` §4:
+
+### 9a. Doctrine-eligible now — decidable without any undefined term
+
+| Fenced statement | Source | Why `D-030` does not block it |
+|---|---|---|
+| Wait for rejection of price before entering; rejection = the trap move completing, and the trap is complete only when the returning candle **closes** back inside | `[00:08:06]`–`[00:08:23]`, `[00:39:45]`–`[00:40:02]`, `[01:01:12]` | Defined in-lesson by an observable close event |
+| The two-hour time stop, restarted on a new M | `[00:13:19]`, `[00:23:36]` | A clock duration |
+| Exit on a contrary pattern (*"if I see a beautiful fat W [against my M], I'm going to kill this trade"*) | `[00:40:26]`–`[00:41:21]` | Conditional on M/W recognition, which the course already uses corpus-wide; no new undefined term |
+| Preferred reward-to-risk 2:1; stop from moving-average spacing; pass when the spacing is 12–15 pips | `[01:03:05]`–`[01:03:26]` | Arithmetic on stated numbers |
+| The three-views timeframe map (macro 4h / mini 1h / micro 15m; entries on 15m) | `[00:00:51]`–`[00:01:12]` | A timeframe assignment |
+| Do not trade between bunched moving averages; ranging when they are close together | `[01:02:07]`–`[01:03:00]`, `[01:08:49]`–`[01:09:05]` | Qualitative but self-contained |
+| Do not trade back toward the peak-formation high | `[00:43:16]`–`[00:43:27]` | Uses the corpus's existing *peak formation* object |
+
+**Eligibility is not promotion.** Entering any of these into `08_CONCEPT_LIBRARY/` or
+`12_MASTER_SPEC/` is a separate session's work with the reading done, per `D-033`'s own
+consequence note; nothing is promoted by this section.
+
+### 9b. Still blocked — by `D-030`, regardless of `D-033`
+
+Everything that needs *push* (the counting rule, push-one placement, two-vs-three pushes,
+the counter-trend diagnostic), *pullback* (the 25–50 pip band, the 10–15 pip non-pullback),
+*nameable pattern* (the three-pattern filter — and the presenter breaks it himself at
+`[00:23:25]`), ADR's lookback (*"ADR ÷ 3"* — moved 31–60 % by lookback choice,
+`V06_HOMEWORK.md` §2), the *tracer* (`A-051`), and the moving-average nickname→period map
+(`A-020`). Dimension B (Recognition) stays blocked with them.
+
+### 9c. Register consequences recorded with this restatement
+
+`A-019` and `A-030` are **extended** by frame `V06_00-48-29`'s printed *"3:45am or 9:45am
+est."* (first printed `est` in the corpus; Brinks fire times) — see the register rows. The
+DMR syllabus has **at least thirteen weeks**, not twelve; Week 13 is *Trade Management &
+Position Sizing*, matching the spoken forward curriculum at `[00:49:11]`.

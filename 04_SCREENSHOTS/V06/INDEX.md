@@ -17,6 +17,14 @@
 > - **Most of this deck is squarely normative in content.** Twelve of the 27 slides carry an
 >   `Enter` annotation on a chart. Those are flagged inline as `NORMATIVE — EXCLUDED`, and the
 >   flag is on the majority of the deck rather than the minority. That is what V06 is.
+>
+> ### ⚖️ 2026-08-13 — THE FENCE ABOVE IS SUPERSEDED IN PART BY `D-033` (item 60)
+>
+> `DECISIONS.md` `D-033` makes guest material **NORMATIVE at equal weight**; the exclusions
+> above no longer bind and the `NORMATIVE — EXCLUDED` verdicts below are historical. Retained
+> unedited because they governed how this index was written. Still binding: speaker tagging
+> (provenance) and **`D-030`** — printed *push*/pattern content stays un-operationalisable
+> while those terms are undefined. See `V06_INTERPRETATION.md` §9.
 
 > **Process disclosure — evidence order.** `SWF_CAPTURE_RECIPE.md` §9 asks that source notes
 > be written from the transcript *before* screenshots are examined. **This session did not
@@ -161,12 +169,38 @@ legible at this capture resolution, and nothing is reconstructed from context.**
 > the pattern sets up.
 >
 > **Week 10** = ***Brinks & Safe Trade*** – Two great setups taught by Steve in class. Brinks
-> Trade – 2nd Leg of a M or W pattern Falling inside the **Shadow Box** and … Safe Trade –
-> After the Anchor formation, the MM induce traders to trade toward…
+> Trade – 2nd Leg of a M or W pattern Falling inside the **Shadow Box** **and more
+> specifically at 3:45am or 9:45am est.** Safe Trade – After the Anchor formation, the MM
+> induce traders to trade towards the PEAK formation before trapping them and moving away
+> from it.
 >
-> **Week 11** = ***Swing Trade*** – Want to be a Swing trader but using Intraday entries…
+> **Week 11** = ***Swing Trade*** – Want to be a Swing trader but using Intraday entries Steve
+> taught us. You will learn how to do that during this week. (Guest Presenter)
 >
-> **Week 12** = ***Counter Trend Trades*** – …
+> **Week 12** = ***Counter Trend Trades*** – Got to know when to take a Counter Trend trade
+> and know what a high probable setup should look like. (MM Trade both ways why can't you…)
+>
+> **Week 13** = ***Trade Management & Position Sizing*** – Knowing how to manage the trade
+> while its running and knowing proper RISK Management is key to growing your account
+> *(partially cut by the frame's bottom edge — the syllabus has at least THIRTEEN weeks, not
+> twelve; Week 13's topic matches the presenter's spoken forward curriculum at `[00:49:11]`)*
+>
+> #### ⚠ RE-TRANSCRIPTION NOTICE — 2026-08-13, R1 remediation (item 57, `V06_REVIEW_R1.md` M1)
+>
+> Every ellipsis in the original transcription above was re-examined at 2×–4×. **All of the
+> elided text was legible**, contrary to the original protocol note ("text that is present but
+> not legible"); the completions are now in place above with the superseded readings recorded
+> here:
+>
+> | Week | Originally elided / misread | Actual printed text |
+> |---|---|---|
+> | 1 | *"(Intra Day and Multi Day/Session pattern)"*; *"Research & Developments"* | *"(Intra Day and Multi Day/Session **Anchor patterns**)"*; *"Research & Development"* (singular) |
+> | 4 | *"Patterns & Timing – … – 2 Pins to the Mayo…"* | the elision is ***"Trading the A and V of the MM Trend Cycle"*** |
+> | 5 | *"Hard Right Edge"* | the frame prints ***"Hard Ridge Edge"*** [sic] — Week 2 prints *"Hard Right Edge"*; the Week 5 typo is the source's own and is preserved |
+> | 9 | *"This … when the pattern sets up"* | *"This **exercise will help you do just that. See how JIM waits for the setup and then enter on the 2nd LEG** when the pattern sets up"* |
+> | 10 | *"Shadow Box and …"* / *"trade toward…"* | ***"and more specifically at 3:45am or 9:45am est."*** — the corpus's **first printed `est`** and first printed clock times (→ `A-019`, `A-030`); Safe Trade completed as above |
+> | 11–12 | tails elided | completed as above |
+> | 13 | not recorded at all | partially visible at the frame's bottom edge — the *"twelve weeks"* description throughout the V06 artifacts undercounts the syllabus |
 
 ### What this frame does and does not do
 
@@ -201,7 +235,31 @@ further `R = ` labels on at least nine frames, two of them transcribed (`A-018`)
 (`A-042`); the MT4 rectangle mechanism; the presenter's own file organisation.
 
 **Not settled:** no moving-average **period** is attached to any nickname anywhere, in audio or
-in print (`A-020` stays open); no session clock appears on any of the 32 frames (`A-019`
-untouched, sixth consecutive lesson); `SS` and `MS` are never expanded (`A-053`); the DMR's
-*content* remains outside the corpus (`A-042` stays open); and **no frame shows the
-instructor** — every chart in this lesson is the presenter's own.
+in print (`A-020` stays open); no **session-boundary** clock appears on any of the 32 frames —
+but frame 26 **does** print clock times with a timezone (*"3:45am or 9:45am est."*, the Brinks
+trade's fire times; `A-019` **extended**, not untouched — corrected 2026-08-13, item 57;
+superseded wording: *"no session clock appears on any of the 32 frames (A-019 untouched, sixth
+consecutive lesson)"*); `SS` and `MS` are never expanded (`A-053`); the DMR's *content* remains
+outside the corpus (`A-042` stays open); and **no frame shows the instructor** — every chart in
+this lesson is the presenter's own.
+
+### R-LABEL LEDGER — 2026-08-13, R1 remediation sweep (items 57, and `V06_REVIEW_R2.md` M5)
+
+Every `R = ` label on the curated frames, re-read at 2×. This ledger **supersedes** the
+per-row phrases *"value not transcribed"* above (rows 7, 10, 15, 20, 22, 27, 29, 31), which
+are retained in place as the original record:
+
+| Frame | Value(s) |
+|---|---|
+| `V06_00-09-00` / `V06_00-09-19` | `R = 31.1` (same AUDUSD markup) |
+| `V06_00-13-09` / `V06_00-15-49` | `R = 41.5`; `V06_00-15-49` also `R = 80.6` |
+| `V06_00-21-59` | `R = 24.3` |
+| `V06_00-26-24` | `R = 67.3` |
+| `V06_00-29-09` | `R = 44.4` |
+| `V06_00-34-39` | `R = 82.7` (beside the printed `3 Swipes`) |
+| `V06_00-52-59` | `R = 80.6` (the AUDUSD chart re-shown; also a printed `51 pips`, matching `[00:16:38]`) |
+| `V06_01-13-35` | `R = 24.3`, `R = 28.9` |
+| `V06_01-14-09` | `R = 24.3` |
+
+The corrected value set (24.3, 28.9, 31.1, 41.5, 44.4, 67.3, 80.6, 82.7) remains not a
+multiple of any stated stop or target — `A-018`'s negative result survives the correction.

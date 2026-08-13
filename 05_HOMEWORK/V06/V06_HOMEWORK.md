@@ -52,6 +52,13 @@
 > **A homework artifact that marked anchors, pushes and entries would look far more like the
 > lesson and would be wrong.** The exclusion is the assignment being done correctly under this
 > project's rules, not the assignment being skipped.
+>
+> **⚖️ 2026-08-13 — the `D-025` grounds above are SUPERSEDED IN PART by `D-033` (item 60):**
+> guest material is now normative at equal weight, so rows excluded solely as "guest
+> normative" lose that ground. **The work performed does not change**, because every excluded
+> item except H2's anchor half is *independently* blocked by `D-030` (*push*, *pullback*,
+> *consolidation*, pattern names — all undefined), and that block survives. Retained
+> unedited; see `V06_INTERPRETATION.md` §9.
 
 ---
 

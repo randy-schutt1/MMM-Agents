@@ -59,10 +59,20 @@ throughout, from the second minute to the last:
 | `[01:10:54]`–`[01:11:18]` | *"we are week eight, and **Steve** is starting… **His**, **Steve's** teaching is going to be sort of, we go into more into details on it. **Steve** is just kind of giving you the material the way **he** sees it, and **we** kind of give you a material a little bit with our own take on it"* |
 | `[01:11:45]`–`[01:11:51]` | *"**Steve** had not, if you went in Orlando, **Steve** had not spent a lot of time talking with fractional disparity"* |
 
-The token `Steve` occurs **25 times** in the verbatim body (word-boundary, case-sensitive).
-**23 are the speaker's own third-person references.** The remaining **2 sit inside audience
-questions the presenter is reading aloud**, and both are called out here because a careless
-reader could take either as evidence that the speaker *is* Steve:
+The token `Steve` occurs **26 times** in the verbatim body (word-boundary, case-sensitive;
+this count includes the two possessives `Steve's` at `[01:03:56]` and `[01:11:03]`, and the
+line at `[01:11:45]` carries the token twice). **23 are the speaker's own third-person
+references.** The remaining **3 sit inside material the presenter is reading aloud** — the two
+audience questions tabled below, plus `[01:11:39]` *"I suppose Steve has simplified the
+presentation on that subject"*, inside the quoted Isubio text (`[01:11:22]` *"this is another
+Isubias thing"*). All three are called out because a careless reader could take any as
+evidence that the speaker *is* Steve — each refers to Steve in the third person, so each
+points the same way as the other 23.
+
+> *(Corrected 2026-08-13, R1 remediation item 58; superseded text: "occurs **25 times**…
+> **23 are the speaker's own third-person references.** The remaining **2** sit inside
+> audience questions…". The total was irreproducible and the Isubio read-aloud instance was
+> unclassified. The identification conclusion is unchanged in either direction.)*
 
 | Marker | The read-aloud text | Why it is not evidence the speaker is Steve |
 |---|---|---|
@@ -120,6 +130,13 @@ identifying a guest is provenance, not evidence).
 > two-hour time stop, a stop/target geometry and an exit rule — and **all of it is excluded.**
 > The temptation to promote material *because it is good* is exactly the failure mode D-025
 > was written to prevent.
+>
+> **⚖️ 2026-08-13 — the consequence box above is SUPERSEDED IN PART by `D-033` (item 60):**
+> guest material is now **NORMATIVE at equal weight**, so the exclusion clauses no longer
+> bind. Retained unedited as the ruling in force when this transcript was adopted. Speaker
+> identification and tagging remain mandatory, and **`D-030` still blocks** anything that
+> needs *push*, *pullback*, *nameable pattern* or an ADR lookback. See
+> `V06_INTERPRETATION.md` §9.
 
 ## PROVENANCE AND VERIFICATION
 
