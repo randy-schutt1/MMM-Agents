@@ -1,0 +1,183 @@
+==============================================================================
+PT-035 — 'highly unlikely we're gonna lose three or four times in a row'
+V09 [00:06:08]-[00:06:20], GUEST, normative under D-033
+==============================================================================
+
+SCOPE (mandatory, PT-035 §8): this tests ONE empirical premise of ONE
+lesson's risk plan, at a MATCHED-RANDOM entry. V09 states no entry rule and
+none was invented (D-030). The claim is CONDITIONAL — 'with our training' —
+and the training is NOT reproduced, because V08's recognition criterion is
+A-061, an undefined adjective. A result here BOUNDS THE CLAIM FROM BELOW.
+Price levels are not comparable with V02-V06 FXCM homework (D-036a).
+
+QA GATE: PASS (C1-C4 clean) — precondition satisfied, D-036a
+SHA256SUMS.txt: 4 files on record
+
+==============================================================================
+O1 — ARITHMETIC AUDIT OF V09's OWN WORKED EXAMPLE (reads no market data)
+==============================================================================
+quantity                         V09 states   re-derived       source
+------------------------------------------------------------------------------
+balance x 0.02                       250.00       250.00  OK   [00:02:32] '$250 loss'
+250 / 25 pips = $/pip                 10.00        10.00  OK   [00:02:38] '10 minis or one lot'
+after four 2% losses              11,500.00    11,500.00  OK   [00:06:52] '12,500 is now 11,500'
+drawdown %                             8.00         8.00  OK   [00:06:01] 'drawn down eight percent'
+2% of 11,500 -> $/pip                  9.20         9.20  OK   [00:06:55] '9.2 minis or 0.92 lots'
+first 2:1 winner                  11,960.00    11,960.00  OK   [00:07:03] 'back up to 11,960'
+second 2:1 winner                 12,500.00    12,438.40  MISS [00:07:33] 'up to 12,500'
+------------------------------------------------------------------------------
+reconciled: 6/7
+second-winner shortfall: 61.60  (0.49% of stated)  -> C-014
+
+§2a check — the WRONG re-derivation a reviewer is likely to try:
+  1 - 0.98^4 = 7.76%  <- assumes size is recalculated after EVERY loss
+  4 x 2%     = 8.00%  <- V09 holds size constant, so this is the right one
+
+==============================================================================
+§2b/§2c CLOSED FORM — stated in the pre-registration, reproduced here
+==============================================================================
+  25/50: break-even hit rate 33.33%   (1-p)^3 = 29.6%   (1-p)^4 = 19.8%
+  15/50: break-even hit rate 23.08%   (1-p)^3 = 45.5%   (1-p)^4 = 35.0%
+  p=0.50: (1-p)^3 = 12.5%   (1-p)^4 = 6.2%   P(any 4-run in 200) = 99.9%
+  p=0.73: (1-p)^3 = 2.0%   (1-p)^4 = 0.5%   P(any 4-run in 200) = 54.1%
+
+ARM A: M15 re-derivation vs committed aggregate_m15.py -> MATCH (86824 rows, ts=True px=True)
+        window 2013-01-06T00:00 -> 2016-06-30T23:59   M15 bars 86,500   C8 EXCLUDED BY NAME: 36 M15 / 521 M1 bars (2014-06-01, 2014-06-02)
+
+==============================================================================
+CELL A25 — geometry -25/+50, D-031 arm A
+==============================================================================
+  eligible M15 entry bars in grid: 49,563
+  unresolved-at-horizon drawn and DISCARDED: 298,908 of 600,000 (49.8%)
+
+  N3 shuffled-order sanity control (must centre on ~0)
+    n_seq 1000  seq_len 200
+    p_hat            median 0.2800   5-95% [0.2250, 0.3300]
+    run3  observed    37.88%    i.i.d.  37.32%    diff  -0.27pp
+    run4  observed    26.90%    i.i.d.  26.87%    diff  -0.48pp
+    d4 bootstrap 95% [-0.699pp, -0.243pp]   frac(d4>0) 0.439
+    longest loss run median 13, 95th pct 21
+
+    N3 verdict: *** FAIL — estimator biased, O3 NOT reportable (§7b) ***
+
+  O2/O3 observed, chronological order
+    n_seq 1000  seq_len 200
+    p_hat            median 0.2800   5-95% [0.2250, 0.3300]
+    run3  observed    38.38%    i.i.d.  37.32%    diff  +0.31pp
+    run4  observed    27.92%    i.i.d.  26.87%    diff  +0.25pp
+    d4 bootstrap 95% [+0.030pp, +0.477pp]   frac(d4>0) 0.539
+    longest loss run median 14, 95th pct 21
+
+    run4 Wilson 95% on the median sequence: [22.12%, 34.56%]  (k=55, n=197)
+    O4 hit rate required for P(any 4-loss run in 100 trades) <= 5%:
+        under i.i.d.            p >= 84.2%
+        under observed clustering (x1.04)  p >= 84.3%
+
+==============================================================================
+CELL A15 — geometry -15/+50, D-031 arm A
+==============================================================================
+  eligible M15 entry bars in grid: 49,563
+  unresolved-at-horizon drawn and DISCARDED: 224,852 of 600,000 (37.5%)
+
+  N3 shuffled-order sanity control (must centre on ~0)
+    n_seq 1000  seq_len 200
+    p_hat            median 0.1675   5-95% [0.1250, 0.2150]
+    run3  observed    57.58%    i.i.d.  57.70%    diff  -0.12pp
+    run4  observed    48.22%    i.i.d.  48.04%    diff  -0.13pp
+    d4 bootstrap 95% [-0.389pp, +0.100pp]   frac(d4>0) 0.484
+    longest loss run median 21, 95th pct 35
+
+    N3 verdict: PASS — interval contains 0
+
+  O2/O3 observed, chronological order
+    n_seq 1000  seq_len 200
+    p_hat            median 0.1675   5-95% [0.1250, 0.2150]
+    run3  observed    58.08%    i.i.d.  57.70%    diff  +0.41pp
+    run4  observed    48.73%    i.i.d.  48.04%    diff  +0.63pp
+    d4 bootstrap 95% [+0.375pp, +0.793pp]   frac(d4>0) 0.598
+    longest loss run median 23, 95th pct 38
+
+    run4 Wilson 95% on the median sequence: [41.84%, 55.67%]  (k=96, n=197)
+    O4 hit rate required for P(any 4-loss run in 100 trades) <= 5%:
+        under i.i.d.            p >= 84.2%
+        under observed clustering (x1.01)  p >= 84.2%
+
+ARM B: M15 re-derivation vs committed aggregate_m15.py -> MATCH (86824 rows, ts=True px=True)
+        window 2013-01-06T00:00 -> 2016-06-30T23:59   M15 bars 86,500   C8 EXCLUDED BY NAME: 32 M15 / 466 M1 bars (2014-06-01, 2014-06-02)
+
+==============================================================================
+CELL B25 — geometry -25/+50, D-031 arm B
+==============================================================================
+  eligible M15 entry bars in grid: 49,563
+  unresolved-at-horizon drawn and DISCARDED: 279,621 of 600,000 (46.6%)
+
+  N3 shuffled-order sanity control (must centre on ~0)
+    n_seq 1000  seq_len 200
+    p_hat            median 0.2800   5-95% [0.2300, 0.3400]
+    run3  observed    37.37%    i.i.d.  37.32%    diff  -0.09pp
+    run4  observed    26.90%    i.i.d.  26.87%    diff  -0.26pp
+    d4 bootstrap 95% [-0.513pp, +0.024pp]   frac(d4>0) 0.471
+    longest loss run median 13, 95th pct 21
+
+    N3 verdict: PASS — interval contains 0
+
+  O2/O3 observed, chronological order
+    n_seq 1000  seq_len 200
+    p_hat            median 0.2800   5-95% [0.2300, 0.3400]
+    run3  observed    37.88%    i.i.d.  37.32%    diff  +0.35pp
+    run4  observed    27.41%    i.i.d.  26.87%    diff  +0.38pp
+    d4 bootstrap 95% [+0.148pp, +0.549pp]   frac(d4>0) 0.546
+    longest loss run median 13, 95th pct 22
+
+    run4 Wilson 95% on the median sequence: [21.66%, 34.03%]  (k=54, n=197)
+    O4 hit rate required for P(any 4-loss run in 100 trades) <= 5%:
+        under i.i.d.            p >= 84.2%
+        under observed clustering (x1.02)  p >= 84.3%
+
+==============================================================================
+CELL B15 — geometry -15/+50, D-031 arm B
+==============================================================================
+  eligible M15 entry bars in grid: 49,563
+  unresolved-at-horizon drawn and DISCARDED: 207,318 of 600,000 (34.6%)
+
+  N3 shuffled-order sanity control (must centre on ~0)
+    n_seq 1000  seq_len 200
+    p_hat            median 0.1725   5-95% [0.1300, 0.2200]
+    run3  observed    56.57%    i.i.d.  56.67%    diff  -0.23pp
+    run4  observed    46.19%    i.i.d.  46.89%    diff  -0.35pp
+    d4 bootstrap 95% [-0.424pp, -0.140pp]   frac(d4>0) 0.444
+    longest loss run median 20, 95th pct 33
+
+    N3 verdict: *** FAIL — estimator biased, O3 NOT reportable (§7b) ***
+
+  O2/O3 observed, chronological order
+    n_seq 1000  seq_len 200
+    p_hat            median 0.1725   5-95% [0.1300, 0.2200]
+    run3  observed    57.07%    i.i.d.  56.67%    diff  +0.41pp
+    run4  observed    47.72%    i.i.d.  46.89%    diff  +0.66pp
+    d4 bootstrap 95% [+0.551pp, +0.978pp]   frac(d4>0) 0.593
+    longest loss run median 22, 95th pct 38
+
+    run4 Wilson 95% on the median sequence: [40.85%, 54.67%]  (k=94, n=197)
+    O4 hit rate required for P(any 4-loss run in 100 trades) <= 5%:
+        under i.i.d.            p >= 84.2%
+        under observed clustering (x1.02)  p >= 84.3%
+
+==============================================================================
+DECISION — applying §6's rules, which were fixed before any number existed
+==============================================================================
+  run4_obs medians: A25=27.92%  A15=48.73%  B25=27.41%  B15=47.72%
+  VERDICT on 'highly unlikely to lose three or four in a row': CONTRADICTED AS STATED
+
+  clustering cells: positive-and-significant 4, negative-and-significant 0, interval-includes-0 0
+  VERDICT on clustering: CLUSTERING CONFIRMED
+
+  N3 sanity control: *** FAILED IN AT LEAST ONE CELL ***
+
+  §6a PREDICTIONS, scored:
+    P1 (O1 reconciles all but the 12,500, which lands at 12,438.40): RIGHT
+    P2 (p_hat 0.30-0.36 at 25/50, 0.20-0.26 at 15/50): WRONG  — A25=0.280, A15=0.168, B25=0.280, B15=0.172
+    P3 (run4 > 10% in all four cells -> CONTRADICTED): RIGHT
+    P4 (losses cluster, d4 > 0): RIGHT
+    P5 (required p > 50%, so V09's own >50% claim is insufficient): RIGHT  — A25=84.3%, A15=84.2%, B25=84.3%, B15=84.3%
+
