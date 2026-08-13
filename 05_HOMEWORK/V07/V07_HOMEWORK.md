@@ -269,6 +269,24 @@ python3 05_HOMEWORK/V07/scripts/v07_flashcards.py
 
 ---
 
+## 6a. ADDENDUM 2026-08-13 (later, same day) — THE `C8` DATA HOLE
+
+A concurrent session added a QA check after this homework was published (`f7c5c04`) and found a
+**~22-hour hole at `2014-05-30 16:59` → `2014-06-02 15:01`** in the corpus — the only
+unexplained absence in 3.5 years, and one that `D-036a`'s original `C5`–`C7` sign-off passed.
+
+**It falls inside §2b's 2014 row and nowhere else.** One day bucket (`2014-06-02`) is affected,
+it is a **miss**, and excluding it moves that cell's fraction by **+0.001 or less** — measured in
+`BT_V07_0001.md` §9a, which carries the full four-cell table. **2014 remains the low year and
+§2b's 12–14 point spread is unchanged.**
+
+**§5a's second-measurement-method check is unaffected in a way worth stating:** it compares the
+M15 aggregate against the raw M1 file, and a hole present in both is invisible to that
+comparison. **A cross-source check validates aggregation, not completeness** — which is exactly
+why `C8` was needed and why it is a different kind of control.
+
+---
+
 ## 7. MASTERY RESULT FOR THIS HOMEWORK
 
 **`SUCCESS AFTER CORRECTION`.**
