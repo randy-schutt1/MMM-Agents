@@ -4523,3 +4523,178 @@ working tree throughout the review and its files were read for context and **not
 Student remediation of open items 61–63, then **V07 R2**. `CUMULATIVE_25.md` should pick
 up the `E20` count class (now at seven instances), the `A-039`/`A-056` untaught-component
 pattern, and the day-boundary decision gap `PT-033` exposed.
+
+---
+
+## 2026-08-13 — Student Session — V08
+
+### Lesson
+
+**V08 — "Jim's Journey in Learning and Trading MMFX"**, `Bootcamp1 Wk2 032612 Part3 (43mins).swf`,
+SHA-256 `6beedb40b7c211cb019b37ff69002e8e625fca4521c3cf3155f946edc5f8b767`, 00:43:03,
+session date 2012-03-26.
+
+### Branch and isolation — first full lesson under `D-038`
+
+Worked in a **dedicated git worktree** at `MMM-Agents-v08` on branch **`video/v08`**, per
+`D-038`. Merged `origin/claude/add-documents-repository-fdfb3u` at session start — clean
+fast-forward, `D-038` (`823458d`) the only incoming commit.
+
+**No `I-009` collision occurred.** `git add -A` was never used; every commit staged explicit
+paths and was preceded by `git diff --staged`. **This is the first complete lesson run under the
+branch-isolation policy and it is the evidence `D-038`'s consequences section asked for before
+`I-009` can be narrowed toward closure.**
+
+**One `D-038` tension, flagged for the owner rather than resolved:** `D-038` says the
+append-only ledgers — `DECISIONS.md`, `COURSE_PROGRESS.md`, `LOG.md`, `REVIEW_INDEX.md`,
+`SETUP_ISSUES.md` — are edited **on the integration branch**, not on a task branch. This session
+was instructed to work only in its worktree and not to merge back, so `COURSE_PROGRESS.md`,
+`LOG.md`, `QUARANTINE_REGISTER.md`, `AUTOMATION_AMBIGUITIES.md` and `CONTRADICTIONS.md` were
+appended **here**. All are append-only additions in regions no concurrent session is touching,
+so the merge should be clean — but it is a deviation from `D-038` and is recorded rather than
+absorbed.
+
+### Gate
+
+**Verified OPEN in `18_REVIEW/REVIEW_INDEX.md` before any V08 artifact was created.** V07 R1,
+2026-08-13: `REVISE`, **0 `CRITICAL` / 0 `MAJOR` / 3 `MINOR`** → `D-024` opens the gate with the
+minors deferred and owed. No override needed or used. `COURSE_PROGRESS.md`'s `V08 GATE` block
+still read `CLOSED` (written before R1 returned) and is reconciled in this session's update,
+with the superseded text retained.
+
+### Source Evidence Processed
+
+- **Transcript** — verified on four axes and committed (`I-008`). Audio identity by **energy
+  envelope cross-correlation r = 0.978–0.981** at a 0.02 s re-encode lag; the waveform Pearson
+  `r` is ~0 and that is an artifact, recorded because it read as a disconfirmation for a minute.
+  Six Whisper `small.en` spot windows, 0.797–0.977 word similarity, each engine keeping its own
+  mishearings. 848 markers, strictly increasing, **measured not asserted**.
+- **Speaker tagged FIRST**, per `D-033` provision 1. **100% `GUEST` — the fourth consecutive
+  lesson with zero course-author runtime.**
+- **26 screenshots** captured by Ruffle 10× sweep, port and served bytes verified (`D-022`).
+- **`Q-009`** — `NOTES.md` and `VISUAL_INDEX.md` audited and confirmed fabricated. `RULES.md`
+  not re-audited (discharged by `Q-007`).
+
+### Findings
+
+**1. The lesson is incomplete, and that is a finding rather than a defect of the file.** Three
+sections plus the DMR planned over ~2 hours; this 43-minute file carries section 1 and most of
+section 2 and **ends mid-argument**. The final frame shows a literal `?` at the centre of the
+presenter's own ring diagram — the audio-only reading corroborated, not corrected. **Section 3,
+the defined-risk lesson, is announced twice and is not in the file.**
+
+**2. `A-056` extended, not closed.** V08 gives the first account anywhere in V01–V08 of what
+"Hi-Lo" asks a trader to do — where (the extreme), where in the structure (second leg, at a prior
+trap area), what cues it (speed), and — **printed only** — a **10-pip tolerance from HOD/LOD**.
+It does not give **how to identify the extreme before it is one**. Under `D-033` this speaker
+*could* close the record; the evidence does not reach it.
+
+**3. `C-009` — a normative speaker calls the course's own confirmation requirement a "myth"**, in
+printed slide text, having just stated the rule in the course's own voice (*"in **our** basic
+training, **we** do say"*). Under `D-025` this was hygiene; **`D-033` provision 3 makes it a real
+method-level conflict on an entry condition.** `PROVISIONAL`: the lesson supplies a staging rule
+(confirmed live, extremes on demo) that defers rather than dissolves it.
+
+**4. The slides carry a number the audio does not.** Frame `V08_00-05-40` prints *"dealing within
+**10 pips of HOD/LOD**"*. The transcript renders it *"with intent pips"* — the ASR's rendering of
+*in ten pips*. This is `SWF_CAPTURE_RECIPE.md` §9's case exactly, and it **changed a test design**:
+`PT-033` had to invent its tolerance grid; `PT-034` takes `X = 10` from the lesson.
+
+**5. Six new ambiguities.** `A-059` (`CM35`), `A-060` (*"no week that there hasn't been at least
+five"* — the strongest empirical claim in V08, wholly `D-030`-blocked), **`A-061`** (*fast* /
+*slow* — an **entry cue** whose only criterion is an undefined adjective), `A-062` (a
+**fractional** level count, the first in V01–V08), `A-063` (the stop hunt box's **size**, 25 pips,
+with no placement rule), `A-064` (Mayo/mail/male).
+
+**6. `A-019` NOT closed, and it was tempting.** `[00:33:30]`'s *"1.30 AM Eastern Daylight Time"*
+is the most precise clock reference in the corpus. The bootcamp ran **wholly inside US DST**, so
+it is consistent with **both** of `D-031`'s hypotheses and distinguishes them **not at all**.
+
+**7. `Q-009` — the fabrication is ONE GENERATOR, not four failure modes.** `COURSE_PROGRESS.md`'s
+V07 item (e) warned *"four lessons, four ways of being wrong, do not assume uniformity"*. The
+opposite is true and more useful: `extracted_png_27.png` and `extracted_png_290.png` are
+**byte-identical across V05–V08** — the Camtasia Studio logo and the words *"Camtasia Studio 6"* —
+and are described as **eight different trading topics**, with timestamps tracking only their
+position in the folder listing. V08's own index puts **three timestamps after the file ends**,
+sells **four byte-duplicates as separate screenshots**, indexes **one printed sentence split
+across two delta tiles** as two unrelated candlestick topics, and attributes **all eleven** entries
+to a speaker who does not appear in the lesson.
+
+**8. `PT-034` / `BT_V08_0001`.** Pre-registered at `a4ab65a` **before the runner existed and
+before this session parsed a row of the corpus.** The **primary result needed no data and was
+stated in advance**: within a day, an entry within `X` pips of the extreme has `MAE ≤ X` by
+construction, so *"Risk Reward to 3:1 or greater"* **cannot fail** for any `X ≤ 16.67`. The
+empirical arm returned **`CONFIRMED AS TAUGHT`** — 70.5–76.8% vs a matched-random null of
+**24.2–24.5%** against a 25.00% break-even. **The observation discloses a defect in its own
+pre-registered decision rule** and does **not** edit it. **Independent cross-check against
+`PT-033` passes every pre-registered band.**
+
+**9. The homework produced a clean negative.** Twelve hard-right-edge flashcards, answer key
+sealed, predictions and reasoning committed to Git before scoring. Using V08's own *"the fast move
+is false"* as the predictor: **5/12 = 0.42 against an always-`TARGET` baseline of 0.83.** The
+*fast → `TARGET`* half matched the base rate (4/5); the *slow → `STOP`* half went **1/7** and was
+actively anti-predictive. Labelled `SAMPLE INSUFFICIENT FOR INFERENCE`.
+
+### Corrections made against this session's own work
+
+- **22 quotations carried silent ASR corrections inside the quote marks** (*"I can see M and W
+  patterns"* for the source's *"I can see him in W patterns"*; `CAD-JPY` for `CAD-YEN`; *"go long
+  here"* for *"go along here"*). All made literal, glosses moved outside. **This is the defect V07
+  R1 charged as `M3`, caught here by a checker rather than by reading.**
+- **A frame was misread at half resolution.** The terminal panel's `S/L 1.32360` looked like a
+  6.4-pip *initial* stop, which beside *"tighter stops, 3:1 or greater"* would have been the
+  corroborating number of the session. It is a **trailed** stop on a short, therefore in profit.
+  Died at 3× magnification; a standing prohibition is written into the screenshot `INDEX.md`.
+- **The first screenshot sweep captured nothing** — 529 valid PNGs of a static splash, reported
+  `DONE`. `SWF_CAPTURE_RECIPE.md` §3's click coordinate misses this file's play button. The sweep
+  now aborts non-zero if the frame does not change after the click.
+- **Probe `R01` failed on first writing** and the probe was wrong, not the transcript: two of the
+  ten tally figures are stated as *"one at London"* / *"one at New York"*, with neither token the
+  regex keyed on. Retained in the docstring.
+
+### Student Artifacts Produced
+
+`02_TRANSCRIPTS/V08/` · `03_LESSON_NOTES/V08_SOURCE_NOTES.md` + `V08_INTERPRETATION.md` ·
+`04_SCREENSHOTS/V08/` (26 + `INDEX.md`) · `05_HOMEWORK/V08/` · `06_MANUAL_BACKTEST/V08/` ·
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-034_…` · `07_MASTERY_REPORTS/V08_MASTERY_REPORT.md` ·
+`00_SYSTEM/QUARANTINE_REGISTER.md` `Q-009` · `10_AMBIGUITIES/` `A-059`–`A-064` ·
+`11_CONTRADICTIONS/` `C-007`–`C-009`
+
+### Student Status
+
+```text
+REVIEW REQUIRED — not PASS.
+8 SATISFIED · 1 SUCCESS AFTER CORRECTION (F) · 1 BLOCKED BY D-030, NOT GRADED (B)
+```
+
+**Dimension B is `D-030`-blocked for the FOURTH lesson running**, and the project still has no
+vocabulary for that disposition. **That is why this is `REVIEW REQUIRED`.**
+
+### Escalations
+
+1. **`REVIEW_INDEX.md` open item 36 is four lessons old.** Owner ruling owed.
+2. **Day-boundary decision, second data point** — 13.8 points on a within-day observable, 2.9 on a
+   no-deadline one. A `D-031`-shaped two-arm rule remains the recommendation.
+3. **`Q-009`'s three-check screen** for V09–V21's `VISUAL_INDEX.md`. Not a batch discharge.
+4. **`A-061`** is the highest-value definitional gap V08 leaves.
+5. **`PT-034` §6's defect** suggests a follow-up test against a non-hindsight benchmark — a new
+   test, not an edit.
+6. **`D-038` ledger-location tension**, above.
+
+### Validator
+
+`python3 scripts/validate_project.py` — **103 passed, 0 warnings, 0 failures.** One failure was
+raised and fixed in-session: `BT_V08_0001.md` lacked its `DESCRIPTIVE`/`EVIDENTIAL`/`INVALID`
+classification, now `EVIDENTIAL` with the caveat that a sound measurement is not a supported claim.
+
+### Git
+
+Branch `video/v08`, pushed after every checkpoint. Commits, in order: `0c7069a`, `c83f4ca`,
+`3026a81`, `20d9938`, `56e2d14`, `cff710c`, `e545d46`, `a4ab65a`, `e3a8e66`, `1d206ab`, `e586db2`,
+`c04ef2c`, plus this bookkeeping commit. **No merge to the integration branch was attempted** —
+that is a separate, deliberate, single-threaded step under `D-038`.
+
+### Next Review Trigger
+
+**Independent review of V08 — `18_REVIEW/V08/V08_REVIEW_R1.md`, by a session that is not this
+one (`D-003`).** The V09 gate is **CLOSED** until it returns.
