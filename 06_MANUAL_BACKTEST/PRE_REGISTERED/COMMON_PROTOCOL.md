@@ -29,13 +29,29 @@ decision point and its own outcome table. If this file and a `PT-NNN` file ever 
 | Instrument | **GBP/USD only** (`D-007`). No other pair appears in this batch |
 | Pip | `0.0001`. A "pip" anywhere in PT-002…PT-021 means exactly this |
 | Timeframes | 15-minute primary; 1-hour and 4-hour where a test says so |
-| Data source | ~~**UNDECLARED — `I-007` is OPEN.**~~ **DECLARED 2026-08-13 — `D-034`: TradingView, FXCM feed (`FX:GBPUSD`), no login, platform text only, chart timezone recorded per harvest.** `I-007` is CLOSED. See §6 — a **data-availability** blocker replaces it and it is not the same thing |
+| Data source | ~~**UNDECLARED — `I-007` is OPEN.**~~ ~~**`D-034`: TradingView, FXCM feed.**~~ **AMENDED 2026-08-13 — `D-036a`: for `W-A`/`W-B`/`W-C′` the source is the HistData GBP/USD **M1 CSV corpus**, aggregated locally to 15m (`datasets/HISTDATA_GBPUSD_M1/`, SHA-256 on record). `D-034`/TradingView-FXCM remains the source for recent and live chart work.** `I-007` CLOSED; the data-availability blocker in §6 is **CLEARED**. See §2 for the restated measurement rule |
+| **Week open — READ THIS** | **22:00 UTC** (Sunday 17:00, fixed UTC−5, no DST), measured across 187 week opens. **This replaces FXCM's 21:00 UTC for every test on this corpus** — `PT-008`–`PT-013` and `PT-019` must state 22:00 UTC. Whether FXCM's own figure is a year-round constant is **`I-010` Q1, OPEN** |
+| Price-level comparability | **Levels on this corpus are NOT comparable with the V02–V06 FXCM homework** — FXCM serves no 2013–2016 data, so `D-034`'s cross-vendor offset cannot be measured here. **Only shape and distance claims travel.** Every report says so |
+| Data-QA gate | **Precondition on every run.** `06_MANUAL_BACKTEST/scripts/qa_histdata_m1.py`; cite its report. C1–C4 must PASS; C5–C7 need human sign-off (first sign-off recorded in `D-036a`) |
 
 ## 2. MEASUREMENT — THE HARD RULE
 
 > **No price is ever read from a pixel.** Every open, high, low, close and timestamp is
 > the charting platform's **own text report** of the bar, read from the DOM / Data
 > Window / OHLC legend.
+
+> **RESTATED 2026-08-13 for the CSV corpus — `D-036a`. This strengthens the rule, it does
+> not relax it.**
+>
+> **Every quote enters an observation as a number parsed from a checksummed file.** No
+> value is read from a rendering of any kind — not a pixel, not a DOM node, not a chart
+> screenshot. **A chart may be *looked at*; nothing may be *measured off* one.** Any figure
+> appearing in a result is reproducible by re-running a committed script against a file
+> whose SHA-256 is on record.
+>
+> A CSV read satisfies `E06` **more** completely than the DOM-text method it replaces: the
+> input is fixed, hashed and re-runnable, where a Data Window read was manual and
+> unrepeatable. The paragraph below still governs any test that opens a chart.
 
 This is not a preference. `18_REVIEW/V02/V02_REVIEW_R1.md` charged a `MAJOR`
 (`E06`/`E19`) because a price line drawn in TradingView's exact bullish body colour
@@ -178,7 +194,8 @@ time:
 |---|---|
 | ~~**`I-007`** — no chart data source, feed or timezone is declared~~ | ✅ **CLOSED 2026-08-13 — `D-034`.** TradingView / FXCM, no login, platform text only. The feed's week open is **21:00 UTC**, and that is the boundary W-C and `PT-008`–`PT-013` inherit; every such test must state it |
 | ~~**`D-028` dates unpinned**~~ | ✅ **PINNED 2026-08-13 — `D-035`: boundary `2016-07-01`.** See §3a — W-A and W-B conform; **the seven W-C tests do not** |
-| 🔴 **DATA AVAILABILITY — the blocker that replaced `I-007`, and it still stops this batch** | The declared feed serves 15-minute GBP/USD back only to **2026-05-31** (depth probe, `PT-023` §1). **W-A / W-B / W-C are out of reach at 15 minutes.** This is a `D-019` **measurement** gap, not a `D-030` definitional one — resolvable by tooling or by an owner decision, and `D-035` records the three options. **Nothing in this batch may be run until it is resolved** |
+| ~~🔴 **DATA AVAILABILITY — the blocker that replaced `I-007`**~~ | ✅ **CLEARED 2026-08-13 — `D-036a`.** `D-036` showed the bar-allowance exits (10k / 20k) close only ~6% of the gap; the owner took the import path. `W-A`/`W-B`/`W-C′` are now served in full by the HistData M1 corpus (1,297,781 bars, 2013-01-01 → 2016-06-30, QA gate C1–C4 PASS). **`PT-002`–`PT-007`, `PT-014`–`PT-018`, `PT-020`, `PT-021` are RUNNABLE.** The seven `W-C` tests still owe their `D-035` re-issue onto `W-C′` — this supplies their data, not their conformance |
+| ⚠️ **`I-010` — two open clock questions** | Q1: FXCM's 21:00 UTC week open was probed over a **summer-only** window and cannot be distinguished from a DST-anchored NY 17:00. Q2: which `D-031` arm's clock the `D-035` boundary is expressed in (Arm B spills 4 bars past 2016-06-30). **Neither blocks this batch**; both corrupt cross-source comparison if left open |
 | **`D-030`** — definitions are never approximated | §7 — **unchanged by `D-033`**, and this is the part a future session is most likely to get wrong |
 | ~~**`D-025`** — guest material is excluded as normative~~ | ⚖️ **REVERSED 2026-08-13 — `D-033`.** Guest material is normative on equal footing with the course author. §8 is corrected in place |
 

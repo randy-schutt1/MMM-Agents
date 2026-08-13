@@ -453,6 +453,7 @@ in-progress files under their own commit messages. Observed:
 | `6e4adac` | "adopt V02 transcript and record Q-002" | authored by the *review* session, not the V02 session |
 | `4068db7` | "apply V01 review R1 corrections" | `V02_SOURCE_NOTES.md`, `V02_INTERPRETATION.md` |
 | `58e3d03` | "correct stale RECORDS:0 status" | the 422-line A-019…A-025 block |
+| `a6fa421` | "docs(V06): record the R2 reviewer PASS…" | `06_MANUAL_BACKTEST/scripts/qa_histdata_m1.py` — written by the concurrent **data-source** session, swept in by the **V06 review** session. **Recurred 2026-08-13**, three days after the mitigation was written |
 
 No content was lost, but authorship and grouping in the history are wrong, so `git log`
 no longer identifies which session produced which artifact.
@@ -467,3 +468,67 @@ These mitigations are conventions, not enforcement. A session that does not read
 file will repeat both failures. The durable fixes — one working tree per session (git
 worktrees), and a port derived from the lesson number — are recommended but not yet
 adopted.
+
+---
+
+## I-010 — Two unresolved clock questions left open by the move to a CSV corpus
+
+**Status:** `OPEN` — neither blocks `PT-002`…`PT-021`; both will silently corrupt a
+week-boundary result if they are still open when someone compares across sources.
+**Raised by:** `D-036a`, 2026-08-13.
+
+### Question 1 — is FXCM's 21:00 UTC week open a vendor constant, or a summer artifact?
+
+`D-034` records, as a standing vendor fact, that *"FXCM opens the week at 21:00 UTC …
+consistently, week after week"*, and binds `W-C` and `PT-008`–`PT-013` to that boundary
+**by name**. The evidence behind it is `PT-023` §1's depth probe, which covered
+**2026-05-31 → 2026-08-13**.
+
+That window is **entirely inside northern-hemisphere summer**, and over a summer-only
+sample two different vendor behaviours are indistinguishable:
+
+| Hypothesis | Summer week open | Winter week open |
+|---|---|---|
+| Fixed offset, 21:00 UTC year-round | 21:00 UTC | 21:00 UTC |
+| New York 17:00, DST-anchored | 21:00 UTC (17:00 EDT) | **22:00 UTC** (17:00 EST) |
+
+The probe cannot separate them. "Consistently, week after week" is true of the sample and
+does not establish the year-round claim `D-034` makes from it.
+
+**Why it matters now.** HistData is **provably** fixed at 17:00 EST = 22:00 UTC year-round
+(`D-036a`, three independent confirmations). If FXCM is DST-anchored, the two vendors
+**agree in winter and differ by an hour in summer** — which would mean the V02–V06
+homework and the `PT` corpus are on different session grids for part of the year, in a way
+nobody would notice because each is internally consistent.
+
+**To close:** probe FXCM's week open on any week between November and February and
+compare against 22:00 UTC. Costs one probe. **Do not** amend `D-034` fact 1 from memory or
+inference — measure it.
+
+### Question 2 — which arm's clock is the `D-035` boundary expressed in?
+
+`D-035` pins DEVELOPMENT/HOLDOUT at **2016-07-01**, computed on calendar grounds before
+any chart existed. `D-031` then runs every session-dependent test on **two clocks**.
+Nobody has said which clock the boundary itself is stated in.
+
+Measured consequence, from the built corpus: the Arm B aggregation (`+1h` during US DST)
+spills **4 fifteen-minute bars** past 2016-06-30 into wall-clock **2016-07-01**:
+
+```text
+2016.07.01,00:00 · 00:15 · 00:30 · 00:45
+```
+
+The underlying M1 data is entirely `≤ 2016-06-30` in the file's own UTC−5 clock. So either
+
+- the boundary is **absolute** (fixed in one clock, and Arm B simply reads 4 bars of
+  development data at a wall-clock stamp of 2016-07-01), or
+- the boundary is **per-arm** (each arm cuts in its own clock, and Arm B's development
+  block is 4 bars shorter than Arm A's).
+
+**Neither is wrong; leaving it unstated is.** Four bars will not move a result, but the
+same ambiguity applies at the start of every window and to any future boundary, and it is
+exactly the class of thing this project would rather pin now than discover in a review.
+
+**To close:** one line appended to `D-035` stating the clock. Recommend **absolute**, in
+the corpus's native UTC−5 (Arm A) clock, since the boundary was computed on calendar
+grounds independent of any arm — but that is an owner call, not a session's.

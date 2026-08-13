@@ -1767,3 +1767,175 @@ is a **new decision amending `D-034`**, and it must restate the week open, the l
 the `E06` measurement rule for the new tool before any observation is collected.
 **Status:** ACTIVE — advisory to the still-**OPEN OWNER DECISION** in `D-035`
 
+---
+
+## D-036a — `D-035` option A is TAKEN: the historical windows are sourced from a HistData CSV corpus, amending `D-034`
+
+**Date:** 2026-08-13
+**Owner decision, given in session:** *"Let's just go with csv for now… Make the csv the
+priority… We need to verify what the tests call for."*
+**Amends:** `D-034`, **for the pre-registered historical windows only**.
+**Resolves:** the data-availability blocker recorded in `D-034`, `D-035` and
+`COMMON_PROTOCOL.md` §6 — the one that has stopped `PT-002`…`PT-021` since 2026-08-13.
+**Numbered `D-036a` rather than `D-037`** because it executes the option `D-036` narrowed;
+it is not an independent decision and must never be cited apart from `D-036`.
+
+**Decision:** For `W-A`, `W-B` and `W-C′`, the data source is a **HistData.com GBP/USD
+M1 CSV corpus**, aggregated locally to 15 minutes. `D-034` is **not revoked** — TradingView
+/ FXCM remains the standing source for recent and live chart work, and for every homework
+already recorded against it. What changes is that a window the declared feed cannot reach
+is now sourced from a vendor that can.
+
+| Field | Value |
+|---|---|
+| Source | **HistData.com**, free tier, no account, no login |
+| Product | `MetaTrader` format, **M1 (1-minute) bid bars** — the finest the vendor publishes |
+| Instrument | GBP/USD (`D-007`) |
+| Files | `DAT_MT_GBPUSD_M1_{2013,2014,2015}.csv` + `DAT_MT_GBPUSD_M1_2016H1.csv` |
+| Retrieved | **2026-08-13**, by HTTP POST to the vendor's public `get.php` form endpoint |
+| Integrity | **SHA-256 recorded** per file in `datasets/HISTDATA_GBPUSD_M1/raw/SHA256SUMS.txt` |
+| Span | **2013-01-01 17:00 → 2016-06-30 23:59**, **1,297,781** M1 bars |
+| Timezone | **Fixed UTC−5 ("EST"), no DST** — vendor spec, and measured (below) |
+| Column format | `YYYY.MM.DD,HH:MM,O,H,L,C,V` |
+| Volume | **Structurally zero** in this vendor's data. Carried for format compatibility; **it is not traded volume and no test may read it** |
+| Derived | `GBPUSD_M15_ARMA.csv`, `GBPUSD_M15_ARMB.csv` — 86,824 bars each, built by `06_MANUAL_BACKTEST/scripts/aggregate_m15.py` |
+| Location | `06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M1/` — **gitignored bulk data**, provenance committed, per that directory's standing README rule |
+
+**Window coverage, verified rather than assumed:**
+
+| Window | Range | M1 bars | 15-min bars | Covered |
+|---|---|---|---|---|
+| `W-A` | 2015-01-04 → 2015-12-31 | 370,787 | 24,755 | ✅ |
+| `W-B` | 2014-01-05 → 2015-12-31 | 738,298 | 49,421 | ✅ |
+| `W-C′` | 2013-01-06 → 2016-06-30 | 1,293,491 | 86,536 | ✅ |
+
+**THE HOLDOUT WAS NEVER ON DISK.** The vendor publishes past years whole, with no monthly
+granularity, so the 2016 file necessarily contained `2016-07-01 → 2016-12-31` — **holdout
+under `D-035`**. It was truncated at `2016.06.30` **on arrival**, before any read: 186,608
+post-boundary rows discarded, the untruncated CSV and its zip **deleted**, and no
+post-boundary row was ever printed, parsed into a result, or displayed. `E23` did not
+occur. Any future session extending this corpus past 2016-06-30 must repeat that
+discipline or record the breach.
+
+### The week open — the fact `W-C′` and `PT-008`…`PT-013` inherit BY NAME
+
+`D-034` fact 1 binds every week-boundary test to its vendor's week open. That number
+**changes** under this amendment, and the change is measured, not assumed:
+
+| | FXCM (`D-034`) | **HistData (this entry)** |
+|---|---|---|
+| Week open | 21:00 UTC | **22:00 UTC** |
+| Local anchor | — | **Sunday 17:00, fixed** |
+| DST behaviour | **untested — see `I-010`** | **none — fixed offset year-round** |
+
+Three independent confirmations, because a one-hour error moves every session boundary:
+
+1. **Vendor spec:** *"Eastern Standard Time (EST) time-zone WITHOUT Day Light Savings
+   adjustments."*
+2. **Measured:** 187 week opens across the corpus; **172 land at exactly 17:00**, the
+   remainder at 17:01–17:10 (late opens), and the modal open is **17:00 in all twelve
+   months** — no seasonal shift. Five non-Sunday opens are the Christmas/New-Year breaks.
+3. **Event-anchored:** the corpus's largest M1 bar is **2016-06-23 19:17 = 00:17 UTC
+   2016-06-24**, coinciding with the Newcastle/Sunderland referendum declarations that
+   moved sterling. An independent clock check that does not depend on the vendor's own
+   documentation.
+
+**`PT-008`–`PT-013` and `PT-019` must state 22:00 UTC, not 21:00 UTC.** Any draft already
+carrying the FXCM number is wrong and must be corrected before it runs.
+
+### `D-031` becomes cheap, and that is a methodological gain
+
+The corpus is stamped in fixed UTC−5 — **natively `D-031` Arm A**. So:
+
+- **Arm A** (fixed offset, no DST) = file timestamps **verbatim**, zero transformation.
+- **Arm B** (`America/New_York`, DST active) = file stamp **+1h during US DST**, unchanged
+  otherwise. Derivation: stamp `T` denotes `UTC = T+5h`; NY under DST is UTC−4, so local
+  `= T+1h`.
+
+On a rendered chart, `D-031`'s binding rule — **both arms always reported** — meant
+harvesting each window twice by hand, which is precisely the cost that makes a robustness
+check quietly get skipped. It is now one flag. This does not change what `D-031` requires;
+it removes the incentive to cheat on it.
+
+### What is LOST by leaving FXCM, stated plainly
+
+**`D-034` fact 2 — the cross-vendor level offset — becomes unmeasurable for these
+windows, permanently.** The offset (Yahoo − FXCM: +3.11 pips on highs, +3.94 on lows) was
+measured on recent data. FXCM serves **no** 2013–2016 GBP/USD at 15 minutes, so there is
+nothing to compare against. **Level-comparability between these windows and the V02–V06
+homework cannot be established — only asserted, which this project does not do.** Every
+report on this corpus states that its price *levels* are not comparable with prior
+homework, and that only *shape* and *distance* claims travel.
+
+### `E06` restated for a CSV corpus
+
+`COMMON_PROTOCOL.md` §2's *"no price is ever read from a pixel"* was written against a
+rendered chart. Restated, and **strengthened** rather than relaxed:
+
+> Every quote enters an observation as a **number parsed from a checksummed file**. No
+> value is read from a rendering of any kind — not a pixel, not a DOM node, not a chart
+> screenshot. A chart may be **looked at**; nothing may be **measured off** one. Any
+> figure appearing in a result is reproducible by re-running a committed script against a
+> file whose SHA-256 is on record.
+
+A CSV read satisfies `E06` more completely than the DOM-text method it replaces: the
+input is fixed, hashed and re-runnable, where a Data Window read was manual and
+unrepeatable.
+
+### The data-QA gate, now a precondition
+
+A chart makes a bad tick obvious; a column of numbers computes it silently into a result.
+`06_MANUAL_BACKTEST/scripts/qa_histdata_m1.py` is therefore a **precondition on every PT
+test run against this corpus**, and its report is cited in each. First run, 2026-08-13:
+
+| Check | Result |
+|---|---|
+| C1 parse integrity | **PASS** — 1,297,781 rows, zero malformed |
+| C2 duplicate timestamps | **PASS** — none |
+| C3 ordering | **PASS** — strictly increasing |
+| C4 OHLC coherence | **PASS** — no `high < low`, no `high < max(O,C)`, no `low > min(O,C)`, no non-positive quote |
+| C5 spike census | 578 bars > 12× rolling median range — **a list for human review, never an auto-exclusion** |
+| C6 gap census | **3** intra-week gaps ≥ 30m, **4h43m total** across 3.5 years |
+| C7 week-open census | 187 opens, fixed 17:00, no DST shift |
+
+**C5 needs the human sign-off it asks for, and the ratio metric misleads.** Most of the
+578 are thin holiday sessions where a 6-pip bar is 30× a 0.2-pip local median — arithmetic
+noise, not corruption. By **absolute** magnitude only **six days** contain any M1 bar over
+100 pips, and **26 of those bars fall on 2016-06-23** — the EU referendum, which `D-035`
+places inside DEVELOPMENT. The census is finding real events, not artifacts. **Signed off
+on that basis; no bar is excluded.**
+
+**Reason:** `D-036` established that only an import-capable path reaches the windows, and
+the owner chose it. The choice is well-matched to what this batch actually is:
+`COMMON_PROTOCOL.md` §7 already excluded every visual concept the course left undefined —
+M/W anatomy, second leg, TDI, "the level", anchor points — so all twenty tests resolve to
+clock comparisons and price arithmetic. `PT-018` Measure 3 is the proof: the one place a
+shape judgment would enter, the protocol already recorded as **NOT MODELLED**. Nothing in
+`PT-002`…`PT-021` requires a rendered chart to produce its result.
+**Evidence:** `datasets/HISTDATA_GBPUSD_M1/raw/SHA256SUMS.txt` (provenance);
+`datasets/HISTDATA_GBPUSD_M1/QA_REPORT.txt` (the gate run quoted above);
+`06_MANUAL_BACKTEST/scripts/qa_histdata_m1.py`, `aggregate_m15.py` (both committed);
+HistData's published file specification (timezone, column format); `D-034`, `D-035`,
+`D-036`; `COMMON_PROTOCOL.md` §2, §7; `PT-018` §3 Measure 3.
+**Alternatives considered:** *Importing into MT4 and reading bars off its charts* —
+rejected; it converts an auditable file into a rendering and then reads numbers back off
+it, which is strictly worse under `E06`, and MT4's History Center path (M1-only import,
+period-converter for M15, broker-server overwrite) adds failure modes for no measurement
+gain. MT4 remains available for **looking**. *Trusting a vendor-published M15 file instead
+of aggregating locally* — rejected; `D-031` makes the bucket boundary the tested variable,
+so the boundaries must be ours and auditable. *Deleting the 578 flagged spikes* — rejected;
+a news bar and a bad tick are indistinguishable to a threshold, and auto-exclusion would
+have silently removed the referendum. *Running the tests before a QA gate existed* —
+rejected; the failure mode that replaces "obvious spike on a chart" is "silent wrong
+number", and it needed an explicit gate.
+**Consequences:** `COMMON_PROTOCOL.md` §1 and §6 are updated — the data-availability
+blocker is **CLEARED for `W-A`/`W-B`/`W-C′`**. `PT-002`…`PT-007`, `PT-014`–`PT-018`,
+`PT-020`, `PT-021` are **unblocked and runnable**. The seven `W-C` tests are **still owed
+their `D-035` re-issue** onto `W-C′` — this entry supplies their data, not their
+conformance. Every `PT` file's source table changes from TradingView/FXCM to this corpus,
+and every week-boundary test changes 21:00 UTC → **22:00 UTC**. Two open questions are
+recorded as **`I-010`**: whether FXCM's 21:00 UTC is a fixed offset or a summer-only
+artifact, and which arm's clock the `D-035` boundary is expressed in (Arm B spills **4
+bars** past 2016-06-30 into wall-clock 2016-07-01).
+**Status:** ACTIVE
+
