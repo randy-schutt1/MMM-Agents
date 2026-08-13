@@ -2251,6 +2251,11 @@ session's task is what matters):
 because they are append-only ledgers that every concurrent session reads, and a policy change
 that sits unmerged on a task branch is a policy no other session can see. This entry itself was
 written that way.
+> ⚠️ **This paragraph is AMENDED by `D-038a`.** The list above conflates two kinds of file and,
+> read literally, forbids a lesson or review session from writing the very records its job
+> produces. `D-038a` splits it into **policy ledgers** (integration branch only) and **evidence
+> ledgers** (written on the task branch, merged with the work). Read `D-038a` before applying
+> this paragraph. The superseded text is retained above, unedited.
 
 **Reason:** The shared-tree collisions are not hypothetical and they are not rare — they have
 recurred across four days, against sessions that were following the mitigation correctly. The
@@ -2319,4 +2324,77 @@ rather than a fault.
 
 Merge-back to the integration branch happens **one branch at a time**, with a `git fetch` and a
 divergence check immediately before the push, per the discipline already in use.
+**Status:** ACTIVE
+
+---
+
+## D-038a — `D-038`'s integration-branch-only ledger list is split: POLICY ledgers vs EVIDENCE ledgers
+
+**Date:** 2026-08-13
+**Amends:** `D-038`, one paragraph only — the "Project-policy documents … are edited on the
+integration branch" rule. Everything else in `D-038` (branch-per-session, worktree-per-session,
+single-threaded merge-back, the naming convention, the `I-009` staging discipline) is
+**unchanged and still in force**.
+**Numbered `D-038a` rather than `D-039`** because it clarifies a rule `D-038` already made; it
+is not an independent decision and must never be cited apart from `D-038`.
+**Resolves:** `18_REVIEW/REVIEW_INDEX.md` open item **68**, raised by `18_REVIEW/V08/V08_REVIEW_R1.md`
+(`N1`) after the V08 student session disclosed the deviation in its own `LOG.md` entry rather
+than resolving it silently.
+
+**Decision:** `D-038`'s single list of integration-branch-only files is **two categories, not
+one**:
+
+| Category | Files | Where edited |
+|---|---|---|
+| **POLICY ledgers** | `00_SYSTEM/DECISIONS.md`, `00_SYSTEM/SETUP_ISSUES.md`, `CHANGELOG.md`, and every standing protocol or standard — `06_MANUAL_BACKTEST/PRE_REGISTERED/COMMON_PROTOCOL.md`, `00_SYSTEM/REVIEW_PROTOCOL.md`, `00_SYSTEM/MASTERY_STANDARD.md`, `00_SYSTEM/BACKTEST_EVIDENCE_STANDARD.md`, `00_SYSTEM/STUDY_PROTOCOL.md`, `00_SYSTEM/SOURCE_INGESTION_PROTOCOL.md`, `00_SYSTEM/REMEDIATION_PROTOCOL.md`, `00_SYSTEM/FILE_NAMING_STANDARD.md`, `00_SYSTEM/SWF_CAPTURE_RECIPE.md`, the session prompts | **Integration branch only.** Never on a task branch. |
+| **EVIDENCE ledgers** | `LOG.md`, `00_SYSTEM/COURSE_PROGRESS.md`, `00_SYSTEM/QUARANTINE_REGISTER.md`, `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`, `11_CONTRADICTIONS/CONTRADICTIONS.md`, `18_REVIEW/REVIEW_INDEX.md`, `00_SYSTEM/SOURCE_MANIFEST.md` | **On the task branch, in the same commits as the work that produced them**, and merged with it. |
+
+**The test that separates them**, for any file this table does not name: *does an unmerged edit
+to this file change what another session is permitted to do?* If yes it is a policy ledger and
+belongs on integration. If it only records what a session found, it is an evidence ledger and
+belongs with the finding.
+
+**Reason:** `D-038`'s rule was written for the failure it had actually seen — a **policy** change
+stranded on a task branch, invisible to the sessions it governs. Applied to evidence, the rule
+inverts into an obstruction: a lesson session's whole output *is* new `A-xxx` records, a new
+`Q-xxx` record, `C-xxx` records and a `LOG.md` entry, and a reviewer's output *is* a
+`REVIEW_INDEX.md` verdict row. Forbidding those on the task branch would require every isolated
+session to reach across to the integration branch mid-work — reintroducing precisely the shared
+write path `D-038` exists to remove — or to defer its own records to a later session, which is
+worse. **Evidence ledgers are append-only and their additions are `git`-mergeable by
+construction**; policy ledgers are not the problem because they are rare, deliberate, and
+already an owner-level act.
+
+**Evidence that the split is safe, measured rather than assumed:** the `video/v08` and
+`review/v08` merge-back performed on 2026-08-13 (merges `46d09ed` and `a025b97`) carried edits to
+all five files the V08 session flagged. Result: **no conflict, no duplication, no overwrite.**
+`LOG.md`, `QUARANTINE_REGISTER.md`, `AUTOMATION_AMBIGUITIES.md` and `CONTRADICTIONS.md` merged as
+**pure additions — zero deleted lines** against `23fe5e4`. `COURSE_PROGRESS.md` carried 74 deleted
+lines, all of them the V07→V08 status rewrite the session intended, with superseded text retained
+in place per project convention. Record-ID sets were re-derived after the merge: **no duplicate
+`A-`, `C-` or `Q-` identifier**, and the pre-existing repeated `LOG.md` headings were counted
+before and after the merge at the same 9, so the merge introduced none.
+
+**Alternatives considered:** *Leave `D-038` as written and have sessions ask the owner each time*
+— rejected; the V08 session did exactly that and it cost a review finding and an owner decision
+to settle one predictable case. *Move all five files to integration-only and have the merging
+session transcribe them* — rejected; transcription is a lossy manual step performed by a session
+that did not do the work, and it puts the record further from the evidence rather than nearer.
+*Declare everything an evidence ledger* — rejected; it is the failure `D-038` was written for.
+
+**Consequences:** A session working in isolation writes its evidence ledgers on its own branch
+and merges them with its work — this is now the expected behaviour, not a deviation. Two
+obligations attach:
+
+1. **Allocate record identifiers against the latest integration branch**, not against the task
+   branch alone, and re-check them at merge-back. Concurrent branches can allocate the *same*
+   `A-`/`C-`/`Q-` number to different records — **this has already happened**: `video/v08` and
+   `infra/add-steve-moro-reference-book` both hold a `C-007` and a `C-008`, for four distinct
+   contradictions. `git` cannot detect it, because the two branches append to different regions
+   of the same file. The merging session renumbers the later arrival and fixes its
+   cross-references.
+2. **Merge back promptly.** `REVIEW_INDEX.md` is an evidence ledger, but its gate rows govern
+   whether the next lesson may start; a verdict left unmerged holds a gate closed that is
+   actually open. Prompt merge-back is what keeps it an evidence ledger rather than a policy one.
+
 **Status:** ACTIVE

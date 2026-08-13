@@ -4838,3 +4838,83 @@ single-threaded step, and both branches await the owner.
 ### Next Review Trigger
 
 V08 R2, on student resubmission with `M1`–`M3` applied.
+
+---
+
+## 2026-08-13 — Integration Session — merge-back of `video/v08` and `review/v08`, and `D-038a`
+
+### Objective
+
+The `D-038` merge-back step, performed as its own deliberate act: land `video/v08` and then
+`review/v08` on `claude/add-documents-repository-fdfb3u`, and settle `REVIEW_INDEX.md` open
+item 68. **No lesson or review work was done by this session** — it merges and rules, nothing else.
+
+### Single-threaded, and verified so before touching anything
+
+`git fetch --all --prune`. `origin/claude/add-documents-repository-fdfb3u` stood at **`23fe5e4`**,
+exactly the last known state (the historical-data-import merge) — **no divergence, no surprises**.
+Performed in a dedicated worktree at `MMM-Agents-integ`, so none of the four live worktrees
+(`MMM-Agents`, `-histdata`, `-review-v08`, `-v08`) was disturbed.
+
+**Topology confirmed before merging rather than assumed:** `video/v08` (13 commits) branches from
+`823458d`; integration had advanced **11 commits** since, so this was a real merge and *not* the
+clean fast-forward the V08 review recorded as available when it looked — that report was accurate
+when written and had been overtaken by the historical-data import. `review/v08` carries **exactly
+one** unique commit (`0fe482d`) on top of `video/v08`, so merging it second was guaranteed to
+contribute only the review.
+
+### The append-only ledger question — verified, not assumed
+
+The V08 session flagged that it wrote `LOG.md`, `COURSE_PROGRESS.md`, `QUARANTINE_REGISTER.md`,
+`AUTOMATION_AMBIGUITIES.md` and `CONTRADICTIONS.md` from inside its own branch. Checked **before**
+merging: the set of files changed by `video/v08` and the set changed by integration since `823458d`
+have **zero intersection** — the historical-data import touched only `06_MANUAL_BACKTEST/**`, so
+there was no shared ledger region at all. Checked **after** merging:
+
+- `LOG.md`, `QUARANTINE_REGISTER.md`, `AUTOMATION_AMBIGUITIES.md`, `CONTRADICTIONS.md` — **pure
+  additions, zero deleted lines** against `23fe5e4`.
+- `COURSE_PROGRESS.md` — 136 added / 81 changed lines, **74 deletions, all of them the intended
+  V07→V08 status rewrite**, superseded text retained. No concurrent edit was overwritten because
+  no concurrent branch had touched the file.
+- **No duplicate `A-`, `C-` or `Q-` identifier** after the merge. The repeated `LOG.md` section
+  headings are pre-existing — counted at **9 before and 9 after**, so the merge introduced none.
+
+**Conclusion: no duplication, no overwrite, no corruption. The deviation cost nothing**, and that
+is the measured evidence `D-038a` rests on.
+
+### The one real defect this merge found
+
+**A cross-branch record-ID collision `git` cannot see.** `infra/add-steve-moro-reference-book`
+(unmerged, `1728287`) holds a `C-007` and a `C-008` that are **different contradictions** from the
+`C-007` and `C-008` `video/v08` has now landed on integration. Both branches append to different
+regions of `CONTRADICTIONS.md`, so it will merge cleanly and silently leave four records under two
+identifiers. **Not fixed here** — the offending records are on a branch this session was not asked
+to merge, and renumbering them belongs to whoever merges it. **Raised as open item 69**, and the
+general obligation is written into `D-038a` consequence 1.
+
+### `D-038a` — open item 68 ruled
+
+`D-038`'s single list of integration-branch-only ledgers is split into **POLICY ledgers**
+(integration only) and **EVIDENCE ledgers** (task branch, merged with the work), adopting the V08
+reviewer's proposal substantially as offered, with a test for files the table does not name: *does
+an unmerged edit change what another session is permitted to do?* `D-038`'s superseded paragraph is
+**retained unedited** with an amendment pointer, per project convention. The V08 session's handling
+is **retroactively correct, not a deviation.** `REVIEW_INDEX.md` is classified as an evidence
+ledger with an explicit prompt-merge obligation, because its gate rows do govern other sessions.
+
+### Validator
+
+`python3 scripts/validate_project.py` — **103 passed, 0 warnings, 0 failures** at the baseline,
+after the `video/v08` merge, after the `review/v08` merge, and after this bookkeeping commit.
+
+### Git
+
+Merges `46d09ed` (`video/v08`) and `a025b97` (`review/v08`), both `--no-ff` so the merge-back is
+legible in `git log`, in that order, one at a time, pushed after the pair. Explicit paths staged
+only; `git add -A` never used; `git diff --staged` inspected before each commit.
+
+### Next
+
+`V09` — the gate is **OPEN** under `D-024` (V08 R1: `REVISE`, 0 `CRITICAL` / 0 `MAJOR` / 3 `MINOR`),
+with open items 64–66 owed. **Item 69 must be discharged before
+`infra/add-steve-moro-reference-book` is merged.**
