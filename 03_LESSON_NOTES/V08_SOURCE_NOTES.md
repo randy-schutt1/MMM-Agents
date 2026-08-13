@@ -682,10 +682,21 @@ their weight; it does not change their content.
 Pattern clearly AFTER it forms but can't see it BEFORE it forms…"* — the sentence §1 identified
 as the pivot of the lesson, in print on the ring diagram.
 
-**4. The file's last frame confirms it ends unanswered.** Frame `00-43-10` shows the rings with
+**4. The file's last frame confirms it ends unanswered.** Frame `00-43-04` shows the rings with
 three thresholds labelled and **a red question mark at the centre**, beside a `replay` button.
+It is the **post-playback end card** — playback has stopped, which is what puts the `replay`
+button on screen.
 §1's audio-only reading — *"it ends mid-argument… the recording stops before he answers"* — is
 **corroborated**, not corrected.
+
+> **`SUPERSEDED — INCORRECT TIMECODE`, corrected 2026-08-13.** This item **cited the frame as
+> `00-43-10` until 2026-08-13**, and the file was named for that timecode. `V08_REVIEW_R1.md`
+> `M3` (`E19`, open item 66) charged it: `00:43:10` is past the **00:43:03** runtime and asserts
+> a moment the recording does not contain. The frame's own burned-in player timecode reads
+> **`43:04`**, re-read from the pixels in this remediation. **The frame is genuine and this
+> observation is unchanged — only the label was wrong.** Full account, including why `43:04` is
+> the right label even though it still rounds a quarter-second past the runtime, in
+> `04_SCREENSHOTS/V08/INDEX.md`.
 
 **5. A TDI panel is on every chart in this lesson and is never mentioned.** Frames `00-20-00`,
 `00-34-00`, `00-40-10` and every gallery chart carry a `TDI_MMM` sub-window. **Displayed, not
