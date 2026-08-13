@@ -54,6 +54,17 @@ Tier 2.
 
 ### 1.2 Tier 2 — what it is, and the three limits that travel with it
 
+> ### THE RULING IN ONE LINE — owner, 2026-08-13
+>
+> **Treat the Mauro PDF as authoritative/normative — exactly as `D-039` already established —
+> UNLESS a video directly contradicts it, in which case the video always wins.**
+>
+> Both halves matter. The PDF is **not** demoted to "background" or "hints": where it supplies a
+> definition and no video contradicts it, it is **normative and may close a record**. And the
+> moment a video contradicts it, the video wins **on that point**, a `C-xxx` is filed, and the
+> note is superseded there — not generally. `A-014` and `A-023` remain **CLOSED**; this ruling
+> confirms `D-039` as-is and adds nothing but explicitness about the override.
+
 An **anonymous student's notes** from Mauro's seminars — its own title page reads *"Private Study
 Notes from Seminar of Steve Mauro — Authored by: Anonymous."* It is not a polished course
 document and does not claim to be one. The owner has read it and attested that it is *"in
@@ -157,12 +168,18 @@ easier to code.
 **A divergence is a finding, not noise.** A disagreement between the recordings and an attested
 account of the same teacher is **evidence about the corpus**. Tidying it away destroys the finding.
 
-**Two divergences are already open and awaiting Tier 1 adjudication:**
+**Two divergences are known, and BOTH are now filed as contradiction records:**
 
-| Divergence | Tier 2 says | Tier 1 says | Status |
+| Divergence | Tier 2 says | Tier 1 says | Record |
 |---|---|---|---|
-| The moving-average set | **5 / 13 / 50 / 200, no 800**; the 200 is *"home base"* (`MMM-NOTES` p.38) | V06 audio uses ***"blueberry"***, which Tier 3 maps to **800** | ⚠️ Unadjudicated (`A-020`, `C-007` class) |
-| ADR lookback | *"the average daily trading range of the **last 2 weeks**"* | V04 guest: **2 previous days**; also an unbounded *"generally every day runs"* | ⚠️ Unadjudicated (`A-038`) — three numbers, three sources |
+| The moving-average set | **5 / 13 / 50 / 200, no 800**; the 200 is *"home base"* (`MMM-NOTES` p.38) | V06 audio uses ***"blueberry"***, confirmed by the owner as **800** | ✅ **`C-007`** — the corpus's **800 stands**; the notes' enumeration is superseded on this point. `A-020` closes on **owner attestation**, not on the notes |
+| ADR lookback | *"the average daily trading range of the **last 2 weeks**"* (`MMM-NOTES` p.43) | V04 guest: **2 previous days** `[01:05:36]`; also an unbounded *"generally every day runs"* `[01:13:34]` | ✅ **`C-008`** — ***"2 weeks"* is NOT the ADR window.** `A-038` is **NOT** narrowed: Tier 1's three bases stay incompatible, so Tier 2 is defeated **without** a replacement. Stays `DO NOT CODE` |
+
+> **Note the asymmetry `C-008` makes concrete.** "The video wins" is a rule about **which source
+> is superseded**, not a promise that Tier 1 supplies a usable answer. Where Tier 1 contradicts
+> Tier 2 but is itself incoherent, the correct outcome is that **both** the Tier 2 figure and the
+> record's blocker survive. A session that treats a won contradiction as licence to adopt whatever
+> Tier 1 fragment is nearest has made the `D-030` error by another route.
 
 ### 3.4 The two records currently closed on Tier 2 — the standing re-check obligation
 

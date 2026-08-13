@@ -8,6 +8,26 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 
 ## STATUS
 
+> ## 📌 UPDATED 2026-08-13 — `C-008` ADDED, CLOSING §9.6's SECOND FLAGGED DIVERGENCE
+>
+> **Counts in the `C-007` block below are superseded** (`REMEDIATION_PROTOCOL.md` §2). Current:
+> **RECORDS 8 (`C-001`…`C-008`) · UNRESOLVED 7 · RESOLVED/OTHER 1**.
+>
+> `EXTERNAL_VOCABULARY_REFERENCE.md` §9.6 flagged **two** video-versus-notes divergences on
+> 2026-08-13 and required a `C-xxx` for each. Only one was filed. **`C-008` files the second** —
+> the **ADR lookback window**: the notes state *"the last 2 weeks"* (`MMM-NOTES` p.43); V04's guest
+> gives *"the two previous days"* `[01:05:36]` **and** an unbounded *"generally every day runs"*
+> `[01:13:34]`.
+>
+> **Owner ruling, 2026-08-13** (recorded in `D-040`): the notes are authoritative **unless a video
+> directly contradicts them, in which case the video always wins.** Both flagged divergences are
+> now filed, and on both the notes are **superseded on that specific point** — the `800`/blueberry
+> line stands (`C-007`), and *"2 weeks"* is **not** the ADR window (`C-008`).
+>
+> **Neither record closes or narrows anything.** `A-038` still has three incompatible corpus bases
+> and stays `DO NOT CODE`: "the video wins" defeats the Tier 2 figure **without** installing a
+> replacement.
+
 > ## 📌 UPDATED 2026-08-13 — `C-007` ADDED, A NEW CLASS OF RECORD
 >
 > **Counts in the block below are as at `C-006` and are superseded** (`REMEDIATION_PROTOCOL.md`
@@ -1179,5 +1199,92 @@ admitted account of it.
 | Ambiguity | `A-020` (the nicknames and their periods) |
 | Decision | `D-039` (admission of the notes; the videos-win rule) |
 | Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.4, §9.6; `MMM-NOTES` p.38, p.66 |
+
+---
+
+## C-008 — The ADR lookback window: the notes say two weeks, the corpus says two days and "generally every day"
+
+### Concept
+
+Over how many days the Average Daily Range is averaged. This is the **second** video-versus-notes
+record and the **second** of the two divergences `EXTERNAL_VOCABULARY_REFERENCE.md` §9.6 flagged
+as *"unadjudicated"* on 2026-08-13. §9.6's own rule required a `C-xxx` be filed; **it was not, and
+that omission is corrected here.**
+
+> **Logged under `D-039`'s standing direction and `D-040`'s Tier 1 > Tier 2 rule.** Owner ruling,
+> 2026-08-13: the notes are authoritative **unless a video directly contradicts them, in which
+> case the video always wins.** This record exists so that the notes' *"2 weeks"* is **not**
+> treated as authoritative on this point.
+
+### Source A — the corpus (Tier 1)
+
+| Field | Value |
+|---|---|
+| Material | V04, **guest presenter** — see the speaker note below |
+| Basis 1 | *"if it's behavior for the **two previous days**, and it's basically ran the same ADR, 110 pips, 80 pips, 120 pips, whatever it is, the two previous days"* `[01:05:36]`–`[01:06:09]` |
+| Basis 2 | *"if the pair **generally every day** runs 100 pips, if it's not in the mid 90s, it's not ready"* `[01:13:34]` — an **unbounded** average |
+| Basis 3 | Whatever the template's indicator reports; the panel prints `TDR / YDR / WADR / MADR / %DADR` (frame `01:08:40`), periods not visible — `A-040` |
+| Window implied | **Three incompatible answers, all in one lesson** |
+
+### Source B — the admitted seminar notes (Tier 2)
+
+| Field | Value |
+|---|---|
+| Material | `MMM-NOTES` (`EXTERNAL_REFERENCE/`), admitted by `D-039` |
+| Evidence | *"an ADR indicator which tells us the average daily trading range of the **last 2 weeks**"* (`MMM-NOTES` **p.43**) — i.e. ~10 trading days |
+| Window implied | **A single, clean, stated number** — the only stated window found in any source anywhere |
+
+### Why this is a contradiction and not merely a gap
+
+The notes supply exactly the datum `A-038` has been missing since V04, and it is **the tidiest
+number on offer**: bounded, specific, and immediately codable. That is precisely what makes it
+dangerous. A ~10-day mean and a **2-day** mean differ by tens of pips on a volatile pair, and the
+gate is *whether today has run 90–95% of it* — so the window choice decides whether a setup is
+taken at all. Adopting *"2 weeks"* because it is the only clean figure would be substituting a
+Tier 2 number for a Tier 1 statement that says something different.
+
+### Speaker note — this record is GUEST-vs-NOTES, and that cuts BOTH ways
+
+`A-038` is a **`GUEST`** record. Under `D-033` guest material cannot close a record on its own.
+Two consequences, and they pull in opposite directions:
+
+- **The notes do not win by default.** A guest is still **Tier 1** (`D-040` §1.1) — guest material
+  is *not* demoted to Tier 2. The video-wins rule applies here in full.
+- **But the corpus does not supply a usable answer either.** Tier 1's own three bases are mutually
+  incompatible, so "the video wins" defeats the notes' figure **without** installing a replacement.
+
+### Assessment
+
+**Both accounts may describe real practice at different times or by different traders**, and the
+guest is explicit that his own method is personal (*"I've been looking at these same pairs for
+nearly three years now"*). That reconciliation is **`INFERRED` and is not adopted** — `D-039`
+forbids smoothing a divergence into a chronology the sources do not state.
+
+**Resolution under `D-039` / `D-040`: the recordings win, and the notes' "2 weeks" is superseded
+on this point.** It must not be cited as the ADR window, and it must not be recorded as
+corroboration of any of the three corpus bases.
+
+### What this does and does not do to `A-038`
+
+- **Does NOT narrow or close `A-038`.** The corpus had three incompatible bases before this record
+  and has three after. A fourth number from Tier 2 makes four, not one — as
+  `EXTERNAL_VOCABULARY_REFERENCE.md` §9.2 already stated.
+- **`A-038` stays `DO NOT CODE`**, and `D-030` applies with full force: the window is still never
+  approximated.
+- **Its Required Research is unchanged** — an instructor lesson defining ADR, or a frame with the
+  indicator's settings dialog open.
+- **`A-040` is untouched.** Which of `TDR/YDR/WADR/MADR/%DADR` the template actually gates on
+  remains unread.
+
+```text
+Status: UNRESOLVED — Tier 2 figure SUPERSEDED by Tier 1; Tier 1 supplies no replacement
+```
+
+| Field | Value |
+|---|---|
+| Class | **VIDEO-vs-NOTES** (`C-007` class), and **GUEST**-vs-notes within it |
+| Ambiguity | `A-038` (the guest's ADR window); `A-040` (the template's ADR variants) |
+| Decision | `D-039` (admission of the notes; the videos-win rule); `D-040` (Tier 1 > Tier 2) |
+| Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.2, §9.6; `00_SYSTEM/SOURCING_HIERARCHY.md` §3.3; `MMM-NOTES` p.43 |
 
 ---

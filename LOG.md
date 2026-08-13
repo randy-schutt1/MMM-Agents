@@ -4707,3 +4707,65 @@ The `D-039` queue is still only partly worked — the records not named in the 2
 have not been read against the source. Any session reaching a lesson that touches cross-pair
 analysis, the level-counting scheme, or the moving-average set must run `SOURCING_HIERARCHY.md`
 §3.1 against `A-014`, `A-023` and `A-020`.
+
+---
+
+## 2026-08-13 — the `D-040` ruling is applied, and §9.6's second divergence is finally filed as `C-008`
+
+**Branch:** `infra/add-steve-moro-reference-book` (continued; no merge)
+
+### The owner's ruling
+
+> Treat the Mauro PDF as **authoritative/normative — same as `D-039` already established — UNLESS
+> a video directly contradicts it, in which case the video always wins.** Keep `A-014` and `A-023`
+> **CLOSED**; do not reopen them.
+
+This **confirms `D-039` as-is** and makes the override explicit for future cases. It matches the
+hierarchy already committed in `b1cb0a3`, so `SOURCING_HIERARCHY.md` and `D-040` needed no
+reversal — only the ruling stated in the owner's own words, which is now §1.2's opening block.
+
+**`A-014` and `A-023` were not touched.** Both remain `RESOLVED BY MMM-NOTES`. No `A-xxx` record
+had its status changed by any part of this work.
+
+### The real finding: `C-008` was owed and had never been filed
+
+`EXTERNAL_VOCABULARY_REFERENCE.md` §9.6 flagged **two** video-versus-notes divergences on
+2026-08-13 and its own rule required a `C-xxx` for **each**. Only one was ever filed:
+
+| Divergence | Record | Was it filed? |
+|---|---|---|
+| The moving-average set — notes enumerate *"5, 13, 50 and 200"* with **zero** `800` in 84 pp.; V06 audio has *"blueberry"*, owner-confirmed as the **800** | **`C-007`** | ✅ Already filed, and thorough |
+| **ADR lookback** — notes say *"the average daily trading range of the **last 2 weeks**"* (`MMM-NOTES` **p.43**); V04's guest says ***"the two previous days"*** `[01:05:36]` **and** an unbounded *"generally every day runs"* `[01:13:34]` | **`C-008`** | ❌ **Never filed — corrected here** |
+
+Both sat in §9.6 marked *"⚠️ Unadjudicated"*, which under the ruling is no longer accurate: the
+videos win both, so the notes are **superseded on those two specific points** and must not be
+cited as authoritative there. §9.6's table, `SOURCING_HIERARCHY.md` §3.3 and the
+`CONTRADICTIONS.md` STATUS block were all updated to say so.
+
+### The asymmetry `C-008` makes concrete, and why `A-038` did NOT move
+
+`C-007` and `C-008` resolve differently in an instructive way. In `C-007` Tier 1 is coherent — the
+corpus uses an 800 — so the notes lose and the corpus's answer stands. In `C-008` **Tier 1 is
+itself incoherent**: the guest gives *two previous days* and *"generally every day runs"* in one
+lesson, with a third variant implied by the template's `TDR/YDR/WADR/MADR/%DADR` panel (`A-040`).
+
+So *"the video wins"* **defeats the notes' clean *"2 weeks"* without installing a replacement.**
+`A-038` had three incompatible bases before this record and has three after — a fourth number from
+Tier 2 makes four, not one. **`A-038` stays `DO NOT CODE`, unnarrowed**, with `D-030` in full
+force and its Required Research unchanged. This is recorded prominently in both `C-008` and
+`SOURCING_HIERARCHY.md` §3.3, because the tempting error is precisely to read a won contradiction
+as licence to adopt whichever Tier 1 fragment is nearest to hand.
+
+Note also that `A-038` is a **`GUEST`** record: under `D-040` §1.1 a guest is still **Tier 1** and
+is *not* demoted to Tier 2, so the video-wins rule applies in full — but `D-033` still means guest
+material cannot close the record on its own.
+
+### Files changed
+`11_CONTRADICTIONS/CONTRADICTIONS.md` (**`C-008` added**, STATUS counts → 8 records / 7 unresolved
+/ 1 resolved-other) · `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` (§9.6 table: both rows now
+`FILED`) · `00_SYSTEM/SOURCING_HIERARCHY.md` (§1.2 ruling block; §3.3 table + the asymmetry note)
+· `LOG.md`.
+
+### Verification before commit
+`python3 scripts/validate_project.py` — clean. Explicit paths staged; `git diff --staged` read in
+full. **Not merged to the integration branch** — the owner's separate act per `D-038`.
