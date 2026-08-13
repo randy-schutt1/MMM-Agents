@@ -285,7 +285,26 @@ explicitly says he did not have time to show his own trades in it. Every chart i
 **historical markup**, not a trade record. `INFERRED`: nothing in V06 is evidence that the method
 was traded, let alone that it worked.
 
-### 5.3 An asymmetry I noticed and cannot explain `UNRESOLVED`
+### 5.3 The 90% figure, and why I did not have it `EXPLICIT`
+
+*"if you say, listen, I get M then W 90% of the time, I'm like, absolutely go do it."*
+`[00:46:55]`–`[00:47:03]`
+
+**Read in context this cuts against performance inflation rather than for it.** It is the bar a
+student must clear before being allowed to trade a faster variation — the answer to *"can
+anybody trade off the 5 EMA?"* is *no, unless you can already show me this*. The presenter is
+using a high number to **withhold** permission, which is the opposite of the use `D-009` was
+written to guard against.
+
+**I record it as an interpretive failure of my own, not as a finding.** The first draft of these
+notes contained no percentage from V06 at all. `D-009` does not have an exception for figures
+used modestly, and a future session grepping the corpus for accuracy claims would have found
+nothing here. It was caught by this session's negative comprehension battery (`N13`), which was
+written to catch *imported fabrications* and instead caught an *omission* — a real number the
+student had not written down. See `V06_MASTERY_REPORT.md` § COMPREHENSION for what that says
+about the value of negative probes.
+
+### 5.4 An asymmetry I noticed and cannot explain `UNRESOLVED`
 
 The presenter says the third push is where you stop: *"you're trading push one and push two. The
 third one is going to be a reversal, so be careful with that one"* `[01:12:33]`–`[01:12:41]`.
@@ -301,7 +320,7 @@ cycle; you personally take one and two"* — but that reading is mine, it is not
 recording that I supplied it rather than found it. Not logged as a contradiction: a single
 speaker's loose usage within one lesson is `A-054`, an ambiguity, not a `C-xxx`.
 
-### 5.4 "Isubio" `UNRESOLVED`, and deliberately left so
+### 5.5 "Isubio" `UNRESOLVED`, and deliberately left so
 
 Twice the presenter reads out and endorses material from a student he calls *"Isubio"*
 `[01:08:47]`, `[01:11:22]`, crediting *"30 years of experience"* `[01:06:09]`. The name is never

@@ -3637,7 +3637,7 @@ records.
 | Type | Reference |
 |---|---|
 | Source | `03_LESSON_NOTES/V06_SOURCE_NOTES.md` §5 |
-| Interpretation | `03_LESSON_NOTES/V06_INTERPRETATION.md` §5.3 |
+| Interpretation | `03_LESSON_NOTES/V06_INTERPRETATION.md` §5.4 |
 | Related records | `A-004`, `C-001`, `C-006` |
 
 ---

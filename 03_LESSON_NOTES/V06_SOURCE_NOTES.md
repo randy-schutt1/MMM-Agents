@@ -465,6 +465,28 @@ become one** (`D-010`, and `D-025` independently).
 | Student's week | 6 winners, 1 loser | `[00:49:53]` | Read-out email |
 | Student's week | 11 straight trades, **$1600** | `[00:51:24]` | Read-out email |
 | Instructor's trade book | *"5,000 of them"* | `[00:46:23]` | Reported |
+| **A 90% figure** | **90%** | `[00:46:55]` | **See the note below — the only percentage in the lesson** |
+
+> ### ⚠ THE ONE PERCENTAGE IN V06, AND WHAT IT IS NOT — `D-009`
+>
+> *"If you tell me and if you show me and if you say, listen, I get M then W 90% of the time,
+> I'm like, absolutely go do it."* `[00:46:55]`–`[00:47:03]`
+>
+> **This is not a performance claim.** It is a **permission threshold** put to a hypothetical
+> student: the context `[00:46:15]`–`[00:46:47]` is a question about whether anyone may trade
+> off the 5 EMA, and the answer is *no, unless you can demonstrate that you already succeed at
+> the basic pattern*. The number describes a standard the student would have to meet, not a
+> result the method delivers. Read in context it runs **against** performance inflation.
+>
+> **It is recorded anyway, because `D-009` says any advertised accuracy figure is recorded with
+> provenance and treated as a hypothesis, never as a target — and the rule does not have an
+> exception for figures that happen to be used modestly.** A future session grepping the corpus
+> for accuracy claims must find this one and must find it with its context attached.
+>
+> **This entry exists because this session's own comprehension probe (`N13`) failed.** The first
+> draft of these notes, of `V06_INTERPRETATION.md` and of the mastery report contained **no
+> percentage from V06 at all**. The probe was written to catch imported fabrications and instead
+> caught an omission — a real figure the student had not recorded.
 
 ---
 
@@ -553,7 +575,18 @@ lesson asserts several of these.
 | Not present | Measurement |
 |---|---|
 | Any **session clock time** | `EST` 0×; no hour is attached to Asian, London or US anywhere. `A-019` gains a **sixth** consecutive lesson of silence |
-| A **defined Asian box** | `Asian` 5×, all in passing (*"here's my Asian low"* `[00:31:58]`, *"closing inside the Asian range"* `[00:32:05]`, *"is the first push in Asia?"* `[01:09:55]`). No boundary, no rule |
+| A **defined Asian box** | **`Asian` occurs 4× and `Asia` once.** *"Here's my Asian low"* `[00:31:58]`; *"closing inside the Asian range"* `[00:32:05]`; a student's losing trade *"was an Asian session"* `[00:49:53]`; and — the instance that matters most and was missing from the first draft of this row — **an audience question that says "Asian box" outright**: *"when there is the move in the Asian box, say 30 pips down, and then it comes out of the box and does a stop and high, do you start your count of the pushes from the stop and high, or is the first push in Asia?"* `[01:09:43]`–`[01:09:55]`. **The presenter answers about push counting and never defines the box, its boundary, or any rule attached to it.** The conclusion is unchanged and is now stated on the strongest evidence rather than the weakest: the term is in the room, and the lesson does not define it |
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2. This row previously read:
+> *"`Asian` 5×, all in passing ("here's my Asian low" `[00:31:58]`, "closing inside the Asian
+> range" `[00:32:05]`, "is the first push in Asia?" `[01:09:55]`). No boundary, no rule"*.
+> **Two defects, both found by this session's own comprehension probe (`N03`), not by a
+> reviewer.** (1) The count was wrong: `Asian` is 4× word-boundary, plus one `Asia`; *"5×"*
+> conflated the two tokens. (2) More seriously, the row listed three weak instances and
+> **omitted the one that literally contains the phrase "Asian box"** — the single piece of
+> evidence a reviewer would go looking for, in a row whose whole purpose is to say the box is
+> undefined. The conclusion did not change; the evidence for it was incomplete in exactly the
+> place it needed to be complete.)*
 | A **5/13 EMA cross** | `5/13` 0×, `5 EMA` 0× |
 | **TDI** as anything but a future agenda item | `TDI` 1×, `[00:49:16]` |
 | **Shark fin** | `shark` 0× |

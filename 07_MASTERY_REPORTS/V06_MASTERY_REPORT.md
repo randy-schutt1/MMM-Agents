@@ -330,3 +330,223 @@ procedure — not just the requirement — be recorded**, so V07–V21 do not ea
 must not certify its own work, and does not.
 
 **The V07 gate is governed by `D-024`**, not by this report.
+
+---
+
+# COMPREHENSION VERIFICATION
+
+**Added 2026-08-13 at the owner's direction:** independent checks designed to expose
+fabrication or shallow pattern-matching rather than genuine understanding.
+
+The ten dimensions above are a *self-assessment*. Everything in this section is built so that
+**it can fail**, and two probes did.
+
+---
+
+## CV-1. THE PROBE — 48 MACHINE-CHECKED CLAIMS, TWO OF WHICH CAUGHT MY OWN ERRORS
+
+`05_HOMEWORK/V06/scripts/comprehension_probe.py`, committed and re-runnable.
+
+**Method.** Two batteries pulling in opposite directions:
+
+| Battery | What it is | Why it can't be gamed by fluency |
+|---|---|---|
+| **POSITIVE — 33 claims** | Written **closed-book from memory**, before re-opening any note, then each checked by regex against the transcript at a marker I also had to state from memory | A confabulated detail fails the text match; a right detail attached to a wrong timestamp fails the marker match |
+| **NEGATIVE — 15 claims** | Statements that **sound like they belong in this lesson and are not in it.** Six are lifted verbatim from the quarantined `NOTES.md`/`RULES.md` **for this very lesson** (`Q-006`) — precisely the material a shallow reader absorbs | Recall can be faked by fluency. **Correctly rejecting a plausible falsehood cannot be** |
+
+**Result: 33/33 positive, 13/15 negative. The two negative failures are both TRUE, and both
+found defects in my own work that no reviewer had yet raised.**
+
+### The negative battery, in full
+
+| ID | Plausible claim | Verdict |
+|---|---|---|
+| `N01` | A 5/13 EMA cross is the entry trigger | ✅ absent (`5/13` 0×) |
+| `N02` | Stops 10–15 pips beyond the high/low of day | ✅ absent |
+| `N03` | The presenter teaches an "Asian Box" | ❌ **FAILED — and the failure was right** |
+| `N04` | Session times given in EST | ✅ absent (`EST` 0×) |
+| `N05` | PFH / PFL are used | ✅ absent |
+| `N06` | A minimum 1:3 risk-to-reward is required | ✅ absent — **after a probe bug, below** |
+| `N07` | The TDI shark fin confirms the entry | ✅ absent (`shark` 0×) |
+| `N08` | The 5 EMA is named | ✅ absent |
+| `N09` | "800 EMA" as a term | ✅ absent (the 800 *is* mentioned; the term is not) |
+| `N10` | `HOD` / `LOD` are **spoken** | ✅ absent from audio — they are **printed** on the slide, and conflating the two is the trap |
+| `N11` | A clock time is given for London | ✅ absent |
+| `N12` | "Mayo" is **spoken** | ✅ absent — it is **printed** in the DMR frame; the audio says *"mail"/"male"* |
+| `N13` | An accuracy percentage is claimed | ❌ **FAILED — and the failure was right** |
+| `N14` | The lesson defines what a nameable pattern *is* | ✅ absent — it enumerates three and defines the class nowhere |
+| `N15` | Steve Mauro speaks in this lesson | ✅ absent |
+
+### `N03` — "Asian box" IS in the lesson, and my source notes had missed the instance
+
+The term occurs **once**, at `[01:09:43]`, inside an audience question the presenter reads
+aloud: *"when there is the move in the Asian box, say 30 pips down…"*. He answers about push
+counting and **never defines the box**.
+
+**My §10 row was wrong twice.** It said `Asian` occurs 5× (it is 4×, plus one `Asia` — two
+tokens conflated), and it listed **three weak instances while omitting the only one containing
+the literal phrase "Asian box"** — in a row whose entire purpose was to establish that the box
+is undefined. **The conclusion survived; the evidence for it was missing exactly where a
+reviewer would look.** Corrected in `V06_SOURCE_NOTES.md` §10 with the superseded text retained.
+
+### `N13` — a 90% figure exists in V06 and I had not recorded it
+
+*"if you say, listen, I get M then W 90% of the time, I'm like, absolutely go do it."*
+`[00:46:55]`–`[00:47:03]`
+
+In context it is a **permission threshold**, not a performance claim — the bar a student must
+clear before being allowed to trade a faster variation. Read properly it cuts *against*
+performance inflation. **But `D-009` requires every accuracy figure on the record with
+provenance and has no exception for figures used modestly**, and the first drafts of the source
+notes, the interpretation and this report contained **no percentage from V06 at all**.
+
+**A probe written to catch imported fabrications instead caught an omission.** Now recorded at
+`V06_SOURCE_NOTES.md` §7 and `V06_INTERPRETATION.md` §5.3.
+
+### `N06` — the probe's own bug, kept on the record
+
+The first draft of `N06` used the bare pattern `1:3`, which matched the **timestamp markers**
+`[01:3x:xx]` twenty times and reported a failure that did not exist. Fixed with a lookbehind.
+**The bug is documented in the script rather than quietly removed**, because a probe that
+reports failures it cannot explain is worse than no probe — and a reader needs to know this
+battery has been wrong once.
+
+> **What CV-1 is evidence of, stated precisely.** It shows my recall of V06 is accurate on 33
+> checked points and that I reject 13 of 15 plausible falsehoods, including six drawn from the
+> fabricated notes for this lesson. **It does not show I understood the lesson** — that is
+> CV-2 and CV-3. And its most useful output was not a pass: it was two failures that improved
+> the artifacts.
+
+---
+
+## CV-2. THE LESSON IN MY OWN WORDS, WITH THE JOINTS SHOWING
+
+*Written without consulting the notes. The test is not fluency — it is whether the causal
+structure hangs together and whether I can say which parts are the presenter's reasoning and
+which are mine.*
+
+The presenter's argument has one premise and one move. The premise is **self-similarity**: if
+the market-maker cycle is real, and the market is fractal, then the same three-part shape the
+course draws on 4-hour and 1-hour charts must also be visible inside a single day on the
+15-minute. The move is **renaming**: he calls the intraday instance *pushes* rather than
+*levels*, explicitly so his vocabulary does not collide with the instructor's.
+
+Everything operational follows from wanting to trade that smaller shape. If you are trading a
+15-minute structure, you need to know **where it starts** (the anchor, and specifically the
+second leg — *"wherever the second leg is, that's my push one"*), **how big each leg should be**
+(ADR ÷ 3), **how far it should pull back between legs** (25–50 pips, and *measure it*, because
+a 10–15 pip drift is not a pullback), and **where the turns happen** (at a moving average, as
+one of three named candle shapes).
+
+Then the filters, which are most of the lesson. **Wait for rejection** — do not anticipate,
+because before the trap completes you cannot tell a bounce from a continuation. **Name the
+pattern** — if you cannot name it, it is *"garbage"*. **Trade with the market-maker trend, not
+the retail trend.** And a set of pass conditions that all reduce to the same idea: if price did
+not actually reach the moving averages, there is nothing to trade.
+
+Management is thin and blunt: a **two-hour clock** — if it has not gone anywhere, kill it — and
+an **exit on a contrary pattern**: if I am short an M and a W forms, I am out, because *"I can
+always get into a trade"*.
+
+**The part I find most interesting is the failure case**, because he gives it its own slide.
+When you are counter-trend, you do not get three pushes, you get two. That is offered as a
+*diagnostic*: the structure degrading is how you learn you were on the wrong side. **That is a
+genuinely falsifiable-sounding claim** — and it is unfalsifiable in this corpus, because
+counting pushes requires a definition of *push* that nobody has given.
+
+**Where my reading goes beyond his words** (and this is the part that matters for D-008): I
+read the lesson as **a frequency upgrade sold with a filter attached, where the filter is the
+substance** — more trades per trend, but only if you obey a long list of refusals. He never says
+that. He says the opposite emphasis: *"you can take more trades this way."* My reading is an
+inference from **counting** how much of the runtime is spent on reasons *not* to trade, and it
+is labelled `INFERRED` in `V06_INTERPRETATION.md` §1 for that reason.
+
+---
+
+## CV-3. THREE REASONING TRACES, EACH WITH ITS BREAKING POINT NAMED
+
+*A conclusion is only as good as the step most likely to be wrong. Each trace names that step.*
+
+### Trace 1 — from raw audio to "this is not the instructor" (the load-bearing conclusion)
+
+| Step | Evidence | Could it break? |
+|---|---|---|
+| 1 | The token `Steve` occurs 25× in the body | No — mechanical count |
+| 2 | 23 are third-person references by the speaker; 2 are inside read-aloud questions | Yes — attribution of read-aloud text is a judgement. **I checked both, and one (`A-052`) I could not resolve and left open** |
+| 3 | He tells students twice to *email Steve* about topics he will not cover | No — `[01:03:38]`, `[01:09:29]` |
+| 4 | He describes the DMR curriculum as approved by Steve: *"we tell him what we're going to do"* `[01:04:15]` | No |
+| 5 | An F0 profile shows one voice throughout: 37/38 blocks inside 13.5 Hz | **This is the weakest step and I treat it as such.** It is a *screen*, validated on V04's known handover; it cannot identify a speaker across files, and I do not use it to |
+| 6 | ∴ zero course-author runtime; `D-025` governs the lesson | Follows from 1–4 alone. **Step 5 is corroboration, not load-bearing** |
+
+**Where it would break:** if the read-aloud attribution in step 2 were systematically wrong —
+i.e. if the "questions" were actually the speaker's own asides — the third-person count would
+fall. It would have to fall from 23 to near zero to threaten the conclusion. It does not.
+
+### Trace 2 — from "the DMR curriculum prints six or seven patterns" to *weakening* `A-044`
+
+| Step | Evidence | Could it break? |
+|---|---|---|
+| 1 | The audio enumerates three and closes the list: *"pretty much all you're looking for are these three patterns"* `[00:07:44]` | No |
+| 2 | Frame `V06_00-48-29` prints *"2 Pins to the Mayo or Water along with Shooting Star, Evening Star, Morning Star and RR Tracks"* plus *"Confirmed M & W"* | **Yes — this is an OCR-by-eye read at 4×.** I transcribed only what I could read confidently and marked the rest with ellipses |
+| 3 | Those are six or seven items, not three | Follows from 2 |
+| 4 | ∴ *"three patterns"* is probably a live-audience simplification, not a closed set | **Inference.** An alternative reading is that the DMR list is a *later* or *broader* curriculum and both are accurate for their own context |
+| 5 | ∴ `A-044` is **extended and weakened**, not answered | Holds under either reading of 4 — both mean the spoken enumeration cannot be taken as the definition |
+
+**Where it would break:** step 2. If my reading of the curriculum frame is wrong, the whole
+trace collapses. **That is why the frame is committed at full resolution** and the transcription
+marks what it could not read.
+
+### Trace 3 — from the ADR measurement to a claim about `D-030` rather than about the market
+
+| Step | Evidence | Could it break? |
+|---|---|---|
+| 1 | V06 states *"each push is approximately ADR divided by 3"* and never defines ADR's lookback | No |
+| 2 | Computing ADR over 5/10/14/20/30 days on four pairs gives spreads of 31–60% of the smallest | No — arithmetic on committed data, reproducible by a committed script |
+| 3 | ∴ *"ADR ÷ 3"* is 15 or 23 pips for GBP/USD depending on an unstated parameter | Follows |
+| 4 | ∴ any session that picked a lookback to make the rule testable would produce a number whose provenance is invisible later | **Inference, and the one I am most confident of** — it is `D-030`'s own argument, now with a measured magnitude |
+| 5 | ✗ **NOT concluded:** that the guest's claim is wrong | Deliberately not drawn. The measurement says the *parameter* is undetermined, not that the *claim* is false |
+
+**Where it would break:** step 5 is where a careless session would over-reach. The temptation is
+to write *"the lesson's arithmetic does not hold"*. **It is not what the data shows.**
+
+---
+
+## CV-4. DISCRIMINATION — WHAT WOULD MAKE THIS *NOT* THE SETUP
+
+*Answered from the lesson's own logic. A shallow reader can list the entry conditions; only a
+close one can say where the presenter breaks his own rules.*
+
+| Would-be setup | Why the lesson says no |
+|---|---|
+| A clean pattern that never reached the moving averages | *"This one did not even touch the moving averages, so I don't count it"* `[00:20:57]`; *"there is no way you can enter"* `[00:21:43]` |
+| A pattern that came *close* to the average | *"I don't like when it's close to it… wait for the moving averages. Otherwise you pass"* `[00:24:13]` |
+| A textbook shape entered before the trap completed | *"You do not anticipate the trade"* `[00:08:14]` — and the trap is complete only when the candle **closes** `[01:01:12]` |
+| A perfect structure against the market-maker trend | *"even if you have the pattern, you still cannot take those trades"* `[00:07:03]` |
+| A third push | *"The third one is going to be a reversal, so be careful"* `[01:12:37]` |
+
+**And the two places he contradicts himself, which is the real test:**
+
+1. **He takes a position on a non-nameable pattern.** *"here's some sort of a non-nameable
+   pattern, but it closed below 13. Take another position."* `[00:23:25]`–`[00:23:33]` — twelve
+   minutes after making nameability the entry condition. **This is why `A-044` cannot be closed
+   even as a description of his own practice.**
+2. **Push three is three different things** — the completion of the cycle, the one to avoid, and
+   the one whose absence proves you were counter-trend. He corrects himself mid-sentence:
+   *"look for three of those, I mean two pushes"* `[01:12:24]`. Logged as `A-054`.
+
+---
+
+## CV-5. WHAT WOULD CHANGE MY MIND
+
+*Falsifiable commitments. If a later lesson shows any of these, I was wrong here and the record
+should say so.*
+
+| My position | What would overturn it |
+|---|---|
+| V06 has zero instructor runtime | Any lesson identifying this speaker **as** Steve Mauro, or the instructor endorsing the push framework in his own voice |
+| The three-pattern enumeration is a simplification | The instructor stating the same closed list of three |
+| *"Push"* is the coaches' construct, not course doctrine | The instructor using *push* as a technical term for the 15-minute cycle |
+| The lesson is *"a frequency upgrade with a filter attached"* | Any statement framing pushes as a **replacement** for the anchor-level-three trade rather than an addition |
+| The `A-042` gap is structural — the corpus is bounded | A later lesson actually teaching Entry Candles, Hi/Lo Drill, Brinks or Safe Trade in the instructor's voice |
+| `C-006`'s two stop-hunt definitions cannot both be the course's | The instructor defining the term in a way that subsumes both |
+
