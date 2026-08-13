@@ -4,6 +4,10 @@
 STATUS:     PRE-REGISTERED — NOT YET RUN
 LESSON:     V02 [00:51:03]–[00:51:20]; V01 [00:46:09]
 BLOCKERS:   I-007 · D-028 boundary dates unpinned
+            RESOLVED 2026-08-13 (D-034 / D-035 / D-036a): I-007 CLOSED, D-028 PINNED at
+            2016-07-01, W-B confirmed inside DEVELOPMENT. Data source is now the
+            HistData GBP/USD M1 CSV corpus. Data-availability blocker CLEARED. NONE
+            remaining from this pair.
 ATTESTATION: No chart in W-B was opened by the session that wrote this file.
 ```
 
@@ -44,9 +48,10 @@ and prevailing volatility, with nothing special at 09:30.
 | Field | Value |
 |---|---|
 | Instrument | GBP/USD (`D-007`) |
+| Data source | ~~TradingView / FXCM, `D-034`~~ **AMENDED 2026-08-13, `D-036a`: HistData GBP/USD M1 CSV corpus**, aggregated locally to 15m. `06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M1/`, SHA-256 on record. Data-QA gate (`scripts/qa_histdata_m1.py`) is a precondition on this run — cite `QA_REPORT.txt` |
 | Timeframe | 15-minute |
 | Window | **W-B** — 2014-01-05 → 2015-12-31 |
-| Block | PROVISIONAL DEVELOPMENT pending `D-028` |
+| Block | ~~PROVISIONAL DEVELOPMENT pending `D-028`~~ **PINNED 2026-08-13, `D-035`: boundary `2016-07-01`. W-B conforms — wholly inside DEVELOPMENT (`COMMON_PROTOCOL.md` §3a)** |
 | Timezone | **Both `D-031` arms** |
 | Entry | Mechanical: at the **08:00 bar close**, every trading day, no filter of any kind. Both directions run as separate arms (long-only and short-only), because the instructor names no direction |
 | Stop | **18 pips** — the instructor's stated maximum (V04 `[00:04:43]`). Not fitted |
@@ -91,8 +96,17 @@ claim is specifically about the clock.
 
 ## 7. TO RUN THIS
 
-1. Close `I-007`; confirm W-B sits inside DEVELOPMENT.
-2. Harvest 15m bars with timestamps from DOM text only.
+1. ~~Close `I-007`; confirm W-B sits inside DEVELOPMENT.~~ **Both resolved — `D-034` closed
+   I-007, `D-035` pinned D-028 at 2016-07-01, W-B confirmed inside DEVELOPMENT
+   (`COMMON_PROTOCOL.md` §3a). Run the data-QA gate
+   (`06_MANUAL_BACKTEST/scripts/qa_histdata_m1.py`) as a precondition and cite
+   `datasets/HISTDATA_GBPUSD_M1/QA_REPORT.txt`.**
+2. ~~Harvest 15m bars with timestamps from DOM text only.~~ **Source is the HistData
+   GBP/USD M1 CSV corpus (`D-036a`), aggregated locally to 15m by
+   `06_MANUAL_BACKTEST/scripts/aggregate_m15.py` (`GBPUSD_M15_ARMA.csv` /
+   `GBPUSD_M15_ARMB.csv` per `D-031` arm). Every quote is a number parsed from the
+   checksummed file, per `COMMON_PROTOCOL.md` §2's restated `E06` — no value is read
+   from a chart rendering.**
 3. Run N1 and N2 and record their distributions **before** looking at the observed
    stop-out histogram.
 4. Produce the wall-clock and entry-relative histograms in the same pass.

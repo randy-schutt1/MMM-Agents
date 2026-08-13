@@ -4,6 +4,10 @@
 STATUS:     PRE-REGISTERED — NOT YET RUN
 LESSON:     V03 [00:39:49]–[00:40:10]
 BLOCKERS:   I-007 · D-028 unpinned · C-004 (3:30 printed vs 4:00 spoken) — handled in §3a
+            RESOLVED 2026-08-13 (D-034 / D-035 / D-036a), I-007/D-028 PAIR ONLY: I-007
+            CLOSED, D-028 PINNED at 2016-07-01, W-B confirmed inside DEVELOPMENT. Data
+            source is now the HistData GBP/USD M1 CSV corpus. Data-availability blocker
+            CLEARED. C-004 remains OPEN, unaffected by this entry — see §3a.
 INTERPRETIVE DEPENDENCY: V03_INTERPRETATION.md I8 / Q-of-scope — declared in §3b
 ATTESTATION: No chart in W-B was opened by the session that wrote this file.
 ```
@@ -49,9 +53,10 @@ directional edge; **(b)** the two branches show the same dispersion.
 | Field | Value |
 |---|---|
 | Instrument | GBP/USD (`D-007`) |
+| Data source | ~~TradingView / FXCM, `D-034`~~ **AMENDED 2026-08-13, `D-036a`: HistData GBP/USD M1 CSV corpus**, aggregated locally to 15m. `06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M1/`, SHA-256 on record. Data-QA gate (`scripts/qa_histdata_m1.py`) is a precondition on this run — cite `QA_REPORT.txt` |
 | Timeframe | 15-minute |
 | Window | **W-B** — 2014-01-05 → 2015-12-31 |
-| Block | PROVISIONAL DEVELOPMENT pending `D-028` |
+| Block | ~~PROVISIONAL DEVELOPMENT pending `D-028`~~ **PINNED 2026-08-13, `D-035`: boundary `2016-07-01`. W-B conforms — wholly inside DEVELOPMENT (`COMMON_PROTOCOL.md` §3a)** |
 | Timezone | **Both `D-031` arms** |
 | Referent range | The **Asian range** (8:30pm–3:00am) — the only range the course places before London on the V02 printed table |
 | Trigger window | **03:30 – 04:30**, which spans both readings of the London open (§3a) |
@@ -119,8 +124,17 @@ mirror images; running the mirror is the cheapest way to find out.
 
 ## 7. TO RUN THIS
 
-1. Close `I-007`; confirm W-B is DEVELOPMENT.
-2. Harvest with timestamps from DOM text only; build the Asian box per day, both arms.
+1. ~~Close `I-007`; confirm W-B is DEVELOPMENT.~~ **Both resolved — `D-034` closed I-007,
+   `D-035` pinned D-028 at 2016-07-01, W-B confirmed inside DEVELOPMENT
+   (`COMMON_PROTOCOL.md` §3a). Run the data-QA gate
+   (`06_MANUAL_BACKTEST/scripts/qa_histdata_m1.py`) as a precondition and cite
+   `datasets/HISTDATA_GBPUSD_M1/QA_REPORT.txt`.**
+2. ~~Harvest with timestamps from DOM text only;~~ **Source is the HistData GBP/USD M1
+   CSV corpus (`D-036a`), aggregated locally to 15m by
+   `06_MANUAL_BACKTEST/scripts/aggregate_m15.py` (`GBPUSD_M15_ARMA.csv` /
+   `GBPUSD_M15_ARMB.csv` per `D-031` arm); every quote is a number parsed from the
+   checksummed file, per `COMMON_PROTOCOL.md` §2's restated `E06` — no value is read
+   from a chart rendering.** Build the Asian box per day, both arms.
 3. Run the mirror control and N1 **before** looking at branch H's result.
 4. Report branch frequencies (H / L / N) with the outcome table — a rule that fires on 8%
    of days is a different object from one that fires on 60%.

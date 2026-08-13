@@ -4,6 +4,10 @@
 STATUS:     PRE-REGISTERED — NOT YET RUN
 LESSON:     V02 (printed slide, [00:45:55])
 BLOCKERS:   I-007 · D-028 boundary dates unpinned
+            RESOLVED 2026-08-13 (D-034 / D-035 / D-036a): I-007 CLOSED, D-028 PINNED at
+            2016-07-01, W-A confirmed inside DEVELOPMENT. Data source is now the
+            HistData GBP/USD M1 CSV corpus. Data-availability blocker CLEARED. NONE
+            remaining from this pair.
 ATTESTATION: No chart in W-A was opened by the session that wrote this file.
 ```
 
@@ -47,9 +51,10 @@ than a day anchored at any other hour of the clock.
 | Field | Value |
 |---|---|
 | Instrument | GBP/USD (`D-007`) |
+| Data source | ~~TradingView / FXCM, `D-034`~~ **AMENDED 2026-08-13, `D-036a`: HistData GBP/USD M1 CSV corpus**, aggregated locally to 15m. `06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M1/`, SHA-256 on record. Data-QA gate (`scripts/qa_histdata_m1.py`) is a precondition on this run — cite `QA_REPORT.txt` |
 | Timeframe | 15-minute |
 | Window | **W-A** — 2015-01-04 → 2015-12-31 |
-| Block | PROVISIONAL DEVELOPMENT pending `D-028` |
+| Block | ~~PROVISIONAL DEVELOPMENT pending `D-028`~~ **PINNED 2026-08-13, `D-035`: boundary `2016-07-01`. W-A conforms — wholly inside DEVELOPMENT (`COMMON_PROTOCOL.md` §3a)** |
 | Timezone | **Both `D-031` arms** (`5pm` is `17:00` in the chart's own zone; the arms move it) |
 | Metric 1 — **extreme separation** | For each candidate anchor hour `h`, the mean absolute time-gap between the day's high and the day's low, in bars. A "reset" day should place its extremes *inside* the day rather than adjacent across the boundary |
 | Metric 2 — **boundary adjacency** | Share of days whose high **or** low falls within 30 minutes of the anchor. A real boundary should be a *rare* place for an extreme, not a common one |
@@ -88,8 +93,17 @@ pre-registered here so the ranking cannot be reframed afterwards.
 
 ## 7. TO RUN THIS
 
-1. Close `I-007`; confirm W-A sits inside DEVELOPMENT.
-2. Harvest 15m bars with timestamps from DOM text only.
+1. ~~Close `I-007`; confirm W-A sits inside DEVELOPMENT.~~ **Both resolved — `D-034` closed
+   I-007, `D-035` pinned D-028 at 2016-07-01, W-A confirmed inside DEVELOPMENT
+   (`COMMON_PROTOCOL.md` §3a). Run the data-QA gate
+   (`06_MANUAL_BACKTEST/scripts/qa_histdata_m1.py`) as a precondition and cite
+   `datasets/HISTDATA_GBPUSD_M1/QA_REPORT.txt`.**
+2. ~~Harvest 15m bars with timestamps from DOM text only.~~ **Source is the HistData
+   GBP/USD M1 CSV corpus (`D-036a`), aggregated locally to 15m by
+   `06_MANUAL_BACKTEST/scripts/aggregate_m15.py` (`GBPUSD_M15_ARMA.csv` /
+   `GBPUSD_M15_ARMB.csv` per `D-031` arm). Every quote is a number parsed from the
+   checksummed file, per `COMMON_PROTOCOL.md` §2's restated `E06` — no value is read
+   from a chart rendering.**
 3. Compute all three metrics for all 24 anchors **and both arms** in one pass, so that no
    ordering of the computation can influence what is looked at first.
 4. Run N2 before ranking anything.

@@ -4,6 +4,10 @@
 STATUS:     PRE-REGISTERED — NOT YET RUN
 LESSON:     V02 (printed slide, [00:45:55]; spoken [00:50:32])
 BLOCKERS:   I-007 · D-028 boundary dates unpinned · C-004 (see §3a)
+            RESOLVED 2026-08-13 (D-034 / D-035 / D-036a), I-007/D-028 PAIR ONLY: I-007
+            CLOSED, D-028 PINNED at 2016-07-01, W-A confirmed inside DEVELOPMENT. Data
+            source is now the HistData GBP/USD M1 CSV corpus. Data-availability blocker
+            CLEARED. C-004 remains OPEN, unaffected by this entry — see §3a.
 ATTESTATION: No chart in W-A was opened by the session that wrote this file.
 ```
 
@@ -48,9 +52,10 @@ Null hypothesis: **the named windows are not distinguishable** from the surround
 | Field | Value |
 |---|---|
 | Instrument | GBP/USD (`D-007`) |
+| Data source | ~~TradingView / FXCM, `D-034`~~ **AMENDED 2026-08-13, `D-036a`: HistData GBP/USD M1 CSV corpus**, aggregated locally to 15m. `06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M1/`, SHA-256 on record. Data-QA gate (`scripts/qa_histdata_m1.py`) is a precondition on this run — cite `QA_REPORT.txt` |
 | Timeframe | 15-minute |
 | Window | **W-A** — 2015-01-04 → 2015-12-31 |
-| Block | PROVISIONAL DEVELOPMENT pending `D-028` |
+| Block | ~~PROVISIONAL DEVELOPMENT pending `D-028`~~ **PINNED 2026-08-13, `D-035`: boundary `2016-07-01`. W-A conforms — wholly inside DEVELOPMENT (`COMMON_PROTOCOL.md` §3a)** |
 | Timezone | **Both `D-031` arms** |
 | Windows under test | (i) 17:00–20:00 "Dead Gap"; (ii) 03:00–03:30 gap; (iii) 09:00–09:30 gap |
 | Comparators | For each, the equal-length window **immediately before** and **immediately after** it |
@@ -58,6 +63,7 @@ Null hypothesis: **the named windows are not distinguishable** from the surround
 | Metric 2 | Mean absolute net movement across the window, in pips |
 | Metric 3 | Share of **daily** extremes falling inside the window (a genuinely dead window should hold almost none) |
 | Weekday handling | Sunday and Friday are **retained and reported separately**, because the week's open and close sit inside the 17:00–20:00 window on those days and would otherwise contaminate a weekday average |
+| **Where the week open actually falls — pinned 2026-08-13, `D-036a`** | The row above was written when the week open was un-pinned. It is now measured, and it lands **inside window (i), at its edge**: **Arm A — 17:00 exactly, the FIRST bar of the Dead Gap window** (corpus is natively fixed UTC−5; 172 of 187 week opens at exactly 17:00). **Arm B — 18:00 during US DST** (one hour into the window), **17:00 during standard time**. So the Sunday instance's contamination is not merely "inside the window" but **arm- and season-dependent in position**. The separate-reporting rule stands unchanged; **the two arms must be compared on the Sunday instance specifically**, and any divergence there is a `D-031` finding, not a defect |
 | Decision point | None — distributional |
 | Sample | ~260 instances per window. ≥ 30 satisfied |
 
@@ -97,8 +103,17 @@ same data. If 03:30–04:00 looks like gap rather than session, that is evidence
 
 ## 7. TO RUN THIS
 
-1. Close `I-007`; confirm W-A sits inside DEVELOPMENT.
-2. Harvest 15m bars with timestamps from DOM text only.
+1. ~~Close `I-007`; confirm W-A sits inside DEVELOPMENT.~~ **Both resolved — `D-034` closed
+   I-007, `D-035` pinned D-028 at 2016-07-01, W-A confirmed inside DEVELOPMENT
+   (`COMMON_PROTOCOL.md` §3a). Run the data-QA gate
+   (`06_MANUAL_BACKTEST/scripts/qa_histdata_m1.py`) as a precondition and cite
+   `datasets/HISTDATA_GBPUSD_M1/QA_REPORT.txt`.**
+2. ~~Harvest 15m bars with timestamps from DOM text only.~~ **Source is the HistData
+   GBP/USD M1 CSV corpus (`D-036a`), aggregated locally to 15m by
+   `06_MANUAL_BACKTEST/scripts/aggregate_m15.py` (`GBPUSD_M15_ARMA.csv` /
+   `GBPUSD_M15_ARMB.csv` per `D-031` arm). Every quote is a number parsed from the
+   checksummed file, per `COMMON_PROTOCOL.md` §2's restated `E06` — no value is read
+   from a chart rendering.**
 3. Build the full 96-slot 24-hour profile **first**, for both arms, before extracting any
    named window.
 4. Run N2 before comparing.

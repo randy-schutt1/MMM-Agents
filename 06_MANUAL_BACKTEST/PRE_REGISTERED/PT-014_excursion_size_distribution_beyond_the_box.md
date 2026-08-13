@@ -4,6 +4,10 @@
 STATUS:     PRE-REGISTERED — NOT YET RUN
 LESSON:     V04 [00:10:01], [00:14:36], [00:15:43]; V02 [00:44:59], [00:43:45]
 BLOCKERS:   I-007 · D-028 boundary dates unpinned · A-019 handled by D-031 arms
+            RESOLVED 2026-08-13 (D-034 / D-035 / D-036a), I-007/D-028 PAIR ONLY: I-007
+            CLOSED, D-028 PINNED at 2016-07-01, W-B confirmed inside DEVELOPMENT. Data
+            source is now the HistData GBP/USD M1 CSV corpus. Data-availability blocker
+            CLEARED. A-019 handling is unaffected — still via D-031 arms.
 RELATION:   Supplies the distribution PT-001 assumes a band inside of. Run this FIRST.
 ATTESTATION: No chart in W-B was opened by the session that wrote this file.
 ```
@@ -50,9 +54,10 @@ special position in the distribution.
 | Field | Value |
 |---|---|
 | Instrument | GBP/USD (`D-007`) |
+| Data source | ~~TradingView / FXCM, `D-034`~~ **AMENDED 2026-08-13, `D-036a`: HistData GBP/USD M1 CSV corpus**, aggregated locally to 15m. `06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M1/`, SHA-256 on record. Data-QA gate (`scripts/qa_histdata_m1.py`) is a precondition on this run — cite `QA_REPORT.txt` |
 | Timeframe | 15-minute |
 | Window | **W-B** — 2014-01-05 → 2015-12-31 |
-| Block | PROVISIONAL DEVELOPMENT pending `D-028` |
+| Block | ~~PROVISIONAL DEVELOPMENT pending `D-028`~~ **PINNED 2026-08-13, `D-035`: boundary `2016-07-01`. W-B conforms — wholly inside DEVELOPMENT (`COMMON_PROTOCOL.md` §3a)** |
 | Timezone | **Both `D-031` arms** |
 | The box | High and low of the Asian window **8:30pm – 3:00am**, exactly as the V02 slide prints it (`COMMON_PROTOCOL.md` §4) |
 | Measure 1 | Maximum excursion beyond the box high, and beyond the box low, per day, in pips |
@@ -92,8 +97,17 @@ having a trigger is the exact distribution that makes a band look inevitable.
 
 ## 7. TO RUN THIS
 
-1. Close `I-007`; confirm W-B is DEVELOPMENT.
-2. Harvest with timestamps from DOM text only; build the Asian box per day for both arms.
+1. ~~Close `I-007`; confirm W-B is DEVELOPMENT.~~ **Both resolved — `D-034` closed I-007,
+   `D-035` pinned D-028 at 2016-07-01, W-B confirmed inside DEVELOPMENT
+   (`COMMON_PROTOCOL.md` §3a). Run the data-QA gate
+   (`06_MANUAL_BACKTEST/scripts/qa_histdata_m1.py`) as a precondition and cite
+   `datasets/HISTDATA_GBPUSD_M1/QA_REPORT.txt`.**
+2. ~~Harvest with timestamps from DOM text only;~~ **Source is the HistData GBP/USD M1
+   CSV corpus (`D-036a`), aggregated locally to 15m by
+   `06_MANUAL_BACKTEST/scripts/aggregate_m15.py` (`GBPUSD_M15_ARMA.csv` /
+   `GBPUSD_M15_ARMB.csv` per `D-031` arm); every quote is a number parsed from the
+   checksummed file, per `COMMON_PROTOCOL.md` §2's restated `E06` — no value is read
+   from a chart rendering.** Build the Asian box per day for both arms.
 3. Build the sham-box control before reading the real histogram.
 4. **Run this before PT-001, PT-015, PT-016, PT-017 and PT-018**, all of which use the same
    box and inherit this distribution's shape.

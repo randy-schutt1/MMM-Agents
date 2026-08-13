@@ -4,6 +4,10 @@
 STATUS:     PRE-REGISTERED — NOT YET RUN
 LESSON:     V03 [00:44:48]–[00:44:51]; printed card "Asian Range =41" ([00:44:19] slide)
 BLOCKERS:   I-007 · D-028 unpinned · PROVENANCE CAVEAT — see §1a, and it is not small
+            RESOLVED 2026-08-13 (D-034 / D-035 / D-036a), I-007/D-028 PAIR ONLY: I-007
+            CLOSED, D-028 PINNED at 2016-07-01, W-B confirmed inside DEVELOPMENT. Data
+            source is now the HistData GBP/USD M1 CSV corpus. Data-availability blocker
+            CLEARED. The PROVENANCE CAVEAT is unaffected and remains — see §1a.
 ATTESTATION: No chart in W-B was opened by the session that wrote this file.
 ```
 
@@ -56,9 +60,10 @@ Null hypothesis: **they do not.** Box size carries no information about what fol
 | Field | Value |
 |---|---|
 | Instrument | GBP/USD (`D-007`) |
+| Data source | ~~TradingView / FXCM, `D-034`~~ **AMENDED 2026-08-13, `D-036a`: HistData GBP/USD M1 CSV corpus**, aggregated locally to 15m. `06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M1/`, SHA-256 on record. Data-QA gate (`scripts/qa_histdata_m1.py`) is a precondition on this run — cite `QA_REPORT.txt` |
 | Timeframe | 15-minute |
 | Window | **W-B** — 2014-01-05 → 2015-12-31 |
-| Block | PROVISIONAL DEVELOPMENT pending `D-028` |
+| Block | ~~PROVISIONAL DEVELOPMENT pending `D-028`~~ **PINNED 2026-08-13, `D-035`: boundary `2016-07-01`. W-B conforms — wholly inside DEVELOPMENT (`COMMON_PROTOCOL.md` §3a)** |
 | Timezone | **Both `D-031` arms** |
 | The box | Asian window 8:30pm–3:00am per the V02 printed table |
 | Split | **Arm L: box range < 50 pips** · **Arm H: box range ≥ 50 pips**. The cut is the instructor's, not this session's |
@@ -97,9 +102,18 @@ whether anything happens at 50 at all.
 
 ## 7. TO RUN THIS
 
-1. Close `I-007`; confirm W-B is DEVELOPMENT. Run **PT-014** first for the excursion
+1. ~~Close `I-007`; confirm W-B is DEVELOPMENT.~~ **Both resolved — `D-034` closed I-007,
+   `D-035` pinned D-028 at 2016-07-01, W-B confirmed inside DEVELOPMENT
+   (`COMMON_PROTOCOL.md` §3a). Run the data-QA gate
+   (`06_MANUAL_BACKTEST/scripts/qa_histdata_m1.py`) as a precondition and cite
+   `datasets/HISTDATA_GBPUSD_M1/QA_REPORT.txt`.** Run **PT-014** first for the excursion
    distribution this test conditions.
-2. Harvest with timestamps from DOM text only.
+2. ~~Harvest with timestamps from DOM text only.~~ **Source is the HistData GBP/USD M1
+   CSV corpus (`D-036a`), aggregated locally to 15m by
+   `06_MANUAL_BACKTEST/scripts/aggregate_m15.py` (`GBPUSD_M15_ARMA.csv` /
+   `GBPUSD_M15_ARMB.csv` per `D-031` arm). Every quote is a number parsed from the
+   checksummed file, per `COMMON_PROTOCOL.md` §2's restated `E06` — no value is read
+   from a chart rendering.**
 3. Compute the box-range distribution and the random-median control **before** applying the
    50-pip cut.
 4. Write `BT_V03_NNNN.md` from the template, §0 referencing this file, with §1a reproduced

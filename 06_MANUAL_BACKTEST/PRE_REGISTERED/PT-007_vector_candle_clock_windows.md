@@ -4,6 +4,10 @@
 STATUS:     PRE-REGISTERED — NOT YET RUN
 LESSON:     V02 [00:43:52]
 BLOCKERS:   I-007 · D-028 boundary dates unpinned
+            RESOLVED 2026-08-13 (D-034 / D-035 / D-036a): I-007 CLOSED, D-028 PINNED at
+            2016-07-01, W-B confirmed inside DEVELOPMENT. Data source is now the
+            HistData GBP/USD M1 CSV corpus. Data-availability blocker CLEARED. NONE
+            remaining from this pair.
 ATTESTATION: No chart in W-B was opened by the session that wrote this file.
 ```
 
@@ -43,9 +47,10 @@ volatility profile.
 | Field | Value |
 |---|---|
 | Instrument | GBP/USD (`D-007`) |
-| Timeframe | 15-minute primary; **5-minute confirmatory** where the feed supplies it, because a claim about `8:31` is finer than a 15m bar can resolve |
+| Data source | ~~TradingView / FXCM, `D-034`~~ **AMENDED 2026-08-13, `D-036a`: HistData GBP/USD M1 CSV corpus**, aggregated locally to 15m. `06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M1/`, SHA-256 on record. Data-QA gate (`scripts/qa_histdata_m1.py`) is a precondition on this run — cite `QA_REPORT.txt` |
+| Timeframe | 15-minute primary; **5-minute confirmatory** ~~where the feed supplies it~~ **where a 5-minute file has been aggregated from the M1 corpus — see §7 step 1**, because a claim about `8:31` is finer than a 15m bar can resolve |
 | Window | **W-B** — 2014-01-05 → 2015-12-31 |
-| Block | PROVISIONAL DEVELOPMENT pending `D-028` |
+| Block | ~~PROVISIONAL DEVELOPMENT pending `D-028`~~ **PINNED 2026-08-13, `D-035`: boundary `2016-07-01`. W-B conforms — wholly inside DEVELOPMENT (`COMMON_PROTOCOL.md` §3a)** |
 | Timezone | **Both `D-031` arms** |
 | Windows under test | (i) the bar containing **08:30**; (ii) the bar containing **04:30** |
 | Metric 1 | Rank of that bar's true range within the day's 96 bars |
@@ -93,9 +98,23 @@ inference this project's `G7` refuses.
 
 ## 7. TO RUN THIS
 
-1. Close `I-007`; confirm W-B sits inside DEVELOPMENT. Establish whether the feed supplies
-   5-minute history over the whole window **before** starting, and record the answer.
-2. Harvest with timestamps from DOM text only.
+1. ~~Close `I-007`; confirm W-B sits inside DEVELOPMENT.~~ **Both resolved — `D-034` closed
+   I-007, `D-035` pinned D-028 at 2016-07-01, W-B confirmed inside DEVELOPMENT
+   (`COMMON_PROTOCOL.md` §3a). Run the data-QA gate
+   (`06_MANUAL_BACKTEST/scripts/qa_histdata_m1.py`) as a precondition and cite
+   `datasets/HISTDATA_GBPUSD_M1/QA_REPORT.txt`.**
+   ~~Establish whether the feed supplies 5-minute history over the whole window before
+   starting, and record the answer.~~ **The HistData M1 corpus (`D-036a`) natively covers
+   the whole window at 1-minute resolution — finer than the 5-minute series this step
+   asks for. No 5-minute derived file exists yet; whether one has been aggregated from
+   the M1 corpus (analogous to `aggregate_m15.py`) still needs recording before
+   harvesting.**
+2. ~~Harvest with timestamps from DOM text only.~~ **Source is the HistData GBP/USD M1
+   CSV corpus (`D-036a`), aggregated locally to 15m by
+   `06_MANUAL_BACKTEST/scripts/aggregate_m15.py` (`GBPUSD_M15_ARMA.csv` /
+   `GBPUSD_M15_ARMB.csv` per `D-031` arm). Every quote is a number parsed from the
+   checksummed file, per `COMMON_PROTOCOL.md` §2's restated `E06` — no value is read
+   from a chart rendering.**
 3. Build the full intraday profile first; extract the two named bars from it afterwards.
 4. Run N2 before ranking.
 5. Write `BT_V02_NNNN.md` from the template, §0 referencing this file.
