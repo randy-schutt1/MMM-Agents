@@ -8,10 +8,16 @@ Manual historical chart study — the Student Phase's proof of application.
 
 ```text
 06_MANUAL_BACKTEST/
+├── PRE_REGISTERED/           ← PT-NNN test designs, locked BEFORE any outcome is seen
 ├── VXX/                      ← BT_VXX_NNNN.md + before/after screenshots
 ├── cumulative/               ← summaries across lessons
 └── datasets/                 ← chart data provenance (raw data is gitignored)
 ```
+
+`PRE_REGISTERED/INDEX.md` lists the 21 tests designed so far and the shared machinery in
+`PRE_REGISTERED/COMMON_PROTOCOL.md`. A `PT-NNN` file is a **prediction locked in before
+the data is looked at**; the `BT_` observation that runs it cites it in its §0 and never
+edits it.
 
 ## WHAT THIS IS — AND IS NOT
 
