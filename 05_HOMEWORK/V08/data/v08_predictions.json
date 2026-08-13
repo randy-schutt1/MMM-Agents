@@ -1,0 +1,36 @@
+{
+  "committed_before_scoring": true,
+  "answer_key_opened_before_predicting": false,
+  "method": "V08's own stated heuristic, applied as MY reading of it, not as a coded course rule",
+  "heuristic": "V08 [00:36:15]-[00:36:16]: 'The fast move is false. The slow and steady move is the correct move.' Applied here as: if the approach INTO the entry is FAST relative to the day's other bars, treat the down move as false and expect the reversal (TARGET). If the approach is a slow, steady grind, treat the down move as real and expect continuation through the entry (STOP).",
+  "declared_limitation": "'Fast' has no definition anywhere in V08 (A-061). The operationalisation above is MINE. It is used to make a personal prediction in a comprehension exercise; it is NOT a coded rule, it does NOT enter any spec, and no result here may be cited as a measurement of the course's rule (D-010, D-030).",
+  "expected_difficulty": "PT-034 measured the base rate for exactly this entry at 70-77% TARGET. An always-TARGET guess therefore scores about 0.75. I am predicting only 5 of 12 TARGET, which is a deliberately discriminating call: if the heuristic carries no information I should LOSE to the baseline, and I expect that is more likely than not.",
+  "predictions": {
+    "1": "TARGET",
+    "2": "STOP",
+    "3": "TARGET",
+    "4": "STOP",
+    "5": "TARGET",
+    "6": "TARGET",
+    "7": "STOP",
+    "8": "TARGET",
+    "9": "STOP",
+    "10": "STOP",
+    "11": "STOP",
+    "12": "STOP"
+  },
+  "reasoning": {
+    "1": "Final visible bar drops ~21 pips against prior bars of ~2-6. Sharply FAST into the entry -> false move -> TARGET.",
+    "2": "A steady grind, 1.5991 -> 1.5919 over twelve bars with no single dominant bar. SLOW AND STEADY -> the down move is real -> STOP.",
+    "3": "Accelerating: -16 then -30 pips into the entry. FAST -> TARGET.",
+    "4": "Tiny bars throughout, holiday week (29 Dec). No fast approach, and a quiet range makes 50 pips a long way and 16.67 close. STOP.",
+    "5": "A 32-pip drop immediately followed by a +7 bounce. Fast down then an instant recovery is the reversal signature the lesson describes. TARGET.",
+    "6": "Prior bars 1-3 pips, final bar -19. The most extreme fast/slow contrast in the set. TARGET.",
+    "7": "Steady decline 1.5447 -> 1.5389 with no dominant bar. STOP.",
+    "8": "Small steady bars, but the decision is at 02:00 Asian with the whole London and New York day still ahead. I take the remaining session time over the weak slow-grind signal. TARGET.",
+    "9": "~91 pips over twelve bars, sustained and one-directional, in the Feb-2016 sterling downtrend. This is the lesson's 'slow and steady = correct' case at its clearest. STOP.",
+    "10": "Only 18 bars visible, flat around 1.6490, 30 December. Year-end illiquidity: 50 pips is unlikely, 16.67 is not. STOP.",
+    "11": "A grind down, then two flat bars at the low. The flatness is ambiguous - it could be basing - but the approach was slow, so I follow the heuristic. STOP.",
+    "12": "Steady small decline 1.5167 -> 1.5116, no fast bar. STOP."
+  }
+}
