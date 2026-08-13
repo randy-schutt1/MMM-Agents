@@ -6253,3 +6253,53 @@ single-threaded `D-038` act and carries `video/v09` with it, which `D-024` permi
 ### Next Review Trigger
 
 **V09 R2**, on student resubmission with items **73–78** applied.
+
+---
+
+## 2026-08-13 — Integration (V09 R1 merge-back and the `SWF_CAPTURE_RECIPE.md` fix)
+
+**Act:** the deliberate, single-threaded `D-038` merge-back, plus the one policy-ledger edit that
+could not be made anywhere else. Performed by the V09 R1 reviewer, knowing it was the only merge
+in flight.
+
+### What was merged
+
+| Step | Detail |
+|---|---|
+| Fetch and divergence check | Integration at **`4a291fe`**, level with `origin`. `review/v09` **14 ahead, 0 behind** — a clean fast-forward |
+| Merge | `--no-ff`, so the deliberate act is visible in the graph rather than disappearing into a fast-forward. **`f7a72a2`** |
+| What it carries | `18_REVIEW/V09/V09_REVIEW_R1.md` and this round's ledger rows — **and `video/v09` with them**, which `D-024` permits: `REVISE` with 0 `CRITICAL` and 0 `MAJOR` opens the gate with the minors deferred |
+| Validator | **103 passed, 0 warnings, 0 failures**, before the push |
+
+### The recipe fix — `89bb858`
+
+`SWF_CAPTURE_RECIPE.md` is a **POLICY ledger** under `D-038a`. The V08 session hit the
+play-coordinate defect, diagnosed it and could not fix it; the V09 session hit it again, escalated
+it, and correctly declined to fix it from a task branch. **V09 R1 confirmed it, established the
+cause, and made the fix here.**
+
+**The cause is a declared header field, not a per-file oddity.** The stage rectangle of every
+`.swf` in the library was parsed: **V08, V09 and V21 declare `1280 × 738`; the other eighteen
+declare `1024 × 786`.** At the recipe's `1024 × 786` viewport Ruffle letterboxes the first class at
+scale 0.8 — measurable in the committed frames as uniform bands at rows ~0–160 and ~685–785, absent
+from V06/V07 frames — so every coordinate calibrated on the second class is displaced on the first.
+`(512, 300)` misses; `(512, 325)` hits. On **both** V08 and V09.
+
+**What changed:** §3 and §10 no longer carry `(512, 300)` as a constant; a new **`GOTCHA 5`**
+records the failure history, the cause, a one-command stage-size probe (**tested as written, on
+both classes**) and the coordinate table, with an explicit warning not to trust the table alone;
+and §10's sweep now **screenshots before and 1.5 s after the play click and exits non-zero if they
+are byte-identical**. That last part is V08's own remedy, promoted from one lesson's screenshot
+index to the standard — it needs no table, and it converts a silent hour-long failure into an
+immediate abort.
+
+**`REVIEW_INDEX.md` open item 78's reviewer half is discharged by this commit.** Its student half —
+correcting the *"the coordinate that starts the Camtasia player on V01–V08"* sentence in
+`04_SCREENSHOTS/V09/INDEX.md` and `V09_MASTERY_REPORT.md` — **remains OPEN and owed at V09 R2**.
+
+### Gate
+
+**V10 OPENS** under `D-024`. `COURSE_PROGRESS.md`'s V10 GATE block still reads `CLOSED` — it was
+written before this verdict returned and was correct when written; `REVIEW_INDEX.md` is the
+authoritative register and it records the opening. Reconciling `COURSE_PROGRESS.md` is the V10
+session's first bookkeeping act, exactly as V09's was.
