@@ -1,0 +1,135 @@
+==============================================================================
+V10 HOMEWORK H2 (PARTIAL) — WEEKLY ANCHORS, NOT SETUPS
+==============================================================================
+assignment : frame 94:27 / [01:34:36] 'Mark 10 Safety setups ... 5 long, 5 short'
+performed  : the ANCHOR only — V10 [01:14:06]'s definition, and the
+             sub-task the lesson assigns at [01:33:43]
+DEFERRED   : the SETUP. Five of seven conditions rest on undefined terms
+             (A-076 blue box, A-077 lock, A-007 second leg, A-004 level).
+             D-030 forbids approximating them. D-019 DEFERRED, not N/A.
+instrument : GBP/USD (D-007)
+window     : W-C' 2013-01-06 -> 2016-06-30 (D-035 DEVELOPMENT)
+selection  : FIXED index rule, stated before any price was read (see docstring)
+
+  ==============================================================================
+HISTDATA GBP/USD M1 — DATA QA GATE
+==============================================================================
+files    : 4
+bars     : 1,297,781
+span     : 2013-01-01 17:00:00 -> 2016-06-30 23:59:00
+
+--- GATING CHECKS (must be clean) ---
+C1 parse integrity     : PASS
+C2 duplicate timestamps: PASS
+C3 ordering            : PASS
+C4 OHLC coherence      : PASS
+
+--- REPORTS (human review, not gates) ---
+C5 spike census        : 578 bars > 12x rolling median range
+      2016-06-07 00:10:00  range   180.1 pips   local median   2.0   x 90.1
+      2016-03-25 14:09:00  range     6.5 pips   local median   0.1   x 65.0
+      2014-07-11 16:59:00  range    41.3 pips   local median   0.7   x 59.0
+      2016-03-25 14:08:00  range     5.3 pips   local median   0.1   x 53.0
+      2014-06-12 16:00:00  range    52.7 pips   local median   1.3   x 40.5
+      2013-09-27 01:20:00  range    48.6 pips   local median   1.2   x 40.5
+      2014-04-16 20:18:00  range    21.7 pips   local median   0.6   x 36.2
+      2013-04-25 04:30:00  range   108.5 pips   local median   3.0   x 36.2
+      2016-03-25 14:10:00  range     3.5 pips   local median   0.1   x 35.0
+      2013-07-04 07:00:00  range    94.0 pips   local median   2.7   x 34.8
+      2016-03-24 20:55:00  range    27.0 pips   local median   0.8   x 33.8
+      2016-06-23 19:17:00  range   469.9 pips   local median  14.0   x 33.6
+      2016-03-25 14:01:00  range     6.7 pips   local median   0.2   x 33.5
+      2015-10-15 16:59:00  range    36.4 pips   local median   1.1   x 33.1
+      2016-03-25 14:07:00  range     6.5 pips   local median   0.2   x 32.5
+      ... 563 more
+
+C6 gap census          : 3 intra-week gaps >= 30m, 4:43:00 total
+      2015-01-01 13:33:00 -> 2015-01-01 17:00:00   3:27:00
+      2015-08-21 13:16:00 -> 2015-08-21 13:57:00   0:41:00
+      2013-04-11 19:11:00 -> 2013-04-11 19:46:00   0:35:00
+
+C7 week-open census    : 181 week opens (Sunday-delimited)
+      time-of-day : {'17:00': 170, '17:01': 2, '17:03': 2, '17:04': 2, '17:06': 2}
+      6 INTRA-WEEK RE-OPENS — these are NOT week boundaries:
+        2013-01-01 17:00:00 (Tue) — mid-week re-open after a closure
+        2013-12-26 06:02:00 (Thu) — mid-week re-open after a closure
+        2014-01-01 17:00:00 (Wed) — mid-week re-open after a closure
+        2014-06-02 15:01:00 (Mon) — mid-week re-open after a closure
+        2014-12-25 18:00:00 (Thu) — mid-week re-open after a closure
+        2015-01-01 13:01:00 (Thu) — mid-week re-open after a closure
+      Deriving week boundaries from re-opens would split those weeks in two.
+      3 week(s) not closing on a Friday — invisible to this census:
+        week of 2015-12-20 ends 2015-12-24 (Thu), 5 sessions
+        week of 2015-12-27 ends 2015-12-31 (Thu), 5 sessions
+        week of 2016-06-26 ends 2016-06-30 (Thu), 5 sessions
+      modal open by month: {1: '17:00', 2: '17:00', 3: '17:00', 4: '17:00', 5: '17:00', 6: '17:00', 7: '17:00', 8: '17:00', 9: '17:00', 10: '17:00', 11: '17:00', 12: '17:00'}
+      seasonal shift (DST): NO — fixed offset year-round
+
+C8 session completeness: 11 sessions below 60% of nominal bars
+      2013-01-01 Tue    405 bars  (nominal ~1440,  28.1%)  <- Dec/Jan holiday, a real market closure
+      2013-12-25 Wed      0 bars  (nominal ~1440,   0.0%)  <- Dec/Jan holiday, a real market closure
+      2014-01-01 Wed    392 bars  (nominal ~1440,  27.2%)  <- Dec/Jan holiday, a real market closure
+      2014-06-01 Sun      0 bars  (nominal ~ 420,   0.0%)  <- *** ABSENT AND UNEXPLAINED ***
+      2014-06-02 Mon    521 bars  (nominal ~1440,  36.2%)  <- *** SHORT AND UNEXPLAINED ***
+      2014-12-24 Wed    840 bars  (nominal ~1440,  58.3%)  <- Dec/Jan holiday, a real market closure
+      2014-12-25 Thu    360 bars  (nominal ~1440,  25.0%)  <- Dec/Jan holiday, a real market closure
+      2015-01-01 Thu    424 bars  (nominal ~1440,  29.4%)  <- Dec/Jan holiday, a real market closure
+      2015-12-24 Thu    840 bars  (nominal ~1440,  58.3%)  <- Dec/Jan holiday, a real market closure
+      2015-12-25 Fri      0 bars  (nominal ~1020,   0.0%)  <- Dec/Jan holiday, a real market closure
+      2016-01-01 Fri      0 bars  (nominal ~1020,   0.0%)  <- Dec/Jan holiday, a real market closure
+      A short session is not automatically a defect. Holidays are closures;
+      an unexplained absence is a hole. Only a human tells them apart.
+
+==============================================================================
+GATE: PASS — C1-C4 clean
+C5-C8 require human sign-off before any PT test is run.
+Any session flagged by C8 must have an explicit, PRE-REGISTERED disposition
+(include / exclude / report separately) in the test that spans it.
+==============================================================================
+
+  c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+
+
+usable weeks in W-C' : 180
+
+---- LONG (anchor = week LOW) ------------------------------------
+  week 2013-01-06  anchor LOW  1.59913 at 2013-01-09T09:30   week range   186.7 pips  [M1==M15 ✓]
+  week 2013-09-15  anchor LOW  1.58843 at 2013-09-17T06:14   week range   277.6 pips  [M1==M15 ✓]
+  week 2014-05-25  anchor LOW  1.66915 at 2014-05-29T03:18   week range   189.2 pips  [M1==M15 ✓]
+  week 2015-02-08  anchor LOW  1.51965 at 2015-02-10T04:56   week range   225.4 pips  [M1==M15 ✓]
+  week 2015-10-18  anchor LOW  1.53058 at 2015-10-23T16:32   week range   201.5 pips  [M1==M15 ✓]
+
+---- SHORT (anchor = week HIGH) ----------------------------------
+  week 2013-05-12  anchor HIGH 1.53836 at 2013-05-13T07:43   week range   226.7 pips  [M1==M15 ✓]
+  week 2014-01-19  anchor HIGH 1.66671 at 2014-01-24T03:12   week range   273.0 pips  [M1==M15 ✓]
+  week 2014-10-05  anchor HIGH 1.62253 at 2014-10-09T07:45   week range   272.5 pips  [M1==M15 ✓]
+  week 2015-06-14  anchor HIGH 1.59296 at 2015-06-18T04:30   week range   442.1 pips  [M1==M15 ✓]
+  week 2016-02-21  anchor HIGH 1.43054 at 2016-02-21T17:43   week range   451.8 pips  [M1==M15 ✓]
+
+---- INDEPENDENT CROSS-CHECK RESULT -----------------------------------------
+  10/10 anchors reproduce EXACTLY from the raw M1 series and from the
+  committed M15 aggregation. Two paths, no shared code, zero disagreement.
+
+---- WHAT THESE ANCHORS DO AND DO NOT SHOW ----------------------------------
+  median week range across the ten            :   249.6 pips
+  weeks among the ten inside V10's 600-1000   : 0/10
+  -> consistent with BT_V10_0001's M1 result (0/180 corpus-wide). These ten
+     were selected by a fixed index rule BEFORE any price was read, so they
+     are not a curated illustration of that finding.
+
+  NOT SHOWN, and it is the larger half:
+   * whether any of these anchors was TRADEABLE. That needs the lock
+     (A-077), which has no threshold anywhere in the corpus.
+   * whether a stop hunt or a second leg followed. A-076 / A-007.
+   * ANY entry, stop, target or outcome. None is computed here and none
+     may be inferred from this output.
+
+  A NOTE ON HINDSIGHT, because it would be easy to miss:
+   a weekly extreme is only knowable AFTER the week ends. Marking one is a
+   legitimate CHART-READING exercise -- it is what [01:33:43] assigns -- but
+   it is NOT a decision made at a decision point, and nothing here may be
+   read as evidence that the anchor could have been identified in advance.
+   That is precisely what the lock was supposed to supply, and does not.
