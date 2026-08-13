@@ -3936,3 +3936,298 @@ as a unit.
 | **A-029** / **A-018** — `R = <number>` labels on shaded boxes | Printed on at least six V07 frames. Values legible at committed resolution: `R = 17.4`, `R = 16.4` (the deck's persistent background chart); `R = 44.2`, `R = 107.9`, `R = 44.3`, `R = 73.2` (`V07_00-13-55`); `R = 18.9`, `R = 65.2`, `R = 38.1`, `R = 78.0` (`V07_00-16-20`); `R = 40.1`, `R = 22.3`, `R = 38.8` (`V07_00-18-25`); `R = 76.8`, `R = 86.7` (`V07_00-19-15`); `R = 50.1` (`V07_00-27-00`) | **Fifth lesson of printed instances; the negative result from V06 holds and strengthens.** V07 states a **target** (50 pips, four times) and **no stop at all**, so again the labels cannot be checked against an R-multiple. **No speaker says the letter `R` aloud in V07.** The values continue to look like **pip ranges of the shaded boxes** rather than multiples of anything — `R = 48.9`-scale numbers on 15-minute boxes — but **that reading is not stated by anyone and is not adopted.** Stays `DO NOT CODE` |
 | **A-042** — the operative detail deferred to the DMR | *"I look at at least the 10 from DMR"* `[00:32:09]`; *"We are going to do the DMR today, Jeff"* `[00:33:56]`; *"Now there is going to be DMR tonight, Whitney"* `[00:34:20]`; and the Hi-Lo deferral to Jim (`A-056`) | **Extended.** The DMR now has a **named 10-pair watchlist** the corpus does not contain, on top of the twelve-week syllabus V06 surfaced. **A new deferral target is added — a whole entry method (`A-056`).** Stays open |
 | **A-004** — "the level" | Used **35 times** as `level <N>` (`three` ×13, `one` ×9, `3` ×4, `1` ×4, `2` ×3, `two` ×2), and the bare token `level`/`levels` **56 times** — and never defined. V07 does something new with it: it attaches an **expected pattern** to each level (`V07_INTERPRETATION.md` §2.2) and uses a level mismatch as a **reason to pass a trade** (`[00:27:47]`–`[00:28:00]`) | **Extended, and the cost of the gap raised.** The record now blocks not just a filter but a documented **prohibition**. Stays `DO NOT CODE` |
+
+---
+
+# V08 — SIX NEW RECORDS, AND THE V08 PASS OVER THE EXISTING ONES
+
+**Source:** V08, *"Jim's Journey in Learning and Trading MMFX"*, 2012-03-26.
+**Speaker: 100% `GUEST`** — the course author does not speak in this lesson. Under **`D-033`**
+that demotes nothing: every statement below is **NORMATIVE at equal weight** and *can* close a
+record. Where a record is not closed below, the reason is **evidentiary**, never procedural.
+
+---
+
+## A-059 — "CM35" — an unexplained token attached to four weekly setup counts
+
+### Course Meaning
+
+Unknown. It prefixes a list of numbers offered as further weekly M/W setup counts.
+
+### Evidence
+
+| Video | Timestamp | Evidence |
+|---|---|---|
+| V08 | `[00:16:44]` | *"29 set ups last week guys and it's not the only week that's happened. **I've done this in CM35, 37, 40, 28.**"* |
+
+### Assessment
+
+The four numbers are plainly weekly counts of the same kind as the 29 — the sentence's whole
+work is **and other weeks were like this too**. **`CM` is never expanded anywhere in V01–V08.**
+Candidate readings exist (a chatroom or class designation; an ASR artefact for something like
+**I've counted 'em** or **seen 'em**) and **none is adopted** — a guess here would put a
+fabricated provenance on four numbers that are already unsourced. **Those candidate phrasings
+are this session's, not the source's**, and are set in bold rather than quotation marks so they
+cannot be mistaken for transcript text.
+
+**The numbers themselves are the more important problem and they belong to `A-060`**: they are
+counts of M/W setups, and M/W anatomy is undefined (`A-011`).
+
+### Current Status
+
+```text
+DO NOT CODE — an unexpanded token attached to four unverifiable counts.
+```
+
+### Required Research
+
+Whether `CM` is expanded in any later lesson. Low priority: even expanded, the counts stay
+blocked by `A-011`.
+
+---
+
+## A-060 — "no week that there hasn't been at least five" — a universal frequency claim over an undefined object
+
+### Course Meaning
+
+A claim that the method's setups appear at a guaranteed minimum rate, every week, without
+exception.
+
+### Evidence
+
+| Video | Timestamp | Evidence |
+|---|---|---|
+| V08 | `[00:33:01]` | *"**Every week there's been no week that there hasn't been at least five.** I have a tough time choosing which ones to take. There's a ton of them."* |
+| V08 | `[00:11:26]`–`[00:11:31]` | *"ten or more pairs will show that M's and W's are setting up according to the method **without fail** and have been doing so **for years**."* |
+| V08 | `[00:16:22]`, `[00:16:44]` | *"that's **29 set ups"*; *"I've done this in CM35, 37, 40, 28"* |
+| V08 | `[00:32:56]` | *"I show **five perfect M&W setups** as they formed into Take Profit"* — the five are a DMR selection, which is what makes the `[00:33:01]` claim a claim about supply |
+
+### Assessment
+
+**This is the strongest empirical claim in V08 and one of the strongest in the corpus** — a
+universal quantifier over all weeks, with a stated floor, offered as verifiable
+(`[00:16:50]` *"These are verifiable"*).
+
+It is **entirely blocked by `D-030`**, and the block is not close. Every one of these numbers
+counts **M and W formations**, whose anatomy the course has named across eight lessons and never
+defined (`A-011`). A session that operationalised M/W to make the count runnable would produce a
+number — **the rate is 22 per week** — and that number would be attributed to the instructor
+while measuring **this session's definition**. `D-030` exists for exactly this case, and a count
+is the most authority-acquiring artefact a research corpus can contain.
+
+**Note what is NOT blocked, because the distinction matters for `PT-034`'s design.** The claim's
+*necessary conditions* — that GBP/USD in the relevant sessions actually moves far enough, often
+enough, for a 50-pip target to be available — are arithmetic and need no pattern definition.
+Testing a necessary condition is not testing the claim, and any such test must say so.
+
+### Current Status
+
+```text
+DO NOT CODE — DEBT, not a gap. Discharges in the lesson that defines M/W anatomy (A-011).
+```
+
+### Required Research
+
+`A-011`. Nothing else unblocks it.
+
+---
+
+## A-061 — "the fast move is false; the slow and steady move is the correct move"
+
+### Course Meaning
+
+A timing criterion distinguishing a false move from a real one by **speed**, offered as the
+insight the high-low drill trains and as the cue to enter.
+
+### Evidence
+
+| Video | Timestamp | Evidence |
+|---|---|---|
+| V08 | `[00:36:15]`–`[00:36:16]` | *"**The fast move is false. The slow and steady move is the correct move.**"* |
+| V08 | `[00:36:20]` | *"We'll whip this secondly down **real fast**. **Hold it there** and then **gradually bring it back up**."* — `secondly` is the ASR's rendering of *second leg* |
+| V08 | `[00:36:42]` | *"You're going to see **how fast the candles paint**. That's a huge portion of your education right here because it's **pattern and timing**."* |
+| V08 | `[00:36:50]` | *"Because when they **move this fast down here really fast, that's your cue. Get in. Load up. It's coming.**"* |
+| V08 | `[00:05:48]` | *"we have **pattern** and we have the **speed of price**"* |
+| V08 | printed, `V08_00-05-40` | *"How DOING the High Low Drill Teaches one the **TIMING ASPECT of Price Action or the SPEED of PRICE**."* |
+
+### Assessment
+
+**This is an entry cue, not a description**, which is what makes it consequential: `[00:36:50]`
+converts speed into an instruction (*"that's your cue. Get in. Load up."*).
+
+**No numeric or comparative definition of *fast* or *slow* is given anywhere in the lesson, and
+no frame prints one.** The printed slide names *"the SPEED of PRICE"* as the object being
+taught, which **restates the concept without measuring it** — the closest the corpus comes to a
+definition, and it is not one.
+
+Candidate operationalisations are obvious and that is precisely the hazard: pips per bar, bar
+range versus a rolling median, ticks per minute, number of bars from the level to the extreme.
+**Each would produce a different rule with a different hit rate**, and the lesson gives no
+ground to choose between them. This is `D-010` and `D-030` together.
+
+**One structural observation, recorded as observation and not as definition:** the claim has a
+testable *shape* even without a threshold — it asserts an **asymmetry** between the move into an
+extreme and the move out of it (*"We'll whip this secondly down real fast… Hold it there and then gradually bring it back up"*).
+A **grid** over speed measures, reporting all of them, tests the asymmetry without selecting a
+constant, in the way `PT-033` gridded its thresholds rather than picking one. **That is a
+permissible test design; it is not a closure of this record.**
+
+### Current Status
+
+```text
+DO NOT CODE — an entry cue whose only criterion is an undefined adjective.
+```
+
+### Required Research
+
+Whether any later lesson attaches a measure to *fast*/*slow*. This record is **the single
+largest obstacle to `A-056`** — speed is the only forward-looking element the high-low drill
+offers, so defining it is most of what would make Hi-Lo executable.
+
+---
+
+## A-062 — a fractional level count: "one, two, three, three and three quarters"
+
+### Course Meaning
+
+A level count that does not land on an integer.
+
+### Evidence
+
+| Video | Timestamp | Evidence |
+|---|---|---|
+| V08 | `[00:40:49]`–`[00:40:57]` | *"We have a nice **first leg pull away** and it's gone up **one, two, three, three and three quarters**."* |
+
+### Assessment
+
+Every prior level count in the corpus is an integer, and `A-004`'s open question is what a level
+*is*. **This is the first fractional count anywhere in V01–V08**, and it implies levels are
+measured on a continuum rather than counted as discrete events — which is a **materially
+different object** from what the corpus has assumed.
+
+**It is one instance, in one aside, with no explanation**, and it is not being generalised. It
+is recorded because a single counter-instance to an assumed data type is worth more than its
+airtime: any future formalisation of `A-004` that admits only integers has to account for this
+sentence or explain it away.
+
+### Current Status
+
+```text
+DO NOT CODE — extends A-004 and sharpens it; defines nothing.
+```
+
+### Required Research
+
+Whether fractional level counts recur. If they do, `A-004`'s formalisation is a measurement, not
+a count.
+
+---
+
+## A-063 — the stop hunt box is 25 pips — a size with no placement rule
+
+### Course Meaning
+
+A stated dimension for a named chart object, given as a reminder of prior doctrine.
+
+### Evidence
+
+| Video | Timestamp | Evidence |
+|---|---|---|
+| V08 | `[00:19:31]` | *"**Remember, this stop hunt box is 25 pips.** So you can always gauge what size these candles are."* |
+| V08 | `[00:21:15]`–`[00:21:19]` | *"Again, these are **25-pip in size**. Stop-homp boxes."* (`Stop-homp` = stop hunt) |
+
+### Assessment
+
+**This is a real numeric datum and it is new to this corpus.** *"Remember"* marks it as prior
+doctrine rather than V08's invention, and it is stated twice, two minutes apart, consistently.
+
+**What it does not supply is where the box goes.** No anchor, no time, no construction rule,
+no statement of what it is measured from. Frames `V08_00-20-00`, `00-34-00` and every gallery
+chart show shaded boxes; **no frame states how one is placed.** A size without a placement rule
+cannot be drawn on a chart, and therefore cannot be tested.
+
+**Its one immediately usable property is as a scale bar**, which is the use the speaker himself
+makes of it: *"you can always gauge what size these candles are."* That is a reading aid for the
+screenshots, not a rule, and it is recorded as such.
+
+**Do not conflate this with the 25–50 pip band** in the earlier corpus. Whether they are the same
+object is an open question this record does not answer.
+
+### Current Status
+
+```text
+DO NOT CODE — a dimension awaiting its placement rule.
+```
+
+### Required Research
+
+The lesson that states where the stop hunt box is anchored, and whether its 25 pips is the same
+25 as the earlier band.
+
+---
+
+## A-064 — "the Mayo" / "the mail" / "the male" — one word, three ASR renderings, and a moving-average nickname the lesson never expands
+
+### Course Meaning
+
+A named line on the chart, referred to as a location that price forms patterns *off*.
+
+### Evidence
+
+| Video | Timestamp | Evidence |
+|---|---|---|
+| V08 | `[00:22:13]` | *"an M formation **off the Mayo**"* |
+| V08 | `[00:23:12]` | *"**M off the Mayo**"* |
+| V08 | `[00:18:03]` | *"anchor in the bottom W **off the mail** in the middle of Asia"* |
+| V08 | `[00:20:47]` | *"Information **off the male**"* — `Information` is the ASR's rendering of *M formation* |
+| V08 | `[00:20:58]` | *"an M. Almost **off the male**"* |
+| V08 | `[00:21:28]` | *"Easy 50 back to **the water** in pound Ozz"* |
+
+### Assessment
+
+**Five references to the same object across one lesson, in three spellings**, plus one to *"the
+water"*. The renderings `Mayo` / `mail` / `male` are the ASR's, and the corpus already carries
+`Mayo` as a **printed** caption from V04, so the word is settled; **what it denotes is not.**
+
+V08 adds a genuinely new usage: the nickname is used **as a location** — patterns form *"off"*
+it, the way they form off an anchor formation — and *"back to the water"* is used as a **target
+description**. That is more operational than the corpus's earlier instances, which were mostly
+line-naming.
+
+**It still does not expand.** V08 never says what period `Mayo` or `water` is, never links a
+nickname to a number, and **the token `EMA` occurs zero times in the lesson.** This is the same
+non-joining `A-020` has recorded across six lessons; V08 is the seventh and adds usage, not
+definition.
+
+### Current Status
+
+```text
+DO NOT CODE — extends A-020. A nickname used as a location, still with no period attached.
+```
+
+### Required Research
+
+`A-020`. This record exists to carry V08's usage evidence and the three-rendering ASR hazard, so
+a future session does not read `mail`/`male` as a different object from `Mayo`.
+
+---
+
+## THE V08 PASS OVER EXISTING RECORDS
+
+Every record V08 touches. **Under `D-033` a `GUEST` statement can close a record**, so each row
+below states why it does not.
+
+| ID | V08 evidence | Effect |
+|---|---|---|
+| **A-056** — "Hi-Lo" named as a primary method and never taught | **The largest extension this record will get.** V08 supplies **where** to enter (*"instead of entering here, we want to enter here"* `[00:37:41]`; *"at the extremes of the high of the day or the low of the day"* `[00:36:27]`), **where in the structure** (*"Second leg, when they come down to negotiate that area that they've defined as a trap area"* `[00:37:51]`; *"your high low drill is going to be in the second leg"* `[00:41:38]`), **what cues it** (speed, `[00:36:50]`), **a practice regime** (demo, `[00:38:55]`), **a claimed payoff** (*"Risk Reward to 3:1 or greater"*, printed `V08_00-40-10`), and — **printed only** — a **numeric target tolerance**: *"dealing **within 10 pips of HOD/LOD**"* (`V08_00-05-40`; the audio garbles it, `[00:05:35]` *"with intent pips"*) | **EXTENDED, NOT CLOSED — and the reason is evidentiary.** The record asks **how the extreme is identified before it is the extreme.** V08 answers with *fast* (`A-061`, undefined) and specifies a **tolerance on the target** — which is not a method for finding it. Knowing you want to be within 10 pips of the low tells you nothing about which candle is the low. **`D-033` permits this speaker to close the record; the evidence does not reach it.** Stays open |
+| **A-011** — M/W anatomy | Used ~30 times in the gallery alone, plus every frequency claim (`A-060`) and the printed *"extremes of 'M' and 'W' formations"* (`V08_00-40-10`) | **Extended by volume, not by content. Eight lessons, zero definitions.** The cost is now concrete rather than theoretical: `A-060` is the strongest empirical claim in V08 and this record is the only thing blocking it. Stays `DO NOT CODE` |
+| **A-002** — "trap move" | *"that area that they've defined as a **trap area**"* `[00:37:51]`; *"I can see a **previous trap area**"* `[00:40:28]`; *"physically draw a line that corresponds to that **trap area**"* `[00:40:34]`, `[00:40:40]` | **Extended with a NEW operational role and no criterion.** V08 uses *trap area* as a **drawable price location** — you mark it with a line and enter near it. That is more operational than any prior use, and **no rule for identifying one is given.** Fourth speaker, fourth role, still no definition. Stays `DO NOT CODE` |
+| **A-007** — the second leg | *"Second leg, when they come down to negotiate that area"* `[00:37:51]`; *"First leg, second leg, railroad track, entry"* `[00:21:45]`; *"your high low drill is going to be in the second leg"* `[00:41:38]`; *"it looks like we have a **first leg** formed"* `[00:34:06]` | **Extended and made load-bearing for a second rule.** V08 **locates the high-low drill inside the second leg**, so `A-007`'s gap now blocks `A-056` as well as its own filter. Stays `DO NOT CODE` |
+| **A-004** — "the level" | `level`/`levels` **7×** — *"a beautiful level one rise"* `[00:17:48]`, *"a level one big multi-day W"* `[00:20:19]`, *"we know that in level one, things going to continue"* `[00:22:02]`–`[00:22:07]`, *"levels are good stuff, guys"* `[00:22:09]` — plus the **fractional** count at `[00:40:49]` (`A-062`) | **Extended, and its data type called into question** for the first time by `A-062`. *"we know that in level one, things going to continue"* is also a **level → expectation** statement of the kind V07 introduced, corroborating that mapping across two speakers. Stays `DO NOT CODE` |
+| **A-039** — TDI, a component the course never teaches | **`TDI` occurs 0 times in V08's audio.** A `TDI_MMM` sub-panel is visible on **every chart in the lesson**, with printed values (`V08_00-20-00`, `00-34-00`, `00-40-10`, `00-38-10`) | **Extended by one more instance of the same shape. Displayed, not taught — fifth lesson running.** V08 is the sharpest case yet: the indicator is on screen for the entire 43 minutes and is **never once mentioned aloud.** Stays `DO NOT CODE` |
+| **A-019** — the session timezone convention | `[00:33:30]` *"It's the **CAD-YEN Monday, March 19th 2012, 1.30 AM Eastern Daylight Time**"* — **the most precise clock reference in V01–V08**, naming the zone *and* its DST state | **Extended and explicitly NOT closed — see `V08_INTERPRETATION.md` §2.4.** The bootcamp ran 2012-03-18 → 2012-06-17, **wholly inside US DST**, so a speaker saying *"Eastern Daylight Time"* is consistent with **both** of `D-031`'s hypotheses and distinguishes them **not at all**. It corroborates that the corpus was recorded on New York wall clock; it says nothing about whether the session table is fixed clock numbers or DST-tracking. **`D-031`'s two arms stay.** Stays open |
+| **A-020** — MA nicknames | *"off the Mayo"* ×2, *"off the mail"*/*"off the male"* ×3, *"back to the water"* ×1. **`EMA` 0×, `moving average` 0×, `5/13` 0×, `mustard` 0×, `blueberry` 0×, `raspberry` 0×** | **Seventh lesson running that the two halves are never joined.** V08 adds a **new usage** — the nickname as a *location* patterns form off, and as a *target* — which is operationally richer than prior instances and still attaches **no period to any name**. Carried in detail as `A-064`. Stays `DO NOT CODE` |
+| **A-038** — the ADR lookback | *"Nice **pin to the ADR**"* `[00:23:42]` — one mention, as a price location a pin reaches | **Extended by one instance, a fifth operational role (a target level a pin reaches), and still no lookback window.** Stays `DO NOT CODE` |
+| **A-029 / A-018** — `R = <number>` box labels | Visible on the gallery charts. Read at 4× on `V08_00-20-00`: **`R = 39.1`** — the leading digits are unambiguous, the final digit is legible but not certain at this resolution and is recorded as such rather than asserted | **Sixth lesson of printed instances.** V08 states a **target** (50 pips, 8×) and, uniquely, a **ratio** (3:1) — but **still no stop distance**, so the labels remain uncheckable against any R-multiple. **No speaker says the letter `R` aloud in V08.** Stays `DO NOT CODE` |
+| **A-042** — the operative detail deferred elsewhere | *"Come join me for an hour or so in the DMR"* `[00:32:50]`; *"go back to the recording and see how you can use the **box tool**"* `[00:32:17]`; *"**Go back and listen to Steve recording** on that"* `[00:35:22]`; and **section 3, the defined-risk lesson, announced twice and absent from the file** | **Extended, and with a new kind of deferral: the lesson defers to ITSELF and then ends.** *"That's going to have a lot of ramifications in about 35, 40 minutes when we get into that section"* `[00:40:05]` — the section does not arrive. Stays open |
+| **A-049 / C-006** — stop hunt versus trap move | *"stop hunt box"* **6×** (`[00:17:25]` … `[00:19:31]`); *"trap area"* **4×** (`[00:37:51]`–`[00:40:40]`). **Both used, in one lesson, and never compared** | **Extended with a second NEGATIVE datum, which is what `REVIEW_INDEX.md` open item 37 asks each lesson for. V08's answer is again no.** A **fourth** speaker uses both families without a criterion. Note V08 uses *stop hunt* only in the compound **stop hunt box** — a chart object — and *trap* only as **trap area**, also a location, which is the closest the corpus has come to the two terms being used for *the same kind of thing*. **That is a hint, not a discriminator, and it is not adopted.** Stays open |
