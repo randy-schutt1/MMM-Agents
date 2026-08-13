@@ -4234,3 +4234,36 @@ material. **`V06_INTERPRETATION.md` §9 added**: the restated V06 corpus contrib
 
 ### Next
 R2 verification review, this session, owner-directed.
+
+---
+
+## 2026-08-13 — Reviewer Session (V06 R2)
+
+### Lesson
+V06 — *"Micro Daily Trends"*
+
+### Review Objective
+Verification of R1 items 57–60 (remediation at `4c89db1`). Owner-directed same-session
+remediation and re-review, disclosed in `V06_REVIEW_R2.md`'s header; `CUMULATIVE_25.md`
+should independently re-sample this round.
+
+### Findings
+All four items ✅ CLOSED, each verified against a primary-source re-read (frame 26 re-read
+at 2× character-by-character; Steve/Asia counts re-measured mechanically and reproducing
+exactly; five `D-033` fence notices and `V06_INTERPRETATION.md` §9 checked against markers).
+The required item-57 sweep surfaced one further defect — **M5** (`E20`): `V06_SOURCE_NOTES.md`
+§11b's R-label cell wrong on five of eight values while the INDEX and `A-018` register row
+were right — **fixed and verified in-round**. `A-018`'s negative conclusion survives the
+corrected value set. +1 NOTE (N1, closed). `check_quotes.py` 0 failures; validator clean.
+
+### Decision
+**PASS — 0 CRITICAL / 0 MAJOR / 0 open MINOR. V06 is COMPLETE. The V07 gate OPENS under
+`D-024`.** Dimension B carried as "blocked by `D-030`, excluded from pass/fail per owner
+directive" — documented, not scored, per the standing carve-out.
+
+### Git
+`18_REVIEW/V06/V06_REVIEW_R2.md`; `REVIEW_INDEX.md` (STATUS, decision row, items 57–60
+closed, E20 M5 entry, R2 severity delta + totals); this entry.
+
+### Next Review Trigger
+V07 student pass (gate open); `CUMULATIVE_25.md` at its threshold.
