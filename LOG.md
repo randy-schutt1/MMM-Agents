@@ -5285,3 +5285,122 @@ V08 findings on one side, the V07 remediation dispositions on the other. Both su
 `REVIEW_INDEX.md` open item **69 → CLOSED**. Open items **61–63** are `APPLIED — PENDING
 VERIFICATION at R2` and now visible on the integration branch, so **V07 R2 is triggered**. Items
 **64–67** (V08 R1) remain OPEN and are owed. The V09 gate is unchanged: OPEN under `D-024`.
+
+---
+
+## 2026-08-13 — Reviewer Session — V07 INDEPENDENT REVIEW R2 (verification of open items 61–63)
+
+**Role:** Independent Reviewer / Teacher Agent.
+**Act:** verification of an applied remediation. **No V07 artifact was authored or edited by this
+session, and no remediation was performed** — `D-003` reserves those to other sessions, and a
+reviewer that fixes what it finds has stopped being a reviewer.
+**Branch:** `review/v07-r2`, cut from the integration branch at `f3f9006` after `git fetch --all`
+confirmed no divergence (`D-038`). `REVIEW_INDEX.md` and this entry are written here as **evidence
+ledgers** per `D-038a`, and merged with the finding.
+
+### Why a branch, when the content under review is already merged
+
+`D-038`'s rule is branch-per-session whenever concurrent sessions may write, and it does not carve
+out review rounds — `review/v08` is the precedent and it used a branch and a worktree. The one
+thing that differs here is that V07's artifacts are **already on the integration branch**, so there
+was nothing to isolate *from*: no worktree was needed, only a branch, and the merge-back is a
+separate single-threaded act. `D-038a` settles the ledger question that `review/v08` had to escalate
+— `REVIEW_INDEX.md` and `LOG.md` are evidence ledgers and belong with the work.
+
+### Method — every count re-derived, nothing taken on trust
+
+`D-003` means the remediation's claims get the same treatment R1's did: none. The verbatim body was
+extracted once (from `# VERBATIM TRANSCRIPT` to end of file, marker lines stripped) and **every
+count was taken twice, by two tools sharing no code** — a Python `re` word-boundary pass and a
+`grep -oiE` pass — before the remediated text was read. `wc -w` on that extraction returns **7,436**,
+exactly the body size `V07_SOURCE_NOTES.md` §10 states, which anchors the base. The transcript was
+verified untouched by `98d893a`.
+
+### Verdicts
+
+| Item | Verdict |
+|---|---|
+| **61** (`M1`, `E20`) | ✅ **CLOSED — VERIFIED.** `level` **53** + `levels` **3** = **56**, both methods agreeing. The two plausible sub-counts were measured too — compound `level <N>` **35**, marker entries containing the token **44** — so 26 matches nothing, independently confirming R1's diagnosis. §5 verified unedited at 56; `A-004` untouched |
+| **62** (`M2`, `E20`) | ✅ **CLOSED — VERIFIED.** *"the peak"* **5**, and **enumerated** rather than only counted: `[00:00:26]`, `[00:03:18]`, `[00:03:20]`, `[00:14:02]`, `[00:16:44]` — exactly the five markers the row listed, in order. A bare `peak`/`peaks` sweep returns the same five and no others. `peak formation`/`PFH`/`PFL` re-measured at 0/0/0 |
+| **63** (`M3`, `E01`+`E11`) | ⚠️ **PARTIALLY VERIFIED — STAYS OPEN.** §D half closed and correct; §H half **not verified** — see below |
+
+### The finding: the repair to §H is itself a false categorical claim
+
+R1 required §H's sentence be **repaired or scoped**. The remediation chose repair, explicitly
+declined to take R1's count on trust, ran its own sweep, and re-asserted: *"One quotation in the V07
+set contained a word that is not in the source… **no other instance exists**"*, with *"it's met"*
+and *"mayo"* named among reconstructions *"moved **outside** the quotes"*. **Three quotations
+falsify it:**
+
+1. `V07_SOURCE_NOTES.md` **§9a** — `[00:27:24]` quoted as *"30 minute of the water, 30 minute of the
+   **mayo**."*; the marker reads *"…30 minute of the **male**,"*. **§10 of the same file measures
+   `mayo` at 0** and says the audio only garbles it to *mail*/*male* — so the file again holds a
+   right record and a wrong record for one object, which is what item 61 had just been fixed for.
+   **§9's evidence table ten lines above renders it correctly**, reconstruction outside the quotes
+   with `A-020` provenance.
+2. `V07_SOURCE_NOTES.md` **§11** — the row headed *"`[00:25:26]`'s **unrecovered** word"* then quotes
+   *"it turns red when **it's met**"*; `[00:25:26]` reads *"…It turns red when **Beth**."*
+3. `04_SCREENSHOTS/V07/INDEX.md` **item 6** — same substitution, unbracketed, where **row 15 of its
+   own frame table brackets it correctly** as `[it's met]`.
+
+Charged as **one** `MINOR` (`E01`, co-code `E20`), not three: one falsified claim, three sites, one
+lapse of a single sweep. **Fourth instance of V04 R1's `N5` class** — narrative prose restating an
+evidence table and losing the table's quotation discipline in the restatement; in two of three cases
+the correct rendering is in the same file.
+
+**Materiality: none.** `A-020` is not moved, §10's `mayo` 0 row is correct, the ADR observation is
+correctly fenced as display behaviour rather than a course rule in both places. It is charged for
+R1's own reason: a categorical self-certification is what a later session relies on **instead of
+re-checking**, which is precisely what the remediation itself argued when it chose to repair.
+
+### The superseded-text convention — verified SATISFIED
+
+Checked by reading `git diff 98d893a^ 98d893a` in full rather than the commit's description of it.
+**21 lines deleted across four files, and every deletion is reproduced verbatim inside a dated
+retention block** naming round, open item and finding code — more than `REMEDIATION_PROTOCOL.md` §2
+asks for. No incorrect text was silently removed anywhere. The remediation also anticipated
+correctly that a re-run sweep would return a higher raw count because the retention blocks re-quote
+the defects on purpose: measured at **238 → 252** under this reviewer's definition, all 14 of the
+delta retention text.
+
+### Two NOTES, neither a required correction
+
+- **`N1`** — the sweep that earned the repaired claim is **not reproducible**; `98d893a` commits no
+  script. In a project that commits its homework scripts so a reviewer can re-execute them, a
+  load-bearing count from an uncommitted throwaway is an evidence gap, and it is the gap the three
+  instances passed through. Forwarded to `CUMULATIVE_25.md` as a candidate standing rule, not
+  invented as an obligation R1 never set.
+- **`N2`** — three sweeps of one corpus returned **239** (R1), **238** (this session, pre-remediation
+  tree, independently written matcher) and **167** (the remediation). R1 and this session agree to
+  one fragment; the 30% gap is the remediation's. One candidate mechanism was **tested**: a
+  `\*"(.+?)"\*` pattern without `DOTALL` returns 164 fragments over `V07_SOURCE_NOTES.md` and misses
+  the §9a quotation because it wraps across a line break; with `DOTALL` it returns 180 and catches
+  it. Candidate, not determination — without the script (`N1`) the cause cannot be established.
+
+### Scope discipline of the remediation — recorded in its favour
+
+Every prohibition in `V07_REVIEW_R1.md` §15 was obeyed, verified individually: `PT-033`, the
+sensitivity, the cross-check and the homework scripts were not re-run; no git history was rewritten
+for `I-009`; `R11` is still failing in the committed tree; `V07_SOURCE_NOTES.md` §6c and §5 are
+untouched and both still correct. The defect found here is a defect of a **sweep**, not of scope.
+
+### Dimension B
+
+Carried from R1 **unchanged** — NOT SATISFIED, blocked by `D-030`, structural, not attributable to
+the student, **no severity charge**. No owner directive was issued for this round either.
+`REVIEW_INDEX.md` open item **36** is now owed for the **fifth** lesson-round running. Restated,
+not re-argued, and not counted again.
+
+### Files produced / updated
+- `18_REVIEW/V07/V07_REVIEW_R2.md` — new.
+- `18_REVIEW/REVIEW_INDEX.md` — V07 R2 decision row; STATUS block updated with its superseded text
+  retained; items 61–62 → CLOSED — VERIFIED; item 63 → PARTIALLY VERIFIED, stays open; new open item
+  **70**; `E01` 5 → 6 and `E20` 33 → 34 with the count class recorded as **discharged**; severity
+  table and its arithmetic.
+- `LOG.md` — this entry.
+
+### Consequences
+**V07 does NOT reach `COMPLETE`.** Open item **70** is owed and item **63** stays open until it
+discharges. The **V08 gate is unchanged: OPEN** — R1's `D-024` authorization is undisturbed and
+nothing found here is CRITICAL or MAJOR. **Next review trigger: remediation of item 70, then R3.**
+`python3 scripts/validate_project.py` — **103 passed / 0 warnings / 0 failures.**
