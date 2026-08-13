@@ -17,11 +17,29 @@
 > **Created:** 2026-08-13 · **Branch:** `infra/external-vocabulary-reference` · **Status:**
 > `EXTERNAL — NON-NORMATIVE — REFERENCE ONLY, PERMANENTLY`
 >
-> **§5 is web-sourced. §9 (added the same day) covers an 84-page seminar-notes PDF supplied by
-> the owner** — it answers far more, including `A-031`, `A-055`, `A-005`, `A-014`, `A-023` and
-> `A-022`, and it changes **nothing**. It is **anonymous** and it is very probably the document
-> the §5 web sources were copied from, so §5 "convergence" is often one source counted twice.
-> **Read §9.0 and §9.4 before quoting anything from §9.**
+> ## ⚠️ THE BANNER ABOVE APPLIES TO §5 ONLY — §9 WAS ADMITTED AS EVIDENCE BY `D-039`
+>
+> **Everything above was written on 2026-08-13 before the owner had read the seminar-notes PDF.
+> It is retained unedited and is still exactly right about §5.** It is **no longer right about
+> §9**, and the difference is the whole point of this notice.
+>
+> | Section | Source | Status |
+> |---|---|---|
+> | **§5** | Web pages, forums, indicator listings | **`EXTERNAL — NON-NORMATIVE`.** The banner above governs in full. Closes nothing, ever, cited nowhere |
+> | **§9** | The 84-page Mauro seminar-notes PDF | **ADMITTED as normative evidence by `D-039`**, on the owner's attestation *"in alignment with the instructor and should be trusted"*. Citable as `MMM-NOTES` + page |
+>
+> **This does NOT mean §9's records are closed.** `D-039` closes nothing by itself — §9.2 is a
+> **follow-up queue** needing a session that reads the source and applies the judgement. `D-030`
+> still binds where the document is silent or hedged: **`push` is not unblocked and dimension B
+> stays blocked.**
+>
+> **And the recordings still win.** Owner direction, same day: *"if at any time the videos
+> contradict the pdf then we can call it out."* A divergence is a mandatory `C-xxx`, not a
+> tidy-up — see §9.6.
+>
+> **§9.0's two warnings survive `D-039` intact**: the document is anonymous, and it is probably
+> the original the §5 web sources were copied from — so a §5 page agreeing with §9 is **one
+> document counted twice**, never corroboration. **Read §9.0 and §9.4 before quoting §9.**
 
 ---
 
@@ -636,10 +654,28 @@ before reading a single definition below.
 > corroboration — it is one document counted twice.** Several §5 entries marked 🟢 CONVERGENT are
 > now better read as 🟡: the convergence was an echo. Individually re-marked below where it applies.
 
-**Status of everything in §9: EXTERNAL. NON-NORMATIVE. CLOSES NOTHING.** `D-030` binds unchanged;
-dimension B stays blocked. Whether this document may ever count as evidence is an **owner
-decision that does not yet exist** — see `EXTERNAL_REFERENCE/README.md`. The §3 reconciliation
-rule applies to every entry below exactly as it does to §5.
+> **STATUS — CORRECTED 2026-08-13, same day, after the owner read the document.**
+>
+> This paragraph originally read: *"Status of everything in §9: EXTERNAL. NON-NORMATIVE. CLOSES
+> NOTHING. `D-030` binds unchanged; dimension B stays blocked. Whether this document may ever
+> count as evidence is an **owner decision that does not yet exist** — see
+> `EXTERNAL_REFERENCE/README.md`. The §3 reconciliation rule applies to every entry below exactly
+> as it does to §5."* Retained per `REMEDIATION_PROTOCOL.md` §2. **The decision now exists.**
+
+**Status of everything in §9: ADMITTED AS NORMATIVE EVIDENCE by `D-039`**, citable as
+`MMM-NOTES` + page. **But:**
+
+- **`D-039` closes no record by itself.** §9.2 is a **follow-up queue**, not a disposition. Each
+  `A-xxx` needs a session that reads the source, applies the ordinary judgement, and cites the
+  page. Some will still fail on the merits — `A-011` gains a geometric constraint and still has
+  no leg count or invalidation rule.
+- **`D-030` still binds where the document is silent or hedged**, and **`push` is not unblocked**:
+  the document gives push *sizes* then withdraws the regularity in the next sentence. **Dimension
+  B stays blocked.**
+- **The recordings outrank it** — see §9.6.
+- **§3's reconciliation rule no longer applies to §9** (it governs §5, which stays external). §9's
+  rule is §9.6's: where a lesson and the notes diverge, the lesson wins and the divergence is
+  logged as a `C-xxx`.
 
 ### 9.1 The lineage hypothesis is now much stronger
 
@@ -715,6 +751,13 @@ condiment mapping, this document prints *Mayo → 200*, and the mapping is almos
 owner testimony, that is legitimate and takes one entry in `DECISIONS.md` stating what is being
 adopted and on whose authority. An agent must not do it silently on the strength of §9.
 
+> **UPDATE 2026-08-13 — `D-039` supplies exactly that decision, and it changes the answer by
+> half.** `A-020` is now **eligible for partial closure**: a session may close the ***Mayo = 200
+> EMA*** half citing (`MMM-NOTES` p.66, *"Hold the Mayo – 200 Bounce"*) plus the owner's
+> confirmation, recorded in `D-039` consequence 5. **It must not close the record whole.** The
+> **800 / "blueberry"** line is absent from this document entirely, so that half is not merely
+> unclosed — it is a **live video-vs-notes divergence** under §9.6. Close in part, log the rest.
+
 **(b) §9.2's second-leg row is a complete, codable trading rule.** Entry, stop, target, time-stop
 — all four, in numbers. It is the single most likely thing in this repository to end up in
 `13_MACHINE_SPEC/` or `14_PINE/` by accident. It is **anonymous, unverified, not from these
@@ -724,11 +767,52 @@ seminar notes*, never as a test of the course's rule.
 
 ### 9.5 Net effect on project state
 
-**Nil, again.** No record closed or narrowed; no contradiction resolved; no decision superseded;
-no grade, dimension or gate changed; no blocked test unblocked. `D-030` and `D-010` bind
-unchanged. What §9 changes is the **quality of the Required Research questions** — e.g. `A-055`
-can now ask *"is `M3` the mid-pivot between PP and R1?"* instead of *"what are these labels?"*,
-and `A-001` can be recorded as probably-unresolvable-externally. That is the legitimate use.
+> **CORRECTED 2026-08-13.** This section originally read: *"**Nil, again.** No record closed or
+> narrowed; no contradiction resolved; no decision superseded; no grade, dimension or gate changed;
+> no blocked test unblocked. `D-030` and `D-010` bind unchanged. What §9 changes is the **quality
+> of the Required Research questions**…"* That was true when written — before the attestation.
+> Retained per `REMEDIATION_PROTOCOL.md` §2.
+
+**One decision was created: `D-039`.** Beyond that, still nothing has changed *yet*:
+
+- **No record is closed or narrowed by §9 or by `D-039`.** Not one.
+- No contradiction resolved; no mastery grade, dimension, review verdict or gate state changed;
+  no blocked test unblocked. `D-010` binds unchanged and `D-030` binds wherever the document does
+  not actually supply a definition.
+- What **has** changed is that §9.2's rows are now **admissible**, which converts them from
+  "interesting external commentary" into **a work queue**: `A-031`, `A-055`, `A-005`, `A-014`,
+  `A-023`, `A-022`, `A-011`, `A-007`, and `A-020` in part.
+- **Two rows get harder, not easier.** `A-038` (ADR) now has **three** admissible windows from
+  three admissible sources — 2 days, unbounded, and *"last 2 weeks"* — which is a contradiction
+  to log, not a resolution. And `A-001` is now known to have **no route at all**: *"anchor point"*
+  does not occur once in 84 pages.
+
+### 9.6 When the videos and the notes disagree — owner direction, 2026-08-13
+
+> *"if at any time the videos contradict the pdf then we can call it out."*
+
+**Mandatory, not permissive.** A session that finds a lesson stating something this document
+contradicts **must** log it as a `C-xxx` in `11_CONTRADICTIONS/CONTRADICTIONS.md`, tagged
+`MMM-NOTES` vs. the speaker, with the page and the timestamp.
+
+**Resolution rule: the recording wins.** The notes are an attested account of seminars this
+project did not record; the videos are the primary material. Where the recording is clear, it is
+doctrine and the note is superseded on that point — annotate the §9.2 row, leave the superseded
+text visible.
+
+**Never resolved by:** reading the lesson down to fit the notes; treating the notes as "what he
+really meant"; calling the lesson a misspeak; or preferring whichever version is more codable.
+
+**Two candidates are already open and are flagged here rather than left to be discovered:**
+
+| Divergence | Notes say | Corpus says | Status |
+|---|---|---|---|
+| The moving-average set | **5/13/50/200, no 800**; the 200 is *"home base"* | V06 audio uses ***"blueberry"***, which the web maps to **800** | ⚠️ Unadjudicated. The corpus may use a line the document does not contain |
+| ADR lookback | *"the average daily trading range of the **last 2 weeks**"* | V04 guest: **2 previous days**, and separately an unbounded *"generally every day runs"* | ⚠️ Unadjudicated. Three numbers, three admissible sources |
+
+**This cuts both ways, and that is the point.** A divergence between the recordings and an
+attested account of the same teacher is **evidence about the corpus**, not noise to be tidied
+away. The register exists to hold exactly that.
 
 ---
 
