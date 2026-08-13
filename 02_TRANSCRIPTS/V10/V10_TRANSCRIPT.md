@@ -77,9 +77,39 @@ returns a final clause *"…you don't want to do the work"* and nothing after it
 own final entry `[01:36:12]` reads *"You felt too far behind you don't want to do the work"*.
 **Both engines stop on the same words.**
 
-**The lesson ends mid-exhortation**, on the third consecutive file to end without a formal close.
-Unlike V08 (mid-argument) and V09 (mid-clause), V10's final sentence is **grammatically
-complete**; what is missing is a sign-off, not a predicate.
+> ### ⚠ CORRECTED BY THE SCREENSHOT PASS — AND THE CORRECTION IS THE POINT OF THE ORDERING RULE
+>
+> This paragraph originally read:
+>
+> > ~~**The lesson ends mid-exhortation**, on the third consecutive file to end without a formal
+> > close. Unlike V08 (mid-argument) and V09 (mid-clause), V10's final sentence is
+> > **grammatically complete**; what is missing is a sign-off, not a predicate.~~
+>
+> **That is wrong, and it was written from the audio alone — which is exactly what
+> `SWF_CAPTURE_RECIPE.md` §9 puts the transcript pass before the screenshot pass to expose.**
+> **V10 HAS a formal close.** The final slide, at burned timecode `96:16 / 96.1`, prints:
+>
+> ```text
+> Looks like I will have a session for Easter Sunday...
+> So same time next week
+> Thank you all  GOOD NIGHT
+> ```
+>
+> **None of it is spoken.** The sign-off is *printed and silent*, so no transcript of any quality
+> could contain it. This is the same class as V01's *"pendings"* — a word on a slide, never
+> uttered — which §9 records as the reason the two passes are kept separate.
+>
+> **What actually ends mid-thought is the AUDIO, not the lesson.** The correct statement is:
+> V10's spoken track stops on a complete sentence with no verbal sign-off, while the deck closes
+> formally.
+>
+> **A dated forward reference falls out of it, and it is checkable.** *"Easter Sunday"* in 2012
+> was **2012-04-08**, and the next file in `SOURCE_MANIFEST.md` is
+> **`Bootcamp1 Wk4 040812 Part1 (51mins).swf` — 04/08/12.** The end card therefore predicts V11's
+> existence and its date from inside V10, which is a **third** independent corroboration of
+> `D-017` §2's ordering (after the filename and the printed *"Week 3"*). **Recorded as a
+> prediction for the V11 session to test, not as a finding about V11**, which this session has
+> not opened.
 
 ## VERIFICATION — FOUR INDEPENDENT AXES
 
@@ -148,9 +178,24 @@ case/punctuation normalisation:
    `A-078`, and no single figure is adopted.** `pits` is the engine's rendering of *pips*.
 2. **`ain't` is unreliable.** See the table above. Any quotation in `03_LESSON_NOTES/V10_*` that
    turns on this phrase carries its marker so a reader can re-listen.
-3. **Proper nouns are unreliable** — `a lu`/`Lou`, *"marketmakersforks.com"* and
-   *"Steve at MMM forex"* at `[00:07:38]`–`[00:07:44]` against the correctly-rendered
-   `marketmakers4x.com` at `[00:07:16]`. **No V10 artifact depends on a spelled-out domain.**
+3. **Proper nouns are unreliable, and this note had the direction BACKWARDS until the screenshot
+   pass corrected it.** It originally read:
+   > ~~*"marketmakersforks.com"* and *"Steve at MMM forex"* at `[00:07:38]`–`[00:07:44]` against
+   > the **correctly-rendered** `marketmakers4x.com` at `[00:07:16]`.~~
+
+   **The printed slide at burned timecode `07:08` reads `steve@marketmakersforex.com`.** So
+   `marketmakers4x.com` is the *mis*-rendering — the engine heard *"forex"* as *"4x"* — and
+   `marketmakersforks.com` is the *closer* one. The note had ranked the two exactly the wrong way
+   round, and it did so confidently, from audio alone.
+
+   The same substitution runs through the spoken brand name: `[00:04:59]` *"on behalf of market
+   makers **4x**"* and `[00:05:06]` *"market makers **for us**"* are both the engine's renderings
+   of **Market Makers Forex**. Also unreliable: `a lu` / **Lou** (`[00:04:48]`, `[00:15:12]`).
+
+   **No V10 artifact depends on a spelled-out domain or company name**, and none did before the
+   correction either — which is why the error cost nothing beyond this note. It is retained
+   rather than silently fixed because a session that mis-ranks its own confidence should leave
+   the evidence of having done so.
 4. **The engine drops the leading "Re-" on "Remember"** — `[00:13:13]` *"**Member** to end the
    day with long holders trapped"*, `[00:11:43]` *"**Member** I told you the market makers only
    have a handful of moves"*. This is a **positive** authenticity signal, not a hazard.
