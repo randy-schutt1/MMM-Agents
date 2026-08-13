@@ -1832,9 +1832,13 @@ Three independent confirmations, because a one-hour error moves every session bo
 
 1. **Vendor spec:** *"Eastern Standard Time (EST) time-zone WITHOUT Day Light Savings
    adjustments."*
-2. **Measured:** 187 week opens across the corpus; **172 land at exactly 17:00**, the
+2. **Measured:** ~~187 week opens across the corpus; **172 land at exactly 17:00** … Five
+   non-Sunday opens are the Christmas/New-Year breaks.~~ **CORRECTED — see the C7 block
+   below; that count conflated week opens with mid-week re-opens.** The correct figure is
+   **181 Sunday-delimited week opens**, of which **170 land at exactly 17:00**, the
    remainder at 17:01–17:10 (late opens), and the modal open is **17:00 in all twelve
-   months** — no seasonal shift. Five non-Sunday opens are the Christmas/New-Year breaks.
+   months** — no seasonal shift. **The DST conclusion is unchanged and slightly
+   strengthened:** the fixed-offset finding now rests only on genuine week opens.
 3. **Event-anchored:** the corpus's largest M1 bar is **2016-06-23 19:17 = 00:17 UTC
    2016-06-24**, coinciding with the Newcastle/Sunderland referendum declarations that
    moved sterling. An independent clock check that does not depend on the vendor's own
@@ -1896,7 +1900,7 @@ test run against this corpus**, and its report is cited in each. First run, 2026
 | C4 OHLC coherence | **PASS** — no `high < low`, no `high < max(O,C)`, no `low > min(O,C)`, no non-positive quote |
 | C5 spike census | 578 bars > 12× rolling median range — **a list for human review, never an auto-exclusion** |
 | C6 gap census | **3** intra-week gaps ≥ 30m, **4h43m total** across 3.5 years |
-| C7 week-open census | 187 opens, fixed 17:00, no DST shift |
+| C7 week-open census | ~~187 opens~~ **181 Sunday-delimited opens** + 6 intra-week re-opens + 3 non-Friday-closing weeks; fixed 17:00, no DST shift |
 
 **C5 needs the human sign-off it asks for, and the ratio metric misleads.** Most of the
 578 are thin holiday sessions where a 6-pip bar is 30× a 0.2-pip local median — arithmetic
@@ -1907,8 +1911,8 @@ on that basis; no bar is excluded.**
 
 > **CORRECTION, same day — THAT SIGN-OFF WAS INCOMPLETE, AND THE GATE HAD A BLIND SPOT.**
 >
-> The C5–C7 sign-off above was recorded without examining `C7`'s five **non-Sunday** week
-> opens. Four are Christmas/New-Year weeks. **The fifth is a hole in the data:**
+> The C5–C7 sign-off above was recorded without examining `C7`'s **non-Sunday** entries.
+> One of them is a hole in the data:
 >
 > ```text
 > last bar   Fri 2014-05-30 16:59
@@ -1941,6 +1945,48 @@ on that basis; no bar is excluded.**
 > This is precisely the hazard named when this project left rendered charts — on a chart a
 > 22-hour hole is a visible discontinuity; in a column of numbers it computes silently. The
 > QA gate is the compensating control, and it was one check short.
+>
+> ---
+>
+> **SECOND CORRECTION — `C7` ITSELF WAS MIS-SPECIFIED, and this one nearly reached a run.**
+>
+> Raised by the re-issue session, which refused an instruction from this session rather
+> than complying with it. It was right and this session was wrong.
+>
+> `C7` was implemented as *"the first bar after any gap ≥ 12h"* and every such bar was
+> reported as a **week open**. That is not what a week open is. A Christmas or New Year
+> closure produces a ≥ 12h gap **in the middle of a week that opened normally on Sunday**:
+>
+> ```text
+> 2013-12-22 Sun 17:00   <- the actual week open, 418 bars
+> 2013-12-24 Tue         <- closes early
+> 2013-12-25 Wed         <- 0 bars, market shut
+> 2013-12-26 Thu 06:02   <- a RE-OPEN, which C7 reported as a "week open"
+> ```
+>
+> **A run session deriving week boundaries from that output would have split four weeks in
+> two** — and `W-C′` and `PT-025`–`PT-032` are *entirely* weekly-structure tests.
+>
+> The inverse error is equally bad and was also missed: **when a holiday closure abuts the
+> weekend, the affected week produces no anomalous open at all and `C7` stays silent.**
+> Three weeks end on a **Thursday** — `2015-12-20`, `2015-12-27` (Christmas and New Year)
+> and `2016-06-26` (an artifact of this corpus's own truncation at the `D-035` boundary).
+> A Thursday close shortens every censoring horizon that runs to the week close.
+>
+> **Corrected counts:** ~~187 week opens~~ → **181 Sunday-delimited week opens**, **6
+> intra-week re-opens** (never week boundaries), **3 non-Friday-closing weeks**.
+>
+> **Binding rule, now stated in every affected pre-registration:** *a week is delimited by
+> its Sunday 17:00 open; an intra-week holiday re-open is never a week boundary.*
+>
+> **What this changes about the record.** Nothing about the timezone finding: the
+> fixed-offset conclusion now rests on 181 genuine week opens instead of a contaminated
+> 187, which strengthens it. What it changes is confidence in this session's own QA work —
+> **two of the eight checks were wrong on first writing, and both were caught downstream
+> rather than by the gate.** `C6` and `C7` were each wrong in the same direction: they
+> treated an absence as a boundary. That is the characteristic failure of measuring a
+> market from a file, and it argues for the checks themselves being reviewed, not merely
+> their output.
 
 **Reason:** `D-036` established that only an import-capable path reaches the windows, and
 the owner chose it. The choice is well-matched to what this batch actually is:

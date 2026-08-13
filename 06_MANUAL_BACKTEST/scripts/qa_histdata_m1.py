@@ -185,12 +185,59 @@ def session_completeness(rows, floor=0.60):
 
 
 def week_opens(rows):
+    """Return (week_opens, midweek_reopens).
+
+    CORRECTED — the naive form of this check was WRONG, and wrong in a way that
+    propagated into a decision entry before anyone noticed.
+
+    The original implementation returned "the first bar after any gap >= 12h" and called
+    every one of them a week open. That is not what a week open is. A Christmas or New
+    Year closure also produces a >= 12h gap *in the middle of a week that opened normally
+    on Sunday*, and the naive check reports the re-open as though the week restarted there:
+
+        2013-12-22 Sun 17:00  <- the actual week open, 418 bars
+        2013-12-24 Tue        <- closes early
+        2013-12-25 Wed        <- 0 bars, market shut
+        2013-12-26 Thu 06:02  <- a RE-OPEN, reported by the naive check as a "week open"
+
+    A run session deriving week boundaries from that output would split four weeks in two.
+    The inverse error is just as bad: when a holiday closure merges with the weekend, the
+    affected week produces NO irregular open at all and the naive check stays silent —
+    2015-12-20 and 2015-12-27 both END ON THURSDAY and neither was flagged.
+
+    So: a week is delimited by its **Sunday** open. An intra-week re-open is never a week
+    boundary. Both are reported, separately, because the second set matters — a
+    Thursday-ending week shortens every censoring horizon that runs to the week close.
+    """
     weekend = timedelta(hours=12)
-    opens = [rows[0][0]]
+    boundaries = [rows[0][0]]
     for a, b in zip(rows, rows[1:]):
         if (b[0] - a[0]) >= weekend:
-            opens.append(b[0])
-    return opens
+            boundaries.append(b[0])
+    opens = [t for t in boundaries if t.weekday() == 6]
+    reopens = [t for t in boundaries if t.weekday() != 6]
+    return opens, reopens
+
+
+def short_weeks(rows):
+    """Weeks that do not run the full Sunday-open -> Friday-close span.
+
+    Invisible to the week-open census by construction: when a holiday closure abuts the
+    weekend, the week simply ends early and no anomalous open is ever emitted.
+    """
+    by_day = collections.Counter(r[0].date() for r in rows)
+    weeks = collections.defaultdict(list)
+    for day in sorted(by_day):
+        # attribute each session to the Sunday that opened its week
+        anchor = day - timedelta(days=(day.weekday() + 1) % 7)
+        weeks[anchor].append(day)
+    out = []
+    for anchor, days in sorted(weeks.items()):
+        last = max(days)
+        if last.weekday() not in (4,):  # a normal week closes Friday
+            if last.weekday() != 5:  # Saturday never trades
+                out.append((anchor, last, last.strftime("%a"), len(days)))
+    return out
 
 
 def main():
@@ -250,12 +297,18 @@ def main():
         print(f"      ... {len(gaps) - 10} more")
     print()
 
-    opens = week_opens(rows)
+    opens, reopens = week_opens(rows)
     tod = collections.Counter(o.strftime("%H:%M") for o in opens)
-    dow = collections.Counter(o.strftime("%a") for o in opens)
-    print(f"C7 week-open census    : {len(opens)} week opens")
+    print(f"C7 week-open census    : {len(opens)} week opens (Sunday-delimited)")
     print(f"      time-of-day : {dict(tod.most_common(5))}")
-    print(f"      weekday     : {dict(dow)}")
+    print(f"      {len(reopens)} INTRA-WEEK RE-OPENS — these are NOT week boundaries:")
+    for r in reopens:
+        print(f"        {r} ({r.strftime('%a')}) — mid-week re-open after a closure")
+    print("      Deriving week boundaries from re-opens would split those weeks in two.")
+    sw = short_weeks(rows)
+    print(f"      {len(sw)} week(s) not closing on a Friday — invisible to this census:")
+    for anchor, last, wd, ndays in sw:
+        print(f"        week of {anchor} ends {last} ({wd}), {ndays} sessions")
     bymonth = collections.defaultdict(collections.Counter)
     for o in opens:
         bymonth[o.month][o.strftime("%H:%M")] += 1

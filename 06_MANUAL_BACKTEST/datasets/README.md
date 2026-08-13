@@ -51,7 +51,12 @@ live chart work.
   truncated at `2016.06.30` **on arrival** (186,608 post-boundary rows discarded,
   untruncated CSV and zip deleted, nothing past the boundary ever read). `D-035`'s holdout
   is intact. **Any session extending this corpus must repeat that or record the breach.**
-- **Weekends** are absent by construction, not gaps. 187 week opens detected.
+- **Weekends** are absent by construction, not gaps. **181 Sunday-delimited week opens**
+  (not 187 — that earlier figure counted mid-week holiday re-opens as week opens; see the
+  second correction block in `D-036a`). Also present: **6 intra-week re-opens**, which are
+  **never** week boundaries, and **3 weeks that close on a Thursday** (`2015-12-20`,
+  `2015-12-27`, and `2016-06-26` — the last an artifact of this corpus's truncation at the
+  `D-035` boundary, not a market closure).
 - **Intra-week gaps:** only 3 at ≥ 30 minutes, 4h43m total across 3.5 years.
 - **ONE UNEXPLAINED HOLE — `2014-06-01` / `2014-06-02`.** The corpus is absent from
   **Sun 2014-06-01 17:00 to Mon 2014-06-02 15:01**, ~22 continuous hours covering a full
@@ -62,10 +67,10 @@ live chart work.
 - **Nine Dec/Jan short sessions** are genuine market closures, not defects — but a partial
   session still cannot support a full-window measurement, so the same
   explicit-disposition rule applies.
-- **Calendar weeks ≠ trading weeks.** W-C′ holds **182 calendar Sundays** but **186
-  detected week opens**, of which only **181 open on a Sunday** (five open Mon/Wed/Thu —
-  four holiday-shortened, one the hole above). Any `n` denominated in "weeks" must say
-  which of the two it counts.
+- **Calendar weeks ≠ trading weeks.** W-C′ holds **182 calendar Sundays** → **181
+  calendar-complete Sun→Fri weeks** → **180 trading weeks** once the 2014-06-01 hole is
+  excluded. Any `n` denominated in "weeks" must say which of the three it counts; the
+  re-issued tests `PT-025`–`PT-032` are denominated in **trading weeks**.
 - **DST:** none. Modal week open is 17:00 in all twelve months.
 - **Volume is structurally zero** in this vendor's data. Carried for format compatibility.
   **It is not traded volume and no test may read it.**
