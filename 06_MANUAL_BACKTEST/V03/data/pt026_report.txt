@@ -1,0 +1,246 @@
+==============================================================================
+PT-026 — Is the first-eight-hours range of the week cut?
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-C' 2013-01-06 -> 2016-06-30. Re-issue of PT-008,
+           which straddled the D-035 boundary and was never run.
+blocks   : ALL THREE arms reported (8h clock / two 4h bars / 12h).
+           `D-030` forbids adopting one as THE definition.
+==============================================================================
+
+==========================================================================
+--- ARM A ---
+==========================================================================
+  week roster (arm A) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 3  (2015-12-20, 2015-12-27, 2016-06-26)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+  WEEKS USED (§3d): 180   bar universe 85732 M15 bars
+  §3c: 2014-06-01 EXCLUDED by name (no observable week open, so no block).
+       six Dec/Jan closure weeks INCLUDED, reported separately — all six
+       open normally on Sunday, so all three blocks are intact in each.
+       ['2015-12-20', '2015-12-27'] end on THURSDAY — Measures 2-4 censored earlier, realised
+       censoring time reported below.
+
+  SECOND BASELINE — the natural control: 8-hour blocks at every 4-hour
+  offset through the 120-hour week (30 offsets).
+  The week-open block is RANKED among them, not tested alone.
+    'both edges cut' across the 30 offsets: median 0.564, range [0.000, 0.817]
+    'neither edge cut'                    : median 0.000, range [0.000, 0.669]
+    median hours to first breach          : median 1.25, range [0.75, 13.00]
+    offsets yielding NO measurable week (block runs past the week close): 2 of 30 — +112 h and +116 h
+
+  ⚠ STRUCTURAL CONFOUND IN THE PRE-REGISTERED SWEEP, and the matched basis
+  added alongside it (the pre-registered sweep above is retained, not
+  replaced). Every offset is re-measured with the SAME 24-hour
+  outcome window after its own block close:
+    'both edges cut' within 24 h, across the offsets: median 0.315, range [0.170, 0.683]
+    offsets measurable on this basis: 23 of 30
+
+  THIRD BASELINE — block-width sweep at the WEEK OPEN (4/8/12/24 h), so a
+  'wider blocks get breached less' artifact cannot masquerade as a finding:
+     4 h block: both 0.861  neither 0.000  median hours-to-breach 1.25  (n = 180)
+     8 h block: both 0.817  neither 0.000  median hours-to-breach 1.25  (n = 180)
+    12 h block: both 0.678  neither 0.000  median hours-to-breach 1.25  (n = 180)
+    24 h block: both 0.483  neither 0.000  median hours-to-breach 11.12  (n = 180)
+
+  PRIMARY BASELINE — N3 week-anchor shift, 1000 draws, seed 20260812:
+    'both edges cut'             : median 0.6798, 5-95% [0.4944, 0.8596]
+    'neither edge cut'           : median 0, 5-95% [0, 0.005618]
+    median hours to first breach : median 2.25, 5-95% [0.25, 52.89]
+
+  ======================================================================
+  OBSERVED — the week-open block, read after all three baselines
+  ======================================================================
+
+  HEADLINE — 'the first eight hours', 8 h by clock from the realised week open   (measurable weeks n = 180)
+    realised block length: median 8.00 h  min 8.00  max 8.00
+    M1 is it cut? — above 0.894 (161/180), 95% CI [0.841, 0.931]
+                  below 0.922 (166/180), 95% CI [0.874, 0.953]
+                  BOTH  0.817 (147/180), 95% CI [0.754, 0.866]
+                  NEITHER 0.000 (0/180), 95% CI [0.000, 0.021]
+    M2 when? — hours from block close to first breach: median 1.25, IQR [0.50, 2.00], n = 180
+    M3 how far? — max excursion beyond the HIGH: median 103.1 pips (n = 161)
+                  beyond the LOW : median 94.1 pips (n = 166)
+    M4 which first? — up first 108, down first 72, no breach 0
+       week's extreme on the FIRST-BREACH side: 0.589 (106/180), 95% CI [0.516, 0.658]
+
+  SECOND ARM — 'the first two 4-hour bars', midnight-anchored (§0c)   (measurable weeks n = 180)
+    realised block length: median 7.00 h  min 7.00  max 7.00
+    M1 is it cut? — above 0.900 (162/180), 95% CI [0.847, 0.936]
+                  below 0.922 (166/180), 95% CI [0.874, 0.953]
+                  BOTH  0.822 (148/180), 95% CI [0.760, 0.871]
+                  NEITHER 0.000 (0/180), 95% CI [0.000, 0.021]
+    M2 when? — hours from block close to first breach: median 2.00, IQR [0.94, 2.75], n = 180
+    M3 how far? — max excursion beyond the HIGH: median 102.7 pips (n = 162)
+                  beyond the LOW : median 94.1 pips (n = 166)
+    M4 which first? — up first 110, down first 70, no breach 0
+       week's extreme on the FIRST-BREACH side: 0.578 (104/180), 95% CI [0.505, 0.648]
+
+  THIRD ARM — the 12-hour block, V03 [00:29:51]   (measurable weeks n = 180)
+    realised block length: median 12.00 h  min 12.00  max 12.00
+    M1 is it cut? — above 0.817 (147/180), 95% CI [0.754, 0.866]
+                  below 0.861 (155/180), 95% CI [0.803, 0.904]
+                  BOTH  0.678 (122/180), 95% CI [0.606, 0.742]
+                  NEITHER 0.000 (0/180), 95% CI [0.000, 0.021]
+    M2 when? — hours from block close to first breach: median 1.25, IQR [0.25, 4.00], n = 180
+    M3 how far? — max excursion beyond the HIGH: median 100.6 pips (n = 147)
+                  beyond the LOW : median 96.1 pips (n = 155)
+    M4 which first? — up first 78, down first 102, no breach 0
+       week's extreme on the FIRST-BREACH side: 0.606 (109/180), 95% CI [0.533, 0.674]
+
+  THE WEEK-OPEN BLOCK RANKED AMONG THE 30 SWEEP OFFSETS (§4 arm 2):
+    'both edges cut'  = 0.817  -> rank 1 of 30 (1 = most cut)
+    'neither cut'     = 0.000 -> rank 1 of 30 (1 = least often uncut)
+  ON THE MATCHED BASIS (same 24 h outcome window for every offset):
+    'both edges cut'  = 0.528 (n = 180) -> rank 7 of 23 measurable offsets,
+    against a sweep median of 0.315.
+    THIS is the comparison the pre-registered sweep cannot make, and it is
+    reported beside it rather than instead of it.
+  AGAINST N3 (§4 arm 1):
+    'both edges cut'  percentile 88.2
+    'neither edge cut' percentile 0.0
+    hours-to-breach   percentile 28.4
+
+  §3c — the six Dec/Jan closure weeks, INCLUDED and reported separately
+  (headline 8h arm):
+    closure weeks   : both 0.833 (5/6), 95% CI [0.436, 0.970]  <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+    all other weeks : both 0.816 (142/174), 95% CI [0.752, 0.867]
+    the two THURSDAY-ending weeks, realised outcome window:
+      2015-12-20: 84.75 h after the block close (a full week gives 111.75 h)
+      2015-12-27: 87.75 h after the block close (a full week gives 111.75 h)
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — five largest-range weeks:
+    2016-06-19  range  1789.5 pips  ends Fri
+    2015-03-15  range   533.1 pips  ends Fri
+    2013-06-02  range   491.7 pips  ends Fri
+    2015-04-12  range   488.2 pips  ends Fri
+    2015-08-23  range   483.8 pips  ends Fri
+
+==========================================================================
+--- ARM B ---
+==========================================================================
+  week roster (arm B) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 2  (2015-12-20, 2015-12-27)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+  WEEKS USED (§3d): 180   bar universe 85732 M15 bars
+  §3c: 2014-06-01 EXCLUDED by name (no observable week open, so no block).
+       six Dec/Jan closure weeks INCLUDED, reported separately — all six
+       open normally on Sunday, so all three blocks are intact in each.
+       ['2015-12-20', '2015-12-27'] end on THURSDAY — Measures 2-4 censored earlier, realised
+       censoring time reported below.
+
+  SECOND BASELINE — the natural control: 8-hour blocks at every 4-hour
+  offset through the 120-hour week (30 offsets).
+  The week-open block is RANKED among them, not tested alone.
+    'both edges cut' across the 30 offsets: median 0.564, range [0.000, 0.817]
+    'neither edge cut'                    : median 0.000, range [0.000, 0.669]
+    median hours to first breach          : median 1.25, range [0.75, 13.00]
+    offsets yielding NO measurable week (block runs past the week close): 2 of 30 — +112 h and +116 h
+
+  ⚠ STRUCTURAL CONFOUND IN THE PRE-REGISTERED SWEEP, and the matched basis
+  added alongside it (the pre-registered sweep above is retained, not
+  replaced). Every offset is re-measured with the SAME 24-hour
+  outcome window after its own block close:
+    'both edges cut' within 24 h, across the offsets: median 0.315, range [0.170, 0.683]
+    offsets measurable on this basis: 23 of 30
+
+  THIRD BASELINE — block-width sweep at the WEEK OPEN (4/8/12/24 h), so a
+  'wider blocks get breached less' artifact cannot masquerade as a finding:
+     4 h block: both 0.861  neither 0.000  median hours-to-breach 1.25  (n = 180)
+     8 h block: both 0.817  neither 0.000  median hours-to-breach 1.25  (n = 180)
+    12 h block: both 0.678  neither 0.000  median hours-to-breach 1.25  (n = 180)
+    24 h block: both 0.483  neither 0.000  median hours-to-breach 11.12  (n = 180)
+
+  PRIMARY BASELINE — N3 week-anchor shift, 1000 draws, seed 20260812:
+    'both edges cut'             : median 0.6798, 5-95% [0.4944, 0.8596]
+    'neither edge cut'           : median 0, 5-95% [0, 0.005618]
+    median hours to first breach : median 2.25, 5-95% [0.25, 52.88]
+
+  ======================================================================
+  OBSERVED — the week-open block, read after all three baselines
+  ======================================================================
+
+  HEADLINE — 'the first eight hours', 8 h by clock from the realised week open   (measurable weeks n = 180)
+    realised block length: median 8.00 h  min 8.00  max 8.00
+    M1 is it cut? — above 0.894 (161/180), 95% CI [0.841, 0.931]
+                  below 0.922 (166/180), 95% CI [0.874, 0.953]
+                  BOTH  0.817 (147/180), 95% CI [0.754, 0.866]
+                  NEITHER 0.000 (0/180), 95% CI [0.000, 0.021]
+    M2 when? — hours from block close to first breach: median 1.25, IQR [0.50, 2.00], n = 180
+    M3 how far? — max excursion beyond the HIGH: median 103.1 pips (n = 161)
+                  beyond the LOW : median 94.1 pips (n = 166)
+    M4 which first? — up first 108, down first 72, no breach 0
+       week's extreme on the FIRST-BREACH side: 0.589 (106/180), 95% CI [0.516, 0.658]
+
+  SECOND ARM — 'the first two 4-hour bars', midnight-anchored (§0c)   (measurable weeks n = 180)
+    realised block length: median 6.00 h  min 6.00  max 7.00
+    M1 is it cut? — above 0.900 (162/180), 95% CI [0.847, 0.936]
+                  below 0.922 (166/180), 95% CI [0.874, 0.953]
+                  BOTH  0.822 (148/180), 95% CI [0.760, 0.871]
+                  NEITHER 0.000 (0/180), 95% CI [0.000, 0.021]
+    M2 when? — hours from block close to first breach: median 2.50, IQR [0.50, 3.31], n = 180
+    M3 how far? — max excursion beyond the HIGH: median 102.7 pips (n = 162)
+                  beyond the LOW : median 94.1 pips (n = 166)
+    M4 which first? — up first 110, down first 70, no breach 0
+       week's extreme on the FIRST-BREACH side: 0.567 (102/180), 95% CI [0.494, 0.637]
+
+  THIRD ARM — the 12-hour block, V03 [00:29:51]   (measurable weeks n = 180)
+    realised block length: median 12.00 h  min 12.00  max 12.00
+    M1 is it cut? — above 0.817 (147/180), 95% CI [0.754, 0.866]
+                  below 0.861 (155/180), 95% CI [0.803, 0.904]
+                  BOTH  0.678 (122/180), 95% CI [0.606, 0.742]
+                  NEITHER 0.000 (0/180), 95% CI [0.000, 0.021]
+    M2 when? — hours from block close to first breach: median 1.25, IQR [0.25, 4.00], n = 180
+    M3 how far? — max excursion beyond the HIGH: median 100.6 pips (n = 147)
+                  beyond the LOW : median 96.1 pips (n = 155)
+    M4 which first? — up first 78, down first 102, no breach 0
+       week's extreme on the FIRST-BREACH side: 0.606 (109/180), 95% CI [0.533, 0.674]
+
+  THE WEEK-OPEN BLOCK RANKED AMONG THE 30 SWEEP OFFSETS (§4 arm 2):
+    'both edges cut'  = 0.817  -> rank 1 of 30 (1 = most cut)
+    'neither cut'     = 0.000 -> rank 1 of 30 (1 = least often uncut)
+  ON THE MATCHED BASIS (same 24 h outcome window for every offset):
+    'both edges cut'  = 0.528 (n = 180) -> rank 7 of 23 measurable offsets,
+    against a sweep median of 0.315.
+    THIS is the comparison the pre-registered sweep cannot make, and it is
+    reported beside it rather than instead of it.
+  AGAINST N3 (§4 arm 1):
+    'both edges cut'  percentile 88.2
+    'neither edge cut' percentile 0.0
+    hours-to-breach   percentile 28.4
+
+  §3c — the six Dec/Jan closure weeks, INCLUDED and reported separately
+  (headline 8h arm):
+    closure weeks   : both 0.833 (5/6), 95% CI [0.436, 0.970]  <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+    all other weeks : both 0.816 (142/174), 95% CI [0.752, 0.867]
+    the two THURSDAY-ending weeks, realised outcome window:
+      2015-12-20: 84.75 h after the block close (a full week gives 111.75 h)
+      2015-12-27: 87.75 h after the block close (a full week gives 111.75 h)
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — five largest-range weeks:
+    2016-06-19  range  1789.5 pips  ends Fri
+    2015-03-15  range   533.1 pips  ends Fri
+    2013-06-02  range   491.7 pips  ends Fri
+    2015-04-12  range   488.2 pips  ends Fri
+    2015-08-23  range   483.8 pips  ends Fri
