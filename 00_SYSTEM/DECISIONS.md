@@ -2211,3 +2211,112 @@ and §1's 22:00 UTC row should name the eight new numbers — **owed, not done i
 wrote this text.** `validate_project.py` may now check that no observation cites `PT-008`–
 `PT-013`, `PT-019`, or `PT-002`'s W-C arm.
 **Status:** ACTIVE
+
+---
+
+## D-038 — Concurrent sessions get their own branch, and their own worktree where practical; merge-back is single-threaded
+
+**Date:** 2026-08-13
+**Governs:** every session, agent or human, that may run against this repository at the
+same time as another.
+**Adopts:** the durable fix `SETUP_ISSUES.md` `I-009` "Residual risk" has recommended and
+left unadopted since 2026-08-10 (*"one working tree per session (git worktrees) … recommended
+but not yet adopted"*).
+**Refines, does not supersede:** `I-009`'s staging mitigations and `D-022`. Those remain in
+force as the last line of defence for any work that still shares a tree.
+
+**Decision:** Whenever more than one session may be writing to this project concurrently,
+**each session works on its own dedicated git branch, and — where the environment supports it —
+in its own git worktree (separate checkout directory).** Two write-heavy sessions never commit
+to the same branch at the same time, and never share one working tree.
+
+**Merging back is a distinct, single-threaded step.** One session at a time integrates its
+branch into the default/integration branch — fetch, verify no divergence, merge or fast-forward,
+push — and no other session merges while that is in flight. Integration is not something a
+working session does incidentally at the end of its own work; it is its own act, performed
+knowing it is the only one happening.
+
+**Branch naming convention** (a convention, not a gate — a descriptive name that identifies the
+session's task is what matters):
+
+| Prefix | Use |
+|---|---|
+| `video/vNN` | lesson ingestion work for video *NN* — e.g. `video/v08` |
+| `review/vNN` | an independent review round against video *NN* |
+| `fix/<description>` | remediation of named open items or findings |
+| `infra/<description>` | tooling, scripts, bookkeeping, governing-document work |
+
+**Project-policy documents — `DECISIONS.md`, `SETUP_ISSUES.md`, `COURSE_PROGRESS.md`,
+`LOG.md`, `REVIEW_INDEX.md` — are edited on the integration branch**, not on a task branch,
+because they are append-only ledgers that every concurrent session reads, and a policy change
+that sits unmerged on a task branch is a policy no other session can see. This entry itself was
+written that way.
+
+**Reason:** The shared-tree collisions are not hypothetical and they are not rare — they have
+recurred across four days, against sessions that were following the mitigation correctly. The
+mitigations `I-009` supplies are conventions enforced by nothing: `git add <explicit paths>`
+writes into a **shared index another session has already staged into**, so staging discipline
+controls what a session *adds* and not what is *already there*. The corrected
+`git commit -m "…" -- <paths>` form is a genuine improvement and it is still a habit rather than
+a control. Separate worktrees remove the shared index, the shared HEAD and the shared checkout
+entirely, so the failure has no mechanism left. **This is the difference between a rule that
+sessions must remember and a condition under which the failure cannot occur.**
+
+The cost is real and worth naming: an extra checkout directory per session, and a merge step
+that must be performed deliberately. That cost is paid once per session; the collision cost has
+been paid repeatedly, in wrong commit authorship, in mislabelled history that `git log` can no
+longer attribute, and — at `1c836df` — in a review that flags a gate breach being swept into the
+very commit containing the breaching work, under a message describing only the latter.
+
+**Evidence:** `SETUP_ISSUES.md` `I-009` (both collisions, the corrected mitigation, and the
+"Residual risk" paragraph this entry discharges); `I-009` collision-2 table — `6e4adac`,
+`4068db7`, `58e3d03`, `a6fa421` (recurred 2026-08-13, three days after the mitigation was
+written), `8785c41` (a session that ran **no** `git add -A` and staged only its own five paths
+and cross-committed anyway); `LOG.md` 2026-08-10 "Addendum — commit collision" (`1c836df`);
+`LOG.md` V07 entry "⚠ Process — `I-009` recurred, against this session's work"
+(`02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` swept into `8785c41`); `18_REVIEW/V07/V07_REVIEW_R1.md`
+§ on the collision, at commit `69c02ac` — the V07 review found a same-file collision between the
+V07 session and a concurrent session and charged **no finding against the student**, because the
+student's own staging was correct and the defect was structural; `COURSE_PROGRESS.md` V07 GATE
+carry-forward (f) *"`I-009` IS LIVE ON THIS MACHINE"*; `18_REVIEW/REVIEW_INDEX.md` (two
+independent R1 reviews of the same round produced concurrently by duplicate sessions).
+**Verified in this environment, not assumed:** `git worktree add` **works here** — a worktree at
+`/Users/randyschutt/Desktop/Trading/MMM-Agents-v08` on branch `video/v08` was created, checked
+out 508 files, reports a clean `git status`, and passes `validate_project.py`. Branch-only
+isolation is **not** the practical ceiling on this machine.
+
+**Alternatives considered:** *Keeping the `I-009` conventions and trying harder* — rejected;
+`8785c41` is a session that followed them exactly and collided anyway, which is the argument
+against conventions stated in evidence rather than in principle. *Serialising all work — never
+run two sessions at once* — rejected; it is the only alternative that is strictly safer, and it
+costs the parallelism this project has actually used to run ingestion, review and data work
+together, when branch isolation buys the same safety without it. *Branch-only isolation in one
+shared tree* — rejected as the standing policy, though it is the fallback where worktrees are
+unavailable; branches alone do not fix `I-009`, because the shared **index and checkout** are
+the mechanism, not the branch pointer, and two sessions on two branches in one tree cannot both
+have their branch checked out. *A `.git/index.lock`-style advisory lock or a pre-commit hook* —
+rejected for now; it constrains the symptom (concurrent commits) rather than removing the shared
+state, and it is more machinery than a second checkout directory. *Rewriting the polluted
+history to correct authorship* — rejected, restating `I-009`: nothing was lost, all of it is
+pushed, and rebasing while another session holds the same tree can destroy uncommitted work.
+
+**Consequences:** A session spawned for concurrent work must be **told its branch** (and its
+worktree path) at spawn time; a session that is not told is entitled to assume it is alone and
+will work in the default tree. `I-009` may now be narrowed from `OPEN` toward its durable fix,
+but should **not** be closed until a full round has run under this policy — **owed, not done by
+the session that wrote this entry.** `I-009`'s staging discipline (`git status --porcelain`
+before staging; `git commit -m "msg" -- <paths>`; never `git add -A`) **remains mandatory
+everywhere**, including inside a private worktree, because the policy is a convention too and
+the next session may not have read it.
+
+**Two operational facts a worktree session must know, verified here:** (1) `.gitignore`d assets
+do **not** materialise in a new worktree — `01_SOURCE_VIDEOS/**` and
+`06_MANUAL_BACKTEST/datasets/**` (127 MB HistData corpus) arrive empty, and a session needing
+them must symlink or reference the primary checkout; the `video/v08` worktree has both symlinked
+and its `git status` stays clean because both paths are ignored. (2) A branch that is checked out
+in one worktree **cannot** be checked out in another, which is the isolation working as intended
+rather than a fault.
+
+Merge-back to the integration branch happens **one branch at a time**, with a `git fetch` and a
+divergence check immediately before the push, per the discipline already in use.
+**Status:** ACTIVE
