@@ -1,6 +1,7 @@
-//@version=5
+//@version=6
 // =============================================================================
 // MMM_Indicator.txt — Market Maker Method: EMAs + Session Boxes  (OVERLAY)
+// Pine Script v6.  Paste into TradingView → Pine Editor → Add to chart.
 // =============================================================================
 //
 // PURPOSE
@@ -31,9 +32,14 @@
 //   [DEFAULT] — NOT source-verified. This file's choice. Change freely.
 //
 // COMPANION SCRIPT
-//   TDI is an oscillator and cannot share a pane with an overlay in Pine v5
-//   (`force_overlay` is a v6 feature). TDI therefore ships as a SECOND script:
-//   `MMM_TDI.txt`. Add both to the chart. See MMM_Indicator_README.md.
+//   TDI ships as a SECOND script, `MMM_TDI.txt`, in its own pane.
+//   NOTE FOR v6: unlike v5, this split is now a CHOICE rather than a hard
+//   limit. Pine v6 adds `force_overlay`, so one script COULD declare
+//   `overlay = false` and push the EMAs and boxes onto the price pane with
+//   `force_overlay = true`. Two scripts are kept deliberately: each gets its
+//   own settings dialog and can be toggled, restyled or removed independently,
+//   which is what chart-marking work actually wants. Merging them is a
+//   supported option if you would rather have one.
 // =============================================================================
 
 indicator(
@@ -178,11 +184,10 @@ tz = switch tzChoice
     => syminfo.timezone
 
 // Day mask, TradingView session syntax: 1=Sun … 7=Sat.
-// [DEFAULT] "23456" (Mon-Fri). The corpus states no day mask for the intraday
-// session table. Mon-Fri is chosen because the Asian session opens 20:30 ET on
-// the calendar day BEFORE the London/NY sessions it precedes, so on this mask
-// the week's first Asian box opens Sunday evening ET only if "1" is included.
-// Include "1" if you want the Sunday-evening open drawn.
+// [DEFAULT] The corpus states no day mask for the intraday session table.
+// Note the Asian session opens 20:30 ET on the calendar day BEFORE the
+// London/NY sessions it precedes, so the week's first Asian box is drawn on
+// Sunday evening ET only while "1" is included.
 sessDays = input.string("1234567", "Days included (1=Sun … 7=Sat)", group = grpTz,
      tooltip = "[DEFAULT] Not source-specified. '1234567' draws every day. Use '23456' for Mon-Fri only.")
 
@@ -308,18 +313,21 @@ txNyP  = input.string("NY PRIME / REVERSAL", "Label", group = gNyP)
 intradayOk = timeframe.isintraday
 
 // Returns true when the current bar falls inside `sess` in timezone `tz`.
-f_in(string sess, string days) =>
+// Parameters are declared `simple string` deliberately: `time()` requires
+// simple-qualified session and timezone arguments, and letting Pine infer a
+// `series` qualifier here would fail to match the overload.
+f_in(simple string sess, simple string days) =>
     not na(time(timeframe.period, sess + ":" + days, tz))
 
 // One persistent box-set per call site. `var` inside a function gives each
 // call site its own independent state, which is exactly what is wanted here.
-// `isIn` / `wasIn` are passed in (rather than computed with [1] inside the
-// function) so no history reference is made from within a function body.
+// `isIn` / `wasIn` are passed in rather than derived from history inside the
+// function body, so the function makes no history reference of its own.
 f_box(bool isIn, bool wasIn, color bg, color bc, string txt, int keep, int extMs) =>
-    var box[] store = array.new_box()
-    var box   cur   = na
-    var float hi    = na
-    var float lo    = na
+    var array<box> store = array.new<box>()
+    var box   cur = na
+    var float hi  = na
+    var float lo  = na
     if isIn
         if not wasIn
             hi := high
@@ -359,12 +367,44 @@ inLonP = draw and onLonP  and f_in(sesLonP, sessDays)
 inNy   = draw and onNy    and f_in(sesNy,   sessDays)
 inNyP  = draw and onNyP   and f_in(sesNyP,  sessDays)
 
+// -------------------------------------------------------------------------
+// Previous-bar session state.
+//
+// ⚠ THIS REPLACES A BUG. The earlier version wrote `nz(inAsia[1], false)`,
+//    which does not compile:
+//
+//      Cannot call "nz" with argument "source"="call "operator SQBR"
+//      (series bool)". An argument of "series bool" type was used but a
+//      "simple int" is expected.  (CE10123)
+//
+//    `nz()` has overloads for the numeric and colour types but NOT for
+//    `series bool`, so the compiler falls through to `nz(simple int, …)` and
+//    rejects the boolean.
+//
+//    The fix carries the previous value in an explicit `var bool` instead of
+//    reaching into history at all. That is also version-proof: it does not
+//    depend on whether `bool` may hold `na` (v5) or may not (v6), and it needs
+//    no na-guard in either language version.
+// -------------------------------------------------------------------------
+var bool wasAsia = false
+var bool wasLon  = false
+var bool wasLonP = false
+var bool wasNy   = false
+var bool wasNyP  = false
+
 // Draw order: parent sessions first, then the nested "prime" boxes on top.
-f_box(inAsia, nz(inAsia[1], false), bgAsia, bcAsia, txAsia, keepN, extMs)
-f_box(inLon,  nz(inLon[1],  false), bgLon,  bcLon,  txLon,  keepN, extMs)
-f_box(inNy,   nz(inNy[1],   false), bgNy,   bcNy,   txNy,   keepN, extMs)
-f_box(inLonP, nz(inLonP[1], false), bgLonP, bcLonP, txLonP, keepN, extMs)
-f_box(inNyP,  nz(inNyP[1],  false), bgNyP,  bcNyP,  txNyP,  keepN, extMs)
+f_box(inAsia, wasAsia, bgAsia, bcAsia, txAsia, keepN, extMs)
+f_box(inLon,  wasLon,  bgLon,  bcLon,  txLon,  keepN, extMs)
+f_box(inNy,   wasNy,   bgNy,   bcNy,   txNy,   keepN, extMs)
+f_box(inLonP, wasLonP, bgLonP, bcLonP, txLonP, keepN, extMs)
+f_box(inNyP,  wasNyP,  bgNyP,  bcNyP,  txNyP,  keepN, extMs)
+
+// Roll the state forward only AFTER every box has consumed it.
+wasAsia := inAsia
+wasLon  := inLon
+wasLonP := inLonP
+wasNy   := inNy
+wasNyP  := inNyP
 
 // A single, quiet warning when boxes are requested on a non-intraday chart,
 // so the absence of boxes is never mistaken for "no sessions found".

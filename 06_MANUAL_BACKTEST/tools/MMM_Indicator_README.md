@@ -2,7 +2,7 @@
 
 > **Branch:** `feature/tradingview-mmm-indicator` · **Created:** 2026-08-13 · **Status:** `TOOL — NOT SPEC`
 >
-> Two Pine Script v5 **indicators** (never strategies) that draw EMAs, session boxes and a TDI
+> Two Pine Script **v6** indicators (never strategies) that draw EMAs, session boxes and a TDI
 > panel, so that manual chart study under `06_MANUAL_BACKTEST/` does not have to be done by eye.
 >
 > **This tool encodes no setup, fires no signal, and is evidence of nothing.**
@@ -42,10 +42,19 @@ the code comments and in the TradingView tooltips. The table below is the same i
 ### Why two files rather than one
 
 TDI is a 0–100 oscillator and belongs in its own pane; the EMAs and boxes belong on the price
-chart. **A Pine v5 script occupies exactly one pane.** The `force_overlay` argument that would
-let a single script write to both was introduced in **Pine v6** and does not exist in v5. Since
-the brief specifies v5 *and* a separate TDI pane, two scripts is the only correct
-implementation — not a stylistic choice. Add both to the chart.
+chart, so they live in two scripts. Add both to the chart.
+
+> **⚠ This rationale changed at the v5 → v6 port, and the earlier version of this README was
+> wrong about it going forward.** It argued the split was *forced*: "a Pine v5 script occupies
+> exactly one pane… two scripts is the only correct implementation — not a stylistic choice."
+> That was true of **v5**. It is **not** true of v6, which adds `force_overlay` — a single v6
+> script can declare `overlay = false` for the TDI panel and push the EMAs and boxes onto the
+> price pane with `force_overlay = true`.
+>
+> So the split is now a **choice**, and the honest reason is a different one: two scripts means
+> two settings dialogs, so the panel and the overlay can be toggled, restyled or removed
+> independently — which is what chart-marking work actually wants. **Merging them into one v6
+> script is fully supported** if you would rather have a single indicator; say the word.
 
 ---
 
@@ -183,7 +192,7 @@ label to that effect.
 
 > **Why `.txt` and not `.pine`:** both scripts are stored with a `.txt` extension so they open in
 > any plain-text editor and can be selected and copied without fuss. The contents are ordinary
-> Pine Script v5 and are unchanged by the extension — TradingView never reads the file, only what
+> Pine Script v6 and are unchanged by the extension — TradingView never reads the file, only what
 > you paste into the Pine Editor, so the extension is irrelevant to it.
 
 1. Open a GBP/USD chart (`D-007` — the project's primary research instrument) on an **intraday**
@@ -204,6 +213,15 @@ Both scripts compile as-is with no external dependencies.
 
 **Pine / platform**
 
+- **Pine v6 required** (`//@version=6` on line 1 of both files). They will not compile as v5 —
+  `array.new<box>()` and the v6 `bool` semantics are assumed.
+- **A `nz()` bug was fixed at the v6 port.** The first release tracked the previous bar's session
+  state with `nz(inAsia[1], false)`, which does not compile: *"Cannot call `nz` with argument
+  `source`=… (series bool). An argument of `series bool` type was used but a `simple int` is
+  expected. (CE10123)"* — `nz()` has overloads for the numeric and colour types but **not** for
+  `series bool`. The previous state is now carried in an explicit `var bool` and never read from
+  history, which sidesteps the overload entirely and does not depend on whether `bool` may hold
+  `na` (v5) or may not (v6).
 - **Intraday only.** On daily-and-higher charts one bar spans every session, so no honest box
   could be drawn. Box drawing is *suppressed* rather than approximated, and a one-line on-chart
   notice appears so that "no boxes" is never misread as "no sessions found".

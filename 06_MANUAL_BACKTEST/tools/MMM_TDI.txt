@@ -1,14 +1,25 @@
-//@version=5
+//@version=6
 // =============================================================================
 // MMM_TDI.txt — Traders Dynamic Index  (SEPARATE PANE)
+// Pine Script v6.  Paste into TradingView → Pine Editor → Add to chart.
 // =============================================================================
 //
 // WHY THIS IS A SEPARATE FILE
-//   TDI is an oscillator on a 0-100 scale and must live in its own pane, so it
-//   is declared `overlay = false`. A single Pine v5 script occupies exactly one
-//   pane; `force_overlay` (which would allow mixing) is a Pine v6 feature and
-//   does not exist in v5. Splitting into two scripts is therefore not a
-//   stylistic choice, it is the only correct v5 implementation.
+//   TDI is an oscillator on a 0-100 scale and belongs in its own pane, so it is
+//   declared `overlay = false`.
+//
+//   ⚠ CORRECTED AT THE v5 → v6 PORT. This block previously argued the split was
+//   forced — "a single Pine v5 script occupies exactly one pane; force_overlay
+//   … does not exist in v5 … the only correct v5 implementation." That was true
+//   of v5 and is NOT true here. Pine v6 ADDS `force_overlay`, so one script
+//   could declare `overlay = false` for this panel and push the EMAs and boxes
+//   onto the price pane with `force_overlay = true`.
+//
+//   So the split is now a CHOICE, and the honest reason is different: two
+//   scripts means two settings dialogs, so the panel and the overlay can be
+//   toggled, restyled or removed independently. That suits chart-marking work.
+//   Merging them into one v6 script is fully supported if you prefer it.
+//
 //   Companion overlay script: `MMM_Indicator.txt` (EMAs + session boxes).
 //
 // =============================================================================
@@ -159,7 +170,7 @@ plot(showRsi  ? rsiVal   : na, "RSI",              color = colRsi,  linewidth = 
 plot(showFast ? fastMa   : na, "Fast MA (RSI Price Line)",   color = colFast, linewidth = 2)
 plot(showSlow ? slowMa   : na, "Slow MA (Trade Signal Line)", color = colSlow, linewidth = 2)
 
-// Reference levels are drawn with `plot`, not `hline`: Pine v5 requires
+// Reference levels are drawn with `plot`, not `hline`: Pine (v5 and v6 alike) requires
 // `hline`'s price to be a const/input, so it cannot take a `showLevels ? … : na`
 // expression. `plot` accepts the series and keeps the toggle working.
 plot(showLevels ? lvlUp  : na, "Level upper", color = color.new(color.gray, 50), style = plot.style_linebr)
