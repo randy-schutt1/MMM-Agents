@@ -176,7 +176,7 @@ objection is waived. `C-010` stays **open**.
 
 ---
 
-## Q6. Does *"three pushes, the third being the longest"* get us any closer to coding `push`?
+## Q6. Does *"three pushes… the third being the longest"* get us any closer to coding `push`?
 
 **Answer: no. `MEDIUM` confidence that it moves the record at all, `HIGH` confidence that it
 does not unblock it.**
@@ -190,6 +190,14 @@ push 3 exists — which is the only thing a recognition rule could use.
 longest"* looks codable. It is not, because *longest* presupposes that you have already
 segmented the move into three pushes, which is the undefined step. **`D-030` binds. Dimension B
 stays BLOCKED for the fifth lesson running.**
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this question's heading
+> previously read *"three pushes**,** the third being the longest"*. `[00:46:28]` reads
+> *"inducements, which would be three pushes, **three accelerations,** the third being the
+> longest"*, so the comma silently elided three words. Replaced with the ellipsis form
+> `V09_SOURCE_NOTES.md` §7e already used for the same sentence. **The answer does not move.**
+> `V09_REVIEW_R2.md` open item **81**, found by
+> `05_HOMEWORK/V07/scripts/verify_quotes.py V09`.)*
 
 ---
 

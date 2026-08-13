@@ -163,9 +163,17 @@ hit losing cycles of three or four consecutive stopouts you **diminish** your lo
 | Start | $12,500 | |
 | After 4 losses at 2% | *"12,500 is now 11,500"* | 4 × $250 = $1,000. **$11,500 ✓** |
 | Drawdown described as | *"down eight percent of original equity"* | $1,000 / $12,500 = **8.0% ✓**. The slide burned `06:00` prints *"drawn down **to** 8% of original equity"*, which literally says the balance IS 8%; the audio's *"down eight percent"* is the right sense. **Loose wording, correct arithmetic — recorded here, not registered as an ambiguity** |
-| New size | *"2% of 11,500 is 9.2 minis or 0.92 lots"* | $230 / 25 pips = **$9.20/pip ✓** |
-| First 2:1 winner | *"brings us back up to 11,960"* | $11,500 + (50 × $9.20) = **$11,960 ✓** |
+| New size | *"two percent of 11,500 is 9.2 minis or 0.92 lots"* | $230 / 25 pips = **$9.20/pip ✓** |
+| First 2:1 winner | *"will bring us back up to 11,960"* | $11,500 + (50 × $9.20) = **$11,960 ✓** |
 | Second winner | *"brings the account balance up to 12,500"* | $11,960 × 0.02 / 25 = $9.568/pip; +50 pips = $478.40 → **$12,438.40**, not $12,500. **Off by $61.60 — see `C-014`** |
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — the two rows above previously
+> read *"**2%** of 11,500 is 9.2 minis or 0.92 lots"* and *"**brings** us back up to 11,960"*.
+> `[00:06:52]`–`[00:06:55]` reads *"**two percent** of 11,500 is 9.2 minis or 0.92 lots"* and
+> `[00:07:03]` reads *"our first-winning winning trade **will bring** us back up to 11,960"*.
+> Neither arithmetic check moves. Found by `05_HOMEWORK/V07/scripts/verify_quotes.py V09`, the
+> sweep `V09_REVIEW_R2.md` open item **81** required; the numeral-for-word and tense
+> substitutions are the same `E01` class as `V09_REVIEW_R1.md` `M1`.)*
 
 ### 2d. Cumulative exposure — the rule that is easiest to miss
 
@@ -255,7 +263,7 @@ Printed complete on the frame burned `21:40`, spoken `[00:18:31]`–`[00:22:40]`
 | 1 | *"Moving your Stop Loss After you have placed it: 1st S/L is always the cheapest"* | `[00:18:48]`, attributed to a named participant: *"the seebull always says the first stop loss is always the cheapest"* |
 | 2 | *"Putting on Multiple Positions which add up to GREATER than your % Risk"* | `[00:19:13]`–`[00:19:40]` — the cumulative-2% rule of §2d |
 | 3 | *"Not having the DISCIPLINE to KEEP TO the Risk Plan as described"* | `[00:19:48]`–`[00:20:27]`, framed as V08's **innermost ring**: *"that inner shell has like I don't know what it's it's titanium or diamond… it's the circle within the circle"* — the doubled *"it's"* is the speaker's own stutter and is left standing (`V09_REVIEW_R1.md` `M1`; it previously read *"what it's titanium"*) |
-| 4 | *"Miscalculating Lot size on NON USD quote Pairs -- use a lot size calculator!"* | `[00:20:48]`–`[00:21:31]` — *"USD JPY on a USD based account is going to be a larger unit than a pair that ends in USD"* |
+| 4 | *"Miscalculating Lot size on NON USD quote Pairs -- use a lot size calculator!"* | `[00:20:48]`–`[00:21:31]` — *"USD JP why on a USD based account is going to be a larger unit than a pair that ends in USD"*. The ASR renders **USD/JPY** as *"USD JP why"*; the reconstruction is stated here rather than inside the quote (`V09_REVIEW_R2.md` item 81; it previously read *"USD JPY on a USD based account"*) |
 | 5 | *"Not having HARD Stop Losses and Take Profits WITH THE BROKER"* | `[00:21:44]`–`[00:22:40]` — explicitly against stealth-EA stop management; *"there's going to be times where your platform goes down"* |
 
 **Error 3 is the answer to V08's unanswered question.** V08's final frame is a red `?` at the
@@ -274,9 +282,15 @@ single most important cross-file result in this lesson.
 | Risk at stop | 2% |
 | Geometry | 2:1 or greater, −25 / +50 |
 | Per trade | **−2% on a loss, +4% on a win** |
-| Claim | *"only **five successful trades per week** brings **20% gains** for the week"* |
+| Claim | `AUDIO` `[00:24:52]`–`[00:24:55]`: *"only **five successful trades per week**… it brings **20% gains**"*. `PRINTED`, frame burned `25:00`: *"Only FIVE successful trades per Week = 20% Gains for the Week!"* |
 | Compounding | *"In four weeks you doubled your account with a $5,000 account. You now have 10,000 368"* |
 | Spreadsheet (frame burned `26:40`) | `Base 5,000.00`, `% profit 0.2000`, Week 4 = `10,368.00`, running 28 weeks to **`824,223.31`** |
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — the Claim row previously read
+> *"only **five successful trades per week** brings **20% gains** for the week"*, which is
+> neither source verbatim: it drops the audio's *"it"* and imports *"for the week"* from the
+> slide. Both sources are now quoted separately and the claim is unchanged. Found by the item 81
+> sweep.)*
 
 **Arithmetic check:** 5 × 4% = 20% ✓. $5,000 × 1.2⁴ = **$10,368.00** ✓ exactly. The 28-week
 terminal value is $5,000 × 1.2²⁸ = **$824,223.31** ✓ exactly.
@@ -407,8 +421,17 @@ Every number, with its status. **None is a machine rule** (`D-010`).
 | **70%, 85%** | Illustrative accuracy figures | `[00:15:59]`, `[00:22:47]` | **ILLUSTRATIVE.** The 85% is `C-012` |
 | **5 trades / week, 20% / week** | Target throughput and return | `[00:24:52]`–`[00:24:57]` | **EXPLICIT**, and `C-013` |
 | **29** | Setups *"last week"* | `[00:10:06]` | **REPEATED FROM V08** — V08's own 29-setup gallery (`C-007`) |
-| **50 pips** | What market makers *"can grab all their stuff at"* | `[00:44:44]` | **ANECDOTAL** — *"experience shows me"* |
+| **50 pips** | What market makers *"can grab all their stuff at"* | `[00:44:44]` | **ANECDOTAL** — *"experiences show me"* (`[00:44:39]`) |
 | **800 / 200** | The blueberry / the grape | `[00:41:43]`–`[00:41:48]` | **EXPLICIT.** See §9 |
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — the `50 pips` row previously
+> read *"**experience shows** me"*; `[00:44:39]` reads *"**experiences show** me"*. **This is the
+> FIFTH instance of the `E01` class in this file and the SECOND of this exact phrase** — §7e's
+> identical quotation was corrected at R1 while this one, 38 lines below it, was not, because
+> the R1 remediation fixed the four sites it was pointed at by hand and did not run the sweep
+> `V09_REVIEW_R1.md` `M1` also required. The file therefore contradicted itself about its own
+> audio for one round. `V09_REVIEW_R2.md` open item **81**; now found mechanically by
+> `05_HOMEWORK/V07/scripts/verify_quotes.py V09`.)*
 
 ---
 
@@ -529,11 +552,22 @@ Terms this lesson uses fluently and never defines. **All `DO NOT CODE`.**
 
 | # | Assignment | Marker | Performable today? |
 |---|---|---|---|
-| **H1** | *"Type in a lot size calculator, forex lot size calculator, tons of free ones… I suggest you go get one"* | `[00:02:56]`–`[00:03:16]` | **YES** — and it is checkable by arithmetic instead, which is what `05_HOMEWORK/V09` does |
-| **H2** | *"Go back, study it, do what you can, take notes heavily, because this is everything"* — of the risk section | `[00:23:37]`–`[00:23:47]` | **YES**, and it is what this file is |
-| **H3** | **The USD/JPY arrow drill.** *"Take USD/JPY for the specific reason that we don't cover it in the DMR… try to sus levels in it, and then at the end of every day he's going to pop in an arrow in the direction that he thinks this bad boy is going to go, and then see what it does tomorrow… I'm going to pass that out to you guys"* | `[00:47:57]`–`[00:49:01]` | **BLOCKED by `D-030`** — see below |
+| **H1** | *"type in a lot size calculator, 4x lot size calculator, tons of free ones… I suggest you go get one"* — the ASR's *"4x"* is **forex** | `[00:02:56]`–`[00:03:16]` | **YES** — and it is checkable by arithmetic instead, which is what `05_HOMEWORK/V09` does |
+| **H2** | *"go back, study it, do what you can… take notes heavily because this is everything"* — of the risk section | `[00:23:37]`–`[00:23:47]` | **YES**, and it is what this file is |
+| **H3** | **The USD/JPY arrow drill.** *"take usd jpy for the specific reason that we don't cover it in the dmor… try to sus levels in it, and then at the end of every day he's going to pop in an arrow… in the direction that he thinks this bad boy is going to go, and then see what it does tomorrow… I'm going to pass that out to you guys"* — the ASR's *"dmor"* is **DMR** (§10 records both spellings) | `[00:47:57]`–`[00:49:01]` | **BLOCKED by `D-030`** — see below |
 | **H4** | *"Slap some arrows on there and see what it does the next day"* — the same drill generalized to levels | `[00:51:31]`–`[00:51:43]` | **BLOCKED**, same reason |
 | **H5** | Steve's week-1 assignment, referred to but not reissued: *"our homework from last week that Steve gave us was to mark up this chart"* (USD/CHF) | `[00:37:43]`–`[00:38:00]` | **Not V09's assignment.** Recorded as a pointer only |
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — `V09_REVIEW_R2.md` open item
+> **81**, found by `05_HOMEWORK/V07/scripts/verify_quotes.py V09`. **H1** previously read *"Type
+> in a lot size calculator, **forex** lot size calculator, tons of free ones…"*; `[00:02:56]`
+> reads *"**4x** lot size calculator"* — an ASR form silently expanded inside the quote marks.
+> **H2** previously read *"…do what you can**,** take notes heavily…"*, joining `[00:23:37]` to
+> `[00:23:43]` across the dropped words *"you know"* with a comma rather than an ellipsis.
+> **H3** previously read *"…we don't cover it in the **DMR**…"* (`[00:47:57]` reads *"dmor"*)
+> and *"…pop in an arrow **in the direction**…"*, joining `[00:48:13]` to `[00:48:18]` across the
+> dropped *"hopefully bigger than that"*. **No assignment, marker or disposition changes** —
+> H3/H4 stay `BLOCKED by D-030`.)*
 
 > ### WHY H3/H4 ARE BLOCKED, AND WHY THAT IS NOT AN EXCUSE
 >
