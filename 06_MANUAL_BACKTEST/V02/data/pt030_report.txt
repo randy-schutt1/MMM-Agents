@@ -1,0 +1,181 @@
+==============================================================================
+PT-030 — Is the previous week's extreme a barrier?
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-C' 2013-01-06 -> 2016-06-30. Re-issue of PT-012.
+⚠ THIS TEST LOSES TWO WEEKS TO THE DATA HOLE (§3a″): 2014-06-01
+  and 2014-06-08, whose BARRIER is drawn from the holed week.
+⚠ Breaches are BID-SIDE (§0b). No execution claim is derived.
+⚠ `C-001`: a curve is reported and NO day count is adopted.
+==============================================================================
+
+==========================================================================
+--- ARM A ---
+==========================================================================
+  week roster (arm A) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 3  (2015-12-20, 2015-12-27, 2016-06-26)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+
+  EXCLUSIONS, EVERY ONE APPLIED AND COUNTED BY NAME:
+    2013-01-06  §3a — predecessor is the corpus's Tue-start fragment, not a week
+    2016-06-26  §3a — truncated by the DEVELOPMENT boundary
+    2014-06-01  §3a″ — DATA DEFECT, no observable week open
+    2014-06-08  §3a″ — INHERITS the defect: its barrier IS the holed week's high and low
+  TESTED WEEKS: 178  -> 356 barrier observations   (§3b pre-registered: 178 / 356)
+
+  PRIMARY BASELINE (§4 arm 1) — THE SHAM BARRIER, placed at the SAME
+  DISTANCE from the week's open as the real one, direction drawn at random.
+  1000 draws, seed 20260812. §4: 'Distance to a barrier dominates
+  the breach rate ... any comparison that does not hold distance constant
+  measures volatility and reports it as doctrine.'
+    sham upper-barrier breach rate: median 0.5, 5-95% [0.4551, 0.5393]
+    sham lower-barrier breach rate: median 0.5056, 5-95% [0.4607, 0.5506]
+
+  THIRD BASELINE (§4 arm 3) — barrier taken from a DIFFERENT, RANDOMLY
+  CHOSEN week, SCALED to the same distance. Implemented as: the DONOR week
+  supplies which side is nearer, this week supplies the distances — the two
+  requirements the pre-registration states together. It differs from arm 1
+  only in drawing the side from the EMPIRICAL distribution rather than
+  uniformly, and both are reported.
+    upper: median 0.4775, 5-95% [0.4382, 0.5225]    lower: median 0.5281, 5-95% [0.4829, 0.5677]
+
+  SECOND BASELINE (§4 arm 2) — N3 week-anchor shift: 'the previous week's
+  extreme computed on SHIFTED week boundaries', 1000 draws.
+    upper: median 0.4746, 5-95% [0.4463, 0.4915]    lower: median 0.548, 5-95% [0.5112, 0.5706]
+
+  ======================================================================
+  OBSERVED — the real barrier, read after all three baselines
+  ======================================================================
+  MEASURE 2 — breach rate, n = 178 weeks / 356 barrier observations
+    upper barrier (last week's HIGH) breached: 0.466 (83/178), 95% CI [0.394, 0.540]
+    lower barrier (last week's LOW)  breached: 0.539 (96/178), 95% CI [0.466, 0.611]
+    both breached 18    neither breached 17
+    vs the DISTANCE-MATCHED sham (§4 arm 1): upper pct 8.4, lower pct 86.6
+    vs N3 (§4 arm 2)  : upper pct 25.9, lower pct 35.0
+    vs donor-side (§4 arm 3): upper pct 27.1, lower pct 64.7
+
+  MEASURE 1 — SURVIVAL CURVE, censored at the week close (§3c: the curve
+  speaks only to the first ~120 h, and ADOPTS NO DAY COUNT — `C-001` is NOT
+  resolved by any number below):
+    hours        12     24     36     48     60     72     84     96    108    120
+    upper   0.871  0.809  0.787  0.730  0.697  0.618  0.590  0.562  0.545  0.534
+    lower   0.809  0.770  0.702  0.618  0.573  0.517  0.500  0.483  0.466  0.461
+    median hours to breach — upper 38.0, lower 35.5
+
+  MEASURE 3 — APPROACH (un-breached barriers only) and
+  MEASURE 4 — BREACH DEPTH (breached only). §3b: if either subset falls
+  under 30 every figure from it carries the §4.1 label.
+    upper approach : median    77.4 pips  n = 95
+    upper depth    : median    76.1 pips  n = 83
+    lower approach : median    89.3 pips  n = 82
+    lower depth    : median   100.7 pips  n = 96
+
+  DIRECTIONAL CONDITIONING — the barrier the week's net direction runs
+  TOWARD vs AWAY FROM. §3b requires the FOUR CELL COUNTS beside the rates:
+    net UP  /toward: 0.690 (58/84), 95% CI [0.585, 0.779]
+    net UP  /away  : 0.345 (29/84), 95% CI [0.252, 0.452]
+    net DOWN/toward: 0.713 (67/94), 95% CI [0.614, 0.794]
+    net DOWN/away  : 0.266 (25/94), 95% CI [0.187, 0.363]
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — five largest-range weeks:
+    2016-06-19  range  1789.5 pips
+    2015-03-15  range   533.1 pips
+    2013-06-02  range   491.7 pips
+    2015-04-12  range   488.2 pips
+    2015-08-23  range   483.8 pips
+
+==========================================================================
+--- ARM B ---
+==========================================================================
+  week roster (arm B) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 2  (2015-12-20, 2015-12-27)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+
+  EXCLUSIONS, EVERY ONE APPLIED AND COUNTED BY NAME:
+    2013-01-06  §3a — predecessor is the corpus's Tue-start fragment, not a week
+    2016-06-26  §3a — truncated by the DEVELOPMENT boundary
+    2014-06-01  §3a″ — DATA DEFECT, no observable week open
+    2014-06-08  §3a″ — INHERITS the defect: its barrier IS the holed week's high and low
+  TESTED WEEKS: 178  -> 356 barrier observations   (§3b pre-registered: 178 / 356)
+
+  PRIMARY BASELINE (§4 arm 1) — THE SHAM BARRIER, placed at the SAME
+  DISTANCE from the week's open as the real one, direction drawn at random.
+  1000 draws, seed 20260812. §4: 'Distance to a barrier dominates
+  the breach rate ... any comparison that does not hold distance constant
+  measures volatility and reports it as doctrine.'
+    sham upper-barrier breach rate: median 0.5, 5-95% [0.4551, 0.5393]
+    sham lower-barrier breach rate: median 0.5056, 5-95% [0.4607, 0.5506]
+
+  THIRD BASELINE (§4 arm 3) — barrier taken from a DIFFERENT, RANDOMLY
+  CHOSEN week, SCALED to the same distance. Implemented as: the DONOR week
+  supplies which side is nearer, this week supplies the distances — the two
+  requirements the pre-registration states together. It differs from arm 1
+  only in drawing the side from the EMPIRICAL distribution rather than
+  uniformly, and both are reported.
+    upper: median 0.4775, 5-95% [0.4382, 0.5225]    lower: median 0.5281, 5-95% [0.4829, 0.5677]
+
+  SECOND BASELINE (§4 arm 2) — N3 week-anchor shift: 'the previous week's
+  extreme computed on SHIFTED week boundaries', 1000 draws.
+    upper: median 0.4746, 5-95% [0.4463, 0.4915]    lower: median 0.548, 5-95% [0.5112, 0.5706]
+
+  ======================================================================
+  OBSERVED — the real barrier, read after all three baselines
+  ======================================================================
+  MEASURE 2 — breach rate, n = 178 weeks / 356 barrier observations
+    upper barrier (last week's HIGH) breached: 0.466 (83/178), 95% CI [0.394, 0.540]
+    lower barrier (last week's LOW)  breached: 0.539 (96/178), 95% CI [0.466, 0.611]
+    both breached 18    neither breached 17
+    vs the DISTANCE-MATCHED sham (§4 arm 1): upper pct 8.4, lower pct 86.6
+    vs N3 (§4 arm 2)  : upper pct 25.9, lower pct 35.0
+    vs donor-side (§4 arm 3): upper pct 27.1, lower pct 64.7
+
+  MEASURE 1 — SURVIVAL CURVE, censored at the week close (§3c: the curve
+  speaks only to the first ~120 h, and ADOPTS NO DAY COUNT — `C-001` is NOT
+  resolved by any number below):
+    hours        12     24     36     48     60     72     84     96    108    120
+    upper   0.871  0.809  0.787  0.730  0.697  0.618  0.590  0.562  0.545  0.534
+    lower   0.809  0.770  0.702  0.618  0.573  0.517  0.500  0.483  0.466  0.461
+    median hours to breach — upper 38.0, lower 35.5
+
+  MEASURE 3 — APPROACH (un-breached barriers only) and
+  MEASURE 4 — BREACH DEPTH (breached only). §3b: if either subset falls
+  under 30 every figure from it carries the §4.1 label.
+    upper approach : median    77.4 pips  n = 95
+    upper depth    : median    76.1 pips  n = 83
+    lower approach : median    89.3 pips  n = 82
+    lower depth    : median   100.7 pips  n = 96
+
+  DIRECTIONAL CONDITIONING — the barrier the week's net direction runs
+  TOWARD vs AWAY FROM. §3b requires the FOUR CELL COUNTS beside the rates:
+    net UP  /toward: 0.690 (58/84), 95% CI [0.585, 0.779]
+    net UP  /away  : 0.345 (29/84), 95% CI [0.252, 0.452]
+    net DOWN/toward: 0.713 (67/94), 95% CI [0.614, 0.794]
+    net DOWN/away  : 0.266 (25/94), 95% CI [0.187, 0.363]
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — five largest-range weeks:
+    2016-06-19  range  1789.5 pips
+    2015-03-15  range   533.1 pips
+    2013-06-02  range   491.7 pips
+    2015-04-12  range   488.2 pips
+    2015-08-23  range   483.8 pips
