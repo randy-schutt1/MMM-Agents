@@ -1,6 +1,26 @@
 # PT-022 — "They don't usually run like London": is the New York session's realised range smaller than London's?
 
 ```text
+STATUS:      SUPERSEDED — PERIOD UNOBTAINABLE. RE-ISSUED AS PT-023, 2026-08-13.
+             NOT RUN. NOT EDITED INTO CONFORMANCE. Retained exactly as pre-registered.
+
+             WHY: this file pre-registered W-A (2015-01-04 -> 2015-12-31) as its period,
+             with a fallback of "the oldest contiguous 12 calendar months of 15-minute
+             history the feed provides". BOTH are unobtainable. The declared feed
+             (TradingView, FXCM) serves 15-minute GBP/USD history back to 2026-05-31
+             ONLY -- about 2.5 months. Measured 2026-08-13 by walking the chart back
+             368 drags until the left edge stopped moving for six consecutive drags
+             (probe_back.mjs; DATES ONLY were read, no price).
+
+             D-027 is explicit that changing a range creates a NEW TEST ID and that the
+             abandoned test is retained and marked. That is what has happened. PT-023
+             carries the same question, the same nulls, the same seed and the same
+             decision rules, on a period that exists -- and declares, as costs rather
+             than as details, everything the substitution loses.
+
+             NOTHING IN THIS FILE WAS CHANGED except this status block.
+
+--- original status block, as pre-registered and committed at 582859e ---
 STATUS:      PRE-REGISTERED — NOT YET RUN
 WRITTEN:     2026-08-13
 ATTESTATION: The session that wrote this file had, at the moment of writing, opened NO

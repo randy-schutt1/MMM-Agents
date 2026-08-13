@@ -5,7 +5,8 @@ That is the whole point of the directory: a prediction locked in before the outc
 known is evidence; the same prediction written afterwards is a story.
 
 ```text
-STATUS:  22 tests pre-registered · 1 run (PT-022)
+STATUS:  23 tests pre-registered · 1 run (PT-023)
+         PT-022 SUPERSEDED — PERIOD UNOBTAINABLE, retained unedited, re-issued as PT-023
 GATE:    I-007 (no STANDING chart data source declared) blocks PT-001 ... PT-021.
          PT-022 declares its own source, feed and chart timezone in its observation
          and pins the D-028 boundary; I-007 stays OPEN project-wide, because a
@@ -39,7 +40,8 @@ GATE:    I-007 (no STANDING chart data source declared) blocks PT-001 ... PT-021
 | **PT-019** | The weekend gap, and the one mechanical rationale in V01 | **V01** | W-C |
 | **PT-020** | The London-open asymmetric conditional | **V03** | W-B |
 | **PT-021** | DNC and the straightaway test | V02 | W-B |
-| **PT-022** | *"They don't usually run like London"* — is the New York window's realised range smaller? | **V06 — GUEST** | W-A |
+| **PT-022** | *"They don't usually run like London"* — is the New York window's realised range smaller? | **V06 — GUEST** | W-A — **SUPERSEDED, period unobtainable** |
+| **PT-023** | The same question, re-issued on the period the feed actually serves | **V06 — GUEST** | `D-028` DEVELOPMENT block, pinned at run time |
 
 Shared machinery — units, the no-pixel measurement rule, the three windows, the two
 `D-031` timezone arms, the four null models, the fixed seed, and the `D-030` exclusion
@@ -54,7 +56,7 @@ list — is in **`COMMON_PROTOCOL.md`**. Each file still carries its own pre-reg
 | **V03** | PT-008, 016, 020 (+ PT-009, 011) | The first-8-hours block, the box-size filter, the one crisp conditional |
 | **V04** | PT-014, 015, 017 (+ PT-001) | The prescriptive lesson: the excursion band, its missing ceiling, and `CL1` |
 | **V05** | **none** | `D-025` — zero course-author runtime |
-| **V06** | **PT-022** | See the note below. `D-025` still excludes every normative statement in V06 from the methodology; `D-032` permits one measurable claim to be **tested** |
+| **V06** | **PT-022** (superseded) → **PT-023** (run) | See the note below. `D-025` still excludes every normative statement in V06 from the methodology; `D-032` permits one measurable claim to be **tested** |
 
 > **CHANGED 2026-08-13, and the superseded reading is retained above the change rather than
 > corrected away.** This table previously read **"V06 — none — `D-025` — zero course-author
