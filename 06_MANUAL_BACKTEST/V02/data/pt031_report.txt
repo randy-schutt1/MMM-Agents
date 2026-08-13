@@ -1,0 +1,214 @@
+==============================================================================
+PT-031 — Are Sunday and Monday the week's accumulation phase?
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-C' 2013-01-06 -> 2016-06-30. Re-issue of PT-013.
+⚠ 'Sunday + Monday' is 31 HOURS on this corpus, not two days.
+  BOTH raw and length-normalised forms are reported and THE
+  NORMALISED ONE GOVERNS THE VERDICT (§0c.1, §5 row 5).
+⚠ 'Accumulation' is UNDEFINED by the course (§0b). This measures a
+  named proxy — range, containment, boundary relevance.
+==============================================================================
+
+==========================================================================
+--- ARM A ---
+==========================================================================
+  week roster (arm A) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 3  (2015-12-20, 2015-12-27, 2016-06-26)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+
+  §3a — THE FEED PRINTS SUNDAY BARS, so `PT-013` §3a's conditional resolves
+  IN FAVOUR OF RUNNING ARM 2, and arm 2 is NOT redefined as 'Monday's first
+  eight hours' — that substitution would be `D-030`'s exact prohibition.
+
+  EXCLUSIONS, APPLIED AND COUNTED BY NAME:
+    2014-06-01  §3b″ — DATA DEFECT, no Sunday session exists, so arms 1, 2 and 3 have no span to measure
+    2016-06-26  §3b — truncated by the DEVELOPMENT boundary, no Friday and no remaining week
+    2013-01-06  §3b — ARM 3 ONLY: its Friday is 2013-01-04, inside the
+                corpus but OUTSIDE W-C'. Using it would silently widen the
+                pre-registered window, which `D-027` forbids.
+  n: arms 1 and 2 = 180   arm 3 = 179   (§3c pre-registered: 180 / 180 / 179)
+
+  PRIMARY BASELINE (§4 arm 1) — the four OTHER two-day spans, computed
+  before Sun+Mon's own numbers are looked at (§7 step 6). Ranking is done on
+  the LENGTH-NORMALISED metric, because the spans are 31/48/48/48/41 hours.
+
+  METRIC 1 — RANGE. BOTH FORMS REPORTED; THE NORMALISED ONE GOVERNS (§0c.1)
+    span                    n   hours   RAW pips   pips/HOUR  pips/sqrtH   share
+    Sun+Mon  (ARM 1)      180   31.00      100.2       3.232       18.00   0.400
+    Sun      (ARM 2)      180    7.00       31.4       4.486       11.87   0.126
+    Mon+Tue  (ctrl)       180   48.00      137.0       2.861       19.77   0.578
+    Tue+Wed  (ctrl)       180   48.00      154.7       3.263       22.41   0.687
+    Wed+Thu  (ctrl)       180   48.00      150.5       3.169       21.72   0.681
+    Thu+Fri  (ctrl)       180   41.00      151.6       3.723       23.81   0.644
+    Fri+Sun+Mon (ARM 3)   179   48.00      138.8       2.892       20.03   0.563
+
+  THE RANKING (§4 arm 1) — is Sun+Mon the lowest-range span in the week?
+  §3c: report the DENOMINATOR with every ranking figure; a rank-of-5 and a
+  rank-of-4 are not comparable numbers.
+    denominator = 5 spans, n = 180 weeks   (1 = LOWEST range)
+    RAW range        — Sun+Mon mean rank 1.65, rank-1 share 0.633 (114/180), 95% CI [0.561, 0.700]
+    NORMALISED       — Sun+Mon mean rank 2.93, rank-1 share 0.233 (42/180), 95% CI [0.178, 0.300]
+    rank histogram (normalised): r1=42  r2=35  r3=33  r4=33  r5=37
+    SQRT-TIME        — Sun+Mon mean rank 2.23, rank-1 share 0.428 (77/180), 95% CI [0.358, 0.501]
+    rank histogram (sqrt-time) : r1=77  r2=37  r3=29  r4=22  r5=15
+    chance expectation under no effect: mean rank 3.00, rank-1 share 0.200
+    ⚠ THE VERDICT DEPENDS ON THE NORMALISATION, and no form is neutral:
+      raw range favours the LONGER span; pips-per-hour over-corrects and
+      penalises the SHORTER one (range grows as ~sqrt(T), not as T);
+      sqrt-time sits between them. §0c.1 pre-registers pips-per-hour as the
+      governing form and it governs -- but all three are reported and the
+      dependence is disclosed rather than resolved by preference (`D-030`).
+
+  METRIC 2 — CONTAINMENT of the remaining week's bars inside the span:
+    Sun+Mon  (ARM 1)     median 0.317  (n = 180)
+    Sun      (ARM 2)     median 0.077  (n = 180)
+    Mon+Tue  (ctrl)      median 0.388  (n = 180)
+    Tue+Wed  (ctrl)      median 0.698  (n = 180)
+    Wed+Thu  (ctrl)      median 0.838  (n = 178)
+    Thu+Fri  (ctrl)       NOT APPLICABLE (§0c.3 — no remaining week; a zero
+                          would read as 'perfectly contained' and invert it)
+    Fri+Sun+Mon (ARM 3)  median 0.379  (n = 179)
+
+  METRIC 3 — BOUNDARY RELEVANCE. §3c: the SHARE is near-certain by
+  construction for a 31-hour span in a 120-hour week; THE DISTANCE is the
+  informative quantity.
+    Sun+Mon  (ARM 1)     extreme beyond an edge 180/180 = 1.000   median distance   134.3 pips   (extreme INSIDE: 0)  <<< complementary subset < 30, descriptive only
+    Sun      (ARM 2)     extreme beyond an edge 180/180 = 1.000   median distance   161.6 pips   (extreme INSIDE: 0)  <<< complementary subset < 30, descriptive only
+    Mon+Tue  (ctrl)      extreme beyond an edge 178/180 = 0.989   median distance    90.0 pips   (extreme INSIDE: 2)  <<< complementary subset < 30, descriptive only
+    Tue+Wed  (ctrl)      extreme beyond an edge 170/180 = 0.944   median distance    61.6 pips   (extreme INSIDE: 10)  <<< complementary subset < 30, descriptive only
+    Wed+Thu  (ctrl)      extreme beyond an edge 170/180 = 0.944   median distance    65.7 pips   (extreme INSIDE: 10)  <<< complementary subset < 30, descriptive only
+    Thu+Fri  (ctrl)      extreme beyond an edge 165/180 = 0.917   median distance    81.7 pips   (extreme INSIDE: 15)  <<< complementary subset < 30, descriptive only
+    Fri+Sun+Mon (ARM 3)  extreme beyond an edge 178/179 = 0.994   median distance   111.1 pips   (extreme INSIDE: 1)  <<< complementary subset < 30, descriptive only
+
+  METRIC 4 — hours from span close to the first breach of either edge:
+    Sun+Mon  (ARM 1)     median   4.75 h   (n = 180)
+    Sun      (ARM 2)     median   2.25 h   (n = 180)
+    Mon+Tue  (ctrl)      median   6.00 h   (n = 177)
+    Tue+Wed  (ctrl)      median   6.12 h   (n = 154)
+    Wed+Thu  (ctrl)      median   5.25 h   (n = 129)
+    Thu+Fri  (ctrl)       NOT APPLICABLE (§0c.3)
+    Fri+Sun+Mon (ARM 3)  median   6.38 h   (n = 178)
+
+  SECOND BASELINE (§4 arm 2) — N3 week-anchor shift, 1000 draws:
+    normalised range of the sham week's FIRST 31 HOURS: median 3.845, 5-95% [3.216, 4.39]
+    OBSERVED Sun+Mon normalised range 3.232 -> percentile 5.3
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — five largest-range weeks:
+    2016-06-19  range  1789.5 pips
+    2015-03-15  range   533.1 pips
+    2013-06-02  range   491.7 pips
+    2015-04-12  range   488.2 pips
+    2015-08-23  range   483.8 pips
+
+==========================================================================
+--- ARM B ---
+==========================================================================
+  week roster (arm B) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 2  (2015-12-20, 2015-12-27)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+
+  §3a — THE FEED PRINTS SUNDAY BARS, so `PT-013` §3a's conditional resolves
+  IN FAVOUR OF RUNNING ARM 2, and arm 2 is NOT redefined as 'Monday's first
+  eight hours' — that substitution would be `D-030`'s exact prohibition.
+
+  EXCLUSIONS, APPLIED AND COUNTED BY NAME:
+    2014-06-01  §3b″ — DATA DEFECT, no Sunday session exists, so arms 1, 2 and 3 have no span to measure
+    2016-06-26  §3b — truncated by the DEVELOPMENT boundary, no Friday and no remaining week
+    2013-01-06  §3b — ARM 3 ONLY: its Friday is 2013-01-04, inside the
+                corpus but OUTSIDE W-C'. Using it would silently widen the
+                pre-registered window, which `D-027` forbids.
+  n: arms 1 and 2 = 180   arm 3 = 179   (§3c pre-registered: 180 / 180 / 179)
+
+  PRIMARY BASELINE (§4 arm 1) — the four OTHER two-day spans, computed
+  before Sun+Mon's own numbers are looked at (§7 step 6). Ranking is done on
+  the LENGTH-NORMALISED metric, because the spans are 31/48/48/48/41 hours.
+
+  METRIC 1 — RANGE. BOTH FORMS REPORTED; THE NORMALISED ONE GOVERNS (§0c.1)
+    span                    n   hours   RAW pips   pips/HOUR  pips/sqrtH   share
+    Sun+Mon  (ARM 1)      180   30.00       98.9       3.270       17.95   0.395
+    Sun      (ARM 2)      180    6.00       30.7       4.800       12.12   0.125
+    Mon+Tue  (ctrl)       180   48.00      136.5       2.854       19.70   0.578
+    Tue+Wed  (ctrl)       180   48.00      153.1       3.223       22.21   0.687
+    Wed+Thu  (ctrl)       180   48.00      150.8       3.180       21.76   0.681
+    Thu+Fri  (ctrl)       180   42.00      151.6       3.674       23.63   0.644
+    Fri+Sun+Mon (ARM 3)   179   48.00      140.1       2.919       20.22   0.556
+
+  THE RANKING (§4 arm 1) — is Sun+Mon the lowest-range span in the week?
+  §3c: report the DENOMINATOR with every ranking figure; a rank-of-5 and a
+  rank-of-4 are not comparable numbers.
+    denominator = 5 spans, n = 180 weeks   (1 = LOWEST range)
+    RAW range        — Sun+Mon mean rank 1.62, rank-1 share 0.656 (118/180), 95% CI [0.584, 0.721]
+    NORMALISED       — Sun+Mon mean rank 2.98, rank-1 share 0.217 (39/180), 95% CI [0.163, 0.282]
+    rank histogram (normalised): r1=39  r2=34  r3=38  r4=30  r5=39
+    SQRT-TIME        — Sun+Mon mean rank 2.25, rank-1 share 0.417 (75/180), 95% CI [0.347, 0.490]
+    rank histogram (sqrt-time) : r1=75  r2=37  r3=32  r4=20  r5=16
+    chance expectation under no effect: mean rank 3.00, rank-1 share 0.200
+    ⚠ THE VERDICT DEPENDS ON THE NORMALISATION, and no form is neutral:
+      raw range favours the LONGER span; pips-per-hour over-corrects and
+      penalises the SHORTER one (range grows as ~sqrt(T), not as T);
+      sqrt-time sits between them. §0c.1 pre-registers pips-per-hour as the
+      governing form and it governs -- but all three are reported and the
+      dependence is disclosed rather than resolved by preference (`D-030`).
+
+  METRIC 2 — CONTAINMENT of the remaining week's bars inside the span:
+    Sun+Mon  (ARM 1)     median 0.317  (n = 180)
+    Sun      (ARM 2)     median 0.081  (n = 180)
+    Mon+Tue  (ctrl)      median 0.393  (n = 180)
+    Tue+Wed  (ctrl)      median 0.684  (n = 180)
+    Wed+Thu  (ctrl)      median 0.833  (n = 178)
+    Thu+Fri  (ctrl)       NOT APPLICABLE (§0c.3 — no remaining week; a zero
+                          would read as 'perfectly contained' and invert it)
+    Fri+Sun+Mon (ARM 3)  median 0.386  (n = 179)
+
+  METRIC 3 — BOUNDARY RELEVANCE. §3c: the SHARE is near-certain by
+  construction for a 31-hour span in a 120-hour week; THE DISTANCE is the
+  informative quantity.
+    Sun+Mon  (ARM 1)     extreme beyond an edge 180/180 = 1.000   median distance   134.3 pips   (extreme INSIDE: 0)  <<< complementary subset < 30, descriptive only
+    Sun      (ARM 2)     extreme beyond an edge 180/180 = 1.000   median distance   161.6 pips   (extreme INSIDE: 0)  <<< complementary subset < 30, descriptive only
+    Mon+Tue  (ctrl)      extreme beyond an edge 179/180 = 0.994   median distance    90.0 pips   (extreme INSIDE: 1)  <<< complementary subset < 30, descriptive only
+    Tue+Wed  (ctrl)      extreme beyond an edge 169/180 = 0.939   median distance    61.6 pips   (extreme INSIDE: 11)  <<< complementary subset < 30, descriptive only
+    Wed+Thu  (ctrl)      extreme beyond an edge 171/180 = 0.950   median distance    65.7 pips   (extreme INSIDE: 9)  <<< complementary subset < 30, descriptive only
+    Thu+Fri  (ctrl)      extreme beyond an edge 165/180 = 0.917   median distance    81.7 pips   (extreme INSIDE: 15)  <<< complementary subset < 30, descriptive only
+    Fri+Sun+Mon (ARM 3)  extreme beyond an edge 178/179 = 0.994   median distance   111.1 pips   (extreme INSIDE: 1)  <<< complementary subset < 30, descriptive only
+
+  METRIC 4 — hours from span close to the first breach of either edge:
+    Sun+Mon  (ARM 1)     median   5.50 h   (n = 180)
+    Sun      (ARM 2)     median   2.75 h   (n = 180)
+    Mon+Tue  (ctrl)      median   6.38 h   (n = 178)
+    Tue+Wed  (ctrl)      median   6.75 h   (n = 154)
+    Wed+Thu  (ctrl)      median   6.00 h   (n = 131)
+    Thu+Fri  (ctrl)       NOT APPLICABLE (§0c.3)
+    Fri+Sun+Mon (ARM 3)  median   7.00 h   (n = 178)
+
+  SECOND BASELINE (§4 arm 2) — N3 week-anchor shift, 1000 draws:
+    normalised range of the sham week's FIRST 31 HOURS: median 3.845, 5-95% [3.216, 4.39]
+    OBSERVED Sun+Mon normalised range 3.270 -> percentile 5.3
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — five largest-range weeks:
+    2016-06-19  range  1789.5 pips
+    2015-03-15  range   533.1 pips
+    2013-06-02  range   491.7 pips
+    2015-04-12  range   488.2 pips
+    2015-08-23  range   483.8 pips
