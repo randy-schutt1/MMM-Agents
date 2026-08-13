@@ -112,6 +112,19 @@ which the lesson treats as a **different, per-day** object. Filed as `C-017`; th
 > between two things one speaker said in one hour. **The honest answer is that the number is
 > settled and its origin is not.**
 
+> **⚠ CENSUS CORRECTED 2026-08-13 — `V10_REVIEW_R1.md` `M2` (`E20`, open item 92). THE ANSWER
+> ABOVE IS RETAINED EXACTLY AS FIRST SUBMITTED** and is **not** rewritten, per
+> `REMEDIATION_PROTOCOL.md` §2 and the first-attempt-preservation rule: this file is the record of
+> what was answered before the scorer existed, and editing it in place would destroy that.
+> **The correction:** the answer says *"four of six spoken instances"* and the rejection block
+> says *"the speaker says it four times"*. **`[01:00:20]` — *"75 pips off of the blue tracer"* —
+> is a seventh spoken instance and it names the tracer**, so the true census is **five of seven**
+> naming the tracer, one naming the LOW/HOW anchor, one ambiguous. **The answer's substance is
+> unaffected and its reasoning is strengthened**: a wider spoken majority makes *"frequency is not
+> authority"* a harder discipline to keep, and the answer keeps it. See `A-078` and `C-017` for
+> the corrected records. **⚠ Corrected AND self-verified by one session at owner direction; this
+> does NOT satisfy `D-003`.**
+
 ---
 
 ## Q7 — What does the safety trade use as a stop loss?

@@ -176,6 +176,17 @@ case/punctuation normalisation:
    **The modal and self-corrected form is `25 to 75`** (the speaker says *"25 to 75 is easy to
    remember"*, which is the correction landing in real time). **This is recorded as an ambiguity,
    `A-078`, and no single figure is adopted.** `pits` is the engine's rendering of *pips*.
+
+   > **⚠ COUNT CORRECTED 2026-08-13 — `18_REVIEW/V10/V10_REVIEW_R1.md` `M2` (`E20`, open item
+   > 92).** **The count *"six times"* above is SUPERSEDED and is retained per
+   > `REMEDIATION_PROTOCOL.md` §2; the correct count is SEVEN.** The missing instance is
+   > **`[01:00:20]` *"75 pips off of the blue tracer"***. An eighth distance utterance,
+   > `[00:54:02]` *"25 to 50 pips"*, names no reference object and is recorded in `A-078` rather
+   > than counted here. **The note's own point is unaffected and is reinforced** — a seventh
+   > rendering that drops the lower bound entirely is further evidence that the ASR does not
+   > render this figure reliably, which is the whole reason the note exists. **The verbatim body
+   > is UNTOUCHED; only this header note is corrected.** ⚠ Corrected AND self-verified by one
+   > session at owner direction; `D-003` is NOT satisfied.
 2. **`ain't` is unreliable.** See the table above. Any quotation in `03_LESSON_NOTES/V10_*` that
    turns on this phrase carries its marker so a reader can re-listen.
 3. **Proper nouns are unreliable, and this note had the direction BACKWARDS until the screenshot

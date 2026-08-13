@@ -12,7 +12,72 @@ stays visible with its round number.
 
 ```text
 LESSONS REVIEWED: 10
-PASSED:           9  (V09 — COMPLETE 2026-08-13, ⚠ SELF-VERIFIED AT
+PASSED:           10 (V10 — ⚠ COMPLETE 2026-08-13, SELF-VERIFIED AT
+                      OWNER DIRECTION, NOT INDEPENDENTLY VERIFIED.
+                      Superseded text, retained: "PASSED: 9".
+                      R1's four MINORs -- items 91 (student half), 92,
+                      93 and 94 -- are all APPLIED and all CLOSED —
+                      SELF-VERIFIED AT OWNER DIRECTION. ⚠⚠ READ THE
+                      V10 NOTICE UNDER THE DECISION TABLE BEFORE
+                      RELYING ON THIS ROW. The owner explicitly
+                      authorised ONE session to both fix AND verify
+                      this round, on the ground that all four items are
+                      small documentation edits. That authorisation is
+                      real and recorded, but it does not manufacture
+                      independence and this round does NOT satisfy
+                      D-003. There was NO R2 and no independent PASS.
+                      SECOND use of the pattern, after V09 R2 on the
+                      same date, and recorded in the same words so the
+                      two are countable.
+                      WHAT MOVED: nothing that bears on a measurement,
+                      classification, disposition or rule. M2 corrects
+                      the spoken census from "four of six" to FIVE OF
+                      SEVEN -- [01:00:20] "75 pips off of the blue
+                      tracer" was missing -- which WIDENS the spoken
+                      majority and STRENGTHENS C-017. M3 rescopes §15's
+                      "no hour is ever stated" to "no session-boundary
+                      clock time is stated", listing the four
+                      incidental times ([00:02:24], [00:05:09],
+                      [00:42:52], [01:03:57]) that falsified the
+                      stronger form; A-076's parallel sentence was
+                      checked, found CORRECT as written, and left as
+                      the model. M4 adds an ASR caution to C-016 --
+                      both figures ASR-rendered, neither printed, no
+                      curated frame carries a holding period -- as a
+                      FURTHER reason for UNRESOLVED, superseding
+                      nothing. M1's student half: the renumbering
+                      81-85 -> 86-90 is VERIFIED COMPLETE by repo-wide
+                      sweep, and the review's claim that two V10
+                      artifacts "cite open item 82" is FALSE -- neither
+                      ever carried an item number, so nothing was
+                      orphaned; both have GAINED a pointer to item 87
+                      instead, and the error is corrected in place
+                      rather than absorbed.
+                      Every marker was re-derived from
+                      02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md at source,
+                      not copied from the review. M2's sweep found
+                      THREE sites beyond the four the review named --
+                      04_SCREENSHOTS/V10/INDEX.md, the V10 comprehension
+                      answers, and the transcript's own TRANSCRIPTION
+                      NOTE 1, the last being the note M4 relies on.
+                      The comprehension answer was NOT rewritten: it is
+                      a preserved first attempt and carries an appended
+                      correction instead. The transcript's VERBATIM BODY
+                      IS UNTOUCHED. Superseded text retained at every
+                      site per REMEDIATION_PROTOCOL.md §2. Validator
+                      103/0/0. Applied and self-verified on branch
+                      fix/v10-r1-minors, cut from the integration branch
+                      at 9c00a60 after git fetch --all confirmed zero
+                      divergence (D-038), and merged back by this
+                      session because its own verdict is what closes
+                      the round.
+                      STILL OPEN and NOT covered by this verdict: items
+                      86, 88, 89, 91's POLICY half, 95 and 96. None was
+                      owed before COMPLETE.
+                      GATE TO V11 IS CONFIRMED OPEN under D-024 -- it
+                      was already open on R1's 0 CRITICAL / 0 MAJOR and
+                      never depended on these four minors.
+                      V09 — COMPLETE 2026-08-13, ⚠ SELF-VERIFIED AT
                       OWNER DIRECTION, NOT through the normal
                       independent process. See the V09 block under
                       IN REMEDIATION below, which carries the full
@@ -163,16 +228,31 @@ PASSED:           9  (V09 — COMPLETE 2026-08-13, ⚠ SELF-VERIFIED AT
                       REVIEW_INDEX reads were discarded and redone. NO
                       conclusion rests on a read from the wrong tree.
                       Charged to PROCESS, not to V08.)
-IN REMEDIATION:   1  (V10 — R1 REVISE 2026-08-13, 0 CRITICAL /
-                      0 MAJOR / 4 MINOR / 7 NOTE, HIGH confidence.
-                      Items 91-94 are OWED and NOT yet applied. All
-                      four are documentation or register hygiene and
-                      none moves a measurement, classification,
-                      disposition or rule. V10 reaches COMPLETE only
-                      at R2, and D-003 reserves that verification to an
-                      independent session.
+IN REMEDIATION:   0  (Superseded text, retained per
+                      REMEDIATION_PROTOCOL.md §2 -- this line and its
+                      V10 block previously read:
+
+                      "IN REMEDIATION:   1  (V10 — R1 REVISE 2026-08-13,
+                      0 CRITICAL / 0 MAJOR / 4 MINOR / 7 NOTE, HIGH
+                      confidence. Items 91-94 are OWED and NOT yet
+                      applied. All four are documentation or register
+                      hygiene and none moves a measurement,
+                      classification, disposition or rule. V10 reaches
+                      COMPLETE only at R2, and D-003 reserves that
+                      verification to an independent session."
+
+                      ⚠ THE SUPERSEDED SENTENCE IS THE POINT, NOT A
+                      FORMALITY. It said V10 reaches COMPLETE only at
+                      R2, by an independent session. THERE WAS NO R2.
+                      The owner authorised one session to fix AND
+                      verify instead, and V10's COMPLETE is therefore
+                      ⚠ SELF-VERIFIED AT OWNER DIRECTION -- recorded in
+                      the PASSED block above and in the notice under
+                      the DECISION TABLE, which must be read before
+                      that status is relied on. D-003 is NOT satisfied.
 
                       Superseded text, retained: "IN REMEDIATION: 0"
+                      (the value before V10 R1 opened)
 
                       V09 — ⚠ COMPLETE 2026-08-13, SELF-VERIFIED AT
                       OWNER DIRECTION, NOT INDEPENDENTLY VERIFIED.
@@ -266,6 +346,21 @@ IN REMEDIATION:   1  (V10 — R1 REVISE 2026-08-13, 0 CRITICAL /
                       MMM-NOTES directly, and re-run
                       verify_quotes.py V09. None of it takes long.
                       Gate to V10 REMAINS OPEN under D-024.)
+
+                      GATE TO V11: ⚠ CONFIRMED OPEN under D-024 as of
+                      2026-08-13. V10 R1 returned 0 CRITICAL and 0
+                      MAJOR, which is what D-024 gates on, so the gate
+                      opened at R1 and never depended on the four
+                      minors -- their closure removes the "V10 is NOT
+                      COMPLETE" qualifier, not the authorization. READ
+                      WITH THE QUALIFICATION IT CARRIES: V10's COMPLETE
+                      is ⚠ SELF-VERIFIED AT OWNER DIRECTION, not an
+                      independent verdict, and a V11 session inherits
+                      that qualification along with the gate.
+                      Still owed and NOT gating: items 86, 88, 89,
+                      91's policy half, 95, 96, and item 36 -- the
+                      D-030 dimension-B disposition, now owed for the
+                      SIXTH consecutive lesson-round.)
 
                      (Superseded text, retained per REMEDIATION_PROTOCOL
                       §2 — this block previously read, at R2:)
@@ -1052,6 +1147,48 @@ ruling) are carried forward unchanged. **The next review trigger is the V06 subm
 > re-derived independently reproduces what R2 found. Only the forward-looking sentence about R3 is
 > superseded, by this round.)*
 | V10 | REVIEW REQUIRED | R1 | REVISE | 0 | 0 | ⏳ |
+| V10 | REMEDIATION APPLIED | R1 (fix round) | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** |
+
+> ## ⚠⚠ V10's `COMPLETE` IS NOT AN INDEPENDENT VERDICT. READ THIS BEFORE RELYING ON IT.
+>
+> **R1's four MINORs — items 91 (student half), 92, 93 and 94 — were fixed AND verified by the
+> SAME session, on the owner's explicit authorisation for this round specifically**, on the ground
+> that all four are small documentation edits. That authorisation is real and it is recorded — but
+> **it does not manufacture independence, and this round does NOT satisfy `D-003`.** All four
+> items carry the status **`CLOSED — SELF-VERIFIED AT OWNER DIRECTION`**, which exists for no
+> other purpose than to be visibly different from `CLOSED — VERIFIED`, and the decision column
+> reads `SELF-VERIFIED` rather than `PASS` for the same reason. **No independent reviewer issued a
+> `PASS` for this round. There was no R2.**
+>
+> **This row is NOT a new review round.** It is R1's remediation, closed against R1's own findings.
+> The R1 row above is untouched and its `REVISE` verdict stands as the last arm's-length judgement
+> anyone made about V10.
+>
+> **Precedent: this is the second use of the pattern**, after V09 R2's items 81–83 on 2026-08-13,
+> and it is deliberately recorded in the same words so the two are comparable and countable.
+>
+> **What the round actually changed, so its weight can be judged rather than taken on trust.**
+> Nothing that bears on a measurement, a classification, a disposition or a rule. `M2` corrects a
+> spoken-instance census from *four of six* to **five of seven** — a correction that **widens** the
+> majority and therefore **strengthens** `C-017`; `M3` rescopes an absence claim from *"no hour is
+> ever stated"* to *"no session-boundary clock time is stated"*, listing the four incidental times
+> that falsified the stronger form; `M4` adds an ASR caution to `C-016` as a **further** reason for
+> `UNRESOLVED`; `M1`'s student half turned out to be an addition rather than a correction, the two
+> artifacts having never carried the stale number the review attributed to them. **Every marker
+> was re-derived from `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` at source rather than copied from the
+> review**, `M2`'s sweep found **three sites beyond the four the review named**, and `M1`'s sweep
+> **found the review itself to be wrong on a point of fact and says so in place.**
+>
+> **What a later reviewer should do if it wants the independence this round lacks:** read
+> `[01:00:20]` and `[00:54:02]` in the transcript body; read `[00:02:24]`, `[00:05:09]`,
+> `[00:42:52]` and `[01:03:57]` for `M3`; confirm no curated frame prints a holding period for
+> `M4`; and re-run `grep -rn "item 8[1-5]"` for the renumbering. **None of it takes long.**
+>
+> **What is NOT closed and is NOT covered by this verdict:** open items **86** (recommended
+> `PT-037`), **88** (printed-vs-spoken precedence, owner), **89** (`A-077`, the lock), **91**'s
+> **policy half** (`D-038a`'s mergeability premise — an owner ruling a reviewer may not make),
+> **95** (owner question) and **96** (the `COURSE_PROGRESS.md` table sweep). None of these was
+> owed before `COMPLETE`; all remain open.
 
 > **`R1B` is a parallel second opinion on the R1 round, not a separate round of remediation.**
 > It is listed so the decision history is complete; the two R1-round rows describe **one**
@@ -1407,6 +1544,25 @@ week range. Four frames, including both rules slides and the 25-75 slide, were *
 as images**: nine printed rules and two load-bearing slide texts transcribed with **zero
 substitutions**.
 
+*(V10 R1 fix-round arithmetic, 2026-08-13: CRITICAL, MAJOR, MINOR and NOTE **totals** unchanged —
+no new finding was charged. **The delta is −4 open MINOR / +4 closed MINOR** (items 91's student
+half, 92, 93, 94); NOTE unchanged. **ABSOLUTE FIGURES ARE DELIBERATELY NOT QUOTED HERE, and the
+reason is a defect this round found and is disclosing rather than papering over: the SEVERITY
+TOTALS table above has not been reconciled since V09 R1** — it still reads `MINOR 57 / 12 open /
+45 closed`, which predates **V09 R2's +3** and **V10 R1's +4**, and **neither of those rounds
+posted an arithmetic paragraph at all**, breaking a convention every round from V07 R1 onward had
+kept. Quoting a total off a stale table would manufacture a number rather than record one.
+**A reconciliation sweep is owed and belongs with open item 96's bookkeeping-decay work**, which
+is the same class one file over. **⚠ THE FOUR ARE `CLOSED — SELF-VERIFIED AT OWNER DIRECTION`, NOT
+`CLOSED — VERIFIED`** — one session both fixed and verified them on the owner's explicit
+authorisation, and this round does **not** satisfy `D-003`. They are counted in the *closed* column
+because they are applied and discharged; **the status string, not the column, is what records that
+no independent session checked them.** Read the notice under the DECISION TABLE before relying on
+any of the four. Item **91's policy half stays OPEN** and is not counted as closed; items 86, 88,
+89, 95 and 96 are untouched. **V10 is `COMPLETE`, qualified.** The **V11 gate is CONFIRMED OPEN**
+— it opened at R1 on 0 CRITICAL / 0 MAJOR under `D-024` and never depended on these four.
+Dimension B and open item 36 are restated, **not re-counted**.)*
+
 **V09 R1's delta:** **+6 MINOR (`M1`–`M6`, open items 73–78), +8 NOTE** (`N1` the branch and
 merge state and the 11-commit divergence — closed as disclosure; `N2` the oscillator sub-panel,
 which the reviewer **magnified and read** as `TDI  MMM  59.8444 66.7359 68.0841`, corroborating the
@@ -1440,6 +1596,17 @@ make. See `V09_REVIEW_R1.md`.
 | MAJOR | 5 | 0 | 5 |
 | MINOR | 57 | 12 | 45 |
 | NOTE | 78 | 13 | 65 |
+
+> **⚠ THIS TABLE IS STALE AS OF 2026-08-13 AND MUST NOT BE QUOTED AS CURRENT.** It reflects the
+> state at **V09 R1** and has not been advanced since. It does **not** include **V09 R2's +3
+> MINOR** (items 81–83, subsequently closed) or **V10 R1's +4 MINOR** (items 91–94, closed this
+> round). **Neither of those rounds posted the per-round arithmetic paragraph** that every round
+> from V07 R1 onward had posted, which is how the drift went unrecorded. **Found and disclosed by
+> the V10 R1 fix round rather than corrected**, because reconciling it means re-auditing the
+> pre-V03 rows this table has carried unreconciled since V02 R1 — a sweep, not an edit, and one
+> this session was not authorised to make. **Owed with open item 96**, which is the same
+> bookkeeping-decay class in `COURSE_PROGRESS.md`. The per-round delta paragraphs below and above
+> are authoritative; the table is not.
 
 *(V08 R2 arithmetic: CRITICAL, MAJOR and MINOR **totals** unchanged — no new finding was charged.
 MINOR open 9 − 3 (items **64**, **65** and **66** verified closed) = **6**, closed 42 + 3 = **45**.
@@ -1613,15 +1780,15 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 | 83 | V09 R2 | **`MINOR` (`E19`) — the mastery report still puts a retired question to the owner.** Item 77's own `REVIEW_INDEX.md` row states that it *"retires the submission's escalation 5 to the owner — the route does not reach, so no blending judgement is owed"*, and `C-010`'s new V09 block says the same in its own words. **`V09_MASTERY_REPORT.md` escalation 5 is unchanged**, still reading *"if the owner judges that reading a timeframe into `MMM-NOTES` is acceptable, `C-010` closes immediately"* and still flagged **OWNER**. It does not close immediately, and the project now knows why. **Escalation 2 in the same table was given a `✅ DISCHARGED` marker in this same remediation**, so the mechanism was available and was applied one row away. Charged because the owner-escalation table is an **action list, not prose** — its whole function is to tell a human what is owed, and it currently owes them a judgement the project has established is moot. This is the *"files that disagree about their own state"* class (V05 R1 `M4`), here between the mastery report and both `C-010` and this index. **Required:** mark escalation 5 retired citing item 77 and `C-010`'s V09 block, in the form escalation 2 already uses, with superseded text retained. | `07_MASTERY_REPORTS/V09_MASTERY_REPORT.md` escalation 5; `11_CONTRADICTIONS/CONTRADICTIONS.md` `C-010`; `V09_REVIEW_R2.md` item 83 | 🔶 **OPEN — owed at V09 R3** ⚠ **CLOSED — SELF-VERIFIED AT OWNER DIRECTION 2026-08-13.** **NOT `CLOSED — VERIFIED`** — see item 81 for the full `D-003` disclosure. Escalation 5 is marked ✅ **RETIRED**, in the same form escalation 2 already used one row away, with the original text retained **in full** per `REMEDIATION_PROTOCOL.md` §2 and the reason stated: **the premise is false.** The escalation offered the owner a ruling on which `C-010` *"closes immediately"*; it does not, on **any** ruling. **RE-DERIVED FROM `MMM-NOTES` AT SOURCE rather than from item 77's account of itself:** p.38 reads *"The specific EMA's used in Mauro's charts are the **5, 13, 50 and 200** bar EMA's"* — four averages — **`800` occurs ZERO times in the entire extract**, and p.66 reads *"Hold the Mayo – 200 Bounce"*, independently corroborating `A-020`'s Mayo = 200. So the factor-of-four identity lands **one member of a four-member set** and **collides with `A-020`**, which attests Mayo = 200 and Blueberry = 800 as two distinct lines. Even granting the most permissive possible owner ruling, `C-010` stays `UNRESOLVED`. **`C-010`'s disposition is UNCHANGED** — item 83 retires a *question about* `C-010`, not `C-010` — and the `SOURCING_HIERARCHY.md` §3.2 *"Do not blend"* refusal recorded in the original text still stands; it is simply no longer the only thing keeping the record open. **The owner-escalation table now owes a human nothing that the project has already settled**, which was the whole charge: it is an action list, not prose. |
 | 86 | V10 student | **RECOMMENDED, NOT OWED — the `PT-037` path-length reading of `M1`.** `BT_V10_0001` §9 records that a reading exists on which V10's *"600 to 1000 pips a week"* could survive — **total distance travelled** rather than high-minus-low **range** — and **declines to run it**, because it was not pre-registered and running an unregistered alternative after seeing a failure is how a contradicted claim gets rescued (`E09`). **Pre-register it before measuring.** Carry one requirement: the successor must also report the **textual objection** against itself — the speaker says *"peak formation high **to** peak formation low"*, which names two points and the distance between them, i.e. a range, not a path. | `06_MANUAL_BACKTEST/V10/BT_V10_0001.md` §9 | 🔶 **OPEN — recommended** |
 | 87 | V10 student | **ESCALATED — `SWF_CAPTURE_RECIPE.md` §10 states the frame-rate patch as `3.0 → 30.0` fps, carried from V01/V02. V10 declares 2.0 fps.** Applied literally to V10 it sweeps at **15×, not 10×**, and **fails silently**: a complete, well-formed, correctly-timecoded frame set at 7.5-presentation-second spacing, under-sampling the screen-state detector by a third. **Same family as `GOTCHA 4` and `GOTCHA 5`** — a header field that varies across the library, quoted in the recipe as a constant, with no loud failure when wrong. **Fix is one line: read `frameRate` from the header and patch `rate × 10`; `GOTCHA 5`'s probe already parses the adjacent field.** **POLICY ledger under `D-038a` — owed on the integration branch, and correctly NOT patched by the V10 student session.** | `04_SCREENSHOTS/V10/INDEX.md` § ESCALATION; `00_SYSTEM/SWF_CAPTURE_RECIPE.md` §10 | ✅ **CLOSED — FIXED AND VERIFIED at V10 R1, 2026-08-13, on the integration branch under `D-038a`.** **The defect is REAL — reviewer read §10 and confirmed all three sites** (the header table, the prose *"Patch 3.0 → 30.0 fps"*, and the speedup table's *"3 fps control"* column) quote 3.0 as if it were the library's constant. **V10's own capture was NOT harmed, and this was CHECKED rather than assumed:** the student read the header first per `GOTCHA 5`, found 2.0, and patched 2.0 → 20.0 — arithmetically confirmed by the realised sweep of **1,164 frames** (5776.2 s ÷ 5 + 8 = 1,163); a 15× sweep would have yielded ~776 distinct sample points instead. **So the defect was latent, not realised — avoided by a session following `GOTCHA 5`'s advice rather than §10's prose, which is exactly the luck a recipe must not depend on.** **FIX APPLIED:** §10's header table is relabelled *"Measured examples — data points, NOT the library's constant"* and gains V10's 2.0 row with its three-way duration cross-check; a warning block states **THE RULE — read `frameRate` from the header of the file you are about to capture and patch `rate × SPEED`, never type a literal**; the prose becomes *"Patch `declared_rate × 10`"* with the superseded sentence retained per `REMEDIATION_PROTOCOL.md` §2; the speedup table's control column is labelled as V02's rate; and the sweep snippet derives `PATCH_FPS` from `DECLARED_FPS`. **The escalate-don't-patch handling by the V10 student session was CORRECT** — `SWF_CAPTURE_RECIPE.md` is a POLICY ledger and a task branch may not edit it. Second consecutive lesson to get that boundary right. |
-| 88 | V10 student | **ESCALATED — `C-017` is the corpus's FIRST printed-vs-spoken contradiction and the project has no standing rule for that class.** V10's anchor distance is measured *"off of the LOW/HOW anchor"* on the printed slide and *"off of the blue tracer"* in **four of six** spoken instances, and the two are different objects in the lesson's own usage. `D-008`'s hierarchy ranks slides above transcripts and **would settle it by class**; the V10 session **declined to apply it**, reasoning that `D-008` ranks *capture reliability* and was written to stop an agent's reading outranking the course, not to adjudicate between two things one speaker said in one hour. **An owner or reviewer ruling would settle a question that will recur** — this corpus is slide-heavy and single-speaker from V10 on. | `11_CONTRADICTIONS/CONTRADICTIONS.md` `C-017`; `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` `A-078`, `A-079` | 🔶 **OPEN — escalated** |
+| 88 | V10 student | **ESCALATED — `C-017` is the corpus's FIRST printed-vs-spoken contradiction and the project has no standing rule for that class.** V10's anchor distance is measured *"off of the LOW/HOW anchor"* on the printed slide and *"off of the blue tracer"* in **five of seven** spoken instances (**corrected 2026-08-13 from *"four of six"*** under item 92; superseded text retained here per `REMEDIATION_PROTOCOL.md` §2 — the escalation is **strengthened**, the spoken majority being wider than first recorded), and the two are different objects in the lesson's own usage. `D-008`'s hierarchy ranks slides above transcripts and **would settle it by class**; the V10 session **declined to apply it**, reasoning that `D-008` ranks *capture reliability* and was written to stop an agent's reading outranking the course, not to adjudicate between two things one speaker said in one hour. **An owner or reviewer ruling would settle a question that will recur** — this corpus is slide-heavy and single-speaker from V10 on. | `11_CONTRADICTIONS/CONTRADICTIONS.md` `C-017`; `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` `A-078`, `A-079` | 🔶 **OPEN — escalated** |
 | 89 | V10 student | **`A-077` (the lock) is now the highest-value gap in the project, and it is a NEW record.** V10 supplies the safety trade's **anchor** — `[01:14:06]`, the week's extreme — which is **retrospective**. The *"lock"* is the lesson's real-time substitute and carries **no distance and no duration**. It is the **only** thing standing between a defined anchor and a prospectively identifiable setup, and it blocks dimension **B**, V10's deferred **H2** setup half, and **`PT-038`**. **Any lesson attaching a number to *"price has moved away and confirmed"* discharges all three at once.** | `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` `A-077`; `03_LESSON_NOTES/V10_INTERPRETATION.md` Q3 | 🔶 **OPEN — watch item for V11+** |
 | 90 | V10 student | **NOTE — open item 80's censoring bias was DESIGNED OUT of `PT-036` and VERIFIED, which is evidence for the reviewer's narrowed scope.** R1's judgement was that the bias lands on tests *"racing asymmetric barriers inside a bounded horizon"* and not on range/weekday/gap statistics. `PT-036` is exactly the latter kind: no barrier, no horizon, **zero possible censored observations** — asserted in §2 and **enforced as a hard assert** that would have voided both measures. Result: `censored = 0` on both arms. **This does not close item 80** (which is about `PT-033`–`PT-035` and successors) but it confirms the narrowed scope was right. | `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-036_…md` §2, §7b; `06_MANUAL_BACKTEST/V10/BT_V10_0001.md` §6 | ℹ️ **NOTE — supports item 80's scope** |
-| 91 | **V10 R1** | **`M1` — OPEN-ITEM IDENTIFIER COLLISION, and the policy gap behind it.** `video/v10` allocated open items **81–85**; the integration branch concurrently allocated **81–83** to **V09 R2** (`7b42156`, merged `310362c`) after `video/v10` branched at `5db04d8`. **Resolved mechanically: V10's items are renumbered 86–90 by the V10 R1 reviewer at merge-back** (see the disclosure beneath this table). **The policy half is NOT resolved.** `D-038a` classifies `REVIEW_INDEX.md` as an evidence ledger on the ground that *"evidence ledgers are append-only and their additions are `git`-mergeable by construction"*, and its safety evidence re-derived `A-`, `C-` and `Q-` identifier sets after the V08 merge. **Open-item numbers were not in that check, and they are the one series in the list that is NOT mergeable by construction** — two branches append `| 81 |` and git merges both. **Recommended: `D-038a` gains an explicit consequence that `REVIEW_INDEX.md` open-item numbers are allocated against the integration branch's state**, as `PT-036` §0 already does for `PT` numbers. Owner ruling needed; a reviewer cannot amend a `DECISIONS.md` entry. **⭐ DIRECT EVIDENCE ADDED AT THE MERGE ITSELF, and it is stronger than the argument:** the `review/v10` → integration merge **CONFLICTED in three files — `REVIEW_INDEX.md` (3 hunks), `LOG.md` (2 hunks) and `COURSE_PROGRESS.md` (1 hunk)** — every one of them an evidence ledger `D-038a` classifies as *"append-only and `git`-mergeable by construction"*. **They are not.** Both branches appended to the same tail of the same tables and status blocks, so git could not order them; `LOG.md`'s conflict additionally **interleaved two session entries**, splicing the V09 R2 entry's Decision/Files/Git/Next-Action sections into the middle of the V10 R1 entry's fenced Decision block. All were resolved by hand at merge-back and the repair is disclosed here rather than absorbed. **`D-038a`'s mergeability premise is measurably false for tail-appended ledgers, not only for numbered identifiers** — which widens this item from a numbering rule to a question about how concurrent sessions append to shared ledgers at all. | `18_REVIEW/V10/V10_REVIEW_R1.md` `M1`; `DECISIONS.md` `D-038a`; the merge commit's own conflict set | 🔶 **OPEN — policy gap WIDENED by merge evidence; the numbering instance is discharged** |
-| 92 | **V10 R1** | **`M2` — `A-078` / `C-017` undercount the spoken renderings.** `A-078` heads *"spoken six times"*; `C-017` says *"four of six spoken instances say the tracer."* **`[01:00:20]` — *"75 pips off of the blue tracer"* — is a seventh, and it names the tracer.** Correct census: **five of seven** spoken instances name the blue tracer, one names the LOW/HOW anchor, one is ambiguous. (`[00:54:02]`'s *"25 to 50 pips"* is an eighth distance utterance with no reference object named.) **`A-079`'s separate *"named 13 times"* headline is CORRECT** — `tracer` 13, `blue tracer` 10. **The direction STRENGTHENS `C-017`**: the spoken majority is wider than recorded. Edit, not redo; no conclusion moves | `A-078`, `C-017`, `V10_MASTERY_REPORT.md` §J | 🔶 **OPEN — MINOR, owed before `COMPLETE`** |
-| 93 | **V10 R1** | **`M3` — `V10_SOURCE_NOTES.md` §15's absence claim is overstated.** *"No session clock times. Sessions are named constantly; **no hour is ever stated**."* Hours **are** stated — `[00:02:24]` *"at 830"*, `[00:05:09]` *"seven o'clock New York time"*, `[00:42:52]` *"3 o'clock in the morning"*, `[01:03:57]` *"5 6 o'clock at night"*. **None is a session boundary, which is the true and intended claim**, but the sentence as written is falsifiable by a one-line grep and §15 exists precisely so a later session can rely on it. **`A-076`'s parallel sentence is correctly scoped and is the model to copy.** Reword to a session-boundary-scoped claim listing the four incidental times | `V10_SOURCE_NOTES.md` §15 | 🔶 **OPEN — MINOR, owed before `COMPLETE`** |
-| 94 | **V10 R1** | **`M4` — `C-016` does not apply the transcript's own ASR caution to its own evidence.** TRANSCRIPTION NOTE 1 records that *"numeric ranges wobble, and one of them is load-bearing"* and rates the file `MEDIUM–HIGH`. `C-016` rests entirely on two ASR-rendered numbers two seconds apart, **neither printed on any slide**, and argues from them as though capture were certain — inconsistent with the same session's correct treatment of `A-078`, where ASR unreliability on numbers is the express reason to prefer the slide. **The caveat STRENGTHENS the `UNRESOLVED` disposition**: if either figure may be a rendering artifact, no construction over them is safe. Add the caveat; the disposition does not change | `C-016`; `V10_TRANSCRIPT.md` TRANSCRIPTION NOTES 1 | 🔶 **OPEN — MINOR, owed before `COMPLETE`** |
+| 91 | **V10 R1** | **`M1` — OPEN-ITEM IDENTIFIER COLLISION, and the policy gap behind it.** `video/v10` allocated open items **81–85**; the integration branch concurrently allocated **81–83** to **V09 R2** (`7b42156`, merged `310362c`) after `video/v10` branched at `5db04d8`. **Resolved mechanically: V10's items are renumbered 86–90 by the V10 R1 reviewer at merge-back** (see the disclosure beneath this table). **The policy half is NOT resolved.** `D-038a` classifies `REVIEW_INDEX.md` as an evidence ledger on the ground that *"evidence ledgers are append-only and their additions are `git`-mergeable by construction"*, and its safety evidence re-derived `A-`, `C-` and `Q-` identifier sets after the V08 merge. **Open-item numbers were not in that check, and they are the one series in the list that is NOT mergeable by construction** — two branches append `| 81 |` and git merges both. **Recommended: `D-038a` gains an explicit consequence that `REVIEW_INDEX.md` open-item numbers are allocated against the integration branch's state**, as `PT-036` §0 already does for `PT` numbers. Owner ruling needed; a reviewer cannot amend a `DECISIONS.md` entry. **⭐ DIRECT EVIDENCE ADDED AT THE MERGE ITSELF, and it is stronger than the argument:** the `review/v10` → integration merge **CONFLICTED in three files — `REVIEW_INDEX.md` (3 hunks), `LOG.md` (2 hunks) and `COURSE_PROGRESS.md` (1 hunk)** — every one of them an evidence ledger `D-038a` classifies as *"append-only and `git`-mergeable by construction"*. **They are not.** Both branches appended to the same tail of the same tables and status blocks, so git could not order them; `LOG.md`'s conflict additionally **interleaved two session entries**, splicing the V09 R2 entry's Decision/Files/Git/Next-Action sections into the middle of the V10 R1 entry's fenced Decision block. All were resolved by hand at merge-back and the repair is disclosed here rather than absorbed. **`D-038a`'s mergeability premise is measurably false for tail-appended ledgers, not only for numbered identifiers** — which widens this item from a numbering rule to a question about how concurrent sessions append to shared ledgers at all. | `18_REVIEW/V10/V10_REVIEW_R1.md` `M1`; `DECISIONS.md` `D-038a`; the merge commit's own conflict set | 🔶 **OPEN — POLICY HALF ONLY; the numbering instance is FULLY discharged.** ⚠ **STUDENT-OWED HALF CLOSED — SELF-VERIFIED AT OWNER DIRECTION 2026-08-13** (see item 92 for the `D-003` disclosure). **THE RENUMBERING WAS VERIFIED COMPLETE BY REPO-WIDE SWEEP, not by reading the reviewer's account of it:** `grep` for `item 8[1-5]` across every `.md` in the tree returns **zero V10-scoped hits** — every surviving 81/82/83 reference belongs to **V09 R2**, which correctly keeps those numbers, and items **86, 87, 88, 89, 90** are each present exactly once in the open-items table with the subjects the RENUMBERING DISCLOSURE maps them to. **⚠ ONE CORRECTION AGAINST THE REVIEW, stated rather than absorbed:** `M1` and the disclosure both assert that `04_SCREENSHOTS/V10/INDEX.md` § ESCALATION and `07_MASTERY_REPORTS/V10_MASTERY_REPORT.md` escalation 2 *"cite open item 82"*. **THEY DO NOT, AND NEVER DID.** Both referred to the recipe defect **by description, carrying no item number at all** — verified by grepping `82` in both files, whose only hits are the source `.swf` SHA-256 and an `R = 82.0` chart label. **So there were no stale pointers to correct**; the renumbering could not have orphaned a citation that did not exist. **What was actually owed, and is now done, is the OPPOSITE act:** both artifacts have **gained** a pointer naming open item **87**, recording that it is ✅ CLOSED, that it was `82` on `video/v10`, and that the collision and the `D-038a` gap are carried here at item 91. **Nothing in either artifact is superseded** — these are additions, and each says so. **The policy half remains OPEN and is untouched by this session:** a `DECISIONS.md` amendment requires an owner ruling, and neither a reviewer nor a student session may make one. |
+| 92 | **V10 R1** | **`M2` — `A-078` / `C-017` undercount the spoken renderings.** `A-078` heads *"spoken six times"*; `C-017` says *"four of six spoken instances say the tracer."* **`[01:00:20]` — *"75 pips off of the blue tracer"* — is a seventh, and it names the tracer.** Correct census: **five of seven** spoken instances name the blue tracer, one names the LOW/HOW anchor, one is ambiguous. (`[00:54:02]`'s *"25 to 50 pips"* is an eighth distance utterance with no reference object named.) **`A-079`'s separate *"named 13 times"* headline is CORRECT** — `tracer` 13, `blue tracer` 10. **The direction STRENGTHENS `C-017`**: the spoken majority is wider than recorded. Edit, not redo; no conclusion moves | `A-078`, `C-017`, `V10_MASTERY_REPORT.md` §J | ⚠ **CLOSED — SELF-VERIFIED AT OWNER DIRECTION 2026-08-13** (branch `fix/v10-r1-minors`, cut from the integration branch at `9c00a60` after `git fetch --all` confirmed zero divergence, `D-038`). **NOT `CLOSED — VERIFIED`. This round was fixed AND verified by ONE session on the owner's explicit authorisation; it does not satisfy `D-003`, and the distinct status string exists solely so it is never mistaken for an arm's-length verdict.** **`[01:00:20]` WAS RE-DERIVED FROM `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` AT SOURCE**, not copied from the review: line 2452 of the body reads *"75 pips off of the blue tracer"*, and `[00:54:02]` (line 2203) reads *"25 to 50 pips the dealer falls into the shadow box"* — an eighth **distance** utterance that names **no reference object** and is therefore recorded in `A-078` and `C-017` **but deliberately NOT counted** in either census. **CORRECTED AT SEVEN SITES, not the four the review named** — a repo-wide sweep for the undercount found three more: `A-078` (heading, marker list, renderings table + the new `[01:00:20]` row, and the *"four of the six"* sentence), `C-017` (table row added; *"Four spoken instances"* → **five of seven**), `V10_MASTERY_REPORT.md` §J, **item 88's own text in this register**, and additionally **`04_SCREENSHOTS/V10/INDEX.md`** (*"the audio gives it six times"*), **`05_HOMEWORK/V10/V10_COMPREHENSION_ANSWERS.md` Q6** and **`02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` TRANSCRIPTION NOTE 1** (*"given six times"*, with its own six-marker list) — the last being the note that `M4` relies on, so leaving it stale would have left two V10 records disagreeing about the same census. **The comprehension answer was NOT rewritten**: it is a preserved first attempt, so the correction is appended as a block and the original wording stands, per `REMEDIATION_PROTOCOL.md` §2 and the first-attempt rule. **The transcript's VERBATIM BODY IS UNTOUCHED** — only the header note is corrected. **Superseded text retained at every one of the seven sites. NOTHING MOVES:** no marker, no disposition, no `DO NOT CODE` verdict, no grade, no conclusion. `A-078`'s number stays `RESOLVED BY COURSE`, its reference point stays `DO NOT CODE`, and `C-017` stays `UNRESOLVED` — **strengthened**, because a 5/7 spoken majority makes the misspeak reading `C-017` refuses *less* available than a 4/6 majority did. |
+| 93 | **V10 R1** | **`M3` — `V10_SOURCE_NOTES.md` §15's absence claim is overstated.** *"No session clock times. Sessions are named constantly; **no hour is ever stated**."* Hours **are** stated — `[00:02:24]` *"at 830"*, `[00:05:09]` *"seven o'clock New York time"*, `[00:42:52]` *"3 o'clock in the morning"*, `[01:03:57]` *"5 6 o'clock at night"*. **None is a session boundary, which is the true and intended claim**, but the sentence as written is falsifiable by a one-line grep and §15 exists precisely so a later session can rely on it. **`A-076`'s parallel sentence is correctly scoped and is the model to copy.** Reword to a session-boundary-scoped claim listing the four incidental times | `V10_SOURCE_NOTES.md` §15 | ⚠ **CLOSED — SELF-VERIFIED AT OWNER DIRECTION 2026-08-13.** **NOT `CLOSED — VERIFIED`** — see item 92 for the full `D-003` disclosure; one session both fixed and verified this, on the owner's explicit authorisation. §15's bullet now reads **"No session-boundary clock time is stated"**, states that sessions are named constantly and **not one is given an opening or closing hour on any clock**, and then **lists all four incidental times with what each actually is** — `[00:02:24]` *"at 830"* (a chart students are being told to stop watching), `[00:05:09]` *"seven o'clock New York time"* (the seminar announcement), `[00:42:52]` *"3 o'clock in the morning"* (the speaker's own readiness, rhetorical), `[01:03:57]` *"5 6 o'clock at night"* — **none of which delimits a session**, which is the claim §15 was always making. **ALL FOUR MARKERS RE-DERIVED FROM `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` AT SOURCE**, not copied from the review; all four resolve verbatim at the cited marker. **`A-076`'s parallel sentence was CHECKED as the review directed and is CORRECT AS WRITTEN — it is left untouched and is cited in the fix as the model.** It reads *"V10 states **no clock time for any session**"* and backs it with six specific zero-counts (`7:00`, `3:00 am`, `3:30`, `9:00`, `9:30`, `5:00 pm`, all **0** in the body, `Q-011` §1), so it never overshot. **Superseded text retained in full per `REMEDIATION_PROTOCOL.md` §2.** **NOTHING DOWNSTREAM MOVES:** no rule, machine candidate, ambiguity disposition or backtest rests on this bullet, and the no-session-boundary finding it supports is unchanged and still true. |
+| 94 | **V10 R1** | **`M4` — `C-016` does not apply the transcript's own ASR caution to its own evidence.** TRANSCRIPTION NOTE 1 records that *"numeric ranges wobble, and one of them is load-bearing"* and rates the file `MEDIUM–HIGH`. `C-016` rests entirely on two ASR-rendered numbers two seconds apart, **neither printed on any slide**, and argues from them as though capture were certain — inconsistent with the same session's correct treatment of `A-078`, where ASR unreliability on numbers is the express reason to prefer the slide. **The caveat STRENGTHENS the `UNRESOLVED` disposition**: if either figure may be a rendering artifact, no construction over them is safe. Add the caveat; the disposition does not change | `C-016`; `V10_TRANSCRIPT.md` TRANSCRIPTION NOTES 1 | ⚠ **CLOSED — SELF-VERIFIED AT OWNER DIRECTION 2026-08-13.** **NOT `CLOSED — VERIFIED`** — see item 92 for the full `D-003` disclosure. **An ASR CAUTION block is added to `C-016`, and NOTHING ABOVE IT IS SUPERSEDED** — the review is explicit that the omission *"strengthens nothing and undermines nothing in the disposition"*, so this is the **omitted-available-self-caution** class (the V08 R1 `M1` shape), not a correction. The block states that `[01:00:41]`'s *"one-day"* and `[01:00:43]`'s *"three days"* are **both ASR renderings and NEITHER is printed on any slide**, cites TRANSCRIPTION NOTE 1 (*"Numeric ranges wobble, and one of them is load-bearing"*) and the transcript's own **`MEDIUM–HIGH`** self-rating, and concludes it is a **FURTHER independent reason to refuse the reconciliation**: the refused reading is a *construction over the two numerals*, and a construction over figures that may themselves be rendering artifacts is unsafe. **RE-DERIVED, NOT TAKEN ON THE REVIEW'S WORD:** TRANSCRIPTION NOTE 1 and the confidence rating were read at source, and the **absence of any printed holding period was checked against all 32 curated frames via `04_SCREENSHOTS/V10/INDEX.md` — no frame carries one**, which is what makes *"neither is printed"* a verified claim rather than a repeated one. **The block also states what the caution does NOT license**, which the review did not ask for and which matters: it is **not** grounds to discard either figure (`D-030`, `SOURCING_HIERARCHY.md` §3.2 forbid selecting the convenient one), and the contradiction is **over-determined without them** — strike both ASR-suspect figures and `[00:41:45]` *"at least two days"*, `[01:32:07]` *"two days"* and `[01:26:39]` *"three days … maybe one more"* still state the duration three incompatible ways. **The consistency charge is answered directly:** `A-078` invokes ASR unreliability to prefer the slide; here **there is no slide**, so the same unreliability points toward `UNRESOLVED`. `C-016`'s Related section now cites TRANSCRIPTION NOTE 1 and `A-078`. **The `UNRESOLVED` disposition, every marker, every quotation and every figure are UNCHANGED.** Cross-referenced to item **95**, the standing owner question about tagging this class at filing. |
 | 95 | **V10 R1** | **NOTE — a standing convention for ASR-only contradictions?** `M4` is the third corpus record resting solely on ASR-rendered numbers with no printed corroboration. **Reviewer question to the owner:** should a `C-xxx` filed on unprinted ASR numerals carry that tag at filing, rather than a reviewer noticing it per lesson? Not a defect in V10 | `V10_REVIEW_R1.md` reviewer question 1 | ℹ️ **NOTE — owner question** |
-| 96 | **V10 R1** | **NOTE - `COURSE_PROGRESS.md`'s PROGRESS TABLE has decayed and is now stale for FIVE lessons.** The V10 student session updated the STATUS prose block at `e5262b2` but left the table's V10 row reading `NOT STARTED` with every artifact column `⬜`, against a full committed artifact set. **This is not a V10 defect alone** - the same table reads `AWAITING REVIEW R1` for **V06, V07 and V09** (V06 and V07 are `COMPLETE` per `REVIEW_INDEX`) and `IN REMEDIATION (items 64-66)` for **V08** (also `COMPLETE`). **The prose block above it is maintained; the table below it is not**, so the file now contradicts itself and `REVIEW_INDEX.md` in four places. **Not charged as a MINOR against V10** for that reason. V10's row is corrected by this reviewer; **the other four rows need a sweep**, and the durable fix is to state which of the two blocks is authoritative | `00_SYSTEM/COURSE_PROGRESS.md` PROGRESS TABLE vs its STATUS block and `18_REVIEW/REVIEW_INDEX.md` DECISION TABLE | 🔶 **OPEN - bookkeeping sweep owed** |
+| 96 | **V10 R1** | **NOTE - `COURSE_PROGRESS.md`'s PROGRESS TABLE has decayed and is now stale for FIVE lessons.** The V10 student session updated the STATUS prose block at `e5262b2` but left the table's V10 row reading `NOT STARTED` with every artifact column `⬜`, against a full committed artifact set. **This is not a V10 defect alone** - the same table reads `AWAITING REVIEW R1` for **V06, V07 and V09** (V06 and V07 are `COMPLETE` per `REVIEW_INDEX`) and `IN REMEDIATION (items 64-66)` for **V08** (also `COMPLETE`). **The prose block above it is maintained; the table below it is not**, so the file now contradicts itself and `REVIEW_INDEX.md` in four places. **Not charged as a MINOR against V10** for that reason. V10's row is corrected by this reviewer; **the other four rows need a sweep**, and the durable fix is to state which of the two blocks is authoritative | `00_SYSTEM/COURSE_PROGRESS.md` PROGRESS TABLE vs its STATUS block and `18_REVIEW/REVIEW_INDEX.md` DECISION TABLE | 🔶 **OPEN - bookkeeping sweep owed. ⚠ WIDENED 2026-08-13 by the V10 R1 fix round: the SAME DECAY IS PRESENT IN THIS FILE.** `REVIEW_INDEX.md`'s own **SEVERITY TOTALS table is stale at V09 R1** — `MINOR 57 / 12 open / 45 closed`, predating **V09 R2's +3** and **V10 R1's +4** — because **neither round posted the per-round arithmetic paragraph** that every round from V07 R1 onward had posted. **So the pattern item 96 names is not confined to `COURSE_PROGRESS.md`: in both files a maintained prose/delta layer sits above an unmaintained table, and the table is the part a reader scans.** Flagged in place under the table rather than silently corrected — reconciling it requires re-auditing the pre-V03 rows carried unreconciled since V02 R1, which is a sweep and not an edit. **The durable fix is the same for both files and should be ruled once:** declare which layer is authoritative, or delete the derived table. |
 
 ---
 
@@ -1649,6 +1816,31 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 > § ESCALATION and `07_MASTERY_REPORTS/V10_MASTERY_REPORT.md` escalation 2, both citing
 > *"open item 82"* for the recipe defect, which is now **87**. Correcting them is carried as
 > item **91**'s student-owed half. The cause, and the `D-038a` gap behind it, is item **91**.
+>
+> ---
+>
+> #### ⚠ RENUMBERING VERIFIED COMPLETE — AND THE PARAGRAPH ABOVE IS FACTUALLY WRONG. 2026-08-13
+>
+> **Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2** — the paragraph immediately above
+> is left standing and is corrected here rather than edited away.
+>
+> **Neither artifact cited *"open item 82"*, or any item number at all.** Both referred to the
+> recipe defect **by description**. Verified by grepping `82` in each file: the only hits are the
+> source `.swf`'s SHA-256 and an `R = 82.0` chart label in the frame table. **There were no stale
+> pointers, so the renumbering orphaned nothing.**
+>
+> **The renumbering itself is COMPLETE and was verified by sweep, not by assertion.** `grep` for
+> `item 8[1-5]` across every `.md` in the repository returns **no V10-scoped hit** — every
+> surviving 81/82/83 belongs to V09 R2, which correctly keeps those numbers — and 86, 87, 88, 89
+> and 90 each appear exactly once in the open-items table, with the subjects mapped above.
+>
+> **What was owed turned out to be an addition rather than a correction, and it is done:** both
+> artifacts now carry a pointer naming open item **87** as ✅ CLOSED, recording that it was `82`
+> on `video/v10` and pointing at item **91** for the collision and the `D-038a` gap. **Nothing in
+> either artifact is superseded.**
+>
+> **⚠ Verified by the same session that made these edits, at owner direction — `D-003` is NOT
+> satisfied.** See item 92's status cell for the full disclosure.
 
 ## HUMAN REVIEW QUEUE
 

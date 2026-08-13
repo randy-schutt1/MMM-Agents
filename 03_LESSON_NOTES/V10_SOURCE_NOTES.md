@@ -319,7 +319,31 @@ Recorded because absence is evidence, and because a later session must not assum
 - **No stop-loss rule of any kind.** `stop loss` occurs **0** times. The safety trade is given an
   entry, a direction, a target and a time horizon — and **no invalidation price**.
 - **No position size.** (V09 supplied that; V10 does not restate it.)
-- **No session clock times.** Sessions are named constantly; **no hour is ever stated**.
+- **No session-boundary clock time is stated.** Sessions are named constantly — Asian, London, New
+  York — and **not one of them is given an opening or closing hour, on any clock, anywhere in the
+  96 minutes.** Clock times *do* occur in the lesson, but only **incidentally** and never as a
+  session delimiter: `[00:02:24]` *"AU [is] still gonna be there buddy **at 830**"* (a chart the
+  speaker is telling students to stop watching), `[00:05:09]` *"Tuesday April 3rd at **seven
+  o'clock New York time**"* (the seminar announcement), `[00:42:52]` *"I'll be ready to go at **3
+  o'clock in the morning**"* (the speaker's own readiness, rhetorical), `[01:03:57]` *"**5 6
+  o'clock at night**"*. **None delimits a session**, which is why `A-076` records that the `blue
+  box` boundary cannot be recovered from V10 and why no week or day boundary is codable from this
+  lesson.
+
+  > **⚠ SCOPE CORRECTED 2026-08-13 — `18_REVIEW/V10/V10_REVIEW_R1.md` `M3` (`E20`, open item
+  > 93).** **Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this bullet previously
+  > read:** *"**No session clock times.** Sessions are named constantly; **no hour is ever
+  > stated**."* **The intended claim was true; the sentence as written was not.** *"No hour is
+  > ever stated"* is falsifiable by a one-line grep against the four incidental times now listed
+  > above, and §15 exists precisely so a later session can rely on it without re-reading the
+  > transcript — so an absence stated more strongly than the evidence supports is a real defect
+  > even when the operative conclusion is unaffected. **`A-076`'s parallel sentence — *"V10 states
+  > no clock time for any session"* — was already correctly scoped and was the model for this
+  > rewording.** **NOTHING DOWNSTREAM MOVES:** no rule, machine candidate, ambiguity disposition
+  > or backtest depends on this bullet, and the no-session-boundary finding it supports is
+  > unchanged and still true. **⚠ Corrected AND self-verified by one session at owner direction;
+  > this does NOT satisfy `D-003`.** All four markers were re-derived from
+  > `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` at source, not copied from the review.
 - **No definition of `the level`, `second leg`, `blue box`, `blue tracer`, `shark fin`, or the
   boundary of a `stop hunt`.**
 - **No ADR lookback window.**
