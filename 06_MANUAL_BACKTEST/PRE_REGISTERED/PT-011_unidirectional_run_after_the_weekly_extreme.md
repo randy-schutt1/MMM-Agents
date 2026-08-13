@@ -1,6 +1,41 @@
 # PT-011 — Is the rest of the week a "unidirectional swing" after the extreme?
 
 ```text
+STATUS:      NON-CONFORMING UNDER D-035 — SUPERSEDED BY PT-029, 2026-08-13.
+             NEVER RUN. NOT EDITED INTO CONFORMANCE. RETAINED, NOT DELETED.
+
+             WHY: this file pre-registered W-C (2013-01-06 -> 2017-12-29) as its window.
+             D-035 pins the project-wide D-028 split at 2016-07-01 -- DEVELOPMENT
+             2013-01-06 -> 2016-06-30, HOLDOUT 2016-07-01 -> 2017-12-29. W-C STRADDLES
+             that boundary by 546 days, so 30% of this test's window lies in the
+             holdout, which no session may open during the Student Phase (D-027, D-028).
+
+             D-027 is explicit that changing a range creates a NEW TEST ID and that the
+             abandoned test is retained and marked. COMMON_PROTOCOL.md 3a says the same
+             and names the replacement window: W-C' = 2013-01-06 -> 2016-06-30. PT-029
+             carries this test's question, three metrics, three controls, seed, the
+             retrospective-anchor disclosure and the DESCRIPTIVE classification onto
+             W-C', and declares as costs rather than as details everything the
+             substitution changes:
+               - data source: HistData GBP/USD M1 CSV corpus (D-036a), not TradingView
+                 / FXCM (D-034);
+               - week open: 22:00 UTC (Sunday 17:00, fixed UTC-5, no DST), NOT 21:00 UTC;
+               - directional efficiency is RESOLUTION-DEPENDENT -- the path-length
+                 denominator grows as bars get finer -- so PT-029 pins the path sum to
+                 15-minute bars and reports the bar size with every figure;
+               - the October 2016 flash crash is in HOLDOUT and unavailable, which
+                 removes the era's archetypal maximally-efficient post-extreme run;
+               - sample: 180 TRADING weeks, not the ~260 claimed in 3 below. W-C' holds
+                 182 calendar Sundays but only 181 observable Sunday week opens, and
+                 the week of 2014-06-01 is EXCLUDED BY NAME -- ~22 missing hours would
+                 shorten the path-length denominator and INFLATE efficiency toward the
+                 claim under test. Surfaced by QA check C8, ADDED AFTER PT-029 was
+                 drafted.
+
+             THIS FILE HAS NEVER BEEN RUN AND MUST NOT BE RUN.
+             NOTHING IN THIS FILE WAS CHANGED except this status block.
+
+--- original status block, as pre-registered 2026-08-12, unchanged ---
 STATUS:     PRE-REGISTERED — NOT YET RUN
 LESSON:     V02 [00:14:37], [00:14:54]; V03 [00:33:36]–[00:34:19]
 BLOCKERS:   I-007 · D-028 boundary dates unpinned

@@ -1,6 +1,42 @@
 # PT-008 — "The dealer must cut" the first-eight-hours range of the week
 
 ```text
+STATUS:      NON-CONFORMING UNDER D-035 — SUPERSEDED BY PT-026, 2026-08-13.
+             NEVER RUN. NOT EDITED INTO CONFORMANCE. RETAINED, NOT DELETED.
+
+             WHY: this file pre-registered W-C (2013-01-06 -> 2017-12-29) as its window.
+             D-035 pins the project-wide D-028 split at 2016-07-01 -- DEVELOPMENT
+             2013-01-06 -> 2016-06-30, HOLDOUT 2016-07-01 -> 2017-12-29. W-C STRADDLES
+             that boundary by 546 days, so 30% of this test's window lies in the
+             holdout, which no session may open during the Student Phase (D-027, D-028).
+
+             D-027 is explicit that changing a range creates a NEW TEST ID and that the
+             abandoned test is retained and marked. COMMON_PROTOCOL.md 3a says the same
+             and names the replacement window: W-C' = 2013-01-06 -> 2016-06-30. PT-026
+             carries this test's question, measures, nulls, seed and decision rules onto
+             W-C', and declares as costs rather than as details everything the
+             substitution changes:
+               - data source: HistData GBP/USD M1 CSV corpus (D-036a), not TradingView
+                 / FXCM (D-034);
+               - week open: 22:00 UTC (Sunday 17:00, fixed UTC-5, no DST), NOT the
+                 21:00 UTC this file inherited from FXCM -- and this test is the one
+                 most exposed to that change, because its block IS the first bars of
+                 the week;
+               - "the first eight hours" and "the first two 4-hour bars" are NO LONGER
+                 THE SAME SPAN on the new corpus (PT-026 0c); both are reported and
+                 neither is adopted;
+               - sample: 180 TRADING weeks, not the ~260 claimed in 3 below. W-C' holds
+                 182 calendar Sundays but only 181 observable Sunday week opens, and
+                 the week of 2014-06-01 is EXCLUDED BY NAME -- the corpus is absent
+                 from Sun 2014-06-01 17:00 to Mon 2014-06-02 15:01 (~22 hours), so
+                 that week has no observable week open and cannot carry this test.
+                 Surfaced by QA check C8, which was ADDED AFTER PT-026 was drafted.
+
+             THIS FILE HAS NEVER BEEN RUN AND MUST NOT BE RUN. Its blockers were never
+             discharged; it is superseded before, not after, execution.
+             NOTHING IN THIS FILE WAS CHANGED except this status block.
+
+--- original status block, as pre-registered 2026-08-12, unchanged ---
 STATUS:     PRE-REGISTERED — NOT YET RUN
 LESSON:     V03 [00:12:46]–[00:13:29] and its slide; V04 [00:16:06]–[00:16:15]
 BLOCKERS:   I-007 (the feed decides where the week opens — see §3a) · D-028 unpinned

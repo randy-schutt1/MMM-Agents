@@ -1,6 +1,55 @@
 # PT-002 — Do GBP/USD turning points cluster at the six boundaries V01 names?
 
 ```text
+STATUS:      PARTIALLY NON-CONFORMING UNDER D-035 — THE W-C ARM IS SUPERSEDED BY PT-025,
+             2026-08-13. THE W-A ARM IS UNAFFECTED AND STAYS RUNNABLE IN THIS FILE.
+             NEVER RUN. NOT EDITED INTO CONFORMANCE. RETAINED, NOT DELETED.
+
+             READ THIS BEFORE RUNNING ANYTHING FROM THIS FILE:
+               - W-A arm (2015-01-04 -> 2015-12-31, DAILY extremes): CONFORMS. It lies
+                 wholly inside D-035 DEVELOPMENT and is RUNNABLE under D-036a. Run it
+                 from this file.
+               - W-C arm (2013-01-06 -> 2017-12-29, WEEKLY extremes): NON-CONFORMING.
+                 DO NOT RUN IT FROM THIS FILE. It is re-issued as PT-025 on
+                 W-C' = 2013-01-06 -> 2016-06-30.
+
+             WHY, AND A DEFECT IN D-035 THAT IS RECORDED RATHER THAN CORRECTED HERE:
+             D-035 pins the project-wide D-028 split at 2016-07-01 -- DEVELOPMENT
+             2013-01-06 -> 2016-06-30, HOLDOUT 2016-07-01 -> 2017-12-29 -- and its
+             consequence-1 conformance table lists PT-002 among the CONFORMING tests.
+             THAT IS WRONG. Section 3 of this file declares TWO windows, and the second
+             of them is W-C, which straddles the boundary by 546 days exactly as
+             PT-008 ... PT-013 and PT-019 do. INDEX.md 1 has recorded this file's window
+             as "W-A, W-C" since the batch was written. D-035 classified the file by its
+             first window and missed the second, so the re-issue obligation it created
+             was one test short.
+
+             The correction is written up in PRE_REGISTERED/_PROPOSED_DECISION_REISSUE.md
+             for the owner to integrate. NO SESSION MAY EDIT DECISIONS.md TO FIX IT BY
+             SIDE-EFFECT.
+
+             D-027 requires that a range change create a NEW TEST ID with the abandoned
+             test retained and marked. PT-025 carries the W-C arm's question, six
+             boundaries, proximity bands, nulls, seed and scope onto W-C', and declares
+             as costs rather than as details everything the substitution changes:
+               - data source: HistData GBP/USD M1 CSV corpus (D-036a), not TradingView
+                 / FXCM (D-034);
+               - week open: 22:00 UTC (Sunday 17:00, fixed UTC-5, no DST), NOT 21:00 UTC
+                 -- which matters here because two of the six boundaries ARE the week
+                 boundary;
+               - the trading week is 120 hours and is NOT five equal days (Sunday 7h,
+                 Friday 17h), so the covered-fraction expectation must be
+                 exposure-weighted;
+               - sample: 180 TRADING weeks x 2 extremes = 360, not the ~520 claimed in
+                 3 below. W-C' holds 182 calendar Sundays but only 181 observable
+                 Sunday week opens, and the week of 2014-06-01 is EXCLUDED BY NAME --
+                 the corpus is absent from Sun 2014-06-01 17:00 to Mon 2014-06-02
+                 15:01 (~22 hours), so neither week boundary can be placed. Surfaced
+                 by QA check C8, which was ADDED AFTER PT-025 was drafted.
+
+             NOTHING IN THIS FILE WAS CHANGED except this status block.
+
+--- original status block, as pre-registered 2026-08-12, unchanged ---
 STATUS:     PRE-REGISTERED — NOT YET RUN
 LESSON:     V01
 BLOCKERS:   I-007 (no data source declared) · D-028 boundary dates unpinned

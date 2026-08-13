@@ -1,6 +1,55 @@
 # PT-010 — On which weekday does the GBP/USD week make its high and its low?
 
 ```text
+STATUS:      NON-CONFORMING UNDER D-035 — SUPERSEDED BY PT-028, 2026-08-13.
+             NEVER RUN. NOT EDITED INTO CONFORMANCE. RETAINED, NOT DELETED.
+
+             WHY: this file pre-registered W-C (2013-01-06 -> 2017-12-29) as its window.
+             D-035 pins the project-wide D-028 split at 2016-07-01 -- DEVELOPMENT
+             2013-01-06 -> 2016-06-30, HOLDOUT 2016-07-01 -> 2017-12-29. W-C STRADDLES
+             that boundary by 546 days, so 30% of this test's window lies in the
+             holdout, which no session may open during the Student Phase (D-027, D-028).
+
+             D-027 is explicit that changing a range creates a NEW TEST ID and that the
+             abandoned test is retained and marked. COMMON_PROTOCOL.md 3a says the same
+             and names the replacement window: W-C' = 2013-01-06 -> 2016-06-30. PT-028
+             carries this test's question, three measures, focal prediction, nulls, seed
+             and scope onto W-C', and declares as costs rather than as details
+             everything the substitution changes:
+               - data source: HistData GBP/USD M1 CSV corpus (D-036a), not TradingView
+                 / FXCM (D-034);
+               - week open: 22:00 UTC (Sunday 17:00, fixed UTC-5, no DST), NOT 21:00 UTC
+                 -- which makes Sunday a 7-hour weekday category and Friday a 17-hour
+                 one, so the null must be EXPOSURE-WEIGHTED and not 1/6 per weekday;
+               - sample: 180 TRADING weeks, not the ~260 claimed in 3 below. W-C' holds
+                 182 calendar Sundays but only 181 observable Sunday week opens, and
+                 the week of 2014-06-01 is EXCLUDED BY NAME -- the corpus is absent
+                 from Sun 2014-06-01 17:00 to Mon 2014-06-02 15:01 (~22 hours).
+                 Including it would record a corpus hole as GENUINE ZERO SUNDAY
+                 EXPOSURE, biasing the very cell that is already thinnest.
+
+             THIS IS THE ONE RE-ISSUE WHOSE SAMPLE GOES MARGINAL, and it is recorded
+             here as well as in PT-028 so it cannot be missed: at n = 180 the expected
+             counts in the SUNDAY (~10.5) and FRIDAY (~25.5) cells fall BELOW the n = 30
+             floor of BACKTEST_EVIDENCE_STANDARD.md 4.1, and the 6x6 joint table of
+             Measure 3 averages 5.0 per cell and becomes DESCRIPTIVE ONLY with no chi^2.
+             Those two figures are EQUAL-WEEK UPPER BOUNDS: two included holiday weeks
+             (2015-12-20, 2015-12-27) carry ZERO Friday exposure, so the realised Friday
+             expectation is lower still. Sunday was already marginal at W-C (~15.2 over
+             260 weeks); Friday was not (~36.8). That is a finding about the re-issue,
+             reported rather than absorbed.
+
+             Correcting calendar weeks to TRADING weeks moved these figures by less
+             than one observation and changed no verdict -- but the inputs are now
+             right. Surfaced by QA check C8 (session completeness), which was ADDED
+             AFTER PT-028 was drafted; C7 had rendered the hole cosmetic by surfacing
+             it as a decorative MONDAY entry in a weekday tally -- this test's own unit
+             of analysis.
+
+             THIS FILE HAS NEVER BEEN RUN AND MUST NOT BE RUN.
+             NOTHING IN THIS FILE WAS CHANGED except this status block.
+
+--- original status block, as pre-registered 2026-08-12, unchanged ---
 STATUS:     PRE-REGISTERED — NOT YET RUN
 LESSON:     V01 [00:34:47]–[00:35:55], [00:52:38]; V02 [00:04:15], [00:00:03]–[00:00:26]
 BLOCKERS:   I-007 · D-028 boundary dates unpinned
