@@ -4710,7 +4710,7 @@ analysis, the level-counting scheme, or the moving-average set must run `SOURCIN
 
 ---
 
-## 2026-08-13 — the `D-040` ruling is applied, and §9.6's second divergence is finally filed as `C-008`
+## 2026-08-13 — the `D-040` ruling is applied, and §9.6's second divergence is finally filed as `C-011`
 
 **Branch:** `infra/add-steve-moro-reference-book` (continued; no merge)
 
@@ -4727,32 +4727,32 @@ reversal — only the ruling stated in the owner's own words, which is now §1.2
 **`A-014` and `A-023` were not touched.** Both remain `RESOLVED BY MMM-NOTES`. No `A-xxx` record
 had its status changed by any part of this work.
 
-### The real finding: `C-008` was owed and had never been filed
+### The real finding: `C-011` was owed and had never been filed
 
 `EXTERNAL_VOCABULARY_REFERENCE.md` §9.6 flagged **two** video-versus-notes divergences on
 2026-08-13 and its own rule required a `C-xxx` for **each**. Only one was ever filed:
 
 | Divergence | Record | Was it filed? |
 |---|---|---|
-| The moving-average set — notes enumerate *"5, 13, 50 and 200"* with **zero** `800` in 84 pp.; V06 audio has *"blueberry"*, owner-confirmed as the **800** | **`C-007`** | ✅ Already filed, and thorough |
-| **ADR lookback** — notes say *"the average daily trading range of the **last 2 weeks**"* (`MMM-NOTES` **p.43**); V04's guest says ***"the two previous days"*** `[01:05:36]` **and** an unbounded *"generally every day runs"* `[01:13:34]` | **`C-008`** | ❌ **Never filed — corrected here** |
+| The moving-average set — notes enumerate *"5, 13, 50 and 200"* with **zero** `800` in 84 pp.; V06 audio has *"blueberry"*, owner-confirmed as the **800** | **`C-010`** | ✅ Already filed, and thorough |
+| **ADR lookback** — notes say *"the average daily trading range of the **last 2 weeks**"* (`MMM-NOTES` **p.43**); V04's guest says ***"the two previous days"*** `[01:05:36]` **and** an unbounded *"generally every day runs"* `[01:13:34]` | **`C-011`** | ❌ **Never filed — corrected here** |
 
 Both sat in §9.6 marked *"⚠️ Unadjudicated"*, which under the ruling is no longer accurate: the
 videos win both, so the notes are **superseded on those two specific points** and must not be
 cited as authoritative there. §9.6's table, `SOURCING_HIERARCHY.md` §3.3 and the
 `CONTRADICTIONS.md` STATUS block were all updated to say so.
 
-### The asymmetry `C-008` makes concrete, and why `A-038` did NOT move
+### The asymmetry `C-011` makes concrete, and why `A-038` did NOT move
 
-`C-007` and `C-008` resolve differently in an instructive way. In `C-007` Tier 1 is coherent — the
-corpus uses an 800 — so the notes lose and the corpus's answer stands. In `C-008` **Tier 1 is
+`C-010` and `C-011` resolve differently in an instructive way. In `C-010` Tier 1 is coherent — the
+corpus uses an 800 — so the notes lose and the corpus's answer stands. In `C-011` **Tier 1 is
 itself incoherent**: the guest gives *two previous days* and *"generally every day runs"* in one
 lesson, with a third variant implied by the template's `TDR/YDR/WADR/MADR/%DADR` panel (`A-040`).
 
 So *"the video wins"* **defeats the notes' clean *"2 weeks"* without installing a replacement.**
 `A-038` had three incompatible bases before this record and has three after — a fourth number from
 Tier 2 makes four, not one. **`A-038` stays `DO NOT CODE`, unnarrowed**, with `D-030` in full
-force and its Required Research unchanged. This is recorded prominently in both `C-008` and
+force and its Required Research unchanged. This is recorded prominently in both `C-011` and
 `SOURCING_HIERARCHY.md` §3.3, because the tempting error is precisely to read a won contradiction
 as licence to adopt whichever Tier 1 fragment is nearest to hand.
 
@@ -4761,7 +4761,7 @@ is *not* demoted to Tier 2, so the video-wins rule applies in full — but `D-03
 material cannot close the record on its own.
 
 ### Files changed
-`11_CONTRADICTIONS/CONTRADICTIONS.md` (**`C-008` added**, STATUS counts → 8 records / 7 unresolved
+`11_CONTRADICTIONS/CONTRADICTIONS.md` (**`C-011` added**, STATUS counts → 8 records / 7 unresolved
 / 1 resolved-other) · `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` (§9.6 table: both rows now
 `FILED`) · `00_SYSTEM/SOURCING_HIERARCHY.md` (§1.2 ruling block; §3.3 table + the asymmetry note)
 · `LOG.md`.
@@ -4769,3 +4769,64 @@ material cannot close the record on its own.
 ### Verification before commit
 `python3 scripts/validate_project.py` — clean. Explicit paths staged; `git diff --staged` read in
 full. **Not merged to the integration branch** — the owner's separate act per `D-038`.
+
+---
+
+## 2026-08-13 — record-ID collision with `video/v08`: this branch's `C-007`/`C-008` renumbered to `C-010`/`C-011`
+
+**Branch:** `infra/add-steve-moro-reference-book` · **Act:** merge-back preparation, per `D-038a`
+consequence 1 ("Allocate record identifiers against the latest integration branch … re-check them
+at merge-back … The merging session renumbers the later arrival and fixes its cross-references").
+
+### The collision
+
+`video/v08` and this branch ran concurrently under `D-038` isolation and each allocated `C-007`
+and `C-008` — to **four distinct contradictions**. `git` could not detect it: the two branches
+appended to different regions of `11_CONTRADICTIONS/CONTRADICTIONS.md`, so the merge is a clean
+textual addition on both sides and the duplicate identifier survives it silently. `D-038a` names
+this exact pair as the worked example of the failure mode.
+
+| ID | `video/v08` (merged first, `46d09ed`) | This branch (later arrival) |
+|---|---|---|
+| `C-007` | Twenty-nine "set ups" become twenty-nine "trades" inside eight minutes | The moving-average SET: the corpus's `800` against the notes' four-EMA enumeration |
+| `C-008` | *"Go off my faith here"* and *"big scientific reason"*, four sentences apart | The ADR lookback window: notes *"2 weeks"* vs corpus *"2 previous days"* |
+
+`video/v08` also holds `C-009` (a normative speaker calls the confirmation requirement a "myth"),
+so `C-009` is **taken** and the next free identifiers are `C-010` and `C-011`.
+
+### Resolution
+
+**Merged-first wins the number.** `video/v08`'s `C-007`/`C-008` are untouched. This branch's two
+records are renumbered **`C-007` → `C-010`** and **`C-008` → `C-011`**, with the original numbers
+recorded in a provenance banner on each record so no citation from before the merge is orphaned.
+
+### Files changed — every reference, not only the records
+
+| File | References renumbered |
+|---|---|
+| `11_CONTRADICTIONS/CONTRADICTIONS.md` | 13 — both record headings, both STATUS banners, the class-label row; two banner count-lines marked superseded; provenance banner added to each record |
+| `LOG.md` | 9 — the `D-040` application entry and its finding tables |
+| `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` | 6 — `A-020` disposition, the `RESOLVED BY MMM-NOTES` class row, the blueberry/`800` decode table and its contradiction row |
+| `00_SYSTEM/SOURCING_HIERARCHY.md` | 3 — §3.3 table rows for the MA set and the ADR lookback, and the asymmetry note |
+| `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` | 3 — §9.6's two `FILED` rows and the closing note |
+
+**34 references in 5 files**; zero occurrences of `C-007`/`C-008` remain on this branch.
+
+### Cross-check for further collisions — systematic, not assumed
+
+Every identifier namespace was re-derived on both sides against the merge base `823458d`, rather
+than checking only the one namespace the collision was known to be in:
+
+| Namespace | Integration adds | This branch adds | Collision |
+|---|---|---|---|
+| `C-xxx` | `C-007`, `C-008`, `C-009` | `C-007`, `C-008` | ⚠️ **YES — resolved above** |
+| `D-xxx` | `D-038a` | `D-039`, `D-040` | None |
+| `A-xxx` | `A-059`…`A-064` | *none* (records moved, none created) | None |
+| `Q-xxx` | `Q-009` | *none* (`Q-002` cited only) | None |
+| `PT-xxx` | `PT-034` | *none* (`PT-033` cited only) | None |
+| `I-xxx` | *none* (`I-010` pre-dates the split) | *none* (`I-008`/`I-009` cited only) | None |
+| `18_REVIEW/REVIEW_INDEX.md` items | 64–69 | *none created* — 61–63 updated in place | None |
+
+### Verification before commit
+`python3 scripts/validate_project.py` — clean. Explicit paths staged; `git diff --staged` read in
+full.

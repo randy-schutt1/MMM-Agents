@@ -862,11 +862,11 @@ really meant"; calling the lesson a misspeak; or preferring whichever version is
 
 | Divergence | Notes say | Corpus says | Status |
 |---|---|---|---|
-| The moving-average set | **5/13/50/200, no 800**; the 200 is *"home base"* | V06 audio uses ***"blueberry"***, which the web maps to **800** | ✅ **FILED as `C-007`.** Resolved under the videos-win rule: **the corpus's 800 stands**; the notes' four-line enumeration is superseded on this point |
-| ADR lookback | *"the average daily trading range of the **last 2 weeks**"* (p.43) | V04 guest: **2 previous days** `[01:05:36]`, and separately an unbounded *"generally every day runs"* `[01:13:34]` | ✅ **FILED as `C-008`** (2026-08-13). Resolved under the videos-win rule: ***"2 weeks"* is NOT the ADR window** and must not be cited as one. **`A-038` is NOT narrowed** — Tier 1's own three bases stay incompatible, so the notes' figure is defeated without a replacement |
+| The moving-average set | **5/13/50/200, no 800**; the 200 is *"home base"* | V06 audio uses ***"blueberry"***, which the web maps to **800** | ✅ **FILED as `C-010`.** Resolved under the videos-win rule: **the corpus's 800 stands**; the notes' four-line enumeration is superseded on this point |
+| ADR lookback | *"the average daily trading range of the **last 2 weeks**"* (p.43) | V04 guest: **2 previous days** `[01:05:36]`, and separately an unbounded *"generally every day runs"* `[01:13:34]` | ✅ **FILED as `C-011`** (2026-08-13). Resolved under the videos-win rule: ***"2 weeks"* is NOT the ADR window** and must not be cited as one. **`A-038` is NOT narrowed** — Tier 1's own three bases stay incompatible, so the notes' figure is defeated without a replacement |
 
 > **Both divergences this section flagged are now filed.** The §9.6 rule required a `C-xxx` for
-> each; `C-008` was outstanding until 2026-08-13 and is now recorded. Owner ruling, same date
+> each; `C-011` was outstanding until 2026-08-13 and is now recorded. Owner ruling, same date
 > (`D-040`): the notes are authoritative **unless a video directly contradicts them, in which case
 > the video always wins** — which is what both records apply.
 

@@ -8,13 +8,15 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 
 ## STATUS
 
-> ## 📌 UPDATED 2026-08-13 — `C-008` ADDED, CLOSING §9.6's SECOND FLAGGED DIVERGENCE
+> ## 📌 UPDATED 2026-08-13 — `C-011` ADDED, CLOSING §9.6's SECOND FLAGGED DIVERGENCE
 >
-> **Counts in the `C-007` block below are superseded** (`REMEDIATION_PROTOCOL.md` §2). Current:
-> **RECORDS 8 (`C-001`…`C-008`) · UNRESOLVED 7 · RESOLVED/OTHER 1**.
+> **Counts in the `C-010` block below are superseded** (`REMEDIATION_PROTOCOL.md` §2). As at this
+> branch, before merge-back: **RECORDS 8 · UNRESOLVED 7 · RESOLVED/OTHER 1**. ⚠️ **These counts and
+> this record's original number are themselves superseded by the merge-back banner at the top of
+> this section** — this record was filed as `C-008` and is now `C-011`.
 >
 > `EXTERNAL_VOCABULARY_REFERENCE.md` §9.6 flagged **two** video-versus-notes divergences on
-> 2026-08-13 and required a `C-xxx` for each. Only one was filed. **`C-008` files the second** —
+> 2026-08-13 and required a `C-xxx` for each. Only one was filed. **`C-011` files the second** —
 > the **ADR lookback window**: the notes state *"the last 2 weeks"* (`MMM-NOTES` p.43); V04's guest
 > gives *"the two previous days"* `[01:05:36]` **and** an unbounded *"generally every day runs"*
 > `[01:13:34]`.
@@ -22,21 +24,23 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 > **Owner ruling, 2026-08-13** (recorded in `D-040`): the notes are authoritative **unless a video
 > directly contradicts them, in which case the video always wins.** Both flagged divergences are
 > now filed, and on both the notes are **superseded on that specific point** — the `800`/blueberry
-> line stands (`C-007`), and *"2 weeks"* is **not** the ADR window (`C-008`).
+> line stands (`C-010`), and *"2 weeks"* is **not** the ADR window (`C-011`).
 >
 > **Neither record closes or narrows anything.** `A-038` still has three incompatible corpus bases
 > and stays `DO NOT CODE`: "the video wins" defeats the Tier 2 figure **without** installing a
 > replacement.
 
-> ## 📌 UPDATED 2026-08-13 — `C-007` ADDED, A NEW CLASS OF RECORD
+> ## 📌 UPDATED 2026-08-13 — `C-010` ADDED, A NEW CLASS OF RECORD
 >
 > **Counts in the block below are as at `C-006` and are superseded** (`REMEDIATION_PROTOCOL.md`
-> §2). Current: **RECORDS 7 (`C-001`…`C-007`) · UNRESOLVED 6 · RESOLVED/OTHER 1**.
+> §2). As at this branch, before merge-back: **RECORDS 7 · UNRESOLVED 6 · RESOLVED/OTHER 1**.
+> ⚠️ **Superseded by the merge-back banner at the top of this section** — this record was filed as
+> `C-007` and is now `C-010`.
 >
-> **`C-007` is the first VIDEO-vs-NOTES record**, a class that did not exist until `D-039`
+> **`C-010` is the first VIDEO-vs-NOTES record**, a class that did not exist until `D-039`
 > admitted the Mauro seminar notes (`MMM-NOTES`) as normative evidence. Prior classes were
 > instructor-vs-instructor, instructor-vs-guest and guest-vs-guest — all *inside* the corpus.
-> `C-007` is the corpus against an admitted account *of* the corpus's method.
+> `C-010` is the corpus against an admitted account *of* the corpus's method.
 >
 > **The resolution rule for this class is fixed and does not need re-deciding per record**
 > (`D-039`, owner direction *"if at any time the videos contradict the pdf then we can call it
@@ -44,7 +48,7 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 > superseded on that point. A divergence is a **mandatory** record, never smoothed away by
 > reading the lesson down to fit the notes.
 >
-> `C-007` itself: the notes enumerate the EMA set as *"the 5, 13, 50 and 200"* and contain **no
+> `C-010` itself: the notes enumerate the EMA set as *"the 5, 13, 50 and 200"* and contain **no
 > `800` anywhere in 84 pages**; the corpus has *"blueberry"* in V06 audio, confirmed by the owner
 > as the **800 EMA**. The corpus's 800 stands.
 
@@ -1107,7 +1111,14 @@ reasons are recorded here so the absence is auditable rather than assumed.
 
 ---
 
-## C-007 — The moving-average SET: the corpus uses an `800` the admitted seminar notes do not contain
+## C-010 — The moving-average SET: the corpus uses an `800` the admitted seminar notes do not contain
+
+> **RENUMBERED at merge-back, 2026-08-13.** This record was filed as **`C-007`** on
+> `infra/external-vocabulary-reference` / `infra/add-steve-moro-reference-book`. `video/v08`
+> independently allocated `C-007` to a different contradiction and merged first (`46d09ed`), so
+> under `D-038a` consequence 1 the later arrival is renumbered: **`C-007` → `C-010`.** Any
+> reference to `C-007` predating this merge, in a document not renumbered here, means *this*
+> record if it concerns the moving-average set, and `video/v08`'s record otherwise.
 
 ### Concept
 
@@ -1202,7 +1213,14 @@ admitted account of it.
 
 ---
 
-## C-008 — The ADR lookback window: the notes say two weeks, the corpus says two days and "generally every day"
+## C-011 — The ADR lookback window: the notes say two weeks, the corpus says two days and "generally every day"
+
+> **RENUMBERED at merge-back, 2026-08-13.** This record was filed as **`C-008`** on
+> `infra/add-steve-moro-reference-book`. `video/v08` independently allocated `C-008` to a different
+> contradiction and merged first (`46d09ed`), so under `D-038a` consequence 1 the later arrival is
+> renumbered: **`C-008` → `C-011`.** Any reference to `C-008` predating this merge, in a document
+> not renumbered here, means *this* record if it concerns the ADR lookback window, and
+> `video/v08`'s record otherwise.
 
 ### Concept
 
@@ -1282,7 +1300,7 @@ Status: UNRESOLVED — Tier 2 figure SUPERSEDED by Tier 1; Tier 1 supplies no re
 
 | Field | Value |
 |---|---|
-| Class | **VIDEO-vs-NOTES** (`C-007` class), and **GUEST**-vs-notes within it |
+| Class | **VIDEO-vs-NOTES** (`C-010` class), and **GUEST**-vs-notes within it |
 | Ambiguity | `A-038` (the guest's ADR window); `A-040` (the template's ADR variants) |
 | Decision | `D-039` (admission of the notes; the videos-win rule); `D-040` (Tier 1 > Tier 2) |
 | Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.2, §9.6; `00_SYSTEM/SOURCING_HIERARCHY.md` §3.3; `MMM-NOTES` p.43 |

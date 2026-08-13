@@ -172,10 +172,10 @@ account of the same teacher is **evidence about the corpus**. Tidying it away de
 
 | Divergence | Tier 2 says | Tier 1 says | Record |
 |---|---|---|---|
-| The moving-average set | **5 / 13 / 50 / 200, no 800**; the 200 is *"home base"* (`MMM-NOTES` p.38) | V06 audio uses ***"blueberry"***, confirmed by the owner as **800** | ✅ **`C-007`** — the corpus's **800 stands**; the notes' enumeration is superseded on this point. `A-020` closes on **owner attestation**, not on the notes |
-| ADR lookback | *"the average daily trading range of the **last 2 weeks**"* (`MMM-NOTES` p.43) | V04 guest: **2 previous days** `[01:05:36]`; also an unbounded *"generally every day runs"* `[01:13:34]` | ✅ **`C-008`** — ***"2 weeks"* is NOT the ADR window.** `A-038` is **NOT** narrowed: Tier 1's three bases stay incompatible, so Tier 2 is defeated **without** a replacement. Stays `DO NOT CODE` |
+| The moving-average set | **5 / 13 / 50 / 200, no 800**; the 200 is *"home base"* (`MMM-NOTES` p.38) | V06 audio uses ***"blueberry"***, confirmed by the owner as **800** | ✅ **`C-010`** — the corpus's **800 stands**; the notes' enumeration is superseded on this point. `A-020` closes on **owner attestation**, not on the notes |
+| ADR lookback | *"the average daily trading range of the **last 2 weeks**"* (`MMM-NOTES` p.43) | V04 guest: **2 previous days** `[01:05:36]`; also an unbounded *"generally every day runs"* `[01:13:34]` | ✅ **`C-011`** — ***"2 weeks"* is NOT the ADR window.** `A-038` is **NOT** narrowed: Tier 1's three bases stay incompatible, so Tier 2 is defeated **without** a replacement. Stays `DO NOT CODE` |
 
-> **Note the asymmetry `C-008` makes concrete.** "The video wins" is a rule about **which source
+> **Note the asymmetry `C-011` makes concrete.** "The video wins" is a rule about **which source
 > is superseded**, not a promise that Tier 1 supplies a usable answer. Where Tier 1 contradicts
 > Tier 2 but is itself incoherent, the correct outcome is that **both** the Tier 2 figure and the
 > record's blocker survive. A session that treats a won contradiction as licence to adopt whatever

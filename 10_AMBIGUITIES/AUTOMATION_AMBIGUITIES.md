@@ -62,7 +62,7 @@ Template: `00_SYSTEM/TEMPLATES/AMBIGUITY_TEMPLATE.md`
 >    2 days and an unbounded average. That is **three** admissible numbers from three admissible
 >    sources — a contradiction to log, not a resolution.
 >
-> **`C-007` was opened** by this work: the notes enumerate the EMA set as *"the 5, 13, 50 and
+> **`C-010` was opened** by this work: the notes enumerate the EMA set as *"the 5, 13, 50 and
 > 200"* and contain **no `800` in 84 pages**, while the corpus uses *"blueberry"*. Under `D-039`
 > **the recordings win** — the corpus's 800 stands.
 
@@ -218,7 +218,7 @@ hedge is error code E03.
 | `RESEARCH CANDIDATE` | A measurable hypothesis is defined but unvalidated. | 4 |
 | `EMPIRICALLY VALIDATED` | Tested against manually labelled history. | 6 |
 | `RESOLVED BY COURSE` | A later lesson defines it explicitly. Cite the evidence. | any |
-| `RESOLVED BY MMM-NOTES` | The admitted seminar notes define it (`D-039`). **Weaker than `RESOLVED BY COURSE`** — the notes are an attested account of seminars this project did not record, and the recordings outrank them (`C-007` class). Cite `MMM-NOTES` + page. | any |
+| `RESOLVED BY MMM-NOTES` | The admitted seminar notes define it (`D-039`). **Weaker than `RESOLVED BY COURSE`** — the notes are an attested account of seminars this project did not record, and the recordings outrank them (`C-010` class). Cite `MMM-NOTES` + page. | any |
 | `RESOLVED — OWNER ATTESTATION` | The owner has testified to the meaning (`D-039`). **Weakest of the three** and used only where no lesson and no admitted document supplies it. Must say so on its face; never re-labelled `RESOLVED BY COURSE`. | any |
 
 Promotion requires evidence, never convenience. Records are never deleted — a
@@ -249,7 +249,7 @@ resolved record keeps its history.
 | A-017 | "big entry candle" | V01 `[00:48:41]` | DO NOT CODE | Medium. The only entry-trigger language in the lesson. |
 | A-018 | `R = <number>` labels on the shaded boxes | V01 `[00:48:35]` | DO NOT CODE | Medium. If misread as a risk-to-reward ratio it would invent a target rule the lesson never states. |
 | A-019 | session times with **no timezone stated** | V02 `[00:50:32]` | DO NOT CODE — **materially constrained** by slide `[00:45:55]` | Foundational. The full session table is now recovered from the slide; only the timezone is missing. |
-| A-020 | "mayonnaise" (a moving average) | V02 `[00:19:46]` | **RESOLVED — OWNER ATTESTATION** (`D-039`), *not* by course. See `C-007` | High. Used as a support/resistance reference *and* as the distance test for whether a trade is worth taking. |
+| A-020 | "mayonnaise" (a moving average) | V02 `[00:19:46]` | **RESOLVED — OWNER ATTESTATION** (`D-039`), *not* by course. See `C-010` | High. Used as a support/resistance reference *and* as the distance test for whether a trade is worth taking. |
 | A-021 | the letter sequence for "the cycle" | V02 `[00:07:28]` / `[00:19:31]` | DO NOT CODE | Medium. Two incompatible strings ("M-A-A-W", "WVVM") for the same named object. |
 | A-022 | "half-Batman" | V02 `[00:20:37]` | DO NOT CODE — **narrowed** by `MMM-NOTES` p.19 (`D-039`) | High. One of exactly two named continuations at outside structure high. |
 | A-023 | "33 trade" | V02 `[00:22:16]` | **RESOLVED BY `MMM-NOTES`** p.64 (`D-039`) — digits decoded; remains DO NOT CODE; **constrained** by V02 slide `[00:18:00]` | Medium. Printed on the **Level 3** move, tying it to level rather than calendar day. ~~Digits still undecoded.~~ **Decoded 2026-08-13**: 3 levels over 3 days + an intraday Level III. |
@@ -1993,7 +1993,7 @@ failure mode.
 | Ketchup | 13 | Owner attestation; `MMM-NOTES` p.38 lists a 13 |
 | Water | 50 | Owner attestation; `MMM-NOTES` p.38 lists a 50 as *"the balance line"* |
 | **Mayo** | **200** | **Owner attestation 2026-08-13 + `MMM-NOTES` p.66, entry list: *"Hold the Mayo – 200 Bounce"*** |
-| **Blueberry** | **800** | **Owner attestation 2026-08-13, verbatim: *"800 EMA is the blueberry"*** — and **nothing else**; see `C-007` |
+| **Blueberry** | **800** | **Owner attestation 2026-08-13, verbatim: *"800 EMA is the blueberry"*** — and **nothing else**; see `C-010` |
 
 **Status:**
 
@@ -2011,7 +2011,7 @@ cite it that way — **`OWNER-ATTESTED`, not the instructor.**
 **What the admitted notes could and could not carry.** `MMM-NOTES` corroborates **Mayo = 200**
 from inside the admitted source, independently of the owner. It carries **nothing** for
 *Blueberry*: the document enumerates the EMA set as *"the 5, 13, 50 and 200"* and contains **no
-`800` anywhere in 84 pages**. That gap is logged as **`C-007`** — the corpus's 800 stands, and
+`800` anywhere in 84 pages**. That gap is logged as **`C-010`** — the corpus's 800 stands, and
 the notes' four-line enumeration does not.
 
 **A by-product worth recording: the quarantined `NOTES.md` mapping is OFF BY ONE.** The *What is
@@ -2039,7 +2039,7 @@ survive its closure and are **not** answered by the mapping:
 | Type | Reference |
 |---|---|
 | Decision | `D-039` (admission of `MMM-NOTES`; owner attestation as warrant) |
-| Contradiction | **`C-007`** — the corpus's `800` vs the notes' four-EMA enumeration |
+| Contradiction | **`C-010`** — the corpus's `800` vs the notes' four-EMA enumeration |
 | Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.4; `MMM-NOTES` p.38, p.66 |
 
 ---
