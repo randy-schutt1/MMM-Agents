@@ -4979,9 +4979,21 @@ A per-day marking on the presenter's chart that shows where each trading day beg
 
 **One occurrence. No second use, no gloss, no definition.**
 
-Visible on frames 22, 23 and 25 as chart furniture whose exact nature is **not** determinable
-from a rendering, and no attempt is made to determine it from one (`E06` as restated by
-`D-036a`).
+Visible on the frames burned `28:45`, `31:50` and `41:25` as chart furniture whose exact nature
+is **not** determinable from a rendering, and no attempt is made to determine it from one (`E06`
+as restated by `D-036a`).
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this line previously read
+> *"Visible on **frames 22, 23 and 25** as chart furniture…"*. Those ordinals were written
+> against V09's original 26-frame numbering; `ff7b8bd` inserted a frame at position 15 and every
+> ordinal at 15 or above shifted by one, so **frame 22 now points at the compounding spreadsheet
+> and frame 25 at the MS Paint email address** — neither is a chart. `V09_REVIEW_R1.md` `M4`
+> (open item 76) eliminated the ordinals from every V09-scoped file but attributed this string to
+> `04_SCREENSHOTS/V09/INDEX.md` alone; it occurred in **three** places and the two in this shared
+> register survived. `V09_REVIEW_R2.md` open item **82**. Converted to burned-in player
+> timecodes, which no later insertion can invalidate. **The three frames intended are the same
+> three** — `04_SCREENSHOTS/V09/INDEX.md` rows 23, 24 and 26. **No evidence, status or
+> disposition moves.**)*
 
 ### Tier 2 — a recorded negative
 
@@ -5170,7 +5182,15 @@ An event that restarts the level count from one.
 | V09 | `[00:50:48]`–`[00:50:57]` | *"so I based my resets on the fact that it actually has a **correlation back to a previous trap volume area**… that trap volume means what they sent the market down to get shorts committed this direction and they've pulled away from them"* |
 | V09 | `[00:51:07]`–`[00:51:13]` | *"market makers are still toying with this level and **pulling away from it twice** — okay, to me that shows a **reset of their count**"* |
 
-Also printed on frames 22, 23 and 25 as a chart label.
+Also printed on the frames burned `28:45`, `31:50` and `41:25` as a chart label.
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this line previously read *"Also
+> printed on **frames 22, 23 and 25** as a chart label."* Same cause and same correction as
+> `A-069` above: the ordinals predate `ff7b8bd`'s insertion at position 15, and under the current
+> numbering frame 22 is the compounding spreadsheet and frame 25 the MS Paint email address.
+> `V09_REVIEW_R2.md` open item **82**. The three frames intended are
+> `04_SCREENSHOTS/V09/INDEX.md` rows 23, 24 and 26. **No evidence, status or disposition
+> moves.**)*
 
 ### Assessment
 
