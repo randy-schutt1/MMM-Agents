@@ -4121,3 +4121,62 @@ divergence check before push.
 cheapest next move whichever way the owner leans. **Second, and independent: a fresh reviewer
 session** to re-assess V05 and V06 against `D-033`, and to re-read `C-005` as a live method
 contradiction. **Third:** re-issue the seven `W-C` tests under conforming windows.
+
+---
+
+## 2026-08-13 — Reviewer Session (V06 R1)
+
+### Lesson
+V06 — *"Micro Daily Trends"*
+
+### Review Objective
+Independent mastery audit of the V06 student pass (`D-003` — this session authored no V06
+artifact). First review conducted with `D-033`/`D-034`/`D-035` in force. Standing owner
+directive applied: dimension B (Recognition) is permanently blocked by `D-030` (*push* never
+precisely defined in any lecture) — reviewed, documented, and **excluded from pass/fail**.
+
+### Source Evidence Reviewed
+`V06_TRANSCRIPT.md` (full read; coverage block re-measured — 1,304 markers, strictly
+increasing, gap table reproduces); negative-vocabulary counts re-measured; frames
+`V06_00-00-05`, `V06_00-05-29`, `V06_00-48-29` read directly, the last at 2× magnification;
+`DECISIONS.md` D-024–D-035; git history for the pre-registration order.
+
+### Student Artifacts Reviewed
+`V06_SOURCE_NOTES.md`, `V06_INTERPRETATION.md`, `V06_HOMEWORK.md` (+ data, scripts, charts),
+`04_SCREENSHOTS/V06/INDEX.md`, `06_MANUAL_BACKTEST/V06/BT_V06_0001.md` (+ `PT-022/023/024`),
+`V06_MASTERY_REPORT.md` incl. comprehension-verification section. Re-ran `check_quotes.py`
+(0 failures), `comprehension_probe.py` (48 probes, the two documented correct-failures
+reproduce), `run_pt023.py` on both committed datasets (PT-024 reproduces to the digit;
+holdout untouched), `validate_project.py` (clean).
+
+### Findings
+**0 CRITICAL, 1 MAJOR, 3 MINOR, 3 NOTE** — full detail in `18_REVIEW/V06/V06_REVIEW_R1.md`.
+- **M1 (MAJOR, `E07`+`E11`, item 57):** frame `V06_00-48-29` Week 10 prints *"and more
+  specifically at 3:45am or 9:45am est."* — legible at committed resolution, elided as
+  "not legible", and its absence asserted as *"no session clock appears on any of the 32
+  frames"* in two files. First printed `est` in the corpus; bears on `A-019` and `A-030`.
+- **M2 (MINOR, item 58):** transcript header's "Steve 25× = 23+2" irreproducible (26 tokens;
+  third read-aloud at `[01:11:39]` unclassified). Speaker conclusion unaffected.
+- **M3 (MINOR, item 59):** the once-corrected `Asian`/`Asia` row still miscounts (`Asia` 2×).
+- **M4 (MINOR, item 60):** `D-033` propagation left the five live `D-025` fences in the V06
+  lesson artifacts stating superseded prohibitions in present tense.
+- Dimension G audited against §6.G checks 1–20 including the new 15–20: **all clean** —
+  pre-registration order verified in git, holdout intact, PT-023 contamination properly
+  disclosed and downgraded, both `D-031` arms reported, conjunctive verdict correctly
+  preferred over the sharper per-arm label.
+
+### Required Corrections
+Items 57–60 (`V06_REVIEW_R1.md` §15). No re-recording, re-harvest or re-test required.
+
+### Decision
+**REVISE — 0 CRITICAL / 1 MAJOR / 3 MINOR. The V07 gate stays CLOSED under `D-024`** pending
+remediation of item 57 and re-review. Dimension B: blocked by `D-030`, excluded from
+pass/fail per owner directive — explicitly not the cause of the REVISE; absent M1 this round
+would have opened the gate. Confidence: HIGH.
+
+### Git
+Review file `18_REVIEW/V06/V06_REVIEW_R1.md`; `REVIEW_INDEX.md` updated (STATUS, decision
+row, E07/E20 counts, severity delta + totals, open items 57–60); this entry.
+
+### Next Review Trigger
+Student resubmission of V06 (items 57–60).

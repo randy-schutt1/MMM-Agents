@@ -11,12 +11,20 @@ stays visible with its round number.
 ## STATUS
 
 ```text
-LESSONS REVIEWED: 5
+LESSONS REVIEWED: 6
 PASSED:           5  (V01, V02, V03, V04 — V04 PASS at R2, COMPLETE;
                       V05 — PASS at R3 2026-08-12, COMPLETE)
-IN REMEDIATION:   0
+IN REMEDIATION:   1  (V06 — R1 REVISE 2026-08-13, 0 CRITICAL / 1 MAJOR /
+                      3 MINOR (open items 57-60). Gate to V07 CLOSED under
+                      D-024 pending remediation of the MAJOR and re-review.
+                      Dimension B blocked by D-030 ("push" undefined),
+                      EXCLUDED from pass/fail per owner directive — it is
+                      not what holds the gate.)
 AWAITING REVIEW:  0
 ```
+
+> *(Superseded STATUS text, retained — before V06's R1 this block read
+> `LESSONS REVIEWED: 5` / `IN REMEDIATION: 0` / `AWAITING REVIEW: 0`.)*
 
 > *(Superseded STATUS text, retained — before V05's R3 PASS this block read:
 > `PASSED: 4 (V01, V02, V03, V04 — V04 PASS at R2, COMPLETE)` /
@@ -477,6 +485,7 @@ ruling) are carried forward unchanged. **The next review trigger is the V06 subm
 | V05 | REVIEW REQUIRED | R1B | REVISE | 0 | 0 | ⏳ |
 | V05 | REMEDIATION APPLIED | R2 | REVISE | 0 | 0 | ⏳ |
 | V05 | REMEDIATION APPLIED | R3 | **PASS** | 0 | 0 | ✅ COMPLETE |
+| V06 | REVIEW REQUIRED | R1 | REVISE | 0 | 1 | ⏳ |
 
 > **`R1B` is a parallel second opinion on the R1 round, not a separate round of remediation.**
 > It is listed so the decision history is complete; the two R1-round rows describe **one**
@@ -523,7 +532,7 @@ keeps recurring is a training problem, not a lesson problem.
 | E04 | Wrong sequence | 0 | |
 | E05 | Wrong pattern boundary | 0 | |
 | E06 | False positive | 1 | V02 (R1 ×1, also codes `E19`) — homework markup contradicts its own chart |
-| E07 | False negative | 0 | |
+| E07 | False negative | 1 | **V06 (R1 ×1 — `M1`, `MAJOR`, co-code `E11`, open item 57):** frame `V06_00-48-29` Week 10 prints *"and more specifically at 3:45am or 9:45am est."* — legible at committed resolution, elided in the frame-26 transcription as "not legible", and its absence then asserted as *"no session clock appears on any of the 32 frames"* in both `04_SCREENSHOTS/V06/INDEX.md` and `V06_SOURCE_NOTES.md` §11d. First printed `est` in the corpus evidence; bears on `A-019` and `A-030`. The audio-scoped §10 claim (`EST` 0× spoken) is true and unaffected |
 | E08 | Hindsight contamination | 0 | |
 | E09 | Cherry-picking | 0 | |
 | E10 | Incomplete homework | 1 | V01 |
@@ -536,7 +545,7 @@ keeps recurring is a training problem, not a lesson problem.
 | E17 | Missing negative examples | 0 | |
 | E18 | Invalid manual-backtest procedure | 0 | |
 | E19 | Data/timeframe inconsistency | 2 | V02 (R1 ×1 as a co-code with `E06` — closed at R2; R2 ×1 — day boundary off by one bar, open); V03 (R1 ×1 — ADR figures not reproducible from committed data, M1 — **✅ CLOSED at R2 2026-08-10**: all twenty daily ranges and all four ADR figures re-derived exactly from the raw JSON under the stated 21:00-UTC convention); V04 (R1 ×1 — `M1`, **✅ CLOSED — VERIFIED at R2 2026-08-11** — partial 12-bar week-open 4h bar diagnosed and the slice corrected to 476 bars; 474/480 → 476/480; `bars_15m_in_4h_bar_0` and `verify_reconstruction.py` committed: USDCHF's 15-minute series is mis-sliced at a partial week-open bar, and the 27/30 reconstruction symptom was attributed to ±0.4 pip harvest noise when bar 0's open differs by **28.1 pips**. No conclusion changes; the 4h data is clean at 116/116) |
-| E20 | Other | 26 | **V05 (R1B ×2 — `M7`, `M9`, both APPLIED 2026-08-11, pending R3 verification, open items 47, 49):** `M7` the V05 contradiction check that was actually run against `C-004` is named `C-003` at four sites including `CONTRADICTIONS.md`'s **STATUS block** — the record named contains no V05 text at all, and this retires R1's `N5` claim that all four status blocks were current; `M9` four printed `R =` labels unrecorded in curated frame 26, leaving `A-018`'s *"V05 adds four more labels"* an undercount of at least half — **the same frame and the same class as `M6`**. **V05 (R1 ×3 — `M4`, `M5`, `M6`, all ✅ CLOSED — VERIFIED at R2 2026-08-11, open items 44–46):** `M4` three V05 files disagreeing about V05's own evidence order, with `INDEX.md` disclosing the deviation correctly and `V05_INTERPRETATION.md` line 12 claiming the opposite — **a new sub-class: not stale text, but two files written in the same session asserting contrary things about that session's own process**; `M5` `A-039`'s *"V05 is the next candidate"* pointer left stale by the lesson that answered it — **eighth instance of the status-staleness class (open item 14), and the only staleness this round**; `M6` an unrecorded oscillator sub-panel in curated frame 26, the V04 `M6` class exactly. **Counterweight worth recording: V05 is the FIRST round in which all four STATUS blocks were current** (`AUTOMATION_AMBIGUITIES.md`, `CONTRADICTIONS.md`, `COURSE_PROGRESS.md`, `REVIEW_INDEX.md`), verified by re-deriving each against its own file's contents. Open item 14 has failed in six previous rounds; this one is clean, and it was achieved **without** the proposed `validate_project.py` guard existing. V01 (R1 ×6, R2 ×2, R3 ×1) — all closed at R3; V02 (R1 ×4) — closed at R2; V02 (R2 ×2) — open; V03 (R1 ×1 — transcript coverage block overclaims "strictly monotonic, no duplicates", M2 — **✅ CLOSED at R3 2026-08-10**: applied to the `PROVENANCE` I-008 criterion at `683a12a` and to the `COVERAGE` block at `492bb11`; both blocks now assert the same true proposition, re-derived component by component at R3. Carried as R2 M2′, never double-counted — one occurrence, remediated in two commits. The **monotonicity class is now empty project-wide**: V01 makes no such claim, V02 is genuinely strict (1,026 / 1,026), V04 states the weaker true property) | **V04 (R1 ×5 — all ✅ CLOSED — VERIFIED at R2 2026-08-11):** `M3` two ambiguity cross-references in `V04_TRANSCRIPT.md` pointing at `A-037`/`A-038` where the register holds `A-031`/`A-030` (co-codes `E11`); `M4` stale "26 frames" (27 exist) and stale `VISUAL_INDEX` filename — **sixth and seventh instances of the status-staleness class, open item 14**; `M5` homework validation 1's 569/549/20 continuity figures not reproducible from committed data (same promise as open item 13); `M6` a visible `Traders Dynamic Index Visual` panel in curated frames 21 and 22, unrecorded in `INDEX.md` and in `A-039`; `M7` four `MASTERY_STANDARD.md` quality-control boxes unchecked and undeclared (concept library, positive/negative/borderline examples) — **shared with V02 and V03, raise at `CUMULATIVE_25.md`** **V04 (R2 ×1 — `m1`, OPEN, non-blocking, open item 34):** the *"§3.3 windows are identical"* justification written during the R1 remediation is true for the high-side window and false for the low-side one; the descriptor row it justifies is genuinely unchanged (1/1/1/1, recomputed at R2). **Eighth instance of the narrative-about-a-check class R1's `N5` named** |
+| E20 | Other | 29 | **V06 (R1 ×3 — `M2`, `M3`, `M4`, all `MINOR`, open items 58–60):** `M2` the transcript header's *"Steve occurs 25 times, 23 + 2"* is irreproducible — 26 tokens measured, and a **third** read-aloud instance (`[01:11:39]`, inside the Isubio quotation) is unclassified; speaker-identification conclusion unaffected and strengthened. **Token/verbatim-count class again (open items 15, 39, 48) — already at the escalation threshold, raise at `CUMULATIVE_25.md`.** `M3` the *already-corrected* `Asian`/`Asia` row in `V06_SOURCE_NOTES.md` §10 is still miscounted: `Asia` is 2× (`[00:50:25]`, `[01:09:55]`), not 1×. Same class. `M4` the `D-033` propagation (`612f431`, *"every place they change"*) did not touch the five live `D-025` fences in the V06 lesson artifacts themselves (transcript header, source notes, interpretation, homework, screenshot index) — each still states superseded prohibitions in present tense; status-staleness class, open item 14. | **V05 (R1B ×2 — `M7`, `M9`, both APPLIED 2026-08-11, pending R3 verification, open items 47, 49):** `M7` the V05 contradiction check that was actually run against `C-004` is named `C-003` at four sites including `CONTRADICTIONS.md`'s **STATUS block** — the record named contains no V05 text at all, and this retires R1's `N5` claim that all four status blocks were current; `M9` four printed `R =` labels unrecorded in curated frame 26, leaving `A-018`'s *"V05 adds four more labels"* an undercount of at least half — **the same frame and the same class as `M6`**. **V05 (R1 ×3 — `M4`, `M5`, `M6`, all ✅ CLOSED — VERIFIED at R2 2026-08-11, open items 44–46):** `M4` three V05 files disagreeing about V05's own evidence order, with `INDEX.md` disclosing the deviation correctly and `V05_INTERPRETATION.md` line 12 claiming the opposite — **a new sub-class: not stale text, but two files written in the same session asserting contrary things about that session's own process**; `M5` `A-039`'s *"V05 is the next candidate"* pointer left stale by the lesson that answered it — **eighth instance of the status-staleness class (open item 14), and the only staleness this round**; `M6` an unrecorded oscillator sub-panel in curated frame 26, the V04 `M6` class exactly. **Counterweight worth recording: V05 is the FIRST round in which all four STATUS blocks were current** (`AUTOMATION_AMBIGUITIES.md`, `CONTRADICTIONS.md`, `COURSE_PROGRESS.md`, `REVIEW_INDEX.md`), verified by re-deriving each against its own file's contents. Open item 14 has failed in six previous rounds; this one is clean, and it was achieved **without** the proposed `validate_project.py` guard existing. V01 (R1 ×6, R2 ×2, R3 ×1) — all closed at R3; V02 (R1 ×4) — closed at R2; V02 (R2 ×2) — open; V03 (R1 ×1 — transcript coverage block overclaims "strictly monotonic, no duplicates", M2 — **✅ CLOSED at R3 2026-08-10**: applied to the `PROVENANCE` I-008 criterion at `683a12a` and to the `COVERAGE` block at `492bb11`; both blocks now assert the same true proposition, re-derived component by component at R3. Carried as R2 M2′, never double-counted — one occurrence, remediated in two commits. The **monotonicity class is now empty project-wide**: V01 makes no such claim, V02 is genuinely strict (1,026 / 1,026), V04 states the weaker true property) | **V04 (R1 ×5 — all ✅ CLOSED — VERIFIED at R2 2026-08-11):** `M3` two ambiguity cross-references in `V04_TRANSCRIPT.md` pointing at `A-037`/`A-038` where the register holds `A-031`/`A-030` (co-codes `E11`); `M4` stale "26 frames" (27 exist) and stale `VISUAL_INDEX` filename — **sixth and seventh instances of the status-staleness class, open item 14**; `M5` homework validation 1's 569/549/20 continuity figures not reproducible from committed data (same promise as open item 13); `M6` a visible `Traders Dynamic Index Visual` panel in curated frames 21 and 22, unrecorded in `INDEX.md` and in `A-039`; `M7` four `MASTERY_STANDARD.md` quality-control boxes unchecked and undeclared (concept library, positive/negative/borderline examples) — **shared with V02 and V03, raise at `CUMULATIVE_25.md`** **V04 (R2 ×1 — `m1`, OPEN, non-blocking, open item 34):** the *"§3.3 windows are identical"* justification written during the R1 remediation is true for the high-side window and false for the low-side one; the descriptor row it justifies is genuinely unchanged (1/1/1/1, recomputed at R2). **Eighth instance of the narrative-about-a-check class R1's `N5` named** |
 
 **Escalation rule:** any code reaching 3 occurrences is a systematic weakness.
 Note it in the next cumulative review and consider whether the student protocol
@@ -685,12 +694,30 @@ second review-layer concurrency event — all closed as observations). **`M7`–
 `M1`–`M6` (all six verified against source) and open item 39.** 0 CRITICAL, 0 MAJOR — the V06
 gate stays open; **V05 does not reach `COMPLETE`.**
 
+**V05 R3's delta (for the table below):** R3 raised nothing and verified `M7`–`M11`
+(open items 47–51) closed — MINOR open 11 → 6. V05 is `COMPLETE`.
+
+**V06 R1's delta:** **+1 MAJOR (`M1`, open item 57 — the frame-26 elided `3:45am /
+9:45am est.` line and the false "no session clock on any frame" claim, `E07`+`E11`),
++3 MINOR (`M2`–`M4`, open items 58–60), +3 NOTE** (`N1` the PT-023 `T1` convention,
+`N2` the arm-B label correctly quarantined under `D-031`, `N3` the student's
+self-audit tooling — all closed as observations). **Dimension B is blocked by `D-030`
+and is EXCLUDED from pass/fail per the owner's directive — documented in
+`V06_REVIEW_R1.md` §B/§14, not scored, and not the cause of the `REVISE`.**
+**1 MAJOR — the V07 gate stays CLOSED under D-024** until item 57 is remediated and
+re-reviewed. First round audited under `D-033`/`D-034`/`D-035`; first exercise of
+`REVIEW_PROTOCOL.md` §6.G checks 15–20 against a run backtest, all clean.
+
 | Severity | Total | Open | Closed |
 |---|---:|---:|---:|
 | CRITICAL | 0 | 0 | 0 |
-| MAJOR | 4 | 0 | 4 |
-| MINOR | 40 | 11 | 29 |
-| NOTE | 48 | 5 | 43 |
+| MAJOR | 5 | 1 | 4 |
+| MINOR | 43 | 9 | 34 |
+| NOTE | 51 | 5 | 46 |
+
+*(V06 R1 arithmetic: MAJOR 4 → 5, open +1 (item 57). MINOR 40 → 43, open
+11 − 5 (V05 R3 closures, items 47–51) + 3 (items 58–60) = 9; closed 29 + 5 = 34.
+NOTE 48 → 51, all three closed as observations, 43 + 3 = 46.)*
 
 **Arithmetic of the V05 R1B + R2 update, written out so it can be checked.**
 `MINOR` 35 → 40: **+4** (R1B `m1`–`m4`) **+1** (R2 `M11`, R1B's `n1` escalated). Open 12 →
@@ -799,6 +826,10 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 | 54 | Owner direction 2026-08-11 | **`D-030` — blocked tests wait for the course; definitions are never approximated.** Generalizes `A-039`'s TDI prohibition to every definitional blocker (`A-011` M/W anatomy, `A-004` the level, `A-002` trap move, `A-019` timezone). Manual-backtest debt will keep accruing and **that is correct behaviour**, not a backlog to clear by lowering the standard. Reviewer: treat an approximated definition inside a test as `E06`+`E18`, **CRITICAL** | `DECISIONS.md` D-030 | OPEN — standing |
 | 55 | Owner request 2026-08-11 | **`PT-001` — the one test available before the course teaches more.** Pre-registered at `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-001_asian_range_predictive_content.md`: does the Asian range boundary carry predictive content? No pattern recognition, no indicator — the box is pure measurement. Tests the **load-bearing premise** under V04's prohibition, V03's accumulation phase and condition (a). ~~Blocked by `A-019`~~ **— UNBLOCKED 2026-08-11 by `D-031`'s two-arm timezone design.** Remaining prerequisites are `I-007` (data source) and the `D-028` boundary dates — and unlike the other blockers this plausibly closes from existing V01–V05 evidence rather than a future lesson (V04 `[00:07:01]` Eastern; V01 `[00:46:09]` US session 9:30 Eastern; but `C-004` warns session times in this course are messy). **Prerequisite work item: a focused timezone evidence pass.** Do NOT assume Eastern to unblock it (`D-030`) | `PT-001…md`; `A-019`; `C-004` | ⚠️ **PREREQUISITES DISCHARGED 2026-08-13 — and a new one appeared.** `I-007` CLOSED (`D-034`); `D-028` boundary PINNED at 2016-07-01 (`D-035`); `PT-001`'s window `W-A` **conforms**. **Still blocked by DATA AVAILABILITY**: the declared feed serves 15m GBP/USD back only to 2026-05-31, and `W-A` is 2015. `D-035` records the three exits and they are the **owner's** to choose. **OPEN — owner flagged, do not lose** |
 | 56 | Owner direction 2026-08-11 | **`D-031` — session timezone is a TESTED VARIABLE, two arms, both always reported.** Arm A fixed `UTC−5`; Arm B DST-aware `America/New_York`. **Reviewer must check that BOTH arms are reported** on any session-dependent test — reporting only the better one is `E09`+`E24`. Fact of record: the bootcamp ran 2012-03-18→06-17, entirely inside US DST, so **Arm B reproduces the instructor's own stated times and Arm A displaces them by an hour**; this is evidence about the source and does not settle which reading the method needs. `A-019` remains **OPEN** — `D-031` governs project method, not course content, and may never be cited as instruction | `DECISIONS.md` D-031; `A-019`; `PT-001` §3 | OPEN — standing |
+| 57 | V06 R1 | **`M1` (`E07`+`E11`, `MAJOR`) — frame `V06_00-48-29` Week 10 prints *"and more specifically at 3:45am or 9:45am est."*, legible at committed resolution, elided as "not legible" in the frame-26 transcription; its absence then asserted as *"no session clock appears on any of the 32 frames"* in `04_SCREENSHOTS/V06/INDEX.md` and `V06_SOURCE_NOTES.md` §11d.** First printed `est` in the corpus evidence; two fire times attached to the Brinks trade. Fix: complete the transcription (superseded text retained), correct both sentences, extend `A-019` and `A-030` with the printed evidence and its provenance (DMR syllabus, guest programme, printed not spoken), re-sweep the other 31 frames for elided-but-legible text. **Holds the V07 gate closed (`D-024`)** | `V06_REVIEW_R1.md` M1 | OPEN |
+| 58 | V06 R1 | **`M2` (`E20`, count class) — transcript header "Steve 25× = 23 + 2" irreproducible: 26 tokens; third read-aloud instance `[01:11:39]` (Isubio quotation) unclassified.** Speaker conclusion unaffected and strengthened. Count class is at its escalation threshold (items 15, 39, 48) — raise at `CUMULATIVE_25.md` | `V06_REVIEW_R1.md` M2 | OPEN |
+| 59 | V06 R1 | **`M3` (`E20`, count class) — `V06_SOURCE_NOTES.md` §10's once-corrected row still miscounts: `Asia` is 2× (`[00:50:25]`, `[01:09:55]`), not 1×.** Conclusion (Asian box undefined) unaffected | `V06_REVIEW_R1.md` M3 | OPEN |
+| 60 | V06 R1 | **`M4` (`E20`, staleness class, item 14 lineage) — the `D-033` propagation (`612f431`) left the five live `D-025` fences in the V06 lesson artifacts untouched** (transcript header, source notes, interpretation, homework, screenshot index — each states superseded prohibitions in present tense). Fix: dated `D-033` notice under each fence, noting `D-030` still blocks the *push*-family material; with it, record the restated V06 corpus contribution under `D-033` (`V06_REVIEW_R1.md` §13.2). Error is conservative (over-restricts), hence MINOR | `V06_REVIEW_R1.md` M4, §13 | OPEN |
 
 ---
 
