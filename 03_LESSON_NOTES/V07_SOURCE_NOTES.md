@@ -175,8 +175,9 @@ time."*
 
 ## 5. LEVELS — WHAT HE SAYS TO EXPECT AT EACH — `GUEST`
 
-The lesson uses *level one*, *level two* and *level three* 26 times between them and **never
-defines them**. `A-004` is untouched. What it *does* state is an **expectation attached to each
+The lesson uses the form *level `<N>`* **35 times** (*three* ×13, *one* ×9, *3* ×4, *1* ×4,
+*2* ×3, *two* ×2; word-boundary, case-insensitive, over the verbatim body) and the bare token
+*level* / *levels* **56 times** — and **never defines any of them**. `A-004` is untouched. What it *does* state is an **expectation attached to each
 level**, and that is new:
 
 | Marker | Words | Level |
@@ -363,6 +364,48 @@ water, 30 minute of the mayo."*
 *mayo* is. **`A-020`'s Required Research route fails for a sixth lesson running**, and it fails
 in a new and more frustrating way: the lesson had both halves of the answer on screen at once and
 did not put them together.
+
+### 9b. THE TRAP FAMILY — ADDED 2026-08-13 AFTER THE COMPREHENSION PROBE FAILED A PREDICTION
+
+> **Provenance of this subsection, stated because it matters.** `05_HOMEWORK/V07/scripts/comprehension_probe.py`
+> item **`R11`** is an *answer-not-known-in-advance* probe. It predicted that V07 does **not**
+> use the compound *"trap move"* — that the compound is a V01/V02 object (`A-002`) and that V07
+> only uses *trap* as a verb and in *"trap candle"*. **The probe FAILED. The prediction was
+> wrong.** The failure is left in the script rather than reworded to pass, and this subsection
+> is what the failure produced. **Nothing in §§1–10 above is retracted** — §10 never claimed the
+> compound was absent — but the material was missed on the first pass and that is recorded here
+> rather than absorbed silently.
+
+The trap family occurs **10 times**, in four distinct senses:
+
+| Marker | Words | Sense |
+|---|---|---|
+| **`[00:14:52]`** | ***"I don't have the one hour chart on here, but a nice good long trap move on the second leg."*** | **The compound `A-002` tracks — and it is attached to a SECOND LEG** |
+| `[00:14:59]` | *"this small trap candle made the decision for me"* | A single candle |
+| `[00:18:33]` | *"Once this closed and gave a nice big trap, this person had a nice, more confident they were right."* | A single candle, on a student's chart |
+| `[00:28:40]` | *"Okay, Mel, trap volume, if you're having a hard time seeing where they would be trapped on"* | The question read aloud |
+| `[00:28:52]` | *"If you were looking to trap traders and punish traders, where would be the ideal place to do it?"* | Verb — the market maker's action |
+| `[00:29:19]` | *"and trap all of those traders in there"* | Verb |
+| `[00:29:29]` | *"trapping with it"* | Verb |
+| `[00:38:13]` | *"Some people look at where the previous level traps were and see if it came down to that level from the previous day."* | **A located object with a history — "previous level traps"** |
+| `[00:44:47]` | *"what the trap candles look like"* | A candle class, listed beside railroad tracks and morning/evening stars |
+
+**Two of these are consequential and neither was in the first draft of these notes:**
+
+1. **`[00:14:52]` attaches *"trap move"* directly to a second leg**, on a chart he is showing as
+   one of his own good trades. `A-049` — *does anyone ever distinguish a stop hunt from a trap
+   move, and on what criterion* — is the project's highest-priority standing research question
+   (`REVIEW_INDEX.md` open item 37), carried into every lesson. **V07 does not distinguish them.
+   It uses *trap move* once, as a description, with no criterion**, and `stop hunt` occurs once
+   (`[00:36:49]`, *"they go back and do an extra stop hunt run and they take you out"*) with no
+   criterion either. **Both terms appear in one lesson, neither is defined, and they are never
+   compared.** `A-049` is **extended with a negative datum and not closed.**
+2. **`[00:38:13]`'s *"previous level traps"*** is a **located, persistent** object — a price
+   where a trap happened on a previous day, used as a reference the next day. That is a
+   different object from a trap *candle* and from the verb, and the lesson attributes it to
+   *"some people"* rather than adopting it. Recorded; **`A-002` is extended, not narrowed.**
+
+---
 
 ---
 

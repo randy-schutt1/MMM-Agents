@@ -3688,3 +3688,251 @@ one. Kept together so the V06 pass is auditable as a unit.
 | **A-038** — the ADR lookback window | `ADR` occurs **3 times** — `[00:02:00]`, `[00:05:45]`, `[00:05:54]` — and is used as the **denominator of a push-size rule** (*"Each push is approximately ADR divided by 3"*, attributed to Steve at `[00:05:50]`). It is printed on frame `V06_00-05-29` in the same form | **Extended, and the stakes raised.** V04's guest used ADR as a gate; V06's uses it as a **sizing unit**. Two guests, two different operational roles, **and still no definition and no lookback anywhere in the corpus.** `D-030` applies with full force: a session that picks an ADR window to make this testable is inventing the rule it then measures. Stays `DO NOT CODE` |
 | **A-036** / **A-045** — "quarter of wood" / `COW` | Spoken twice — *"you have your quarter wood"* `[00:07:34]` (as one of the three named patterns) and *"They threw a quarter wood"* `[00:26:29]` — and printed as **`COW`** on frames `V06_00-18-44`, `V06_00-26-24`, `V06_00-31-30`, `V06_00-36-50`. Also *"It gives me a cow, but I'm sleeping, so I couldn't eat it"* `[00:19:13]` | **Extended; the term's *status* clarified, its *geometry* not.** V06 places `quarter wood` in a **closed list of three admissible entry patterns**, which is the first time the corpus sees it treated as a first-class pattern rather than an aside. It still supplies **no candle count, no proportion, no construction**. `A-045`'s ASR question (*"COW cow is a quart of wood"*) is untouched. Stays `DO NOT CODE` |
 | **A-011** — M and W anatomy | Reported, then rejected, in four seconds: *"Steve says that M or W should be minimum nine candles, right? Thirty to ninety minutes"* `[00:53:03]`–`[00:53:08]`, immediately followed by *"So, there is no such thing as the minimum because if the multi-day or multi-session M or W could be twenty thirty candles, I don't know."* `[00:53:12]`–`[00:53:18]` | **Extended by a datum that arrives and departs in the same breath.** This is the **first candle count ever attributed to the instructor** for M/W — and it is reported by a guest who **immediately disputes its generality**, ending on *"I don't know"*. Under `D-025` a guest cannot close this record; and even setting D-025 aside, a number its own reporter withdraws is not a definition. `A-011` stays exactly where it was. Stays `DO NOT CODE` |
+
+---
+
+## A-055 — `M0` / `M1` / `M2` / `M3`: printed price-level labels, never spoken, never explained
+
+### Course Meaning
+
+Unknown. Four labels printed down the right-hand price scale of a student's chart, beside
+`Pivot` and `ADR High`, in the position MT4 draws horizontal-line labels.
+
+### Evidence
+
+| Video | Timestamp / frame | Evidence |
+|---|---|---|
+| V07 | frame `V07_00-18-25` | `M0`, `M1`, `M2`, `M3` printed on the right-hand panel of a **student's** annotated chart, alongside `Pivot`, `ADR High. 1.44522`, `Pips To HOD 69.4`, `Pips To LOD 37.1`. `M0` sits near the bottom of the visible range and `M3` near the top, i.e. they are **ordered price levels**, not a single line |
+
+`M0`/`M1`/`M2`/`M3` occur **0 times** in V07's audio, and **0 times** anywhere in V01–V06.
+
+### Assessment
+
+**Recorded because it is printed on a chart the lesson shows and discusses**, and because an
+ordered set of price levels is exactly the kind of object that gets silently absorbed into a
+rule later. The presenter never refers to them; the chart is one he is displaying as *"trades
+here that other people did"* `[00:17:44]`, so the labels are the **student's** indicator
+settings, not the programme's.
+
+**Two readings are obvious and neither is adopted:** that `M` stands for a Murrey-math level
+set, or that it is an unrelated user-named line group. **Nothing in this corpus supports
+either**, and importing a framework to explain a label is precisely what `D-008`'s
+external-framework prohibition forbids during the learning phase.
+
+### Current Status
+
+```text
+DO NOT CODE — printed once, on a third party's chart, unexplained by any speaker.
+Do NOT reconcile with any external level system.
+```
+
+### Required Research
+
+Whether any later lesson displays or names `M0`–`M3`, or any ordered `M`-prefixed level set.
+`A-053` (`SS` / `MS`, printed and never spoken) is the same shape and should be checked
+together.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `04_SCREENSHOTS/V07/INDEX.md` frame 17; `03_LESSON_NOTES/V07_SOURCE_NOTES.md` §11b |
+| Related records | `A-053`, `A-029`, `A-018` |
+
+---
+
+## A-056 — "Hi-Lo": a primary entry method the course names, recommends in print, and does not teach
+
+### Course Meaning
+
+Entry at, or within *"a few pips"* of, the day's high or low. Presented as potentially the
+single most valuable entry method available, and deferred to another presenter.
+
+### Evidence
+
+| Video | Timestamp / frame | Evidence |
+|---|---|---|
+| V07 | `[00:07:11]`–`[00:07:12]` | *"High low. Another one."* |
+| V07 | `[00:07:13]` | *"Can this be the holy grail of daily trading?"* |
+| V07 | `[00:07:17]` | *"If you can master high low and get in at the high of the day or the lower day within a few pips, you're going to make pips every day."* |
+| V07 | `[00:07:31]` | *"What other things can we confirm that with so that we can be sure we get in high low?"* — asked, never answered |
+| V07 | `[00:07:38]` | *"**Jim**, I'm going to do a presentation there but he seems to be a master at the high of the day."* |
+| V07 | `[00:07:43]` | *"I like second legs because I can't do that sometimes."* |
+| V07 | `[00:21:04]`–`[00:21:10]` | *"Coupling those entries now, the next level with high low entries to maximize your reward versus your risk is the next level to get you great graphs every time."* |
+| V07 | `[00:21:16]` | *"**Jim** gets great graphs all the time near the high of the day."* |
+| V07 | `[00:38:26]` | *"That's a little more advanced and I think **Jim** covers some of that on how he gets into those entries."* |
+| V07 | frame `V07_00-08-00` | Slide bullet: **"Hi-Lo — Can this be all I need?"** |
+| V07 | frame `V07_00-19-30` | Closing synopsis, printed: *"Couple it with a **Hi-Lo entry** for smaller risk and maximum gain and you will have great trade grabs the majority of the time."* |
+| V07 | frames `V07_00-13-55`, `V07_00-16-20`, `V07_00-18-25` | The MT4 panel prints **`Pips To HOD`** and **`Pips To LOD`** live |
+| V06 | frame `V06_00-48-29` | The DMR curriculum prints **"Hi/Lo Drill"** as a week's topic — i.e. it is taught, in the separate paid programme (`A-042`) |
+
+### Assessment
+
+**This is the `A-039` shape — a component treated as load-bearing and never defined — and it is
+the third instance in the corpus** (TDI `A-039`; the operative detail deferred to the DMR
+`A-042`; now this).
+
+**But it differs from `A-039` in a way that matters and must not be flattened.** TDI cannot be
+tested because nobody has said what it *is*. Hi-Lo's **object** is not ambiguous at all: *high of
+the day* and *low of the day* are arithmetic once a day boundary is fixed, and the chart panel
+prints the distance to them. **What is missing is not a definition but a method of identifying
+the extreme in real time**, which is the entire content of the claim.
+
+**That asymmetry is what made this the only V07 claim testable under `D-030`**, and it was
+tested: `PT-033` / `BT_V07_0001` measures the **ceiling** (95.4% of 17:00-session days in
+2013-01-06 → 2016-06-30 contained a 50-pip run from the day's extreme; 81.0% of midnight days)
+and the **gap to a matched random entry** (+0.29 to +0.37 in hit rate). **That test does not
+close this record and explicitly says so** — it measures what the missing skill is worth, not
+what the skill is.
+
+### Current Status
+
+```text
+DO NOT CODE — the target is computable, the method is absent.
+A high ceiling is NOT support for the claim; it is the precondition for the claim
+being worth anything. See BT_V07_0001.md §8, the mandatory scope statement.
+```
+
+### Required Research
+
+Whether any later lesson — or "Jim" in any recording in this library — states **how** the
+day's extreme is identified before it is known. If no lesson does, the project must record that
+the corpus recommends a method it does not contain. `A-042` is the adjacent record and the
+likely destination.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V07_SOURCE_NOTES.md` §4 |
+| Interpretation | `03_LESSON_NOTES/V07_INTERPRETATION.md` §2.4 |
+| Test | `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-033_hi_lo_ceiling_and_the_untaught_gap.md`; `06_MANUAL_BACKTEST/V07/BT_V07_0001.md` |
+| Related records | `A-039`, `A-042`, `A-004` |
+
+---
+
+## A-057 — "an A pattern": a named pattern distinct from M and W, never described
+
+### Course Meaning
+
+Unknown. Named once, as the pattern to **expect at level one**, in contrast to a second leg.
+
+### Evidence
+
+| Video | Timestamp | Evidence |
+|---|---|---|
+| V07 | `[00:14:07]`–`[00:14:15]` | *"So what do we expect at level one? We expect an **A pattern** or a single leg. We do not expect this."* |
+
+That is the **only** occurrence. The lesson never returns to it.
+
+### Assessment
+
+**The record is opened with an explicit warning that it may not exist.** *"an A pattern"* could
+be ASR garble for *"an M pattern"*, or for the indefinite article plus a pause before a word
+that was not captured. This session **did not reconstruct it**, because reconstructing a pattern
+name from a single ambiguous token is exactly how a fabricated object enters a corpus.
+
+**It is deliberately NOT merged with `A-047` (*"M, A1, A2"*).** That record holds an `A`-prefixed
+object from a **different speaker in a different lesson**, and merging two unexplained `A`s on
+the strength of a shared letter would manufacture a pattern family nobody stated. **The two are
+recorded separately and a future session must resist joining them without evidence.**
+
+**What it does establish, whatever the token turns out to be:** the presenter distinguishes a
+level-one expectation from a level-three expectation **by pattern type**, which is the
+level → expected-pattern mapping recorded in `V07_INTERPRETATION.md` §2.2. That mapping does not
+depend on decoding this word.
+
+### Current Status
+
+```text
+DO NOT CODE — may not be a real term. One occurrence, unrecovered, not reconstructed.
+Do NOT merge with A-047 without independent evidence.
+```
+
+### Required Research
+
+Better audio for `[00:14:10]`, or a second occurrence anywhere in V08–V21. A reviewer with the
+audio open may retire this record in one minute, and that is the cheapest possible next step.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V07_SOURCE_NOTES.md` §5 |
+| Interpretation | `03_LESSON_NOTES/V07_INTERPRETATION.md` §6 item 1 |
+| Related records | `A-047`, `A-011`, `A-004` |
+
+---
+
+## A-058 — "tilted" / "slanted": the geometry on which a whole class of setup is declined
+
+### Course Meaning
+
+A second-leg shape in which the two legs are not level with each other. Used as the criterion
+for **not taking** a setup.
+
+### Evidence
+
+| Video | Timestamp | Evidence |
+|---|---|---|
+| V07 | `[00:30:14]` | *"Some are going to be **tilted** the other way instead of **slanted** down or **slanted** up in your favorite."* |
+| V07 | `[00:31:06]`–`[00:31:16]` | *"Even though the ones that are **tilted sideways away from me** may have high probability, I haven't done enough homework on them to trade them all ways because TDI is going to have shoulder verges in that direction as well in either case."* |
+| V07 | `[00:31:40]` | *"the other three were **tilted W's** like on the CAD or something like that."* |
+
+### Assessment
+
+**This is a rejection criterion, which makes it more consequential than a descriptive term.** A
+trader following V07 declines setups on it. It is stated three times, with three different
+words (*tilted*, *slanted*, *tilted sideways away from me*), and **no angle, no pip difference,
+and no reference line is ever given**.
+
+**The presenter's own reason for declining them is not that they fail** — it is
+*"I haven't done enough homework on them"*, and he explicitly allows that they *"may have high
+probability"*. **That is a statement about his research, not about the market**, and a session
+that converts it into a filter would be encoding one man's incomplete homework as a rule.
+
+Note also that it is stated relative to the **trader's direction** (*"away from me"*, *"in your
+favorite"*), so any future definition has to be signed, not absolute.
+
+### Current Status
+
+```text
+DO NOT CODE — a rejection criterion with no measurable boundary, declined for a reason
+that is explicitly about the speaker's research rather than about the setup.
+```
+
+### Required Research
+
+Whether any lesson gives a slope, a pip tolerance, or a reference line for second-leg
+alignment. `A-044` (what makes a second leg a nameable pattern) and `A-007` (the second leg) are
+the records this would attach to.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Source | `03_LESSON_NOTES/V07_SOURCE_NOTES.md` §6b |
+| Interpretation | `03_LESSON_NOTES/V07_INTERPRETATION.md` §2.3 |
+| Related records | `A-007`, `A-044`, `A-011` |
+
+---
+
+## V07 EVIDENCE ADDED TO EXISTING RECORDS
+
+V07's transcript and its 24 screenshots bear on nine earlier records. **None is closed here.**
+Under `D-033` guest material *may* now close a record — the bar is evidentiary, not speaker
+authority — and **not one of these nine meets it.** Kept together so the V07 pass is auditable
+as a unit.
+
+| ID | V07 evidence | Effect |
+|---|---|---|
+| **A-020** — "mayonnaise" / MA nicknames | **Both halves of the answer appear, minutes apart, and are never joined.** A **colour** is attached to a **period**: *"The only other lines in here, look, this yellow one is a five moving average"* `[00:25:34]`, then *"I made it dotted in the 1350 and the 200"* `[00:25:38]` (the second ASR pass hears *"I made a dot it in the 13 50 and the 200"*, i.e. three periods). **Nicknames** are attached to a **timeframe**: *"The dashed ones like this are 30 minute versions, 30 minute of the water, 30 minute of the male"* `[00:27:24]`, *"the blue heavy ones are 60 minutes"* `[00:27:33]`. Nicknames also at `[00:01:11]` (*"the water of the male"*), `[00:01:14]`, `[00:14:19]`, `[00:17:23]`, `[00:17:36]`, `[00:24:54]`, `[00:32:58]`, `[00:33:02]` | **Extended; the frustration recorded; the record untouched.** This is the **first time in the corpus a colour is attached to a period in genuine audio**, and the first time nicknames are attached to a timeframe. **They are never joined** — no sentence in V07 says what period *water* or *mayo* is, and reasoning probe `R09` in `05_HOMEWORK/V07/scripts/comprehension_probe.py` verifies the non-joining mechanically. `mustard` 0×, `raspberry` 0×, `800` 0×. **Sixth lesson running that this record's Required Research route has failed**, and the first in which the lesson had both halves on screen at once. Stays `DO NOT CODE` |
+| **A-038** — the ADR lookback window | `ADR` spoken twice — `[00:25:21]`, `[00:25:26]` — as a **brown line that changes state when the ADR is met**. And **printed in full** on two frames: `V07_00-13-55` reads `ADR Value= 1081, Reached= No, Today's Range= 732, T's High= 110.451, T's Low= 109.719 / Target High= 110.800, Target Low= 109.370 / To ADR High= 989, To ADR Low= 441`; `V07_00-16-20` reads `ADR Value= 1023, Reached= Yes, Today's Range= 1030` | **Extended by the corpus's most complete ADR evidence yet, and still no lookback.** The two frames give the indicator's **entire printed output in both states**, which mechanises `[00:25:26]`'s *"it turns red when [it's met]"* — `Reached` flips when `Today's Range` ≥ `ADR Value`. **That is an observation about one indicator's display, not a course rule**, and it says nothing about how many days the average is taken over. A third guest, a third operational role (gate in V04, sizing unit in V06, displayed target band here), still zero definitions. Stays `DO NOT CODE` |
+| **A-039** — TDI is a required entry criterion the course has never taught | `TDI` spoken twice: *"[Divergence] on the TDI is always an extra confirmation"* `[00:24:08]` and *"TDI is going to have shoulder verges in that direction as well in either case"* `[00:31:16]`. The `TDI_MMM` sub-panel is visible with three printed values on frames `V07_00-13-55`, `V07_00-19-15`, `V07_00-24-05` | **Extended, and the record's own framing sharpened.** `[00:24:08]` demotes TDI from V04's **necessary** condition to *"an extra confirmation"* — a **fourth** operational role across four speakers. `[00:31:16]` introduces *"shoulder verges"* — ASR for **shoulder divergences** — as a TDI feature, and does not define it. Still no inputs, periods, bands, line names or decision rule. **Displayed, used, and not taught — for the fourth lesson running.** Stays `DO NOT CODE` |
+| **A-032** — "shark fin" | **The first LOCATED instance in the corpus.** Frame `V07_00-18-25`, a student's annotated chart, prints **`SHARK FIN IN TDI`** with a **red box drawn on the TDI sub-panel itself**. The phrase occurs **0 times in V07's audio** | **Extended in the most useful way this record has been extended, and still not closed.** `A-032` has carried the phrase since V03 with no marked instance; there is now a frame that points at one. **Located is not defined**: the box marks a region of an oscillator whose inputs and bands are unknown (`A-039`), on a third party's chart, with no accompanying criterion. It tells a future session **where to look**, not what the shape is. Stays `DO NOT CODE` |
+| **A-044** — what makes a second leg a "nameable pattern" | V07 enumerates **four second-leg GEOMETRIES** and endorses two: *"Some are going to be inducing below the low of the first leg and railroad track back into the range"* `[00:30:05]`; *"Some are going to be tilted the other way"* `[00:30:14]`; *"Some are going to be exactly at the same level and some are going to be exactly the same level where to spike through it and come back into range"* `[00:30:21]`. Endorsed: *"One, it becomes exactly down to the level, pin through it and come back up and give me a confirmed candle in my direction"* `[00:30:44]`; *"And the second one is if it induces below it, it closes below the first leg and railroad tracks right back into the range on the next very next candle"* `[00:30:52]`. Printed corroboration: `V07_00-19-15` reads **"Enter after 2nd leg RR tracks"** | **Extended on a NEW AXIS, and deliberately not merged with V06's.** V06 answered this record with **candle names** (railroad tracks / quarter wood / star); V07 answers with **geometries** (below / tilted / level / pin-through). **These are different axes.** A session that combined them would produce a twelve-cell rule table neither speaker stated — `REVIEW_PROTOCOL.md` §17 failure mode 3. **The record is now extended twice and closed neither time**, and none of V07's four variants carries a measurable boundary. Stays `DO NOT CODE` |
+| **A-002** — "trap move" | Used **once as the compound**, and attached to a **second leg**: *"a nice good long trap move on the second leg"* `[00:14:52]`. Also *"trap candle"* `[00:14:59]`, `[00:44:47]`; *"a nice big trap"* `[00:18:33]`; the verb at `[00:28:52]`, `[00:29:19]`, `[00:29:29]`; and a **new located object** — *"Some people look at where the **previous level traps** were and see if it came down to that level from the previous day"* `[00:38:13]` | **Extended, not narrowed — and found by a failing comprehension probe rather than by the first reading.** `R11` predicted the compound was absent from V07 and was wrong; `V07_SOURCE_NOTES.md` §9b records the correction with its provenance. **No criterion is given for any of the four senses**, and *"previous level traps"* is attributed to *"some people"* rather than adopted. Stays `DO NOT CODE` |
+| **A-049** — stop hunt versus trap move, the standing discriminator question | **Both terms appear in one lesson and are never compared.** *"a nice good long trap move on the second leg"* `[00:14:52]`; *"they go back and do an extra stop hunt run and they take you out and they do a consolidation and give you another pattern"* `[00:36:49]` | **Extended with a NEGATIVE datum, which is what the standing question asked for.** `REVIEW_INDEX.md` open item 37 asks every remaining lesson whether the distinction is ever drawn. **V07's answer is no** — a third speaker uses both terms, neither with a criterion, in the same 48 minutes. Three speakers now: V05 geometric, V06 causal, V07 silent. **The instructor has still never defined either.** Stays `DO NOT CODE` |
+| **A-029** / **A-018** — `R = <number>` labels on shaded boxes | Printed on at least six V07 frames. Values legible at committed resolution: `R = 17.4`, `R = 16.4` (the deck's persistent background chart); `R = 44.2`, `R = 107.9`, `R = 44.3`, `R = 73.2` (`V07_00-13-55`); `R = 18.9`, `R = 65.2`, `R = 38.1`, `R = 78.0` (`V07_00-16-20`); `R = 40.1`, `R = 22.3`, `R = 38.8` (`V07_00-18-25`); `R = 76.8`, `R = 86.7` (`V07_00-19-15`); `R = 50.1` (`V07_00-27-00`) | **Fifth lesson of printed instances; the negative result from V06 holds and strengthens.** V07 states a **target** (50 pips, four times) and **no stop at all**, so again the labels cannot be checked against an R-multiple. **No speaker says the letter `R` aloud in V07.** The values continue to look like **pip ranges of the shaded boxes** rather than multiples of anything — `R = 48.9`-scale numbers on 15-minute boxes — but **that reading is not stated by anyone and is not adopted.** Stays `DO NOT CODE` |
+| **A-042** — the operative detail deferred to the DMR | *"I look at at least the 10 from DMR"* `[00:32:09]`; *"We are going to do the DMR today, Jeff"* `[00:33:56]`; *"Now there is going to be DMR tonight, Whitney"* `[00:34:20]`; and the Hi-Lo deferral to Jim (`A-056`) | **Extended.** The DMR now has a **named 10-pair watchlist** the corpus does not contain, on top of the twelve-week syllabus V06 surfaced. **A new deferral target is added — a whole entry method (`A-056`).** Stays open |
+| **A-004** — "the level" | Used **35 times** as `level <N>` (`three` ×13, `one` ×9, `3` ×4, `1` ×4, `2` ×3, `two` ×2), and the bare token `level`/`levels` **56 times** — and never defined. V07 does something new with it: it attaches an **expected pattern** to each level (`V07_INTERPRETATION.md` §2.2) and uses a level mismatch as a **reason to pass a trade** (`[00:27:47]`–`[00:28:00]`) | **Extended, and the cost of the gap raised.** The record now blocks not just a filter but a documented **prohibition**. Stays `DO NOT CODE` |
