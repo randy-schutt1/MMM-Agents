@@ -8,6 +8,26 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 
 ## STATUS
 
+> ## 📌 UPDATED 2026-08-13 — `C-007` ADDED, A NEW CLASS OF RECORD
+>
+> **Counts in the block below are as at `C-006` and are superseded** (`REMEDIATION_PROTOCOL.md`
+> §2). Current: **RECORDS 7 (`C-001`…`C-007`) · UNRESOLVED 6 · RESOLVED/OTHER 1**.
+>
+> **`C-007` is the first VIDEO-vs-NOTES record**, a class that did not exist until `D-039`
+> admitted the Mauro seminar notes (`MMM-NOTES`) as normative evidence. Prior classes were
+> instructor-vs-instructor, instructor-vs-guest and guest-vs-guest — all *inside* the corpus.
+> `C-007` is the corpus against an admitted account *of* the corpus's method.
+>
+> **The resolution rule for this class is fixed and does not need re-deciding per record**
+> (`D-039`, owner direction *"if at any time the videos contradict the pdf then we can call it
+> out"*): **the recordings win.** Where a lesson is clear it is doctrine and the note is
+> superseded on that point. A divergence is a **mandatory** record, never smoothed away by
+> reading the lesson down to fit the notes.
+>
+> `C-007` itself: the notes enumerate the EMA set as *"the 5, 13, 50 and 200"* and contain **no
+> `800` anywhere in 84 pages**; the corpus has *"blueberry"* in V06 audio, confirmed by the owner
+> as the **800 EMA**. The corpus's 800 stands.
+
 ```text
 RECORDS:         6   (C-001 … C-006)
 LESSONS STUDIED: 7   (V01-V06 COMPLETE; V07 student pass complete 2026-08-13,
@@ -1064,3 +1084,100 @@ reasons are recorded here so the absence is auditable rather than assumed.
 | **C-001** — duration of the move away from the anchor | V07 states no anchor, no duration and no day count. Nothing bears on it in either direction |
 | **C-003** — whether M and W formations can fail | **Tempting and declined.** V07 has two explicit failure cases — *"even though the entry was perfect… It didn't really give us anything out of that trade"* `[00:01:06]`–`[00:01:21]`, and *"the second leg didn't pay out till the next day"* `[00:02:38]`. **Both are about SECOND LEGS, not about M/W formations as such**, and stretching them to fit `C-003` is the error V05 review R2 `M7` charged. Recorded in `V07_SOURCE_NOTES.md` §2 as evidence *bearing on* `C-003`, not as resolving it |
 | **C-004** — London open, 3:30am printed against 4:00 spoken | V07 states **no clock time for any session**: `EST` 0×, and all six candidate boundary times 0× (verified by reasoning probe `R08`). No session clock appears on any of the 24 curated frames either. Bears on it in neither direction — the same negative result V06 returned |
+
+---
+
+## C-007 — The moving-average SET: the corpus uses an `800` the admitted seminar notes do not contain
+
+### Concept
+
+How many moving averages the method uses, and which. The corpus and the newly-admitted seminar
+notes (`D-039`, tagged `MMM-NOTES`) give **different sets**, and the difference is a whole line.
+
+> **Logged under `D-039`'s standing direction**, owner, 2026-08-13: *"if at any time the videos
+> contradict the pdf then we can call it out."* This is the **first** record filed under that
+> direction. It is a **video-versus-notes** divergence, not a speaker-versus-speaker one, so it
+> is a new class for this file — see the Disposition.
+
+### Source A — the corpus
+
+| Field | Value |
+|---|---|
+| Material | V05, V06 audio; V02 term-count sweeps |
+| Evidence | *"blueberry"* spoken **2×** in V06 — `[00:29:48]`, `[00:29:54]` — as a moving-average nickname, alongside *"water"* (4×) and *"mayo"*/*"mail"* (2×). Recorded in `A-020` and in the V06 evidence block of `AUTOMATION_AMBIGUITIES.md` |
+| Owner attestation, 2026-08-13 | ***"800 EMA is the blueberry."*** |
+| Set implied | **At least five lines**, including an **800** |
+
+### Source B — the admitted seminar notes
+
+| Field | Value |
+|---|---|
+| Material | `MMM-NOTES` p.38 (`EXTERNAL_REFERENCE/`), admitted by `D-039` |
+| Evidence | *"The specific EMA's used in Mauro's charts are the **5, 13, 50 and 200** bar EMA's."* Roles given: 5/13 = *"the signal lines"*; 50 = *"the balance line… shows the intraday trend"*; 200 = *"home base defining the longer term trend. Price always returns to home base."* |
+| Corroborating absence | **`800` occurs ZERO times in the whole 84-page document** (verified against `EXTERNAL_Mauro_MMM_seminar_notes_TEXT_EXTRACT.md`). So do the words *blueberry*, *mayo* (except once, see below), *ketchup*, *mustard* |
+| Set implied | **Four lines**, topping out at 200 |
+
+### The nicknames are NOT the contradiction — the set is
+
+This must be stated precisely, because the two things are easy to conflate:
+
+- The **nickname mapping is not in dispute.** The owner has confirmed **Mayo = 200** and
+  **Blueberry = 800**, and the notes independently print ***"Hold the Mayo – 200 Bounce"***
+  (`MMM-NOTES` p.66) in their entry list, which corroborates the *Mayo* half from inside the
+  admitted source.
+- The **contradiction is the existence of an 800 line at all.** The notes enumerate the EMA set
+  explicitly and exhaustively — *"the specific EMA's used… are the 5, 13, 50 and 200"* — and an
+  800 is not merely unmentioned, it is **excluded by an enumeration that claims to be complete.**
+  The corpus has a speaker using an 800 nickname in genuine audio.
+
+### Assessment
+
+**Both can be true, and the likeliest reconciliation is chronology — but that is inference, and
+it is not adopted.**
+
+The notes describe seminars; the recordings are dated **March 2012**. If the 800 entered the
+method after these notes were written — or if the note-taker simply recorded the four lines
+their own chart carried — then there is no conflict in the teaching, only a gap in the account.
+The notes' own framing supports this reading: *"any other rapidly moving pair of EMA's would
+achieve the same goal"* (`MMM-NOTES` p.38) is not the language of a closed, canonical set.
+
+**But `D-039` is explicit that a divergence is a finding, not a tidy-up**, and the agent's
+plausible chronology is exactly the sort of smoothing the direction forbids. Recorded as a
+divergence; the reconciliation is offered as `INFERRED` and is not doctrine.
+
+**Resolution under `D-039`: the recordings win.** The corpus uses an 800 line. Anything built
+from this method must account for it, and a session that adopts the notes' four-line set because
+it is the tidier enumeration would be dropping a line the course's own speakers use.
+
+### What this does and does not do to `A-020`
+
+- **Does not block `A-020`'s closure.** `A-020` asks what the nicknames mean and what periods
+  attach. Both halves are now answered — Mayo = 200 (notes + owner), Blueberry = 800 (owner).
+- **Does mean `A-020` closes on OWNER ATTESTATION, not on the notes and not on the course.** The
+  notes can only carry *Mayo*. See `A-020`'s disposition and `D-039` consequence 5.
+- **Does leave one thing genuinely open**, and it is not this record's to solve: **no period is
+  attached to *water* (50?) or to any other nickname by any speaker in V01–V07**, and the
+  50 = *"balance line"* reading is the notes', not the course's.
+
+### Disposition
+
+```text
+STATUS: OPEN — RECORDED, NOT RESOLVED
+CLASS:  VIDEO-vs-NOTES divergence (the first under D-039)
+RULE:   The recordings win. The corpus's 800 stands.
+```
+
+**Required to close:** a lesson or frame in which the instructor or a guest states the full
+moving-average set, or states the 800's period and role directly. Failing that, this record
+stands permanently as an accurate description of a real difference between the corpus and the
+admitted account of it.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Ambiguity | `A-020` (the nicknames and their periods) |
+| Decision | `D-039` (admission of the notes; the videos-win rule) |
+| Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.4, §9.6; `MMM-NOTES` p.38, p.66 |
+
+---
