@@ -126,8 +126,30 @@ Before / setup / confirm / invalidate / follows, as V07 states them:
 | **Before** | Know the level you are at; wait for the one you are trading (`[00:05:00]`, `[00:27:47]`) |
 | **Setup** | A second leg of one of two accepted geometries (`[00:30:39]`–`[00:31:03]`) |
 | **Confirms** | A confirmed candle in your direction, entered near its close (`[00:30:44]`, `[00:15:58]`); TDI divergence as *"an extra confirmation"* (`[00:24:08]`) |
-| **Invalidates** | Wrong level (`[00:27:47]`); a tilted geometry (`[00:31:06]`); *"if it doesn't do what you expect and your flashcard isn't the same"* (`[00:28:28]`) |
+| **Invalidates** | Wrong level (`[00:27:47]`); a tilted geometry (`[00:31:06]`); *"If it doesn't do what you expect in your flashcard isn't the same"* (`[00:28:31]`) |
 | **Follows** | Little to no drawdown (`[00:08:04]`); ~50 pips (`[00:13:45]` and three more); at level three consider extending (`[00:23:11]`) |
+
+> *(Superseded cell, retained per `REMEDIATION_PROTOCOL.md` §2 — corrected 2026-08-13, V07 R1
+> remediation, open item 63; `V07_REVIEW_R1.md` `M3`, `E01` with co-code `E11`.)*
+>
+> **The Invalidates row previously read:** *"if it doesn't do what you expect **and** your
+> flashcard isn't the same"* (`[00:28:28]`). **Two defects in one citation, both re-derived from
+> `V07_TRANSCRIPT.md` this session rather than taken from the review's prose:**
+>
+> 1. **`in` → `and` inside quotation marks.** `[00:28:31]` reads, literally: *"If it doesn't do
+>    what you expect in your flashcard isn't the same, you may just decide to pass on it."* The
+>    substitution is the *sensible* reading of a garbled ASR passage — which is exactly why it
+>    must not be made silently inside quotation marks. This is the V04 `M2` / V05 `M3` class,
+>    charged a third time.
+> 2. **`[00:28:28]` is the wrong marker.** It exists and carries a **different** sentence —
+>    *"We'll say whether it's something that you will take."* The quoted words fall under
+>    `[00:28:31]`. This is open item 7's class: the neighbouring marker rather than the one the
+>    words belong to.
+>
+> **Materiality to the method: none.** §D's grading does not turn on the word, and
+> `V07_SOURCE_NOTES.md` §6c renders the same passage correctly and has **not** been edited (the
+> review forbids editing it). **What the defect did falsify is §H's own categorical claim** — see
+> the correction recorded there in the same edit.
 
 **Verified as a relation, not a list:** reasoning probes `R04`, `R05`, `R06` and `R10` check that
 the taxonomy is contiguous, that the homework rename precedes the assignment, that the level-one
@@ -209,9 +231,56 @@ against the marker range it is cited to. **20 citation errors were found and cor
 commit.** One citation does not resolve to a transcript marker (`[00:21:35]`, a screenshot
 timestamp) and is declared in both files.
 
-**No quotation mark in any V07 artifact contains a word that is not in the source.** Four
-editorial reconstructions — *"it's met"*, *"the 15 minute"*, *"mayo"*, the 13/50/200 reading —
-were moved **outside** the quotes and labelled as inferred or as the second ASR pass.
+**One quotation in the V07 set contained a word that is not in the source. It was found at R1,
+it is corrected, and no other instance exists.** Four editorial reconstructions — *"it's met"*,
+*"the 15 minute"*, *"mayo"*, the 13/50/200 reading — were moved **outside** the quotes and
+labelled as inferred or as the second ASR pass.
+
+> *(Superseded sentence, retained per `REMEDIATION_PROTOCOL.md` §2 — corrected 2026-08-13, V07 R1
+> remediation, open item 63; `V07_REVIEW_R1.md` `M3`.)*
+>
+> **This paragraph previously opened, unhedged:** *"**No quotation mark in any V07 artifact
+> contains a word that is not in the source.**"* **That sentence was false, by one word.** The
+> falsifying instance is §D's Invalidates cell, which rendered `[00:28:31]`'s *"…**in** your
+> flashcard…"* as *"…**and** your flashcard…"* and cited `[00:28:28]`. It is corrected above,
+> with the superseded text retained there.
+>
+> **A categorical claim that is 238/239 true must be repaired or scoped, not left standing**,
+> because a later session will rely on it rather than re-checking. It is repaired rather than
+> merely scoped, because the exception was verified to be the only one:
+>
+> **Re-verification performed for this correction (not assumed from the review's count).** A
+> fresh mechanical sweep this session over all seven V07 artifacts — `V07_SOURCE_NOTES.md`,
+> `V07_INTERPRETATION.md`, `V07_HOMEWORK.md`, `V07_MASTERY_REPORT.md`,
+> `04_SCREENSHOTS/V07/INDEX.md`, `BT_V07_0001.md`, `PT-033` — matched every `*"…"*` fragment
+> carrying an adjacent `[HH:MM:SS]` citation against the transcript body: **167 marker-cited
+> quotes, and after the §D fix, zero contain a word that is not in the source.** The nine flags
+> the sweep raised were each opened and cleared by hand, and none is a §H exception:
+>
+> | Flag | Disposition |
+> |---|---|
+> | *"Go Trader 4"*, *"Exit +50 pips & 8.57% gain"* (×2), the `V07_00-04-00` bullet slide | **Printed** slide/chart text, labelled `PRINTED` at the point of use. Printed source is source |
+> | *"And so I have 12 pairs that I look at."* (`[00:38:19]`) | A **V04** quote at a **V04** marker, labelled as such in the same sentence — declared in advance in the transcript header's own sweep block |
+> | *"essentially every day"* (`V07_HOMEWORK.md`) | **The student's own first reading**, framed as *"my first reading was that the answer is…"*. Not a source quote |
+> | *"an M pattern"* (`[00:14:10]`) | A **hypothesised ASR alternative** — *"could be ASR garble for…"* — offered as a candidate, not asserted as the source's words. `A-057` logged rather than reconstructed |
+> | *"tell the whole story"* (`[00:00:32]`) | **Every word is in the spoken source** (*"do they tell us the whole story?"*) **and the string is verbatim in the printed source** — slide `V07_00-00-35`, *"But do they tell the whole story?"*. An un-elided partial, not a substituted word; outside this sentence's class either way |
+> | *"…I made it dotted in the 13, 50 and the 200"* (`[00:25:44]`) | Elision marked with an explicit `…`, and the reading is the declared second ASR pass |
+>
+> **Re-running that sweep now returns a higher raw count, and this is expected, not a
+> regression.** The superseded-text blocks this remediation added — this one and §D's — **quote
+> the defective renderings verbatim on purpose**, because `REMEDIATION_PROTOCOL.md` §2 requires
+> the old text to be retained rather than deleted; the cleared-flag table just above re-quotes
+> them too. Those re-quotations are what the extra hits are. **The measurement stated here is
+> over the artifact text as it stood when the defect was found; the corrections themselves are
+> not new defects.**
+>
+> **`N2` folded in as the review directed** (*"do not refresh it as a separate task; fold it in
+> whenever §H is next edited"*): the *"163 citations"* figure in this section's opening paragraph
+> **was true when measured and is now stale** — §9b of `V07_SOURCE_NOTES.md`, the trap-family
+> subsection, was added *after* that sweep ran, in response to probe `R11`'s failure, and carries
+> citations of its own. Current counts for that file: **190 occurrences, 171 distinct**
+> (182 / 168 excluding §11). The 163 is left in place above as the record of what the pre-commit
+> sweep actually covered.
 
 **Orphan rules: none.** Every statement in the interpreted-rules table has a marker, and eight of
 the ten carry an explicit `D-030` blocker.

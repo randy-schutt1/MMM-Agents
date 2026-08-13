@@ -417,16 +417,41 @@ falsify them cheaply. All counts are word-boundary over the 7,436-word verbatim 
 | Absent | Count | Note |
 |---|---|---|
 | Any session clock | `EST` **0**, and **0** occurrences of any of `7:00`, `3:00`, `3:30`, `9:00`, `9:30`, `5:00` | `Asian` 1×, `London` 2×, `New York` 1× — all as the setting of one chart |
-| Peak formation | `peak formation` **0**, `PFH` **0**, `PFL` **0** | *"the peak"* is used 4× as a location (`[00:00:26]`, `[00:03:18]`, `[00:03:20]`, `[00:14:02]`, `[00:16:44]`) and never defined |
+| Peak formation | `peak formation` **0**, `PFH` **0**, `PFL` **0** | *"the peak"* is used **5×** as a location (`[00:00:26]`, `[00:03:18]`, `[00:03:20]`, `[00:14:02]`, `[00:16:44]`) and never defined *(count corrected 2026-08-13, R1 item 62 — the row said `4×` while listing five markers; the marker list was right and is unchanged)* |
 | The 5/13 cross | `5/13` **0**, `M15` **0** | `EMA` occurs twice, both in the stair-step Q&A |
 | A stop distance | `10-15` **0**, `10 to 15` **0**, `HOD` **0**, `LOD` **0** | `stop loss` 1×, `[00:09:44]`, with no number |
 | A risk:reward ratio | `1:3` **0** | *"risk"* 7× and *"reward"* 4×, always qualitatively |
 | Shark fin, spoken | `shark fin` **0**, `volatility band` **0** | It is **printed** on a chart — §11b |
 | MA nicknames from the fabricated template | `mustard` **0**, `mayo` **0** (the audio only garbles it to *mail*/*male*), `raspberry` **0**, `800` **0** | |
 | GBP/USD | **0** | The project's primary instrument (`D-007`) is not used in this lesson at all |
-| A definition of *level* | — | 26 uses, no definition. `A-004` untouched |
+| A definition of *level* | — | **56 uses** (`level` 53 + `levels` 3), no definition. `A-004` untouched *(count corrected 2026-08-13, R1 item 61 — the row said `26 uses`, which matches no measurement of the object; §5 of this file already said 56 and was correct)* |
 | A definition of TDI | — | 2 uses, no inputs, no periods, no bands. `A-039` extended, not closed |
 | An ADR lookback | — | `ADR` 2× spoken and printed twice on charts; no lookback. `A-038` untouched |
+
+> *(Superseded cells, retained per `REMEDIATION_PROTOCOL.md` §2 — corrected 2026-08-13, V07 R1
+> remediation, open items 61 and 62; `V07_REVIEW_R1.md` `M1` and `M2`, both `E20` count class.)*
+>
+> **`M1` — the *level* row previously read:** *"| A definition of `level` | — | **26 uses**, no
+> definition. `A-004` untouched |"*. **26 matches no measurement of the object.** Re-derived from
+> the verbatim body this session, not taken from the review's prose: `level` **53** + `levels`
+> **3** = **56**; the `level <N>` compound form is **35**; entries containing the token are
+> **44**. **§5 of this file already stated 56 and was correct** — the file held one right record
+> and one wrong record for the same object, fourteen sections apart (the V05 `M4`
+> intra-corpus-disagreement class layered on the count class). §5 is **not** edited. **The row's
+> conclusion is unaffected and, if anything, understated:** *level* is used constantly and never
+> defined, and `A-004` remains untouched. No other artifact cites 26.
+>
+> **`M2` — the *"the peak"* row previously read:** *"…is used **4×** as a location
+> (`[00:00:26]`, `[00:03:18]`, `[00:03:20]`, `[00:14:02]`, `[00:16:44]`)…"* — **four, while
+> listing five markers**, so the row was internally inconsistent on its own face. Re-derived this
+> session: **5 occurrences, at exactly the five markers already listed.** The marker list was
+> right and is unchanged. The `peak formation` / `PFH` / `PFL` zero counts were correct and are
+> unchanged, and the row's conclusion is unaffected.
+>
+> **Why both were charged rather than waived:** this section's own preamble invites the check —
+> the counts are *"stated as measured negatives so a later session does not go looking, and so a
+> reviewer can falsify them cheaply."* A reviewer took the invitation and two cells falsified.
+> **No conclusion in §10 moves.**
 
 ---
 

@@ -4523,3 +4523,92 @@ working tree throughout the review and its files were read for context and **not
 Student remediation of open items 61–63, then **V07 R2**. `CUMULATIVE_25.md` should pick
 up the `E20` count class (now at seven instances), the `A-039`/`A-056` untaught-component
 pattern, and the day-boundary decision gap `PT-033` exposed.
+
+---
+
+## 2026-08-13 — Remediation Session (V07 R1 items 61–63) — the three MINORs applied on a dedicated branch
+
+**Process note, stated up front.** This session authored **no** V07 artifact and performed
+**no** review. It applied the three corrections `V07_REVIEW_R1.md` §15 requires and stopped.
+**Nothing here is self-certified:** `D-003` reserves verification to an independent reviewer,
+so all three open items move to `APPLIED — PENDING VERIFICATION at R2`, never to `CLOSED`.
+
+**Branch isolation, per `D-038` (adopted earlier the same day).** Work was done on
+`fix/v07-r1-minors`, branched from the integration branch after a `git fetch` with a clean
+tree and zero divergence (`0 0` against `origin`). **Merge-back was deliberately not
+performed** — `D-038` makes integration its own single-threaded act, and it is the owner's.
+
+### Item 61 (`M1`, `E20` count class) — APPLIED
+`03_LESSON_NOTES/V07_SOURCE_NOTES.md` §10's *level* row: **26 uses → 56 uses**
+(`level` 53 + `levels` 3). **Re-derived from the verbatim body this session, not taken from
+the review's prose** — the `level <N>` compound form is 35 and entries containing the token
+are 44, so 26 matches no measurement of the object. **§5, which already said 56, was NOT
+edited**, as the review requires. The row's conclusion is unaffected and was already
+understated: *level* is used constantly and never defined; `A-004` remains untouched.
+
+### Item 62 (`M2`, same class) — APPLIED
+Same file, same table, the *"the peak"* row: **4× → 5×**. Re-measured this session at exactly
+the five markers the row already listed (`[00:00:26]`, `[00:03:18]`, `[00:03:20]`,
+`[00:14:02]`, `[00:16:44]`) — **the marker list was right and is unchanged**, and the
+`peak formation` / `PFH` / `PFL` zero counts are unchanged. The row no longer contradicts
+itself on its face.
+
+### Item 63 (`M3`, `E01` + co-code `E11`) — APPLIED
+`07_MASTERY_REPORTS/V07_MASTERY_REPORT.md` §D, the Sequence table's **Invalidates** cell.
+Both defects fixed in one edit, re-derived from `V07_TRANSCRIPT.md`:
+
+- **The quotation** now reads *"If it doesn't do what you expect **in** your flashcard isn't
+  the same"* — the transcript's literal wording. The previous *"**and** your flashcard"* was
+  the *sensible* reading of a garbled ASR passage, which is exactly why it must not be made
+  silently inside quotation marks (V04 `M2` / V05 `M3` class, third instance).
+- **The citation** now reads `[00:28:31]`. `[00:28:28]` exists and carries a **different**
+  sentence — *"We'll say whether it's something that you will take."*
+
+**§H repaired rather than merely scoped, and the repair was earned.** The falsified sentence
+— *"No quotation mark in any V07 artifact contains a word that is not in the source"* — now
+states that one such quotation existed, was found at R1, and is corrected. Before re-asserting
+a clean claim, a **fresh sweep was run this session rather than trusting the reviewer's 239**:
+every `*"…"*` fragment carrying an adjacent `[HH:MM:SS]` citation across all seven V07
+artifacts was re-matched against the transcript body — **167 marker-cited quotes, and after
+the §D fix, zero contain a word that is not in the source.** The nine flags raised were each
+opened by hand and cleared, none a §H exception:
+
+| Flag | Disposition |
+|---|---|
+| *"Go Trader 4"*, *"Exit +50 pips & 8.57% gain"* (×2), the `V07_00-04-00` bullet slide | **Printed** slide/chart text, labelled `PRINTED` at the point of use — printed source is source |
+| *"And so I have 12 pairs that I look at."* (`[00:38:19]`) | A **V04** quote at a **V04** marker, labelled as such and declared in advance in the transcript header's sweep block |
+| *"essentially every day"* | **The student's own first reading**, framed as such. Not a source quote |
+| *"an M pattern"* (`[00:14:10]`) | A **hypothesised ASR alternative** (*"could be ASR garble for…"*), offered as a candidate. `A-057` logged rather than reconstructed |
+| *"tell the whole story"* (`[00:00:32]`) | Every word is in the spoken source (*"do they tell **us** the whole story?"*) **and the string is verbatim in the printed source**, slide `V07_00-00-35`. An un-elided partial, not a substituted word — outside the sentence's class either way |
+| *"…I made it dotted in the 13, 50 and the 200"* (`[00:25:44]`) | Elision marked with an explicit `…`; the reading is the declared second ASR pass |
+
+**`N2` folded into the same edit as the review directed** (*"do not refresh it as a separate
+task"*): §H's *"163 citations"* is now recorded as **true when measured and since gone stale**
+— 190 occurrences / 171 distinct (182 / 168 excluding §11) — with the cause named, §9b having
+been added after the sweep ran in response to probe `R11`'s failure. The 163 is left in place
+as the record of what the pre-commit sweep actually covered.
+
+**`V07_SOURCE_NOTES.md` §6c was NOT edited**, as the review requires — it renders the same
+passage correctly.
+
+### Superseded text, retained at all three sites
+Per `REMEDIATION_PROTOCOL.md` §2 and the convention prior rounds established (V05 R1 `M4`,
+V06 R1/R2), **no incorrect text was deleted**. Each correction carries the old wording
+verbatim in a dated block naming the round, the open item and the finding: one block beneath
+§10's table covering `M1` and `M2` together, one beneath §D's table, one inside §H. A note in
+§H records that **re-running the sweep now returns a higher raw count precisely because those
+retained blocks re-quote the defective renderings on purpose** — expected, not a regression.
+
+### Explicitly NOT done, per `V07_REVIEW_R1.md` §15
+No re-run of `PT-033`, the sensitivity, the cross-check or any homework script (all reproduce
+bit-exactly). No git history rewritten for `I-009`. **`R11` left failing in the committed
+tree.** No re-review, no certification, no merge to the integration branch.
+
+### Verification before commit
+`python3 scripts/validate_project.py` — clean. Explicit paths staged; `git diff --staged`
+read in full before committing.
+
+### Next
+**V07 R2** — an independent reviewer verifies items 61–63. Owner merges `fix/v07-r1-minors`
+as a separate deliberate act per `D-038`. Open item 36 (dimension B vocabulary) remains owed
+and is untouched by this remediation.
