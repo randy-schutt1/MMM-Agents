@@ -11,13 +11,79 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  0
+VIDEOS IN PROGRESS:  1  (V07 — STUDENT PASS COMPLETE 2026-08-13, submitted as
+                        REVIEW REQUIRED, AWAITING INDEPENDENT REVIEW R1)
 VIDEOS PASSED:       6  (V01, V02, V03, V04 — V04 PASS at R2, COMPLETE;
                         V05 — PASS at R3 2026-08-12, COMPLETE;
                         V06 — PASS at R2 2026-08-13, COMPLETE)
-NEXT LESSON:         V07 — GATE OPEN under D-024 (V06 carries a reviewer PASS
-                     with 0 CRITICAL / 0 MAJOR). NOT YET STARTED.
-CURRENT LESSON:      **V06 — "MICRO DAILY TRENDS". REVIEWED 2026-08-13 (R2):
+NEXT LESSON:         V08 — **GATE CLOSED.** V07 carries a STUDENT status only, and
+                     D-004 opens a gate on a REVIEWER verdict, never on a student
+                     submission. No V08 artifact of any kind until V07 R1 returns;
+                     what it returns then governs per D-024.
+CURRENT LESSON:      **V07 — "BEST TRADE GRABS". STUDENT PASS COMPLETE 2026-08-13,
+                     submitted as REVIEW REQUIRED (not PASS). AWAITING REVIEW R1.**
+
+                     THE V07 GATE WAS VERIFIED OPEN IN REVIEW_INDEX.md BEFORE ANY
+                     V07 ARTIFACT WAS CREATED. D-004 satisfied outright on V06's
+                     own PASS — not a D-024 minors-only opening.
+
+                     TITLE AND SESSION DATE COME FROM INSIDE THE RECORDING for the
+                     first time in this corpus: the title slide prints "Best Trade
+                     Grabs / MMFx Breakout Session 03-26-2012" (frame
+                     V07_00-00-10). The quarantined NOTES.md calls the lesson
+                     "Time Mapping, Session Overlaps & Peak Formation Tracking",
+                     which is fabricated (Q-008).
+
+                     THIRD CONSECUTIVE LESSON WITH ZERO COURSE-AUTHOR RUNTIME
+                     (V05, V06, V07). Speaker identification was step one, before
+                     any note: "Steve" occurs twice, both third-person, and one of
+                     them queues Steve as the NEXT QUESTIONER. Under D-033 that
+                     does not demote anything — the material is normative at equal
+                     weight — but D-030 still blocks 8 of the 10 interpreted rules.
+
+                     WHY REVIEW REQUIRED AND NOT PASS — two dimensions, both named:
+                     (1) DIMENSION B (Recognition) is D-030-blocked, as V06's was,
+                     and the project still has no vocabulary for that disposition
+                     (REVIEW_INDEX.md open item 36 is the live proposal). This is
+                     the THIRD lesson to hit it.
+                     (2) DIMENSION F carries one NOT APPLICABLE — practise on a
+                     demo account — that a reviewer may reasonably overturn to
+                     DEFERRED, as V01 R1 overturned two of eight.
+
+                     WHAT V07 CONTRIBUTES: the base-rate objection stated from
+                     INSIDE the course ("M's and W's are everywhere… how do we
+                     differentiate which ones work"), which is D-026's own argument
+                     made by a speaker who now carries normative authority; the
+                     first level -> expected-pattern mapping, used as a reason to
+                     PASS trades; the first four-way second-leg GEOMETRY taxonomy,
+                     two endorsed and one declined for want of research; "Hi-Lo"
+                     named as a primary method, recommended in print, and never
+                     taught (A-056); and a student asking on the record whether all
+                     the DMR speakers agree about second legs, and not being told
+                     that they do.
+
+                     FIRST TEST IN THE PROJECT TO REACH THE PRE-REGISTERED
+                     HISTORICAL WINDOWS. PT-033 / BT_V07_0001 ran on the HistData
+                     corpus D-036a landed the same day: 904-1,087 days of GBP/USD,
+                     2013-01-06 -> 2016-06-30, wholly inside DEVELOPMENT, holdout
+                     never on disk. Verdict INDETERMINATE under the pre-registered
+                     rule. Two findings that were not the question asked: O2
+                     collapses into O1 at perfect hindsight, and THE DAY BOUNDARY
+                     MOVES THE RESULT BY ~14 POINTS while the D-031 timezone arm
+                     does not — corroborated by a second vendor whose day boundary
+                     falls between the two tested.
+
+                     ⚠ I-009 RECURRED AGAINST THIS SESSION'S WORK. A concurrent
+                     session committing in the same working tree swept
+                     02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md — staged by this session
+                     — into 8785c41, a commit about the HistData corpus. No content
+                     lost; authorship and message wrong. NOT rewritten: rewriting
+                     shared history while another session is active is worse than
+                     the defect. Recorded in LOG.md and in the mastery report's
+                     escalations.
+
+                     ---- V06, retained ----
+                     **V06 — "MICRO DAILY TRENDS". REVIEWED 2026-08-13 (R2):
                      PASS, confidence HIGH, 0 CRITICAL / 0 MAJOR / 0 MINOR
                      open. V06 IS COMPLETE (D-004). THE V07 GATE IS OPEN.**
 
@@ -704,6 +770,67 @@ V04 GATE:            **OPEN on V03's own PASS as of V03 R3, 2026-08-10 (D-004
                      currently the only thing holding the gate.
 
 
+V08 GATE:            **CLOSED.** V07's student pass is complete and submitted as
+                     REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
+                     verdict, not a student submission — "a student PASS never
+                     advances the course by itself; it is a submission"
+                     (MASTERY_STANDARD.md). No V08 artifact of any kind may be
+                     created until V07's R1 returns, and what it returns then
+                     governs per **D-024**: PASS or a minors-only REVISE opens this
+                     gate; any CRITICAL or MAJOR keeps it closed until fixed AND
+                     re-reviewed.
+                     Note for whoever holds this next: the D-004 gate has been
+                     breached twice in this project's history and REVIEW_INDEX.md
+                     open item 9 remains OPEN precisely because a written gate with
+                     no enforcement is what failed. The validate_project.py
+                     pre-flight guard is still unimplemented, so this block is
+                     currently the only thing holding the gate.
+
+V07 GATE:            **OPEN on V06's own PASS: V06 R2, 2026-08-13 — PASS,
+                     0 CRITICAL / 0 MAJOR / 0 MINOR. V06 is COMPLETE (D-004).**
+                     No override was needed and none was used: the gate was verified
+                     OPEN in 18_REVIEW/REVIEW_INDEX.md before any V07 artifact was
+                     created.
+                     Carry into V08, and read this before starting it:
+                     (a) **SPEAKER IDENTIFICATION IS STILL THE FIRST STEP.**
+                     Course-author runtime across the corpus so far runs ~100%
+                     (V03) -> ~31% (V04) -> 0% (V05) -> 0% (V06) -> **0% (V07)**.
+                     Three consecutive lessons with no course author. **V08 AND V09
+                     SHARE V07's 2012-03-26 SESSION DATE**, so a coach-led block is
+                     the working hypothesis and the same is a live possibility for
+                     both. Tag first; do not assume in either direction. The
+                     acoustic screen at 05_HOMEWORK/V06/scripts/f0_profile.py
+                     detects a handover INSIDE a file and must NOT be used to
+                     identify a speaker ACROSS files — that prohibition was observed
+                     in V07 and must be again.
+                     (b) **THE DATA SITUATION CHANGED ON 2026-08-13.** D-036a landed
+                     a checksummed HistData GBP/USD M1 corpus covering
+                     2013-01-01 -> 2016-06-30, with both D-031 arms prebuilt and a
+                     QA gate (qa_histdata_m1.py) that is a PRECONDITION on every
+                     run. V07's BT_V07_0001 is the first test to use it. Every
+                     future backtest should, and must cite the QA report.
+                     (c) **THE DAY BOUNDARY IS AN UNMADE DECISION AND IT MOVES
+                     RESULTS.** PT-033 found a ~14-point swing between a 17:00
+                     session day and a midnight day, against ~0 from the D-031
+                     timezone arm. The project has a standing two-arm rule for the
+                     TIMEZONE (D-031) and none for the DAY. Recommend the owner
+                     consider one; V07 did not make it, and ran both.
+                     (d) **A-049 / C-006 IS STILL THE STANDING QUESTION.** Three
+                     speakers have now used "stop hunt" and "trap move" without a
+                     criterion, and V07 uses BOTH in one lesson without comparing
+                     them. The instructor has still never defined either.
+                     (e) **THE NOTES.md / VISUAL_INDEX.md AUDIT IS STILL
+                     PER-LESSON.** RULES.md is discharged in one step (Q-007), but
+                     V07 found a FOURTH distinct VISUAL_INDEX.md failure mode — the
+                     Camtasia player's own splash logo, 267x51 and 137x14 pixels,
+                     indexed as "EMA Dynamic Support & Resistance" and "TDI Blood in
+                     the Water Setup" (Q-008). Four lessons, four ways of being
+                     wrong. Do not assume uniformity.
+                     (f) **I-009 IS LIVE ON THIS MACHINE.** A concurrent session
+                     swept a V07 file into its own commit (8785c41). Commit your own
+                     work promptly and in small chunks; do not assume the index is
+                     yours alone.
+
 V06 GATE:            **OPEN on V05's own PASS: V05 R3, 2026-08-12 — PASS,
                      0 CRITICAL / 0 MAJOR / 0 MINOR. V05 is COMPLETE (D-004).**
                      No override was needed and none was used: the gate was verified
@@ -857,7 +984,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ✅ | ✅ | ✅ | ✅ | ⏸ | REVIEW REQUIRED (resub) | ✅ R1 REVISE (0C/0M/7m) → **R2 PASS** | **COMPLETE** |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ✅ | ✅ | ✅ | ⚠️ | 🚫 | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R1B REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
-| V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V10 | Wk3 | 01:36:16 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -1067,7 +1194,7 @@ points are set once the real lesson count is known at ingestion.
 | Phase | Name | Status |
 |---|---|---|
 | 0 | Environment | ✅ Complete |
-| 1 | Student | 🔄 In progress — V01 **PASS** (R3); V02 **PASS** (R3); V03 **PASS** (R3); V04 **PASS** (R2); V05 **PASS** (R3); **V06 AWAITING REVIEW R1**, gate for V07 governed by D-024 |
+| 1 | Student | 🔄 In progress — V01 **PASS** (R3); V02 **PASS** (R3); V03 **PASS** (R3); V04 **PASS** (R2); V05 **PASS** (R3); V06 **PASS** (R2), COMPLETE; **V07 AWAITING REVIEW R1**, gate for V08 CLOSED until it returns (D-004/D-024) |
 | 2 | Scholar | Not started |
 | 3 | Expert (Master Spec) | Not started |
 | 4 | Formalizer (Machine Spec) | Not started |

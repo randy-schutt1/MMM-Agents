@@ -4267,3 +4267,137 @@ closed, E20 M5 entry, R2 severity delta + totals); this entry.
 
 ### Next Review Trigger
 V07 student pass (gate open); `CUMULATIVE_25.md` at its threshold.
+
+---
+
+## 2026-08-13 — Student Session (V07)
+
+### Lesson
+**V07 — "Best Trade Grabs"** (`Bootcamp1 Wk2 032612 Part2 (48mins).swf`, 00:48:06).
+**Title and session date established from inside the recording** — the title slide prints
+*"Best Trade Grabs / MMFx Breakout Session 03-26-2012"*. First lesson in this corpus whose
+**date** is printed rather than inferred from a filename.
+
+### Gate
+**Verified OPEN in `18_REVIEW/REVIEW_INDEX.md` before any V07 artifact was created** —
+*"V06 — PASS at R2 2026-08-13, COMPLETE … V07 gate OPEN."* `D-004` satisfied outright.
+
+### Speaker — step one, before any note
+**100% `GUEST`. Zero course-author runtime — the third consecutive lesson** (V05, V06, V07).
+Four independent lines: `Steve` occurs exactly twice, both third-person, one of them queueing
+Steve as the **next questioner**; `Jim` three times, third-person, credited with a method the
+presenter says he cannot do; the staff first-person-plural voice about the DMR; and a flat F0
+profile (median 142.9 Hz, sd 6.4 across 25 two-minute blocks, no step). **The acoustic screen
+was used only for in-file handover detection** — `COURSE_PROGRESS.md`'s V06 GATE item (a)
+prohibition on cross-file use was observed.
+
+Under **`D-033`** the tag records who spoke and does **not** demote. Under **`D-030`**, 8 of the
+10 interpreted rules remain blocked.
+
+### Work performed
+- **Transcript.** `I-008` all four criteria **PASS**: 539 markers strictly increasing, zero
+  duplicates, largest gap 19 s; duration triangulated three ways (audio 2886.95 s, SWF header
+  8,661 ÷ 3.0 = 2887.00 s, manifest 2886 s); five 60-second Whisper `small.en` windows match
+  near-verbatim; the file preserves its own mishearings (**five different spellings of one
+  student's name**); it carries none of the 21-lesson fabrication template. Adopted.
+- **Quarantine — `Q-008`.** `RULES.md` **not re-derived** (cited to `Q-007`'s mechanical
+  discharge, as `Q-007` authorizes). `NOTES.md` and `VISUAL_INDEX.md` audited individually and
+  **both fabricated**. The index claims 7 screenshots; there are **5 files** (two byte-identical
+  pairs by SHA-256) and **2 distinct screens**. Entry 004, described as *"50 EMA (Mayo) and 200
+  EMA (Blueberry) reaction bounces"*, is a 267×51 image of the words **"Camtasia Studio"**;
+  entry 005, *"TDI Blood in the Water Setup"*, is a 137×14 image of **"Camtasia Studio 6"**.
+- **Screenshots.** 24 curated frames, Ruffle 10× sweep (588 frames). **`D-022` was load-bearing,
+  not ceremonial**: five other sessions' HTTP servers were listening on this machine when the
+  port was chosen. Two visual hazards measured and written up — every slide renders
+  semi-transparent over a persistent MT4 chart (cause **not** determined and not claimed), and
+  two frames are partial repaints keeping the background's outer strips.
+- **Notes.** Source notes and interpretation, **every quote machine-verified** against the
+  marker range it is cited to. **20 citation errors found and corrected before commit.** Four
+  editorial reconstructions moved outside the quotation marks.
+- **Homework.** The assignment (`[00:12:09]`, *"How many times over a year…"*) performed on the
+  new corpus. **First attempt preserved and it was misleading** — 2015 alone returned 0.996,
+  which disagreed with `PT-033`'s wider-window 0.954 and prompted the year-by-year run:
+  **2013 0.981, 2014 0.861, 2015 0.996 — the answer moves 12–14 points depending on the year
+  chosen.** Seven SVG flashcards built (the artifact the slide defines), positives at an even
+  stride and the single negative retained.
+- **Manual backtest.** `PT-033` pre-registered and **committed at `81f9ae4` before the runner
+  existed**; `BT_V07_0001` run on `D-036a`'s HistData corpus. **The first test in this project
+  to reach the pre-registered historical windows.**
+- **Comprehension probe.** 75 items across three batteries (45 positive, 16 negative, 14
+  reasoning). **74 pass, 1 fails and stays failing.**
+
+### Findings
+1. **`PT-033` verdict: `INDETERMINATE`** under its own pre-registered rule (cells 0.9535 /
+   0.8096 / 0.8462 / 0.8086 straddle the 0.95 boundary). **My pre-registered prediction
+   (`OVERSTATED`, 0.70–0.90) was part right and part wrong**, and is scored as such.
+2. **`O2` collapses into `O1`.** At perfect hindsight, *"was a 50-pip run available today"* and
+   *"did the day have 50 pips of range"* agree to three decimals in every cell. The claim's
+   whole content is *"most days have 50 pips in them"*.
+3. **The day boundary is load-bearing (~14 points); the `D-031` timezone arm is not.** A
+   pre-registered drop rule interacted with Arm B to create 118 one-hour Friday stub days;
+   removing them moves `B · D-SESSION` from 0.8462 to 0.9546, matching Arm A. **Disclosed as a
+   post-hoc sensitivity, labelled, reported alongside the headline. `PT-033` not edited. Verdict
+   unchanged either way.**
+4. **The untaught skill is worth +0.29 to +0.37** in hit rate against a matched random entry.
+   The rule arm's percentile within `N1` is 100.0 **and means nothing** — `PT-033` §4 said so
+   before the numbers existed.
+5. **Comprehension probe `R11` FAILED.** It predicted V07 never uses the compound *"trap move"*.
+   It does — once, `[00:14:52]`, **attached to a second leg**. That bears on `A-049`, and the
+   first pass of the source notes had missed it. `V07_SOURCE_NOTES.md` §9b is what the failure
+   produced; the failing probe is retained rather than reworded.
+6. **A student names the inter-presenter divergence out loud** — *"Do all the DM[R] speaker[s]
+   agree on this?"* `[00:29:49]` — and **is not told that they do**. Verified mechanically by
+   reasoning probe `R07`.
+7. **`A-020` fails its Required Research route for a sixth lesson running**, and fails it while
+   the lesson has both halves on screen: a **colour** attached to a **period** (`[00:25:34]`) and
+   **nicknames** attached to a **timeframe** (`[00:27:24]`), never joined.
+
+### Registers
+- **`10_AMBIGUITIES`:** four new records — **`A-055`** (`M0`–`M3` printed level labels),
+  **`A-056`** (Hi-Lo, named and untaught), **`A-057`** (*"an A pattern"*, opened with a warning
+  it may be ASR garble, **deliberately not merged with `A-047`**), **`A-058`** (*"tilted"* /
+  *"slanted"*). **Nine existing records extended, none closed** — under `D-033` a guest *can*
+  now close one; the bar is evidentiary and not one of the nine meets it. `A-032` gains its
+  **first located instance** in the corpus; `A-044` is extended on a **new axis** (geometry,
+  where V06 gave candle names) and the two are **deliberately not merged**.
+- **`11_CONTRADICTIONS`:** **no new record.** One candidate — V04's *"12 pairs"* against V07's
+  *"the 10 from DMR"* — **checked and rejected** (different objects). `C-005` and `C-006`
+  extended and **neither adjudicated** (`D-003`, and `D-033`'s own instruction). `C-001` and
+  `C-004` struck off as negative; `C-003` declined deliberately.
+- **`00_SYSTEM/QUARANTINE_REGISTER.md`:** `Q-008`.
+- **`08_CONCEPT_LIBRARY`:** **not updated, and stated rather than omitted** in the mastery
+  report's checklist. Every concept V07 adds is `D-030`-blocked, and the library takes
+  definitions. Fourth lesson to leave this box unchecked (V04 R1 `M7`).
+
+### ⚠ Process — `I-009` recurred, against this session's work
+A **concurrent session** committing in the same working tree swept
+`02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` — staged by this session, not yet committed — into
+**`8785c41`**, a commit about the HistData corpus. **No content was lost; the authorship and the
+commit message are wrong.** That session recorded the same class of event against itself in the
+same commit. **Not rewritten:** rewriting shared history while another session is actively
+committing is worse than the defect. Recorded here, in the mastery report's escalations, and in
+`COURSE_PROGRESS.md`'s V07 GATE carry-forward (f). Mitigation adopted mid-session: commit own
+work promptly, in small explicit-path chunks, and re-`fetch` before every push.
+
+### Verification before commit
+Every marker citation and every quoted string in the transcript header, source notes,
+interpretation and the new ambiguity records checked programmatically against the transcript
+body — **0 mismatches at commit**, after 20 citation errors and 4 quote-integrity issues were
+corrected. Comprehension probe run. `validate_project.py` clean.
+
+### Git
+`02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` *(swept into `8785c41` — see above)*; `aedffbb`
+screenshots + `INDEX.md`; `a237220` `Q-008`; `83a3171` source notes + interpretation; `81f9ae4`
+`PT-033` pre-registration; `a5ae7dc` `BT_V07_0001` + runner + sensitivity + cross-check;
+`450d1ff` homework; `a5369d1` comprehension probe + `A-055`–`A-058` + mastery report; this
+entry with `COURSE_PROGRESS.md` and `CONTRADICTIONS.md`.
+
+### Student status
+**`REVIEW REQUIRED`** — not `PASS`. Two dimensions are not cleanly satisfiable and the
+disposition is the reviewer's: **B (Recognition)** is `D-030`-blocked with no vocabulary to
+express that (third lesson running; `REVIEW_INDEX.md` open item 36 is the live proposal), and
+**F** carries one `NOT APPLICABLE` a reviewer may overturn to `DEFERRED`.
+
+### Next
+**A fresh independent reviewer session writes `18_REVIEW/V07/V07_REVIEW_R1.md`** (`D-003` — this
+session must not review its own work). **The V08 gate is CLOSED** until it returns.

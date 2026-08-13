@@ -10,9 +10,20 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 
 ```text
 RECORDS:         6   (C-001 … C-006)
-LESSONS STUDIED: 6   (V01-V05 complete; V06 student pass complete, awaiting review)
+LESSONS STUDIED: 7   (V01-V06 COMPLETE; V07 student pass complete 2026-08-13,
+                     awaiting review)
 UNRESOLVED:      5   (C-001 foundational; C-003; C-004; C-005; C-006)
 RESOLVED/OTHER:  1   (C-002 — STATED EXCEPTION, condition unmeasurable)
+
+V07 ADDED NO RECORD. One candidate — V04's "12 pairs" against V07's "the 10
+from DMR" — was checked and REJECTED on the evidence (different objects: a
+personal shortlist versus the DMR's published list). C-005 and C-006 are both
+EXTENDED and NEITHER is adjudicated, per D-003 and per D-033's own instruction
+that C-005 is flagged for the reviewer rather than re-decided. C-001 and C-004
+were re-checked against V07 and struck off as negative; C-003 was declined
+deliberately — V07's two failure cases are about SECOND LEGS, not M/W
+formations, and stretching them to fit is the error V05 R2 M7 charged.
+See the V07 PASS block at the end of this file.
 
 V06 ADDED ONE RECORD, C-006, and it is a CORPUS-HYGIENE record of the C-005
 class — NOT a contradiction charged against the instructor. V06 is 100% GUEST
@@ -1018,3 +1029,38 @@ corpus does not contain the distinction and the project must say so rather than 
 | Interpretation | `03_LESSON_NOTES/V06_INTERPRETATION.md` §2.3 |
 | Decision | `DECISIONS.md` D-025 consequence 2 |
 | Related records | `A-002` (trap move), `A-049` (the V05 discriminator), `C-005` (the class this belongs to) |
+
+---
+
+## V07 PASS — NO NEW RECORD, AND ONE CANDIDATE CHECKED AND REJECTED
+
+**Added 2026-08-13 by the V07 student session.** V07 is the **third consecutive lesson with zero
+course-author runtime**. Under **`D-033`** that no longer bars it from producing a genuine
+`C-xxx` — provision 3 inverts `D-025` consequence 2, so a guest/instructor or guest/guest
+divergence **is** a method-level conflict now. **V07 nonetheless opens no record**, and the
+reasons are recorded here so the absence is auditable rather than assumed.
+
+### The candidate that was checked and rejected
+
+| Apparent conflict | Verdict |
+|---|---|
+| **V04's guest watches "just 12 pairs"; V07's presenter watches "at least the 10 from DMR".** V04 `[00:30:22]`: *"So I paired it down about six weeks ago to just 12 pairs."* and `[00:38:19]`: *"And so I have 12 pairs that I look at."* V07 `[00:32:09]`: *"I look at at least the 10 from DMR and I add in certain other ones that I want to see like the Euro Allsy, the Pound Allsy, certain other crosses like that."* | **NOT A CONTRADICTION.** The two sentences describe **different objects**: V04's twelve is that speaker's **own** pared-down personal list, arrived at *"about six weeks ago"*; V07's ten is **the DMR's** published list, which he then **adds to**. A personal shortlist and a programme's watchlist can differ without either being wrong, and neither speaker presents his number as the method's. **Recorded so a later session does not re-derive it as a conflict.** |
+
+### What V07 adds to the two open records of this class
+
+| Record | V07 evidence | Effect |
+|---|---|---|
+| **C-005** — the instructor and a guest teach different entry systems in one lesson | **A student names the divergence out loud, and it is the corpus's first instance.** `[00:29:34]`–`[00:29:55]`, read aloud by the presenter: *"I'm confused about second legs. It seems that they are different opinions than what you think a second leg is lower than the first leg or a W or if the second leg on the M is higher than the first. **Do all the DM[R] speaker[s] agree on this? If so, how do I see it?**"* | **Extended, and NOT adjudicated here** (`D-003` — that is the reviewer's call). **He does not answer the question.** He describes four second-leg geometries, says which two *he* likes, and tells the student to *"make up your mind and flashcard what it is you are looking for"* `[00:31:21]`. Reasoning probe `R07` in `05_HOMEWORK/V07/scripts/comprehension_probe.py` verifies **mechanically** that no agreement claim appears in the twelve entries after the question. Under `D-025` this was a hygiene curiosity; under `D-033`, where two speakers can both create doctrine, **a coach asked directly and declining to say the coaches agree is evidence about the method.** |
+| **C-006** — two guests give incompatible definitions of "stop hunt" | **V07 uses both terms and defines neither, which is the negative datum this record's Required Research asked for.** *"a nice good long trap move on the second leg"* `[00:14:52]`; *"they go back and do an extra stop hunt run and they take you out"* `[00:36:49]`. **They are never compared.** | **Extended with a negative result.** `A-049`'s standing question — *does anyone ever distinguish them, and on what criterion* — now has **three speakers and three non-answers**: V05 geometric, V06 causal, V07 silent. **The instructor has still never defined either term anywhere in V01–V07.** Stays UNRESOLVED. |
+
+> **`C-005`'s category change under `D-033` is flagged, not made.** `D-033`'s own consequences
+> block says *"`C-005` is **not** re-adjudicated here; it is flagged for the reviewer."* This
+> session adds evidence to it and leaves the category question exactly where `D-033` left it.
+
+### Records checked against V07 and struck off as negative
+
+| Record | Why it does not apply |
+|---|---|
+| **C-001** — duration of the move away from the anchor | V07 states no anchor, no duration and no day count. Nothing bears on it in either direction |
+| **C-003** — whether M and W formations can fail | **Tempting and declined.** V07 has two explicit failure cases — *"even though the entry was perfect… It didn't really give us anything out of that trade"* `[00:01:06]`–`[00:01:21]`, and *"the second leg didn't pay out till the next day"* `[00:02:38]`. **Both are about SECOND LEGS, not about M/W formations as such**, and stretching them to fit `C-003` is the error V05 review R2 `M7` charged. Recorded in `V07_SOURCE_NOTES.md` §2 as evidence *bearing on* `C-003`, not as resolving it |
+| **C-004** — London open, 3:30am printed against 4:00 spoken | V07 states **no clock time for any session**: `EST` 0×, and all six candidate boundary times 0× (verified by reasoning probe `R08`). No session clock appears on any of the 24 curated frames either. Bears on it in neither direction — the same negative result V06 returned |
