@@ -1905,6 +1905,43 @@ noise, not corruption. By **absolute** magnitude only **six days** contain any M
 places inside DEVELOPMENT. The census is finding real events, not artifacts. **Signed off
 on that basis; no bar is excluded.**
 
+> **CORRECTION, same day — THAT SIGN-OFF WAS INCOMPLETE, AND THE GATE HAD A BLIND SPOT.**
+>
+> The C5–C7 sign-off above was recorded without examining `C7`'s five **non-Sunday** week
+> opens. Four are Christmas/New-Year weeks. **The fifth is a hole in the data:**
+>
+> ```text
+> last bar   Fri 2014-05-30 16:59
+> ABSENT     Sun 2014-06-01              (0 bars; a normal Sunday holds ~399)
+> ABSENT     Mon 2014-06-02 00:00–15:01
+> resumes    Mon 2014-06-02 15:01        (521 bars vs ~1440 nominal)
+> ```
+>
+> **~22 continuous hours are missing — an entire week open plus a Monday Asian and London
+> session.** It is the only unexplained absence in 3.5 years, and both relevant checks waved
+> it through: **`C6` excluded it by construction** (the gap census skips anything ≥ 12h as
+> "the weekend", and a missing session is indistinguishable from a weekend by duration
+> alone), and **`C7` rendered it cosmetic** (it surfaced as a `Mon` entry in a weekday
+> tally, where it reads as a holiday artifact rather than as an absence).
+>
+> **`C8` — session completeness** was added to `qa_histdata_m1.py` in response: bars present
+> per session against the nominal count for that weekday on the corpus's own clock. It flags
+> **11 sessions** — nine Dec/Jan closures, plus the two above. `C8` is a **report, not a
+> gate**: a holiday closure is real market behaviour, not a defect, and only a human
+> separates a closure from a hole.
+>
+> **Binding consequence.** Every session `C8` flags must carry an **explicit,
+> pre-registered disposition** — include, exclude, or report separately — in any test whose
+> window spans it, chosen on completeness grounds and **never** after seeing what it does to
+> a result. Any test reporting `n` must report the **exclusion count** beside it.
+> `QA_REPORT.txt` is regenerated and supersedes the run quoted in the table above.
+>
+> Recorded rather than quietly patched, because the failure is the instructive part: **the
+> corpus passed four gating checks and three reports while missing a full trading session.**
+> This is precisely the hazard named when this project left rendered charts — on a chart a
+> 22-hour hole is a visible discontinuity; in a column of numbers it computes silently. The
+> QA gate is the compensating control, and it was one check short.
+
 **Reason:** `D-036` established that only an import-capable path reaches the windows, and
 the owner chose it. The choice is well-matched to what this batch actually is:
 `COMMON_PROTOCOL.md` §7 already excluded every visual concept the course left undefined —

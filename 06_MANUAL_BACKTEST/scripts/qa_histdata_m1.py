@@ -27,8 +27,26 @@ Seven checks, each of which has silently corrupted a backtest somewhere:
   C7  week-open census     — time-of-day of the first bar after each weekend, which is
                              the vendor fact `W-C'` and PT-008..PT-013 inherit BY NAME
 
-Exit status is 0 only if C1-C4 are clean. C5-C7 are reports, not gates: they need a
+  C8  session completeness — bars present per session against the nominal count
+
+C8 EXISTS BECAUSE C1-C7 MISSED A REAL HOLE, and the way they missed it is instructive.
+The corpus is absent from Sun 2014-06-01 17:00 to Mon 2014-06-02 15:01 — ~22 hours
+covering an entire week open plus a Monday Asian and London session. Both relevant checks
+waved it through:
+
+  C6 excluded it BY CONSTRUCTION — the gap census skips anything >= 12h as "the weekend",
+     and a missing session is indistinguishable from a weekend by duration alone.
+  C7 saw it and rendered it cosmetic — it surfaced as a **Monday** entry in a weekday
+     tally, where it reads as a holiday artifact rather than as an absence.
+
+So a missing session was simultaneously invisible to the gap check and decorative to the
+week-open check. C8 asks what neither asked: is each session actually THERE.
+
+Exit status is 0 only if C1-C4 are clean. C5-C8 are reports, not gates: they need a
 human, and pretending a threshold can decide them is how a bad tick becomes a finding.
+C8 in particular CANNOT be a gate — Christmas and New Year produce genuinely short
+sessions that are market closures, not defects, and only a human separates those from a
+hole.
 
 usage: python3 qa_histdata_m1.py DATA_DIR [--spike-mult 12] [--gap-min 30]
        DATA_DIR holds DAT_MT_GBPUSD_M1_*.csv
@@ -139,6 +157,33 @@ def gap_census(rows, gap_min):
     return gaps
 
 
+def session_completeness(rows, floor=0.60):
+    """Flag sessions holding materially fewer bars than the trading day nominally holds.
+
+    Nominal counts follow the corpus's own fixed UTC-5 clock: the week opens Sunday 17:00
+    and closes Friday 17:00, so Sunday is a 7-hour stub, Monday-Thursday are full, and
+    Friday runs to 17:00. Saturday is skipped — its absence is the market, not a defect.
+
+    Returns (date, weekday, actual, nominal) for each session under `floor` x nominal.
+    A short session is NOT automatically a defect: holidays are real closures. This
+    separates "look at these" from "these are fine", nothing more.
+    """
+    nominal = {6: 420, 0: 1440, 1: 1440, 2: 1440, 3: 1440, 4: 1020}
+    per_day = collections.Counter(r[0].date() for r in rows)
+    first, last = rows[0][0].date(), rows[-1][0].date()
+    flagged = []
+    day = first
+    while day <= last:
+        wd = day.weekday()
+        if wd != 5:  # Saturday: no session expected
+            want = nominal[wd]
+            have = per_day.get(day, 0)
+            if have < floor * want:
+                flagged.append((day, day.strftime("%a"), have, want))
+        day += timedelta(days=1)
+    return flagged
+
+
 def week_opens(rows):
     weekend = timedelta(hours=12)
     opens = [rows[0][0]]
@@ -220,10 +265,27 @@ def main():
     print(f"      seasonal shift (DST): {'YES' if seasonal else 'NO — fixed offset year-round'}")
     print()
 
+    short = session_completeness(rows)
+    print(f"C8 session completeness: {len(short)} sessions below 60% of nominal bars")
+    for day, wd, have, want in short:
+        note = ""
+        if (day.month == 12 and day.day >= 24) or (day.month == 1 and day.day <= 2):
+            note = "  <- Dec/Jan holiday, a real market closure"
+        elif have == 0:
+            note = "  <- *** ABSENT AND UNEXPLAINED ***"
+        else:
+            note = "  <- *** SHORT AND UNEXPLAINED ***"
+        print(f"      {day} {wd}  {have:5d} bars  (nominal ~{want:4d}, {100*have/want:5.1f}%){note}")
+    print("      A short session is not automatically a defect. Holidays are closures;")
+    print("      an unexplained absence is a hole. Only a human tells them apart.")
+    print()
+
     gate_ok = not (c1 or c2 or c3 or c4)
     print("=" * 78)
     print("GATE:", "PASS — C1-C4 clean" if gate_ok else "FAIL — see above")
-    print("C5-C7 require human sign-off before any PT test is run.")
+    print("C5-C8 require human sign-off before any PT test is run.")
+    print("Any session flagged by C8 must have an explicit, PRE-REGISTERED disposition")
+    print("(include / exclude / report separately) in the test that spans it.")
     print("=" * 78)
     return 0 if gate_ok else 1
 
