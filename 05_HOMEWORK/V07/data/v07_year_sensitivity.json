@@ -1,0 +1,82 @@
+{
+ "A|D-MIDNIGHT|2013": {
+  "frac": 0.8301282051282052,
+  "hit_days": 259,
+  "n_days": 312
+ },
+ "A|D-MIDNIGHT|2014": {
+  "frac": 0.7243589743589743,
+  "hit_days": 226,
+  "n_days": 312
+ },
+ "A|D-MIDNIGHT|2015": {
+  "frac": 0.8461538461538461,
+  "hit_days": 264,
+  "n_days": 312
+ },
+ "A|D-MIDNIGHT|2016H1": {
+  "frac": 0.8709677419354839,
+  "hit_days": 135,
+  "n_days": 155
+ },
+ "A|D-SESSION|2013": {
+  "frac": 0.9806949806949807,
+  "hit_days": 254,
+  "n_days": 259
+ },
+ "A|D-SESSION|2014": {
+  "frac": 0.861003861003861,
+  "hit_days": 223,
+  "n_days": 259
+ },
+ "A|D-SESSION|2015": {
+  "frac": 0.9961389961389961,
+  "hit_days": 258,
+  "n_days": 259
+ },
+ "A|D-SESSION|2016H1": {
+  "frac": 1.0,
+  "hit_days": 130,
+  "n_days": 130
+ },
+ "B|D-MIDNIGHT|2013": {
+  "frac": 0.8269230769230769,
+  "hit_days": 258,
+  "n_days": 312
+ },
+ "B|D-MIDNIGHT|2014": {
+  "frac": 0.7243589743589743,
+  "hit_days": 226,
+  "n_days": 312
+ },
+ "B|D-MIDNIGHT|2015": {
+  "frac": 0.8461538461538461,
+  "hit_days": 264,
+  "n_days": 312
+ },
+ "B|D-MIDNIGHT|2016H1": {
+  "frac": 0.8709677419354839,
+  "hit_days": 135,
+  "n_days": 155
+ },
+ "B|D-SESSION|2013": {
+  "frac": 0.8668941979522184,
+  "hit_days": 254,
+  "n_days": 293
+ },
+ "B|D-SESSION|2014": {
+  "frac": 0.7610921501706485,
+  "hit_days": 223,
+  "n_days": 293
+ },
+ "B|D-SESSION|2015": {
+  "frac": 0.8839590443686007,
+  "hit_days": 259,
+  "n_days": 293
+ },
+ "B|D-SESSION|2016H1": {
+  "frac": 0.903448275862069,
+  "hit_days": 131,
+  "n_days": 145
+ }
+}

@@ -1,0 +1,58 @@
+[
+ {
+  "kind": "POSITIVE",
+  "day": "2015-01-02",
+  "range_pips": 262.7,
+  "short_hit": true,
+  "long_hit": false,
+  "file": "V07_flashcard_positive_2015-01-02.svg"
+ },
+ {
+  "kind": "POSITIVE",
+  "day": "2015-03-04",
+  "range_pips": 119.8,
+  "short_hit": true,
+  "long_hit": false,
+  "file": "V07_flashcard_positive_2015-03-04.svg"
+ },
+ {
+  "kind": "POSITIVE",
+  "day": "2015-05-04",
+  "range_pips": 84.5,
+  "short_hit": true,
+  "long_hit": true,
+  "file": "V07_flashcard_positive_2015-05-04.svg"
+ },
+ {
+  "kind": "POSITIVE",
+  "day": "2015-07-02",
+  "range_pips": 77.1,
+  "short_hit": false,
+  "long_hit": true,
+  "file": "V07_flashcard_positive_2015-07-02.svg"
+ },
+ {
+  "kind": "POSITIVE",
+  "day": "2015-09-01",
+  "range_pips": 108.0,
+  "short_hit": true,
+  "long_hit": false,
+  "file": "V07_flashcard_positive_2015-09-01.svg"
+ },
+ {
+  "kind": "POSITIVE",
+  "day": "2015-10-30",
+  "range_pips": 162.7,
+  "short_hit": true,
+  "long_hit": true,
+  "file": "V07_flashcard_positive_2015-10-30.svg"
+ },
+ {
+  "kind": "NEGATIVE",
+  "day": "2015-11-16",
+  "range_pips": 48.9,
+  "short_hit": false,
+  "long_hit": false,
+  "file": "V07_flashcard_negative_2015-11-16.svg"
+ }
+]
