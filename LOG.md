@@ -5782,8 +5782,20 @@ and `18_REVIEW/V08/V08_REVIEW_R1.md`.
 ### Git
 
 Explicit paths on every `git add`; `git diff --staged` read before every commit. No `git add -A`.
-Branch **pushed, not merged** — `D-038` makes merge-back a separate deliberate act and R2 has not
-run. `python3 scripts/validate_project.py` — **103 passed / 0 warnings / 0 failures.**
+Four commits on `fix/v08-r1-minors` — one per item, one for the ledgers — then pushed.
+`python3 scripts/validate_project.py` — **103 passed / 0 warnings / 0 failures.**
+
+**MERGED TO INTEGRATION, on the owner's instruction, later the same day.** The remediation branch
+was **first pushed unmerged** — `D-038` makes merge-back a separate, deliberate, single-threaded
+act and this session does not take it on its own initiative. The owner then directed the merge.
+Performed per `D-038`: re-fetched, verified **no divergence** (the integration branch had not
+moved from `a886585` since the branch was cut), merged **`--no-ff`** so the merge-back is legible
+in `git log`, validator re-run **clean after the merge**, then pushed.
+
+**The merge changes nothing about the items' status.** They remain `APPLIED — PENDING
+VERIFICATION at R2`. Merging is a code-movement act, not a verification act, and `D-003` reserves
+closure to an independent reviewer. Project precedent is explicit that a `REVISE` with 0
+`CRITICAL` / 0 `MAJOR` does not block a merge (V03–V07, and `V08_REVIEW_R1.md` §3 item 1).
 
 ### Next Review Trigger
 
