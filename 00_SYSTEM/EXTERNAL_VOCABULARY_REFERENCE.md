@@ -16,6 +16,12 @@
 >
 > **Created:** 2026-08-13 · **Branch:** `infra/external-vocabulary-reference` · **Status:**
 > `EXTERNAL — NON-NORMATIVE — REFERENCE ONLY, PERMANENTLY`
+>
+> **§5 is web-sourced. §9 (added the same day) covers an 84-page seminar-notes PDF supplied by
+> the owner** — it answers far more, including `A-031`, `A-055`, `A-005`, `A-014`, `A-023` and
+> `A-022`, and it changes **nothing**. It is **anonymous** and it is very probably the document
+> the §5 web sources were copied from, so §5 "convergence" is often one source counted twice.
+> **Read §9.0 and §9.4 before quoting anything from §9.**
 
 ---
 
@@ -608,7 +614,125 @@ index row in `00_SYSTEM/README.md`.
 
 ---
 
-## 8. MAINTENANCE
+## 9. ADDENDUM — 2026-08-13 — THE MAURO SEMINAR-NOTES PDF
+
+**Added after §1–§8 were written, at owner instruction.** The owner supplied an 84-page document
+and asked whether it fills the gaps. **It fills many of them — and it changes nothing.** Read §9.0
+before reading a single definition below.
+
+### 9.0 What this document is, and the two warnings that govern everything in §9
+
+**File:** `00_SYSTEM/EXTERNAL_REFERENCE/EXTERNAL_Mauro_MMM_seminar_notes_anonymous.pdf`
+(84 pp., SHA-256 `67bdd3ff…6b6f7`). See that directory's `README.md` for full provenance.
+
+> **⚠️ WARNING 1 — IT IS NOT BY MAURO.** The file arrived named *"Steve Mauro ORIGINAL…"*. Its own
+> title page says ***"Private Study Notes from Seminar of Steve Mauro — Authored by: Anonymous."***
+> It is an anonymous student's notes. It is the best external document found, and it is still
+> anonymous secondary testimony.
+>
+> **⚠️ WARNING 2 — IT IS PROBABLY THE SOURCE THE WEB SOURCES COPIED.** Phrasing, section order and
+> specific figures (the 30–90 minute M/W gap, the 25–50 pip stop-hunt distance, the Level I/II/III
+> framing) match the web material in §5 near-verbatim. **So this PDF agreeing with §5 is not
+> corroboration — it is one document counted twice.** Several §5 entries marked 🟢 CONVERGENT are
+> now better read as 🟡: the convergence was an echo. Individually re-marked below where it applies.
+
+**Status of everything in §9: EXTERNAL. NON-NORMATIVE. CLOSES NOTHING.** `D-030` binds unchanged;
+dimension B stays blocked. Whether this document may ever count as evidence is an **owner
+decision that does not yet exist** — see `EXTERNAL_REFERENCE/README.md`. The §3 reconciliation
+rule applies to every entry below exactly as it does to §5.
+
+### 9.1 The lineage hypothesis is now much stronger
+
+§2 proposed BTMM/Mauro provenance as a research lead. This document's **table of contents reads
+like an index of this project's own ambiguity register** — it has chapters titled *Fractional
+Disparity*, *The Trading Zone*, *The 33 Trade*, *The Anatomy of the Half Batman Pattern*,
+*Anatomy of an M and W Formation*, *Midweek reversals*, *Peak formation highs and lows*,
+*Learning to Count*. Those are `A-014`, `A-005`, `A-023`, `A-022`, `A-011`, `A-012`, `A-010`.
+A document from an unrelated trading school does not accidentally share seven of this corpus's
+idiosyncratic named objects.
+
+**Still a hypothesis, still not a fact** — no recording in this library names Mauro or BTMM. But
+§2 should now be read as *probable* rather than *speculative*.
+
+### 9.2 What it answers — term by term
+
+Every row is an **external candidate**. Every corresponding `A-xxx` is **UNCHANGED**.
+
+| Term / record | What the PDF says | Effect |
+|---|---|---|
+| **"blood in the water"** `A-031` | **A direct definition, the only one found anywhere:** the scaling-in entries are listed as *"the appearance of the shark fin (1st) · **the Market base line cross (referred to as Blood in the Water)** (2nd) · break out of the opposite volatility band during the trend run (3rd)"* | 🟡 §5.7 was 🔴 NOT FOUND; it now has **one** candidate. It answers `A-031`'s exact question (*which TDI line?*) — **the market base line**. From an anonymous source, so it is a lead for the promised TDI lesson, not an answer |
+| **"shark fin"** `A-032` | A full multi-step description: volatility bands tight during the Asian range → RSI line breaks **out** of the bands while price is 25–50 pips beyond the Asian range → overbought → RSI **crosses back below the signal line**, tracing the fin. Explicitly **location-gated**: *"this is only valid when it is occurring at the correct place. If it occurs during the consolidation phase for instance, it is meaningless"* | 🟡 Much richer than §5.6, and it **adds a constraint §5.6 lacked** — the fin is only a signal where the M/W stop hunt is. Still no numeric thresholds |
+| **`M0`/`M1`/`M2`/`M3`** `A-055` | **Identifies the labels.** They are **mid-pivot points** — M1 between S2/S1, M2 between S1/PP, M3 between PP/R1, M4 between R1/R2 — with *"the HOD is more likely to be located at the M3 or M4 mid-pivot points"* and the LOD at M1/M2 | 🟡 `A-055` recorded these as unexplained labels printed beside `Pivot` and `ADR High`. **A mid-pivot reading fits that placement exactly** and is a strong lead. `A-055` stays open — a plausible fit is not a course statement |
+| **ADR lookback** `A-038` | **The first stated window found anywhere:** *"an ADR indicator which tells us the average daily trading range of the **last 2 weeks**"* — i.e. ~10 trading days | 🟡 §5.8 was 🔴 (no source stated a period). Now one anonymous source says **2 weeks**. **This does NOT resolve `A-038`**: the corpus's problem is that its *guests* used 2-day and unbounded bases, and a third number from outside makes three, not one. `D-030` applies with full force |
+| **"the trading zone"** `A-005` | A definition, and it is **spatial, not temporal**: *"The trading zone is set 25 to 50 pips higher (or lower) than the Asian range"*, because *"most people put their stops 25 to 50 pips behind the trades"* — widened for volatile pairs (GBPJPY), narrowed for slow ones (CAD). Ideal Asian range ≤50 pips | 🟡 `A-005` is the record the instructor **deferred twice** and never delivered. An external answer to a question the course explicitly promised to answer itself is the *most* tempting and *least* admissible kind |
+| **"push"** D-030 blocker | Sized **and** hedged in the same breath: a stop hunt travels 25–50 pips beyond the Asian range in *"3 pushes or candles"*, worked as e.g. 25 pips → hold 3–4 candles → 20 pips → a final 5–7 pip *"tap, identified as a pin"*. Immediately followed by: *"it is not that simple and the 3 pushes may occur in increments of different sizes… do not simply expect a straight 3 candle movement"* | 🟡 Richer than §5.1 and **still not a recognition rule**. Note the hedge is *part of the teaching* — recording the numbers without it is error `E03`. Dimension B stays blocked |
+| **M/W anatomy** `A-011` | Chapter *"Anatomy of an M and W Formation"*. Content: the 30–90 minute gap between the two peaks; RRT is *"really an M or W pattern that has occurred more quickly"*; and — **new, and the most useful constraint found** — in the tradeable setup *"the 2nd leg of the pattern is **less extreme** than the 1st leg"* | 🟡 A **geometric** constraint at last (2nd leg fails to exceed the 1st), plus a duration. **Still no leg count and no invalidation rule.** Note it **contradicts** the withdrawn 9-candle figure: an RRT M/W is **two candles**. `A-011` stays open and this is a reason to distrust the 9-candle datum further, not to close anything |
+| **"second leg"** `A-007`, `A-044` | The second approach to the HOD/LOD which *"most of the time… will fail to take it out (so as to not give those who got in a profitable position to escape)"*. Named *"the preferred point of entry"*. Entry = **the close of the 2nd-leg candle**; stop = **7 pips beyond the 1st leg**; first target ≈ **50 pips**; **scratch after 2 hours** if it has not moved | 🟡 The most operationally complete external statement in the whole file — and precisely therefore the most dangerous. It would make several blocked tests runnable overnight against **anonymous** numbers |
+| **peak formation high / low** `A-010` | Structural, and it ties the whole cycle together: PFH → Level I + consolidation → Level II + consolidation → Level III (choppy, wide, profit-taking) → **a new Peak Formation Low is defined and the cycle starts again.** *"You should never trade against the Peak Formation out of Level I Consolidation"* | 🟡 Coherent and matches V02's `Level 1/2/3` slide. Note it **does not** equate PFH with an *anchor point* — see 9.3 |
+| **"level"** `A-004` | Level I = MM-driven, fast moves; Level II = market/emotion-driven without MM support, smaller; Level III = choppy, wide-ranged, profit-taking, reversal imminent. Plus a size datum: *"Level I and Level II average about 75 pips from peak formation high or low to the consolidation"* | 🟡 Backs §5.2 reading (1), the ordinal-phase reading. **Does not back** the EMA-pair reading (13/50, 50/200, 50/800) that §5.2 also records — so §5.2's disagreement is **not** resolved, and the V01 *horizontal-dashed-line* evidence still matches none of them |
+| **the EMAs** `A-020` | **5, 13, 50, 200 — and NO 800.** Roles: 5/13 = signal lines; 50 = *"the balance line… intraday trend"*; 200 = *"home base… price always returns to home base"*. **No condiment nicknames anywhere in the body** — but the entry list prints ***"Hold the Mayo – 200 Bounce"***, which ties **Mayo → 200 EMA** inside this document | 🟢 on Mayo=200 (owner-confirmed, and now attested here too) · ⚠️ **but see 9.4 — this is still not a course statement, and the missing 800 is a real discrepancy** |
+| **"33 trade"** `A-023` | Decoded: *"a **3** level rise over **3** days in combination with a Level **III** rise on an intraday chart… a strong sell signal"* — the two digits are the two nested counts | 🟡 A clean, plausible decode of `A-023`'s undecoded digits, consistent with V02's slide printing it on the Level 3 move |
+| **"fractional disparity"** `A-014` | Decoded: cross-pair level analysis — when AUD/CAD reach choppy Level III while EUR/GBP/CHF are at Level II, *"their crosses will be handled"*, so the crosses offer cleaner setups. Explicitly optional: *"not essential for understanding this model, or for making a profit"* | 🟡 `A-014` was *"named once in a survey, never explained"*. A candidate meaning now exists |
+| **"half-Batman"** `A-022` | Occurs at **Level I consolidation**; *"there is no need for a 2nd move back to the high because there are already traders trapped from further up"* — i.e. an M/W missing its second leg | 🟡 Coherent with `A-022` being one of two named continuations at outside structure high |
+| **trap / stop hunt** `A-002`, `A-049` | Stop hunt: *"a deliberate movement outside of the range to what will become the high or low of the day"*, 1–4am ET, two objectives (take stops, induce wrong-direction commitment), then spread widens and accumulation runs 30–90 min. *Trap* remains descriptive — volume-trapping via spikes contained by a trend line | 🟡 Sharper than §5.12 on stop hunt; **still no clean discriminator**, so `C-006` (V05 geometric vs V06 causal) is untouched and now has a third framing beside it |
+| **Asian box** V06 `[01:09:43]` | *"drawn around the Asian session and simply denotes the area of consolidation… **It is just a guide**"*, explicitly **not** a hard boundary: *"It does not mean that a range can only be broken outside of this box."* A second, smaller box marks the New York reversal window (~3 hours from NY open) | 🟡 Notable for what it **denies**: the box is advisory, which argues **against** ever coding a hard Asian-box boundary. No clock times given → `A-019`/`D-031` untouched |
+| **Hi-Lo** `A-056` | Confirms the object and the framing (the stop hunt *is* what defines HOD/LOD) and, like every other source, describes recognising it **after** the fact — *"There is often a second move to the HOD/LOD"*, which is the second-leg entry | 🟢→ still the same conclusion as §5.10: **the tradition has the same hole.** `A-056`'s gap is real and not an artifact of this corpus |
+
+### 9.3 What it does NOT answer — the honest negatives
+
+Searched directly in the full extracted text. **Absent entirely:**
+
+| Term | Record | Result |
+|---|---|---|
+| **"anchor point" / "anchors in"** | `A-001` | **Zero occurrences.** Not one, in 84 pages that otherwise cover this vocabulary exhaustively. §5.11's negative result is now much stronger: this is very likely **the instructor's own term**, used in the recordings and absent from the written tradition. `A-001` is unresolvable externally — full stop |
+| **"Brinks" / "shadow box"** | `A-030` | **Zero occurrences of either.** The V06 DMR curriculum attributes Brinks to *"Steve… in class"*; this document, which is notes *from* his class, does not contain it. Possibly later material than these notes |
+| **"quarter of wood" / `COW`** | `A-036`, `A-045` | **Zero occurrences.** `A-045`'s ASR question stays unanswerable externally |
+| **"tracer" / "vector"** | `A-008`, `A-035`, `A-051` | **Zero occurrences of either.** Both are corpus-only vocabulary |
+| **the `800` EMA** | `A-020` | **Zero occurrences.** This document's EMA set stops at 200 — see 9.4 |
+| **session clock times / timezone** | `A-019`, `D-031` | Times appear only as *"1–4am ET"*, *"8 AM ET"* — **no session table, no DST treatment.** The `D-031` question is untouched |
+| **`R =` / `wt =` chart labels** | `A-018`, `A-029` | **Zero occurrences.** The best opportunity yet to test the "R = risk multiple" reading, and it is silent — consistent with V06's negative result |
+
+### 9.4 ⚠️ Two things in §9 that will be misused if this warning is not read
+
+**(a) "Hold the Mayo – 200 Bounce" is not a course statement.** The owner has confirmed the
+condiment mapping, this document prints *Mayo → 200*, and the mapping is almost certainly right.
+**`A-020` still does not close on that**, for a reason that is not pedantry:
+
+- `A-020`'s open half is *the period as used **in this course***, and **no speaker in V01–V07
+  attaches a period to any nickname**. Owner confirmation is confirmation of the *tradition*,
+  not testimony about *these recordings* — the owner is the authority on the project's scope
+  and rules, which is a different thing from being a witness to what a lecturer said.
+- **There is a live discrepancy.** This document's EMA set is **5/13/50/200 with no 800**, and
+  it calls the 200 *"home base"*. The corpus's V06 audio has ***blueberry*** as a nickname, and
+  the web sources map **Blueberry → 800**. So the corpus uses at least one moving average this
+  document does not contain. A five-line mapping and a four-line document are not the same
+  system, and adopting the five-line one wholesale would import a line the course may use
+  differently — or may not use at all.
+- Consequence if wrong is not cosmetic: `A-020` records that mayo is *"the distance test for
+  whether a trade is worth taking"*. Wrong period ⇒ different trades taken, not a wrong label.
+
+**The right move is a decision, not an inference.** If the owner wants `A-020` closed on
+owner testimony, that is legitimate and takes one entry in `DECISIONS.md` stating what is being
+adopted and on whose authority. An agent must not do it silently on the strength of §9.
+
+**(b) §9.2's second-leg row is a complete, codable trading rule.** Entry, stop, target, time-stop
+— all four, in numbers. It is the single most likely thing in this repository to end up in
+`13_MACHINE_SPEC/` or `14_PINE/` by accident. It is **anonymous, unverified, not from these
+lessons**, and it is exactly what `D-030` and `D-010` exist to keep out. If a backtest of those
+numbers is ever wanted, it must be pre-registered explicitly as a test of *the anonymous
+seminar notes*, never as a test of the course's rule.
+
+### 9.5 Net effect on project state
+
+**Nil, again.** No record closed or narrowed; no contradiction resolved; no decision superseded;
+no grade, dimension or gate changed; no blocked test unblocked. `D-030` and `D-010` bind
+unchanged. What §9 changes is the **quality of the Required Research questions** — e.g. `A-055`
+can now ask *"is `M3` the mid-pivot between PP and R1?"* instead of *"what are these labels?"*,
+and `A-001` can be recorded as probably-unresolvable-externally. That is the legitimate use.
+
+---
+
+## 10. MAINTENANCE
 
 - **Append-only in spirit.** Entries are annotated under §3 when the course speaks; the external
   text is never deleted, so the audit trail of what was believed-external-and-when survives.

@@ -35,6 +35,7 @@ course.** These are process documents.
 | `STUDENT_SESSION_PROMPT.md` | Copy-paste prompt to start a Student session |
 | `REVIEWER_SESSION_PROMPT.md` | Copy-paste prompt to start a Reviewer session |
 | `EXTERNAL_VOCABULARY_REFERENCE.md` | ⛔ **NOT COURSE MATERIAL.** Third-party, internet-sourced candidate definitions for terms the corpus names and never defines. Non-normative, permanently. Closes no record, unblocks no test, never cited as a source |
+| `EXTERNAL_REFERENCE/` | ⛔ **NOT COURSE MATERIAL.** Outside-the-corpus documents held for reference only — currently the anonymous Mauro seminar-notes PDF. Never cited as evidence; read its `README.md` first |
 | `TEMPLATES/` | Eleven reusable artifact templates |
 
 ## READING ORDER FOR A NEW AGENT
