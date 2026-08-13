@@ -766,3 +766,183 @@ unaudited for V07–V21 and are NOT covered by this entry; each still needs its 
 check, on its own merits, when that video's ingestion actually runs (they have shown three
 distinct failure modes so far — V01, V05, V06 — so uniformity should not be assumed for them
 the way it has now been proven for `RULES.md`).
+
+---
+
+## Q-008 — V07's `NOTES.md` and `VISUAL_INDEX.md`, checked individually and confirmed fabricated; `VISUAL_INDEX.md` indexes the **Camtasia player's own splash logo** as a TDI setup
+
+```text
+STATUS:        QUARANTINED — DO NOT USE
+DATE:          2026-08-13
+QUARANTINED BY: V07 Student session
+DECISION:      D-017 (Q-001 blanket action). RULES.md is NOT re-derived here —
+                it is discharged by Q-007's mechanical template-marker test, as
+                Q-007 explicitly authorizes.
+```
+
+### Scope — what this entry does and does not cover
+
+| File | Disposition | Basis |
+|---|---|---|
+| `RULES.md` | Already quarantined, **not re-audited** | **`Q-007`**, which measured all three template markers across `V07`–`V21` and found the identical `NUMERICAL PARAMETERS` hash. Q-007's own text says a later Student session "can cite `Q-007` … instead of re-running the `RULES.md` audit" |
+| `NOTES.md` | **Fabricated — confirmed here** | Per-lesson audio cross-check, below |
+| `VISUAL_INDEX.md` | **Fabricated — confirmed here** | Per-lesson image cross-check, below |
+| `TRANSCRIPT.md` | **SOUND — adopted** | `SETUP_ISSUES.md` I-008, all four criteria, recorded in `02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` § PROVENANCE AND VERIFICATION |
+
+Q-007 required that `NOTES.md` and `VISUAL_INDEX.md` "still need their own per-lesson check, on
+their own merits". This is that check.
+
+### Method
+
+All token counts are word-boundary matches over the **verbatim body only** of
+`02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` (header and timestamp lines excluded), 7,436 words.
+All image claims are checked against the files actually present in the lesson folder's
+`SCREENSHOTS/`, by SHA-256 and by opening each one.
+
+---
+
+### `NOTES.md` — finding 1: it describes a different lesson
+
+`NOTES.md` gives the lesson's **Topic Focus** as *"Time Mapping, Session Overlaps & Peak
+Formation Tracking"*.
+
+The lesson is titled **"Best Trade Grabs"** — printed on its own title slide together with
+*"MMFx Breakout Session 03-26-2012"* (frame `V07_00-00-10`). Its subject is what makes a good
+trade: setups, entries, exits and money management, followed by 26 minutes of Q&A. The
+vocabulary that actually dominates it is `second leg` **34×**, `flashcard` **15×**, `R&D`
+**11×** (10 as a standalone token, plus one *"you've R&Ded it"* at `[00:20:50]`), `level three`
+**13×**, `level one` **9×**.
+
+### `NOTES.md` — finding 2: a session-time table that is not in the recording
+
+It prints three sessions with clock boundaries:
+
+> *"Asian Session: 7:00 PM – 3:00 AM EST … London Session: 3:30 AM – 9:00 AM EST … New York
+> Session: 9:30 AM – 5:00 PM EST"*
+
+Measured against the audio:
+
+| Token | Occurrences in V07 |
+|---|---|
+| `EST` | **0** |
+| `7:00`, `3:00`, `3:30`, `9:00`, `9:30`, `5:00` | **0** each |
+| `Asian` | **1** — `[00:01:48]` *"A nice small W after inducing after the Asian session"*, describing one chart |
+| `London` | **2** — `[00:38:03]` and `[00:39:17]`, both inside one student's question about a trade |
+| `New York` | **1** — `[00:15:17]` *"Closer to New York session, got in in the shadow box"* |
+
+**No session boundary, in any timezone, is stated anywhere in this lesson.** The three sessions
+are named four times between them, always as the setting of a particular chart, never as a rule.
+The same sweep was run over all 24 curated frames at full resolution: **no session clock appears
+on any of them either.**
+
+### `NOTES.md` — finding 3: structural objects that are absent
+
+| Claim in `NOTES.md` | Occurrences in V07 |
+|---|---|
+| *"Peak Formation High (PFH) & Low (PFL)"* | `PFH` **0**, `PFL` **0**, `peak formation` **0** |
+| *"market makers induce positions in low-volatility Asian accumulation boxes"* | `accumulation` **0**, `institutional` **0**, `Asian Box` **0** |
+| *"3 levels of drop or rise following peak formations before cycle reset"* | `reset` appears **4×** (`[00:23:15]`, `[00:38:51]`, `[00:39:37]`, `[00:43:53]`), **never with a peak formation and never as a level count.** Three of the four are *"after a reset"* / *"from that reset"* attached to a **level number**, which is a different claim — see `V07_SOURCE_NOTES.md` §5 |
+
+### `NOTES.md` — finding 4: the indicator and risk block, which is the shared template
+
+| Claim in `NOTES.md` | Occurrences in V07 |
+|---|---|
+| *"EMAs: 5 (Mustard), 13 (Water), 50 (Mayo), 200 (Blueberry), 800 (Raspberry)"* | `mustard` **0**, `mayo` **0**, `raspberry` **0**, `800` **0**. `water` 2×, `mail`/`male` 7×, `blueberry` 2× — **and not one of them is given a period** |
+| *"5/13 EMA Cross: Execution confirmation on M15 close"* | `5/13` **0**, `M15` **0**. `EMA` occurs **twice**, both inside one Q&A about stair-stepped higher-timeframe averages (`[00:26:01]`, `[00:26:29]`) |
+| *"TDI Indicator: Green Price Line crossing Red Signal Line with Shark Fin confirmation outside Volatility Bands"* | `shark fin` **0** *spoken*, `volatility band` **0**, `green line` **0**, `signal line` **0**. `TDI` occurs twice, `[00:24:08]` and `[00:31:16]`, both without any definition |
+| *"Stop loss positioned 10–15 pips past High/Low of Day with minimum 1:3 Risk-to-Reward ratio"* | `10-15` **0**, `10 to 15` **0**, `1:3` **0**, `HOD` **0**, `LOD` **0**. `stop loss` occurs **once**, `[00:09:44]`, as *"Stop losses. If I can make them smaller and possible…"* — a wish, not a distance |
+
+> **The last row is the fabrication template's own signature.** *"Place your stop loss 10 to 15
+> pips beyond the High or Low of the Day"* is `RULES.md` rule 2, present in all 21 lessons and
+> proven identical by `Q-007`. Finding it restated in prose inside `NOTES.md` shows the two
+> files were generated from **one source**, which is what `Q-004` proved mechanically for
+> `RULES.md` and what `Q-002`, `Q-003`, `Q-005` and `Q-006` found for `NOTES.md` individually.
+> V07 is the sixth `NOTES.md` to fail, and it fails the same way.
+
+### There is one accidental near-hit, and it is recorded so a later session does not mistake it for accuracy
+
+`NOTES.md` says *"M & W Pattern Anatomy: 2nd leg failure test with candlestick rejection
+(Railroad tracks, pin bars, star formations)"*. V07 **does** discuss second legs, railroad
+tracks and star formations. **This is not evidence the file was written from the audio.** The
+same sentence appears in the shared template, the lesson supplies no *"failure test"* language,
+and the surrounding four claims in the same section are all zero-occurrence. A generator that
+emits the course's general vocabulary will occasionally land on a topic the lesson happens to
+cover; that is a property of the vocabulary, not of the file's provenance.
+
+---
+
+### `VISUAL_INDEX.md` — 7 claimed screenshots, 5 files, **2 distinct screens**
+
+The file claims *"Total Captured Presentation & Annotated Chart Screenshots: 7"* and describes
+seven numbered images, each with a timestamp, a filename, a byte size, a *"What is visible"*
+description and a *"Trading Significance"*.
+
+The folder holds **seven files** — and by SHA-256, **two pairs are byte-identical**:
+
+| # | Filename in the index | Dimensions | SHA-256 (first 16) | Actually |
+|---|---|---|---|---|
+| 001 | `VIDEO_08_SCREENSHOT_001_00-02-00.jpg` | 1024×768 | `159292f29fe500e3` | **The title slide** — *"Best Trade Grabs / MMFx Breakout Session 03-26-2012"* |
+| 002 | `extracted_jpeg_1001.jpg` | 1024×768 | `9e2a66db74b63688` | **The same title slide**, re-encoded (max per-pixel Δ = 18, mean Δ = 0.42 against 001) |
+| 003 | `extracted_jpeg_1012.jpg` | **492×40** | `34ee0767916c438c` | **A delta-tile of the background chart's title bar**, reading `EURJPYm,M15 101.100 101.200 101.059 101.188` |
+| 004 | `extracted_png_27.png` | **267×51** | `17e5622c255a753a` | **The Camtasia Studio / TechSmith splash logo** |
+| 005 | `extracted_png_290.png` | **137×14** | `9791aacf64336fbe` | **The words "Camtasia Studio 6"** |
+| 006 | `raw_extracted_1001.jpg` | 1024×768 | `9e2a66db74b63688` | **Byte-identical to 002.** The same title slide again |
+| 007 | `raw_extracted_1012.jpg` | **492×40** | `34ee0767916c438c` | **Byte-identical to 003.** The same title-bar tile again |
+
+**Seven entries. Five files. Three copies of one slide, two copies of one 492×40 tile, and two
+pieces of player chrome. Zero annotated charts. Zero of the seven descriptions matches its
+file.**
+
+### The two entries that make the fabrication unmistakable
+
+| Entry | What `VISUAL_INDEX.md` says is visible | What the file is |
+|---|---|---|
+| **004** | *"EMA Dynamic Support & Resistance — 50 EMA (Mayo) and 200 EMA (Blueberry) reaction bounces."* Visual Type: *"Presentation Slide / Annotated Chart"* | A **267×51** image of the words **"Camtasia Studio"** with the TechSmith logo |
+| **005** | *"TDI Blood in the Water Setup — Green line crossing red line at volatility band boundary."* Visual Type: *"Presentation Slide / Annotated Chart"* | A **137×14** image of the words **"Camtasia Studio 6"** |
+
+A 137×14-pixel strip carrying the player's version string is indexed as a TDI setup, at a
+timestamp, with a trading significance. **`A-031` ("blood in the water") and `A-032` ("shark
+fin") must not be read as having any V07 print evidence from this file.** V07 does have a real
+printed shark fin — *"SHARK FIN IN TDI"*, boxed on the oscillator in frame `V07_00-18-25` — and
+it was found by capturing the lesson, not by reading this index.
+
+### Two further independent errors
+
+1. **Every entry attributes the lesson to the wrong speaker.** All seven read *"Steve Mauro
+   breaking down …"*. V07 carries **zero course-author runtime**; a single guest presenter
+   speaks the whole 48 minutes and refers to Steve in the third person twice, once as the next
+   questioner in the audience queue (`V07_TRANSCRIPT.md` § ONE SPEAKER…).
+2. **The timestamps are wrong, and entry 001 disagrees with its own filename.** The index dates
+   001 to `[00:07:00]` while the filename says `00-02-00`; the file is the **title slide**,
+   which is on screen from about `00:00:05` to `00:00:45` in the capture and is gone by
+   `00:02:00`. The remaining six are spaced at exactly five-minute intervals — `[00:12:00]`,
+   `[00:17:00]`, `[00:22:00]`, `[00:27:00]`, `[00:32:00]`, `[00:37:00]` — which is a generated
+   sequence, not an observation.
+
+### One thing this audit is careful NOT to claim
+
+`VISUAL_INDEX.md`'s **file listing is accurate** — the five files it names do exist, at the byte
+sizes and dimensions it states. What is fabricated is every statement about **what is in them**.
+That is worth recording precisely, because it shows the generator had directory access and did
+not have image access, which is the same shape `Q-005` and `Q-006` found.
+
+---
+
+### Disposition
+
+All three files remain quarantined in place at
+`_QUARANTINE_UNVERIFIED_NOTES/per_lesson/07_Bootcamp1_Wk2_032612_Part2_48mins/`, covered by the
+tree's blanket `README_WHY_QUARANTINED.md`. **No file was moved, renamed or deleted.** The
+lesson's own `SCREENSHOTS/` folder is left untouched as source-side evidence; this project's
+screenshots for V07 are the 24 frames in `04_SCREENSHOTS/V07/`, captured from the `.swf`.
+
+### Running tally for the fabrication pattern
+
+- **`RULES.md`:** 21 of 21 covered (V01–V06 individually, V07–V21 by `Q-007`'s mechanical
+  discharge). Zero exceptions library-wide.
+- **`NOTES.md`:** **7 of 21 audited** (V01–V07), **7 fabricated, zero exceptions.**
+- **`VISUAL_INDEX.md`:** **7 of 21 audited** (V01–V07), **7 fabricated**, and now **four
+  distinct failure modes**: 78 entries for 1 image (V01), 12 duplicate pairs sold as 24
+  screenshots (V05), SWF delta-tiles indexed as annotated charts (V06), and — new here —
+  **the player's own chrome indexed as course content** (V07). Uniformity still should not be
+  assumed for V08–V21; each needs its own check.
