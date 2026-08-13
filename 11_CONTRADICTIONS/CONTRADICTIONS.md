@@ -8,6 +8,33 @@ Template: `00_SYSTEM/TEMPLATES/CONTRADICTION_TEMPLATE.md`
 
 ## STATUS
 
+> ## 📌 UPDATED 2026-08-13 — V09: FOUR RECORDS ADDED (`C-012` … `C-015`), AND ONE OF THEM IS A CORROBORATION
+>
+> **All counts in every block below are superseded** (`REMEDIATION_PROTOCOL.md` §2). As at
+> `video/v09`, before merge-back: **RECORDS 15** (`C-001` … `C-015`) · **UNRESOLVED 12** ·
+> **NOTED 1** (`C-014`) · **RESOLVED/OTHER 2**.
+>
+> | Record | Class | One line |
+> |---|---|---|
+> | **`C-012`** | Internal to one printed slide | *"85% Win Rate"* captions a curve the same slide counts as *"7 Wins, 6 Losses"* — **53.8%**. Printed **and** spoken, so not an ASR artifact |
+> | **`C-013`** | Internal to V09 | A 28-week 20%-per-week compounding table, arithmetically **exact**, in a lesson whose four worked examples are 8W/11L, 7W/12L, 6W/14L, 7W/6L — and which states the losing-trade cost itself one marker earlier |
+> | **`C-014`** | Arithmetic, `NOTED` | The worked recovery lands at **$12,438.40**, stated as *"12,500"* — **self-hedged** by *"essentially"*, 0.49%, and logged at the lowest grade of the three because of it |
+> | **`C-015`** | **VIDEO vs NOTES** (`C-010`/`C-011`'s class) | V09 and `MMM-NOTES` p.67 give the **same position-sizing formula** and **opposite sizing policies** |
+>
+> **`C-015` is the first record in this file whose larger part is AGREEMENT.** Two admissible
+> sources, neither citing the other, give `risk_dollars ÷ stop_pips` identically — the strongest
+> corroboration of a method rule in the corpus to date. The conflict is on **policy**: Tier 1 is
+> flat 2% with an explicit ban on impulsive increases; Tier 2 escalates to 5% with proficiency
+> and teaches a 5:4:3:2:1 scale-in. `SOURCING_HIERARCHY.md` §3.3: the recording wins, **and**
+> `C-011`'s asymmetry holds — Tier 2 is defeated **without a replacement**, so the corpus ends
+> with no scale-in doctrine at all.
+>
+> **`C-012` and `C-013` are both stated-accuracy / stated-return records and both fall under
+> `D-009`**: preserved with provenance, treated as hypotheses, **never** as targets. Neither
+> figure is carried into any artifact.
+>
+> **None of these four closes or narrows any `A-xxx`.**
+
 > ## 📌 UPDATED 2026-08-13 — `C-011` ADDED, CLOSING §9.6's SECOND FLAGGED DIVERGENCE
 >
 > **Counts in the `C-010` block below are superseded** (`REMEDIATION_PROTOCOL.md` §2). As at this
@@ -1396,6 +1423,39 @@ admitted account of it.
 
 ---
 
+> ### ⭐ NARROWED 2026-08-13 BY V09 — TIER 1 NOW CARRIES THE `800` DIRECTLY, AND THIS RECORD STILL DOES NOT CLOSE
+>
+> **Everything above is retained unedited** (`REMEDIATION_PROTOCOL.md` §2). Three changes:
+>
+> **1. Source A is strengthened from attestation to course evidence.** When this record was
+> written, the corpus's `800` rested on *"blueberry"* spoken twice in V06 plus the owner's
+> attestation of what the word means. **V09 states the mapping outright, on the record, in the
+> lesson:** `[00:41:43]` *"**The blueberry is the 800 on the 15 minute time frame**"*, `GUEST`,
+> normative under `D-033`, said to students about ***their own*** charts. `A-020`'s *Blueberry*
+> row is reconciled to `RESOLVED BY COURSE` accordingly (§3.1 six-step process run there).
+>
+> **2. A timeframe now exists on the Tier 1 side, and it did not before.** *"The 15 minute."*
+>
+> **3. That timeframe opens a CANDIDATE RECONCILIATION, which is recorded and NOT ADOPTED.**
+> V09 `[00:41:48]`, immediately after: *"which makes this **a 200**"* — the 800 on the 15-minute
+> and the 200 on the 1-hour are **the same line** (800 × 15 min = 12,000 min = 200 × 60 min), and
+> he says so while explaining that he keeps his EMAs *"consistent throughout all time [frames]"*.
+>
+> | | |
+> |---|---|
+> | **Why it is attractive** | If Tier 2's `5, 13, 50, 200` is an enumeration **on one chart** and Tier 1's `800` is the same line **on a faster chart**, the two sources are describing one moving-average set and there is no conflict at all |
+> | **Why it is REFUSED** | **`MMM-NOTES` states no timeframe anywhere in its EMA section.** Adopting the reconciliation requires supplying Tier 2 with a fact Tier 2 does not contain — which is precisely the composite definition `SOURCING_HIERARCHY.md` §3.2 Case A ends by forbidding: *"**Do not blend.**"* A hypothesis that reconciles two sources by inventing a fact neither states is not a resolution |
+>
+> **`C-010` therefore stays UNRESOLVED**, with its resolution rule unchanged — the recordings win,
+> the corpus's `800` stands, and the notes' four-line enumeration is superseded on that point.
+> What V09 changes is the **strength of the winning side**, not the outcome.
+>
+> **What would close it:** a lesson or a page stating which chart the notes' `5/13/50/200` are
+> plotted on. `SOURCING_HIERARCHY.md` §3.4's standing re-check obligation for the moving-average
+> set remains live for V10–V21.
+>
+> **Source:** `03_LESSON_NOTES/V09_SOURCE_NOTES.md` §9d; `V09_INTERPRETATION.md` Q5.
+
 ## C-011 — The ADR lookback window: the notes say two weeks, the corpus says two days and "generally every day"
 
 > **RENUMBERED at merge-back, 2026-08-13.** This record was filed as **`C-008`** on
@@ -1489,3 +1549,258 @@ Status: UNRESOLVED — Tier 2 figure SUPERSEDED by Tier 1; Tier 1 supplies no re
 | Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.2, §9.6; `00_SYSTEM/SOURCING_HIERARCHY.md` §3.3; `MMM-NOTES` p.43 |
 
 ---
+
+---
+
+## C-012 — One slide captions a curve "85% Win Rate" and counts it "7 Wins, 6 Losses"
+
+```text
+STATUS:        UNRESOLVED - INTERNAL TO ONE PRINTED SLIDE
+CLASS:         Method-level (a stated accuracy figure), D-033 provision 3
+LOGGED:        2026-08-13, V09 Student session
+```
+
+### The two statements
+
+| Source | Text |
+|---|---|
+| **A — the caption** | *"Example of Equity Curve of **85% Win Rate** with 2:1 Risk Reward Profile"* — printed, `04_SCREENSHOTS/V09/V09_00-22-45_eighty-five-percent-win-rate-seven-wins-six-losses.png` |
+| **B — the count, one line below, on the same slide** | *"**7 Wins, 6 Losses**"* — printed, same frame, in the presenter's own green/red |
+
+### The arithmetic
+
+`7 / (7 + 6) = 7 / 13 = **53.8%**`. Not 85%.
+
+### It is not an ASR artifact, and that is why it is here rather than in the transcript notes
+
+The audio at `[00:22:47]`–`[00:22:50]` repeats the caption — *"what would we get if we had an
+**85 win rate** with a two to one risk reward profile? All right, here we have **seven wins and
+six losses**"* — so the two figures are stated **in the same breath as well as on the same
+slide**. Two independent channels, same conflict.
+
+### Why it is logged as a contradiction and not an erratum
+
+`D-033` provision 3 makes a divergence involving a normative speaker a **real method-level
+conflict**, and an accuracy figure is method-level: `D-009` requires that any stated accuracy
+claim be *"recorded with provenance and treated as a hypothesis to test, never as a performance
+requirement"*. **A corpus that quietly wrote down "85%" would be recording a claim the source's
+own worked example contradicts by 31 percentage points.**
+
+### What each reading would mean
+
+| Reading | Consequence |
+|---|---|
+| **The caption is the error; the curve is 7W/6L** | The slide demonstrates that **53.8% at 2:1 gives a rising equity curve**, which is true and is exactly the lesson's thesis. The caption is a slip |
+| **The count is the error; the curve really is 85%** | Then the drawn staircase (which does show 7 up-legs and 6 down-legs) is mislabelled, and the demonstration does not demonstrate what it claims |
+
+**This project adopts neither.** Reading 1 is more likely — the whole section argues that a
+sub-60% hit rate suffices, and an 85% example would undercut it — but *more likely* is not
+evidence, and no session may resolve a source conflict by picking the version that fits the
+argument better. That is `E13` inverted.
+
+### Disposition
+
+```text
+UNRESOLVED. The 85% figure is NOT carried into any artifact as a course rate.
+The 7W/6L count IS carried, as an observation, with this record attached.
+```
+
+### Related
+
+`D-009` (no optimization toward a claimed win rate); `A-067` (the *">50% accuracy"* claim, one
+section earlier); **`C-013`** (the projection that follows three minutes later).
+
+---
+
+## C-013 — The equity projection compounds 20% a week for 28 weeks in a lesson whose every worked example loses more often than it wins
+
+```text
+STATUS:        UNRESOLVED - INTERNAL TO V09
+CLASS:         Method-level (a stated return expectation), D-033 provision 3
+LOGGED:        2026-08-13, V09 Student session
+```
+
+### The two statements
+
+| Source | Text | Where |
+|---|---|---|
+| **A — the projection** | *"Only **FIVE successful trades per Week** = **20% Gains for the Week!**"*, and a spreadsheet with `Base 5,000.00`, `% profit 0.2000`, compounding **28 consecutive weeks** to **`824,223.31`** | Printed, frames 19–21; spoken `[00:24:52]`–`[00:26:38]` |
+| **B — the lesson's own demonstrations** | Four equity staircases: **8W/11L**, **7W/12L**, **6W/14L**, **7W/6L**. Printed headline one slide before the projection: *"Can have **MORE Losers than Winners** and still have UPWARD EQUITY"* | Frames 12, 13, 15, 18; `[00:10:35]`, `[00:11:17]`, `[00:12:06]`, `[00:22:47]`, `[00:15:00]` |
+
+### The arithmetic is EXACT, and that is what makes this a contradiction rather than an error
+
+Every number in A checks out:
+
+| Claim | Check |
+|---|---|
+| 5 winners × 4% | **20% ✓** |
+| $5,000 × 1.2⁴ | **$10,368.00** — he says *"10,000 368"* `[00:26:00]` **✓ exact** |
+| 28 weeks at 20% | $5,000 × 1.2²⁸ = **$824,223.31** — the spreadsheet's red-boxed final cell **✓ exact** |
+
+**Nothing is miscalculated. What is omitted is the losing trades**, and the lesson supplies their
+cost itself: `[00:24:46]` *"we're looking at **4% per trade if we get it, 2% if we don't get
+it**"*. At the lesson's own demonstrated ratios — say 5 wins against 8 losses in a week, the
+mildest of its four examples — the week returns 5×4% − 8×2% = **+4%**, not +20%, and 28 weeks of
+that is **$5,000 → $14,990**, not $824,223.
+
+### Why this is not pedantry
+
+The projection is the **last content before the sales pitch** (`[00:27:24]` *"I hope you guys
+join us in the DMR"*) and it is the only place in the lesson where slide, spreadsheet and speech
+jointly assert a number the lesson's own evidence contradicts. **A student sizing their
+expectations by it would be sizing them by the one passage the rest of the lesson disproves.**
+
+### What this does NOT impugn
+
+**The position-sizing rule is unaffected and is not called into question by this record.**
+`V09_SOURCE_NOTES.md` §2 stands on its own arithmetic, which is separately verified. A return
+projection and a sizing policy are different objects; this record is filed against the former
+only.
+
+### Disposition
+
+```text
+UNRESOLVED. The 20%/week figure and the 824,223.31 terminal value are NOT
+carried into any artifact as a course expectation. Under D-009 they are recorded
+with provenance as a claim, and are never a target.
+```
+
+### Related
+
+`D-009`; **`C-012`**; `A-067`; `03_LESSON_NOTES/V09_INTERPRETATION.md` Q4.
+
+---
+
+## C-014 — The worked recovery lands at 12,438.40 and is stated as 12,500 — the weakest of V09's three internal conflicts, and it is hedged
+
+```text
+STATUS:        NOTED - SELF-HEDGED BY THE SPEAKER
+CLASS:         Arithmetic, within one worked example
+LOGGED:        2026-08-13, V09 Student session
+```
+
+### The statement
+
+`[00:07:33]`–`[00:07:40]`: *"Our second winning trade then brings the account balance up to
+**12,500** — **essentially** we've come back. We've had four losses and in two… wins we came back
+and we're back to where we were."*
+
+### The re-derivation
+
+Following V09's own rules exactly (recalculate size after every win, `[00:07:14]`):
+
+| Step | Balance | Size at 2% / 25 pips | Result of +50 pips |
+|---|---|---|---|
+| After 4 losses | $11,500.00 | $9.20 / pip | |
+| Win 1 | | | **$11,960.00** — he states this, **✓ exact** |
+| Win 2 | $11,960.00 | $9.568 / pip | **$12,438.40** |
+
+**$12,438.40, not $12,500. A shortfall of $61.60, or 0.49%.**
+
+### Why this is logged at the lowest grade of the three
+
+**He hedges it in the same sentence.** *"Essentially we've come back… we're back to where we
+were"* is explicitly approximate language, and 0.49% is within any reasonable reading of
+*essentially*. This is **not** the `C-012`/`C-013` pattern of a precise figure contradicting
+precise evidence.
+
+**It is recorded anyway, for one reason:** it is the only place in V09 where re-deriving his
+arithmetic does **not** reproduce his number, and a future session re-checking §2 of the source
+notes will hit it. Recording it costs nothing and prevents that session concluding either that
+the source notes are wrong or that a new defect has been found.
+
+**A second, structural observation, offered as observation:** the shortfall exists *because* the
+recovery is compounding upward from a reduced base. Full restoration after four 2% losses
+requires 4 / (1 − 0.08) ≈ 4.35 winning 2%-units, not 4 — i.e. slightly more than two 2:1
+winners. **The system is very slightly slower to recover than the example implies**, and that is
+a property of fixed-fractional sizing, not an error in his rule.
+
+### Disposition
+
+```text
+NOTED. The $11,960 figure is carried (it is exact). The $12,500 is carried as
+STATED-AND-APPROXIMATE with this record attached. Nothing is corrected in place.
+```
+
+---
+
+## C-015 — Tier 1 (V09) and Tier 2 (`MMM-NOTES`) agree on the position-sizing FORMULA and contradict each other on the sizing POLICY
+
+```text
+STATUS:        UNRESOLVED ON POLICY - TIER 1 GOVERNS (SOURCING_HIERARCHY §3.3)
+CLASS:         Tier 1 vs Tier 2, per D-039's mandatory call-out and D-040
+LOGGED:        2026-08-13, V09 Student session
+TAGS:          V09 GUEST  vs  MMM-NOTES
+```
+
+> **`D-039` makes this mandatory, not optional:** *"if at any time the videos contradict the pdf
+> then we can call it out"*, and `SOURCING_HIERARCHY.md` §3.3 requires a `C-xxx` carrying **both
+> the page and the timestamp**.
+
+### First, the agreement — it is the larger part and it is genuine corroboration
+
+`MMM-NOTES` **p.67** prints a `RISK LEVEL` table:
+
+```text
+Stop Loss Size    1% (per $100K) = $1000    3% = $3000    5% = $5000
+10 pip                10 lots                30 lots         50 lots
+15 pip                6.7 lots               20 lots         33 lots
+20 pip                5 lots                 15 lots         25 lots
+```
+
+**That is `risk_dollars ÷ stop_pips`** — V09's formula exactly (`[00:02:00]`–`[00:02:03]`,
+printed frame 3). $1,000 at a 10-pip stop is $100/pip = 10 standard lots. ✓
+
+**Two admissible sources, neither citing the other, giving the same position-sizing arithmetic.**
+This is the strongest corroboration of a method rule anywhere in the corpus to date, and it is
+recorded as such.
+
+### The divergence — the policy around the formula, and it runs in opposite directions
+
+| Question | **V09 (Tier 1, `GUEST`)** | **`MMM-NOTES` (Tier 2)** |
+|---|---|---|
+| Risk per trade | **2%**, flat, `[00:08:28]` *"2% is a good place to start"* | **1–3% when learning**, then *"when you are proficient (hitting 9 – 10), then **increase the per trade risk to 5%** of your account balance"* (**p.67**) |
+| After consecutive losses | **Diminish** size, `[00:09:23]` | Not addressed |
+| Multiple positions | **Error #2**: *"Putting on Multiple Positions which add up to GREATER than your % Risk"*; *"cumulative risk that's never greater than two percent across your account"* `[00:19:29]` | A **5:4:3:2:1 scale-in ladder**, taught as *"a safer way of gaining profit"* (**p.67**) |
+| Sizing philosophy | *"**No Impulsive Increases in LOT SIZE**"* (printed, frame 16); *"you will blow up accounts unless you work this way"* `[00:09:07]` | *"looking for the most pristine setups where there is maximum opportunity for **scaling in heavily and trading with high lot sizes without being concerned about losses**"* (**p.50**); *"If you are confident with your setups and your level of accuracy you can afford to **trade heavily**"* (**p.51**); *"ramp up your contract size"* (**p.51**) |
+
+### Resolution under `SOURCING_HIERARCHY.md` §3.3 — and the asymmetry `C-011` made concrete
+
+**The recording wins. The note is superseded on this point** — `EXTERNAL_VOCABULARY_REFERENCE.md`
+§9 is annotated accordingly, superseded text left visible per `REMEDIATION_PROTOCOL.md` §2.
+
+**But note precisely how far that goes**, because `C-011` established that "the video wins" is a
+rule about *which source is superseded*, not a promise that Tier 1 supplies a complete answer:
+
+| | Outcome |
+|---|---|
+| **The formula** | **Not in conflict.** Both sources give it identically. Corroborated, not contested |
+| **The number** | **Not in conflict either.** V09's 2% sits *inside* Tier 2's 1–3% learning band |
+| **The escalation to 5% with proficiency** | **DEFEATED.** Tier 1 states a flat 2% and an explicit prohibition on impulsive increases. It does not enter `A-065`, the spec, or any machine candidate |
+| **The 5:4:3:2:1 scale-in** | **DEFEATED as a sizing policy** — it is V09's printed error #2. **But V09 does not describe scaling in at all**, so Tier 1 defeats it without replacing it, and the corpus is left with **no scale-in doctrine**. `A-065` gains nothing |
+
+### Why this is a real finding and not tidying
+
+Two attested accounts of the same method give **the same arithmetic and opposite risk
+temperaments** — one built around never increasing size under pressure, the other around
+increasing it once you are confident. `SOURCING_HIERARCHY.md` §3.3: *"A divergence is a finding,
+not noise. Tidying it away destroys the finding."*
+
+**One possibility this project explicitly does not adopt:** that the two are compatible because
+they address different stages (V09 teaching beginners, the notes describing an experienced
+trader). It is plausible; **V09 does not say it**, and constructing the reconciliation would be
+the composite-definition move `SOURCING_HIERARCHY.md` §3.2 forbids. Recorded as noticed and
+refused.
+
+### Disposition
+
+```text
+UNRESOLVED ON POLICY. Tier 1 governs. The 5% escalation and the 5:4:3:2:1
+ladder are NOT carried into any artifact. The shared FORMULA is carried, and
+this record is cited as its independent corroboration.
+```
+
+### Related
+
+`D-039`, `D-040`, `SOURCING_HIERARCHY.md` §3.3; **`C-011`** (the asymmetry precedent);
+`A-065`; `MMM-NOTES` pp. 50, 51, 67; `03_LESSON_NOTES/V09_SOURCE_NOTES.md` §13.

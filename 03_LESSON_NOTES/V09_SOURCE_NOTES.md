@@ -162,7 +162,7 @@ hit losing cycles of three or four consecutive stopouts you **diminish** your lo
 |---|---|---|
 | Start | $12,500 | |
 | After 4 losses at 2% | *"12,500 is now 11,500"* | 4 × $250 = $1,000. **$11,500 ✓** |
-| Drawdown described as | *"down eight percent of original equity"* | $1,000 / $12,500 = **8.0% ✓** — see `A-066` on the wording |
+| Drawdown described as | *"down eight percent of original equity"* | $1,000 / $12,500 = **8.0% ✓**. The slide (frame 8) prints *"drawn down **to** 8% of original equity"*, which literally says the balance IS 8%; the audio's *"down eight percent"* is the right sense. **Loose wording, correct arithmetic — recorded here, not registered as an ambiguity** |
 | New size | *"2% of 11,500 is 9.2 minis or 0.92 lots"* | $230 / 25 pips = **$9.20/pip ✓** |
 | First 2:1 winner | *"brings us back up to 11,960"* | $11,500 + (50 × $9.20) = **$11,960 ✓** |
 | Second winner | *"brings the account balance up to 12,500"* | $11,960 × 0.02 / 25 = $9.568/pip; +50 pips = $478.40 → **$12,438.40**, not $12,500. **Off by $61.60 — see `C-014`** |
@@ -384,7 +384,7 @@ Every number, with its status. **None is a machine rule** (`D-010`).
 | **0.02 / 2%** | Risk per trade at stop loss | `[00:02:00]`, `[00:08:28]` | **EXPLICIT.** Policy for changing it: **absent** (`A-065`) |
 | **2%** | *Cumulative* exposure across all open positions | `[00:19:29]` | **EXPLICIT** |
 | **3 / 4** | Losses before lot size is recalculated | `[00:08:20]`–`[00:08:43]` | **EXPLICIT** |
-| **8%** | Drawdown after four 2% losses | `[00:06:01]` | **EXPLICIT**, arithmetically exact (`A-066` on wording) |
+| **8%** | Drawdown after four 2% losses | `[00:06:01]` | **EXPLICIT**, arithmetically exact. Slide wording is loose (§2c) |
 | **25 / 50 pips** | Beginner 2:1 stop / target | `[00:04:55]` | **EXPLICIT** |
 | **15 / 50 pips** | HOD/LOD 3:1 stop / target | `[00:03:49]`–`[00:03:56]` | **EXPLICIT** (stated as *"3:1"*, is 3.33:1) |
 | **> 50%** | Accuracy said to bring upward equity | `[00:15:36]` | **EXPLICIT**, and sufficient-not-necessary (`A-067`) |
@@ -563,6 +563,7 @@ Stated because absence is evidence, and because the quarantined `NOTES.md` asser
 - **No entry rule.** V09 never says when to enter. It says how much to trade once you have.
 - **No stop *placement* rule.** It gives stop **sizes** (25, 15 pips) and never says where the
   stop goes relative to structure. **V08's promised stop-side payoff is only half delivered.**
+  Registered as **`A-066`** — a stop size with no placement rule is not a stop rule.
 - **No session times.** Six clock figures in the quarantined file; zero in the audio.
 - **No TDI, shark fin, railroad track, pin bar, EMA cross, or 30–90-minute leg gap.** All zero.
 - **No definition of *level*, *reset*, *push*, *M/W anatomy*, or *trap*.**

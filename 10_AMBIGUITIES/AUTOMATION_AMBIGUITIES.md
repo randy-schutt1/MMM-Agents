@@ -8,6 +8,42 @@ Template: `00_SYSTEM/TEMPLATES/AMBIGUITY_TEMPLATE.md`
 
 ## STATUS
 
+> ## 📌 UPDATED 2026-08-13 — V09: ELEVEN RECORDS ADDED (`A-065` … `A-075`)
+>
+> **All counts in every block below are superseded** (`REMEDIATION_PROTOCOL.md` §2). As at
+> `video/v09`, before merge-back: **RECORDS 75** (`A-001` … `A-075`). **LESSONS STUDIED 9**
+> (V01–V06 COMPLETE; V07, V08 in remediation; V09 student pass this session).
+>
+> | Record | Subject | Status |
+> |---|---|---|
+> | **`A-065`** | The `2%` risk constant | **`CODABLE AS STATED` — DO NOT EXTEND.** A first for this register: a number that is not ambiguous, with a governing policy that is |
+> | **`A-066`** | A stop **size** with no **placement** rule | `DO NOT CODE`. V09 gives 25 and 15 pips and never says from what |
+> | **`A-067`** | *">50% accuracy brings upward equity"* | `DO NOT CODE` as a threshold. True, prominent, and **sufficient-not-necessary** — break-even is 33.3% / 25.0% / 23.1% at the stated geometries |
+> | **`A-068`** | The third equity demonstration's *"15"* — stop or target? | `UNRESOLVED`. The two readings **disagree on the sign** of the result |
+> | **`A-069`** | *"high low tracer"* | `DO NOT CODE`. One occurrence, no gloss. **Tier 2 negative: 0 in 84 pages** |
+> | **`A-070`** | Level 3 *"always characterized by"* expansion / acceleration / heavy volume | `DO NOT CODE` — **BLOCKED BY `A-004`**, not independently testable |
+> | **`A-071`** | *"the dinosaur pattern"* | `DO NOT CODE`. **Tier 2 negative: 0 in 84 pages.** *"We all know what that is"* implies an earlier source the corpus does not contain |
+> | **`A-072`** | *"three pushes… the third being the longest"* | **EXTENSION ONLY.** ⛔ **Does NOT unblock `push`. V05/V06/V07 dimension B stays BLOCKED** |
+> | **`A-073`** | *"reset"* | `DO NOT CODE`. 16 markers. **Where the level count starts** — `A-004` asks what a level is; this asks where counting begins |
+> | **`A-074`** | *"dominant pair"* | `DO NOT CODE`. Explicitly **not** derived from correlation, by his own statement |
+> | **`A-075`** | *"alternate count"* | `DO NOT CODE`, and the most important of the eleven: **~half his calls carry a simultaneous contradictory reading, by his own account** |
+>
+> ### THE ONE THING A LATER SESSION IS MOST LIKELY TO GET WRONG HERE
+>
+> **`A-072` looks like it unblocks `push`. It does not.** *"The third being the longest"*
+> presupposes that the move has already been segmented into three pushes — and **the segmentation
+> is the undefined step**. `D-030` binds; `D-033`, `D-039` and `D-040` do not relax it, and
+> `D-039`'s own text refuses this exact over-reach in advance.
+>
+> ### THE `SOURCING_HIERARCHY.md` §3.4 OBLIGATION WAS DISCHARGED FOR `A-020`
+>
+> §3.4 requires any session reaching a lesson that touches the moving-average set to re-check
+> `A-014`, `A-020`, `A-023` against it. **Tier 1 spoke:** V09 `[00:41:43]` *"The blueberry is the
+> 800 on the 15 minute time frame"*. `A-020`'s *Blueberry* row is upgraded from owner attestation
+> to **course evidence**, and gains a **timeframe** it never had. `A-014` was re-checked and
+> **not** changed (V09 uses *fractional disparity* at `[00:35:15]` and does not define it —
+> §3.2 Case D at best). `A-023` is untouched by V09.
+
 > ## 📍 2026-08-13 — `D-040`: THE THREE-TIER SOURCING HIERARCHY NOW GOVERNS EVERY FILL-IN BELOW
 >
 > **Tier 1** the recordings (always wins) · **Tier 2** `MMM-NOTES` (`D-039`) · **Tier 3** generic
@@ -1994,6 +2030,47 @@ failure mode.
 | Water | 50 | Owner attestation; `MMM-NOTES` p.38 lists a 50 as *"the balance line"* |
 | **Mayo** | **200** | **Owner attestation 2026-08-13 + `MMM-NOTES` p.66, entry list: *"Hold the Mayo – 200 Bounce"*** |
 | **Blueberry** | **800** | **Owner attestation 2026-08-13, verbatim: *"800 EMA is the blueberry"*** — and **nothing else**; see `C-010` |
+
+> ### ⭐ RECONCILED 2026-08-13 — TIER 1 HAS NOW SPOKEN. `SOURCING_HIERARCHY.md` §3.1, ALL SIX STEPS.
+>
+> **The row above is superseded as to its AUTHORITY and its COMPLETENESS, and is retained
+> unedited** per §3.1 step 4 / `REMEDIATION_PROTOCOL.md` §2. The mapping it gives is **not** wrong.
+>
+> | Nickname | Period | **Timeframe** | Authority, as at 2026-08-13 |
+> |---|---|---|---|
+> | **Blueberry** | **800** | **the 15-minute** | ✅ **`RESOLVED BY COURSE` — V09 `[00:41:43]`**, `GUEST`, normative under `D-033`: *"**The blueberry is the 800 on the 15 minute time frame.**"* Addressed to students as ***"your** blueberry on your charts"* `[00:41:31]`, i.e. shared course furniture |
+>
+> **What changed, precisely:**
+>
+> 1. **The basis.** This record's own closure block insisted the distinction survive — *"`RESOLVED
+>    BY COURSE` means a later lesson defines it explicitly. **No lesson does.**"* **A lesson now
+>    does.** Under §3.2 **Case A** (*Tier 1 is clear and specific*) the Tier 1 statement governs
+>    **alone** and the owner-attestation basis is **replaced, not supplemented** — §3.1 step 5
+>    requires saying so in those words.
+> 2. **The timeframe, which is genuinely new.** *"800"* on its own is ambiguous across charts, and
+>    neither the owner's attestation nor `MMM-NOTES` supplies a chart. **V09 supplies it.**
+>
+> **What did NOT change, and must not be read as changing:**
+>
+> - **The other four nicknames.** V09 says nothing about mustard, ketchup, water or mayo.
+>   `Mayo = 200` stays on **owner attestation + `MMM-NOTES` p.66**, and is still explicitly *not*
+>   `RESOLVED BY COURSE`.
+> - **The decision rules built on the average.** *"Enough distance between the entry and the
+>   mayonnaise"* (`V02 [00:19:46]`) is untouched. Knowing a line's period and chart gives the line,
+>   **not the threshold**, and `D-030` still forbids picking one.
+> - **`[00:05:00]`'s *"manays"*** is still PROBABLE, not confirmed.
+> - **`C-010` does NOT close.** See the narrowing recorded there.
+>
+> **A separate object, recorded so it is never merged into this row: "the grape".** V09
+> `[00:41:25]`–`[00:41:31]` — *"the name that **I've** given to the 800 moving average on the one
+> hour chart… it's just **my own little twist**"*, and `[00:42:16]` *"**Steve doesn't teach it.**
+> This is my my twist on it."* **The grape is the presenter's own naming and his own practice of
+> carrying the line across timeframes. It is NOT a course nickname and does not enter this
+> mapping.** Under `D-033` a guest may create doctrine — but this guest is disclaiming that he is
+> doing so, and that disclaimer is itself Tier 1 evidence.
+>
+> **Source:** `03_LESSON_NOTES/V09_SOURCE_NOTES.md` §9 (the full treatment, four claims separated);
+> `04_SCREENSHOTS/V09/V09_00-41-25_multi-chart-tile-view-during-grape-question.png`.
 
 **Status:**
 
@@ -4656,3 +4733,578 @@ below states why it does not.
 | **A-029 / A-018** — `R = <number>` box labels | Visible on the gallery charts. Read at 4× on `V08_00-20-00`: **`R = 39.1`** — the leading digits are unambiguous, the final digit is legible but not certain at this resolution and is recorded as such rather than asserted | **Sixth lesson of printed instances.** V08 states a **target** (50 pips, 8×) and, uniquely, a **ratio** (3:1) — but **still no stop distance**, so the labels remain uncheckable against any R-multiple. **No speaker says the letter `R` aloud in V08.** Stays `DO NOT CODE` |
 | **A-042** — the operative detail deferred elsewhere | *"Come join me for an hour or so in the DMR"* `[00:32:50]`; *"go back to the recording and see how you can use the **box tool**"* `[00:32:17]`; *"**Go back and listen to Steve recording** on that"* `[00:35:22]`; and **section 3, the defined-risk lesson, announced twice and absent from the file** | **Extended, and with a new kind of deferral: the lesson defers to ITSELF and then ends.** *"That's going to have a lot of ramifications in about 35, 40 minutes when we get into that section"* `[00:40:05]` — the section does not arrive. Stays open |
 | **A-049 / C-006** — stop hunt versus trap move | *"stop hunt box"* **6×** (`[00:17:25]` … `[00:19:31]`); *"trap area"* **4×** (`[00:37:51]`–`[00:40:40]`). **Both used, in one lesson, and never compared** | **Extended with a second NEGATIVE datum, which is what `REVIEW_INDEX.md` open item 37 asks each lesson for. V08's answer is again no.** A **fourth** speaker uses both families without a criterion. Note V08 uses *stop hunt* only in the compound **stop hunt box** — a chart object — and *trap* only as **trap area**, also a location, which is the closest the corpus has come to the two terms being used for *the same kind of thing*. **That is a hint, not a discriminator, and it is not adopted.** Stays open |
+
+---
+
+## A-065 — the `2%` risk constant: an explicit number with no policy for changing it
+
+### Course Meaning
+
+The fraction of account balance a trader accepts losing if a trade reaches its stop.
+
+### Evidence
+
+| Video | Timestamp | Usage in context | Basis |
+|---|---|---|---|
+| V09 | `[00:02:00]`–`[00:02:03]` | *"We multiply our account balance by point O2 and divide our stop loss and pips into that number"* | `AUDIO+PRINTED`, frame 3 |
+| V09 | `[00:08:28]` | *"**2% is a good place to start**"* | `AUDIO+PRINTED`, frame 10 |
+| V09 | `[00:19:29]` | *"a **cumulative** risk that's never greater than two percent across your account"* | `AUDIO+PRINTED`, frame 17 error 2 |
+| V09 | `[00:13:27]` | *"when you do restrict your lot size to 2 percent of balance at stop out you have no margin issues"* | `AUDIO` |
+
+### Why this is in the register at all
+
+**The number is not ambiguous. The policy around it is.** `2%` is stated flatly, printed, and
+used in every worked example — this is the least ambiguous constant in the corpus. What is
+missing is everything that would let a machine decide when it is **not** 2%:
+
+- *"a good place to start"* implies a place to move **to**, and no trigger, direction or ceiling
+  for that move is given.
+- Nothing conditions it on account size, instrument, session, volatility, experience or
+  drawdown state — while the lesson's own recovery rule **does** condition **lot size** on
+  drawdown state.
+- The **cumulative** reading (`[00:19:29]`) changes the object from a per-trade parameter to a
+  portfolio constraint, and no rule is given for allocating it across simultaneous positions
+  beyond *"carve that lot size in three"* (`[00:19:33]`), which is an equal split by example,
+  not by rule.
+
+### Possible Measurable Features
+
+| # | Candidate | Course support |
+|---|---|---|
+| 1 | Fixed 2% forever, cumulative across open positions | **Directly supported.** This is what the lesson says and it is codable as stated |
+| 2 | 2% as a floor that rises with demonstrated skill | **NONE in Tier 1.** `MMM-NOTES` p.67 says exactly this (*"increase the per trade risk to 5%"*) — and it is **Tier 2 and contradicted**, see `C-015` |
+| 3 | Equal split across n simultaneous pairs | INFERRED from one example, not stated as a rule |
+
+### Current Status
+
+```text
+CODABLE AS STATED (candidate 1) — DO NOT EXTEND.
+The constant may be used exactly as V09 gives it. Any rule that VARIES it is
+NOT a course rule and must not be written as one (D-010).
+```
+
+**This is deliberately a different status from most records here**, and it is the first of its
+kind: the register's usual problem is a phrase with no number, and this is a number with no
+governing policy. Coding candidate 1 imports nothing the lesson did not say. Coding candidate 2
+would import `MMM-NOTES` **against** a Tier 1 statement, which `SOURCING_HIERARCHY.md` §3.3
+forbids.
+
+### Required Research
+
+Whether any later lesson, or the course author himself, states a risk percentage. **V09 is the
+only source in V01–V09.** If the author states a different number, `C-015` becomes a Tier
+1-internal conflict and this record reopens.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Contradiction | **`C-015`** — Tier 1 vs Tier 2 on risk escalation and scaling in |
+| Source | `03_LESSON_NOTES/V09_SOURCE_NOTES.md` §2, §13 |
+| Backtest | `PT-035` pre-registers this constant as given |
+
+---
+
+## A-066 — a stop SIZE with no placement rule
+
+### Course Meaning
+
+Where the stop-loss order actually goes on the chart.
+
+### Evidence
+
+| Video | Timestamp | What is stated | What is not |
+|---|---|---|---|
+| V09 | `[00:03:49]` | *"solid HOD/LOD entries can warrant a **15-pip stop loss**"* | Fifteen pips **from what** |
+| V09 | `[00:04:55]` | *"this example will use **25 pips stop loss** and a 50-pip take profit"* | Same |
+| V09 | `[00:18:44]`–`[00:18:48]` | *"Moving your stop loss after you've placed it"* is error #1 | Presupposes a placement rule and does not give one |
+| V08 | printed, `V08_00-05-40` | *"dealing **within 10 pips of HOD/LOD**"* | An **entry** tolerance, not a stop |
+
+### Assessment
+
+**V09 is the first lesson in the corpus to state a stop-loss magnitude, and it does not state a
+stop-loss rule.** A stop is defined by a *location*; a distance is only half of one, and the
+missing half is the anchor.
+
+The corpus makes the gap look smaller than it is, because a plausible anchor is lying next to
+it: V08's printed 10-pip entry tolerance from HOD/LOD, plus V09's 15-pip stop, is consistent
+with *"stop 15 pips beyond the extreme"*.
+
+> **THAT ASSEMBLY IS REFUSED AND THE REFUSAL IS THE POINT OF THIS RECORD.** The two numbers come
+> from different lessons, describe different objects (entry tolerance vs stop distance), and are
+> never connected by the speaker who states both. Writing `stop = extreme ± 15` would be `D-010`
+> (a machine constant invented in study) and `D-030` (an approximated definition) in a single
+> move. It is recorded at `V09_INTERPRETATION.md` Q3 as noticed, attractive, and **not adopted**.
+>
+> **The fabricated `RULES.md` this project quarantined asserts exactly this rule** — *"Place your
+> stop loss 10 to 15 pips beyond the High or Low of the Day"*, `V09-R002`/`V10-R002`, in 16 of 21
+> lessons (`Q-010` §3). The invented rule and the tempting inference are **the same sentence**.
+> That is the strongest available argument for refusing it.
+
+### Current Status
+
+```text
+DO NOT CODE — no stop placement rule exists anywhere in V01-V09.
+```
+
+### Required Research
+
+Any later lesson stating where a stop goes. Until then the corpus can size a position for a
+given stop distance (`A-065`) but cannot decide the distance from chart structure.
+
+### Related
+
+| Type | Reference |
+|---|---|
+| Quarantine | **`Q-010`** — the fabricated file asserts this exact rule |
+| Ambiguity | `A-056` (Hi-Lo), `A-063` (the 25-pip stop hunt box — a different object, **not merged**) |
+| Interpretation | `03_LESSON_NOTES/V09_INTERPRETATION.md` Q3 |
+
+---
+
+## A-067 — *"greater than 50% accuracy will bring UPWARD EQUITY"*: true, prominent, and not the threshold
+
+### Course Meaning
+
+The hit rate said to be required for a positive equity curve.
+
+### Evidence
+
+| Video | Timestamp | Usage | Basis |
+|---|---|---|---|
+| V09 | `[00:15:36]` | *"Simply trading with greater than 50 percent accuracy will bring upward equity"* | `AUDIO+PRINTED`, frames 15–16 |
+| V09 | `[00:15:43]` | *"I gotta just stop this whole thing and **freeze this frame** and just keep it here all night because this is an amazing thing"* | `AUDIO` |
+| V09 | `[00:15:00]` | *"Can have **MORE Losers than Winners** and still have UPWARD EQUITY"* | `PRINTED`, frame 15 |
+
+### Assessment
+
+**The claim is TRUE and it is weaker than the lesson's own material.** At the stated geometries
+the break-even hit rates are:
+
+| Geometry | Break-even |
+|---|---|
+| 2:1 (−25 / +50) | **33.3%** |
+| 3:1 | **25.0%** |
+| 3.33:1 (−15 / +50) | **23.1%** |
+
+So *">50%"* is a **sufficient** condition presented with the rhetorical emphasis of a
+**necessary** one — *"freeze this frame… all night"*. The lesson prints the correct weaker claim
+**one slide earlier** and the four worked demonstrations all sit **below** 50% (8/19, 7/19,
+6/20) while showing positive equity, which is the correct claim demonstrated four times.
+
+### Why it is registered rather than ignored
+
+Because it is codable and the wrong version is the attractive one. A session building a filter
+from V09 could write *"require expected win rate > 0.50"*, which would **reject every one of
+this lesson's own examples**. The register exists for exactly that.
+
+### Current Status
+
+```text
+DO NOT CODE the 50% figure as a threshold.
+The break-even arithmetic above is THIS PROJECT'S, derived from the lesson's
+stated geometries, and is not a course rule either (D-010).
+```
+
+### Required Research
+
+None outstanding — the record is complete on V09's own evidence. It stays open as a **caution**,
+not as a question.
+
+---
+
+## A-068 — the third equity demonstration: a 15-pip number that is a stop or a target, and it changes the sign
+
+### Course Meaning
+
+The geometry underlying the *"six wins and 14 losses"* equity staircase.
+
+### Evidence
+
+| Video | Timestamp | Text |
+|---|---|---|
+| V09 | `[00:11:41]`–`[00:11:46]` | *"You're really trying to catch the high and low day and **you're jumping out when it hits you 15, take your 15 out**. Next one, get back in, take your 15 out"* |
+| V09 | `[00:12:06]` | *"you had **six wins and 14** count them 14 losses"* |
+| V09 | `[00:12:12]` | *"you still had a **net positive equity curve**"* |
+
+### The problem
+
+Two readings, and they disagree on the sign:
+
+| Reading | Geometry | 6 wins, 14 losses |
+|---|---|---|
+| **A — 15 is the TARGET** ("take your 15 out" = bank 15 pips) | stop 15 / target 15 | 6 × 15 − 14 × 15 = **−120 pips. NEGATIVE**, contradicting `[00:12:12]` |
+| **B — 15 is the STOP**, geometry inherited from the previous slide | stop 15 / target 50 | 6 × 50 − 14 × 15 = **+90 pips. POSITIVE**, consistent |
+
+Reading A is what the words most naturally say — *"take your 15 out"* is banking a profit.
+Reading B is what makes his conclusion true and matches the preceding demonstration
+(`[00:11:17]`, −15 / +50).
+
+**The frame does not settle it**: frame 13 (`00:11:40`) prints `-15 pip S/L` and `+50 pip T/P`,
+which supports B — but that slide is on screen for the *previous* demonstration too, and the
+speech at `[00:11:41]` is describing a different, more aggressive style (*"you're being
+aggressive… next one get back in"*).
+
+### Current Status
+
+```text
+DO NOT CODE - UNRESOLVED.
+The lesson does not state which. This project does not choose.
+```
+
+### Required Research
+
+Nothing in V09 resolves it. A later lesson describing a scalping variant that banks a fixed
+small profit would support A; silence supports B by default and default is not evidence.
+
+### Impact If Wrong
+
+Small in isolation, and it is registered because of what it would do downstream: adopting
+reading A would put a **1:1 geometry** into the corpus attributed to a lesson whose entire
+argument is that the target must exceed the stop (`[00:14:35]`).
+
+---
+
+## A-069 — "high low tracer"
+
+### Course Meaning
+
+A per-day marking on the presenter's chart that shows where each trading day begins and ends.
+
+### Evidence
+
+| Video | Timestamp | Usage |
+|---|---|---|
+| V09 | `[00:28:19]` | *"our days are depicted by the **high low tracer** as you can see monday tuesday wednesday thursday friday"* |
+
+**One occurrence. No second use, no gloss, no definition.**
+
+Visible on frames 22, 23 and 25 as chart furniture whose exact nature is **not** determinable
+from a rendering, and no attempt is made to determine it from one (`E06` as restated by
+`D-036a`).
+
+### Tier 2 — a recorded negative
+
+`SOURCING_HIERARCHY.md` §2 step 3: *tracer* occurs **0 times** in `MMM-NOTES`'s 84 pages. Tier 1
+uses it once without defining it; Tier 2 has never heard of it. **This is a strong negative and
+it is worth as much as a hit.**
+
+### Possible Measurable Features
+
+| # | Candidate | Course support |
+|---|---|---|
+| 1 | A custom MT4 indicator drawing daily high/low bands | **NONE** — he says he draws the *weekly divider* by hand `[00:28:11]` and does not say this one is different |
+| 2 | Hand-drawn per-day high/low markers | **NONE** |
+| 3 | A daily-range display of the `TDR`/`YDR` family recorded at `A-040` | **NONE**, and the resemblance is this session's, not his |
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+Any later lesson naming an indicator or describing what the tracer draws.
+
+---
+
+## A-070 — level 3 is *"always characterized by"* expansion, acceleration and heavy volume
+
+### Course Meaning
+
+Two general claims about what a level-3 move looks like.
+
+### Evidence
+
+| Video | Timestamp | Statement |
+|---|---|---|
+| V09 | `[00:30:34]` | *"**Lot of volume always at level three.** It's characterized by heavy volume and big moves both direction"* |
+| V09 | `[00:33:53]` | *"**Level three is always characterized by expansion and acceleration**"* |
+
+**Two `always` claims, 200 seconds apart, mutually consistent.** They are among the very few
+generalizations in Part B, which is otherwise pair-by-pair commentary.
+
+### Why this is blocked rather than testable
+
+**Each term in the claim is undefined, including the subject.**
+
+| Term | State |
+|---|---|
+| *level three* | `A-004` — *level* as a countable unit is undefined at V09, five lessons after it was first used |
+| *expansion*, *acceleration* | Undefined. Neither is given a measure or a comparison base |
+| *heavy volume* | Undefined — **and on FX retail feeds "volume" is tick count, not traded size.** `D-036a` records that the project's own corpus carries **structurally zero** volume |
+| *big moves both direction* | Undefined |
+
+**A test of this claim requires first inventing a level-counting rule**, which is `D-030`. That
+is the whole reason it is here rather than in `06_MANUAL_BACKTEST/`.
+
+### Current Status
+
+```text
+DO NOT CODE - BLOCKED BY A-004.
+Not testable until the course defines a level. D-030: the test waits.
+```
+
+### Required Research
+
+`A-004`. This record discharges when that one does, and not before.
+
+---
+
+## A-071 — "the dinosaur pattern"
+
+### Course Meaning
+
+A named weekly-shape pattern that can override a running level count.
+
+### Evidence
+
+| Video | Timestamp | Usage |
+|---|---|---|
+| V09 | `[00:34:18]` | *"the caveat to all of this is our lovely **market maker cycle** which we bring into play as soon as we start seeing that form"* |
+| V09 | `[00:34:27]` | *"**we all know what that is** right, I don't need to draw that out for you guys, but because I'm crazy I will"* |
+| V09 | `[00:34:44]` | *"**The dinosaur pattern**, okay"* |
+| V09 | `[00:34:48]` | *"This pattern **can always impose itself on the week**. So our level count many times will have to change"* |
+| V09 | `[00:34:55]`–`[00:35:11]` | *"if we see a nice [M] up here we expect three levels dropping back… it's possible that we can see an [M] form here and then it can drop back down three levels for the rest of the week"* |
+
+### Assessment
+
+**He draws it live in MS Paint and describes it only by its consequence.** The name appears
+once. *"We all know what that is"* is an appeal to shared prior teaching — which means the
+definition, if it exists, is in a **lesson this project has not yet studied or in material
+outside the corpus**.
+
+**What can be said without inventing anything:** it is (a) associated with *"the market maker
+cycle"*, (b) weekly in scope, (c) capable of **overriding** the level count, and (d) sketched as
+an M followed by three levels down. Whether *"dinosaur"* names the M-plus-three-levels shape, or
+the whole weekly cycle diagram, or a sub-part of it, **is not determinable from this lesson**.
+
+### Tier 2 — a recorded negative
+
+*dinosaur* occurs **0 times** in `MMM-NOTES`'s 84 pages.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+Any earlier or later lesson naming it. V01–V08 contain zero occurrences (checked). The phrase
+*"we all know what that is"* makes an **earlier** source likely and the corpus does not contain
+one — which is itself worth recording.
+
+---
+
+## A-072 — EXTENSION ONLY: *"three pushes, three accelerations, the third being the longest"*
+
+> ### ⛔ READ THIS FIRST — THIS RECORD DOES NOT UNBLOCK `push`
+>
+> This is the most structurally specific statement about push anatomy in V01–V09, and **it is
+> still not a recognition rule.** V05/V06/V07 **dimension B stays BLOCKED**. `D-030` binds,
+> `D-033` does not relax it, and `D-039`/`D-040` explicitly refuse this exact over-reach in
+> advance. **A session that cites this record as grounds for coding a push has misread it.**
+
+### Course Meaning
+
+The structure of the inducement sequence that precedes a reversal.
+
+### Evidence
+
+| Video | Timestamp | Statement | Basis |
+|---|---|---|---|
+| V09 | `[00:44:29]` | *"When the market makers start their cycle, **induce once, induce twice, induce the third time**. We want to try to get people long"* | `AUDIO` |
+| V09 | `[00:44:39]`–`[00:44:44]` | *"They form a pin up here because they're going to pull it back the other way and they're going to grab their pips, and experience shows me that they can **grab all their stuff at 50 pips**"* | `AUDIO` |
+| V09 | `[00:44:48]` | *"Get enough people trapped, pull it back, and that can **reset the count**"* | `AUDIO` |
+| V09 | `[00:46:28]` | *"I honestly look more towards **inducements, which would be three pushes, three accelerations, the third being the longest**"* | `AUDIO` |
+| V09 | `[00:46:31]` | *"I see a nice long acceleration here. All right. **That's my own reasoning**"* | `AUDIO` — a self-limiting hedge |
+
+### What it adds
+
+The corpus previously had a **count** (three pushes). V09 adds an **ordering constraint**: the
+third is the longest. It also links inducement to the **reset** mechanism (`A-073`) and gives an
+anecdotal magnitude for what the move retrieves (50 pips, `[00:44:44]`).
+
+### What it does not add, stated so the refusal is auditable
+
+| Missing | Why it is fatal to coding |
+|---|---|
+| A **size** for a push | Without one, "longest" has nothing to compare |
+| A **delimiter** — where one push ends and the next begins | This is the undefined step. *"Longest"* **presupposes the segmentation** |
+| A **noise floor** | No basis for excluding small oscillations from the count |
+| Anything **forward-looking** | The constraint is only checkable once push 3 exists, i.e. after the setup has formed. It is a description, not a trigger |
+| A reconciliation with `MMM-NOTES` | The notes give push *sizes* (25–50 pips) and **withdraw the regularity in the next sentence**. `D-039` names this as the single most likely over-reach and refuses it |
+
+### Current Status
+
+```text
+DO NOT CODE - EXTENSION of an existing blocker, not a resolution of it.
+Dimension B remains BLOCKED for V05, V06, V07.
+```
+
+### Required Research
+
+A lesson that says how a push is delimited. Nothing less closes this.
+
+---
+
+## A-073 — "reset"
+
+### Course Meaning
+
+An event that restarts the level count from one.
+
+### Evidence
+
+16 markers in V09. Representative:
+
+| Video | Timestamp | Usage |
+|---|---|---|
+| V09 | `[00:28:27]` | *"this is the euro usd, last friday seemed to form a **reset** with the level one two three"* |
+| V09 | `[00:28:35]` | *"Pulled back, formed another **reset**"* |
+| V09 | `[00:30:02]` | *"I am personally [seeing] a **reset** that formed the beginning of last week"* |
+| V09 | `[00:44:48]` | *"Get enough people trapped, pull it back, and **that can reset the count**"* |
+| V09 | `[00:50:04]` | *"I always look at a **reset** to have some type of **context** — multi-day"* |
+| V09 | `[00:50:48]`–`[00:50:57]` | *"so I based my resets on the fact that it actually has a **correlation back to a previous trap volume area**… that trap volume means what they sent the market down to get shorts committed this direction and they've pulled away from them"* |
+| V09 | `[00:51:07]`–`[00:51:13]` | *"market makers are still toying with this level and **pulling away from it twice** — okay, to me that shows a **reset of their count**"* |
+
+Also printed on frames 22, 23 and 25 as a chart label.
+
+### Assessment
+
+**This is the closest V09 comes to defining one of its own terms, and it is still not a
+definition.** `[00:50:04]`–`[00:51:13]` gives three necessary-looking conditions:
+
+1. It has **multi-day context**.
+2. It **correlates back to a previous trap-volume area**.
+3. Price has **pulled away from that area twice** without committing.
+
+Every one of them rests on another undefined object — *trap volume* area, *pulling away*,
+*context* — and none is quantified. The passage is a worked justification of one specific call
+on one specific chart, offered as *"in my eyes"* (`[00:44:52]`).
+
+**Why this matters more than a vocabulary gap:** `A-004` asks what a *level* is; **reset asks
+where counting starts**. A level count with no defined origin is not partially specified, it is
+unspecified — and every one of V09's twelve directional calls (§7b of the source notes) depends
+on where the reset was placed.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Required Research
+
+Whether the course author defines it. Tier 2 has **3** occurrences of *reset* in 84 pages, none
+of them a definition (checked, `SOURCING_HIERARCHY.md` §2 step 2).
+
+### Related
+
+`A-004` (*level*), `A-072` (inducement resets the count), and the trap-move records.
+
+---
+
+## A-074 — "dominant pair"
+
+### Course Meaning
+
+Which of the two currencies in a cross is driving its direction, overriding the usual USD
+correlation.
+
+### Evidence
+
+| Video | Timestamp | Usage |
+|---|---|---|
+| V09 | `[00:42:47]` | *"when we don't have alignment — okay, we all see this — we want to have alignment with the U side"* |
+| V09 | `[00:42:54]` | *"if USD decides to be the **dominant pair**, of course this is going to move against your USD"* |
+| V09 | `[00:43:02]` | *"if the frank is the **dominant pair**, it won't matter what the USD does, the frank will take over"* |
+| V09 | `[00:43:09]`–`[00:43:12]` | *"that's the same actually with the J pairs. When the J decides to be the **dominant pair**, then it's going to affect all the J pairs ending with J and they won't have any correlation to the first part, which is actually the base currency"* |
+
+### Assessment
+
+A real and consequential idea — it is his stated reason for calling EUR/USD and USD/CHF **both
+long** (`[00:42:24]`), which a naive USD-correlation reading would forbid.
+
+**And there is no criterion for deciding which currency is dominant.** *"Decides to be"* is
+agentive language for an outcome; nothing says how to detect it, over what window, or before the
+fact. He is explicit that he is not deriving it from correlation: `[00:43:23]`–`[00:43:30]`
+*"I'm making this [level] count based on what we see here. I'm **not basing it purely on
+correlation** of the US dollar. If you were to correlate it, of course, it doesn't make sense."*
+
+**That last clause is the whole problem in one sentence**: the call is acknowledged to be
+inconsistent with correlation, and the thing that licenses it is undefined.
+
+### Possible Measurable Features
+
+| # | Candidate | Course support |
+|---|---|---|
+| 1 | Currency-strength index across a basket | **NONE** — not mentioned |
+| 2 | Rolling correlation breakdown between a cross and its USD legs | **NONE**, and explicitly disclaimed at `[00:43:27]`–`[00:43:30]` |
+| 3 | The pair whose own level count is cleanest | INFERRED from `[00:43:23]`, weak |
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Related
+
+`A-014` (*fractional disparity* — cross-pair level analysis, `RESOLVED BY MMM-NOTES`). **These
+are adjacent and are NOT merged**: `A-014` is about level counts disagreeing across pairs;
+`A-074` is about which currency drives a cross. V09 uses both terms, 470 seconds apart, without
+connecting them.
+
+---
+
+## A-075 — "alternate count"
+
+### Course Meaning
+
+Carrying two incompatible level counts on the same chart at the same time, deliberately.
+
+### Evidence
+
+| Video | Timestamp | Usage |
+|---|---|---|
+| V09 | `[00:40:55]` | *"enough study of this stuff also will tell you that it's good to know if you see it, **alternate count** going one way or the other. I've written down multiple counts a lot, or I'll have a one up and a three down"* |
+| V09 | `[00:45:51]`–`[00:45:54]` | *"I would mark it a two to the downside, I would actually make that tomato color… and then I would actually throw in a **bracket** after it, and so I would have an **alternate count**"* |
+| V09 | `[00:46:00]` | *"there's nothing wrong with alternate counts. We like to have everything solid in the sand — you know, line in the sand — but in this business you're looking a lot of times at **potentialities**"* |
+| V09 | `[00:46:14]` | *"I've had count lists from 17 pairs with **at least half of them having alternate counts**"* |
+| V09 | `[00:40:46]` | *"Hopefully you guys see **these aren't exact science**. This is potentials we're dealing with"* |
+
+### Assessment
+
+**This is the most important epistemic statement in Part B and it should not be filed as a mere
+vocabulary gap.** The presenter states, in his own practice, that **roughly half of his
+directional calls carry a simultaneous contradictory reading**, and that this is correct
+practice rather than a failure.
+
+**Two consequences that a future session must not lose:**
+
+1. **It bounds how any level-count claim can ever be scored.** If a call is *"level 1 up, or
+   level 3 down"*, then a next-day outcome test cannot falsify it — which is precisely why V09's
+   own homework (H3, the arrow drill) demands a **single committed arrow**, and why performing
+   H3 with an undefined level rule would be worse than not performing it.
+2. **It is `DESCRIPTIVE` about method confidence, and under `D-033` it is also NORMATIVE** — he
+   is telling students to do this. Both readings point the same way: **the course's own
+   representation of its level counts is probabilistic, not deterministic.**
+
+### What is missing
+
+No rule for **when** an alternate count is warranted, how many are permitted, which one is
+primary, or what would retire one. `[00:46:42]` — *"these do help us form a bias that overall wins more times than loses"* — is a performance claim with no measurement attached, and per
+`D-009` it is preserved with provenance and treated as a hypothesis, **not** a target.
+
+### Current Status
+
+```text
+DO NOT CODE
+```
+
+### Related
+
+`A-004`, `A-073`, `D-009` (no optimization toward a claimed rate).
