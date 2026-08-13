@@ -1286,3 +1286,183 @@ source-side evidence; this project's screenshots for V09 are the **26 frames in
   **9 distinct templates across the library, one of which covers 9 lessons including V09.**
   V09 adds a sixth failure mode and it is the one that defeats the cheapest screen: **a genuine
   frame from the correct lesson, carrying an entirely invented description.**
+
+---
+
+## Q-011 — V10's `NOTES.md` and `VISUAL_INDEX.md`, confirmed fabricated; and `RULES.md` is shown to be **V01's file with six identifier strings swapped**
+
+```text
+STATUS:        QUARANTINED — DO NOT USE
+DATE:          2026-08-13
+QUARANTINED BY: V10 Student session
+DECISION:      D-017 (Q-001 blanket action). RULES.md is already quarantined and is NOT
+                re-derived from audio for its own sake — Q-007's mechanical template-marker
+                test discharges V07-V21. It IS re-measured here, for a different and
+                stronger purpose: see §3, which upgrades Q-010's "two templates" result
+                from a normalised-hash grouping to an EXACT TEXT IDENTITY.
+```
+
+### Scope
+
+| File | SHA-256 (quarantined copy) | Disposition | Basis |
+|---|---|---|---|
+| `NOTES.md` | `a97ead37943dfd2383e672509772ea1f5a23c1a78466ae04f1e2150acad15252` | **Fabricated — confirmed here** | Per-lesson audio cross-check, §1 |
+| `VISUAL_INDEX.md` | `a1cb25d10079b801499330cc7e87cbd5deb271cdcfad99fafd4d0027eefb2de0` | **Fabricated — confirmed here** | Per-lesson image cross-check, §2 |
+| `RULES.md` | `3d769300409849ae882264394c9e2840bba58c964337b347cf41b4ab44671653` | Already quarantined; **re-measured**, not re-derived | `Q-007`; §3 |
+| `TRANSCRIPT.md` | — | **SOUND — adopted** | `SETUP_ISSUES.md` `I-008`, four axes, recorded in `02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` § VERIFICATION |
+
+### Method
+
+Token counts are matches over the **verbatim body only** of
+`02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md` (the pre-ingestion `# VIDEO` header and all timestamp
+lines excluded), **14,335 words**. Counts use **word boundaries**, not substring matching —
+see the disclosure at the end of §1, which is a correction this session made against itself.
+Every image claim is checked against the files actually present in the lesson folder's
+`SCREENSHOTS/`, by SHA-256, by reading real pixel dimensions, **and by opening and looking**,
+and additionally against **this session's own 1,164-frame sweep of the same `.swf`**.
+
+---
+
+### 1. `NOTES.md` — fabricated
+
+| `NOTES.md` claims | Occurrences in V10's 14,335-word body |
+|---|---|
+| *"Session Timing: Asian Session 7:00 PM – 3:00 AM EST / London 3:30 AM – 9:00 AM EST / New York 9:30 AM – 5:00 PM EST"* | **`7:00` 0, `3:00 am` 0, `3:30` 0, `9:00` 0, `9:30` 0, `5:00 pm` 0. Six clock figures, six zeroes.** V10 discusses sessions constantly (`asian` **13**) and **never once states a clock time for any of them** |
+| *"EMAs: 5 (Mustard), 13 (Water), 50 (Mayo), 200 (Blueberry), 800 (Raspberry)"* | **`mustard` 0, `raspberry` 0, `ketchup` 0.** `mayo` **1** and `blueberry` **2** — all three inside one line, `[01:25:28]` *"Pins to the blueberry baby pins to the Mayo pins to the blueberry"*, which uses them as chart-line names and **maps neither to a period**. `water` **1**, and it is not an average: `[01:24:29]` *"Shark fin blood in the water"* |
+| *"Time Gap: 30 to 90 minutes between peak 1 and peak 2 on M15 charts"* | **`30 to 90` 0, `M15` 0.** No time gap of any length is stated. The one interval V10 does give is different in both number and subject — `[00:39:14]` *"comes above leg two for 15 to 30 minutes and comes back below"* |
+| *"M & W Pattern Anatomy: 2nd leg must fail to make a new extreme, showing rejection candles (Railroad tracks or pin bars)"* | **`pin bar` 0, `rejection` 0, `new extreme` 0.** `railroad` **4**, but never as a required confirmation — it is narration of specific charts (`[00:38:19]`, `[01:04:50]`) |
+| *"TDI Indicator: Green Price Line crossing Red Signal Line after breaking outside Blue Volatility Bands (Shark Fin)"* | **`signal line` 0, `volatility band` 0, `divergence` 0.** `TDI` **1** — and it is a *deferral*, not a teaching: `[01:13:03]` *"do we use TDI to confirm these yes, that's next week's lesson my friend"* |
+| *"Institutional Mechanics: … institutional order flow … panic/fear via spike candles and news events"* | **`institutional` 0, `order flow` 0, `spike` 0, `panic` 0, `news` 0** |
+| *"Topic Focus: H4 Anchor Analysis, H1 Alignment, M15 Execution Timing"* — i.e. multi-timeframe analysis | **The lesson explicitly REFUSES this framing.** `[01:13:47]`–`[01:13:56]`: *"people posted in the form … that I'm using multiple time frame analysis. That's what you want to call it. That's fine, but that's not what we're doing here"* |
+
+**The last row is the sharpest.** It is not an unsupported claim — it is a claim the lesson
+**contradicts in terms**, about the lesson's own headline topic. `NOTES.md`'s framing device is
+the one thing V10 goes out of its way to disown.
+
+> **⚠ A COUNTING ERROR THIS SESSION MADE AND CAUGHT, DISCLOSED BECAUSE THE METHOD IS THE POINT.**
+> An early screen of this lesson counted **`EMA` = 24** by substring match. That figure is
+> **wrong and is retained here rather than deleted.** Twenty-two of the twenty-four are the word
+> **`email`**, of which this lesson (a Q&A-heavy session opening on a mailbag) has a great many.
+> The word-boundary count is **`EMA` = 2**, both incidental: `[00:59:45]` *"the EMA's are open
+> wide open"* and `[01:02:53]` *"He uses the 200 EMA of support"*. **`800` = 0.**
+>
+> This matters beyond bookkeeping: a substring count would have let `NOTES.md`'s five-EMA table
+> look *partially* supported by a busy token, when the truth is that V10 names exactly one
+> moving average, once. **A fabrication screen that over-counts in the fabrication's favour is
+> not a screen.** Every count in this record is word-boundary.
+
+---
+
+### 2. `VISUAL_INDEX.md` — fabricated, and it is the **second confirmed instance of `Q-010`'s sixth failure mode**
+
+`VISUAL_INDEX.md` describes **three** screenshots. The lesson folder contains **one**.
+
+| # | Claimed | Reality |
+|---|---|---|
+| 001 | `[00:02:00]` — *"Asian Box accumulation range with 5, 13, 50, 200, and 800 EMAs"* | **The file exists** (`b61063e68092fb97de640c31fc6faaac87566a137580da2b3ee07560507c014b`, 1024×768) **and it is a genuine frame of this lesson — the TITLE CARD**, reading *"Market Makers Boot Camp / Week 3"*. It contains **no chart, no box, no moving average of any kind.** Its timestamp is also wrong: this session's own sweep shows the screen at `01:39` and `01:58` is the *"Chat Box…"* housekeeping slide, and the title card precedes it |
+| 002 | `[00:15:00]` — *"London Open Stop Hunt false breakout forming 2nd leg M-formation at High of Day"* | **No such file.** At `[00:15:02]` the lesson is answering a mailbag question about *"the price won't come back to a certain price point"* |
+| 003 | `[00:30:00]` — *"TDI Shark Fin setup with green line hooking inside volatility bands + 5/13 EMA cross"* | **No such file.** At `[00:30:01]` the lesson is narrating *"the dealer fails to extend above the previous set"*. `TDI` is **deferred to next week** at `[01:13:03]`; `5/13` occurs **0** times in the lesson |
+
+**Q-010 recorded a sixth failure mode — a genuine frame from the correct lesson carrying an
+entirely invented description — and noted that hashing across lessons cannot catch it. V10 is
+the second instance, and it is starker than V09's:** the frame here is a **title card**. There
+is no reading of it, at any resolution, on which it depicts an Asian accumulation range with
+five moving averages. The description is not a mislabel of an ambiguous chart; it is unrelated
+to the pixels.
+
+**The cheap screens and what each would have done:**
+
+| Screen | Verdict on V10 |
+|---|---|
+| Timestamp past runtime | **Would NOT fire** — all three claimed stamps are inside 96 minutes |
+| Constant timestamp delta | **Would fire** — `00:02:00 / 00:15:00 / 00:30:00`, and the file stops describing at minute 30 of a 96-minute lesson |
+| Byte-duplicate across lessons | **Would NOT fire** — this image is unique in the library |
+| Count files vs count entries | **Would fire** — 3 described, 1 present |
+| **Open the image and look at it** | **Fires immediately, and is the only screen that catches the description** |
+
+---
+
+### 3. `RULES.md` — the strongest result in this record: it is **V01's file with six identifier strings swapped**
+
+`Q-010` measured `RULES.md` as **two templates** library-wide by normalised hash, with V09 in
+V01's group. This session tested the stronger claim directly, with `diff`, and it holds:
+
+```text
+diff  _QUARANTINE.../01_Bootcamp1_Wk1_031812_Part1_55mins/RULES.md
+      _QUARANTINE.../10_Bootcamp1_Wk3_040112_96mins/RULES.md
+```
+
+returns **six changed lines, and all six are the lesson's name:**
+
+| Line | V01 | V10 |
+|---|---|---|
+| title | `… - Bootcamp1 Wk1 031812 Part1 (55mins).swf` | `… - Bootcamp1 Wk3 040112 (96mins).swf` |
+| rule id | `V01-R001` | `V11-R001` |
+| visual | `VIDEO_01_SCREENSHOT_001_00-02-00.jpg` | `VIDEO_11_SCREENSHOT_001_00-02-00.jpg` |
+| rule id | `V01-R002` | `V11-R002` |
+| visual | `VIDEO_01_SCREENSHOT_002_00-15-00.jpg` | `VIDEO_11_SCREENSHOT_002_00-15-00.jpg` |
+| setup | `Asian Box Stop Hunt Reversal (Week 1 - Part 1)` | `Asian Box Stop Hunt Reversal (Week 3)` |
+
+**Every other line is byte-identical** — every rule, every `**Source:** Explicit` label, every
+timestamp, every numeric parameter, every "Instructor Statement", the ambiguity section, the
+contradiction section (*"None detected within this video"*), and the coding implications.
+
+**`D-017` already proved V01's copy false against verified audio.** The same sentence, at the
+same claimed marker, is therefore false here too — and V10's own audio is independently
+decisive:
+
+| `RULES.md` asserts, **`Source: Explicit`** | What is actually at that marker in V10 |
+|---|---|
+| `[00:05:00]` *"Wait for the M15 candle to close before taking the 5/13 EMA cross."* | `[00:04:59]`–`[00:05:09]` **a CompassFX seminar announcement** — *"On behalf of market makers 4x … we're gonna be hosting a seminar Tuesday April 3rd"*. `5/13` occurs **0** times in the lesson; `M15` **0**; `crossover` **0** |
+| `[00:18:00]` *"Place your stop loss 10 to 15 pips beyond the High or Low of the Day."* | `[00:18:04]` **homework housekeeping** — *"We are not in grade school. I don't need to see your homework and bring it home and hang it on my fridge with a magnet"*. `stop loss` occurs **0** times; `10 to 15` **0** |
+| `[00:04:00]` the five-EMA parameter table, all five rows `Explicit` | `[00:04:03]` *"these are some of the problems that I'm coming across on the emails"*. **`EMA` = 2 in the whole lesson, `800` = 0** |
+| `[00:22:00]` *"Peak Time Gap 30-90 mins"*, `Explicit` | `[00:22:09]` *"The dealer comes back issues a triple bottom in the shadow brinksy, baby"*. `30 to 90` = **0** |
+| *"# CONTRADICTIONS — None detected within this video."* | This session files **`C-016`** and **`C-017`** from V10's own audio |
+
+**Six citations, six misses, zero partial hits.** The failure is not drift or paraphrase; the
+document was never about this lesson.
+
+### 4. Template census — this session's own measurement
+
+Normalising away per-lesson identifier tokens and digits, then hashing, across all 21 lessons:
+
+| File | Distinct templates | Where V10 sits |
+|---|---|---|
+| `NOTES.md` | **17** | a **singleton** — so V10's `NOTES.md` is per-lesson generated, and needed the real audit in §1. **This reproduces `Q-010`'s count of 17 exactly** |
+| `VISUAL_INDEX.md` | **8** under this session's stricter normalisation | in the **largest group, n = 10** (V03, V04, V09–V15, V21). `Q-010` measured 9 groups with one covering nine lessons; the two measurements agree in substance and differ only by normalisation strictness, which is **stated rather than reconciled away** |
+| `RULES.md` | **5** under this session's stricter normalisation | a singleton **by hash** — but §3 shows that is an artifact of the normaliser, which masks digits but not the words *"Wk1 … Part1"* vs *"Wk3"*. **By `diff`, V10 and V01 are the same document.** `Q-010`'s two-template reading is the correct one and this session's hash grouping is the weaker instrument |
+
+> **The methodological point, and it is against this session's own first instrument.** A
+> normalised hash reported V10's `RULES.md` as *unique*. A `diff` reported it as *V01's file*.
+> **The hash was wrong because the normaliser did not anticipate the identifier's shape**, and
+> a session trusting it would have recorded V10's rules as independently generated — which is
+> precisely the opposite of the truth, and would have made them look more credible. Both
+> measurements are recorded above. `Q-010` was right; this session's stricter normalisation was
+> not more rigorous, it was differently blind.
+
+### Disposition
+
+All three files remain quarantined in place at
+`_QUARANTINE_UNVERIFIED_NOTES/per_lesson/10_Bootcamp1_Wk3_040112_96mins/`, covered by the
+tree's blanket `README_WHY_QUARANTINED.md`. **No file was moved, renamed or deleted**
+(`REMEDIATION_PROTOCOL.md` §2). The lesson folder's own `SCREENSHOTS/` is left untouched as
+source-side evidence; this project's screenshots for V10 are the curated frames in
+`04_SCREENSHOTS/V10/`, captured from the `.swf` by this session.
+
+### One thing the quarantined material got right, recorded because the register must cut both ways
+
+The single real image is the lesson's **title card, and it prints *"Week 3"***. That is an
+**independent, in-recording corroboration of `D-017` §2's ordering for this file**, whose week
+number until now rested on the filename (`Wk3 040112`) and the session-date derivation alone.
+It is also the reason `V10` can assert a printed banner where `V09` could assert no title at
+all. The *description* attached to it is fabricated; the *pixels* are evidence.
+
+### Running tally for the fabrication pattern
+
+- **`RULES.md`:** 21 of 21 covered. **Now shown by exact `diff` — not merely by normalised hash —
+  to be a single document re-badged**, with V10 and V01 differing in six identifier strings only.
+- **`NOTES.md`:** **10 of 21 audited** (V01–V10), **10 fabricated, zero exceptions.** V10 adds
+  the first instance of a claim the lesson **contradicts in terms** (multi-timeframe analysis).
+- **`VISUAL_INDEX.md`:** **10 of 21 audited** (V01–V10), **10 fabricated.** V10 is the **second
+  confirmed instance of the sixth failure mode** — a genuine frame carrying an invented
+  description — and confirms it is a repeating generator behaviour rather than a V09 one-off.
