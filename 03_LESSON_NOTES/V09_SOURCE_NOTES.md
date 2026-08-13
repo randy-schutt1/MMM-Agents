@@ -282,14 +282,15 @@ single most important cross-file result in this lesson.
 | Risk at stop | 2% |
 | Geometry | 2:1 or greater, −25 / +50 |
 | Per trade | **−2% on a loss, +4% on a win** |
-| Claim | `AUDIO` `[00:24:52]`–`[00:24:55]`: *"only **five successful trades per week**… it brings **20% gains**"*. `PRINTED`, frame burned `25:00`: *"Only FIVE successful trades per Week = 20% Gains for the Week!"* |
+| Claim | `AUDIO` `[00:24:52]`–`[00:24:59]`: *"only **five successful trades per week** it brings **20% gains** for the week"*. `PRINTED`, frame burned `25:00`: *"Only FIVE successful trades per Week = 20% Gains for the Week!"* |
 | Compounding | *"In four weeks you doubled your account with a $5,000 account. You now have 10,000 368"* |
 | Spreadsheet (frame burned `26:40`) | `Base 5,000.00`, `% profit 0.2000`, Week 4 = `10,368.00`, running 28 weeks to **`824,223.31`** |
 
 > *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — the Claim row previously read
-> *"only **five successful trades per week** brings **20% gains** for the week"*, which is
-> neither source verbatim: it drops the audio's *"it"* and imports *"for the week"* from the
-> slide. Both sources are now quoted separately and the claim is unchanged. Found by the item 81
+> *"only **five successful trades per week** brings **20% gains** for the week"*. `[00:24:52]`–
+> `[00:24:59]` reads *"only five successful trades per week **it** brings 20% gains for the
+> week"*: the single dropped word is *"it"*, and the sentence is otherwise contiguous in the
+> audio. Both sources are now quoted separately, and the claim is unchanged. Found by the item 81
 > sweep.)*
 
 **Arithmetic check:** 5 × 4% = 20% ✓. $5,000 × 1.2⁴ = **$10,368.00** ✓ exactly. The 28-week

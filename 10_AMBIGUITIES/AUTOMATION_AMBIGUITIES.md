@@ -8,6 +8,35 @@ Template: `00_SYSTEM/TEMPLATES/AMBIGUITY_TEMPLATE.md`
 
 ## STATUS
 
+> ## 📌 CORRECTED 2026-08-13 — V09 R2 item 81: SIX QUOTATION DEFECTS IN THIS REGISTER'S V09 ROWS
+>
+> **Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2.** `V09_REVIEW_R2.md` open item
+> **81** required `05_HOMEWORK/V07/scripts/verify_quotes.py` to be generalised and run. **It was,
+> and the run had to be extended to reach this file** — the seven V09 artifacts the review named
+> do not include the shared registers, and **six live misquotes were sitting here**, including
+> the very phrase item 81 was raised about. This is item 82's argument, in the quotation class
+> rather than the pointer class: **a defect in a shared register outlives the lesson that put it
+> there.** The script now scans `10_AMBIGUITIES/` and `11_CONTRADICTIONS/` for every lesson,
+> restricted to rows whose first cell names that lesson.
+>
+> | Record | Previously read | The transcript reads | Marker |
+> |---|---|---|---|
+> | **`A-066`** | *"**solid HOD/LOD entries** can warrant a 15-pip stop loss"* | *"Example solid **high low-day** entries…"* — `HOD/LOD` is the PRINTED form (frame burned `03:45`), now named outside the quote | `[00:03:49]` |
+> | **`A-071`** | *"…impose itself on the week**. So** our level count many times will have to change"* | two markers joined across the dropped *"All right, so"*; now explicitly elided | `[00:34:48]`–`[00:34:52]` |
+> | **`A-072`** | *"…and **experience shows** me that they can grab all their stuff at 50 pips"* | *"**experiences show** me"* — **the seventh instance of this class in V09 and the third of this exact phrase**, after `V09_SOURCE_NOTES.md` §7e (fixed at R1) and §8 line 410 (item 81) | `[00:44:39]` |
+> | **`A-072`** | *"Get enough people **trapped**, pull it back…"* | *"Get enough people **trap**, pull it back…"* | `[00:44:48]` |
+> | **`A-073`** | *"Get enough people **trapped**, pull it back…"* | the same, in a second record | `[00:44:48]` |
+> | **`A-075`** | *"I've had count **lists** from 17 pairs…"* | *"I've had count **list** from 17 pairs… **on them**"*, and the quotation spans two markers | `[00:46:13]`–`[00:46:14]` |
+>
+> **Nothing moves.** No record's status, disposition, `DO NOT CODE` verdict, evidence count or
+> Tier 2 negative changes. Every one is a rendering defect inside quotation marks.
+>
+> **Three further fragments were flagged and hand-ruled NOT defects**, on the ground V07 R3 `N2`
+> established: `A-071`'s two `[M]` brackets and `A-073`'s `[seeing]` bracket leave a hole when the
+> bracket is stripped, so the remainder cannot match — but every **unbracketed** word is verbatim,
+> and `[seeing]` is the reading `V09_TRANSCRIPT.md`'s own TRANSCRIPTION NOTES record as correct.
+> Each is enumerated in the script's allowlist with its reason rather than left to re-flag.
+
 > ## 📌 UPDATED 2026-08-13 — V09: ELEVEN RECORDS ADDED (`A-065` … `A-075`)
 >
 > **All counts in every block below are superseded** (`REMEDIATION_PROTOCOL.md` §2). As at
@@ -4815,7 +4844,7 @@ Where the stop-loss order actually goes on the chart.
 
 | Video | Timestamp | What is stated | What is not |
 |---|---|---|---|
-| V09 | `[00:03:49]` | *"solid HOD/LOD entries can warrant a **15-pip stop loss**"* | Fifteen pips **from what** |
+| V09 | `[00:03:49]` | *"Example solid high low-day entries can warrant a **15-pip stop loss**"* — the ASR's *"high low-day"* is the printed **`HOD/LOD`** (frame burned `03:45`) | Fifteen pips **from what** |
 | V09 | `[00:04:55]` | *"this example will use **25 pips stop loss** and a 50-pip take profit"* | Same |
 | V09 | `[00:18:44]`–`[00:18:48]` | *"Moving your stop loss after you've placed it"* is error #1 | Presupposes a placement rule and does not give one |
 | V08 | printed, `V08_00-05-40` | *"dealing **within 10 pips of HOD/LOD**"* | An **entry** tolerance, not a stop |
@@ -5077,7 +5106,7 @@ A named weekly-shape pattern that can override a running level count.
 | V09 | `[00:34:18]` | *"the caveat to all of this is our lovely **market maker cycle** which we bring into play as soon as we start seeing that form"* |
 | V09 | `[00:34:27]` | *"**we all know what that is** right, I don't need to draw that out for you guys, but because I'm crazy I will"* |
 | V09 | `[00:34:44]` | *"**The dinosaur pattern**, okay"* |
-| V09 | `[00:34:48]` | *"This pattern **can always impose itself on the week**. So our level count many times will have to change"* |
+| V09 | `[00:34:48]`–`[00:34:52]` | *"This pattern **can always impose itself on the week**… our level count many times will have to change"* |
 | V09 | `[00:34:55]`–`[00:35:11]` | *"if we see a nice [M] up here we expect three levels dropping back… it's possible that we can see an [M] form here and then it can drop back down three levels for the rest of the week"* |
 
 ### Assessment
@@ -5128,8 +5157,8 @@ The structure of the inducement sequence that precedes a reversal.
 | Video | Timestamp | Statement | Basis |
 |---|---|---|---|
 | V09 | `[00:44:29]` | *"When the market makers start their cycle, **induce once, induce twice, induce the third time**. We want to try to get people long"* | `AUDIO` |
-| V09 | `[00:44:39]`–`[00:44:44]` | *"They form a pin up here because they're going to pull it back the other way and they're going to grab their pips, and experience shows me that they can **grab all their stuff at 50 pips**"* | `AUDIO` |
-| V09 | `[00:44:48]` | *"Get enough people trapped, pull it back, and that can **reset the count**"* | `AUDIO` |
+| V09 | `[00:44:39]`–`[00:44:44]` | *"They form a pin up here because they're going to pull it back the other way and they're going to grab their pips, and experiences show me that they can **grab all their stuff at 50 pips**"* | `AUDIO` |
+| V09 | `[00:44:48]` | *"Get enough people trap, pull it back, and that can **reset the count**"* | `AUDIO` |
 | V09 | `[00:46:28]` | *"I honestly look more towards **inducements, which would be three pushes, three accelerations, the third being the longest**"* | `AUDIO` |
 | V09 | `[00:46:31]` | *"I see a nice long acceleration here. All right. **That's my own reasoning**"* | `AUDIO` — a self-limiting hedge |
 
@@ -5177,7 +5206,7 @@ An event that restarts the level count from one.
 | V09 | `[00:28:27]` | *"this is the euro usd, last friday seemed to form a **reset** with the level one two three"* |
 | V09 | `[00:28:35]` | *"Pulled back, formed another **reset**"* |
 | V09 | `[00:30:02]` | *"I am personally [seeing] a **reset** that formed the beginning of last week"* |
-| V09 | `[00:44:48]` | *"Get enough people trapped, pull it back, and **that can reset the count**"* |
+| V09 | `[00:44:48]` | *"Get enough people trap, pull it back, and **that can reset the count**"* |
 | V09 | `[00:50:04]` | *"I always look at a **reset** to have some type of **context** — multi-day"* |
 | V09 | `[00:50:48]`–`[00:50:57]` | *"so I based my resets on the fact that it actually has a **correlation back to a previous trap volume area**… that trap volume means what they sent the market down to get shorts committed this direction and they've pulled away from them"* |
 | V09 | `[00:51:07]`–`[00:51:13]` | *"market makers are still toying with this level and **pulling away from it twice** — okay, to me that shows a **reset of their count**"* |
@@ -5293,7 +5322,7 @@ Carrying two incompatible level counts on the same chart at the same time, delib
 | V09 | `[00:40:55]` | *"enough study of this stuff also will tell you that it's good to know if you see it, **alternate count** going one way or the other. I've written down multiple counts a lot, or I'll have a one up and a three down"* |
 | V09 | `[00:45:51]`–`[00:45:54]` | *"I would mark it a two to the downside, I would actually make that tomato color… and then I would actually throw in a **bracket** after it, and so I would have an **alternate count**"* |
 | V09 | `[00:46:00]` | *"there's nothing wrong with alternate counts. We like to have everything solid in the sand — you know, line in the sand — but in this business you're looking a lot of times at **potentialities**"* |
-| V09 | `[00:46:14]` | *"I've had count lists from 17 pairs with **at least half of them having alternate counts**"* |
+| V09 | `[00:46:13]`–`[00:46:14]` | *"I've had count list from 17 pairs with **at least half of them having alternate counts** on them"* |
 | V09 | `[00:40:46]` | *"Hopefully you guys see **these aren't exact science**. This is potentials we're dealing with"* |
 
 ### Assessment

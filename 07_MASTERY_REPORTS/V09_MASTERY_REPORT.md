@@ -471,7 +471,7 @@ found inside `PT-035` that was deliberately **not** fixed.
 
 | Item | Finding | Fix | Where |
 |---|---|---|---|
-| **81** | `E01` — the mechanized sweep item 73 required was never run, and a **fifth** instance of the same defect survived 38 lines from the corrected one | `verify_quotes.py` **generalised** to take a lesson identifier and **run against all seven V09 artifacts**. It FLAGGED **46** fragments; **thirteen were genuine defects and all thirteen are fixed**, including line 410 and a **sixth** `E01` instance nobody had enumerated. The remaining 33 are printed slide text, quotations of other documents, and superseded text retained inline in table cells — each is now enumerated with its reason in the script's V09 allowlist. Superseded text retained at every site | `05_HOMEWORK/V07/scripts/verify_quotes.py`; `V09_SOURCE_NOTES.md` §2c, §5, §6, §8, §11; `V09_INTERPRETATION.md` Q6; `V09_HOMEWORK.md`; `04_SCREENSHOTS/V09/INDEX.md` row 26 |
+| **81** | `E01` — the mechanized sweep item 73 required was never run, and a **fifth** instance of the same defect survived 38 lines from the corrected one | `verify_quotes.py` **generalised** to take a lesson identifier and **run against all seven V09 artifacts**, then **extended to the two shared registers** when a seventh instance turned up outside the named set. **NINETEEN genuine defects found and all nineteen fixed**, including line 410, a **sixth** instance nobody had enumerated, and six more in the shared ambiguity register. Every non-defect is enumerated with its reason in the script's V09 allowlist. Superseded text retained at every site | `05_HOMEWORK/V07/scripts/verify_quotes.py`; `V09_SOURCE_NOTES.md` §2c, §5, §6, §8, §11; `V09_INTERPRETATION.md` Q6; `V09_HOMEWORK.md`; `04_SCREENSHOTS/V09/INDEX.md` row 26; `AUTOMATION_AMBIGUITIES.md` `A-066`, `A-071`, `A-072`, `A-073`, `A-075` |
 | **82** | `E11` — `A-069` and `A-073` still carried *"frames 22, 23 and 25"*, pointing at a spreadsheet and an email address | Both converted to the burned-in player timecodes `28:45` / `31:50` / `41:25`, matching the convention item 76 established. Superseded text retained at both | `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` `A-069`, `A-073` |
 | **83** | `E19` — escalation 5 still put a retired question to the owner | Marked ✅ **RETIRED**, in the form escalation 2 already used, with the item-77 arithmetic that retires it restated and the original text retained in full | this report, escalation 5 |
 
@@ -484,11 +484,20 @@ and the review named it. `04_SCREENSHOTS/V09/INDEX.md` row 26's *"What is the gr
 **no human in either review round found it.** `V09_SOURCE_NOTES.md` §9a corrected its own copy of
 that exact quotation at R1. A machine sweep found the twin in a different file in one run.
 
-The other eleven were the same class in milder forms: numeral-for-word (*"2%"* for *"two percent"*),
+**And a SEVENTH, in a file no sweep was looking at.** The seven V09 artifacts the review named
+do not include `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`. `A-072`'s evidence table was carrying
+*"experience shows me"* — the **same phrase** as line 410, its **third** live copy in V09 — and
+five more misquotes sat beside it in `A-066`, `A-071`, `A-073` and `A-075`. The script now scans
+both shared registers for every lesson, restricted to rows whose first cell names that lesson.
+**This is item 82's argument in the quotation class rather than the pointer class:** a defect in
+a shared register outlives the lesson that put it there. Running the extended sweep against V07
+as well returns **0** flags, so no earlier lesson carries the same debt.
+
+The other eleven in the artifact set were the same class in milder forms: numeral-for-word (*"2%"* for *"two percent"*),
 tense (*"brings"* for *"will bring"*), ASR expansions inside quote marks (*"forex"* for the
 transcript's *"4x"*, *"DMR"* for *"dmor"*, *"USD JPY"* for *"USD JP why"*), and four unmarked
 elisions where a comma or a full stop joined two non-adjacent markers. **None moves a conclusion.
-All thirteen are now either literal or explicitly elided.**
+All nineteen are now either literal or explicitly elided.**
 
 ### What this revision does NOT change
 

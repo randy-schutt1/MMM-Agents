@@ -158,6 +158,21 @@ ARTIFACTS = {
     ],
 }
 
+# SHARED REGISTERS, scanned for every lesson. These outlive the lesson that wrote into them, which
+# is exactly why V09 R2 charged item 82 against them: a wrong pointer here is read by every later
+# session. They were NOT in the artifact set when item 81's sweep first ran, and a SEVENTH instance
+# of the E01 class was sitting in `A-072`'s evidence table as a result -- the same *"experience
+# shows me"* misquote as line 410, in a file no sweep was looking at.
+#
+# Only rows whose FIRST table cell is the lesson id are checked. These registers carry evidence
+# from every lesson in one table, so scanning them whole against ONE lesson's transcript would
+# flag every other lesson's quotations as misses. The `| VNN |` first cell is the register's own
+# declaration of which transcript a row is asserting, and it is what makes the check sound.
+SHARED_REGISTERS = [
+    '10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md',
+    '11_CONTRADICTIONS/CONTRADICTIONS.md',
+]
+
 # Quotations shorter than this many words after normalisation are not checked. A two-word
 # fragment matches by accident too often for a hit to mean anything, and a two-word fragment that
 # does not match is usually a term of art in quotes rather than a quotation.
@@ -374,6 +389,22 @@ ALLOWLIST = {
         ('*', 'usd jpy on a usd based account'):
             'RETAINED superseded text, inline in V09_SOURCE_NOTES.md Sec 5 row 4. Corrected at'
             ' V09 R2 (item 81) to the literal "USD JP why", the ASR form',
+        # -- Intra-word / single-token editorial brackets in the SHARED register. Stripping the
+        #    bracket leaves a hole where the ASR token was, so the remainder cannot match even
+        #    though every asserted word is correct. This is the same class V07 R3 `N2` RULED NOT A
+        #    DEFECT, and it is the bracket convention working exactly as designed: a bracketed
+        #    reconstruction is not an assertion about the source.
+        ('*', 'if we see a nice up here we expect three levels dropping back'):
+            'bracket-strip artifact. [00:34:55] reads "if we see a nice am up here"; the register'
+            ' brackets the ASR\'s "am" as [M]. Every unbracketed word is verbatim',
+        ('*', 'it s possible that we can see an form here and then it can drop back down three'
+              ' levels for the rest of the week'):
+            'bracket-strip artifact. [00:35:06] reads "we can see an m form here"; the register'
+            ' brackets the bare "m" as [M] for legibility. Every unbracketed word is verbatim',
+        ('*', 'i am personally a reset that formed the beginning of last week'):
+            'bracket-strip artifact. [00:30:02] reads "I am personally staying a reset"; the'
+            ' register brackets [seeing], which V09_TRANSCRIPT.md TRANSCRIPTION NOTES already'
+            ' record as the Whisper-correct reading of that garble',
         # -- Scoped to ONE FILE, not '*', because each of these IS the defective rendering. The
         #    mastery report's Revision R2 narrative quotes the wrong text in order to name it.
         #    A '*' entry here would excuse the same misquote reappearing anywhere in the corpus.
@@ -486,13 +517,22 @@ def allow_reason(allowlist, basename, norm):
     return None
 
 
-def check(body, allowlist, path):
-    """Yield (status, line, tier, detail, fragment) for every quotation in one artifact."""
+def check(body, allowlist, path, lesson_rows_only=None):
+    """Yield (status, line, tier, detail, fragment) for every quotation in one artifact.
+
+    `lesson_rows_only` is a lesson id. When set, only quotations sitting on a Markdown table row
+    whose FIRST cell is that id are checked -- the shared-register rule; see SHARED_REGISTERS.
+    """
     with open(path, encoding='utf-8') as fh:
         text = fh.read()
     basename = os.path.basename(path)
+    row_re = (re.compile(r'^\|\s*%s\s*\|' % re.escape(lesson_rows_only))
+              if lesson_rows_only else None)
+    lines = text.splitlines()
     for m in QUOTE_RE.finditer(text):
         line = text.count('\n', 0, m.start()) + 1
+        if row_re and not row_re.match(lines[line - 1]):
+            continue
         tier = 'cited' if cited(text, m.start()) else 'uncited'
         # Bracketed editorial insertions are removed before matching -- that is what the brackets
         # declare. A quotation only asserts the words left outside them.
@@ -563,16 +603,20 @@ def main():
     print('TRANSCRIPT   %s' % transcript)
     print('             %d markers, %d normalised words of spoken body'
           % (markers, len(body_words)))
-    print('ARTIFACTS    %d' % len(artifacts))
+    print('ARTIFACTS    %d + %d shared register(s), lesson rows only'
+          % (len(artifacts), len(SHARED_REGISTERS)))
     print()
 
     tally = {'MATCH': 0, 'ALLOWED': 0, 'RETAINED': 0, 'UNRELATED': 0, 'FLAG': 0}
     flags = []
-    for path in artifacts:
+    targets = ([(p, None) for p in artifacts]
+               + [(p, lesson) for p in SHARED_REGISTERS if os.path.exists(p)])
+    for path, rows_only in targets:
         if not os.path.exists(path):
             sys.exit('FATAL: missing artifact %s' % path)
-        rows = list(check(body, allowlist, path))
-        print('%-72s %3d fragment%s' % (path, len(rows), '' if len(rows) == 1 else 's'))
+        rows = list(check(body, allowlist, path, rows_only))
+        label = path + (' [%s rows only]' % lesson if rows_only else '')
+        print('%-72s %3d fragment%s' % (label, len(rows), '' if len(rows) == 1 else 's'))
         for status, line, tier, detail, frag in rows:
             tally[status] += 1
             if status == 'FLAG':

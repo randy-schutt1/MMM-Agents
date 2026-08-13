@@ -192,9 +192,10 @@ segmented the move into three pushes, which is the undefined step. **`D-030` bin
 stays BLOCKED for the fifth lesson running.**
 
 > *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this question's heading
-> previously read *"three pushes**,** the third being the longest"*. `[00:46:28]` reads
-> *"inducements, which would be three pushes, **three accelerations,** the third being the
-> longest"*, so the comma silently elided three words. Replaced with the ellipsis form
+> previously read *"three pushes**,** the third being the longest"*. `[00:46:28]`–`[00:46:31]`
+> reads *"inducements, which would be three pushes, **three accelerations,** the third being the
+> longest"*, so the comma silently elided two words across a marker boundary. Replaced with the
+> ellipsis form
 > `V09_SOURCE_NOTES.md` §7e already used for the same sentence. **The answer does not move.**
 > `V09_REVIEW_R2.md` open item **81**, found by
 > `05_HOMEWORK/V07/scripts/verify_quotes.py V09`.)*
