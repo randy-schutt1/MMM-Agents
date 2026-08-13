@@ -4698,3 +4698,143 @@ that is a separate, deliberate, single-threaded step under `D-038`.
 
 **Independent review of V08 — `18_REVIEW/V08/V08_REVIEW_R1.md`, by a session that is not this
 one (`D-003`).** The V09 gate is **CLOSED** until it returns.
+
+---
+
+## 2026-08-13 — Reviewer Session (V08 R1)
+
+### Lesson
+
+V08 — *"Jim's Journey in Learning and Trading MMFX"*
+(`Bootcamp1 Wk2 032612 Part3 (43mins).swf`, 00:43:03, 100% `GUEST`).
+
+### Review Objective
+
+Independent mastery audit, R1. `D-003` separation of duties **SATISFIED** — this session
+authored no V08 artifact.
+
+### Branch basis, and the merge-status question
+
+**Reviewed on `review/v08`, branched FROM `video/v08` at `d9e4f9e`**, in its own worktree at
+`/Users/randyschutt/Desktop/Trading/MMM-Agents-review-v08` (`D-038`). `git fetch` established
+that **`video/v08` is NOT merged into `claude/add-documents-repository-fdfb3u`** — it descends
+directly from `823458d` with no divergence, so a clean fast-forward is available, and
+`origin/video/v08` is in sync. Branching from integration would have reviewed an empty set.
+
+**The V08 session's `D-038` deviation is confirmed and is NOT charged against the student.** It
+wrote `LOG.md`, `COURSE_PROGRESS.md`, `QUARANTINE_REGISTER.md`, `AUTOMATION_AMBIGUITIES.md` and
+`CONTRADICTIONS.md` on its own branch, and **disclosed it in its own log** rather than resolving
+it silently. The policy is one day old, the additions are append-only in untouched regions, and
+disclosing a tension is what `D-038`'s consequences section asked the first session under it to
+produce. **Flagged to the owner as open item 68**, with the reviewer's observation that the last
+three files are not in `D-038`'s enumerated list at all and are exactly what a lesson session
+must write — the list may need splitting into *policy* ledgers and *evidence* ledgers.
+**Neither `video/v08` nor `review/v08` was merged by this session.**
+
+### Source Evidence Reviewed
+
+The `.swf` itself (SHA-256 re-hashed, `6beedb40…f8b767`, matches `SOURCE_MANIFEST.md`); its
+audio, re-extracted and re-measured at **2583.745313 s**; the full verbatim transcript body; the
+load-bearing frames **read as images** (the C-009 myth slide, the 3:1 crown-jewel slide, the
+section-3 slide, the end card); and the quarantined `NOTES.md` / `VISUAL_INDEX.md` with their
+referenced image assets, opened and looked at.
+
+`ffmpeg`'s inability to extract frames past **00:08:56** was reproduced independently, which
+corroborates `SWF_CAPTURE_RECIPE.md` §1 as structural. The limit is disclosed in the review
+(§0a); frames after that point were verified by reading the student's captures against their own
+burned-in timecodes, platform pair-tabs and chart dates rather than by re-capture.
+
+### Student Artifacts Reviewed
+
+`02_TRANSCRIPTS/V08/`, `03_LESSON_NOTES/V08_SOURCE_NOTES.md` and `V08_INTERPRETATION.md`,
+`04_SCREENSHOTS/V08/` (26 frames + `INDEX.md`), `05_HOMEWORK/V08/`,
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-034`, `06_MANUAL_BACKTEST/V08/BT_V08_0001.md` and its
+scripts and data, `07_MASTERY_REPORTS/V08_MASTERY_REPORT.md`, `00_SYSTEM/QUARANTINE_REGISTER.md`
+`Q-009`, `10_AMBIGUITIES` `A-059`–`A-064`, `11_CONTRADICTIONS` `C-007`–`C-009`.
+
+### What was re-derived rather than accepted
+
+- **`PT-034` re-executed**: `pt034_output.txt` **byte-identical** bar the absolute worktree path;
+  `pt034_results.json` differs in the single field `runtime_s`. The `PT-033` cross-check re-ran
+  **byte-identical** (`CROSS-CHECK: PASS`). The comprehension probe re-ran **byte-identical**,
+  58/58.
+- **Pre-registration ordering verified in Git**: `a4ab65a` 11:34:31 (prereg) → `e3a8e66` 11:37:43
+  (runner) → `1d206ab` 11:44:33 (results), and `--follow` shows the prereg and the runner each
+  have **exactly one commit** — neither was ever amended.
+- **Homework re-scored** from raw JSON with the reviewer's own code: **5/12 = 0.42**, always-
+  `TARGET` baseline **10/12 = 0.83**, `TARGET`-half 4/5, `STOP`-half **1/7**. Commit structure
+  confirms predictions were committed **without** the answer key (`e586db2` 11:49:45 vs
+  `c04ef2c` 11:52:14).
+- **`Q-009` verified by hash and by eye**: `17e5622c255a…` and `9791aacf6433…` present in exactly
+  quarantine folders 05–08 and nowhere else; four duplicate pairs byte-identical at the stated
+  byte counts; images confirmed to be the Camtasia/TechSmith wordmark, the two halves of one
+  printed sentence, and an office photograph.
+- **Citations and quotations re-derived mechanically**: 272 marker citations, 193 distinct,
+  **zero orphans**; 220 quoted passages checked ellipsis-aware, **zero misquotations** — the 17
+  non-matches are all printed slide text or quotations of other documents, each correctly
+  attributed.
+
+### Findings
+
+**0 CRITICAL, 0 MAJOR, 3 MINOR, 5 NOTE.**
+
+- **`M1`** (`E11`) — `C-009` Source A omits available corroboration from V07
+  `[00:28:02]`–`[00:28:31]`. New sub-class: omitted corroboration, not an absent or wrong
+  citation.
+- **`M2`** (`E20`) — `PT-034` §4 leaves the matched-random null's entry-**price** convention to
+  the runner, which fixes it to the bar's close. Mitigated: committed before it ran, natural
+  neutral choice, and the null landed at 0.2424–0.2450 against a closed-form break-even of
+  0.2500.
+- **`M3`** (`E19`) — a screenshot filename and `INDEX.md` row 26 assert `00:43:10` on a
+  `00:43:03` recording; the frame's own burned timecode reads `43:04`. Charged because `Q-009`
+  proposes exactly that check as its first fabrication screen.
+- **`N1`** branch/merge state and the `D-038` ledger question (open item 68); **`N2`**
+  `SOURCE_MANIFEST.md` staleness, pre-existing and not charged; **`N3`** the "186 citations"
+  figure is conservative, not inflated; **`N4`** dimension B, fourth lesson (open item 36);
+  **`N5`** the reviewer's own delta-tile and 267×51 measurements independently corroborating
+  `Q-009`'s mechanism from the source side.
+
+### The seven submitted claims, adjudicated
+
+All seven **CONFIRMED**. The speaker identification, the incompleteness (accurately
+characterised, neither overstated nor understated), the backtest figures (70.5–76.8% vs
+24.2–24.5%, break-even 25.00%) **and** the correct identification of the 3:1 claim as
+arithmetically empty **stated before the run rather than discovered after it**, the `Q-009`
+one-generator reduction (a reframing, not a retraction), `C-009` as a genuine method-level
+contradiction, dimension B's standard treatment, and the homework's clean negative disclosed
+without softening.
+
+### Dispositions set
+
+`A-056` **not closed** — upheld. `C-009` **`PROVISIONAL`** — upheld. `PT-034` **not re-run** —
+upheld; a corrected rule is a new test (open item 67). Homework's two `NOT APPLICABLE`s —
+upheld. The presenter's name as *probable and unresolved* — upheld.
+
+### Required Corrections
+
+Three, all `MINOR`, none blocking: apply `M1`, `M2` (forward requirement only — `PT-034` must
+not be edited), and `M3`. Open items 64–66.
+
+### Decision
+
+```text
+DECISION:    REVISE
+CONFIDENCE:  HIGH
+CRITICAL 0 · MAJOR 0 · MINOR 3 · NOTE 5
+ADVANCEMENT: AUTHORIZED under D-024. The V09 gate OPENS.
+```
+
+### Validator
+
+`python3 scripts/validate_project.py` — **103 passed, 0 warnings, 0 failures.**
+
+### Git
+
+Branch `review/v08`, branched from `video/v08` at `d9e4f9e`, in its own worktree. Explicit paths
+staged only; `git add -A` never used; `git diff --staged` inspected before the commit. Pushed to
+`origin/review/v08` as backup. **Not merged** — `D-038` makes merge-back a separate, deliberate,
+single-threaded step, and both branches await the owner.
+
+### Next Review Trigger
+
+V08 R2, on student resubmission with `M1`–`M3` applied.
