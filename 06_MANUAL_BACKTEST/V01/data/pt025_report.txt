@@ -1,0 +1,187 @@
+==============================================================================
+PT-025 — Do WEEKLY extremes cluster at the six printed boundaries?
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-C' 2013-01-06 -> 2016-06-30 — IS the `D-035`
+           DEVELOPMENT block. Re-issue of PT-002's W-C arm, which
+           straddled the boundary by 546 days and was never run.
+==============================================================================
+
+==========================================================================
+--- ARM A ---
+==========================================================================
+  week roster (arm A) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 3  (2015-12-20, 2015-12-27, 2016-06-26)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+  WEEKS USED (§3d)                       : 180   -> 360 weekly-extreme timestamps
+  excluded by name: data hole 2014-06-01; truncated 2016-06-26
+  §3c End-Of-Week placed at the REALISED last bar for: ['2015-12-20', '2015-12-27']
+  bar universe: 85732 M15 bars, 2013-01-06T17:00 -> 2016-06-24T16:45
+
+  THIRD BASELINE — exposure-weighted analytic expectation over the
+  120-hour trading week, overlap-corrected, computed on REALISED bars (§3a):
+    band +/-15 min : expected share 0.1688
+    band +/-30 min : expected share 0.2521
+    band +/-60 min : expected share 0.4187
+
+  PRIMARY BASELINE — N2 circular clock shift (labels AND week anchor), 1000 draws, seed 20260812:
+    band +/-15 min : share median 0.1927, 5-95% [0.1397, 0.2654]
+                     covered 0.1689 | ratio median 1.131, 5-95% [0.8275, 1.572]
+    band +/-30 min : share median 0.2737, 5-95% [0.2039, 0.3631]
+                     covered 0.2522 | ratio median 1.07, 5-95% [0.8082, 1.419]
+    band +/-60 min : share median 0.4441, 5-95% [0.3518, 0.5531]
+                     covered 0.4190 | ratio median 1.054, 5-95% [0.8306, 1.308]
+
+  SECOND BASELINE — N3 week-anchor shift ONLY, 1000 draws, seed 20260812:
+    band +/-15 min : share median 0.2303, 5-95% [0.1882, 0.2978]
+                     covered 0.1750 | ratio median 1.331, 5-95% [1.092, 1.726]
+    band +/-30 min : share median 0.3596, 5-95% [0.323, 0.4326]
+                     covered 0.2625 | ratio median 1.381, 5-95% [1.259, 1.661]
+    band +/-60 min : share median 0.5871, 5-95% [0.5364, 0.6404]
+                     covered 0.4272 | ratio median 1.361, 5-95% [1.262, 1.482]
+
+  OBSERVED (read after all three baselines) — 180 weeks, 360 extremes
+  Two comparisons are reported for each band: the RAW share against each
+  null's raw share, and the §3a-corrected RATIO observed/covered against
+  each null's own ratio. Where a null covers a different fraction of the
+  week than the rule arm does, only the ratio comparison is meaningful.
+    band +/-15 : observed 0.222 (80/360), 95% CI [0.182, 0.268]
+                 covered 0.1688 -> ratio 1.317
+                 RAW   pct : N2  69.2 | N3  42.8   (N3 covers 0.1750, NOT 0.1688)
+                 RATIO pct : N2  73.3 | N3  49.3   <<< the comparable one
+    band +/-30 : observed 0.331 (119/360), 95% CI [0.284, 0.381]
+                 covered 0.2521 -> ratio 1.311
+                 RAW   pct : N2  74.4 | N3   8.3   (N3 covers 0.2625, NOT 0.2521)
+                 RATIO pct : N2  76.6 | N3  20.8   <<< the comparable one
+    band +/-60 : observed 0.539 (194/360), 95% CI [0.487, 0.590]
+                 covered 0.4187 -> ratio 1.287
+                 RAW   pct : N2  90.0 | N3   6.2   (N3 covers 0.4272, NOT 0.4187)
+                 RATIO pct : N2  92.9 | N3  11.6   <<< the comparable one
+
+  PER-BOUNDARY BREAKDOWN at +/-30 min (§5 row 2; §3d's per-cell warning attached):
+  NOTE: 17:00 is simultaneously a day open, a day close and the New York
+        session close, so these rows OVERLAP and do not sum to the headline.
+    week_open      observed    7/360 = 0.0194 | expected 0.0063 | ratio 3.09  <<< cell n<30, descriptive only
+    day_open       observed   20/360 = 0.0556 | expected 0.0520 | ratio 1.07  <<< cell n<30, descriptive only
+    session_open   observed   71/360 = 0.1972 | expected 0.1563 | ratio 1.26
+    session_close  observed   82/360 = 0.2278 | expected 0.1562 | ratio 1.46
+    day_close      observed   20/360 = 0.0556 | expected 0.0520 | ratio 1.07  <<< cell n<30, descriptive only
+    week_close     observed   11/360 = 0.0306 | expected 0.0063 | ratio 4.85  <<< cell n<30, descriptive only
+
+  §5 row 5 — the TWO WEEK boundaries reported separately from the FOUR
+  intraday ones, so a later cross-source comparison with FXCM's 21:00 UTC
+  week open is possible (`I-010` Q1 is OPEN):
+    week boundaries only : 0.050 (18/360), 95% CI [0.032, 0.078] | expected 0.0126
+    intraday only        : 0.328 (118/360), 95% CI [0.281, 0.378] | expected 0.2500
+
+  §3c — the six Dec/Jan closure weeks, INCLUDED and reported separately:
+    closure weeks   : 0.417 (5/12), 95% CI [0.193, 0.680]  <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+    all other weeks : 0.328 (114/348), 95% CI [0.280, 0.379]
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — the five largest-range weeks in
+  W-C'. An APPENDIX, never the headline, and NEVER a filtered re-run:
+    2016-06-19  range  1789.5 pips  ends Fri
+    2015-03-15  range   533.1 pips  ends Fri
+    2013-06-02  range   491.7 pips  ends Fri
+    2015-04-12  range   488.2 pips  ends Fri
+    2015-08-23  range   483.8 pips  ends Fri
+
+==========================================================================
+--- ARM B ---
+==========================================================================
+  week roster (arm B) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 2  (2015-12-20, 2015-12-27)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+  WEEKS USED (§3d)                       : 180   -> 360 weekly-extreme timestamps
+  excluded by name: data hole 2014-06-01; truncated 2016-06-26
+  §3c End-Of-Week placed at the REALISED last bar for: ['2015-12-20', '2015-12-27']
+  bar universe: 85732 M15 bars, 2013-01-06T17:00 -> 2016-06-24T16:45
+
+  THIRD BASELINE — exposure-weighted analytic expectation over the
+  120-hour trading week, overlap-corrected, computed on REALISED bars (§3a):
+    band +/-15 min : expected share 0.1728
+    band +/-30 min : expected share 0.2561
+    band +/-60 min : expected share 0.4228
+
+  PRIMARY BASELINE — N2 circular clock shift (labels AND week anchor), 1000 draws, seed 20260812:
+    band +/-15 min : share median 0.1955, 5-95% [0.1453, 0.2737]
+                     covered 0.1729 | ratio median 1.116, 5-95% [0.8599, 1.568]
+    band +/-30 min : share median 0.2821, 5-95% [0.2207, 0.3715]
+                     covered 0.2563 | ratio median 1.101, 5-95% [0.8611, 1.44]
+    band +/-60 min : share median 0.4497, 5-95% [0.3575, 0.5447]
+                     covered 0.4230 | ratio median 1.064, 5-95% [0.8425, 1.288]
+
+  SECOND BASELINE — N3 week-anchor shift ONLY, 1000 draws, seed 20260812:
+    band +/-15 min : share median 0.2191, 5-95% [0.1854, 0.2921]
+                     covered 0.1750 | ratio median 1.262, 5-95% [1.06, 1.676]
+    band +/-30 min : share median 0.3371, 5-95% [0.3062, 0.4185]
+                     covered 0.2603 | ratio median 1.295, 5-95% [1.181, 1.597]
+    band +/-60 min : share median 0.4831, 5-95% [0.441, 0.559]
+                     covered 0.4279 | ratio median 1.124, 5-95% [1.042, 1.291]
+
+  OBSERVED (read after all three baselines) — 180 weeks, 360 extremes
+  Two comparisons are reported for each band: the RAW share against each
+  null's raw share, and the §3a-corrected RATIO observed/covered against
+  each null's own ratio. Where a null covers a different fraction of the
+  week than the rule arm does, only the ratio comparison is meaningful.
+    band +/-15 : observed 0.203 (73/360), 95% CI [0.164, 0.247]
+                 covered 0.1728 -> ratio 1.173
+                 RAW   pct : N2  56.7 | N3  24.4   (N3 covers 0.1750, NOT 0.1728)
+                 RATIO pct : N2  56.7 | N3  26.1   <<< the comparable one
+    band +/-30 : observed 0.319 (115/360), 95% CI [0.273, 0.369]
+                 covered 0.2561 -> ratio 1.247
+                 RAW   pct : N2  76.8 | N3  20.5   (N3 covers 0.2603, NOT 0.2561)
+                 RATIO pct : N2  76.8 | N3  29.0   <<< the comparable one
+    band +/-60 : observed 0.447 (161/360), 95% CI [0.397, 0.499]
+                 covered 0.4228 -> ratio 1.058
+                 RAW   pct : N2  47.7 | N3  10.6   (N3 covers 0.4279, NOT 0.4228)
+                 RATIO pct : N2  48.5 | N3  11.5   <<< the comparable one
+
+  PER-BOUNDARY BREAKDOWN at +/-30 min (§5 row 2; §3d's per-cell warning attached):
+  NOTE: 17:00 is simultaneously a day open, a day close and the New York
+        session close, so these rows OVERLAP and do not sum to the headline.
+    week_open      observed    7/360 = 0.0194 | expected 0.0063 | ratio 3.09  <<< cell n<30, descriptive only
+    day_open       observed   20/360 = 0.0556 | expected 0.0520 | ratio 1.07  <<< cell n<30, descriptive only
+    session_open   observed   67/360 = 0.1861 | expected 0.1563 | ratio 1.19
+    session_close  observed   73/360 = 0.2028 | expected 0.1562 | ratio 1.30
+    day_close      observed   20/360 = 0.0556 | expected 0.0520 | ratio 1.07  <<< cell n<30, descriptive only
+    week_close     observed   11/360 = 0.0306 | expected 0.0063 | ratio 4.85  <<< cell n<30, descriptive only
+
+  §5 row 5 — the TWO WEEK boundaries reported separately from the FOUR
+  intraday ones, so a later cross-source comparison with FXCM's 21:00 UTC
+  week open is possible (`I-010` Q1 is OPEN):
+    week boundaries only : 0.050 (18/360), 95% CI [0.032, 0.078] | expected 0.0126
+    intraday only        : 0.300 (108/360), 95% CI [0.255, 0.349] | expected 0.2499
+
+  §3c — the six Dec/Jan closure weeks, INCLUDED and reported separately:
+    closure weeks   : 0.417 (5/12), 95% CI [0.193, 0.680]  <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+    all other weeks : 0.316 (110/348), 95% CI [0.269, 0.367]
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — the five largest-range weeks in
+  W-C'. An APPENDIX, never the headline, and NEVER a filtered re-run:
+    2016-06-19  range  1789.5 pips  ends Fri
+    2015-03-15  range   533.1 pips  ends Fri
+    2013-06-02  range   491.7 pips  ends Fri
+    2015-04-12  range   488.2 pips  ends Fri
+    2015-08-23  range   483.8 pips  ends Fri
