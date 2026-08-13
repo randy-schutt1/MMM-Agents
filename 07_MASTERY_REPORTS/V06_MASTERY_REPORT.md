@@ -10,9 +10,14 @@
 
 ## STUDENT STATUS: **REVIEW REQUIRED**
 
-**Not `PASS`.** Two dimensions cannot be honestly graded under the existing decision set,
-for the same structural reason V05 raised and did not get answered — and V06 makes the gap
-larger rather than smaller. Both are escalated below rather than resolved by this session.
+**Not `PASS`.** **One** dimension — **B, Recognition** — cannot be honestly graded under the
+existing decision set. Dimension **G** was in the same position and is no longer: the owner's
+2026-08-13 direction, recorded as `D-032`, unblocked it, and a genuine pre-registered manual
+backtest has been run and reported (`BT_V06_0001.md`).
+
+**The residual escalation is narrower and sharper than V05's was.** Recognition would require
+identifying *pushes* on unseen charts, and *push* is undefined in the corpus — so B is blocked
+by `D-030` independently of `D-025`, and no owner ruling about guest material can unblock it.
 
 This is a **submission for review**, not an authorization (`SETUP_ISSUES.md` I-001).
 
@@ -134,12 +139,52 @@ lesson — the 25–50 pip pullback band — was **not** performed, because a *p
 definition in this corpus and any threshold chosen to make it measurable would be the
 agent's, producing a number that would then be attributed to the course (`D-030`).
 
-### G. Manual backtesting — **NOT APPLICABLE**, and this is the second escalated grade
+### G. Manual backtesting — **PERFORMED.** `06_MANUAL_BACKTEST/V06/BT_V06_0001.md`
 
-V06 states testable rules. **They are excluded by `D-025`, so there is nothing this project
-may test.** Testing them would require adopting them as the object of a test, which is the
-adoption the decision forbids; and `D-030` independently blocks it, since *push*, *pullback*,
-*nameable pattern* and *ADR's lookback* are all undefined in the corpus.
+> **REGRADED 2026-08-13. The superseded grade and its full reasoning are retained immediately
+> below, per `REMEDIATION_PROTOCOL.md` §2.** The owner directed that V06 receive a genuine
+> pre-registered manual backtest; `D-032` (PROVISIONAL) records the direction and the fence.
+> **The prior reasoning was not wrong about `D-025` — it was wrong to conclude that exclusion
+> from doctrine implies exclusion from measurement.**
+
+**What was run.** One claim from V06 survives `D-030` — *"U.S. session you're looking for
+anywhere from 30 to 50 pips… They don't usually run like London"* `[00:31:14]`–`[00:31:20]` —
+because it needs no pattern, no indicator, no entry and no judgement call. Every other claim in
+the lesson needs *push*, *pullback*, *nameable pattern* or a moving-average type, none of which
+the course has defined. `PT-022` §1 tabulates each one and why it is blocked.
+
+| | Detail |
+|---|---|
+| Pre-registration | `PT-022` → `PT-023` → `PT-024`, **all three committed before the data existed** (`582859e`, `294441d`, `6d5d8e9`) |
+| Result | **`INDISTINGUISHABLE FROM THE NULL`** (PT-024, n = 41, `EVIDENTIAL`); `SAMPLE INSUFFICIENT` (PT-023, n = 12, `DESCRIPTIVE`, reported anyway) |
+| Nulls | N-P sign-flip and N2 circular clock shift, 1,000 iterations, seed `20260812`, **run before the rule arm was read** |
+| Holdout | **Never opened** in either test. `D-028` boundaries pinned and appended to the decision |
+| Both `D-031` arms | Reported, and **they diverge** — a one-hour clock shift flips the sign of the raw difference |
+
+**Two things I want the reviewer to look at hardest:**
+
+1. **The verdict is the conjunctive one, not the sharper one.** The runner labels Arm B
+   `CONTRADICTED AS TAUGHT`. `PT-022` §6 requires its conditions in **both** arms, so the test's
+   verdict is `INDISTINGUISHABLE`. Quoting Arm B would be arm-selection — `E09` + `E24`.
+2. **Two re-issues happened, and neither was period-shopping.** PT-022's period was out of
+   reach (feed depth); PT-023's was reachable but not harvestable at n ≥ 30 (harvester
+   throughput). **No result existed at either change**, both prior files are retained unedited,
+   and `PT-024` §1 argues the point rather than asserting it. A reviewer who thinks this is
+   shopping should say so — it is the single most attackable thing in this session's work.
+
+**What it does not do:** it says nothing about the Market Maker Method, closes no record, and
+supports the guest's claim in neither direction. Per hour London is the more active window in
+both arms; in raw range the answer depends on the arm.
+
+> *(Superseded text, retained — the grade and reasoning before the owner's direction:)*
+>
+> > ### G. Manual backtesting — **NOT APPLICABLE**, and this is the second escalated grade
+
+> > V06 states testable rules. **They are excluded by `D-025`, so there is nothing this project
+> > may test.** Testing them would require adopting them as the object of a test, which is the
+> > adoption the decision forbids; and `D-030` independently blocks it, since *push*,
+> > *pullback*, *nameable pattern* and *ADR's lookback* are all undefined in the corpus.
+> > **`D-030`'s half of that reasoning survives intact and is why only ONE claim was testable.**
 
 `06_MANUAL_BACKTEST/` was not written to by this session, and **no `BT_*` observation exists
 anywhere in the directory**, so `D-026`/`D-027`'s gate is not engaged — and the homework's §0
@@ -148,8 +193,14 @@ states that reasoning explicitly rather than leaving it implied. A parallel sess
 none is run, and this session neither authored nor audited them.** `PT-001` remains
 pre-registered and unrun.
 
-**Same disposition problem as B.** Work excluded by decision is neither `NOT APPLICABLE`
-(there *is* subject matter) nor `DEFERRED` (no future event unblocks it). See ESCALATION §1.
+> > **Same disposition problem as B.** Work excluded by decision is neither `NOT APPLICABLE`
+> > (there *is* subject matter) nor `DEFERRED` (no future event unblocks it).
+>
+> **The escalation in §1 below is narrowed rather than withdrawn.** `D-032` answers it for
+> dimension **G** — the work was performable and has been performed. It does **not** answer it
+> for dimension **B (Recognition)**, which would require identifying *pushes* on unseen charts,
+> and that remains excluded by `D-030` as much as by `D-025`. **B is still ungraded by the
+> existing decision set.**
 
 ### H. Provenance — **SATISFIED**
 
@@ -226,11 +277,11 @@ rather than left silent.
 | Screenshots captured and indexed | ✅ 32 frames, `INDEX.md` with per-frame verdicts |
 | Major rules have provenance | ✅ — and no rule was adopted |
 | Homework complete, or absence documented | ✅ performed; each excluded item named with its ground |
-| Manual chart testing complete where appropriate | ⚠️ **Not appropriate** — see G |
+| Manual chart testing complete where appropriate | ✅ **Performed** — `BT_V06_0001.md`, two pre-registered tests, one `EVIDENTIAL`. See G |
 | Positive examples exist | ⚠️ **NO.** `09_CHART_EXAMPLES/` gains nothing from V06 |
 | Negative examples exist | ⚠️ **NO**, same reason |
 | Borderline examples exist | ⚠️ **NO**, same reason |
-| Failed valid setups recorded | ⚠️ **N/A** — no setup was traded or tested |
+| Failed valid setups recorded | ⚠️ **N/A** — the backtest is distributional and contains no trades, by pre-registration (`PT-022` §4b) |
 | Unresolved ambiguity logged | ✅ `A-050`–`A-054`, ten extended |
 | Contradictions logged | ✅ `C-006` |
 | Concept library updated | ⚠️ **NO — deliberately.** No V06 material is eligible under `D-025` |

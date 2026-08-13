@@ -3860,3 +3860,145 @@ in `COURSE_PROGRESS.md`'s `NEXT ACTION` block, headed by the one that matters mo
 "did the student find the rules" but "did the student keep them out".**
 
 ---
+
+## 2026-08-13 — Student Session (continuation) — V06 backtest, comprehension probe, second-vendor cross-check
+
+### Objective
+
+Owner direction, 2026-08-13, expanding V06's student scope: a **genuine pre-registered manual
+backtest**, **independent comprehension checks** that would expose fabrication or shallow
+pattern-matching, and a **cross-check of the homework by an additional independent method**.
+Same session as the V06 pass; the stop-before-self-review rule is unchanged and honoured.
+
+### Decisions
+
+**`D-032` written — PROVISIONAL, owner ratification requested.** *Guest material may be TESTED,
+never adopted; a test is not a citation.* It refines `D-025` without superseding it: adoption,
+citation for or against an instructor rule, merging, and closing an `A-xxx`/`C-xxx` record all
+remain forbidden, and **`D-030` is explicitly untouched** — the entry deliberately creates no
+route around it. Recorded because an authorized action that lives only in a chat session reads
+afterwards as a violation, which is the `D-023` failure.
+
+**`D-028` appended** — the first 70/30 boundaries are pinned, from the actual available ranges,
+and **scoped**: each is one series on one vendor at one timeframe, and the two disagree by three
+weeks. A project-wide split still needs `I-007`.
+
+### Manual Backtesting — THE MAIN ADDITION
+
+**`PT-022` → `PT-023` → `PT-024`, all committed before the data existed; `BT_V06_0001.md`.**
+
+Only **one** claim in V06 survives `D-030`: *"They don't usually run like London"* `[00:31:20]`.
+`PT-022` §1 tabulates why every other claim is blocked — *push*, *pullback*, *nameable pattern*
+and the moving-average type are all undefined.
+
+| | |
+|---|---|
+| **Overall verdict** | **`INDISTINGUISHABLE FROM THE NULL`** (PT-024, n = 41, `EVIDENTIAL`) |
+| Second run | `SAMPLE INSUFFICIENT` (PT-023, n = 12, `DESCRIPTIVE`) — reported in full anyway |
+| Nulls | N-P sign-flip, N2 circular clock shift; 1,000 iterations; seed `20260812`; **run before the rule arm was read** |
+| Holdout | never opened in either test |
+
+**Two re-issues, neither of them period-shopping, and the files argue it rather than asserting
+it.** PT-022's period (2015) was out of reach — the feed serves 15m back to 2026-05-31 only,
+measured by walking the chart back 368 drags reading **dates only**. PT-023's period was
+reachable but not harvestable at n ≥ 30 — the DOM-hover harvester advances ~8 net bars per drag,
+so 200 screens returned 24 days. **No result existed at either change**, and both superseded
+files are retained unedited.
+
+**The finding is the arm divergence.** Arm A (`UTC−5`) gives median `D` = +3.4 pips, London
+ahead; Arm B (`UTC−4`) gives −4.5 pips, New York ahead. Same price path, same window lengths,
+same days — the clock moved one hour and the sign flipped. What survives both arms is the
+**duration-normalised** comparison: London is the more active window per hour in both
+(+1.66, +1.16 pips/h). **So the guest's claim looks true about intensity and unproven about
+total range** — precisely the asymmetry `PT-022` §2a predicted before any data existed, because
+the New York window is 36% longer.
+
+**The runner prints a per-arm label calling Arm B `CONTRADICTED`. That is not the verdict.**
+`PT-022` §6 is conjunctive across arms; quoting Arm B would be arm-selection, `E09` + `E24`.
+
+### Comprehension Verification
+
+`comprehension_probe.py` — **48 machine-checked claims**: 33 written closed-book from memory
+(**33/33 pass**) and 15 plausible falsehoods that must be absent (**13/15**), six of them lifted
+from the quarantined `NOTES.md`/`RULES.md` for this very lesson.
+
+**Both failures were true, and both corrected my own work:**
+
+- **`N03`** — *"Asian box"* **is** in V06, once, at `[01:09:43]`, inside an audience question.
+  My §10 row miscounted the token (4× not 5×, conflating `Asian` and `Asia`) and **omitted the
+  one instance containing the literal phrase**, in a row whose entire purpose was to establish
+  the box is undefined. Conclusion survived; the evidence was missing where it mattered.
+- **`N13`** — a **90% figure** exists at `[00:46:55]` and appeared nowhere in my artifacts.
+  In context it is a permission threshold, not a performance claim — but `D-009` has no
+  exception for figures used modestly.
+
+**`N06` was a bug in the probe itself** (the pattern `1:3` matched twenty timestamp markers).
+Fixed and **documented in the script rather than removed**.
+
+Also added: the lesson in my own words with the inferences labelled as mine; three reasoning
+traces each naming the step most likely to be wrong; discrimination probes including the two
+places the presenter breaks his own rules; six falsifiable commitments.
+
+### Homework — second-vendor cross-check
+
+`V06_HOMEWORK.md` §9, against the **Yahoo Finance chart API** — a different vendor, JSON
+numbers, **nothing rendered at all**.
+
+- **CONFIRMED:** all eight week extremes agree across vendors to ≤4.5 pips; the chart timezone
+  is **UTC**, derived rather than assumed (219–230 of 236 bars on three pairs).
+- **DEMOTED:** *"480 bars in a trading week"* is a property of the **FXCM feed**, not of the
+  market. Yahoo opens the FX week at 23:00 UTC against FXCM's 21:00, consistently, 13 weeks of
+  13. Weekly-window tests `PT-008`/`009`/`010`/`012`/`013`/`019` inherit this.
+- **REFUSED:** whether USDCHF's missing hour is market or feed **cannot** be settled by this
+  vendor — it carries no bar before 23:00 for any pair, so the disputed hour is outside what it
+  serves. Reported as unresolved rather than resolved by the 13-of-13 agreement, which concerns
+  a different hour.
+- **NEW:** two vendors differ on the same bar by sub-pip typically but up to **37–45 pips** on
+  an individual low. Any rule triggering on a specific bar's low can fire on one vendor and not
+  another.
+
+### Ambiguities / Contradictions
+
+None opened. `A-054`'s interpretation pointer renumbered after `V06_INTERPRETATION.md` §5.3 was
+inserted. No record closed — `D-025` and `D-032` both forbid it.
+
+### Deviations, all declared
+
+1. **`MANUAL_BACKTEST_TEMPLATE.md` does not fit** — it is trade-shaped and this test has no
+   trades, by pre-registration. §0/§1 followed; §§2–8 replaced by the pre-registered outcome
+   structure.
+2. **The `D-026` matched-random-**entry** baseline is `NOT APPLICABLE`** and justified: it
+   randomizes an entry bar and there is no entry. N2 is the correct null for a clock claim.
+3. **PT-023's DEVELOPMENT block is contaminated** — it overlaps the fortnight this session had
+   already seen. Disclosed in `BT_V06_0001.md` §1; one more reason its result carries no weight.
+4. **The cross-vendor overlap check `PT-024` §5 required was NOT performed** — the two
+   DEVELOPMENT blocks do not overlap and the region where the series do is PT-024's holdout.
+
+### Files Created/Updated
+
+Created: `PT-022`, `PT-023`, `PT-024`; `06_MANUAL_BACKTEST/V06/BT_V06_0001.md`, `run_pt023.py`,
+`data/` (3 files); `05_HOMEWORK/V06/scripts/comprehension_probe.py`,
+`crosscheck_second_source.py`; four `yh30_*.json` and the cross-check output.
+Updated: `DECISIONS.md` (`D-032`, `D-028` append); `PRE_REGISTERED/INDEX.md`;
+`V06_SOURCE_NOTES.md`; `V06_INTERPRETATION.md`; `V06_HOMEWORK.md`; `V06_MASTERY_REPORT.md`;
+`AUTOMATION_AMBIGUITIES.md`; `COURSE_PROGRESS.md`; `LOG.md`.
+
+### Verification
+
+`scripts/validate_project.py`: **103 passed, 0 warnings, 0 failures** (four new checks, from the
+first real backtest observation). `check_quotes.py` clean on every V06 artifact.
+`comprehension_probe.py`: 46/48, with both failures explained in-file.
+
+### Git
+
+Explicit paths on every `git add`; `git diff --staged` read before each commit. **The two
+pre-registrations were committed before the data existed**, which is the point of them.
+
+### Next Action
+
+**Unchanged: a fresh reviewer session for V06 R1 (`D-003`).** This session authored every V06
+artifact, including the backtest, and must not review any of it. Two items now head the
+reviewer's list: whether the two backtest re-issues constitute period-shopping (the single most
+attackable thing here), and whether `D-032` should be ratified, amended or rejected.
+
+---

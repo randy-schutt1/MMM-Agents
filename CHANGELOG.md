@@ -11,6 +11,48 @@ Newest first.
 
 ---
 
+## [0.10.0] — 2026-08-13 — V06 gets a real backtest; D-032; the probe that failed usefully
+
+### Added
+
+- **`DECISIONS.md` `D-032` (PROVISIONAL — owner ratification requested)** — *guest material may
+  be **tested**, never adopted; a test is not a citation.* Refines `D-025` without superseding
+  it and leaves `D-030` explicitly untouched.
+- **`PT-022` → `PT-023` → `PT-024`** and **`06_MANUAL_BACKTEST/V06/BT_V06_0001.md`** — the
+  project's **first executed manual backtest**. All three pre-registrations committed before the
+  data existed.
+- **`05_HOMEWORK/V06/scripts/comprehension_probe.py`** — 48 machine-checked claims, 33 recalled
+  closed-book and 15 plausible falsehoods that must be absent.
+- **`05_HOMEWORK/V06/scripts/crosscheck_second_source.py`** and `V06_HOMEWORK.md` §9 — an
+  independent second-vendor cross-check.
+
+### Changed
+
+- **`D-028`** — first 70/30 boundaries pinned and appended, and **scoped** to one series each.
+- **`V06_MASTERY_REPORT.md` dimension G** regraded `NOT APPLICABLE` → **PERFORMED**, superseded
+  grade retained.
+- **`V06_SOURCE_NOTES.md` §10 and §7** corrected — both by the probe, not by a reviewer.
+
+### Notes — the three results worth carrying forward
+
+- **The backtest returned `INDISTINGUISHABLE FROM THE NULL`, and the interesting part is the
+  arm divergence.** A one-hour clock shift flips the sign of the raw London-vs-New-York
+  difference. What survives both arms is the duration-normalised comparison: **London is the
+  more active window per hour**. So the guest's claim looks **true about intensity and unproven
+  about total range** — the exact asymmetry `PT-022` §2a predicted before any data existed,
+  because the New York window is 36% longer. **The pre-registration earned its keep by
+  predicting the confound that turned out to matter.**
+- **A probe written to catch imported fabrications caught two omissions of my own instead** —
+  a missing *"Asian box"* citation and an unrecorded 90% figure. **Negative controls are worth
+  more than positive recall**, and this is the evidence for it.
+- **A second vendor confirmed the homework's numbers and demoted one of its inferences.**
+  *"480 bars in a trading week"* is a fact about the FXCM feed, not the market: Yahoo opens the
+  FX week two hours later, 13 weeks out of 13. Six pre-registered weekly-window tests inherit
+  that. And two vendors can differ by **37–45 pips on a single bar's low**, which constrains
+  every future backtest that triggers on a specific bar.
+
+---
+
 ## [0.9.0] — 2026-08-12 — V06 student pass; D-025 applied to a lesson that costs something
 
 ### Added

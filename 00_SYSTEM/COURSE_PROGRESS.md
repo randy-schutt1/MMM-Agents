@@ -104,6 +104,39 @@ CURRENT LESSON:      **V06 — "MICRO DAILY TRENDS". STUDENT PASS COMPLETE
                      direction); (3) that speaker identification is now a standing
                      cost and should be a standing PROCEDURE, not just a requirement.
 
+                     ADDED 2026-08-13 ON OWNER DIRECTION (D-032, PROVISIONAL):
+                     (a) A GENUINE PRE-REGISTERED MANUAL BACKTEST. PT-022 -> PT-023
+                     -> PT-024, all three committed BEFORE the data existed, testing
+                     the ONE claim in V06 that survives D-030 ("they don't usually
+                     run like London"). Result: INDISTINGUISHABLE FROM THE NULL
+                     (n=41, EVIDENTIAL); a second, underpowered run reported anyway
+                     (n=12, SAMPLE INSUFFICIENT). THE ARMS DIVERGE — a one-hour clock
+                     shift flips the sign of the raw difference — which makes A-019's
+                     stakes concrete without being evidence about A-019. Per hour
+                     London is the more active window in BOTH arms, so the claim looks
+                     true about INTENSITY and unproven about total RANGE, exactly the
+                     asymmetry PT-022 §2a predicted before any data existed.
+                     Dimension G is REGRADED from NOT APPLICABLE to PERFORMED, with
+                     the superseded grade retained.
+                     (b) A COMPREHENSION PROBE, 48 machine-checked claims: 33 recalled
+                     closed-book (33/33 pass) and 15 plausible falsehoods that must be
+                     absent (13/15). BOTH FAILURES WERE TRUE and both fixed my own
+                     work — "Asian box" IS in the lesson once, in a question I had
+                     omitted from the row whose whole purpose was to say the box is
+                     undefined; and a 90% figure exists at [00:46:55] that D-009
+                     required on the record and I had not written down anywhere.
+                     (c) A SECOND-VENDOR CROSS-CHECK of the homework. It CONFIRMED the
+                     week extremes (<=4.5 pips) and the chart timezone (UTC, derived
+                     not assumed), and DEMOTED one claim: "480 bars in a week" is a
+                     property of the FXCM feed, not of the market — Yahoo opens the
+                     week at 23:00 UTC against FXCM's 21:00, consistently, 13 weeks
+                     out of 13. It also could NOT resolve whether USDCHF's missing
+                     hour is market or feed, and says so.
+                     ONE ESCALATION IS WITHDRAWN AND ONE SHARPENED: D-032 answers the
+                     disposition question for dimension G; dimension B (Recognition)
+                     is still ungraded, and is blocked by D-030 independently of
+                     D-025, so no ruling about guest material can unblock it.
+
                      A-050..A-054 opened; TEN existing records extended and NONE
                      closed. In two cases the V06 evidence LOOKS like an answer and
                      is recorded as weakening one: A-044 (the DMR curriculum prints
@@ -795,7 +828,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ✅ | ✅ | ✅ | ✅ | ⏸ | REVIEW REQUIRED (resub) | ✅ R1 REVISE (0C/0M/7m) → **R2 PASS** | **COMPLETE** |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ✅ | ✅ | ✅ | ⚠️ | 🚫 | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R1B REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
-| V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ✅ | ✅ | ✅ | ⚠️ | 🚫 | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
+| V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
