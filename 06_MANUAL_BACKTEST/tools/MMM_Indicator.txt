@@ -1,6 +1,6 @@
 //@version=5
 // =============================================================================
-// MMM_Indicator.pine — Market Maker Method: EMAs + Session Boxes  (OVERLAY)
+// MMM_Indicator.txt — Market Maker Method: EMAs + Session Boxes  (OVERLAY)
 // =============================================================================
 //
 // PURPOSE
@@ -33,7 +33,7 @@
 // COMPANION SCRIPT
 //   TDI is an oscillator and cannot share a pane with an overlay in Pine v5
 //   (`force_overlay` is a v6 feature). TDI therefore ships as a SECOND script:
-//   `MMM_TDI.pine`. Add both to the chart. See MMM_Indicator_README.md.
+//   `MMM_TDI.txt`. Add both to the chart. See MMM_Indicator_README.md.
 // =============================================================================
 
 indicator(

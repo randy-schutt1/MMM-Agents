@@ -35,9 +35,9 @@ the code comments and in the TradingView tooltips. The table below is the same i
 
 | Component | File | Pane |
 |---|---|---|
-| Five EMAs — 5, 13, 50, 200, 800; each independently toggleable, each with its own colour and period input | `MMM_Indicator.pine` | overlay |
-| Session boxes — Asian, London, London "prime", New York, NY "prime"; each independently toggleable | `MMM_Indicator.pine` | overlay |
-| TDI — RSI line, Fast MA, Slow MA / Trade Signal, Market Base Line, Volatility Bands | `MMM_TDI.pine` | separate |
+| Five EMAs — 5, 13, 50, 200, 800; each independently toggleable, each with its own colour and period input | `MMM_Indicator.txt` | overlay |
+| Session boxes — Asian, London, London "prime", New York, NY "prime"; each independently toggleable | `MMM_Indicator.txt` | overlay |
+| TDI — RSI line, Fast MA, Slow MA / Trade Signal, Market Base Line, Volatility Bands | `MMM_TDI.txt` | separate |
 
 ### Why two files rather than one
 
@@ -181,13 +181,18 @@ label to that effect.
 
 ## Installation
 
+> **Why `.txt` and not `.pine`:** both scripts are stored with a `.txt` extension so they open in
+> any plain-text editor and can be selected and copied without fuss. The contents are ordinary
+> Pine Script v5 and are unchanged by the extension — TradingView never reads the file, only what
+> you paste into the Pine Editor, so the extension is irrelevant to it.
+
 1. Open a GBP/USD chart (`D-007` — the project's primary research instrument) on an **intraday**
    timeframe. The 15-minute chart is the natural default, because the 800 EMA's Tier-1 definition
    is *"the 800 on the 15 minute time frame"*.
 2. **Pine Editor** (bottom panel of TradingView) → **Open** → **New blank indicator**.
-3. Paste the entire contents of `MMM_Indicator.pine`, replacing the template → **Save** → give it
+3. Paste the entire contents of `MMM_Indicator.txt`, replacing the template → **Save** → give it
    a name → **Add to chart**.
-4. Repeat steps 2–3 for `MMM_TDI.pine`. It will attach in its own pane below price.
+4. Repeat steps 2–3 for `MMM_TDI.txt`. It will attach in its own pane below price.
 5. Open each script's settings (⚙) and set the **timezone arm** — and read the tooltip on that
    input before you choose.
 

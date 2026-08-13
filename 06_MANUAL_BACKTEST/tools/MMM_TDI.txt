@@ -1,6 +1,6 @@
 //@version=5
 // =============================================================================
-// MMM_TDI.pine — Traders Dynamic Index  (SEPARATE PANE)
+// MMM_TDI.txt — Traders Dynamic Index  (SEPARATE PANE)
 // =============================================================================
 //
 // WHY THIS IS A SEPARATE FILE
@@ -9,7 +9,7 @@
 //   pane; `force_overlay` (which would allow mixing) is a Pine v6 feature and
 //   does not exist in v5. Splitting into two scripts is therefore not a
 //   stylistic choice, it is the only correct v5 implementation.
-//   Companion overlay script: `MMM_Indicator.pine` (EMAs + session boxes).
+//   Companion overlay script: `MMM_Indicator.txt` (EMAs + session boxes).
 //
 // =============================================================================
 // ⚠⚠ READ THIS BEFORE USING ANY NUMBER IN THIS FILE ⚠⚠
