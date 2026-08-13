@@ -327,9 +327,22 @@ hedges it himself with *"essentially"*, and 0.49% is inside that word.
 | **2** | ✅ **DISCHARGED 2026-08-13 — see Revision R1.** `SWF_CAPTURE_RECIPE.md` §3/§10's play-button coordinate `(512, 300)` is wrong for V09 and produced 638 frames of a static splash. **It was also wrong for V08**, whose own `INDEX.md` records the identical failure — this escalation originally claimed the coordinate worked *"on V01–V08"* and `V09_REVIEW_R1.md` `M6` charged that. **The cause is the declared stage size:** V08, V09 and V21 are `1280 × 738`; the other eighteen files are `1024 × 786`; the recipe's viewport is `1024 × 786`, so the first class is letterboxed and every calibrated coordinate is displaced. The `D-038a` disposition was correct — the fix was **made by the V09 R1 reviewer** on the integration branch (`89bb858`, `GOTCHA 5`) | **OWNER / integration — DONE** |
 | **3** | **A successor to `PT-035` is specified and not run.** The correct clustering comparator is the shuffled-order control itself (chronological vs shuffled, composition held fixed). It was **not** pre-registered, so it was **not** computed — inventing it after seeing the registered statistic fail is the move `D-026`/`E21` exist to prevent. Owed under a new `PT` number | **REVIEWER** |
 | **4** | **A second successor: the resolution-censoring bias.** `PT-035`'s intraday horizon censors a 50-pip target more than a 15/25-pip stop, biasing every hit rate in the batch downward. **This may affect other tests in the `PT-002`…`PT-032` family** that use a day-end horizon with asymmetric geometry | **REVIEWER** |
-| **5** | **`C-010` is narrowed and a tidy reconciliation is available and refused.** If the owner judges that reading a timeframe into `MMM-NOTES` is acceptable, `C-010` closes immediately. This session judged it forbidden by §3.2's *"Do not blend"* and flags the call rather than making it silently | **OWNER** |
+| **5** | ✅ **RETIRED 2026-08-13 — see Revision R2. No owner judgement is owed.** This escalation asked the owner to rule on whether reading a timeframe into `MMM-NOTES` is acceptable, on the premise that if it were, **`C-010` closes immediately**. **The premise is false, and item 77's remediation established why:** the factor-of-four identity lands **one member of a four-member set** (`MMM-NOTES` p.38 enumerates the **5, 13, 50 and 200** bar averages; `800` occurs **0×** in its 84 pages), and it **collides with `A-020`**, which attests Mayo = 200 and Blueberry = 800 as two distinct lines. So even granting the owner the most permissive possible ruling, `C-010` does **not** close — it stays `UNRESOLVED`, with the Q5 confidence downgraded `MEDIUM` → `LOW` and the arithmetic written out at `V09_INTERPRETATION.md` Q5 and in `C-010`'s V09 block. `V09_REVIEW_R1.md` `M5` (open item 77); carried into this table under `V09_REVIEW_R2.md` open item **83** | **OWNER — RETIRED, NO ACTION** |
 | **6** | **`08_CONCEPT_LIBRARY/` is empty project-wide after nine lessons.** Not a V09 defect; carried because the checklist asks | **REVIEWER** |
 | **7** | **V09 leaves `A-061` and `A-063` untouched** — V08's two highest-value gaps get no answer here. The stop-side promise V08 made (*"a lot of ramifications in about 35, 40 minutes"*) is **half paid**: V09 supplies the stop *size* and no *placement* | **REVIEWER** |
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — escalation 5 previously read, in
+> full: *"**`C-010` is narrowed and a tidy reconciliation is available and refused.** If the owner
+> judges that reading a timeframe into `MMM-NOTES` is acceptable, `C-010` closes immediately. This
+> session judged it forbidden by §3.2's *"Do not blend"* and flags the call rather than making it
+> silently"*, flagged **OWNER**. `V09_REVIEW_R2.md` open item **83**: item 77's remediation had
+> already retired the question — `REVIEW_INDEX.md`'s item 77 row and `C-010`'s V09 block both say
+> so in terms — but the retirement was never carried into the file where the escalation actually
+> lives, so **the owner-escalation table, which is an action list rather than prose, went on
+> owing a human a judgement the project had established was moot.** Marked retired in the form
+> escalation 2 already used. **`C-010`'s disposition is unchanged: UNRESOLVED.** The §3.2 *"Do not
+> blend"* refusal recorded in the original text still stands and is still the right call — it is
+> simply no longer the only thing keeping `C-010` open.)*
 
 ---
 
@@ -415,3 +428,98 @@ items 73–78 read `APPLIED — PENDING VERIFICATION at R2`, exactly as the V07 
 remediations did. And **V09 R2 must be an independent session**; it cannot be this one, and it
 should re-derive each of the six from source rather than from this table.
 
+
+---
+
+## REVISION R2 — 2026-08-13 — the three `MINOR` findings of `V09_REVIEW_R2.md`, APPLIED AND SELF-VERIFIED
+
+> ## ⚠⚠ READ THIS BEFORE READING ANYTHING BELOW IT ⚠⚠
+>
+> **This round was fixed AND verified by ONE session, at the owner's explicit direction. It was
+> NOT independently verified, and it does NOT satisfy the normal `D-003` separation of duties.**
+>
+> The owner authorised combining the fix and the verification for **this round specifically**, on
+> the grounds that the three items are small. That authorisation is real and it is recorded — but
+> it does not manufacture independence, and nothing here should be read as though it had.
+> Items 81–83 are therefore marked **`CLOSED — SELF-VERIFIED AT OWNER DIRECTION`** and never
+> `CLOSED — VERIFIED`, so a future reader can tell the two apart at a glance. V09's `COMPLETE`
+> status carries the same qualification.
+>
+> **The precedent, and the difference from it.** V09's own R1 remediation used the same
+> owner-authorised pattern for the *fix* — and it closed nothing, because R2 was still coming.
+> **This round closes its own items.** That is the stronger deviation of the two and it is why
+> this notice is at the top rather than the bottom.
+>
+> **What a later reviewer should do if it wants the independence this round lacks:** re-derive
+> item 81's line-410 quotation, item 82's three frame identities and item 83's `C-010` arithmetic
+> from `02_TRANSCRIPTS/V09/V09_TRANSCRIPT.md`, `04_SCREENSHOTS/V09/` and `MMM-NOTES` directly,
+> and re-run `05_HOMEWORK/V07/scripts/verify_quotes.py V09`. None of it takes long.
+
+```text
+STUDENT STATUS:  REVIEW REQUIRED  (unchanged — D-016/I-001)
+REMEDIATION:     items 81-83 APPLIED and SELF-VERIFIED AT OWNER DIRECTION
+                 NOT independently verified per standard D-003 process.
+```
+
+### What was found, and what was done
+
+**All three are documentation fixes.** `REMEDIATION_PROTOCOL.md` §2's redo-do-not-reword rule is
+checked again and again does **not** bite: no test was invalid, no sample cherry-picked, no
+classification hindsight-dependent, no rule stripped of provenance. **`PT-035` and
+`run_pt035.py` were not touched** — see the disclosure at the end of this block for the one thing
+found inside `PT-035` that was deliberately **not** fixed.
+
+| Item | Finding | Fix | Where |
+|---|---|---|---|
+| **81** | `E01` — the mechanized sweep item 73 required was never run, and a **fifth** instance of the same defect survived 38 lines from the corrected one | `verify_quotes.py` **generalised** to take a lesson identifier and **run against all seven V09 artifacts**, then **extended to the two shared registers** when a seventh instance turned up outside the named set. **NINETEEN genuine defects found and all nineteen fixed**, including line 410, a **sixth** instance nobody had enumerated, and six more in the shared ambiguity register. Every non-defect is enumerated with its reason in the script's V09 allowlist. Superseded text retained at every site | `05_HOMEWORK/V07/scripts/verify_quotes.py`; `V09_SOURCE_NOTES.md` §2c, §5, §6, §8, §11; `V09_INTERPRETATION.md` Q6; `V09_HOMEWORK.md`; `04_SCREENSHOTS/V09/INDEX.md` row 26; `AUTOMATION_AMBIGUITIES.md` `A-066`, `A-071`, `A-072`, `A-073`, `A-075` |
+| **82** | `E11` — `A-069` and `A-073` still carried *"frames 22, 23 and 25"*, pointing at a spreadsheet and an email address | Both converted to the burned-in player timecodes `28:45` / `31:50` / `41:25`, matching the convention item 76 established. Superseded text retained at both | `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` `A-069`, `A-073` |
+| **83** | `E19` — escalation 5 still put a retired question to the owner | Marked ✅ **RETIRED**, in the form escalation 2 already used, with the item-77 arithmetic that retires it restated and the original text retained in full | this report, escalation 5 |
+
+### The sixth instance, and why it matters more than the fifth
+
+Item 81's charge was that hand-fixing an enumerated list leaves the un-enumerated ones. **The
+sweep proved that charge twice over.** Line 410's *"experience shows me"* was the fifth instance
+and the review named it. `04_SCREENSHOTS/V09/INDEX.md` row 26's *"What is the grape?"* — cited to
+`[00:41:25]`, where the transcript reads *"What is the **grade** Fred?"* — is the **sixth**, and
+**no human in either review round found it.** `V09_SOURCE_NOTES.md` §9a corrected its own copy of
+that exact quotation at R1. A machine sweep found the twin in a different file in one run.
+
+**And a SEVENTH, in a file no sweep was looking at.** The seven V09 artifacts the review named
+do not include `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`. `A-072`'s evidence table was carrying
+*"experience shows me"* — the **same phrase** as line 410, its **third** live copy in V09 — and
+five more misquotes sat beside it in `A-066`, `A-071`, `A-073` and `A-075`. The script now scans
+both shared registers for every lesson, restricted to rows whose first cell names that lesson.
+**This is item 82's argument in the quotation class rather than the pointer class:** a defect in
+a shared register outlives the lesson that put it there. Running the extended sweep against V07
+as well returns **0** flags, so no earlier lesson carries the same debt.
+
+The other eleven in the artifact set were the same class in milder forms: numeral-for-word (*"2%"* for *"two percent"*),
+tense (*"brings"* for *"will bring"*), ASR expansions inside quote marks (*"forex"* for the
+transcript's *"4x"*, *"DMR"* for *"dmor"*, *"USD JPY"* for *"USD JP why"*), and four unmarked
+elisions where a comma or a full stop joined two non-adjacent markers. **None moves a conclusion.
+All nineteen are now either literal or explicitly elided.**
+
+### What this revision does NOT change
+
+- **No conclusion of the lesson moves**, and no marker, disposition, grade or verdict changes.
+- **No number was recomputed and no test re-run.** `PT-035`, `run_pt035.py` and
+  `data/pt035_output.txt` are untouched.
+- **`C-010` stays `UNRESOLVED`.** Item 83 retires a *question about* `C-010`, not `C-010`.
+- **The transcript body is untouched**, as at R1.
+
+### Disclosure — a defect found inside `PT-035` that was deliberately NOT fixed
+
+The generalised sweep reports, as a hand-rulable near-miss rather than a failure, that
+`PT-035` §"Source" quotes `[00:06:08]` as *"…risk management. **However** I believe that with our
+training…"*. **The transcript reads *"…risk management. **How are** I believe that with our
+training?"*** — an ASR garble, silently smoothed inside quotation marks. It is the same `E01`
+class as item 81.
+
+**It is not fixed, and it must not be.** `COMMON_PROTOCOL.md` §9 rule 7 forbids editing a
+pre-registration after the fact, and `V09_REVIEW_R2.md` verified `PT-035` is byte-identical to
+its pre-registration commit by blob SHA. **Editing it to fix a typo would destroy a stronger
+guarantee than the one the typo violates.** It is recorded here, in `LOG.md` and in the script's
+own notes so that a later round rules on it deliberately. **Nothing turns on it:** *How are* is
+transparently *However*, the load-bearing clause of the quotation — *"it's highly unlikely we're
+gonna lose three or four times in a row"* — is verbatim, and `PT-035`'s verdict rests on that
+clause.

@@ -10,11 +10,19 @@
 
 | # | Assignment | Marker | Disposition |
 |---|---|---|---|
-| **H1** | *"Type in a lot size calculator… tons of free ones. I suggest you go get one"* | `[00:02:56]`–`[00:03:16]` | ✅ **DONE — §1** |
-| **H2** | *"Go back, study it, do what you can, take notes heavily, because this is everything"* | `[00:23:37]`–`[00:23:47]` | ✅ **DONE** — `V09_SOURCE_NOTES.md` §2–§6, and §2 below is the graded version of it |
+| **H1** | *"type in a lot size calculator, 4x lot size calculator, tons of free ones… I suggest you go get one"* | `[00:02:56]`–`[00:03:16]` | ✅ **DONE — §1** |
+| **H2** | *"go back, study it, do what you can… take notes heavily because this is everything"* | `[00:23:37]`–`[00:23:47]` | ✅ **DONE** — `V09_SOURCE_NOTES.md` §2–§6, and §2 below is the graded version of it |
 | **H3** | **The USD/JPY arrow drill** — commit a directional arrow each day from the level count, score it the next day, alone | `[00:47:57]`–`[00:49:01]` | ⏸ **DEFERRED** (`D-019`), blocked by `A-004`. See §4 |
 | **H4** | *"Slap some arrows on there and see what it does the next day"* — H3 generalized | `[00:51:31]`–`[00:51:43]` | ⏸ **DEFERRED**, same blocker |
 | **H5** | Steve's week-1 assignment, referred to but **not reissued**: *"our homework from last week that Steve gave us was to mark up this chart"* | `[00:37:43]`–`[00:38:00]` | ▫ **NOT V09's assignment** — recorded as a pointer only |
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — `V09_REVIEW_R2.md` open item
+> **81**, found by `05_HOMEWORK/V07/scripts/verify_quotes.py V09`. **H1** previously read *"Type
+> in a lot size calculator… tons of free ones**.** I suggest you go get one"*, which joins
+> `[00:03:02]`–`[00:03:16]` with a full stop rather than an ellipsis and drops the ASR's *"4x"*
+> — the spoken form of **forex** — from the middle of the sentence. **H2** previously read
+> *"…do what you can**,** take notes heavily…"*, joining `[00:23:37]` to `[00:23:43]` across the
+> dropped *"you know"*. Both now match `V09_SOURCE_NOTES.md` §11. **No disposition changes.**)*
 
 **Plus, beyond what was assigned:** §3 executes V09's own sizing algorithm on real trade
 sequences, under predictions committed in advance. It is not homework the lesson set; it is the

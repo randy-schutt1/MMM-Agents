@@ -6391,3 +6391,337 @@ retained at both sites.
 
 **V09 R2** — verification of items 73–78 by an **independent** session.
 
+
+---
+
+## 2026-08-13 — Reviewer Session (V09 R2 — INDEPENDENT VERIFICATION)
+
+### Objective
+
+Verify the R1 remediation of `18_REVIEW/V09/V09_REVIEW_R1.md` items **73–78**, applied at
+`16c43ea` (`fix/v09-r1-minors`) and `89bb858` (`SWF_CAPTURE_RECIPE.md`).
+
+**Why this round exists and why it could not be skipped.** The R1 remediation was performed by the
+**same session that wrote R1**, on the owner's explicit direction — a `D-003` deviation. **The
+authorization covered the fix-it-yourself step, not a waiver of independent verification.** That
+session correctly closed nothing, leaving all six items at `APPLIED — PENDING VERIFICATION at R2`.
+This session authored no V09 artifact, did not write R1, and did not perform the remediation.
+
+### Method — primary sources first, the remediation's account of itself last
+
+**Every one of the six original findings was re-derived from source BEFORE any fix was read.**
+Nothing was taken from `LOG.md`, from the commit messages, or from the mastery report's revision
+block.
+
+- The transcript was read at all four `M1` markers. **All four misquotes were real**, exactly as R1
+  transcribed them.
+- A gap scanner was written from scratch: **721 markers, 718 distinct, zero decreasing transitions,
+  11 s twice, 10 s SEVEN times** at exactly the seven markers R1 listed. The original *"four"* was
+  wrong.
+- The 27-frame listing was mapped against every ordinal R1 named. **The off-by-one is real**;
+  position 15 is the inserted `V09_00-15-00_…png`.
+- `PT-035` §6 was read **in the pre-registration blob**, not in the observation's quotation of it.
+  The `INDETERMINATE`-on-`N3`-failure row is there verbatim and was live and unapplied.
+- The binomial was **re-derived in this session's own run-length DP**: 99.93% at p=0.50, 54.13% at
+  p=0.73, 100.00% at p=1/3, threshold 84.19%. `CONTRADICTED AS STATED` genuinely needs no
+  measurement.
+- `MMM-NOTES` was read **at source**: four averages enumerated (*"the 5, 13, 50 and 200"*), and
+  **`800` occurs zero times in 84 pages**. `A-020` attests Mayo = 200 and Blueberry = 800 as two
+  lines, so the identity does collide with it.
+- The **SWF `RECT` was parsed from every file**. Of the 21 canonical `Bootcamp/` files **exactly
+  three** declare 1280×738 — V08, V09, V21 — as R1 and the recipe state.
+- `GOTCHA 5`'s probe script was **run verbatim on one file of each class** and works on both.
+- One load-bearing frame was **opened as an image**: burned timecode matches filename, error 2 is
+  where `A-065` says it is, letterbox bands visible.
+
+### Findings — items 73–78 ALL CLOSED — VERIFIED
+
+**Every original finding was real. Every fix was correct. The superseded-text convention was
+followed at every site checked.**
+
+| Item | Verdict |
+|---|---|
+| **73** `E01` | **CLOSED — VERIFIED.** All four sites repaired, two by the stronger `PRINTED`-retag route. **Transcript body byte-identical by hash.** ⚠ The item's other required action — the mechanized sweep — was not performed: **new item 81** |
+| **74** `E20` | **CLOSED — VERIFIED.** Clause quoted in full, measured arm reported `INDETERMINATE`, verdict carried on §2c/`O4` alone, `P3` re-scored and the tally moved with both prior values retained, propagated to all three files R1 named |
+| **75** `E19` | **CLOSED — VERIFIED.** Corrected to seven, all listed, superseded text retained, body untouched and proven so |
+| **76** `E11` | **CLOSED — VERIFIED.** Took the **preferred structural route** — burned timecodes. Zero bare ordinals in any V09-scoped file. ⚠ Two survive in the shared register at sites R1 mis-attributed: **new item 82** |
+| **77** `E02` | **CLOSED — VERIFIED.** `MEDIUM`→`LOW`, arithmetic written out, Q8 corrected, `C-010` annotated and still **OPEN**. ⚠ The escalation it retires was not marked retired: **new item 83** |
+| **78** `E20` | **CLOSED — VERIFIED, BOTH HALVES**, and they are mutually consistent |
+
+**`PT-035` and `run_pt035.py` are BYTE-UNCHANGED from pre-registration** — verified by **blob SHA and
+single-commit history**, a stronger check than a diff: `c274088836a0…` at `0f709d2` and at `HEAD`;
+`9215e3ac79e5…` at `7c3fe2d` and at `HEAD`. Both re-executed; `pt035_output.txt` and
+`pt035_results.json` reproduce **byte-identically**.
+
+**Item 78's split disposition holds up.** The reviewer's policy-ledger edit is in scope under
+`D-038a`, confined to one file, correctly hedged (*"do not trust the table alone"*), and makes the
+**table-free** before/after guard the standard rather than publishing a coordinate table as
+authority. The student half cites it accurately. No live *"V01–V08"* claim remains anywhere — the
+surviving occurrences are all inside retained superseded blocks.
+
+**Items 79 and 80 are accurately characterised as non-blocking.** Read, confirmed, not resolved.
+Neither is V09 debt.
+
+### New Findings — 3 MINOR
+
+- **81** `E01` — item 73's required mechanized sweep was never run (`verify_quotes.py` still
+  V07-specific, one commit, untouched since V07 R2/R3), and a **fifth instance survives** at
+  `V09_SOURCE_NOTES.md`:410 — *"experience shows me"* for *"experiences show me"*, **38 lines from
+  the corrected block that states the transcript reads the latter.** The file contradicts itself
+  about its own source.
+- **82** `E11` — `A-069` and `A-073` still carry *"frames 22, 23 and 25"* in the **shared** register.
+  Under the current numbering those point at a **spreadsheet** and an **MS Paint email**, neither a
+  chart. The miss originates in R1's enumeration, not the remediation's execution; charged anyway
+  because the register outlives the lesson.
+- **83** `E19` — mastery report escalation 5 still asks the owner to rule on `C-010`'s closure after
+  item 77 retired the question, while escalation 2 one row away was given a `DISCHARGED` marker in
+  the same remediation.
+
+### Retesting
+
+Nothing was owed a redo: all six items are documentation defects and **no underlying test was
+invalid**, so `REMEDIATION_PROTOCOL.md` §2's redo rule was correctly not triggered. Re-run anyway
+for regression: `run_pt035.py` and all three V09 homework scripts — **all byte-identical, tree
+clean**. Marker citation integrity re-checked across the six V09 artifacts: **208 distinct
+citations, ZERO orphans**. `REMEDIATION_PROTOCOL.md` §6 forbidden acts: **none committed** — no
+review file edited since it was written, `LOG.md` gained 88 lines and deleted zero, no history
+rewritten.
+
+### Decision
+
+```text
+V09 R2:  REVISE, HIGH confidence
+         CRITICAL 0   MAJOR 0   MINOR 3  (new items 81-83)
+
+         R1 items 73-78: ALL SIX CLOSED — VERIFIED.
+         The D-003 deviation is DISCHARGED: the remediating session
+         closed nothing, and this independent round supplied the
+         verification the owner's authorization did not waive.
+
+         V09 does NOT reach COMPLETE. R3 required.
+         V10 gate REMAINS OPEN under D-024 -- nothing here gates.
+```
+
+**Why `REVISE` and not `PASS`, stated so it can be argued with.** This was close. The remediation
+did what it was asked, on all six items, correctly, and twice chose the stronger of two offered
+remedies. Nothing it did is wrong. It is not a `PASS` because **two of the three new findings are
+live wrong pointers**, one of them the very defect the round was convened to remove, surviving in a
+register that outlives V09. `REVIEW_PROTOCOL.md` §9 condition 2 is breached the same way `M4`
+breached it. Condition 14 is comfortably met — nothing corrupts downstream learning — which is why
+the gate stays open.
+
+**Recorded in the remediating session's favour.** Item 74 required it to report its own headline arm
+as `INDETERMINATE`, re-score its own prediction downward and move its own tally from `3/1/1` to
+`2/1/1/1`. It did all of it, and wrote *"item 74 is the finding this session should have made
+against itself and did not"* — while holding the pen on both the review and the fix, with nobody yet
+checking. **That is what the separation-of-duties rule exists to guarantee when it cannot be
+guaranteed structurally.**
+
+### Files Created/Updated
+
+- **Created:** `18_REVIEW/V09/V09_REVIEW_R2.md`
+- **Updated:** `18_REVIEW/REVIEW_INDEX.md` — items 73–78 → `CLOSED — VERIFIED at R2`, new items
+  **81–83**, V09 R2 decision row, `IN REMEDIATION` status block (superseded text retained)
+- **Updated:** `LOG.md` — this entry
+
+### Git
+
+Branch **`review/v09-r2`**, cut from the integration branch at `5db04d8`. `fix/v09-r1-minors`,
+`review/v09` and `video/v09` were **all already merged** into integration and `origin` was in sync
+(0/0 divergence), verified with `merge-base --is-ancestor` before any read — so unlike R1 this round
+needed no merge of integration into the task branch.
+
+**THE MERGE-BACK IS NOT PERFORMED.** The standing `D-038` instruction conditions the deliberate
+merge-back on a clean verdict, and **this verdict is not clean.** The branch is pushed and left
+unmerged. Recorded as a decision, not an omission.
+
+`validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+### Next Action
+
+**V09 R3** — on resubmission with items 81–83 applied.
+
+---
+
+## 2026-08-13 — V09 R2 REMEDIATION: items 81–83 APPLIED and ⚠ SELF-VERIFIED AT OWNER DIRECTION
+
+> ## ⚠⚠ PROCESS DISCLOSURE — READ BEFORE THE REST OF THIS ENTRY ⚠⚠
+>
+> **This round was fixed AND verified by ONE session. It is `SELF-VERIFIED AT OWNER DIRECTION,
+> NOT independently verified per the standard `D-003` process.**
+>
+> The owner explicitly authorised combining the fix and the verification **for this round
+> specifically**, on the grounds that the three items are small. That authorisation is real, it is
+> recorded, and it was followed. **It does not manufacture independence.** Items 81–83 are closed
+> as **`CLOSED — SELF-VERIFIED AT OWNER DIRECTION`** — a status string that exists for no purpose
+> other than being visibly unlike `CLOSED — VERIFIED` — and V09's `COMPLETE` carries the same
+> qualification in `REVIEW_INDEX.md`, in the decision table, and in `V09_MASTERY_REPORT.md`
+> Revision R2.
+>
+> **The precedent, and the difference from it.** V09's own R1 remediation used the same
+> owner-authorised pattern. But R1 authorised the **fix** only, and that session **closed
+> nothing** — `REVIEW_INDEX.md` read `APPLIED — PENDING VERIFICATION at R2`, and R2 supplied the
+> verification the authorisation had not waived. **This round closes its own items.** That is the
+> stronger deviation of the two, and pretending otherwise would be the failure this project
+> exists to avoid.
+>
+> **The honest statement of what is and is not established.** What is established: the three
+> findings were real, they are fixed, sixteen more defects of the same class were found and fixed,
+> and the fixes were re-derived from primary sources — the transcript, the PNGs, `MMM-NOTES` —
+> rather than from any document's account of them. What is **not** established: that a session
+> with no stake in the answer would reach the same verdict. Nothing here substitutes for that.
+
+### What the review charged, and what was done
+
+`18_REVIEW/V09/V09_REVIEW_R2.md` closed R1's items 73–78 as `VERIFIED` and opened three new
+`MINOR`s. All three are documentation fixes; `REMEDIATION_PROTOCOL.md` §2's redo-do-not-reword rule
+was checked against each and does not bite — no test was invalid, no sample cherry-picked, no
+classification hindsight-dependent, no rule stripped of provenance.
+
+| Item | Charge | Disposition |
+|---|---|---|
+| **81** `E01` | The mechanized sweep item 73 required was never run; a **fifth** instance survived 38 lines from the corrected one | **Both halves discharged.** `verify_quotes.py` generalised **and** run. **19 genuine defects found and fixed** against the one the review named |
+| **82** `E11` | `A-069`/`A-073` still carried *"frames 22, 23 and 25"*, pointing at a spreadsheet and an email | Converted to burned timecodes `28:45`/`31:50`/`41:25`. Verified **by opening all five images** |
+| **83** `E19` | Escalation 5 still put the owner a question item 77 had retired | Marked ✅ **RETIRED**, in escalation 2's form, with the arithmetic that retires it restated |
+
+### Item 81 is the substance of the round, and it got worse the harder it was looked at
+
+`V09_REVIEW_R1.md` `M1` required two things: **generalise** `verify_quotes.py` and **run** it. The
+R1 remediation did neither, and hand-fixed the four sites it was pointed at. `V09_REVIEW_R2.md`
+charged that *"hand-fixing an enumerated list leaves the un-enumerated ones."*
+
+**That charge was demonstrated three times over.**
+
+1. **The fifth instance, which the review named.** `V09_SOURCE_NOTES.md` line 410 read *"experience
+   shows me"*; `[00:44:39]` reads *"experiences show me"*. The same file had corrected the same
+   phrase 38 lines above, at R1.
+2. **A sixth, which nobody found.** `04_SCREENSHOTS/V09/INDEX.md` row 26 quoted the audience as
+   *"What is the grape?"*, cited to `[00:41:25]`, where the transcript reads *"What is the **grade**
+   Fred?"*. `V09_SOURCE_NOTES.md` §9a had corrected its own copy of that exact quotation at R1. **The
+   twin in a different file survived both review rounds. The sweep found it in one run.**
+3. **A seventh — and five more beside it — in a file the sweep could not see.** The seven V09
+   artifacts the review named do **not** include the shared registers.
+   `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` `A-072` was carrying a **third** live copy of
+   *"experience shows me"*, with `A-066`, `A-071`, `A-073` and `A-075` carrying five more misquotes
+   beside it. **The script was extended** to scan `10_AMBIGUITIES/` and `11_CONTRADICTIONS/` for
+   every lesson, restricted to table rows whose first cell names that lesson — the register's own
+   declaration of which transcript a row asserts, which is what makes the check sound on a
+   cross-lesson file.
+
+**This third one is item 82's argument in the quotation class rather than the pointer class: a
+defect in a shared register outlives the lesson that put it there.** The register was carrying
+**both** kinds of debt simultaneously, which is the strongest available evidence for R2's point.
+
+The remaining eleven were the same class in milder forms — *"2%"* for the spoken *"two percent"*,
+*"brings"* for *"will bring"*, *"forex"* for the ASR's *"4x"*, *"DMR"* for *"dmor"*, *"USD JPY"* for
+*"USD JP why"*, a Claim row that blended audio and slide into a quotation verbatim in neither, and
+four unmarked elisions joining non-adjacent markers with a comma or a full stop. **None moves a
+conclusion. All nineteen are now either literal or explicitly elided, with superseded text retained
+at every site.**
+
+### The script, and what was done to it beyond generalising
+
+`ARTIFACTS` and `ALLOWLIST` are now per-lesson dicts keyed by lesson id; the transcript path is
+derived; usage is `verify_quotes.py {V07|V09}`. **`V07_REVIEW_R3.md` §4 listed three precision
+fixes to apply "when the file is next touched". This was that touch. Two are adopted; one is
+refused, with reasons:**
+
+- **ADOPTED** — allowlist matching anchored to the **full** normalised fragment instead of a
+  prefix, closing the hole R3 found by mutation testing. Three V07 fragments the prefix rule had
+  been excusing silently now carry their own written reasons; six that were being excused for no
+  reason at all now fall through to `uncited, unrelated`, where they belong.
+- **ADOPTED** — the docstring claim that prefix matching *could not* excuse a longer differently
+  worded quotation, which was false, is corrected.
+- **REFUSED** — ordering `in_blockquote()` after the cited-FLAG test. `REMEDIATION_PROTOCOL.md` §2
+  retention blocks re-quote the defective rendering **on a `>` line** and carry its marker, so the
+  reorder would FLAG every correctly-retained superseded quotation, of which this round alone
+  creates several. **R3's actual concern was masking, not ordering**, and it is addressed instead
+  by having every `RETAINED` fragment report its near-miss run against the transcript — the hand
+  check R3 performed, mechanised, without mechanising a wrong verdict.
+
+**The file stays at `05_HOMEWORK/V07/scripts/` deliberately**, though it is no longer V07-specific.
+Six committed documents already cited it there and three are review files `REMEDIATION_PROTOCOL.md`
+§6 forbids editing; moving it would create exactly the dangling-pointer defect item 82 charges. The
+path is historical rather than descriptive and the docstring says so. **A later round willing to
+accept the stale citations may move it to `scripts/`.**
+
+### What the self-verification pass actually did — and what it caught against itself
+
+This is the part that carries whatever weight this round has, so it is stated in detail.
+
+| Check | Method | Result |
+|---|---|---|
+| Every cited marker | A parser written for this pass, **not** `verify_quotes.py`'s, dumping marker → text | **Two of this session's own edits were WRONG.** §6's Claim row was cited `[00:24:52]`–`[00:24:55]`; **`[00:24:55]` does not exist**. And the superseded block claimed *"for the week"* was imported from the slide — **the audio says it, at `[00:24:59]`**. The real defect was one dropped word, *"it"*. Q6's block likewise cited one marker for a two-marker sentence and called a two-word elision three. **Both corrected in place and reported** |
+| Item 82's three frames | **Opened all five PNGs as images** | `28:45` = `EURUSD,H1`, hand-drawn levels, level count 1/2/3, **`Reset` printed twice**, DayHi/DayLo tracer lines. `31:50` = `GBPJPY,H1`, `Reset`, numbered levels. `41:25` = nine tiles, `Reset` on `EU` and `GU`. **All three are charts and fit both records.** `26:40` = the compounding spreadsheet, `34:35` = the MS Paint email — **confirmed not charts**, which is what made the stale ordinals harmful |
+| Item 83's premise | `MMM-NOTES` **at source**, not item 77's account of it | p.38: *"The specific EMA's used in Mauro's charts are the **5, 13, 50 and 200** bar EMA's"* — four. **`800` occurs ZERO times in the extract.** p.66: *"Hold the Mayo – 200 Bounce"*, independently corroborating `A-020`'s Mayo = 200. **The premise is false on any owner ruling** |
+| The script | **Mutation-tested three ways** | Reintroduce item 81's defect at line 410 → **FLAG, exit 1**. Reintroduce the *grape* instance → **FLAG, exit 1**. Append words to an allowlisted fragment (*"7 Wins, 6 Losses, and a partridge in a pear tree"*) → **FLAG**, which proves the prefix hole is genuinely closed |
+| Live defects anywhere | grep for the phrase outside retention blocks | **Found the seventh instance**, in the shared register, and led to the six-defect find and the script extension |
+| Final sweep | Both lessons | **V09 → 315 fragments, 0 FLAGGED. V07 → 353 fragments, 0 FLAGGED** — the register extension adds V07 rows and finds **no** V07 debt |
+| Validator | `python3 scripts/validate_project.py` | **103 passed, 0 warnings, 0 failures** |
+
+**The two own-errors are the point of reporting this table.** A self-verification pass that returns
+"all clear" is worth nothing. This one found six defects the fix pass had missed and two mistakes of
+its own, including a citation to a marker that does not exist. That is offered as evidence the pass
+did work — **not** as a substitute for independence.
+
+### One defect found and deliberately NOT fixed
+
+`PT-035` §Source quotes `[00:06:08]` as *"…risk management. **However** I believe that with our
+training…"*. **The transcript reads *"…risk management. **How are** I believe that with our
+training?"*** — an ASR garble smoothed inside quotation marks, the same `E01` class as item 81.
+
+**It is not fixed and it must not be.** `COMMON_PROTOCOL.md` §9 rule 7 forbids editing a
+pre-registration after the fact, and `V09_REVIEW_R2.md` verified `PT-035` byte-identical to its
+pre-registration blob by SHA. **Editing it to fix a typo would destroy a stronger guarantee than the
+typo violates.** Recorded in `V09_MASTERY_REPORT.md` Revision R2, in `REVIEW_INDEX.md` item 81 and
+in the script's own allowlist so that a later round rules on it deliberately rather than
+rediscovering it. **Nothing turns on it** — *How are* is transparently *However*, and the
+load-bearing clause of the quotation is verbatim.
+
+### What did NOT change
+
+- **No conclusion of the lesson moves.** No marker, status, disposition, `DO NOT CODE` verdict,
+  grade, evidence count or Tier 2 negative changes anywhere.
+- **`C-010` stays `UNRESOLVED`.** Item 83 retires a *question about* `C-010`, not `C-010`.
+- **The transcript body is untouched**, as at R1.
+- **`PT-035`, `run_pt035.py` and `data/pt035_output.txt` are untouched.** No test was re-run.
+- **No review file was edited**, no history rewritten, no retention block deleted, no test ID
+  renumbered.
+
+### Files Created/Updated
+
+- **Updated:** `05_HOMEWORK/V07/scripts/verify_quotes.py` — generalised, extended to the shared
+  registers, two of V07 R3's three precision fixes adopted and the third refused with reasons
+- **Updated:** `03_LESSON_NOTES/V09_SOURCE_NOTES.md` §2c, §5, §6, §8, §11 — nine quotation fixes
+- **Updated:** `03_LESSON_NOTES/V09_INTERPRETATION.md` Q6 — heading elision
+- **Updated:** `05_HOMEWORK/V09/V09_HOMEWORK.md` — H1/H2 elisions
+- **Updated:** `04_SCREENSHOTS/V09/INDEX.md` row 26 — the sixth `E01` instance
+- **Updated:** `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` — items 82 (`A-069`, `A-073`) **and** 81
+  (`A-066`, `A-071`, `A-072`, `A-073`, `A-075`), plus a register-level correction block
+- **Updated:** `07_MASTERY_REPORTS/V09_MASTERY_REPORT.md` — escalation 5 retired; **Revision R2**
+  appended, led by the `D-003` disclosure
+- **Updated:** `18_REVIEW/REVIEW_INDEX.md` — items 81–83 → `CLOSED — SELF-VERIFIED AT OWNER
+  DIRECTION`, V09 → `COMPLETE` with the qualification stated in three places, status block and
+  decision table updated (superseded text retained)
+- **Updated:** `LOG.md` — this entry
+
+### Git
+
+Branch **`fix/v09-r2-minors`**, cut from `review/v09-r2` at `dc427dc` after `git fetch --all`
+confirmed zero divergence from `origin` (`D-038`). Four commits, every one carrying the `D-003`
+disclosure in its message. Paths staged explicitly; `git diff --staged` read before each commit;
+`git add -A` never used.
+
+**THE `D-038` MERGE-BACK IS PERFORMED THIS ROUND**, because this session's own verdict is what
+closes the round — there is no later session to hand it to. `review/v09-r2` and `fix/v09-r2-minors`
+both go to integration. **That is itself part of the deviation and is recorded as such**, not
+presented as routine.
+
+`validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+`verify_quotes.py V09`: **PASS, 0 flags.** `verify_quotes.py V07`: **PASS, 0 flags.**
+
+### Next Action
+
+**V10** — the gate has been open under `D-024` since V09 R1 and nothing here closes it. **A later
+session that wants V09 verified at arm's length has a short, specific list to re-derive; it is in
+`REVIEW_INDEX.md`'s V09 status block.**

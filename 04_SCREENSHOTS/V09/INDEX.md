@@ -104,8 +104,21 @@ REVIEW_INDEX.md open item 66).
 | 23 | `V09_00-28-45_live-mt4-eurusd-h1-level-count-and-reset.png` | `28:45` | LIVE | Full-screen MetaTrader. **Title bar, read from the platform's own text: `67352016: FXDD - MetaTrader - Demo Account - [EURUSD,H1]`.** Chart carries hand-drawn horizontal level lines, green/orange/yellow segments, the labels `1`, `2`, `3`, **`Reset`**, a vertical week divider, and a multi-line oscillator sub-panel beneath the price pane | **Broker/platform provenance** — `FXDD`, demo, **H1**. The account number **differs from V05's `67342442`** on the same broker, which is independent non-acoustic evidence of a different presenter |
 | 24 | `V09_00-31-50_live-mt4-gbpjpy-h1-level-two-long.png` | `31:50` | LIVE | Same platform, a `GJ`-watermarked H1 chart with a `(3)` label at the left, `Reset`, numbered levels and the same oscillator sub-panel | `[00:31:50]`–`[00:32:04]` |
 | 25 | `V09_00-34-35_ms-paint-presenter-email-address.png` | `34:35` | SLIDE | An **MS Paint** window on which the presenter has typed `jimn` and, below it, **`jimnicholson.dmr@hotmail.com`** | **Provenance only** (`D-025` c.4 / `D-033` p.2). Corroborates the spoken `[00:27:30]`. **Nothing in any V09 artifact depends on this** |
-| 26 | `V09_00-41-25_multi-chart-tile-view-during-grape-question.png` | `41:25` | LIVE | Nine tiled MT4 charts (`EU`, `GU`, `AU`, `EJ`, `GJ`, `UJ`, `EC`, `GF`, `UC` watermarks) at the moment the audience asks *"What is the grape?"* | `[00:41:25]` → **A-020 / C-010 reconciliation** |
+| 26 | `V09_00-41-25_multi-chart-tile-view-during-grape-question.png` | `41:25` | LIVE | Nine tiled MT4 charts (`EU`, `GU`, `AU`, `EJ`, `GJ`, `UJ`, `EC`, `GF`, `UC` watermarks) at the moment the audience asks *"What is the **grade** Fred?"* — the ASR's *"grade"* is **grape**, as `V09_SOURCE_NOTES.md` §9a records | `[00:41:25]` → **A-020 / C-010 reconciliation** |
 | 27 | `V09_00-52-25_final-frame-bird-photo.png` | `52:25` | SLIDE | Windows Photo Gallery displaying a photograph of a **fledgling bird on the ground** | Corroborates the audio-only reading that the file ends mid-sentence on `[00:52:23]` *"that was the whole idea of this bird right here — I mean he's got wings…"* |
+
+> ### ⚠ ROW 26's QUOTATION — CORRECTED 2026-08-13
+>
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2.)* Row 26 previously read *"at the
+> moment the audience asks *"What is the **grape**?"*"*, cited to `[00:41:25]`. **The transcript
+> at `[00:41:25]` reads *"What is the **grade** Fred?"*** — this is the **sixth** instance of the
+> `E01` class in V09 and the second of this specific ASR slip. `V09_SOURCE_NOTES.md` §9a
+> corrected its own copy of the same quotation at R1, under `V09_REVIEW_R1.md` `M1`; **this one
+> was not enumerated there and survived**, which is exactly the failure mode
+> `V09_REVIEW_R2.md` open item **81** charges. It was found mechanically by
+> `05_HOMEWORK/V07/scripts/verify_quotes.py V09`, not by eye. **Nothing moves:** *grape* is the
+> right reading, the transcript itself renders it correctly at `[00:33:21]` and `[00:41:31]`,
+> and the `A-020`/`C-010` reconciliation this row points at is unaffected.
 
 > ### ⚠ FRAME ORDINALS ARE NO LONGER USED AS CROSS-REFERENCES — CORRECTED 2026-08-13
 >
