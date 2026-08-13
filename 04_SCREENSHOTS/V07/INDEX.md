@@ -183,7 +183,19 @@ the last 13 minutes contain no new visual evidence and are represented by one fr
 5. **The struck-through "Homework"**, printed. The rename to *"R&D"* is a deliberate act, not a
    verbal tic.
 6. **The full ADR indicator readout in two states** (`Reached= No` / `Reached= Yes`), which
-   mechanises *"it turns red when it's met"*.
+   mechanises `[00:25:26]` *"It turns red when [it's met]"* — brackets marking the editorial
+   reconstruction, matching row 15 of the frame table above. The source word is **unrecovered**:
+   the transcript reads *"It turns red when **Beth**."*
+
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — corrected 2026-08-13, V07 R2
+> remediation, open item 70; `V07_REVIEW_R2.md` `M1`, instance (c), `E01` with co-code `E20`.)*
+>
+> **Item 6 previously read:** *"…which mechanises *"it turns red when **it's met**"*."* —
+> unbracketed and with no adjacent marker, so a later session had no signal that it was reading a
+> reconstruction. **Row 15 of this file's own frame table had the convention right** — it renders
+> *"That brown line there is the ADR. It turns red when **[it's met]**"* — and is **not** edited.
+> Verified against `02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` at `[00:25:26]` for this correction.
+> **No conclusion moves:** the two-state readout is read off the frames, not off the word.
 7. **"SHARK FIN IN TDI"** with a box drawn on the oscillator — the first located instance of
    `A-032`'s object.
 8. **`M0` / `M1` / `M2` / `M3`** printed level labels — a new undefined object (`A-055`).

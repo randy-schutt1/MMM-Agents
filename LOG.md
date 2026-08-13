@@ -5404,3 +5404,124 @@ not re-argued, and not counted again.
 discharges. The **V08 gate is unchanged: OPEN** — R1's `D-024` authorization is undisturbed and
 nothing found here is CRITICAL or MAJOR. **Next review trigger: remediation of item 70, then R3.**
 `python3 scripts/validate_project.py` — **103 passed / 0 warnings / 0 failures.**
+
+---
+
+## 2026-08-13 — Remediation Session (V07 R2 item 70) — the false categorical claim corrected, and the sweep that failed twice replaced by committed code
+
+### Objective
+
+Discharge `REVIEW_INDEX.md` open item **70** — `V07_REVIEW_R2.md` `M1` (`E01`, co-code `E20`), the
+sole outstanding item keeping V07 from `COMPLETE`. Branch `fix/v07-r2-item70`, cut from the
+integration branch at `6d86272` after `git fetch --all --prune` confirmed no divergence (`D-038`).
+
+**This is a Student remediation session. It verifies nothing and closes nothing** — `D-003`
+reserves both to an independent reviewer.
+
+### The defect, and why it is the same defect twice
+
+R1's `M3` was a word substituted inside quotation marks. The remediation of `M3` was asked to
+**repair or scope** §H's categorical claim; it chose to repair, on the strength of a sweep it ran
+itself and **did not commit** — and the repair was false. R2 located **three** further instances,
+two of them the very reconstructions the repaired sentence named as having been moved outside the
+quotes.
+
+**The instructive part is not the three words. It is that a stronger categorical claim was asserted
+on weaker evidence than the claim it replaced.** `N1` said the sweep was unreproducible; `N2` showed
+three sweeps of one corpus returning 239 / 238 / **167**, a ~30% spread. This round treats `N1` as
+the finding.
+
+### Verification performed BEFORE any edit
+
+Both markers were re-derived from `02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md` directly, not taken from
+the review's prose:
+
+```text
+[00:27:24]  The dashed ones like this are 30 minute versions, 30 minute of the water,
+            30 minute of the male,
+[00:25:26]  That brown line there is the ADR. It turns red when Beth.
+```
+
+**The review's claim is correct at both markers.** *mayo* does not occur in the V07 body at all,
+which §10 of `V07_SOURCE_NOTES.md` already measured at **0** — so that file held a right record and
+a wrong record for the same object, fourteen sections apart, inside the round that had just
+corrected it for the same fault.
+
+### Work completed
+
+- **`V07_MASTERY_REPORT.md` §H** — the false categorical claim corrected. It now states that
+  **four** quotations contained a word not in the source (one found at R1, three at R2), and it
+  **cites committed code** rather than asserting the completeness of a hand sweep.
+- **`V07_SOURCE_NOTES.md` §9a** — `[00:27:24]` restored to the literal *"30 minute of the water,
+  30 minute of the male,"*, with *mayo* outside the quotation marks carrying its `A-020`
+  provenance, exactly as §9's evidence table ten lines above already had it.
+- **`V07_SOURCE_NOTES.md` §11**, the `[00:25:26]` row — *met* taken out of the quotation and
+  bracketed as *"it turns red when [it's met]"*, matching `INDEX.md` row 15.
+- **`04_SCREENSHOTS/V07/INDEX.md` item 6** — same, bracketed, and given the marker and the
+  unrecovered source word it previously lacked.
+- **Superseded text retained at all four sites** per `REMEDIATION_PROTOCOL.md` §2, each block
+  naming round, open item, finding code and instance letter.
+
+### `N1` discharged — `05_HOMEWORK/V07/scripts/verify_quotes.py`, committed
+
+The substantive change of the round. Every quotation in the seven V07 artifacts is checked against
+the transcript body by **committed, re-runnable code**, in two tiers:
+
+- **Tier 1, cited** — a quotation with an `[HH:MM:SS]` in its own context must resolve to the
+  transcript exactly. Instances (a) and (b) are tier-1 catches.
+- **Tier 2, uncited** — a quotation with no marker is *not* required to match, but is flagged when
+  it **tracks a transcript sentence for ≥4 consecutive words and then diverges**, which is the
+  shape of this defect. **Instance (c) is a tier-2 catch and is reachable no other way**: it
+  carries no adjacent marker, so no citation-windowed sweep could ever have found it. That is the
+  mechanism behind `N2`'s 30% spread, and it is now closed rather than hypothesised.
+
+Three design choices were made against measurement rather than intuition, and are recorded in the
+script's own docstring: a similarity **ratio** for tier 2 was tried first and **rejected** (it
+cannot see *"it turns red when it's met"* against *"It turns red when Beth"*, because the two differ
+in length); the quotation pattern was narrowed so a match cannot run past its own closing mark and
+swallow the next quotation; and the citation window was stopped at Markdown table-row boundaries,
+because extending across them made every printed-slide row inherit its neighbour's marker.
+
+**Results.** Against the **pre-correction** tree: 338 fragments extracted, **exactly the three
+instances R2 found, and nothing else**. Against the **corrected** tree: **0 flags**. Non-transcript
+quotations are dispositioned rather than ignored — 64 by a reasoned allowlist (printed slide/chart
+text, labelled V04 quotes, a hypothesised ASR alternative, the declared second ASR pass), each entry
+carrying **its reason** so a later round audits the excuses instead of inheriting them, and 23 by
+the retention-block rule. Retained fragments rose 14 → 23 across this remediation: **the expected
+audit-trail inflation `V07_REVIEW_R2.md` §4 predicted**, not a regression.
+
+### One further flag, hand-checked and deliberately NOT edited
+
+`V07_MASTERY_REPORT.md` renders `[00:29:49]` as *"Do all the DM[R] speaker[s] agree on this?"*,
+bracketing a correction **inside** a token where the transcript reads *"Do all the **DMS** speaker
+agree on this?"*. Hand-checked: the bracket convention working as designed, not a substitution.
+**R2 did not raise it, and this remediation does not widen its own scope** (`REMEDIATION_PROTOCOL.md`
+§3.2). It is recorded in the script's allowlist **with its reason**, so it is visible rather than
+silently passing, and **R3 can rule** on whether intra-word bracketing should be spelled
+differently.
+
+### Prohibitions honoured, verified individually
+
+`V07_SOURCE_NOTES.md` §9's evidence table, §10's `mayo` **0** row, §5 and §6c are **unedited**;
+`INDEX.md` row 15 is **unedited**; items **61** and **62** were **not re-opened**; no V07 script,
+homework, backtest or probe was re-run; `R11` is **still failing**; no git history was rewritten;
+**no retention block was deleted**, including the ones that re-quote defective text.
+
+### Files produced / updated
+- `03_LESSON_NOTES/V07_SOURCE_NOTES.md` — §9a and §11 corrected, superseded text retained at both.
+- `04_SCREENSHOTS/V07/INDEX.md` — item 6 corrected, superseded text retained.
+- `07_MASTERY_REPORTS/V07_MASTERY_REPORT.md` — §H corrected, superseded text retained.
+- `05_HOMEWORK/V07/scripts/verify_quotes.py` — **new**, the discharge of `N1`.
+- `18_REVIEW/REVIEW_INDEX.md` — item 70 → ⚠️ **APPLIED — PENDING VERIFICATION at R3**; STATUS block
+  updated with its superseded text retained.
+- `LOG.md` — this entry.
+
+### Consequences
+**V07 still does not reach `COMPLETE`, and this session cannot make it do so.** Item **70** is
+applied and owed **verification**; item **63** stays open until 70 discharges; `D-003` reserves both
+to an independent reviewer. The **V08 gate is unchanged: OPEN**. **Next trigger: V07 R3**, which
+should **re-run `verify_quotes.py` rather than write a fourth sweep** — that is the point of
+committing it. For `CUMULATIVE_25.md`: this round is the argument for the standing rule `N1`
+proposed — **a numeric or categorical claim asserted in an artifact must be produced by committed,
+re-runnable code** — now with a worked instance showing a hand sweep failing twice on the same
+corpus and the committed one reproducing the reviewer's findings exactly.
