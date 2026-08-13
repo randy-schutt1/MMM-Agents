@@ -11,19 +11,36 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-VIDEOS IN PROGRESS:  3  (V07 — STUDENT PASS 2026-08-13, R1 returned REVISE
-                        0C/0M/3m, IN REMEDIATION, three minors owed;
-                        V08 — R1 returned REVISE 0C/0M/3m 2026-08-13,
-                        IN REMEDIATION, open items 64-66 owed, COMPLETE at R2;
-                        V09 — STUDENT PASS COMPLETE 2026-08-13, submitted as
-                        REVIEW REQUIRED, AWAITING INDEPENDENT REVIEW R1)
-VIDEOS PASSED:       6  (V01, V02, V03, V04, V05, V06 — all COMPLETE)
-NEXT LESSON:         V10 — **GATE CLOSED.** V09 carries a STUDENT status only, and
-                     D-004 opens a gate on a REVIEWER verdict, never on a student
-                     submission. No V10 artifact of any kind until V09 R1 returns;
-                     what it returns then governs per D-024.
-CURRENT LESSON:      **V09 — NO PRINTED TITLE. STUDENT PASS COMPLETE 2026-08-13,
-                     submitted as REVIEW REQUIRED (not PASS). AWAITING REVIEW R1.**
+VIDEOS IN PROGRESS:  1  (V09 — R1 returned REVISE 0C/0M/6m 2026-08-13.
+                        IN REMEDIATION: open items 73-78 are APPLIED and
+                        PENDING VERIFICATION at R2 -- NOT closed. D-003
+                        reserves closure to an independent reviewer.
+                        V09 reaches COMPLETE only at R2.)
+VIDEOS PASSED:       8  (V01, V02, V03, V04, V05, V06 — all COMPLETE;
+                        V07 — PASS at R3 2026-08-13, COMPLETE;
+                        V08 — PASS at R2 2026-08-13, COMPLETE)
+NEXT LESSON:         V10 — **GATE OPEN.** V09 R1 returned REVISE with
+                     0 CRITICAL / 0 MAJOR, which opens the next gate under
+                     D-024 with the six minors deferred and still owed.
+                     V10 may start. See the V10 GATE block below for what
+                     to carry into it.
+CURRENT LESSON:      **V09 — NO PRINTED TITLE. R1 REVISE 2026-08-13,
+                     0 CRITICAL / 0 MAJOR / 6 MINOR. REMEDIATION APPLIED,
+                     PENDING VERIFICATION at R2.**
+
+                     (Superseded text, retained per REMEDIATION_PROTOCOL.md
+                     §2 -- before V09 R1 this block read:
+                     "VIDEOS IN PROGRESS: 3 (V07 ... IN REMEDIATION, three
+                     minors owed; V08 ... IN REMEDIATION, open items 64-66
+                     owed, COMPLETE at R2; V09 -- STUDENT PASS COMPLETE
+                     2026-08-13, submitted as REVIEW REQUIRED, AWAITING
+                     INDEPENDENT REVIEW R1)"; "VIDEOS PASSED: 6"; "NEXT
+                     LESSON: V10 -- GATE CLOSED. V09 carries a STUDENT
+                     status only..."; "CURRENT LESSON: V09 ... AWAITING
+                     REVIEW R1." V07 and V08 had already reached COMPLETE
+                     at R3 and R2 and this block had not been reconciled
+                     to them -- the status-staleness class, open item 14.
+                     It is reconciled here.)
 
                      THE V09 GATE WAS VERIFIED OPEN IN REVIEW_INDEX.md BEFORE ANY
                      V09 ARTIFACT WAS CREATED. V08 R1 returned REVISE with 0
@@ -869,11 +886,32 @@ V08 GATE:            **OPEN. V07 R1, 2026-08-13 — REVISE, 0 CRITICAL / 0 MAJOR
                      REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
                      verdict, not a student submission.
 
-V10 GATE:            **CLOSED.** V09's student pass is complete and submitted as
-                     REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
-                     verdict, never on a student submission. No V10 artifact of any
-                     kind until V09's R1 returns, and what it returns then governs
-                     per **D-024**.
+V10 GATE:            **OPEN.** V09's R1 returned **REVISE, 0 CRITICAL / 0 MAJOR /
+                     6 MINOR** on 2026-08-13, and under **D-024** the progression
+                     gate follows finding severity rather than the verdict word:
+                     zero criticals and zero majors OPENS the next lesson with the
+                     minors deferred and still owed. **V10 may start.** V09 itself
+                     reaches COMPLETE only at R2 -- open items 73-78 are APPLIED
+                     and PENDING VERIFICATION, not closed.
+                     18_REVIEW/REVIEW_INDEX.md is the authoritative register.
+
+                     (Superseded text, retained per REMEDIATION_PROTOCOL.md §2 --
+                     this block read "**CLOSED.** V09's student pass is complete
+                     and submitted as REVIEW REQUIRED, but D-004 opens the next
+                     gate on a *reviewer* verdict, never on a student submission.
+                     No V10 artifact of any kind until V09's R1 returns, and what
+                     it returns then governs per **D-024**." It was correct when
+                     written; V09's R1 has now returned.)
+
+                     ⭐ **ONE FURTHER CARRY-FORWARD, ADDED BY V09 R1 AND NOT IN
+                     THE LIST BELOW: READ THE STAGE SIZE BEFORE YOU CAPTURE.**
+                     SWF_CAPTURE_RECIPE.md GOTCHA 5 (commit 89bb858) now records
+                     that the play-button coordinate is per-stage-size, that V08,
+                     V09 and V21 declare 1280x738 against the other eighteen files
+                     at 1024x786, and that the sweep must screenshot before and
+                     after the play click and abort if they are identical.
+                     **V10 is a 1024x786 file, so (512, 300) is correct for it --
+                     but confirm it, do not assume it.**
                      Carry into V10, and read this before starting it:
                      (a) **SPEAKER IDENTIFICATION IS STILL THE FIRST STEP.**
                      Course-author runtime: ~100% (V03) -> ~31% (V04) -> 0% (V05)

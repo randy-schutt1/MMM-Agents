@@ -21,10 +21,32 @@ verification performed **before** capture and recorded below.
 > ### ⚠ THE FIRST SWEEP WAS DISCARDED, AND WHY IT IS RECORDED RATHER THAN QUIETLY REDONE
 >
 > The first 638-frame sweep produced **638 identical frames of a static splash screen**.
-> `SWF_CAPTURE_RECIPE.md` §3's `mouse.click(512, 300)` — the coordinate that starts the
-> Camtasia player on V01–V08 — **misses on this file.** Before playback V09 renders its stage
-> in a small centred box, not full-window, and the play button sits at **(512, 325)**; the
-> recipe's coordinate lands in the transport strip above it.
+> `SWF_CAPTURE_RECIPE.md` §3's `mouse.click(512, 300)` **misses on this file.** Before playback
+> V09 renders its stage in a small centred box, not full-window, and the play button sits at
+> **(512, 325)**; the recipe's coordinate lands in the transport strip above it.
+>
+> ### ⚠ CORRECTED 2026-08-13 — IT ALSO MISSED ON V08, AND THE CAUSE IS THE STAGE SIZE
+>
+> This block previously described `(512, 300)` as *"the coordinate that starts the Camtasia player
+> on **V01–V08**"*. **That was wrong, and `18_REVIEW/V09/V09_REVIEW_R1.md` `M6` (`E20`, open item
+> 78) charged it.** `04_SCREENSHOTS/V08/INDEX.md` records the identical failure one lesson earlier:
+> *"the first 529-frame sweep produced one distinct image, 529 times… misses the play target on
+> this file — V08's splash centres its play button at approximately `(512, 325)`."* **Same
+> coordinate, same corrected coordinate, same symptom.** V09 is the **second** occurrence, not the
+> first, and citing V08 would have made the finding reproducible rather than anecdotal.
+>
+> **The reviewer then established the cause, which neither session had.** The stage rectangle is a
+> declared field in the SWF header, and this library holds two sizes: **V08, V09 and V21 declare
+> `1280 × 738`; the other eighteen files declare `1024 × 786`.** The recipe's Playwright viewport
+> is `1024 × 786`, so Ruffle letterboxes the first class at scale 0.8 — measurable in these very
+> frames as uniform bands at rows ~0–160 and ~685–785, which V06/V07 frames do not have. **Every
+> coordinate calibrated on a 1024×786 file is displaced on a 1280×738 one.** It is a property of a
+> header field, not a per-file oddity.
+>
+> **The policy fix is MADE** — `SWF_CAPTURE_RECIPE.md` `GOTCHA 5`, commit `89bb858` on the
+> integration branch: §3 and §10 no longer carry the coordinate as a constant, a one-command
+> stage-size probe is given, and the sweep now screenshots before and after the play click and
+> **exits non-zero if they are byte-identical** — V08's own remedy, promoted to the standard.
 >
 > **Nothing downstream looked wrong.** The server was verified, the bytes matched, `__ready`
 > went true, 638 valid PNGs were written. The only thing that caught it was **opening a frame
@@ -85,6 +107,20 @@ REVIEW_INDEX.md open item 66).
 | 26 | `V09_00-41-25_multi-chart-tile-view-during-grape-question.png` | `41:25` | LIVE | Nine tiled MT4 charts (`EU`, `GU`, `AU`, `EJ`, `GJ`, `UJ`, `EC`, `GF`, `UC` watermarks) at the moment the audience asks *"What is the grape?"* | `[00:41:25]` → **A-020 / C-010 reconciliation** |
 | 27 | `V09_00-52-25_final-frame-bird-photo.png` | `52:25` | SLIDE | Windows Photo Gallery displaying a photograph of a **fledgling bird on the ground** | Corroborates the audio-only reading that the file ends mid-sentence on `[00:52:23]` *"that was the whole idea of this bird right here — I mean he's got wings…"* |
 
+> ### ⚠ FRAME ORDINALS ARE NO LONGER USED AS CROSS-REFERENCES — CORRECTED 2026-08-13
+>
+> `18_REVIEW/V09/V09_REVIEW_R1.md` `M4` (`E11`, open item 76) found **fourteen cross-references at
+> ordinal 15 or above off by one across five files**. The cause: `ff7b8bd` inserted
+> `V09_00-15-00_can-have-more-losers-than-winners.png` at **position 15** and renumbered the table
+> below, without renumbering the references written against the earlier 26-frame numbering.
+>
+> **Every content claim they supported was correct** — the reviewer read the load-bearing frames —
+> so this was a pointer defect, not an evidence defect. **The fix is structural rather than
+> arithmetic:** every cross-reference in `V09_SOURCE_NOTES.md`, this file, `A-065`, `A-067`,
+> `C-013`, `C-015` and `V09_MASTERY_REPORT.md` now names the frame by its **burned-in player
+> timecode**, which no later insertion can invalidate. **The numbered column below is an index
+> into this table only, and nothing outside this file cites it.**
+
 ## WHAT THE FRAMES ADDED THAT THE TRANSCRIPT DID NOT
 
 Written **after** `V09_SOURCE_NOTES.md` and `V09_INTERPRETATION.md` were complete from the
@@ -101,7 +137,7 @@ rewritten**; every item below is added as a new section there.
 3. **`C-012` and `C-013` are both PRINTED contradictions**, not transcription artifacts. A
    reader who doubted the *"85% win rate / 7 wins, 6 losses"* line as a mishearing can see it
    set in the presenter's own slide, and the 28-week compounding table is legible cell by cell.
-4. **The broker and platform are legible** (frame 22): `FXDD`, MetaTrader, **demo** account
+4. **The broker and platform are legible** (frame 23, burned `28:45`): `FXDD`, MetaTrader, **demo** account
    `67352016`, `EURUSD,H1`. `D-034`'s text-only measurement rule is satisfied — this is read
    from the platform's own title bar, not inferred from pixels.
 5. **The account number is different from V05's**, on the same broker. Recorded as provenance
@@ -111,12 +147,12 @@ rewritten**; every item below is added as a new section there.
 
 ## WHAT WAS DELIBERATELY NOT TRANSCRIBED
 
-- **The oscillator sub-panel** visible beneath the price pane on frames 22, 23 and 25 carries a
+- **The oscillator sub-panel** visible beneath the price pane on the frames burned `28:45`, `31:50` and `41:25` carries a
   header label in the same position as V05 frame 26's `TDI_MMM`. At this resolution it is at the
   edge of legibility and is **not transcribed** — only its presence is recorded. **Displayed,
   not taught**: the presenter never refers to it. This row does **not** narrow `A-039`.
-- **The hand-drawn level markings** on frames 22, 23 and 25 are recorded as *present* and their
+- **The hand-drawn level markings** on the frames burned `28:45`, `31:50` and `41:25` are recorded as *present* and their
   labels (`1`, `2`, `3`, `Reset`) transcribed, but **no geometry is measured off them** —
   `D-036a`'s restated `E06` forbids measuring anything off a rendering.
-- **The spreadsheet's intermediate rows** on frame 21 are legible but only the first block and
+- **The spreadsheet's intermediate rows** on the frame burned `26:40` are legible but only the first block and
   the red-boxed final row are transcribed above, because those are the two the argument uses.

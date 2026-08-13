@@ -1489,6 +1489,48 @@ admitted account of it.
 >
 > **Source:** `03_LESSON_NOTES/V09_SOURCE_NOTES.md` §9d; `V09_INTERPRETATION.md` Q5.
 
+> ### ⭐⭐ THE CANDIDATE RECONCILIATION DOES NOT MERELY LACK PERMISSION — IT FAILS ARITHMETICALLY. ADDED 2026-08-13
+>
+> `18_REVIEW/V09/V09_REVIEW_R1.md` `M5` (`E02`, open item 77). **The block above is retained
+> unedited and its conclusion is UPHELD** — `C-010` stays open and the refusal was correct. What
+> the reviewer added is a **second, independent reason**, and it is the stronger one: the block
+> above refuses the reconciliation on the *"do not blend"* rule alone, and `V09_INTERPRETATION.md`
+> Q5 accordingly graded the hypothesis `MEDIUM`, *"more likely than not"*. **It is not.**
+>
+> The identity is a **factor of four**. Applied to the whole enumeration rather than to its last
+> member:
+>
+> ```text
+> notes on H1:         5      13      50     200
+> the same lines on M15:   20      52     200     800
+> the corpus's set:    5      13      50     200     800     (A-020)
+> ```
+>
+> | Member | Outcome |
+> |---|---|
+> | `200 → 800` | ✅ lands |
+> | `50 → 200` | ❌ the corpus's 200 is **mayo**, a distinct named line |
+> | `13 → 52` | ❌ the corpus carries a 13, not a 52 |
+> | `5 → 20` | ❌ the corpus carries a 5, not a 20 |
+>
+> **And it collides with `A-020` directly.** That record's attested mapping has **mayo = 200 and
+> blueberry = 800 on one chart** — two lines. The reconciliation requires them to be one line seen
+> from two timeframes. **A hypothesis cannot resolve `C-010` by contradicting `A-020`.**
+>
+> **Consequence, recorded so no later session re-attempts it.** The reconciliation reconciles
+> **one member of a four-member enumeration and breaks the other three**. `C-010`'s own Assessment
+> block already names the better explanation — **chronology**, that the 800 entered the method
+> after these notes were written, which the notes' own *"any other rapidly moving pair of EMA's
+> would achieve the same goal"* supports.
+>
+> **This also retires the escalation `V09_MASTERY_REPORT.md` put to the owner** (*"if the owner
+> judges that reading a timeframe into `MMM-NOTES` is acceptable, `C-010` closes immediately"*).
+> **It does not close.** The blending question is moot because the route does not reach.
+>
+> **`C-010` STAYS UNRESOLVED. Disposition unchanged.** What would close it is unchanged too — and
+> it is now more demanding than the sentence above implies: **a source stating the timeframe of the
+> WHOLE set on both sides**, not of one member.
+
 ## C-011 — The ADR lookback window: the notes say two weeks, the corpus says two days and "generally every day"
 
 > **RENUMBERED at merge-back, 2026-08-13.** This record was filed as **`C-008`** on
@@ -1657,8 +1699,8 @@ LOGGED:        2026-08-13, V09 Student session
 
 | Source | Text | Where |
 |---|---|---|
-| **A — the projection** | *"Only **FIVE successful trades per Week** = **20% Gains for the Week!**"*, and a spreadsheet with `Base 5,000.00`, `% profit 0.2000`, compounding **28 consecutive weeks** to **`824,223.31`** | Printed, frames 19–21; spoken `[00:24:52]`–`[00:26:38]` |
-| **B — the lesson's own demonstrations** | Four equity staircases: **8W/11L**, **7W/12L**, **6W/14L**, **7W/6L**. Printed headline one slide before the projection: *"Can have **MORE Losers than Winners** and still have UPWARD EQUITY"* | Frames 12, 13, 15, 18; `[00:10:35]`, `[00:11:17]`, `[00:12:06]`, `[00:22:47]`, `[00:15:00]` |
+| **A — the projection** | *"Only **FIVE successful trades per Week** = **20% Gains for the Week!**"*, and a spreadsheet with `Base 5,000.00`, `% profit 0.2000`, compounding **28 consecutive weeks** to **`824,223.31`** | Printed, frames burned `25:00`, `26:00`, `26:40`; spoken `[00:24:52]`–`[00:26:38]` |
+| **B — the lesson's own demonstrations** | Four equity staircases: **8W/11L**, **7W/12L**, **6W/14L**, **7W/6L**. Printed headline one slide before the projection: *"Can have **MORE Losers than Winners** and still have UPWARD EQUITY"* | Frames burned `10:15`, `11:40`, `15:00`, `22:45`; `[00:10:35]`, `[00:11:17]`, `[00:12:06]`, `[00:22:47]`, `[00:15:00]` |
 
 ### The arithmetic is EXACT, and that is what makes this a contradiction rather than an error
 
@@ -1782,7 +1824,7 @@ Stop Loss Size    1% (per $100K) = $1000    3% = $3000    5% = $5000
 ```
 
 **That is `risk_dollars ÷ stop_pips`** — V09's formula exactly (`[00:02:00]`–`[00:02:03]`,
-printed frame 3). $1,000 at a 10-pip stop is $100/pip = 10 standard lots. ✓
+printed on the frame burned `02:05`). $1,000 at a 10-pip stop is $100/pip = 10 standard lots. ✓
 
 **Two admissible sources, neither citing the other, giving the same position-sizing arithmetic.**
 This is the strongest corroboration of a method rule anywhere in the corpus to date, and it is
@@ -1795,7 +1837,7 @@ recorded as such.
 | Risk per trade | **2%**, flat, `[00:08:28]` *"2% is a good place to start"* | **1–3% when learning**, then *"when you are proficient (hitting 9 – 10), then **increase the per trade risk to 5%** of your account balance"* (**p.67**) |
 | After consecutive losses | **Diminish** size, `[00:09:23]` | Not addressed |
 | Multiple positions | **Error #2**: *"Putting on Multiple Positions which add up to GREATER than your % Risk"*; *"cumulative risk that's never greater than two percent across your account"* `[00:19:29]` | A **5:4:3:2:1 scale-in ladder**, taught as *"a safer way of gaining profit"* (**p.67**) |
-| Sizing philosophy | *"**No Impulsive Increases in LOT SIZE**"* (printed, frame 16); *"you will blow up accounts unless you work this way"* `[00:09:07]` | *"looking for the most pristine setups where there is maximum opportunity for **scaling in heavily and trading with high lot sizes without being concerned about losses**"* (**p.50**); *"If you are confident with your setups and your level of accuracy you can afford to **trade heavily**"* (**p.51**); *"ramp up your contract size"* (**p.51**) |
+| Sizing philosophy | *"**No Impulsive Increases in LOT SIZE**"* (printed, frame burned `17:05`); *"you will blow up accounts unless you work this way"* `[00:09:07]` | *"looking for the most pristine setups where there is maximum opportunity for **scaling in heavily and trading with high lot sizes without being concerned about losses**"* (**p.50**); *"If you are confident with your setups and your level of accuracy you can afford to **trade heavily**"* (**p.51**); *"ramp up your contract size"* (**p.51**) |
 
 ### Resolution under `SOURCING_HIERARCHY.md` §3.3 — and the asymmetry `C-011` made concrete
 

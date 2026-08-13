@@ -4746,9 +4746,9 @@ The fraction of account balance a trader accepts losing if a trade reaches its s
 
 | Video | Timestamp | Usage in context | Basis |
 |---|---|---|---|
-| V09 | `[00:02:00]`–`[00:02:03]` | *"We multiply our account balance by point O2 and divide our stop loss and pips into that number"* | `AUDIO+PRINTED`, frame 3 |
-| V09 | `[00:08:28]` | *"**2% is a good place to start**"* | `AUDIO+PRINTED`, frame 10 |
-| V09 | `[00:19:29]` | *"a **cumulative** risk that's never greater than two percent across your account"* | `AUDIO+PRINTED`, frame 17 error 2 |
+| V09 | `[00:02:00]`–`[00:02:03]` | *"We multiply our account balance by point O2 and divide our stop loss and pips into that number"* | `AUDIO+PRINTED`, frame burned `02:05` |
+| V09 | `[00:08:28]` | *"**2% is a good place to start**"* | `AUDIO+PRINTED`, frame burned `08:20` |
+| V09 | `[00:19:29]` | *"a **cumulative** risk that's never greater than two percent across your account"* | `AUDIO+PRINTED`, the five-errors frame burned `21:40` — error 2 |
 | V09 | `[00:13:27]` | *"when you do restrict your lot size to 2 percent of balance at stop out you have no margin issues"* | `AUDIO` |
 
 ### Why this is in the register at all
@@ -4872,9 +4872,9 @@ The hit rate said to be required for a positive equity curve.
 
 | Video | Timestamp | Usage | Basis |
 |---|---|---|---|
-| V09 | `[00:15:36]` | *"Simply trading with greater than 50 percent accuracy will bring upward equity"* | `AUDIO+PRINTED`, frames 15–16 |
+| V09 | `[00:15:36]` | *"Simply trading with greater than 50 percent accuracy will bring upward equity"* | `AUDIO+PRINTED`, frames burned `16:00`–`17:05` |
 | V09 | `[00:15:43]` | *"I gotta just stop this whole thing and **freeze this frame** and just keep it here all night because this is an amazing thing"* | `AUDIO` |
-| V09 | `[00:15:00]` | *"Can have **MORE Losers than Winners** and still have UPWARD EQUITY"* | `PRINTED`, frame 15 |
+| V09 | `[00:15:00]` | *"Can have **MORE Losers than Winners** and still have UPWARD EQUITY"* | `PRINTED`, frame burned `15:00` |
 
 ### Assessment
 
