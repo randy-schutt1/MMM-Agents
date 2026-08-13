@@ -73,6 +73,37 @@ setup itself**:
 | Stop distance and target distance | — |
 | Date range | — |
 | Number of trades (match n) | — |
+| **Entry PRICE convention** (see 2.1a — this row was added 2026-08-13) | — |
+
+#### 2.1a The null's entry-**price** convention is a required pre-registration field
+
+> **ADDED 2026-08-13** in remediation of `V08_REVIEW_R1.md` `M2` (`E20`, open item 65). This is
+> a **forward** requirement. It does **not** invalidate any completed test, and `PT-034` — the
+> test that exposed the gap — **is not edited**; `COMMON_PROTOCOL.md` §9 rule 7 forbids that.
+
+The table above tells a session to hold the entry *bar* selection and the stop/target
+distances. **It never said to fix the entry PRICE**, and `PT-034` shows what happens: the
+pre-registration specified the random *bar* and left the *price* to the runner, which chose the
+bar's **close**. The choice was sound, was committed before the run, and was validated by
+landing on the analytic break-even — but it was settled in code rather than in the
+pre-registration, which is exactly the location a reviewer cannot audit in advance.
+
+**Requirement.** Every `PT-xxx` carrying a matched-random null **must state, in the
+pre-registration's own parameter table, the price at which the null enters** — e.g.
+*"the chosen bar's close"*, *"the chosen bar's open"*, *"the bar's midpoint"*.
+
+**State it even when — especially when — it differs from the rule arm's.** A rule arm anchored
+to an extreme (`LOD + X`) and a null entering at the close are **not** using the same price
+convention, and that asymmetry is load-bearing for what the comparison means. A null must not
+be given an intrabar-favourable price (its bar's low for a long, its high for a short): that
+borrows the very favourability the rule arm is being tested for and biases the null **toward**
+the rule. A random bar has no extreme to anchor to — that is what makes it a null — so the
+close is the ordinary neutral choice, but the choice must be **written down, not inferred from
+the code**.
+
+**Reviewer enforcement:** an unstated null entry-price convention is at minimum a `MINOR`
+`E20` (pre-registration completeness). See `06_MANUAL_BACKTEST/V08/BT_V08_0001.md` §5 for the
+worked precedent.
 
 Run it at least **200 iterations** and report the distribution, not one draw. The
 comparison is *the rule's result against that distribution*, and the honest statement
