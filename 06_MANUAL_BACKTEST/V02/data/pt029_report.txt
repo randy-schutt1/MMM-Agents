@@ -1,0 +1,170 @@
+==============================================================================
+PT-029 — Is the rest of the week a unidirectional swing after the extreme?
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-C' 2013-01-06 -> 2016-06-30. Re-issue of PT-011.
+⚠ CLASS: DESCRIPTIVE BY CONSTRUCTION — the anchor is retrospective
+  and is unknowable in real time. This is NOT a trading result.
+⚠ PATH RESOLUTION: 15-MINUTE BARS (§0b), a first-class parameter.
+==============================================================================
+
+==========================================================================
+--- ARM A ---
+==========================================================================
+  week roster (arm A) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 3  (2015-12-20, 2015-12-27, 2016-06-26)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+  TRADING WEEKS USED: 180
+  §3a: 2014-06-01 EXCLUDED BY NAME. This is the test where the hole does the
+       most damage — the efficiency DENOMINATOR is a path summed over M15
+       bars, so 22 missing hours would shorten the path and INFLATE
+       efficiency, biasing the headline metric TOWARD the claim under test.
+  §3a: ['2015-12-20', '2015-12-27'] end THURSDAY — the net-zero metric uses the REALISED last bar,
+       never a nominal Friday close.
+  §0b: PATH RESOLUTION = 15-MINUTE BARS, for every week and every control
+       alike. The M1 corpus is NOT used for the path sum. Efficiency figures
+       below are NOT comparable with any computed on another timeframe.
+
+  PRIMARY BASELINE (§4 arm 1) — efficiency over EQUAL-LENGTH spans anchored
+  at a RANDOM bar in the SAME week, 1000 draws, seed 20260812.
+  Same week, same volatility, same length; only the anchor changes.
+    median efficiency across weeks: median 0.07102, 5-95% [0.06557, 0.07656]
+
+  SECOND BASELINE (§4 arm 2) — equal-length spans anchored at the RELATIVE
+  POSITION of a RANDOMLY CHOSEN OTHER WEEK'S extreme, 1000 draws.
+  ⚠ WHAT THIS DOES AND DOES NOT CONTROL, stated rather than assumed. §4 calls
+    it the control for 'the mechanical fact that any span starting at a local
+    extreme has elevated efficiency by construction'. Read literally — and it
+    is implemented literally — it borrows the extreme's TIMING, not its
+    EXTREMENESS: the borrowed anchor is a typical extreme POSITION in this
+    week, but need not be an extreme of it. It therefore isolates POSITION,
+    and arm 1 plus arm 2 BRACKET the extremeness effect rather than measuring
+    it directly. Constructing a 'local extreme' would require a definition the
+    course does not give, which `D-030` forbids inventing.
+    median efficiency across weeks: median 0.06372, 5-95% [0.05756, 0.06938]
+
+  THIRD BASELINE (§4 arm 3) — N3 week-anchor shift, 1000 draws:
+    median efficiency across sham weeks: median 0.1055, 5-95% [0.09837, 0.1139]
+
+  ======================================================================
+  OBSERVED — read after all three baselines
+  ======================================================================
+  ⚠ CLASS: DESCRIPTIVE. The anchor is knowable only AFTER the week ends.
+  ⚠ PATH RESOLUTION: 15-MINUTE BARS (§0b). Not comparable across timeframes.
+
+  METRIC — DIRECTIONAL EFFICIENCY after the retrospective extreme, n = 180
+    median 0.1153, IQR [0.0742, 0.1514], 5-95% [0.0395, 0.2729]
+    bootstrap 95% CI on the median: [0.1059, 0.1236]
+    vs arm 1 (random anchor, same week) : median 0.0710   percentile 100.0
+    vs arm 2 (borrowed extreme position): median 0.0637   percentile 100.0
+    vs arm 3 (N3 week-anchor shift)     : median 0.1055   percentile 96.5
+
+  METRIC — MONOTONICITY: largest counter-directional retracement after the
+  anchor:
+    in pips           : median 81.4, IQR [59.3, 113.0]
+    as a share of the total move: median 0.451, IQR [0.291, 0.790]
+
+  METRIC — NET-ZERO WEEKS (§7 step 6 requires this in the HEADLINE, not the
+  appendix). Friday close within +/-25 pips of the week open,
+  using the REALISED last bar for the two Thursday-ending weeks:
+    0.089 (16/180), 95% CI [0.055, 0.140]
+    subset size for any statement ABOUT net-zero weeks: 16  <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+    their median efficiency: 0.0650   (all other weeks 0.1182)
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — five largest-range weeks:
+    2016-06-19  range  1789.5 pips  efficiency 0.2496
+    2015-03-15  range   533.1 pips  efficiency 0.1313
+    2013-06-02  range   491.7 pips  efficiency 0.1383
+    2015-04-12  range   488.2 pips  efficiency 0.1242
+    2015-08-23  range   483.8 pips  efficiency 0.1981
+
+==========================================================================
+--- ARM B ---
+==========================================================================
+  week roster (arm B) — derived from the Sunday 17:00 anchor,
+    NOT from C7's open list (which counts 4 holiday re-opens as opens)
+    Sunday week anchors in W-C'            : 182
+    of which Dec/Jan closure weeks         : 6  (INCLUDE, report separately)
+    of which the 2014-06-01 data hole      : 1  (EXCLUDE by name)
+    of which truncated by the DEV boundary : 1  (2016-06-26)
+    weeks whose realised open is late      : 1  (max lag 1320 min)
+    weeks whose realised close is a Thu    : 2  (2015-12-20, 2015-12-27)
+    holiday re-opens asserted absent from the roster: 2013-12-26, 2014-01-01, 2014-12-25, 2015-01-01
+  TRADING WEEKS USED: 180
+  §3a: 2014-06-01 EXCLUDED BY NAME. This is the test where the hole does the
+       most damage — the efficiency DENOMINATOR is a path summed over M15
+       bars, so 22 missing hours would shorten the path and INFLATE
+       efficiency, biasing the headline metric TOWARD the claim under test.
+  §3a: ['2015-12-20', '2015-12-27'] end THURSDAY — the net-zero metric uses the REALISED last bar,
+       never a nominal Friday close.
+  §0b: PATH RESOLUTION = 15-MINUTE BARS, for every week and every control
+       alike. The M1 corpus is NOT used for the path sum. Efficiency figures
+       below are NOT comparable with any computed on another timeframe.
+
+  PRIMARY BASELINE (§4 arm 1) — efficiency over EQUAL-LENGTH spans anchored
+  at a RANDOM bar in the SAME week, 1000 draws, seed 20260812.
+  Same week, same volatility, same length; only the anchor changes.
+    median efficiency across weeks: median 0.07102, 5-95% [0.06557, 0.07656]
+
+  SECOND BASELINE (§4 arm 2) — equal-length spans anchored at the RELATIVE
+  POSITION of a RANDOMLY CHOSEN OTHER WEEK'S extreme, 1000 draws.
+  ⚠ WHAT THIS DOES AND DOES NOT CONTROL, stated rather than assumed. §4 calls
+    it the control for 'the mechanical fact that any span starting at a local
+    extreme has elevated efficiency by construction'. Read literally — and it
+    is implemented literally — it borrows the extreme's TIMING, not its
+    EXTREMENESS: the borrowed anchor is a typical extreme POSITION in this
+    week, but need not be an extreme of it. It therefore isolates POSITION,
+    and arm 1 plus arm 2 BRACKET the extremeness effect rather than measuring
+    it directly. Constructing a 'local extreme' would require a definition the
+    course does not give, which `D-030` forbids inventing.
+    median efficiency across weeks: median 0.06372, 5-95% [0.05756, 0.06938]
+
+  THIRD BASELINE (§4 arm 3) — N3 week-anchor shift, 1000 draws:
+    median efficiency across sham weeks: median 0.1055, 5-95% [0.09837, 0.1139]
+
+  ======================================================================
+  OBSERVED — read after all three baselines
+  ======================================================================
+  ⚠ CLASS: DESCRIPTIVE. The anchor is knowable only AFTER the week ends.
+  ⚠ PATH RESOLUTION: 15-MINUTE BARS (§0b). Not comparable across timeframes.
+
+  METRIC — DIRECTIONAL EFFICIENCY after the retrospective extreme, n = 180
+    median 0.1153, IQR [0.0742, 0.1514], 5-95% [0.0395, 0.2729]
+    bootstrap 95% CI on the median: [0.1059, 0.1236]
+    vs arm 1 (random anchor, same week) : median 0.0710   percentile 100.0
+    vs arm 2 (borrowed extreme position): median 0.0637   percentile 100.0
+    vs arm 3 (N3 week-anchor shift)     : median 0.1055   percentile 96.5
+
+  METRIC — MONOTONICITY: largest counter-directional retracement after the
+  anchor:
+    in pips           : median 81.4, IQR [59.3, 113.0]
+    as a share of the total move: median 0.451, IQR [0.291, 0.790]
+
+  METRIC — NET-ZERO WEEKS (§7 step 6 requires this in the HEADLINE, not the
+  appendix). Friday close within +/-25 pips of the week open,
+  using the REALISED last bar for the two Thursday-ending weeks:
+    0.089 (16/180), 95% CI [0.055, 0.140]
+    subset size for any statement ABOUT net-zero weeks: 16  <<< SAMPLE INSUFFICIENT FOR INFERENCE — descriptive only
+    their median efficiency: 0.0650   (all other weeks 0.1182)
+
+  PRE-REGISTERED SENSITIVITY APPENDIX — five largest-range weeks:
+    2016-06-19  range  1789.5 pips  efficiency 0.2496
+    2015-03-15  range   533.1 pips  efficiency 0.1313
+    2013-06-02  range   491.7 pips  efficiency 0.1383
+    2015-04-12  range   488.2 pips  efficiency 0.1242
+    2015-08-23  range   483.8 pips  efficiency 0.1981
