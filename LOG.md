@@ -3764,8 +3764,14 @@ V05 R2 precedent that declining to transcribe an illegible value is correct.
 **None, and the reasoning is in the homework's §0 rather than implied.** V06's rules are
 excluded by `D-025`, so there is nothing this project may test; `D-030` blocks it
 independently, since *push*, *pullback*, *nameable pattern* and ADR's lookback are all
-undefined. `06_MANUAL_BACKTEST/` untouched; `PT-001` still pre-registered and unrun; no
-`BT_*.md` created, so `D-026`/`D-027`'s gate is not engaged.
+undefined. `06_MANUAL_BACKTEST/` was not written to by this session and **no `BT_*` observation exists
+anywhere in it**, so `D-026`/`D-027`'s gate is not engaged. **A parallel session on this same
+branch added `PT-002`–`PT-021` pre-registrations while V06 was being studied** (commits
+`2d62e87`, `138fc86`, `6951d1c`, `bfa0b2d`), and separately batch-discharged the `RULES.md`
+fabrication check for V07–V21 (`a5ab604`, which cites this session's `Q-006`). **None of that
+work is this session's, none of it is V06-derived, and none of it was audited here** — it is
+recorded so the interleaved commit history is legible to a reviewer. `PT-001` remains
+pre-registered and unrun.
 
 ### Homework
 

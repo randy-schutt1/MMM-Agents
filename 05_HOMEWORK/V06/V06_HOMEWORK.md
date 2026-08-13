@@ -66,9 +66,15 @@ entry, no exit, no direction, no outcome and no hit rate. Every number is either
 the data (bar counts, ranges, extremes, clock times) or arithmetic on figures the lesson itself
 states. There is nothing for a matched-random-entry baseline to be a baseline *of*.
 
-**`06_MANUAL_BACKTEST/` is untouched by this session and `PT-001` remains pre-registered and
-unrun.** If a future session wants to test V06's push rule, it will need the baseline, the
-period pre-registration, the holdout — **and a definition of "push" that this corpus does not
+**`06_MANUAL_BACKTEST/` was not written to by this session, and no `BT_*` observation exists
+anywhere in it.** A parallel session working the same branch added `PT-002`–`PT-021` to
+`06_MANUAL_BACKTEST/PRE_REGISTERED/` while this lesson was being studied; **none of them is
+V06-derived**, none is run, and this session neither authored nor audited them — they are
+named here only so a reader does not mistake this file's claim for a survey of the directory's
+whole contents. `PT-001` remains pre-registered and unrun.
+
+If a future session wants to test V06's push rule, it will need the baseline, the period
+pre-registration, the holdout — **and a definition of "push" that this corpus does not
 contain**, which is `D-030`'s wall.
 
 ---

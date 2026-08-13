@@ -141,9 +141,12 @@ may test.** Testing them would require adopting them as the object of a test, wh
 adoption the decision forbids; and `D-030` independently blocks it, since *push*, *pullback*,
 *nameable pattern* and *ADR's lookback* are all undefined in the corpus.
 
-`06_MANUAL_BACKTEST/` is untouched by this session. `PT-001` remains pre-registered and
-unrun. **No `BT_*.md` observation was created, so `D-026`/`D-027`'s gate is not engaged** —
-and the homework's §0 states that reasoning explicitly rather than leaving it implied.
+`06_MANUAL_BACKTEST/` was not written to by this session, and **no `BT_*` observation exists
+anywhere in the directory**, so `D-026`/`D-027`'s gate is not engaged — and the homework's §0
+states that reasoning explicitly rather than leaving it implied. A parallel session added
+`PT-002`–`PT-021` pre-registrations to the same branch during this one; **none is V06-derived,
+none is run, and this session neither authored nor audited them.** `PT-001` remains
+pre-registered and unrun.
 
 **Same disposition problem as B.** Work excluded by decision is neither `NOT APPLICABLE`
 (there *is* subject matter) nor `DEFERRED` (no future event unblocks it). See ESCALATION §1.
