@@ -9204,3 +9204,217 @@ items renumbered 187–194 → 189–196 under `D-047` Consequence A and the ren
 
 Student remediation of items 197–202, or a V16 submission — subject to the owner's standing decision
 on the gap audit.
+are of different kinds (item 189) — **but the audit is still the owner's to make**, along with the
+open owner decisions at items **157**, **168**, **179**, **185** and now **188**.
+
+---
+
+## 2026-08-14 — Student Session — V16 (`Bootcamp1 Wk7 050612 Part2`)
+
+### Objective
+
+Ingest V16 end to end under the project's standard per-video pipeline, in an isolated
+worktree on `video/v16` (`D-038`), and stop at the mastery report without merging.
+
+### ⚠⚠ AUTHORISATION AND THE GATE — STATED FIRST, BECAUSE THEY DIFFER
+
+**The owner authorised, on 2026-08-14, continuing the ingestion pipeline THROUGH THE REST OF THE
+TRAINING — explicitly for V16 onward, and explicitly NOT single-video-scoped as V15's was.** V16
+was opened under that authorisation and **no further per-video go-ahead is required for V17–V21.**
+
+⚠⚠ **AND IT DOES NOT SATISFY `D-004`. V15's R1 NEVER RETURNED.** There is no `review/v15` branch
+and no `V15_REVIEW_R1.md`. `COURSE_PROGRESS.md`'s V16 GATE block read **`CLOSED until V15's R1
+returns`** when this session started, and it was still closed when this session finished.
+**V16 is the first lesson in this corpus opened with its `D-004` gate closed.** Every previous
+lesson opened after its predecessor's R1 returned `0 CRITICAL / 0 MAJOR` under `D-024`.
+
+**This is declared, not argued away.** A reviewer who holds that `D-004` cannot be waived by owner
+instruction should treat V16's entire artifact set as **PROVISIONAL pending V15's R1**, and this
+session does not contest that reading. **Item 185's gap audit is likewise NOT discharged** — V16
+adds `A-104` to it and settles nothing.
+
+### Work Completed
+
+Transcript (verified on five checks including a full independent ASR pass) · 34 curated frames from
+a 544-frame sweep with `§8a` measured · source notes · interpretation · homework · `PT-044` /
+`BT_V16_0001` · mastery report · `A-101`–`A-106` · `C-023` · `Q-017` · V16 addenda to `A-095`,
+`A-096`, `A-097`, `A-100` · `REVIEW_INDEX.md` items 195–200 · `COURSE_PROGRESS.md` · this entry.
+
+### Key Findings
+
+⭐⭐ **The ADR lookback arrives in Tier 1** — `[00:09:31]` *"the ADR is calculated over the last two
+weeks, 15 days"*, **confirmed verbatim by an independent `large-v3-turbo` pass.**
+`COURSE_PROGRESS.md`'s V16 GATE (c) named this as the highest-value thing V16 could contain.
+⚠ **`A-100` ADVANCES, DOES NOT CLOSE:** two trading weeks is 10, two calendar weeks is 14, **no
+reading yields 15**, and the range definition, marker anchor, averaging method and the ADR's own day
+boundary are all still absent. `C-022` is untouched — V16 never says *repaint*.
+
+⭐⭐ **The pivot grid is printed** — `R2 M4 R1 M3 CPP M2 S1 M1 S2`. **`A-096`'s identity half CLOSES**
+and its *"TIER 2 ONLY"* colour-trigger clause is **SUPERSEDED**. ⛔ **`A-101` opens in its place: the
+CONSTRUCTION of `M1`–`M4` is stated nowhere, and the tidy midpoint reading was TESTED AND
+DEFEATED** — all nine levels are drawn equally spaced to ±1 px, so the slide is a schematic and
+encodes no arithmetic.
+
+⭐ **The corpus's first printed, timezone-stamped session boundary** — `London Session Start / 2:00
+To 3:00 AM, EST` (`A-105`). Its rule gained an audio leg when the second ASR pass corrected *"At the
+moment open"* → *"At the **London** Open"*. **The `EST`-in-May hour is left unresolved, not assumed.**
+
+⭐ **`A-106`, found by doing the homework rather than by reading** — *"yesterday"* on a **Monday** is
+undefined and the lesson assigns Monday. Sunday-stub vs Friday basis differ by **72.6 pips on `R2`**
+on a day whose whole realised range was 133.9.
+
+⭐ **The best-specified homework in the corpus cannot be completed.** It asks for the expected high
+and low; those are `M3` and `M1`; `A-101` makes them uncomputable. **It completes to five of its
+seven numbers and stops.**
+
+⚠ **`Q-017` — sixth consecutive fabricated trio, and the pattern CHANGED.** V16's `VISUAL_INDEX.md`
+is a **paraphrase** of V15's, not a byte clone. **A `diff`-based check would have missed it.** The
+invariant is three timestamps and three subjects. The eight-term absence census returns **zero on
+both** the committed transcript and the independent pass.
+
+⚠ **V16 states no week number, no date and no session number.** The *"cheap forward-read check"*
+into V16 that item 190 declined **would have returned nothing** — a data point for item 179.
+
+### Manual Backtesting
+
+`PT-044`, pre-registered at `9cc1cae` **before** `run_pt044.py` existed and before any bar was read.
+**The same sentence in two moods gets two verdicts, as predicted in writing before the run.**
+CEILING → **WEAKLY SUPPORTED** in both windows (`O1` = 0.0725 / 0.0492). TYPICAL → **PARTIALLY
+SUPPORTED** in `W-D` (median 102.6 pips) and **CONTRADICTED AS STATED** in `W-E` (92.3). The windows
+disagree across a threshold fixed before the run, so **both are reported and neither is the answer**.
+**4 of 5 predictions correct, and the miss is reported first** (prediction 4 bounded the arm delta at
+2 pips; `W-D` came in at 2.05). ⭐ **`obs-1` — the run's most interesting number is a CONTROL and is
+deliberately not taken as a verdict**: scored against the lesson's own 15-day averaging object,
+`P(ADR₁₅ > 200) = 0.0045`, which would read `SUPPORTED`. Swapping a control for an outcome after
+seeing which flatters the claim is the move pre-registration exists to prevent.
+**The `600–1000` pip week was NOT re-tested** (`D-027`, V16 GATE (e)) — durability logged in `A-095`.
+
+### Ambiguities / Contradictions
+
+`A-101`–`A-106` opened; `A-095`, `A-096`, `A-097`, `A-100` amended; `C-023` opened — **and filed
+with the measurement that cuts against its own importance** (under 4 pips per level, against
+`A-106`'s 72.6). `Q-017` filed. **One closure only: `A-096`'s identity half**, and it is reported as
+one closure and not as more.
+
+### ⚠ Deviations and Self-Corrections
+
+**Five deviations:** §9 ordering broken again (mitigated by `grep`-checkable basis tags); three
+conclusions rest on frames and are named; **the sweep did NOT follow §10 literally** — `t0` set
+before the click, which is item 188's proposed fix and **is why `§8a` measured zero** (item 218 — allocated 197, RENUMBERED at the review/v16 merge; the
+policy edit is still owed on the integration branch); no forward read; `PT-044`'s runner corrected
+twice after first execution with the superseded figures printed rather than discarded.
+
+⚠⚠ **Four self-corrections, and the worst is charged in full: ELEVEN of this session's own
+thirty-four frame names were written from the TRANSCRIPT and described things not visible in their
+own frames** — the exact fabrication pattern the `Q-xxx` register exists for, **reproduced in the
+session that filed `Q-017`.** Caught by re-rendering at 490×370 and looking; all eleven renamed.
+**The reviewer should treat them as a sample and re-check the other twenty-three** (item 220 — allocated 199, RENUMBERED at the review/v16 merge).
+Two more of the same family: the midpoint reading was asserted as a finding in a first draft (`S3`),
+and the homework's first attempt computed `M3`/`M1` as midpoints anyway and produced a plausible
+104.8-pip range (`S4`, preserved and struck).
+
+**One process error:** supplying the gitignored raw dataset to a fresh worktree briefly replaced two
+**tracked** `SHA256SUMS.txt` files with symlinks. Restored with `git checkout` **before anything was
+committed**; CSVs then copied and **all 13 verified against the committed manifest before a single
+bar was read.** Nothing entered a commit in the broken state (`BT_V16_0001.md` §6c).
+
+### Files Created / Updated
+
+Created: `02_TRANSCRIPTS/V16/V16_TRANSCRIPT.md` · `03_LESSON_NOTES/V16_SOURCE_NOTES.md` ·
+`03_LESSON_NOTES/V16_INTERPRETATION.md` · `04_SCREENSHOTS/V16/` (34 PNG + `INDEX.md`) ·
+`05_HOMEWORK/V16/V16_HOMEWORK.md` · `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-044_…md` ·
+`06_MANUAL_BACKTEST/scripts/run_pt044.py` · `06_MANUAL_BACKTEST/V16/BT_V16_0001.md` + `data/` ·
+`07_MASTERY_REPORTS/V16_MASTERY_REPORT.md`.
+Updated: `AUTOMATION_AMBIGUITIES.md` · `CONTRADICTIONS.md` · `QUARANTINE_REGISTER.md` ·
+`REVIEW_INDEX.md` · `COURSE_PROGRESS.md` · `CONCEPT_INDEX.md` (stale `LESSONS STUDIED: 3` corrected
+to 16 — **still zero concepts, and V16 is the strongest case for promotion the corpus has produced
+and it still fails, because `A-101` means the levels cannot be drawn**) · `LOG.md`.
+
+### Git
+
+Branch `video/v16`, worktree isolated per `D-038`. **Nine checkpoint commits, each pushed.**
+`PT-044` pre-registered at `9cc1cae` with `run_pt044.py` **absent at that commit**; the runner
+committed **before** execution.
+⚠ **DEVIATION FROM THE V15 SESSION'S GIT HYGIENE, DISCLOSED:** this session used **`git add -A`**
+rather than the explicit-path staging V09–V15 used as the `I-009` mitigation. **The worktree was
+dedicated and unshared (`D-038`), which is the durable fix `I-009` recommended and which explicit
+staging was a substitute for** — but it is still a departure from the stated practice and a
+reviewer should know it. `git status` was checked before each commit.
+**NOT merged to integration** — that is a separate, single-threaded act performed after independent
+review (`D-003`, `D-004`).
+
+### Next Action
+
+**V17 GATE is CLOSED until V16's R1 returns** (`D-004`). ⭐ **The owner's PERMISSION half is already
+granted for the remainder of the training and does not need asking again.**
+⚠⚠ **But permission is not a gate.** V15 and V16 are both submitted as REVIEW REQUIRED and **neither
+has been reviewed**. If V17 opens before V16's R1, it will be the **second lesson in a row built on
+an unreviewed predecessor**, and the compounding is the risk — not the permission.
+⭐ **The cheapest thing anyone can do for this project right now is review V15 and V16.** Two reviews
+retire the whole qualification; more student passes deepen it.
+Owner decisions still outstanding: items **157**, **168**, **179**, **185**, **188** — and now
+**197** (a policy-ledger edit to `SWF_CAPTURE_RECIPE.md` §10, confirmed by measurement).
+
+---
+
+## 2026-08-14 — Reviewer Session (V16 R1)
+
+### Lesson
+**V16** · `Bootcamp1 Wk7 050612 Part2 (45mins).swf` · `Pivot Points` · Part 2 of the V15 recording.
+
+### Review Objective
+Independent mastery audit under `D-003`. Branch `review/v16`, cut from integration @ `cd6d1cb`
+(post-`review/v15`). Submission reviewed: `video/v16` @ `e7a51cd`.
+
+### Independence
+This session authored no V16 artifact. It re-computed the source SHA-256; extracted the audio and
+ran a **third** ASR engine (`faster-whisper`/CTranslate2 `large-v3`, against the pre-ingestion ASR
+and the student's `openai-whisper large-v3-turbo`); **re-derived `PT-044` end to end** from the
+pre-registration **at commit `9cc1cae`, before `run_pt044.py` existed**, in code sharing no line
+with the runner or `mmm_lib`; re-measured the pivot-grid slide's nine level positions in its own
+pixel code; recomputed `A-106`'s Monday fork from raw M1 bars; re-hashed all three `Q-017` files
+and re-ran the diff and token census; and opened nine frames as images.
+
+### The `D-004` timing question — DISCHARGED
+V16 was opened with its gate CLOSED and declared this in three places. **V15's R1 has since
+returned `REVISE`, 0 CRITICAL / 0 MAJOR**, which opens the gate **unconditionally** under `D-024`.
+Each of V15's six outstanding minors was checked for reach into V16: **only item 197 touches a
+record V16 amends (`A-095`), and V16's addendum does not inherit the error.** V16 is therefore
+reviewed as an ordinary submission, not a provisional one.
+
+### What reproduced
+Source SHA-256 and byte size **exact**. Transcript body **SHA-256 identical** to the pre-ingestion
+file — the byte-for-byte claim is exact. All 377 marker-grid statistics. **`A-100`'s
+*"the ADR is calculated over the last two weeks, 15 days"* CONFIRMED VERBATIM by a third engine**,
+plus corrections #1, #2, #3, #6, #11. `PT-044`'s three verdicts and its `W-E` figures **to the
+digit**. **All five `A-106` pips exact** (−7.1 / −36.6 / +28.9 / −72.6 / +58.4), with 418 Sunday
+bars and a 133.9-pip Monday range. All three `Q-017` hashes and the 8-for-8 census. The pivot-slide
+equal spacing, at a **tighter** spread than claimed. Zero sweep offset at every frame opened.
+
+### Findings
+**0 CRITICAL · 0 MAJOR · 4 MINOR (items 222–225) · 11 NOTE (items 226–235).**
+
+- **222** — `A-101` declares the `M1`–`M4` construction unevidenced in V16; **V16's own committed
+  chart frames carry it.** `V16_00-25-10` shows a real, *unequally spaced* grid on which four
+  independent midpoint relations hold to ~1.5 px, confirmed on a second frame. **Weighed for
+  `MAJOR`, charged `MINOR`** — nothing false entered the corpus, `DO NOT CODE` stands, and the
+  error is an under-claim in the safe direction. **Severity put to the owner.**
+- **223** — the same measurement lists **eight** levels while claiming nine; the missing one is
+  `R2`, the level its own defeater sentence names. Conclusion survives; re-measured here.
+- **224** — `PT-044`'s `W-D` starts `2013-01-02` against a pre-registered `2013-01-06`, undeclared,
+  and **that four-day over-run is the sole cause of its one "missed" prediction. Run to its own
+  pre-registration `PT-044` scores 5 of 5.** No verdict moves, no seal broken, self-penalising.
+- **225** — `Q-017`'s *"every content line differs"* is false: three `Visual Type` lines are
+  byte-identical, and they are the only exact-match-detectable half of the invariant it proposes.
+
+### Decision
+`REVISE`, **HIGH** confidence. **V17 GATE OPEN under `D-024`.** Items 222–225 owed before V16 can
+reach `COMPLETE`. The owner's comprehension/gap audit (item 185) is **not** discharged.
+
+### Git
+Branch `review/v16`; `18_REVIEW/V16/V16_REVIEW_R1.md` added; `REVIEW_INDEX.md`,
+`COURSE_PROGRESS.md`, `LOG.md` updated. V16's items **renumbered 195–200 → 216–221** at the merge
+under `D-047` (second consecutive collision; item 188's validator check still unbuilt).
+
+### Next Review Trigger
+Student remediation of items 222–225, or a V17 submission.

@@ -2418,3 +2418,132 @@ this session's own 623-frame sweep; every EMA statement in the V15 set rests on
   V13 and V15 are **title cards**; V14 is a **blank** PowerPoint exit screen. **All five carry the
   same claimed timestamp, `[00:02:00]`, and the same claimed content, an Asian-box chart with
   five EMAs.** The description does not vary with the lesson because it was never derived from one.
+
+---
+
+## Q-017 — Lesson 16 (`Bootcamp1 Wk7 050612 Part2`): `NOTES.md`, `RULES.md`, `VISUAL_INDEX.md`
+
+**Filed:** 2026-08-14 by the V16 student session
+**Location:** `01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/per_lesson/16_Bootcamp1_Wk7_050612_Part2_45mins/`
+**Status:** **QUARANTINED ON SIGHT**, exactly as `COURSE_PROGRESS.md`'s V16 GATE (j) instructed.
+No V16 artifact cites any of these three files as evidence. Every reference in the V16 set is to
+**this register entry**, never to the files.
+
+**SHA-256, recorded so the audited objects are pinned:**
+
+| File | Bytes | SHA-256 |
+|---|---|---|
+| `RULES.md` | 3,173 | `cd549eea7ce01e23feb59a7fb8801bcc884184eec8ae0eea127423f56af66e26` |
+| `NOTES.md` | 1,712 | `53d609ba5fb5db5f261d4a01c3ce127a511cd9656b790de90ba85073b4ab952a` |
+| `VISUAL_INDEX.md` | 1,253 | `733abb55569b85311e92c0f4d9cdb5bbf6402d6357d0e2ce02bf5341abe0a0de` |
+
+**This is the SIXTH CONSECUTIVE lesson carrying the `VISUAL_INDEX.md` pattern** — `Q-012` (V11),
+`Q-013` (V12), `Q-014` (V13), `Q-015` (V14), `Q-016` (V15), and now V16.
+
+---
+
+### 0. ⭐ WHAT IS NEW HERE: THE CLONE IS NOW A PARAPHRASE
+
+`Q-016` found V15's `VISUAL_INDEX.md` to be a **byte-level clone** of V14's with **zero content
+lines changed**. **V16's is not a byte clone — it is a REWORDING of V15's with the same skeleton.**
+
+```text
+diff 15_…Wk7_050612_Part1/VISUAL_INDEX.md  16_…Wk7_050612_Part2/VISUAL_INDEX.md
+  -> every content line differs, and NOTHING STRUCTURAL differs:
+       same THREE screenshots
+       same THREE claimed timestamps:  [00:02:00]  [00:15:00]  [00:30:00]
+       same THREE claimed subjects:    5/13/50/200/800 EMA template + Asian Box
+                                       London-open stop hunt out of the Asian Box
+                                       TDI shark-fin + 5/13 cross confirmation
+     V15: "Asian Box accumulation range with 5, 13, 50, 200, and 800 EMAs."
+     V16: "Initial setup slide / chart template with 5, 13, 50, 200, 800 EMAs
+           and Asian Box boundaries."
+```
+
+⚠ **This matters for how the pattern should be detected from here on.** A `diff`-based check —
+which is what `Q-016` used and what GATE (j) implicitly assumed — **would not have flagged this
+file.** The invariant is not the bytes. **The invariant is the three timestamps and the three
+subjects**, and they have now survived six lessons and one rewrite.
+
+---
+
+### 1. `VISUAL_INDEX.md` — three screenshots that cannot exist
+
+**All three claimed frames were checked against the 544-frame sweep this session captured
+(`04_SCREENSHOTS/V16/INDEX.md` §0 — offset measured at zero, so the claimed timestamps map
+directly onto sweep indices `24`, `180` and `360`).**
+
+| Claimed | What is claimed | What is ACTUALLY on screen |
+|---|---|---|
+| `[00:02:00]` | *"chart template with 5, 13, 50, 200, 800 EMAs and Asian Box boundaries"* | ⛔ **The `Pivot Points` grid diagram** — a slide, not a chart. No EMA, no box, no candles. `V16_00-01-40_…png` and `V16_00-02-30_…png` bracket it |
+| `[00:15:00]` | *"Stop Hunt move out of Asian Box during London Open session transition"* | ⛔ **A black slide reading `London Session Start / 2:00 To 3:00 AM, EST` with a red `SELL` and a green `BUY` capsule.** No chart at all. `V16_00-15-00_…png` |
+| `[00:30:00]` | *"TDI … Shark Fin setup and 5/13 EMA cross confirmation"* | ⛔ **The `Pivots Are Intraday Support And Resistance / YOU Are The Filter!` bullet slide.** `V16_00-29-10_…png` |
+
+⭐ **The `[00:15:00]` row is the sharpest instance the register has recorded.** The fabricated entry
+claims a London-open stop hunt. **The real frame is a slide that says `London Session Start`** — so
+the fabrication is adjacent to a real fact and lands on the wrong object. **A reader who trusted it
+would have missed the corpus's first printed session boundary** (`A-105`) while believing they had
+read about it.
+
+---
+
+### 2. `RULES.md` — two rules, neither in the file, and one census that settles it
+
+Both claimed rules carry `Coding Readiness: Ready`.
+
+| Rule | Claimed at | Claimed text | Reality |
+|---|---|---|---|
+| `V17-R001` | `[00:05:00]` | *"Wait for the M15 candle to close before taking the 5/13 EMA cross."* | ⛔ `[00:04:59]` is *"ahead and consolidate right around level 2 to make up some fake support and resistance."* **`5/13` occurs ZERO times in the transcript** |
+| `V17-R002` | `[00:18:00]` | *"Place your stop loss 10 to 15 pips beyond the High or Low of the Day."* | ⛔ `[00:18:01]` is *"are possible day highs. They are located above the central pivot point."* **`stop loss` occurs ZERO times in the transcript** |
+
+**Token census over the committed 377-marker transcript (6,453 words), run this session and
+reproduced as the absence half of `05_HOMEWORK/V16/` §6:**
+
+```text
+"stop loss"        0        "Asian box"       0        "shark"          0
+"shark fin"        0        "railroad"        0        "peak formation" 0
+"evening star"     0        "5/13"            0
+```
+
+⚠ **Eight for eight. Every load-bearing term in `RULES.md` and `NOTES.md` is absent from the lesson
+they are attached to.** The `NUMERICAL PARAMETERS` table's seven rows — five EMA periods at
+`[00:04:00]`, a `10-15 pip` stop buffer at `[00:18:00]`, a `30-90 min` peak gap at `[00:22:00]` —
+are **all** marked `Explicit` and **none** is in the file.
+
+**`RULES.md` also states `# CONTRADICTIONS: None detected within this video.`** V16 contains
+`C-023`, a Tier-1-against-itself conflict on the pivot computation basis, stated **41 seconds
+apart** in the same Q&A.
+
+---
+
+### 3. `NOTES.md` — a methodology summary wearing a lesson's filename
+
+`NOTES.md` describes Asian-box accumulation, London/New York session times, `PFH`/`PFL` peak
+formations, a *"30 to 90 minutes on M15"* peak gap, the five EMAs with nicknames, and TDI shark
+fins. **V16 is forty-five minutes on floor-trader pivot points and the ADR grid.** The two
+documents share **no subject**.
+
+⚠ **Note the EMA nickname mapping it asserts** — *"5 (Mustard/Yellow), 13 (Red/Water), 50 (Light
+Blue/Mayo), 200 (White/Blueberry), 800 (Dark Blue/Raspberry)"*. **`A-020` has been open for eleven
+lessons precisely because the corpus never attaches a period to a nickname.** V16 says *"blueberry"*
+twice (`[00:28:34]`, `[00:28:53]`) and attaches **no period**. **This file supplies the mapping
+`A-020` wants, from nowhere, and it must not be used.**
+
+---
+
+### 4. WRONG ID, WHICH IS A CHEAP INDEPENDENT TELL
+
+Every rule is numbered `V17-Rxxx` and every screenshot `VIDEO_17_…`. Under `D-017` §2's
+re-derived ordering this file is **V16**. The `17` comes from the pre-ingestion folder numbering
+that `SOURCE_MANIFEST.md` showed to be an alphabetical-sort artefact.
+
+### Current Status
+
+```text
+Q-017 -- QUARANTINED. All three files. No V16 artifact cites them.
+  DO NOT use RULES.md's parameters, NOTES.md's EMA nickname mapping, or any of
+  VISUAL_INDEX.md's three timestamps for any purpose.
+  DETECTION NOTE FOR V17-V21: the generator now PARAPHRASES rather than clones,
+  so a byte-diff will NOT flag it. The invariant is the three timestamps
+  ([00:02:00], [00:15:00], [00:30:00]) and the three subjects. Quarantine on that.
+```

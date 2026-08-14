@@ -11,6 +11,152 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
+V16 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
+                     branch video/v16 (worktree MMM-Agents-v16, D-038).
+
+                     ⚠⚠⚠ AUTHORISATION -- READ THIS FIRST, AND NOTE THAT IT IS
+                     BROADER THAN V15's. The V15 block below records an owner
+                     go-ahead that was SINGLE-VIDEO SCOPED: "The V14 block's stop
+                     was lifted for V15 ONLY, by a direct owner instruction naming
+                     V15. It does not extend to V16."
+                     ⭐ THAT LIMIT IS NOW LIFTED. On 2026-08-14 the owner
+                     AUTHORISED CONTINUING THE INGESTION PIPELINE THROUGH THE
+                     REST OF THE TRAINING -- explicitly "for V16 onward" and
+                     "the remainder of the training rather than being
+                     single-video-scoped". V16 was opened under that
+                     authorisation. NO FURTHER PER-VIDEO GO-AHEAD IS REQUIRED
+                     FOR V17-V21.
+                     ⚠ WHAT THE AUTHORISATION DOES **NOT** DO, stated because
+                     the V14/V15 blocks are emphatic that a gate and a
+                     permission are different things:
+                       (a) It does NOT discharge item 185's gap audit. That is
+                           still the owner's to decide and V16 adds material to
+                           it (A-104) rather than settling it.
+                       (b) It does NOT touch D-003 or D-004. V16 reaches
+                           COMPLETE only at an independent reviewer PASS, and
+                           this session did NOT merge to integration.
+                       (c) ⚠⚠ IT DOES NOT SATISFY THE D-004 REVIEW GATE THIS
+                           SESSION STARTED AGAINST, AND THAT IS A DEVIATION
+                           THIS SESSION DECLARES RATHER THAN GLOSSES. The V16
+                           GATE block below reads "CLOSED until V15's R1
+                           returns (D-004)". **V15's R1 HAS NOT RETURNED.**
+                           There is no review/v15 branch and no V15_REVIEW_R1.md.
+                           So V16 was opened with its D-004 gate CLOSED, on the
+                           owner's explicit instruction to continue the pipeline.
+                           THAT IS A FIRST FOR THIS CORPUS -- every previous
+                           lesson opened after the prior lesson's R1 returned
+                           0 CRITICAL / 0 MAJOR under D-024.
+                           IT IS NOT HIDDEN AND IT IS NOT ARGUED AWAY. A
+                           reviewer who holds that the owner cannot waive D-004
+                           by instruction should treat V16's entire artifact set
+                           as PROVISIONAL pending V15's R1, and this session
+                           does not contest that reading.
+
+                     WEEK 7 PART 2, 2012-05-06, and it OPENS MID-SENTENCE on the
+                     bare words "pivot points." -- no greeting, no title read.
+                     V15 [00:35:00] promised "I'm going to tie pivots in the blue
+                     tracer into it in a minute." THIS IS THAT MINUTE. The two
+                     files are one continuous lecture split at a file boundary.
+                     PRINTED TITLE: **Pivot Points**, with three printed
+                     sub-lines, on the running head of every slide to 34:55.
+                     SPEAKER: 100% course author, 0% guest, HIGH -- TESTED afresh
+                     per V16 GATE (d) on six non-acoustic strands, and the
+                     17-pattern handover scan returns ZERO across all 377 markers.
+                     ⚠ WEAKER THAN V15's: "Steve" occurs five times and NOT ONE
+                     is a self-naming. HIGH, not CERTAIN, and the transcript says so.
+
+                     ⭐⭐ THE ADR LOOKBACK ARRIVES, IN TIER 1, EXACTLY WHERE V16
+                     GATE (c) SAID THE HIGHEST-VALUE FIND WOULD BE. [00:09:31]:
+                     "the ADR is calculated over the last two weeks, 15 days."
+                     CONFIRMED VERBATIM by an independent large-v3-turbo pass.
+                     ⚠ A-100 ADVANCES, DOES NOT CLOSE, and the reason is now
+                     smaller and different: not "no number exists" but "two
+                     numbers exist and disagree" -- two trading weeks is 10, two
+                     calendar weeks is 14, and NO reading yields 15. Range
+                     definition, marker anchor, averaging method and the ADR's
+                     own day boundary are ALL still absent; C-022 is untouched
+                     because V16 never says the word repaint.
+
+                     ⭐⭐ THE PIVOT GRID IS PRINTED: R2 M4 R1 M3 CPP M2 S1 M1 S2.
+                     A-096's IDENTITY half CLOSES and its "TIER 2 ONLY" colour-
+                     trigger clause is SUPERSEDED -- V16 prints "Red Candle
+                     Indicates M1/M3 Day" / "Green Candle Indicates M2/M4 Day".
+                     ⛔ A-101 OPENS IN ITS PLACE: the CONSTRUCTION of M1-M4 is
+                     stated nowhere, and the tidy "they're midpoints" reading was
+                     TESTED AND DEFEATED -- all nine levels are drawn EQUALLY
+                     SPACED to +/-1 px, so the slide is a schematic and encodes
+                     no arithmetic. M1-M4 stay DO NOT CODE.
+                     ⚠ AND "M5" SURVIVES BOTH ASR ENGINES, TWICE IN ONE SENTENCE,
+                     with no M5 on the printed grid. Do not assume the nine
+                     printed levels are exhaustive.
+
+                     ⭐ THE CORPUS'S FIRST PRINTED, TIMEZONE-STAMPED SESSION
+                     BOUNDARY: "London Session Start / 2:00 To 3:00 AM, EST"
+                     (A-105). The rule it carries gained an AUDIO leg when the
+                     second ASR pass corrected "At the moment open" to "At the
+                     LONDON Open". ⚠ The EST-in-May hour is left UNRESOLVED,
+                     not assumed -- one hour, the A-019 problem with a source.
+
+                     ⭐ A-106, FOUND BY DOING THE HOMEWORK RATHER THAN BY READING:
+                     "yesterday" on a MONDAY is undefined and the lesson assigns
+                     Monday explicitly. Sunday-stub basis vs Friday basis differ
+                     by 72.6 pips on R2 on a day whose whole realised range was
+                     133.9. C-023 (midnight-to-midnight vs "just do it on the
+                     daily candle", 41 seconds apart) is filed WITH the
+                     measurement that cuts against it -- under 4 pips on every
+                     level on both days. A reviewer should escalate A-106, not
+                     C-023. ⭐ And the SECOND ASR PASS shows the student asked
+                     C-023's question as a direct CHALLENGE in 2012.
+
+                     ⭐ THE BEST-SPECIFIED HOMEWORK IN THE CORPUS CANNOT BE
+                     COMPLETED. Instruments enumerated, input named, tool named,
+                     schedule named -- and it asks for the expected high and low,
+                     which are M3 and M1, which A-101 makes uncomputable. It
+                     completes to five of its seven numbers and stops. THE FIRST
+                     ATTEMPT COMPUTED THEM ANYWAY as midpoints, produced a
+                     plausible 104.8-pip range on real data, and is PRESERVED
+                     AND STRUCK -- nothing downstream would have flagged it.
+
+                     PT-044 / BT_V16_0001: the same sentence in two moods gets
+                     TWO DIFFERENT VERDICTS, as PREDICTED IN WRITING BEFORE THE
+                     RUN. CEILING ("do not exceed 200 pips on the average day")
+                     -> WEAKLY SUPPORTED in both windows. TYPICAL ("approximately
+                     200 pips in every pair except GJ") -> PARTIALLY SUPPORTED in
+                     W-D (median 102.6 pips) and CONTRADICTED AS STATED in W-E
+                     (92.3). The windows disagree across a threshold fixed before
+                     the run, so BOTH are reported and NEITHER is the answer.
+                     4 of 5 predictions correct and THE MISS IS REPORTED FIRST.
+                     The 600-1000 pip week was RESTATED and deliberately NOT
+                     re-tested (D-027, V16 GATE (e)) -- logged as DURABILITY in
+                     A-095.
+
+                     Q-017 filed -- SIXTH consecutive fabricated trio, AND THE
+                     PATTERN CHANGED: V16's is a PARAPHRASE of V15's, not a byte
+                     clone, so a diff-based check WOULD HAVE MISSED IT. The
+                     invariant is the three timestamps and three subjects.
+
+                     ⚠⚠ FOUR SELF-CORRECTIONS, AND THE WORST IS CHARGED IN FULL:
+                     ELEVEN of this session's own thirty-four frame names were
+                     written from the TRANSCRIPT and described things not visible
+                     in their own frames -- the exact fabrication pattern the
+                     Q-xxx register exists for, reproduced in the session that
+                     filed Q-017. Caught by re-rendering and looking; all eleven
+                     renamed. THE REVIEWER SHOULD TREAT THEM AS A SAMPLE AND
+                     RE-CHECK THE OTHER TWENTY-THREE. See V16_MASTERY_REPORT.md
+                     §2 S1-S4 and open item 220 (allocated 199, RENUMBERED).
+
+                     Five declared deviations. Items 216-221 raised (allocated 195-200, RENUMBERED at merge under D-047).
+                     V17 GATE: * OPEN. V16's R1 returned 2026-08-14 on branch
+                     review/v16 (D-003 satisfied): REVISE, 0 CRITICAL /
+                     0 MAJOR / 4 MINOR / 11 NOTE, HIGH confidence. Under
+                     D-024 a round with zero CRITICAL and zero MAJOR OPENS
+                     the next lesson. Items 222-225 (MINOR) are OWED before
+                     V16 can reach COMPLETE; items 226-235 are NOTE.
+                     ** ITEM 222'S SEVERITY IS PUT TO THE OWNER -- it was
+                     weighed for MAJOR and charged MINOR, and if the owner
+                     reads it as MAJOR THIS GATE CLOSES.
+                     ** AND ITEM 185'S GAP AUDIT IS STILL NOT DISCHARGED.
+
 V15 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
                      branch video/v15 (worktree MMM-Agents-v15, D-038).
 
@@ -2211,7 +2357,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V13 | Wk5 P1 | 01:05:22 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-084 NARROWED not closed (A-087), legend route CLOSED corpus-wide, A-088 + C-020 opened, Q-014 filed, PT-041 PARTIALLY SUPPORTED |
 | V14 | Wk5 P2 | 00:47:48 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** *(superseded, retained: `REVIEW REQUIRED`)* | **R1 REVISE** 0C/0M/5m/9n, HIGH, 2026-08-14 → **R1 fix round** ⚠ **SELF-VERIFIED**, items 172–176 `CLOSED — SELF-VERIFIED AT OWNER DIRECTION`, **NOT** `CLOSED — VERIFIED`; **D-003 NOT satisfied for the fix round, no R2, no independent PASS**; item 186 opened | ⭐ **R1 RETURNED — V15 GATE OPEN under D-024, AND THE OWNER'S HARD STOP STANDS.** Items 172-176 (MINOR) OWED; V14 **NOT COMPLETE**. Rulings: A-056 **NOT CLOSED** (item 178) · A-084 defeater **HOLDS** vs 4 attacks (184) · D3 **legitimate but unnecessary and unverified** (179) · C-021 forwarded to owner · ⭐ A-056 ANSWERED (closure put to reviewer), A-077 advanced (A-094), A-084 NARROWED not closed 2nd consecutive, A-086 advanced + C-021 opened, A-089-A-094 filed, Q-015 filed, PT-042 NOT SUPPORTED  · ⚠ **REMEDIATION 2026-08-14:** all five MINORs closed **SELF-VERIFIED**; ⭐ item **186** opened — the item-174 frame offset is a **dropped step, not a broken tool** (V12 §0 and V13 both document and correct it; `SWF_CAPTURE_RECIPE.md` §8a now mandatory); ⭐ item **176** — a **second, larger, UNEXAMINED** `Wk9→Wk10` four-week gap, so the gap audit's figure is **2 KNOWN + up to ~3 UNKNOWN, not 2**; ⚠⚠ **V15 GATE OPEN ≠ PROCEED — THE OWNER'S HARD STOP STANDS** |
 | V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 197–202) · ⭐ **V16 GATE OPEN under D-024** · ⚠⚠ **the six student-owned columns to the left are STILL `⬜` and that is open item 199 — the narrative block and the V16 GATE section of this same file record a complete student pass. Only the Reviewer and Final Status cells were filled in by R1** |
-| V16 | Wk7 P2 | 00:44:35 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V16 | Wk7 P2 | 00:44:35 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/4m/11n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 222–225) · ⭐ **V17 GATE OPEN under D-024** · ⭐⭐ **the `D-004` deviation V16 declared is DISCHARGED** — V15's R1 returned 0C/0M and opened the gate unconditionally; only V15 item 197 reaches a record V16 amends (`A-095`) and V16's addendum does NOT inherit it · ⭐⭐ **`A-100`'s *"two weeks, 15 days"* CONFIRMED VERBATIM ON A THIRD ENGINE**; `PT-044` RE-DERIVED from its pre-registration and all three verdicts reproduce; **all five `A-106` pips EXACT**; `Q-017`'s paraphrase sub-pattern CONFIRMED · ⚠ **item 222: `A-101` declares the `M1`–`M4` construction unevidenced and V16's own chart frames carry it** (4 midpoint relations to ~1.5 px on 2 frames) — weighed for MAJOR, charged MINOR, **severity put to the owner** · ⚠ item 224: `PT-044`'s `W-D` ran 4 days wide, undeclared, and **that is the sole cause of its one "missed" prediction — run to its pre-registration it scores 5 OF 5** |
 | V17 | Wk8 P1 | 00:57:09 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V18 | Wk8 P2 | 00:46:08 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V19 | Wk9 P1 | 01:07:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -2521,6 +2667,13 @@ Carry into V15, and read this before starting:
       * THE Wk9 -> Wk10 FOUR-WEEK GAP IS UNEXAMINED (item 176). Its cheap
         decider is the same D3 shape and should WAIT for item 179's ruling.
 
+V16 GATE:            📌 **NOTE ADDED AT THE `review/v16` MERGE.** The block below is the
+                     CURRENT and correct state. It became true at `cd6d1cb`. **`video/v16`
+                     was ingested BEFORE that**, against the superseded `CLOSED` text, and
+                     said so. The V16 R1 review adjudicates that timing question directly;
+                     the superseded `video/v16` wording is preserved in `LOG.md` and in
+                     `V16_MASTERY_REPORT.md` per `REMEDIATION_PROTOCOL.md` §2.
+
 V16 GATE:            ⭐ **OPEN.** V15 R1 returned 2026-08-14 on branch
                      `review/v15` (`D-003` satisfied -- independent reviewer,
                      no V15 artifact authored, worktree cut from integration
@@ -2639,4 +2792,86 @@ Carry into V16, and read this before starting:
       content (an Asian-box chart with five EMAs), whatever the lesson and
       whatever the image behind it. Quarantine V16's trio on sight as Q-017;
       do not spend a session re-deriving what six entries have established.
+V17 GATE:            🔴 **CLOSED until V16's R1 returns (`D-004`).** V16's student
+                     pass is complete and is submitted as REVIEW REQUIRED on
+                     branch `video/v16`. `D-003` reserves closure to an
+                     independent reviewer; V16 reaches COMPLETE only at a
+                     reviewer PASS.
+                     ⭐ **THE OWNER'S PERMISSION HALF IS ALREADY GRANTED AND DOES
+                     NOT NEED ASKING AGAIN.** The 2026-08-14 authorisation covers
+                     **the remainder of the training, V16 onward**, and is not
+                     single-video-scoped. **No V17 session needs a fresh
+                     go-ahead.**
+                     ⚠⚠ **BUT PERMISSION IS NOT A GATE.** `D-004` is untouched by
+                     it, and V16 has just demonstrated what that means: **V16 ran
+                     with its own `D-004` gate closed** because V15's R1 never
+                     returned. **A V17 session inherits that qualification.** If
+                     V16's R1 has not returned when V17 opens, V17 will be the
+                     SECOND lesson in a row built on an unreviewed predecessor,
+                     and the compounding is the risk — not the permission.
+                     ⭐ **THE CHEAPEST THING ANYONE CAN DO FOR THIS PROJECT RIGHT
+                     NOW IS REVIEW V15 AND V16.** Two reviews retire the whole
+                     qualification; more student passes deepen it.
+
+Carry into V17, and read this before starting:
+
+  (a) ⭐⭐ `A-101` IS THE BINDING CONSTRAINT ON EVERYTHING V16 TAUGHT, and it has
+      a CHEAP CLOSE. The construction of `M1`–`M4` is unstated; the diagram is a
+      schematic (nine levels equally spaced to ±1 px). **`V16_00-16-50_…` and
+      `V16_00-17-30_…` show the grid on a PRICE SCALE and are illegible at
+      1024×786.** A re-capture at higher `deviceScaleFactor` would settle it in
+      one frame — see open item **198**. **Do that before hunting V17 for a
+      formula.**
+
+  (b) ⭐ `A-100` NEEDS FOUR THINGS, NOT ONE, AND THE LOOKBACK IS NO LONGER ONE OF
+      THEM. Still missing: the range definition, the marker anchor, the averaging
+      method, and the ADR's OWN day boundary. ⚠ **Do NOT transplant V16's
+      `"midnight to midnight"` onto the ADR** — it is said of PIVOTS, and `C-023`
+      shows he does not hold it firmly even there. That transplant is the `A-082`
+      error.
+
+  (c) ⚠ `M5`. Two ASR engines, twice in one sentence, and no `M5` on the printed
+      nine-level grid. **Do not assume the printed levels are exhaustive.** Any
+      V17 grid image with a tenth level settles it.
+
+  (d) SPEAKER: TEST IT, DO NOT ASSUME. V17 is `Wk8 P1` — a **NEW WEEK and a NEW
+      DATE**, which is the condition under which this corpus's author runtime has
+      broken before (V03→V04). V15's and V16's 100% prove **nothing** about V17.
+      ⚠ And note V16's identification was **weaker** than V15's — five `"Steve"`
+      tokens, none of them a self-naming.
+
+  (e) ⛔ `Q-017`'s DETECTION NOTE IS AN INSTRUCTION, NOT A COMMENT. The fabricated
+      trio is now a **PARAPHRASE**, not a byte clone — **a `diff` against the
+      previous lesson WILL NOT FLAG IT.** Quarantine on the invariant: three
+      screenshots, timestamps `[00:02:00]` / `[00:15:00]` / `[00:30:00]`, and the
+      subjects *"5/13/50/200/800 EMA template + Asian Box"*, *"London-open stop
+      hunt"*, *"TDI shark fin"*. **Quarantine V17's trio on sight as `Q-018`.**
+
+  (f) ⚠⚠ READ `REVIEW_INDEX.md` ITEM 199 BEFORE NAMING A SINGLE FRAME. The V16
+      session named eleven of its own thirty-four frames from the TRANSCRIPT and
+      every one of those names described something not in its frame. **Render
+      candidates at 490×370 or larger and look at them.** A 300×225 contact sheet
+      was not enough to catch it.
+
+  (g) `SWF_CAPTURE_RECIPE.md` §8a IS MANDATORY. ⚠ **V16 measured ZERO and that is
+      NOT a licence to assume zero** — it measured zero because its sweep set `t0`
+      BEFORE the click (item **197**, a policy edit still owed on the integration
+      branch). **A session that uses §10's script as written will get `+15/+16`
+      again.** Measure it, every lesson.
+
+  (h) `A-084` REMAINS BLOCKED. **3,214 frames across V12–V16 contain no properties
+      dialog, no Navigator and no inputs tab.** Do NOT spend V17 hunting for it.
+      The live routes are unchanged: the OWNER ruling on `!SM_TDI` (item 157), or
+      material from outside this corpus.
+
+  (i) `A-095` NOW HOLDS EIGHT PIP FIGURES ACROSS V15 AND V16, and two of them
+      (`~200 pips`) have been TESTED. ⚠ **`D-027` forbids re-testing the
+      `600–1000` pip week and the `~200` pip day.** If V17 restates either, log
+      DURABILITY in `A-095` and move on.
+
+  (j) `C-021`, item 157, item 168, item 179 and item 185 are **OWNER decisions**.
+      Do not resolve them from a lesson session. ⚠ **Item 185's gap audit now has
+      `A-104` in it** — a second bootcamp cycle planned for autumn 2012 that this
+      library never held. **It is an out-of-corpus dependency, NOT a gap, and the
+      audit must not count it against completeness.**
 ```

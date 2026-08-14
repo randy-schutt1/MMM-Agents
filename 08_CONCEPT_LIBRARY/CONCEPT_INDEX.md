@@ -11,9 +11,30 @@ Naming: `CL-NNN_concept-name.md`
 
 ```text
 CONCEPTS:        0
-LESSONS STUDIED: 3  (V01 reviewed R2: PASS; V02 reviewed R3: PASS;
-                     V03 studied, not yet reviewed)
+LESSONS STUDIED: 16 (V01-V14 studied; V15 and V16 studied and submitted as
+                     REVIEW REQUIRED. See COURSE_PROGRESS.md for per-lesson
+                     review status -- several are COMPLETE only in the
+                     qualified SELF-VERIFIED AT OWNER DIRECTION sense.)
 ```
+
+> **UPDATED 2026-08-14 (V16 session).** `LESSONS STUDIED` read **`3`** while sixteen
+> lessons had been studied. **That is the third time this exact block has gone stale
+> and the second time it has been corrected for it** — the class the file itself flags
+> twice below, and `REVIEW_INDEX.md` open item 14. **`CONCEPTS` is unchanged at 0 and
+> the standing rationale below holds after sixteen lessons, not three.**
+>
+> **V16 specifically, because it is the strongest case for promotion the corpus has
+> produced and it still fails.** V16 supplies the most completely specified rule in
+> the library — *"Red Candle Indicates M1/M3 Day / Green Candle Indicates M2/M4 Day"*,
+> **printed, spoken twice and hand-drawn once** — and it supplies the nine-level pivot
+> grid `R2 M4 R1 M3 CPP M2 S1 M1 S2` **in print**. ⛔ **Neither is promotable, and the
+> reason is `A-101`: the CONSTRUCTION of `M1`–`M4` is stated nowhere.** A rule that
+> selects between two pairs of levels is not a concept if the levels cannot be drawn.
+> **`05_HOMEWORK/V16/` demonstrates this rather than asserting it** — the lesson's own
+> assigned homework completes to five of its seven numbers and stops.
+>
+> Promoting the colour rule here would launder a naming convention into a method.
+> That is rule 5, and V16 is exactly the kind of well-printed lesson it was written for.
 
 > **UPDATED 2026-08-10 (V03 pass).** `LESSONS STUDIED` read `1` while V02 and V03 had
 > both been studied — the same staleness class this block was already corrected for
