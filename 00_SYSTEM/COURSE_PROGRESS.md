@@ -2515,7 +2515,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 197–202) · ⭐ **V16 GATE OPEN under D-024** · ⚠⚠ **the six student-owned columns to the left are STILL `⬜` and that is open item 199 — the narrative block and the V16 GATE section of this same file record a complete student pass. Only the Reviewer and Final Status cells were filled in by R1** |
 | V16 | Wk7 P2 | 00:44:35 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/4m/11n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 222–225) · ⭐ **V17 GATE OPEN under D-024** · ⭐⭐ **the `D-004` deviation V16 declared is DISCHARGED** — V15's R1 returned 0C/0M and opened the gate unconditionally; only V15 item 197 reaches a record V16 amends (`A-095`) and V16's addendum does NOT inherit it · ⭐⭐ **`A-100`'s *"two weeks, 15 days"* CONFIRMED VERBATIM ON A THIRD ENGINE**; `PT-044` RE-DERIVED from its pre-registration and all three verdicts reproduce; **all five `A-106` pips EXACT**; `Q-017`'s paraphrase sub-pattern CONFIRMED · ⚠ **item 222: `A-101` declares the `M1`–`M4` construction unevidenced and V16's own chart frames carry it** (4 midpoint relations to ~1.5 px on 2 frames) — weighed for MAJOR, charged MINOR, **severity put to the owner** · ⚠ item 224: `PT-044`'s `W-D` ran 4 days wide, undeclared, and **that is the sole cause of its one "missed" prediction — run to its pre-registration it scores 5 OF 5** |
 | V17 | Wk8 P1 | 00:57:09 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 244–249) · ⭐ **V18 GATE OPEN under D-024** · ⭐⭐ **the `D-004` gate was ACTUALLY OPEN THE WHOLE TIME** — V16's R1 merged at `0fee48c` **17:16:53**, before V17's first content commit `f55c2f3` **17:20:11**; the addendum's *"returned after this session's last content commit"* is refuted by the graph (item 246) and **the compounding never happened** · ⭐⭐ **`PT-045` RE-DERIVED from its pre-registration before the runner was opened and ARM A REPRODUCES TO FOUR DECIMAL PLACES**; the calendar-consecutive artefact RE-EXECUTED and it really does return a clean 4-of-4 refutation; the homework's `<50 pips` filter recomputed at **0.8512 / 0.8893**; `C-023`, `C-024`, `C-027`, `A-011` all confirmed on a third engine or off the pixels · ⭐⭐ **THE FABRICATION PATTERN IS SOLVED FOR THE WHOLE COURSE — two templates, A for 1–15 and 21, B for 16–20; V18/V19/V20 are BYTE CLONES of V17's (item 254)** · ⚠ item 244: `[00:11:22]` is *"an extra **week in between**"* on THREE engines, not *"weekend"* — **item 238's inference INVERTS and is ANSWERED, not returned** |
-| V18 | Wk8 P2 | 00:46:08 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V18 | Wk8 P2 | 00:46:08 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** (branch `video/v18`, worktree-isolated per `D-038`) · ⭐⭐ **THE COMMITTED TRANSCRIPT INVERTS A RULE** — `[00:19:40]` reads *"Counter trends are advised"*; the deck prints **`Counter Trend Is Ill Advised`** on two slides and an independent `large-v3` engine returns *"ill-advised"*. Corrected in `V18_TRANSCRIPT.md` §5 #1 · ⭐⭐ **`PT-046` returns a CLEAN NULL on the lesson's most-repeated rule** (said 4×, *"write that down"*): `P(3rd corrects │ 2 same)` = **0.5080** vs base **0.5124**, lift **−0.0044** at the **34th percentile** of the shuffled null, **stable across all 3 boundary variants**; **runs of length 2 occur 366× against a coin-flip 367.2**, and the run mode is **1, not 2** · ⭐⭐ **`N3` FIRED ON THE REPLICATION WINDOWS AND FORCED `INCONCLUSIVE` AGAINST THE LESSON'S FAVOUR** — `W-E` shows a positive lift on both arms that is a boundary artefact; the pre-registered guard is why that could not be reported as support · ⭐ **§8a returns a drift the corpus has not seen: `0 → −3 s`, monotonic** (V16 and V17 were flat zero) — every frame named from its own burned timecode · ⭐ **`Q-019`** corroborates item 254's V16–V20 clone block by an independent method **and finds the template's FIRST TRUE CELL** (`30-90 mins` really is said — at `[00:42:14]`, not the claimed `[00:22:00]`, and about a different thing) · ⚠ `A-126`–`A-131`, `C-028` filed · ⚠ **`W-D`/arm B not run — the DEVELOPMENT seal fired (`I-010` Q2) and was NOT overridden** |
 | V19 | Wk9 P1 | 01:07:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V20 | Wk9 P2 | 00:45:49 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V21 | Wk10 | 01:14:47 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -2962,6 +2962,37 @@ V18 GATE:            🟢 **OPEN.** ⭐⭐ **V17's R1 RETURNED 2026-08-14** on b
                      four lessons to open on fully reviewed ground.**
                      ⭐ The owner's 2026-08-14 authorisation covers V18 and
                      needs no fresh go-ahead; **`D-004` is now satisfied too.**
+
+                     ⭐⭐ **ADDENDUM, ADDED BY THE V18 SESSION ITSELF, 2026-08-14 —
+                     THE GATE WAS OPEN, AND THIS SESSION VERIFIED IT FROM THE
+                     COMMIT GRAPH RATHER THAN FROM ITS BRIEFING.**
+                     The V18 session was briefed that V17's R1 was *"currently in
+                     progress in a parallel session (not yet returned)"* and was
+                     instructed to disclose that pending status here, in `LOG.md`,
+                     in the gate block and in the mastery report, and not to
+                     soften it. **THAT PREMISE WAS STALE AND IS REFUTED BY THE
+                     GRAPH:**
+                       * V17 R1 committed  `0cd31a5`  **18:50:38 −04:00**
+                       * merged to integration `698c682` **18:51:07 −04:00**
+                       * V18's worktree was created **FROM `698c682`**
+                       * V18's first content commit `c1cb2c7` came **after** it
+                     **So V18 was opened on a gate that was open, verified and
+                     merged before any V18 work existed.**
+                     ⭐ **The check was made BECAUSE V17 R1's item 246 charged the
+                     V17 session with exactly this error** — asserting V16's review
+                     had not returned when the graph showed it had, *"a checked
+                     fact that was not checked"*. **Writing "V17's review is
+                     pending" into four permanent ledgers without opening the graph
+                     would have reproduced item 246 one lesson later.**
+                     ⚠ **The disclosure instruction is honoured in full, with the
+                     TRUE status rather than the briefed one.** Nothing is hidden;
+                     the correction is recorded more prominently than the original
+                     claim would have been. See `V18_MASTERY_REPORT.md` §0.2.
+                     ⚠ **This is a fact about V18, not a general reassurance about
+                     V19** — the pace instruction (*"we can finish v19 by end of
+                     day"*) is being followed, and on V18 it did not cost gate
+                     compliance. **V19's gate depends on V18's R1, which does not
+                     exist.**
 
                      ⚠⚠ **SUPERSEDED TEXT, RETAINED per `REMEDIATION_PROTOCOL.md`
                      §2:** 🔴 **CLOSED until V17's R1 returns (`D-004`).**

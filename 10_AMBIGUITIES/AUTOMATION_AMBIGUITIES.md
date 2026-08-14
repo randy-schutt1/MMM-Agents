@@ -9659,3 +9659,170 @@ false**, and because a future session that finds this frame must find this cavea
 A-125 -- OPEN as a caveat. DO NOT CODE 60 or 15. Read together with A-123, which
   is the Tier 1 version of the same question and is garbled.
 ```
+
+---
+
+## A-126 — `Lights Out` is printed and spoken, and never defined
+
+**Raised:** V18, 2026-08-14 · **Tier 1 (in-lesson)**
+**Evidence:** printed on `V18_00-03-34_…png` — *"If A Double Peak Formation Appears On A Higher Time
+Frame….Lights Out!!"*; spoken `[00:05:08]` *"If a double peak formation appears on a higher
+timeframe, it's lights out, man."*
+
+**The ambiguity:** `Lights Out` is emphatic and is plainly meant as a strong signal, but the lesson
+never says **what to do**. Three readings are all consistent with the text and with the chart he
+shows next (`05:24`): (a) a high-confidence reversal is coming; (b) do not trade — stand aside;
+(c) a large move is coming, direction per the peak. **Nothing in V18 discriminates.**
+`[00:05:15]` *"And I have a snapshot of that, but it happens all the time"* is the closest he comes
+and it settles nothing.
+
+### Current Status
+
+```text
+A-126 -- OPEN. DO NOT CODE. `Lights Out` has no action attached to it in V18.
+```
+
+---
+
+## A-126a — `HOW` on the `TREND INTRA DAY` slide: typo for `HOD`, or `High Of Week`?
+
+**Raised:** V18, 2026-08-14 · **Tier 1 (printed)**
+**Evidence:** `V18_00-06-29_…png`, fourth bullet, verbatim: *"If Level One Is Identified at the HOW
+or LOW The Trade Will Offer More Pips And Can Be Converted To A Swing Trade"*.
+
+**The ambiguity:** `HOW` beside `LOW` reads as a typo for **`HOD`** (High Of Day) — and the later
+trap-moves slide does print `HOD And LOD`. **But `High Of Week` also fits**, and V18 spends its
+second half on weekly structure and explicitly sets *"look for the dealer to make the high and low
+of the week"* as homework. **A printed slide is not corrected from inference in this project.**
+
+**Cheapest close:** re-capture that one frame at higher `deviceScaleFactor` and read the glyph.
+**Not attempted** — the sweep was complete before the need was identified.
+
+### Current Status
+
+```text
+A-126a -- OPEN. DO NOT CODE. Cheap close available: one higher-resolution frame.
+```
+
+---
+
+## A-127 — `9.45` is a digit string, not a resolved time
+
+**Raised:** V18, 2026-08-14 · **Tier 1 (in-lesson)**
+**Evidence:** `[00:42:35]` *"cut yourself from the position and wait for a new move after 9.45."*
+An independent `faster-whisper large-v3` pass returns *"after 945"* — **the same three digits, with
+no colon, no decimal, no am/pm and no time zone.**
+
+**The ambiguity:** `9:45` is the natural reading and is almost certainly right, but **it is an
+inference, not a transcribed fact**, and the lesson attaches **no time zone** to it. V18 gives no
+clock time for any session anywhere (`A-131`), so there is no in-lesson anchor to resolve it
+against. Whether it is 9:45 New York, London, or dealer time is **not determinable from V18**.
+
+### Current Status
+
+```text
+A-127 -- OPEN. `9:45` is carried as an INFERENCE wherever it appears in the V18 set.
+  DO NOT CODE a session-changeover time from V18.
+```
+
+---
+
+## A-128 — `Minimum 2 Hrs` (printed) vs *"about two hours"* (spoken) vs a 75-minute lower bound (derived)
+
+**Raised:** V18, 2026-08-14 · **Tier 1 (printed + in-lesson)**
+
+**Three statements of the same rule that do not agree:**
+
+| Channel | Statement |
+|---|---|
+| **Printed**, `V18_00-41-28_…png` | **`Minimum 2 Hrs`** |
+| **Spoken**, `[00:42:19]` | *"You need to wait **about two hours**"* |
+| **Derived on screen**, `V18_00-42-28_…png` (`3  45` and `30 · 90`) and `[00:42:01]`–`[00:42:14]` | 45 min vector **+ 30–90 min** formation = **75–135 minutes** |
+
+**The ambiguity:** a `minimum` and an `about` are different objects, and the derivation the lesson
+performs on camera produces a band whose **lower bound (75 min) is below the printed minimum**.
+Coding `≥ 120 min` would contradict his own arithmetic; coding `75–135 min` would contradict the
+slide.
+
+⚠️ **A reviewer may reasonably think this is a loosely-worded slide rather than a real conflict.**
+It is filed as an ambiguity rather than a contradiction for that reason — but it is filed, because
+the number is one of the lesson's most emphatic and the discrepancy is arithmetic, not stylistic.
+
+### Current Status
+
+```text
+A-128 -- OPEN. DO NOT CODE the 2-hour figure as a hard floor. If it is coded at all,
+  it must carry the 75-135 minute band the lesson itself derives.
+```
+
+---
+
+## A-129 — the fourth session: resume or reverse, with no discriminator
+
+**Raised:** V18, 2026-08-14 · **Tier 1 (in-lesson)**
+**Evidence:** `[00:09:12]` *"The trend will resume or… this will be the reversal"* → `[00:09:19]`
+*"the reversal double top and fall"*; `[00:09:59]` *"fourth session should resume the trend that was
+underway by the dealer."*
+
+**The ambiguity:** the lesson states a **two-way fork** at session 4 and supplies **nothing** to tell
+the branches apart in advance. `[00:09:59]` says *"should resume"*, which reads as a default, but
+`[00:09:12]` offers reversal as a co-equal outcome. **A rule with two outcomes and no discriminator
+is not a prediction.**
+
+**Measured, but NOT used decisionally:** `PT-046` O4 reports `P(4th resumes)` = **0.5509** (n = 530)
+on `W-D`/A — i.e. **a coin flip**. The pre-registration deliberately excluded O4 from the decision
+rule precisely because this ambiguity makes a failure uninterpretable.
+
+### Current Status
+
+```text
+A-129 -- OPEN. DO NOT CODE the fourth session. Measured at 0.55 (PT-046 O4, descriptive).
+```
+
+---
+
+## A-130 — the safety trade's `25–75 pips` is anchored to two different lows
+
+**Raised:** V18, 2026-08-14 · **Tier 1 (in-lesson)**
+
+| Marker | Statement | Anchor |
+|---|---|---|
+| `[00:01:01]`–`[00:01:03]` | *"how many pips off the low? **25 to 75** off of yesterday's low?"* | **yesterday's low** |
+| `[00:12:30]`–`[00:12:39]` | *"**25, 75 pips** off of the first W, the first W is low. That's your safety trade."* | **the first W's low** |
+
+**Both confirmed verbatim by the independent ASR pass.**
+
+**The ambiguity:** on a day-one anchor the two coincide. **On a mid-cycle W they need not**, and the
+lesson never reconciles them or says which governs. This is the lesson's headline setup, so the
+anchor is load-bearing.
+
+### Current Status
+
+```text
+A-130 -- OPEN. DO NOT CODE the safety-trade entry band until the anchor is fixed.
+  The band itself (25-75) is well-evidenced; the reference point is not.
+```
+
+---
+
+## A-131 — V18 supplies NO clock time for any trading session
+
+**Raised:** V18, 2026-08-14 · **Tier 1 (absence)**
+**Evidence:** token census over the committed transcript — `Asian range` × 8, `London` × 2,
+`U.S. session` × 4, and **zero hour figures attached to any of them**. `[00:04:26]` *"Trade the
+pairs at the **beginning of the sessions or the end of the sessions**"* is as specific as V18 gets,
+and `[00:04:36]` *"I didn't make those timings up"* refers to timings the lesson does not state.
+
+**Why this is filed as an ambiguity rather than a mere absence:** V18's most emphatic rule is
+counted **in sessions** (`V18_SOURCE_NOTES.md` §5), and `[00:09:27]` explicitly refuses to fix which
+session plays which role. **So the lesson's central rule is indexed to a unit the lesson never
+defines.** Any test of it must substitute a convention — which is exactly what `PT-046` §2a had to
+do, and why `PT-046` made boundary sensitivity decision-overriding.
+
+### Current Status
+
+```text
+A-131 -- OPEN. The three-session partition used anywhere in the V18 set is a DECLARED
+  CONVENTION OF THE TEST (PT-046 s2a), never a reading of the lesson. DO NOT CODE
+  session boundaries from V18.
+```

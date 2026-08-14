@@ -9647,3 +9647,118 @@ ADVANCEMENT: AUTHORIZED for V18.
 
 ### Next Review Trigger
 Student remediation of items 244–249, or a V18 submission.
+
+---
+
+## 2026-08-14 — V18 STUDENT INGESTION (`Bootcamp1 Wk8 051312 Part2`, 00:46:08)
+
+**Branch:** `video/v18`, **own worktree** `MMM-Agents-v18` (`D-038`). **NOT merged to integration.**
+
+### ⚠⚠ D-004 GATE DISCLOSURE — THE GATE WAS **OPEN**, AND THE BRIEFING SAID IT WAS NOT
+
+**This session was briefed that V17's R1 was *"currently in progress in a parallel session (not yet
+returned)"*, and was instructed to disclose that pending status in `COURSE_PROGRESS.md`, `LOG.md`,
+the gate block and the mastery report, without softening it.**
+
+**The premise was stale. It was checked against the commit graph before the disclosure was written,
+and it is refuted:**
+
+```text
+V17 R1 committed        0cd31a5   2026-08-14 18:50:38 -04:00
+merged to integration   698c682   2026-08-14 18:51:07 -04:00
+V18 worktree created FROM 698c682
+V18 first content commit c1cb2c7  (after)
+V17 R1 verdict: REVISE, 0 CRITICAL / 0 MAJOR / 6 MINOR / 13 NOTE, HIGH
+  -> V18 GATE OPEN under D-024
+```
+
+⭐ **The check was made because V17 R1's own item 246 charged the V17 session with this exact
+error** — asserting V16's review had not returned when the graph showed it had. **Repeating the
+briefed status into four permanent ledgers would have reproduced item 246 one lesson later.**
+
+**The disclosure instruction is honoured in full, with the true status.** V17's six MINORs
+(244–249) remain owed and **none of them reaches V18's subject matter** — checked individually.
+⚠ **V17 is `IN REMEDIATION`, not `COMPLETE`; an open gate is not a `PASS`.**
+⚠ **This says nothing about V19, whose gate depends on a V18 R1 that does not exist.**
+
+### Source integrity
+SHA-256 `cfa425ab…1f7181` **and** byte length **17,852,174** matched `SOURCE_MANIFEST.md` before the
+run, and the original was **re-hashed after the fps patch** and is unchanged. Audio **2768.953 s** vs
+header **8,308 ÷ 3.0 = 2769.333 s** vs manifest **2768 s** — three independent figures within 1.33 s.
+
+### Capture
+Frame rate **read from this file's header** (3.0 → 30.0, ×10 derived not typed). Stage 1024×786,
+play click `(512,300)`, **guard fired**. Server port **8918**, exclusivity proven by PID **and** by
+SHA-256 of the served bytes — **13 stale servers from prior sessions were listening on other 89xx
+ports**. 562 frames in 280.5 s wall.
+
+⭐ **§8a returned a result new to the corpus: the offset is `0 → −1 → −2 → −3 s`, MONOTONIC** — the
+first lesson where it is neither a constant nor zero (V12 +16, V13 +15, V14 +16 unmeasured, V15 +15,
+V16 0, V17 0). Rate check: 15 of 18 intervals exact, 3 short by 1 s, total deficit **0.110%**.
+**Judged frame-pacing slippage, NOT the gross multiplier error §8a step 3 targets** — reasoning
+declared in `04_SCREENSHOTS/V18/INDEX.md` §0.3. **No scalar offset applied; all 26 frames named from
+their own burned timecodes.** ⚠ **§8a step 3 needs a tolerance — raised, not made (policy ledger,
+`D-038a`).**
+
+### Transcript
+881 markers, monotonic, 0 backwards, 1 genuine second-collision, last marker **1.0 s** before the
+measured end of audio, 6,879 words, 149.1 wpm. **Body byte-identical to the pre-ingestion file**
+(46,572 bytes, `1972a181…`). Independent **`faster-whisper large-v3`** pass over **8 segments**.
+
+⭐⭐ **CORRECTION #1 IS THE HEADLINE: THE COMMITTED TRANSCRIPT INVERTS A RULE.** `[00:19:40]` reads
+*"Counter trends are advised."* — the deck prints **`Counter Trend Is Ill Advised On V1`** and
+**`… on A1`** on two slides, and the second engine returns *"countertrend is ill-advised"*.
+**Refuted by two independent channels.** Four further corrections filed.
+
+### Study artifacts
+`V18_TRANSCRIPT.md`, `V18_SOURCE_NOTES.md`, `V18_INTERPRETATION.md`,
+`04_SCREENSHOTS/V18/` (26 frames + `INDEX.md`), `V18_HOMEWORK.md`, `BT_V18_0001.md`,
+`V18_MASTERY_REPORT.md`. **142 markers cited across the six artifacts; 139 verified in the grid, 3
+absent BY DESIGN and enumerated** (`verify_citations.py`).
+
+### PT-046 — pre-registered, and it returns a clean null
+Pre-registration committed at **`c1cb2c7`, before `run_pt046.py` existed and before any bar was
+read**. Corpus **13/13 files verified against `raw/SHA256SUMS.txt`**.
+
+```text
+W-D / A   O1 0.5080  O2 0.5124  O3 -0.0044   N1 pct 34.0   N3 stable   NOT SUPPORTED
+W-D / B   NOT RUN -- DEVELOPMENT seal fired (I-010 Q2). NOT overridden.
+W-E / A   O3 +0.0016   N3 FLIPPED  -> INCONCLUSIVE
+W-E / B   O3 +0.0025   N3 FLIPPED  -> INCONCLUSIVE
+run-length mode 1 (not 2); length-2 runs 366 observed vs 367.2 coin-flip expectation
+```
+
+⭐⭐ **`N3` did real work:** `W-E` shows a positive lift on **both** arms — the direction the claim
+wants — and it is a **boundary artefact**; the sign flips negative in all four off-boundary cells.
+**Pre-registering `N3` as decision-overriding is why "the replication window shows a positive lift"
+could not be written.**
+
+### Homework
+Three of four items **NOT DONE — blocked**, because V18 rests them on objects it never constructs
+(`peak formation`: used 17×, defined 0×). The measurable item was run: weekly extremes cluster at
+the ends of the week; **the Asian session is the longest (10 h) and yields the fewest weekly
+extremes** — London 2.3×/hour for highs, 4.8×/hour for lows. ⚠ **Arms disagree by 17 points on the
+day-of-week distribution, so no day-of-week claim is carried forward.**
+
+### Quarantine — `Q-019`
+The V18 trio was **already quarantined on arrival**. `Q-019` **corroborates `REVIEW_INDEX.md` item
+254 by an independent method** (normalised hashing of all 63 files) and says so first: the clone
+block is **V16–V20**, and **V21 reverts to template A**.
+
+⭐ **The one new fact: the template scores its FIRST TRUE CELL.** `Peak Time Gap | 30-90 mins` —
+and **V18 really does say *"30 to 90 minutes"***, at `[00:42:14]`, not the claimed `[00:22:00]`, and
+about the dealer building the next level's formation, not a gap between M/W legs. ⚠️ **This makes
+V18's folder more dangerous than V17's: the cell a reviewer would spot-check is the one that checks
+out.** `EMA` returns a **clean zero** on V18 (V17 had 4 glosses), so the five-EMA table is a
+stronger refutation here than there.
+
+### Ledgers
+`A-126`, `A-126a`, `A-127`, `A-128`, `A-129`, `A-130`, `A-131` opened. `C-028` opened and closed as
+recorded (on-air arithmetic, `64` for a span holding `48`, confirmed on two engines).
+
+### Git
+`video/v18` cut from `698c682` (the merge carrying V17's review). Pre-registration committed
+**before** the runner. **NOT merged to integration** — that follows independent review.
+
+### Next Review Trigger
+**A V18 R1 review.** ⚠ **V19's `D-004` gate is CLOSED until it returns.**

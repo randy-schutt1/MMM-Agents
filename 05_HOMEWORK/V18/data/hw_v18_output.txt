@@ -1,0 +1,68 @@
+==============================================================================
+V18 HOMEWORK -- item 3: WHEN does the dealer make the high and low of the week?
+V18 [00:45:58]: "Look for the dealer to make the high and low of the week"
+==============================================================================
+
+NOT a test. No hypothesis, no prediction, no verdict.
+Session boundaries are the DECLARED convention of PT-046 s2a -- V18 states
+no clock time for any session. Read the percentages with that in mind.
+
+------------------------------------------------------------------------------
+ARM A   complete weeks 181   (incomplete session days excluded: 11)
+
+  WEEKLY HIGH lands on day-of-week (0 = first session day of the week):
+    day +0:   52   28.7%  ##############
+    day +1:   24   13.3%  ######
+    day +2:   21   11.6%  #####
+    day +3:   35   19.3%  #########
+    day +4:   49   27.1%  #############
+    day +5:    0    0.0%  
+
+  WEEKLY HIGH lands in session:
+    S1 Asian 17:00-03:00      :   49   27.1%  #############
+    S2 London 03:00-09:00     :   66   36.5%  ##################
+    S3 US 09:00-17:00         :   66   36.5%  ##################
+
+  WEEKLY LOW lands on day-of-week:
+    day +0:   43   23.8%  ###########
+    day +1:   30   16.6%  ########
+    day +2:   29   16.0%  ########
+    day +3:   18    9.9%  ####
+    day +4:   61   33.7%  ################
+    day +5:    0    0.0%  
+
+  WEEKLY LOW lands in session:
+    S1 Asian 17:00-03:00      :   30   16.6%  ########
+    S2 London 03:00-09:00     :   78   43.1%  #####################
+    S3 US 09:00-17:00         :   73   40.3%  ####################
+
+------------------------------------------------------------------------------
+ARM B   complete weeks 181   (incomplete session days excluded: 245)
+
+  WEEKLY HIGH lands on day-of-week (0 = first session day of the week):
+    day +0:   61   33.7%  ################
+    day +1:   23   12.7%  ######
+    day +2:   33   18.2%  #########
+    day +3:   45   24.9%  ############
+    day +4:   19   10.5%  #####
+    day +5:    0    0.0%  
+
+  WEEKLY HIGH lands in session:
+    S1 Asian 17:00-03:00      :   56   30.9%  ###############
+    S2 London 03:00-09:00     :   59   32.6%  ################
+    S3 US 09:00-17:00         :   66   36.5%  ##################
+
+  WEEKLY LOW lands on day-of-week:
+    day +0:   54   29.8%  ##############
+    day +1:   37   20.4%  ##########
+    day +2:   20   11.0%  #####
+    day +3:   45   24.9%  ############
+    day +4:   25   13.8%  ######
+    day +5:    0    0.0%  
+
+  WEEKLY LOW lands in session:
+    S1 Asian 17:00-03:00      :   26   14.4%  #######
+    S2 London 03:00-09:00     :   68   37.6%  ##################
+    S3 US 09:00-17:00         :   87   48.1%  ########################
+
+wrote ../../05_HOMEWORK/V18/data/hw_v18_results.json

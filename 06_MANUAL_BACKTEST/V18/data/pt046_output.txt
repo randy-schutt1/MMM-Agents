@@ -1,0 +1,53 @@
+==============================================================================
+PT-046 -- V18: two sessions of rise or fall, third session corrective
+pre-registration: PT-046_two_sessions_then_a_corrective_third.md @ c1cb2c7
+==============================================================================
+
+------------------------------------------------------------------------------
+W-D/A   boundary 09:00
+  sessions 2691  days 908 (excluded 11)  zero-dir 4
+  O1 P(3rd corrects | 2 same) = 0.5080  (571/1124, ties 2)
+  O2 base reversal rate       = 0.5124  (1280/2498)
+  O3 LIFT                     = -0.0044
+  O4 P(4th resumes)           = 0.5509  (n=530) [descriptive only]
+  O5 run median 1.0  mode 1  hist {1: 802, 2: 366, 3: 154, 4: 87, 5: 37, 6: 10, 7: 8, 8: 4, 10: 1}
+  N1 shuffle: mean O3 -0.0007 sd 0.0103  p95 +0.0134  observed percentile 34.0
+  N2 geometric expectation (mode 1 under i.i.d.): {1: 734.5, 2: 367.2, 3: 183.6, 4: 91.8, 5: 45.9, 6: 23.0, 7: 11.5, 8: 5.7, 10: 1.4}
+  N3 boundary sensitivity: 08:00 O3=-0.0074  09:00 O3=-0.0044  10:00 O3=-0.0080   FLIPPED=False
+  N5 bridging gaps (artefact control): O3=+0.0012 median run 1.0  [reported, NOT substituted]
+  VERDICT: NOT SUPPORTED
+
+------------------------------------------------------------------------------
+W-D/B   ** NOT RUN **
+  HOLDOUT BREACH (PT-046 W-D arm B): max timestamp 2016-07-01T00:45 >= 2016-07-01T00:00. Stopping, per `D-035` / `E23`.
+  The DEVELOPMENT seal fired and was NOT overridden. See BT_V18_0001.md §5 and `I-010` Q2.
+
+------------------------------------------------------------------------------
+W-E/A   boundary 09:00
+  sessions 9216  days 3272 (excluded 200)  zero-dir 14
+  O1 P(3rd corrects | 2 same) = 0.5112  (1979/3871, ties 6)
+  O2 base reversal rate       = 0.5096  (4358/8551)
+  O3 LIFT                     = +0.0016
+  O4 P(4th resumes)           = 0.5142  (n=1826) [descriptive only]
+  O5 run median 1.0  mode 1  hist {1: 2702, 2: 1284, 3: 539, 4: 272, 5: 118, 6: 53, 7: 20, 8: 13, 9: 5, 10: 3}
+  N1 shuffle: mean O3 -0.0017 sd 0.0060  p95 +0.0087  observed percentile 71.0
+  N2 geometric expectation (mode 1 under i.i.d.): {1: 2504.5, 2: 1252.2, 3: 626.1, 4: 313.1, 5: 156.5, 6: 78.3, 7: 39.1, 8: 19.6, 9: 9.8, 10: 4.9}
+  N3 boundary sensitivity: 08:00 O3=-0.0025  09:00 O3=+0.0016  10:00 O3=-0.0003   FLIPPED=True
+  N5 bridging gaps (artefact control): O3=+0.0048 median run 1.0  [reported, NOT substituted]
+  VERDICT: INCONCLUSIVE (N3 flipped)
+
+------------------------------------------------------------------------------
+W-E/B   boundary 09:00
+  sessions 8178  days 3635 (excluded 909)  zero-dir 7
+  O1 P(3rd corrects | 2 same) = 0.5060  (1726/3411, ties 3)
+  O2 base reversal rate       = 0.5035  (3788/7523)
+  O3 LIFT                     = +0.0025
+  O4 P(4th resumes)           = 0.5139  (n=1588) [descriptive only]
+  O5 run median 1.0  mode 1  hist {1: 2383, 2: 1134, 3: 495, 4: 244, 5: 92, 6: 50, 7: 17, 8: 13, 9: 5, 10: 2, 11: 1}
+  N1 shuffle: mean O3 -0.0000 sd 0.0064  p95 +0.0119  observed percentile 68.5
+  N2 geometric expectation (mode 1 under i.i.d.): {1: 2218.0, 2: 1109.0, 3: 554.5, 4: 277.2, 5: 138.6, 6: 69.3, 7: 34.7, 8: 17.3, 9: 8.7, 10: 4.3, 11: 2.2}
+  N3 boundary sensitivity: 08:00 O3=-0.0016  09:00 O3=+0.0025  10:00 O3=-0.0006   FLIPPED=True
+  N5 bridging gaps (artefact control): O3=+0.0023 median run 1.0  [reported, NOT substituted]
+  VERDICT: INCONCLUSIVE (N3 flipped)
+
+wrote ../V18/data/pt046_results.json
