@@ -9354,3 +9354,67 @@ an unreviewed predecessor**, and the compounding is the risk — not the permiss
 retire the whole qualification; more student passes deepen it.
 Owner decisions still outstanding: items **157**, **168**, **179**, **185**, **188** — and now
 **197** (a policy-ledger edit to `SWF_CAPTURE_RECIPE.md` §10, confirmed by measurement).
+
+---
+
+## 2026-08-14 — Reviewer Session (V16 R1)
+
+### Lesson
+**V16** · `Bootcamp1 Wk7 050612 Part2 (45mins).swf` · `Pivot Points` · Part 2 of the V15 recording.
+
+### Review Objective
+Independent mastery audit under `D-003`. Branch `review/v16`, cut from integration @ `cd6d1cb`
+(post-`review/v15`). Submission reviewed: `video/v16` @ `e7a51cd`.
+
+### Independence
+This session authored no V16 artifact. It re-computed the source SHA-256; extracted the audio and
+ran a **third** ASR engine (`faster-whisper`/CTranslate2 `large-v3`, against the pre-ingestion ASR
+and the student's `openai-whisper large-v3-turbo`); **re-derived `PT-044` end to end** from the
+pre-registration **at commit `9cc1cae`, before `run_pt044.py` existed**, in code sharing no line
+with the runner or `mmm_lib`; re-measured the pivot-grid slide's nine level positions in its own
+pixel code; recomputed `A-106`'s Monday fork from raw M1 bars; re-hashed all three `Q-017` files
+and re-ran the diff and token census; and opened nine frames as images.
+
+### The `D-004` timing question — DISCHARGED
+V16 was opened with its gate CLOSED and declared this in three places. **V15's R1 has since
+returned `REVISE`, 0 CRITICAL / 0 MAJOR**, which opens the gate **unconditionally** under `D-024`.
+Each of V15's six outstanding minors was checked for reach into V16: **only item 197 touches a
+record V16 amends (`A-095`), and V16's addendum does not inherit the error.** V16 is therefore
+reviewed as an ordinary submission, not a provisional one.
+
+### What reproduced
+Source SHA-256 and byte size **exact**. Transcript body **SHA-256 identical** to the pre-ingestion
+file — the byte-for-byte claim is exact. All 377 marker-grid statistics. **`A-100`'s
+*"the ADR is calculated over the last two weeks, 15 days"* CONFIRMED VERBATIM by a third engine**,
+plus corrections #1, #2, #3, #6, #11. `PT-044`'s three verdicts and its `W-E` figures **to the
+digit**. **All five `A-106` pips exact** (−7.1 / −36.6 / +28.9 / −72.6 / +58.4), with 418 Sunday
+bars and a 133.9-pip Monday range. All three `Q-017` hashes and the 8-for-8 census. The pivot-slide
+equal spacing, at a **tighter** spread than claimed. Zero sweep offset at every frame opened.
+
+### Findings
+**0 CRITICAL · 0 MAJOR · 4 MINOR (items 222–225) · 11 NOTE (items 226–235).**
+
+- **222** — `A-101` declares the `M1`–`M4` construction unevidenced in V16; **V16's own committed
+  chart frames carry it.** `V16_00-25-10` shows a real, *unequally spaced* grid on which four
+  independent midpoint relations hold to ~1.5 px, confirmed on a second frame. **Weighed for
+  `MAJOR`, charged `MINOR`** — nothing false entered the corpus, `DO NOT CODE` stands, and the
+  error is an under-claim in the safe direction. **Severity put to the owner.**
+- **223** — the same measurement lists **eight** levels while claiming nine; the missing one is
+  `R2`, the level its own defeater sentence names. Conclusion survives; re-measured here.
+- **224** — `PT-044`'s `W-D` starts `2013-01-02` against a pre-registered `2013-01-06`, undeclared,
+  and **that four-day over-run is the sole cause of its one "missed" prediction. Run to its own
+  pre-registration `PT-044` scores 5 of 5.** No verdict moves, no seal broken, self-penalising.
+- **225** — `Q-017`'s *"every content line differs"* is false: three `Visual Type` lines are
+  byte-identical, and they are the only exact-match-detectable half of the invariant it proposes.
+
+### Decision
+`REVISE`, **HIGH** confidence. **V17 GATE OPEN under `D-024`.** Items 222–225 owed before V16 can
+reach `COMPLETE`. The owner's comprehension/gap audit (item 185) is **not** discharged.
+
+### Git
+Branch `review/v16`; `18_REVIEW/V16/V16_REVIEW_R1.md` added; `REVIEW_INDEX.md`,
+`COURSE_PROGRESS.md`, `LOG.md` updated. V16's items **renumbered 195–200 → 216–221** at the merge
+under `D-047` (second consecutive collision; item 188's validator check still unbuilt).
+
+### Next Review Trigger
+Student remediation of items 222–225, or a V17 submission.
