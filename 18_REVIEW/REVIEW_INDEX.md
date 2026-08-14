@@ -11,7 +11,79 @@ stays visible with its round number.
 ## STATUS
 
 ```text
-LESSONS REVIEWED: 11 (superseded text, retained: "LESSONS REVIEWED: 10")
+LESSONS REVIEWED: 12 (superseded text, retained: "LESSONS REVIEWED: 11",
+                  and before it "LESSONS REVIEWED: 10")
+V12:              R1 2026-08-14 — REVISE, HIGH confidence,
+                  0 CRITICAL / 0 MAJOR / 2 MINOR / 6 NOTE.
+                  GATE TO V13 IS OPEN under D-024 and was opened by
+                  R1 itself; items 137-138 were non-gating and owed
+                  only before COMPLETE.
+                  ⭐ R1 IS A FULLY INDEPENDENT ROUND — D-003 SATISFIED.
+                  The reviewer authored no V12 artifact, read all 690
+                  transcript markers before any student conclusion,
+                  EXTRACTED THE AUDIO FROM THE SOURCE .swf AND RAN ITS
+                  OWN ASR with a different engine AND model
+                  (faster-whisper medium.en vs the student's
+                  openai-whisper small.en), and RE-DERIVED PT-040 END
+                  TO END in code sharing no line with run_pt040.py or
+                  mmm_lib — every Wilder cell exact to the printed
+                  decimal, M = 10.4812 pp at k=5,t=50.
+                  ⚠⚠ THE R1 REMEDIATION IS NOT INDEPENDENT. Items
+                  137-138 are CLOSED — SELF-VERIFIED AT OWNER
+                  DIRECTION 2026-08-14, NOT CLOSED — VERIFIED. One
+                  session both fixed AND verified them on the owner's
+                  explicit authorisation. THERE WAS NO R2 and no
+                  independent PASS for the fix round. THIRD use of the
+                  pattern, after V09 R2 and V10 R1 (both 2026-08-13),
+                  recorded in the same words so the three are
+                  countable. READ THE V12 NOTICE UNDER THE DECISION
+                  TABLE BEFORE RELYING ON V12's COMPLETE.
+                  WHAT MOVED: nothing that bears on a measurement,
+                  classification, disposition or rule. Item 137 adds a
+                  SIXTH legend row to 04_SCREENSHOTS/V12/INDEX.md §1 —
+                  the 00-34-26 multi-timeframe MACD/STR/EMA dashboard,
+                  RE-DERIVED FROM THE IMAGE at four magnifications —
+                  and rescopes the false categorical "every legend
+                  legible in any V12 frame". Its columns are
+                  TIMEFRAMES, not lookback periods; the EMA row carries
+                  no number; the chart is a STUDENT'S ([00:34:19]); and
+                  the dashboard is UNIQUE TO 00-34-26, re-tested by
+                  mean-differencing the same pixel region across all 28
+                  curated frames. A-080 STAYS RESOLVED BY COURSE AND
+                  ITS NEGATIVE IS STRENGTHENED. Pips to Open and Daily
+                  Av DO NOT RESOLVE and are recorded illegible, NOT
+                  reconstructed. TWO SITES THE REVIEW DID NOT NAME were
+                  found by sweep and corrected: §2 row 21 had
+                  mis-transcribed the SAME dashboard (108.083 for
+                  108.093, "At Hi Low 215" for "Hi to Low 315", a
+                  "Daily Hi 105" that does not exist, and Spread 33
+                  omitted), and V12_SOURCE_NOTES.md §10.5 repeated the
+                  categorical claim.
+                  Item 138 corrects Q-013 §4's "THE FIRST TIME the
+                  generator's text is about the right subject" to THE
+                  THIRD AND MOST COMPLETE TIME, naming Q-003 Finding 2
+                  (V03) and Q-004 Finding 3 (V04) — both of which THIS
+                  REGISTER ALREADY RECORDED. THE CORRECTION STRENGTHENS
+                  THE ENTRY: a recurring, escalating hazard is a better
+                  argument for Q-007's blanket rule and the exact-diff
+                  test than a one-off curiosity was. Census RE-RUN AT
+                  SOURCE over each verbatim body (V03 TDI 12 / shark fin
+                  3; V04 TDI 11 / shark fin 5; V12 TDI 46 / shark fin
+                  21); two V12 cells diverge from the review by one and
+                  BOTH divergences are disclosed, one with its cause
+                  located and one marked explicitly undeterminable.
+                  Shared-body claim verified mechanically: V03 and V04
+                  VISUAL_INDEX.md diff against V12 at exactly four
+                  differing lines each and ZERO content lines, and the
+                  NOTES.md TDI sentence is byte-identical at line 18 of
+                  all three. Disposition unchanged — all three files
+                  stay quarantined.
+                  Superseded text retained at every site per
+                  REMEDIATION_PROTOCOL.md §2. Validator 103/0/0.
+                  Applied and self-verified on branch
+                  fix/v12-r1-minors, cut from the integration branch at
+                  b38d31b after git fetch --all confirmed zero
+                  divergence (D-038).
 V11:              R1 2026-08-13 — REVISE, HIGH confidence,
                   0 CRITICAL / 0 MAJOR / 5 MINOR / 7 NOTE.
                   GATE TO V12 IS OPEN under D-024 and this round does
@@ -70,7 +142,28 @@ V11:              R1 2026-08-13 — REVISE, HIGH confidence,
                   independently and DECLINES the escalation D-041
                   consequence 7 invited (item 114), a result D-042 §1
                   independently corroborated mid-review.
-PASSED:           10 (V10 — ⚠ COMPLETE 2026-08-13, SELF-VERIFIED AT
+PASSED:           11 (Superseded text, retained: "PASSED: 10")
+                     (V12 — ⚠ COMPLETE 2026-08-14, SELF-VERIFIED AT
+                      OWNER DIRECTION, NOT INDEPENDENTLY VERIFIED.
+                      R1's two MINORs — items 137 and 138 — are APPLIED
+                      and CLOSED — SELF-VERIFIED AT OWNER DIRECTION.
+                      ⚠⚠ READ THE V12 NOTICE UNDER THE DECISION TABLE
+                      BEFORE RELYING ON THIS ROW. The owner explicitly
+                      authorised ONE session to both fix AND verify
+                      this round, on the ground that both items are
+                      small documentation edits. That authorisation is
+                      real and recorded, but it does not manufacture
+                      independence and this round does NOT satisfy
+                      D-003. There was NO R2 and no independent PASS.
+                      THIRD use of the pattern, after V09 R2 and V10 R1
+                      on 2026-08-13, recorded in the same words so the
+                      three are countable. Full detail in the V12 block
+                      above. GATE TO V13 IS CONFIRMED OPEN under D-024
+                      — it was already open on R1's 0 CRITICAL / 0
+                      MAJOR and never depended on these two minors;
+                      this round was checked for regression and caused
+                      none;
+                      V10 — ⚠ COMPLETE 2026-08-13, SELF-VERIFIED AT
                       OWNER DIRECTION, NOT INDEPENDENTLY VERIFIED.
                       Superseded text, retained: "PASSED: 9".
                       R1's four MINORs -- items 91 (student half), 92,
@@ -1209,6 +1302,40 @@ ruling) are carried forward unchanged. **The next review trigger is the V06 subm
 | V11 | REVIEW REQUIRED | — | — | — | — | ⏳ *(superseded, retained: `AWAITING R1`)* |
 | V11 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V12 OPEN (`D-024`) · 5 MINOR (109–113) owed before `COMPLETE`** |
 | V12 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V13 OPEN (`D-024`) · 2 MINOR (137–138) owed before `COMPLETE`** |
+| V12 | REMEDIATION APPLIED | R1 (fix round) | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** · **V13 GATE OPEN** |
+
+> ## ⚠⚠ V12's `COMPLETE` IS NOT AN INDEPENDENT VERDICT. READ THIS BEFORE RELYING ON IT.
+>
+> **R1's two MINORs — items 137 and 138 — were fixed AND verified by the SAME session, on the
+> owner's explicit authorisation for this round specifically**, on the ground that both are small
+> documentation edits. That authorisation is real and it is recorded — but **it does not manufacture
+> independence, and this round does NOT satisfy `D-003`.** Both items carry the status
+> **`CLOSED — SELF-VERIFIED AT OWNER DIRECTION`**, which exists for no other purpose than to be
+> visibly different from `CLOSED — VERIFIED`, and the decision column reads `SELF-VERIFIED` rather
+> than `PASS` for the same reason. **No independent reviewer issued a `PASS` for this round. There
+> was no R2.**
+>
+> **This row is NOT a new review round.** It is R1's remediation, closed against R1's own findings.
+> The R1 row above is untouched and its `REVISE` verdict stands as the last arm's-length judgement
+> anyone made about V12.
+>
+> **Precedent: this is the THIRD use of the pattern**, after V09 R2's items 81–83 (2026-08-13) and
+> V10 R1's items 91–94 (2026-08-13), and it is deliberately recorded in the same words so the three
+> are comparable and countable.
+>
+> **⚠ THE V13 GATE WAS ALREADY OPEN AND NOTHING IN THIS ROUND CHANGES THAT.** `D-024` opens the
+> gate on a round carrying **zero `CRITICAL` and zero `MAJOR`**, which R1 returned; items 137–138
+> are **non-gating** and were owed only before `COMPLETE`. This remediation was checked for
+> regression and **caused none**: no marker, status, disposition, grade, threshold or conclusion
+> moves anywhere in the project, `A-080` stays `RESOLVED BY COURSE` with its negative strengthened,
+> all three `Q-013` files stay quarantined, and `validate_project.py` returns **103 passed, 0
+> warnings, 0 failures**.
+>
+> **What a later independent session should re-check first**, if it wants to convert this into a
+> real verdict: that `04_SCREENSHOTS/V12/INDEX.md` §1 row 6 matches the pixels of `00-34-26` —
+> including that `Pips to Open` and `Daily Av` genuinely do not resolve — and that `Q-013` §4's
+> corrected count of **three** on-topic instances is complete, i.e. that no fourth lesson among the
+> twelve audited also carries an on-topic fabricated body.
 
 > ## ⚠⚠ V10's `COMPLETE` IS NOT AN INDEPENDENT VERDICT. READ THIS BEFORE RELYING ON IT.
 >
@@ -1890,8 +2017,8 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 | 134 | V12 student | **NOTE — a self-reported error, and a MEASUREMENT trap that would have FLATTERED a fabricated file.** `Q-013` §0 records two artifacts caught in this session's own first pass, inherited from `Q-012`'s method note: a naive `grep -ci "EMA"` returns **7** against **2** word-boundary; and **a naive `grep -ci "morning star"` returns 1**, which **is a substring of `[00:30:20]` *"10 in the **morning star**ted the US session"***. **The true count is 0.** Had it not been checked it would have appeared to **corroborate** the quarantined `NOTES.md`'s fabricated *"Evening/Morning Stars"* topic line — **the closest this register has come to a false positive running in a fabrication's favour.** Same class as `Q-012`'s `9:30`-matches-a-timestamp trap and item 103's method note, in a new costume. Recorded per item 108's precedent that a session's own errors belong in the record | `Q-013` §0, §2; item 103; `Q-012` measurement note | ℹ️ **NOTE — method, self-reported** |
 | 135 | V12 student | **NOTE — two disclosures a reviewer should adjudicate rather than discover.** **(1) `EXTERNAL_VOCABULARY_REFERENCE.md` was edited on the task branch.** It is named in **NEITHER** of `D-038a`'s two lists. Classified here as an **EVIDENCE ledger** by `D-038a`'s own test (*does an unmerged edit change what another session is permitted to do?* — it records what a session found), which is **also what `SOURCING_HIERARCHY.md` §3.1 steps 3–4 require of the reconciling session, and that requirement is what forced the choice.** **R1 may overrule.** **(2) A mis-cited decision was corrected in place rather than quietly:** `V12_HOMEWORK.md`'s first draft blocked the demo-trade drill on **`D-006`**, which in fact defers *automated backtesting and Pine Script*, not demo orders. **The correction REDUCED the blocker count from two to one**, and the file says so — *"a deferral propped up by a mis-cited decision is worse than a deferral with one honest reason"* | `D-038a`; `SOURCING_HIERARCHY.md` §3.1; `D-006`; `V12_HOMEWORK.md` § dispositions | ℹ️ **NOTE — disclosures, reviewer adjudication invited** |
 | 136 | V12 student | ⭐ **`08_CONCEPT_LIBRARY` — V12 IS THE FIRST LESSON THAT GENUINELY TESTS ITS 0-CONCEPT POLICY, AND THE SESSION DECLINES TO RESOLVE THE TENSION ALONE.** The index holds **0 concepts** on a reasoned, **R1-upheld** rule: promote a term only when the course defines it, never while it is an open `A-xxx`, because that *"would launder an open ambiguity into a citable definition"*. **Every prior lesson made that easy — nothing was defined.** V12 breaks the pattern: **`shark fin` and `blood in the water` are now `RESOLVED BY COURSE`, printed and spoken**, and `mayonnaise = 200` is Tier 1 — **exactly the terms the index was written to wait for.** ⚠ **No entry was created**, because all three are closed **as to meaning** and **not computable** (`A-086`), so an entry could be mistaken for a codable rule — **a different laundering than the index's rules name, in the opposite direction.** The likely right answer — an entry carrying the closure **and** the blocker in one breath — **is a change to the index's own rules, which a task branch should not make.** Put to R1 and the owner | `08_CONCEPT_LIBRARY/CONCEPT_INDEX.md`; `A-031`, `A-032`, `A-086`; `V12_MASTERY_REPORT.md` §2, carry-forward (j) | 🔶 **OPEN — owner/reviewer decision invited** |
-| 137 | **V12 R1** | **`M1` — `04_SCREENSHOTS/V12/INDEX.md` §1's categorical *"Every legend legible in any V12 frame is transcribed below"* is FALSE.** Frame `00-34-26` carries an **untranscribed sixth on-screen text block**: a multi-timeframe indicator dashboard with rows **`MACD / STR / EMA`** over columns **`1 · 5 · 15 · 30 · H1 · H4 · D · W · MN`**, plus `108.093`, `Spread 33`, `Pips to Open`, `Hi to Low 315`, `Daily Av`. The reviewer cropped and enlarged the region to confirm legibility. **⭐ `A-080` IS UNAFFECTED AND ITS NEGATIVE IS STRENGTHENED**, for three reasons each checked: (i) the columns are **TIMEFRAMES, not lookback periods** — the `5` and `15` are minutes, and the `EMA` row carries **no number at all**; (ii) the chart is a **STUDENT's**, given to the instructor — `[00:34:19]` *"this came to me from my good friend… who graduated Harvard business school"* — which is the exact category V11 R1 item 109 warned about; (iii) the dashboard appears on **NO other frame** — the reviewer cropped the same region from `00-37-21`, `00-40-36`, `00-22-11` and `00-20-41` and it is absent from all four. **The defect is that this is the same class of error V11 R1 item 109 charged, inside the very section written to discharge it** — V11 recorded a pane count and missed a legend; V12 recorded the legends and missed a dashboard. **REQUIRED:** add the dashboard as a sixth `INDEX.md` §1 row, transcribed verbatim, `Carries a period?` = **NO — columns are TIMEFRAMES**, noting the student-chart provenance; and **rescope** the categorical sentence to *"every legend and on-screen readout block identified in the 28 curated frames"*. Superseded text retained (`REMEDIATION_PROTOCOL.md` §2). **`A-080`'s status does not change** | `04_SCREENSHOTS/V12/INDEX.md` §1; `V12_00-34-26_…png`; `V12_TRANSCRIPT.md` `[00:34:19]`; item 109 | 🔶 **OPEN — MINOR** |
-| 138 | **V12 R1** | **`M2` — `Q-013` §4's *"THE FIRST TIME THE GENERATOR'S TEXT IS ABOUT THE RIGHT SUBJECT"* is FALSE, and the register itself records the other two instances.** §4 asserts *"on eleven previous lessons the fabricated files were wrong in an obvious way."* **`Q-003` Finding 2 is headed *"the new hazard: this time some of the fabricated vocabulary is real"*** and names **the same `NOTES.md` sentence** (*"Green Price Line crossing Red Signal Line after breaking outside Blue Volatility Bands (Shark Fin)"*); **`Q-004` Finding 3 is headed *"the `Q-003` hazard recurs and is worse here."*** Reviewer's own word-boundary census over the transcript bodies: **V03 — `TDI` 12, `shark fin` 3, `volatility band` 2, `blood in the water` 2; V04 — `TDI` 11, `shark fin` 5, `blood in the water` 2**, against **V12 — `TDI` 46, `shark fin` 20, `blood in the water` 14**. **And V03 and V04 share BOTH the ten-lesson `VISUAL_INDEX.md` body AND the `NOTES.md` TDI-sentence variant with V12** — the reviewer verified the `NOTES.md` line has three variants across the 21 files and that V01–V04, V09–V15 and V21 all carry V12's exact wording. **⭐ THE CORRECTION STRENGTHENS THE ENTRY:** V12 is the **third and most complete** instance of a documented, escalating hazard, not a novel one — and *a recurring hazard is a far better argument for §4's own conclusion* (*"the defence is not vigilance — it is `Q-007`'s blanket rule and the exact-`diff` test"*) than novelty was. **Disposition UNCHANGED — all three files stay quarantined and no V12 artifact draws on them, verified independently.** **REQUIRED:** rewrite §4's opening to name `Q-003` and `Q-004` as first and second, restate V12 as third and most complete, and carry the measured counts and the shared-body/shared-sentence fact. Superseded text retained | `Q-013` §4; `Q-003` Finding 2; `Q-004` Finding 3; reviewer TDI-vocabulary census | 🔶 **OPEN — MINOR** |
+| 137 | **V12 R1** | **`M1` — `04_SCREENSHOTS/V12/INDEX.md` §1's categorical *"Every legend legible in any V12 frame is transcribed below"* is FALSE.** Frame `00-34-26` carries an **untranscribed sixth on-screen text block**: a multi-timeframe indicator dashboard with rows **`MACD / STR / EMA`** over columns **`1 · 5 · 15 · 30 · H1 · H4 · D · W · MN`**, plus `108.093`, `Spread 33`, `Pips to Open`, `Hi to Low 315`, `Daily Av`. The reviewer cropped and enlarged the region to confirm legibility. **⭐ `A-080` IS UNAFFECTED AND ITS NEGATIVE IS STRENGTHENED**, for three reasons each checked: (i) the columns are **TIMEFRAMES, not lookback periods** — the `5` and `15` are minutes, and the `EMA` row carries **no number at all**; (ii) the chart is a **STUDENT's**, given to the instructor — `[00:34:19]` *"this came to me from my good friend… who graduated Harvard business school"* — which is the exact category V11 R1 item 109 warned about; (iii) the dashboard appears on **NO other frame** — the reviewer cropped the same region from `00-37-21`, `00-40-36`, `00-22-11` and `00-20-41` and it is absent from all four. **The defect is that this is the same class of error V11 R1 item 109 charged, inside the very section written to discharge it** — V11 recorded a pane count and missed a legend; V12 recorded the legends and missed a dashboard. **REQUIRED:** add the dashboard as a sixth `INDEX.md` §1 row, transcribed verbatim, `Carries a period?` = **NO — columns are TIMEFRAMES**, noting the student-chart provenance; and **rescope** the categorical sentence to *"every legend and on-screen readout block identified in the 28 curated frames"*. Superseded text retained (`REMEDIATION_PROTOCOL.md` §2). **`A-080`'s status does not change** | `04_SCREENSHOTS/V12/INDEX.md` §1; `V12_00-34-26_…png`; `V12_TRANSCRIPT.md` `[00:34:19]`; item 109 | 🔶 **OPEN — MINOR** ⚠ **CLOSED — SELF-VERIFIED AT OWNER DIRECTION 2026-08-14** (branch `fix/v12-r1-minors`, cut from the integration branch at `b38d31b` after `git fetch --all` confirmed **zero divergence**, `D-038`). **NOT `CLOSED — VERIFIED`. This round was fixed AND verified by ONE session on the owner's explicit authorisation; it does not satisfy `D-003`, and the distinct status string exists solely so it is never mistaken for an arm's-length verdict.** **ROW 6 WAS RE-DERIVED FROM THE IMAGE, not copied from the review** — `00-34-26` was cropped and enlarged at four increasing magnifications and read off the pixels. **Confirmed legible:** the nine-column header `1 5 15 30 H1 H4 D W MN`, the three `MACD`/`STR`/`EMA` rows (nine coloured status cells each, **no numerals**), `108.093`, `Spread 33`, `Hi to Low 315`. **`Pips to Open` and `Daily Av` DO NOT RESOLVE at the `1024 × 786` capture resolution and are recorded `‹illegible›`, NOT reconstructed** — the same handling row 4 gives its left-clipped overlay. **THE *"NO OTHER FRAME"* CLAIM WAS RE-TESTED, NOT ACCEPTED:** the identical pixel region was extracted from **all 28 curated frames** and mean-differenced against `00-34-26`; the nearest non-identical frame is `00-40-36` at **8.76**, and the two closest candidates (`00-40-36`, `00-22-11`) were additionally **opened and read as images** — neither carries the dashboard. **Confirmed unique to `00-34-26`.** The categorical sentence is rescoped to *"every legend and on-screen readout block identified in the 28 curated frames"*, with the original retained per `REMEDIATION_PROTOCOL.md` §2 and the reason stated. **⚠ TWO SITES THE REVIEW DID NOT NAME were found by repo-wide sweep and corrected, disclosed rather than absorbed: (1) `04_SCREENSHOTS/V12/INDEX.md` §2 row 21 MIS-TRANSCRIBED THIS SAME DASHBOARD** — `108.083` for `108.093`, *"At Hi Low 215"* for `Hi to Low 315`, a *"Daily Hi 105"* that does not exist (the label is `Daily Av` and its value is illegible), and **`Spread 33` omitted entirely**; leaving it would have left **two V12 records disagreeing about the same block**. **(2) `03_LESSON_NOTES/V12_SOURCE_NOTES.md` §10.5 repeated the same categorical claim** and is rescoped identically. Superseded text retained at both. **`A-080` DOES NOT MOVE and its negative is STRENGTHENED** — the dashboard's columns are **timeframes, not lookback periods**, the `EMA` row carries no number, and the frame is a **student's** chart (`[00:34:19]`, re-read at source), so it is one more on-screen block carrying no period. **No marker, status, disposition, grade or conclusion moves anywhere.** `validate_project.py`: **103 passed, 0 warnings, 0 failures.** |
+| 138 | **V12 R1** | **`M2` — `Q-013` §4's *"THE FIRST TIME THE GENERATOR'S TEXT IS ABOUT THE RIGHT SUBJECT"* is FALSE, and the register itself records the other two instances.** §4 asserts *"on eleven previous lessons the fabricated files were wrong in an obvious way."* **`Q-003` Finding 2 is headed *"the new hazard: this time some of the fabricated vocabulary is real"*** and names **the same `NOTES.md` sentence** (*"Green Price Line crossing Red Signal Line after breaking outside Blue Volatility Bands (Shark Fin)"*); **`Q-004` Finding 3 is headed *"the `Q-003` hazard recurs and is worse here."*** Reviewer's own word-boundary census over the transcript bodies: **V03 — `TDI` 12, `shark fin` 3, `volatility band` 2, `blood in the water` 2; V04 — `TDI` 11, `shark fin` 5, `blood in the water` 2**, against **V12 — `TDI` 46, `shark fin` 20, `blood in the water` 14**. **And V03 and V04 share BOTH the ten-lesson `VISUAL_INDEX.md` body AND the `NOTES.md` TDI-sentence variant with V12** — the reviewer verified the `NOTES.md` line has three variants across the 21 files and that V01–V04, V09–V15 and V21 all carry V12's exact wording. **⭐ THE CORRECTION STRENGTHENS THE ENTRY:** V12 is the **third and most complete** instance of a documented, escalating hazard, not a novel one — and *a recurring hazard is a far better argument for §4's own conclusion* (*"the defence is not vigilance — it is `Q-007`'s blanket rule and the exact-`diff` test"*) than novelty was. **Disposition UNCHANGED — all three files stay quarantined and no V12 artifact draws on them, verified independently.** **REQUIRED:** rewrite §4's opening to name `Q-003` and `Q-004` as first and second, restate V12 as third and most complete, and carry the measured counts and the shared-body/shared-sentence fact. Superseded text retained | `Q-013` §4; `Q-003` Finding 2; `Q-004` Finding 3; reviewer TDI-vocabulary census | 🔶 **OPEN — MINOR** ⚠ **CLOSED — SELF-VERIFIED AT OWNER DIRECTION 2026-08-14.** **NOT `CLOSED — VERIFIED`** — see item 137 for the full `D-003` disclosure; one session both fixed and verified this on the owner's explicit authorisation. `Q-013` §4 is reheaded **"THE THIRD AND MOST COMPLETE TIME THE GENERATOR'S TEXT IS *ABOUT THE RIGHT SUBJECT*"**, naming **`Q-003` Finding 2 (V03) as first** and **`Q-004` Finding 3 (V04) as second**; the superseded heading and opening paragraph are **retained in full** per `REMEDIATION_PROTOCOL.md` §2. **⭐ THE CORRECTION STRENGTHENS THE ENTRY AND THE RECORD SAYS SO:** as written, §4 read as a **one-off curiosity**; corrected, it is the **third and most severe instance of a documented, escalating hazard** — which is a **far better** argument for §4's own conclusion (*"the defence is not vigilance — it is `Q-007`'s blanket rule and the exact-`diff` test"*) than novelty was. A rule that must catch a repeating pattern is better justified than one guarding against a fluke. **BOTH PRIOR FINDINGS WERE READ AT SOURCE, not taken from the review:** `Q-003` Finding 2 is headed *"the new hazard: this time some of the fabricated vocabulary is real"* and **quotes the same `NOTES.md` sentence**; `Q-004` Finding 3 is headed *"the `Q-003` hazard recurs and is worse here"*. **THE CENSUS WAS RE-RUN AT SOURCE** over the **verbatim body** of each transcript (`\b` word-boundary regex, case-insensitive): **V03 — TDI 12, shark fin 3, volatility band 2, blood in the water 2; V04 — TDI 11, shark fin 5, VB 0, BITW 2; V12 — TDI 46, shark fin 21, VB 5, BITW 14.** This reproduces the review's table exactly for V03, V04, V10 and V11. **⚠ TWO V12 CELLS DIVERGE FROM THE REVIEW BY ONE and the divergence is STATED, not absorbed:** the review reports shark fin 20 / VB 4. **For `shark fin` the cause is located** — `[00:23:17]` carries **two** occurrences on one line (*"what do you have shark fin short shark fin long?"*), which a per-line count scores once. **For `volatility band` the cause is NOT determinable** from the review file, which gives its counts without its pattern; this session records its own figure and method rather than reconciling to a number it cannot reproduce. **Nothing turns on either** — V12 exceeds V03/V04 four- to sevenfold on every row under either count. `Q-003`'s own *"TDI (13 mentions)"* is likewise a whole-file count against a body figure of 12, and that is recorded too. **THE SHARED-BODY CLAIM WAS VERIFIED MECHANICALLY:** `diff` of V03's and V04's quarantined `VISUAL_INDEX.md` against V12's returns **exactly four differing lines each — the title and three `Filename:` stems — and ZERO content lines**; and the `NOTES.md` `TDI Indicator` sentence is **byte-identical at line 18 of all three files**. **So the two sentences §4 called on-topic-for-the-first-time were equally on-topic for V03 and V04 because they are literally the same two sentences.** **A SECOND SITE carrying the same false *"first"* was found by sweep and corrected** — the `VISUAL_INDEX.md` running tally at the foot of `Q-013`; superseded text retained. **THE DISPOSITION IS UNCHANGED:** all three V12 files stay quarantined, and the negative that **no V12 artifact draws on any of them** was re-tested during the fix. `validate_project.py`: **103 passed, 0 warnings, 0 failures.** |
 | 139 | **V12 R1** | **NOTE — ⭐ `PT-040` WAS REPRODUCED EXACTLY BY INDEPENDENT RE-DERIVATION, AND ONE UNDER-SPECIFICATION WAS FOUND IN `N3`.** The reviewer wrote `reviewer_pt040.py` from `PT-040` §§3–5 and `COMMON_PROTOCOL.md` §§1–3 alone, parsing the **1,297,781 raw M1 bars** directly (not the `_cache`, not the pre-aggregated ARMA/ARMB CSVs), with its own M15 aggregation, its own Wilder RSI, its own US-DST rule and its own observations — **sharing no line with `run_pt040.py` or `mmm_lib`, neither of which was opened until after the run completed.** **EVERY WILDER CELL MATCHES TO THE PRINTED DECIMAL** across `W-A`/A, `W-A`/B and `W-B`/A: `O1` ×20, `O2` ×15, `O3` ×20, `O4` ×16, bars **24,755 / 24,730 / discarded 25**, `W-B` **49,421 / 49,396**, spans, **`M = 10.4812 pp` at `k=5,t=50`**, **`k=2` max `5.1638 pp`**, arm gap **0.0000 pp**, `N2` **10.6608 pp**. All four pre-registered secondary checks re-derived and all four hold. **The `N3` simple-average cell differs by ≤ 0.02 pp** (`k=5,t=50`: 12.15 vs reviewer's 12.14). **Cause identified exactly:** `PT-040` §3.1 names *"the simple-average variant"* without giving its formula; the runner uses a **prefix-sum** rolling mean, the reviewer a **direct windowed sum**. Max divergence **5.16 × 10⁻¹¹** — but **48 bars in `W-A` sit at EXACTLY `RSI = 50.0`** (up-sum equals down-sum exactly) and `O2`'s `≥` is **tie-sensitive**, so float noise flips 15 of them. **NO VERDICT MOVES — both are `MATERIAL`. NOT CHARGED**, because `N3` is a reported line with no decision attached. **FORWARD REQUIREMENT: the next `PT` carrying a formula-robustness line should state the summation method and the tie convention at the threshold** | `PT-040` §3.1, §4 `N3`; `pt040_output.txt` N3 cell; reviewer re-derivation | ℹ️ **NOTE — reproduced exactly; forward requirement for the next `PT`** |
 | 140 | **V12 R1** | **NOTE — the *"all 672 sweep frames"* scan is NOT verifiable by repository inspection**, because the sweep frames are not committed. Same class of limit V11 R1 recorded at its `N6` for push timing. **What IS verifiable was checked and holds:** the reviewer opened **8 of the 28 committed frames** and found no properties dialog and no Navigator panel; the six timecode-sync rows in `INDEX.md` §0 spot-check correct; the `26:11` print-vs-audio cross-check lands on the same second in both media; and **the load-bearing observation — that MT4 prints an indicator's inputs in parentheses after its name, and here there are none — was confirmed by reading the TDI sub-window legend off the pixels on two separate frames** (`00-26-11` and `00-34-26`), both showing `Traders Dynamic Index Visual` followed by six **unparenthesised** output values. **NOT CHARGED** — the claim is recorded so its evidential status is explicit, and `A-080` closes on the audio in any case | `04_SCREENSHOTS/V12/INDEX.md` §0, §1; `A-080` V12 update; V11 R1 item 119 | ℹ️ **NOTE — self-report accepted, one half unverifiable** |
 | 141 | **V12 R1** | **NOTE — a sentence supporting `A-080` that the record does not cite, and it forecloses the last alternative reading.** `[00:08:22]`, from the reviewer's own independent ASR pass: *"**You want to use it at 14, knock yourself out.**"* The instructor contrasts his preset against the RSI's own default **as a choice he is consciously making and consciously offering to the group** — which rules out both remaining alternative readings of `A-080`'s evidence: that `21` is a misspeak, and that he is reporting some third party's setting rather than his own. **Worth adding to `A-080`'s evidence table**, where it costs nothing and closes the last door. Recorded because independence means adding evidence, not only checking it | `A-080` V12 update evidence table; reviewer ASR `00:07:05`–`00:08:40` | ℹ️ **NOTE — added evidence, favourable** |

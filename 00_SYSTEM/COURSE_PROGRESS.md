@@ -24,7 +24,20 @@ VIDEOS IN PROGRESS:  0  (Superseded text, retained per REMEDIATION_PROTOCOL.md
                         session to both fix AND verify the four minors, so
                         V10's COMPLETE is ⚠ SELF-VERIFIED AT OWNER DIRECTION
                         and D-003 is NOT satisfied. See the V10 row below.)
-VIDEOS PASSED:       10 (Superseded text, retained: "VIDEOS PASSED: 9".
+VIDEOS PASSED:       11 (Superseded text, retained: "VIDEOS PASSED: 10",
+                        and before it "VIDEOS PASSED: 9".
+                        V12 — ⚠ COMPLETE 2026-08-14, SELF-VERIFIED AT OWNER
+                        DIRECTION, NOT independently verified. R1's two
+                        MINORs -- items 137 and 138 -- are applied and
+                        CLOSED — SELF-VERIFIED AT OWNER DIRECTION, NOT
+                        CLOSED — VERIFIED. THIRD use of this pattern, after
+                        V09's items 81-83 and V10's items 91-94, both
+                        2026-08-13. There was NO R2 and no independent PASS;
+                        D-003 is NOT satisfied. Read REVIEW_INDEX.md's V12
+                        notice under the DECISION TABLE before relying on
+                        this row. V13 GATE re-confirmed OPEN; nothing
+                        regressed. Still open and not gating: items 139-144
+                        (all NOTE).
                         V10 — ⚠ COMPLETE 2026-08-13, SELF-VERIFIED AT OWNER
                         DIRECTION, NOT independently verified. R1's four
                         MINORs -- items 91 (student half), 92, 93, 94 -- are
@@ -1072,11 +1085,37 @@ V11 STATUS NOW:      **IN REMEDIATION, NOT COMPLETE.** Items 109-113 are
                      none alters a method, threshold, disposition or
                      number.
 
-V12 STATUS NOW:      **STUDENT PASS COMPLETE, SUBMITTED, AWAITING R1.**
-                     Branch video/v12, isolated worktree (D-038), pushed,
-                     NOT MERGED -- D-004 reserves that for after review.
+V12 STATUS NOW:      ⚠ **COMPLETE 2026-08-14 — SELF-VERIFIED AT OWNER
+                     DIRECTION, NOT INDEPENDENTLY VERIFIED.** R1's two
+                     MINORs, items 137 and 138, are APPLIED and CLOSED —
+                     SELF-VERIFIED AT OWNER DIRECTION. **NOT
+                     "CLOSED — VERIFIED".**
+                     ⚠⚠ READ THIS BEFORE RELYING ON THE STATUS. The owner
+                     explicitly authorised ONE session to both FIX and
+                     VERIFY this round, on the ground that both items are
+                     small documentation edits. That authorisation is real
+                     and it is recorded -- but it does NOT manufacture
+                     independence, and this round does NOT satisfy D-003.
+                     THERE WAS NO R2 and no independent PASS. The distinct
+                     status string exists solely so no later reader mistakes
+                     it for an arm's-length verdict. THIRD use of the
+                     pattern, after V09 R2 and V10 R1 (both 2026-08-13).
+                     Full disclosure: REVIEW_INDEX.md items 137-138 and the
+                     V12 notice under its DECISION TABLE, and LOG.md.
+                     WHAT MOVED: nothing that bears on a measurement,
+                     classification, disposition, threshold or rule. A-080
+                     stays RESOLVED BY COURSE and its negative is
+                     STRENGTHENED; all three Q-013 files stay quarantined.
+                     Applied on branch fix/v12-r1-minors, cut from the
+                     integration branch at b38d31b after git fetch --all
+                     confirmed zero divergence (D-038).
+                     validate_project.py: 103 passed, 0 warnings, 0 failures.
+                     *(Superseded, retained per REMEDIATION_PROTOCOL.md §2:
+                     "STUDENT PASS COMPLETE, SUBMITTED, AWAITING R1. Branch
+                     video/v12, isolated worktree (D-038), pushed, NOT
+                     MERGED -- D-004 reserves that for after review.
                      Self-assessment: REVIEW REQUIRED (not PASS), on three
-                     named judgement calls listed in the mastery report §3.
+                     named judgement calls listed in the mastery report §3.")*
 
                      WHAT V12 IS: 55 minutes on the Traders Dynamic Index --
                      titled that, in print, on a frame held 8.5 minutes.
@@ -1199,8 +1238,19 @@ V13 GATE:            ⭐ **OPEN.** V12 R1 returned 2026-08-14 on branch
                      review/v12: **REVISE — 0 CRITICAL, 0 MAJOR, 2 MINOR,
                      6 NOTE, confidence HIGH.** Under D-024 a round carrying
                      zero CRITICAL and zero MAJOR OPENS the gate for V13.
-                     V12 stays IN REMEDIATION, not COMPLETE: items 137-138
-                     are owed. Neither can contaminate V13 -- 137 rescopes a
+                     ⭐ **RE-CONFIRMED OPEN 2026-08-14 AFTER THE R1
+                     REMEDIATION. Nothing regressed.** The gate never
+                     depended on items 137-138 -- D-024 opened it on R1's
+                     0 CRITICAL / 0 MAJOR, and both minors were non-gating,
+                     owed only before COMPLETE. Both are now CLOSED —
+                     SELF-VERIFIED AT OWNER DIRECTION (NOT VERIFIED; see
+                     V12 STATUS NOW above), and the remediation moved no
+                     marker, status, disposition, grade, threshold or
+                     conclusion anywhere in the project. Validator 103/0/0.
+                     *(Superseded, retained per REMEDIATION_PROTOCOL.md §2:
+                     "V12 stays IN REMEDIATION, not COMPLETE: items 137-138
+                     are owed.")*
+                     Neither could contaminate V13 -- 137 rescopes a
                      completeness claim about frame legends while LEAVING
                      A-080 AND ITS NEGATIVE INTACT AND STRENGTHENED, and 138
                      corrects a novelty claim in Q-013 §4 while every

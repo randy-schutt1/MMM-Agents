@@ -1807,11 +1807,86 @@ indexed with **the identical sentence** used on V11 (`Q-012`).
 
 ---
 
-### 4. ⭐ THE FINDING THIS ENTRY EXISTS FOR: THE FIRST TIME THE GENERATOR'S TEXT IS *ABOUT THE RIGHT SUBJECT*
+### 4. ⭐ THE FINDING THIS ENTRY EXISTS FOR: THE **THIRD AND MOST COMPLETE** TIME THE GENERATOR'S TEXT IS *ABOUT THE RIGHT SUBJECT*
 
-On eleven previous lessons the fabricated files were wrong in an obvious way — they described
-Asian boxes and London stop hunts over lessons about equity curves, position sizing or the RSI.
-**On V12 they are not obviously wrong, because V12 really is about the TDI shark fin.**
+> **⚠️ CORRECTED AT V12 R1 item 138 (`M2`) — ⚠ SELF-VERIFIED AT OWNER DIRECTION.**
+> **NOT `VERIFIED`.** This correction was applied **and** verified by **one session** on the owner's
+> explicit authorisation. It does **not** satisfy `D-003` and must never be read as an arm's-length
+> verdict. Full disclosure at `REVIEW_INDEX.md` item 138 and `LOG.md`.
+>
+> **`REMEDIATION_PROTOCOL.md` §2 — the superseded heading and opening are retained, not deleted.**
+> This section was originally headed **"THE FIRST TIME THE GENERATOR'S TEXT IS *ABOUT THE RIGHT
+> SUBJECT*"** and opened:
+>
+> > *"On eleven previous lessons the fabricated files were wrong in an obvious way — they described
+> > Asian boxes and London stop hunts over lessons about equity curves, position sizing or the RSI.
+> > **On V12 they are not obviously wrong, because V12 really is about the TDI shark fin.**"*
+>
+> **The novelty claim was FALSE, and THIS REGISTER RECORDS THE OTHER TWO INSTANCES ITSELF** — which
+> is what makes the error charged rather than excusable. It is **the third occurrence**, not the
+> first. See the table immediately below.
+>
+> **⭐ THE CORRECTION STRENGTHENS THIS ENTRY, IT DOES NOT WEAKEN IT.** As originally written, §4 read
+> as a **one-off curiosity**. Corrected, it is the **third and most severe instance of a documented,
+> escalating hazard** — and a recurring hazard is a **far stronger** argument for §4's own conclusion
+> (*"the defence is not vigilance — it is `Q-007`'s blanket rule and the exact-`diff` test, which do
+> not care whether the text happens to be true"*) than a novel one was. A rule that must catch a
+> repeating pattern is better justified than one guarding against a fluke.
+>
+> **The disposition is UNCHANGED.** All three V12 files stay quarantined, no V12 artifact draws on
+> any of them, and that negative was re-tested at source during this fix.
+
+**This is the THIRD lesson on which the generator's fabricated text happens to be on-topic, and the
+register already recorded the first two:**
+
+| # | Record | What it already said |
+|---|---|---|
+| **1st** | **`Q-003`** (V03), Finding 2 — *"the new hazard: this time some of the fabricated vocabulary is real"* | *"Unlike V02… **V03 genuinely discusses TDI (13 mentions), shark fin (3), railroad tracks (5), and stop hunts (8)**. The fabricated `NOTES.md` happens to name real V03 subjects"* — **and it quotes the SAME `NOTES.md` sentence** this section quotes below |
+| **2nd** | **`Q-004`** (V04), Finding 3 — *"the `Q-003` hazard recurs and is worse here"* | *"The recording really does discuss **TDI (11), shark fin (5)**, stop hunts (4), railroad tracks (4)… A reader skimming `NOTES.md` and the transcript together would find the vocabulary corroborated everywhere"* |
+| **3rd** | **`Q-013`** (V12), this section | **The most complete overlap of the three** — see the counts below |
+
+**Word-boundary census, re-run at source by this session over the VERBATIM BODY of each transcript**
+(not copied from the review):
+
+| | `TDI` | `shark fin` | `volatility band` | `blood in the water` |
+|---|---|---|---|---|
+| **V03** | **12** | **3** | **2** | **2** |
+| **V04** | **11** | **5** | 0 | **2** |
+| V10 | 1 | 2 | 0 | 1 |
+| V11 | 27 | 0 | 0 | 0 |
+| **V12** | **46** | **21** | **5** | **14** |
+
+> **⚠ Two cells differ by one from `V12_REVIEW_R1.md`'s table**, and the divergence is stated rather
+> than absorbed: the review reports V12 `shark fin` = 20 and `volatility band` = 4; this session's
+> exact-regex census returns **21** and **5**. **For `shark fin` the cause is located** — `[00:23:17]`
+> carries **two** occurrences on one line (*"So now you have two setups what do you have shark fin
+> short shark fin long?"*), which a per-line count scores once. **For `volatility band` the cause is
+> NOT determinable** from the review file, which states its counts without its pattern; this session
+> records its own figure and the method behind it (`\bvolatility\s+bands?\b`, case-insensitive, over
+> the verbatim body) rather than reconciling to a number it cannot reproduce. **Nothing turns on
+> either cell**: V12 exceeds V03 and V04 by four to seven times on every row under either count.
+> **`Q-003`'s own *"TDI (13 mentions)"* likewise counts the whole file; the body figure is 12**, and
+> both are recorded above for the same reason.
+
+**And the three are ONE phenomenon, not three coincidences — verified mechanically this session:**
+
+- **V03, V04 and V12 share the same ten-lesson `VISUAL_INDEX.md` body.** `diff` against V12 returns
+  **exactly four differing lines for each — the title and three `Filename:` stems — and ZERO content
+  lines.**
+- **V03, V04 and V12 carry the byte-identical `NOTES.md` `TDI Indicator` sentence, at the same line
+  18 of each file.** It is one of three variants across the 21 files; V01–V04, V09–V15 and V21 all
+  carry V12's exact wording.
+
+**So the two sentences this section identifies as on-topic were EQUALLY on-topic for V03 and V04 —
+because they are literally the same two sentences.** What is true of V12 is not that the overlap is
+new, but that it is **most complete**: V03 mentions the TDI 12 times in 71 minutes as one topic among
+many, while **V12 is 55 minutes of nothing else**, titled `Traders Dynamic Index` on a card held for
+eight and a half minutes.
+
+**On eleven of the twelve audited lessons the fabricated files were wrong in an obvious way** — they
+described Asian boxes and London stop hunts over lessons about equity curves, position sizing or the
+RSI. **On V12, as on V03 and V04 before it, they are not obviously wrong, because V12 really is about
+the TDI shark fin — and V12 is the lesson where that accidental overlap is most complete.**
 
 - `NOTES.md` §3 says *"TDI Indicator: **Green Price Line** crossing **Red Signal Line** after
   breaking outside **Blue Volatility Bands** (**Shark Fin**)"*. **Every one of those four objects
@@ -1858,5 +1933,9 @@ All three files remain quarantined **in place**, covered by the tree-wide
   anywhere in the corpus or in either external tier**.
 - **`VISUAL_INDEX.md`:** **12 of 21 audited** (V01–V12), **12 fabricated.** V12 is the **fourth**
   confirmed instance of the sixth failure mode and the **second consecutive** one whose
-  misdescribed frame is a **title card** — and the first lesson on which the file's text is
-  *about the right subject*, for the reason given in §4.
+  misdescribed frame is a **title card** — and the **THIRD** lesson on which the file's text is
+  *about the right subject* (after `Q-003`/V03 and `Q-004`/V04), and the one on which that overlap
+  is **most complete**, for the reason given in §4.
+  ⚠️ **CORRECTED AT V12 R1 item 138 — ⚠ SELF-VERIFIED AT OWNER DIRECTION** (see §4). Retained per
+  `REMEDIATION_PROTOCOL.md` §2, this clause originally read *"and the first lesson on which the
+  file's text is about the right subject"*. **`first` was false; it is the third.**
