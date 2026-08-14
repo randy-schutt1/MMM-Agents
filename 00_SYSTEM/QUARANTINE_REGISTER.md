@@ -1466,3 +1466,184 @@ all. The *description* attached to it is fabricated; the *pixels* are evidence.
 - **`VISUAL_INDEX.md`:** **10 of 21 audited** (V01–V10), **10 fabricated.** V10 is the **second
   confirmed instance of the sixth failure mode** — a genuine frame carrying an invented
   description — and confirms it is a repeating generator behaviour rather than a V09 one-off.
+
+---
+
+## Q-012 — V11's `NOTES.md` and `VISUAL_INDEX.md`, confirmed fabricated; the one real image is the **TITLE CARD**, indexed as *"Asian Box accumulation range with 5, 13, 50, 200, and 800 EMAs"*
+
+```text
+STATUS:        QUARANTINED — DO NOT USE
+DATE:          2026-08-13
+QUARANTINED BY: V11 Student session (branch video/v11, isolated worktree, D-038)
+DECISION:      D-017 (Q-001 blanket action). RULES.md is NOT re-derived here — it is
+               discharged by Q-007's mechanical template-marker test, as Q-007
+               explicitly authorizes. The markers were nonetheless re-measured on this
+               file (below) because the check is one command.
+LOCATION:      01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/
+               per_lesson/11_Bootcamp1_Wk4_040812_Part1_51mins/
+               (in place; nothing moved, renamed or deleted)
+```
+
+### Scope — what this entry does and does not cover
+
+| File | Disposition | Basis |
+|---|---|---|
+| `RULES.md` | Already quarantined, **not re-audited on the merits** | **`Q-007`**. Markers re-measured here as a free cross-check and all three hold |
+| `NOTES.md` | **Fabricated — confirmed here** | Per-lesson audio cross-check, §2 |
+| `VISUAL_INDEX.md` | **Fabricated — confirmed here** | Per-lesson image cross-check, §3 |
+| `TRANSCRIPT.md` | **SOUND — adopted** | `SETUP_ISSUES.md` `I-008`, all four criteria, plus four Whisper spot-checks. Recorded in `02_TRANSCRIPTS/V11/V11_TRANSCRIPT.md` § VERIFICATION |
+
+**Measurement note.** Every count in this entry was taken with **word-boundary matching against
+the spoken body only**, after stripping the `[HH:MM:SS]` marker lines. This matters and is stated
+because it caught an error in this session's own first pass: a naive case-insensitive
+`grep -c "EMA"` returns **11** on the raw file — it matches *email*, *them a*, *problem* — and a
+naive `grep -c "9:30"` returns **3** by matching **timestamps**. Both figures are artifacts. The
+correct figures are below, and a future session repeating this audit should strip the markers
+first.
+
+---
+
+### 1. `RULES.md` — Q-007's discharge re-confirmed, and V11 reproduces the Q-011 finding exactly
+
+| Template marker | V11 |
+|---|---|
+| Rule 1 quote at `[00:05:00]` — *"Wait for the M15 candle to close before taking the 5/13 EMA cross."* | ✅ present |
+| Rule 2 quote at `[00:18:00]` — *"Place your stop loss 10 to 15 pips beyond the High or Low of the Day."* | ✅ present |
+| Exactly two `## Rule ID:` entries | ✅ 2 |
+| `NUMERICAL PARAMETERS` block hash | ✅ `e75ace74e1f12759…` — **identical to V01's and to V10's** |
+
+> ### ⭐ `Q-011`'s FINDING REPRODUCES ON A SECOND LESSON
+>
+> `Q-011` showed that V10's `RULES.md` is **V01's file with six identifier strings swapped**.
+> **V11's is the same.** An exact `diff` of V01's and V11's `RULES.md` returns **12 differing
+> lines — six substitutions and nothing else**:
+>
+> ```text
+> filename header      Wk1 031812 Part1 (55mins)  ->  Wk4 040812 Part1 (51mins)
+> Rule ID x2           V01-R001 / V01-R002        ->  V12-R001 / V12-R002
+> Relevant Visual x2   VIDEO_01_SCREENSHOT_00x    ->  VIDEO_12_SCREENSHOT_00x
+> Setup Name           (Week 1 - Part 1)          ->  (Week 4 - Part 1)
+> ```
+>
+> **Zero content lines differ.** Every rule, every timestamp, every parameter, every ambiguity
+> and every "Coding Implication" is byte-identical across two lessons recorded three weeks apart
+> on entirely different subjects. `Q-011` called this *"one generator"*; V11 is the second exact
+> demonstration, and it upgrades the claim from *inferred from a normalised hash* to
+> **twice-demonstrated by exact diff**.
+
+**Note the `V12-` prefix.** The generator numbered this file against the **pre-`D-017` alphabetical
+ordering**, in which `Wk10` sorted third. Under `D-017` §2 this lesson is **V11**. Recorded so no
+future session reads `V12-R001` as a reference to the corpus's V12.
+
+---
+
+### 2. `NOTES.md` — fabricated. Its central vocabulary is absent from the audio
+
+`NOTES.md` §3 asserts, without hedge:
+
+> *"**EMAs:** 5 (Mustard), 13 (Water), 50 (Mayo), 200 (Blueberry), 800 (Raspberry)."*
+> *"**TDI Indicator:** Green Price Line crossing Red Signal Line after breaking outside Blue Volatility Bands (**Shark Fin**)."*
+
+**Measured against the transcript body (word-boundary, markers stripped):**
+
+| Token asserted by `NOTES.md` | Occurrences in 51 minutes |
+|---|---|
+| `EMA` / `EMAs` | **0** |
+| `moving average` | **0** |
+| `5/13` | **0** |
+| `M15` | **0** |
+| `shark` (hence *Shark Fin*) | **0** |
+| `PFH`, `PFL` | **0** each |
+| `mustard`, `water`, `blueberry`, `raspberry` | **0** each |
+| `accumulation` | **0** |
+| `institutional`, `order flow` | **0** each |
+| `railroad`, `pin bar` | **0** each |
+| `New York` | **0** |
+| any clock time (`7:00`, `3:00`, `9:00`, `9:30`, `5:00`) | **0** |
+
+**`RULES.md` presents as `Source: Explicit`, at `[00:05:00]`, a quotation whose central token
+occurs zero times in the lesson.** `[00:05:00]` is in fact *"W formation don't you understand I
+can't say it enough"*, in a passage about the second leg and the TDI bands.
+
+#### 2a. The three specific claims, checked one by one
+
+| `NOTES.md` claim | What the lesson actually says |
+|---|---|
+| *"**Session Timing:** Asian 7:00 PM – 3:00 AM EST; London 3:30 AM – 9:00 AM EST; New York 9:30 AM – 5:00 PM EST"* | **No clock time of any kind is spoken in this lesson.** `london` occurs **once** (`[00:49:30]`, *"from mid london into the us session"*) and `asian` **once** (`[00:06:01]`). The table is imported from elsewhere |
+| *"**Time Gap:** 30 to 90 minutes between peak 1 and peak 2 on M15 charts"* | ⚠ **The number is real and the claim attached to it is not.** `[00:14:25]`–`[00:14:39]`: *"Understand that the **low** has to hold. How long? **30 to 90 minutes.** 30 minutes is for railroad tracks, but the long sideways consolidation should last **up to two hours**, then calmly take a trade."* It is a **hold duration for a candidate low**, not a **gap between two peaks**; `M15` is never mentioned; and the *"up to two hours"* half is dropped entirely. **This is the most dangerous item in the file**, because a real number carried on a false claim survives spot-checking |
+| *"**M & W Pattern Anatomy:** 2nd leg must fail to make a new extreme, showing rejection candles (Railroad tracks or pin bars)"* | The lesson's actual anatomy statement is `[00:10:26]`–`[00:11:07]` — the formation *"needs to have a **pullback and another leg**"*, and *"needs to look like that"* (**aggressive and big**). It says nothing about the second leg failing to make a new extreme; `[00:12:31]` prefers *"a couple hammers to the downside wick and then rise"*. *"Railroad tracks"* **is** a real course term — confirmed present in a Whisper pass of `[00:14:31]` — but it is used there of the **30-minute hold case**, not of a rejection candle at a second leg |
+
+**Verdict: `NOTES.md` is FABRICATED.** Its failure mode is the one `Q-009` named — a generic
+market-maker template with a handful of genuine tokens embedded, which is exactly what makes it
+survive a careless read.
+
+---
+
+### 3. `VISUAL_INDEX.md` — fabricated, and this is the **third** confirmed instance of the sixth failure mode
+
+`VISUAL_INDEX.md` indexes **three** screenshots. The lesson folder contains **one**.
+
+| Indexed | File on disk |
+|---|---|
+| `VIDEO_12_SCREENSHOT_001_00-02-00.jpg` | ✅ exists |
+| `VIDEO_12_SCREENSHOT_002_00-15-00.jpg` | ❌ **does not exist** |
+| `VIDEO_12_SCREENSHOT_003_00-30-00.jpg` | ❌ **does not exist** |
+
+Two of the three entries describe, in confident detail, images that were never captured —
+including *"London Open Stop Hunt false breakout forming 2nd leg M-formation at High of Day"* and
+*"TDI Shark Fin setup with green line hooking inside volatility bands + 5/13 EMA cross"*.
+
+#### 3a. And the one image that DOES exist is described as something it is not
+
+`VISUAL_INDEX.md` Screenshot 001:
+
+> *"**Visual Type:** Chart / Slide Overview.
+> **What is visible:** Asian Box accumulation range with 5, 13, 50, 200, and 800 EMAs.
+> **Instructor's Explanation:** Setting up session boundaries and explaining accumulation mechanics."*
+
+**The image is the lesson's TITLE CARD.** It is a dark damask slide bearing a white box reading
+**`MARKET MAKERS BOOT CAMP`** / **`Week 4`**, and **nothing else**. There is no chart, no box, no
+candle, no axis, and no moving average of any kind anywhere in the frame. It was opened and
+looked at by this session, and independently reproduced from the `.swf` by the frame sweep.
+
+This is the **third** confirmed instance of the sixth failure mode — a genuine frame carrying an
+invented description — after `Q-010` (V09) and `Q-011` (V10). `Q-008` (V07) is the same family
+one step further: there the indexed "TDI setup" was the **Camtasia player's own splash logo**.
+
+#### 3b. Cross-lesson duplicate check — negative, and worth recording as negative
+
+The MD5 of every lesson's `SCREENSHOT_001` was compared across all 21 folders: **21 distinct
+hashes, no duplicate pair.** V11's single image is a genuine, unique frame from V11. **The
+fabrication here is entirely in the prose, not in the pixels** — which is precisely why an
+image-count check alone would have passed this file.
+
+---
+
+### 4. One thing the quarantined material got right — the register cuts both ways
+
+The single real image prints **`Week 4`**. That is an **independent, in-recording corroboration
+of `D-017` §2's ordering for this file**, whose week number otherwise rests on the filename
+(`Wk4 040812`) and the session-date derivation. It agrees with the spoken *"welcome to week four
+of market maker boot camp"* `[00:00:00]` and with the `2012-04-08` Easter Sunday reference at
+`[00:25:33]`. **The description attached to the frame is fabricated; the pixels are evidence.**
+
+---
+
+### 5. Disposition
+
+All three files remain quarantined **in place**, covered by the tree-wide
+`README_WHY_QUARANTINED.md` banner. Nothing was moved, renamed or deleted. **No V11 artifact
+draws on any of them**, and `V11_SOURCE_NOTES.md` was written from the transcript alone before
+these files were opened.
+
+### Running tally for the fabrication pattern
+
+- **`RULES.md`:** 21 of 21 covered. **Now shown by exact `diff` on TWO lessons — V10 (`Q-011`) and
+  V11 (this entry) — to be a single document re-badged by six string substitutions.** The
+  "one generator" claim no longer rests on a normalised hash.
+- **`NOTES.md`:** **11 of 21 audited** (V01–V11), **11 fabricated, zero exceptions.** V11 adds the
+  clearest instance yet of a **real number carried on a false claim** (*"30 to 90 minutes"*
+  re-attributed from a low's hold duration to a peak-to-peak gap).
+- **`VISUAL_INDEX.md`:** **11 of 21 audited** (V01–V11), **11 fabricated.** V11 is the **third**
+  confirmed instance of the sixth failure mode, and the first in which the misdescribed frame is
+  a **title card** — i.e. a frame containing no chart content at all.

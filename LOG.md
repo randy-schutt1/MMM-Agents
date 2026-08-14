@@ -7302,6 +7302,185 @@ of the 32 curated frames for any printed holding period (`M4`); and `grep -rn "i
 
 ---
 
+## 2026-08-13 — V11 STUDENT SESSION · `Bootcamp1 Wk4 040812 Part1 (51mins).swf`
+
+**Branch:** `video/v11`, dedicated git worktree at `/Users/randyschutt/Desktop/Trading/MMM-Agents-v11`,
+cut fresh from `origin/claude/add-documents-repository-fdfb3u` (`a004e88`) per `D-038`. Gitignored
+**child** directories symlinked back to the primary checkout (`01_SOURCE_VIDEOS/Forex Bootcamp`,
+`06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M1`) — the V08/V09/V10 pattern. **`git status` stayed
+clean throughout; no `I-009` collision.**
+
+**Gate:** verified **OPEN** in `REVIEW_INDEX.md` and `COURSE_PROGRESS.md` **before any V11 artifact
+was created.** V10 R1 returned `REVISE` 0 `CRITICAL` / 0 `MAJOR` / 4 `MINOR` → opens under `D-024`.
+**V10's ⚠ SELF-VERIFIED qualification is inherited and recorded.**
+
+### What V11 is
+
+**Week 4, Part 1 · 2012-04-08 · course author, 100% of runtime · HIGH confidence.**
+
+Two lessons welded together. The first 25 minutes are a mailbag-driven **restatement** of the entry
+protocol — *"25 to 50 pips out of the box, second leg W formation… inside the TDI… the double
+band"* — stated eight ways and adding nothing new. The last 25 minutes **teach the RSI substrate of
+the TDI for the first time in the corpus**, across six printed slides.
+
+**The session date is corroborated from inside the recording** — `[00:25:33]` *"I figured it was
+sunday and it was easter"*; Easter Sunday 2012 = **8 April 2012** — which **confirms V10's printed
+end-card prediction**, made from inside V10 and recorded in the carry-forward before V11 was opened.
+
+### The headline finding
+
+**A printed slide headed *"Parameters of RSI"* lists six parameters and NOT the lookback period.**
+`rsi` occurs 33 times in the audio with no period attached; no frame among 28 detected screen
+states shows a settings dialog; and the **Tier 2 `MMM-NOTES` PDF is also silent** (`D-040` step 2,
+searched). **`A-080`** opens. The TDI's distributed default of 13 was **refused explicitly**, and
+the trap named — `MMM-NOTES` p.38 lists a **13 EMA**, so a session could reach *"13"* by conflating
+two indicators and feel sourced doing it.
+
+**The cost was measured rather than asserted**: across six candidate periods on the `D-036a`
+corpus, *"time above 80"* — V11's own overextended condition — ranges **0.04% → 5.66%, a 144×
+ratio**. Even adjacent 13 vs 14 differ ~20% relative.
+
+### Capture
+
+`SWF_CAPTURE_RECIPE.md` §10 at 10×, **using the corrected per-file frame-rate rule** (open item 87).
+**V11 declares 3.0 fps; V10 declared 2.0** — V11 is the demonstration that the field varies in
+**both** directions. Port **8931 was BUSY** on first try and `GOTCHA 4`'s check caught it; 8953 was
+verified by PID and by SHA-256 of the served bytes. The `GOTCHA 5` pre/post-click guard fired and
+passed. 620 frames; the frame→time offset was **measured** (`t = i×5 + 15`) against frame `0021`'s
+burned timecode `02:00`, not assumed. 28 screen states → **27 curated frames**, each opened and
+looked at before naming.
+
+### Q-012 — the quarantine audit
+
+`NOTES.md` and `VISUAL_INDEX.md` **fabricated**. `RULES.md` discharged by `Q-007`, markers
+re-measured anyway. Two findings that advance the corpus pattern:
+
+1. **`Q-011`'s "one generator" claim reproduces on a second lesson by EXACT `diff`** — V11's
+   `RULES.md` is **V01's file with six identifier strings swapped**: 12 differing lines, **zero
+   content lines**.
+2. **The one real image is the TITLE CARD**, indexed as *"Asian Box accumulation range with 5, 13,
+   50, 200, and 800 EMAs."* Third instance of the sixth failure mode, first on a frame with no
+   chart content at all. **`EMA` occurs ZERO times in 51 minutes.**
+
+**The register cuts both ways:** that title card prints **`Week 4`**, independently corroborating
+`D-017` §2's ordering.
+
+### Records
+
+**New:** `A-080` (RSI period), `A-081` (*"a 25 risk"*, no unit — **spoken, not printed**), `A-082`
+(flashcards — a **curriculum** blocker that gates trading for the week and is specified nowhere),
+`A-083` (is V11's sub-graph *"safety trade confirmation"* V10's price-pane safety trade? probably —
+**`DO NOT MERGE`**).
+**Narrowed:** `A-039` (TDI — *"displayed, not taught"* **retired**; still no parameters),
+`A-011` (M/W — pullback + another leg, *"aggressive and big"*, negative case, mechanism; still no
+count/size/invalidation).
+**Annotated:** `A-020` → `CONFLICT — OWNER ADJUDICATION REQUIRED`, on its `Mayo = 200` half only.
+
+**`C-018` filed and NOT adjudicated.** Tier 2 (`MMM-NOTES` p.66) + owner attestation vs Tier 1
+(V11 `[00:46:45]` *"There's the mayonnaise. There's the 50."*). §3.3's *"the recording wins"*
+**cannot close it**: the recording is two-ways readable, and the identical phrase means the **RSI
+baseline** seven seconds later at `[00:46:52]`. The frame at `46:45` was extracted specifically to
+arbitrate and **could not** — reported as a negative result.
+
+### Manual backtest
+
+**`PT-039`** *(filed, committed and run as `PT-037`; re-issued by owner ruling 2026-08-13 — see
+the entry at the end of this log)* pre-registered at `beee96a` **before the runner existed and
+before any bar was read**;
+runner at `6da82b3`; output after that. **Commit-timestamp ordering is the evidence.**
+
+Claim: *"the low has to hold — how long? 30 to 90 minutes… the long sideways consolidation should
+last up to two hours."* Estimand `P(FINAL | held ≥ T)` on M1, 894 session days, 26,028 candidate
+lows, `W-C′`, holdout never opened.
+
+| | Verdict |
+|---|---|
+| `M1a` duration informs at all | **PARTIALLY SUPPORTED** (+15.80 pp) |
+| `M1b` the 30→90 band does work | **CONFIRMED AS STATED** (+12.17 pp) |
+| `M1c` the named numbers are special | **CONTRADICTED AS STATED** — no feature at 30 or 90, both arms |
+| `M1d` survives the confound | **PARTIALLY SUPPORTED** — 3 of 6 strata |
+
+**The claim's direction is supported and its numbers are not.** `N3`'s margin is **monotone in
+remaining session time** across a factor of eight (+5.5 pp → +44.0 pp, six strata in the right
+order); `N4` puts the real 17:00 boundary at the **6.40th percentile** of 1,000 arbitrary 24-hour
+boundaries. `O5` cuts the other way and says so: the **median candidate low is superseded in TWO
+MINUTES**, so *"held 30 minutes"* is a ~1-in-7 event at the 85.6th percentile — **his threshold IS
+selective; it is just not distinguished.**
+
+**Predictions: 4 of 7 substantive** (P2, P5, P7, P8 right; P3, P4, P6 wrong). **The cheap P1 also
+failed** and is still reported separately. **P6 is the instructive miss** — predicted 4–9 candidate
+lows per day, actual **26** — and it is **his side of the argument**: it measures exactly how far
+this unfiltered test sits from the setup he described.
+
+**Most of V11 was NOT tested** and `BT_V11_0001` §1 says so first: the entry rule and **every one of
+the six printed RSI thresholds**, all `D-030`-blocked.
+
+### Three things this session got wrong or found late, recorded rather than absorbed
+
+1. **A validator failure was pushed.** The first `BT_V11_0001` commit shipped without the required
+   `EVIDENTIAL`/`DESCRIPTIVE` classification, because the validator was run **before** the file was
+   staged rather than after. Caught on the next run, fixed in the following commit. **The durable
+   lesson is ordering:** `stage → validate → commit`. Item **108**.
+2. **A `PT` numbering collision was found late.** `PT-037` and `PT-038` were reserved **in prose**
+   by `BT_V10_0001` §9, item 86 and this log; `PRE_REGISTERED/` held neither as a **file**, and
+   `PT-037` §0's search was for files. **Proposed: V11 keeps `PT-037`; V10's reservations move to
+   `PT-039` / `PT-040`.** Disclosed by append in `PT-037` §0, changing nothing in §§1–9. **A second,
+   distinct instance of item 91's finding.** Item **99**.
+3. **A `D-031` Arm B design defect was found at run time**, not in design. Arm B's DST `+1 h` shift
+   moves the Friday close to 18:00, failing **every DST-week Monday** on the completeness rule:
+   **11 exclusions on Arm A, 245 on Arm B.** Arm A is the pre-registered primary cell and no verdict
+   moves — but **every session-day-unit test in the `PT` family inherits this.** Item **101**.
+
+### V10's carry-forward (a)–(g) — all seven answered
+
+(a) speaker **tested**, author continues · (b) V10's Easter-Sunday date prediction **CONFIRMED from
+inside V11** · (c) the TDI *is* taught — **`A-039` narrows, does not close**, because no parameters
+and the bands are promised at `[00:32:34]` and never delivered · (d) `A-077` **checked, not
+advanced** · (e) `A-004` **checked, not advanced — and V10's "the course routes around it" reading
+is strengthened** · (f) `C-017`'s printed-vs-spoken question gets **two more instances pointing
+opposite ways**, and `Q7` is **evidence against a simple "print beats speech" rule** · (g) the
+frame rate was **read per file** and varies in both directions.
+
+### Files
+
+- **New:** `02_TRANSCRIPTS/V11/V11_TRANSCRIPT.md`; `03_LESSON_NOTES/V11_SOURCE_NOTES.md`,
+  `V11_INTERPRETATION.md`; `04_SCREENSHOTS/V11/` (27 PNG + `INDEX.md`);
+  `05_HOMEWORK/V11/V11_HOMEWORK.md`, `scripts/rsi_period_sensitivity.py`, `data/…_output.txt`;
+  `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-037_how_long_must_the_low_hold.md`
+  *(→ re-issued as `PT-039_how_long_must_the_low_hold.md`)*,
+  `scripts/run_pt037.py` *(→ `run_pt039.py`)*, `V11/BT_V11_0001.md`,
+  `V11/data/pt037_output.txt` *(→ `pt039_output.txt`)*;
+  `07_MASTERY_REPORTS/V11_MASTERY_REPORT.md`.
+- **Appended (evidence ledgers, `D-038a`):** `00_SYSTEM/QUARANTINE_REGISTER.md` (`Q-012`);
+  `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` (`A-080`–`A-083`, `A-039`/`A-011`/`A-020` updates);
+  `11_CONTRADICTIONS/CONTRADICTIONS.md` (`C-018`); `18_REVIEW/REVIEW_INDEX.md` (V11 verdict row,
+  items **97–108**); `00_SYSTEM/COURSE_PROGRESS.md` (V11 row, `V11 STATUS`, `V12 GATE`); this log.
+- **NOT touched:** `00_SYSTEM/DECISIONS.md`, `SETUP_ISSUES.md`, `SOURCING_HIERARCHY.md`,
+  `SWF_CAPTURE_RECIPE.md`, `COMMON_PROTOCOL.md` — **POLICY ledgers, integration branch only**
+  (`D-038a`). `18_REVIEW/V10/**`, `06_MANUAL_BACKTEST/V10/**` — completed work.
+
+### Git
+
+Branch `video/v11` in its own worktree. Paths staged **explicitly**; `git diff --staged` read before
+every commit; **`git add -A` never used.** Eight commits, each pushed. **No merge to integration —
+that is a separate, single-threaded act under `D-038`, performed after independent review.**
+
+`scripts/validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+### Next Action
+
+**Independent review R1 of V11 (`D-003`).** The **V12 gate is CLOSED** until it returns.
+
+**Owner decisions owed:** `C-018` (item 97) · the `PT` numbering resolution (item 99) · the
+`SETUP_ISSUES.md` entry for `C-018`, which only the integration branch can write (item 100).
+
+**⭐ V12 is the cheapest route to closing the two biggest things V11 leaves open** — same session,
+same day, same charts, 55 minutes. **One frame showing an indicator-properties dialog closes
+`A-080` and unblocks the whole RSI half of this lesson; one recurrence of *"mayonnaise"* with a
+legend visible closes `C-018` / `A-020` on Tier 1 evidence.** Look for both deliberately.
+
+---
+
 ## 2026-08-13 — Integration Session — `D-041`: the owner's definitive MA nickname mapping
 
 **Branch:** `claude/add-documents-repository-fdfb3u` (integration) · **Act:** POLICY-ledger decision
@@ -7397,3 +7576,114 @@ not a method concept, and promoting it would launder a label into a definition.
 put to the reviewer: (1) the **ketchup/mustard inversion** — a reviewer is entitled to put it back
 to the owner, and nothing here is protected from that; (2) `C-018`'s closure arrives on
 `video/v11`, so a reviewer reading integration alone will not see it until merge-back.
+
+---
+
+## 2026-08-13 — V11 branch — two owner rulings applied: `C-018` closed, `PT-037` re-issued as `PT-039`
+
+**Branch:** `video/v11` (worktree `MMM-Agents-v11`, `D-038`) · **Act:** applying two owner rulings
+to V11's artifacts **before** the independent review starts. **Still not merged** — merge-back
+still waits on R1. `git fetch origin` first; **zero divergence** confirmed (`0 0`).
+
+### 1. `C-018` — CLOSED by owner adjudication (`D-041`)
+
+> *"Mayonnaise is the 200 EMA, period. 50 is water, 5 is ketchup, 13 is mustard, 800 is blueberry.
+> These are the definitive names and numbers."* — owner, 2026-08-13
+
+**`[00:46:45]` resolves as reading B — enumeration.** *"There's the mayonnaise. There's the 50"*
+points at two lines in turn. **Mayo is the 200; `A-020` is untouched by the utterance.**
+
+**This session's own record was right.** `C-018` gave three grounds for reading B and **declined to
+adjudicate anyway**. The owner's ruling agrees with the reading it already held. Filing the
+conflict rather than adopting the convenient answer cost nothing and is why the closure is clean.
+
+**What the closure does NOT establish, and `C-018`'s closure block says so at length:**
+§3.3's *"the recording wins"* was **neither applied nor overridden** — it cannot close a record
+whose recording is two-ways readable. **The owner supplied a DISAMBIGUATION, not a trump card.
+There is no "Tier 0."** `A-020` stays `RESOLVED — OWNER ATTESTATION` (the weakest resolved status)
+and **`SOURCING_HIERARCHY.md` §3.4's re-check obligation on it REMAINS LIVE.** *Required Research*
+is still unsatisfied and **V12 is still the cheapest route to Tier 1 closure.**
+
+**⚠ The same ruling overturned two rows of `A-020`** — **ketchup = 5, mustard = 13**, inverting the
+prior record. It contradicts **no recording** (`ketchup` occurs nowhere in genuine audio; `mustard`
+0× in V05–V08) and overturns only Tier 3 and the project's own V06 inference. Recorded on the
+integration branch at `D-041`; flagged here and in `REVIEW_INDEX.md` item 97 because **a reviewer
+is entitled to put it back to the owner.**
+
+**`SETUP_ISSUES.md` was NOT written and item 100 is closed anyway.** §3.2 **Case C** is *"genuine
+conflict — do not adjudicate, log it, surface to the owner."* The owner has adjudicated; there is
+no live conflict for an entry to describe. **Discharged, not performed** — `D-041` consequence 5.
+
+### 2. ⭐ `PT-037` → `PT-039` — owner REVERSED this session's proposed resolution
+
+> ***"Move V11 not V10 since V11 is after."*** — owner, 2026-08-13
+
+**V10 KEEPS `PT-037` and `PT-038`. V11's hold-duration test is re-issued as `PT-039`.**
+
+This session proposed the **opposite** (V11 keeps 037; V10's reservations move to 039/040), and
+reasoned from the **artifact**: a committed, run pre-registration should not move, a prose
+reservation is free to. **The owner ruled on precedence** — V10 filed first, so V10 keeps its
+numbers. **The reversal is applied exactly as this session said it would be if reversed:**
+`SUPERSEDED — NUMBERING`, re-issued, **result retained in full**, nothing in the pre-registration's
+§§1–9 touched.
+
+**⚠ `PT-040` WAS NOT ALLOCATED, AND A SESSION EXPECTING IT WILL BE CONFUSED.** The reversal was
+framed as *"V11 moves to `PT-039`/`PT-040`"*, on the reading that V11 held both numbers. **It did
+not — V11 filed exactly ONE pre-registration.** Every `PT-038` reference anywhere in V11's
+artifacts points at **V10's** safety-trade reservation, which was never V11's to move. **`PT-039`
+is the only renumbering; `PT-040` remains free.**
+
+**V10's numbering was NOT touched, at all.** `BT_V10_0001.md` §9, `V10_REVIEW_R1.md`,
+`V10_MASTERY_REPORT.md`, `REVIEW_INDEX.md` items 86 and 89, and every V10 `LOG.md` and
+`COURSE_PROGRESS.md` line keep `PT-037`/`PT-038` unchanged — verified by grep after the edit, not
+assumed. `REVIEW_PROTOCOL.md` §11 (no overwriting a completed review) is intact.
+
+**Renames are git-tracked, and no stub was left at the old paths.** A `PT-037` placeholder would
+squat the number the owner has just ruled belongs to V10 — the opposite of the ruling. Nothing is
+deleted: content is unchanged, `git log --follow` reaches the full history, and the pre-run
+ordering is recorded in the file.
+
+**⭐ The `D-026`/`D-027` commit-timestamp ordering is UNAFFECTED**, and this is the thing a reviewer
+should check first. Verification rests on **commit order, not filename**:
+`beee96a` (pre-registration) → `6da82b3` (runner) → `4d2bdcd` (output) → `735a458` (scoring).
+**This re-issue is a later commit than all four**, so it cannot backdate anything.
+
+**The self-disclosure is what made this cheap.** The collision was found late — by the check
+`D-038a` consequence 1 requires, run against **files** when the reservations were **prose** — but it
+was disclosed with a specific remedy attached, and the owner could therefore rule in one sentence.
+
+### Files
+
+- **Renamed (git-tracked, content unchanged):**
+  `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-037_how_long_must_the_low_hold.md` → `PT-039_…md`;
+  `06_MANUAL_BACKTEST/scripts/run_pt037.py` → `run_pt039.py`;
+  `06_MANUAL_BACKTEST/V11/data/pt037_output.txt` → `pt039_output.txt`.
+- **Updated (V11-owned references only):** the re-issued pre-registration (governing block + §0
+  reversal note; §§1–9 self-references relabelled, **design untouched**);
+  `06_MANUAL_BACKTEST/V11/BT_V11_0001.md`; `07_MASTERY_REPORTS/V11_MASTERY_REPORT.md`;
+  `03_LESSON_NOTES/V11_INTERPRETATION.md`, `V11_SOURCE_NOTES.md`;
+  `05_HOMEWORK/V11/V11_HOMEWORK.md`; `02_TRANSCRIPTS/V11/V11_TRANSCRIPT.md` (**notes only — the
+  verbatim body is untouched**); `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` (`A-020` V11
+  annotation cleared; one `PT` reference); `11_CONTRADICTIONS/CONTRADICTIONS.md` (`C-018` closed);
+  `18_REVIEW/REVIEW_INDEX.md` (items **97**, **98**, **99**, **100**, **101**);
+  `00_SYSTEM/COURSE_PROGRESS.md` (V11 row, carry-forwards **(g)** and **(h)**); this log.
+- **NOT touched, deliberately:** `18_REVIEW/V10/V10_REVIEW_R1.md`, `06_MANUAL_BACKTEST/V10/**`,
+  `07_MASTERY_REPORTS/V10_MASTERY_REPORT.md`, `REVIEW_INDEX.md` items **86**/**89**, and every
+  other V10-owned `PT-037`/`PT-038` reference — **V10's numbering stays exactly as filed**;
+  `00_SYSTEM/DECISIONS.md` and `00_SYSTEM/SETUP_ISSUES.md` (**POLICY** ledgers — `D-041` was made
+  on the integration branch, `D-038a`); all superseded text, retained per
+  `REMEDIATION_PROTOCOL.md` §2.
+
+### Git
+
+Branch `video/v11`, own worktree. `git fetch origin` first, **zero divergence** confirmed. Paths
+staged **explicitly**; `git diff --staged` read before the commit; **`git add -A` never used.**
+
+`scripts/validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+### Next Action
+
+**V11's independent review (R1) — unchanged, still owed, still the only thing that can make V11
+`COMPLETE`.** Three things are handed to the reviewer: (1) the **ketchup/mustard inversion** in
+`D-041`, reversible on a word; (2) `PT-039`'s re-issue and the commit-ordering audit trail above;
+(3) `PT-040` is **free**, not V11's, despite the framing of the ruling that produced this entry.
