@@ -1,0 +1,283 @@
+==============================================================================
+PT-043 -- the DAILY close, 25-50 pips off the high or low
+==============================================================================
+QA gate (development scope): PASS   manifest sha256=c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+seed=20260814  iterations=2000  band=25-50 pips inclusive
+scope = DEVELOPMENT only (D-035). No D-044 year is read.
+
+------------------------------------------------------------------------------
+WINDOW W-B   ARM A
+------------------------------------------------------------------------------
+  n = 511 complete session days; 6 excluded for incomplete sessions
+    excluded: 2014-06-02 (8/96), 2014-12-24 (84/96), 2014-12-26 (92/96), 2015-01-01 (2/96), 2015-08-21 (95/96), 2015-12-24 (84/96)
+
+  OUTCOMES (observed) vs N1 random-intraday-close control (median of 2000)
+    O1 min in band  (V15 'or')     p_hat=0.3640  Wilson95=[0.3234,0.4066]  N1 median=0.3757 [P5=0.3444,P95=0.4090]  delta=-0.0117
+    O2 both in band (V10 'and')    p_hat=0.0939  Wilson95=[0.0716,0.1223]  N1 median=0.1018 [P5=0.0841,P95=0.1213]  delta=-0.0078
+    O3 max in band  (descriptive)  p_hat=0.2427  Wilson95=[0.2075,0.2817]  N1 median=0.2485 [P5=0.2290,P95=0.2681]  delta=-0.0059
+
+  D1 -- distributions, pips
+    d_hi (H-C)         n=  511  median=   40.80  IQR=[  23.45,  73.25]  D1=  13.50 D9= 112.50  median95CI=[37.00,45.20]
+    d_lo (C-L)         n=  511  median=   38.40  IQR=[  18.95,  68.60]  D1=   7.50 D9= 111.00  median95CI=[34.79,42.20]
+    min(d_hi,d_lo)     n=  511  median=   21.40  IQR=[  12.60,  32.40]  D1=   5.50 D9=  44.90  median95CI=[19.90,23.30]
+    day range H-L      n=  511  median=   96.00  IQR=[  70.20, 130.85]  D1=  54.20 D9= 170.20  median95CI=[90.70,101.01]
+
+  D2 -- five largest-range days (reported, NOT excluded)
+    2015-03-18  range= 533.10  d_hi= 191.20  d_lo= 341.90
+    2015-03-19  range= 321.20  d_hi= 258.50  d_lo=  62.70
+    2015-05-08  range= 284.30  d_hi=  68.30  d_lo= 216.00
+    2015-05-01  range= 283.00  d_hi= 262.40  d_lo=  20.60
+    2015-08-26  range= 267.40  d_hi= 261.20  d_lo=   6.20
+
+  N3 -- where the closes actually sit (DESCRIPTIVE, changes no verdict)
+    min(d_hi,d_lo) in [0,25]     0.5832
+    min(d_hi,d_lo) in [25,50]    0.3640
+    min(d_hi,d_lo) in [50,75]    0.0509
+    min(d_hi,d_lo) in [75,100]   0.0000
+    min(d_hi,d_lo) in [100,inf]  0.0020
+
+  N2 -- day-boundary offset control on O1
+    offset -120 min   O1=0.3686   delta_vs_17:00=+0.0046
+    offset  -60 min   O1=0.3440   delta_vs_17:00=-0.0200
+    offset  +60 min   O1=0.3447   delta_vs_17:00=-0.0192
+    offset +120 min   O1=0.3496   delta_vs_17:00=-0.0144
+
+  VERDICT O1 (HEADLINE): NOT SUPPORTED
+    reason: p_hat=0.3640, N1 delta -0.0117
+  VERDICT O2 (secondary): CONTRADICTED AS STATED
+    reason: p_hat=0.0939 < 0.10 against the speaker's 'always' (clause a)
+
+------------------------------------------------------------------------------
+WINDOW W-A   ARM A
+------------------------------------------------------------------------------
+  n = 256 complete session days; 2 excluded for incomplete sessions
+    excluded: 2015-08-21 (95/96), 2015-12-24 (84/96)
+
+  OUTCOMES (observed) vs N1 random-intraday-close control (median of 2000)
+    O1 min in band  (V15 'or')     p_hat=0.4180  Wilson95=[0.3592,0.4792]  N1 median=0.4297 [P5=0.3828,P95=0.4766]  delta=-0.0117
+    O2 both in band (V10 'and')    p_hat=0.0781  Wilson95=[0.0511,0.1176]  N1 median=0.0859 [P5=0.0625,P95=0.1133]  delta=-0.0078
+    O3 max in band  (descriptive)  p_hat=0.1445  Wilson95=[0.1067,0.1929]  N1 median=0.1602 [P5=0.1367,P95=0.1836]  delta=-0.0156
+
+  D1 -- distributions, pips
+    d_hi (H-C)         n=  256  median=   50.35  IQR=[  29.17,  89.37]  D1=  16.40 D9= 129.10  median95CI=[44.35,56.10]
+    d_lo (C-L)         n=  256  median=   46.55  IQR=[  21.78,  81.30]  D1=   8.00 D9= 126.40  median95CI=[39.75,50.90]
+    min(d_hi,d_lo)     n=  256  median=   25.85  IQR=[  14.53,  39.13]  D1=   6.20 D9=  50.05  median95CI=[23.30,28.50]
+    day range H-L      n=  256  median=  113.55  IQR=[  86.35, 142.60]  D1=  65.90 D9= 188.30  median95CI=[107.45,121.10]
+
+  D2 -- five largest-range days (reported, NOT excluded)
+    2015-03-18  range= 533.10  d_hi= 191.20  d_lo= 341.90
+    2015-03-19  range= 321.20  d_hi= 258.50  d_lo=  62.70
+    2015-05-08  range= 284.30  d_hi=  68.30  d_lo= 216.00
+    2015-05-01  range= 283.00  d_hi= 262.40  d_lo=  20.60
+    2015-08-26  range= 267.40  d_hi= 261.20  d_lo=   6.20
+
+  N3 -- where the closes actually sit (DESCRIPTIVE, changes no verdict)
+    min(d_hi,d_lo) in [0,25]     0.4805
+    min(d_hi,d_lo) in [25,50]    0.4180
+    min(d_hi,d_lo) in [50,75]    0.0977
+    min(d_hi,d_lo) in [75,100]   0.0000
+    min(d_hi,d_lo) in [100,inf]  0.0039
+
+  N2 -- day-boundary offset control on O1
+    offset -120 min   O1=0.4069   delta_vs_17:00=-0.0111
+    offset  -60 min   O1=0.4069   delta_vs_17:00=-0.0111
+    offset  +60 min   O1=0.3883   delta_vs_17:00=-0.0296
+    offset +120 min   O1=0.4029   delta_vs_17:00=-0.0151
+
+  VERDICT O1 (reported): NOT SUPPORTED
+    reason: p_hat=0.4180, N1 delta -0.0117
+  VERDICT O2 (secondary): CONTRADICTED AS STATED
+    reason: p_hat=0.0781 < 0.10 against the speaker's 'always' (clause a)
+
+------------------------------------------------------------------------------
+WINDOW W-B   ARM B
+------------------------------------------------------------------------------
+  n = 444 complete session days; 141 excluded for incomplete sessions
+    excluded: 2014-03-10 (92/96), 2014-03-15 (4/96), 2014-03-17 (92/96), 2014-03-22 (4/96), 2014-03-24 (92/96), 2014-03-29 (4/96), 2014-03-31 (92/96), 2014-04-05 (4/96), 2014-04-07 (92/96), 2014-04-12 (4/96), 2014-04-14 (92/96), 2014-04-19 (4/96), +129 more
+
+  OUTCOMES (observed) vs N1 random-intraday-close control (median of 2000)
+    O1 min in band  (V15 'or')     p_hat=0.3604  Wilson95=[0.3171,0.4060]  N1 median=0.3829 [P5=0.3491,P95=0.4189]  delta=-0.0225
+    O2 both in band (V10 'and')    p_hat=0.0811  Wilson95=[0.0591,0.1102]  N1 median=0.1014 [P5=0.0833,P95=0.1216]  delta=-0.0203
+    O3 max in band  (descriptive)  p_hat=0.2095  Wilson95=[0.1742,0.2497]  N1 median=0.2410 [P5=0.2207,P95=0.2635]  delta=-0.0315
+
+  D1 -- distributions, pips
+    d_hi (H-C)         n=  444  median=   42.25  IQR=[  23.47,  75.22]  D1=  12.23 D9= 118.00  median95CI=[37.55,45.20]
+    d_lo (C-L)         n=  444  median=   40.20  IQR=[  19.03,  69.00]  D1=   8.73 D9= 110.70  median95CI=[35.85,45.90]
+    min(d_hi,d_lo)     n=  444  median=   21.60  IQR=[  12.30,  33.52]  D1=   5.90 D9=  44.50  median95CI=[19.55,23.30]
+    day range H-L      n=  444  median=   96.35  IQR=[  71.90, 134.25]  D1=  55.82 D9= 177.35  median95CI=[92.00,102.50]
+
+  D2 -- five largest-range days (reported, NOT excluded)
+    2015-03-19  range= 479.50  d_hi= 441.40  d_lo=  38.10
+    2015-03-18  range= 316.60  d_hi=   3.60  d_lo= 313.00
+    2015-05-08  range= 287.10  d_hi=  66.00  d_lo= 221.10
+    2015-05-01  range= 283.00  d_hi= 250.60  d_lo=  32.40
+    2015-03-20  range= 270.20  d_hi=  43.60  d_lo= 226.60
+
+  N3 -- where the closes actually sit (DESCRIPTIVE, changes no verdict)
+    min(d_hi,d_lo) in [0,25]     0.5833
+    min(d_hi,d_lo) in [25,50]    0.3604
+    min(d_hi,d_lo) in [50,75]    0.0518
+    min(d_hi,d_lo) in [75,100]   0.0045
+    min(d_hi,d_lo) in [100,inf]  0.0000
+
+  N2 -- day-boundary offset control on O1
+    offset -120 min   O1=0.3818   delta_vs_17:00=+0.0214
+    offset  -60 min   O1=0.3464   delta_vs_17:00=-0.0139
+    offset  +60 min   O1=0.3445   delta_vs_17:00=-0.0158
+    offset +120 min   O1=0.3399   delta_vs_17:00=-0.0205
+
+  VERDICT O1 (reported): NOT SUPPORTED
+    reason: p_hat=0.3604, N1 delta -0.0225
+  VERDICT O2 (secondary): CONTRADICTED AS STATED
+    reason: p_hat=0.0811 < 0.10 against the speaker's 'always' (clause a)
+
+------------------------------------------------------------------------------
+WINDOW W-A   ARM B
+------------------------------------------------------------------------------
+  n = 222 complete session days; 70 excluded for incomplete sessions
+    excluded: 2015-03-09 (92/96), 2015-03-14 (4/96), 2015-03-16 (92/96), 2015-03-21 (4/96), 2015-03-23 (92/96), 2015-03-28 (4/96), 2015-03-30 (92/96), 2015-04-04 (4/96), 2015-04-06 (92/96), 2015-04-11 (4/96), 2015-04-13 (92/96), 2015-04-18 (4/96), +58 more
+
+  OUTCOMES (observed) vs N1 random-intraday-close control (median of 2000)
+    O1 min in band  (V15 'or')     p_hat=0.4144  Wilson95=[0.3516,0.4801]  N1 median=0.4279 [P5=0.3784,P95=0.4775]  delta=-0.0135
+    O2 both in band (V10 'and')    p_hat=0.0721  Wilson95=[0.0448,0.1139]  N1 median=0.0946 [P5=0.0676,P95=0.1216]  delta=-0.0225
+    O3 max in band  (descriptive)  p_hat=0.1441  Wilson95=[0.1040,0.1964]  N1 median=0.1712 [P5=0.1441,P95=0.1937]  delta=-0.0270
+
+  D1 -- distributions, pips
+    d_hi (H-C)         n=  222  median=   48.85  IQR=[  28.80,  87.63]  D1=  12.96 D9= 133.28  median95CI=[42.80,56.45]
+    d_lo (C-L)         n=  222  median=   47.75  IQR=[  22.72,  81.00]  D1=   9.60 D9= 128.24  median95CI=[40.90,54.35]
+    min(d_hi,d_lo)     n=  222  median=   25.85  IQR=[  13.50,  39.08]  D1=   7.24 D9=  50.59  median95CI=[22.80,29.60]
+    day range H-L      n=  222  median=  115.95  IQR=[  84.37, 144.57]  D1=  64.92 D9= 192.10  median95CI=[107.60,123.41]
+
+  D2 -- five largest-range days (reported, NOT excluded)
+    2015-03-19  range= 479.50  d_hi= 441.40  d_lo=  38.10
+    2015-03-18  range= 316.60  d_hi=   3.60  d_lo= 313.00
+    2015-05-08  range= 287.10  d_hi=  66.00  d_lo= 221.10
+    2015-05-01  range= 283.00  d_hi= 250.60  d_lo=  32.40
+    2015-03-20  range= 270.20  d_hi=  43.60  d_lo= 226.60
+
+  N3 -- where the closes actually sit (DESCRIPTIVE, changes no verdict)
+    min(d_hi,d_lo) in [0,25]     0.4820
+    min(d_hi,d_lo) in [25,50]    0.4144
+    min(d_hi,d_lo) in [50,75]    0.0991
+    min(d_hi,d_lo) in [75,100]   0.0045
+    min(d_hi,d_lo) in [100,inf]  0.0000
+
+  N2 -- day-boundary offset control on O1
+    offset -120 min   O1=0.4412   delta_vs_17:00=+0.0268
+    offset  -60 min   O1=0.3873   delta_vs_17:00=-0.0272
+    offset  +60 min   O1=0.3975   delta_vs_17:00=-0.0169
+    offset +120 min   O1=0.3738   delta_vs_17:00=-0.0406
+
+  VERDICT O1 (reported): NOT SUPPORTED
+    reason: p_hat=0.4144, N1 delta -0.0135
+  VERDICT O2 (secondary): CONTRADICTED AS STATED
+    reason: p_hat=0.0721 < 0.10 against the speaker's 'always' (clause a)
+
+==============================================================================
+HEADLINE (PT-043 §6): W-B, Arm A, O1
+  NOT SUPPORTED   p_hat=0.3640  N1=0.3757  n=511
+==============================================================================
+
+RESULTS_JSON_BEGIN
+{
+  "W-A/A": {
+    "downgraded_by_clause_c": false,
+    "median_day_range_pips": 113.55000000000004,
+    "n": 256,
+    "n1_median": {
+      "O1": 0.4296875,
+      "O2": 0.0859375,
+      "O3": 0.16015625
+    },
+    "n2_O1": {
+      "-120": 0.4068627450980392,
+      "-60": 0.4068627450980392,
+      "120": 0.4029126213592233,
+      "60": 0.3883495145631068
+    },
+    "n_excluded": 2,
+    "observed": {
+      "O1": 0.41796875,
+      "O2": 0.078125,
+      "O3": 0.14453125
+    },
+    "verdict_O1": "NOT SUPPORTED",
+    "verdict_O2": "CONTRADICTED AS STATED"
+  },
+  "W-A/B": {
+    "downgraded_by_clause_c": false,
+    "median_day_range_pips": 115.95000000000022,
+    "n": 222,
+    "n1_median": {
+      "O1": 0.42792792792792794,
+      "O2": 0.0945945945945946,
+      "O3": 0.17117117117117117
+    },
+    "n2_O1": {
+      "-120": 0.4411764705882353,
+      "-60": 0.3872549019607843,
+      "120": 0.3737864077669903,
+      "60": 0.39748953974895396
+    },
+    "n_excluded": 70,
+    "observed": {
+      "O1": 0.4144144144144144,
+      "O2": 0.07207207207207207,
+      "O3": 0.14414414414414414
+    },
+    "verdict_O1": "NOT SUPPORTED",
+    "verdict_O2": "CONTRADICTED AS STATED"
+  },
+  "W-B/A": {
+    "downgraded_by_clause_c": false,
+    "median_day_range_pips": 96.00000000000053,
+    "n": 511,
+    "n1_median": {
+      "O1": 0.37573385518590996,
+      "O2": 0.10176125244618395,
+      "O3": 0.24853228962818003
+    },
+    "n2_O1": {
+      "-120": 0.36855036855036855,
+      "-60": 0.343980343980344,
+      "120": 0.34963325183374083,
+      "60": 0.34474327628361856
+    },
+    "n_excluded": 6,
+    "observed": {
+      "O1": 0.3639921722113503,
+      "O2": 0.09393346379647749,
+      "O3": 0.24266144814090018
+    },
+    "verdict_O1": "NOT SUPPORTED",
+    "verdict_O2": "CONTRADICTED AS STATED"
+  },
+  "W-B/B": {
+    "downgraded_by_clause_c": false,
+    "median_day_range_pips": 96.34999999999948,
+    "n": 444,
+    "n1_median": {
+      "O1": 0.38288288288288286,
+      "O2": 0.10135135135135136,
+      "O3": 0.240990990990991
+    },
+    "n2_O1": {
+      "-120": 0.3817733990147783,
+      "-60": 0.3464373464373464,
+      "120": 0.33985330073349634,
+      "60": 0.3445378151260504
+    },
+    "n_excluded": 141,
+    "observed": {
+      "O1": 0.36036036036036034,
+      "O2": 0.08108108108108109,
+      "O3": 0.20945945945945946
+    },
+    "verdict_O1": "NOT SUPPORTED",
+    "verdict_O2": "CONTRADICTED AS STATED"
+  }
+}
+RESULTS_JSON_END

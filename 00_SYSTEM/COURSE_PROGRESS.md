@@ -11,6 +11,121 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
+V15 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
+                     branch video/v15 (worktree MMM-Agents-v15, D-038).
+
+                     ⚠⚠ AUTHORISATION, RECORDED BECAUSE THE HARD STOP REQUIRED
+                     IT: the V14 block below states "NO SESSION MAY OPEN V15
+                     WITHOUT THE OWNER'S SEPARATE GO-AHEAD." THE OWNER GAVE ONE
+                     -- this session was opened by a direct owner instruction to
+                     run the standard per-video ingestion pipeline for V15,
+                     2026-08-14. That instruction is the separate go-ahead the
+                     hard stop demanded. Item 185's gap-audit input is NOT
+                     thereby answered and remains the owner's to decide.
+
+                     WEEK 7, 2012-05-06. Subject: the ADR -- the average daily
+                     range, lifted off its oscillator sub-panel and replotted as
+                     two horizontal levels, then used as ONE LEG of a four-part
+                     confluence filter for the New York reversal.
+                     SPEAKER: 100% course author, 0% guest, HIGH. TESTED afresh
+                     per V14 GATE (d), NOT inherited. He names himself at
+                     [00:04:04]-[00:04:12]; handover scan returns ZERO across
+                     492 markers.
+
+                     ⭐⭐ THE ORLANDO RECORDING NEVER EXISTED. [00:05:21], first
+                     person: "The same shit that happened in Orlando where I
+                     didn't get a recording out of there is exactly why I'm not
+                     streaming this class." The slide at 04:40 PRINTS "This Class
+                     will NOT be recorded or streamed!!!!!!!" of the June live
+                     class. A-092's Orlando half moves from ABSENT to NEVER MADE,
+                     and no future session can find it.
+
+                     ⭐⭐ WEEK 6 IS 2012-04-29, AND THE DECIDER WAS ALREADY
+                     COMMITTED -- IN V13. V13 [00:05:20] "Next session is going
+                     to be Sunday the 29th"; V13 [00:05:33] "we'll get started
+                     again with week six through ten". 2012-04-22 is the
+                     announced week off (Orlando). The calendar closes with ZERO
+                     residual. THE TWO ABSENCES ARE OF DIFFERENT KINDS: Orlando
+                     was NEVER RECORDED; Week 6 WAS HELD and whether it was ever
+                     recorded is UNKNOWN. Corroborated independently by the
+                     printed Week-7 roll-call (five drills, all of which this
+                     corpus already holds) and by TWO DATED FORUM POSTS that
+                     BRACKET 2012-04-29 (Apr 28 19:57 and Apr 30 03:12).
+                     PROCESS POINT: V14 R1 offered a forward-read decider for
+                     the Wk9->Wk10 gap; the Week-6 decider needed none -- it was
+                     BEHIND us. Check backwards before arguing to read forwards.
+
+                     ⭐ A-084's IN-CORPUS ABSENCE IS NOW EXPLAINED, NOT MERELY
+                     UNLUCKY -- and it is NOT resolved. 623 frames: no properties
+                     dialog, no Navigator, no inputs tab (2,670 across V12-V15).
+                     Both TDI legends print TDI_MMM + three values, no tuple.
+                     THE NEW DATUM IS PRINTED: the June web-class slide reads
+                     "6pm-10pm with Sat as the Indicator chart setup day." THE
+                     SETUP CONTENT WAS SCHEDULED INTO A SEPARATE WEB CLASS, NOT
+                     INTO THE BOOTCAMP -- which is why four consecutive lessons
+                     have no setup screen. That class is not in this corpus.
+                     A-084/A-085/A-086 and item 157 are EXACTLY as open as V14
+                     left them. The two new TDI_MMM readouts are bookkeeping,
+                     not progress, and are recorded as such.
+
+                     ⭐ PT-043 RUN: O1 NOT SUPPORTED, O2 CONTRADICTED AS STATED,
+                     identically in all four window x arm cells. V15's daily
+                     "25 to 50 pips off the high or low" lands 36.4% of the time
+                     -- and a RANDOM MINUTE OF THE SAME DAY lands 37.6%. THE
+                     CONTROL IS THE FINDING. Median nearer-distance 21.4 pips,
+                     just under the band's floor. The 600-1000 pip week was
+                     DELIBERATELY NOT re-tested (BT_V10_0001 already returned
+                     CONTRADICTED, 0/180); what V15 adds there is DURABILITY.
+
+                     ⭐ C-022 + A-100: THE LESSON'S CENTRAL OBJECT CANNOT BE
+                     DRAWN. The ADR levels "creep up or creep down to fit price
+                     action" [00:28:34] and are "Not repaint" [00:28:44] -- ten
+                     seconds apart, and incompatible as MT4 uses those words. No
+                     lookback, no range definition, no anchor, no day boundary is
+                     stated anywhere in Tier 1. Consequence: an ADR level read at
+                     a past timestamp cannot be known to have been visible then,
+                     so the confluence rule is NOT BACKTESTABLE today. Declared
+                     in PT-043 §1b BEFORE the run.
+
+                     A-096: S1/R1/M1-M4 are MT4 PIVOT levels, not M-formations --
+                     decoded from three frames. Tier 2 corroborates on three
+                     points and pairs M3 with the EMA 200, matching [00:44:53]'s
+                     "your mayonnaise, your M3" under D-043. DECODED, NOT
+                     DEFINED: the "M1/M3 day" trigger is Tier 2 ONLY and the
+                     lesson promises the explanation and never gives it.
+
+                     A-097 "22-trade" (survives THREE ASR renderings, so a term
+                     and not a mishearing) and "3333"/"3.33"; A-098 the
+                     "five for five" student result, logged as ANECDOTE and
+                     explicitly not usable against PT-042; A-099 Tier 2 DEFINES
+                     "blood in the water" as the Market Base Line cross, and the
+                     "one hour" qualifier stays unexplained.
+
+                     D-043 gets a THIRD Tier-1 corroboration, by ORDERING: yellow
+                     turns before red at every pivot on two 2012 instructor
+                     charts. The 50<->water / 200<->mayo assignment is NOT closed.
+
+                     Q-016: the FIFTH consecutive VISUAL_INDEX.md. Byte-clone of
+                     V14's, zero content lines changed; the one surviving image is
+                     the TITLE CARD indexed as a five-EMA Asian-box chart -- the
+                     same sentence Q-015 found applied to a BLANK screen; RULES.md
+                     quotes two sentences that occur ZERO times in 492 markers,
+                     one of them a FABRICATED STOP-LOSS RULE in quotation marks.
+
+                     SWF_CAPTURE_RECIPE.md §8a: FIRST COMPLIANCE RUN, all five
+                     steps performed and the verification table published
+                     (04_SCREENSHOTS/V15/INDEX.md §0). Offset +15 s, origin not
+                     rate, files named from the burned timecode. REFINEMENT to
+                     item 186: the dominant term is the recipe's own FIXED 1500 ms
+                     guard, which at SPEED=10 is exactly 15 presentation seconds
+                     -- which is why four sweeps returned +16/+15/+16/+15 rather
+                     than a scatter. §8a's no-hardcoding rule STANDS; the durable
+                     fix is a POLICY edit and is NOT made on this branch (item 190).
+
+                     V15 SETS NO HOMEWORK. Declared substitution; no assignment
+                     invented. Sourcing hierarchy observed -- the Mauro PDF was
+                     searched BEFORE any web research and NO web research was
+                     performed. validate_project.py: PASS.
 V14 (2026-08-14):    ⭐ R1 RETURNED — REVISE, 0 CRITICAL / 0 MAJOR / 5 MINOR /
                      9 NOTE, HIGH confidence, D-003 SATISFIED (independent
                      reviewer, branch review/v14, cut POST-D-044 at 5218cce).
@@ -2095,7 +2210,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-080 + A-064 + A-031 + A-032 CLOSED, A-020 mayo row → Tier 1, C-019 opened, PT-040 MATERIAL |
 | V13 | Wk5 P1 | 01:05:22 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-084 NARROWED not closed (A-087), legend route CLOSED corpus-wide, A-088 + C-020 opened, Q-014 filed, PT-041 PARTIALLY SUPPORTED |
 | V14 | Wk5 P2 | 00:47:48 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** *(superseded, retained: `REVIEW REQUIRED`)* | **R1 REVISE** 0C/0M/5m/9n, HIGH, 2026-08-14 → **R1 fix round** ⚠ **SELF-VERIFIED**, items 172–176 `CLOSED — SELF-VERIFIED AT OWNER DIRECTION`, **NOT** `CLOSED — VERIFIED`; **D-003 NOT satisfied for the fix round, no R2, no independent PASS**; item 186 opened | ⭐ **R1 RETURNED — V15 GATE OPEN under D-024, AND THE OWNER'S HARD STOP STANDS.** Items 172-176 (MINOR) OWED; V14 **NOT COMPLETE**. Rulings: A-056 **NOT CLOSED** (item 178) · A-084 defeater **HOLDS** vs 4 attacks (184) · D3 **legitimate but unnecessary and unverified** (179) · C-021 forwarded to owner · ⭐ A-056 ANSWERED (closure put to reviewer), A-077 advanced (A-094), A-084 NARROWED not closed 2nd consecutive, A-086 advanced + C-021 opened, A-089-A-094 filed, Q-015 filed, PT-042 NOT SUPPORTED  · ⚠ **REMEDIATION 2026-08-14:** all five MINORs closed **SELF-VERIFIED**; ⭐ item **186** opened — the item-174 frame offset is a **dropped step, not a broken tool** (V12 §0 and V13 both document and correct it; `SWF_CAPTURE_RECIPE.md` §8a now mandatory); ⭐ item **176** — a **second, larger, UNEXAMINED** `Wk9→Wk10` four-week gap, so the gap audit's figure is **2 KNOWN + up to ~3 UNKNOWN, not 2**; ⚠⚠ **V15 GATE OPEN ≠ PROCEED — THE OWNER'S HARD STOP STANDS** |
-| V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 197–202) · ⭐ **V16 GATE OPEN under D-024** · ⚠⚠ **the six student-owned columns to the left are STILL `⬜` and that is open item 199 — the narrative block and the V16 GATE section of this same file record a complete student pass. Only the Reviewer and Final Status cells were filled in by R1** |
 | V16 | Wk7 P2 | 00:44:35 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V17 | Wk8 P1 | 00:57:09 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V18 | Wk8 P2 | 00:46:08 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -2405,4 +2520,123 @@ Carry into V15, and read this before starting:
         that wants to reach into V16+.
       * THE Wk9 -> Wk10 FOUR-WEEK GAP IS UNEXAMINED (item 176). Its cheap
         decider is the same D3 shape and should WAIT for item 179's ruling.
+
+V16 GATE:            ⭐ **OPEN.** V15 R1 returned 2026-08-14 on branch
+                     `review/v15` (`D-003` satisfied -- independent reviewer,
+                     no V15 artifact authored, worktree cut from integration
+                     POST-D-045..D-050 at 61042e5): **REVISE, 0 CRITICAL /
+                     0 MAJOR / 6 MINOR / 13 NOTE, HIGH confidence.** Under
+                     D-024 a round with zero CRITICAL and zero MAJOR OPENS the
+                     next lesson. Items 197-202 (MINOR) are OWED before V15 can
+                     reach COMPLETE; items 203-215 are NOTE.
+                     ⚠ V15 is **NOT COMPLETE** -- `D-003` reserves closure to an
+                     independent reviewer and V15 reaches COMPLETE only at a
+                     reviewer PASS.
+                     ⭐ **What R1 re-derived rather than read:** PT-043
+                     independently re-implemented from the pre-registration
+                     (O1 0.3645 vs 0.3640, O1-N1 = -0.0117 EXACT, median
+                     nearer-distance 21.40 pips EXACT, verdict unchanged in all
+                     four cells); C-022 both halves re-transcribed on a
+                     different ASR engine and CONFIRMED VERBATIM; Q-016's three
+                     SHA-256s, all three diffs and every transcript negative
+                     re-measured; the forum-post dates and the web-class slide
+                     read off the pixels; and ⭐ **V13's Week-6 lines
+                     re-transcribed FROM V13's OWN AUDIO** -- the check the
+                     submission declared it had not done. IT CONFIRMS VERBATIM.
+
+                     ⚠ **SUPERSEDED, retained per REMEDIATION_PROTOCOL.md §2 --
+                     this block read "🔴 CLOSED until V15's R1 returns (D-004)"
+                     and that was the correct state to hold until R1 returned.**
+                     ⚠⚠ **AND THE OWNER'S HARD STOP IS NOT DISCHARGED BY THIS
+                     SESSION.** The V14 block's stop was lifted for V15 ONLY, by
+                     a direct owner instruction naming V15. **It does not extend
+                     to V16.** Item 185's gap-audit input is still awaiting the
+                     owner's decision, and V15 has given that decision new
+                     material (see carry-forward (a) and (b) below) rather than
+                     making it.
+
+Carry into V16, and read this before starting:
+
+  (a) ⭐⭐ THE GAP AUDIT HAS NEW, DECISIVE MATERIAL AND THE COUNT HAS CHANGED
+      IN KIND, NOT IN NUMBER. Two recordings are still absent from the Wk5 ->
+      Wk7 region, but they are absences of DIFFERENT KINDS and item 185's
+      audit should not average them:
+        * ORLANDO (2012-04-21) -- NO RECORDING WAS OBTAINED. V15
+          [00:05:21], first person, contemporaneous ("I didn't get a
+          recording out of there"), CONFIRMED FROM AUDIO by R1.
+          UNRECOVERABLE. Stop looking.
+          ⚠ AMENDED BY V15 R1 (item 201): the earlier wording here and in
+          the V15 artifacts read "NEVER RECORDED". V13 [00:02:26] -- also
+          confirmed from audio by R1 -- says "we will try to either stream
+          it and record it or just record it. So we'll hang it in the
+          forum". An attempt was INTENDED; nothing usable resulted. The
+          operative conclusion is unchanged: there is no Orlando file and
+          none is recoverable.
+        * WEEK 6 (2012-04-29) -- HELD. V13 [00:05:20] schedules it by date and
+          V13 [00:05:33] by number ("week six through ten"). Whether it was
+          ever recorded is UNKNOWN and nothing in V13/V14/V15 says.
+      A-092 should be amended to carry the distinction. ⚠ M5's separate point
+      -- the Wk9 -> Wk10 FOUR-WEEK gap (item 176) -- is UNEXAMINED and this
+      session did not touch it.
+
+  (b) ⭐ A-084's IN-CORPUS FRAME HUNT SHOULD BE CLOSED AS *EXPLAINED*. The
+      June web-class slide prints "Sat as the Indicator chart setup day" --
+      the setup content was scheduled OUTSIDE the bootcamp series. Four
+      lessons and 2,670 frames of nothing is now accounted for. DO NOT spend
+      V16 hunting frames for it. The live routes are unchanged: the OWNER
+      ruling on !SM_TDI (item 157), or material from outside this corpus.
+      ⭐ SHARPENED BY V15 R1 (item 211): the SAME SLIDE's next bullet reads
+      "These recordings will be left up all during the Live event", and
+      [00:06:36] says the June web class's recording "will replace the
+      recordings that are up right now". The distinction the corpus draws
+      is IN-PERSON vs WEB, not recorded vs not -- so "EXPLAINED" must NOT
+      be read as "unrecoverable". A-084's surviving out-of-corpus route is
+      a CONCRETE, NAMED artifact: the June 2012 web class, Saturday
+      session. Weigh that against item 157 rather than against nothing.
+
+  (c) ⛔ THE ADR IS NOT CODEABLE AND NOT BACKTESTABLE. A-100 (no lookback, no
+      range definition, no anchor, no day boundary in Tier 1) and C-022
+      ("creep up or creep down to fit price action" vs "Not repaint", ten
+      seconds apart). V16 is Wk7 Part 2 and is the single most likely place
+      for an ADR construction statement -- IF ONE APPEARS, IT CLOSES A-100
+      AND C-022 AND UNBLOCKS THE LESSON'S OWN RULE. That is the highest-value
+      thing V16 could contain.
+
+  (d) SPEAKER: TEST IT, DO NOT ASSUME -- but note the condition is WEAKER
+      here than it was for V15. V16 is Part 2 of the SAME recording session
+      (Wk7 050612). V14's 100% and V15's 100% prove nothing about V16, and
+      "same session" is the weakest case for a break; test it anyway, on
+      strands fixed before the answer is known.
+
+  (e) ⚠ THE A-082 CLASS IS NOW A MEASURED FAILURE, TWICE. BT_V10_0001
+      CONTRADICTED the 600-1000 pip week (0/180); BT_V15_0001 returned NOT
+      SUPPORTED on the daily 25-50 pip close, with the close BEATEN by a
+      random minute. If V16 restates either figure, that is DURABILITY
+      evidence and should be logged in A-095 -- NOT re-tested (D-027).
+      A-095 figure 3 ("about 200 pips") remains untestable as stated.
+
+  (f) A-097's "22-trade" AND "3333/3.33 trade" ARE LIVE VOCABULARY GAPS with
+      a real chance of resolution in V16, since V16 continues the same
+      session. Neither may be guessed.
+
+  (g) A-099: Tier 2 defines "blood in the water" as the Market Base Line
+      cross. The "ONE HOUR" qualifier V15 attaches at [00:10:44] is
+      unexplained and is the only such attachment in the corpus. Watch for it.
+
+  (h) THE FORWARD-READ PRECEDENT (item 179) IS STILL UNSETTLED and this
+      session did NOT read forward. Note before invoking it: V15's biggest
+      calendar finding came from reading BACKWARDS into V13, which needed no
+      precedent at all.
+
+  (i) SWF_CAPTURE_RECIPE.md §8a IS MANDATORY AND WAS RUN FOR THE FIRST TIME
+      HERE. Measure the offset per lesson; do NOT carry V15's +15 s forward.
+      Item 188 offers a durable fix to §10 that would remove the 15-second
+      term entirely -- it is a POLICY edit and must be made on the
+      integration branch, not on a lesson branch (D-038a).
+
+  (j) Q-016 IS THE FIFTH CONSECUTIVE VISUAL_INDEX.md AND THE PATTERN IS NOW
+      FULLY PREDICTABLE: same claimed timestamp [00:02:00], same claimed
+      content (an Asian-box chart with five EMAs), whatever the lesson and
+      whatever the image behind it. Quarantine V16's trio on sight as Q-017;
+      do not spend a session re-deriving what six entries have established.
 ```

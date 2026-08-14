@@ -8185,3 +8185,347 @@ Every record V14 touches, including those it does **not** move. Negative results
 | **`A-039`** — TDI as a whole | See `A-084`/`A-085`/`A-086` | **Net: advanced on one of three quantities.** Stays open |
 | **`A-020`** — the moving averages | ⭐ `V14_00-13-05_…png` — four MAs, speed-ordered yellow < red < cyan < white | ⭐ **Tier-1 ORDINAL corroboration of `D-043`**, and inconsistent with `D-042` §2's superseded 5/13 rows. **Does NOT close `A-020`** — no period is printed. See `04_SCREENSHOTS/V14/INDEX.md` §3 |
 | **`A-042`** — operative detail deferred elsewhere | `[00:28:26]` *"post it in the forum"*; `[00:42:44]` *"I'm going to **post the homework in the forum**"* | ⭐ **PARTIALLY DISCHARGED for the first time.** V07 deferred Hi-Lo to *"Jim"*; **V14 delivers it in-corpus.** Two new deferrals to the forum are added, and the forum is not in this library — but the pattern is no longer uniformly one-way |
+
+---
+
+## A-095 — ⚠ The `A-082` class in V15: three pip figures stated as fact, none with an instrument
+
+**Raised by:** V15 · `[00:31:27]`, `[00:38:26]`, `[00:27:39]`
+**Speaker:** course author, all three
+**Governing precedent:** `A-082` (magnitude claims that read as rules); `COURSE_PROGRESS.md`
+V14 GATE (f), which required this class be audited on sight
+
+### The three figures, verbatim
+
+| # | Verbatim | Marker | Object | Grammar |
+|---|---|---|---|---|
+| 1 | *"We know that they **always** complete the cycle. **Twenty-five to fifty pips off of the high or low**, depending on the pair, right? And they want to end back in the range to trap the traders for tomorrow."* | `[00:31:27]` | **daily** excursion off the day's extreme | ⚠ *"We know"* + *"always"* — **a claim about the market**, not an instruction |
+| 2 | *"**The weekly range is 600 to 1000 pips.**"* | `[00:38:26]` | **weekly** range | flat assertion, present tense |
+| 3 | *"They have limitations of about **200 pips**."* | `[00:27:39]` | **ADR** magnitude | *"about"* |
+
+⚠ **Figure 1's wording is `[00:31:27]`'s as ARBITRATED, not as first transcribed.** The committed
+grid reads *"off of the **higher low**"*; an independent ASR pass returns *"off of the **high or
+low**"* (`V15_TRANSCRIPT.md`, correction 11). The uncorrected reading would have made this a claim
+about **a higher low** — a market structure — instead of about **two levels**, and would have been
+a different record.
+
+### Why this is one record and not three
+
+All three share the defect `A-082` names: **a number, a scope word, and no instrument.**
+*"Depending on the pair"* (1) and *"about"* (3) place the figure beyond falsification as stated,
+because no pair is named and no tolerance is given. **Figure 2 is the exception** — it names a
+period (a week) and a unit, and can therefore be measured against this project's corpus without
+inventing anything. **`PT-043` pre-registers exactly that**, and only that.
+
+### ⚠ The near-collision with V14, stated so nobody reconciles them by accident
+
+| | V14 | V15 figure 1 |
+|---|---|---|
+| Value | `30–50` pips | `25–50` pips |
+| Object | **the drill's profit target** | **the dealer's excursion off the daily high/low** |
+| Grammar | *"go for 30 to 50 pips"* — an instruction | *"they always complete the cycle, 25–50 pips…"* — a claim |
+| Disposition | **fenced as a DRILL parameter** by `V14_REVIEW_R1.md`, out of every spec file | **not adopted anywhere** |
+
+**The two figures nearly coincide and the two claims do not.** A later session reading only the
+numbers would reasonably merge them. **They must not be merged**, and this row exists so that the
+merge is visibly refused rather than silently avoided.
+
+**Not filed as a contradiction**, on `A-094`'s precedent: a drill parameter and a market claim are
+different kinds of statement and there is no rule-versus-rule clash to adjudicate.
+
+### Tier 2 — checked, and it neither confirms nor refutes
+
+`EXTERNAL_REFERENCE/…TEXT_EXTRACT.md` (Tier 2, admissible under `D-039`) gives the New York
+reversal trade *"You are likely get **40 to 50 pips or less**"* and, elsewhere, *"if the ADR is
+about of **150 pip**"*. **Both are different objects again** — a single trade's take, and a worked
+example's ADR — and neither is the daily-excursion claim. **No figure is adopted from Tier 2.**
+
+### Current Status
+
+```text
+A-095 -- OPEN. NONE of the three figures is adopted into any spec file.
+  Figure 1 (25-50 pips daily):  UNTESTABLE AS STATED. Do not merge with V14's 30-50.
+  Figure 2 (600-1000 wk range): TESTABLE -> PT-043, pre-registered before any result.
+  Figure 3 (~200 pip ADR):      UNTESTABLE AS STATED. No pair named.
+  DO NOT CODE any of the three.
+```
+
+---
+
+## A-096 — ⭐ `S1` / `R1` / `M1`–`M4` are PIVOT levels, not M-formations — DECODED from the frames, DEFINED only at Tier 2
+
+**Raised by:** V15 · `[00:44:53]`, `[00:45:47]`, `[00:51:00]` `[AUDIO]`; frames `44:50`, `46:00`,
+`51:00` `[PRINTED]`
+**Speaker:** course author
+
+### The hazard this record exists to prevent
+
+Read from **audio alone**, these lines are a trap:
+
+> `[00:44:53]` *"Here's your mayonnaise, your **M3**."*
+> `[00:45:47]` *"…finding support on a pivot. **This is an M1, M3 day.** I'll talk about that
+> next, if you're confused."*
+> `[00:51:00]` *"He went right down past the ADR. **He spiked it to the M1.**"*
+
+This corpus uses **M** for the **M-formation** everywhere else, and V14 supplies `M1`-shaped
+level language of its own. **An `M1` read as "the first M-formation level" would be wrong**, and
+it would corrupt any level-count logic derived from it.
+
+### The frames settle it
+
+| Frame | What is printed |
+|---|---|
+| `V15_00-44-50_daily-chart-annotated-ellipses-yellow.png` | `DayLo` on a cyan dotted line, **`S1`** on a grey line, **`M1`** on a white dash-dot line, two red dotted ADR lines |
+| `V15_00-46-00_chart-adr-high-0-89822-red-box.png` | **`M4`** and **`R1`** |
+| `V15_00-51-00_chart-adr-low-1-07128-annotated-spikes.png` | **`S1`** and **`M1`** |
+
+**`S`/`R` are the standard pivot support and resistance levels; `M1`–`M4` are the mid-levels
+between them.** They are chart furniture, not formations.
+
+### ⭐ Tier 2 DEFINES the phrase V15 leaves hanging
+
+`EXTERNAL_REFERENCE/…TEXT_EXTRACT.md` (Tier 2, `D-039`), PDF p. 42:
+
+> *"In effect, the **pivot levels are a grid of the ADR** because they are based on the high, low,
+> and close of the previous day's candle. So, if the previous day's candle was **red** then this
+> indicates that today might be an **M1/M3 day**. (This means that price will move between the M1
+> and M3 pivots). Alternately, if the previous day's candle was **green** then this indicates that
+> the day might be an **M2/M4 day**."*
+
+and p. 43:
+
+> *"if the **ADR high lines up with M3** and is then also happens to be an **EMA 200** in the same
+> place then this is a high probability area for a reversal."*
+
+**This is a direct, independent corroboration of V15 on three separate points** — the M-levels are
+pivot mid-levels; *"an M1, M3 day"* is a named construct with a stated trigger; and the ADR ×
+pivot × long-EMA confluence is the same rule V15's `41:30` slide prints. **And it corroborates
+`[00:44:53]`'s pairing of *mayonnaise* with `M3`, since Tier 2 pairs `M3` with the EMA 200 and
+`D-043` makes mayonnaise the 200.**
+
+### ⚠ What is still open, and why the record does not close
+
+1. **Tier 1 never states the trigger.** *"This is an M1, M3 day"* is followed by *"I'll talk about
+   that next, if you're confused"* — **and he does not.** The red-candle / green-candle rule is
+   **Tier 2 only**.
+2. **No pivot formula anywhere.** Neither Tier 1 nor the Tier-2 passage gives the arithmetic for
+   `P`, `S1`, `R1` or the mid-levels, nor the session the previous day's `H/L/C` is taken over —
+   which matters, because this course's day boundary is itself unsettled.
+3. **`D-039`'s caution binds:** admitting the source is not the same as reading it against a
+   record, and **a Tier-2 rule is not promoted to method by a Tier-1 chart label.**
+
+### Current Status
+
+```text
+A-096 -- DECODED, NOT DEFINED.
+  SAFE to read S1/R1/M1-M4 in V15 transcripts and frames as PIVOT levels.
+  NOT SAFE to code: no pivot formula, no session boundary, and the
+  "M1/M3 day" trigger is TIER 2 ONLY -- the lesson promises it and never gives it.
+  DO NOT CODE.
+```
+
+---
+
+## A-097 — Two undefined trade names: *"a 22-trade"* and *"the 3333 trade"*
+
+**Raised by:** V15 · `[00:21:34]`, `[00:21:55]`, `[00:43:17]`
+**Speaker:** course author
+
+### 1. *"a 22-trade"* — NOT an ASR error
+
+> `[00:21:34]` *"And what you have in essence is **a 22-trade on the four-hour chart**."*
+> `[00:21:55]` *"On the four-hour chart, you have a bigger, bigger thing going on. **You have a
+> 22-trade.**"*
+
+**Three independent ASR renderings agree** — the committed grid's *"22-trade"*, and two separate
+`whisper medium.en` passes returning *"twenty two trade"* and *"twenty-two trade"*. **The
+plausible repair *"an M2 trade"* is therefore NOT available**: it would have to survive three
+engines mishearing the same way.
+
+**The surrounding content is a two-leg structure on the four-hour** — `[00:21:26]` *"This is
+actually leg two of a bigger picture"*, `[00:23:19]` *"This would be your bigger M. This would be
+your second leg of a second leg."* A *"22"* naming **leg 2 of a leg 2** is the obvious reading and
+**is not adopted**, because the lesson never says it.
+
+### 2. *"the 3333 trade"* — the two passes disagree
+
+> `[00:43:17]` *"**The 3333 trade** might show. Right. Three intraday pushes with the last batch
+> of acceleration being three pushes."*
+
+The second pass returns *"the **3.33** trade"*. The sentence itself describes **3 pushes whose
+last leg is 3 pushes**, which would motivate either rendering.
+
+### Tier 2 — checked
+
+`EXTERNAL_REFERENCE/…TEXT_EXTRACT.md` contains **neither** term (`22 trade`: 0 hits).
+**No web research was performed** (`SOURCING_HIERARCHY.md` order observed).
+
+### Current Status
+
+```text
+A-097 -- OPEN. Two named trades, zero definitions, zero Tier-2 support.
+  DO NOT CODE. DO NOT GUESS the expansion of either name.
+  Required research: V16-V21 for either term used with a definition.
+```
+
+---
+
+## A-098 — The *"five for five"* result: the corpus's first stated student outcome, and it is an anecdote
+
+**Raised by:** V15 · `[00:39:31]`, `[00:40:03]`
+**Speaker:** course author
+
+> `[00:39:31]` *"I wanted to congratulate **Luther and Kirk**. They went **five for five** this
+> week. And they had a fantastic week trading."*
+> `[00:40:03]` *"they were **taking 35, 40 trades apiece a week** and they realized that that's
+> not the answer. The answer is **quality setups less often** confirmed trades that will pay out.
+> That's how you go five for five. **That's one trade a day. Every day without a loss.**"*
+
+### Why this is logged rather than used
+
+`COURSE_PROGRESS.md`'s V14 GATE (h) predicted that V15 is where the two-week drill reports back,
+and said that student results would be **Tier 1 evidence about the drill's real-world behaviour**.
+**They arrive, and they do not carry the weight the gate hoped for:**
+
+| Required to be evidence | Present? |
+|---|---|
+| Instrument / pair | ❌ |
+| Dates | ❌ *"this week"* |
+| Entries, exits, stops | ❌ |
+| Losing trades | ❌ **none reported** |
+| Sample size | **5 trades, 2 traders, 1 week** |
+| Independent verification | ❌ self-reported to the instructor |
+
+**`PT-042` returned NOT SUPPORTED on the six computable steps of that drill.** A five-trade
+self-report cannot rebut a pre-registered measurement, and **this record exists so that no later
+session cites *"five for five"* against `PT-042`.** The `35, 40 → 1` trade-frequency change is
+the interesting part and is equally unmeasured.
+
+### Current Status
+
+```text
+A-098 -- LOGGED AS ANECDOTE, NOT EVIDENCE. Cite it only as "the instructor
+  reported"; never as a performance figure, and never against a PT result.
+```
+
+---
+
+## A-099 — *"the one hour blood in the water"*: Tier 2 DEFINES the phrase, Tier 1 attaches a timeframe nobody explains
+
+**Raised by:** V15 · `[00:10:44]`, `[00:16:19]`
+**Speaker:** course author
+**Bears on:** `A-084`/`A-085`/`A-086` (the TDI family) — **without advancing any of them**
+
+### The two Tier-1 usages disagree with each other
+
+> `[00:10:44]` *"When it crosses back inside the band and crosses **the one hour blood in the
+> water**, those trades are gold."*
+> `[00:16:19]` *"He waited for a nice clean W formation and a crossover. **Blood in the water.**
+> And he counted his levels."*
+
+The first attaches **a timeframe** to the object; the second uses it bare, of a **crossover**.
+**Nothing in V15 reconciles them**, and `[00:10:44]` is the only place in this corpus where a
+timeframe is attached to this phrase.
+
+### ⭐ Tier 2 supplies the definition Tier 1 never has
+
+`EXTERNAL_REFERENCE/…TEXT_EXTRACT.md` (Tier 2, `D-039`), PDF p. 46, listing the scaling-in
+entries in order:
+
+> *"⋅ the appearance of the shark fin (1st) ⋅ **the Market base line cross (referred to as Blood
+> in the Water)** (2nd) ⋅ break out of the opposite volatility band during the trend run (3rd)"*
+
+**"Blood in the water" = the Market Base Line cross.** That reading fits both Tier-1 usages —
+`[00:10:44]`'s *"crosses back inside the band and crosses the … blood in the water"* is precisely
+the 1st→2nd step of that sequence, and `[00:16:19]`'s bare use follows *"a crossover"*.
+
+### ⚠ What the timeframe does, and why the record stays open
+
+`"one hour"` is **not** explained by the Tier-2 definition. Three readings survive and the lesson
+does not choose:
+
+1. **A higher-timeframe MBL** — the H1 chart's market base line, read while trading a lower one.
+2. **A duration** — the cross must hold for an hour (which would make it a `A-094`-style *lock*).
+3. **An ASR artifact of a longer phrase.** ⚠ **Not adopted, and this is now measured rather
+   than assumed**: the committed grid, the targeted `medium.en` clip pass **and** a full-file
+   `large-v3-turbo` pass all independently render *"the one hour blood in the water"* /
+   *"the one-hour blood in the water"*. **Three engines, one phrase.**
+
+⭐ **AND THE FULL-FILE INDEPENDENT PASS CONFIRMS THE NEGATIVE, MEASURED OVER THE WHOLE LESSON.**
+A `large-v3-turbo` transcription of all 52 minutes contains **`68` once, `32` once, `shark fin`
+three times, `blood in the water` three times, `RSI` twice — and ZERO occurrences of `smoothing`,
+`period`, `standard deviation`, `volatility band`, `market base`, `63` or `37`.** The TDI passage
+reproduces verbatim. **V15's audio contains no TDI parameter of any kind, and that is now a
+measurement rather than a reading.**
+
+⚠⚠ **This does NOT touch `A-084`, `A-085` or `A-086`.** Naming a line is not parameterising it:
+the Market Base Line's period is stated nowhere in Tier 1, and `A-085`'s question is exactly that
+period. **`D-039`'s caution applies — admitting the PDF is not reading it against a record**, and
+what is read against this record is a **name**, not a number.
+
+### Current Status
+
+```text
+A-099 -- ADVANCED AT TIER 2, OPEN AT TIER 1.
+  "Blood in the water" = the Market Base Line cross  [TIER 2, D-039].
+  The "one hour" qualifier is UNEXPLAINED. Do not code a timeframe onto it.
+  A-084/A-085/A-086 are UNTOUCHED and remain DO NOT CODE.
+```
+
+---
+
+## A-100 — ⭐ The ADR is taught for a whole lesson and its LOOKBACK is never stated: the corpus cannot compute the object it teaches
+
+**Raised by:** V15 · the whole `[00:26:57]`–`[00:51:56]` lesson
+**Speaker:** course author
+
+### The problem, stated plainly
+
+V15 spends **25 minutes** on the ADR. It states what the ADR *is for* (`V15_00-32-00_…png`), how
+it *behaves* (`[00:28:34]`), how it is *plotted* (`V15_00-28-20_…png`), and what it *confirms*
+(`V15_00-41-30_…png`). **It never once states how it is COMPUTED.**
+
+| Needed to compute an ADR level | Stated in V15? |
+|---|---|
+| Lookback window (how many days averaged) | ❌ |
+| What is averaged — true range, or high−low | ❌ |
+| Where the two markers are anchored — around the open? the previous close? the midpoint? | ⚠ *"at the open, the ADR will **straddle** price"* `[00:28:24]` — a behaviour, not an anchor rule |
+| How the levels update intraday | ⚠ *"they'll **creep up or creep down** to try to fit price action"* `[00:28:34]` — a behaviour, and see `C-022` |
+| Which day boundary | ❌ |
+
+**Without the first two, the lesson's central object cannot be reproduced**, and every downstream
+claim — the *"met or exceeded"* filter, the confluence rule, `PT-043`'s sibling questions — rests
+on a level this project cannot draw.
+
+### ⭐ Tier 2 supplies the lookback, and ONLY the lookback
+
+`EXTERNAL_REFERENCE/…TEXT_EXTRACT.md` (Tier 2, `D-039`), PDF p. 43:
+
+> *"It can be more accurate if it is coupled with an ADR indicator which tells us **the average
+> daily trading range of the last 2 weeks**."*
+
+and p. 41 corroborates V15's whole framing independently:
+
+> *"The ADR is normally plotted as an oscillator. It is however difficult to read in this format
+> and **Mauro has produced a version which is read on the price chart and provides a high and low
+> value**… the real strengths of the ADR occurs when its values coincide with other indicators…
+> These would particularly include **the pivot point or with a 50 or 200 moving average**."*
+
+⭐ **That last sentence is V15's `41:30` slide, in different words, from an independent source.**
+It is a strong Tier-2 corroboration of the *rule*. **It is not a specification of the
+indicator**: *"last 2 weeks"* does not say 10 trading days or 14 calendar days, does not say true
+range or high−low, and does not anchor the markers.
+
+### Current Status
+
+```text
+A-100 -- OPEN, and it BLOCKS any coding of V15's lesson.
+  Lookback: "the last 2 weeks"  [TIER 2 ONLY, D-039]. Ambiguous between
+            10 trading days and 14 calendar days -- a real difference.
+  Range definition, anchor rule and day boundary: STATED NOWHERE.
+  DO NOT CODE the ADR marker. Any PT touching it must pre-register its own
+  definition as an ASSUMPTION and say so, per D-027.
+  Required research: V16-V21 for an ADR construction statement; the June 2012
+  web class "Indicator chart setup day" is where it would have been shown and
+  is NOT in this corpus (see A-087, REVIEW_INDEX item 189).
+```
