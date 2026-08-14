@@ -1,7 +1,15 @@
 # PT-043 — V15's DAILY restatement: does the session day close **25–50 pips off its own high or low**?
 
+> ### RUN 2026-08-14 — **VERDICT: `O1` NOT SUPPORTED · `O2` CONTRADICTED AS STATED.** See `06_MANUAL_BACKTEST/V15/BT_V15_0001.md`.
+> `O1` (V15's *"or"*) = **0.3640** against an `N1` random-intraday-close control of **0.3757** —
+> **the real close does WORSE than an arbitrary minute of the same day.** `O2` (V10's *"and"*) =
+> **0.0939**, below §6 clause (a)'s 0.10 floor for an *"always"*. **Identical verdicts in all four
+> window × arm cells.** The median nearer-distance is **21.4 pips**, just under the band's 25-pip
+> floor. **5 of 5 substantive predictions right, and discounted in `BT_V15_0001` §7 because P1–P3
+> were largely one prediction inherited from `BT_V10_0001`.**
+
 ```text
-STATUS:      PRE-REGISTERED. NOT RUN.
+STATUS:      PRE-REGISTERED -- RUN 2026-08-14 -- O1 NOT SUPPORTED / O2 CONTRADICTED
 WRITTEN:     2026-08-14, V15 student session, branch video/v15
 LESSON:      V15 -- Bootcamp1 Wk7 050612 Part1 (52mins).swf
              SHA-256 5308c350193b7cf9471ecb3f534b27fc7e8c1cd21e1cd94eb9521e7e56482b49
