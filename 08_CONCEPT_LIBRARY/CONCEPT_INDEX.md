@@ -11,10 +11,12 @@ Naming: `CL-NNN_concept-name.md`
 
 ```text
 CONCEPTS:        0
-LESSONS STUDIED: 16 (V01-V14 studied; V15 and V16 studied and submitted as
-                     REVIEW REQUIRED. See COURSE_PROGRESS.md for per-lesson
+LESSONS STUDIED: 17 (V01-V14 studied; V15, V16 and V17 studied and submitted
+                     as REVIEW REQUIRED. See COURSE_PROGRESS.md for per-lesson
                      review status -- several are COMPLETE only in the
-                     qualified SELF-VERIFIED AT OWNER DIRECTION sense.)
+                     qualified SELF-VERIFIED AT OWNER DIRECTION sense, and
+                     V16 and V17 were both opened with their D-004 gate
+                     CLOSED.)
 ```
 
 > **UPDATED 2026-08-14 (V16 session).** `LESSONS STUDIED` read **`3`** while sixteen
@@ -23,6 +25,30 @@ LESSONS STUDIED: 16 (V01-V14 studied; V15 and V16 studied and submitted as
 > twice below, and `REVIEW_INDEX.md` open item 14. **`CONCEPTS` is unchanged at 0 and
 > the standing rationale below holds after sixteen lessons, not three.**
 >
+> **UPDATED 2026-08-14 (V17 session).** `LESSONS STUDIED` **17**. `CONCEPTS` unchanged at
+> **0**, and V17 is a **stronger** case for the standing rationale than V16 was, not a weaker
+> one.
+>
+> **V17 is the densest lesson since V09.** It prints a seven-point `Safety Trade` checklist, a
+> three-slide day-by-day trend cycle, a reset-versus-reversal distinction, and a student
+> flashcard with eleven numbered criteria. ⛔ **None of it is promotable, and the reasons are
+> now measured rather than argued:**
+>
+> * **The seven-point key completes to TWO of seven on real data** (`05_HOMEWORK/V17/` §1). Five
+>   points rest on `peak formation`, `M`/`W`, *"spike"*, the TDI bands (`A-084`) or an exit rule
+>   the corpus does not contain.
+> * **The flashcard's headline filter is inert** — `Asian range less than 50pips` **passes
+>   85–89% of all GBP/USD days** and changes the downstream rate by 1.6 points (§2a). A concept
+>   promoted from it would be a no-op with a citation.
+> * **Every new rule arrives with an undefined term inside it.** Nineteen ambiguities opened
+>   against eight advanced.
+> * ⚠ **And V17 shows that even a rule already recorded as promotable can stop being so:** V16's
+>   candle-colour rule was graded *"mechanically checkable"*, and V17 attaches an override to it
+>   whose trigger is undefined (`A-109`).
+>
+> **The rule below — no concept without evidence, no numeric thresholds in the Student Phase —
+> holds after seventeen lessons, and V17 is the clearest demonstration of why.**
+
 > **V16 specifically, because it is the strongest case for promotion the corpus has
 > produced and it still fails.** V16 supplies the most completely specified rule in
 > the library — *"Red Candle Indicates M1/M3 Day / Green Candle Indicates M2/M4 Day"*,
