@@ -502,6 +502,8 @@ adopted.
 **Status:** `OPEN` — neither blocks `PT-002`…`PT-021`; both will silently corrupt a
 week-boundary result if they are still open when someone compares across sources.
 **Raised by:** `D-036a`, 2026-08-13.
+**Q2 amended 2026-08-14** — the spillage is now measured at a second timeframe (`H1`).
+**The question itself is UNCHANGED and STILL AWAITING AN OWNER RULING.**
 
 ### Question 1 — is FXCM's 21:00 UTC week open a vendor constant, or a summer artifact?
 
@@ -558,6 +560,36 @@ exactly the class of thing this project would rather pin now than discover in a 
 **To close:** one line appended to `D-035` stating the clock. Recommend **absolute**, in
 the corpus's native UTC−5 (Arm A) clock, since the boundary was computed on calendar
 grounds independent of any arm — but that is an owner call, not a session's.
+
+#### AMENDMENT 2026-08-14 — the spillage is confirmed at `H1` as well as `M15`
+
+The text above is **retained unedited** per `REMEDIATION_PROTOCOL.md` §2. It is correct;
+it is simply **no longer complete**, because it was written when `M15` was the only
+derived timeframe in existence. The `M15`/`H1` corpus built since measures the same
+effect one timeframe coarser:
+
+| Timeframe | Arm A last bar | Arm B last bar | Bars stamped `2016-07-01` under Arm B |
+|---|---|---|---|
+| `M15` | `2016-06-30 23:45` | `2016-07-01 00:45` | **4** (as recorded above) |
+| `H1` | `2016-06-30 23:00` | `2016-07-01 00:00` | **1** (measured 2026-08-14) |
+
+**Citation:** `06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M15_H1/QA_REPORT_H1_ARMB.txt`,
+check `C8`, row `2016-07-01 Fri  1 bars`; corroborated by that file's `span` header and by
+the dataset's `README.md` ("**4 bars at M15** … and **1 bar at H1**"). Both live on branch
+`feature/m15-h1-chart-backtest`, **which is not merged** — re-verify against the merged
+tree before this line is used as evidence for anything.
+
+**Nothing about the question changes, and that is the point.** No new data is involved:
+these are the same development-side minutes wearing a different clock label. The
+amendment establishes only that the ambiguity is **not an `M15` artifact** — it recurs at
+every derived timeframe, and will recur at every future one, which strengthens the case
+above for pinning the clock **once, generally**, rather than per-dataset.
+
+**⚠️ NO RESOLUTION IS ADOPTED HERE.** This session was authorised to record the `H1`
+finding, not to answer the question. The **absolute / per-arm** choice remains exactly as
+posed above, the recommendation above remains a recommendation, and `D-035` is **not**
+amended. **`I-010` Q2 stays `OPEN` pending an owner ruling.** Any downstream file may
+continue to cite it as `OPEN`; none needs updating on account of this amendment.
 
 ---
 

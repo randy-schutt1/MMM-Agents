@@ -135,6 +135,22 @@ yarn-error.log*
 06_MANUAL_BACKTEST/datasets/**
 !06_MANUAL_BACKTEST/datasets/README.md
 !06_MANUAL_BACKTEST/datasets/.gitkeep
+
+# PROVENANCE IS NOT BULK DATA — a hash manifest is the audit trail, not the
+# payload, and belongs in history. The `**` above swallowed it, which is why
+# `D-036a` cited `datasets/HISTDATA_GBPUSD_M1/raw/SHA256SUMS.txt` as the
+# integrity record for a corpus while that file existed only on the machine
+# that built it. A checksum nobody else holds cannot verify anything. The rule
+# was the defect; the file was there all along and its four hashes verify
+# against the on-disk corpus. Un-ignored and committed 2026-08-14.
+!06_MANUAL_BACKTEST/datasets/*/
+!06_MANUAL_BACKTEST/datasets/*/raw/
+!06_MANUAL_BACKTEST/datasets/*/raw/SHA256SUMS.txt
+!06_MANUAL_BACKTEST/datasets/*/derived/
+!06_MANUAL_BACKTEST/datasets/*/derived/SHA256SUMS.txt
+# ...but never the bars themselves.
+06_MANUAL_BACKTEST/datasets/**/*.csv
+
 *.parquet
 *.feather
 *.sqlite
