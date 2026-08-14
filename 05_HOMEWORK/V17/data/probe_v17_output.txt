@@ -1,0 +1,38 @@
+V17 COMPREHENSION PROBE -- 33 recall claims, answers fixed BEFORE this checker ran
+Each claim is checked against the COMMITTED transcript at its own marker (+/- 2 lines).
+
+  PASS  [00:02:36]  Week number stated
+  PASS  [00:00:11]  Session date stated
+  PASS  [00:00:14]  Memorial Day = no session
+  PASS  [00:01:05]  Final bootcamp releases a new strategy + scalar
+  PASS  [00:08:27]  Pivots recalc ~12-1am on dealer GMT offset
+  PASS  [00:08:33]  Pivots fresh right before the London open
+  PASS  [00:09:08]  Red candle = M1 M3 day
+  PASS  [00:09:21]  Shift the zone to M2 M4 next day
+  PASS  [00:09:39]  Pivot inputs are open high low close
+  PASS  [00:10:54]  25 to 75 pips off that level as a safety trade
+  PASS  [00:21:21]  Trade lasted 45 minutes to an hour
+  PASS  [00:21:39]  Stop about 18-19 pips
+  PASS  [00:21:43]  Took 40 pips
+  PASS  [00:22:23]  Entry bar disqualified as blown out
+  PASS  [00:22:45]  45 pips off the LOD is too late
+  PASS  [00:28:59]  25 to 50 pips as his normal stop hunt
+  PASS  [00:27:41]  Dealer quits extending the low for 1h15 -> go long
+  PASS  [00:28:09]  W is in the closing of price
+  PASS  [00:35:04]  Eight candles or above for a good M or W
+  PASS  [00:37:20]  Two types of trend: MM and technical
+  PASS  [00:38:41]  Shark fin on 4H -> reverse at least 50 pips
+  PASS  [00:39:14]  Big board opened with F10
+  PASS  [00:42:04]  Trend generally a 3-day cycle
+  PASS  [00:42:25]  Unidirectional swing 2.5-3 days
+  PASS  [00:42:55]  Wick = consolidation off the high or low
+  PASS  [00:43:09]  Day 1 = reversal day
+  PASS  [00:45:16]  Day 2 = 5200 (printed 50/200) crossover
+  PASS  [00:47:47]  Day 3 = 333 trade, three candles straight up
+  PASS  [00:48:50]  Dealer becomes heavy net short
+  PASS  [00:51:25]  Resets happen at the man-e's or the blueberry
+  PASS  [00:51:47]  Retail build orders at the 20 EMA 4H/daily
+  PASS  [00:53:42]  Stop: 15-25 total above the high below the low
+  PASS  [00:56:33]  Safety trade = signature trade
+
+SCORE: 33/33
