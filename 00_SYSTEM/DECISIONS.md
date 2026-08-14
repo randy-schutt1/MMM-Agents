@@ -485,6 +485,11 @@ name the justification in the mastery report. `MASTERY_STANDARD.md` is not rewri
 this decision governs its application and is cited from the report.
 **Status:** ACTIVE
 
+> 📌 **POINTER ADDED 2026-08-14 — `D-046`.** `D-046` adopts **`EXCLUDED BY DECISION`** as a
+> third mastery disposition, available to **any** dimension under a four-condition test.
+> **This entry is REFINED, not superseded, and stays `ACTIVE`** — its `NOT APPLICABLE` grant to
+> dimensions F and G is unchanged. **This entry's text is not edited** (append-only).
+
 ---
 
 ## D-019 — `NOT APPLICABLE` and `DEFERRED` are different dispositions, and D-018 grants only the first
@@ -550,6 +555,13 @@ disposition, not just the conclusion.
 > **The decision's meaning is unchanged and it is not superseded** — this is a citation
 > fix made in place, as `DECISIONS.md` is append-only *as to meaning*, not as to
 > typography. D-019 remains `ACTIVE` in its original form.
+
+> 📌 **POINTER ADDED 2026-08-14 — `D-046`.** **This entry's two-row disposition table becomes
+> THREE rows**: `D-046` adds **`EXCLUDED BY DECISION`** — subject matter exists, the work is
+> permanently barred by a **numbered decision that is cited**, no future lesson can lift the bar,
+> and the record states **what** was excluded. It closes like `NOT APPLICABLE` and **accrues no
+> debt**, and it is available to **any** dimension. **This entry is REFINED, not superseded, and
+> stays `ACTIVE`; its text is not edited** (append-only). The amended table is printed in `D-046`.
 
 ---
 
@@ -1562,6 +1574,18 @@ The `DECISIONS TO BE MADE AT INGESTION` table's *"Chart data source / broker fee
 `PT_` file states platform, feed, chart timezone and the depth probe for its timeframe.
 **Status:** ACTIVE
 
+> 📌 **POINTER ADDED 2026-08-14 — `D-050` PART 2 REDUCES FACT 1 TO ITS EVIDENCE.**
+> **Fact 1 is restated as: FXCM's week open is 21:00 UTC over the OBSERVED SUMMER WINDOW
+> (`PT-023` §1, 2026-05-31 → 2026-08-13); its WINTER behaviour is UNMEASURED.** The sample lies
+> entirely inside northern-hemisphere summer, over which *"fixed 21:00 UTC year-round"* and
+> *"DST-anchored New York 17:00"* are **indistinguishable**. **`W-C` and `PT-008`–`PT-013` STAND
+> and are NOT re-run**; **no NEW test may bind to a year-round FXCM week open by name**; and any
+> cross-vendor comparison with the HistData series **states the open question at the point of
+> comparison**. ⭐ **A WINTER PROBE IS OWED** — a standing obligation on the first session running
+> after **1 November 2026**, on any week between November and February, compared against 22:00 UTC.
+> **The result is APPENDED HERE and fact 1 is measured, never inferred.** `SETUP_ISSUES.md` `I-010`
+> Q1 closes on that measurement and not before. **This entry's text is not edited** (append-only).
+
 ---
 
 ## D-035 — The project-wide `D-028` 70/30 boundary is pinned at 2016-07-01
@@ -1671,6 +1695,17 @@ permanently into development data, which must be **disclosed**.
 >
 > The obligation this entry created is **discharged by `D-037`**, which re-issues all eight onto
 > `W-C′` = 2013-01-06 → 2016-06-30 as `PT-025` … `PT-032`.
+
+> 📌 **APPENDED 2026-08-14 — `D-050` PART 1 STATES THE CLOCK. `I-010` Q2 IS CLOSED.**
+> **The DEVELOPMENT/HOLDOUT boundary at `2016-07-01` is ONE INSTANT, expressed in the corpus's
+> native UTC−5 (Arm A) clock, and it is THE SAME INSTANT FOR BOTH `D-031` ARMS.** It is **not**
+> re-cut per arm, and the rule is **general** — it governs the start and end of **every**
+> pre-registered window at **every** timeframe unless a later decision says otherwise for a named
+> window. **Measured consequence, so it is never mistaken for a holdout leak:** under Arm B the
+> aggregation stamps **4 `M15` bars** and **1 `H1` bar** with a wall-clock date of `2016-07-01`;
+> **those bars are DEVELOPMENT data** — their underlying M1 is entirely `≤ 2016-06-30` in the
+> file's own clock. **The holdout remains sealed and unopened. No result is invalidated and no
+> test is re-run.** **This entry's text is not edited** (append-only).
 
 ---
 
@@ -2396,6 +2431,19 @@ obligations attach:
 2. **Merge back promptly.** `REVIEW_INDEX.md` is an evidence ledger, but its gate rows govern
    whether the next lesson may start; a verdict left unmerged holds a gate closed that is
    actually open. Prompt merge-back is what keeps it an evidence ledger rather than a policy one.
+
+> 📌 **POINTER ADDED 2026-08-14 — `D-047` CORRECTS THIS ENTRY'S STATED REASON.**
+> **The premise that *"evidence ledgers are append-only and their additions are `git`-mergeable by
+> construction"* is FALSE AS STATED AND IS WITHDRAWN.** Append-only makes a ledger
+> **conflict-tolerant, not conflict-free** — two branches appending to the **same tail** conflict,
+> and two branches allocating from the **same number series** collide invisibly. **Both have
+> happened here** (the `review/v10` merge conflicted in `REVIEW_INDEX.md`, `LOG.md` and
+> `COURSE_PROGRESS.md`, and `LOG.md`'s conflict spliced two session entries together).
+> ⭐ **THE OPERATIVE POLICY/EVIDENCE SPLIT IS KEPT UNCHANGED AND IS NOT SUPERSEDED** — it stands on
+> its remaining and sufficient ground. **`D-047` attaches three consequences:** identifier
+> allocation is **integration-relative and re-checked at merge-back**; `LOG.md`,
+> `COURSE_PROGRESS.md` and `REVIEW_INDEX.md` merge **single-threaded**; `REVIEW_INDEX.md` merges
+> promptly. **This entry's text is not edited** (append-only).
 
 ---
 
@@ -3566,3 +3614,554 @@ it breaks the vendor checksums and destroys the evidence that the defect exists.
 whole-corpus runners keep meaning "whatever is in the directory"* — rejected; that is how a
 holdout gets read by accident.
 **Status:** ACTIVE
+
+---
+
+## D-045 — The owner's `!SM_TDI` MT4 template is admitted as a NEW TIERED EVIDENCE CLASS, and `A-084` closes PROVISIONALLY at k = 2
+
+**Date:** 2026-08-14
+**Decision:** Two parts, and the second does not follow from the first without it.
+
+**Part 1 — the evidence class.** The owner's own MT4 platform artifacts, supplied by the owner and
+attested by the owner as his working configuration for this method, are admitted as a named
+evidence class: **`TOOLING — OWNER-ATTESTED PLATFORM ARTIFACT`**. It ranks **below Tier 1 and above
+`[DEFAULT]`** in `SOURCING_HIERARCHY.md`, exactly as `D-042` already does for owner colour
+attestations. Admission is **per-artifact**, as `D-039` is per-document: this entry admits
+`Ultimate Blue.tpl` / `!SM_TDI` (md5 `ea22c8cf527921cef072586b6fa28296`) and nothing else.
+A citation from this class carries the tag **`[TOOLING]`** with the artifact name.
+
+**Part 2 — what it closes, and how weakly.** `RSI_Price_Line=2` with `RSI_Price_Type=0`
+(MT4 `MODE_SMA`) states that the plotted green line is `SMA(2)` of `RSI(21)`. **`A-084` closes
+`PROVISIONALLY RESOLVED — TOOLING` at `k = 2`**, and the closure carries, in the record itself,
+the weakness in Part 3. `A-084`'s `ACTIVE BLOCKER` status is lifted **to the extent of `k`, and no
+further**: V11's RSI threshold family (the 50 bias baseline, 80/40, 60/20, 80/20, the 38–42
+pullback band, both divergence forms, the `[00:36:19]` composite) is unblocked **as against
+`A-084`** and remains subject to every other blocker it carries.
+
+**Part 3 — the weakness, stated at the closure and not glossed.** The template is dated **2016 and
+2019**; the course was recorded in **2012**. V13 frame `00:53:35` — a 2012, Tier-1,
+instructor's-own-chart datum — carries the template's **non-default** `63`/`37` pair, and the audio
+ties `37` to the shark fin (`[00:51:09]`); the public Dean Malone TDI ships 68/50/32, so this is
+**not** the public default. `RSI_Period=21` matches `A-080`'s Tier-1 closure exactly. **But
+`RSI_Price_Line=2` — the one field that answers `A-084` — is NOT among the corroborated fields.**
+The corroboration establishes that the template is of this lineage and plausibly this
+instructor's; it does not establish the load-bearing value. Any artifact relying on `k = 2` cites
+this decision and inherits this paragraph.
+
+**Reason:** `A-084` is an `ACTIVE BLOCKER` on a *required* entry criterion the course has never
+taught (`A-039`), and three lessons have now attacked it by three routes and failed. The legend
+route is closed corpus-wide; 2,047 frames across V12–V14 contain no properties dialog; and
+`A-093` shows the spoken route is structurally weak rather than merely untried — the speaker
+answers what the indicator feels like, never what it computes. `PT-040` measured the cost of
+guessing at **10.481 pp** at `k = 5, t = 50` and **5.16 pp** at `k = 2`, concentrated at `t = 50`,
+V11's bias baseline. Waiting is not free and is not likely to work; and a fourth possibility —
+smoothing outside the swept simple-MA family — would make even `PT-040`'s `M` the wrong quantity,
+which the template answers and waiting does not.
+
+**Evidence:** `06_MANUAL_BACKTEST/tools/MMM_TDI.txt` and `Ultimate Blue.tpl` (branch
+`feature/tradingview-mmm-indicator`, **unmerged** — re-verify against the merged tree before
+citing); V13 frame `00:53:35` and `[00:51:09]`; `A-080`; `PT-040` and its pre-registered
+2 pp / 5 pp decision rule; `A-084`, `A-087`, `A-093`; `REVIEW_INDEX.md` item 157 (V13 R1 `N2`);
+`00_SYSTEM/GAP_AUDIT_2026-08-14.md` §3. Owner attestation, 2026-08-14, that the template is his
+own working configuration for this method.
+
+**Alternatives considered:** *Admitting it at full weight and closing `A-084` outright* — rejected;
+the dating gap is real and the corroborated fields are not the load-bearing field, so a
+non-provisional closure would assert more than the evidence carries. *Continuing to wait for a
+course-verified answer* — rejected on the record above; two of the three remaining routes are
+empirically dead and the third is structurally weak, and the cost is up to seven more lessons with
+a low prior. *Admitting the artifact without giving the class a tier* — rejected; an untiered
+admission is re-litigated by the next artifact, which is the failure `D-040` was written to end.
+*Closing `A-086`'s band period on `Volatility_Band=34` in this entry* — **rejected, and this is the
+`D-039` caution repeated: admitting a source is not reading it against a record.** `A-086` is
+**eligible** and is not closed here; a session that does the reading closes it, or does not.
+
+**Consequences:**
+
+1. `SOURCING_HIERARCHY.md` gains the `TOOLING` rung, its per-artifact admission rule, and a
+   pointer to this entry. `EXTERNAL_REFERENCE/README.md`'s default is untouched.
+2. **`A-084` moves to `PROVISIONALLY RESOLVED — TOOLING`, `k = 2`**, with Part 3 quoted in the
+   record. It does **not** become `RESOLVED BY COURSE`.
+3. **The re-check obligation of `SOURCING_HIERARCHY.md` §3.4 attaches to `A-084`**, and `A-084`
+   joins `A-014`, `A-023` and `A-020` on that list. **A later Tier 1 statement overturns this
+   under `D-040` §3.1**, and any session reaching a lesson that shows a TDI properties dialog,
+   a Navigator panel or a smoothing length must run §3.1.
+4. **`A-086` (`Volatility_Band=34`) and `A-032` (63/37) become ELIGIBLE and are NOT closed here.**
+   Each needs a session that reads the artifact against the record and cites it.
+5. **Nothing else is unblocked.** `A-085` is a mechanism claim with no construction and is
+   untouched. `A-039` stays open on the TDI as a taught entry criterion. `D-030` is untouched.
+6. Every `PT` or `BT` artifact that uses `k = 2` states in its own pre-registration that the value
+   is `TOOLING`-tier and provisional, so a later overturn is traceable to the runs it affected.
+
+**Status:** ACTIVE — `A-084`'s closure under it is PROVISIONAL
+
+---
+
+## D-046 — `EXCLUDED BY DECISION` is adopted as a third mastery disposition, available to any dimension
+
+**Date:** 2026-08-14
+**Refines:** `D-018` and `D-019`, both of which remain `ACTIVE` and neither of which is superseded.
+`D-019`'s two-row table becomes three rows.
+**Resolves:** `18_REVIEW/REVIEW_INDEX.md` open item **36**, ruled at V05 R1 on 2026-08-11 and open
+since then **only on this adoption step**.
+
+**Decision:** A mastery dimension may be recorded as **`EXCLUDED BY DECISION`** when **all four**
+hold:
+
+| # | Condition |
+|---|---|
+| 1 | **Subject matter exists.** The lesson supplies material the dimension would otherwise grade. This is what separates it from `NOT APPLICABLE`. |
+| 2 | **The work is permanently barred by a numbered decision in this file**, and **the decision is cited by number in the report.** An exclusion with no citable decision is not available — the disposition is `DEFERRED`, or the work is done. |
+| 3 | **No future lesson can lift the bar.** This is what separates it from `DEFERRED`. Where a future lesson *could* lift it — a definition the course has not yet given — the disposition is `DEFERRED` and `D-030` governs. |
+| 4 | **The record states WHAT was excluded**, specifically enough that a reader can see the size of the hole. |
+
+**Effect:** the item **closes like `NOT APPLICABLE` and accrues no debt** — it is not carried in
+`REVIEW_INDEX.md` as open research — **and, unlike `NOT APPLICABLE`, it is a positive statement
+that material was withheld.** It is available to **any** dimension, not only F and G.
+`EXCLUDED BY DECISION` is **not a pass**; it is a claim the reviewer audits like any other, and a
+reviewer who finds the cited decision does not in fact bar the work returns `REVISE` with the
+dimension reinstated.
+
+`D-019`'s table, as amended:
+
+| Disposition | Meaning | Effect | Who can grant it |
+|---|---|---|---|
+| `NOT APPLICABLE` | The lesson supplies **no subject matter** | Closed permanently | `D-018`, dimensions F and G only |
+| `DEFERRED` | Subject matter exists; a prerequisite is missing and **may arrive** | Stays open, carried in `REVIEW_INDEX.md` | Any dimension |
+| **`EXCLUDED BY DECISION`** | Subject matter exists; the work is **permanently barred by a numbered decision**, which is cited | Closed; **no debt accrues**; the exclusion is auditable | **Any dimension**, subject to reviewer audit |
+
+**Reason:** V05 forced it and five later lessons have restated it. V05 states several
+testable-shaped rules that are withheld by `D-025`. `NOT APPLICABLE` asserts there was never
+anything there, which is false — there is an hour of it. `DEFERRED` asserts the work becomes
+possible later, which is also false — no future lesson makes a V05 guest rule testable. With
+neither label fitting, mastery dimension **B** has been carried un-graded or
+`NOT SATISFIED WITH NO SEVERITY CHARGE` for **six-plus consecutive lessons**, and reviewers have
+correctly declined to charge it, because charging it would penalise the `D-030` discipline the
+project mandates. **The gap is in the project's own standards, not in any lesson's understanding.**
+
+**Evidence:** `REVIEW_INDEX.md` item 36 and its V05 R1 ruling (2026-08-11), which **upheld** the
+escalation and recommended this adoption in these terms; restatements at V06, V07 (x2), V08, V09,
+V10, each *"restated, not re-counted"*; `V05_MASTERY_REPORT.md` § F, G and Escalation;
+`00_SYSTEM/GAP_AUDIT_2026-08-14.md` §5b, §6 `D2`, §7a.
+
+**Alternatives considered:** *Widening `NOT APPLICABLE`* — rejected; it makes `D-018`'s own
+eligibility test false and re-creates the confusion `D-019` exists to end. *Using `DEFERRED` and
+letting the debt sit forever* — rejected; a debt that can never be discharged is not a debt, it is
+a permanently misleading open item. *Leaving it open* — rejected; the ruling is fourteen weeks
+of escalations old and costs one sentence.
+
+**Consequences:**
+
+1. `MASTERY_STANDARD.md` and the mastery report template gain the third disposition and the
+   four-condition test. `REVIEW_PROTOCOL.md` gains the reviewer's audit of it.
+2. **V05 dimensions B and G take `EXCLUDED BY DECISION`, citing `D-025`**; **dimension F stays as
+   graded** (`SUCCESS AFTER SOURCE REVIEW`) — it correctly refused `NOT APPLICABLE` because the
+   assignment is partly performable and the performable part was performed.
+3. **Dimension G's reason changes from *"states no testable rule"* to *"states rules excluded by
+   `D-025`"***, so V06–V21 do not inherit the wrong precedent — this was the V05 R1 ruling's
+   specific requirement.
+4. **No grade, verdict or gate state changes by operation of this entry**, and **no lesson is
+   re-reviewed on account of it.** Re-labelling a disposition is not re-grading. Where an earlier
+   report used a disposition this entry would have changed, the report is annotated in place per
+   `REMEDIATION_PROTOCOL.md` §2 and the superseded text stays visible.
+5. **It creates no new licence to exclude.** Condition 2 is the whole guard: **no numbered
+   decision, no exclusion.** A session that cannot name the decision has not found a third
+   disposition, it has found work it has not done.
+
+**Status:** ACTIVE
+
+---
+
+## D-047 — `D-038a`'s mergeability premise is CORRECTED: tail-appended evidence ledgers are NOT mergeable by construction, and consequences attach
+
+**Date:** 2026-08-14
+**Amends:** `D-038a`, **its stated reason only.** `D-038a`'s operative split — POLICY ledgers on
+the integration branch, EVIDENCE ledgers on the task branch with the work — is **kept unchanged
+and is not superseded.** `D-038` is untouched.
+**Resolves:** `18_REVIEW/REVIEW_INDEX.md` open item **91**, policy half. The numbering instance was
+discharged mechanically at merge-back (V10's items renumbered 86–90) and is not reopened.
+
+**On the identifier.** This entry is `D-047` and not `D-038b`. The `D-038a` precedent is for an
+entry that **clarifies** a rule; this one **corrects a premise the rule was justified on**, which
+is a different act and deserves its own number in the main series so that a reader of `D-038a`
+is sent to a peer entry rather than to a footnote on itself.
+
+**Decision:** `D-038a`'s premise that *"evidence ledgers are append-only and their additions are
+`git`-mergeable by construction"* is **false as stated, and is withdrawn.** Append-only makes a
+ledger **conflict-tolerant**, not conflict-free: two branches appending to the **same tail** of the
+same table produce a conflict git cannot order, and two branches allocating from the **same number
+series** produce a collision git cannot see. Both have happened in this project. `D-038a`'s split
+stands on its remaining and sufficient ground — **an isolated session's evidence must travel with
+the work that produced it, and the alternative re-introduces the shared write path `D-038` exists
+to remove** — and gains three consequences:
+
+**Consequence A — identifier allocation is against the INTEGRATION branch.** Every project-wide
+number series — `REVIEW_INDEX.md` **open-item numbers**, `A-`, `C-`, `Q-`, `PT-`, `BT-`, `I-` — is
+allocated against **the latest integration branch's state**, never against the task branch alone,
+and is **re-checked at merge-back**. This is what `PT-036` §0 already does for `PT` numbers; it is
+now general. The merging session renumbers the later arrival and fixes its cross-references, and
+**discloses the renumbering in the merge rather than absorbing it.**
+
+**Consequence B — tail-appended ledgers merge single-threaded.** `LOG.md`,
+`00_SYSTEM/COURSE_PROGRESS.md` and `18_REVIEW/REVIEW_INDEX.md` are **tail-appended** ledgers: their
+additions land at the end of the same table or status block every time. Merge-back of any branch
+touching them is **single-threaded** — one branch merges to integration at a time, completely,
+before the next begins — which `D-038` already requires and this entry makes explicit for these
+three files by name. A session that must wait, waits; it does not merge in parallel and repair
+afterwards.
+
+**Consequence C — `REVIEW_INDEX.md` merges promptly.** Unchanged from `D-038a` obligation 2 and
+restated because B makes it sharper: its gate rows govern whether the next lesson may start, and a
+verdict left unmerged holds a gate closed that is actually open.
+
+**Reason:** The premise was tested and failed, and the test is direct rather than argumentative.
+The `review/v10` → integration merge **conflicted in three files** — `REVIEW_INDEX.md` (3 hunks),
+`LOG.md` (2 hunks), `COURSE_PROGRESS.md` (1 hunk) — **every one of them a file `D-038a` names as
+mergeable.** `LOG.md`'s conflict **interleaved two session entries**, splicing the V09 R2 entry's
+Decision/Files/Git/Next-Action sections into the middle of the V10 R1 entry's fenced Decision
+block: a silent corruption of the project's own audit trail, caught only because a human resolved
+the conflict by hand. Separately, `video/v10` allocated open items **81–85** while the integration
+branch concurrently allocated **81–83** to V09 R2. `D-038a`'s own safety evidence re-derived `A-`,
+`C-` and `Q-` sets after the V08 merge and **did not check open-item numbers**, which are the one
+series in its list that is not mergeable by construction. **The risk grows with concurrency, and
+this project runs concurrent sessions by design.**
+
+**Evidence:** `18_REVIEW/V10/V10_REVIEW_R1.md` `M1` and its RENUMBERING DISCLOSURE; the
+`review/v10` → integration merge commit's own conflict set; `REVIEW_INDEX.md` item 91;
+`D-038a`'s reason paragraph and its safety-evidence paragraph; `PT-036` §0;
+`00_SYSTEM/GAP_AUDIT_2026-08-14.md` §6 `D3`.
+
+**Alternatives considered:** *Reversing `D-038a` and returning the evidence ledgers to
+integration-only* — rejected on `D-038a`'s own reasoning, which this entry does not disturb:
+it forces an isolated session to reach across mid-work or to defer its own records to a session
+that did not do the work. *Leaving the premise in place and treating the V10 merge as bad luck* —
+rejected; it happened twice in different forms and the second form corrupted a `LOG.md` entry.
+*Numbering this entry `D-038b`* — rejected for the reason stated above. *Locking `REVIEW_INDEX.md`
+numbering behind a tool* — **not rejected, deferred**: a validator check that no open-item number
+appears twice is cheap and would enforce Consequence A mechanically. Recorded as a follow-up, not
+required by this entry.
+
+**Consequences:** `D-038a` gains a pointer to this entry; **its text is not edited**, per this
+file's append-only rule. `D-038`'s merge-back paragraph gains the three named files.
+`scripts/validate_project.py` may add a duplicate-open-item-number check. No branch, merge or
+ledger row already made is invalidated by this entry.
+**Status:** ACTIVE
+
+---
+
+## D-048 — TIER 1 AGAINST ITSELF: a standing tie-break ladder, and `C-021`'s disposition under it
+
+**Date:** 2026-08-14
+**Resolves:** `18_REVIEW/REVIEW_INDEX.md` open item **168**; and the standing gap
+`SOURCING_HIERARCHY.md` §3.3 leaves open. **Part 2 does NOT resolve `C-021`** — see Part 2.
+**Does not disturb:** `D-039`, `D-040`, `D-030`, `D-025`/`D-033`, or `SOURCING_HIERARCHY.md`'s
+between-tier rules. This entry governs **within Tier 1 only.**
+
+**PART 1 — THE GENERAL RULE.** Where two Tier 1 statements conflict — printed against spoken, one
+lesson against another, or one sentence against another in the same hour — `SOURCING_HIERARCHY.md`
+§3.3's *"the recording wins"* does not apply, because both are the recording. A session applies
+this ladder **in order** and **stops at the first rung that answers**, and **records which rung
+answered**:
+
+| Rung | Test | Outcome |
+|---|---|---|
+| **1** | **Is one statement a demonstrable misspeak, corrected by the same speaker in the same passage?** | The correction governs. Record both; note the correction. |
+| **2** | **Does one statement carry a construction and the other only a characterisation?** A statement of *how a thing is computed* outranks a statement of *what it feels like or is built upon* (`A-093`) | The constructive statement governs. |
+| **3** | **Is one statement unhedged, unprompted and LATER, with the earlier one hedged, prompted or retracted under correction?** | The later unhedged statement is the speaker's **standing position** — **but this rung records a POSITION, not a FACT.** Anything closed on it closes **`PROVISIONALLY RESOLVED — TIER 1 STANDING POSITION`**, never `RESOLVED BY COURSE`, and carries the conflicting statement in the record. |
+| **4** | **Anything else — including any case where the rungs disagree, or where a rung would close a load-bearing record** | **DO NOT ADJUDICATE.** File/keep the `C-xxx`, keep the record `DO NOT CODE`, and put it to the owner. Owner adjudication sits **outside** the ladder, as `D-041` established it sits outside the tiers. |
+
+**Three hard limits, and they are what makes the ladder safe:**
+
+1. **The ladder never produces `RESOLVED BY COURSE`.** Only an *uncontradicted* Tier 1 statement
+   does. A resolved internal conflict yields a **provisional** status at best.
+2. **The `C-xxx` is never deleted or downgraded.** Both statements stay on the record, visible, per
+   `REMEDIATION_PROTOCOL.md` §2. **A divergence is a finding about the corpus** — the same
+   principle `SOURCING_HIERARCHY.md` §3.3 already states for Tier 1 vs Tier 2.
+3. **Tier 2 corroboration is a tiebreaker input, never a warrant.** Where Tier 2 agrees with one
+   arm it may be **noted** at rung 3, and it does not promote the outcome above provisional —
+   `D-039`'s Tier 2 cannot outrank Tier 1, so it certainly cannot arbitrate between two Tier 1
+   statements. **`D-045`'s `TOOLING` class is treated the same way and for the same reason:** it
+   sits below Tier 1, so it is an input at rung 2 or rung 3 and never a warrant.
+
+**PART 2 — `C-021`, PUT THROUGH PART 1, LANDS ON RUNG 4. IT IS NOT ADJUDICATED HERE.**
+
+The owner directed that `C-021` be resolved with `D-045` if `D-045`'s newly admitted `TOOLING`
+evidence bears on it, and not otherwise. **The check was run and the artifact does not bear on it.
+`C-021` therefore stays `OPEN — UNADJUDICATED` and is returned to the owner for a direct pick.**
+
+*The ladder, rung by rung, on the record:*
+
+- **Rung 1 — arguably answers, FOR V12.** V12 `[00:16:16]`–`[00:16:20]` is a correction accepted on
+  the record (*"from the RSI line. Thank you."*). **But the corrector is unidentified and is not
+  the speaker**, so this is not cleanly *"corrected by the same speaker in the same passage"*, and
+  the correction may be right about the **public** Dean Malone build and wrong about **this altered
+  one** (V12 `[00:07:20]` *"I've altered it or tweaked it a little bit"*). Rung 1 is **not clean.**
+- **Rung 2 — does not answer.** **Neither statement is a construction.** *"Two standard deviations
+  away from the market base"* and *"Bollinger bands based on the RSI line itself"* are both
+  characterisations of what the band is built upon. Neither states a computation. This is `A-093`'s
+  pattern exactly.
+- **Rung 3 — answers, FOR V14**, and would close `A-086`'s basis
+  `PROVISIONALLY RESOLVED — TIER 1 STANDING POSITION`: V14 `[00:45:09]` is later, unhedged and
+  unprompted; V12's position was reached under a chat prompt and is the least confident statement
+  in that lesson; and Tier 2 (`MMM-NOTES` p.45) independently agrees.
+- ⭐ **RUNG 1 AND RUNG 3 POINT OPPOSITE WAYS, AND THE LADDER'S OWN RUNG 4 GOVERNS THAT CASE:**
+  *"including any case where the rungs disagree."* **DO NOT ADJUDICATE.**
+
+*⭐ THE `D-045` TOOLING CHECK, RUN IN FULL AND REPORTED WHETHER OR NOT IT HELPED:*
+
+The `!SM_TDI` block admitted by `D-045` was read field by field against the specific question
+`C-021` asks — **what the volatility bands are two standard deviations OF**:
+
+| Field | What it states | Does it answer C-021's basis question? |
+|---|---|---|
+| `Volatility_Band=34` | A **lookback period**, one number, shared by the band and the base line | ❌ **No.** This is `A-086`'s *missing third quantity*, not its basis |
+| `SharkFin_Upper_Level=63` / `_Lower_Level=37` | Two **static horizontal levels** | ❌ No. These are `A-032`'s thresholds and do not touch the bands |
+| `RSI_Period=21`, `RSI_Price_Line=2`, `Trade_Signal_Line=7`, and both `_Type=0` | The RSI and the two MA lines | ❌ No. These build the three **line** buffers, not the bands |
+| The std-dev **multiplier** | **NOT EXPOSED.** `MMM_TDI.txt` states it in terms: *"The MT4 indicator exposes NO input for it, so it is compiled into the binary and the template cannot reveal it"* | ❌ No — the field that would have to carry a basis does not exist in the artifact |
+| `MM4XSF_TDI.ex4` buffer names — *"MarketBase Line"*, *"RSI Price Line"*, *"Upper/Lower VB Break"* | That a market-base buffer and an RSI-price buffer **both exist and are both plotted** | ❌ **No, and this is the important negative.** A list of buffer **names** says which lines are drawn. It does not say which series the bands are a deviation **of** — which is precisely and only what `C-021` disputes |
+
+**The template has NO basis field.** It exposes a period and a set of levels; the one parameter
+that would have to encode a basis — the deviation multiplier — is compiled into the `.ex4` and
+unreadable. **So the artifact is silent on `C-021` in the same way Tier 2 is loud on it: it speaks
+to a different quantity.** Reading the buffer-name list as though it settled the basis would be the
+`D-039` error — treating the admission of a source as a reading of it against a record — which
+`D-045`'s own alternatives paragraph forbids by name.
+
+**What the artifact DOES bear on, kept strictly separate:** `Volatility_Band=34` is a candidate for
+`A-086`'s **never-stated period**, which is the quantity that keeps the bands unconstructible. That
+is `D-045` consequence 4, it makes `A-086` **eligible and not closed**, and it is **not** a `C-021`
+ruling. Confusing the two would answer a question nobody asked and leave the disputed one open.
+
+**`C-021`'s disposition, therefore:**
+
+```text
+C-021 -- OPEN. UNADJUDICATED.
+D-048 rung 4 applied and RECORDED: rungs 1 and 3 disagree, rung 2 is silent, and the
+D-045 TOOLING artifact was checked field-by-field and does not speak to the basis.
+Both statements stand on the record. Neither is coded. A-086 stays DO NOT CODE.
+OWED: a direct owner pick between V12 / V14 / neither. It is not a session's call
+and this entry does not take it.
+```
+
+**AND IN EVERY CASE, WHICHEVER WAY THE OWNER LATER PICKS: NOTHING IS UNBLOCKED.** **The bands'
+PERIOD is never stated in Tier 1 or Tier 2**, so `A-086` stays `DO NOT CODE`, and `A-031`
+(*"blood in the water"*) and `A-032` (*"shark fin"*) stay uncomputable. **A multiplier and a basis
+do not build a band without a lookback.** A ruling on Part 2 settles the record; it does not settle
+the indicator. Any session that reads Part 2 as an unblock has made the `D-039` error by another
+route.
+
+**Reason:** The class has arisen **three times** — `C-017` (printed vs spoken, item 88), `C-021`
+(Tier 1 vs Tier 1 one week apart), and the `D-041`/`D-043` EMA-nickname family — and has consumed
+**two owner rulings and one reversal**, and `SOURCING_HIERARCHY.md` has no rule for it because it
+ranks *sources*, not two things one speaker said in one hour. Both the V14 session and the V14
+reviewer declined `C-021` and forwarded it unchanged, correctly, on the ground that it is neither
+a session's nor a reviewer's call. **A general rule retires a recurring stoppage; ruling `C-021`
+alone does not** — and the next instance is already predictable, because the corpus keeps
+producing them. **That the ladder's first live application returns rung 4 rather than an answer is
+not a failure of the ladder — it is the ladder working.** A tie-break scheme that always produces
+a winner is not a tie-break scheme, it is a preference; rung 4 is what keeps it honest, and
+`D-042`/`D-043` are the project's own demonstration that a session declining to chain an inference
+is what produced the correct answer.
+
+**Evidence:** `C-021` in full, including §4's three readings and §5's operational note; `C-017`
+and `REVIEW_INDEX.md` item 88; `D-041`, `D-042`, `D-043` and the reversal between them;
+`SOURCING_HIERARCHY.md` §3.2 Case C and §3.3; `A-086`, `A-093`; `D-045` and, for the Part 2 check,
+the verbatim `!SM_TDI` template block and the `MM4XSF_TDI.ex4` string list as recorded in
+`06_MANUAL_BACKTEST/tools/MMM_TDI.txt` (branch `feature/tradingview-mmm-indicator`, **unmerged** —
+re-verify against the merged tree before citing);
+`00_SYSTEM/GAP_AUDIT_2026-08-14.md` §1d, §6 `D4`.
+
+**Alternatives considered:** *Ruling `C-021` and nothing more* — rejected; it is the third instance
+and would leave the fourth to another owner session. *Owner adjudication of every instance* —
+rejected as the standing rule, and **retained as rung 4** for the instances that deserve it;
+`D-043`'s reversal of `D-041` shows that routing everything to the owner does not by itself
+produce correctness. *A pure "latest statement wins" rule* — rejected; it would have adopted
+whichever EMA mapping was stated last and cannot see a misspeak, which rung 1 catches.
+*Deleting the superseded `C-xxx` once a rung answers* — rejected outright; the divergence is
+evidence about the corpus, and §3.3's principle applies unchanged.
+⭐ *Applying rung 3 by default at Part 2 and adopting V14* — **rejected, and this is the one that
+was live.** Rung 3 does answer for V14 in isolation, and the drafted caution against defaulting to
+*"most recent"* stands: rung 1 answers for V12, the two disagree, and rung 4 exists for exactly
+that. ⭐ *Treating the `!SM_TDI` buffer-name list as evidence of the basis* — rejected on the
+field-by-field reading above; naming the buffers a build plots is not stating what one of them is
+computed from, and `D-045` Part 1 admits an artifact, not a reading of it.
+
+**Consequences:** `SOURCING_HIERARCHY.md` gains a §3.5 stating the ladder and pointing here.
+`C-021` gains the rung-4 disposition and the `TOOLING` check above, **and stays `OPEN`**; `A-086`
+stays `DO NOT CODE` and unchanged as to basis. **No other record changes status** — in particular
+`C-017` is **not** ruled by this entry; it becomes eligible for a session to apply the ladder to
+it, which is a different act. **No `A-xxx` is unblocked and no test becomes runnable.**
+`REVIEW_PROTOCOL.md` gains a check that a session claiming a rung names it.
+`REVIEW_INDEX.md` item 168 closes **as to Part 1** and a successor item carries the owner's
+outstanding `C-021` pick.
+**Status:** ACTIVE — Part 1 is the operative rule; Part 2 records a rung-4 non-adjudication and
+`C-021` remains OPEN pending the owner's direct pick
+
+---
+
+## D-049 — A forward read of a not-yet-studied lesson is permitted under four cumulative conditions, and the fourth is the one that matters
+
+**Date:** 2026-08-14
+**Resolves:** `18_REVIEW/REVIEW_INDEX.md` open item **179**, raised by V14 R1 as a proposed
+standing precedent. **Unblocks** item 176's second calendar gap.
+**Does not disturb:** `D-004` (the progression gate), `D-002` (one lesson per session), `D-017`
+(ingestion), `I-008` (unverified supplied transcripts). Nothing here permits **studying** a future
+lesson.
+
+**Decision:** A session may read files belonging to a lesson it is not studying — including a
+lesson beyond the gate — **if and only if all four conditions hold. They are cumulative; failing
+any one makes the read impermissible:**
+
+| Clause | Condition |
+|---|---|
+| **(a)** | **It seeks a BIBLIOGRAPHIC fact** — a filename, a week label, a duration, a checksum, a spoken week number, an ordering. **Never doctrine, never a rule, never a value, never a definition.** A read that would answer an `A-xxx` is forbidden outright, whatever it finds. |
+| **(b)** | **It is disclosed AT THE POINT OF USE** — in the artifact that relies on it, not only in `LOG.md`. A reader landing on the claim sees where it came from. |
+| **(c)** | **No artifact, note or interpretation about the future lesson is created.** No `03_LESSON_NOTES/` entry, no screenshot index, no `A-xxx`, no mastery work. The read leaves no forward footprint. |
+| **(d)** | ⭐ **The imported datum carries the SAME `I-008` VERIFICATION as any other evidence, or is labelled `UNVERIFIED` wherever it is used.** A supplied pre-ingestion transcript is not evidence merely because it is on disk. |
+
+**Clause (d) is the operative one and the reason this entry exists.** V14's `D3` satisfied
+(a)–(c) and **failed (d)**: the file it read is a pre-ingestion supplied transcript of exactly the
+class `Q-008`…`Q-015` show to be fabricated in its headers — **its own header carries
+*"Course Position: Video 16 of 21"* and a *"Primary Topics"* line, the two fields `Q-015` §5
+quarantines by name** — and the session applied `I-008` rigorously to V14's own body and **none of
+it** to the V15 body it made load-bearing for `A-092`.
+
+**A fifth condition, implied by (a) and stated so it is not missed: PREFER THE INGESTED SOURCE.**
+Where `SOURCE_MANIFEST.md`, the library tree or an already-studied lesson answers the question, the
+forward read is **not permitted** — not because it is dangerous, but because it is unnecessary and
+imports an unverified body for no gain. V14's `D3` failed this too: the manifest already showed
+`Wk5 041512` → `Wk7 050612` with no `Wk6`.
+
+**Reason:** The capability is genuinely useful and genuinely cheap — the second calendar anomaly
+(`Wk9 052012` → `Wk10 061712`, a four-week jump with three missing weeks recorded nowhere) has a
+forward read as its cheap decider, and that work is currently blocked on this ruling. Prohibiting
+forward reads outright would forbid an act that is, in form, harmless: a bibliographic string check
+creates no artifact and engages neither `D-004` nor `D-017`. But permitting them on disclosure
+alone would leave untouched the thing that actually went wrong, which was not the boundary and not
+the disclosure — **it was importing an unverified datum from a quarantined class and treating it as
+established.** This project quarantined 72 files to avoid exactly that, and the hazard does not
+change because the datum is bibliographic rather than doctrinal.
+
+**Evidence:** `18_REVIEW/V14/V14_REVIEW_R1.md` § `D3` and `REVIEW_INDEX.md` item 179, which
+proposed these four clauses; item 165; `A-092`; `SOURCE_MANIFEST.md`; `Q-015` §5 and
+`Q-008`…`Q-015`; `I-008`; `COURSE_PROGRESS.md` V15 GATE (c);
+`00_SYSTEM/GAP_AUDIT_2026-08-14.md` §6 `D5`, §7b.
+
+**Alternatives considered:** *Prohibiting forward reads outright* — rejected; it forbids a
+harmless and useful act and leaves the second calendar region unexamined. *Permitting on
+disclosure alone, clauses (a)–(c)* — rejected; V14 satisfied all three and the defect survived
+all three. *Charging V14 a finding retrospectively* — rejected and explicitly not done: V14 R1
+charged nothing because the manifest independently supports the conclusion, and this entry is a
+forward precedent, not a re-grading.
+
+**Consequences:**
+
+1. `STUDY_PROTOCOL.md` and both session prompts gain the four clauses and the prefer-the-ingested-
+   source rule. `REVIEW_PROTOCOL.md` gains a check that a disclosed forward read names its clause
+   (d) status.
+2. **Item 176's second calendar gap is unblocked** and may be decided — by the manifest and the
+   library tree first, and by a clause-compliant forward read only if those are silent, with any
+   imported datum labelled `UNVERIFIED` wherever used.
+3. **V14's `D3` is annotated, not reversed.** `A-092`'s conclusion stands on the manifest;
+   the V15-sourced half is labelled `UNVERIFIED` at its point of use per clause (d).
+4. **`I-008` is unchanged and is not weakened.** This entry extends its reach to imported data;
+   it grants no exemption from it.
+
+**Status:** ACTIVE
+
+---
+
+## D-050 — The two `I-010` clock questions are ruled: the `D-035` boundary is ABSOLUTE in the UTC−5 clock, and `D-034`'s FXCM week-open fact is REDUCED TO ITS EVIDENCE pending a winter probe
+
+**Date:** 2026-08-14
+**Resolves:** `00_SYSTEM/SETUP_ISSUES.md` `I-010` **Q2** outright; `I-010` **Q1** conditionally —
+Q1 stays `OPEN` until the probe is run, but its handling is now decided rather than undecided.
+**Amends:** `D-035` (Q2, one appended line); `D-034` fact 1 (Q1, scope of the claim only).
+`D-031`'s two-arm requirement is untouched.
+
+**PART 1 — Q2. THE `D-035` BOUNDARY IS ABSOLUTE, IN THE CORPUS'S NATIVE UTC−5 (ARM A) CLOCK.**
+
+`D-035`'s DEVELOPMENT/HOLDOUT boundary at **2016-07-01** is **one instant**, expressed in the
+corpus's native **UTC−5** clock, and it is **the same instant for both `D-031` arms.** It is **not**
+re-cut per arm. **This rule is general**: it governs the start and end of **every** pre-registered
+window, at **every** timeframe, now and in future, unless a later decision says otherwise for a
+named window.
+
+**The measured consequence, stated so it is never mistaken for a holdout leak:** under Arm B
+(`America/New_York`, `+1h` during US DST) the aggregation stamps **4 fifteen-minute bars** and
+**1 one-hour bar** with a wall-clock date of `2016-07-01`:
+
+```text
+M15:  2016.07.01,00:00 — 00:15 — 00:30 — 00:45
+H1:   2016.07.01,00:00
+```
+
+**Those bars are DEVELOPMENT data.** Their underlying M1 data is entirely `<= 2016-06-30` in the
+file's own UTC−5 clock; they are the same development-side minutes wearing a different clock label.
+**The `D-035` holdout remains sealed and unopened, and this entry opens nothing.**
+
+**PART 2 — Q1. `D-034` FACT 1 IS REDUCED TO WHAT ITS EVIDENCE SUPPORTS, AND A PROBE IS OWED.**
+
+`D-034`'s statement that FXCM opens the week at 21:00 UTC *"consistently, week after week"* is
+**true of its sample and is not established year-round.** The sample — `PT-023` §1's depth probe,
+**2026-05-31 → 2026-08-13** — lies entirely inside northern-hemisphere summer, over which
+*"fixed 21:00 UTC year-round"* and *"DST-anchored New York 17:00"* are **indistinguishable.**
+`D-034` fact 1 is therefore **restated as: FXCM's week open is 21:00 UTC over the observed summer
+window; its winter behaviour is UNMEASURED.**
+
+**Until the probe is run:**
+
+1. **No new test may bind to a year-round FXCM week open by name.** Existing tests bound to it —
+   `W-C`, `PT-008`–`PT-013` — **stand and are not re-run**; their windows are summer-side or
+   HistData-sourced, and the exposure is recorded here rather than assumed away.
+2. **Any cross-vendor comparison** between the FXCM-sourced and HistData-sourced series **states
+   this open question at the point of comparison.** HistData is provably fixed at 22:00 UTC
+   year-round; if FXCM is DST-anchored the two **agree in winter and differ by an hour in summer**,
+   and each series is internally consistent, so **nothing in the data would flag it.**
+3. **The probe is a standing obligation on the first session running after 1 November 2026:**
+   probe FXCM's week open on any week between **November and February** and compare against
+   22:00 UTC. Record the result by appending to `D-034`. **`D-034` fact 1 is NOT amended from
+   memory or inference — it is measured.** `I-010` Q1 closes on that measurement and not before.
+
+**⚠️ Q1 IS NOT RESOLVED BY THIS ENTRY AND IS NOT TO BE READ AS RESOLVED.** What is decided is
+**how Q1 is handled** — the claim is narrowed to its evidence, the exposure is written down, and
+the closing test is named and dated. **The question itself stays `OPEN` and closes on a
+measurement, not on a ruling.**
+
+**Reason:** Both questions have the same shape — **a convention nobody stated, that no result
+currently depends on, and that will silently corrupt a comparison the first time one does.** Q2's
+spillage is 4 bars at `M15` and 1 at `H1`, which will not move a result; but the ambiguity recurs
+at every window start and at every future timeframe, and the `H1` measurement taken 2026-08-14
+established exactly that — it is not an `M15` artifact. Pinning it once, generally, costs one line.
+Q1 is the more serious of the two because `D-034` states as a standing vendor fact something its
+own evidence cannot support, and four pre-registered tests are bound to it **by name**; the failure
+mode is invisible by construction, because each series is internally consistent.
+
+**Absolute rather than per-arm, for Q2:** the boundary was computed on **calendar** grounds before
+any chart existed, independent of any arm. Cutting per-arm would make Arm B's development block
+4 bars shorter than Arm A's — so the two arms would no longer cover the same period, which
+defeats the one thing `D-031`'s two-arm design exists to control.
+
+**Evidence:** `SETUP_ISSUES.md` `I-010` Q1 and Q2 in full, including the 2026-08-14 `H1`
+amendment; `06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M15_H1/QA_REPORT_H1_ARMB.txt` check `C8`
+and that dataset's `README.md` (branch `feature/m15-h1-chart-backtest`, **unmerged** — re-verify
+against the merged tree before citing); `D-034` fact 1 and `PT-023` §1; `D-035`; `D-036a`'s three
+independent confirmations of HistData's 22:00 UTC; `D-031`; `D-044` §6, whose near-miss is the
+same clock ambiguity caught in code;
+`00_SYSTEM/GAP_AUDIT_2026-08-14.md` §6 `D6`.
+
+**Alternatives considered:** *Per-arm boundaries (Q2)* — rejected for the reason above.
+*Leaving Q2 unstated because 4 bars cannot move a result* — rejected; the cost of stating it is one
+line and the cost of discovering it in a review is a re-run. *Confirming `D-034` fact 1 as written
+(Q1)* — rejected; `I-010` says in terms that it must be measured, not inferred, and the existing
+probe provably cannot separate the two hypotheses. *Re-running `PT-008`–`PT-013` now against a
+22:00 UTC boundary (Q1)* — rejected as premature: it would spend real work on a hypothesis nobody
+has tested, and the winter probe costs one probe and settles it.
+
+**Consequences:** `D-035` gains one appended line stating the clock. `D-034` fact 1 gains its
+scope restatement and the probe obligation, appended rather than edited. `I-010` **Q2 closes**;
+**Q1 stays `OPEN`** with its handling now decided and its closing test named and dated.
+`BACKTEST_EVIDENCE_STANDARD.md` gains the general rule that a pre-registered window's boundaries
+are absolute instants in the corpus's native clock, identical across `D-031` arms. **No existing
+result is invalidated, no test is re-run, and the `D-035` holdout stays sealed.**
+**Status:** ACTIVE — Q1 half PENDING the winter probe

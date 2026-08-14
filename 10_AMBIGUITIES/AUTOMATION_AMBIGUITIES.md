@@ -6802,6 +6802,26 @@ Tier 2's "market base line cross" is SUPERSEDED -- see C-019.
 `A-032`, `A-039`, `A-085`, `A-086`, `C-019` (new), `D-030`, `D-040`,
 `SOURCING_HIERARCHY.md` §3.1/§3.2 Case A/§3.3; `EXTERNAL_VOCABULARY_REFERENCE.md` §5.7, §9.2.
 
+> ## 📌 POINTER ADDED 2026-08-14 — `D-045` / `D-048`: **NOTHING HERE CHANGES. STILL NOT COMPUTABLE.**
+>
+> Two owner rulings landed on the TDI on 2026-08-14 and **neither touches this record.** Recorded
+> because a reader who has just seen `A-084`'s blocker lift will reasonably ask whether this one
+> lifted too. **It did not.**
+>
+> - **`D-045`** admits the owner's `!SM_TDI` template at the new `TOOLING` tier and closes `A-084`
+>   provisionally at `k = 2`. That fixes the **RSI line's** construction. This record's blocker is
+>   **`A-086` — the volatility band**, and `D-045` makes `A-086` **eligible, not closed**.
+> - **`D-048`** adopts the Tier-1-against-itself ladder and, at Part 2, applies it to `C-021` (the
+>   band's *basis*) — **returning rung 4, DO NOT ADJUDICATE.** `C-021` stays `OPEN`.
+>
+> ```text
+> A-031 -- RESOLVED BY COURSE as to MEANING.  UNCHANGED.
+>          STILL NOT COMPUTABLE: the band is still unspecified (A-086).
+> ```
+>
+> **A multiplier and a basis do not build a band without a lookback** — and the lookback
+> (`Volatility_Band=34`) is a `TOOLING` **candidate** under `D-045`, not an adopted value.
+
 ---
 
 ## A-032 — STATUS CHANGE: ⭐ **CLOSED — `RESOLVED BY COURSE`** ("shark fin")
@@ -6847,6 +6867,32 @@ V12 [00:19:28] spoken + frames 19:06 and 23:26 printed.
 
 `A-031`, `A-039`, `A-086`, `A-011`, `D-040`; `EXTERNAL_VOCABULARY_REFERENCE.md` §5.6, §9.2;
 `03_LESSON_NOTES/V12_SOURCE_NOTES.md` §6a.
+
+> ## 📌 UPDATED 2026-08-14 — `D-045`: **THIS RECORD BECOMES *ELIGIBLE* FOR A TOOLING CORROBORATION, AND IS NOT CLOSED FURTHER**
+>
+> `D-045` admits the owner's `!SM_TDI` MT4 template at the new `TOOLING — OWNER-ATTESTED PLATFORM
+> ARTIFACT` tier. That artifact carries **`SharkFin_Upper_Level=63` and `SharkFin_Lower_Level=37`
+> as first-class named inputs**, plus dedicated *"Upper Shark Fin"* / *"Lower Shark Fin"* buffers in
+> `MM4XSF_TDI.ex4`, and the template's level list `68 / 63 / 50 / 37 / 32`. **V13 frame `00:53:35`
+> corroborates the `63`/`37` pair from Tier 1**, and `[00:51:09]` ties `37` to the shark fin by
+> name — this is `D-045` Part 3's provenance bridge and it is **this record's numbers** that carry
+> it, which is why `D-045` names `A-032` explicitly.
+>
+> **`D-045` consequence 4 makes this record ELIGIBLE and does NOT close it further**, and the
+> reason is `D-045`'s own alternatives paragraph: ***admitting a source is not reading it against a
+> record.*** A session that does the reading writes it up and cites `D-045`; this block does not
+> perform that act.
+>
+> **⚠️ AND IT WOULD NOT UNBLOCK THIS RECORD IF IT DID.** `63`/`37` are **static horizontal levels**.
+> The shark fin is defined against the **volatility band**, not against a level — *"the blue band is
+> the waterline"* — and the band is still unconstructible (`A-086`: period a `TOOLING` candidate,
+> basis disputed at `C-021`, multiplier compiled into the `.ex4` and absent from the template).
+>
+> ```text
+> A-032 -- RESOLVED BY COURSE as to MEANING.  UNCHANGED.
+>          STILL NOT CODABLE: the band is unspecified (A-086).
+>          63/37 are ELIGIBLE for a TOOLING write-up under D-045. Not adopted here.
+> ```
 
 ---
 
@@ -7195,7 +7241,57 @@ remaining unblock in the project.**~~
 ### Related
 
 `A-080`, `A-039`, `A-085`, `A-086`, `D-030`; `03_LESSON_NOTES/V12_INTERPRETATION.md` Q2;
-`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-040_…md` §2.
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-040_…md` §2. **And now `D-045`** — see the status change
+immediately below.
+
+> ## ⭐⭐ STATUS CHANGE 2026-08-14 — **`D-045`: THE ACTIVE BLOCKER IS LIFTED, PROVISIONALLY, AT `k = 2`**
+>
+> **The owner ruled on `REVIEW_INDEX.md` item 157.** Everything above is **retained unedited** per
+> `REMEDIATION_PROTOCOL.md` §2 and is the record of how this was arrived at. What follows supersedes
+> the `ACTIVE BLOCKER` status **and nothing else.**
+>
+> ```text
+> A-084 -- PROVISIONALLY RESOLVED — TOOLING.  k = 2.
+>          The plotted green line is SMA(2) of RSI(21).
+>          NOT `RESOLVED BY COURSE`.  NOT closed for good.
+>          Warrant: D-045, on the owner-attested !SM_TDI MT4 template
+>          (Ultimate Blue.tpl, md5 ea22c8cf527921cef072586b6fa28296),
+>          fields RSI_Price_Line=2 with RSI_Price_Type=0 (MT4 MODE_SMA).
+> ```
+>
+> **⚠️ THE WEAKNESS, QUOTED FROM `D-045` PART 3 AND NOT GLOSSED — a reader of this record reads this
+> paragraph too.** The template is dated **2016 and 2019**; the course was recorded in **2012**.
+> V13 frame `00:53:35` — a 2012, Tier-1, instructor's-own-chart datum — carries the template's
+> **non-default** `63`/`37` pair, and the audio ties `37` to the shark fin (`[00:51:09]`); the
+> public Dean Malone TDI ships 68/50/32, so this is **not** the public default. `RSI_Period=21`
+> matches `A-080`'s Tier-1 closure exactly. **But `RSI_Price_Line=2` — the one field that answers
+> this record — is NOT among the corroborated fields.** The corroboration establishes that the
+> template is of this lineage and plausibly this instructor's; **it does not establish the
+> load-bearing value.** Any artifact relying on `k = 2` cites `D-045` and inherits this paragraph.
+>
+> **WHAT THIS UNBLOCKS, AND ITS EXACT EXTENT.** V11's RSI threshold family — the 50 bias baseline,
+> 80/40, 60/20, 80/20, the 38–42 pullback band, both divergence forms, the `[00:36:19]` composite —
+> is unblocked **as against `A-084` and no further**, and remains subject to every other blocker
+> each claim carries. **`PT-040`'s `MATERIAL` verdict is not disturbed**: it measured the cost of
+> *guessing* at `k`, and `k` is no longer guessed. Its `k = 2` arm (5.16 pp at `t = 50`) is now the
+> arm that matters.
+>
+> **WHAT THIS DOES NOT DO.** `A-085` is untouched — a mechanism claim with no construction.
+> `A-039` stays **OPEN** on the TDI as a taught entry criterion. `A-086` stays `DO NOT CODE`.
+> `D-030` is untouched. **Admitting the template is not reading it against every record it might
+> touch** (`D-045`, alternatives) — see `A-086` and `A-032`, which `D-045` makes **eligible and does
+> not close.**
+>
+> **⭐ THIS RECORD NOW CARRIES A STANDING RE-CHECK OBLIGATION.** `D-045` consequence 3 puts `A-084`
+> on the `SOURCING_HIERARCHY.md` §3.4 list beside `A-014`, `A-023` and `A-020`. **A later Tier 1
+> statement overturns this closure under `D-040` §3.1.** Any session reaching a lesson that shows a
+> **TDI properties dialog, a Navigator/inputs panel, or a spoken smoothing length must run §3.1
+> against this record** — the closure being provisional is the whole reason the scan is still worth
+> running. **Closed on `TOOLING` is not closed for good.**
+>
+> **⭐ AND EVERY `PT`/`BT` USING `k = 2` MUST SAY SO IN ITS OWN PRE-REGISTRATION** (`D-045`
+> consequence 6): that the value is `TOOLING`-tier and **provisional**, so a later overturn is
+> traceable to the runs it affected.
 
 ---
 
@@ -7363,6 +7459,43 @@ are still not testable.**
 > against itself across lessons.** ⚠️ **`C-021` is an OWNER decision** (`REVIEW_INDEX.md` item 168).
 > ❌ **The band's PERIOD is still never stated in Tier 1 or Tier 2**, so this record stays
 > `DO NOT CODE` and **`A-031`/`A-032` remain uncomputable.**
+
+> ## ⭐ UPDATED 2026-08-14 — `D-045` AND `D-048`. **THIS RECORD STAYS `DO NOT CODE`, ON BOTH COUNTS.**
+>
+> Two owner rulings landed the same day and **neither closes this record.** Both are recorded here
+> because a reader landing on `A-086` will otherwise assume one of them did.
+>
+> **1. THE BASIS — `D-048` PART 2 RAN THE LADDER AND RETURNED RUNG 4. `C-021` STAYS `OPEN`.**
+> `D-048` Part 1 adopts a standing tie-break ladder for **Tier 1 against itself**, and Part 2 puts
+> `C-021` through it on the record: **rung 1 arguably answers for V12** (the `[00:16:20]`
+> *"Thank you"* correction — but the corrector is unidentified and is not the speaker, so it is not
+> clean); **rung 2 is silent** — *neither* statement is a construction, both are characterisations,
+> which is `A-093`'s pattern exactly; **rung 3 answers for V14** (later, unhedged, unprompted, Tier
+> 2 agreeing). **Rungs 1 and 3 point opposite ways, which is precisely the case rung 4 governs:
+> DO NOT ADJUDICATE.** The basis is **owed to the owner as a direct pick between V12 / V14 /
+> neither**, and this record's *"final position: the RSI line, low confidence"* is therefore **still
+> out of date and deliberately not replaced.** See `C-021` §7.
+>
+> **2. ⭐ THE PERIOD — `D-045` MAKES THIS RECORD *ELIGIBLE* AND EXPRESSLY DOES NOT CLOSE IT.**
+> `D-045` admits the owner's `!SM_TDI` MT4 template at the new `TOOLING — OWNER-ATTESTED PLATFORM
+> ARTIFACT` tier. That artifact carries **`Volatility_Band=34`** — a lookback period, the **exact
+> quantity this record has never had**, and the reason the bands are unconstructible. **`D-045`
+> consequence 4 makes `A-086` ELIGIBLE and does NOT close it**, and its alternatives paragraph says
+> why in terms: ***admitting a source is not reading it against a record.*** A session that does the
+> reading — against the 2016-vs-2012 dating weakness, against `D-030`, and against the fact that the
+> **std-dev multiplier is compiled into the `.ex4` and is NOT in the template at all** — closes this
+> record, or does not. **This block is not that session and does not perform that act.**
+>
+> ```text
+> A-086 -- DO NOT CODE.  UNCHANGED.
+> Basis:      DISPUTED. C-021 OPEN at D-048 rung 4. Owner pick owed.
+> Deviation:  "two standard deviations" (V14, unhedged). Multiplier NOT in the artifact.
+> Period:     NEVER STATED IN TIER 1 OR TIER 2. Volatility_Band=34 is a TOOLING
+>             candidate under D-045 and is ELIGIBLE, NOT ADOPTED.
+> ```
+>
+> ❌ **`A-031` and `A-032` therefore remain uncomputable.** **A multiplier and a basis do not build
+> a band without a lookback**, and the lookback is a candidate, not a closure.
 
 
 ---

@@ -152,6 +152,35 @@ reviewer session.
 
 ---
 
+## 1a. ⭐ READING A LESSON YOU ARE NOT STUDYING — the `D-049` forward-read rule
+
+**Added 2026-08-14 by `D-049`.** You **may** read files belonging to a lesson you are not studying,
+including one beyond the `D-004` gate — **if and only if ALL FOUR clauses hold. They are
+cumulative; failing any one makes the read impermissible.**
+
+| Clause | Condition |
+|---|---|
+| **(a)** | **It seeks a BIBLIOGRAPHIC fact** — a filename, a week label, a duration, a checksum, a spoken week number, an ordering. ⚠️ **Never doctrine, never a rule, never a value, never a definition. A read that would answer an `A-xxx` is FORBIDDEN OUTRIGHT, whatever it finds** |
+| **(b)** | **Disclosed AT THE POINT OF USE** — in the artifact that relies on it, **not only in `LOG.md`.** A reader landing on the claim sees where it came from |
+| **(c)** | **No artifact, note or interpretation about the future lesson is created.** No `03_LESSON_NOTES/` entry, no screenshot index, no `A-xxx`, no mastery work. **The read leaves no forward footprint** |
+| **(d)** | ⭐ **The imported datum carries the SAME `I-008` VERIFICATION as any other evidence, or is labelled `UNVERIFIED` WHEREVER IT IS USED.** A supplied pre-ingestion transcript is **not evidence merely because it is on disk** |
+
+⭐ **AND A FIFTH — PREFER THE INGESTED SOURCE.** Where `SOURCE_MANIFEST.md`, the library tree or an
+already-studied lesson answers the question, **the forward read is NOT permitted** — not because it
+is dangerous, but because it is **unnecessary and imports an unverified body for no gain.**
+
+> **Clause (d) is the operative one and the reason `D-049` exists.** The precedent case satisfied
+> (a)–(c) and failed (d): the file read was a pre-ingestion supplied transcript of exactly the class
+> `Q-008`…`Q-015` show to be **fabricated in its headers**, and the session applied `I-008`
+> rigorously to its own lesson and **none of it** to the imported body it then made load-bearing.
+> **This project quarantined 72 files to avoid exactly that, and the hazard does not change because
+> the datum is bibliographic rather than doctrinal.**
+
+⚠️ **NOTHING HERE PERMITS STUDYING A FUTURE LESSON.** `D-004` (the gate), `D-002` (one lesson per
+session) and `D-017` (ingestion) are undisturbed.
+
+---
+
 ## 2. MANUAL BACKTEST PROTOCOL
 
 Manual backtesting is part of the Student Phase and is different from later
