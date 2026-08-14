@@ -185,6 +185,32 @@ HOLDOUT       70% point → most recent          (untouched until Phase 6+)
 
 ---
 
+## 3a. ⭐ WINDOW BOUNDARIES ARE ABSOLUTE INSTANTS IN THE CORPUS'S NATIVE CLOCK
+
+**Added 2026-08-14 by `D-050` Part 1, which closes `SETUP_ISSUES.md` `I-010` Q2.**
+
+**A pre-registered window's start and end are ABSOLUTE INSTANTS, expressed in the corpus's native
+UTC−5 clock, and they are THE SAME INSTANTS FOR BOTH `D-031` ARMS.** They are **not** re-cut per
+arm. **This is general** — every window, every timeframe, now and in future, unless a later
+decision says otherwise for a **named** window.
+
+**Why absolute and not per-arm:** cutting per-arm makes one arm's block a different length from the
+other's, so **the two arms would no longer cover the same period — which defeats the one thing
+`D-031`'s two-arm design exists to control.**
+
+**The measured consequence for the `D-035` boundary, recorded so it is never misread as a holdout
+leak:** under Arm B (`+1h` during US DST) the aggregation stamps **4 `M15` bars** and **1 `H1` bar**
+with a wall-clock date of `2016-07-01`. ⚠️ **Those bars are DEVELOPMENT data** — their underlying M1
+is entirely `≤ 2016-06-30` in the file's own clock; they are the **same development-side minutes
+wearing a different clock label**. **The `D-035` holdout remains sealed and unopened.**
+
+> ⚠️ **AND THE CONVERSE FAILURE IS REAL, NOT HYPOTHETICAL.** `D-044` §6 records a near-miss in
+> which a draft clipped the scope on **the arm's own clock** — which *looks* more principled and is
+> a **silent redefinition**: Arm-B DEVELOPMENT would quietly have become 86,820 M15 bars where
+> `D-036a` committed 86,824. It was caught by a row count. **Clip on the raw file clock.**
+
+---
+
 ## 4. STATISTICAL HONESTY
 
 ### 4.1 Minimum reportable sample

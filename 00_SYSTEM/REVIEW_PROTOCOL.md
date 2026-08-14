@@ -306,6 +306,41 @@ matching it, and do not allow sample manipulation to achieve it.
 
 ---
 
+## 6a. ⭐ THREE CHECKS ADDED 2026-08-14 BY `D-046`, `D-048` AND `D-049`
+
+Each is a **check on a claim the session makes**, not a new dimension. A session that makes none
+of these claims is not tested by them.
+
+**(1) `EXCLUDED BY DECISION` is AUDITED, not accepted — `D-046`.** Where a mastery report gives a
+dimension the disposition `EXCLUDED BY DECISION`, verify **all four** conditions:
+**(a)** subject matter exists (else the disposition is `NOT APPLICABLE`); **(b)** ⭐ **a numbered
+decision is CITED BY NUMBER and it actually bars the work** — read the decision, do not take the
+citation on trust; **(c)** no future lesson can lift the bar (else the disposition is `DEFERRED`);
+**(d)** the record states **what** was excluded, specifically enough to see the size of the hole.
+⚠️ **A reviewer who finds the cited decision does NOT in fact bar the work returns `REVISE` with
+the dimension REINSTATED.** **No numbered decision, no exclusion** — a session that cannot name one
+has not found a third disposition, it has found work it has not done.
+
+**(2) A session claiming a `D-048` rung must NAME the rung — `D-048`.** Where a session resolves a
+**Tier 1 against Tier 1** conflict, verify that it **states which rung answered** and that the
+rungs above it were tried and did not answer. ⚠️ **Verify the ceiling too: rung 3 closes only
+`PROVISIONALLY RESOLVED — TIER 1 STANDING POSITION`, NEVER `RESOLVED BY COURSE`** — the ladder
+cannot produce a course closure, and a session that reports one has misapplied it. **Where the
+rungs disagree, rung 4 governs and the answer is `DO NOT ADJUDICATE`**; a session that picked a
+winner anyway is charged. **The `C-xxx` is never deleted or downgraded**, whatever the rung.
+
+**(3) A disclosed forward read must name its clause (d) status — `D-049`.** Where a session
+discloses a read of a not-yet-studied lesson's files, verify **all four cumulative clauses** and
+the fifth condition: **(a)** the fact sought is **bibliographic**, never doctrine, a rule, a value
+or a definition — ⚠️ **a read that would answer an `A-xxx` is forbidden outright, whatever it
+found**; **(b)** it is disclosed **at the point of use**, not only in `LOG.md`; **(c)** no artifact
+or interpretation about the future lesson was created; **(d)** ⭐ **the imported datum carries the
+same `I-008` verification as any other evidence, OR is labelled `UNVERIFIED` wherever used**;
+**(fifth)** **prefer the ingested source** — if `SOURCE_MANIFEST.md`, the library tree or an
+already-studied lesson answers the question, the read was **not permitted**.
+
+---
+
 ## 7. ERROR TAXONOMY
 
 Classify important errors:

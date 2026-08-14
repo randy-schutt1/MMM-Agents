@@ -86,7 +86,32 @@ stop-hunt/trap-move discriminator; the box-drawing conventions; the abbreviation
 **Honest limit:** recall of *what the presenter said* is not recall of *course doctrine*, and
 in V05 those are disjoint. I can recall the lesson; there is no doctrine in it to recall.
 
-### B. Recognition — **NOT APPLICABLE (with reason)**
+### B. Recognition — ⭐ **`EXCLUDED BY DECISION` (`D-025`)** — *re-labelled 2026-08-14 by `D-046`*
+
+> **ANNOTATION IN PLACE, `REMEDIATION_PROTOCOL.md` §2. The superseded label and the whole of the
+> text beneath it are RETAINED UNEDITED and are accurate — only the DISPOSITION changes.**
+>
+> **Superseded label:** `NOT APPLICABLE (with reason)`.
+> **New label:** **`EXCLUDED BY DECISION`**, citing **`D-025`**.
+>
+> `D-046` adopted `EXCLUDED BY DECISION` on 2026-08-14 and applied it retroactively to this
+> report, which is the lesson that forced it. **This dimension now carries the label that
+> describes its actual state**, and the four conditions are met: **(1)** subject matter exists —
+> there is an hour of it; **(2)** the work is permanently barred by **`D-025`**, cited;
+> **(3)** no future lesson makes a V05 guest rule testable, so `DEFERRED` would be affirmatively
+> false; **(4)** what was excluded is stated in the text below.
+>
+> ⚠️ **This is a RE-LABELLING, NOT A RE-GRADE.** `D-046` consequence 4: no grade, verdict or gate
+> state changes by operation of that entry and no lesson is re-reviewed on account of it. **V05's
+> `REVIEW REQUIRED` status, its R1 verdict and every gate are untouched.**
+>
+> ⭐ **AND IT CLEARS A SIX-LESSON MIS-LABELLING.** `REVIEW_INDEX.md` item 36's V05 R1 ruling found
+> that `NOT APPLICABLE` **was not even available** to dimension B — `D-019`'s table grants it to
+> **F and G only** — which is why this dimension was carried un-graded or
+> `NOT SATISFIED WITH NO SEVERITY CHARGE` for six-plus consecutive lessons. **The vocabulary gap
+> was in the project's standards, not in this lesson's understanding.**
+
+*(Superseded heading, retained:)* **B. Recognition — NOT APPLICABLE (with reason)**
 
 The dimension asks whether the agent can identify **the taught concepts** on charts not used
 in the lesson. V05 teaches no concept that is admissible to identify. The concepts it names
@@ -164,7 +189,40 @@ no answer to see.
 > and hide real work. **This is the first of the two dimensions I am asking the reviewer to
 > rule on.**
 
-### G. Manual backtesting — **NOT APPLICABLE**, and this is the contested grade
+### G. Manual backtesting — ⭐ **`EXCLUDED BY DECISION` (`D-025`)** — *re-labelled 2026-08-14 by `D-046`*
+
+> **ANNOTATION IN PLACE, `REMEDIATION_PROTOCOL.md` §2. The superseded label and the whole of the
+> text beneath it are RETAINED UNEDITED — the reasoning below is what produced the ruling and it
+> is deliberately preserved. Only the DISPOSITION and its STATED REASON change.**
+>
+> **Superseded label:** `NOT APPLICABLE`, *"and this is the contested grade"*.
+> **New label:** **`EXCLUDED BY DECISION`**, citing **`D-025`**.
+>
+> ⭐⭐ **AND THE STATED REASON CHANGES — this was the V05 R1 ruling's SPECIFIC REQUIREMENT and is
+> now `D-046` consequence 3:**
+>
+> | | |
+> |---|---|
+> | **Was** | *"states no testable rule"* |
+> | **Is** | ⭐ **"states rules EXCLUDED BY `D-025`"** |
+>
+> **The distinction is the whole point and V06–V21 must not inherit the wrong one.** V05 does
+> state testable-shaped rules — several — and the strict reading of `D-018` therefore never
+> covered this lesson. The rules are **withheld**, not **absent**. Recording it as *"no testable
+> rule"* would carry a false precedent forward into every later guest lesson.
+>
+> **The contest is over.** This dimension's own text below says *"if a third disposition is
+> needed, this is the lesson that shows why"*. **It was, and it is now adopted** — `D-046`,
+> `REVIEW_INDEX.md` item 36, closed on its sixth escalation. The four conditions are met exactly
+> as for dimension B, and **the escalation at the foot of this report is answered in the
+> affirmative.**
+>
+> ⚠️ **RE-LABELLING, NOT RE-GRADING.** No verdict, status or gate changes. **Dimension F is
+> UNCHANGED and stays `SUCCESS AFTER SOURCE REVIEW`** — it correctly refused `NOT APPLICABLE`,
+> because the assignment is partly performable and the performable part was performed on real
+> data. `D-046` consequence 2 says so in terms.
+
+*(Superseded heading, retained:)* **G. Manual backtesting — NOT APPLICABLE, and this is the contested grade**
 
 No manual backtest was performed. **Deliberately.**
 

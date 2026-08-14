@@ -89,6 +89,40 @@ Are conflicts with earlier lessons documented in
 
 ---
 
+## ⭐ DIMENSION DISPOSITIONS — `NOT APPLICABLE` · `DEFERRED` · `EXCLUDED BY DECISION`
+
+**Added 2026-08-14 by `D-046`**, which refines `D-018` and `D-019`; both remain `ACTIVE` and
+neither is superseded. A dimension that is not graded normally takes **exactly one** of three
+dispositions, and they are not interchangeable:
+
+| Disposition | Meaning | Effect | Who can grant it |
+|---|---|---|---|
+| `NOT APPLICABLE` | The lesson supplies **no subject matter** | Closed permanently | `D-018`, **dimensions F and G only** |
+| `DEFERRED` | Subject matter exists; a prerequisite is missing and **may arrive** | Stays **open**, carried in `REVIEW_INDEX.md` | Any dimension |
+| **`EXCLUDED BY DECISION`** | Subject matter exists; the work is **permanently barred by a numbered decision**, which is **cited** | Closed; **no debt accrues**; the exclusion is **auditable** | **Any dimension**, subject to reviewer audit |
+
+**`EXCLUDED BY DECISION` requires ALL FOUR conditions. Failing any one, it is not available:**
+
+| # | Condition |
+|---|---|
+| 1 | **Subject matter exists.** The lesson supplies material the dimension would otherwise grade. **This is what separates it from `NOT APPLICABLE`** |
+| 2 | ⭐ **The work is permanently barred by a numbered decision in `DECISIONS.md`, and THE DECISION IS CITED BY NUMBER in the report.** An exclusion with no citable decision is **not available** — the disposition is `DEFERRED`, or the work is done |
+| 3 | **No future lesson can lift the bar. This is what separates it from `DEFERRED`.** Where a future lesson *could* lift it — a definition the course has not yet given — the disposition is `DEFERRED` and `D-030` governs |
+| 4 | **The record states WHAT was excluded**, specifically enough that a reader can see **the size of the hole** |
+
+⚠️ **`EXCLUDED BY DECISION` IS NOT A PASS.** It is a claim the reviewer audits like any other, and
+**a reviewer who finds the cited decision does not in fact bar the work returns `REVISE` with the
+dimension reinstated.**
+
+⚠️ **It creates no new licence to exclude. Condition 2 is the whole guard: NO NUMBERED DECISION, NO
+EXCLUSION.** A session that cannot name the decision has not found a third disposition — **it has
+found work it has not done.**
+
+**Unlike `NOT APPLICABLE`, this disposition is a POSITIVE STATEMENT that material was withheld.**
+That is the point of it: the exclusion becomes visible and auditable rather than invisible.
+
+---
+
 ## STATUS VALUES
 
 The mastery report status must be **exactly one** of:

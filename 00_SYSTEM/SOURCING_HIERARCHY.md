@@ -38,6 +38,33 @@ session may look, in what order, and what it must do when the course finally spe
 lower tier is consulted only because the higher tier is *silent* — never because the higher tier
 is inconvenient, unclear, or harder to code.
 
+> ### ⭐ ADDED 2026-08-14 BY `D-045` — A FOURTH RUNG: `TOOLING — OWNER-ATTESTED PLATFORM ARTIFACT`
+>
+> | Rung | Source | Authority | May close an `A-xxx`? |
+> |---|---|---|---|
+> | **`TOOLING`** | **The owner's own MT4 platform artifacts**, supplied by the owner and **attested by the owner as his working configuration for this method** — chart templates, compiled indicators and their embedded strings | **Admitted by `D-045`**, and it ranks **BELOW TIER 1 AND ABOVE `[DEFAULT]`** — exactly as `D-042` already does for owner colour attestations. It is **not** Tier 1, **not** Tier 2, and **not** Tier 3 | ⚠️ **Yes, but only PROVISIONALLY** — `PROVISIONALLY RESOLVED — TOOLING`, **never `RESOLVED BY COURSE`**, and the closure carries its weakness in the record |
+>
+> **Three rules travel with this rung and none of them is optional:**
+>
+> 1. ⭐ **ADMISSION IS PER-ARTIFACT, as `D-039` is per-document.** `D-045` admits
+>    `Ultimate Blue.tpl` / `!SM_TDI` (md5 `ea22c8cf527921cef072586b6fa28296`) **and nothing else.**
+>    A second artifact needs its own owner attestation and its own entry. **There is no standing
+>    licence to read files off the owner's disk.**
+> 2. ⭐ **ADMITTING A SOURCE IS NOT READING IT AGAINST A RECORD.** This is the `D-039` caution
+>    repeated, and `D-045` repeats it deliberately: admission makes a record **eligible**, and a
+>    session that does the reading closes it, **or does not.** `D-045` itself declined to close
+>    `A-086` and `A-032` on the artifact it admitted.
+> 3. ⭐ **EVERY CLOSURE ON THIS RUNG IS PROVISIONAL AND JOINS THE §3.4 RE-CHECK LIST**, and a later
+>    Tier 1 statement overturns it under §3.1. **Closed on `TOOLING` is not closed for good** —
+>    the same sentence §3.4 already carries for Tier 2 and for owner attestation.
+>
+> **Citations from this rung carry the tag `[TOOLING]` with the artifact name**, so they are
+> visibly distinct from `[TIER 1]`, `[TIER 2]` and `[DEFAULT]` at the point of use.
+>
+> ⚠️ **The search order is unchanged.** `TOOLING` is consulted because Tier 1 and Tier 2 are
+> **silent**, never because they are inconvenient. `EXTERNAL_REFERENCE/README.md`'s default is
+> untouched, and **Tier 3 remains `EXTERNAL — NON-NORMATIVE`, permanently.**
+
 ### 1.1 Tier 1 — what "the course" means here
 
 `01_SOURCE_VIDEOS/` and everything derived from it under `02_TRANSCRIPTS/`, `03_LESSON_NOTES/`
@@ -181,6 +208,30 @@ account of the same teacher is **evidence about the corpus**. Tidying it away de
 > record's blocker survive. A session that treats a won contradiction as licence to adopt whatever
 > Tier 1 fragment is nearest has made the `D-030` error by another route.
 
+### 3.4 The records currently closed below Tier 1 — the standing re-check obligation
+
+> ### ⭐ EXTENDED 2026-08-14 BY `D-045` — **`A-084` JOINS THIS LIST.** The heading above was
+> ### *"the two records currently closed on Tier 2"* and is retained in the body below; the list
+> ### is now **four records closed on three different sub-Tier-1 warrants.**
+>
+> **`A-084`** (*is the TDI's plotted green line `RSI(21)` or a smoothing of it?*) is
+> **`PROVISIONALLY RESOLVED — TOOLING` at `k = 2`** under `D-045`, on the owner-attested
+> `!SM_TDI` template's `RSI_Price_Line=2` / `RSI_Price_Type=0`. ⚠️ **Its weakness is on the record
+> at the closure and is not glossed: the corroborated fields and the load-bearing field are NOT the
+> same fields.** V13 frame `00:53:35` corroborates the non-default `63`/`37` and the `21`;
+> **`RSI_Price_Line=2` is not among them**, and the artifact is dated 2016/2019 against a 2012
+> course.
+>
+> ⭐ **THE TRIGGER FOR `A-084` IS NARROWER AND MORE ACTIONABLE THAN THE OTHERS' — name it, so a
+> session knows exactly what to watch for: any lesson showing a TDI PROPERTIES DIALOG, a
+> NAVIGATOR/INPUTS PANEL, or stating a SMOOTHING LENGTH in speech. That session MUST run §3.1
+> against `A-084`.** The legend route is closed corpus-wide (`TDI_MMM <values>`, no parameter
+> tuple) and **2,047 frames across V12–V14 hold no dialog** — so **stop scanning legends**, and
+> watch for the dialog.
+>
+> **The provisional closure being provisional is the whole reason the scan is still worth running.**
+
+*(Original heading and text, retained unedited per `REMEDIATION_PROTOCOL.md` §2:)*
 ### 3.4 The two records currently closed on Tier 2 — the standing re-check obligation
 
 `A-014` (*fractional disparity*, `MMM-NOTES` p.52) and `A-023` (*the 33 trade*, `MMM-NOTES` p.64)
@@ -276,6 +327,54 @@ against the lesson and run §3.1 if Tier 1 speaks. Closed on Tier 2 is **not** c
 > and still governs**: no Tier 1 statement attaches a period to *ketchup* or *mustard* anywhere in
 > V01–V11. `D-043` changes **which owner-attested numbers fill that gap, not whether the gap
 > exists.** `A-014` and `A-023` remain listed and untouched.
+
+---
+
+### 3.5 ⭐ WHEN TIER 1 CONTRADICTS **ITSELF** — the `D-048` tie-break ladder
+
+**Added 2026-08-14 by `D-048`.** §3.3's *"the recording wins"* **presupposes a recording that is
+clear.** This file ranks **sources**; it has never had a rule for **two things one speaker said** —
+printed against spoken, one lesson against another, or one sentence against another in the same
+hour. **The class has arisen three times** (`C-017`, `C-021`, the `D-041`/`D-043` EMA-nickname
+family) and consumed **two owner rulings and one reversal**. This section is that rule.
+
+**Apply the rungs IN ORDER. Stop at the first rung that answers. RECORD WHICH RUNG ANSWERED.**
+
+| Rung | Test | Outcome |
+|---|---|---|
+| **1** | Is one statement a **demonstrable misspeak, corrected by the same speaker in the same passage**? | The correction governs. Record both; note the correction |
+| **2** | Does one statement carry a **construction** and the other only a **characterisation**? *How a thing is computed* outranks *what it feels like or is built upon* (`A-093`) | The constructive statement governs |
+| **3** | Is one statement **unhedged, unprompted and LATER**, with the earlier one hedged, prompted or retracted under correction? | The later statement is the speaker's **standing position** — ⚠️ **this rung records a POSITION, not a FACT.** Anything closed on it closes **`PROVISIONALLY RESOLVED — TIER 1 STANDING POSITION`**, never `RESOLVED BY COURSE`, and carries the conflicting statement in the record |
+| **4** | **Anything else — INCLUDING any case where the rungs DISAGREE, or where a rung would close a load-bearing record** | ⛔ **DO NOT ADJUDICATE.** File/keep the `C-xxx`, keep the record `DO NOT CODE`, put it to the owner. Owner adjudication sits **outside** the ladder, as `D-041` established it sits outside the tiers |
+
+**Three hard limits, and they are what makes the ladder safe:**
+
+1. **The ladder NEVER produces `RESOLVED BY COURSE`.** Only an *uncontradicted* Tier 1 statement
+   does. A resolved internal conflict yields a **provisional** status at best.
+2. **The `C-xxx` is never deleted or downgraded.** Both statements stay on the record, visible,
+   per `REMEDIATION_PROTOCOL.md` §2. **A divergence is a finding about the corpus** — the same
+   principle §3.3 already states for Tier 1 vs Tier 2.
+3. **Tier 2 corroboration is a TIEBREAKER INPUT, NEVER A WARRANT.** It may be *noted* at rung 3
+   and does not promote the outcome above provisional — `D-039`'s Tier 2 cannot outrank Tier 1, so
+   it certainly cannot arbitrate between two Tier 1 statements. **§1's new `TOOLING` rung is
+   treated identically and for the identical reason.**
+
+> #### ⭐ THE LADDER'S FIRST LIVE APPLICATION RETURNED **RUNG 4** — and that is the ladder working
+>
+> `D-048` Part 2 put **`C-021`** (the TDI volatility bands' *basis*) through it: **rung 1 arguably
+> answers for V12** and is not clean (the corrector is unidentified and is **not the speaker**);
+> **rung 2 is SILENT** — neither statement is a construction, both are characterisations;
+> **rung 3 answers for V14**. **Rungs 1 and 3 disagree → rung 4 → DO NOT ADJUDICATE.** The
+> `D-045` `TOOLING` artifact was also checked field-by-field and is **silent on the basis**.
+> **`C-021` stays `OPEN`, and a direct owner pick is owed** (`REVIEW_INDEX.md` item 187).
+>
+> **A tie-break scheme that always produces a winner is not a tie-break scheme, it is a
+> preference.** Rung 4 is what keeps it honest — and §3.4's `D-042`/`D-043` history is this
+> project's own demonstration that a session **declining** to chain an inference is what produced
+> the correct answer.
+
+**`C-017` is NOT ruled by `D-048`.** It becomes **eligible** for a session to apply this ladder to
+it, which is a different act from having applied it.
 
 ---
 

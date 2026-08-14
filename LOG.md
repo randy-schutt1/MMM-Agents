@@ -8913,3 +8913,114 @@ owner's separate go-ahead.**
 **The next action is the owner's:** the gap audit (item 185), **now carrying item 176's corrected
 figure — `2 KNOWN + up to ~3 UNKNOWN`, not `2`** — and the four owner decisions at items **157**,
 **168**, **179** and **185**.
+
+---
+
+## 2026-08-14 — Owner Decision Session — **`D-045` … `D-050` ADOPTED AND APPLIED**
+
+**Actor:** owner ruling, applied by an agent session. **Not a Student session and not a Reviewer
+session** — no lesson was studied, no lesson was reviewed, no grade was issued.
+**Branch:** `decisions/adopt-045-050`, cut from `docs/decision-drafts` (itself integration + the
+drafts commit). Merged to the integration branch as its own deliberate step.
+
+### Decision
+
+**The owner approved all six drafts in `00_SYSTEM/DECISION_DRAFTS_2026-08-14.md`.** The six are
+written into `00_SYSTEM/DECISIONS.md` as **`D-045` … `D-050`** in draft order `D1`…`D6`.
+**No renumbering was required** — all six were approved, so the contiguous mapping is the identity:
+
+| Draft | Adopted as | Subject |
+|---|---|---|
+| `D1` | **`D-045`** | `!SM_TDI` admitted at a new `TOOLING` tier; `A-084` closes **PROVISIONALLY** at `k = 2` |
+| `D2` | **`D-046`** | `EXCLUDED BY DECISION` adopted as a third mastery disposition |
+| `D3` | **`D-047`** | `D-038a`'s mergeability premise corrected (ID `D-047`, **not** `D-038b`, at the owner's direction — it corrects a *premise*, not a rule) |
+| `D4` | **`D-048`** | Tier-1-against-itself ladder (Part 1) + `C-021` under it (Part 2) |
+| `D5` | **`D-049`** | Forward-read precedent, four clauses + the fifth |
+| `D6` | **`D-050`** | `I-010` Q2 closed; Q1's handling decided, question left `OPEN` |
+
+⚠️ **NOTHING WAS MARKED `RESOLVED BY COURSE` OR COURSE-VERIFIED.** These are **owner rulings**.
+**`A-084` is `PROVISIONALLY RESOLVED — TOOLING`** and joins the `SOURCING_HIERARCHY.md` §3.4
+re-check list; **`I-010` Q1 stays `OPEN`**; **`C-021` stays `OPEN`** (below).
+
+### ⭐ `D-048` PART 2 — HOW IT ACTUALLY RESOLVED, AND IT IS THE REPORTABLE RESULT
+
+The owner approved Part 1 (the four-rung ladder) outright and directed that Part 2 be resolved
+**with `D-045`** — applying the newly admitted `TOOLING` evidence as an input under the ladder's
+own rules — **expressly declining a rung-3 / "most recent = V14" default.**
+
+**The `!SM_TDI` artifact was read FIELD BY FIELD against `C-021`'s actual question — what the
+volatility bands are two standard deviations OF — and it DOES NOT BEAR ON IT:**
+`Volatility_Band=34` is a **period**; `SharkFin_Upper/Lower_Level=63/37` are **static levels**;
+the RSI and MA fields build the **line** buffers; the `.ex4` buffer-name list says which lines are
+**drawn**, not what the bands are a deviation **of**; and ⚠️ **the standard-deviation multiplier —
+the only field that could encode a basis — is compiled into the binary and is NOT in the template
+at all.** `MMM_TDI.txt` says so in its own words.
+
+**The ladder then returns rung 4:** rung 1 arguably answers **for V12** and is not clean (the
+corrector is unidentified and is **not the speaker**); **rung 2 is SILENT** — neither statement is
+a construction, both are characterisations, `A-093`'s pattern exactly; rung 3 answers **for V14**.
+**Rungs 1 and 3 disagree, which is rung 4's stated case: DO NOT ADJUDICATE.**
+
+```text
+C-021 -- STILL OPEN. UNADJUDICATED.
+A DIRECT OWNER PICK BETWEEN V12 / V14 / NEITHER IS OWED.
+Tracked as REVIEW_INDEX.md item 187. Reasoning recorded at C-021 §7.
+```
+
+**Nothing is unblocked whichever way it later goes** — the bands' **period** is never stated in
+Tier 1 or Tier 2, so `A-086` stays `DO NOT CODE` and `A-031`/`A-032` stay uncomputable.
+⭐ **That the ladder's first live application declines to answer is the ladder working, not
+failing.** A tie-break scheme that always produces a winner is a preference, not a tie-break.
+
+### Records dispositioned
+
+- **`A-084`** → `PROVISIONALLY RESOLVED — TOOLING`, `k = 2`, with `D-045` Part 3's weakness quoted
+  at the closure and the §3.4 re-check obligation attached. **`ACTIVE BLOCKER` lifted to the
+  extent of `k` and no further.**
+- **`A-086`, `A-032`** → **ELIGIBLE, not closed** (`D-045` consequence 4). **`A-031`** → unchanged
+  and still not computable. All three carry pointer blocks so a reader landing on them sees it.
+- **`C-021`** → §7 added: the ladder applied rung by rung and the `TOOLING` check in full.
+  **Stays `OPEN`.**
+- **`I-010`** → **Q2 CLOSED** (`D-050` Part 1, absolute boundary in the UTC−5 clock, same instant
+  both arms). **Q1 STILL `OPEN`** — `D-034` fact 1 reduced to its evidence, and **a winter probe is
+  a standing obligation on the first session running after 1 November 2026.**
+- **`REVIEW_INDEX.md`** → items **36, 91, 157, 179** CLOSED by decision; **168** closed as to the
+  general rule with the instance forwarded; **176** Gap B **unblocked** by `D-049` with `D-049`'s
+  order of resort made explicit. **Items 187 and 188 opened**, allocated against the integration
+  branch's state per `D-047` Consequence A with a numbering disclosure.
+- **`V05_MASTERY_REPORT.md`** → dimensions **B** and **G** re-labelled `EXCLUDED BY DECISION`
+  citing `D-025`; **G's stated reason changed** from *"states no testable rule"* to *"states rules
+  excluded by `D-025`"*; **F unchanged.** Annotated in place per `REMEDIATION_PROTOCOL.md` §2,
+  superseded text retained. ⚠️ **Re-labelling, not re-grading — no verdict, status or gate moved.**
+- **`D-018`, `D-019`, `D-034`, `D-035`, `D-038a`** → each gains a **pointer block**; **no entry's
+  text is edited**, per `DECISIONS.md`'s append-only rule.
+
+### Files Created/Updated
+
+None created. **11 updated:** `00_SYSTEM/DECISIONS.md`, `SETUP_ISSUES.md`,
+`SOURCING_HIERARCHY.md` (the `TOOLING` rung, §3.4 extended, new §3.5), `MASTERY_STANDARD.md`,
+`REVIEW_PROTOCOL.md` (§6a), `STUDY_PROTOCOL.md` (§1a), `BACKTEST_EVIDENCE_STANDARD.md` (§3a),
+`10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`, `11_CONTRADICTIONS/CONTRADICTIONS.md`,
+`18_REVIEW/REVIEW_INDEX.md`, `07_MASTERY_REPORTS/V05_MASTERY_REPORT.md`.
+
+### Git
+
+Branch `decisions/adopt-045-050`. `validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+`docs/decision-drafts` carried in via the branch point. Merged to integration
+**single-threaded**, after `git fetch` and an explicit divergence check — which is `D-047`
+Consequence B applied to its own adoption commit.
+
+⚠️ **Two pre-existing working-tree states were left untouched and are NOT part of this session's
+work:** an uncommitted modification to `05_HOMEWORK/V07/scripts/verify_quotes.py` (open item 180),
+and **`00_SYSTEM/GAP_AUDIT_2026-08-14.md`, which is UNTRACKED** — the six entries cite it as
+evidence and **it is not yet committed to any branch.** Flagged for the owner.
+
+### Next Action
+
+⚠️ **THE OWNER'S HARD STOP ON V15 STANDS AND IS NOT TOUCHED BY THIS SESSION.** Adopting six
+decisions is not authorisation to open a lesson.
+
+**Owner items now outstanding:** **187** (the `C-021` pick — V12 / V14 / neither) and **185** (the
+gap audit's own remaining half). **Session-owed and now unblocked:** item **176** Gap B under
+`D-049`; the `A-086` / `A-032` `TOOLING` write-ups made *eligible* by `D-045`; item **180**; item
+**188** (deferred validator check).

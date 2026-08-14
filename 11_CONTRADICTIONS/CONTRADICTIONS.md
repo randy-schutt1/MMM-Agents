@@ -2632,4 +2632,81 @@ built to settle. Raised to the owner as REVIEW_INDEX.md item 168.
 
 `A-086` (updated), `A-031`, `A-032`, `A-039`, `A-084`, `A-085`, `C-019` §3, `C-011`, `D-030`,
 `D-039`, `D-040`; `MMM-NOTES` p.45; `03_LESSON_NOTES/V12_SOURCE_NOTES.md` §4d;
-`03_LESSON_NOTES/V14_INTERPRETATION.md` Q3c.
+`03_LESSON_NOTES/V14_INTERPRETATION.md` Q3c. **And now `D-045`, `D-048` — see §7.**
+
+---
+
+## 7. ⭐ ADJUDICATION ATTEMPTED 2026-08-14 UNDER `D-048` — **RUNG 4. STILL `OPEN — UNADJUDICATED`.**
+
+**Everything above is retained unedited** (`REMEDIATION_PROTOCOL.md` §2). §6's status is
+**confirmed, not superseded** — but it is no longer *"deliberately un-attempted"*. **A ruling now
+exists, the ladder was applied, and the ladder returned "do not adjudicate."** That is a different
+and stronger record than silence, and it is what this section adds.
+
+### 7.1 The owner's direction
+
+`D-048` Part 1 adopts a standing **tie-break ladder for Tier 1 against itself** — the general rule
+this record asked for at §4. On the specific question, the owner directed that `C-021` be resolved
+**with `D-045`** — i.e. by applying the newly admitted `TOOLING` evidence (the owner-attested
+`!SM_TDI` MT4 template) as an input under the ladder's own rules — **and, if that artifact does not
+genuinely bear on the basis question, not to force a resolution.** ⭐ **The owner expressly declined
+to have rung 3 ("most recent / V14") applied as a default.**
+
+### 7.2 The ladder, rung by rung
+
+| Rung | Applied to `C-021` | Result |
+|---|---|---|
+| **1** — misspeak corrected by the same speaker in the same passage | V12 `[00:16:16]`–`[00:16:20]` **is** a correction accepted on the record (*"from the RSI line. Thank you."*) — **but the corrector is unidentified and is NOT the speaker**, and Dean Malone's shipped TDI **does** build the bands on the RSI line, so the chat may have been right about the **public** build and wrong about **this altered one** (V12 `[00:07:20]`) | ⚠️ **Arguably answers, FOR V12. NOT clean** |
+| **2** — construction outranks characterisation | ⭐ **Neither statement is a construction.** *"Two standard deviations away from the market base"* and *"Bollinger bands based on the RSI line itself"* are both statements of what the band is **built upon**. Neither states a computation. This is `A-093`'s pattern precisely — the speaker answers what the indicator *feels like*, never what it computes | ➖ **SILENT** |
+| **3** — later, unhedged, unprompted, against an earlier hedged/prompted/retracted statement | V14 `[00:45:09]` is later by one week, unhedged and unprompted; V12's position was reached under a chat prompt and is the least confident statement in that lesson; Tier 2 (`MMM-NOTES` p.45) independently agrees — **noted as a tiebreaker input, never a warrant** (`D-048` limit 3) | ⚠️ **Answers, FOR V14** |
+| **4** — anything else, **including any case where the rungs disagree** | ⭐ **Rungs 1 and 3 point OPPOSITE WAYS.** This is rung 4's stated case, verbatim | ⛔ **GOVERNS. DO NOT ADJUDICATE** |
+
+### 7.3 ⭐ The `D-045` `TOOLING` check — run in full, and it is a NEGATIVE
+
+The `!SM_TDI` block admitted by `D-045` was read **field by field** against the one question this
+record disputes: **what the volatility bands are two standard deviations OF.**
+
+| Field | What it states | Answers the basis question? |
+|---|---|---|
+| `Volatility_Band=34` | A **lookback period** — one number, shared by the band and the base line | ❌ **No.** This is `A-086`'s *missing third quantity*, a different question |
+| `SharkFin_Upper_Level=63` / `_Lower_Level=37` | Two **static horizontal levels** | ❌ No — `A-032`'s thresholds; they do not touch the bands |
+| `RSI_Period=21`, `RSI_Price_Line=2`, `Trade_Signal_Line=7`, both `_Type=0` | The RSI and the two moving-average lines | ❌ No — these build the three **line** buffers |
+| **The standard-deviation multiplier** | ⭐ **NOT EXPOSED AT ALL.** `MMM_TDI.txt`: *"The MT4 indicator exposes NO input for it, so it is compiled into the binary and the template cannot reveal it"* | ❌ **No — the one field that would have to carry a basis does not exist in the artifact** |
+| `MM4XSF_TDI.ex4` buffer names — *"MarketBase Line"*, *"RSI Price Line"*, *"Upper/Lower VB Break"* | That a market-base buffer and an RSI-price buffer **both exist and are both plotted** | ❌ **No, and this is the important negative.** A list of buffer **names** says which lines are drawn. **It does not say which series the bands are a deviation OF** — which is precisely and only what this record disputes |
+
+**Conclusion: the template has NO basis field.** It supplies a period and a set of levels; the only
+parameter that could encode a basis is compiled into the `.ex4` and unreadable. **The artifact is
+silent on `C-021`** — it speaks to a different quantity, and reading the buffer-name list as though
+it settled the basis would be the `D-039` error: treating the *admission* of a source as a *reading*
+of it against a record, which `D-045`'s own alternatives paragraph forbids by name.
+
+> ⚠️ **KEEP THE TWO APART.** `Volatility_Band=34` **is** a live candidate for `A-086`'s
+> never-stated **period**. That is `D-045` consequence 4, it makes `A-086` **eligible and not
+> closed**, and it is **not a `C-021` ruling.** Answering the period question and reporting it as
+> the basis question would resolve something nobody asked and leave the disputed thing open.
+
+### 7.4 Disposition
+
+```text
+C-021 -- OPEN.  UNADJUDICATED.
+D-048 rung 4 APPLIED AND RECORDED (not merely un-attempted):
+  rung 1 arguably answers for V12 and is not clean;
+  rung 2 is silent -- neither statement is a construction;
+  rung 3 answers for V14;
+  rungs 1 and 3 DISAGREE -> rung 4 governs -> DO NOT ADJUDICATE.
+The D-045 TOOLING artifact was checked field-by-field and DOES NOT SPEAK TO THE BASIS.
+Both statements stand on the record. Neither is coded. A-086 stays DO NOT CODE.
+OWED: a DIRECT OWNER PICK between V12 / V14 / NEITHER. Not a session's call,
+      not a reviewer's, and D-048 Part 2 expressly does not take it.
+```
+
+**§5 is unaffected and still governs: nothing is unblocked whichever way the owner later picks.**
+The bands' **period** is never stated in Tier 1 or Tier 2, so `A-086` stays `DO NOT CODE` and
+`A-031`/`A-032` stay uncomputable. **A multiplier and a basis do not build a band without a
+lookback.**
+
+**⭐ And record what the rung-4 return demonstrates, because it is the point of the ladder.** A
+tie-break scheme that always produces a winner is not a tie-break scheme, it is a preference.
+`D-048`'s first live application declining to answer — against a rung that *would* have answered —
+is the same discipline that produced the correct result at `D-042`/`D-043`, where a session's
+refusal to chain an inference is what stopped a wrong mapping being adopted.

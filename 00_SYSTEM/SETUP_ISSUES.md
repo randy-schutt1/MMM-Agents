@@ -499,8 +499,12 @@ adopted.
 
 ## I-010 — Two unresolved clock questions left open by the move to a CSV corpus
 
-**Status:** `OPEN` — neither blocks `PT-002`…`PT-021`; both will silently corrupt a
-week-boundary result if they are still open when someone compares across sources.
+**Status:** 🔶 **PARTIALLY CLOSED 2026-08-14 by `D-050` — Q2 CLOSED, Q1 STILL `OPEN`.**
+See the ruling block at the end of this record; the original status line is retained
+immediately below per `REMEDIATION_PROTOCOL.md` §2.
+*(Superseded status, retained:)* `OPEN` — neither blocks `PT-002`…`PT-021`; both will
+silently corrupt a week-boundary result if they are still open when someone compares across
+sources.
 **Raised by:** `D-036a`, 2026-08-13.
 **Q2 amended 2026-08-14** — the spillage is now measured at a second timeframe (`H1`).
 **The question itself is UNCHANGED and STILL AWAITING AN OWNER RULING.**
@@ -590,6 +594,61 @@ finding, not to answer the question. The **absolute / per-arm** choice remains e
 posed above, the recommendation above remains a recommendation, and `D-035` is **not**
 amended. **`I-010` Q2 stays `OPEN` pending an owner ruling.** Any downstream file may
 continue to cite it as `OPEN`; none needs updating on account of this amendment.
+
+---
+
+### ⭐⭐ RULED 2026-08-14 BY `D-050` — **Q2 IS CLOSED. Q1 STAYS OPEN, WITH ITS HANDLING DECIDED.**
+
+**Everything above is retained unedited** (`REMEDIATION_PROTOCOL.md` §2), including the
+paragraph immediately above, which was correct when written. **The owner has now ruled.**
+This block supersedes the header `Status:` line for Q2 only.
+
+```text
+I-010 -- Q2 CLOSED.  Q1 STILL OPEN.
+```
+
+#### Q2 — ✅ **CLOSED. `RESOLVED — OWNER DECISION`, `D-050` Part 1.**
+
+**The `D-035` boundary is ABSOLUTE, expressed in the corpus's native UTC−5 (Arm A) clock,
+and it is THE SAME INSTANT FOR BOTH `D-031` ARMS.** It is **not** re-cut per arm. **The rule
+is general**: it governs the start and end of **every** pre-registered window, at **every**
+timeframe, now and in future, unless a later decision says otherwise for a named window.
+
+**The measured consequence, so it is never mistaken for a holdout leak:** under Arm B the
+aggregation stamps **4 `M15` bars** (`00:00 · 00:15 · 00:30 · 00:45`) and **1 `H1` bar**
+(`00:00`) with a wall-clock date of `2016-07-01`. **Those bars are DEVELOPMENT data** — their
+underlying M1 is entirely `≤ 2016-06-30` in the file's own UTC−5 clock; they are the same
+development-side minutes wearing a different clock label. **The `D-035` holdout remains
+sealed and unopened.** Compare `D-044` §6's near-miss, which is this exact ambiguity caught
+in code by a row count.
+
+**Neither arm's block changes size and no committed result moves.** `D-050` chose absolute
+precisely because a per-arm cut would make Arm B's development block 4 bars shorter than
+Arm A's, defeating the one thing `D-031`'s two-arm design exists to control.
+
+#### Q1 — 🔶 **STILL `OPEN`. Its HANDLING is decided; the QUESTION closes on a MEASUREMENT.**
+
+**`D-050` Part 2 did NOT answer Q1 and must not be read as having answered it.** What it did
+is narrow the claim to its evidence and write down the exposure:
+
+**`D-034` fact 1 is restated as: FXCM's week open is 21:00 UTC over the observed summer
+window (`PT-023` §1, 2026-05-31 → 2026-08-13); its WINTER behaviour is UNMEASURED.**
+
+**Until the probe is run:**
+
+1. **No new test may bind to a year-round FXCM week open by name.** Existing tests bound to
+   it — `W-C`, `PT-008`–`PT-013` — **stand and are NOT re-run**; their windows are
+   summer-side or HistData-sourced, and the exposure is recorded rather than assumed away.
+2. **Any cross-vendor comparison** between FXCM-sourced and HistData-sourced series
+   **states this open question at the point of comparison.** HistData is provably fixed at
+   22:00 UTC year-round; if FXCM is DST-anchored the two **agree in winter and differ by an
+   hour in summer**, and each series is internally consistent, so **nothing in the data would
+   flag it.**
+3. ⭐ **THE PROBE IS A STANDING OBLIGATION ON THE FIRST SESSION RUNNING AFTER
+   1 NOVEMBER 2026:** probe FXCM's week open on any week between **November and February**
+   and compare against 22:00 UTC. Record the result by **appending to `D-034`**.
+   **`D-034` fact 1 is NOT amended from memory or inference — it is measured.**
+   **`I-010` Q1 closes on that measurement and not before.**
 
 ---
 
