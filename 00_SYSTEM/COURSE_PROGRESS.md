@@ -11,6 +11,87 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
+V14 (2026-08-14):    ⭐ R1 RETURNED — REVISE, 0 CRITICAL / 0 MAJOR / 5 MINOR /
+                     9 NOTE, HIGH confidence, D-003 SATISFIED (independent
+                     reviewer, branch review/v14, cut POST-D-044 at 5218cce).
+                     **V15 GATE IS OPEN under D-024** — and ⚠ THE OWNER'S HARD
+                     STOP STANDS INDEPENDENTLY OF IT. D-024 rules on finding
+                     severity and says NOTHING about the comprehension/gap audit
+                     scheduled for this point. The review does not authorise V15
+                     work; it removes the review-severity obstacle to it.
+                     Items 172-176 (MINOR) are owed before V14 reaches COMPLETE;
+                     V14 is NOT COMPLETE and only a reviewer PASS makes it so
+                     (D-004). Items 177-185 are NOTE/RULING/OWNER.
+                     CONFIRMED BY RE-DERIVATION, NOT BY READING: PT-042
+                     re-implemented from PT-042 §3 before run_pt042.py was
+                     opened -- O1 0.3468/0.3030, O2 0.4617/0.4483, medMFE
+                     40.20/42.35 against the committed 0.3461/0.3041,
+                     0.4607/0.4433, 40.10/40.40 (every figure within 0.005), and
+                     no-extension=0 / no-lock=0 EXACTLY in both arms, confirming
+                     N4's degeneracy; the TDI passage re-transcribed on
+                     openai-whisper large-v3-turbo AND medium.en -- correction 5
+                     confirms VERBATIM including "the green RSI line"; both
+                     worked-example percentiles recomputed by hand (45.5 / 20.0);
+                     Q-015's diff and its 0.9964 mean luminance / 0.00321
+                     light-fraction reproduced EXACT; item 157's zero-occurrence
+                     negative reproduced; and PT-042 re-run under the D-044
+                     13-file corpus is BYTE-IDENTICAL.
+                     RULINGS: item 162 -> A-056 NOT CLOSED (a second reason
+                     added: PT-042 refuted the method's own premise, so it cannot
+                     be closed as RESOLVED BY COURSE); item 163 -> the A-084
+                     defeater HOLDS against four attacks, and a FIFTH defeater is
+                     offered; item 165 -> D3 legitimate in kind, UNNECESSARY in
+                     fact (SOURCE_MANIFEST.md already shows Wk5->Wk7 with no
+                     Wk6), and UNVERIFIED in substance (the V15 body carries no
+                     I-008 check) -- a four-part forward-read precedent is PUT TO
+                     THE OWNER at item 179. C-021 (item 168) FORWARDED unchanged.
+                     ⚠ M5: A-092's "TWO artifacts missing from this corpus" is
+                     over-general -- Wk9 052012 -> Wk10 061712 is a FOUR-WEEK gap
+                     recorded nowhere. This matters because the gap audit will
+                     carry that count into the V15+ decision as a bound, and it
+                     is not one.
+                     Superseded text, retained per REMEDIATION_PROTOCOL.md §2 --
+                     this line previously read: "⭐ STUDENT PASS COMPLETE,
+                     submitted as REVIEW REQUIRED on
+                     branch video/v14 (worktree MMM-Agents-v14, D-038).
+                     V14 IS THE LESSON V13 PROMISED AND DEFERRED, AND IT ARRIVES.
+                     The high/low board drill: a PRINTED six-step method for
+                     identifying the day's extreme in real time with no chart at
+                     all. Six of its seven steps are arithmetic -- the most
+                     completely specified method in the corpus to date.
+                     ⭐ A-056's SEVEN-LESSON-OLD Required Research is ANSWERED.
+                     Closure NOT taken: step 2 ("trading in the middle of the
+                     range") is printed, spoken and UNDEFINED (A-089), and the
+                     speaker's own two examples sit at the 45.5th and 20.0th
+                     percentile. PUT TO THE REVIEWER as item 162.
+                     ⭐ A-077's missing lock threshold N ARRIVES, PRINTED: 1 hour.
+                     But on a SESSION extreme, ~10x short of V10's 15-16h WEEKLY
+                     narration -> A-094. A-077 ADVANCES, does not close, and
+                     V14's figure must NOT be transplanted onto V10's safety trade.
+                     ⚠ A-084 NARROWED NOT CLOSED, SECOND CONSECUTIVE LESSON, on
+                     the corpus's BEST spoken opportunity -- a direct student
+                     question. Defeater: the "Yes" answers a COMPOUND question
+                     whose red half is demonstrably a lag-gloss. A-093 records
+                     WHY the spoken route is structurally weak. V11's RSI
+                     threshold claims STAY BLOCKED.
+                     ⚠ A-086 advanced on the multiplier ("two standard
+                     deviations", unhedged); the BASIS reverts to the answer V12
+                     retracted ONE WEEK earlier -> C-021, left UNADJUDICATED and
+                     put to the OWNER (item 168). Tier 2 sides with V14. Period
+                     still never stated, so A-031/A-032 stay uncomputable.
+                     ⭐ THE WEEK-6 QUESTION IS SETTLED: TWO artifacts are missing
+                     from this corpus -- the Week 6 session (~2012-04-29) and the
+                     Orlando meetup recording (2012-04-21). A-092.
+                     PT-042 -> NOT SUPPORTED. O1 0.3461/0.3041 vs >=0.80 (a
+                     45-point miss); O2 0.4607/0.4433 vs >=0.50. BUT O2 doubles
+                     matched-random and O4 median MFE is 40 pips: the distance is
+                     real, the premise is not.
+                     ❌ ITEM 157 GETS NO HELP: shark and 63 occur ZERO times.
+                     Q-015 filed -- FOURTH consecutive VISUAL_INDEX.md instance,
+                     and its surviving image is a BLANK PowerPoint exit screen
+                     indexed as a five-EMA chart.
+                     FIVE declared deviations and THREE self-corrections -- see
+                     V14_MASTERY_REPORT.md s2. V15 GATE CLOSED until R1 returns."
 V13 (2026-08-14):    ⭐ R1 RETURNED — REVISE, 0 CRITICAL / 0 MAJOR / 2 MINOR /
                      6 NOTE, HIGH confidence, D-003 SATISFIED (independent
                      reviewer, branch review/v13). **V14 GATE IS OPEN under
@@ -1946,7 +2027,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V11 | Wk4 P1 | 00:50:56 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | **R1 REVISE 0C/0M/5min** | **IN REMEDIATION (items 109-113) · V12 GATE OPEN** |
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-080 + A-064 + A-031 + A-032 CLOSED, A-020 mayo row → Tier 1, C-019 opened, PT-040 MATERIAL |
 | V13 | Wk5 P1 | 01:05:22 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-084 NARROWED not closed (A-087), legend route CLOSED corpus-wide, A-088 + C-020 opened, Q-014 filed, PT-041 PARTIALLY SUPPORTED |
-| V14 | Wk5 P2 | 00:47:48 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V14 | Wk5 P2 | 00:47:48 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | **R1 REVISE** 0C/0M/5m/9n, HIGH, 2026-08-14 | ⭐ **R1 RETURNED — V15 GATE OPEN under D-024, AND THE OWNER'S HARD STOP STANDS.** Items 172-176 (MINOR) OWED; V14 **NOT COMPLETE**. Rulings: A-056 **NOT CLOSED** (item 178) · A-084 defeater **HOLDS** vs 4 attacks (184) · D3 **legitimate but unnecessary and unverified** (179) · C-021 forwarded to owner · ⭐ A-056 ANSWERED (closure put to reviewer), A-077 advanced (A-094), A-084 NARROWED not closed 2nd consecutive, A-086 advanced + C-021 opened, A-089-A-094 filed, Q-015 filed, PT-042 NOT SUPPORTED |
 | V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V16 | Wk7 P2 | 00:44:35 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V17 | Wk8 P1 | 00:57:09 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -2172,3 +2253,89 @@ points are set once the real lesson count is known at ingestion.
 > this table is a view of it and must be reconciled against it, not edited independently.**
 
 Full phase definitions: `STUDY_PROTOCOL.md` §4.
+
+---
+
+## V15 GATE
+
+```text
+V15 GATE:            ⭐ **OPEN.** V14 R1 returned 2026-08-14 on branch
+                     `review/v14` — **REVISE, 0 CRITICAL / 0 MAJOR / 5 MINOR /
+                     9 NOTE**, and under D-024 a round carrying no CRITICAL and
+                     no MAJOR opens the gate. Items 172-176 are owed before V14
+                     reaches COMPLETE and are NOT gating. D-004 is untouched:
+                     V14 is NOT COMPLETE.
+                     ⚠⚠ **V14 IS THE OWNER'S HARD STOP AND THE STOP STANDS.**
+                     D-024 rules on finding severity only. This review does NOT
+                     authorise V15 work — it removes the review-severity
+                     obstacle to it. **The gap audit happens now, and whether
+                     there is a V15 at all is the owner's decision.** The
+                     reviewer's own read on that is REVIEW_INDEX.md item 185.
+                     Superseded text, retained per REMEDIATION_PROTOCOL.md §2 —
+                     this block previously read: "CLOSED until V14's R1 returns
+                     (D-004). V14's student pass is complete and submitted as
+                     REVIEW REQUIRED on branch video/v14. D-003 reserves
+                     closure to an independent reviewer; V14 reaches
+                     COMPLETE only at a reviewer PASS."
+
+Carry into V15, and read this before starting:
+
+  (a) A-084 REMAINS AN ACTIVE BLOCKER. V11's RSI threshold claims STAY
+      BLOCKED. Routes remaining: a properties dialog, a Navigator/inputs
+      tab. The SPOKEN route is now known to be structurally weak (A-093) --
+      V14 had the best opportunity the corpus offers and it failed on the
+      compound-question defeater. Do NOT treat a fifth restatement as new
+      evidence. 2,047 frames across V12/V13/V14 contain no dialog.
+
+  (b) ⭐ V15 IS "WEEK SEVEN" AND WEEK SIX IS MISSING (A-092). Expect
+      back-references to Week 6 material that is NOT in this corpus, and to
+      an Orlando meetup recording that is also absent. DO NOT read those
+      absences as your own error, and do not reconstruct the missing content.
+
+  (c) ⭐ V15 OPENS WITH A COURSE-LENGTH STATEMENT worth capturing precisely:
+      "I got about two or three more weeks of boot camp / we're going to
+      wind up around 10 or 11 weeks." This session saw that line only via
+      the narrow week-number grep declared as D3 and did NOT ingest it.
+      V15 should treat it as its own primary evidence.
+
+  (d) SPEAKER: TEST IT, DO NOT ASSUME. V15 is a NEW WEEK and a NEW DATE
+      (2012-05-06) after a three-week gap -- the exact condition under which
+      this corpus's author runtime has broken before (V03->V04). V14's 100%
+      proves NOTHING about V15.
+
+  (e) A-056 MAY ALREADY BE CLOSED by the time V15 starts, depending on R1's
+      ruling on item 162. Check the disposition before citing it.
+
+  (f) ⭐ THE A-082 CLASS REMAINS THE AUDIT TARGET. V14's 5-pip stop and
+      30-50 pip target are DRILL parameters and are fenced out of every spec
+      file. If V15 restates either as method, that is a finding -- and if a
+      V15 artifact adopts them, that is the error.
+
+  (g) C-021 and item 168 are OWNER decisions. Do not resolve them from a
+      lesson session.
+
+  (h) THE BOARD DRILL RUNS FOR TWO WEEKS AND V15 IS WHEN IT REPORTS BACK.
+      "Record your results and post it in the forum." If V15 discusses
+      student results, that is Tier 1 evidence about the drill's real-world
+      behaviour, and PT-042 returned NOT SUPPORTED on the six computable
+      steps. Compare them.
+
+  (i) ⭐ R1 ADDITIONS, 2026-08-14 (V14_REVIEW_R1.md GATE):
+      * CHECK THE FRAME SWEEP'S CLOCK BEFORE NAMING FRAMES. All 29 V14 frames
+        run EXACTLY +16 s against their own burned-in player timecode; V12's
+        and V13's run at 0-1 s. Item 174. Measure the offset; if it recurs,
+        name the cause.
+      * STATE YOUR TIMESTAMP CONVENTION ONCE, AT THE TOP. V14 mixes the
+        committed marker grid with its own ASR clock; 20 distinct citations
+        are unfindable in the transcript they point at. Item 173.
+      * A-084's SPOKEN ROUTE IS STRUCTURALLY DRY, not merely unlucky, and a
+        FIFTH defeater is recorded at item 184. Do not treat a sixth
+        restatement as new evidence. The live route is the OWNER ruling at
+        item 157.
+      * THE FORWARD-READ PRECEDENT IS NOT YET SETTLED (item 179). Its clause
+        (d) -- an imported datum carries the same I-008 verification as any
+        other evidence, or is labelled UNVERIFIED -- binds any V15 session
+        that wants to reach into V16+.
+      * THE Wk9 -> Wk10 FOUR-WEEK GAP IS UNEXAMINED (item 176). Its cheap
+        decider is the same D3 shape and should WAIT for item 179's ruling.
+```
