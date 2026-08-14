@@ -16,53 +16,71 @@ the local copy (`GOTCHA 4`).
 
 ---
 
-## ⭐ §0 — THE +15-SECOND SWEEP OFFSET: MEASURED, AND ITS CAUSE NAMED (open item 174)
+## ⭐ §0 — THE SWEEP→CLOCK OFFSET, MEASURED PER `SWF_CAPTURE_RECIPE.md` §8a
 
-`V14_REVIEW_R1.md` found that **all 29 V14 frames ran exactly +16 s against their own burned-in
-timecode**, that V12's and V13's ran at 0–1 s, and required the next session to *measure the
-offset; if it recurs, name the cause*. **It recurred, at +15 s, and the cause is in the recipe.**
+**§8a is a MANDATORY numbered step**, added 2026-08-14 by the V14 R1 remediation
+(`REVIEW_INDEX.md` items **174** and **186**). It requires: read the burned timecode off the
+pixels, confirm the offset on ≥3 frames spread across the file plus the last, confirm it is an
+**origin** error and not a **rate** error, **name the files from the burned timecode**, and
+**publish the verification table here**. All five steps were performed. This is the table.
 
-**Measured, not assumed** — the burned-in timecode was read off eight frames spanning the file:
+### 1. THE MEASUREMENT — 8 frames spanning 52 minutes, plus the clamped tail
 
-| Sweep label | Burned-in timecode | Offset |
-|---|---|---|
-| `0` | `00:16` | +16 |
-| `100` | `01:55` | +15 |
-| `500` | `08:35` | +15 |
-| `1000` | `16:55` | +15 |
-| `1500` | `25:15` | +15 |
-| `2000` | `33:35` | +15 |
-| `2500` | `41:55` | +15 |
-| `3000` | `50:15` | +15 |
+| Sweep index `i` | `i × 5` | Burned-in timecode | `offset = burned − i×5` |
+|---|---|---|---|
+| `0` | `0` | `00:16` | **+16** |
+| `20` | `100` | `01:55` | **+15** |
+| `100` | `500` | `08:35` | **+15** |
+| `200` | `1000` | `16:55` | **+15** |
+| `300` | `1500` | `25:15` | **+15** |
+| `400` | `2000` | `33:35` | **+15** |
+| `500` | `2500` | `41:55` | **+15** |
+| `600` | `3000` | `50:15` | **+15** |
+| `624` (tail) | `3120` | `52:06` | **clamped** — the player's own duration. **Expected, not drift** (§8a step 2) |
 
-**Constant +15 s, zero drift across 52 minutes.** The `+16` at label `0` is the OSD's own
-1-second lazy granularity (`GOTCHA 2`), not a different offset.
+**Adopted offset: `+15 s`.** The `+16` at `i = 0` is the OSD's 1-second lazy granularity
+(`GOTCHA 2`), which §8a's own measured spread (V12 `+16`, V13 `+15`, V14 `+16`) sits inside.
 
-### THE CAUSE
+### 2. ORIGIN, NOT RATE — confirmed per §8a step 3
 
-`SWF_CAPTURE_RECIPE.md` §10's `sweep.mjs` clicks play, then waits **1500 ms** to compare the
-pre-click and post-click screenshots (the `GOTCHA 5` guard), and **only then** starts the clock
-(`const t0 = Date.now()`). At `SPEED = 10`, **that 1500 ms of wall clock is 15 presentation
-seconds of playback.** The offset is therefore not a defect and not drift:
+Consecutive filename deltas equal consecutive burned deltas at every sampled pair: `i = 100→200`
+is `1000 − 500 = 500 s` and `16:55 − 08:35 = 500 s`; `i = 400→600` is `1000 s` and
+`50:15 − 33:35 = 1000 s`. **The offset does not grow.** The 10× patch (`3.0 → 30.0`, read from
+this file's own header) is correct and no rate correction is applied.
 
-> **`offset_seconds = guard_ms / 1000 × SPEED`**
+### 3. ⭐ A REFINEMENT TO ITEM 186's DIAGNOSIS — THE DOMINANT TERM IS NOT LATENCY, IT IS A CONSTANT IN THE RECIPE
 
-**This predicts V14's +16 s** (same 1500 ms guard, same 10×, plus the same 1-second OSD
-granularity) **and it predicts V12's and V13's 0–1 s**: a sweep that sets `t0` before the click,
-or waits a fraction of that, cannot accumulate it. **It is deterministic, computable in advance,
-and it scales with `SPEED`** — at 40× the same guard would put every frame 60 s out.
+Item 186 diagnosed the offset as *"click latency AMPLIFIED 10× by the fast sweep"* and concluded
+*"IT THEREFORE CANNOT BE HARDCODED"*. **The conclusion is right and should stay. The mechanism is
+worth one more turn of the screw**, because it explains why four independent sweeps have now
+returned values inside a 1-second band rather than scattering as latency would:
 
-### WHAT THIS SESSION DID ABOUT IT
+`SWF_CAPTURE_RECIPE.md` §10's `sweep.mjs` clicks play, then **waits a fixed `1500 ms`** to compare
+the pre-click and post-click screenshots (the `GOTCHA 5` guard), and **only then** sets
+`const t0 = Date.now()`. At `SPEED = 10` that fixed guard is **exactly 15 presentation seconds**
+of playback that elapses before the clock starts.
 
-**Every filename in §1 is the TRUE presentation time — `sweep_label + 15.0` — and every one of
-them was checked against its own burned-in timecode before it was named.** No frame in this
-directory is named from the raw sweep label. A reader can verify any row by reading the
-bottom-right corner of the PNG it points at.
+> **`offset ≈ guard_ms / 1000 × SPEED  +  (true click latency)  ±  1 s of OSD granularity`**
 
-⚠ **Recommended for `SWF_CAPTURE_RECIPE.md` §10, which is a POLICY document and therefore is
-NOT edited on this branch (`D-038a`):** set `t0` immediately before `p.mouse.click(...)` and
-take the guard screenshot afterwards, or subtract `guard_ms/1000 × SPEED`. Raised as
-`REVIEW_INDEX.md` item 189.
+The first term is **15 s and is a constant of the script**; the second is the genuinely variable
+part and is evidently well under a second. **That is why V12 read `+16`, V13 `+15`, V14 `+16` and
+V15 reads `+15` — a 1-second band around 15, not a scatter.**
+
+⚠️ **This does NOT license hardcoding, and §8a's rule stands unchanged.** The residual term is
+still real, `SPEED` is a per-run choice, and a future session that changed the guard or the speed
+factor would silently break any hardcoded value. **It was measured here, as required.**
+
+⚠️ **A durable fix is available and is NOT applied on this branch**, because
+`SWF_CAPTURE_RECIPE.md` is a POLICY ledger and `D-038a` puts policy edits on the integration
+branch: **set `t0` immediately before `p.mouse.click(...)` and take the guard screenshot
+afterwards**, which removes the 15-second term entirely and leaves only the sub-second latency
+§8a exists to catch. Raised as `REVIEW_INDEX.md` item **188**.
+
+### 4. WHAT THIS SESSION DID ABOUT IT — §8a step 4
+
+**Every filename in §1 is the burned-in timecode**, i.e. `i × 5 + 15`, and **every one was
+checked against the bottom-right corner of its own PNG before it was named.** No frame in this
+directory is named from the raw sweep index. A reader can verify any row by opening the file.
 
 ---
 

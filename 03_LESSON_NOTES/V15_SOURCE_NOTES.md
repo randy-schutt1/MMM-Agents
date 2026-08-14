@@ -252,6 +252,20 @@ red-dotted and cyan-dotted horizontals with no candles in view, and `V15_00-46-0
 `V15_00-51-00_…png` print `ADR High: 0.89622` and `ADR Low: 1.07128` in red beside solid red
 bands.
 
+### 6b-i. ⚠ TWO PROBLEMS ARE BORN IN §6b, AND BOTH ARE FILED
+
+**`C-022` — *"they'll creep up or creep down to fit price action"* and *"Not repaint"* are ten
+seconds apart and cannot both hold** as the platform uses those words. Under the first reading an
+ADR level's value at 09:00 differs from its value at 15:00; under the second it does not. **Every
+*"met or exceeded"* claim in this lesson depends on which is true**, and a backtest that guesses
+wrong imports lookahead bias. **This is the reason no `PT` in this session touches the confluence
+rule.**
+
+**`A-100` — the ADR's CONSTRUCTION is never stated.** Not the lookback, not whether the range
+averaged is true range or high−low, not the anchor, not the day boundary. Tier 2 supplies
+*"the average daily trading range of the **last 2 weeks**"* and nothing else. **The lesson's
+central object cannot be drawn from this corpus.**
+
 ### 6c. Floating grid vs fixed grid — the lesson's own distinction
 
 `[00:32:16]` *"what do I mean by a fixed grid and a floating grid? **ADR is a floating grid. It
@@ -379,7 +393,7 @@ at `A-095` and **none is adopted into any spec file by this session.**
 
 | # | Verbatim | Marker | Status |
 |---|---|---|---|
-| 1 | *"We know that they always complete the cycle. **Twenty-five to fifty pips off of the high or low**, depending on the pair, right? And they want to end back in the range to trap the traders for tomorrow."* | `[00:31:27]` | ⚠ A **daily** magnitude, and it does **not** match V14's `30–50` pip **drill** target or V14's `5`-pip stop, which were fenced as DRILL parameters. **A different scale and a different object.** Not reconciled — see `C-022` |
+| 1 | *"We know that they always complete the cycle. **Twenty-five to fifty pips off of the high or low**, depending on the pair, right? And they want to end back in the range to trap the traders for tomorrow."* | `[00:31:27]` | ⚠ A **daily** magnitude, and it does **not** match V14's `30–50` pip **drill** target or V14's `5`-pip stop, which were fenced as DRILL parameters. **A different scale and a different object.** Not reconciled and deliberately not merged — see `A-095` |
 | 2 | *"**The weekly range is 600 to 1000 pips.**"* | `[00:38:26]` | ⚠ No pair named, no period, no source |
 | 3 | *"They have limitations of about **200 pips**."* (the ADR) | `[00:27:39]` | ⚠ No pair named |
 
@@ -457,7 +471,8 @@ unlucky.** Logged as an update to `A-087`'s route list and raised at `REVIEW_IND
 | **Floating grid / fixed grid** | `[00:32:16]` | ✅ **Yes** — ADR floats, pivots are fixed |
 | **Blue tracer** | `[00:40:29]` | ✅ **Yes** — *"the daily low or the high low marker"* |
 | **`S1` / `R1` / `M1` / `M3` / `M4`** | `[00:44:53]`, `[00:45:47]` `[AUDIO]`; `44:50`, `46:00`, `51:00` `[PRINTED]` | ⚠ **PARTLY.** The frames print them as MT4 **pivot** labels; the audio never says the word "pivot mid-level". **`A-096`** |
-| **New York reversal** | `[00:27:15]` | ⚠ Used as a known term; timing given, entry not fully specified |
+| **New York reversal** | `[00:27:15]` | ⚠ Used as a known term; timing given, entry not fully specified. Tier 2 carries a nine-item checklist for it (`A-095`, `A-100`) |
+| **ADR construction** (lookback, range definition, anchor) | — | ❌ **Never stated.** **`A-100`** — and it blocks coding the lesson |
 | **Fractional disparity** | `[00:08:47]`, `[00:09:27]` | ❌ **No** — *"we'll address that in the weeks to follow"*. Named across V14 and V15 and taught in neither |
 | **Blood in the water** *(one hour)* | `[00:10:44]` | ❌ **No** — **`A-099`** |
 | **"22-trade"** | `[00:21:34]`, `[00:21:55]` | ❌ **No** — heard identically by two independent ASR passes; not a mishearing, and not defined. **`A-097`** |

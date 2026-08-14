@@ -195,6 +195,14 @@ the ADR"* and `[00:30:27]` *"**Asubio** puts it as they should get your attentio
 explicitly a **softening**: the instructor adopts *"gets your attention"* over anything stronger.
 **No spec file in this project should render the ADR filter as a gate.** It is a watchlist rule.
 
+⭐⭐ **And the object itself cannot be drawn.** V15 spends 25 minutes on the ADR and **never states
+its lookback, its range definition, its anchor or its day boundary** (`A-100`) — while
+simultaneously saying its levels *"creep up or creep down to fit price action"* and are
+*"not repaint"*, ten seconds apart (`C-022`). **Together these make the lesson's central object
+non-reproducible and its "met or exceeded" claims non-historical**, which is why `PT-043` tests
+the weekly-range figure instead of the confluence rule. Tier 2 supplies *"the last 2 weeks"* and
+is silent on the rest.
+
 **What is genuinely new to the corpus here**, and it is not nothing:
 
 1. **The floating-grid / fixed-grid distinction** (`[00:32:16]`) — a clean, checkable statement
@@ -236,7 +244,7 @@ object:**
 
 **The numbers nearly coincide and the claims do not.** A later session reading only the figures
 would reasonably conclude V15 restates V14's drill target — and it does not; it makes a
-**factual claim about dealer behaviour** with the word *"always"* in it. **Logged as `C-022`.**
+**factual claim about dealer behaviour** with the word *"always"* in it. **Logged inside `A-095`, and deliberately NOT filed as a contradiction** — on `A-094`'s precedent, a drill parameter and a market claim are different kinds of statement and there is no rule-versus-rule clash to adjudicate. **V15's own contradiction is elsewhere: `C-022`, the ADR *creep* / *not repaint* conflict.**
 This is exactly the `A-082` hazard: a drill parameter and a market claim wearing the same number.
 
 **Number 1 is also the correction the second ASR pass earned its keep on** — the committed
@@ -342,14 +350,18 @@ design.**
 6. **A third Tier-1 corroboration of `D-043`'s 5/13 ordering.**
 7. **The course's own length**, from the instructor: *"10 or 11 weeks"* — matching the corpus's
    last file at Week 10.
-8. **The `+15 s` sweep offset's CAUSE**, which is a recipe defect and not a capture failure
-   (`04_SCREENSHOTS/V15/INDEX.md` §0).
+8. **The first `SWF_CAPTURE_RECIPE.md` §8a compliance run** — §8a became mandatory the same day
+   this session started — plus a **refinement to item 186's diagnosis**: the dominant term in the
+   offset is not latency but the recipe's own fixed `1500 ms` guard, which is why four sweeps have
+   returned `+16 / +15 / +16 / +15` rather than scattering. **§8a's no-hardcoding rule stands**;
+   the durable fix is offered at item 188 (`04_SCREENSHOTS/V15/INDEX.md` §0).
 
 ### Does not
 
 1. **Does not resolve `A-084`, `A-085`, `A-086` or item 157.**
 2. **Does not set homework**, so `05_HOMEWORK/V15/` runs on a declared substitution.
-3. **Does not make the ADR rule tradeable** — Q3.
+3. **Does not make the ADR rule tradeable** — Q3 — and does not make the ADR itself computable
+   (`A-100`, `C-022`).
 4. **Does not account for 2012-04-29**, the one-week residual in Q1 §3.
 5. **Does not teach fractional disparity, the level count, or the pivot formula**, all of which it
    names.

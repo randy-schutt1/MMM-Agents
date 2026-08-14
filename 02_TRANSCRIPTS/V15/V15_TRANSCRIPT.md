@@ -118,7 +118,7 @@ and moves to the flag list below.
 | 8 | `[00:44:53]` | *"There's your **manage**, your M3"* | *"Here's your **mayonnaise**, your M3"* | ✅ *"**Here's your mayonnaise, your M3.**"* | Same, and it is the only line pairing an EMA nickname with a pivot label |
 | 9 | `[00:21:38]` | *"**Who's** my voice?"* | *"**I'm losing** my voice"* | ✅ *"Excuse me, **I'm losing my voice.**"* | Otherwise reads as a second speaker being addressed. **Directly a speaker-table hazard**, and the transcript corroborates it at `[00:46:36]` (*"hope they're losing my voice"*) |
 | 10 | `[00:40:03]` | *"taken **3540** trades a piece a week"* | *"taking **35, 40** trades apiece a week"* | ✅ *"they were taken **35 40 trades apiece**"* | The number is quoted in `V15_SOURCE_NOTES.md` §4 and in `A-098` |
-| 11 | `[00:31:27]` | *"twenty-five to fifty pips off of the **higher low**"* | *"twenty-five to fifty pips off of the **high or low**"* | ✅ *"**25 to 50 pips off of the high or low**, depending on the pair"* | ⚠ **`A-082`-class.** Quoted verbatim in `A-095` and in `C-022` |
+| 11 | `[00:31:27]` | *"twenty-five to fifty pips off of the **higher low**"* | *"twenty-five to fifty pips off of the **high or low**"* | ✅ *"**25 to 50 pips off of the high or low**, depending on the pair"* | ⚠ **`A-082`-class.** Quoted verbatim in `A-095`. The uncorrected reading would have made it a claim about **a higher low** (a structure) instead of about **two levels** |
 | 12 | `[00:45:47]` | *"**Find and** support on a pivot"* | *"**finding** support on a pivot"* | ✅ *"ADR, met or exceeded, **finding support on a pivot**. This is an M1, M3 day"* | Quoted in `V15_SOURCE_NOTES.md` §7 |
 
 > ### ⭐ SELF-CORRECTION ON #4, RECORDED RATHER THAN QUIETLY FIXED

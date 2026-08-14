@@ -2633,3 +2633,80 @@ built to settle. Raised to the owner as REVIEW_INDEX.md item 168.
 `A-086` (updated), `A-031`, `A-032`, `A-039`, `A-084`, `A-085`, `C-019` §3, `C-011`, `D-030`,
 `D-039`, `D-040`; `MMM-NOTES` p.45; `03_LESSON_NOTES/V12_SOURCE_NOTES.md` §4d;
 `03_LESSON_NOTES/V14_INTERPRETATION.md` Q3c.
+
+---
+
+## C-022 — ⭐ The ADR markers "creep up or creep down to fit price action" AND are "Not repaint" — a definitional conflict, stated twenty seconds apart, that blocks any implementation
+
+**Raised by:** V15 · `[00:28:34]` against `[00:28:44]`
+**Speaker:** **course author, both times.** An internal Tier-1 contradiction inside a single
+20-second span — the tightest in this register
+**Separation:** **10 seconds.** Not a drift over lessons; two consecutive sentences
+
+---
+
+### 1. THE TWO STATEMENTS
+
+> `[00:28:24]` *"So at the open, the ADR will straddle price. Okay. **The ADR moves. It changes
+> during the day.** Keep that in mind."*
+> `[00:28:34]` *"That you'll notice the red lines before their hit, their light orange, **they'll
+> move. They'll creep up or creep down to try to fit price action**, so to speak."*
+> `[00:28:44]` *"Okay. **They're a moving grid.** If you didn't know they moved, they move. Okay.
+> **Not repaint.** They adjust for price action."*
+
+### 2. WHY THIS IS A CONTRADICTION AND NOT A CLARIFICATION
+
+The speaker plainly intends `[00:28:44]` as a **reassurance** — *"they move, but don't worry,
+that's not the bad kind of moving."* **On the platform this course runs on, the distinction he is
+drawing does not exist as he draws it.**
+
+In MT4, **repainting** means: an indicator's plotted value **for a bar already closed** is
+different tomorrow from what it was today. A level that *"creeps up or creeps down to try to fit
+price action"* during the session is doing exactly that to every bar it is drawn across.
+
+| Reading | What it would mean | Consistent with `[00:28:34]`? | Consistent with `[00:28:44]`? |
+|---|---|---|---|
+| **A — a single level that changes value intraday** | the line's value at 09:00 differs from its value at 15:00, on the same day | ✅ | ❌ **this IS repainting** |
+| **B — a level fixed per day, redrawn each new day** | today's level is constant all day; tomorrow's differs | ❌ *"changes during the day"* is explicit | ✅ |
+| **C — a level fixed per day, plus a separate "projected" marker that tracks price** | two objects, one static one dynamic | ⚠ possible, and **nothing in the lesson says there are two objects** | ✅ |
+
+**Reading A is what the words say. Reading B is what "not repaint" requires. They cannot both
+hold.** Reading C would dissolve the conflict and **is not stated anywhere** — it is this
+session's construction and is offered as a hypothesis, not adopted.
+
+### 3. WHY IT MATTERS, RATHER THAN BEING A QUIBBLE
+
+**Every ADR-based claim in this lesson is a claim about a level being *hit*** — *"If the ADR is
+**met or exceeded**"* `[00:29:57]`, *"when these values are **hit** we can make solid trade
+decisions"* (`V15_00-28-20_…png`), *"the dealer **hits the ADR** right at those levels"*
+`[00:41:39]`.
+
+Under reading **A**, *"the ADR was exceeded at 10:00"* is not a well-defined historical statement,
+because the level that was exceeded no longer exists by 15:00 and cannot be recovered from a
+saved chart. **A backtest of the confluence rule would silently use the END-OF-DAY level as
+though it had been visible at 10:00 — textbook lookahead bias.** Under reading **B** the same
+backtest is clean.
+
+⚠⚠ **This is the single reason no `PT` in this session tests the confluence rule.** `PT-043`
+tests the weekly-range figure (`A-095` figure 2) instead, which needs no ADR level at all.
+
+### 4. WHAT WOULD RESOLVE IT
+
+- **Tier 1:** any lesson showing the ADR indicator's construction, or a chart at two times of the
+  same day with the level readable in both. **The June 2012 *"Indicator chart setup day"* is where
+  this would have been shown and is not in this corpus** (`A-087`, `REVIEW_INDEX.md` item 187).
+- **Tier 2:** `EXTERNAL_REFERENCE/…TEXT_EXTRACT.md` was searched. It describes the ADR's purpose,
+  its *"last 2 weeks"* lookback and its confluence use (`A-100`), and **says nothing about whether
+  the plotted levels change intraday.** It does not resolve this.
+- **The owner**, on the MT4 indicator itself, in the same way `!SM_TDI` is put to the owner at
+  `REVIEW_INDEX.md` item 157.
+
+### Current Status
+
+```text
+C-022 -- OPEN. Reading A and reading B are both defensible from Tier 1 and are
+  incompatible. Reading C is unsourced and is NOT adopted.
+  CONSEQUENCE: the ADR marker is NOT CODEABLE (A-100), and no backtest may
+  assume an ADR level was visible at a past timestamp without pre-registering
+  WHICH reading it assumes, per D-027.
+```
