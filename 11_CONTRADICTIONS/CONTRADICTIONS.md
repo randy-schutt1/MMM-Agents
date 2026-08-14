@@ -2272,3 +2272,103 @@ is a reason to keep going to V12, and it is noted for the ingestion plan.**
 `A-020`, `C-010`, `C-011`, `D-039`, `D-040`, `SOURCING_HIERARCHY.md` §3.1/§3.2 Case C/§3.3/§3.4;
 `Q-012` §2; `02_TRANSCRIPTS/V11/V11_TRANSCRIPT.md` § SPOT-CHECK RESULTS clip `c1`;
 `04_SCREENSHOTS/V11/INDEX.md` §4; `03_LESSON_NOTES/V11_INTERPRETATION.md` Q2.
+
+---
+
+## C-019 — `blood in the water`: the admitted notes put it on the **market base line**; V12 puts it on the **trade signal line**, in print and in speech
+
+```text
+TYPE:      TIER 1 vs TIER 2  (SOURCING_HIERARCHY.md §3.3 -- MANDATORY, not permissive)
+RAISED BY: V12 student session, branch video/v12 (D-038)
+DATE:      2026-08-13
+STATUS:    RESOLVED -- THE RECORDING WINS. Tier 2 is superseded ON THIS POINT.
+```
+
+### 1. The two statements
+
+| Source | Verbatim |
+|---|---|
+| **TIER 2** — `MMM-NOTES` **p.46**, listing the three scaling-in entries | *"the appearance of the shark fin (1st) · **the Market base line cross (referred to as Blood in the Water)** (2nd) · break out of the opposite volatility band during the trend run (3rd)"* |
+| **TIER 1** — V12 `[00:20:00]`–`[00:20:14]`, course author, **confirmed by an independent Whisper `small.en` pass** (clip `c6`) | *"**When the fin goes back under the water line — back inside the band — and crosses the signal line, the trade signal line, TSL — that's where we get blood in the water.**"* |
+| **TIER 1, PRINTED** — V12 frame `19:06`, `TDI SIGNALS`, fourth bullet | *"Fin Goes Back Under The Waterline **and Crosses The Signal (Red, Blood In The Water)**"* |
+| **TIER 1, a third time, on a worked chart** — V12 `[00:31:34]`–`[00:31:47]` | *"it crosses back in the same side, **you get blood in the water**… the RSI line crosses back inside the water and the blood at the same time"* |
+
+### 2. Why this is a genuine contradiction and not two descriptions of one thing
+
+**They name different lines, and V12 treats those lines as distinct throughout.**
+
+| | Tier 2 | Tier 1 (V12) |
+|---|---|---|
+| The line crossed | **the market base line** — yellow/gold, the TDI's dynamic midline | **the trade signal line** — red |
+| Position in the ladder | the **2nd** entry | **the 1st — it IS the entry signal** |
+| What V12's 2nd rung is | — | *"you add to the trade at **the market baseline break** — remember the gold baseline"* `[00:30:45]`; printed `29:11` *"Add To The Trade At MB Break"* |
+
+**V12 crosses the two at different moments in one sentence** — `[00:31:49]`–`[00:31:52]`
+*"it crosses **the market baseline** right around the same time it also crosses **the static 50**"*
+— and its printed ladder (`29:11`, `33:41`) lists the TSL cross as the **entry** and the MB break
+as the **first add**. **The two documents disagree about which rung of a three-rung ladder carries
+the name.**
+
+**⚠️ Note what the disagreement is NOT.** It is not about the *sequence* — both put the shark fin
+first, a baseline event second and an opposite-band break third. **It is about which event the
+course's own idiom names**, and the idiom is the thing a coded rule would key on.
+
+### 3. A subsidiary divergence in the same section, recorded here rather than as its own record
+
+| Source | The volatility bands are computed from |
+|---|---|
+| **TIER 2** — `MMM-NOTES` p.45 | *"similar to a Bollinger band but applied to **the market baseline** of the indicator instead of price"* |
+| **TIER 1** — V12 `[00:15:47]` | *"two standard deviations away from **the market baseline** or something like that. **I don't really know because I didn't invent it**"* |
+| **TIER 1** — V12 `[00:16:03]`–`[00:16:20]`, **correcting himself on a prompt from the chat** | *"based on **the RSI line itself**. That's what someone said, telling me — **not sure**… from **the RSI line. Thank you.**"* |
+
+**Tier 2 agrees with V12's first answer and disagrees with its corrected one.**
+
+**This does NOT get its own contradiction record and does NOT resolve in Tier 1's favour**, because
+**`SOURCING_HIERARCHY.md` §3.3's *"the recording wins"* presupposes a recording that is clear**, and
+here the speaker attaches *"I don't know"*, *"I don't really know"* and *"not sure"* to every
+version he offers. **`C-011`'s asymmetry applies exactly**: Tier 2 is defeated as an authority
+**without** Tier 1 supplying a usable replacement, and **both the Tier 2 figure and the record's
+blocker survive.** Carried in **`A-086`**.
+
+### 4. Resolution
+
+**`SOURCING_HIERARCHY.md` §3.2 Case A — Tier 1 is clear and specific — and §3.3: the recording
+wins.**
+
+Tier 1 here is about as strong as this corpus gets: **printed and spoken, agreeing, stated three
+times, by the course author, in the lesson that is explicitly the promised treatment of this
+indicator**, and confirmed by a second ASR engine. Tier 2 is an anonymous student's summary of a
+different seminar.
+
+| Action | Done |
+|---|---|
+| `A-031` closes `RESOLVED BY COURSE` **as to meaning** | ✅ `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`, V12 pass |
+| Its Tier 2 basis is **REPLACED, not supplemented** (`§3.1` step 5) | ✅ stated in the record |
+| `EXTERNAL_VOCABULARY_REFERENCE.md` §5.7 and §9.2 annotated **`SUPERSEDED BY COURSE`** in place, superseded text left visible (`§3.1` step 4, `REMEDIATION_PROTOCOL.md` §2) | ✅ |
+| Logged | ✅ `LOG.md` |
+
+### 5. ⭐ WHY THIS ENTRY MATTERS MORE THAN THE FACT IT RECORDS
+
+**`EXTERNAL_VOCABULARY_REFERENCE.md` §9.2 called the Tier 2 answer *"a direct definition, the only
+one found anywhere… From an anonymous source, so it is **a lead for the promised TDI lesson, not
+an answer**."* Written 2026-08-13. **The promised lesson arrived the same day and contradicted
+it.**
+
+**Had that entry been written one degree less carefully — had it closed `A-031` on the only
+definition anyone could find — the corpus would now carry the wrong line for its own entry
+trigger, and a coded rule would fire on the yellow line instead of the red one.**
+
+This is the second time in two days that `D-040`'s reconciliation machinery has caught an error
+that a reasonable session would otherwise have made: **`D-043` §3 records the first** (§3.2 Case C
+forbade a session from adjudicating the colour conflict, and the owner's reversal proved the
+refusal right). **Both times the rule that produced the correct answer was a rule that told a
+session NOT to resolve something it could have resolved.**
+
+### Related
+
+`A-031`, `A-032`, `A-039`, `A-086`, `C-010`, `C-011`, `D-030`, `D-039`, `D-040`;
+`SOURCING_HIERARCHY.md` §3.1, §3.2 Case A, §3.3; `MMM-NOTES` pp.45–46;
+`00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §5.7, §9.2;
+`02_TRANSCRIPTS/V12/V12_TRANSCRIPT.md` clip `c6`;
+`04_SCREENSHOTS/V12/INDEX.md` frames 11, 18, 19;
+`03_LESSON_NOTES/V12_SOURCE_NOTES.md` §6b, §6c.
