@@ -1,7 +1,22 @@
 # PT-042 — "The lock": does a session extreme that holds for one hour become the day's extreme?
 
+> ### ⭐ RUN 2026-08-14 — VERDICT: **NOT SUPPORTED**
+>
+> `O1` = **0.3461 / 0.3041** against `≥ 0.80`; `O2` = **0.4607 / 0.4433** against `≥ 0.50`;
+> `n` = **471 / 467**. Neither boundary holds in either arm, so §6 prescribes `NOT SUPPORTED`.
+> **The distance is real — median MFE 40 pips — and the premise is not.** See
+> `06_MANUAL_BACKTEST/V14/BT_V14_0001.md`.
+>
+> ⚠️ **Two defects in THIS file were exposed by the run and are owed an amendment before any
+> re-issue**, both recorded in `BT_V14_0001.md` §7: **`N4` is degenerate (`n = 0`)**, and
+> **§5a underspecified `N1`'s `O1` construction**, in a direction that flatters the rule arm.
+>
+> **THIS BANNER IS THE ONLY CHANGE MADE TO THIS FILE AFTER THE RUN.** No threshold, window,
+> filter, arm, outcome measure or decision rule was altered — checkable with
+> `git diff ae3b07a HEAD -- 06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_*.md`.
+
 ```text
-STATUS:      PRE-REGISTERED — NOTHING BELOW HAS BEEN RUN
+STATUS:      PRE-REGISTERED — NOTHING BELOW HAS BEEN RUN  (see the RUN banner above)
 WRITTEN:     2026-08-14, by the V14 student session, branch video/v14
 ATTESTATION: The session that wrote this file has loaded NO price series for this
              test, computed NO outcome, and opened NO chart. `run_pt042.py` DOES
