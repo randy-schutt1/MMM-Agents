@@ -119,7 +119,14 @@ def main() -> None:
 
     results = {"windows": {}}
 
-    for scope, wname in [("development", "W-D"), ("extension", "W-E")]:
+    # §4 defines W-E as 2017-01-01 -> 2025-12-31. `mmm_lib`'s "extended" scope loads
+    # 2013 -> 2025, i.e. W-D POOLED with the extension -- which §4 explicitly forbids
+    # ("reported separately and never averaged"). The clip below implements the
+    # pre-registration. The first execution of this runner did NOT clip, and its
+    # superseded W-E figures are reported in BT_V16_0001.md §6a rather than discarded.
+    W_E_LO, W_E_HI = L.dt2m("2017-01-01"), L.dt2m("2025-12-31 23:59")
+
+    for scope, wname in [("development", "W-D"), ("extended", "W-E")]:
         report, manifest = L.qa_gate(scope)
         print(f"=== {wname}  (scope={scope}) ===")
         print(f"QA gate: PASSED   report={report}")
@@ -127,6 +134,8 @@ def main() -> None:
 
         for arm in ARMS:
             b = L.load_m1(arm, scope=scope)
+            if wname == "W-E":
+                b = b.slice(W_E_LO, W_E_HI)
             days, rng, excluded = day_ranges(b)
             m = measures(rng)
             a15 = adr15(days, rng)

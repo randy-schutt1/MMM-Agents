@@ -1,0 +1,198 @@
+{
+  "windows": {
+    "W-D": {
+      "N1_arm_delta_median": 2.05,
+      "arms": {
+        "A": {
+          "N2_adr15_mean": 113.39990929705213,
+          "N2_adr15_median": 111.63333333333324,
+          "N2_p_adr15_gt_200": 0.0045351473922902496,
+          "N3_per_year": {
+            "2013": {
+              "median": 100.9,
+              "n": 255
+            },
+            "2014": {
+              "median": 80.3,
+              "n": 256
+            },
+            "2015": {
+              "median": 113.6,
+              "n": 257
+            },
+            "2016": {
+              "median": 138.0,
+              "n": 129
+            }
+          },
+          "N4_excluded_days": 11,
+          "N4_excluded_pct": 1.2,
+          "O1_p_gt_200": 0.07246376811594203,
+          "O2_median": 102.60000000000157,
+          "O3_mean": 115.817502787068,
+          "O4_p_in_150_250": 0.1750278706800446,
+          "O5_p99": 284.3280000000017,
+          "first_day": "2013-01-02",
+          "last_day": "2016-06-30",
+          "n": 897,
+          "verdict_ceiling": "WEAKLY SUPPORTED",
+          "verdict_typical": "PARTIALLY SUPPORTED"
+        },
+        "B": {
+          "N2_adr15_mean": 115.97894553376905,
+          "N2_adr15_median": 113.93333333333352,
+          "N2_p_adr15_gt_200": 0.00392156862745098,
+          "N3_per_year": {
+            "2013": {
+              "median": 102.3,
+              "n": 221
+            },
+            "2014": {
+              "median": 85.4,
+              "n": 223
+            },
+            "2015": {
+              "median": 116.0,
+              "n": 223
+            },
+            "2016": {
+              "median": 139.1,
+              "n": 113
+            }
+          },
+          "N4_excluded_days": 245,
+          "N4_excluded_pct": 23.9,
+          "O1_p_gt_200": 0.07948717948717948,
+          "O2_median": 104.64999999999947,
+          "O3_mean": 118.64730769230769,
+          "O4_p_in_150_250": 0.18974358974358974,
+          "O5_p99": 287.7510000000003,
+          "first_day": "2013-01-02",
+          "last_day": "2016-06-30",
+          "n": 780,
+          "verdict_ceiling": "WEAKLY SUPPORTED",
+          "verdict_typical": "PARTIALLY SUPPORTED"
+        }
+      },
+      "qa_report": "==============================================================================\nHISTDATA GBP/USD M1 \u2014 DATA QA GATE\n==============================================================================\nfiles    : 4\nbars     : 1,297,781\nspan     : 2013-01-01 17:00:00 -> 2016-06-30 23:59:00\nyears    : (start) -> 2016\n\n--- GATING CHECKS (must be clean) ---\nC1 parse integrity     : PASS\nC2 duplicate timestamps: PASS\nC3 ordering            : PASS\nC4 OHLC coherence      : PASS\n\n--- REPORTS (human review, not gates) ---\nC5 spike census        : 578 bars > 12x rolling median range\n      2016-06-07 00:10:00  range   180.1 pips   local median   2.0   x 90.1\n      2016-03-25 14:09:00  range     6.5 pips   local median   0.1   x 65.0\n      2014-07-11 16:59:00  range    41.3 pips   local median   0.7   x 59.0\n      2016-03-25 14:08:00  range     5.3 pips   local median   0.1   x 53.0\n      2014-06-12 16:00:00  range    52.7 pips   local median   1.3   x 40.5\n      2013-09-27 01:20:00  range    48.6 pips   local median   1.2   x 40.5\n      2014-04-16 20:18:00  range    21.7 pips   local median   0.6   x 36.2\n      2013-04-25 04:30:00  range   108.5 pips   local median   3.0   x 36.2\n      2016-03-25 14:10:00  range     3.5 pips   local median   0.1   x 35.0\n      2013-07-04 07:00:00  range    94.0 pips   local median   2.7   x 34.8\n      2016-03-24 20:55:00  range    27.0 pips   local median   0.8   x 33.8\n      2016-06-23 19:17:00  range   469.9 pips   local median  14.0   x 33.6\n      2016-03-25 14:01:00  range     6.7 pips   local median   0.2   x 33.5\n      2015-10-15 16:59:00  range    36.4 pips   local median   1.1   x 33.1\n      2016-03-25 14:07:00  range     6.5 pips   local median   0.2   x 32.5\n      ... 563 more\n\nC6 gap census          : 3 intra-week gaps >= 30m, 4:43:00 total\n      2015-01-01 13:33:00 -> 2015-01-01 17:00:00   3:27:00\n      2015-08-21 13:16:00 -> 2015-08-21 13:57:00   0:41:00\n      2013-04-11 19:11:00 -> 2013-04-11 19:46:00   0:35:00\n\nC7 week-open census    : 181 week opens (Sunday-delimited)\n      time-of-day : {'17:00': 170, '17:01': 2, '17:03': 2, '17:04': 2, '17:06': 2}\n      6 INTRA-WEEK RE-OPENS \u2014 these are NOT week boundaries:\n        2013-01-01 17:00:00 (Tue) \u2014 mid-week re-open after a closure\n        2013-12-26 06:02:00 (Thu) \u2014 mid-week re-open after a closure\n        2014-01-01 17:00:00 (Wed) \u2014 mid-week re-open after a closure\n        2014-06-02 15:01:00 (Mon) \u2014 mid-week re-open after a closure\n        2014-12-25 18:00:00 (Thu) \u2014 mid-week re-open after a closure\n        2015-01-01 13:01:00 (Thu) \u2014 mid-week re-open after a closure\n      Deriving week boundaries from re-opens would split those weeks in two.\n      3 week(s) not closing on a Friday \u2014 invisible to this census:\n        week of 2015-12-20 ends 2015-12-24 (Thu), 5 sessions\n        week of 2015-12-27 ends 2015-12-31 (Thu), 5 sessions\n        week of 2016-06-26 ends 2016-06-30 (Thu), 5 sessions\n      modal open by month: {1: '17:00', 2: '17:00', 3: '17:00', 4: '17:00', 5: '17:00', 6: '17:00', 7: '17:00', 8: '17:00', 9: '17:00', 10: '17:00', 11: '17:00', 12: '17:00'}\n      seasonal shift (DST): NO \u2014 fixed offset year-round\n\nC8 session completeness: 11 sessions below 60% of nominal bars\n      2013-01-01 Tue    405 bars  (nominal ~1440,  28.1%)  <- Dec/Jan holiday, a real market closure\n      2013-12-25 Wed      0 bars  (nominal ~1440,   0.0%)  <- Dec/Jan holiday, a real market closure\n      2014-01-01 Wed    392 bars  (nominal ~1440,  27.2%)  <- Dec/Jan holiday, a real market closure\n      2014-06-01 Sun      0 bars  (nominal ~ 420,   0.0%)  <- *** ABSENT AND UNEXPLAINED ***\n      2014-06-02 Mon    521 bars  (nominal ~1440,  36.2%)  <- *** SHORT AND UNEXPLAINED ***\n      2014-12-24 Wed    840 bars  (nominal ~1440,  58.3%)  <- Dec/Jan holiday, a real market closure\n      2014-12-25 Thu    360 bars  (nominal ~1440,  25.0%)  <- Dec/Jan holiday, a real market closure\n      2015-01-01 Thu    424 bars  (nominal ~1440,  29.4%)  <- Dec/Jan holiday, a real market closure\n      2015-12-24 Thu    840 bars  (nominal ~1440,  58.3%)  <- Dec/Jan holiday, a real market closure\n      2015-12-25 Fri      0 bars  (nominal ~1020,   0.0%)  <- Dec/Jan holiday, a real market closure\n      2016-01-01 Fri      0 bars  (nominal ~1020,   0.0%)  <- Dec/Jan holiday, a real market closure\n      A short session is not automatically a defect. Holidays are closures;\n      an unexplained absence is a hole. Only a human tells them apart.\n\n==============================================================================\nGATE: PASS \u2014 C1-C4 clean\nC5-C8 require human sign-off before any PT test is run.\nAny session flagged by C8 must have an explicit, PRE-REGISTERED disposition\n(include / exclude / report separately) in the test that spans it.\n==============================================================================\n",
+      "scope": "development"
+    },
+    "W-E": {
+      "N1_arm_delta_median": 0.8,
+      "arms": {
+        "A": {
+          "N2_adr15_mean": 104.23530555555554,
+          "N2_adr15_median": 97.66333333333341,
+          "N2_p_adr15_gt_200": 0.018055555555555554,
+          "N3_per_year": {
+            "2017": {
+              "median": 91.8,
+              "n": 257
+            },
+            "2018": {
+              "median": 99.7,
+              "n": 259
+            },
+            "2019": {
+              "median": 85.2,
+              "n": 253
+            },
+            "2020": {
+              "median": 115.2,
+              "n": 252
+            },
+            "2021": {
+              "median": 85.5,
+              "n": 254
+            },
+            "2022": {
+              "median": 114.0,
+              "n": 254
+            },
+            "2023": {
+              "median": 90.6,
+              "n": 140
+            },
+            "2024": {
+              "median": 72.5,
+              "n": 252
+            },
+            "2025": {
+              "median": 84.8,
+              "n": 254
+            }
+          },
+          "N4_excluded_days": 189,
+          "N4_excluded_pct": 8.0,
+          "O1_p_gt_200": 0.049195402298850575,
+          "O2_median": 92.30000000000071,
+          "O3_mean": 104.26524137931035,
+          "O4_p_in_150_250": 0.11632183908045977,
+          "O5_p99": 291.21999999999684,
+          "first_day": "2017-01-03",
+          "last_day": "2025-12-31",
+          "n": 2175,
+          "verdict_ceiling": "WEAKLY SUPPORTED",
+          "verdict_typical": "CONTRADICTED AS STATED"
+        },
+        "B": {
+          "N2_adr15_mean": 105.77962713619885,
+          "N2_adr15_median": 98.70666666666655,
+          "N2_p_adr15_gt_200": 0.02019678922837908,
+          "N3_per_year": {
+            "2017": {
+              "median": 93.6,
+              "n": 224
+            },
+            "2018": {
+              "median": 101.3,
+              "n": 225
+            },
+            "2019": {
+              "median": 87.6,
+              "n": 229
+            },
+            "2020": {
+              "median": 115.2,
+              "n": 228
+            },
+            "2021": {
+              "median": 86.7,
+              "n": 228
+            },
+            "2022": {
+              "median": 113.9,
+              "n": 228
+            },
+            "2023": {
+              "median": 92.2,
+              "n": 129
+            },
+            "2024": {
+              "median": 72.6,
+              "n": 226
+            },
+            "2025": {
+              "median": 85.1,
+              "n": 229
+            }
+          },
+          "N4_excluded_days": 664,
+          "N4_excluded_pct": 25.4,
+          "O1_p_gt_200": 0.05549845837615622,
+          "O2_median": 93.10000000000039,
+          "O3_mean": 105.80118191161357,
+          "O4_p_in_150_250": 0.1156217882836588,
+          "O5_p99": 312.55,
+          "first_day": "2017-01-03",
+          "last_day": "2025-12-31",
+          "n": 1946,
+          "verdict_ceiling": "WEAKLY SUPPORTED",
+          "verdict_typical": "CONTRADICTED AS STATED"
+        }
+      },
+      "qa_report": "==============================================================================\nHISTDATA GBP/USD M1 \u2014 DATA QA GATE\n==============================================================================\nfiles    : 9\nbars     : 3,297,055\nspan     : 2017-01-02 02:00:00 -> 2025-12-31 16:57:00\nyears    : 2017 -> (end)\ndedupe   : `D-044` exact-duplicate removal APPLIED \u2014 420 row(s) dropped\n           2019-10-27  60 re-emitted minute(s)\n           2020-10-25  60 re-emitted minute(s)\n           2021-10-31  60 re-emitted minute(s)\n           2022-10-30  60 re-emitted minute(s)\n           2023-10-29  60 re-emitted minute(s)\n           2024-10-27  60 re-emitted minute(s)\n           2025-10-26  60 re-emitted minute(s)\n\n--- GATING CHECKS (must be clean) ---\nC1 parse integrity     : PASS\nC2 duplicate timestamps: PASS\nC3 ordering            : PASS\nC4 OHLC coherence      : PASS\n\n--- REPORTS (human review, not gates) ---\nC5 spike census        : 2042 bars > 12x rolling median range\n      2019-12-24 23:10:00  range    21.6 pips   local median   0.1   x216.0\n      2024-12-24 19:52:00  range    19.0 pips   local median   0.1   x190.0\n      2019-12-24 23:28:00  range    18.9 pips   local median   0.1   x189.0\n      2019-12-24 23:09:00  range    16.6 pips   local median   0.1   x166.0\n      2018-12-24 19:55:00  range    14.8 pips   local median   0.1   x148.0\n      2019-12-24 23:11:00  range    14.5 pips   local median   0.1   x145.0\n      2019-12-24 23:03:00  range    13.6 pips   local median   0.1   x136.0\n      2018-12-24 19:33:00  range    12.1 pips   local median   0.1   x121.0\n      2022-12-26 10:52:00  range    11.6 pips   local median   0.1   x116.0\n      2018-12-24 20:48:00  range    11.2 pips   local median   0.1   x112.0\n      2024-12-24 19:21:00  range    10.8 pips   local median   0.1   x108.0\n      2024-12-24 19:30:00  range    10.8 pips   local median   0.1   x108.0\n      2024-12-24 19:48:00  range    10.8 pips   local median   0.1   x108.0\n      2018-12-24 20:01:00  range    10.8 pips   local median   0.1   x108.0\n      2025-12-24 20:00:00  range    10.8 pips   local median   0.1   x108.0\n      ... 2027 more\n\nC6 gap census          : 691 intra-week gaps >= 30m, 33 days, 13:40:00 total\n      2019-05-27 00:59:00 -> 2019-05-27 06:00:00   5:01:00\n      2023-04-03 14:59:00 -> 2023-04-03 18:00:00   3:01:00\n      2023-02-20 07:59:00 -> 2023-02-20 10:00:00   2:01:00\n      2023-02-20 13:59:00 -> 2023-02-20 16:00:00   2:01:00\n      2023-02-23 11:59:00 -> 2023-02-23 14:00:00   2:01:00\n      2023-02-27 11:59:00 -> 2023-02-27 14:00:00   2:01:00\n      2023-02-27 15:59:00 -> 2023-02-27 18:00:00   2:01:00\n      2023-02-28 15:59:00 -> 2023-02-28 18:00:00   2:01:00\n      2023-03-01 11:59:00 -> 2023-03-01 14:00:00   2:01:00\n      2023-03-08 07:59:00 -> 2023-03-08 10:00:00   2:01:00\n      ... 681 more\n\nC7 week-open census    : 465 week opens (Sunday-delimited)\n      time-of-day : {'17:00': 289, '17:04': 44, '17:01': 25, '17:02': 23, '17:05': 19}\n      15 INTRA-WEEK RE-OPENS \u2014 these are NOT week boundaries:\n        2017-01-02 02:00:00 (Mon) \u2014 mid-week re-open after a closure\n        2017-12-25 17:00:00 (Mon) \u2014 mid-week re-open after a closure\n        2018-01-01 17:00:00 (Mon) \u2014 mid-week re-open after a closure\n        2018-12-25 17:05:00 (Tue) \u2014 mid-week re-open after a closure\n        2019-01-01 17:06:00 (Tue) \u2014 mid-week re-open after a closure\n        2019-05-27 00:00:00 (Mon) \u2014 mid-week re-open after a closure\n        2019-12-25 17:04:00 (Wed) \u2014 mid-week re-open after a closure\n        2020-01-01 17:02:00 (Wed) \u2014 mid-week re-open after a closure\n        2020-11-30 19:00:00 (Mon) \u2014 mid-week re-open after a closure\n        2021-05-31 20:00:00 (Mon) \u2014 mid-week re-open after a closure\n        2023-12-25 17:04:00 (Mon) \u2014 mid-week re-open after a closure\n        2024-01-01 17:00:00 (Mon) \u2014 mid-week re-open after a closure\n        2024-12-25 17:03:00 (Wed) \u2014 mid-week re-open after a closure\n        2025-01-01 17:01:00 (Wed) \u2014 mid-week re-open after a closure\n        2025-12-25 17:04:00 (Thu) \u2014 mid-week re-open after a closure\n      Deriving week boundaries from re-opens would split those weeks in two.\n      3 week(s) not closing on a Friday \u2014 invisible to this census:\n        week of 2020-12-27 ends 2020-12-31 (Thu), 5 sessions\n        week of 2023-04-02 ends 2023-04-06 (Thu), 5 sessions\n        week of 2025-12-28 ends 2025-12-31 (Wed), 4 sessions\n      modal open by month: {1: '17:00', 2: '17:00', 3: '17:00', 4: '17:00', 5: '17:00', 6: '17:00', 7: '17:00', 8: '17:00', 9: '17:00', 10: '17:00', 11: '17:00', 12: '17:00'}\n      seasonal shift (DST): NO \u2014 fixed offset year-round\n\nC8 session completeness: 24 sessions below 60% of nominal bars\n      2017-12-24 Sun      0 bars  (nominal ~ 420,   0.0%)  <- Dec/Jan holiday, a real market closure\n      2017-12-25 Mon    412 bars  (nominal ~1440,  28.6%)  <- Dec/Jan holiday, a real market closure\n      2017-12-31 Sun      0 bars  (nominal ~ 420,   0.0%)  <- Dec/Jan holiday, a real market closure\n      2018-01-01 Mon    399 bars  (nominal ~1440,  27.7%)  <- Dec/Jan holiday, a real market closure\n      2018-12-25 Tue    595 bars  (nominal ~1440,  41.3%)  <- Dec/Jan holiday, a real market closure\n      2019-01-01 Tue    409 bars  (nominal ~1440,  28.4%)  <- Dec/Jan holiday, a real market closure\n      2019-05-26 Sun      0 bars  (nominal ~ 420,   0.0%)  <- *** ABSENT AND UNEXPLAINED ***\n      2019-12-25 Wed    559 bars  (nominal ~1440,  38.8%)  <- Dec/Jan holiday, a real market closure\n      2020-01-01 Wed    418 bars  (nominal ~1440,  29.0%)  <- Dec/Jan holiday, a real market closure\n      2020-11-30 Mon    300 bars  (nominal ~1440,  20.8%)  <- *** SHORT AND UNEXPLAINED ***\n      2020-12-25 Fri     97 bars  (nominal ~1020,   9.5%)  <- Dec/Jan holiday, a real market closure\n      2021-01-01 Fri      0 bars  (nominal ~1020,   0.0%)  <- Dec/Jan holiday, a real market closure\n      2021-05-31 Mon    239 bars  (nominal ~1440,  16.6%)  <- *** SHORT AND UNEXPLAINED ***\n      2023-03-17 Fri    600 bars  (nominal ~1020,  58.8%)  <- *** SHORT AND UNEXPLAINED ***\n      2023-03-24 Fri    600 bars  (nominal ~1020,  58.8%)  <- *** SHORT AND UNEXPLAINED ***\n      2023-04-06 Thu    777 bars  (nominal ~1440,  54.0%)  <- *** SHORT AND UNEXPLAINED ***\n      2023-04-07 Fri      0 bars  (nominal ~1020,   0.0%)  <- *** ABSENT AND UNEXPLAINED ***\n      2023-12-24 Sun    113 bars  (nominal ~ 420,  26.9%)  <- Dec/Jan holiday, a real market closure\n      2023-12-25 Mon    527 bars  (nominal ~1440,  36.6%)  <- Dec/Jan holiday, a real market closure\n      2023-12-31 Sun      0 bars  (nominal ~ 420,   0.0%)  <- Dec/Jan holiday, a real market closure\n      2024-01-01 Mon    414 bars  (nominal ~1440,  28.8%)  <- Dec/Jan holiday, a real market closure\n      2024-12-25 Wed    474 bars  (nominal ~1440,  32.9%)  <- Dec/Jan holiday, a real market closure\n      2025-01-01 Wed    418 bars  (nominal ~1440,  29.0%)  <- Dec/Jan holiday, a real market closure\n      2025-12-25 Thu    485 bars  (nominal ~1440,  33.7%)  <- Dec/Jan holiday, a real market closure\n      A short session is not automatically a defect. Holidays are closures;\n      an unexplained absence is a hole. Only a human tells them apart.\n\n==============================================================================\nGATE: PASS \u2014 C1-C4 clean\nC5-C8 require human sign-off before any PT test is run.\nAny session flagged by C8 must have an explicit, PRE-REGISTERED disposition\n(include / exclude / report separately) in the test that spans it.\n==============================================================================\n",
+      "scope": "extended"
+    }
+  }
+}
