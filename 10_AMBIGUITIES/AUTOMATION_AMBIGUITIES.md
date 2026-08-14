@@ -8313,8 +8313,17 @@ does not choose:
 
 1. **A higher-timeframe MBL** — the H1 chart's market base line, read while trading a lower one.
 2. **A duration** — the cross must hold for an hour (which would make it a `A-094`-style *lock*).
-3. **An ASR artifact of a longer phrase.** ⚠ **Not adopted**: the committed grid and the
-   independent pass both carry *"one hour"*.
+3. **An ASR artifact of a longer phrase.** ⚠ **Not adopted, and this is now measured rather
+   than assumed**: the committed grid, the targeted `medium.en` clip pass **and** a full-file
+   `large-v3-turbo` pass all independently render *"the one hour blood in the water"* /
+   *"the one-hour blood in the water"*. **Three engines, one phrase.**
+
+⭐ **AND THE FULL-FILE INDEPENDENT PASS CONFIRMS THE NEGATIVE, MEASURED OVER THE WHOLE LESSON.**
+A `large-v3-turbo` transcription of all 52 minutes contains **`68` once, `32` once, `shark fin`
+three times, `blood in the water` three times, `RSI` twice — and ZERO occurrences of `smoothing`,
+`period`, `standard deviation`, `volatility band`, `market base`, `63` or `37`.** The TDI passage
+reproduces verbatim. **V15's audio contains no TDI parameter of any kind, and that is now a
+measurement rather than a reading.**
 
 ⚠⚠ **This does NOT touch `A-084`, `A-085` or `A-086`.** Naming a line is not parameterising it:
 the Market Base Line's period is stated nowhere in Tier 1, and `A-085`'s question is exactly that
