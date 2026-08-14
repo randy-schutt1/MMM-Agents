@@ -1939,3 +1939,154 @@ All three files remain quarantined **in place**, covered by the tree-wide
   ⚠️ **CORRECTED AT V12 R1 item 138 — ⚠ SELF-VERIFIED AT OWNER DIRECTION** (see §4). Retained per
   `REMEDIATION_PROTOCOL.md` §2, this clause originally read *"and the first lesson on which the
   file's text is about the right subject"*. **`first` was false; it is the third.**
+
+---
+
+## Q-014 — V13's three derived files, confirmed fabricated; `VISUAL_INDEX.md` differs from V12's by **four identifier lines and ZERO content lines**; and the fabricated `EMAs` table is now shown to be **period↔colour-CORRECT and nickname-SHIFTED-BY-ONE**
+
+**Filed:** 2026-08-14, V13 student session, branch `video/v13`
+**Files:** `01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/per_lesson/13_Bootcamp1_Wk5_041512_Part1_65mins/{RULES.md, NOTES.md, VISUAL_INDEX.md}`
+**Disposition:** **QUARANTINED IN PLACE.** Nothing moved, renamed or deleted. Covered by the
+tree-wide `README_WHY_QUARANTINED.md` banner.
+**Quarantined ON SIGHT, before being read for content**, per the standing directive.
+
+---
+
+### 1. The identifier tell, visible before any content check
+
+The V13 files carry rule IDs **`V14-R001` / `V14-R002`** and image filenames
+**`VIDEO_14_SCREENSHOT_00N_…`** — while sitting in the folder indexed **`13_`**, for the file
+`SOURCE_MANIFEST.md` numbers **V13** under `D-017` §2. The generator's own numbering is
+**internally inconsistent with its own folder index**, and it is the same off-by-one the V12
+session recorded in its transcript header (*"Course Position: Video 13 of 21"* on the V12 file).
+
+### 2. `VISUAL_INDEX.md` — measured, not asserted
+
+`diff` against V12's file, which `Q-013` already proved to be one document shared by ten lessons:
+
+```text
+diff 12_…Wk4_040812_Part2/VISUAL_INDEX.md  13_…Wk5_041512_Part1/VISUAL_INDEX.md
+  -> 8 differing lines = FOUR changed pairs, and all four are identifiers:
+       the .swf filename, and the three VIDEO_13 -> VIDEO_14 screenshot names.
+     ZERO content lines differ.
+```
+
+**⭐ THE FULL 21-LESSON CLUSTERING WAS RE-RUN AND `Q-013`'s FINDING EXTENDS.** Normalising away the
+`.swf` filename, the `VIDEO_NN` identifiers and the `VNN-R` rule prefixes, then hashing:
+
+| File | Distinct bodies across 21 lessons | Largest clusters |
+|---|---|---|
+| `VISUAL_INDEX.md` | **8** | **10 lessons** share one body — `03,04,09,10,11,12,13,14,15,21` — and **5 more** share a second — `16,17,18,19,20`. **15 of 21 lessons are covered by exactly TWO documents** |
+| `NOTES.md` | **17** | **5 lessons** share one body — `16,17,18,19,20` |
+| `RULES.md` | **17** | **5 lessons** share one body — `16,17,18,19,20` |
+
+**The `16–20` cluster is new information and is recorded although those lessons are not yet
+studied**: for five consecutive unstudied lessons, **all three derived files are literally
+identical after identifier substitution.** A future session opening V16 does not need to re-derive
+the fabrication finding; it needs only this row.
+
+### 3. The images — indexed three, exist one, and the one is a **title card**
+
+`VISUAL_INDEX.md` indexes three screenshots. **Only `VIDEO_14_SCREENSHOT_001_00-02-00.jpg`
+exists**; `002` and `003` are indexed and **absent from disk**. That is a falsification requiring
+no judgement.
+
+The one image that does exist is a **colour-corrupted render of a title card** reading
+`MARKET MAKER BOOT CAMP / Week 5`. It is indexed as:
+
+> *"Asian Box accumulation range with 5, 13, 50, 200, and 800 EMAs… Setting up session boundaries
+> and explaining accumulation mechanics."*
+
+⭐ **This is `Q-012`'s V11 finding repeating VERBATIM — same failure, same caption, different
+lesson.** `Q-012` recorded *"the one real image is the **TITLE CARD**, indexed as *'Asian Box
+accumulation range with 5, 13, 50, 200, and 800 EMAs'*"*. **Third consecutive lesson whose
+misdescribed frame is a title card.** It is now unreasonable to read these as independent errors.
+
+> ⚠️ **A LEAD IS DECLINED HERE, DELIBERATELY.** The quarantined image appears to carry the printed
+> words **`Week 5`**, which would be a printed confirmation of the week number — and this session's
+> own 793 legitimate frames do **not** show that subtitle. **It is NOT adopted.** Evidence is not
+> laundered out of a quarantined file, and nothing turns on it: the week number is independently
+> established by `[00:17:52]` *"Please, **this is week five**"* and by the filename. Recorded so a
+> reviewer can see the temptation was seen and refused.
+
+### 4. `NOTES.md` — and the `EMAs` line, measured across all 21 files
+
+V13's `NOTES.md` asserts *"**Topic Focus:** Stop Loss Buffers, Account Preservation, Position
+Sizing"* and *"**Time Gap:** 30 to 90 minutes between peak 1 and peak 2 on M15 charts"*.
+
+**This lesson is a pop quiz on weeks 1–4 plus a TDI chart review.** It contains **no** position-
+sizing material, **no** account-preservation material, and the string `30 to 90` — and any minute
+figure for a peak-to-peak gap — occurs **zero times** in its 1,183-entry transcript. The
+`RULES.md` "verbatim instructor statements" attributed to `[00:05:00]` and `[00:18:00]` (*"Wait for
+the M15 candle to close before taking the 5/13 EMA cross"*; *"Place your stop loss 10 to 15 pips
+beyond the High or Low of the Day"*) **appear nowhere in the transcript at those or any
+timestamps.** `10 to 15 pips` occurs zero times; the lesson's actual stop material is *below the
+low* / *below the day* and a **drill** placeholder of `25 or 30`.
+
+#### 4a. THE `EMAs` TABLE — `Q-013` ALREADY MEASURED THIS. ONE AXIS IS ADDED.
+
+> ⚠️ **CORRECTION MADE BEFORE THIS ENTRY WAS COMMITTED, AND LEFT VISIBLE.** This section was first
+> drafted as *"a new and sharper measurement than `Q-013`'s"*. **It is not.** `Q-013` already
+> records: the 16/5 split, the colour-carrying variant, that the variant belongs to lessons 16–20,
+> the four-of-five wrongness against `D-043`, the shift-by-one shape, the missing `Ketchup`, and
+> the invented `Raspberry`. `D-042`'s *"by-product"* section records the shift-by-one analysis
+> **again**, and notes it got **cleaner** under the `D-043` inversion. **The draft would have
+> re-reported three prior findings as this session's.** It was caught by checking the claim against
+> the register instead of against memory. Recorded per `REMEDIATION_PROTOCOL.md` §2, because a
+> student session over-claiming novelty is exactly what an independent reviewer is looking for.
+
+**What this session actually adds is ONE axis, and only because `Q-013` quoted the colour-carrying
+variant without decomposing it.** The five lessons 16–20 carry:
+
+```text
+EMAs: 5 (Mustard/Yellow), 13 (Red/Water), 50 (Light Blue/Mayo),
+      200 (White/Blueberry), 800 (Dark Blue/Raspberry).
+```
+
+Splitting that into its two mappings and testing each separately against `D-043`
+(mustard=5=yellow · ketchup=13=red · water=50=aqua · mayonnaise=200=white · blueberry=800=blue):
+
+| Axis | Verdict | Previously recorded? |
+|---|---|---|
+| **nickname ↔ period** | ❌ **WRONG ON FOUR OF FIVE**, shifted one rung too fast, `Ketchup` dropped, `Raspberry` invented | ✅ `Q-013`; `D-042` by-product |
+| **period ↔ colour** | ✅ ⭐ **CORRECT ON ALL FIVE ROWS** — 5=yellow, 13=red, 50=light blue, 200=white, 800=dark blue, exactly `D-043` §2 | ❌ **not previously decomposed** |
+
+> **Why the one new axis is worth recording rather than dropping.** `D-041` → `D-042` → `D-043`
+> cost the project three decision records and two owner rulings, and `D-043` **reversed** `D-041`
+> on the nickname↔period axis while **leaving the nickname↔colour pairing untouched** — that
+> invariance is `D-043`'s own headline. **These files get the axis `D-043` reversed WRONG and the
+> axis `D-043` did not touch RIGHT.** A session that had reached for them as corroboration at any
+> point in that chain would have been pushed toward the reading the owner ultimately rejected,
+> **while finding the colour column reassuringly correct.** That is a sharper description of the
+> hazard than "four of five rows are wrong", and it is the reason `D-039`/`D-040` exclude this
+> material as a source rather than merely discounting it.
+
+**A phrasing correction carried over from the same draft:** it is **not** accurate to say
+`Raspberry` *"occurs zero times in the corpus"*. The string appears in `V07_TRANSCRIPT.md`,
+`V07_SOURCE_NOTES.md`, `DECISIONS.md`, `COURSE_PROGRESS.md` and this register — **in every case as
+a record of its absence**, never as course speech. The accurate claim, which is `Q-013`'s and
+`D-042`'s: **`raspberry` occurs 0× in genuine course audio anywhere in V01–V13, 0× in `MMM-NOTES`,
+and 0× in every `EXTERNAL_VOCABULARY_REFERENCE.md` tier.** Re-verified this session across V01–V13.
+
+### 5. Independence of the V13 artifacts
+
+`V13_TRANSCRIPT.md`'s header block is copied **only** as the verbatim body; the pre-ingestion
+`# VIDEO` header — including its *"Primary Topics: Risk Management Fundamentals, Stop Loss
+Placement & Position Sizing"* — is **not carried over**, and the transcript's SOURCE table says so.
+
+`V13_SOURCE_NOTES.md` was written from the transcript alone. **These three files were opened only
+to quarantine them**, and no V13 artifact draws on any of them. `V13_SOURCE_NOTES.md` §10 records
+that the corpus's own `mayonnaise` evidence was checked **against `D-043` and returned a negative
+result**, without reference to the table in §4a.
+
+### Running tally for the fabrication pattern
+
+- **`RULES.md`:** 21 of 21 covered. Shown by exact `diff` on **four** lessons — V10 (`Q-011`),
+  V11 (`Q-012`), V12 (`Q-013`), V13 (this entry) — to be one document re-badged by string
+  substitution. **Newly measured: lessons 16–20 share a single `RULES.md` body verbatim.**
+- **`NOTES.md`:** **13 of 21 audited** (V01–V13), **13 fabricated, zero exceptions.** V13 adds only the
+  period↔colour decomposition in §4a — the rest of that table was `Q-013`'s. **Newly measured:
+  lessons 16–20 share a single `NOTES.md` body verbatim, not merely a shared `EMAs` line.**
+- **`VISUAL_INDEX.md`:** **13 of 21 audited** (V01–V13), **13 fabricated.** V13 is the **third
+  consecutive** lesson whose one surviving image is a **title card** described as a chart, and the
+  clustering now shows **15 of 21 lessons covered by exactly two documents**.

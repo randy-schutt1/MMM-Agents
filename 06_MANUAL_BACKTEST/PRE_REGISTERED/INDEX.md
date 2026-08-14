@@ -356,3 +356,25 @@ Two things are worth stating positively rather than as absences:
    figure — see `PT-028` in particular, whose Sunday and Friday cells are below the floor.
 6. **Do not grade a test by whether it flatters the course.** `A null result honestly
    obtained is worth more to this project than a favourable one that cannot be read.`
+
+---
+
+## ADDED 2026-08-14 — `PT-041` (V13 student session, branch `video/v13`)
+
+| ID | Question | Window | Arms | Status |
+|---|---|---|---|---|
+| **`PT-041`** | **The range arithmetic** — conditional on a **25–50 pip Asian box** and a **25–50 pip excursion beyond a box edge**, does price travel back **≥ 40 / ≥ 50 pips** from the excursion extreme within the same session day? V13 `[00:35:24]` | **`W-B`** 2014-01-05 → 2015-12-31 | **Both `D-031` arms, never pooled** | **PRE-REGISTERED — see the file for the run result** |
+
+**Three things about `PT-041` that a reader should not have to open the file to learn:**
+
+1. ⚠ **It is a BEST-CASE / upper-bound test by the speaker's own stipulation** — *"you catch
+   absolute zero, the bottom or the top"*. It measures whether a **distance exists**, and it
+   produces **no tradeable signal**. Its `F4` measurement origin is a forward-looking extreme,
+   **declared in advance** as the measurement origin rather than as a classification.
+2. ⚠ **It is scoped explicitly against `C-020` §2's colliding token.** `25 to 50` now denotes at
+   least **three** distinct quantities in this corpus. `PT-041` uses the **box-width** sense for its
+   range filter and the **excursion-beyond-the-box** sense for its stop-hunt filter — both being
+   the senses V13 `[00:35:24]` itself uses — and **no result of this test is evidence about the
+   third (box-offset) sense.**
+3. ✅ **It does not depend on `A-084`, `A-086`, `A-039` or any TDI construction.** It is pure price
+   geometry, which is why it is runnable at all while the indicator records stay blocked.

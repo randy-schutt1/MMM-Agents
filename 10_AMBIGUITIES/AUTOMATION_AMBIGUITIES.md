@@ -6884,8 +6884,38 @@ smoothing. `PT-040` §6 limitation 1 names this and the sweep deliberately does 
 because widening it without a course statement would be guessing at the construction rather than
 measuring the ambiguity.
 
-**V13 (`Wk5 041512 Part1`) is the next place (a) or (b) could appear, and it is the cheapest
-remaining unblock in the project.**
+~~**V13 (`Wk5 041512 Part1`) is the next place (a) or (b) could appear, and it is the cheapest
+remaining unblock in the project.**~~
+
+> ### ⭐ UPDATED 2026-08-14 BY THE V13 SESSION — **V13 WAS CHECKED. IT NARROWS THIS RECORD AND DOES
+> ### NOT CLOSE IT. SEE `A-087`.**
+>
+> **`A-084` REMAINS AN ACTIVE BLOCKER and V11's RSI threshold claims STAY BLOCKED.** `PT-040`'s
+> `MATERIAL` verdict is undisturbed.
+>
+> V13 `[00:54:51]` is the closest the corpus has come to condition (a) — it explains **a plotted
+> line's height** by *"it only looks back 21 periods"* — **and it fails to close on the ground that
+> `MA_k(RSI(21))` inherits the same 21-period lookback**, so the passage explains a property the
+> two candidates share and cannot separate them. Three further defeaters in `A-087`, including the
+> speaker's own arithmetic disagreeing with itself 21 seconds apart.
+>
+> **THREE NARROWINGS ARE BANKED:**
+> 1. **`RSI = 21` corroborated from a SECOND lesson**, first-person, as a configuration choice —
+>    *"RSI is typically 14, **we have it set to 21**"*. `A-080`'s closure now rests on three
+>    independent Tier 1 instances.
+> 2. **The 21 is a lookback in CHART PERIODS, scaling with timeframe** — *"if you're on a 15 minute
+>    chart, it's 21 15-minute periods"*. `PT-040` already treated it this way; it is now **sourced**
+>    rather than assumed.
+> 3. ⭐ **THE LEGEND ROUTE IS CLOSED FOR THE WHOLE CORPUS.** V13's frames show the TDI sub-window
+>    legend printing **`TDI_MMM <three values>` with NO parameter tuple** — MT4's behaviour for an
+>    indicator whose short name omits its inputs. **No legend in any lesson can close this record.**
+>    The remaining routes are exactly three: a properties dialog, a Navigator/inputs tab, or a
+>    spoken identity statement. **V13's 793 frames contain no dialog and no Navigator panel; V12's
+>    672 contained none either.**
+>
+> **The next place (a) or (b) could appear is V14 (`Wk5 041512 Part2`), the same session** — and
+> `COURSE_PROGRESS.md` V13 GATE (f)'s promise/delivery split makes it a better-than-average
+> candidate, because V13 defers its "lesson part" into it. **Stop scanning legends.**
 
 ### Related
 
@@ -7038,3 +7068,189 @@ Every record V12 touches and does **not** move. Recorded as **negative results**
 | **`A-056`** — Hi-Lo | `HOD` printed once (`29:11`), spoken once (`[00:30:33]`); `high of the day` otherwise absent | **NOT ADVANCED — and it became MORE load-bearing.** `A-066`'s new placement rule is anchored to `HOD`, so this record now blocks a stop rule as well as an entry method |
 | **`A-042`** — operative detail deferred elsewhere | `[00:52:04]` *"I'm preparing some lessons for **the DMR**… on the other side for the paid subscribers"*; `[00:53:09]` *"I'm gonna deliver **a web class**"*; `[00:45:46]` *"I'm gonna try to get that cleaned up tonight or tomorrow"* | **EXTENDED.** Three more deferrals, one to a **paid tier this project has no access to.** Stays open |
 | **`A-020`** | See the dedicated entry above | ⭐ **MAYO ROW MOVES TO TIER 1**; ketchup/mustard/water unchanged |
+
+---
+
+## A-087 — V13's RSI passage: `A-084` NARROWS on three counts and does **not** close
+
+**Raised by:** V13 · `[00:54:51]`–`[00:55:43]`, with `[00:55:58]`
+**Speaker:** course author
+**Status of the parent:** ⛔ **`A-084` REMAINS AN ACTIVE BLOCKER. V11's RSI threshold claims STAY
+BLOCKED. `PT-040`'s `MATERIAL` verdict is undisturbed.**
+
+### Why this record exists
+
+`COURSE_PROGRESS.md` V13 GATE (a) named `A-084` *"the cheapest remaining unblock in the project"*
+and V13 as the next place its condition (a) could appear:
+
+> *a statement that the plotted line **is** the RSI — which would set `k = 1`, make `O2 ≡ 0` by
+> construction and unblock V11's RSI half **immediately**.*
+
+**V13 contains the closest thing the corpus has yet produced to that statement, and it is not that
+statement.** This record exists so that a later session does not re-derive the near-miss and reach
+the other conclusion.
+
+### What V13 says — corrected form, both ASR engines agreeing
+
+> `[00:54:51]` *"here's the weakness with **any** indicator. **The indicator averages back**, in
+> this example, **RSI is typically 14, we have it set to 21. It only looks back 21 periods.** …
+> **How come this didn't rise very high?** … because it only looks back, **it's limited in what it
+> sees**. If you compare this whole structure to the low down here, then yes, **it should plot
+> higher**. But it may not, because it only looks back 21 hours. If you're on a 15 minute chart,
+> it's **21 15-minute periods**."*
+> `[00:55:58]` *"**if you don't like TDI, then use the RSI.** RSI is very cool. In fact I used the
+> RSI for a long time… **TDI was cleaner** for good signals."*
+
+`V13_TRANSCRIPT.md` VERIFICATION corrections 1 and 2 apply; *"any indicator"* and *"we have it set
+to 21"* are the independently-confirmed readings, and the supplied ASR's *"Fennie indicator"* /
+*"we have a set to"* are garbles.
+
+### The near-miss, stated at full strength
+
+`[00:54:51]` explains **a plotted line's height** — *"this didn't rise very high"*, *"it should
+plot higher"* — **entirely by the RSI's 21-period lookback**, offering no other cause. Combined
+with `[00:54:15]` *"the **RSI line** is the same height"* and `[00:51:31]` *"separation between
+**blood and RSI**"* (i.e. `RSI` is one of the *plotted* lines, not an unplotted input), a reader
+can construct: *the line on screen behaves as RSI(21) behaves, therefore it is RSI(21)*.
+
+### ⛔ THE FOUR DEFEATERS
+
+| # | Defeater |
+|---|---|
+| **1** | ⭐ **THE LOOKBACK ARGUMENT DOES NOT DISCRIMINATE.** `MA_k(RSI(21))` **also** sees only 21 periods of price, because its input does. **Every sentence in the passage is equally true of the smoothed series.** The passage explains a property the two candidates **share**, so it cannot separate them. *This is the binding defeater, and it is the one a session hoping for closure would most want to miss.* |
+| **2** | ⚠ **"The indicator averages back" is the passage's only mention of averaging and it is applied to *"the indicator"*, not to the RSI's internals.** It is too vague to ground either reading; reading it as *"the RSI averages"* is choosing the convenient parse of an ambiguous one — and read the other way it is **weak evidence FOR** a smoothing step |
+| **3** | **He treats `TDI` and `RSI` as two things a trader chooses BETWEEN** — `[00:55:58]`. A speaker holding *the green line simply IS the RSI* has just described switching from a thing to itself |
+| **4** | ⚠ **The passage's own arithmetic disagrees with itself**: *"on a one hour chart, it looks back **15 hours**"* `[00:55:07]` vs *"it only looks back **21 hours**"* `[00:55:28]`. **Both engines transcribe both — it is the speaker's error, not the transcriber's.** `D-030` does not permit a blocker to close on a passage whose numbers disagree 21 seconds apart |
+
+### ⭐ WHAT `A-084` GAINS — three narrowings, none of them closure
+
+```text
+1. RSI PERIOD 21 IS CORROBORATED FROM A SECOND LESSON, first-person, as a
+   configuration choice ("we have it set to 21"). A-080's closure is
+   STRENGTHENED and now rests on three independent Tier 1 instances:
+   V12 [00:08:22], V11's frame 27:35 legend, and V13 [00:55:01].
+
+2. THE 21 IS A LOOKBACK IN CHART PERIODS, SCALING WITH TIMEFRAME -- not a
+   wall-clock window. "If you're on a 15 minute chart, it's 21 15-minute
+   periods." Any future test must apply RSI(21) on the tested timeframe and
+   must NOT fix a wall-clock lookback. PT-040 already did this correctly;
+   this is now sourced rather than assumed.
+
+3. THE LEGEND ROUTE IS CLOSED FOR THE WHOLE CORPUS. See below.
+```
+
+### ⭐ THE THIRD NARROWING IS THE MOST USEFUL, AND IT IS `VISUAL`
+
+The TDI sub-window legend in every V13 frame reads:
+
+```text
+TDI_MMM  46.2640  42.8277  40.2789
+```
+
+— **the indicator's name and its three current line values, and NO parameter tuple.** That is MT4's
+behaviour for an indicator whose `#property` short name omits its inputs. **Therefore no legend, in
+any lesson of this corpus, on this deployment, can ever close `A-084`.** The remaining routes are
+exactly three:
+
+1. an indicator-properties dialog,
+2. a Navigator / inputs tab,
+3. a spoken identity statement.
+
+**V13's 793 swept frames contain no dialog and no Navigator panel** (`04_SCREENSHOTS/V13/INDEX.md`).
+V12's 672 contained none either. **The V14–V21 hunt should stop scanning legends.**
+
+### `SOURCING_HIERARCHY.md` / `D-040`
+
+| Tier | Searched | Result |
+|---|---|---|
+| **1 — the course** | V13's full transcript; all 793 sweep frames and their 37 screen states; the 30 curated frames | **The passage above, and no smoothing length.** No properties dialog |
+| **2 — `MMM-NOTES`** | pp.44–46, unchanged since `A-084` was raised | **SILENT** |
+| **3 — web** | Not consulted | Could not close this record if it were (`D-040`) |
+
+### Current Status
+
+```text
+DO NOT CODE.
+A-084 stays an ACTIVE BLOCKER; V11's RSI threshold claims stay blocked.
+A-087 records that V13 narrowed it on three axes and did not close it,
+and that the legend route is closed corpus-wide.
+```
+
+### Required Research
+
+Unchanged from `A-084`: (a) an identity statement, or (b) a smoothing length. **Newly specified:
+look for a properties dialog or a Navigator/inputs tab, not a legend.** `PT-040` §6 limitation 1
+also remains open — the EMA/Wilder smoothing family is still unswept, and V13 says nothing about it.
+
+### Related
+
+`A-084`, `A-080`, `A-085`, `A-086`, `A-039`, `D-030`, `D-040`; `PT-040`;
+`03_LESSON_NOTES/V13_INTERPRETATION.md` Q1; `04_SCREENSHOTS/V13/INDEX.md`.
+
+---
+
+## A-088 — Three terms V13 uses operationally and does not define, plus one quantity it widens
+
+**Raised by:** V13
+**Speaker:** course author
+
+### 1. `blue tracer` — used once, defined never
+
+> `[00:41:37]` *"Notice how he stays off of or worked this **blue tracer** in here **where their
+> volume was trapped**, but did not release here. **These are the things you need to be seeing.**"*
+
+**The sentence asserts the student should be seeing it and supplies no way to identify it.** It is
+adjacent to `double black tracer`, which the **same lesson does define** — `[00:40:39]` *"The double
+black tracer is Sunday Monday. Some dealers do not have a double black tracer."* **The contrast is
+the evidence**: the speaker defines one tracer and not the other, in the same two minutes.
+
+⚠ **And the defined one is explicitly PLATFORM-DEPENDENT** — *"some dealers do not have"* it. A
+tracer is a **broker chart artefact**, not a market feature, which means neither term is safely
+codeable even once defined. Recorded so that a later session does not treat `double black tracer`
+as closed-and-codeable merely because it is closed-and-defined.
+
+### 2. `strike zone` — used twice, interchangeably with `level`, defined never
+
+> `[00:31:55]` *"He's probably going to **extend the level to the next strike zone**"*
+> `[00:33:14]` *"look for a **re-entry on the next level strike zone**"*
+
+`[00:33:14]` welds the two words together (*"next level strike zone"*), which is the strongest
+available evidence that they denote the same object — **and `the level` is `A-039`'s undefined
+object.** A term that is a synonym for an undefined term inherits the block. Filed here rather than
+folded into `A-039` because the phrase is new and a later session grepping for `strike zone` should
+land on a record.
+
+### 3. ⚠ The red box's window — printed once, spoken twice, widened the second time
+
+| Source | `[ts]` | Value |
+|---|---|---|
+| Printed answer slide | `[00:29:35]` | **`8-12am`** |
+| Spoken, first pass | `[00:29:59]` | *"**8 to noon**"* — agrees |
+| Spoken, on a student's re-ask | `[00:37:21]` | ⚠ *"**8 to 11, 8 to 12 depending on how you want to set it up**"* |
+
+**NOT filed as a `C-xxx`.** `[00:37:21]` does not deny `8–12`; it offers `8–11` as an alternative
+*"depending on how you want to set it up"* — the same **template-preference** register as the blue
+box's *"1 or 2 AM… make it 1 a.m."*. It is an **under-specification**, not a conflict, and
+`SOURCING_HIERARCHY.md` §3.2 has no contradiction case for it.
+
+⭐ **But it is not harmless, and that is why it is recorded.** `[00:37:29]` gives the box a
+**purpose** — *"to capture the last hour of the London session going into the U.S., the gap time,
+and to about 11 or 12 noon"* — so the end boundary is **rationalised by a lunch-hour claim**, not by
+a session boundary. `D-031` makes session timezone a **tested variable, never an assumption**, and
+an hour of slack on a New York-anchored window is exactly the kind of thing `D-031` exists to stop
+being quietly fixed.
+
+### Current Status
+
+```text
+DO NOT CODE -- all three.
+`blue tracer`  : UNDEFINED, and its defined sibling is broker-dependent.
+`strike zone`  : UNDEFINED, and appears to be a synonym for A-039's `the level`.
+red box window : 8-12 printed; 8-11 or 8-12 spoken, by preference. Not a
+                 contradiction; not a constant either. D-031 binds.
+```
+
+### Related
+
+`A-039`, `A-004`, `A-076`, `C-020`, `D-030`, `D-031`, `D-040`;
+`03_LESSON_NOTES/V13_SOURCE_NOTES.md` §4, §9.

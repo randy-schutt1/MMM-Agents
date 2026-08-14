@@ -11,8 +11,60 @@ stays visible with its round number.
 ## STATUS
 
 ```text
-LESSONS REVIEWED: 12 (superseded text, retained: "LESSONS REVIEWED: 11",
-                  and before it "LESSONS REVIEWED: 10")
+LESSONS REVIEWED: 13 (superseded text, retained: "LESSONS REVIEWED: 12",
+                  before it "LESSONS REVIEWED: 11", and before that 10)
+V13:              R1 2026-08-14 — REVISE, HIGH confidence,
+                  0 CRITICAL / 0 MAJOR / 2 MINOR / 6 NOTE.
+                  GATE TO V14 IS OPEN under D-024 and was opened by
+                  R1 itself; items 154-155 are non-gating and owed
+                  only before COMPLETE.
+                  ⭐ R1 IS A FULLY INDEPENDENT ROUND — D-003 SATISFIED.
+                  The reviewer authored no V13 artifact; re-verified the
+                  source SHA-256, extracted the audio and RAN ITS OWN ASR
+                  with a different runtime AND a larger model
+                  (openai-whisper medium.en vs the student's
+                  faster-whisper small.en); RE-IMPLEMENTED the 17-pattern
+                  handover scan (exactly ONE hit, 1,183 markers); and
+                  RE-DERIVED PT-041 END TO END in code sharing no line
+                  with run_pt041.py or mmm_lib, parsing the 1,297,781 raw
+                  M1 bars directly — n=81/67, O4=0.7037/0.7015,
+                  O1=0.5432/0.5224, O2=0.6296/0.6418, O3=56.80/52.90 ALL
+                  EXACT, completeness exclusions exact to the named days
+                  and their bucket counts, and C-LIKE reproduced under a
+                  DIFFERENT SEED to within 0.002.
+                  CONFIRMED: host-vs-guest 100% course author
+                  (5 strands + the scan re-run); A-084 NARROWED NOT
+                  CLOSED, with the 15h/21h self-contradiction confirmed
+                  by a third engine and the lookback defeater surviving a
+                  direct attack; C-020 both halves (frame AND audio);
+                  Q-014's diff, the 21-lesson clustering and the
+                  third-consecutive title card; the TDI level lines
+                  63/50/37; PT-041's pre-registration ordering at 3ca5beb
+                  (runner ABSENT, and no threshold moved at the run).
+                  ⭐ THE TDI LEVEL LINES ARE **NOT** A TOOLING DEFECT.
+                  06_MANUAL_BACKTEST/tools/MMM_TDI.txt (branch
+                  feature/tradingview-mmm-indicator) ALREADY ships
+                  68/63/50/37/32 with 63/37 as the SharkFin levels from
+                  the owner's !SM_TDI template. 68/50/32 is Dean Malone's
+                  PUBLIC TDI, not this project's. V13 CORROBORATES the
+                  tool from 2012 Tier-1 pixels and audio — see N2, which
+                  raises an OWNER question about !SM_TDI's admissibility
+                  and its bearing on A-084 (RSI_Price_Line=2).
+                  M1: the "legend route closed corpus-wide" claim drops
+                  A-087's deployment qualifier at two of three sites, and
+                  the corpus runs a SECOND TDI build (V10 01:27:17,
+                  "Traders Dynamic Index Visual", six values). The
+                  conclusion SURVIVES and strengthens; the warrant is
+                  empirical, not deductive.
+                  M2: BT_V13_0001 §5's stated direction of the control
+                  defect is asserted, not shown — C-PRE's median runs the
+                  OTHER way and its tail probabilities are never computed.
+                  ALL SIX SELF-DISCLOSED DEVIATIONS (147-151) CHECKED AND
+                  ACCURATE. No CRITICAL was available to find: A-084 was
+                  not closed, no threshold moved, the 25/30 drill stop did
+                  not reach any spec, and no V13 artifact cites a
+                  quarantined file as evidence.
+
 V12:              R1 2026-08-14 — REVISE, HIGH confidence,
                   0 CRITICAL / 0 MAJOR / 2 MINOR / 6 NOTE.
                   GATE TO V13 IS OPEN under D-024 and was opened by
@@ -1303,6 +1355,7 @@ ruling) are carried forward unchanged. **The next review trigger is the V06 subm
 | V11 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V12 OPEN (`D-024`) · 5 MINOR (109–113) owed before `COMPLETE`** |
 | V12 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V13 OPEN (`D-024`) · 2 MINOR (137–138) owed before `COMPLETE`** |
 | V12 | REMEDIATION APPLIED | R1 (fix round) | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** · **V13 GATE OPEN** |
+| V13 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V14 OPEN (`D-024`) · 2 MINOR (154–155) owed before `COMPLETE`** |
 
 > ## ⚠⚠ V12's `COMPLETE` IS NOT AN INDEPENDENT VERDICT. READ THIS BEFORE RELYING ON IT.
 >
@@ -2105,3 +2158,45 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 ```
 
 Never overwrite a round (`SETUP_ISSUES.md` I-002).
+
+---
+
+## V13 — STUDENT SUBMISSION, ITEMS RAISED BY THE SESSION FOR R1
+
+**Raised 2026-08-14 by the V13 student session on branch `video/v13`. These are the session's own
+open items and questions PUT TO the reviewer — they are not review findings.** Numbering continues
+from **144**, the highest item at the V12 R1 merge (`b38d31b`).
+
+| # | Source | Item | Evidence | Disposition |
+|---|---|---|---|---|
+| 145 | **V13 student** | ⭐ **`A-084` DOES NOT CLOSE, AND THE REVIEWER SHOULD TRY TO BREAK THE ARGUMENT.** The V13 GATE called this *"the cheapest remaining unblock in the project"*. V13 `[00:54:51]` explains **a plotted line's height** by *"we have it set to 21. It only looks back 21 periods"* — the closest near-miss the corpus has produced. **The session declines closure on the ground that `MA_k(RSI(21))` inherits the same 21-period lookback**, so the passage explains a property the two candidates **share** and cannot separate them. Three further defeaters in `A-087`. **If this reasoning is wrong, V11's entire RSI half unblocks immediately and `PT-040`'s `MATERIAL` verdict is moot — so it is worth the reviewer's time to attack it directly** | `A-087`; `A-084` update; `V13_INTERPRETATION.md` Q1; `V13_TRANSCRIPT.md` VERIFICATION corrections 1–2 | ⬜ **PUT TO R1** |
+| 146 | **V13 student** | ⭐ **A DURABLE NEGATIVE, OFFERED FOR VERIFICATION: the legend route to `A-084` is closed for the WHOLE corpus.** V13's TDI sub-window prints `TDI_MMM 46.2640 42.8277 40.2789` — **name and current values, no parameter tuple** — which is MT4's behaviour for an indicator whose `#property` short name omits its inputs. **If correct, no legend in any lesson can ever close `A-084`**, and the V14–V21 hunt should be redirected to properties dialogs, Navigator/inputs tabs, and speech. ⚠ **Verifiability limit, same class as item 140**: the 793 sweep frames are NOT committed; the 30 curated ones are, including all three TDI charts and the legend | `04_SCREENSHOTS/V13/INDEX.md`; frame `V13_00-53-35_…` | ⬜ **PUT TO R1** |
+| 147 | **V13 student** | ⚠️ **DEVIATION D1 — `SWF_CAPTURE_RECIPE.md` §9 ORDERING WAS BROKEN.** The transcript was read in full before any frame was opened (step 1 honoured), but the **swept frames were viewed BEFORE the source notes were written**, breaking the separation between steps 2 and 4. **Mitigated, not excused:** every numbered item in the source notes is tagged `[AUDIO]` / `[PRINTED]` / `[AUDIO+PRINTED]`, and every tag is falsifiable by grepping the committed transcript. **The load-bearing conclusion (`A-087`) rests entirely on `[AUDIO]`.** A reviewer may reasonably discount any `[PRINTED]`-tagged item's contribution to the audio-only record | `V13_SOURCE_NOTES.md` §0 | ⬜ **DISCLOSED — for R1 to weigh** |
+| 148 | **V13 student** | ⚠️ **DEVIATION D2 — THE HOMEWORK WAS SUBSTITUTED.** V13's principal assignment is an exam whose answer key is in the same file, so the session **could not sit it closed-book and refused to fabricate a first attempt**. It graded the **repository's V01–V12 record** against V13's key instead: **17 questions, 10 HELD · 4 PARTIAL · 2 ABSENT · 1 WRONG**, each row citing a file and timestamp. **A reviewer may judge the substitution wrong; nothing downstream depends on it.** ⭐ Two findings came out of it that are worth checking independently: **Q13 — the pre-stop VACATE rule is ABSENT from twelve lessons of notes**, and **Q16 — V10's `25–75` safety-trade anchor is independently corroborated by a different printed deck five weeks later** | `V13_HOMEWORK.md` | ⬜ **DISCLOSED — for R1 to weigh** |
+| 149 | **V13 student** | ⚠️ **DEVIATION D3 — `PT-041` §5 NAMED A DEFECTIVE CONTROL, AND THE DEFECT WOULD HAVE FLATTERED THE CLAIM.** The pre-registered control (`TradeGrid.mfe_pips`) is **truncated by the stop/target resolution** while `O1`/`O2` measure an **unbounded** same-day excursion — not like-for-like, and it **understates the baseline**. A same-metric control (`C-LIKE`) was added **at run time** and the `≥ 10 pp` clause adjudicated on it. **`C-LIKE` is STRICTER than what was pre-registered**, so this is a disclosed amendment, not a post-hoc loosening. Both controls reported. **The verdict does not turn on it** — `PARTIALLY SUPPORTED` is driven by `O4` and `O2` failing thresholds, both pure rule-arm measurements. `PT-041` §5 should be amended for any re-issue | `BT_V13_0001.md` §5, §0a item 2 | ⬜ **DISCLOSED — amendment owed** |
+| 150 | **V13 student** | ⚠️ **DEVIATION D4 — THE `mmm_lib` SEED DEFECT (item 113) IS NOW LIVE FOR THE FIRST TIME.** `PT-040` was harmless because it used no randomisation. **`PT-041` randomises** — `O3`'s bootstrap and `C-LIKE`'s 1,000 iterations both draw from the library's batch constant `SEED = 20260812`. The run is fixed and reproducible, but a re-run under a per-test seed would move `C-LIKE`'s point estimates within their reported percentile bands. **Item 113's library fix is still owed on the integration branch and is no longer theoretical** | `BT_V13_0001.md` §0a item 5; item 113 | ⬜ **ESCALATED** |
+| 151 | **V13 student** | 🔁 **TWO SELF-CORRECTIONS MADE MID-SESSION AND LEFT VISIBLE, OFFERED AS CALIBRATION.** **(1)** `Q-014` §4a was first drafted as *"a new and sharper measurement than `Q-013`'s"* — **it was not**; `Q-013` and `D-042`'s by-product already held the 16/5 split, the colour variant, the shift-by-one and the invented `Raspberry`. Only the **period↔colour decomposition** is this session's, and the *"raspberry occurs zero times in the corpus"* phrasing was wrong and is restated accurately. **(2)** `C-020` §1 first argued the London reading *"coheres with the Brinks times"*; **V06's printed DMR slide gives *"3:45am or 9:45am est"***, which points at the **slide**, i.e. the side the *"recording wins"* rule would have discarded. **Both were caught by checking against the repository instead of against memory, and both are the class of error a student session is most likely to ship** | `Q-014` §4a; `C-020` §1; `V13_MASTERY_REPORT.md` §2 | ⬜ **DISCLOSED** |
+| 152 | **V13 student** | ⭐ **PUT TO R1 AND THE OWNER: V13's EXAM IS A REUSABLE, CLOSED-BOOK-CAPABLE INSTRUMENT AND IT IS ALREADY COMMITTED IN PAIRS.** The unlabelled question frames and the instructor's own answered versions are **both** in `04_SCREENSHOTS/V13/` — five chart questions with five answer keys, plus 17 written questions with a printed key. **A session that has not read V13 can sit it closed-book**, which is the one thing this session could not do. Offered as a candidate for the `19_STUDENT_TEST_SUITE_V01_V10` line of work. **A task branch should not extend that suite's scope on its own**, which is why this is a question rather than a change | `04_SCREENSHOTS/V13/INDEX.md`; `V13_HOMEWORK.md` §4 | ⬜ **PUT TO R1 AND OWNER** |
+| 153 | **V13 student** | ⚠️ **`09_CHART_EXAMPLES/` IS EMPTY ACROSS THE ENTIRE PROJECT (V01–V13), AND V13 DOES NOT FIX IT.** `STUDY_PROTOCOL.md` step 8 asks every lesson for positive / negative / borderline / unresolved examples; **all four directories contain only `.gitkeep`, for thirteen lessons.** This is a **standing project-wide gap, not a V13 regression**, and it is stated rather than skipped. **V13 is a poor lesson to close it on** — its charts are the instructor's own worked answers, so a "positive example" would mean copying his labels. Raised so it stops being invisible | `09_CHART_EXAMPLES/*/.gitkeep`; `V13_MASTERY_REPORT.md` §3 | ⬜ **RAISED — project-wide** |
+
+---
+
+## V13 — R1 REVIEW FINDINGS
+
+**Raised 2026-08-14 by the independent R1 reviewer on branch `review/v13`
+(`18_REVIEW/V13/V13_REVIEW_R1.md`). `D-003` satisfied — the reviewer authored no V13 artifact.**
+Numbering continues from **153**, the highest item raised by the V13 student session.
+
+**Verdict: `REVISE` — 0 CRITICAL, 0 MAJOR, 2 MINOR, 6 NOTE. HIGH confidence. `D-024` opens the V14
+gate; items 154–155 are owed before V13 reaches `COMPLETE`.**
+
+| # | Source | Item | Evidence | Disposition |
+|---|---|---|---|---|
+| 154 | **V13 R1** | **`M1` — THE "LEGEND ROUTE IS CLOSED CORPUS-WIDE" CLAIM DROPS ITS QUALIFIER AT TWO OF THREE SITES, AND THE CORPUS RUNS A SECOND TDI BUILD THE ARGUMENT DOES NOT COVER.** `A-087` correctly says *"any lesson of this corpus, **on this deployment**"*; `04_SCREENSHOTS/V13/INDEX.md:52` and `V13_INTERPRETATION.md:85` say *"no legend in **ANY** lesson of this corpus can ever close `A-084`"*. **The qualifier is load-bearing:** `V10_01-27-17_…png`'s sub-window legend reads **`Traders Dynamic Index Visual 67.7735 53.7329 39.6923 65.5667 61.7477 51.5016`** — a different short name and **six** values against V13's `TDI_MMM` and three. The `#property` argument is a fact about one compiled build. ⭐ **THE CONCLUSION SURVIVES AND GETS STRONGER:** the route is empirically dry across **three lessons and both builds** (V10's legend carries no tuple either; V12 §1 transcribed five legends with no parenthesised parameter; V11 R1 the same). **Owed: the qualifier at both sites, and the V10 build cited as the second observed instance. This is a restatement of the warrant as measured rather than deduced — NOT a retraction** | `V13_REVIEW_R1.md` § legend route; `04_SCREENSHOTS/V13/INDEX.md:52`; `V13_INTERPRETATION.md:85`; `04_SCREENSHOTS/V10/V10_01-27-17_…png`; ✅ `A-087` already correct | 🔶 **OPEN — MINOR** |
+| 155 | **V13 R1** | **`M2` — `BT_V13_0001` §5 ASSERTS A DIRECTION FOR THE CONTROL DEFECT THAT THE COMMITTED NUMBERS DO NOT SHOW, AND THE ONE COMPARABLE FIGURE POINTS THE OTHER WAY.** §5 states the pre-registered control *"would have made the baseline look smaller than it is"*. The **only** `C-PRE` statistic computed is its median — **17.59 / 18.25** — which is **larger** than `C-LIKE`'s **14.41 / 15.29**. `C-PRE`'s `P(≥50)` and `P(≥40)`, the statistics the §6 clause actually adjudicates, are **never computed** (`run_pt041.py:172` takes a median only; `pt041_output.txt` prints the median line only). The direction claim is very probably right **for the tail** — a stop/target-truncated MFE cannot reach 50 as often — **but as committed it is asserted, not shown, and it sits in a table where the only checkable figure contradicts the sentence.** ⚠ **The disclosure itself (item 149) is substantively correct and is credited**: `C-LIKE` is stricter, both controls are reported, and the verdict turns on `O4`/`O2`, which are pure rule-arm measurements. **Owed: compute and report `C-PRE`'s `P(≥50)`/`P(≥40)`, OR narrow §5's sentence to the tail and say plainly that the median runs the other way and why.** `PT-041` §5 is owed an amendment for any re-issue either way | `BT_V13_0001.md` §5; `06_MANUAL_BACKTEST/scripts/run_pt041.py:172`; `06_MANUAL_BACKTEST/V13/data/pt041_output.txt`; item 149 | 🔶 **OPEN — MINOR** |
+| 156 | **V13 R1** | **`N1` — §7.1b's TDI-level sentence invites a wrong inference and one clause fixes it.** *"The shipped Traders Dynamic Index's defaults are `68 / 50 / 32`. These are not those"* is **true of Dean Malone's publicly circulating TDI** and will be read by anyone who does not already know `MMM_TDI.txt` exists as *"ours is wrong"*. **The project's own tool already ships `68 / 63 / 50 / 37 / 32`, with `63`/`37` named as `SharkFin_Upper_Level`/`SharkFin_Lower_Level` from the owner-supplied `!SM_TDI` template.** ✅ **NO TOOLING FIX IS REQUIRED — the V13 finding CORROBORATES the tool rather than contradicting it.** Name which "shipped" is meant | `V13_SOURCE_NOTES.md` §7.1b; `04_SCREENSHOTS/V13/INDEX.md` frame `00:53:35`; `06_MANUAL_BACKTEST/tools/MMM_TDI.txt` (branch `feature/tradingview-mmm-indicator`) | ⬜ **NOTE** |
+| 157 | **V13 R1** | ⭐ **`N2` — PUT TO THE OWNER: IS `!SM_TDI` ADMISSIBLE, AND AT WHAT TIER? V13 HAS MATERIALLY IMPROVED THE CASE THAT THE TEMPLATE IS THE INSTRUCTOR'S.** `MMM_TDI.txt` states its own weakness: *"the file is dated 2016 and 2019, the course was recorded in 2012, and nothing in the template proves the settings are the instructor's rather than a later user's"* — the stated reason `A-039` stays open on it. **V13's frame `00:53:35` is a 2012, Tier-1, instructor's-own-chart datum carrying the template's NON-DEFAULT `63`/`37` pair, and the audio ties `37` to the shark fin** (`[00:51:09]` *"shark fin below the support, 37"*, reviewer's own ASR) **— matching `SharkFin_Lower_Level=37`.** That is exactly the provenance bridge the tool file says is missing, arriving from the one source that outranks it. ⚠⚠ **AND IT REACHES FURTHER THAN `A-032`: the same template block records `RSI_Price_Line=2` / `RSI_Price_Type=0` (MT4 `MODE_SMA`), i.e. the plotted line is `SMA(2)` of `RSI(21)` — a direct candidate answer to `A-084` at `k = 2`, an arm `PT-040` HAS ALREADY MEASURED at `5.16 pp`.** **`A-084` CANNOT be closed on this today** — the template is an evidence class with no tier and no admitting decision, as `MMM_TDI.txt` itself says, and `D-039` required an explicit owner attestation before the Mauro PDF could close anything. **The V13 session is charged NOTHING for missing this: the tool is on an unmerged branch that is not in `video/v13`'s history.** This is a project-level decision and must not be resolved by a lesson session on its own authority | `V13_REVIEW_R1.md` `N2`; `06_MANUAL_BACKTEST/tools/MMM_TDI.txt` header; `A-084`; `A-032`; `A-039`; `D-039`; `PT-040` | ⬜ **PUT TO THE OWNER** |
+| 158 | **V13 R1** | **`N3` — item 152 ENDORSED. V13's exam is a genuine reusable, closed-book-capable instrument**, and the session was **right** not to extend `19_STUDENT_TEST_SUITE_V01_V10`'s scope from a task branch. Both the unlabelled question frames and the instructor's own answered versions are committed in pairs. **Forwarded to the owner as a scope question** | item 152; `04_SCREENSHOTS/V13/INDEX.md`; `V13_HOMEWORK.md` §4 | ⬜ **PUT TO THE OWNER** |
+| 159 | **V13 R1** | **`N4` — item 153 CONFIRMED at source. `09_CHART_EXAMPLES/` holds only `.gitkeep` in all four directories, across thirteen lessons.** Agreed that **V13 is a poor lesson to close it on** — its charts are the instructor's own worked answers, so a "positive example" would mean copying his labels. **Standing project-wide gap, not a V13 regression.** Carried, not charged | item 153; `09_CHART_EXAMPLES/*/.gitkeep` | ⬜ **RAISED — project-wide** |
+| 160 | **V13 R1** | **`N5` — the verifiability limit at item 147 is real, correctly stated, and unchanged from V12 R1 item 140.** The 793 sweep frames are not committed, so *"no properties dialog in 793 frames"* is **not** repository-reproducible. ✅ **What IS committed covered every claim this review turned on** — all three TDI charts and the legend — **and each was opened and read as an image.** Recorded so the limit stays visible rather than being re-discovered at V14 | `04_SCREENSHOTS/V13/INDEX.md`; item 147; item 140 | ⬜ **NOTE** |
+| 161 | **V13 R1** | **`N6` — CALIBRATION, CHARGED AS NOTHING.** The submission's own final commit `9203b79` replaced strand 8's asserted *"returns **two** lines"* with the measured *"exactly ONE"* and corrected a timestamp — **and this reviewer's independently re-implemented scan returns the corrected figure, not the draft's.** With the two `151` self-corrections (`Q-014` §4a's novelty over-claim and `C-020` §1's reversed direction), **that is three draft errors caught by the session grepping the repository instead of trusting its memory, and all three left visible.** Recorded because it is the behaviour `REMEDIATION_PROTOCOL.md` §2 exists to produce, and because a reviewer noting only defects gives the next session no signal about what worked | `9203b79`; item 151; `Q-014` §4a; `C-020` §1 | ⬜ **NOTE — no action** |
