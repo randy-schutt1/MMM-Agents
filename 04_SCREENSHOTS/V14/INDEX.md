@@ -2,8 +2,123 @@
 
 **29 frames**, curated from a **582-frame** 10× sweep (`SWF_CAPTURE_RECIPE.md` §10).
 Every frame is the full **1024 × 786** stage **including the player control bar**, so each one
-**carries its own burned-in timecode and proves its own timestamp** — the property the quarantined
-`VISUAL_INDEX.md` files lack (`Q-015`).
+**carries its own burned-in timecode.**
+
+> ## ⚠⚠ §0 — HOW TO READ THE TIMESTAMPS. **THE FILENAMES ARE THE SWEEP INDEX, NOT THE PLAYER CLOCK.**
+>
+> **CORRECTED — `V14_REVIEW_R1.md` `M3` / `REVIEW_INDEX.md` item 174.**
+>
+> **THE FILENAME TIMESTAMP OF EVERY FRAME IN THIS FOLDER RUNS `+16 s` BEHIND THAT FRAME'S OWN
+> BURNED-IN TIMECODE.** The filenames carry the **sweep index** converted to presentation seconds;
+> the player's clock is the **burned timecode**. They are not the same number, and this index
+> originally claimed they were.
+>
+> **Measured, not assumed — twice, independently.** R1 cropped and read the player timecode on all
+> 29 frames in code. **This remediation round re-cropped and re-read all 29 from the pixels rather
+> than copying R1's figures**, and reproduces R1 exactly: **28 of 29 at exactly `+16 s`**, and the
+> 29th (`00-47-35` → burned `47:49`) **clamped at end-of-file** at `+14`, the file's own duration
+> being 2869.0 s = `47:49`. **The per-frame table is §0a below and it is the authoritative
+> timestamp record for this lesson.**
+>
+> ⚠️ **THE ORIGINAL CLAIM IS WITHDRAWN.** *(Superseded text, retained per
+> `REMEDIATION_PROTOCOL.md` §2 — this header previously read: "so each one **carries its own
+> burned-in timecode and proves its own timestamp** — the property the quarantined
+> `VISUAL_INDEX.md` files lack (`Q-015`)".)* **Each frame does carry a timecode that proves its own
+> position in the file — but the FILENAME did not match it, so the frames did not prove the
+> timestamps this index asserted for them.** The distinction from the quarantined `VISUAL_INDEX.md`
+> entries **still holds and is stronger than the withdrawn wording** — those files' timestamps are
+> a *generated 5-minute grid* attached to images that do not show what is claimed, and **no
+> measurement of any kind can recover them.** V14's are off by a *constant, measurable* 16 seconds
+> against a clock **burned into every image**, which is why R1 could measure it in ten minutes and
+> this round could reproduce it. **A reproducible constant offset and a fabricated grid are not the
+> same defect** — but the claim as written was false and is corrected rather than defended.
+>
+> ✅ **NOTHING SUBSTANTIVE MOVES.** Every frame still shows what §1 says it shows; the assignment
+> slide is on screen across the whole `26:50`–`27:06` span; **§3's `D-043` ordering is a property of
+> the pixels and is unaffected**; no transcript citation, `A-` record, `PT-042` input or grade
+> depends on a frame filename's exact second.
+>
+> ### ⭐ §0b — THE ROOT CAUSE, IDENTIFIED. **IT IS NOT A TOOLING CHANGE, AND THE OFFSET IS NOT NEW.**
+>
+> R1 charged this as *"a V14 regression — something in this lesson's sweep introduced a constant
+> 16-second lag."* **This round looked, and the cause is the opposite of that. Nothing in the
+> harness changed. The harness has ALWAYS had this offset, and V12 and V13 CORRECTED FOR IT. V14
+> did not.**
+>
+> **The evidence is in the project's own committed files:**
+>
+> | Lesson | What its `INDEX.md` says | Frames named from | Measured offset |
+> |---|---|---|---|
+> | **V12** | §0: *"**The filename timestamp is the burned timecode, not the sweep index.** Sweep frame *i* is captured at presentation second `i × 5`, and the burned timecode runs a **constant +16 s** ahead of that (the interval between the sweep's `t0` and the play click taking effect)"* — **with a 6-frame verification table, 6/6 exact** | **burned timecode** | **0 s** |
+> | **V13** | *"`burned_timecode = frame_index × 5 s + 15 s`"*, verified on two frames; *"Timecodes are the **burned-in player timecode**, which is what the filenames carry"* | **burned timecode** | **0–1 s** |
+> | **V14** | **No §0 sync section at all.** The capture-provenance paragraph records the fps patch, the stage size, the play coordinate and the click guard — **and never mentions the index→clock offset** | ⚠️ **raw sweep index** | **+16 s** |
+>
+> **So the regression is a DROPPED STEP, not a broken tool.** V12 measured the offset and applied
+> it before naming; V13 measured it (`+15 s` — *a different value*) and applied it; **V14 measured
+> it never and applied nothing.**
+>
+> ⭐ **AND THE FACT THAT V12 READ `+16` WHILE V13 READ `+15` IS THE POINT.** The offset is the
+> wall-clock interval between the sweep's `t0` and the play click actually taking effect,
+> **multiplied by the 10× playback rate** — so ~1.5–1.6 s of real latency becomes 15–16 s of
+> presentation time. **It is latency, so it varies per run and CANNOT be hardcoded or assumed.**
+> That is precisely why V12 and V13 each *measured* it against the pixels instead of carrying a
+> constant forward, and why skipping the measurement is a defect on its own terms rather than bad
+> luck.
+>
+> **Confirmed as an origin error and not a rate error, from the data:** consecutive filename deltas
+> and consecutive burned deltas are **identical throughout** (`00-00-20`→`00-01-15` = 55 s and
+> `00:36`→`01:31` = 55 s; `00-13-05`→`00-13-35` = 30 s and `13:21`→`13:51` = 30 s). **A rate error
+> would drift; this does not drift.** The 10× patch is correct. Only the origin is wrong.
+>
+> ```text
+> CARRY INTO V15+ AND EVERY LATER SWEEP -- this is the actionable half:
+>
+>   The +16 s is NOT a bug to fix in the harness. It is inherent to clicking
+>   play and then sweeping, and it is AMPLIFIED 10x by the fast-sweep rate.
+>
+>   MEASURE IT EVERY TIME, per lesson, against the pixels -- V12 read +16 and
+>   V13 read +15 on the same recipe -- and NAME FRAMES FROM THE BURNED
+>   TIMECODE, as V12 §0 and V13 both did. Then publish the verification table.
+>
+>   V14's defect was skipping V12's §0 step, not inheriting a broken tool.
+>   `SWF_CAPTURE_RECIPE.md` §10 should carry this as a REQUIRED step so it is
+>   not left to each session to remember. Raised as item 186.
+> ```
+
+### §0a — THE PER-FRAME TIMESTAMP CORRECTION · **all 29 read from the pixels this round**
+
+**`BURNED` IS THE AUTHORITATIVE TIMESTAMP.** Filenames are left unchanged deliberately: they are
+cited by name across `V14_SOURCE_NOTES.md`, `V14_INTERPRETATION.md`, `A-089`, `A-020`, `PT-042` and
+`Q-015`, and renaming 29 files would break every one of those pointers while destroying the audit
+trail this table preserves (`REMEDIATION_PROTOCOL.md` §6). **The correction is recorded here
+instead, and it is complete.**
+
+| # | Filename stamp | **Burned (true)** | Δ | | # | Filename stamp | **Burned (true)** | Δ |
+|---|---|---|---|---|---|---|---|---|
+| 1 | `00-00-20` | **`00:36`** | +16 | | 16 | `00-15-45` | **`16:01`** | +16 |
+| 2 | `00-01-15` | **`01:31`** | +16 | | 17 | `00-17-00` | **`17:16`** | +16 |
+| 3 | `00-02-40` | **`02:56`** | +16 | | 18 | `00-17-15` | **`17:31`** | +16 |
+| 4 | `00-04-55` | **`05:11`** | +16 | | 19 | `00-18-10` | **`18:26`** | +16 |
+| 5 | `00-06-50` | **`07:06`** | +16 | | 20 | `00-18-45` | **`19:01`** | +16 |
+| 6 | `00-07-45` | **`08:01`** | +16 | | 21 | `00-20-10` | **`20:26`** | +16 |
+| 7 | `00-08-30` | **`08:46`** | +16 | | 22 | `00-23-20` | **`23:36`** | +16 |
+| 8 | `00-09-30` | **`09:46`** | +16 | | 23 | `00-26-50` | **`27:06`** | +16 |
+| 9 | `00-10-35` | **`10:51`** | +16 | | 24 | `00-30-00` | **`30:16`** | +16 |
+| 10 | `00-11-55` | **`12:11`** | +16 | | 25 | `00-34-40` | **`34:56`** | +16 |
+| 11 | `00-13-05` | **`13:21`** | +16 | | 26 | `00-39-10` | **`39:26`** | +16 |
+| 12 | `00-13-35` | **`13:51`** | +16 | | 27 | `00-43-20` | **`43:36`** | +16 |
+| 13 | `00-14-15` | **`14:31`** | +16 | | 28 | `00-45-25` | **`45:41`** | +16 |
+| 14 | `00-14-40` | **`14:56`** | +16 | | 29 | `00-47-35` | ⚠️ **`47:49`** | **+14** |
+| 15 | `00-15-20` | **`15:36`** | +16 | | | | *EOF clamp* | |
+
+**28 of 29 at exactly `+16`. The 29th is the end-of-file frame**, whose player clock cannot advance
+past the file's own duration — audio measured **2869.0 s = `47:49`**, and the frame reads
+`47:49 / 47:4x`. **That is a clamp, not a second defect**, and it independently corroborates the
+duration `V14_TRANSCRIPT.md`'s verification block records.
+
+**Method, so it is falsifiable in one command:** each frame's bottom-right 110 × 18 px was cropped
+from the 1024 × 786 stage, upscaled 5× and read. **Anyone can re-run it on any frame in ten
+seconds** — which is the property the quarantined `VISUAL_INDEX.md` timestamps do not have.
 
 **Capture provenance.** Source SHA-256 `e3dd2b80…7a1d01` verified before and after the frame-rate
 patch. Declared rate read from **this file's own header** — `3.0 fps`, patched to `30.0` for 10×.
@@ -15,11 +130,23 @@ verified as this session's PID, then the served bytes SHA-256-matched against th
 **Every frame below was opened and looked at before it was named** (`FILE_NAMING_STANDARD.md` §3 —
 descriptors say what is shown, not what it means).
 
+⚠️ **AND THAT IS EXACTLY THE POINT `M3` MAKES ABOUT WHAT WAS *NOT* DONE.** Every frame was opened
+and its *content* was read — which is why §1's descriptions all verify. **What was never read was
+the player readout in the corner of those same images**, so the frames were named from the sweep
+index instead. **The provenance paragraph above records the fps patch, the stage size, the play
+coordinate and the click guard, and does not mention the index→clock offset at all** — the omission
+`§0b` traces. `SWF_CAPTURE_RECIPE.md` **§8a** now makes the measurement a required, numbered step.
+
 ---
 
 ## §1 — THE FRAMES
 
-| `[ts]` | File | What is shown |
+⚠️ **THE `[ts]` COLUMN BELOW IS THE FILENAME STAMP — i.e. the SWEEP INDEX — and it runs `+16 s`
+behind each frame's own burned-in player timecode.** See **§0a** for the corrected per-frame
+timestamps; `burned = filename + 16 s` for all but the EOF frame. The column is left as-is so it
+keeps matching the filenames it labels.
+
+| `[ts]` *(filename / sweep index)* | File | What is shown |
 |---|---|---|
 | 00:00:20 | `answer-key-slide-ten-minute-break` | `MARKET MAKERS BOOT CAMP` — *"Lets take a 10 minute break, and go over the answers"*. **The V13 exam's answer-key slide**, carried over from Part 1 |
 | 00:01:15 | `price-action-identify-market-condition` | `PRICE ACTION` — *"Identify The Market Condition / Candles In The Wrong Market Condition Are Meaningless"*, then the formation list: Spike, Spinning Tops, Doji, RR Tracks, High Test, Low Test |
@@ -55,7 +182,17 @@ descriptors say what is shown, not what it means).
 
 ## §2 — THE ASSIGNMENT SLIDE, READ AT FULL RESOLUTION
 
-`V14_00-26-50_assignment-slide-the-high-low-board-drill.png`, burned timecode `26:50 / 47:4`:
+`V14_00-26-50_assignment-slide-the-high-low-board-drill.png`, burned timecode **`27:06 / 47:4`**:
+
+> ⚠ **CORRECTED — `V14_REVIEW_R1.md` `M3` / item 174.** *(Superseded text, retained per
+> `REMEDIATION_PROTOCOL.md` §2: this line previously read "burned timecode `26:50 / 47:4`".)*
+> **`26:50` is the FILENAME stamp, not the burned timecode** — it was copied from the filename into
+> a sentence that claimed to be quoting the pixels, in the one section that says the frame was read
+> at full resolution. **The image reads `27:06`**, re-verified from the pixels this round (§0a
+> row 23). **The slide transcription below is UNAFFECTED and was confirmed verbatim, including
+> punctuation, by R1 at full resolution** — only the timecode citation was wrong. The assignment
+> slide is on screen continuously from `26:52` to the end of the lesson, so **both numbers fall
+> inside the slide's own span** and nothing about §2's reading changes.
 
 ```text
 MARKET MAKERS BOOT CAMP

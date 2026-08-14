@@ -59,7 +59,7 @@ MARKET MAKERS BOOT CAMP
  •  Good luck
 ```
 
-**The slide is on screen from `[00:26:50]` to the end of the lesson**, annotated live in green four
+**The slide is on screen from `[00:26:52]` to the end of the lesson**, annotated live in green four
 times. It is the only slide in the lesson that persists.
 
 ### §2a — WHAT THE SPEECH ADDS THAT THE PRINT DOES NOT CARRY
@@ -69,9 +69,9 @@ a `C-017` print-vs-speech conflict — nothing printed is contradicted, three th
 
 | Added by speech only | `[ts]` | Words |
 |---|---|---|
-| **The ≤ 50-pip range filter** | `[00:27:28]` | *"**Identify the pairs that have not made more than a 50 pip range**"*; `[00:29:34]` *"Anything that's exploited or blown out **greater than 50**, exit out for the day at one o'clock, cross it out"*; `[00:38:35]` *"**if the box is less than 50 pips**"* |
+| **The ≤ 50-pip range filter** | `[00:27:27]` | *"**Identify the pairs that have not made more than a 50 pip range**"*; `[00:29:34]` *"Anything that's exploited or blown out **greater than 50**, exit out for the day at one o'clock, cross it out"*; `[00:38:35]` *"**if the box is less than 50 pips**"* |
 | **The target** | `[00:32:38]` | *"Let it run, **aim for 30 to 50 pips**"* |
-| **The entry offset** | `[00:32:25]` | *"open a long position in demo **at about 61 15**"* — the locked low being **61 05**, i.e. **10 pips inside the locked number** |
+| **The entry offset** | `[00:32:23]` | *"open a long position in demo **at about 61 15**"* — the locked low being **61 05**, i.e. **10 pips inside the locked number** |
 
 **⚠️ The ≤ 50-pip filter is the single most important omission from the printed slide**, because
 without it the drill has no candidate-selection step at all. A session working from the slide alone
@@ -82,7 +82,7 @@ would run a different test from a session working from the recording.
 1. `[00:27:05]` *"At **1 a.m. New York time**, record the high and low of the major six pairs"* —
    `[00:27:11]` *"the four majors plus the two commodity crosses"*
 2. `[00:27:22]` *"**subtract them**… find out if it's 50 pips, 40 pips, 30 pips"*
-3. `[00:27:28]` keep only ranges **≤ 50 pips**
+3. `[00:27:27]` keep only ranges **≤ 50 pips**
 4. `[00:27:34]` *"Find a pair that's **trading between the high and the low in the mid range**"*
 5. `[00:27:47]` *"**Wait for the dealer to extend either level**, mark it down"*
 6. `[00:31:33]` *"**Start a stopwatch right here.** Every time the dealer extends the high or low,
@@ -99,11 +99,20 @@ would run a different test from a session working from the recording.
 |---|---|---|
 | 01:00 high / low | `6160` / `6127` | `3190` / `3155` |
 | Range | 33 pips — *"less than 50 pips. Yes"* | 35 pips — *"Less than 50 pips. Yes"* |
-| Price at 01:00 | `6142` — *"in the middle of the range. Hell yeah, it is"* | `3162` — *"He's off of the low and off of the high, **he's closer to the low right now**"* |
+| Price at 01:00 | `6142` — ⚠️ *"**Is he in the middle of the range? Hell yeah, he is.**"* — **a question he asks and answers himself** (see below) | `3162` — *"He's off of the low and off of the high, **he's closer to the low right now**"* |
 | Extension | low → `6115`, then → `6105` | high → `3230` |
 | The lock | *"45 minutes, an hour, and price hasn't come off of 61 05"* | *"an hour, hour and 15, hour and 30"* |
 | Entry | *"**go long… at about 61 15**"* | *"take a short… **around 32 25, 32 22**"* |
 | Stop | *"**61 05, 5 pips below**"* | *"**32 30 plus 5**, stop loss is 32 35"* |
+
+> ⚠ **CORRECTED — `V14_REVIEW_R1.md` `M1` / `REVIEW_INDEX.md` item 172.** The long example's
+> middle-of-range verdict was carried here as a declarative, *"in the middle of the range. Hell
+> yeah, it is"* — **superseded text retained per `REMEDIATION_PROTOCOL.md` §2.** R1's independent
+> ASR on **two** `openai-whisper` models (`medium.en` and `large-v3-turbo`, a different runtime from
+> this session's `faster-whisper` pass) both return an **interrogative**: *"Is he in the middle of
+> the range? Hell yeah, he is."* **The substance is unaffected** — `6142` is still endorsed as the
+> middle and the **45.5%** figure stands. Full correction at `A-089`; recorded as correction **8**
+> in `02_TRANSCRIPTS/V14/V14_TRANSCRIPT.md`.
 
 **⚠️ The two examples do not use the same entry offset** — 10 pips inside in the first, 5–8 pips
 inside in the second. Logged as `A-090`.
@@ -118,7 +127,7 @@ Logged as `A-089` — this is the step that makes the drill non-computable as pr
 
 ## §3 — THE US-SESSION VARIANT `[AUDIO]`
 
-`[00:36:35]` *"If you're going to try it in the U.S. session, **re-bracket the data** and do it
+`[00:36:36]` *"If you're going to try it in the U.S. session, **re-bracket the data** and do it
 8 to 9, re-bracket from 8 to 9:30 session changeover, and look for the move to come 9:45,
 10 o'clock."* `[00:33:25]` *"You got to do this for **London**, but you can try it in New York…
 It's harder for New York, it's easier in London."*
@@ -131,34 +140,34 @@ at the New York session.
 ## §4 — THE CLOCK `[AUDIO+PRINTED]`
 
 ⭐ **The drill's clock reference carries an EXPLICIT TIMEZONE, printed and spoken.** Printed:
-*"At **1am NYC time**"*. Spoken `[00:27:05]`: *"At **1 a.m. New York time**"*. `[00:45:16]`:
+*"At **1am NYC time**"*. Spoken `[00:27:05]`: *"At **1 a.m. New York time**"*. `[00:45:18]`:
 *"**Ted**, if you can't make it at 1 a.m., do 2 a.m. **1 a.m. is the time I was taught to do it**,
 man."*
 
 **This is notable because `A-019` records that the course's session-map slide prints times with no
 timezone and the instructor declines to supply one.** V14 does not close `A-019` — it is a
 different slide and a different clock reference — but it is **the first explicitly timezoned clock
-statement in the corpus**, and `[00:45:16]` shows the 1 a.m. figure is **inherited, not derived**.
+statement in the corpus**, and `[00:45:18]` shows the 1 a.m. figure is **inherited, not derived**.
 
 ---
 
 ## §5 — THE TDI PASSAGE — the lesson's other load-bearing minute `[AUDIO]`
 
 Reproduced in full because every word is contested. **This is a student question read aloud from
-chat and answered live**, `[00:44:41]`–`[00:45:14]`, confirmed verbatim by two ASR engines:
+chat and answered live**, `[00:44:40]`–`[00:45:14]`, confirmed verbatim by two ASR engines:
 
 ```text
-[00:44:41]  John has a question. Let me see.
-[00:44:43]  "Steve, I know that you're not looking at comments, but I am right now.
+[00:44:40]  John has a question. Let me see.
+[00:44:40]  "Steve, I know that you're not looking at comments, but I am right now.
 [00:44:45]   The TDI, does the green RSI line represent the 15-minute chart candles?
-[00:44:49]   Does the red trade signal line represent the one hour?"
+[00:44:45]   Does the red trade signal line represent the one hour?"
 [00:44:51]  Yes.
-[00:44:52]  "Does the yellow market baseline represent the four hour candles?"
-[00:44:55]  No.
+[00:44:51]  "Does the yellow market baseline represent the four hour candles?"
+[00:44:51]  No.
 [00:44:56]  The TDI line, RSI is green.
-[00:44:59]  The red line, blood in the water, is the one hour.
-[00:45:02]  The market baseline is the basis of where price is ranging.
-[00:45:09]  The bands are two standard deviations away from the market base.
+[00:44:56]  The red line, blood in the water, is the one hour.
+[00:45:04]  The market baseline is the basis of where price is ranging.
+[00:45:07]  The bands are two standard deviations away from the market base.
 [00:45:14]  It's a liquid 50.                       <- UNRESOLVED BY BOTH ENGINES
 ```
 
@@ -198,7 +207,7 @@ a different slide.**
 
 ## §7 — THE TRAP-MOVE SLIDES `[PRINTED]`
 
-Three consecutive slides, `[00:18:10]`–`[00:23:20]`, printed:
+Three consecutive slides, `[00:18:10]`–`[00:23:22]`, printed:
 
 ```text
 MARKET MAKER TRAP MOVES
@@ -251,8 +260,8 @@ reason for the two-hour wait rule in §7, so it is recorded as the rule's ration
 | `[ts]` | Words | Bearing |
 |---|---|---|
 | `[00:32:42]` | *"That's **a drill**"* | ⚠️ The `A-082` hazard — see `V14_INTERPRETATION.md` Q4 |
-| `[00:37:12]` | *"This is a very important drill **to help you understand the candles**"* | Stated purpose is pedagogical |
+| `[00:37:08]` | *"This is a very important drill **to help you understand the candles**"* | Stated purpose is pedagogical |
 | `[00:40:33]` | *"It's going to make you **see what's going on in the candles**"* | Same |
-| `[00:07:40]` | *"**This is how I learned**, and this is why I don't take shit inside the blue box"* | Autobiographical warrant |
+| `[00:07:39]` | *"**This is how I learned**, and this is why I don't take shit inside the blue box"* | Autobiographical warrant |
 | `[00:28:33]` | *"**This is how I learned how to trade**, by the way"* | Same, restated |
-| `[00:46:20]` | *"technically, Keith, **you will be able to trade off of the board only**"* | ⭐ **Answering a direct student question about whether it is deployable.** See `A-056` |
+| `[00:46:19]` | *"technically, Keith, **you will be able to trade off of the board only**"* | ⭐ **Answering a direct student question about whether it is deployable.** See `A-056` |

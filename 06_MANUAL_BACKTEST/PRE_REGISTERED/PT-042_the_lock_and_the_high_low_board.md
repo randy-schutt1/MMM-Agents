@@ -11,9 +11,29 @@
 > re-issue**, both recorded in `BT_V14_0001.md` §7: **`N4` is degenerate (`n = 0`)**, and
 > **§5a underspecified `N1`'s `O1` construction**, in a direction that flatters the rule arm.
 >
-> **THIS BANNER IS THE ONLY CHANGE MADE TO THIS FILE AFTER THE RUN.** No threshold, window,
+> ### ⚠ AMENDMENT 2026-08-14 (b) — `REVIEW_INDEX.md` ITEM 173 / `V14_REVIEW_R1.md` `M2`
+>
+> **FIVE `[HH:MM:SS]` CITATIONS IN THIS FILE WERE CORRECTED TO THE MARKER GRID.** They are
+> `[00:27:28]`→**`[00:27:27]`** (×2), `[00:37:12]`→**`[00:37:08]`**, `[00:32:25]`→**`[00:32:23]`**
+> (×2) and `[00:46:20]`→**`[00:46:19]`**. Each corrected marker holds **the same words this file
+> already quoted**; the crosswalk retaining every superseded figure is in
+> `02_TRANSCRIPTS/V14/V14_TRANSCRIPT.md` § *TIMESTAMP CONVENTION*.
+>
+> ⚠️ **NO THRESHOLD, WINDOW, FILTER, ARM, OUTCOME MEASURE OR DECISION RULE MOVED**, and that is
+> checkable rather than asserted — the whole diff is five timestamp tokens:
+> `git diff ddd226f HEAD -- 06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_*.md`.
+> **`F1` is still *board range ≤ 50 pips, inclusive at 50*; `S1` is still *10 pips inside `L`*;
+> `O1` is still adjudicated against `≥ 0.80` and `O2` against `≥ 0.50`.** The run is **not**
+> re-issued and `pt042_output.txt` / `pt042_result.json` are **untouched**.
+>
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this block previously read:
+> "**THIS BANNER IS THE ONLY CHANGE MADE TO THIS FILE AFTER THE RUN.** No threshold, window,
 > filter, arm, outcome measure or decision rule was altered — checkable with
-> `git diff ae3b07a HEAD -- 06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_*.md`.
+> `git diff ae3b07a HEAD -- 06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_*.md`." **That statement was
+> true when written and is superseded only because this remediation round is a second change.**
+> Its substantive claim — that no threshold, window, filter, arm, outcome measure or decision rule
+> was altered — **remains true after this amendment**, and the `ae3b07a` diff it names still
+> returns exactly the RUN banner plus one STATUS line.)*
 
 ```text
 STATUS:      PRE-REGISTERED — NOTHING BELOW HAS BEEN RUN  (see the RUN banner above)
@@ -49,7 +69,7 @@ supplies itself.** The claim under test is **printed** on the assignment slide
 
 and spoken, with the two figures the slide omits:
 
-> `[00:27:28]` *"**Identify the pairs that have not made more than a 50 pip range.**"*
+> `[00:27:27]` *"**Identify the pairs that have not made more than a 50 pip range.**"*
 > `[00:32:38]` *"Let it run, **aim for 30 to 50 pips**."*
 
 **The load-bearing premise is stated separately and more strongly:**
@@ -67,8 +87,8 @@ course says it IS the day's extreme.** That is a falsifiable claim about price, 
 ### 1a. BINDING CAVEATS — reproduced here because a reader of the OUTPUT must see them
 
 1. ⚠️ **THIS TESTS A DRILL'S OWN CLAIM, NOT ADOPTED DOCTRINE.** `[00:32:42]` *"That's a drill"*;
-   `[00:37:12]` *"a very important drill **to help you understand the candles**"*; `[00:32:25]`
-   *"open a long position **in demo**"*. The speaker also says `[00:46:20]` *"technically, Keith,
+   `[00:37:08]` *"a very important drill **to help you understand the candles**"*; `[00:32:23]`
+   *"open a long position **in demo**"*. The speaker also says `[00:46:19]` *"technically, Keith,
    **you will be able to trade off of the board only**"*. **The tension is real and unresolved
    (`V14_INTERPRETATION.md` Q4).** No result here may be cited as the method's stop or target, and
    **the 5-pip stop and 30-pip target appear nowhere in `12_MASTER_SPEC/` or `13_MACHINE_SPEC/`.**
@@ -125,14 +145,14 @@ the locked number, target 30 pips — how often does the target come before the 
 
 ### 3a. THE ONE FILTER APPLIED
 
-**`F1` — board range ≤ 50 pips.** `[00:27:28]`, `[00:29:34]`, `[00:38:35]`. Inclusive at 50.
+**`F1` — board range ≤ 50 pips.** `[00:27:27]`, `[00:29:34]`, `[00:38:35]`. Inclusive at 50.
 
 **`F2` — "trading in the middle of the range": EXCLUDED under `D-030`.** See §1a caveat 2 and
 `A-089`. **It is not approximated and no percentile is invented.**
 
 ### 3b. THE PRE-REGISTERED SENSITIVITY ARM — `A-090`
 
-The two spoken examples give **different** entry offsets: `[00:32:25]` **10 pips inside** `L`;
+The two spoken examples give **different** entry offsets: `[00:32:23]` **10 pips inside** `L`;
 `[00:35:23]` **5 to 8 pips inside**. The printed slide gives none.
 
 > **`S1` — limit entry 10 pips inside `L`**, same stop and target, filled only if price trades

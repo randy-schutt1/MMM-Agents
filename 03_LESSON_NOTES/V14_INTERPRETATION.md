@@ -21,8 +21,8 @@ number.** What it supplies instead is better: **an account of what happens to th
 | `[00:00:57]` | *"if you don't get a link from me on Saturday, then after the meetup, **Tannen will take this recording, go home, render it**, and then we'll post it up for Sunday morning"* |
 | `[00:01:08]` | ⭐ *"**So that will be your boot camp for the week** — to watch the recording that we did over there"* |
 | `[00:24:18]` | *"**Week five R&D**, you got two weeks to do this stuff"* |
-| `[00:40:46]` | *"you've got two weeks. **We're off next week.**"* |
-| `[00:47:34]` | *"I'll see you in **two weeks**, unless you come to Orlando"* |
+| `[00:40:45]` | *"you've got two weeks. **We're off next week.**"* |
+| `[00:47:32]` | *"I'll see you in **two weeks**, unless you come to Orlando"* |
 
 **`[00:01:08]` is the new fact.** The 2012-04-22 week is not merely cancelled — **it is filled, by a
 different artifact**: a recording of the Orlando meetup, rendered by a named person and posted to
@@ -124,7 +124,7 @@ RSI**, which would close `A-084` outright and unblock the whole of V11's RSI hal
 **It was declined, on a defeater this session considers decisive:**
 
 > ⭐ **The same sentence that would have to be read literally for green is demonstrably figurative
-> for red.** `[00:44:49]` asks whether *"the red trade signal line represent[s] the **one hour**"*,
+> for red.** `[00:44:45]` asks whether *"the red trade signal line represent[s] the **one hour**"*,
 > and `[00:44:51]`'s **"Yes"** covers **both halves of a compound question**. But the red line in
 > every TDI build — including this project's own `MMM_TDI.txt` — is a **short moving average of the
 > RSI computed on the chart's own timeframe**. It does not read the one-hour chart. **So the red
@@ -178,7 +178,7 @@ swept across V12, V13 and V14 with no dialog.**
 V12 gave the claim four times as a **mechanism** (*"polls"*, *"pulls the one-hour chart and brings
 it into the 15 minute"*). **V14 gives it in its strongest form yet — flat identity:**
 
-> `[00:44:59]` *"**The red line, blood in the water, is the one hour.**"*
+> `[00:44:56]` *"**The red line, blood in the water, is the one hour.**"*
 
 **No period, no formula, no account of polling — for a second lesson and a fifth statement.** And
 the identity phrasing removes the last bit of hedging the word *"polls"* carried. `A-085`'s required
@@ -191,7 +191,7 @@ to separate.** Stays `DO NOT CODE`.
 
 `A-086` records two defects in V12's band passage. **V14 moves both, in opposite directions.**
 
-| Axis | V12 | **V14 `[00:45:09]`** | Effect |
+| Axis | V12 | **V14 `[00:45:07]`** | Effect |
 |---|---|---|---|
 | **Multiplier** | *"some formula deviation **2%**, I don't know, **two standard deviations**… or something like that. **I don't really know because I didn't invent it**"* | *"**two standard deviations**"* — **flat, unhedged, unprompted** | ⭐ **ADVANCED.** The `2%` alternative is not repeated; the speaker states one value with no disclaimer, one week later |
 | **Basis** | *"away from **the market baseline**"* → corrected on a chat prompt to *"based on **the RSI line itself**… **from the RSI line. Thank you.**"* | *"away from **the market base**"* | ⚠️ **REVERTS to the answer V12 RETRACTED** |
@@ -229,13 +229,13 @@ because they are precise, printed (the stop), and would slot straight into a spe
 
 | Reads as EXERCISE | Reads as METHOD |
 |---|---|
-| `[00:32:42]` *"**That's a drill**"* | `[00:07:40]` *"**This is how I learned**"* |
-| `[00:37:12]` *"a very important drill **to help you understand the candles**"* | `[00:28:33]` *"**This is how I learned how to trade**"* |
-| `[00:40:33]` *"It's going to make you **see what's going on in the candles**"* | `[00:46:20]` *"technically, Keith, **you will be able to trade off of the board only**"* |
-| `[00:32:25]` *"open a long position **in demo**"* | `[00:07:43]` *"this is **why I don't take shit inside the blue box**"* — present tense, his own trading |
-| `[00:34:35]` *"**Promise me you will do this** — this and the TDI are priceless"* | `[00:41:04]` *"This is what **the drill** is"* |
+| `[00:32:42]` *"**That's a drill**"* | `[00:07:39]` *"**This is how I learned**"* |
+| `[00:37:08]` *"a very important drill **to help you understand the candles**"* | `[00:28:33]` *"**This is how I learned how to trade**"* |
+| `[00:40:33]` *"It's going to make you **see what's going on in the candles**"* | `[00:46:19]` *"technically, Keith, **you will be able to trade off of the board only**"* |
+| `[00:32:23]` *"open a long position **in demo**"* | `[00:07:39]` *"this is **why I don't take shit inside the blue box**"* — present tense, his own trading |
+| `[00:35:37]` *"**Promise me you will do this** — this and the TDI are priceless"* | `[00:41:04]` *"This is what **the drill** is"* |
 
-**`[00:46:20]` is the strongest single line for METHOD**, and it is an answer to a student asking
+**`[00:46:19]` is the strongest single line for METHOD**, and it is an answer to a student asking
 precisely this question. ⚠️ **Its first word is unresolved between two ASR engines** — *"No"* or
 *"Now"* — and the transcript says so. **The substance survives either parse** (*"No, technically you
 will be able to…"* and *"Now technically you will be able to…"* both assert the capability), but a
@@ -368,7 +368,7 @@ any web research; results are tagged.**
 | Term | `[ts]` | Status |
 |---|---|---|
 | *"trading in the middle of the range"* | printed + `[00:27:34]` | ⭐ **`A-089` — the drill's one uncomputable step** |
-| *"blood in the water"* as the red line's name | `[00:44:59]` | ✅ **Not new** — `A-031` already CLOSED. V14 **corroborates the closure from a second lesson** |
+| *"blood in the water"* as the red line's name | `[00:44:56]` | ✅ **Not new** — `A-031` already CLOSED. V14 **corroborates the closure from a second lesson** |
 | *"fractional disparity"* | `[00:20:55]` | **`A-091`** — a mechanism claim, recorded not adopted |
 | *"the lock"* at session scale | `[00:35:51]` | **`A-094`** — scale relative to V10's |
 | *"R&D"* as an assignment block label | `[00:24:18]` | Not a trading term. Noted, not filed |
@@ -397,6 +397,6 @@ any web research; results are tagged.**
    `REVIEW_INDEX.md` item 157's `!SM_TDI` provenance question **gets no help from V14.**
 3. ❌ **`A-085` gets worse, not better.**
 4. ❌ **The bands are still not constructible** — no period.
-5. ❌ **`A-011` (M/W anatomy) untouched for a tenth lesson.** `[00:08:11]` *"this looks like an M to
+5. ❌ **`A-011` (M/W anatomy) untouched for a tenth lesson.** `[00:08:13]` *"this looks like an M to
    you and you want to take it — but nothing has happened yet"* uses the shape to **forbid** a trade
    and still does not describe it.
