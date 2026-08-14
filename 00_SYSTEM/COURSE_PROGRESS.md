@@ -11,12 +11,37 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
-V13 (2026-08-14):    STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on branch
-                     video/v13. A-084 NARROWED NOT CLOSED (A-087); A-088 and C-020
-                     opened; Q-014 filed; PT-041 run -> PARTIALLY SUPPORTED. Speaker
-                     TESTED: 100% course author, HIGH, eight non-acoustic strands.
-                     FOUR declared deviations and THREE self-corrections -- see
-                     V13_MASTERY_REPORT.md §2. V14 GATE CLOSED until R1 returns.
+V13 (2026-08-14):    ⭐ R1 RETURNED — REVISE, 0 CRITICAL / 0 MAJOR / 2 MINOR /
+                     6 NOTE, HIGH confidence, D-003 SATISFIED (independent
+                     reviewer, branch review/v13). **V14 GATE IS OPEN under
+                     D-024.** Items 154-155 (MINOR) are owed before V13 reaches
+                     COMPLETE; V13 is NOT COMPLETE and only a reviewer PASS makes
+                     it so (D-004).
+                     CONFIRMED BY RE-DERIVATION, NOT BY READING: 100% course
+                     author (5 strands re-checked at source + the 17-pattern scan
+                     re-implemented -> exactly ONE hit, 1,183 markers); A-084
+                     NARROWED NOT CLOSED, with the 15h/21h self-contradiction
+                     confirmed by a THIRD ASR engine and the lookback defeater
+                     surviving a direct attack; C-020 both halves (frame AND the
+                     reviewer's own audio); Q-014's diff, the 21-lesson clustering
+                     and the third-consecutive title card; PT-041 REPRODUCED IN
+                     FULL to the printed decimal in independent code, including
+                     the completeness exclusions down to the named days, and its
+                     pre-registration ordering PROVEN at 3ca5beb.
+                     ⚠ THE TDI LEVEL LINES 63/50/37 ARE CONFIRMED AND ARE **NOT**
+                     A TOOLING DEFECT — 68/50/32 is Dean Malone's PUBLIC TDI;
+                     MMM_TDI.txt already ships 68/63/50/37/32 from !SM_TDI. V13
+                     CORROBORATES the tool. See item 157, which puts !SM_TDI's
+                     admissibility to the OWNER because the same template answers
+                     A-084 at k=2.
+                     Superseded text, retained per REMEDIATION_PROTOCOL.md §2 --
+                     this line previously read: "STUDENT PASS COMPLETE, submitted
+                     as REVIEW REQUIRED on branch video/v13. A-084 NARROWED NOT
+                     CLOSED (A-087); A-088 and C-020 opened; Q-014 filed; PT-041
+                     run -> PARTIALLY SUPPORTED. Speaker TESTED: 100% course
+                     author, HIGH, eight non-acoustic strands. FOUR declared
+                     deviations and THREE self-corrections -- see
+                     V13_MASTERY_REPORT.md §2. V14 GATE CLOSED until R1 returns."
 VIDEOS IN PROGRESS:  0  (Superseded text, retained per REMEDIATION_PROTOCOL.md
                         §2 -- this line previously read: "VIDEOS IN PROGRESS: 1
                         (V10 — R1 returned REVISE 0C/0M/4m 2026-08-13, HIGH
@@ -1240,9 +1265,19 @@ V12 STATUS NOW:      ⚠ **COMPLETE 2026-08-14 — SELF-VERIFIED AT OWNER
                      NOT advanced, recorded as negative results per item
                      107. Q-013 filed.
 
-V14 GATE:            **CLOSED until V13's R1 returns.** `D-004`: the gate opens on a
-                     REVIEWER verdict, never on a student submission, and what R1
-                     returns then governs per `D-024`.
+V14 GATE:            ⭐ **OPEN.** V13 R1 returned 2026-08-14 on branch `review/v13`
+                     — **REVISE, 0 CRITICAL / 0 MAJOR / 2 MINOR / 6 NOTE**, and
+                     under `D-024` a round carrying no CRITICAL and no MAJOR opens
+                     the gate for V14. Items **154-155** are owed before V13
+                     reaches `COMPLETE` and are **not gating**. `D-004` is
+                     untouched: V13 is **NOT COMPLETE**.
+                     ⚠ **V14 IS STILL THE OWNER'S HARD STOP FOR THE GAP AUDIT.**
+                     ⚠ **ONE CARRY-FORWARD BELOW IS AMENDED BY R1 — read (a).**
+                     Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 —
+                     this block previously read: "**CLOSED until V13's R1
+                     returns.** `D-004`: the gate opens on a REVIEWER verdict,
+                     never on a student submission, and what R1 returns then
+                     governs per `D-024`."
                      ⚠ **V14 IS THE OWNER'S HARD STOP FOR THE GAP AUDIT.** The audit
                      happens after V14, not after V13.
                      V13 R1 will be reviewing: A-087 (does V13 close A-084 — this
@@ -1250,13 +1285,26 @@ V14 GATE:            **CLOSED until V13's R1 returns.** `D-004`: the gate opens 
                      deviations plus THREE self-corrections listed in
                      V13_MASTERY_REPORT.md §2.
                      Carry into V14, and read this before starting:
-                     (a) ⭐ **THE A-084 HUNT IS NARROWED AND ONE ROUTE IS RULED OUT
-                     FOREVER. STOP SCANNING LEGENDS.** V13's TDI sub-window prints
-                     `TDI_MMM <three values>` and NO parameter tuple — MT4's behaviour
-                     for an indicator whose short name omits its inputs. No legend in
-                     ANY lesson can close A-084. The remaining routes are exactly
-                     three: a properties dialog, a Navigator/inputs tab, or a spoken
-                     identity statement. V12: 672 frames, none. V13: 793 frames, none.
+                     (a) ⭐ **THE A-084 HUNT IS NARROWED AND THE LEGEND ROUTE IS
+                     DRY. DE-PRIORITISE LEGENDS — BUT THE CLAIM IS MEASURED, NOT
+                     DEDUCED (R1 item 154).** V13's TDI sub-window prints
+                     `TDI_MMM <three values>` and NO parameter tuple. The remaining
+                     routes are exactly three: a properties dialog, a
+                     Navigator/inputs tab, or a spoken identity statement. V12: 672
+                     frames, none. V13: 793 frames, none.
+                     ⚠ **R1 FOUND A SECOND TDI BUILD IN THE CORPUS**, so the route
+                     is dry **empirically across three lessons and both builds**,
+                     not closed by deduction from one `#property`:
+                     `V10_01-27-17_…png`'s legend reads `Traders Dynamic Index
+                     Visual` with **SIX** values, against V13's `TDI_MMM` with
+                     three. **Neither carries a parameter tuple, and V11/V12's five
+                     transcribed legends carry none either — so the guidance stands
+                     and is better supported.** If V14 shows a THIRD build, read its
+                     legend rather than assuming.
+                     Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 —
+                     this item previously read: "**ONE ROUTE IS RULED OUT FOREVER.
+                     STOP SCANNING LEGENDS… No legend in ANY lesson can close
+                     A-084."
                      (b) ⭐ **V14 IS THE SAME SESSION AND V13 DEFERS ITS LESSON INTO
                      IT.** [00:35:59] "when we get to the lesson part" and [00:48:53]
                      "I know why you guys are taking trades in the blue box now. And

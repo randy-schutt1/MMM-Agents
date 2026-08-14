@@ -8557,3 +8557,77 @@ both "Week 6 was recorded and is missing" and "the break ran long" — nothing d
 **Status:** V13 **AWAITING REVIEW R1**. **V14 GATE CLOSED** — only a reviewer verdict opens it
 (`D-004`). Validator: **103 passed, 0 warnings, 0 failures** before every push. No `git add -A` at
 any point; explicit paths only; `git diff --staged` before each commit.
+
+---
+
+## 2026-08-14 — V13 REVIEW R1 (independent): **REVISE — 0 CRITICAL / 0 MAJOR / 2 MINOR / 6 NOTE**, HIGH confidence, **V14 GATE OPEN**
+
+**Branch:** `review/v13`, dedicated worktree at `../MMM-Agents-v13-review` per `D-038`, cut fresh
+from integration head `f943c9b`, with `video/v13` @ `9203b79` merged in as the submission under
+review. Two evidence-ledger conflicts (`LOG.md`, `QUARANTINE_REGISTER.md`) were resolved **by hand**,
+keeping both sides in full: the register's `Q-013` running tally retains the integration branch's
+V12-R1-item-138 correction (*"THIRD"*, not *"first"*) and V13's `Q-014` is appended beneath it.
+
+**`D-003` SATISFIED.** This session authored no V13 artifact.
+
+### What was re-derived rather than read
+
+- **`PT-041` reproduced end to end in independent code** — own CSV reader over the raw
+  **1,297,781 M1 bars**, own M15 bucketing, own `zoneinfo` DST arm, own session-day/box/post-box
+  construction, own `C-6` gate, own `F1`–`F5` and `O1`–`O4`. **Every reported cell reproduces:**
+  `n = 81/67`, `O4 = 0.7037/0.7015`, `O1 = 0.5432/0.5224`, `O2 = 0.6296/0.6418`,
+  `O3 = 56.80/52.90` — **and the completeness exclusions down to the named days and their bucket
+  counts.** `C-LIKE` re-derived **under a different seed** to within 0.002.
+- **Own ASR pass, `openai-whisper medium.en`** — a different runtime *and* a larger model than the
+  student's `faster-whisper small.en`. SHA-256 re-verified; measured duration 3922.3119 s against
+  the header's 3922.3118 s. **All three transcript corrections confirm; both halves of the
+  `15 hours`/`21 hours` self-contradiction confirm verbatim.**
+- **17-pattern handover scan re-implemented** — exactly **ONE** hit, 1,183 markers.
+- **`Q-014`'s `diff` and the 21-lesson clustering re-run at source** — 8/17/17 distinct bodies,
+  cluster membership identical.
+- **Frames opened as images**, V13's and V10's. **That is where `M1` came from.**
+
+### The verdict
+
+`REVISE`. **Zero `CRITICAL` and zero `MAJOR`, so `D-024` opens the V14 gate.** The five places a
+`CRITICAL` could have arisen were each checked directly and all five are clean — most importantly,
+**`A-084` was not closed on the passage that tempts closure, and the defeater survives a direct
+attempt to break it.**
+
+- **`M1` (item 154)** — the *"legend route closed corpus-wide"* claim drops `A-087`'s deployment
+  qualifier at two of three sites, and **the corpus runs a second TDI build** (`V10 01:27:17`,
+  `Traders Dynamic Index Visual`, six values) the `#property` argument does not cover. **The
+  conclusion survives and strengthens**; what is owed is the warrant restated as measured.
+- **`M2` (item 155)** — `BT_V13_0001` §5's stated direction of the control defect is asserted, not
+  shown: `C-PRE`'s median runs the **other** way and its tail probabilities are never computed.
+
+### ⚠ The TDI level lines are **not** a tooling defect — and the finding is worth more than claimed
+
+`63 / 50 / 37` is **confirmed** at the frame and corroborated on the reviewer's own audio
+(*"shark fin below the support, 37"*). **`68 / 50 / 32` is Dean Malone's PUBLIC TDI, not this
+project's** — `06_MANUAL_BACKTEST/tools/MMM_TDI.txt` already ships `68/63/50/37/32` with `63`/`37`
+as the SharkFin levels from the owner-supplied `!SM_TDI` template. **V13 corroborates the tool.**
+
+⭐ **And it supplies the provenance bridge that tool file says it lacks** — a 2012, Tier-1,
+instructor's-own-chart datum carrying the template's non-default pair. **The same template records
+`RSI_Price_Line=2`, which is a candidate answer to `A-084` at `k=2`.** Put to the owner as item 157;
+**not closable today** and **not a V13 remediation** — the tool is on an unmerged branch that was
+never in `video/v13`'s history.
+
+### The six self-disclosed deviations
+
+**All accurate, none smoothed over, each made in the artifact a reader hits first.** The homework
+substitution was the right call and both findings it produced check out — `vacate` occurs in **no**
+V01–V12 transcript or lesson note, and V13 `[00:39:29]` *"25 to 75 pips"* confirms on the reviewer's
+own ASR, corroborating V10's printed anchor from a different deck five weeks later.
+
+### Git discipline
+
+Explicit path staging only, **never `git add -A`**, `git diff --staged` inspected before each commit,
+`validate_project.py` **PASS** before push.
+
+### Next Action
+
+**Merge `review/v13` into the integration branch** per `D-038`, single-threaded, as a deliberate
+separate step. **V14 may then begin** — it is Part 2 of the same recording and is the owner's hard
+stop for the gap audit.
