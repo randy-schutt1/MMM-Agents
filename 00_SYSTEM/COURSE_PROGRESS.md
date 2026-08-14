@@ -2210,7 +2210,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-080 + A-064 + A-031 + A-032 CLOSED, A-020 mayo row → Tier 1, C-019 opened, PT-040 MATERIAL |
 | V13 | Wk5 P1 | 01:05:22 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-084 NARROWED not closed (A-087), legend route CLOSED corpus-wide, A-088 + C-020 opened, Q-014 filed, PT-041 PARTIALLY SUPPORTED |
 | V14 | Wk5 P2 | 00:47:48 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** *(superseded, retained: `REVIEW REQUIRED`)* | **R1 REVISE** 0C/0M/5m/9n, HIGH, 2026-08-14 → **R1 fix round** ⚠ **SELF-VERIFIED**, items 172–176 `CLOSED — SELF-VERIFIED AT OWNER DIRECTION`, **NOT** `CLOSED — VERIFIED`; **D-003 NOT satisfied for the fix round, no R2, no independent PASS**; item 186 opened | ⭐ **R1 RETURNED — V15 GATE OPEN under D-024, AND THE OWNER'S HARD STOP STANDS.** Items 172-176 (MINOR) OWED; V14 **NOT COMPLETE**. Rulings: A-056 **NOT CLOSED** (item 178) · A-084 defeater **HOLDS** vs 4 attacks (184) · D3 **legitimate but unnecessary and unverified** (179) · C-021 forwarded to owner · ⭐ A-056 ANSWERED (closure put to reviewer), A-077 advanced (A-094), A-084 NARROWED not closed 2nd consecutive, A-086 advanced + C-021 opened, A-089-A-094 filed, Q-015 filed, PT-042 NOT SUPPORTED  · ⚠ **REMEDIATION 2026-08-14:** all five MINORs closed **SELF-VERIFIED**; ⭐ item **186** opened — the item-174 frame offset is a **dropped step, not a broken tool** (V12 §0 and V13 both document and correct it; `SWF_CAPTURE_RECIPE.md` §8a now mandatory); ⭐ item **176** — a **second, larger, UNEXAMINED** `Wk9→Wk10` four-week gap, so the gap audit's figure is **2 KNOWN + up to ~3 UNKNOWN, not 2**; ⚠⚠ **V15 GATE OPEN ≠ PROCEED — THE OWNER'S HARD STOP STANDS** |
-| V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 197–202) · ⭐ **V16 GATE OPEN under D-024** · ⚠⚠ **the six student-owned columns to the left are STILL `⬜` and that is open item 199 — the narrative block and the V16 GATE section of this same file record a complete student pass. Only the Reviewer and Final Status cells were filled in by R1** |
 | V16 | Wk7 P2 | 00:44:35 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V17 | Wk8 P1 | 00:57:09 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V18 | Wk8 P2 | 00:46:08 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -2521,11 +2521,32 @@ Carry into V15, and read this before starting:
       * THE Wk9 -> Wk10 FOUR-WEEK GAP IS UNEXAMINED (item 176). Its cheap
         decider is the same D3 shape and should WAIT for item 179's ruling.
 
-V16 GATE:            🔴 **CLOSED until V15's R1 returns (`D-004`).** V15's student
-                     pass is complete and is submitted as REVIEW REQUIRED on
-                     branch `video/v15`. `D-003` reserves closure to an
-                     independent reviewer; V15 reaches COMPLETE only at a
+V16 GATE:            ⭐ **OPEN.** V15 R1 returned 2026-08-14 on branch
+                     `review/v15` (`D-003` satisfied -- independent reviewer,
+                     no V15 artifact authored, worktree cut from integration
+                     POST-D-045..D-050 at 61042e5): **REVISE, 0 CRITICAL /
+                     0 MAJOR / 6 MINOR / 13 NOTE, HIGH confidence.** Under
+                     D-024 a round with zero CRITICAL and zero MAJOR OPENS the
+                     next lesson. Items 197-202 (MINOR) are OWED before V15 can
+                     reach COMPLETE; items 203-215 are NOTE.
+                     ⚠ V15 is **NOT COMPLETE** -- `D-003` reserves closure to an
+                     independent reviewer and V15 reaches COMPLETE only at a
                      reviewer PASS.
+                     ⭐ **What R1 re-derived rather than read:** PT-043
+                     independently re-implemented from the pre-registration
+                     (O1 0.3645 vs 0.3640, O1-N1 = -0.0117 EXACT, median
+                     nearer-distance 21.40 pips EXACT, verdict unchanged in all
+                     four cells); C-022 both halves re-transcribed on a
+                     different ASR engine and CONFIRMED VERBATIM; Q-016's three
+                     SHA-256s, all three diffs and every transcript negative
+                     re-measured; the forum-post dates and the web-class slide
+                     read off the pixels; and ⭐ **V13's Week-6 lines
+                     re-transcribed FROM V13's OWN AUDIO** -- the check the
+                     submission declared it had not done. IT CONFIRMS VERBATIM.
+
+                     ⚠ **SUPERSEDED, retained per REMEDIATION_PROTOCOL.md §2 --
+                     this block read "🔴 CLOSED until V15's R1 returns (D-004)"
+                     and that was the correct state to hold until R1 returned.**
                      ⚠⚠ **AND THE OWNER'S HARD STOP IS NOT DISCHARGED BY THIS
                      SESSION.** The V14 block's stop was lifted for V15 ONLY, by
                      a direct owner instruction naming V15. **It does not extend
@@ -2540,8 +2561,17 @@ Carry into V16, and read this before starting:
       IN KIND, NOT IN NUMBER. Two recordings are still absent from the Wk5 ->
       Wk7 region, but they are absences of DIFFERENT KINDS and item 185's
       audit should not average them:
-        * ORLANDO (2012-04-21) -- NEVER RECORDED. V15 [00:05:21], first
-          person, contemporaneous. UNRECOVERABLE. Stop looking.
+        * ORLANDO (2012-04-21) -- NO RECORDING WAS OBTAINED. V15
+          [00:05:21], first person, contemporaneous ("I didn't get a
+          recording out of there"), CONFIRMED FROM AUDIO by R1.
+          UNRECOVERABLE. Stop looking.
+          ⚠ AMENDED BY V15 R1 (item 201): the earlier wording here and in
+          the V15 artifacts read "NEVER RECORDED". V13 [00:02:26] -- also
+          confirmed from audio by R1 -- says "we will try to either stream
+          it and record it or just record it. So we'll hang it in the
+          forum". An attempt was INTENDED; nothing usable resulted. The
+          operative conclusion is unchanged: there is no Orlando file and
+          none is recoverable.
         * WEEK 6 (2012-04-29) -- HELD. V13 [00:05:20] schedules it by date and
           V13 [00:05:33] by number ("week six through ten"). Whether it was
           ever recorded is UNKNOWN and nothing in V13/V14/V15 says.
@@ -2555,6 +2585,14 @@ Carry into V16, and read this before starting:
       lessons and 2,670 frames of nothing is now accounted for. DO NOT spend
       V16 hunting frames for it. The live routes are unchanged: the OWNER
       ruling on !SM_TDI (item 157), or material from outside this corpus.
+      ⭐ SHARPENED BY V15 R1 (item 211): the SAME SLIDE's next bullet reads
+      "These recordings will be left up all during the Live event", and
+      [00:06:36] says the June web class's recording "will replace the
+      recordings that are up right now". The distinction the corpus draws
+      is IN-PERSON vs WEB, not recorded vs not -- so "EXPLAINED" must NOT
+      be read as "unrecoverable". A-084's surviving out-of-corpus route is
+      a CONCRETE, NAMED artifact: the June 2012 web class, Saturday
+      session. Weigh that against item 157 rather than against nothing.
 
   (c) ⛔ THE ADR IS NOT CODEABLE AND NOT BACKTESTABLE. A-100 (no lookback, no
       range definition, no anchor, no day boundary in Tier 1) and C-022
