@@ -2254,3 +2254,167 @@ unsourced and, on the `Water = 13` row, **wrong under `D-043`** (Water is the **
   first where the image is **blank**. V11, V12 and V13 were title cards; V14 is PowerPoint's
   *"End of slide show, click to exit."* screen described as *"Asian Box accumulation range with
   5, 13, 50, 200, and 800 EMAs."*
+
+---
+
+## Q-016 — Lesson 15 (`Bootcamp1 Wk7 050612 Part1`): `NOTES.md`, `RULES.md`, `VISUAL_INDEX.md`
+
+**Filed:** 2026-08-14 by the V15 student session
+**Location:** `01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/per_lesson/15_Bootcamp1_Wk7_050612_Part1_52mins/`
+**Status:** **QUARANTINED ON SIGHT.** No V15 artifact cites any of these three files as evidence.
+Every reference in the V15 set is to **this register entry**, never to the files.
+
+**SHA-256, recorded so the audited objects are pinned:**
+
+| File | Bytes | SHA-256 |
+|---|---|---|
+| `RULES.md` | 3,036 | `3474afcd3c2c707053f4e426b13ec72120177377427fd17570be631d2eacf11f` |
+| `NOTES.md` | 1,297 | `a5dc9a38aa6949a8997448ee8d28db050ba15fb05741f21e7b5bf7b75a5002bb` |
+| `VISUAL_INDEX.md` | 1,255 | `4998185adcb931218735bbc380f6d7ba1bb4c452f0008d03d47a809a034a3832` |
+
+**This is the FIFTH CONSECUTIVE lesson carrying the `VISUAL_INDEX.md` pattern** — `Q-012` (V11),
+`Q-013` (V12), `Q-014` (V13), `Q-015` (V14), and now V15.
+
+---
+
+### 1. `VISUAL_INDEX.md` — a byte-level clone of V14's, with ZERO content lines changed
+
+`diff` against lesson 14's file, run this session:
+
+```text
+diff 14_…Wk5_041512_Part2/VISUAL_INDEX.md  15_…Wk7_050612_Part1/VISUAL_INDEX.md
+  -> 8 differing lines = FOUR changed pairs:
+       the .swf filename, and three VIDEO_15 -> VIDEO_16 screenshot names.
+     ZERO content lines differ.
+```
+
+**Identical in kind to the V12→V13 and V13→V14 results `Q-014` §2 and `Q-015` §1 measured — and
+this is now the third consecutive lesson at which the measurement returns exactly the same
+number.** The three *"What is visible"* strings, the three *"Instructor's Explanation"* strings
+and the three *"Trading Significance"* strings are **the same sentences**, describing a
+**52-minute lesson whose entire second half is the ADR** with text about Asian boxes, London-open
+stop hunts and 5/13 EMA crosses. **The word `ADR` does not appear in any of the three files.**
+
+### 2. THE SURVIVING IMAGE IS THE TITLE CARD, DESCRIBED AS A FIVE-EMA CHART
+
+`VISUAL_INDEX.md` indexes **three** screenshots. **Only `VIDEO_16_SCREENSHOT_001_00-02-00.jpg`
+exists on disk** — `002` and `003` are absent, confirmed this session.
+
+**`001` was opened and measured.** It is `1024 × 768`, `mean luminance 3.48 / 255`,
+`fraction of pixels > 60 = 0.0262` — a heavily under-exposed capture. At autocontrast it reads,
+unambiguously:
+
+```text
+Market Makers Boot Camp
+Week 7
+```
+
+**It is the lesson's title card** — the same slide this session captured cleanly as
+`04_SCREENSHOTS/V15/V15_00-00-15_title-slide-week-seven.png`.
+
+`VISUAL_INDEX.md` describes it as:
+
+> - Visual Type: **Chart / Slide Overview**
+> - What is visible: **Asian Box accumulation range with 5, 13, 50, 200, and 800 EMAs.**
+> - Instructor's Explanation: *Setting up session boundaries and explaining accumulation mechanics.*
+> - Trading Significance: *Defines initial liquidity boundaries for session manipulation.*
+
+**A title card carrying two lines of text is indexed as a chart carrying five named moving
+averages.** This is `Q-012`/`Q-013`/`Q-014`'s exact failure — and note that it is **the same
+sentence `Q-015` applied to a BLANK screen.** The description is a constant; the image behind it
+is whatever happened to be captured.
+
+**And the timestamp is wrong.** The file claims `[00:02:00]`. This session's sweep shows the title
+card on the 5-second grid at **00:00:15 and 00:00:20**, replaced by `Welcome Back / TRADESTRONG`
+by **00:00:25**, and at `00:02:00` the lesson is showing the
+`Managing Your Expectations` list (`V15_00-01-10_…png`, which holds until `04:30`).
+⭐ **The claimed time and the actual time are not merely different — the claimed time is the one
+this register has now recorded FIVE times in a row**, `[00:02:00]`, on five different lessons
+with five different openings.
+
+### 3. `RULES.md` — the same two rules, re-badged, and NEITHER IS IN THE LESSON
+
+`diff` against lesson 14's file: **24 differing lines**, and every one is a string substitution —
+the `.swf` filename, `V15-R`→`V16-R` rule prefixes, three `VIDEO_15`→`VIDEO_16` visual references,
+and `(Week 5 - Part 2)`→`(Week 7 - Part 1)` in the setup name.
+
+**The two "Instructor Statements" are presented in quotation marks. Neither is spoken in this
+lesson, and the search is exhaustive over 492 markers:**
+
+| Claimed at | Claimed quotation | Occurrences in `V15_TRANSCRIPT.md` |
+|---|---|---|
+| `[00:05:00]` | *"Wait for the M15 candle to close before taking the 5/13 EMA cross."* | **0.** `M15` occurs 0 times; `5/13` occurs 0 times |
+| `[00:18:00]` | *"Place your stop loss 10 to 15 pips beyond the High or Low of the Day."* | **0.** `10 to 15` occurs 0 times |
+
+At the claimed `[00:05:00]` the lesson is announcing the New Jersey live class; at `[00:18:00]`
+it is on the *"symbiotic / synergy"* aside before the weekly breakdown. **Neither timestamp
+contains anything resembling either sentence.**
+
+⚠ **The second one is the dangerous one.** *"Place your stop loss 10 to 15 pips beyond the High
+or Low of the Day"* is a **fabricated stop-loss rule in quotation marks**, in a lesson that says
+only *"That is why you use a stop loss. Okay. A tight stop loss"* (`[00:42:15]`) with **no
+number attached**. It is precisely the `A-082` class, manufactured.
+
+### 4. `NOTES.md` — a near-clone whose ONE substantive difference is an invented topic line
+
+`diff` against lesson 14's file: **10 differing lines** — the `.swf` filename, `Week 5 - Part 2`→
+`Week 7 - Part 1`, and **one invented `Topic Focus`**:
+
+| Lesson | Invented `Topic Focus` | What the lesson is actually about |
+|---|---|---|
+| V14 (`Q-015`) | *"GBPJPY / NAS100 Spread & Buffer Adjustments, Trailing Stops"* | candles and the high/low board |
+| **V15 (this entry)** | *"Mid-Week Resets, Consolidation Traps, Level Re-counts"* | **the ADR, replotted as horizontal levels, as one leg of a New York-reversal confluence** |
+
+**And the EMA table is wrong under `D-043` on FOUR of its five rows** — a clean shift-by-one down
+the nickname list, with a fifth nickname invented:
+
+| `NOTES.md` claims | `D-043` (authoritative) |
+|---|---|
+| `5 (Mustard)` | ✅ correct |
+| `13 (Water)` | ❌ **13 is KETCHUP.** Water is the **50** |
+| `50 (Mayo)` | ❌ **50 is WATER.** Mayo is the **200** |
+| `200 (Blueberry)` | ❌ **200 is MAYO.** Blueberry is the **800** |
+| `800 (Raspberry)` | ❌ **"Raspberry" is not a nickname in this course.** It appears in **no** transcript, **no** slide and **no** decision |
+
+⚠ **`Q-015` §6 already recorded V14's copy of this same table as wrong on the `Water = 13` row.
+It is the identical table, in a file that is otherwise a clone — so the error propagates
+unchanged across lessons, which is what a clone does and what a note taken from a lesson could
+not.**
+
+### 5. The pre-ingestion `TRANSCRIPT.md` header — fabricated; the BODY is a different matter
+
+The pre-ingestion `TRANSCRIPT.md` carries a `# VIDEO` header claiming
+*"Primary Topics: **Trap Moves, Level 1/2/3 Progression & Fake Breakouts Identification**"*.
+**The lesson contains no trap-move segment, no level-1/2/3 segment and no fake-breakout segment.**
+`fake breakout` occurs **0** times. `trap` occurs **three** times and **none is a lesson segment**:
+`[00:08:11]` *"stop triggers and **trap moves**"* — one clause inside the printed Week-7 take-away
+list, i.e. a **back-reference to V14's material**, not a topic; `[00:31:27]` *"end back in the
+range to **trap** the traders for tomorrow"*; `[00:40:45]` *"where the dealer sets his **traps**"*.
+`level` never appears as `level 1` or `level one`; `level three` occurs three times and every one
+is the instructor **refusing to count** (`[00:23:46]` *"Is this level three yet? **I don't know.**"*).
+Its *"Course Position: Video 16 of 21"* is wrong under `D-017` §2 in any case — this file is **V15**.
+
+**The verbatim body is a different matter and passed verification** — 492 monotonic markers, zero
+equal-adjacent pairs, a 9.4 s tail against measured audio, and it preserves its own mishearings.
+`V15_TRANSCRIPT.md` copies **only the body** and says so in its SOURCE table. **The header is not
+carried over.**
+
+### 6. Independence of the V15 artifacts
+
+**These three files were opened only to quarantine them.** No V15 artifact draws on any of them.
+`V15_SOURCE_NOTES.md` and `V15_INTERPRETATION.md` were written from the verified transcript and
+this session's own 623-frame sweep; every EMA statement in the V15 set rests on
+`V15_00-18-50_…png` and `V15_00-46-00_…png`, **which this session opened and read itself**, and on
+`D-043`.
+
+### Running tally for the fabrication pattern
+
+- **`RULES.md`:** 21 of 21 covered. Shown by exact `diff` on **six** lessons — V10 (`Q-011`),
+  V11 (`Q-012`), V12 (`Q-013`), V13 (`Q-014`), V14 (`Q-015`), V15 (this entry) — to be one
+  document re-badged by string substitution.
+- **`NOTES.md`:** **15 of 21 audited** (V01–V15), **15 fabricated, zero exceptions.**
+- **`VISUAL_INDEX.md`:** **15 of 21 audited** (V01–V15), **15 fabricated.** ⭐ **V15 is the FIFTH
+  CONSECUTIVE lesson whose one surviving image is a non-chart described as a chart.** V11, V12,
+  V13 and V15 are **title cards**; V14 is a **blank** PowerPoint exit screen. **All five carry the
+  same claimed timestamp, `[00:02:00]`, and the same claimed content, an Asian-box chart with
+  five EMAs.** The description does not vary with the lesson because it was never derived from one.
