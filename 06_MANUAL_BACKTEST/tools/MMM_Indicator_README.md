@@ -36,8 +36,11 @@ table below is the same information.
 > `[TIER 1]`** — no recording or frame shows it. It is **not a tier**: `D-041` established that
 > owner attestation sits *outside* the source hierarchy, as an adjudication warrant.
 > **Where a recording contradicts an `[OWNER-ATTESTED]` value, the contradiction is named at the
-> value and put to the owner — never resolved here.** That is live right now for the 5 and 13 EMA
-> colours; see the ⚠ block below.
+> value and put to the owner — never resolved here.** ⭐ **That rule has now been exercised end to
+> end and it worked.** The 5/13 EMA colours were flagged as contradicted by V07 `[00:25:34]`
+> (`I-011`), shipped with the flag attached rather than silently "fixed", and **the owner
+> reversed** — `D-043`, 2026-08-13. See the ✅ block below. **An `[OWNER-ATTESTED]` value is
+> therefore not a settled value; it is the best available one until the owner is asked again.**
 
 ---
 
@@ -121,7 +124,7 @@ collapsed.
 
 | Parameter | Default | Why it is a default |
 |---|---|---|
-| ~~**EMA 5 and 13 colours**~~ | ~~cyan / orange~~ | ⬆ **PROMOTED OUT OF THIS TABLE 2026-08-13 — they are now `[OWNER-ATTESTED]` (`D-042`), no longer invented. Retained struck-through per `REMEDIATION_PROTOCOL.md` §2. See the ⚠ block immediately below — the new values are contested by a Tier 1 recording.** |
+| ~~**EMA 5 and 13 colours**~~ | ~~cyan / orange~~ | ⬆ **PROMOTED OUT OF THIS TABLE 2026-08-13 — they are `[OWNER-ATTESTED]`, no longer invented. Retained struck-through per `REMEDIATION_PROTOCOL.md` §2.** ⚠ ~~`D-042`: 5 red / 13 yellow, contested by a Tier 1 recording~~ → **FINAL: `D-043` — 5 = mustard = YELLOW, 13 = ketchup = RED**, the owner having reversed. The 5's colour is now Tier 1 corroborated. See the ✅ block immediately below. |
 | **"mktopen" boxes' ET placement** | 03:00–04:00 and 09:00–10:00 | The artifacts record **broker server** time and no artifact states the offset. A GMT+3 server fits well (see below) but **that is a curve-fit by this session, not a source**. Ships **disabled**. |
 | EMA source | `close` | Not specified by any source. |
 | **Session timezone** | Arm A, `UTC-5` | **This is the big one — see the next section.** |
@@ -131,57 +134,119 @@ collapsed.
 | **TDI volatility-band std-dev multiple** | 1.6185 | **Still a guess.** The MT4 indicator exposes no input for it, so it is compiled into the `.ex4` and the template cannot reveal it. Remains the Tier-3 public value. See the A-039 section. |
 | Box styling, label text, right-extension | — | Cosmetic. |
 
-### ⚠ Owner-attested — and two of the five are CONTRADICTED BY TAPE (`D-042`, `I-011`)
+### ✅ Owner-attested — FINAL as of `D-043`; `I-011` is CLOSED and the tape agrees
 
-**The full colour mapping the owner stated on 2026-08-13**, now the script's defaults:
+> ### ⚠ THE 5 AND THE 13 SWAPPED COLOURS ON 2026-08-13
+> If you are working from a cached copy, a screenshot, or `D-042`'s wording: **the 5 is now
+> YELLOW and the 13 is now RED**, and the **nicknames moved with the periods**. `D-042` §2's
+> assignment is superseded. The superseded text is retained below the fold
+> (`REMEDIATION_PROTOCOL.md` §2).
 
-| Period | Nickname (`D-041`) | Colour | Warrant |
+> *"I was wrong. It's the reverse. **5=mustard=yellow, 13=ketchup=red.**"*
+> — project owner, 2026-08-13, `DECISIONS.md` **`D-043`**, answering `I-011`
+
+**The final mapping, and the script's defaults:**
+
+| Period | Nickname (`D-043`) | Colour | Warrant |
 |---|---|---|---|
-| **5** | ketchup | **red** `#FF0000` | `[OWNER-ATTESTED]` (`D-042`) — ⚠ **contested, see below** |
-| **13** | mustard | **yellow** `#FFFF00` | `[OWNER-ATTESTED]` (`D-042`) — ⚠ **contested, see below** |
-| **50** | water | **aqua** `#00FFFF` | `[OWNER-ATTESTED]` + `[TOOLING]` |
-| **200** | mayonnaise | **white** `#FFFFFF` | `[OWNER-ATTESTED]` + `[TOOLING]` |
-| **800** | blueberry | **blue** `#0000FF` | `[OWNER-ATTESTED]` + `[TOOLING]` |
+| **5** | **mustard** | **yellow** `#FFFF00` | `[OWNER-ATTESTED]` (`D-043`) + ✅ **`[TIER 1]` on the colour** — V07 `[00:25:34]` |
+| **13** | **ketchup** | **red** `#FF0000` | `[OWNER-ATTESTED]` (`D-043`) — no corroboration |
+| **50** | water | **aqua** `#00FFFF` | `[OWNER-ATTESTED]` + `[TOOLING]` — unchanged |
+| **200** | mayonnaise | **white** `#FFFFFF` | `[OWNER-ATTESTED]` + `[TOOLING]` — unchanged |
+| **800** | blueberry | **blue** `#0000FF` | `[OWNER-ATTESTED]` + `[TOOLING]` — unchanged |
 
-**Cite them as `OWNER-ATTESTED (D-042), not observed on-screen.`** No captured frame in
-`04_SCREENSHOTS/` carries a legend, and no speaker in V01–V11 names a colour and a nickname in the
-same sentence. **This is owner testimony about the owner's own charts — a stronger basis than the
-generic placeholders it replaced, and categorically not a video observation.** Do not let the
-promotion out of the DEFAULT table read as "the course says so".
+**Cite them as `OWNER-ATTESTED (D-043), not observed on-screen`**, with the single exception noted
+below. No captured frame in `04_SCREENSHOTS/` carries a legend, and no speaker in V01–V11 names a
+colour and a **nickname** in the same sentence. **This is owner testimony about the owner's own
+charts — a stronger basis than the generic placeholders it replaced, and categorically not a video
+observation.** Do not let the promotion out of the DEFAULT table read as *"the course says so"*.
 
-#### The contradiction, stated plainly
+#### ⚠ TWO mappings reversed — and the one that looks like it reversed did NOT
+
+The owner's sentence bundles nickname + period + colour, but the project stores **two** decisions
+on **two** axes, and **both** flip:
+
+| Axis | Stored in | Before → After | |
+|---|---|---|---|
+| **nickname ↔ period** | `D-041` | ketchup 5 · mustard 13 → **ketchup 13 · mustard 5** | 🔄 REVERSED |
+| **period ↔ colour** | `D-042` §2 | 5 red · 13 yellow → **5 yellow · 13 red** | 🔄 REVERSED |
+| **nickname ↔ colour** | the composition of the two | ketchup red · mustard yellow | ✅ **UNCHANGED** |
+
+The two reversals are on adjacent axes and **cancel where they meet**: the condiments keep their
+obvious colours and **the periods moved underneath them**. In this file that means both the colour
+constant *and* the nickname change on each of the two EMA lines, while *"ketchup is red"* was never
+wrong. **A reader correcting only the nickname→colour pairing would correct nothing.**
+
+#### The conflict is resolved — and V07 now AGREES
 
 > **V07 `[00:25:34]`** — Tier 1, frame `04_SCREENSHOTS/V07/INDEX.md` row 22:
 >
 > *"The only other lines in here, look, **this yellow one is a five moving average.** I made it
 > dotted in the 13, 50 and the 200."*
 
-**Tier 1 puts YELLOW on the 5. The owner puts RED on the 5 and YELLOW on the 13.**
+`D-042` §3 flagged this as contradicting the owner's `5 = red`, refused to adjudicate it
+(`SOURCING_HIERARCHY.md` §3.2 **Case C**) and filed `I-011`. **The owner has answered, and
+reversed.** `I-011` is **CLOSED — `RESOLVED — OWNER ATTESTATION`.**
 
-**And the consequence runs past colour.** The owner's mapping also gives ketchup = red and
-mustard = yellow. Chain that to V07's yellow = 5 and you get **mustard = 5, ketchup = 13** — the
-assignment `D-041` **overturned** on 2026-08-13. This is a **second, independent route back to the
-reversed nickname mapping**, and unlike the first (three Tier 3 web sources) it **starts from a
-recording**.
+**What that agreement is and is not worth:**
 
-#### Why this file ships the owner's colours anyway, and refuses to resolve it
+1. **It is corroboration, not the warrant.** The owner's attestation closed `I-011` either way —
+   had the owner confirmed red/yellow, V07 would have been annotated as a guest's private palette
+   instead. **Do not write this up as the recording forcing the ruling.**
+2. **One cell gains a genuine Tier 1 basis:** *"the 5 EMA is yellow"*, stated by one speaker in one
+   sentence with no chaining. That is the only cell in this table with a Tier 1 colour.
+3. **Nothing becomes `RESOLVED BY COURSE`.** *Mustard = 5* still requires chaining V07's
+   *yellow = 5* through the owner's *mustard = yellow*, and **no speaker makes that join.** It is
+   the same `D-030` two-warrant chain this README refused when it pointed the *inconvenient* way —
+   and it does not become sound by now pointing the convenient way. **The discipline has to run in
+   both directions or it was never discipline.** Only the **800** has a Tier 1 *period*
+   (V09 `[00:41:43]`).
+4. **The guest-palette explanation is no longer needed and is not thereby disproven.**
+   `[00:27:24]` *"the dashed ones like this are 30 minute versions"* and `[00:27:33]` *"the blue
+   heavy ones are 60 minutes"* still show the V07 speaker using his own multi-timeframe
+   convention. There is simply no divergence left to explain.
 
-1. **No speaker makes the join.** V07 gives colour→period. The owner gives nickname→colour.
-   **Nothing gives colour→nickname on one warrant.** Chaining them is the same `D-030` error this
-   README already refuses to make for *white = 200 = "mayonnaise"* in the `A-020` section below.
-   **The discipline has to hold when the inference points somewhere inconvenient, or it was never
-   discipline.**
-2. **`D-041` is an explicit, definitive owner ruling.** Only the owner reverses it, and
-   `REMEDIATION_PROTOCOL.md` §2 forbids the quiet edit in either direction.
-3. **A cheap innocent explanation is live.** The V07 speaker is a **guest** on his own platform
-   who, minutes later in the same lesson, describes his own multi-timeframe palette —
-   `[00:27:24]` *"the dashed ones like this are 30 minute versions"*, `[00:27:33]` *"the blue heavy
-   ones are 60 minutes."* His colours may simply not be the course's. `D-033` makes a guest
-   normative on **method**; it does not promote his chart cosmetics to shared furniture.
+**If you are matching this script against a V07 screenshot, the 5 should now look RIGHT** — that is
+the check that this swap landed correctly.
 
-**Filed `00_SYSTEM/SETUP_ISSUES.md` `I-011`, `OPEN`**, per `SOURCING_HIERARCHY.md` §3.2 **Case C**
-(*do not adjudicate, surface to the owner*). **One owner sentence closes it.** Until then: if you
-are matching this script against a V07 screenshot, **expect the 5 to look wrong.**
+<details>
+<summary><b>⛔ SUPERSEDED — the <code>D-042</code> mapping and its contested-conflict block, retained per <code>REMEDIATION_PROTOCOL.md</code> §2</b></summary>
+
+> ### ⚠ Owner-attested — and two of the five are CONTRADICTED BY TAPE (`D-042`, `I-011`)
+>
+> | Period | Nickname (`D-041`) | Colour | Warrant |
+> |---|---|---|---|
+> | **5** | ketchup | **red** `#FF0000` | `[OWNER-ATTESTED]` (`D-042`) — ⚠ **contested** |
+> | **13** | mustard | **yellow** `#FFFF00` | `[OWNER-ATTESTED]` (`D-042`) — ⚠ **contested** |
+> | **50** | water | **aqua** `#00FFFF` | `[OWNER-ATTESTED]` + `[TOOLING]` |
+> | **200** | mayonnaise | **white** `#FFFFFF` | `[OWNER-ATTESTED]` + `[TOOLING]` |
+> | **800** | blueberry | **blue** `#0000FF` | `[OWNER-ATTESTED]` + `[TOOLING]` |
+>
+> **Tier 1 puts YELLOW on the 5. The owner puts RED on the 5 and YELLOW on the 13.**
+>
+> **And the consequence runs past colour.** The owner's mapping also gives ketchup = red and
+> mustard = yellow. Chain that to V07's yellow = 5 and you get **mustard = 5, ketchup = 13** — the
+> assignment `D-041` **overturned** on 2026-08-13. This is a **second, independent route back to
+> the reversed nickname mapping**, and unlike the first (three Tier 3 web sources) it **starts from
+> a recording**. *(This is the reasoning the owner went on to confirm — the chain was right, and it
+> was still correct not to adopt it unilaterally.)*
+>
+> **Why this file shipped the owner's colours anyway, and refused to resolve it:** (1) no speaker
+> makes the colour→nickname join, so chaining is the `D-030` error; (2) `D-041` was an explicit
+> definitive owner ruling only the owner could reverse, and `REMEDIATION_PROTOCOL.md` §2 forbids
+> the quiet edit in either direction; (3) a cheap innocent explanation was live — the V07 speaker
+> is a **guest** describing his own multi-timeframe palette minutes later.
+>
+> **Filed `00_SYSTEM/SETUP_ISSUES.md` `I-011`, `OPEN`**, per `SOURCING_HIERARCHY.md` §3.2 **Case C**
+> (*do not adjudicate, surface to the owner*). **One owner sentence closes it.** Until then: if you
+> are matching this script against a V07 screenshot, **expect the 5 to look wrong.**
+>
+> **⭐ That is exactly what happened, and it is the point.** Case C — the rule that forbids a
+> session from resolving a genuine conflict — is what produced the correct answer here. Had this
+> file chained the inference and "fixed" the mapping itself, or suppressed the finding as a mere
+> colour question, the error would have stood.
+
+</details>
 
 ---
 
@@ -434,9 +499,17 @@ untouched and `D-031`'s two arms are undisturbed.
 > have been pointing at the right answer. **It was still correct not to adopt it**, because what
 > settled it was an attestation, not the colour semantics. The same session then found the mirror
 > case: V07 `[00:25:34]` puts **yellow on the 5**, which chained through the owner's
-> *mustard = yellow* would reverse `D-041` — and that chain is **refused on exactly the grounds
-> quoted above**. See the ⚠ `[OWNER-ATTESTED]` block earlier in this file and
-> `00_SYSTEM/SETUP_ISSUES.md` `I-011`.
+> *mustard = yellow* would reverse `D-041` — and that chain was **refused on exactly the grounds
+> quoted above**, and surfaced as `00_SYSTEM/SETUP_ISSUES.md` `I-011` instead.
+>
+> ⭐ **UPDATE 2026-08-13 — `D-043`: the owner answered and REVERSED. The chain was pointing at the
+> right answer, and refusing to walk it was still correct.** *"I was wrong. It's the reverse.
+> 5=mustard=yellow, 13=ketchup=red."* `I-011` is **CLOSED**. **This is the second time in this
+> file that a refused colour-semantics inference turned out to be right** — first
+> *blueberry = blue*, now *yellow = 5*. **Neither is a licence to start chaining.** What settled
+> both was an attestation; the inference was never the warrant, and a chain that happens to land
+> correctly twice is still a chain. `D-030` is unchanged. See the ✅ `[OWNER-ATTESTED]` block
+> earlier in this file.
 
 *284 drawn rectangles* (Mar–May 2015), whose start/end times cluster hard:
 
