@@ -1,0 +1,47 @@
+==============================================================================
+V11 HOMEWORK H6 -- RSI PERIOD SENSITIVITY DEMONSTRATION
+==============================================================================
+⚠ NO PERIOD IS ADOPTED. This output measures the COST of `A-080`,
+  not the course's RSI behaviour. No row may be cited as doctrine.
+  `A-080` is NOT closed, NOT narrowed, and NO test is unblocked.
+==============================================================================
+QA gate : GATE: PASS — C1-C4 clean
+window  : W-C' 2013-01-06T00:00 -> 2016-06-30T23:59 (D-035 DEVELOPMENT)
+timeframe: M15 (V11 [00:31:39] names 15-minute first). Arm A (corpus stamps).
+
+bars: 86536
+
+V11's printed thresholds (frame 31:25 / 37:30), measured at each period:
+
+ period |     >80     <20 |     >50 |  in 70-30 |  in 80-40  in 60-20 |   mean     sd
+-------------------------------------------------------------------------------------
+      5 |   5.66%   5.84% |  49.62% |    69.09% |    63.32%    63.76% |  49.84  18.67
+      9 |   1.72%   1.81% |  49.72% |    83.93% |    74.18%    74.86% |  49.83  14.12
+     13 |   0.74%   0.78% |  49.59% |    89.90% |    79.33%    80.35% |  49.81  12.00
+     14 |   0.60%   0.65% |  49.60% |    90.88% |    80.28%    81.30% |  49.81  11.63
+     21 |   0.16%   0.20% |  49.44% |    95.02% |    84.76%    85.88% |  49.78   9.84
+     34 |   0.04%   0.01% |  48.82% |    98.20% |    88.90%    90.29% |  49.75   8.13
+
+==============================================================================
+  THE SPREAD -- this is the actual result
+==============================================================================
+  time above 80 (V11's 'overextended')               0.04% ..   5.66%   spread   5.62pp  ratio 144.04x
+  time below 20 (V11's 'overextended', downside)     0.01% ..   5.84%   spread   5.83pp  ratio 561.15x
+  time inside the printed NORMAL range 70/30        69.09% ..  98.20%   spread  29.11pp  ratio  1.42x
+  time inside the printed BULL range 80/40          63.32% ..  88.90%   spread  25.57pp  ratio  1.40x
+  time inside the printed BEAR range 60/20          63.76% ..  90.29%   spread  26.53pp  ratio  1.42x
+
+  The 13 vs 14 pair is printed deliberately: they are ADJACENT candidate
+  values and their difference is the floor on how much `A-080` matters.
+       hi:  n=13 ->   0.74%   n=14 ->   0.60%   diff  0.13pp
+       lo:  n=13 ->   0.78%   n=14 ->   0.65%   diff  0.13pp
+     norm:  n=13 ->  89.90%   n=14 ->  90.88%   diff  0.97pp
+
+==============================================================================
+  WHAT THIS DOES NOT SHOW
+==============================================================================
+  - It does not show which period the instructor used.
+  - It does not test any V11 claim. The 80/40 <-> 60/20 SWITCH he asks
+    students to watch for is a REGIME-TRANSITION claim; these are
+    unconditional occupancy fractions and are not the same statistic.
+  - It does not license reading '13 is close enough'. See `A-080`.

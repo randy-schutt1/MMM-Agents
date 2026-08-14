@@ -1,0 +1,186 @@
+==============================================================================
+PT-037 — V11 -- how long must the low hold? 30 / 90 / 120 minutes
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+D-031: BOTH arms reported for every observable (binding)
+==============================================================================
+QA GATE (precondition, D-036a): GATE: PASS — C1-C4 clean
+WINDOW  W-C' = 2013-01-06T00:00 -> 2016-06-30T23:59  (D-035 DEVELOPMENT)
+HOLDOUT 2016-07-01 -> 2017-12-29  NOT OPENED (not on disk; assert_development re-checks)
+SEED 20260813   ITERATIONS 1000   TIMEFRAME M1
+
+==============================================================================
+  §7b VOID CHECKS
+==============================================================================
+  arm A low   session days   894   FINAL candidates   894   unresolved 0   -> OK
+  arm A high  session days   894   FINAL candidates   894   unresolved 0   -> OK
+  arm B low   session days   777   FINAL candidates   777   unresolved 0   -> OK
+  arm B high  session days   777   FINAL candidates   777   unresolved 0   -> OK
+  eligibility rule: no candidate enters a T-denominator with R < T -- enforced in curve()
+
+==============================================================================
+  §7a INCLUSION / COMPLETENESS -- counts reported beside every n
+==============================================================================
+  arm A: INCLUDED 894 session days;  EXCLUDED 11 (fewer than 96/96 fifteen-minute buckets present)
+          first excluded: 2013-04-12(94/96), 2013-12-24(89/96), 2013-12-26(44/96), 2013-12-31(92/96), 2014-06-02(8/96), 2014-12-24(84/96), 2014-12-26(92/96), 2015-01-01(2/96), 2015-08-21(95/96), 2015-12-24(84/96), 2016-07-01(28/96)
+          the D-036a C8 data hole (2014-06-01/02) excluded by name: YES -- 2014-06-02
+  arm B: INCLUDED 777 session days;  EXCLUDED 245 (fewer than 96/96 fifteen-minute buckets present)
+          first excluded: 2013-03-11(92/96), 2013-03-16(4/96), 2013-03-18(92/96), 2013-03-23(4/96), 2013-03-25(92/96), 2013-03-30(4/96), 2013-04-01(92/96), 2013-04-06(4/96), 2013-04-08(92/96), 2013-04-12(94/96), 2013-04-13(4/96), 2013-04-15(92/96)
+          the D-036a C8 data hole (2014-06-01/02) excluded by name: YES -- 2014-06-02
+
+==============================================================================
+  O4 -- CANDIDATES PER SESSION DAY   (fixes N1, the unconditional base rate)
+==============================================================================
+  arm A low   n_days=  894  median=  26.0  mean= 29.11  q25= 15.0  q75= 40.0  min=1  max=136
+              implied unconditional P(FINAL) = 1/mean =  3.43%
+  arm A high  n_days=  894  median=  26.0  mean= 28.22  q25= 16.0  q75= 38.0  min=1  max=132
+              implied unconditional P(FINAL) = 1/mean =  3.54%
+  arm B low   n_days=  777  median=  28.0  mean= 31.13  q25= 17.0  q75= 41.0  min=1  max=136
+              implied unconditional P(FINAL) = 1/mean =  3.21%
+  arm B high  n_days=  777  median=  25.0  mean= 27.69  q25= 15.0  q75= 37.0  min=1  max=118
+              implied unconditional P(FINAL) = 1/mean =  3.61%
+
+==============================================================================
+  O1 -- THE SURVIVAL-CONFIRMATION CURVE   P(FINAL | held >= T)
+  N1 = the T=0 row (unconditional base rate).  * = a threshold the lesson NAMES.
+  N2 = the unnamed rows, run alongside so a smooth rise is distinguishable
+       from a feature at 30 / 90 / 120.
+==============================================================================
+
+  --- arm A, low ---   N1 base rate  3.43%  (n=26028)
+   T=   5     8.89%  (k=   880  n=  9897  95% CI  8.35- 9.47)   d(prev)= +5.46pp  margin_vs_N1= +5.46pp
+   T=  10    12.00%  (k=   876  n=  7301  95% CI 11.27-12.76)   d(prev)= +3.11pp  margin_vs_N1= +8.56pp
+   T=  15    14.14%  (k=   874  n=  6180  95% CI 13.30-15.03)   d(prev)= +2.14pp  margin_vs_N1=+10.71pp
+   T=  30 *  19.24%  (k=   864  n=  4491  95% CI 18.11-20.42)   d(prev)= +5.10pp  margin_vs_N1=+15.80pp
+   T=  45    23.04%  (k=   860  n=  3733  95% CI 21.72-24.42)   d(prev)= +3.80pp  margin_vs_N1=+19.60pp
+   T=  60    26.24%  (k=   852  n=  3247  95% CI 24.76-27.78)   d(prev)= +3.20pp  margin_vs_N1=+22.80pp
+   T=  90 *  31.41%  (k=   840  n=  2674  95% CI 29.68-33.20)   d(prev)= +5.17pp  margin_vs_N1=+27.98pp
+   T= 120 *  35.76%  (k=   826  n=  2310  95% CI 33.83-37.73)   d(prev)= +4.34pp  margin_vs_N1=+32.32pp <- AGENT'S EXTENSION (O6)
+   T= 180    42.58%  (k=   795  n=  1867  95% CI 40.36-44.84)   d(prev)= +6.82pp  margin_vs_N1=+39.15pp
+   T= 240    48.19%  (k=   760  n=  1577  95% CI 45.73-50.66)   d(prev)= +5.61pp  margin_vs_N1=+44.76pp
+
+  --- arm A, high ---   N1 base rate  3.54%  (n=25228)
+   T=   5     9.35%  (k=   888  n=  9495  95% CI  8.78- 9.95)   d(prev)= +5.81pp  margin_vs_N1= +5.81pp
+   T=  10    12.43%  (k=   885  n=  7121  95% CI 11.68-13.21)   d(prev)= +3.08pp  margin_vs_N1= +8.88pp
+   T=  15    14.67%  (k=   884  n=  6024  95% CI 13.80-15.59)   d(prev)= +2.25pp  margin_vs_N1=+11.13pp
+   T=  30 *  19.56%  (k=   875  n=  4473  95% CI 18.43-20.75)   d(prev)= +4.89pp  margin_vs_N1=+16.02pp
+   T=  45    23.42%  (k=   873  n=  3727  95% CI 22.09-24.81)   d(prev)= +3.86pp  margin_vs_N1=+19.88pp
+   T=  60    26.51%  (k=   866  n=  3267  95% CI 25.02-28.05)   d(prev)= +3.08pp  margin_vs_N1=+22.96pp
+   T=  90 *  31.55%  (k=   848  n=  2688  95% CI 29.82-33.33)   d(prev)= +5.04pp  margin_vs_N1=+28.00pp
+   T= 120 *  35.53%  (k=   834  n=  2347  95% CI 33.62-37.49)   d(prev)= +3.99pp  margin_vs_N1=+31.99pp <- AGENT'S EXTENSION (O6)
+   T= 180    42.69%  (k=   786  n=  1841  95% CI 40.45-44.97)   d(prev)= +7.16pp  margin_vs_N1=+39.15pp
+   T= 240    49.00%  (k=   761  n=  1553  95% CI 46.52-51.49)   d(prev)= +6.31pp  margin_vs_N1=+45.46pp
+
+  --- arm B, low ---   N1 base rate  3.21%  (n=24187)
+   T=   5     8.45%  (k=   767  n=  9072  95% CI  7.90- 9.04)   d(prev)= +5.24pp  margin_vs_N1= +5.24pp
+   T=  10    11.38%  (k=   764  n=  6714  95% CI 10.64-12.16)   d(prev)= +2.92pp  margin_vs_N1= +8.17pp
+   T=  15    13.39%  (k=   759  n=  5667  95% CI 12.53-14.30)   d(prev)= +2.01pp  margin_vs_N1=+10.18pp
+   T=  30 *  18.24%  (k=   749  n=  4107  95% CI 17.09-19.45)   d(prev)= +4.84pp  margin_vs_N1=+15.02pp
+   T=  45    21.88%  (k=   744  n=  3400  95% CI 20.52-23.30)   d(prev)= +3.65pp  margin_vs_N1=+18.67pp
+   T=  60    24.91%  (k=   735  n=  2951  95% CI 23.38-26.50)   d(prev)= +3.02pp  margin_vs_N1=+21.69pp
+   T=  90 *  29.80%  (k=   723  n=  2426  95% CI 28.02-31.65)   d(prev)= +4.90pp  margin_vs_N1=+26.59pp
+   T= 120 *  34.07%  (k=   705  n=  2069  95% CI 32.06-36.14)   d(prev)= +4.27pp  margin_vs_N1=+30.86pp <- AGENT'S EXTENSION (O6)
+   T= 180    40.67%  (k=   676  n=  1662  95% CI 38.34-43.05)   d(prev)= +6.60pp  margin_vs_N1=+37.46pp
+   T= 240    46.12%  (k=   641  n=  1390  95% CI 43.51-48.74)   d(prev)= +5.44pp  margin_vs_N1=+42.90pp
+
+  --- arm B, high ---   N1 base rate  3.61%  (n=21514)
+   T=   5     9.55%  (k=   769  n=  8051  95% CI  8.93-10.21)   d(prev)= +5.94pp  margin_vs_N1= +5.94pp
+   T=  10    12.71%  (k=   768  n=  6043  95% CI 11.89-13.57)   d(prev)= +3.16pp  margin_vs_N1= +9.10pp
+   T=  15    14.98%  (k=   767  n=  5119  95% CI 14.03-15.99)   d(prev)= +2.27pp  margin_vs_N1=+11.37pp
+   T=  30 *  19.74%  (k=   760  n=  3850  95% CI 18.51-21.03)   d(prev)= +4.76pp  margin_vs_N1=+16.13pp
+   T=  45    23.44%  (k=   752  n=  3208  95% CI 22.01-24.94)   d(prev)= +3.70pp  margin_vs_N1=+19.83pp
+   T=  60    26.26%  (k=   745  n=  2837  95% CI 24.67-27.91)   d(prev)= +2.82pp  margin_vs_N1=+22.65pp
+   T=  90 *  31.04%  (k=   727  n=  2342  95% CI 29.20-32.95)   d(prev)= +4.78pp  margin_vs_N1=+27.43pp
+   T= 120 *  34.80%  (k=   713  n=  2049  95% CI 32.77-36.89)   d(prev)= +3.76pp  margin_vs_N1=+31.19pp <- AGENT'S EXTENSION (O6)
+   T= 180    41.53%  (k=   674  n=  1623  95% CI 39.15-43.94)   d(prev)= +6.73pp  margin_vs_N1=+37.92pp
+   T= 240    47.92%  (k=   656  n=  1369  95% CI 45.28-50.57)   d(prev)= +6.39pp  margin_vs_N1=+44.31pp
+
+==============================================================================
+  O3 -- HOLD-DURATION DISTRIBUTION OF SUPERSEDED CANDIDATES
+  O5 -- where the NAMED numbers sit as percentiles of that distribution
+==============================================================================
+
+  --- arm A, low ---  n_superseded=25134
+    median=    2.0 min   mean=   28.4   p05=   1.0  q25=   1.0  q75=   10.0  p95=  148.0  max=   1369
+    proportion of superseded holds falling in [30, 90] min:  7.19%   (P5 tests this)
+    O5: T=  30 min sits at the 85.57th percentile of superseded hold durations
+    O5: T=  90 min sits at the 92.70th percentile of superseded hold durations
+    O5: T= 120 min sits at the 94.10th percentile of superseded hold durations
+
+  --- arm A, high ---  n_superseded=24334
+    median=    2.0 min   mean=   28.7   p05=   1.0  q25=   1.0  q75=   10.0  p95=  153.3  max=   1345
+    proportion of superseded holds falling in [30, 90] min:  7.26%   (P5 tests this)
+    O5: T=  30 min sits at the 85.21th percentile of superseded hold durations
+    O5: T=  90 min sits at the 92.44th percentile of superseded hold durations
+    O5: T= 120 min sits at the 93.78th percentile of superseded hold durations
+
+  --- arm B, low ---  n_superseded=23410
+    median=    2.0 min   mean=   27.9   p05=   1.0  q25=   1.0  q75=   10.0  p95=  145.0  max=   1369
+    proportion of superseded holds falling in [30, 90] min:  7.13%   (P5 tests this)
+    O5: T=  30 min sits at the 85.66th percentile of superseded hold durations
+    O5: T=  90 min sits at the 92.73th percentile of superseded hold durations
+    O5: T= 120 min sits at the 94.17th percentile of superseded hold durations
+
+  --- arm B, high ---  n_superseded=20737
+    median=    2.0 min   mean=   29.9   p05=   1.0  q25=   1.0  q75=   10.0  p95=  163.0  max=   1365
+    proportion of superseded holds falling in [30, 90] min:  7.14%   (P5 tests this)
+    O5: T=  30 min sits at the 85.10th percentile of superseded hold durations
+    O5: T=  90 min sits at the 92.21th percentile of superseded hold durations
+    O5: T= 120 min sits at the 93.56th percentile of superseded hold durations
+
+==============================================================================
+  N3 -- TIME-OF-DAY STRATIFICATION   (the confound control; M1d's verdict comes from here)
+  Strata are minute-of-day of the CANDIDATE on the arm's own clock.
+==============================================================================
+
+  --- arm A, low ---
+    00:00-04:00  n_cand=  4466  median R=   862 min   N1= 2.64%   P(F|held>=30)=17.15%   margin=+14.51pp
+    04:00-08:00  n_cand=  4616  median R=   687 min   N1= 3.83%   P(F|held>=30)=24.31%   margin=+20.48pp
+    08:00-12:00  n_cand=  4016  median R=   425 min   N1= 6.52%   P(F|held>=30)=43.45%   margin=+36.93pp
+    12:00-16:00  n_cand=  1189  median R=   200 min   N1=11.02%   P(F|held>=30)=55.04%   margin=+44.02pp
+    16:00-20:00  n_cand=  7628  median R=  1395 min   N1= 1.89%   P(F|held>=30)= 7.42%   margin= +5.53pp
+    20:00-24:00  n_cand=  4113  median R=  1179 min   N1= 1.51%   P(F|held>=30)= 8.90%   margin= +7.39pp
+
+  --- arm B, low ---
+    00:00-04:00  n_cand=  3577  median R=   861 min   N1= 2.07%   P(F|held>=30)=14.07%   margin=+12.00pp
+    04:00-08:00  n_cand=  4506  median R=   684 min   N1= 4.02%   P(F|held>=30)=24.93%   margin=+20.91pp
+    08:00-12:00  n_cand=  3781  median R=   419 min   N1= 5.63%   P(F|held>=30)=38.94%   margin=+33.31pp
+    12:00-16:00  n_cand=  1378  median R=   219 min   N1=10.09%   P(F|held>=30)=53.46%   margin=+43.37pp
+    16:00-20:00  n_cand=  6965  median R=  1405 min   N1= 1.69%   P(F|held>=30)= 6.56%   margin= +4.87pp
+    20:00-24:00  n_cand=  3980  median R=  1160 min   N1= 1.31%   P(F|held>=30)= 7.68%   margin= +6.37pp
+
+==============================================================================
+  N4 -- CIRCULAR CLOCK SHIFT   (does the 17:00 session boundary matter at all?)
+  1000 iterations, offsets uniform on +/-12h in 15-min steps, seed 20260813
+==============================================================================
+  true margin (arm A, low, T=30): +15.80pp
+  shifted-boundary null: n=1000  median=+18.19pp  5-95% [+15.66, +23.00]
+  the true margin sits at the  6.40th percentile of the shifted-boundary null
+
+==============================================================================
+  M1c FEATURE TEST -- is there anything AT 30 or AT 90, versus the unnamed neighbours?
+  A named T* shows a FEATURE if its per-minute increment exceeds the mean per-minute
+  increment of the two adjacent UNNAMED intervals by >= 5pp scaled to interval width.
+==============================================================================
+
+  --- arm A, low ---
+    T= 30: own +0.3397 pp/min   unnamed neighbours [15, 45] mean +0.3410 pp/min   excess over interval =  -0.02pp   -> no feature
+    T= 90: own +0.1725 pp/min   unnamed neighbours [60] mean +0.2135 pp/min   excess over interval =  -1.23pp   -> no feature
+
+  --- arm B, low ---
+    T= 30: own +0.3229 pp/min   unnamed neighbours [15, 45] mean +0.3229 pp/min   excess over interval =  +0.00pp   -> no feature
+    T= 90: own +0.1632 pp/min   unnamed neighbours [60] mean +0.2016 pp/min   excess over interval =  -1.15pp   -> no feature
+
+==============================================================================
+  END. Verdicts against §6's fixed thresholds are recorded in
+  06_MANUAL_BACKTEST/V11/BT_V11_0001.md, not here. This runner reports numbers.
+==============================================================================
