@@ -1,0 +1,36 @@
+{
+  "case_count": 88,
+  "by_status": {
+    "positive/valid": 34,
+    "negative/lookalike": 22,
+    "borderline/insufficient": 21,
+    "neutral": 11
+  },
+  "by_difficulty": {
+    "foundational": 25,
+    "intermediate": 23,
+    "advanced": 25,
+    "integration": 15
+  },
+  "by_mastery_dimension_primary_or_secondary": {
+    "Recall": 16,
+    "Recognition": 52,
+    "Discrimination": 45,
+    "Sequence": 88,
+    "Exceptions": 16,
+    "Homework application": 10,
+    "Manual backtesting": 13,
+    "Provenance": 88,
+    "Ambiguity handling": 81,
+    "Contradiction handling": 12
+  },
+  "by_expected_answer_provenance": {
+    "EXPLICIT": 43,
+    "VISUAL": 7,
+    "IMPLIED": 0,
+    "INFERRED": 17,
+    "UNRESOLVED": 21
+  },
+  "chart_assets": 11,
+  "source_cards": 8
+}

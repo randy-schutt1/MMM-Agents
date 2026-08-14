@@ -138,6 +138,31 @@ V17 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
                      The full mapping is in V17_MASTERY_REPORT.md 0b. NOT applied
                      on the task branch, per D-038a / D-047 4.
 
+                     ⭐⭐ R1 HAS NOW RETURNED (review/v17, 2026-08-14):
+                     REVISE, 0 CRITICAL / 0 MAJOR / 6 MINOR / 13 NOTE, HIGH
+                     confidence, D-003 SATISFIED. V18 GATE OPEN under D-024.
+                     Items 244-249 are owed before V17 can reach COMPLETE.
+                     ** AND THE GATE BLOCK ABOVE IS WRONG ON THE GRAPH: V16's
+                     R1 merged to integration at 0fee48c 17:16:53, BEFORE this
+                     session's first content commit f55c2f3 17:20:11 and before
+                     all eight of them. The belief was honest -- the worktree
+                     could not see integration -- but V17's D-004 COMPOUNDING
+                     NEVER HAPPENED and the "second consecutive lesson on
+                     unreviewed ground" framing is not true of its committed
+                     work. Item 246; fix it here and in the row above.
+                     WHAT THE REVIEW RE-DERIVED RATHER THAN READ: PT-045 end to
+                     end from its pre-registration before the runner was opened
+                     -- ARM A REPRODUCES TO FOUR DECIMAL PLACES in every cell;
+                     the superseded calendar-consecutive reading RE-EXECUTED,
+                     and it really does return median run 1 and CONTRADICTED AS
+                     STATED in four cells of four; the homework recomputed
+                     (<50pips passes 0.8512 arm A / 0.8893 arm B); five ASR
+                     engines; all 63 quarantined files re-diffed.
+                     ** THE FABRICATION PATTERN IS SOLVED FOR THE WHOLE COURSE:
+                     two content templates, A for lessons 1-15 AND 21, B for
+                     16-20. V18/V19/V20 trios are BYTE CLONES of V17's; V21
+                     reverts. Q-019..Q-022 are answered in advance -- item 254.
+
                      V18 GATE CLOSED until V17's own R1 returns (D-004) -- the
                      OWNER's authorisation covers V18 and D-004 does not.
                      See V17_MASTERY_REPORT.md 0, 0a and 5.
@@ -2489,7 +2514,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V14 | Wk5 P2 | 00:47:48 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** *(superseded, retained: `REVIEW REQUIRED`)* | **R1 REVISE** 0C/0M/5m/9n, HIGH, 2026-08-14 → **R1 fix round** ⚠ **SELF-VERIFIED**, items 172–176 `CLOSED — SELF-VERIFIED AT OWNER DIRECTION`, **NOT** `CLOSED — VERIFIED`; **D-003 NOT satisfied for the fix round, no R2, no independent PASS**; item 186 opened | ⭐ **R1 RETURNED — V15 GATE OPEN under D-024, AND THE OWNER'S HARD STOP STANDS.** Items 172-176 (MINOR) OWED; V14 **NOT COMPLETE**. Rulings: A-056 **NOT CLOSED** (item 178) · A-084 defeater **HOLDS** vs 4 attacks (184) · D3 **legitimate but unnecessary and unverified** (179) · C-021 forwarded to owner · ⭐ A-056 ANSWERED (closure put to reviewer), A-077 advanced (A-094), A-084 NARROWED not closed 2nd consecutive, A-086 advanced + C-021 opened, A-089-A-094 filed, Q-015 filed, PT-042 NOT SUPPORTED  · ⚠ **REMEDIATION 2026-08-14:** all five MINORs closed **SELF-VERIFIED**; ⭐ item **186** opened — the item-174 frame offset is a **dropped step, not a broken tool** (V12 §0 and V13 both document and correct it; `SWF_CAPTURE_RECIPE.md` §8a now mandatory); ⭐ item **176** — a **second, larger, UNEXAMINED** `Wk9→Wk10` four-week gap, so the gap audit's figure is **2 KNOWN + up to ~3 UNKNOWN, not 2**; ⚠⚠ **V15 GATE OPEN ≠ PROCEED — THE OWNER'S HARD STOP STANDS** |
 | V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 197–202) · ⭐ **V16 GATE OPEN under D-024** · ⚠⚠ **the six student-owned columns to the left are STILL `⬜` and that is open item 199 — the narrative block and the V16 GATE section of this same file record a complete student pass. Only the Reviewer and Final Status cells were filled in by R1** |
 | V16 | Wk7 P2 | 00:44:35 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/4m/11n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 222–225) · ⭐ **V17 GATE OPEN under D-024** · ⭐⭐ **the `D-004` deviation V16 declared is DISCHARGED** — V15's R1 returned 0C/0M and opened the gate unconditionally; only V15 item 197 reaches a record V16 amends (`A-095`) and V16's addendum does NOT inherit it · ⭐⭐ **`A-100`'s *"two weeks, 15 days"* CONFIRMED VERBATIM ON A THIRD ENGINE**; `PT-044` RE-DERIVED from its pre-registration and all three verdicts reproduce; **all five `A-106` pips EXACT**; `Q-017`'s paraphrase sub-pattern CONFIRMED · ⚠ **item 222: `A-101` declares the `M1`–`M4` construction unevidenced and V16's own chart frames carry it** (4 midpoint relations to ~1.5 px on 2 frames) — weighed for MAJOR, charged MINOR, **severity put to the owner** · ⚠ item 224: `PT-044`'s `W-D` ran 4 days wide, undeclared, and **that is the sole cause of its one "missed" prediction — run to its pre-registration it scores 5 OF 5** |
-| V17 | Wk8 P1 | 00:57:09 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⚠⚠ **OPENED WITH ITS D-004 GATE CLOSED — V16's R1 HAS NOT RETURNED — on the owner's 2026-08-14 authorisation. SECOND CONSECUTIVE LESSON ON UNREVIEWED GROUND. DECLARED, NOT GLOSSED; see the SUMMARY block.** · ⭐⭐ **`C-023` EXPLAINED** (daily candle vs indicator window) — **downgraded, not closed**, and it spawns **`C-024`, the corpus's first CROSS-LESSON contradiction** · ⭐⭐ **the 3-day cycle printed day by day**, with the first causal account (*"heavy net short"*) · ⭐⭐ **`A-010` AND `A-011` both advance** — *8 candles*, and the `W` is *in the closes* · ⭐ 7-point printed answer key; the student flashcard printed in full (**`A-112`**) · A-107–A-125, A-108 closed, C-024–C-027, **Q-018** (pattern REVERTS to a byte clone — **item 221's prediction falsified**) · **PT-045** wick size = path geometry, both-end presence ≠ · ⚠⚠ **this session's own headline claim was RETRACTED by a check it committed in advance — item 237** |
+| V17 | Wk8 P1 | 00:57:09 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 244–249) · ⭐ **V18 GATE OPEN under D-024** · ⭐⭐ **the `D-004` gate was ACTUALLY OPEN THE WHOLE TIME** — V16's R1 merged at `0fee48c` **17:16:53**, before V17's first content commit `f55c2f3` **17:20:11**; the addendum's *"returned after this session's last content commit"* is refuted by the graph (item 246) and **the compounding never happened** · ⭐⭐ **`PT-045` RE-DERIVED from its pre-registration before the runner was opened and ARM A REPRODUCES TO FOUR DECIMAL PLACES**; the calendar-consecutive artefact RE-EXECUTED and it really does return a clean 4-of-4 refutation; the homework's `<50 pips` filter recomputed at **0.8512 / 0.8893**; `C-023`, `C-024`, `C-027`, `A-011` all confirmed on a third engine or off the pixels · ⭐⭐ **THE FABRICATION PATTERN IS SOLVED FOR THE WHOLE COURSE — two templates, A for 1–15 and 21, B for 16–20; V18/V19/V20 are BYTE CLONES of V17's (item 254)** · ⚠ item 244: `[00:11:22]` is *"an extra **week in between**"* on THREE engines, not *"weekend"* — **item 238's inference INVERTS and is ANSWERED, not returned** |
 | V18 | Wk8 P2 | 00:46:08 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V19 | Wk9 P1 | 01:07:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V20 | Wk9 P2 | 00:45:49 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -2923,7 +2948,23 @@ Carry into V16, and read this before starting:
       content (an Asian-box chart with five EMAs), whatever the lesson and
       whatever the image behind it. Quarantine V16's trio on sight as Q-017;
       do not spend a session re-deriving what six entries have established.
-V18 GATE:            🔴 **CLOSED until V17's R1 returns (`D-004`).**
+V18 GATE:            🟢 **OPEN.** ⭐⭐ **V17's R1 RETURNED 2026-08-14** on branch
+                     `review/v17`: **REVISE, 0 CRITICAL / 0 MAJOR / 6 MINOR /
+                     13 NOTE, HIGH confidence, `D-003` satisfied.** Under
+                     **`D-024`** a round carrying zero `CRITICAL` and zero
+                     `MAJOR` **opens the gate for V18 immediately** — the six
+                     minors (items **244–249**) do **not** have to be applied
+                     first. ⚠ **AN OPEN GATE IS NOT A `PASS`: V17 is
+                     `IN REMEDIATION`, not `COMPLETE`.**
+                     ⭐⭐ **AND THE DEBT IS NOW ZERO DEEP.** V15, V16 and V17
+                     have all been independently reviewed and all three returned
+                     **0 CRITICAL / 0 MAJOR**. **A V18 session is the first in
+                     four lessons to open on fully reviewed ground.**
+                     ⭐ The owner's 2026-08-14 authorisation covers V18 and
+                     needs no fresh go-ahead; **`D-004` is now satisfied too.**
+
+                     ⚠⚠ **SUPERSEDED TEXT, RETAINED per `REMEDIATION_PROTOCOL.md`
+                     §2:** 🔴 **CLOSED until V17's R1 returns (`D-004`).**
                      ⭐ **UPDATED after V16's R1 landed at `0fee48c`** (REVISE,
                      0C/0M/4 MINOR/11 NOTE, HIGH, **V17 GATE OPEN under `D-024`**).
                      **V16 is reviewed. V17 is NOT** — its student pass is complete

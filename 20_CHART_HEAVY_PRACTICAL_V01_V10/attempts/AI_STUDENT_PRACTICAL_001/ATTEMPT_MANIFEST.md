@@ -1,0 +1,333 @@
+# ATTEMPT MANIFEST — AI_STUDENT_PRACTICAL_001
+
+- Start timestamp: 2026-08-13T20:53:22-04:00
+- Completion timestamp: 2026-08-13T21:02:55-04:00
+- Packet SHA-256: `1e7eb5641c7dc13619bb375c7f23af41bcc20ea7b80f0478d9c8f65682d5bdcb`
+- Asset-index SHA-256: `31e7a131a665a341154c13320d1ce233f05c3ae1d6b10816cf71e9385d8b3a41`
+- Phase A response SHA-256 (`FIRST_ATTEMPT.md`): `80c250871ebd1085b2b23855e0aa0e6f845ee98dc5fdef4735e078a05970f691`
+- Phase A case count: 60
+- Marked-chart count: 60
+
+## Files accessed
+
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/STUDENT_PRACTICAL_PACKET.md`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/RESULTS_TEMPLATE.md`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/ASSET_INDEX.md`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A01_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A01_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A02_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A02_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A03_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A03_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A04_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A04_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A05_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A05_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A06_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A06_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A07_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A07_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A08_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A08_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A09_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A09_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A10_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A10_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A11_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A11_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A12_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_A12_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B01_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_B01_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B02_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_B02_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B03_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_B03_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B04_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_B04_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B05_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_B05_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B06_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_B06_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B07_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_B07_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B08_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_B08_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C01_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_C01_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C02_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_C02_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C03_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_C03_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C04_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_C04_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C05_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_C05_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C06_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_C06_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C07_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_C07_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C08_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_C08_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D01_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_D01_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D02_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_D02_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D03_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_D03_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D04_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_D04_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D05_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_D05_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D06_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_D06_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D07_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_D07_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D08_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_D08_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E01_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_E01_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E02_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_E02_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E03_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_E03_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E04_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_E04_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E05_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_E05_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E06_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_E06_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E07_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_E07_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E08_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_E08_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F01_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_F01_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F02_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_F02_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F03_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_F03_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F04_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_F04_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F05_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_F05_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F06_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_F06_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F07_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_F07_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F08_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/charts/CH_F08_visible_only.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC01_V01_TYPICAL_WEEK.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC02_V02_POP_QUIZ.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC03_V03_FLASHCARD.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC04_V04_SECOND_LEG.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC05_V06_PUSHES.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC06_V07_STAIR_STEP.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC07_V08_HIGH_LOW.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC08_V10_SAFETY.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/attempt_builder.py`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/FIRST_ATTEMPT.md`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/ATTEMPT_MANIFEST.md`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A01_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A02_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A03_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A04_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A05_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A06_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A07_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A08_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A09_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A10_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A11_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/A12_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/B01_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/B02_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/B03_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/B04_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/B05_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/B06_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/B07_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/B08_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/C01_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/C02_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/C03_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/C04_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/C05_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/C06_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/C07_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/C08_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/D01_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/D02_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/D03_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/D04_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/D05_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/D06_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/D07_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/D08_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/E01_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/E02_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/E03_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/E04_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/E05_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/E06_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/E07_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/E08_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/F01_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/F02_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/F03_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/F04_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/F05_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/F06_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/F07_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/F08_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/G01_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/G02_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/G03_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/G04_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/G05_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/G06_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/G07_MARKED.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/attempts/AI_STUDENT_PRACTICAL_001/MARKED_CHARTS/G08_MARKED.png`
+
+## Visible-only CSV cutoff verification
+
+- A01: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A01_visible_only.csv` final `2013-01-07 01:30 UTC-5` <= decision `2013-01-07 01:30 UTC-5`: **PASS**
+- A02: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A02_visible_only.csv` final `2013-01-28 01:45 UTC-5` <= decision `2013-01-28 01:45 UTC-5`: **PASS**
+- A03: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A03_visible_only.csv` final `2013-02-25 01:00 UTC-5` <= decision `2013-02-25 01:00 UTC-5`: **PASS**
+- A04: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A04_visible_only.csv` final `2013-03-18 04:45 UTC-5` <= decision `2013-03-18 04:45 UTC-5`: **PASS**
+- A05: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A05_visible_only.csv` final `2013-04-08 04:00 UTC-5` <= decision `2013-04-08 04:00 UTC-5`: **PASS**
+- A06: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A06_visible_only.csv` final `2013-04-29 02:45 UTC-5` <= decision `2013-04-29 02:45 UTC-5`: **PASS**
+- A07: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A07_visible_only.csv` final `2013-05-27 03:15 UTC-5` <= decision `2013-05-27 03:15 UTC-5`: **PASS**
+- A08: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A08_visible_only.csv` final `2013-06-17 01:00 UTC-5` <= decision `2013-06-17 01:00 UTC-5`: **PASS**
+- A09: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A09_visible_only.csv` final `2013-07-08 02:00 UTC-5` <= decision `2013-07-08 02:00 UTC-5`: **PASS**
+- A10: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A10_visible_only.csv` final `2013-07-29 02:45 UTC-5` <= decision `2013-07-29 02:45 UTC-5`: **PASS**
+- A11: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A11_visible_only.csv` final `2013-08-19 02:15 UTC-5` <= decision `2013-08-19 02:15 UTC-5`: **PASS**
+- A12: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_A12_visible_only.csv` final `2013-09-16 05:00 UTC-5` <= decision `2013-09-16 05:00 UTC-5`: **PASS**
+- B01: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B01_visible_only.csv` final `2013-10-08 12:00 UTC-5` <= decision `2013-10-08 12:00 UTC-5`: **PASS**
+- B02: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B02_visible_only.csv` final `2013-10-29 12:00 UTC-5` <= decision `2013-10-29 12:00 UTC-5`: **PASS**
+- B03: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B03_visible_only.csv` final `2013-11-19 12:00 UTC-5` <= decision `2013-11-19 12:00 UTC-5`: **PASS**
+- B04: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B04_visible_only.csv` final `2013-12-10 12:00 UTC-5` <= decision `2013-12-10 12:00 UTC-5`: **PASS**
+- B05: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B05_visible_only.csv` final `2013-12-31 12:00 UTC-5` <= decision `2013-12-31 12:00 UTC-5`: **PASS**
+- B06: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B06_visible_only.csv` final `2014-01-21 12:00 UTC-5` <= decision `2014-01-21 12:00 UTC-5`: **PASS**
+- B07: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B07_visible_only.csv` final `2014-02-18 12:00 UTC-5` <= decision `2014-02-18 12:00 UTC-5`: **PASS**
+- B08: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_B08_visible_only.csv` final `2014-03-11 12:00 UTC-5` <= decision `2014-03-11 12:00 UTC-5`: **PASS**
+- C01: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C01_visible_only.csv` final `2014-04-04 16:45 UTC-5` <= decision `2014-04-04 16:45 UTC-5`: **PASS**
+- C02: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C02_visible_only.csv` final `2014-04-25 16:45 UTC-5` <= decision `2014-04-25 16:45 UTC-5`: **PASS**
+- C03: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C03_visible_only.csv` final `2014-05-16 16:45 UTC-5` <= decision `2014-05-16 16:45 UTC-5`: **PASS**
+- C04: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C04_visible_only.csv` final `2014-06-13 16:45 UTC-5` <= decision `2014-06-13 16:45 UTC-5`: **PASS**
+- C05: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C05_visible_only.csv` final `2014-07-04 16:45 UTC-5` <= decision `2014-07-04 16:45 UTC-5`: **PASS**
+- C06: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C06_visible_only.csv` final `2014-08-01 16:45 UTC-5` <= decision `2014-08-01 16:45 UTC-5`: **PASS**
+- C07: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C07_visible_only.csv` final `2014-08-22 16:45 UTC-5` <= decision `2014-08-22 16:45 UTC-5`: **PASS**
+- C08: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_C08_visible_only.csv` final `2014-09-12 16:45 UTC-5` <= decision `2014-09-12 16:45 UTC-5`: **PASS**
+- D01: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D01_visible_only.csv` final `2014-09-30 12:00 UTC-5` <= decision `2014-09-30 12:00 UTC-5`: **PASS**
+- D02: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D02_visible_only.csv` final `2014-10-28 12:00 UTC-5` <= decision `2014-10-28 12:00 UTC-5`: **PASS**
+- D03: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D03_visible_only.csv` final `2014-11-18 12:00 UTC-5` <= decision `2014-11-18 12:00 UTC-5`: **PASS**
+- D04: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D04_visible_only.csv` final `2014-12-09 12:00 UTC-5` <= decision `2014-12-09 12:00 UTC-5`: **PASS**
+- D05: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D05_visible_only.csv` final `2014-12-30 12:00 UTC-5` <= decision `2014-12-30 12:00 UTC-5`: **PASS**
+- D06: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D06_visible_only.csv` final `2015-01-20 12:00 UTC-5` <= decision `2015-01-20 12:00 UTC-5`: **PASS**
+- D07: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D07_visible_only.csv` final `2015-02-10 12:00 UTC-5` <= decision `2015-02-10 12:00 UTC-5`: **PASS**
+- D08: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_D08_visible_only.csv` final `2015-03-03 12:00 UTC-5` <= decision `2015-03-03 12:00 UTC-5`: **PASS**
+- E01: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E01_visible_only.csv` final `2015-03-31 12:00 UTC-5` <= decision `2015-03-31 12:00 UTC-5`: **PASS**
+- E02: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E02_visible_only.csv` final `2015-04-21 12:00 UTC-5` <= decision `2015-04-21 12:00 UTC-5`: **PASS**
+- E03: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E03_visible_only.csv` final `2015-05-12 12:00 UTC-5` <= decision `2015-05-12 12:00 UTC-5`: **PASS**
+- E04: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E04_visible_only.csv` final `2015-06-02 12:00 UTC-5` <= decision `2015-06-02 12:00 UTC-5`: **PASS**
+- E05: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E05_visible_only.csv` final `2015-06-23 11:45 UTC-5` <= decision `2015-06-23 11:45 UTC-5`: **PASS**
+- E06: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E06_visible_only.csv` final `2015-07-14 11:45 UTC-5` <= decision `2015-07-14 11:45 UTC-5`: **PASS**
+- E07: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E07_visible_only.csv` final `2015-08-04 11:45 UTC-5` <= decision `2015-08-04 11:45 UTC-5`: **PASS**
+- E08: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E08_visible_only.csv` final `2015-09-01 11:45 UTC-5` <= decision `2015-09-01 11:45 UTC-5`: **PASS**
+- F01: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F01_visible_only.csv` final `2015-09-22 12:00 UTC-5` <= decision `2015-09-22 12:00 UTC-5`: **PASS**
+- F02: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F02_visible_only.csv` final `2015-10-20 12:00 UTC-5` <= decision `2015-10-20 12:00 UTC-5`: **PASS**
+- F03: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F03_visible_only.csv` final `2015-11-17 12:00 UTC-5` <= decision `2015-11-17 12:00 UTC-5`: **PASS**
+- F04: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F04_visible_only.csv` final `2015-12-15 12:00 UTC-5` <= decision `2015-12-15 12:00 UTC-5`: **PASS**
+- F05: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F05_visible_only.csv` final `2016-01-19 12:00 UTC-5` <= decision `2016-01-19 12:00 UTC-5`: **PASS**
+- F06: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F06_visible_only.csv` final `2016-02-09 12:00 UTC-5` <= decision `2016-02-09 12:00 UTC-5`: **PASS**
+- F07: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F07_visible_only.csv` final `2016-03-01 12:00 UTC-5` <= decision `2016-03-01 12:00 UTC-5`: **PASS**
+- F08: `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_F08_visible_only.csv` final `2016-03-22 12:00 UTC-5` <= decision `2016-03-22 12:00 UTC-5`: **PASS**
+
+## Marked-chart hashes
+
+- A01: `MARKED_CHARTS/A01_MARKED.png` — `1d083db67f7001ad2c368d9859ae48572a77e1a641b24c6c95e7a7d4d0443cb3`
+- A02: `MARKED_CHARTS/A02_MARKED.png` — `00499a08b5869ff5708ee14885610570771cbe4e634b527c1858f483645e736e`
+- A03: `MARKED_CHARTS/A03_MARKED.png` — `237218cc5dec07f869d6b7c8961a9c76d8b1b1c8134cf91e54e419ebfe9ca41a`
+- A04: `MARKED_CHARTS/A04_MARKED.png` — `5f705592c71f06ccce5330ec5a599aa99b9e40f9bbee26f88a7fb711cc799542`
+- A05: `MARKED_CHARTS/A05_MARKED.png` — `ebf9d45dbb9bb02af8bf99cfb754b3b80d11efe35a3387ccce475aaa2c273d62`
+- A06: `MARKED_CHARTS/A06_MARKED.png` — `6ee6828c71fd93b4bbb31803af9c349e94834a886534e0c8196ac68b6154930d`
+- A07: `MARKED_CHARTS/A07_MARKED.png` — `0a6387b5d647511a4b052b0c82103b2fb7538c08f06b39c24e5d462a1c4f72b8`
+- A08: `MARKED_CHARTS/A08_MARKED.png` — `e52fcc2ae6926d840c9065236c181a1653bdc3a60ff8e9aeceac43ddc985a7f6`
+- A09: `MARKED_CHARTS/A09_MARKED.png` — `92131878514d12da12dc3bb8c643197bab918a80407c7aed7a8f75be43b834c8`
+- A10: `MARKED_CHARTS/A10_MARKED.png` — `268a63b10ba8da70a32a1cec0a77742776dff0bfa08c3559041b13f6c6f2a20b`
+- A11: `MARKED_CHARTS/A11_MARKED.png` — `21c8c9273068d20e858fbbd7dece9340333ba8c938b721bd28b33c944e13f357`
+- A12: `MARKED_CHARTS/A12_MARKED.png` — `7713f30a5c8eee2bb2f44e87b59980cc2c421221ebcaadf021937e8090cef113`
+- B01: `MARKED_CHARTS/B01_MARKED.png` — `8326f3ff5df2f214a818d626bee7739bc95e37e99849a635242bfe996c7511fb`
+- B02: `MARKED_CHARTS/B02_MARKED.png` — `e30e616ac299709a998e48635081b2575b2f489d7ce92e3878f2dcd1e9b2cf3e`
+- B03: `MARKED_CHARTS/B03_MARKED.png` — `1ef7a32bd7b7f92faf8ec7811cb4f4fa6ac9d20e74d28a5b06968c1af991acf8`
+- B04: `MARKED_CHARTS/B04_MARKED.png` — `996c347ab7471191c1f19fb37cdb200653ec3131ce2569eb1251c587fe7cc14b`
+- B05: `MARKED_CHARTS/B05_MARKED.png` — `00c580a1bcbd6c1d4a7645fadf20f7d406819c859473790005caa2b082e936de`
+- B06: `MARKED_CHARTS/B06_MARKED.png` — `10f76ea3c2d873d78410e0cd2f8a7da7656747cf5644c65b9af6464b84d41066`
+- B07: `MARKED_CHARTS/B07_MARKED.png` — `40df65439394a22017e075a2648c341d22e11c11a1db7de2f01d7881bd7d26e6`
+- B08: `MARKED_CHARTS/B08_MARKED.png` — `3c54d1dbd8b1205963b669af6dab55b49cdde26a5c5bb125ff3cda28bea18f98`
+- C01: `MARKED_CHARTS/C01_MARKED.png` — `f6a243a280eef53d5ff9234b7cd1cae1919aa08804b7593aad37c888d03e3016`
+- C02: `MARKED_CHARTS/C02_MARKED.png` — `78e6d5eb79f4858f9c5ac5f24b68ba57f139aa6ff52c79e642a75bd32f0a2e37`
+- C03: `MARKED_CHARTS/C03_MARKED.png` — `dc4e3d6f5b0c20e89113008abda50c86778ae104214549413e6dfe0e59166e12`
+- C04: `MARKED_CHARTS/C04_MARKED.png` — `db91e69964d84417c4e45cb29345571189719b8ab7cde6b6ea96a69f38b1430b`
+- C05: `MARKED_CHARTS/C05_MARKED.png` — `f11fd24d1396cd355254be15987bf3c3132cb00e269d364dc3a677d7356ba085`
+- C06: `MARKED_CHARTS/C06_MARKED.png` — `1505715bc967c0b9f18636b0c2bc4015a88e758078f15b07edf2890d3e7a5e56`
+- C07: `MARKED_CHARTS/C07_MARKED.png` — `a3795b63903386aa45ffb6d949e7de07a2b5096f17f3607634f5bf4066d49dba`
+- C08: `MARKED_CHARTS/C08_MARKED.png` — `bc7223695b9568f81f7ed1e984bf9d282bd7ded3baae73298f57f5e00815997c`
+- D01: `MARKED_CHARTS/D01_MARKED.png` — `2344d2371d6712c208886b6b9e4e7259da1ec7f6b5becf4352a4db33df4c9510`
+- D02: `MARKED_CHARTS/D02_MARKED.png` — `09c002c941c876dc4fa3c82811d6a3b741a845a0951ac055a75b69e457b80d35`
+- D03: `MARKED_CHARTS/D03_MARKED.png` — `f8b63cd8543b59b979a34888e29b3288ca3d183417210a1ea32b799c40f4a395`
+- D04: `MARKED_CHARTS/D04_MARKED.png` — `56557898b1a256082056f9667ccc82b850a910e8e5e77693c2a967faf66c4174`
+- D05: `MARKED_CHARTS/D05_MARKED.png` — `72f470aaceeb44f6467b9cb477617152f0c659991d42114fc3fda0aa10150811`
+- D06: `MARKED_CHARTS/D06_MARKED.png` — `4d3da1c5240ecdb9ecad9d74895705c7c468a51ad805ddd4ef3871e03a1b377e`
+- D07: `MARKED_CHARTS/D07_MARKED.png` — `9809b3b851150c04d6ecd7d2b81c694fed8cef96540740aca2f9e7d3bb81d516`
+- D08: `MARKED_CHARTS/D08_MARKED.png` — `2b3b807610ad0fb84a283fe58ed2f9b24944d79a46370fd2d350265ec7622909`
+- E01: `MARKED_CHARTS/E01_MARKED.png` — `8347beae24a3c42ea4daf6ef10a543cc94ff813ca9a023a19925006c3532a3dd`
+- E02: `MARKED_CHARTS/E02_MARKED.png` — `a51ea7d2f4317764be53002705a73c2be910834a3080010ddc34b08119f7ec17`
+- E03: `MARKED_CHARTS/E03_MARKED.png` — `afdb56f23201985e6bed3e8eb107a4173a7a5ec8c5364b78fb1e391df4d564b1`
+- E04: `MARKED_CHARTS/E04_MARKED.png` — `8bf77df15605415f3716ae2c292eec093080aa56698e4b1e790dc3516ef5eac4`
+- E05: `MARKED_CHARTS/E05_MARKED.png` — `ded44ec43e3f330bd9017cb439a7194af0a175a24622ecbb4c7fc8388d912f98`
+- E06: `MARKED_CHARTS/E06_MARKED.png` — `0765a5c515da11081f92e9e4f2686fe59e5b9286122c3ed82a0cb64757561308`
+- E07: `MARKED_CHARTS/E07_MARKED.png` — `0f5272c068d6bad11603a4a0bd64c2bc64bf258c691892911848f58290f0ff80`
+- E08: `MARKED_CHARTS/E08_MARKED.png` — `996e7993158de16db75d3d3050ccc31173670fbb7078a644e3987e678c347a4c`
+- F01: `MARKED_CHARTS/F01_MARKED.png` — `7b749889c6dfaaa470579aa71eec8e9a01436adf8843d416f89c09957915efcb`
+- F02: `MARKED_CHARTS/F02_MARKED.png` — `dc019d736cc182694073be58622a0510036b21ed86382d20d3e282b64f737404`
+- F03: `MARKED_CHARTS/F03_MARKED.png` — `a5f3efd8fe9192f05eb112489bc3c194eecd908de11007b7e1eaa080111d8bca`
+- F04: `MARKED_CHARTS/F04_MARKED.png` — `e92b3782e6098e8d01e3479481f0a63857b97b1988dfcd365d4be82f120b0016`
+- F05: `MARKED_CHARTS/F05_MARKED.png` — `b7e90dcde681a9da584b2fd9f7a2094bf8a23174dac8889e384ae9a313b49775`
+- F06: `MARKED_CHARTS/F06_MARKED.png` — `af84e9f8189a239b6c3275eadb7bde3238f00af093464df7e94b628c9543099d`
+- F07: `MARKED_CHARTS/F07_MARKED.png` — `605f1ad3791868f2925494c4f560a5210587b4c9fc7f04b7c1e33b4d32be7e19`
+- F08: `MARKED_CHARTS/F08_MARKED.png` — `8df4eb34335e1136c565af5a7289d43a4598783a541e917ae4075cf9da58af0d`
+- G01: `MARKED_CHARTS/G01_MARKED.png` — `abbb47caa46806772f92f891c068ff8380ef42a0e9c9fb61be6bc043ce4973fb`
+- G02: `MARKED_CHARTS/G02_MARKED.png` — `adbe209b4869b84f6dc2cf36e00fb238bcb70cbb35f68b089652cabc756800c7`
+- G03: `MARKED_CHARTS/G03_MARKED.png` — `a05769ad2d7c8620bf45cd3bcd16b0c88043823f7b85414c7ab72c016acb1a38`
+- G04: `MARKED_CHARTS/G04_MARKED.png` — `672b416b73672247b8325254d6aa0301ef82ce8ba9860be2b1651d253c2477b5`
+- G05: `MARKED_CHARTS/G05_MARKED.png` — `d2b1dd603811aa323374642cc1ae79e7d7bab09f02e29ff880c7074210d3d312`
+- G06: `MARKED_CHARTS/G06_MARKED.png` — `5a60861b3dcb9eadf52f1c5d886542fd8407ed0e4cf194dc2c3c401b42118a7e`
+- G07: `MARKED_CHARTS/G07_MARKED.png` — `d1ff3f5b397b4d6392d0526a6e2fbdfa811cae13d3d9161793b76eb03a022ce5`
+- G08: `MARKED_CHARTS/G08_MARKED.png` — `ed46700388794cf47807f0f682450eacc9677f0beadaf537e298c050254ed250`
+
+## Forbidden-access disclosure
+
+**INCIDENT DISCLOSED:** Before packet-order processing reached E01/G01, the student used a local tail/view inspection on the following assets that are assigned to later cases but were not yet the current case. No instructor key, rubric, blueprint, validation report, provenance file, instructor-only material, repository script, prior attempt, Video 11+ source, internet source, or unrelated repository evidence was accessed. The prematurely viewed assigned assets were not concealed:
+
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E01_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E02_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E03_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E04_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E05_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E06_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E07_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/visible_only_csv/CH_E08_visible_only.csv`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC01_V01_TYPICAL_WEEK.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC02_V02_POP_QUIZ.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC03_V03_FLASHCARD.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC04_V04_SECOND_LEG.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC05_V06_PUSHES.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC06_V07_STAIR_STEP.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC07_V08_HIGH_LOW.png`
+- `/Users/randyschutt/Desktop/Trading/MMM-Agents/20_CHART_HEAVY_PRACTICAL_V01_V10/assets/source_cards/SRC08_V10_SAFETY.png`
+
+## Signed firewall declaration
+
+I, **AI_STUDENT_PRACTICAL_001**, declare that I used no internet or external sources and accessed no instructor answer key, rubric, blueprint, validation output, instructor-only reveal, repository build/validation script, previous attempt, grading report, transcript, source note, review, mastery report, backtest, or Video 11+ material. I disclose the assigned-asset sequencing incident listed above. All originals were preserved; only duplicates under `MARKED_CHARTS/` were annotated. Signed: **AI_STUDENT_PRACTICAL_001** at **2026-08-13T21:02:55-04:00**.

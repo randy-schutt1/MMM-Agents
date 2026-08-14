@@ -9565,3 +9565,85 @@ deferred rather than applied. The main worktree, which was on `review/v16` with 
 belonging to a parallel session, **was not touched**. The dataset was **copied, never symlinked**
 (V16 §2's process error is not repeated) and verified `13 OK` + `4 OK` before a bar was read.
 **Nothing merged to integration.**
+
+---
+
+## 2026-08-14 — Reviewer Session (V17 R1)
+
+### Lesson
+**V17** · `Bootcamp1 Wk8 051312 Part1 (57mins).swf` · Week 8, 2012-05-13 · `TREND` · Part 1 of two.
+
+### Review Objective
+Independent mastery audit under `D-003`. Branch `review/v17`, cut from integration @ `1f58058`
+(post-`review/v16`, post-`fix/v16-r1-minors`). Submission reviewed: `video/v17` @ `245c756`.
+
+### Independence
+This session authored no V17 artifact. It re-computed the source `.swf`'s SHA-256 **and byte
+length**; extracted the audio itself and ran a **third ASR engine** (`faster-whisper`/CTranslate2
+`large-v3`) over seven segments, with a **fourth and fifth** (`openai-whisper` `medium.en` and
+`large-v3-turbo`) brought in to arbitrate one disputed word; **re-derived `PT-045` end to end** from
+its pre-registration at `7eaf4d1`, **before `run_pt045.py` or `mmm_lib` was opened**, in code sharing
+no line with either; **re-executed the superseded calendar-consecutive reading** to test whether the
+declared artefact reproduces; **recomputed the whole of `V17_HOMEWORK.md` §2/§2a/§3**; **re-hashed
+and re-diffed all 63 quarantined fabrication files across all 21 lessons**; opened **six frames** as
+images and read their burned-in timecodes and printed text; and **re-derived the `D-047`
+renumbering from the commit graph** rather than accepting the handed-over mapping.
+
+### Findings
+**REVISE — 0 CRITICAL / 0 MAJOR / 6 MINOR / 13 NOTE, HIGH confidence. V18 GATE OPEN under `D-024`.**
+
+⭐⭐ **What reproduced.** `PT-045`'s **arm A figures to four decimal places in every reported cell**
+(`n_rev` 117/288, median run 2/1, `P(2..4)` 0.4957/0.4132, `P(≥3│rev)` 0.2906/0.2465, unconditional
+0.2715/0.2689, `O6` +58.99/+48.62); the `O1`/`O2` split (`±0.013` against `+0.079…+0.119`, four cells
+of four); the calendar-consecutive artefact — **median run 1 and `CONTRADICTED AS STATED` in four
+cells of four**, and `pt045_output_reading1.txt` genuinely carrying `N3 = 0.0` four times; the
+homework's `< 50 pips` filter at **0.8512** arm A / **0.8893** arm B against 0.8509/0.8931, and the
+**25.5-pip median downward extension exact**; the source hash, byte length and 3,429.64 s duration;
+the **byte-identical** transcript body; all marker-grid statistics; `C-023`'s whole passage,
+`C-024`'s printed `2:00 To 3:00 AM, EST` slide, `C-027`'s *"GU"* and `A-011`'s *"W in the closing of
+price"*, all on a third engine or off the pixels; and `Q-018`'s zero-content-lines-differ finding.
+
+⚠⚠ **The `D-004` disclosure is wrong, and in V17's favour.** V16's R1 merged at `0fee48c`
+**17:16:53** — before V17's first content commit `f55c2f3` **17:20:11** and before all eight.
+**V17's compounding never happened.** Item 246.
+
+⚠⚠ **`[00:11:22]` is misheard.** Three engines say *"we took an extra **week in between**"*, not
+*"an extra **weekend** between"*. Item 238's inference **inverts**: nine calendar weeks carrying
+eight sessions is one skipped week, which is **`A-01`'s shape exactly**. **Answered by this round,
+not returned.** Item 244.
+
+⭐⭐ **The fabrication pattern is solved for the whole course.** All 21 trios diffed pairwise:
+**two content templates — A for lessons 1–15 and 21, B for 16–20.** V18, V19 and V20's trios are
+**byte clones** of V17's; V21's reverts. `Q-019`–`Q-022` are answered in advance. Item 254.
+
+**The six MINORs:** 244 (the misheard week), 245 (`A-010`'s addendum quotes an ASR error and
+understates its own evidence), 246 (the gate-timing addendum), 247 (item 239's scope — the ~25%
+arm-B exclusion is a `load_m1` property, not a `mmm_lib` one, and the submission's own homework is
+the counterexample), 248 (*"17:00 dealer time"* is an unmarked inference in five files), 249
+(`Q-018`'s `RULES.md` diff count is 10 lines / 5 pairs, not 12 / six).
+
+### Required Corrections
+Items **244–249**, enumerated with exact fixes in `18_REVIEW/V17/V17_REVIEW_R1.md` §5. **None is a
+prerequisite for V18 work** (`D-024`); all six are prerequisites for V17 reaching `COMPLETE`.
+
+### Reviewer Questions for the Owner
+Item **185**'s gap audit is **still not discharged** — four consecutive rounds have passed it
+forward. Item **188**'s validator is still unbuilt and would have caught items 249 and 225 and
+pre-empted the **third consecutive** `D-047` collision. A **broken Git ref**
+`refs/heads/review/v16 2` breaks `git log --all` repository-wide and is one owner command to clear.
+Item **36** is owed for the ninth consecutive lesson.
+
+### Decision
+```text
+REVISE — 0 CRITICAL / 0 MAJOR / 6 MINOR / 13 NOTE, HIGH confidence.
+V18 GATE OPEN under D-024.  V17 IN REMEDIATION, NOT COMPLETE.
+ADVANCEMENT: AUTHORIZED for V18.
+```
+
+### Git
+`review/v17` cut from `1f58058`; `video/v17` merged at `0122c50` with the `D-047` renumbering
+**201–208 → 236–243** applied and disclosed; review committed and merged to integration.
+`scripts/validate_project.py`: 103 passed, 0 warnings, 0 failures.
+
+### Next Review Trigger
+Student remediation of items 244–249, or a V18 submission.

@@ -1,0 +1,171 @@
+{
+  "status": "PASS",
+  "checks": {
+    "case_id_alignment": "88 unique IDs aligned across packet, key, and matrix",
+    "required_fields_and_separation": "all key fields present 88 times; answer/reasoning rows absent from student packet",
+    "lesson_and_integration_floor": {
+      "V01": 6,
+      "V02": 7,
+      "V03": 7,
+      "V04": 7,
+      "V05": 6,
+      "V06": 7,
+      "V07": 6,
+      "V08": 7,
+      "V09": 6,
+      "V10": 9,
+      "integration": 20
+    },
+    "case_balance": {
+      "positive/valid": 34,
+      "negative/lookalike": 22,
+      "borderline/insufficient": 21,
+      "neutral": 11
+    },
+    "ten_mastery_dimensions": {
+      "Ambiguity handling": 10,
+      "Contradiction handling": 7,
+      "Discrimination": 15,
+      "Exceptions": 4,
+      "Homework application": 4,
+      "Manual backtesting": 7,
+      "Provenance": 7,
+      "Recall": 9,
+      "Recognition": 10,
+      "Sequence": 9
+    },
+    "difficulty_coverage": {
+      "foundational": 25,
+      "intermediate": 23,
+      "advanced": 25,
+      "integration": 15
+    },
+    "task_type_floors": {
+      "markup": 63,
+      "borderline_or_insufficient": 21,
+      "calculation_or_quantitative_risk": 12
+    },
+    "outcome_application_separation": {
+      "valid_but_loses": [
+        "V06-04"
+      ],
+      "invalid_but_wins_or_profitable_lookalike": [
+        "V01-04",
+        "V04-03",
+        "V07-02",
+        "V10-04",
+        "I02",
+        "I10"
+      ]
+    },
+    "explicit_uncertainty_answers": [
+      "V01-05",
+      "V02-04",
+      "V02-05",
+      "V03-05",
+      "V04-04",
+      "V04-05",
+      "V05-03",
+      "V05-06",
+      "V06-02",
+      "V07-01",
+      "V07-06",
+      "V08-05",
+      "V08-06",
+      "V09-06",
+      "V10-06",
+      "V10-07",
+      "V10-08",
+      "I03",
+      "I06",
+      "I15",
+      "I16",
+      "I17",
+      "I18"
+    ],
+    "recognition_clusters": "four clusters meet at least 3 valid, 3 invalid/lookalike, and 2 borderline/insufficient",
+    "chart_boundaries": {
+      "CH01": {
+        "rows": 38,
+        "first": "2013-02-03 17:00:00",
+        "last": "2013-02-04 02:15:00"
+      },
+      "CH02": {
+        "rows": 173,
+        "first": "2013-05-12 17:00:00",
+        "last": "2013-05-14 12:00:00"
+      },
+      "CH03": {
+        "rows": 173,
+        "first": "2013-09-08 17:00:00",
+        "last": "2013-09-10 12:00:00"
+      },
+      "CH04": {
+        "rows": 34,
+        "first": "2014-02-09 17:00:00",
+        "last": "2014-02-10 01:15:00"
+      },
+      "CH05": {
+        "rows": 173,
+        "first": "2014-07-13 17:00:00",
+        "last": "2014-07-15 12:00:00"
+      },
+      "CH06": {
+        "rows": 173,
+        "first": "2014-10-12 17:00:00",
+        "last": "2014-10-14 12:00:00"
+      },
+      "CH07": {
+        "rows": 173,
+        "first": "2015-03-08 17:00:00",
+        "last": "2015-03-10 12:00:00"
+      },
+      "CH08": {
+        "rows": 173,
+        "first": "2015-08-09 17:00:00",
+        "last": "2015-08-11 12:00:00"
+      },
+      "CH09": {
+        "rows": 480,
+        "first": "2015-10-11 17:00:00",
+        "last": "2015-10-16 16:45:00"
+      },
+      "CH10": {
+        "rows": 173,
+        "first": "2015-11-08 17:00:00",
+        "last": "2015-11-10 12:00:00"
+      },
+      "CH11": {
+        "rows": 173,
+        "first": "2015-12-06 17:00:00",
+        "last": "2015-12-08 12:00:00"
+      }
+    },
+    "first_breach_cases": "CH01 and CH04 end exactly on the first post-band breach",
+    "source_card_identity": {
+      "CARD_V04": "1bced969ad9a34529c15cc491e3d9436d51ba4d561e39a97200b608dae4aefbf",
+      "CARD_V07": "155068a1e219ed4cd19fedff10106428b02b7ff5915039ebab20ee467fff5ffa",
+      "CARD_V08": "2e55a422e022969219b06438b6190a22ececbfef30130747c83181362482e15a",
+      "CARD_V08_STAGES": "e737149e3d4e389c77b19eee79120de03a541361f5fa51eb008421b47c5484fe",
+      "CARD_V09": "3313cc466b8ece2f7dda2eb7553f6add055f7c16e7628dfd003ad8ef5cff80c7",
+      "CARD_V10A": "daaac0a48c9285a857ea0cee4dbeca2a184edb14196116ddf35d120ccb9a3273",
+      "CARD_V10B": "44b344d08be42a0290f8f1a8b9bbe3695d672517e39c3412a759bb6c17c8d22c",
+      "CARD_V10_DISTANCE": "a4422aeb86f1bef75c7f76aa40c870de26f723210d768d6d8af0076d3a287a15"
+    },
+    "asset_resolution": "every case asset ID resolves through the generated asset index",
+    "citation_resolution": "all cited filenames and 42 formal IDs resolve in repository evidence",
+    "source_video_hashes": {
+      "V01": "c7e660f4b187e0ef81c05d38cc031cb523b56ec22c0c96db4b4dd41303d84030",
+      "V02": "03079acf739119884911075b8332482a42a6ea178bc0ddb5fed216b9d20bce9f",
+      "V03": "efe256d81dddf546cc64a4d35c40920ab304562fb57bd2bcf46fed4bc773e273",
+      "V04": "10d8fe7e0410a12c605abb19cebaae8ad5f39ec78a4ab2e8da553117fe60fb7c",
+      "V05": "c606520de74d8b0f1d4800b026f252f9a89d4ecc66bb5db9ff3992dcf896fcc1",
+      "V06": "382207b3dc10872e8dac6c308d98dc3c4a1d26e0ba2f639a5836d4e5aac96e86",
+      "V07": "cb6a8520c55f7c15f0c0d527026ea021c6d7172800c4269c4f4afa255ea72d34",
+      "V08": "6beedb40b7c211cb019b37ff69002e8e625fca4521c3cf3155f946edc5f8b767",
+      "V09": "b0f36b5540de7a76397c80202cf6a721a2a18aa9011c5698238c6bcc624168d4",
+      "V10": "a37ba371ca2d5c807553c7b9a827a91c479509dd5223b64eadf85995481a3de1"
+    },
+    "v11_boundary": "validator hashes V01\u2013V10 only; no V11 lesson artifact is addressed"
+  }
+}
