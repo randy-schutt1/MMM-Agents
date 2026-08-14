@@ -430,6 +430,13 @@ reaching `COMPLETE`.
    Deleting a ref is not this review's call; **one command from the owner clears it.**
 4. **Item 36** — the project still has no vocabulary for a dimension that is `BLOCKED BY D-030` and
    excluded from pass/fail. Ninth consecutive lesson.
+5. ⚠ **SELF-CHARGED, item 263 — this reviewer's own `git add -A` in commit `0cd31a5` swept 614
+   files from four pre-existing untracked trees into the review commit.** They were removed from the
+   index in the following commit and are untracked again, exactly as at session start; history was
+   **not** rewritten. ⛔ **Whether `19_STUDENT_TEST_SUITE_V01_V10/`,
+   `20_CHART_HEAVY_PRACTICAL_V01_V10/`, `21_EXTREMA_SIGNATURE_TRADE_PRACTICAL_V01_V10/` and
+   `06_MANUAL_BACKTEST/tools/` SHOULD be committed is the owner's call and is deliberately left
+   open.** It does not touch the V17 verdict.
 
 ---
 
@@ -444,6 +451,9 @@ CRITICAL ISSUES: none
 MAJOR ISSUES:    none
 MINOR:           6   (items 244-249)
 NOTE:           13   (items 250-262)
+
+SELF-CHARGED:    1   (item 263 -- this reviewer's own staging error, not a
+                     finding against the submission; PUT TO THE OWNER)
 
 V18 GATE: OPEN under D-024 -- zero CRITICAL, zero MAJOR.
 V17 STATUS: IN REMEDIATION. NOT COMPLETE until items 244-249 are applied and verified.
