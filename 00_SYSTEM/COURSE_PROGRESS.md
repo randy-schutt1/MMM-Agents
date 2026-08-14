@@ -118,9 +118,29 @@ V17 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
                      on that second sweep came back -1, NOT 0 -- same script,
                      same machine, forty minutes apart. Item 205.
 
-                     V18 GATE CLOSED until V16's R1 returns (D-004) -- the
+                     ⭐ ADDENDUM, AFTER THE WORK WAS COMPLETE: V16's R1 HAS NOW
+                     RETURNED and merged to integration at 0fee48c -- REVISE,
+                     0 CRITICAL / 0 MAJOR / 4 MINOR / 11 NOTE, HIGH confidence,
+                     V17 GATE OPEN under D-024. The D-004 timing defect V16
+                     declared is DISCHARGED. So V17's PROVISIONALITY ON V16 IS
+                     DISCHARGED TOO, and the compounding warned about above is
+                     RETIRED. ⚠ The block above is NOT retracted: it is accurate
+                     as the record of what V17 was OPENED AGAINST, and every V17
+                     artifact was produced under a closed gate. ⚠ V17's OWN
+                     status is unchanged -- still REVIEW REQUIRED, still no R1.
+
+                     ⚠⚠ AND THE D-047 RENUMBERING THIS SESSION ANTICIPATED HAS
+                     HAPPENED. V16's items were renumbered 195-200 -> 216-221 at
+                     4d5dbdf; integration now runs to 235. V17's items 201-208
+                     COLLIDE and become 236-243 on integration, and every V16
+                     item cited inside the V17 set needs +21: 197->218, 198->219,
+                     199->220, 200->221 (188 is a V15 item and is unaffected).
+                     The full mapping is in V17_MASTERY_REPORT.md 0b. NOT applied
+                     on the task branch, per D-038a / D-047 4.
+
+                     V18 GATE CLOSED until V17's own R1 returns (D-004) -- the
                      OWNER's authorisation covers V18 and D-004 does not.
-                     See V17_MASTERY_REPORT.md 0 and 5.
+                     See V17_MASTERY_REPORT.md 0, 0a and 5.
 
 V16 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
                      branch video/v16 (worktree MMM-Agents-v16, D-038).
@@ -2871,22 +2891,29 @@ Carry into V16, and read this before starting:
       content (an Asian-box chart with five EMAs), whatever the lesson and
       whatever the image behind it. Quarantine V16's trio on sight as Q-017;
       do not spend a session re-deriving what six entries have established.
-V18 GATE:            🔴 **CLOSED until V16's R1 returns (`D-004`).** V16's student
-                     pass is complete and submitted as REVIEW REQUIRED on branch
-                     `video/v16`; V17's is complete and submitted on `video/v17`.
+V18 GATE:            🔴 **CLOSED until V17's R1 returns (`D-004`).**
+                     ⭐ **UPDATED after V16's R1 landed at `0fee48c`** (REVISE,
+                     0C/0M/4 MINOR/11 NOTE, HIGH, **V17 GATE OPEN under `D-024`**).
+                     **V16 is reviewed. V17 is NOT** — its student pass is complete
+                     and submitted as REVIEW REQUIRED on branch `video/v17`.
+                     ⭐ **The debt is no longer two deep: it is one deep**, and the
+                     highest-value action available to this project is now
+                     **reviewing V17**.
                      `D-003` reserves closure to an independent reviewer.
                      ⭐ **THE OWNER'S PERMISSION HALF IS ALREADY GRANTED AND DOES
                      NOT NEED ASKING AGAIN** — the 2026-08-14 authorisation covers
                      the remainder of the training, V16 onward. **No V18 session
                      needs a fresh go-ahead.**
-                     ⚠⚠ **BUT PERMISSION IS NOT A GATE, AND THE DEBT IS NOW TWO
-                     DEEP.** V16 ran with its gate closed; V17 ran with its gate
-                     closed. **A V18 session would be the THIRD consecutive lesson
-                     built on an unreviewed predecessor**, and V17 would itself be
-                     unreviewed when V18 inherits it. **The compounding is the
-                     risk, not the permission.**
-                     ⭐⭐ **REVIEWING V16 IS STILL THE HIGHEST-VALUE ACTION
-                     AVAILABLE TO THIS PROJECT.**
+                     ⚠⚠ **BUT PERMISSION IS NOT A GATE.** V16 ran with its gate
+                     closed and V17 ran with its gate closed; **V16's R1 has since
+                     returned and discharged V16's**, but **V17's has not.** A V18
+                     session would still inherit an **unreviewed V17**.
+                     ⭐⭐ **REVIEWING V17 IS NOW THE HIGHEST-VALUE ACTION AVAILABLE
+                     TO THIS PROJECT.** V16's R1 is the evidence for that claim:
+                     it returned **0 CRITICAL / 0 MAJOR**, discharged a declared
+                     `D-004` defect, confirmed `A-100` on a third engine and
+                     re-derived `PT-044` from its pre-registration — **one review
+                     retired a whole qualification.**
 
 Carry into V18, and read this before starting:
 

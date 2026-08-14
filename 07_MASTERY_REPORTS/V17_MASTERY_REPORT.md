@@ -10,9 +10,14 @@ The first half carries only the deck's running head.
 
 ## §0 — ⚠⚠ GATE STATUS, DECLARED FIRST AND NOT SOFTENED
 
+> ⭐ **READ `§0a` WITH THIS SECTION. V16's R1 RETURNED AFTER THIS SESSION'S LAST CONTENT COMMIT AND
+> THE V17 GATE IS NOW OPEN.** `§0` is retained unedited because it is the record of what V17 was
+> **opened against**, and every V17 artifact was produced under a closed gate
+> (`REMEDIATION_PROTOCOL.md` §2).
+
 **V17 WAS OPENED WITH ITS `D-004` GATE CLOSED.** `COURSE_PROGRESS.md`'s V17 GATE block read
-🔴 **CLOSED until V16's R1 returns**, and **V16's R1 has not returned.** It is in progress in a
-parallel session and had not landed when this session finished.
+🔴 **CLOSED until V16's R1 returns**, and **V16's R1 had not returned at any point during this
+session's work.** It was in progress in a parallel session.
 
 **What authorised the work, and what it does not authorise:**
 
@@ -32,6 +37,63 @@ retires the compounding; another student pass deepens it. **This is the second l
 unreviewed ground.**
 
 ⚠ **And item 185's gap audit is not discharged by anything in this session.**
+
+---
+
+## §0a — ⭐ ADDENDUM, ADDED AFTER THE WORK WAS COMPLETE: **V16's R1 HAS NOW RETURNED, AND THE V17 GATE IS OPEN**
+
+**Written 2026-08-14, after this session's last content commit (`346417b`), on checking the
+integration branch before reporting.** It is added rather than folded into `§0` so that the record
+of **what V17 was actually opened against** stays intact (`REMEDIATION_PROTOCOL.md` §2).
+
+**V16's R1 returned and merged to integration at `0fee48c`:**
+
+> **REVISE — 0 CRITICAL / 0 MAJOR / 4 MINOR / 11 NOTE, HIGH confidence. ⭐ V17 GATE OPEN under
+> `D-024`.** The `D-004` timing defect V16 declared is **DISCHARGED**; `A-100`'s *"two weeks, 15
+> days"* is confirmed **verbatim on a THIRD ASR engine**; `PT-044` **re-derives from its
+> pre-registration with all three verdicts intact**; all five `A-106` pip figures are **exact**.
+> ⚠ The owner's gap audit is **still not discharged**, and item 222's severity is put to the owner.
+
+### What changes, and what does not
+
+| | |
+|---|---|
+| ⭐ **The V17 gate is OPEN under `D-024`** — a `REVISE` with 0 CRITICAL and 0 MAJOR opens it | **The compounding warned about in `§0` is RETIRED.** V17 is no longer the second lesson standing on an unreviewed predecessor |
+| ⚠ **`§0` was accurate WHEN WRITTEN and is not retracted** | V16's R1 had not returned at any point during this session's work. **V17 was opened, and every artifact in it was produced, under a CLOSED gate.** That is a fact about the process, not about the outcome |
+| ⚠ **V17's own gate status is UNCHANGED** | **V17 is still submitted as `REVIEW REQUIRED` and still has no R1.** `D-003` reserves closure to an independent reviewer |
+| ⭐ **V17's provisionality on V16 is discharged** | `§0`'s instruction to treat V17's artifact set as *"PROVISIONAL PENDING V16's R1"* is **satisfied**. The V16 records V17 leans on (`A-101`, `A-100`, `C-023`, the candle-colour rule, `Q-017`'s detection note) have now been independently reviewed |
+| ⚠ **`A-100` moved while V17 was being written** | R1 confirms *"two weeks, 15 days"* on a **third** engine. V17's `A-100` addendum (which adds only `A-113`'s `TIER 2` *"close enough"*) is **unaffected** but should be read alongside it |
+
+⭐⭐ **AND ONE V17 FINDING IS SHARPENED BY IT.** `§0` and the V18 GATE both argue that *"reviewing
+V16 is the highest-value action available to this project."* **It was done, and it returned 0
+CRITICAL / 0 MAJOR and discharged a `D-004` defect.** That is evidence for the claim, not against it
+— and **the V18 gate remains CLOSED on V17's own unreviewed status**, which is the point the
+carry-forward was making.
+
+## §0b — ⚠⚠ THE `D-047` RENUMBERING THIS REPORT ANTICIPATED HAS NOW ACTUALLY HAPPENED
+
+`§6` warned that items 201–208 might be renumbered on integration. **They must be, and so must
+several of the item numbers cited throughout the V17 artifact set.** The mapping is recorded here so
+the integration session does not have to re-derive it:
+
+| | On this branch | On integration (`0fee48c`) |
+|---|---|---|
+| **V16's student items** | 195–200 | ⭐ **216–221** *(renumbered at `4d5dbdf` under `D-047`, because `review/v15` landed claiming 189–215 after `video/v16` had allocated against the pre-V15 state)* |
+| **V17's items (this session)** | **201–208** | ⛔ **COLLIDE.** Integration already runs to **235** (V16 R1 took 222–235). **V17's items become 236–243** |
+
+**Every citation of a V16 item number inside the V17 artifact set therefore needs the `+21` shift:**
+
+| Cited in V17 as | Actually | Where it appears |
+|---|---|---|
+| item **188** | *(V15 student — unaffected, V15 landed first)* | `INDEX.md` §0.2; `V17_SOURCE_NOTES.md` §0 `D3` |
+| item **197** | ⭐ **218** | `INDEX.md` §0.2; `V17_SOURCE_NOTES.md` §0 `D3`; mastery `§2 D3` |
+| item **198** | ⭐ **219** | `INDEX.md` §6, §6.4; item 205; mastery `§4` |
+| item **199** | ⭐ **220** | `INDEX.md` §1; item 202; mastery `§2 S1` |
+| item **200** | ⭐ **221** | `Q-018` §0; item 201; mastery `§4` |
+
+⚠ **These are NOT edited on this branch.** `D-038a` puts cross-cutting renumbering on the
+integration branch, and `D-047` §4 makes it the merging session's act — the same treatment V15's
+187–194 → 189–196 received. **This table is the hand-off.**
 
 ---
 
