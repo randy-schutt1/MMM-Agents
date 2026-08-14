@@ -2090,3 +2090,167 @@ result**, without reference to the table in §4a.
 - **`VISUAL_INDEX.md`:** **13 of 21 audited** (V01–V13), **13 fabricated.** V13 is the **third
   consecutive** lesson whose one surviving image is a **title card** described as a chart, and the
   clustering now shows **15 of 21 lessons covered by exactly two documents**.
+
+---
+
+## Q-015 — Lesson 14 (`Bootcamp1 Wk5 041512 Part2`): `NOTES.md`, `RULES.md`, `VISUAL_INDEX.md`
+
+**Filed:** 2026-08-14 by the V14 student session
+**Location:** `01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/per_lesson/14_Bootcamp1_Wk5_041512_Part2_48mins/`
+**Status:** **QUARANTINED ON SIGHT.** No V14 artifact cites any of these three files as evidence.
+Every reference in the V14 set is to **this register entry**, never to the files.
+
+**This is the FOURTH CONSECUTIVE lesson carrying the `VISUAL_INDEX.md` pattern** — `Q-012` (V11),
+`Q-013` (V12), `Q-014` (V13), and now V14.
+
+---
+
+### 1. `VISUAL_INDEX.md` — a byte-level clone of V13's, with ZERO content lines changed
+
+`diff` against lesson 13's file, re-run this session:
+
+```text
+diff 13_…Wk5_041512_Part1/VISUAL_INDEX.md  14_…Wk5_041512_Part2/VISUAL_INDEX.md
+  -> 8 differing lines = FOUR changed pairs:
+       the .swf filename, and three VIDEO_14 -> VIDEO_15 screenshot names.
+     ZERO content lines differ.
+```
+
+**Identical to the V12→V13 result `Q-014` §2 measured.** The three "What is visible" strings, the
+three "Instructor's Explanation" strings and the three "Trading Significance" strings are **the same
+sentences**, describing a **48-minute lesson on the price board** with text written for a lesson
+about EMAs, M-formations and TDI shark fins.
+
+### 2. ⭐ THE SURVIVING IMAGE IS A BLANK POWERPOINT EXIT SCREEN DESCRIBED AS A FIVE-EMA CHART
+
+`VISUAL_INDEX.md` indexes **three** screenshots. **Only `VIDEO_15_SCREENSHOT_001_00-02-00.jpg`
+exists on disk** — `002` and `003` are absent, confirmed this session.
+
+**`001` was opened and measured.** It is `1024 × 768`, and:
+
+```text
+mean luminance          1.0   (of 255)
+fraction of pixels > 60   0.0032
+light pixels confined to  rows 11-20 and rows 11 / 752 (the window border)
+```
+
+**It is 99.7% pure black.** The only content is one line of small light text at rows 11–20,
+which at 10× autocontrast reads:
+
+```text
+End of slide show, click to exit.
+```
+
+**It is PowerPoint's end-of-slideshow screen.**
+
+`VISUAL_INDEX.md` describes it as:
+
+> - Visual Type: **Chart / Slide Overview**
+> - What is visible: **Asian Box accumulation range with 5, 13, 50, 200, and 800 EMAs.**
+> - Instructor's Explanation: *Setting up session boundaries and explaining accumulation mechanics.*
+> - Trading Significance: *Defines initial liquidity boundaries for session manipulation.*
+
+⭐ **A blank black screen is indexed as a chart carrying five named moving averages.** This is the
+strongest single demonstration of fabrication in this register: the three preceding entries found
+**title cards** described as charts, and a title card at least carries pixels. **This one carries
+none.**
+
+**And the timestamp is wrong too.** The file claims `[00:02:00]`. At `[00:02:00]` this lesson is
+showing the `CANDLES` formation list (`V14_00-01-15_…png` through `V14_00-02-40_…png`); the actual
+end-of-slideshow state occurs at the **end** of the file. The image is real — it came off some
+machine — but **nothing about how it is labelled is true.**
+
+### 3. `NOTES.md` and `RULES.md` — near-clones, and this lesson REPUDIATES their central rule
+
+`diff` against lesson 13's files, re-run this session:
+
+| File | Differing lines | What actually differs |
+|---|---|---|
+| `NOTES.md` | **6** | the `.swf` filename, `Part 1`→`Part 2`, and **one invented `Topic Focus` line** |
+| `RULES.md` | **12** | the `.swf` filename, `V14-R`→`V15-R` rule prefixes, three `VIDEO_14`→`VIDEO_15` visual references, `Part 1`→`Part 2` |
+
+**The only substantive difference between V13's and V14's `NOTES.md` is a fabricated topic line:**
+
+| Lesson | Invented `Topic Focus` |
+|---|---|
+| 13 | *"Stop Loss Buffers, Account Preservation, Position Sizing"* |
+| 14 | *"GBPJPY / NAS100 Spread & Buffer Adjustments, Trailing Stops"* |
+
+**Negative string checks against the 600-marker verbatim body, run this session:**
+
+| String | Occurrences in V14 |
+|---|---|
+| `GBPJPY` / `GBP/JPY` | **0** |
+| `NAS100` | **0** — the only `nas` substring in the file is *"some **nas**ty emails"* `[00:04:09]` |
+| `trailing` | **0** |
+| `Asian Box` | **0** — the speaker says *"Asian range"* and *"blue box"* |
+| `800` | **0** |
+| `Mustard` / `Mayo` / `Blueberry` / `Raspberry` | **0 each** |
+| `Water` | **1**, and it is *"blood in the **water**"* `[00:44:59]` — **the TDI's red signal line, not a moving average** |
+| `30 to 90` | **0** |
+| `10 to 15` | **0** |
+| `Peak Formation` / `PFH` / `PFL` | **0 each** |
+| `5/13` | **0** |
+| `RRR` | **0** — from the `TRANSCRIPT.md` header's *"Risk-to-Reward Optimization (1:3 to 1:5 RRR)"* |
+
+⭐ **`NAS100` is an anachronism as well as a fabrication.** It is a CFD index ticker, in a 2012
+retail-forex bootcamp whose entire content is the GBP/USD price board.
+
+### 4. ⭐ THE FABRICATED RULE IS THE OPPOSITE OF WHAT THE LESSON TEACHES
+
+`RULES.md` `V15-R001`, presented as a **verbatim** instructor quotation:
+
+> **Instructor Statement:** *'Wait for the M15 candle to close before taking the 5/13 EMA cross.'*
+> **Timestamp:** `[00:05:00]`
+> **Notes:** *"Preserved verbatim rule from instructor."*
+
+**The actual `[00:05:04]` line is:** *"Okay, so this is a picture what I just discussed."*
+
+**And the rule is contradicted by the lesson's entire assignment.** V14's week's work is:
+
+> `[00:26:55]` *"Look at the high low board. **Do not look at candles, do not look at TDI, do not
+> look at nothing but this board.** So help me God."*
+> `[00:31:40]` *"**No Gordon, there's no 15 minute period, there's no periods here.** You're not
+> looking at candles… **there's no 15 minute, there's no one hour, that's all bullshit, throw it
+> out.**"*
+> `[00:46:28]` *"**No charts, Dave. No charts.**"*
+
+**A fabricated rule instructing the student to trade a 5/13 EMA cross on a closed M15 candle has
+been attached to the one lesson in the corpus that forbids looking at candles, EMAs, the 15-minute
+timeframe and charts altogether.**
+
+`V15-R002` — *"Place your stop loss 10 to 15 pips beyond the High or Low of the Day"* at
+`[00:18:00]` — is fabricated on the same pattern. **The lesson's actual stop rule is `5` pips**,
+stated four times and **printed on the assignment slide**; `10 to 15` occurs **0** times.
+
+### 5. The `TRANSCRIPT.md` header block is fabricated; the BODY is not
+
+The pre-ingestion `TRANSCRIPT.md` carries a `# VIDEO` header claiming
+*"Primary Topics: **Risk-to-Reward Optimization (1:3 to 1:5 RRR) & Capital Protection Rules**"*.
+The lesson contains **no risk-to-reward material of any kind**; `RRR` and `1:3` occur **0** times.
+
+**The verbatim body is a different matter and passed verification** — 600 monotonic markers, a
+3.0 s tail against measured audio, and it preserves its own mishearings. `V14_TRANSCRIPT.md`
+copies **only the body** and says so in its SOURCE table. **The header is not carried over**, and
+its *"Course Position: Video 15 of 21"* is wrong under `D-017` §2 in any case.
+
+### 6. Independence of the V14 artifacts
+
+**These three files were opened only to quarantine them.** No V14 artifact draws on any of them.
+`V14_SOURCE_NOTES.md` and `V14_INTERPRETATION.md` were written from the verified transcript and the
+session's own frames; every EMA statement in the V14 set rests on
+`V14_00-13-05_emas-yellow-red-cyan-white-low-test-candle.png`, **which this session opened and read
+itself**, and on `D-043` — **not** on `NOTES.md`'s EMA table, which this entry shows to be
+unsourced and, on the `Water = 13` row, **wrong under `D-043`** (Water is the **50**).
+
+### Running tally for the fabrication pattern
+
+- **`RULES.md`:** 21 of 21 covered. Shown by exact `diff` on **five** lessons — V10 (`Q-011`),
+  V11 (`Q-012`), V12 (`Q-013`), V13 (`Q-014`), V14 (this entry) — to be one document re-badged by
+  string substitution.
+- **`NOTES.md`:** **14 of 21 audited** (V01–V14), **14 fabricated, zero exceptions.**
+- **`VISUAL_INDEX.md`:** **14 of 21 audited** (V01–V14), **14 fabricated.** ⭐ **V14 is the FOURTH
+  CONSECUTIVE lesson whose one surviving image is a non-chart described as a chart** — and the
+  first where the image is **blank**. V11, V12 and V13 were title cards; V14 is PowerPoint's
+  *"End of slide show, click to exit."* screen described as *"Asian Box accumulation range with
+  5, 13, 50, 200, and 800 EMAs."*

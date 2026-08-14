@@ -1,0 +1,98 @@
+==============================================================================
+PT-042 — the lock, and the high/low board
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+BOTH D-031 arms reported. W-B 2014-01-05 -> 2015-12-31.
+==============================================================================
+  QA gate: PASS (qa_histdata_m1.py C1-C4)
+
+  CAVEATS -- see the module docstring and PT-042 s1a. In particular:
+    * this tests a DRILL's own claim, not adopted doctrine (A-082 fence)
+    * step 2 of the course's six is EXCLUDED under D-030 (A-089), so every
+      figure here is a LOWER BOUND on the rule as taught
+    * GBP/USD only; the cross-sectional pick across 'the majors' is untested
+    * M1 is a proxy for a TICK board; locks fire slightly EARLY here
+    * no spread/commission/slippage -- distances, not P&L
+
+==============================================================================
+ARM A   (fixed UTC-5)
+==============================================================================
+  M1 bars in W-B: 738,298
+  session days with both legs present : 512
+  days EXCLUDED by C-14 completeness  : 5
+      2014-04-18  post-T0 <90%  (856 / 960)
+      2014-06-02  empty leg  (0 / 115)
+      2014-12-24  post-T0 <90%  (779 / 960)
+      2015-01-01  empty leg  (0 / 5)
+      2015-12-24  post-T0 <90%  (779 / 960)
+  F1  board range <= 50 pips : 471 of 512  (92.0%)
+  statuses: {'lock': 471}
+
+  --- CONTROLS, computed BEFORE the rule arm's aggregate is printed ---
+  N1 matched-random  O1=0.3142  O2=0.2251  O3=0.1189  medMFE=18.90   (1000 iters, seed 20260812)
+  N4 natural (no-lock days, n=0)  O1=nan   <- extended but never locked
+
+  --- RULE ARM ---
+  n (locks fired)                      : 471
+  O1  P(L is still the day's extreme)  : 0.3461   (0.30451133896225424, 0.3901235811654696)
+  O2  P(30 pips before the 5-pip stop) : 0.4607   (0.416205316554892, 0.5058739389259755)
+  O3  P(50 pips before the stop)       : 0.2972
+  O4  median MFE from entry (pips)     : 40.10
+  O5  median minutes T0 -> lock        : 178
+  O6  S1 limit 10 inside: fill=0.8089  O2|filled=0.3386  (n=381)
+  O1 percentile vs N1: 90.2
+  O2 percentile vs N1: 100.0
+
+==============================================================================
+ARM B   (America/New_York, DST-aware)
+==============================================================================
+  M1 bars in W-B: 738,298
+  session days with both legs present : 511
+  days EXCLUDED by C-14 completeness  : 74
+      2014-03-15  empty leg  (59 / 0)
+      2014-03-22  empty leg  (59 / 0)
+      2014-03-29  empty leg  (60 / 0)
+      2014-04-05  empty leg  (60 / 0)
+      2014-04-12  empty leg  (58 / 0)
+      2014-04-18  post-T0 <90%  (853 / 960)
+      2014-04-19  empty leg  (56 / 0)
+      2014-04-21  pre-T0 hour gap  (7 / 8)
+      ... and 66 more
+  F1  board range <= 50 pips : 467 of 511  (91.4%)
+  statuses: {'lock': 467}
+
+  --- CONTROLS, computed BEFORE the rule arm's aggregate is printed ---
+  N1 matched-random  O1=0.2934  O2=0.2355  O3=0.1263  medMFE=20.30   (1000 iters, seed 20260812)
+  N4 natural (no-lock days, n=0)  O1=nan   <- extended but never locked
+
+  --- RULE ARM ---
+  n (locks fired)                      : 467
+  O1  P(L is still the day's extreme)  : 0.3041   (0.26408550106570766, 0.347248640032115)
+  O2  P(30 pips before the 5-pip stop) : 0.4433   (0.39884440120542636, 0.4885911697136152)
+  O3  P(50 pips before the stop)       : 0.2719
+  O4  median MFE from entry (pips)     : 40.40
+  O5  median minutes T0 -> lock        : 200
+  O6  S1 limit 10 inside: fill=0.8437  O2|filled=0.3249  (n=394)
+  O1 percentile vs N1: 66.3
+  O2 percentile vs N1: 100.0
+
+==============================================================================
+VERDICT -- applying PT-042 s6, fixed before this file existed
+==============================================================================
+  arm A:  n=471   O1=0.3461 vs >=0.8   O2=0.4607 vs >=0.5
+  arm B:  n=467   O1=0.3041 vs >=0.8   O2=0.4433 vs >=0.5
+
+  O1 (the premise) passes in both arms : False
+  O2 (the trade)   passes in both arms : False
+  n >= 30 in both arms                : True
+
+  ==> NOT SUPPORTED

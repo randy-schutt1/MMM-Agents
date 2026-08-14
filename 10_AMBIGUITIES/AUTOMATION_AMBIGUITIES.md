@@ -7254,3 +7254,333 @@ red box window : 8-12 printed; 8-11 or 8-12 spoken, by preference. Not a
 
 `A-039`, `A-004`, `A-076`, `C-020`, `D-030`, `D-031`, `D-040`;
 `03_LESSON_NOTES/V13_SOURCE_NOTES.md` §4, §9.
+
+---
+
+# THE V14 PASS
+
+`Bootcamp1 Wk5 041512 Part2` · 2012-04-15 · course author 100% · **six new records, and updates to
+four existing ones.**
+
+---
+
+## A-089 — ⭐ *"trading in the middle of the range"*: the drill's one uncomputable step
+
+**Raised by:** V14 · **PRINTED** on the assignment slide, spoken `[00:27:34]`
+**Speaker:** course author
+
+### What the lesson says
+
+**Printed**, `V14_00-26-50_assignment-slide-the-high-low-board-drill.png`, step 2 of 6:
+
+> *"Find a pair that is **trading in the middle of the range**"*
+
+**Spoken** `[00:27:34]`: *"Find a pair that's **trading between the high and the low in the mid
+range**."*
+
+### The gap — and it is measured, not asserted
+
+**The speaker gives two worked examples and they are 25 percentage points apart.**
+
+| Example | `[ts]` | Range | Price at 01:00 | **Position in range** | Speaker's verdict |
+|---|---|---|---|---|---|
+| Long | `[00:29:09]`–`[00:29:32]` | `6127` – `6160` (33 pips) | `6142` | **45.5%** | *"is in the middle of the range. **Hell yeah, it is.** This is a possible candidate"* |
+| Short | `[00:33:02]`–`[00:33:17]` | `3155` – `3190` (35 pips) | `3162` | **20.0%** | *"He's off of the low and off of the high, **he's closer to the low right now**"* — **and he proceeds with it anyway** |
+
+**The second example fails any natural reading of "the middle" and is used regardless.** The
+speaker names the problem in his own narration — *"he's closer to the low"* — and does not treat it
+as disqualifying.
+
+### Why this is a record and not a footnote
+
+**It is the single step that stops the corpus's most completely specified method from being
+computable.** Six of the drill's seven steps are arithmetic (`V14_INTERPRETATION.md` Q2). This one
+is not, and **it is a selection filter** — it determines which instrument-days enter the
+population at all, so a chosen tolerance does not merely add noise, it **changes the sample**.
+
+⚠️ **The hazard is `E09`-shaped and cheap to fall into.** Any backtest must either invent a
+percentile band — 25–75%, 30–70%, 40–60% are all defensible-sounding and give different `n` — or
+drop the filter. **Inventing one and reporting the result as the course's claim would attribute a
+number to the instructor that he never stated.**
+
+### `SOURCING_HIERARCHY.md` / `D-040`
+
+| Tier | Searched | Result |
+|---|---|---|
+| **1 — the course** | V14's 600 markers; all 582 sweep frames; the 29 curated frames | **SILENT beyond the two examples above.** The phrase occurs printed once and spoken once, with no tolerance either time |
+| **2 — `MMM-NOTES`** | searched for `middle of the range`, `mid range`, `midrange` | **SILENT** |
+| **3 — web** | Not consulted for a value — could not close this record if it were (`D-040`) |
+
+### Current Status
+
+```text
+DO NOT CODE AS A FILTER.
+PT-042 handles this by EXCLUDING the step under D-030 and testing only the six
+computable steps, and by SAYING SO in its scope statement. The consequence --
+a LARGER and less selective population than the course intends -- is declared
+in advance as a limitation, not discovered afterwards.
+```
+
+### Required Research
+
+A tolerance, a percentile, or any statement that fixes how far from the midpoint is too far.
+
+### Related
+
+`A-056` (this is the one step blocking its closure), `A-076`, `D-030`, `E09`;
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_…md` §2c.
+
+---
+
+## A-090 — The board drill's entry offset: `10` pips inside, or `5` to `8`?
+
+**Raised by:** V14 · `[00:32:25]` vs `[00:35:23]`
+**Speaker:** course author
+
+### What the lesson says
+
+**The printed slide gives no entry price at all** — only *"take a position"*. Both spoken examples
+give one, and they disagree:
+
+| `[ts]` | Locked level | Entry given | Offset **inside** the level |
+|---|---|---|---|
+| `[00:32:25]` | low `6105` | *"open a long position in demo **at about 61 15**"* | **10 pips** |
+| `[00:35:23]` | high `3230` | *"take a short… **around 32 25, 32 22**"* | **5 to 8 pips** |
+
+### The gap
+
+**The stop is fixed at 5 pips beyond the level in both examples, so the offset sets the risk** —
+15 pips in the first case, 10 to 13 in the second. **That is a 50% difference in risk on the
+identical rule**, and the target (*"30 to 50 pips"*) is stated as an absolute distance rather than
+a multiple, so the reward-to-risk of the drill is not determined by anything the lesson states.
+
+**Both figures are hedged** — *"at about"*, *"around"* — which is why this is an ambiguity rather
+than a contradiction: the speaker is estimating, not legislating.
+
+### Current Status
+
+```text
+DO NOT CODE A SINGLE OFFSET.
+PT-042 pre-registers the market-entry-at-lock arm as PRIMARY (fully determined
+by the rule, invents nothing) and reports the 10-pips-inside limit arm as a
+pre-registered SENSITIVITY. Both are declared before the run.
+```
+
+### Related
+
+`A-066`, `A-078`, `A-082`, `D-030`; `PT-042` §3.
+
+---
+
+## A-091 — *"Fractional disparity"*: a cross-rate mechanism offered as intent
+
+**Raised by:** V14 · `[00:20:51]`–`[00:21:14]`
+**Speaker:** course author
+
+### What the lesson says
+
+> `[00:20:51]` *"He's handling the crosses. If you understand **fractional disparity** — do you
+> understand that to create a disparity between the numerator and the denominator, **one pair has
+> to freeze at a level and hold it and another pair has to be moved**? Creates the disparity in the
+> crosses, in the fraction — makes EJ move, EC move, EA move, EG move."*
+
+Context: `[00:19:45]` the market maker's *"secondary move"* when trap volume is not met is to
+*"handle the cross"* rather than hit stops again.
+
+### The gap
+
+**The arithmetic is true and the intent is unsourced.** That EUR/JPY moves when EUR/USD is pinned
+and USD/JPY moves is a definitional property of cross rates, not evidence of anybody's decision.
+**The lesson presents it as the dealer's chosen tactic**, and offers no way to distinguish the
+tactic from the arithmetic.
+
+**This is the `A-085` family**: a real effect narrated as a mechanism, with the two not
+distinguished. It is filed separately because `A-085` is about an indicator and this is about
+market structure, and a future session should not read one as covering the other.
+
+### Current Status
+
+```text
+DO NOT CODE. Recorded, not adopted. No V14 artifact rests on it.
+Note for testability: this is in principle testable -- "is one leg of a triangle
+unusually still while another moves?" -- but NOT on this corpus, which is
+GBP/USD only (D-007). It would need a multi-pair dataset that does not exist here.
+```
+
+### Related
+
+`A-085`, `D-007`, `D-030`.
+
+---
+
+## A-092 — ⭐ TWO artifacts are missing from this corpus, and V14 identifies both
+
+**Raised by:** V14 · `[00:00:57]`–`[00:01:08]`, `[00:40:46]`, `[00:47:34]`; with V13 `[00:05:20]`,
+`[00:05:33]`
+**Speaker:** course author
+
+### The finding
+
+**`V13_REVIEW_R1.md` GATE (c) asked V14 for the cheap decider between "Week 6 missing" and "the
+break ran long". It decides, and the answer is MISSING** — see `V14_INTERPRETATION.md` Q1 for the
+full argument and its three named defeaters.
+
+| Missing artifact | Date | Evidence it existed |
+|---|---|---|
+| **The Orlando meetup recording** | 2012-04-21 | `[00:01:01]` *"**Tannen will take this recording, go home, render it**, and then we'll post it up for Sunday morning"*; `[00:01:08]` *"**So that will be your boot camp for the week**"* |
+| **The Week 6 session** | ≈2012-04-29 | V13 `[00:05:20]` *"Next session is going to be Sunday the 29th"*; V13 `[00:05:33]` *"we'll get started again with **week six** through ten"*; **and the next surviving file's speaker calls it week SEVEN** |
+
+**The decider is the week numbering in the next surviving file.** A narrow forward `grep` — **a
+corpus-level string check, not an ingestion; no V15 artifact was created and the V15 gate is
+untouched** — returns `Wk7 050612 Part1` opening with *"Alright, **week seven**"* at `[00:00:02]`
+and again at `[00:00:23]`. **Had the 04-29 session not happened, 05-06 would have been week six.**
+
+### Why this is an ambiguity record and not a closed finding
+
+**What is established is that the corpus is missing two artifacts.** What is **not** established,
+and cannot be from inside the recordings, is **whether they were ever recorded** — the library is
+the owner's copy, and *"absent from this corpus"* and *"never made"* are different claims. **This
+record makes only the first.**
+
+### Current Status
+
+```text
+RECORDED. Not a blocker. It bounds what the corpus can be expected to contain:
+any V15+ session that finds Week 6 material referred back to should expect the
+referent to be ABSENT, and should not read the absence as its own error.
+```
+
+### Related
+
+`A-042` (material deferred elsewhere), `D-017`; `18_REVIEW/V13/V13_REVIEW_R1.md` GATE (c).
+
+---
+
+## A-093 — ⭐ Why the spoken route to `A-084` is structurally weak, not merely untried
+
+**Raised by:** V14 · `[00:44:41]`–`[00:45:14]`, with V12 `[00:15:40]`
+**Speaker:** course author
+
+### The finding
+
+`A-084`'s three surviving routes after V13 were: a properties dialog, a Navigator/inputs tab, **or
+a spoken identity statement.** V14 delivers **the best spoken opportunity the corpus is likely to
+offer** — an unprompted student question, read aloud, asking exactly what the three TDI lines are —
+and it does not close `A-084` (`V14_INTERPRETATION.md` Q3a).
+
+**The reason is not bad luck. It is a stable property of how this speaker answers indicator
+questions**, and naming it is worth more than the individual failure:
+
+| Lesson | Asked about | Answered in terms of |
+|---|---|---|
+| V12 `[00:15:40]` | the bands' formula | *"**I don't know the math on it**"* |
+| V12 `[00:16:03]` | the bands' basis | *"**That's what someone said**, telling me — not sure"* |
+| V13 `[00:54:51]` | why the line behaves as it does | its **lookback**, a property both candidates share |
+| V14 `[00:44:51]` | the lines' construction | **felt timeframe equivalence** — *"the green is the 15-minute, the red is the one hour"* — which is false as construction for all three lines |
+
+**He answers what the indicator FEELS LIKE, never what it COMPUTES**, and he says so himself.
+
+### Consequence, and it is a planning claim rather than a doctrine claim
+
+```text
+A session hoping to close A-084 from speech should expect this shape and should
+NOT treat a fourth restatement as new evidence. The remaining routes with real
+discriminating power are the two VISUAL ones -- a properties dialog or a
+Navigator/inputs tab -- and 2,047 frames across V12, V13 and V14 contain neither.
+
+This does NOT say the spoken route is closed. It says its prior should be low,
+and that "V15 might say it" is now a weaker expectation than V13's carry-forward
+implied.
+```
+
+⚠️ **The honest counterweight:** V13 `[00:55:02]` *"we have it set to 21"* **is** a first-person
+configuration statement about this deployment, and it is the kind of sentence that would close
+`A-084` if it were ever said about the smoothing. **So the route is not impossible — it is just
+not the one the speaker's habits favour.**
+
+### Related
+
+`A-084`, `A-085`, `A-086`, `A-087`, `D-030`, `D-040`.
+
+---
+
+## A-094 — ⭐ *"The lock"* at two scales: `A-077`'s missing `N` arrives, ~10× short of V10's
+
+**Raised by:** V14 · printed slide, `[00:28:09]`, `[00:31:33]`, `[00:35:51]`, `[00:46:05]`; against
+V10 `[01:05:31]`
+**Speaker:** course author, both lessons
+
+### What changed
+
+`A-077` records an inferred candidate it **refused**: *"the extreme is unbroken for **N** hours AND
+price has travelled **M** pips from it"*, with the note **"N and M appear in no lesson and in no
+`MMM-NOTES` page."**
+
+**V14 supplies both, and uses `A-077`'s own word for the object** — `[00:35:51]` *"you're looking
+for **the lock**"*:
+
+| | V14 value | Where |
+|---|---|---|
+| **`N`** | **1 hour** | ⭐ **PRINTED**: *"fails to hit it again for **1 hour** take a position"*. Spoken `[00:28:09]`; `[00:31:33]` *"**start a stopwatch**… every time the dealer extends the high or low"*; `[00:46:05]` *"a lock for **one hour, one and a half hours, ninety minutes**"* |
+| **`M`** | **~15 pips** | `[00:09:43]` *"14, 15 pips with the spread he pulled off the level"*; `[00:11:40]`; `[00:39:56]` |
+
+### ⚠️ The gap this opens — and it is why `A-077` does not close
+
+**V10's lock and V14's lock differ by an order of magnitude, on objects of different scale.**
+
+| | Object | Duration | Status of the figure |
+|---|---|---|---|
+| **V10** `[01:05:31]` | **weekly** extreme (peak formation high/low) | *"the last **15 hours, 16 hours**"* | `A-077`: **narration of one chart, NOT a rule** |
+| **V14** printed | **session/day** extreme | **1 hour** (1–1.5 spoken) | **a rule — printed, and the week's assignment** |
+
+**Is "the lock" one concept with a scale-dependent threshold, or two concepts sharing a word?**
+Nothing in either lesson says. The mechanism described is identical — the extreme is unbroken, the
+dealer has pulled away — and only the scale differs.
+
+**Not filed as a contradiction**, because `A-077` itself establishes that V10's figure is
+description rather than rule: there is no rule-versus-rule clash to adjudicate.
+
+### Current Status
+
+```text
+A-077 -- ADVANCED, NOT CLOSED.
+  SESSION-scale lock:  N = 1 hour, PRINTED. Usable, and PT-042 uses it.
+  WEEKLY-scale lock:   still NO threshold. V14's 1 hour must NOT be transplanted
+                       onto V10's safety trade -- that would be inventing a
+                       threshold for a different object, which is precisely the
+                       lookahead-bias hazard A-077 exists to prevent.
+```
+
+### Required Research
+
+Any statement relating the two, or a lock threshold stated for a weekly extreme.
+
+### Related
+
+`A-077`, `A-010`, `A-056`, `D-030`, `E08`; `PT-042` §3.
+
+---
+
+# THE V14 PASS OVER EXISTING RECORDS
+
+Every record V14 touches, including those it does **not** move. Negative results are reported
+(`REVIEW_INDEX.md` item 107).
+
+| ID | V14 evidence | Effect |
+|---|---|---|
+| **`A-056`** — Hi-Lo, named and never taught | ⭐ **The whole lesson.** Printed six-step method; `[00:35:51]` *"the number that's the highest point on the board for the day"*; `[00:37:53]` *"the strongest resistance in the day is 32 30. **It's the high of the day**"*; entry 10 pips inside with a 5-pip stop; `[00:46:20]` *"technically, Keith, **you will be able to trade off of the board only**"* | ⭐⭐ **MATERIALLY ADVANCED — its Required Research is ANSWERED.** A later lesson *does* state how the day's extreme is identified in real time, and it is the course author, not the deferred "Jim". **NOT marked CLOSED here**: step 2 is `A-089`, so the method is not yet computable. **Closure is put to the reviewer, not taken by this session** |
+| **`A-077`** — the lock, no threshold | See `A-094` | ⭐ **ADVANCED.** `N` and `M` supplied at session scale, printed. **Weekly scale untouched** |
+| **`A-084`** — is the green line `RSI(21)` or a smoothing? | `[00:44:45]`–`[00:44:56]`, the compound question and its split answer | ⭐ **NARROWED, NOT CLOSED — second consecutive lesson.** The defeater: the same *"Yes"* that must be literal for green is demonstrably figurative for red. **STAYS AN ACTIVE BLOCKER; V11's RSI threshold claims STAY BLOCKED.** See `V14_INTERPRETATION.md` Q3a and `A-093` |
+| **`A-085`** — *"the TSL polls the one-hour chart"* | `[00:44:49]`, `[00:44:59]` *"The red line, blood in the water, **is** the one hour"* | ⚠️ **EXTENDED AND MADE WORSE.** Fifth statement, second lesson, still no period/formula/mechanism — and the flat **identity** phrasing removes the hedge *"polls"* carried. Its Required Research asked for something that separates mechanism from lag; **V14 supplies the opposite** |
+| **`A-086`** — the volatility bands | `[00:45:09]` *"The bands are **two standard deviations** away from the **market base**"* | ⭐ **ADVANCED on the multiplier** — stated flat, unhedged, unprompted, one week after V12's *"I don't really know"*. ⚠️ **The BASIS reverts to the answer V12 retracted → `C-021`.** ❌ **Period still never stated, so `A-086` STAYS `DO NOT CODE` and `A-031`/`A-032` remain uncomputable** |
+| **`A-031`** — *"blood in the water"* | `[00:44:59]`, naming the red line | ✅ **CLOSED already; V14 CORROBORATES the closure from a second lesson.** No change |
+| **`A-019`** — the session map carries no timezone | ⭐ *"At **1am NYC time**"* **printed**; `[00:27:05]` *"1 a.m. **New York time**"*; `[00:45:21]` *"1 a.m. is the time **I was taught** to do it"* | **NOT CLOSED — different slide, different clock reference** — but recorded as **the first explicitly timezoned clock statement in the corpus**, and as evidence the figure is **inherited rather than derived** |
+| **`A-011`** — M/W anatomy | `[00:08:11]` *"this looks like an M to you and you want to take it — **but nothing has happened yet other than consolidation**"*; `[00:06:28]` *"this is the M formation for the day"* | **NOT ADVANCED — tenth lesson, zero definitions.** ⭐ The new use is *negative*: the shape is invoked to **forbid** a trade inside the box. Still no anatomy |
+| **`A-076`** — blue box | `[00:08:04]` *"here's the blue box, I know it's black and white but it's blue"*; `[00:38:48]` ⭐ *"if `3190` subtract `3155` is less than 50, **you're making your own blue box**… that is an essence of blue box"* | ⭐ **ADVANCED, NOT CLOSED.** `[00:38:48]` is the first statement that the blue box **is** the ≤50-pip 01:00 range rather than a drawn object — but *"an essence of"* is not a definition, and it collides with `A-076`'s existing `25 to 50` size reading. Stays `DO NOT CODE` |
+| **`A-082`** — drill parameters adopted as method parameters | `[00:32:42]` *"That's a drill"* vs `[00:46:20]` *"you will be able to trade off of the board only"* | ⭐ **LIVE INSTANCE, CAUGHT AND FENCED.** See `V14_INTERPRETATION.md` Q4. The 5-pip stop and 30–50 pip target are cited **nowhere** in `12_MASTER_SPEC/` or `13_MACHINE_SPEC/`; `PT-042` tests them **as the drill's own claim** and says so |
+| **`A-004`** — "the level" as a countable unit | `[00:19:17]` *"he's got to hit the stops **one more level**, 25 to 50 pips higher"*; printed *"Wait For Next Level Rise/Fall"* | **NOT ADVANCED.** Levels are again spaced `25 to 50` and again not counted, ordered or located |
+| **`A-002`/`C-006`** — trap move vs stop hunt | Counted in the 600-marker body: `trap` **×4**, `stop hunt` **×3** (plus **×1** as the ASR variant *"stop-hon"* `[00:03:36]`). **The printed slides add three more `TRAP MOVE` titles and one `Extended Stop Hunt`** — those are in the frames, not the transcript | ⭐ **NOT ADVANCED, and the negative is sharper than usual.** `REVIEW_INDEX.md` item 37 asks whether the two families are ever compared. **V14 is the first lesson to use BOTH families heavily in the SAME slide sequence** — *"MARKET MAKER TRAP MOVES"* whose failure mode is *"**Extended Stop Hunt** Will Be Seen (2HR Time Gap)"* — **and it still does not distinguish them.** Tenth lesson, no comparison |
+| **`A-038`** — ADR lookback | `ADR` **0×** | **NOT ADVANCED** |
+| **`A-039`** — TDI as a whole | See `A-084`/`A-085`/`A-086` | **Net: advanced on one of three quantities.** Stays open |
+| **`A-020`** — the moving averages | ⭐ `V14_00-13-05_…png` — four MAs, speed-ordered yellow < red < cyan < white | ⭐ **Tier-1 ORDINAL corroboration of `D-043`**, and inconsistent with `D-042` §2's superseded 5/13 rows. **Does NOT close `A-020`** — no period is printed. See `04_SCREENSHOTS/V14/INDEX.md` §3 |
+| **`A-042`** — operative detail deferred elsewhere | `[00:28:26]` *"post it in the forum"*; `[00:42:44]` *"I'm going to **post the homework in the forum**"* | ⭐ **PARTIALLY DISCHARGED for the first time.** V07 deferred Hi-Lo to *"Jim"*; **V14 delivers it in-corpus.** Two new deferrals to the forum are added, and the forum is not in this library — but the pattern is no longer uniformly one-way |
