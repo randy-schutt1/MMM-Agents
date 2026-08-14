@@ -9024,3 +9024,92 @@ decisions is not authorisation to open a lesson.
 gap audit's own remaining half). **Session-owed and now unblocked:** item **176** Gap B under
 `D-049`; the `A-086` / `A-032` `TOOLING` write-ups made *eligible* by `D-045`; item **180**; item
 **188** (deferred validator check).
+
+---
+
+## 2026-08-14 — V15 STUDENT PASS (`Bootcamp1 Wk7 050612 Part1`, Week 7, 2012-05-06)
+
+Branch `video/v15`, worktree `MMM-Agents-v15` (`D-038`), cut fresh from integration head `ddd226f`
+and **merged forward to `fb9eee5` mid-session** to pick up the V14 R1 minors remediation —
+`SWF_CAPTURE_RECIPE.md` §8a and `REVIEW_INDEX.md` items 172–176 / 186 — **before allocating a
+single new record identifier** (`D-038a` consequence 1).
+
+### ⚠️ Authorisation
+
+`COURSE_PROGRESS.md`'s V14 block reads *"NO SESSION MAY OPEN V15 WITHOUT THE OWNER'S SEPARATE
+GO-AHEAD."* **The owner gave one**: a direct instruction, 2026-08-14, to run the standard
+per-video ingestion pipeline for V15. **Recorded here and in `COURSE_PROGRESS.md` because a hard
+stop that is lifted without a written trail is a hard stop nobody can audit.** It named V15; **it
+does not extend to V16**, and item 185's gap audit remains the owner's to decide.
+
+### What V15 is
+
+The ADR — average daily range — lifted off its oscillator sub-panel and replotted as two
+horizontal levels, then used as **one leg of a four-part confluence filter** for the New York
+reversal. The rule is **printed in full** and carries its own disclaimer out loud (*"Is that always
+true? **No.**"*). Two of its four legs are attributed to **students**, not to the instructor.
+
+### The three findings that change something
+
+1. ⭐⭐ **The Orlando recording never existed.** `[00:05:21]`, first person: *"The same shit that
+   happened in Orlando where I didn't get a recording out of there is exactly why I'm not
+   streaming this class."* The June-class slide prints the policy: **`This Class will NOT be
+   recorded or streamed!!!!!!!`** `A-092`'s Orlando half moves from ABSENT to **NEVER MADE**.
+2. ⭐⭐ **Week 6 is 2012-04-29 and the deciding line was already committed — in V13.**
+   V13 `[00:05:20]` *"Next session is going to be Sunday the 29th"*; V13 `[00:05:33]` *"we'll get
+   started again with **week six through ten**"*. 2012-04-22 is the announced week off. **The
+   calendar closes with zero residual, and the two absences are of different kinds.**
+   **Process point worth more than the finding: V14's round proposed a forward read for the
+   Wk9→Wk10 gap; the Week-6 answer was BEHIND us the whole time.** *Check backwards before arguing
+   to read forwards.*
+3. ⭐ **`A-084`'s in-corpus absence is EXPLAINED, not resolved.** The web-class slide prints
+   *"Sat as the Indicator chart setup day"* — **the setup content was scheduled outside the
+   bootcamp.** 623 frames, no dialog (2,670 across V12–V15). **No number was found and none was
+   hunted for**; the sixth spoken restatement is logged as one, per V14 R1's instruction.
+
+### `PT-043` — pre-registered, run, and the control is the finding
+
+`O1` **NOT SUPPORTED** (`0.3640` against an `N1` random-intraday-close control of `0.3757` — the
+real close does **worse** than an arbitrary minute of the same day); `O2` **CONTRADICTED AS
+STATED** (`0.0939`). Identical in all four window × arm cells, `n = 511`. Median nearer-distance
+**21.4 pips**, just under the band's floor. **The 600–1000 pip week was deliberately NOT
+re-tested** — `BT_V10_0001` already returned CONTRADICTED (0/180) and re-running it is what `D-027`
+forbids; V15's contribution there is **durability**. **The lesson's own rule was not tested at
+all**, and the reason was written into `PT-043` §1b *before* the run: `C-022` and `A-100` make a
+past ADR level's visibility undecidable.
+
+### Records
+
+`Q-016` (fifth consecutive `VISUAL_INDEX.md`; `RULES.md` quotes a **fabricated stop-loss rule** in
+quotation marks that occurs zero times in 492 markers); `A-095`…`A-100`; `C-022`. The Mauro PDF
+(Tier 2, `D-039`) was searched **before** any web research and **no web research was performed** —
+it defines *"blood in the water"* as the Market Base Line cross (`A-099`), supplies the *"M1/M3
+day"* trigger (`A-096`) and the ADR's *"last 2 weeks"* lookback (`A-100`), and **none of the three
+is promoted to Tier 1.**
+
+### ⚠️ Process — declared against this session
+
+`SWF_CAPTURE_RECIPE.md` §9's ordering was broken for the **third consecutive lesson** (frames
+opened before the source notes were written), mitigated by `[AUDIO]`/`[PRINTED]` tags that are
+`grep`-checkable. **§8a was run for the first time** and all five steps published. And a
+**domain-primed misreading reached a draft**: `[00:34:01]`'s *"ADM"* was first read as **`ADR`**,
+which would have manufactured a fifth ADR mention inside the ADR lesson; the second ASR pass shows
+it is *"out of me"*. **Recorded in the correction table as a self-correction rather than fixed
+silently** (item 195).
+
+### Git
+
+Branch `video/v15`, worktree isolated per `D-038`. Explicit path staging only; **never
+`git add -A`**; `git diff --staged` reviewed before every commit. `PT-043` committed at `1a3667e`
+with `run_pt043.py` **absent at that commit**; the runner committed at `6b4d4a3` **before**
+execution. `validate_project.py`: **103 passed, 0 warnings, 0 failures.** **NOT merged** — merge
+happens after independent review (`D-003`, `D-004`).
+
+### Next Action
+
+**V16 GATE is CLOSED until V15's R1 returns** (`D-004`). V15 is submitted as **REVIEW REQUIRED**.
+
+⚠️ **And the owner's hard stop is not discharged.** It was lifted for **V15 only**, by an
+instruction naming V15. **Item 185's gap audit now has new, decisive material** — the two absences
+are of different kinds (item 191) — **but the audit is still the owner's to make**, along with the
+open owner decisions at items **157**, **168**, **179**, **185** and now **190**.
