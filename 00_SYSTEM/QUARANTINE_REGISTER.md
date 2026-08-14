@@ -2447,23 +2447,74 @@ No V16 artifact cites any of these three files as evidence. Every reference in t
 `Q-016` found V15's `VISUAL_INDEX.md` to be a **byte-level clone** of V14's with **zero content
 lines changed**. **V16's is not a byte clone — it is a REWORDING of V15's with the same skeleton.**
 
+> ⛔ **CORRECTED 2026-08-14 — `REVIEW_INDEX` item 225. THIS ENTRY PREVIOUSLY SAID *"every content
+> line differs"*. THAT IS FALSE.** Nine content lines are **byte-identical**, and the correction
+> makes the detector **cheaper**, not weaker — see the exact census below. The thesis (a paraphrase,
+> not a clone) is unaffected and stands.
+
 ```text
 diff 15_…Wk7_050612_Part1/VISUAL_INDEX.md  16_…Wk7_050612_Part2/VISUAL_INDEX.md
-  -> every content line differs, and NOTHING STRUCTURAL differs:
-       same THREE screenshots
-       same THREE claimed timestamps:  [00:02:00]  [00:15:00]  [00:30:00]
-       same THREE claimed subjects:    5/13/50/200/800 EMA template + Asian Box
-                                       London-open stop hunt out of the Asian Box
-                                       TDI shark-fin + 5/13 cross confirmation
+  -> 13 lines REWRITTEN, 9 content lines BYTE-IDENTICAL, and NOTHING
+     STRUCTURAL differs.
+
+  BYTE-IDENTICAL (9) -- these survive the rewrite unchanged and are therefore
+  EXACT-MATCH DETECTABLE with a fixed-string grep:
+       3 x header        "## Screenshot 001" / "002" / "003"
+       3 x timestamp     "- Timestamp: [00:02:00]" / "[00:15:00]" / "[00:30:00]"
+       3 x visual type   "- Visual Type: Chart / Slide Overview"
+                         "- Visual Type: Annotated Chart Example"
+                         "- Visual Type: Indicator / Strategy Diagram"
+
+  REWRITTEN (13) -- paraphrased, so NOT exact-match detectable:
+       1 x title line    (Part1 52mins -> Part2 45mins)
+       3 x "- Filename:" (VIDEO_16_… -> VIDEO_17_…)
+       9 x prose         "- What is visible:" / "- Instructor's Explanation:"
+                         / "- Trading Significance:", three of each
+
+  The three claimed SUBJECTS are preserved in MEANING but reworded, e.g.
      V15: "Asian Box accumulation range with 5, 13, 50, 200, and 800 EMAs."
      V16: "Initial setup slide / chart template with 5, 13, 50, 200, 800 EMAs
            and Asian Box boundaries."
 ```
 
-⚠ **This matters for how the pattern should be detected from here on.** A `diff`-based check —
-which is what `Q-016` used and what GATE (j) implicitly assumed — **would not have flagged this
-file.** The invariant is not the bytes. **The invariant is the three timestamps and the three
-subjects**, and they have now survived six lessons and one rewrite.
+⚠ **This matters for how the pattern should be detected from here on, and the correction sharpens
+it.** A **whole-file `diff`** — which is what `Q-016` used and what GATE (j) implicitly assumed —
+**would not have flagged this file**, because the file genuinely is not a byte clone: 13 of its
+lines were rewritten. **But the invariant is only PARTLY non-byte-level, and the byte-level part is
+the cheap part:**
+
+| Invariant axis | Survives the rewrite? | Exact-match detectable? |
+|---|---|---|
+| The three **timestamps** | ✅ byte-identical | ✅ **yes** |
+| The three **`Visual Type`** values | ✅ byte-identical | ✅ **yes** — ⭐ a FOURTH axis this entry did not previously name |
+| The three **`## Screenshot NNN`** headers | ✅ byte-identical | ✅ yes, but generic — weak on its own |
+| The three claimed **subjects** | ✅ in meaning | ⛔ **no** — reworded, needs a semantic check |
+
+⭐ **So three of the four axes are a fixed-string grep, not a semantic comparison.** The detector for
+`V17`–`V21` does **not** need to start with meaning-matching: **grep the timestamp triple and the
+`Visual Type` triple first**, and fall back to subject comparison only for a file that changes
+those too.
+
+### ⭐⭐ THE CORRECTED DETECTOR WAS RUN, AND `V17`–`V21` ALL ALREADY MATCH — 2026-08-14
+
+**Running the fixed-string check the moment it was written cost one `grep` and answered the
+question the `DETECTION NOTE` was written to leave open.** Across
+`_QUARANTINE_UNVERIFIED_NOTES/per_lesson/`:
+
+- `Visual Type: Chart / Slide Overview` matches **15 lessons' `VISUAL_INDEX.md`** — `03`, `04`,
+  `09`, `10`, `11`, `12`, `13`, `14`, **`15`, `16`**, and **`17`, `18`, `19`, `20`, `21`**;
+- **every one of `17`–`21` carries all three of the `[00:02:00]` / `[00:15:00]` / `[00:30:00]`
+  timestamps and exactly three `Visual Type` lines** — i.e. the full invariant, unchanged.
+
+⛔ **The pattern does not stop at V16. It runs to the end of the material this project holds.**
+`V17`–`V21`'s `VISUAL_INDEX.md` files are therefore **presumptively fabricated on the same
+generator**, and each is to be **quarantined on sight** when its lesson is reached, exactly as GATE
+(j) required for V16.
+
+⚠ **This is a DETECTION result, not a verification result.** Matching the invariant is what makes a
+file presumptively fabricated; **nobody has yet checked `V17`–`V21`'s three claimed frames against
+their actual video**, which is the step that turned `Q-017` from a suspicion into §1's table. **That
+work is still owed, one lesson at a time, and this note does not discharge it.**
 
 ---
 
@@ -2543,7 +2594,16 @@ that `SOURCE_MANIFEST.md` showed to be an alphabetical-sort artefact.
 Q-017 -- QUARANTINED. All three files. No V16 artifact cites them.
   DO NOT use RULES.md's parameters, NOTES.md's EMA nickname mapping, or any of
   VISUAL_INDEX.md's three timestamps for any purpose.
-  DETECTION NOTE FOR V17-V21: the generator now PARAPHRASES rather than clones,
-  so a byte-diff will NOT flag it. The invariant is the three timestamps
-  ([00:02:00], [00:15:00], [00:30:00]) and the three subjects. Quarantine on that.
+  DETECTION NOTE FOR V17-V21 [CORRECTED 2026-08-14, REVIEW_INDEX item 225]:
+  the generator now PARAPHRASES rather than clones, so a WHOLE-FILE byte-diff
+  will NOT flag it -- but 9 content lines are still BYTE-IDENTICAL and three of
+  the four invariant axes are a plain fixed-string grep:
+    1. the three timestamps  [00:02:00] [00:15:00] [00:30:00]   [byte-identical]
+    2. the three Visual Type values: "Chart / Slide Overview",
+       "Annotated Chart Example", "Indicator / Strategy Diagram"
+                                                               [byte-identical]
+    3. the three "## Screenshot NNN" headers        [byte-identical, generic]
+    4. the three subjects                    [PARAPHRASED -- semantic check only]
+  Check 1 and 2 FIRST; they are exact matches and cost nothing. Quarantine on
+  any hit. Only fall through to 4 if a file has changed 1 and 2 as well.
 ```

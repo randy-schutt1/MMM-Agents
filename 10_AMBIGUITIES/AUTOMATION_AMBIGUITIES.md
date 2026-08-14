@@ -8378,16 +8378,20 @@ A-096 -- DECODED, NOT DEFINED.
 3. ⭐ **A session boundary is PRINTED** — `London Session Start / 2:00 To 3:00 AM, EST`
    (`V16_00-14-25_…png`). See `A-105`; it is narrower than it was and it is not yet a parameter.
 
-⛔ **The pivot formula is STILL ABSENT, and it is now a record of its own: `A-101`.** V16's diagram
-looks like it encodes the construction of `M1`–`M4` and does not — all nine levels are drawn
-**equally spaced to within one pixel**, which is a schematic. `A-101` carries the measurement and
-the defeated midpoint hypothesis.
+⛔ **The pivot formula is STILL UNSTATED, and it is now a record of its own: `A-101`.** V16's
+*schematic* diagram looks like it encodes the construction of `M1`–`M4` and does not — its nine
+levels are drawn **equally spaced to within about one pixel**. ⚠ **CORRECTED 2026-08-14
+(`REVIEW_INDEX` item 222): that finding is about the schematic only.** V16's real chart frames
+(`00-25-10`, `00-21-00`) draw the same grid **unequally spaced**, and on them the midpoint
+construction **measures true to under 0.6 px across five relations**. `A-101` carries both halves —
+the measurement, and why `DO NOT CODE` still stands despite it.
 
 ```text
 A-096 -- IDENTITY: CLOSED by V16 (PRINTED, TIER 1, HIGH).
          COLOUR TRIGGER: CLOSED by V16 (PRINTED + SPOKEN x2 + DRAWN).
-         CONSTRUCTION: STILL ABSENT -> see A-101, which supersedes this record
-         for anything to do with computing a level.
+         CONSTRUCTION: STILL UNSTATED -> see A-101, which supersedes this record
+         for anything to do with computing a level. NOT "unevidenced": A-101
+         measures the midpoint construction TRUE on V16's own chart frames.
   DO NOT CODE remains in force, via A-101.
 ```
 
@@ -8670,7 +8674,7 @@ A-100 -- STILL OPEN. Required research is now NARROWER:
 
 ---
 
-## A-101 — ⭐⭐ `M1`–`M4`: V16 PRINTS THEIR ORDER AND NEVER STATES THEIR CONSTRUCTION — and the diagram that looks like it encodes the formula is a schematic
+## A-101 — ⭐⭐ `M1`–`M4`: V16 PRINTS THEIR ORDER AND NEVER STATES THEIR CONSTRUCTION — the diagram that looks like it encodes the formula is a schematic, but the CHART FRAMES DO carry the construction
 
 **Raised by:** V16 · `V16_00-01-40_pivot-grid-diagram-100-pips-annotated.png`, `[00:17:53]`–`[00:18:19]`
 **Speaker:** course author
@@ -8700,15 +8704,97 @@ floor-trader pivot grid. They are not M-formations and they are not moving avera
 `M4 = midpoint(R1, R2)`, `M2 = midpoint(S1, CPP)`, `M1 = midpoint(S2, S1)` — is **consistent with
 the printed order and is not established by it.**
 
-**The one available piece of evidence was measured rather than eyeballed.** On the clean,
-unannotated frame (sweep `i = 19`), the y-pixel centres of the nine level labels are
-`235 · 288 · 340 · 393 · 446 · 497 · 549.5 · 602.5`, giving gaps of
-**`53 · 52 · 53 · 53 · 51 · 52.5 · 53`** — **mean 52.5, spread ±1 px.**
+**The SCHEMATIC SLIDE was measured rather than eyeballed.** On the clean, unannotated frame
+(sweep `i = 19`), the nine levels of the centre column sit at y-pixel
+`181 · 233.5 · 287.5 · 339.5 · 392.5 · 445.5 · 497.5 · 550.5 · 604`
+(`R2 · M4 · R1 · M3 · CPP · M2 · S1 · M1 · S2`), giving the eight gaps
+**`52.5 · 54 · 52 · 53 · 53 · 52 · 53 · 53.5`** — **mean 52.9, spread ±1.1 px.**
 
-**All nine levels are equally spaced.** Under every standard floor-trader formula the `R1→R2` gap
-differs from the `CPP→R1` gap. **So the slide is a SCHEMATIC and carries no information about the
-arithmetic — it would look exactly like this whatever the real formula is.** The midpoint reading
-is neither confirmed nor refuted; it is **unsupported**.
+> ⚠ **CORRECTED 2026-08-14 (`REVIEW_INDEX` item 223).** This paragraph previously listed
+> **eight** centres — `235 · 288 · 340 · 393 · 446 · 497 · 549.5 · 602.5` — while concluding
+> *"all nine levels are equally spaced."* **`R2` was missing**, and `R2` is the one level the
+> defeater sentence below actually names, so as written the measurement could not evaluate the
+> comparison it rests on. `R2` is re-measured here at **y = 181** (top edge of the red band) and
+> the series above is the completed nine, re-measured in one pass off the colour-band boundaries
+> and tick rows rather than the label centres. **The conclusion is unchanged and the completed
+> series is what now supports it.**
+
+**All nine levels are equally spaced**, and the comparison the defeater turns on can now be made:
+**`R1→R2` = 107.0 px against `CPP→R1` = 105.0 px** — equal to within 2 px, i.e. within the same
+±1 px-per-gap tolerance as everything else on the slide. **Under every standard floor-trader
+formula those two gaps are NOT equal**: `R2 − R1 = H − P` while `R1 − CPP = P − L`, and those
+coincide only when the close sits exactly at mid-range. **So the slide is a SCHEMATIC and carries
+no information about the arithmetic — it would look exactly like this whatever the real formula
+is.**
+
+### ⭐⭐ BUT V16'S REAL CHART FRAMES DO CARRY CONSTRUCTION EVIDENCE — added 2026-08-14, `REVIEW_INDEX` item 222
+
+⛔ **This record previously generalised the schematic finding to V16 as a whole and said the
+midpoint reading was "unsupported". That inference was wrong, and V16's own committed frames
+refute it.** The schematic paragraph above is correct *about the schematic*. It does not transfer
+to the frames where the same grid is drawn on a **real, correctly-scaled price chart**, because
+those are not equally spaced and therefore *are* informative.
+
+**`V16_00-25-10_price-fails-at-m3-pivot-4-times.png`** — seven levels resolve by colour, and the
+grid is **plainly unequal** (`CPP→R1` = 188.8 px against `CPP→S1` = 128.1 px):
+
+```text
+  M4 230.0 · R1 294.5 · M3 388.5 · CPP 483.3 · M2 546.8 · S1 611.4 · M1 706.1
+```
+
+**Four relations, each independently predicted by the midpoint hypothesis, all hold to under
+0.6 px:**
+
+| Relation | Predicted | Measured | Error |
+|---|---|---|---|
+| `M3` bisects `CPP…R1` | 388.9 | 388.5 | **0.4 px** |
+| `M2` bisects `S1…CPP` | 547.35 | 546.8 | **0.55 px** |
+| `M4 − R1` = ½(`CPP − S1`) | 64.05 | 64.5 | **0.45 px** |
+| `S1 − M1` = ½(`R1 − CPP`) | 94.4 | 94.7 | **0.3 px** |
+
+The last two are the `R2`/`S2` legs reached without `R2` or `S2` being on screen, via the standard
+floor-trader identities `R2 − R1 = CPP − S1` and `S1 − S2 = R1 − CPP`.
+
+**Confirmed on a second frame, `V16_00-21-00_pivot-points-m2-m4-day-chart.png`**, where `S1` and
+`M1` fall below the frame edge. Anchoring each line to its own printed label (labels sit a constant
+**+3.6 px** below their line, which is what makes the anchoring safe):
+
+```text
+  M4 291.5 · R1 425.3 · M3 498.0 · CPP 571.5 · M2 705.5
+```
+
+- `M3` bisects `CPP…R1`: predicted 498.4, measured **498.0** — **0.4 px**;
+- `M4 − R1` = **133.8** and `CPP − M2` = **134.0** — the hypothesis requires these to be *equal*
+  (both are ½(`CPP − S1`)), and they agree to **0.2 px**;
+- and again plainly unequal: `R1→CPP` = 146.2 against `M4→R1` = 133.8.
+
+> ⚠ **Two unlabelled dashed lines on this frame — y = 356.6 and y = 526.4 — are NOT pivot levels.**
+> They carry no label at the +3.6 px offset every real level carries. Any re-measurement that folds
+> them into the gap series will produce a spurious "equal in pairs" reading. They are excluded here.
+
+⭐ **The midpoint reading is therefore NOT "unsupported". It is supported by measurement on V16's
+own frames, on two independent charts, by five relations, to under 0.6 px — and it is still
+NEVER STATED.** Those are different things and this record now keeps them apart.
+
+### ⛔ Why `DO NOT CODE` nevertheless REMAINS IN FORCE
+
+The evidence above is **decoded from the pixels of the instructor's rendered indicator, not from
+anything the instructor says or prints.** Three gaps survive it:
+
+1. **It is a measurement of a drawing, not a statement of a formula.** It establishes what his
+   indicator plotted on two days in 2012. It does not establish what the course *teaches*, and the
+   corpus's standing lesson (`A-042`, `A-082`) is that a number decoded from a rendering is not a
+   definition.
+2. **The `M4`/`M1` legs assume standard floor-trader `CPP`/`R1`/`S1`** in order to stand in for the
+   off-screen `R2`/`S2`. That assumption is itself unverified in V16 — the pivot formula is absent
+   (this record's own subject).
+3. **The `M5` addendum below is unresolved**, so the printed nine may not be the whole grid, and a
+   construction fitted to nine levels may be fitted to the wrong set.
+
+**`DO NOT CODE` therefore stands — but on the ground that the construction is UNSTATED and
+partially assumption-dependent, NOT on the ground that the evidence is absent.** ⚠ **The severity
+of this distinction is put to the owner** (`REVIEW_INDEX` item 222): a session that reads only the
+old wording is told not to look, and V16's homework stopped two numbers short because of it.
 
 ### The consequence, demonstrated rather than asserted
 
@@ -8725,14 +8811,22 @@ A-101 -- OPEN, and it BLOCKS the whole of V16's lesson.
   ORDER:  R2 M4 R1 M3 CPP M2 S1 M1 S2   [PRINTED, TIER 1, HIGH confidence]
   ROLE:   M3/M4 = candidate day highs; M1/M2 = candidate day lows
                                         [PRINTED + SPOKEN, HIGH confidence]
-  CONSTRUCTION: STATED NOWHERE. The midpoint hypothesis is recorded here WITH
-                its defeater so no later session re-derives it as a finding.
-  DO NOT CODE M1, M2, M3 or M4. Any PT touching them must pre-register its own
-  definition as an ASSUMPTION and say so (D-027, D-030).
-  Cheapest open route: a legible price axis beside the grid. V16_00-16-50 and
+  CONSTRUCTION: STATED NOWHERE -- and NOT unevidenced. The midpoint hypothesis
+                is MEASURED TRUE on V16's own chart frames (00-25-10 and
+                00-21-00): five relations, two independent charts, all under
+                0.6 px. The equally-spaced SCHEMATIC slide (00-01-40) is
+                uninformative and does NOT generalise to those frames.
+                Recorded WITH both the measurement and its three limits so no
+                later session re-derives either half as a new finding.
+  DO NOT CODE M1, M2, M3 or M4 -- because the construction is UNSTATED and the
+  M4/M1 legs assume standard floor-trader CPP/R1/S1, NOT because the evidence
+  is absent. Any PT touching them must pre-register its own definition as an
+  ASSUMPTION and say so (D-027, D-030).
+  Cheapest CLOSING route: a legible price axis beside the grid. V16_00-16-50 and
   V16_00-17-30 show exactly that and are ILLEGIBLE at 1024x786; a
-  higher-resolution re-capture of those two moments would settle it in one frame.
-  See REVIEW_INDEX item 198.
+  higher-resolution re-capture of those two moments would convert the pixel
+  measurement into arithmetic on stated prices and settle it in one frame.
+  See REVIEW_INDEX items 198, 222, 223.
   Also required: V17-V21 for a construction statement, and the June 2012 web
   class "Indicator chart setup day" which is NOT in this corpus (A-087).
 ```

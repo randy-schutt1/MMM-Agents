@@ -79,23 +79,23 @@ Any session flagged by C8 must have an explicit, PRE-REGISTERED disposition
 (include / exclude / report separately) in the test that spans it.
 ==============================================================================
 
-  arm A: n=897  2013-01-02 -> 2016-06-30  (excluded 11, 1.2%)
-    O1 P(range>200) = 0.0725   -> CEILING: WEAKLY SUPPORTED
+  arm A: n=894  2013-01-07 -> 2016-06-30  (excluded 11, 1.2%)
+    O1 P(range>200) = 0.0727   -> CEILING: WEAKLY SUPPORTED
     O2 median       = 102.6 pips -> TYPICAL: PARTIALLY SUPPORTED
-    O3 mean         = 115.8 pips
-    O4 P(150-250)   = 0.1750
+    O3 mean         = 115.7 pips
+    O4 P(150-250)   = 0.1734
     O5 p99          = 284.3 pips
-    N2 ADR15 median = 111.6  mean = 113.4  P(ADR15>200) = 0.0045
-    N3 per-year median: {'2013': {'n': 255, 'median': 100.9}, '2014': {'n': 256, 'median': 80.3}, '2015': {'n': 257, 'median': 113.6}, '2016': {'n': 129, 'median': 138.0}}
-  arm B: n=780  2013-01-02 -> 2016-06-30  (excluded 245, 23.9%)
-    O1 P(range>200) = 0.0795   -> CEILING: WEAKLY SUPPORTED
+    N2 ADR15 median = 111.7  mean = 113.4  P(ADR15>200) = 0.0046
+    N3 per-year median: {'2013': {'n': 252, 'median': 100.6}, '2014': {'n': 256, 'median': 80.3}, '2015': {'n': 257, 'median': 113.6}, '2016': {'n': 129, 'median': 138.0}}
+  arm B: n=777  2013-01-07 -> 2016-06-30  (excluded 245, 24.0%)
+    O1 P(range>200) = 0.0798   -> CEILING: WEAKLY SUPPORTED
     O2 median       = 104.6 pips -> TYPICAL: PARTIALLY SUPPORTED
     O3 mean         = 118.6 pips
-    O4 P(150-250)   = 0.1897
+    O4 P(150-250)   = 0.1879
     O5 p99          = 287.8 pips
-    N2 ADR15 median = 113.9  mean = 116.0  P(ADR15>200) = 0.0039
-    N3 per-year median: {'2013': {'n': 221, 'median': 102.3}, '2014': {'n': 223, 'median': 85.4}, '2015': {'n': 223, 'median': 116.0}, '2016': {'n': 113, 'median': 139.1}}
-  N1 arm A/B median delta = 2.05 pips
+    N2 ADR15 median = 114.1  mean = 116.0  P(ADR15>200) = 0.0039
+    N3 per-year median: {'2013': {'n': 218, 'median': 102.0}, '2014': {'n': 223, 'median': 85.4}, '2015': {'n': 223, 'median': 116.0}, '2016': {'n': 113, 'median': 139.1}}
+  N1 arm A/B median delta = 2.00 pips
 
 === W-E  (scope=extended) ===
 QA gate: PASSED   report===============================================================================
