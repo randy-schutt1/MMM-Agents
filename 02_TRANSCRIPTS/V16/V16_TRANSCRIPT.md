@@ -138,21 +138,85 @@ a passage the speaker delivers at speed, and it means **that sentence's content 
 from this transcript alone**; it is arbitrated in §5 and, where the arbitration is not clean, the
 claim is dropped rather than reconstructed.
 
-### §5 — INDEPENDENT ASR ARBITRATION
+### §5 — INDEPENDENT ASR ARBITRATION — **COMPLETE**
 
-**STATUS: PENDING — the second pass is still running at the time of this checkpoint commit.**
-The committed text below is byte-for-byte the pre-ingestion transcript; **no word of it has been
-edited.** Corrections arrive as a table in this section, each attached to the marker grid's
-timestamp, and the body is never rewritten. Load-bearing candidates already identified and queued
-for arbitration:
+**Engine:** `openai-whisper` **`large-v3-turbo`**, English, run this session on the audio extracted
+from the original `.swf`. **41 minutes of CPU.** It shares **no code and no lineage** with whatever
+produced the committed transcript.
 
-| # | Marker | Committed ASR | Why it is load-bearing |
-|---|---|---|---|
-| 1 | `[00:14:23]` | *"At the moment open"* | The slide two seconds later prints `London Session Start / 2:00 To 3:00 AM, EST`; if the word is **London**, this is the corpus's clearest statement of *when* the pivot-grid read is taken |
-| 2 | `[00:03:26]` | *"which is my 180R, 100 pips ADR"* | `180R` is not a term in this corpus; it sits inside the one worked arithmetic example in the lesson |
-| 3 | `[00:33:30]` | *"Most of you, it wasn't M4, M3 was M5"* | There is **no M5** on the printed pivot grid (`R2 M4 R1 M3 CPP M2 S1 M1 S2`). Either the ASR is wrong or an undefined level exists |
-| 4 | `[00:26:39]` | *"an an an an an an an an an an an a long M2"* | Eleven-fold decoder stutter; the sentence's content is unrecoverable from this transcript |
-| 5 | `[00:09:31]` | *"the ADR is calculated over the last two weeks, 15 days"* | ⭐ **The single highest-value line in the file** — it is the lookback `A-100` says the corpus does not have. It must be confirmed verbatim before anything is built on it |
+**⚠ THE COMMITTED TEXT BELOW IS UNCHANGED. Not one word of the 377-marker body has been edited.**
+Corrections live here and nowhere else, each attached to **the marker grid's** timestamp — never
+the second pass's clock, per the TIMESTAMP CONVENTION at the top of this file.
+
+**All five queued load-bearing candidates are resolved. Seven further corrections were found while
+checking them and are reported too.**
+
+| # | Marker | Committed ASR | Second pass | Disposition |
+|---|---|---|---|---|
+| **1** | `[00:14:23]` | *"okay, get ahead of myself. **At the moment open**, if the dealer breaks high,"* | *"okay, **I'm getting ahead of myself. At the London Open**, if the dealer breaks high **in** the top side of the pivot grid, you're a seller."* | ⭐⭐ **CORRECTED — LOAD-BEARING.** *"the moment open"* is *"the **London Open**"*. See below |
+| **2** | `[00:03:30]` | *"which is my **180R**, 100 pips ADR"* | *"which is my **100 ADR, 100 pip ADR**"* | ⭐ **CORRECTED.** *"180R"* was never a term in this corpus. The worked example is a **100-pip ADR**, consistent with `[00:01:27]`'s *"I have a hundred pips to work with"* |
+| **3** | `[00:33:24]`–`[00:33:30]` | *"the M&W might form an M5. **Most of you**, it wasn't M4, M3 was M5"* | *"the M&W might form an M5, **oh, Steve**, it wasn't M4, M3, it was M5"* | ⭐⭐ **PARTLY CORRECTED, AND THE IMPORTANT HALF IS CONFIRMED.** *"Most of you"* is a student's voice, *"oh, Steve"*. **`M5` SURVIVES BOTH ENGINES, TWICE IN ONE SENTENCE.** See below |
+| **4** | `[00:26:39]` | *"half a batman, and **an an an an an an an an an an an a long M2**. M4, he broke the projection outside the"* | *"half a Batman, **and, and, and, and, and, and, and, it, long, M2**, M4, he broke the projection outside the ADR"* | ⚠ **NOT RECOVERED, AND THAT IS THE FINDING.** Two independent engines stutter on the same clause. *"half a Batman"* and *"he broke the projection outside the ADR"* are **CONFIRMED**; the clause between them is **unrecoverable from audio** and **no claim in any V16 artifact rests on it** |
+| **5** | `[00:09:31]` | *"the ADR is calculated over the last two weeks, 15 days."* | *"the ADR is calculated over the last two weeks, **15 days**."* | ⭐⭐ **CONFIRMED VERBATIM.** The single highest-value line in the file, corroborated word-for-word by an independent engine. `[00:09:37]`'s gloss is confirmed too (*"an average of what price**s** moved"* → *"what price **has** moved"*, immaterial) |
+| **6** | `[00:40:07]`–`[00:40:16]` | *"Steve, **are you stating the London session starter on your slide? What is the daily candle** that we were looking at?"* | *"Steve, **why are you stating the London session started on your slide when it's the daily candle** that we were looking at?"* | ⭐⭐ **CORRECTED — LOAD-BEARING, AND IT CHANGES `C-023`.** See below |
+| 7 | `[00:05:24]` | *"we can look at the projections **right up the London open**"* | *"we can look at the projections **right at the London Open**"* | **CORRECTED** — a second garbled *"London Open"* in the same file |
+| 8 | `[00:41:02]` | *"It's actually four majors **in due** commodity crosses"* | *"It's actually four majors **and two** commodity crosses"* | **CORRECTED.** 4 + 2 = the six he just listed |
+| 9 | `[00:34:35]`, `[00:34:44]` | *"**doge** to the high"* · *"straightaway **cell, now example**"* | *"**doji** to the high"* · *"straight away **sell in that example**"* | **CORRECTED** |
+| 10 | `[00:28:34]` | *"a big fat blueberry **line line** there"* | *"a big fat blueberry **line laying** there"* | **CORRECTED** — a duplication artefact, not a repeated word |
+| 11 | `[00:09:06]` | *"perhaps on **the last leg**"* | *"perhaps on **the last leg of the last leg**"* | **CORRECTED.** Slightly sharpens `A-097`'s location note for the *"33 trade"* |
+| 12 | `[00:35:40]` | *"I want you to train your biceps"* | *"I want you to train your biceps **tonight**"* | **CORRECTED** — immaterial |
+
+### ⭐⭐ WHY #1 AND #7 MATTER: THE LONDON-OPEN READ GAINS AN AUDIO LEG
+
+Before arbitration, `V16_INTERPRETATION.md` §2 item 10 — *"price in the red band at the London open
+→ SELL; green band → BUY"* — was graded **`[VISUAL]`, MEDIUM confidence**, because the audio at
+that second was an unrecoverable *"At the moment open"*.
+
+**It is now `[AUDIO+VISUAL]`.** The second pass reads *"At the London Open, if the dealer breaks
+high in the top side of the pivot grid, you're a seller"*, the slide two seconds later prints
+`London Session Start / 2:00 To 3:00 AM, EST`, and the grid slide's own legend prints
+`PRICE AT LONDON OPEN → SELL / BUY`. **Three independent supports, one of them audio.**
+
+⚠ **`A-105`'s `EST`-versus-`EDT` problem is NOT touched by this.** The *rule* gains an audio leg;
+the *hour* does not.
+
+### ⭐⭐ WHY #6 MATTERS: THE STUDENT SPOTTED `C-023` BEFORE THIS PROJECT DID
+
+The committed transcript renders the question as **two** sentences and it reads as two unrelated
+asks. The second pass renders it as **one**, and it is a challenge:
+
+> *"Steve, **why are you stating the London session started on your slide when it's the daily
+> candle that we were looking at?"*
+
+**The student is pointing at exactly the inconsistency `C-023` records.** That changes how the
+answer should be read: `[00:40:22]`'s *"we calculate our pivot points from midnight to midnight… I
+know they're based on the daily candle, **but**…"* is a **considered reply to a challenge**, not an
+offhand remark — which makes `[00:41:09]`'s *"no, just do it on the daily candle for right now"*
+harder to dismiss as a slip, and easier to read as the deliberate simplification he flags it as.
+
+**`C-023` is amended with the corrected question. Its severity is unchanged; its character is not.**
+
+### ⚠ WHY #3 IS A PROBLEM AND NOT A CURIOSITY
+
+**`M5` survives two independent ASR engines, twice inside one sentence** — *"the M&W might form an
+M5… M3, it was M5"* — and **there is no `M5` on the printed nine-level grid**
+(`R2 · M4 · R1 · M3 · CPP · M2 · S1 · M1 · S2`, `V16_00-01-40_…png`).
+
+**Either the instructor's live grid has levels his slide does not, or he misspoke twice.** Nothing
+in the file decides it. **Recorded in `A-101`. It is not resolved and it is not smoothed away.**
+
+### WHAT THE SECOND PASS DID **NOT** CHANGE
+
+Every figure and term any V16 artifact relies on was re-checked against the second pass's full
+text and **survives unchanged**: *"200 pips in every pair, except GJ and some of the crosses"* ·
+*"do not exceed 200 pips on the average day"* · *"600 to 1,000 pip range for the week"* ·
+*"midnight to midnight"* (×2) · *"mypivotcalculator.com"* · the six majors · *"Ignore the
+pivots"* · *"33 trade"* (×2) · *"half a Batman"* (×2) · *"blueberry"* (×2) · *"Labor Day"*.
+
+**And the eight `Q-017` absence terms are absent from the SECOND pass as well** — `stop loss`,
+`Asian box`, `shark`, `shark fin`, `railroad`, `peak formation`, `evening star`, `5/13` all return
+**zero** on an independently produced transcript. **`Q-017`'s fabrication finding does not depend
+on the committed transcript being right.**
 
 ---
 

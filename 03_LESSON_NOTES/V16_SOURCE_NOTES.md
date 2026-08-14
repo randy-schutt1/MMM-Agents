@@ -382,14 +382,27 @@ corpus after V06's `3:45am or 9:45am est.` (V06 R1 item 57).
 > seller. If the dealer breaks low, at the bottom side of the pivot grid, if he hits M1, gives you
 > a nice setup, if he hits M2, he gives you a nice setup."*
 
-*"At the moment open"* is queued as ASR correction **#1** (`V16_TRANSCRIPT.md` §5). ⚠ **Until the
-independent pass arbitrates it, the reading *"At the London open"* is a HYPOTHESIS supported by
-the slide two seconds later and by the same slide's own printed legend `PRICE AT LONDON OPEN` —
-it is not asserted.**
+⭐⭐ **ARBITRATED AND CONFIRMED.** *"At the moment open"* is **`"At the London Open"`** — ASR
+correction **#1**, `V16_TRANSCRIPT.md` §5, resolved by an independent `large-v3-turbo` pass which
+reads *"I'm getting ahead of myself. **At the London Open**, if the dealer breaks high in the top
+side of the pivot grid, you're a seller."* The same pass corrects a **second** garbled *"London
+Open"* at `[00:05:24]` (correction #7). **So the rule has an AUDIO leg, a PRINTED slide two seconds
+later, and the grid slide's own `PRICE AT LONDON OPEN` legend — three independent supports.**
+⚠ **`A-105`'s `EST`/`EDT` hour is untouched by this.**
 
 ### §9b — MIDNIGHT TO MIDNIGHT, AND THE CONTRADICTION FORTY SECONDS LATER `[AUDIO]`
 
-A student asks the question directly. `[00:40:22]`–`[00:40:34]`:
+⭐⭐ **AND THE STUDENT ASKED IT AS A CHALLENGE — the committed ASR obscured that, and the
+independent pass restored it** (correction **#6**). The committed text renders the question as two
+unrelated sentences; the second pass renders it as one:
+
+> `[00:40:07]`–`[00:40:16]` *"Steve, **why are you stating the London session started on your slide
+> when it's the daily candle that we were looking at?**"*
+
+**The student is pointing at the inconsistency directly.** That makes the answer below a
+considered reply rather than an aside.
+
+`[00:40:22]`–`[00:40:34]`:
 > *"I wanted the pivot points of price action to be as fresh as possible right before we trade. So
 > we calculate our pivot points from midnight to midnight. I know they're based on the daily candle,
 > **but they're based on price action from the 24 hour period from midnight to midnight.**"*
@@ -512,7 +525,7 @@ out-of-corpus dependency of the `A-042` kind — **not** as a gap in this corpus
 | *"half a batman"* | `[00:26:39]`, `[00:27:31]` — **corroborates V05's printed *"1/2 Batman"***. Still undefined |
 | *"blueberry"* | `[00:28:34]`, `[00:28:53]` — a *"big fat blueberry line"* slightly below `M1`. **No period attached.** `A-020` extended, still `DO NOT CODE` |
 | *"level 1 / 2 / 3"* | used freely `[00:04:09]`, `[00:25:07]`; never defined here |
-| `M5` | ⚠ `[00:33:24]`–`[00:33:30]` *"You have to understand the M&W might form an M5. Most of you, it wasn't M4, \| M3 was M5"* — **there is no `M5` on the printed grid.** ASR correction **#3**, unresolved at this checkpoint |
+| `M5` | ⚠⚠ `[00:33:24]`–`[00:33:30]`. Corrected to *"the M&W might form an M5, **oh, Steve**, it wasn't M4, M3, it was M5"* (correction **#3**) — *"Most of you"* was a student's voice. ⭐ **`M5` SURVIVES BOTH ASR ENGINES, TWICE IN ONE SENTENCE, and there is NO `M5` on the printed nine-level grid.** Either the live grid carries levels the slide does not, or he misspoke twice. **Nothing in the file decides it.** Recorded in `A-101` |
 | *"stop loss"* | **ZERO occurrences**, as in V10. Absence is evidence |
 | *"Asian box"* | **ZERO occurrences.** *"Asian range"* occurs twice. ⚠ This falsifies the quarantined `NOTES.md`/`RULES.md` directly (`Q-017`) |
 | *"shark"* / *"63"* | **ZERO occurrences.** `A-084`'s open item 157 gets **no help**, as expected |

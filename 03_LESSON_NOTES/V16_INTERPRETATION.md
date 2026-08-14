@@ -54,7 +54,7 @@ a pivot touch as an entry is implementing something the lesson explicitly discla
 | 7 | ADR lookback = *"the last two weeks, 15 days"* | **EXPLICIT** | `[00:09:31]` | HIGH **that he said it**; ⚠ LOW that it is self-consistent |
 | 8 | The three-day cycle, and the fourth-day inversion | **EXPLICIT ×3** | `[00:12:30]`, `[00:13:14]`–`[00:13:32]`, `[00:15:11]`–`[00:15:36]`, `[00:31:32]`–`[00:31:48]` | HIGH |
 | 9 | What starts a cycle | **UNRESOLVED** | Never stated. See §4 | — |
-| 10 | The London-open read: price in the red band at the London open → SELL; green band → BUY | **VISUAL**, audio ASR-damaged | slide `V16_00-14-25`; legend on `V16_00-01-40`; `[00:14:23]` *"At the moment open"* | MEDIUM pending ASR arbitration |
+| 10 | The London-open read: price in the red band at the London open → SELL; green band → BUY | ⭐ **EXPLICIT + VISUAL** *(upgraded from `VISUAL`, MEDIUM, after arbitration)* | `[00:14:23]` **arbitrated to *"At the London Open, if the dealer breaks high in the top side of the pivot grid, you're a seller"*** (correction #1); slide `V16_00-14-25`; legend `PRICE AT LONDON OPEN` on `V16_00-01-40` | **HIGH** |
 | 11 | London session start = `2:00 To 3:00 AM, EST` | **VISUAL** | slide `V16_00-14-25` | HIGH **that it is printed**; see §5 for what it does and does not settle |
 | 12 | Pivot grid ≈ ADR grid; their coincidence is the high-value location | **EXPLICIT + VISUAL** | `[00:27:36]`–`[00:28:06]`; slide `V16_00-27-45` | HIGH |
 | 13 | The tolerance for *"line up"* | **UNRESOLVED** | Never stated → `A-102` | — |
@@ -64,7 +64,7 @@ a pivot touch as an entry is implementing something the lesson explicitly discla
 | 17 | Pivots are computed midnight-to-midnight | **EXPLICIT**, and **contradicted 40 s later by the same speaker** | `[00:40:22]`–`[00:40:34]` vs `[00:41:09]`–`[00:41:18]` → `C-023` | — |
 | 18 | The homework specification | **EXPLICIT + VISUAL**, complete | `[00:35:03]`–`[00:35:36]`, `[00:40:52]`–`[00:41:02]`; slide `V16_00-35-05` | HIGH |
 | 19 | Speaker is the course author, 100% | **INFERRED** from six non-acoustic strands | `V16_TRANSCRIPT.md` SPEAKER TABLE | HIGH, not CERTAIN |
-| 20 | `M5` exists as a grid level | **UNRESOLVED** | `[00:33:24]`–`[00:33:30]`; **no `M5` on the printed grid** → probable ASR damage, queued as correction #3 | — |
+| 20 | `M5` exists as a grid level | **UNRESOLVED — and NO LONGER attributable to ASR damage** | `[00:33:24]`–`[00:33:30]`, **confirmed twice in one sentence by BOTH engines** (correction #3); **no `M5` on the printed grid** → `A-101` | — |
 
 ---
 
@@ -183,6 +183,12 @@ Stated so a reviewer can aim.
 3. **§5's `EST`/`EDT`.** I have treated the slide as evidence that a definite clock exists, not as
    evidence of *which* clock. A reader who reads `EST` literally gets a different hour than one who
    reads it as *"New York time"*.
-4. **`[00:14:23]`.** If the independent ASR pass returns something other than *"London"*, item 10
-   in §2 loses its audio leg and becomes `[VISUAL]`-only. **I have written it so that outcome
-   changes one row and nothing else.**
+4. ~~**`[00:14:23]`.** If the independent ASR pass returns something other than *"London"*, item 10
+   in §2 loses its audio leg and becomes `[VISUAL]`-only.~~ ⭐ **RESOLVED IN THIS SESSION.** The
+   pass returned *"At the **London** Open"* and item 10 was upgraded to **EXPLICIT + VISUAL, HIGH**.
+   *(Retained per `REMEDIATION_PROTOCOL.md` §2 — the prediction was made before the answer was
+   known and it is worth more visible than deleted.)*
+5. ⭐ **`M5`, which I did not anticipate at all.** Two independent engines hear *"M5"* twice in one
+   sentence, and there is no `M5` on the printed grid. **If a later session shows the live grid has
+   more levels than the slide, `A-101`'s pixel-spacing argument (§3) is unaffected but §2's
+   nine-level enumeration is incomplete.** I do not think that is likely; I did not test it.

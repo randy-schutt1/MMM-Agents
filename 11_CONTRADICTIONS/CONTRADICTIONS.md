@@ -2722,6 +2722,20 @@ C-022 -- OPEN. Reading A and reading B are both defensible from Tier 1 and are
 
 ### The two statements
 
+### ⭐ AMENDED, same session — THE STUDENT ASKED IT AS A CHALLENGE
+
+The committed ASR renders the question as two unrelated sentences. The independent
+`large-v3-turbo` pass renders it as **one**, and it is a direct challenge
+(`V16_TRANSCRIPT.md` §5 correction **#6**):
+
+> `[00:40:07]`–`[00:40:16]` *"Steve, **why are you stating the London session started on your slide
+> when it's the daily candle that we were looking at?**"*
+
+**The student had already spotted this conflict in 2012.** That raises the quality of the first
+answer — it is a considered reply to a challenge — and makes the second answer harder to read as a
+slip and easier to read as the deliberate teaching simplification he flags it as.
+**Severity unchanged; character changed.**
+
 **A student (Frank/Franco) asks directly what the daily candle is.** `[00:40:22]`–`[00:40:34]`:
 
 > *"I wanted the pivot points of price action to be as fresh as possible right before we trade. So

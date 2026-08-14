@@ -8604,6 +8604,34 @@ A-101 -- OPEN, and it BLOCKS the whole of V16's lesson.
   class "Indicator chart setup day" which is NOT in this corpus (A-087).
 ```
 
+### ⚠ ADDENDUM, same session — `M5` IS SPOKEN TWICE AND IS NOT ON THE PRINTED GRID
+
+`[00:33:24]`–`[00:33:30]`, and **both ASR engines agree, twice inside one sentence**
+(`V16_TRANSCRIPT.md` §5 correction **#3**):
+
+> *"You have to understand the M&W might form an **M5**, oh, Steve, it wasn't M4, M3, it was **M5**."*
+
+**There is no `M5` on the printed nine-level grid.** The committed transcript's *"Most of you"* was
+a student's voice (*"oh, Steve"*) — that half was ASR damage — **but `M5` was not.**
+
+**Two readings, neither adopted:**
+
+1. The instructor's **live** grid carries levels his slide does not (an `M5` above `M4`, i.e. above
+   `R2`), and the printed enumeration is incomplete.
+2. He misspoke, twice, in one sentence, while correcting a student.
+
+⚠ **Nothing in V16 decides it, and this record does not.** It matters because reading (1) would
+mean **§2's nine-level enumeration is not the whole grid** — which does *not* affect the
+pixel-spacing argument above (that argument is about the drawing, not about completeness) but does
+affect any attempt to enumerate the levels exhaustively.
+
+```text
+A-101 ADDENDUM -- "M5": SPOKEN TWICE, CONFIRMED BY TWO ENGINES, ABSENT FROM THE
+  PRINTED GRID. DO NOT CODE. DO NOT assume the printed nine levels are exhaustive.
+  Required research: V17-V21 for any further M5 use, or any grid image with a
+  tenth level.
+```
+
 ---
 
 ## A-102 — *"line up"* / *"lay in there"* / *"slightly below"*: the confluence rule's TOLERANCE is never stated
