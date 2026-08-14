@@ -192,6 +192,26 @@ a tier that a later video can overturn. Any session reaching a lesson that touch
 analysis, the level-counting scheme, or the moving-average set **must** re-check these three
 against the lesson and run §3.1 if Tier 1 speaks. Closed on Tier 2 is **not** closed for good.
 
+> ### 📌 UPDATED 2026-08-13 — `D-041`, AND `A-020`'s OBLIGATION IS **NOT** DISCHARGED
+>
+> **The course-canonical nickname mapping, owner-attested and definitive (`D-041`):**
+> **ketchup = 5 · mustard = 13 · water = 50 · mayonnaise = 200 · blueberry = 800**
+> (blueberry alone is `RESOLVED BY COURSE`, V09 `[00:41:43]`, on the **15-minute**).
+> Recorded here so a session arriving at this obligation does not have to reassemble the mapping
+> from four files — which is the failure `D-041` exists to fix.
+>
+> **`A-020` STAYS ON THIS LIST.** `D-041` closed `C-018` and corrected two rows; it did **not**
+> make any of ketchup/mustard/water/mayo a Tier 1 statement, and it created **no "Tier 0"** — the
+> owner disambiguated an ambiguous Tier 1 sentence, which is not the same act as outranking one.
+> A later video attaching a period to a nickname still governs and still triggers §3.1.
+>
+> **The strongest argument for this section is now `D-041` itself:** a *definitive* owner
+> attestation had to **overturn two rows of an earlier owner-attested closure** that had agreed
+> with three Tier 3 sources and with the project's own inference from V06. Fill-ins from below
+> Tier 1 go stale silently. That is what this obligation is for.
+>
+> `A-014` was re-checked against V09 and **not** changed; `A-023` is untouched. Both remain listed.
+
 ---
 
 ## 4. WHAT THIS FILE DOES NOT CHANGE

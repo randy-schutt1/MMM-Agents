@@ -7299,3 +7299,101 @@ the independence this round lacks, the cheap re-derivations are: `[01:00:20]` an
 the transcript body (`M2`); `[00:02:24]`, `[00:05:09]`, `[00:42:52]`, `[01:03:57]` (`M3`); a scan
 of the 32 curated frames for any printed holding period (`M4`); and `grep -rn "item 8[1-5]"`
 (`M1`). **None of it takes long.**
+
+---
+
+## 2026-08-13 — Integration Session — `D-041`: the owner's definitive MA nickname mapping
+
+**Branch:** `claude/add-documents-repository-fdfb3u` (integration) · **Act:** POLICY-ledger decision
+under `D-038a`, made directly on integration after `git fetch origin` confirmed **zero divergence**
+(`0 0`, `git rev-list --left-right --count`).
+
+### What happened
+
+The owner issued a direct, definitive ruling on the moving-average nicknames:
+
+> *"Mayonnaise is the 200 EMA, period. 50 is water, 5 is ketchup, 13 is mustard, 800 is blueberry.
+> These are the definitive names and numbers."*
+
+Recorded as **`D-041`**, on the same evidentiary footing as the owner-attested closures of `A-014`
+and `A-023` and the normative admission of `MMM-NOTES` (all `D-039`).
+
+### ⚠ THE FINDING THIS SESSION DID NOT EXPECT — ketchup and mustard are INVERTED
+
+The task that produced this entry described the ruling as **confirming** `A-020`. It confirms three
+rows and **overturns two**:
+
+| Nickname | `A-020` said | **Owner says** | |
+|---|---|---|---|
+| Ketchup | 13 | **5** | ⚠ **OVERTURNED** |
+| Mustard | 5 | **13** | ⚠ **OVERTURNED** |
+| Water | 50 | 50 | ✅ |
+| Mayo | 200 | 200 | ✅ reaffirmed |
+| Blueberry | 800 | 800 | ✅ (keeps its stronger `RESOLVED BY COURSE` basis, V09 `[00:41:43]`, 15-min) |
+
+**This was recorded loudly rather than swapped silently**, and it is flagged to the owner and to
+the incoming V11 reviewer as reversible on a word. The superseded assignment agreed with **three
+independent Tier 3 web sources**, with `Q-002`'s fabricated *"5 Mustard"*, **and** with the
+project's own inference from V06's *"closed below 13"* and its 13/50 relationship — four coherent
+lines of reasoning, all wrong. **No recording is contradicted:** `ketchup` occurs nowhere in
+genuine audio in the corpus and `mustard` occurs 0× in V05–V08.
+
+**That is the most useful thing this session produced.** `EXTERNAL_VOCABULARY_REFERENCE.md` §5's
+Tier 3 material was **unanimous and wrong** on a point where it looked strongest. `D-030` was right
+for the right reason, and §5.16 now carries the receipt.
+
+### `C-018` — closed, and on what basis
+
+V11 `[00:46:45]` *"Look where the averages are. There's the mayonnaise. There's the 50"* resolves
+as **reading B (enumeration)**, not apposition. `A-020` is untouched by the utterance.
+
+**The V11 session was right and is credited.** It refused reading A, gave three grounds for B, and
+declined to adjudicate — `C-018` states in terms why §3.3's *"the recording wins"* could **not**
+close it, because the recording is two-ways readable. The owner supplied the **disambiguation**
+that was missing, which is not the same act as outranking a recording. **No "Tier 0" is created**,
+and `SOURCING_HIERARCHY.md` §3.4's re-check obligation on `A-020` **stays live** — argued in
+`D-041` rather than asserted.
+
+**`C-018` itself is closed on `video/v11`, not here.** `CONTRADICTIONS.md` is an **evidence
+ledger** (`D-038a`) and `C-018` is unmerged. Closing it on its own branch is the rule working, not
+a split-brain; it lands at merge-back.
+
+**`SETUP_ISSUES.md` was NOT written, deliberately.** `C-018` carried a `SOURCING_HIERARCHY.md` §3.2
+**Case C** logging obligation as `OWED, NOT DONE`. Case C is *"genuine conflict — do not adjudicate,
+surface to the owner."* The owner has adjudicated, so the obligation is **discharged rather than
+performed**; there is no live conflict to log. Reasoned in `D-041` consequence 5 rather than
+silently skipped.
+
+### The mapping is now discoverable centrally — three places, deliberately
+
+`D-041` (authoritative) · `EXTERNAL_VOCABULARY_REFERENCE.md` §5.16 (where a session looking up a
+nickname actually lands, and where the wrong table lives) · `SOURCING_HIERARCHY.md` §3.4 (where the
+re-check obligation lives). **`08_CONCEPT_LIBRARY/CONCEPT_INDEX.md` was considered and rejected**
+on that file's own rule 5 and its `A-026` precedent: a nickname's period is a **label expansion**,
+not a method concept, and promoting it would launder a label into a definition.
+
+### Files
+
+- **Updated:** `00_SYSTEM/DECISIONS.md` (`D-041`); `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md`
+  (`A-020` — INDEX row, ⚠️ banner above the mapping table, `⛔ SUPERSEDED IN PART` block, Related
+  table); `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §5.16 (⛔ superseding banner + canonical
+  table); `00_SYSTEM/SOURCING_HIERARCHY.md` §3.4; this log.
+- **NOT touched:** `CHANGELOG.md` (no prior decision entry sets that convention — `D-038a`,
+  `D-039` and `D-040` are absent from it); `00_SYSTEM/SETUP_ISSUES.md` (reasoned above);
+  `08_CONCEPT_LIBRARY/CONCEPT_INDEX.md` (reasoned above); every `A-020` row of superseded text,
+  retained unedited per `REMEDIATION_PROTOCOL.md` §2; all `18_REVIEW/**` review files
+  (`REVIEW_PROTOCOL.md` §11).
+
+### Git
+
+`git fetch origin` first; **zero divergence** confirmed before any edit. Paths staged
+**explicitly**; `git diff --staged` read before the commit; **`git add -A` never used.**
+
+`scripts/validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+### Next Action
+
+**The V11 independent review is not unblocked by this and does not depend on it.** Two things are
+put to the reviewer: (1) the **ketchup/mustard inversion** — a reviewer is entitled to put it back
+to the owner, and nothing here is protected from that; (2) `C-018`'s closure arrives on
+`video/v11`, so a reviewer reading integration alone will not see it until merge-back.

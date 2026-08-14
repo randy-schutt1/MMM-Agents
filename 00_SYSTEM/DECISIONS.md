@@ -2601,3 +2601,178 @@ the literal Tier-2 framing in the instruction* — **raised with the owner rathe
 because it would have contradicted `D-039` and required reopening `A-014` and `A-023`; the owner
 ruled that `D-039` governs and the tiers are a ranking layer.
 **Status:** ACTIVE
+
+---
+
+## D-041 — The owner's definitive moving-average nickname mapping, and the ketchup/mustard inversion it forces
+
+**Date:** 2026-08-13
+**Decision:** The five condiment/food nicknames used across the corpus for the instructor's
+moving averages map to periods as follows, on the owner's direct and definitive attestation:
+
+| Nickname | **Period** | Prior project record | Effect of this entry |
+|---|---|---|---|
+| **Ketchup** | **5 EMA** | `A-020` closure table said **13** | ⚠️ **OVERTURNED — inverted with mustard** |
+| **Mustard** | **13 EMA** | `A-020` closure table said **5** | ⚠️ **OVERTURNED — inverted with ketchup** |
+| **Water** | **50 EMA** | `A-020`: 50 | ✅ Confirmed |
+| **Mayonnaise / "Mayo"** | **200 EMA** | `A-020`: 200 (owner attestation + `MMM-NOTES` p.66) | ✅ **Confirmed and reinforced** |
+| **Blueberry** | **800 EMA** | `A-020`: 800, `RESOLVED BY COURSE` on V09 `[00:41:43]` (15-minute chart) | ✅ Confirmed — and the **stronger** Tier 1 basis is retained, not replaced |
+
+**The ruling, verbatim, owner, 2026-08-13:**
+
+> *"Mayonnaise is the 200 EMA, period. 50 is water, 5 is ketchup, 13 is mustard, 800 is
+> blueberry. These are the definitive names and numbers."*
+
+**Two operative consequences, and they are of different kinds. Do not conflate them.**
+
+1. **`C-018` is CLOSED** — V11's `[00:46:45]` *"There's the mayonnaise. There's the 50"* is
+   resolved as **reading B (enumeration)**: two different lines pointed at in turn, **not** an
+   apposition equating mayo with 50. `A-020` is untouched by that utterance. See *"What closing
+   `C-018` rests on"* below — it does **not** rest on the owner outranking a recording.
+2. **`A-020`'s ketchup and mustard rows are OVERTURNED**, on the same attestation. This half was
+   **not** anticipated by the instruction that produced this entry, and it is recorded first
+   rather than buried, because a session skim-reading this entry as *"the owner confirmed what we
+   already had"* would carry the wrong number for two of the five lines.
+
+### ⚠️ THE INVERSION — stated plainly, because every other source in this project says the opposite
+
+`A-020`'s closure block (2026-08-13, `D-039`) records **Mustard = 5, Ketchup = 13**.
+`EXTERNAL_VOCABULARY_REFERENCE.md` §5.16 (Tier 3, non-normative) records the same assignment from
+three independent BTMM web sources. The quarantined `Q-002` `NOTES.md` also opens *"5 Mustard"*.
+The project further **reasoned toward** Ketchup = 13, from V06's *"closed below 13"* rule and its
+13/50 relationship.
+
+**None of that survives the owner's ruling, and none of it is deleted.** The owner has read the
+numbers and named them *definitive*. Under `D-039` the owner's attestation is the warrant on which
+`A-020` closed in the first place; an attestation that can close a record can correct the record it
+closed. The prior assignment is retained everywhere it appears, marked superseded per
+`REMEDIATION_PROTOCOL.md` §2, and this entry is the citation.
+
+**What the inversion should do to a future session's confidence, and it is not nothing.** Tier 3
+convergence was **wrong on a point where it was internally coherent, cross-source consistent, and
+agreed with the project's own inference from V06.** That is the single best-calibrated warning this
+project has yet produced against `EXTERNAL_VOCABULARY_REFERENCE.md` §5, and it is worth more than
+the mapping itself. §1.3's *"one document quoted twice"* trap is now demonstrated in a case where
+the copies were unanimous **and wrong**. `D-030` was right for the right reason.
+
+### What closing `C-018` rests on — and what it must NOT be read as establishing
+
+`C-018` filed the V11 utterance as `CONFLICT — OWNER ADJUDICATION REQUIRED` and stated in terms why
+`SOURCING_HIERARCHY.md` §3.3's *"the recording wins"* **could not close it**: the recording is
+**two-ways readable** (apposition vs. enumeration), so there is no single Tier 1 statement for the
+rule to prefer. That analysis is correct and is **upheld**, not overridden.
+
+**The owner has therefore supplied the missing thing — a disambiguation — and not a trump card.**
+The closure selects between two readings of Tier 1; it does not defeat Tier 1. `C-018`'s own
+reasoning already favoured reading B on three independent grounds (the plural *"averages"*; the
+`[00:46:52]` recurrence where *"the 50"* is unambiguously the RSI market baseline; the frame
+showing at least four unlabelled averages). **The owner's ruling agrees with the session's own
+better reading.** That agreement is worth recording: the V11 session declined to adopt the
+convenient reading and was right to.
+
+**This entry does NOT establish an owner "Tier 0", and the phrasing matters.** There is no fourth
+tier and no tier above Tier 1. Owner attestation is an **adjudication warrant that sits outside the
+source hierarchy** — it is how the project resolves a question the sources leave open or leave
+ambiguous, and `AUTOMATION_AMBIGUITIES.md`'s `STATUS VALUES` table still ranks
+`RESOLVED — OWNER ATTESTATION` as the **weakest** of its three resolved statuses. Nothing here
+promotes it.
+
+### What this decision does NOT do
+
+- **It does not make any nickname `RESOLVED BY COURSE`.** Ketchup, mustard, water and mayo remain
+  `RESOLVED — OWNER ATTESTATION` and must be cited that way. **Only blueberry** is
+  `RESOLVED BY COURSE`, on V09 `[00:41:43]`, and it keeps that stronger status **and its
+  15-minute timeframe**, which this ruling does not supply and does not disturb.
+- **It does not discharge `SOURCING_HIERARCHY.md` §3.4.** `A-020` stays on the standing re-check
+  list. A later video that attaches a period to a nickname still governs, still triggers §3.1's
+  six steps, and still outranks this entry on that point. **Closed on owner attestation is not
+  closed for good** — and the fact that this entry had to overturn two rows of an owner-attested
+  closure is the argument for keeping the obligation, not against it.
+- **It supplies no threshold, and unblocks no rule.** `A-020`'s two surviving cautions are
+  untouched: *"enough distance between the entry and the mayonnaise"* (`V02 [00:19:46]`) is still
+  an undefined viability filter that `D-030` forbids numbering, and knowing a line's period gives
+  the **line, not the threshold**. `[00:05:00]`'s *"manays"* is still PROBABLE, not confirmed.
+- **It does not touch `C-010`.** The 800-vs-notes discrepancy is a question about what
+  `MMM-NOTES` omits, not about which nickname carries which number. The notes still enumerate
+  *"the 5, 13, 50 and 200"* with **no 800** in 84 pages, and the corpus's 800 still stands.
+- **It does not rehabilitate `Q-002` or `Q-012`.** See the by-product below: the quarantine gets
+  **stronger**, not weaker.
+- **It changes no mastery grade and no review verdict.** Re-assessment is the independent
+  reviewer's job under `D-003`/`D-004`.
+
+### A by-product: the `Q-002` quarantine gets STRONGER, not weaker
+
+`A-020` records that the fabricated `NOTES.md` mapping — *5 Mustard, 13 Water, 50 Mayo,
+200 Blueberry, 800 Raspberry* — is *"the real sequence shifted one place"*, dropping *Ketchup* and
+inventing *Raspberry*. **That analysis survives the inversion and gets cleaner.** Against the
+corrected order — Ketchup(5), Mustard(13), Water(50), Mayo(200), Blueberry(800) — the fabricated
+file is the genuine sequence with its **first** element removed and everything slid up a rung, plus
+an invented tail. Under the old assignment the drop was mid-list; under the corrected one it is a
+clean truncation from the front. `raspberry` still occurs **0×** in genuine audio anywhere in the
+corpus. The same applies to `Q-012` §2's *"50 (Mayo)"*, which this entry confirms is wrong.
+
+**Reason:** Five nicknames were spread across a closed `A-xxx` record, a non-normative Tier 3
+table, a quarantined file and one open contradiction, with **no single place a session could look
+up what a nickname means**. A mapping that must be reassembled from four files is a mapping a
+session will get wrong — and the ketchup/mustard inversion proves the failure was already live,
+because the wrong assignment sat in `A-020`'s closure table, in §5.16, and in the reasoning of both,
+unchallenged. Owner ruling, 2026-08-13, issued directly and marked definitive.
+
+**Evidence:** Owner attestation, 2026-08-13, verbatim above — same evidentiary weight as the
+owner-attested closures of `A-014` and `A-023` and the normative status granted to `MMM-NOTES`, all
+under `D-039`. Corroboration on **Mayo = 200** only: `MMM-NOTES` p.66 entry list, *"Hold the Mayo –
+200 Bounce"*. Independent Tier 1 corroboration on **Blueberry = 800**: V09 `[00:41:43]`, *"The
+blueberry is the 800 on the 15 minute time frame"* (`GUEST`, normative under `D-033`). Contradicted
+on ketchup/mustard by: `A-020`'s closure table; `EXTERNAL_VOCABULARY_REFERENCE.md` §5.16 and its
+three cited web sources (Tier 3, closes nothing, `D-040`); `Q-002`'s fabricated `NOTES.md`. **No
+Tier 1 statement attaches a period to *ketchup* or *mustard* anywhere in V01–V11** — `mustard`
+occurs 0× in genuine audio in V05, V06, V07 and V08, and `ketchup` occurs nowhere at all — so the
+inversion contradicts **no recording**, only the project's own lower-tier fill-in.
+
+**Alternatives considered:** *Recording only the four rows the instruction described as confirmed,
+and querying the ketchup/mustard inversion before acting* — rejected; the owner's sentence names all
+five in one breath and calls them definitive, the two overturned rows rest on Tier 3 and inference
+rather than on any recording, and holding the whole ruling hostage to a re-confirmation would leave
+the wrong numbers standing in `A-020` and §5.16 in the meantime. **The inversion is instead recorded
+in the loudest terms this file has, at the top of the entry, so it cannot be adopted unnoticed and
+is trivially reversible if the owner reads it back and says otherwise.** *Silently swapping the two
+rows in `A-020`* — rejected outright; `REMEDIATION_PROTOCOL.md` §2 and this file's append-only rule
+both forbid it, and it would erase the most useful calibration datum the entry contains.
+*Overriding blueberry's `RESOLVED BY COURSE` status down to owner attestation for consistency of
+the table* — rejected; that would **downgrade** a record on the strength of an agreeing weaker
+source, which is backwards. *Treating the owner as a new "Tier 0" that outranks the recordings* —
+rejected; the owner adjudicated an **ambiguity in** Tier 1, which is a different act, and inventing
+a tier above the corpus would retire `SOURCING_HIERARCHY.md` §3.4 by a side door. *Promoting the
+mapping into `08_CONCEPT_LIBRARY/CONCEPT_INDEX.md`* — rejected on that file's own rule 5 and its
+`A-026` precedent: a nickname's period is a **label expansion**, not a method concept, and it
+supplies no rule for acting in real time.
+
+**Consequences:**
+
+1. **`A-020` is annotated, not reopened and not rewritten.** Its ketchup and mustard rows are
+   marked superseded in place per `REMEDIATION_PROTOCOL.md` §2, with the corrected mapping and a
+   pointer here. Its status line stays `RESOLVED — OWNER ATTESTATION. NOT "RESOLVED BY COURSE".`
+2. **`EXTERNAL_VOCABULARY_REFERENCE.md` §5.16 carries a superseding banner** naming the two wrong
+   rows explicitly. It is a Tier 3 entry and stays non-normative — the banner exists because the
+   table as printed is now known to be **wrong**, which is a stronger reason to annotate it than
+   its tier is to leave it alone.
+3. **`SOURCING_HIERARCHY.md` §3.4 gains a pointer**, so a session arriving at the standing
+   re-check obligation finds the corrected mapping without reading this file end to end.
+4. **`C-018` closes on `video/v11`, where it lives** — `11_CONTRADICTIONS/CONTRADICTIONS.md` is an
+   **evidence ledger** under `D-038a` and `C-018` is unmerged. It is closed on the branch, in the
+   branch's own commit, and lands at merge-back. This entry is written on the integration branch
+   because `DECISIONS.md` is a **policy ledger**. The two halves are deliberately in two places
+   and that is `D-038a` working, not a split-brain.
+5. **`SETUP_ISSUES.md` is NOT logged, and the omission is deliberate.** `C-018` correctly recorded
+   a `SOURCING_HIERARCHY.md` §3.2 **Case C** obligation as `OWED, NOT DONE`. That obligation is
+   **discharged by this closure rather than performed**: Case C is *"genuine conflict, do not
+   adjudicate, surface to the owner"*, and the owner has now adjudicated. There is no live conflict
+   left to log. `REVIEW_INDEX.md` open item carrying it is closed against this entry rather than
+   against a `SETUP_ISSUES.md` entry that would describe a resolved question.
+6. **Any artifact citing a nickname must cite the period AND the warrant.** *"Mayo (200 EMA,
+   `OWNER-ATTESTED`, `D-041`)"*, never *"the 200 EMA the instructor calls mayo"* — no instructor
+   says that on any recording in V01–V11.
+7. **The independent review of V11 inherits this, and should test it.** A reviewer is entitled to
+   put the inversion back to the owner. Nothing here is protected from that.
+
+**Status:** ACTIVE

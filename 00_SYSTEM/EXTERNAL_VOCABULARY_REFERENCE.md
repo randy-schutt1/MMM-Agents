@@ -574,6 +574,41 @@ negative result for *quarter of wood* / `COW` across BTMM sources.
 
 ### 5.16 — the moving averages and their nicknames · `A-020`
 
+> ## ⛔ STOP — THIS ENTRY IS SUPERSEDED, AND TWO ROWS OF ITS TABLE ARE NOW KNOWN TO BE **WRONG**
+>
+> **Updated 2026-08-13 · `00_SYSTEM/DECISIONS.md` `D-041`.** The text and table below are retained
+> unedited per `REMEDIATION_PROTOCOL.md` §2. **Do not cite them.**
+>
+> ### ⭐ THE COURSE-CANONICAL MAPPING — OWNER-ATTESTED, DEFINITIVE, `D-041`
+>
+> > *"Mayonnaise is the 200 EMA, period. 50 is water, 5 is ketchup, 13 is mustard, 800 is
+> > blueberry. **These are the definitive names and numbers.**"* — project owner, 2026-08-13
+>
+> | Nickname | **Period** | Warrant | vs. the Tier 3 table below |
+> |---|---|---|---|
+> | **Ketchup** | **5 EMA** | `RESOLVED — OWNER ATTESTATION` (`D-041`) | ⚠️ **CONTRADICTED** — the table says 13 |
+> | **Mustard** | **13 EMA** | `RESOLVED — OWNER ATTESTATION` (`D-041`) | ⚠️ **CONTRADICTED** — the table says 5 |
+> | **Water** | **50 EMA** | `RESOLVED — OWNER ATTESTATION` (`D-039`, reaffirmed `D-041`) | ✅ agrees |
+> | **Mayonnaise / Mayo** | **200 EMA** | `RESOLVED — OWNER ATTESTATION` + `MMM-NOTES` p.66 (Tier 2) | ✅ agrees |
+> | **Blueberry** | **800 EMA**, **on the 15-minute** | ✅ **`RESOLVED BY COURSE`** — V09 `[00:41:43]`, the only nickname with a Tier 1 basis | ✅ agrees |
+>
+> ### ⭐⭐ THIS IS THE BEST-CALIBRATED WARNING IN THIS ENTIRE FILE — READ IT BEFORE USING §5
+>
+> The table below is **internally coherent**, **consistent across three independent web sources**,
+> **matches the numbers the transcripts' own term-count lists were checking for**, and **agrees
+> with the project's own inference from V06's *"closed below 13"* rule and its 13/50
+> relationship.** It is also **wrong on two of its five rows.**
+>
+> Nothing about the way it was assembled would have caught that. It was not sloppy, not
+> single-sourced, and not implausible — and §1.3 of `SOURCING_HIERARCHY.md` explains why that is
+> no comfort: these sources are very probably **one document quoted three times**, so their
+> unanimity was never independent corroboration. **Tier 3 was unanimous and it was wrong.**
+> `D-030` was right for the right reason, and this is the receipt.
+>
+> **Governing:** `D-041` · `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` `A-020` (⛔ SUPERSEDED IN
+> PART block) · `11_CONTRADICTIONS/CONTRADICTIONS.md` `C-018` (closed) · `SOURCING_HIERARCHY.md`
+> §3.4 (the re-check obligation on `A-020` **remains live**).
+
 **Course status: UNCHANGED — `DO NOT CODE`. The open half of `A-020` is the *period*, and no
 period is printed anywhere in V01–V07.**
 

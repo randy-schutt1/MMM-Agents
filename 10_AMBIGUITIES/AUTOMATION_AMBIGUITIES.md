@@ -314,7 +314,7 @@ resolved record keeps its history.
 | A-017 | "big entry candle" | V01 `[00:48:41]` | DO NOT CODE | Medium. The only entry-trigger language in the lesson. |
 | A-018 | `R = <number>` labels on the shaded boxes | V01 `[00:48:35]` | DO NOT CODE | Medium. If misread as a risk-to-reward ratio it would invent a target rule the lesson never states. |
 | A-019 | session times with **no timezone stated** | V02 `[00:50:32]` | DO NOT CODE — **materially constrained** by slide `[00:45:55]` | Foundational. The full session table is now recovered from the slide; only the timezone is missing. |
-| A-020 | "mayonnaise" (a moving average) | V02 `[00:19:46]` | **RESOLVED — OWNER ATTESTATION** (`D-039`), *not* by course. See `C-010` | High. Used as a support/resistance reference *and* as the distance test for whether a trade is worth taking. |
+| A-020 | "mayonnaise" (a moving average) | V02 `[00:19:46]` | **RESOLVED — OWNER ATTESTATION** (`D-039`), *not* by course. **Mapping SUPERSEDED IN PART by `D-041`** — ketchup/mustard **inverted** to **5/13**; mayo=200 reaffirmed; blueberry=800 stays `RESOLVED BY COURSE`. Closes `C-018`. See `C-010` | High. Used as a support/resistance reference *and* as the distance test for whether a trade is worth taking. |
 | A-021 | the letter sequence for "the cycle" | V02 `[00:07:28]` / `[00:19:31]` | DO NOT CODE | Medium. Two incompatible strings ("M-A-A-W", "WVVM") for the same named object. |
 | A-022 | "half-Batman" | V02 `[00:20:37]` | DO NOT CODE — **narrowed** by `MMM-NOTES` p.19 (`D-039`) | High. One of exactly two named continuations at outside structure high. |
 | A-023 | "33 trade" | V02 `[00:22:16]` | **RESOLVED BY `MMM-NOTES`** p.64 (`D-039`) — digits decoded; remains DO NOT CODE; **constrained** by V02 slide `[00:18:00]` | Medium. Printed on the **Level 3** move, tying it to level rather than calendar day. ~~Digits still undecoded.~~ **Decoded 2026-08-13**: 3 levels over 3 days + an intraday Level III. |
@@ -2052,6 +2052,12 @@ failure mode.
 
 **The mapping, as now recorded:**
 
+> ⚠️ **THE FIRST TWO ROWS OF THIS TABLE ARE WRONG AND ARE SUPERSEDED BY `D-041`.** Ketchup and
+> mustard are **inverted** here: the owner's definitive ruling of 2026-08-13 is **Ketchup = 5,
+> Mustard = 13**. The table is retained unedited per `REMEDIATION_PROTOCOL.md` §2. **Rows 3–5
+> (water, mayo, blueberry) are confirmed and unaffected.** Full treatment: the
+> `⛔ SUPERSEDED IN PART` block below, and `00_SYSTEM/DECISIONS.md` `D-041`.
+
 | Nickname | Period | Authority |
 |---|---|---|
 | Mustard | 5 | Owner attestation (implied by the set); `MMM-NOTES` p.38 lists a 5 |
@@ -2101,6 +2107,76 @@ failure mode.
 > **Source:** `03_LESSON_NOTES/V09_SOURCE_NOTES.md` §9 (the full treatment, four claims separated);
 > `04_SCREENSHOTS/V09/V09_00-41-25_multi-chart-tile-view-during-grape-question.png`.
 
+> ### ⛔ SUPERSEDED IN PART — 2026-08-13 — `D-041`: THE OWNER'S DEFINITIVE MAPPING INVERTS KETCHUP AND MUSTARD
+>
+> **All text above is retained unedited** per `REMEDIATION_PROTOCOL.md` §2. **This record does not
+> reopen and its status does not change.** What changes is **two rows of the mapping table**, and
+> one point of the commentary that depended on them.
+>
+> **The owner's ruling, verbatim, 2026-08-13:**
+>
+> > *"Mayonnaise is the 200 EMA, period. 50 is water, 5 is ketchup, 13 is mustard, 800 is
+> > blueberry. **These are the definitive names and numbers.**"*
+>
+> **THE CORRECTED MAPPING — this is the one to cite:**
+>
+> | Nickname | **Period** | Warrant | vs. the table above |
+> |---|---|---|---|
+> | **Ketchup** | **5** | `RESOLVED — OWNER ATTESTATION` (`D-041`) | ⚠️ **CHANGED** — was 13 |
+> | **Mustard** | **13** | `RESOLVED — OWNER ATTESTATION` (`D-041`) | ⚠️ **CHANGED** — was 5 |
+> | **Water** | **50** | `RESOLVED — OWNER ATTESTATION` (`D-039`, reaffirmed `D-041`) | ✅ unchanged |
+> | **Mayonnaise / Mayo** | **200** | `RESOLVED — OWNER ATTESTATION` (`D-039`, **reaffirmed in the strongest terms** by `D-041`) + `MMM-NOTES` p.66 | ✅ unchanged |
+> | **Blueberry** | **800**, **on the 15-minute** | ✅ **`RESOLVED BY COURSE`** — V09 `[00:41:43]`, `GUEST`, normative under `D-033`. **This stronger basis and its timeframe are RETAINED**; `D-041` agrees with it and does not replace it | ✅ unchanged |
+>
+> ### What the inversion costs, and why it is the most useful thing in this block
+>
+> The superseded assignment was **not** a careless one. It agreed with three independent Tier 3
+> web sources (`EXTERNAL_VOCABULARY_REFERENCE.md` §5.16), with the quarantined `Q-002` file's
+> opening *"5 Mustard"*, **and** with this project's own inference from V06's *"closed below 13"*
+> rule and its 13/50 relationship. Four lines of reasoning, mutually consistent, **all wrong.**
+>
+> **No recording is contradicted by the correction.** `ketchup` occurs nowhere in genuine audio in
+> the corpus, and `mustard` occurs **0×** in V05, V06, V07 and V08. The overturned rows rested on
+> Tier 3 and inference — never on Tier 1 — which is exactly why they were overturnable and exactly
+> what `D-040` warned a fill-in would do if left unchecked.
+>
+> ### `C-018` IS CLOSED BY THIS RULING — and note what it does NOT establish
+>
+> V11 `[00:46:45]` — *"Look where the averages are. There's the mayonnaise. There's the 50"* — is
+> resolved as **reading B (enumeration)**: two separate lines pointed at in turn. **Mayo is not the
+> 50, and this record is untouched by that utterance.** The V11 session declined to adopt the
+> convenient reading A, gave three grounds for B, and refused to adjudicate; **the owner's ruling
+> agrees with the session's own better reading.**
+>
+> **This is an owner disambiguating an ambiguous Tier 1 sentence — NOT an owner outranking Tier 1.**
+> There is no "Tier 0". The `STATUS VALUES` table above still ranks
+> `RESOLVED — OWNER ATTESTATION` as the **weakest** resolved status, and
+> `SOURCING_HIERARCHY.md` §3.4's standing re-check obligation on this record **remains live**: a
+> later video that attaches a period to a nickname still governs and still triggers §3.1.
+> **That a definitive owner attestation has just had to overturn two rows of an earlier
+> owner-attested closure is the argument FOR keeping that obligation, not against it.**
+>
+> ### What did NOT change
+>
+> - **The status line below.** Still `RESOLVED — OWNER ATTESTATION`, still explicitly *not*
+>   `RESOLVED BY COURSE` for ketchup, mustard, water and mayo. Only **blueberry** is Tier 1.
+> - **Both surviving cautions.** *"Enough distance between the entry and the mayonnaise"*
+>   (`V02 [00:19:46]`) is still an undefined viability filter — a period gives the **line, not the
+>   threshold** — and `D-030` still forbids picking a number. `[00:05:00]`'s *"manays"* is still
+>   PROBABLE, not confirmed.
+> - **`C-010`.** Untouched. The notes still enumerate *"the 5, 13, 50 and 200"* with no 800.
+> - **The `Q-002` by-product below — which gets STRONGER.** Against the corrected order
+>   Ketchup(5), Mustard(13), Water(50), Mayo(200), Blueberry(800), the fabricated file's
+>   *5 Mustard, 13 Water, 50 Mayo, 200 Blueberry, 800 Raspberry* is the genuine sequence with its
+>   **first** element dropped and everything slid up one rung, plus an invented tail — a **clean
+>   truncation from the front** rather than the mid-list drop the paragraph below describes. The
+>   quarantine stands and the corroboration is tidier than it was. `raspberry` still occurs **0×**.
+>
+> **Source:** `00_SYSTEM/DECISIONS.md` `D-041` (full entry, alternatives, consequences);
+> `11_CONTRADICTIONS/CONTRADICTIONS.md` `C-018` (closed on `video/v11`, lands at merge-back per
+> `D-038a`); `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §5.16 (Tier 3 table, banner added);
+> `00_SYSTEM/SOURCING_HIERARCHY.md` §3.4.
+
 **Status:**
 
 ```text
@@ -2145,8 +2221,11 @@ survive its closure and are **not** answered by the mapping:
 | Type | Reference |
 |---|---|
 | Decision | `D-039` (admission of `MMM-NOTES`; owner attestation as warrant) |
+| Decision | **`D-041`** — the owner's **definitive** five-nickname mapping. **Supersedes the ketchup/mustard rows of this record (inverted to 5/13)**; reaffirms mayo=200; closes `C-018` |
 | Contradiction | **`C-010`** — the corpus's `800` vs the notes' four-EMA enumeration |
-| Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.4; `MMM-NOTES` p.38, p.66 |
+| Contradiction | **`C-018`** — V11 `[00:46:45]` *"There's the mayonnaise. There's the 50"*. **CLOSED by `D-041`** as reading B (enumeration); this record untouched by the utterance. Lives on `video/v11` until merge-back (`D-038a`) |
+| Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.4 and **§5.16** (Tier 3 table, now carrying a `D-041` superseding banner); `MMM-NOTES` p.38, p.66 |
+| Reference | `00_SYSTEM/SOURCING_HIERARCHY.md` §3.4 — the standing re-check obligation on this record **remains live** after `D-041` |
 
 ---
 
