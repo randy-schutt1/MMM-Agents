@@ -8218,3 +8218,82 @@ failing state.
 returns — `D-004`. **`V13`'s gate is CLOSED until then**, and `COURSE_PROGRESS.md`'s V13 GATE block
 carries ten carry-forward items, of which **(a) — one sentence or one frame naming the TDI's
 smoothing — is the cheapest remaining unblock in the project.**
+
+---
+
+# V12 — INDEPENDENT REVIEW R1 (`review/v12`)
+
+**Date:** 2026-08-14 · **Branch:** `review/v12`, cut from integration @ `e70a6f6`, own worktree
+(`D-038`) · **Submission:** `video/v12` @ `ecc2f75`
+
+## Verdict
+
+```text
+REVISE -- 0 CRITICAL / 0 MAJOR / 2 MINOR / 6 NOTE
+GATE TO V13:  OPEN (D-024)
+V12 STATUS:   IN REMEDIATION (items 137-138 owed before COMPLETE)
+CONFIDENCE:   HIGH
+```
+
+## `D-003` independence
+
+This session authored no V12 artifact. It read the full 690-marker transcript **before** any
+student conclusion was opened; **extracted the audio from the source `.swf`** (SHA-256 re-matched
+against `SOURCE_MANIFEST.md`) and ran **its own ASR with a different engine and a larger model**
+than the student's; re-derived `PT-040` in code sharing no line with `run_pt040.py` or `mmm_lib`;
+and re-ran the `Q-013` `diff`, the flashcard census and the nickname census at source.
+
+## What was re-derived rather than read
+
+- **`PT-040` — every Wilder cell reproduced to the printed decimal**, across `W-A`/A, `W-A`/B and
+  `W-B`/A: `O1` ×20, `O2` ×15, `O3` ×20, `O4` ×16, bars 24,755 / 24,730 / discarded 25, `W-B`
+  49,421 / 49,396. **`M = 10.4812 pp` at `k=5, t=50`; `5.1638 pp` at `k=2`.** Verdict `MATERIAL`
+  re-derived from the reviewer's own numbers. All four pre-registered secondary checks hold.
+  Ordering verified with `git cat-file`: **`run_pt040.py` provably absent at `83110f1`.**
+- **`A-080` — all four cited timestamps plus the fifth restatement, re-transcribed from the source
+  audio.** All confirm. Two ASR defects in the project transcript resolved **in the submission's
+  favour** (*"at all"* → *"that's all"*; *"our SI"* → *"RSI"*).
+- **The mayo/200 identification** — confirmed in speech by a **third** engine (*"it's held by the
+  mayonnaise perfectly. It's held by the 200"*) and in print by opening both frames
+  (`TDI VB BREAK, PRICE HELD BY 200`; `Shark Fin  Hold The Mayo`).
+- **`C-019`** — all four limbs, including **both Tier 2 page citations read at source** (p.46 line
+  1471, p.45 line 1414) and the printed `19:06` bullet read off the pixels.
+- **`Q-013`** — the exact `diff` re-run (**four identifier lines, zero content lines**) and the
+  ten-lesson claim re-derived by normalised hash: **03, 04, 09, 10, 11, 12, 13, 14, 15, 21**, with
+  a further five at 16–20. **Both figures exact.**
+- **`A-082`** — the flashcard census re-run across all 21 lessons: **119 across 18 of 21, every one
+  of the 21 per-lesson cells matching.** Seven of eight V03 citations verified at their markers.
+
+## The two MINORs
+
+1. **Item 137.** `04_SCREENSHOTS/V12/INDEX.md` §1's categorical *"every legend legible in any V12
+   frame is transcribed below"* is false — frame `00-34-26` carries an untranscribed
+   `MACD / STR / EMA` multi-timeframe dashboard. **`A-080` unaffected and its negative
+   strengthened**: the columns are timeframes not periods, the `EMA` row carries no number, the
+   chart is a student's (`[00:34:19]`), and the dashboard appears on no other frame.
+2. **Item 138.** `Q-013` §4's *"the first time the generator's text is about the right subject"* is
+   false — **`Q-003` Finding 2 and `Q-004` Finding 3 record the same hazard, on the same sentence.**
+   Measured: V03 `TDI` 12 / `shark fin` 3; V04 `TDI` 11 / `shark fin` 5; both share the
+   `VISUAL_INDEX.md` body **and** the `NOTES.md` TDI sentence with V12. **The correction strengthens
+   the entry** — three instances of an escalating pattern, not one curiosity.
+
+## The three questions V12 put to R1 — all adjudicated
+
+- **Item 124 — colour axis:** restraint **UPHELD**. `COMMON_PROTOCOL.md` §2 forbids measuring off a
+  rendering. The reviewer found a *further* strand (curve ordering by responsiveness, consistent
+  with `D-043` on all four rows) **and refused it too**.
+- **Item 130 — `A-039`:** stays **NARROWED**. Measured dependency surface: **287 references across
+  65 files** — but the decisive reason is `D-003`, since the same session opened the three
+  replacement records.
+- **Item 135 — `EXTERNAL_VOCABULARY_REFERENCE.md`:** **EVIDENCE ledger**, classified correctly.
+
+## Git discipline
+
+Explicit path staging only, **never `git add -A`**, `git diff --staged` inspected before each
+commit, `validate_project.py` **PASS** before push.
+
+### Next Action
+
+**Merge `review/v12` into the integration branch** per `D-038`, single-threaded, as a deliberate
+separate step. **V13 may then begin** — `A-084` is the cheapest remaining unblock and V13 is the
+next place it could be answered.

@@ -1195,7 +1195,29 @@ V12 STATUS NOW:      **STUDENT PASS COMPLETE, SUBMITTED, AWAITING R1.**
                      NOT advanced, recorded as negative results per item
                      107. Q-013 filed.
 
-V13 GATE:            **CLOSED until V12's R1 returns.** D-004: the gate opens
+V13 GATE:            ⭐ **OPEN.** V12 R1 returned 2026-08-14 on branch
+                     review/v12: **REVISE — 0 CRITICAL, 0 MAJOR, 2 MINOR,
+                     6 NOTE, confidence HIGH.** Under D-024 a round carrying
+                     zero CRITICAL and zero MAJOR OPENS the gate for V13.
+                     V12 stays IN REMEDIATION, not COMPLETE: items 137-138
+                     are owed. Neither can contaminate V13 -- 137 rescopes a
+                     completeness claim about frame legends while LEAVING
+                     A-080 AND ITS NEGATIVE INTACT AND STRENGTHENED, and 138
+                     corrects a novelty claim in Q-013 §4 while every
+                     quarantined file stays quarantined.
+                     ⭐ R1 re-derived PT-040 from the raw M1 corpus in
+                     independent code and reproduced EVERY Wilder cell to the
+                     printed decimal (M = 10.4812 pp, k=2 max 5.1638 pp), and
+                     re-verified all four A-080 timestamps against the SOURCE
+                     AUDIO with a third ASR engine. A-084 IS AN ACTIVE
+                     BLOCKER and V11's RSI threshold claims STAY BLOCKED.
+                     R1 also adjudicated the three questions V12 put to it:
+                     item 124 colour restraint UPHELD, item 130 A-039 STAYS
+                     NARROWED, item 135 EXTERNAL_VOCABULARY_REFERENCE.md is
+                     an EVIDENCE ledger. See 18_REVIEW/V12/V12_REVIEW_R1.md.
+                     *(Superseded, retained per REMEDIATION_PROTOCOL.md §2:
+                     "CLOSED until V12's R1 returns.")*
+                     D-004: the gate opens
                      on a REVIEWER verdict, never on a student submission,
                      and what R1 returns then governs per D-024.
                      Carry into V13, and read this before starting:
