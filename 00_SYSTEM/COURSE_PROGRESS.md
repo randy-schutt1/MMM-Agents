@@ -1020,8 +1020,13 @@ V11 STATUS:          **STUDENT PASS COMPLETE 2026-08-13, SUBMITTED AS
                      (V07's ruling).
                      Q-012 filed (NOTES.md + VISUAL_INDEX.md fabricated).
                      A-080..A-083 new; A-039 and A-011 NARROWED; A-020
-                     annotated CONFLICT. C-018 filed, NOT adjudicated.
-                     PT-037 pre-registered before its runner and run;
+                     annotated CONFLICT. C-018 filed, NOT adjudicated
+                     -- **C-018 SUBSEQUENTLY CLOSED by D-041 (owner
+                     adjudication, 2026-08-13): reading B, enumeration;
+                     Mayo = 200 stands. Same ruling INVERTED A-020's
+                     ketchup/mustard rows to 5 / 13.**
+                     PT-039 (filed and run as PT-037; re-issued by owner
+                     ruling) pre-registered before its runner and run;
                      BT_V11_0001 records M1a PARTIAL / M1b CONFIRMED /
                      M1c CONTRADICTED / M1d PARTIAL.
 
@@ -1069,10 +1074,25 @@ V12 GATE:            **CLOSED until V11's R1 returns.** D-004: the gate
                      PT-037 to its own test and RAN it. Proposed: V11 keeps
                      PT-037, V10's reservations move to PT-039 / PT-040.
                      **Owner or reviewer may reverse it.** See item 99.
+                     >> ✅ RESOLVED 2026-08-13 -- OWNER RULED AND REVERSED
+                     >> THE PROPOSAL: "Move V11 not V10 since V11 is after."
+                     >> V10 KEEPS PT-037 and PT-038; V11's test re-issued as
+                     >> PT-039 (SUPERSEDED -- NUMBERING; result RETAINED;
+                     >> nothing in its §§1-9 touched; BT_V10_0001 and
+                     >> V10_REVIEW_R1 still NOT edited).
+                     >> ⚠ PT-040 was NOT allocated and remains FREE -- V11
+                     >> only ever held ONE number; every PT-038 reference in
+                     >> V11's artifacts points at V10's reservation.
+                     >> Text above retained per REMEDIATION_PROTOCOL §2.
                      (h) **SETUP_ISSUES.md IS OWED AN ENTRY FOR C-018** —
                      SOURCING_HIERARCHY.md §3.2 Case C requires it and it is
                      a POLICY ledger, so a task branch cannot write it.
                      **Do it at integration.** See item 100.
+                     >> ✅ DISCHARGED 2026-08-13 by D-041, NOT performed.
+                     >> §3.2 Case C is "genuine conflict -- do NOT
+                     >> adjudicate, log, surface to owner." The owner HAS
+                     >> adjudicated and C-018 is closed, so there is no live
+                     >> conflict for the entry to describe. D-041 csq 5.
 
 V11 GATE:            **OPEN as of 2026-08-13 — V10 R1 returned REVISE with
                      0 CRITICAL / 0 MAJOR / 4 MINOR, HIGH confidence, which

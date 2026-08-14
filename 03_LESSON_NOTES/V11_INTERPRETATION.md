@@ -190,12 +190,12 @@ lower [low] of the day … have locked in"*, and the hand-written **`LOD`** at f
 supply is which *candidate* lows count — his are lows made after a stop hunt out of the blue box,
 and `A-076` blocks that filter.
 
-**`PT-037` therefore tests the claim's INFORMATIONAL CONTENT, not the instructor's setup**: given
+**`PT-039` therefore tests the claim's INFORMATIONAL CONTENT, not the instructor's setup**: given
 a running session-day low that has held for *T* minutes, how does `P(this is the day's final low)`
 behave as *T* crosses 30, 90 and 120? **If the durations he names carry no information about
 whether a low is final, the claim is contradicted in the only form in which it is decidable. If
 they do, that supports the claim and does not validate the setup**, because the setup's filter is
-absent. Both directions are stated in `PT-037` §8 before the run.
+absent. Both directions are stated in `PT-039` §8 before the run.
 
 **Confidence: MEDIUM** on the operationalisation being fair — it is a real narrowing of what he
 said, and it is disclosed rather than smoothed.
@@ -297,10 +297,10 @@ Three, ordered by how much they would cost if right.
    demonstrably meaning the RSI baseline — and that is a fact about the transcript, not a
    preference. But I hold this at **MEDIUM**, and a reviewer who listens to the clip and finds the
    intonation decisive should say so; that would be better evidence than anything I have.
-2. **`PT-037`'s operationalisation may be a strawman.** Testing *"does a session-day low that has
+2. **`PT-039`'s operationalisation may be a strawman.** Testing *"does a session-day low that has
    held T minutes tend to be final"* is a weaker, more general claim than *"the stop-hunt low out
    of the blue box has to hold 30–90 minutes."* If the general version fails, that is **not**
-   evidence the specific version fails. §8 of `PT-037` states this before the run, and the mastery
+   evidence the specific version fails. §8 of `PT-039` states this before the run, and the mastery
    report must not let the caveat drift.
 3. **I may be over-reading the RSI section's completeness.** It is 25 minutes and six printed
    slides, which *feels* like a full treatment — but the TDI's own components (signal line,
@@ -343,4 +343,4 @@ picked up.
 | V11's *"confirmation of the safety trade"* is V10's safety trade in the sub-graph | **MEDIUM** |
 | `A-011` narrows but does not close | **HIGH** |
 | `A-039` narrows from *"displayed, not taught"* but does not close | **HIGH** |
-| `PT-037`'s operationalisation is a fair narrowing of the claim | **MEDIUM** — disclosed as such |
+| `PT-039`'s operationalisation is a fair narrowing of the claim | **MEDIUM** — disclosed as such |

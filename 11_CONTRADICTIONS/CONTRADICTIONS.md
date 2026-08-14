@@ -2087,10 +2087,80 @@ origin is not a measurable rule.
 
 ## C-018 — `mayonnaise`: Tier 2 and the owner say **200**; V11 puts the word in the same breath as **"the 50"**
 
+> ## ✅ CLOSED 2026-08-13 — OWNER ADJUDICATION — `00_SYSTEM/DECISIONS.md` `D-041`
+>
+> **Everything below is retained unedited** per `REMEDIATION_PROTOCOL.md` §2. It was correct for as
+> long as this record was open, and the analysis it contains is what made the closure possible.
+>
+> **The ruling, owner, 2026-08-13, verbatim:**
+>
+> > *"Mayonnaise is the 200 EMA, period. 50 is water, 5 is ketchup, 13 is mustard, 800 is
+> > blueberry. **These are the definitive names and numbers.**"*
+>
+> ### THE DISPOSITION
+>
+> **`[00:46:45]` resolves as READING B — ENUMERATION.** *"Look where the averages are. There's the
+> mayonnaise. There's the 50"* points at **two different lines in turn**. It is **not** an
+> apposition. **Mayo is the 200 EMA; `A-020` is untouched by this utterance.**
+>
+> ### ⭐ THE SESSION THAT FILED THIS RECORD WAS RIGHT, AND ON ITS OWN REASONING
+>
+> This record refused reading A, gave **three** grounds for B — the plural *"averages"*; the
+> `[00:46:52]` recurrence where *"the 50"* is unambiguously the RSI market baseline; the frame
+> showing at least four unlabelled averages — and then **declined to adjudicate anyway**. The
+> owner's ruling **agrees with the reading this session already thought correct.** Filing the
+> conflict rather than adopting the convenient answer is what this register is for, and it cost
+> nothing to be right and patient at the same time.
+>
+> ### ⚠ WHAT THIS CLOSURE DOES **NOT** ESTABLISH — read before citing it
+>
+> **`SOURCING_HIERARCHY.md` §3.3's *"the recording wins"* was NOT applied, and was NOT overridden.**
+> This record's central point stands: a rule about which source is superseded **cannot** close a
+> record when the recording is itself two-ways readable, because there is no single Tier 1
+> statement for it to prefer. **The owner supplied the missing DISAMBIGUATION, not a trump card.**
+>
+> **There is no "Tier 0" and the owner does not outrank the recordings.** Disambiguating an
+> ambiguous Tier 1 sentence is a different act from overruling a clear one.
+> `AUTOMATION_AMBIGUITIES.md`'s `STATUS VALUES` table still ranks `RESOLVED — OWNER ATTESTATION`
+> as the **weakest** resolved status, and **`SOURCING_HIERARCHY.md` §3.4's standing re-check
+> obligation on `A-020` REMAINS LIVE.** The cheap next step this record names — **V12, same
+> session, same day, same charts** — is still worth taking, and `A-020`'s *Required Research* is
+> still unsatisfied.
+>
+> **The `C-011` trap this record warned about was not walked into.** Reading A would have agreed
+> with the quarantined `Q-012` §2 *"50 (Mayo)"* on a coincidence. **`Q-012` stays quarantined and
+> is now independently confirmed wrong on that point.**
+>
+> ### ⚠ THE SAME RULING OVERTURNED TWO ROWS OF `A-020` — a separate finding, flagged here
+>
+> `A-020`'s closure table recorded **Mustard = 5, Ketchup = 13**. The owner's definitive mapping is
+> **Ketchup = 5, Mustard = 13** — **inverted**. That half was not anticipated, contradicts **no
+> recording** (`ketchup` occurs nowhere in genuine audio; `mustard` 0× in V05–V08), and overturns
+> only Tier 3 material and the project's own inference from V06's *"closed below 13"*. Full
+> treatment and the calibration lesson: `D-041`, and `A-020`'s `⛔ SUPERSEDED IN PART` block.
+> **A reviewer is entitled to put the inversion back to the owner.**
+>
+> ### THE `SETUP_ISSUES.md` OBLIGATION BELOW IS DISCHARGED, NOT PERFORMED
+>
+> §3.2 **Case C** is *"genuine conflict — do **not** adjudicate, log it, surface to the owner."*
+> The owner has adjudicated; **there is no live conflict left for the entry to describe.** Reasoned
+> at `D-041` consequence 5 on the integration branch rather than silently skipped.
+> `REVIEW_INDEX.md` item **100** is closed against that reasoning.
+>
+> **Related:** `D-041`; `A-020` (⛔ SUPERSEDED IN PART); `REVIEW_INDEX.md` items **97**, **100**;
+> `EXTERNAL_VOCABULARY_REFERENCE.md` §5.16; `SOURCING_HIERARCHY.md` §3.4.
+>
+> **Ledger note (`D-038a`):** `CONTRADICTIONS.md` is an **evidence ledger**, so this closure is
+> written on `video/v11` where the record lives and lands at merge-back. `D-041` itself is a
+> **policy** ledger entry and was made on the integration branch. Two files, two branches, one
+> ruling — that is `D-038a` working as designed.
+
 **Filed by:** V11 Student session, 2026-08-13, branch `video/v11`
 **Type:** **Tier 1 (course recording) vs Tier 2 (`MMM-NOTES`) + owner attestation** —
 `SOURCING_HIERARCHY.md` §3.3, `D-039`, `D-040`
-**Status:** ⚠ **`CONFLICT — OWNER ADJUDICATION REQUIRED`. NOT ADJUDICATED HERE.**
+**Status:** ✅ **`CLOSED — OWNER ADJUDICATION` (`D-041`, 2026-08-13). Resolved as reading B
+(enumeration); `A-020` untouched.** *(Superseded status, retained: ⚠ `CONFLICT — OWNER
+ADJUDICATION REQUIRED`. NOT ADJUDICATED HERE.)*
 **Severity of consequence:** `A-020` is one of the **three highest-priority reconciliation targets
 in the project** (`SOURCING_HIERARCHY.md` §3.4) — a record closed on a tier a later video can
 overturn. This is the first lesson to test it.

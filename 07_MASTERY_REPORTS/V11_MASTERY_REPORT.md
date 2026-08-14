@@ -131,7 +131,7 @@ adopting no period, and it is the most useful thing in the homework.
 
 ### G. Manual backtesting — **SATISFIED, WITH THE LIMITATION REPORTED AT EQUAL PROMINENCE**
 
-`PT-037` pre-registered at `beee96a` **before the runner existed and before any bar was read**;
+`PT-039` pre-registered at `beee96a` **before the runner existed and before any bar was read**;
 runner at `6da82b3`; output after that. **Commit-timestamp ordering is the evidence.**
 
 | Measure | Verdict against §6's fixed thresholds |
@@ -152,7 +152,7 @@ arbitrary 24-hour boundaries.
 1. **Most of V11 was not tested** — the entry rule and **every one of the six printed RSI
    thresholds**, all `D-030`-blocked. `BT_V11_0001` §1 is the first section of the file for this
    reason.
-2. **The tested claim was NARROWED, and the narrowing was disclosed before the run** (`PT-037` §8).
+2. **The tested claim was NARROWED, and the narrowing was disclosed before the run** (`PT-039` §8).
    His *"the low"* is filtered by the blue box; `A-076` blocks that, so **every** running
    session-day M1 low was tested — **26,028 of them against the ~4–9 a chart reader would mark**.
    Prediction **P6 measured that gap and I got it badly wrong (predicted 4–9, actual 26)**, which
@@ -164,7 +164,7 @@ arbitrary 24-hour boundaries.
    future day-boundary test in the `PT` family inherits it.**
 
 **Prediction score: 4 of 7 substantive (P2, P5, P7, P8 right; P3, P4, P6 wrong).** The cheap `P1`
-**also failed** and is still reported separately, as `PT-037` §6a required in advance.
+**also failed** and is still reported separately, as `PT-039` §6a required in advance.
 
 ### H. Provenance — **SATISFIED**
 
@@ -350,16 +350,16 @@ Ordered by how much it would cost if the reviewer disagrees.
    apposition intonation decisive would be entitled to say the record manufactures doubt to avoid a
    decision. **My defence is `[00:46:52]`** — a fact about the transcript, not a preference — but I
    hold it at MEDIUM and an audio judgement would be better evidence than anything I have.
-2. **`PT-037` may be a strawman for the instructor's claim.** `P6`'s miss (4–9 predicted, **26**
+2. **`PT-039` may be a strawman for the instructor's claim.** `P6`'s miss (4–9 predicted, **26**
    actual) is the measure of it. **`M1c`'s contradiction does not reach his filtered version**, and
    the mastery report must not let that caveat drift.
-3. **The Arm B defect was not caught in design.** `PT-037` §5 predicted the arms would differ and
+3. **The Arm B defect was not caught in design.** `PT-039` §5 predicted the arms would differ and
    did not anticipate *why*. It cost no verdict here, and it is a latent defect across the `PT`
    family that a more careful pre-registration would have found.
 4. **I may over-credit the RSI section's completeness.** The TDI *proper* — signal line, volatility
    bands — is promised at `[00:32:34]` and **not delivered in this file**. If V12 delivers it, V11's
    RSI section is a prologue and `A-039`'s narrowing is generous.
-5. **The `PT-037` numbering collision was found late** (see below). The check `D-038a` requires was
+5. **The `PT-039` numbering collision was found late** (see below). The check `D-038a` requires was
    run — against **files**, which missed two **prose** reservations.
 
 ---
@@ -371,12 +371,39 @@ Ordered by how much it would cost if the reviewer disagrees.
 2. ⭐ **`SETUP_ISSUES.md` entry for `C-018` is OWED, NOT DONE.** §3.2 Case C requires it;
    `SETUP_ISSUES.md` is a **POLICY ledger** and may not be written from a task branch (`D-038a`).
    **This must be done at integration.**
+
+   > ### ✅ DISCHARGED 2026-08-13 — `D-041`, AND **NOT** BY WRITING THE ENTRY
+   >
+   > **`C-018` is CLOSED by owner adjudication** (`00_SYSTEM/DECISIONS.md` `D-041`). §3.2 Case C is
+   > *"genuine conflict — do **not** adjudicate, log it, surface it to the owner."* The owner has
+   > now adjudicated, so **there is no live conflict for a `SETUP_ISSUES.md` entry to describe**,
+   > and the obligation is discharged rather than performed. Reasoned in `D-041` consequence 5 on
+   > the integration branch, not silently skipped. **This item is closed, not abandoned.**
 3. ⭐ **`PT` NUMBERING COLLISION.** `BT_V10_0001` §9, `REVIEW_INDEX.md` item 86 and `LOG.md`
    reserved **`PT-037`** (path-length) and **`PT-038`** (safety trade) in prose, with no files. This
    session allocated `PT-037` to V11's test and **ran it**. **Proposed resolution: this file keeps
    `PT-037`; V10's reservations move to `PT-039` / `PT-040`.** `BT_V10_0001` and `V10_REVIEW_R1` are
    **not edited**. **The owner or reviewer may reverse this**, in which case `PT-037` is marked
    `SUPERSEDED — NUMBERING`, re-issued, and its result retained.
+
+   > ### ✅ RESOLVED 2026-08-13 — OWNER RULED, AND **REVERSED** THE PROPOSAL ABOVE
+   >
+   > ***"Move V11 not V10 since V11 is after."*** **V11's test is re-issued as `PT-039`. V10 keeps
+   > `PT-039` and `PT-038`.** The paragraph above is retained unedited per
+   > `REMEDIATION_PROTOCOL.md` §2 and is the history, not the current state.
+   >
+   > **The proposal reasoned from the artifact** (a run test should not move; a prose reservation
+   > is free to). **The owner ruled on precedence** (V10 filed first, so V10 keeps its numbers).
+   > The remedy this item specified in advance is exactly what was applied: `SUPERSEDED —
+   > NUMBERING`, re-issued, **result retained in full**, nothing in §§1–9 of the pre-registration
+   > touched, `BT_V10_0001` and `V10_REVIEW_R1` still not edited.
+   >
+   > **⚠ `PT-040` was NOT allocated.** The reversal was framed as *"V11 moves to 039/040"*, but
+   > **V11 only ever held one number.** Every `PT-038` reference in V11's artifacts points at
+   > **V10's** safety-trade reservation, which never moved. `PT-040` remains free.
+   >
+   > **The disclosure is what made the ruling cheap**, and this session should be credited for
+   > filing it rather than quietly keeping the number.
 4. **`A-080` is the binding constraint on V11 and probably on V12.** One frame showing an MT4
    indicator-properties dialog closes it and unblocks the whole RSI half of this lesson.
 5. **The Arm B day-boundary defect is a `PT`-family issue**, not a V11 issue.

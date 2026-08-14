@@ -5707,7 +5707,7 @@ indicators. **No period is adopted here or anywhere in V11's artifacts.**
 Every RSI-dependent claim in V11: the 50-baseline bias rule (§4b.3), the 80/40 ↔ 60/20 range
 switch, the 80/20 overextension threshold, the 38–42 pullback-support band, the ~60 pullback
 resistance, the *"12 or 14 or 10"* level-three extreme, both divergence forms, and the
-`[00:36:19]` composite entry. **`PT-037` therefore tests none of them** — see its §2.
+`[00:36:19]` composite entry. **`PT-039` therefore tests none of them** — see its §2.
 
 ### Current Status
 
@@ -5972,6 +5972,34 @@ forward pointer is recorded so the session reaching V12/V13 knows to look.
 ---
 
 ## A-020 — ⚠ STATUS ANNOTATION: `CONFLICT — OWNER ADJUDICATION REQUIRED` (V11)
+
+> ## ✅ THE FLAG BELOW IS CLEARED — 2026-08-13, `D-041`. `C-018` IS CLOSED.
+>
+> **Everything below is retained unedited** per `REMEDIATION_PROTOCOL.md` §2. The annotation was
+> correct while it stood, and its reasoning is what the owner's ruling went on to confirm.
+>
+> **Owner, 2026-08-13:** *"Mayonnaise is the 200 EMA, period. 50 is water, 5 is ketchup, 13 is
+> mustard, 800 is blueberry. **These are the definitive names and numbers.**"*
+>
+> **`[00:46:45]` resolves as reading B — ENUMERATION.** Two lines pointed at in turn, not an
+> apposition. **`Mayo = 200` stands and this record is untouched by the utterance.** The V11
+> session flagged the conflict, favoured reading B, and refused to adjudicate — **the owner's
+> ruling agrees with its reading.**
+>
+> **What this does NOT establish, restated because it is the easy thing to get wrong:** the owner
+> **disambiguated an ambiguous Tier 1 sentence**; he did not outrank Tier 1. **There is no
+> "Tier 0"**, this record stays `RESOLVED — OWNER ATTESTATION` (the weakest resolved status), and
+> **`SOURCING_HIERARCHY.md` §3.4's re-check obligation on it REMAINS LIVE.** *Required Research* is
+> still unsatisfied and **V12 is still the cheapest route to a Tier 1 closure.**
+>
+> **⚠ SEPARATE FINDING FROM THE SAME RULING — this record's ketchup/mustard rows are OVERTURNED:**
+> **ketchup = 5, mustard = 13** (the record said mustard = 5, ketchup = 13). It contradicts **no
+> recording** and overturns only Tier 3 and inference. **Water = 50, mayo = 200 and blueberry = 800
+> are confirmed**, and blueberry keeps its stronger `RESOLVED BY COURSE` basis (V09 `[00:41:43]`,
+> 15-minute). Full treatment: `D-041`, and this record's `⛔ SUPERSEDED IN PART` block on the
+> integration branch. **A reviewer may put the inversion back to the owner.**
+>
+> **See:** `00_SYSTEM/DECISIONS.md` `D-041`; `C-018` (closed); `REVIEW_INDEX.md` items 97, 100.
 
 > **Appended per `SOURCING_HIERARCHY.md` §3.1 step 3 and `REMEDIATION_PROTOCOL.md` §2. Every prior
 > block of `A-020`, including its 2026-08-13 owner-attestation closure and its V09 `blueberry`

@@ -1,4 +1,53 @@
-# PT-037 — V11's hold-duration claim: *"the low has to hold — how long? 30 to 90 minutes"*
+# PT-039 — V11's hold-duration claim: *"the low has to hold — how long? 30 to 90 minutes"*
+
+> ## ⛔ `SUPERSEDED — NUMBERING` · RE-ISSUED AS `PT-039` BY OWNER RULING, 2026-08-13
+>
+> **This test was filed, committed, run and reported as `PT-037`.** It is re-issued here as
+> **`PT-039`** and **nothing but the label has changed** — no threshold, prediction, null, window,
+> sample, seed or decision rule is touched, and **the result is retained in full, not deleted**
+> (`REMEDIATION_PROTOCOL.md` §2, and the exact contingency §0's disclosure block below named in
+> advance).
+>
+> **The ruling, owner, 2026-08-13:** ***"Move V11 not V10 since V11 is after."***
+>
+> **This REVERSES the resolution §0 proposed**, and the reversal is the correct outcome. §0
+> reasoned from the artifact (*a run test should not move; a prose reservation is free to*); the
+> owner ruled on **precedence** (*V10 filed first, so V10 keeps the number*). **The V11 session
+> flagged this as reviewer/owner-reversible in terms and was right to** — the disclosure is what
+> made the ruling cheap, and the file is re-issued exactly as it said it would be.
+>
+> | | Number | Holder | Status |
+> |---|---|---|---|
+> | **This file** | `PT-037` → **`PT-039`** | V11 — hold-duration | ⛔ **MOVED** (re-issued) |
+> | V10's path-length reading of `M1` | **`PT-037`** | V10 | ✅ **UNCHANGED — keeps the number it reserved** |
+> | V10's safety trade | **`PT-038`** | V10 | ✅ **UNCHANGED** |
+> | *(`PT-040`)* | — | — | **NOT ALLOCATED.** See below |
+>
+> ### ⚠ `PT-040` WAS NOT NEEDED, AND A SESSION EXPECTING IT WILL BE CONFUSED
+>
+> The reversal was framed as *"V11 moves to `PT-039`/`PT-040`"*, on the reading that V11 held both
+> numbers. **It did not.** V11 filed **exactly one** pre-registration — this one, at `PT-037`.
+> Every `PT-038` reference anywhere in V11's artifacts is a reference to **V10's** safety-trade
+> reservation, which stays at `PT-038` and was never V11's to move. **`PT-039` is therefore the
+> only renumbering, and `PT-040` remains free and unallocated.**
+>
+> **Artifacts renamed with this file** (git-tracked renames, content unchanged):
+> `06_MANUAL_BACKTEST/scripts/run_pt037.py` → `run_pt039.py`;
+> `06_MANUAL_BACKTEST/V11/data/pt037_output.txt` → `pt039_output.txt`.
+>
+> **No stub is left at the old path, deliberately.** Leaving a `PT-037` placeholder here would
+> squat the number the owner has just ruled belongs to V10 — the opposite of the ruling. Nothing
+> is lost: the renames are tracked, the full pre-run history is below, and the commits that
+> established the pre-registration ordering are named in §0 and unaltered.
+>
+> ### ⭐ THE COMMIT-TIMESTAMP ORDERING IS UNAFFECTED — read this before doubting the run
+>
+> `D-026`/`D-027` verification rests on **commit order**, not on the filename. The ordering that
+> matters was established under the old number and is **unchanged and still auditable**:
+> pre-registration `beee96a` → runner `6da82b3` → output `4d2bdcd` → scoring `735a458`. **This
+> re-issue is a LATER commit than all four**, so it cannot and does not backdate anything. A
+> reviewer verifying the ordering should follow those four hashes; `git log --follow` on the new
+> paths reaches them through the renames.
 
 ```text
 STATUS:   PRE-REGISTERED. NOT RUN.
@@ -54,6 +103,19 @@ merge-back.
 >
 > **NOTHING IN §§1–9 CHANGES.** No threshold, prediction, null, window, or decision rule is
 > touched by this block; the number is a label and the design is untouched.
+>
+> > ### ⛔ THE PROPOSED RESOLUTION ABOVE WAS **REVERSED** BY THE OWNER, 2026-08-13
+> >
+> > ***"Move V11 not V10 since V11 is after."*** **This file moved to `PT-039`; V10 keeps `PT-037`
+> > and `PT-038`.** Everything in this §0 — including the proposal it makes and the paragraph it
+> > corrects — is **retained unedited as the history of the collision**, per
+> > `REMEDIATION_PROTOCOL.md` §2. It is a record of what was proposed, **not** a statement of the
+> > current numbering. **The governing block is at the top of this file.**
+> >
+> > **The disclosure did its job.** This session named the reversal, specified the exact remedy
+> > (`SUPERSEDED — NUMBERING`, re-issue, retain the result), and got the ruling because it asked.
+> > That is the argument for self-disclosing a numbering error rather than quietly keeping the
+> > number — and §§1–9 still change by nothing at all.
 
 ---
 
@@ -122,16 +184,16 @@ mastery report's dimension G **with equal prominence to anything that is measure
 
 ### 2c. It simulates no trade, so it has no stop, no target, and no barrier race
 
-`PT-037` estimates **a conditional probability about a price extreme**, not a hit rate. It follows
+`PT-039` estimates **a conditional probability about a price extreme**, not a hit rate. It follows
 `PT-036`'s design property, deliberately:
 
-| Property of `REVIEW_INDEX.md` open item **80**'s censoring bias | `PT-037` |
+| Property of `REVIEW_INDEX.md` open item **80**'s censoring bias | `PT-039` |
 |---|---|
 | Requires a **barrier race** (target vs stop) | **No barrier of any kind** |
 | Requires an **asymmetric horizon** that can expire | **A horizon exists** — the session close — and it is **symmetric between the two outcomes**, because both *"superseded"* and *"final"* are decided by the same 17:00 boundary |
 | Produces **unresolved** observations | **Zero possible.** Every candidate is either superseded within its session day or it is not. `n_unresolved == 0` by construction, **and the runner asserts it** |
 
-> ### ⚠ BUT `PT-037` HAS ITS OWN, DIFFERENT BIAS, AND IT IS DESIGNED FOR RATHER THAN AWAY
+> ### ⚠ BUT `PT-039` HAS ITS OWN, DIFFERENT BIAS, AND IT IS DESIGNED FOR RATHER THAN AWAY
 >
 > **A low made at 16:30 is nearly certain to be the day's final low, on arithmetic alone** — there
 > are 30 minutes left for anything to break it. So `P(final | held ≥ T)` will rise with `T`
@@ -215,7 +277,7 @@ smallest. **Every cell reports its own `n`** and any cell below 30 carries
 ## 4. THE NULLS — `D-026`, `D-029`
 
 `D-026`'s named default is **matched random entry**, which is the correct control for **a rule that
-takes trades**. **`PT-037` takes no trades**, so a random-entry baseline would control for a
+takes trades**. **`PT-039` takes no trades**, so a random-entry baseline would control for a
 quantity this test does not estimate. The matched controls for a **conditional-probability claim**
 are used instead, following the `PT-028` / `PT-036` precedent in this corpus.
 
@@ -327,9 +389,9 @@ Written before any bar of `W-C′` was read by this session, and committed in th
 | Timeframe | **M1**, direct from the corpus — **not** aggregated |
 | Source | **HistData.com M1 CSV corpus** (`D-036a`), SHA-256 in `raw/SHA256SUMS.txt` |
 | Timezone | Corpus is **fixed UTC−5, no DST** — natively `D-031` Arm A. Arm B = stamp +1 h during US DST |
-| Week open | Sunday 17:00 local = **22:00 UTC** — HistData's, **NOT** FXCM's 21:00 UTC. *(Carried for completeness; **`PT-037` is a DAY-boundary test, not a week-boundary test**, so nothing here inherits the week open.)* |
+| Week open | Sunday 17:00 local = **22:00 UTC** — HistData's, **NOT** FXCM's 21:00 UTC. *(Carried for completeness; **`PT-039` is a DAY-boundary test, not a week-boundary test**, so nothing here inherits the week open.)* |
 | QA gate | `qa_histdata_m1.py` → `QA_REPORT.txt` is a **precondition on the run** and is cited in `BT_V11_0001` |
-| Level comparability | **Price LEVELS are not comparable with the V02–V06 FXCM homework** (`D-036a`). **`PT-037` reads no price level at all** — only orderings (*is this low below that low*) and clock differences. **This test is structurally immune to the limitation**, and that is stated because it is the rare case where it does not bite |
+| Level comparability | **Price LEVELS are not comparable with the V02–V06 FXCM homework** (`D-036a`). **`PT-039` reads no price level at all** — only orderings (*is this low below that low*) and clock differences. **This test is structurally immune to the limitation**, and that is stated because it is the rare case where it does not bite |
 
 ### 7a. INCLUSION AND `C8` DISPOSITIONS — PRE-REGISTERED BY NAME
 
@@ -377,7 +439,7 @@ Stated in advance so it cannot be negotiated afterwards:
   fence applies.**
 - ⭐ **THE OPERATIONALISATION IS A NARROWING, AND IT IS DISCLOSED BEFORE THE RESULT.** The
   instructor's *"the low"* is a candidate low **made after a stop hunt, out of the blue box**.
-  `A-076` blocks that filter, so **`PT-037` tests EVERY running session-day low instead.**
+  `A-076` blocks that filter, so **`PT-039` tests EVERY running session-day low instead.**
   Consequently:
   - **A CONTRADICTION here does NOT show the instructor's rule fails.** It shows that *hold
     duration alone*, on *unfiltered* candidate lows, carries no information at the numbers he
@@ -397,8 +459,8 @@ Stated in advance so it cannot be negotiated afterwards:
 ## 9. TO RUN THIS
 
 ```bash
-python3 06_MANUAL_BACKTEST/scripts/run_pt037.py \
-  > 06_MANUAL_BACKTEST/V11/data/pt037_output.txt
+python3 06_MANUAL_BACKTEST/scripts/run_pt039.py \
+  > 06_MANUAL_BACKTEST/V11/data/pt039_output.txt
 ```
 
 The runner is committed **separately and after this file**, and its output after that.

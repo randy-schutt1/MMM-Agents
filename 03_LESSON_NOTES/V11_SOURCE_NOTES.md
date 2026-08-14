@@ -132,7 +132,7 @@ are seeing a move out of the box, you're grabbing the trade **anticipating that'
 low**… the dealer goes into consolidation, hits it again. You're like, oh well that wasn't [the
 low], this ought to be the low, you grab it again."*
 
-**This is the claim `PT-037` pre-registers.** It is stated as a **confirmation requirement on a
+**This is the claim `PT-039` pre-registers.** It is stated as a **confirmation requirement on a
 candidate low**, not as a peak-to-peak gap — the quarantined `NOTES.md` re-attributes it, and
 `Q-012` §2a records that.
 
@@ -405,7 +405,7 @@ Stated positively, because an absence is evidence and a later session must not f
 5. **No M/W leg count, no invalidation rule, no maximum leg size** (`A-011` unchanged). §3a gives
    qualitative anatomy — *"a pullback and another leg"*, *"aggressive and big"* — and no measure.
 6. **No stop, no target, no position size, no risk-to-reward.** Dimension G's testable surface is
-   therefore **not** an entry-to-exit trade rule; see `PT-037` §2.
+   therefore **not** an entry-to-exit trade rule; see `PT-039` §2.
 7. **No session clock times.** Zero in 51 minutes. The single clock reference `[00:49:41]`
    (*"11, 12 o'clock"*) is a description of one chart, not a rule, and no timezone is given.
 8. **No homework assignment.** `[00:00:46]` promises one *"coming up this week"* and the file ends

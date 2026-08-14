@@ -7384,7 +7384,9 @@ arbitrate and **could not** — reported as a negative result.
 
 ### Manual backtest
 
-**`PT-037`** pre-registered at `beee96a` **before the runner existed and before any bar was read**;
+**`PT-039`** *(filed, committed and run as `PT-037`; re-issued by owner ruling 2026-08-13 — see
+the entry at the end of this log)* pre-registered at `beee96a` **before the runner existed and
+before any bar was read**;
 runner at `6da82b3`; output after that. **Commit-timestamp ordering is the evidence.**
 
 Claim: *"the low has to hold — how long? 30 to 90 minutes… the long sideways consolidation should
@@ -7444,8 +7446,10 @@ frame rate was **read per file** and varies in both directions.
 - **New:** `02_TRANSCRIPTS/V11/V11_TRANSCRIPT.md`; `03_LESSON_NOTES/V11_SOURCE_NOTES.md`,
   `V11_INTERPRETATION.md`; `04_SCREENSHOTS/V11/` (27 PNG + `INDEX.md`);
   `05_HOMEWORK/V11/V11_HOMEWORK.md`, `scripts/rsi_period_sensitivity.py`, `data/…_output.txt`;
-  `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-037_how_long_must_the_low_hold.md`,
-  `scripts/run_pt037.py`, `V11/BT_V11_0001.md`, `V11/data/pt037_output.txt`;
+  `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-037_how_long_must_the_low_hold.md`
+  *(→ re-issued as `PT-039_how_long_must_the_low_hold.md`)*,
+  `scripts/run_pt037.py` *(→ `run_pt039.py`)*, `V11/BT_V11_0001.md`,
+  `V11/data/pt037_output.txt` *(→ `pt039_output.txt`)*;
   `07_MASTERY_REPORTS/V11_MASTERY_REPORT.md`.
 - **Appended (evidence ledgers, `D-038a`):** `00_SYSTEM/QUARANTINE_REGISTER.md` (`Q-012`);
   `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` (`A-080`–`A-083`, `A-039`/`A-011`/`A-020` updates);
@@ -7474,3 +7478,114 @@ that is a separate, single-threaded act under `D-038`, performed after independe
 same day, same charts, 55 minutes. **One frame showing an indicator-properties dialog closes
 `A-080` and unblocks the whole RSI half of this lesson; one recurrence of *"mayonnaise"* with a
 legend visible closes `C-018` / `A-020` on Tier 1 evidence.** Look for both deliberately.
+
+---
+
+## 2026-08-13 — V11 branch — two owner rulings applied: `C-018` closed, `PT-037` re-issued as `PT-039`
+
+**Branch:** `video/v11` (worktree `MMM-Agents-v11`, `D-038`) · **Act:** applying two owner rulings
+to V11's artifacts **before** the independent review starts. **Still not merged** — merge-back
+still waits on R1. `git fetch origin` first; **zero divergence** confirmed (`0 0`).
+
+### 1. `C-018` — CLOSED by owner adjudication (`D-041`)
+
+> *"Mayonnaise is the 200 EMA, period. 50 is water, 5 is ketchup, 13 is mustard, 800 is blueberry.
+> These are the definitive names and numbers."* — owner, 2026-08-13
+
+**`[00:46:45]` resolves as reading B — enumeration.** *"There's the mayonnaise. There's the 50"*
+points at two lines in turn. **Mayo is the 200; `A-020` is untouched by the utterance.**
+
+**This session's own record was right.** `C-018` gave three grounds for reading B and **declined to
+adjudicate anyway**. The owner's ruling agrees with the reading it already held. Filing the
+conflict rather than adopting the convenient answer cost nothing and is why the closure is clean.
+
+**What the closure does NOT establish, and `C-018`'s closure block says so at length:**
+§3.3's *"the recording wins"* was **neither applied nor overridden** — it cannot close a record
+whose recording is two-ways readable. **The owner supplied a DISAMBIGUATION, not a trump card.
+There is no "Tier 0."** `A-020` stays `RESOLVED — OWNER ATTESTATION` (the weakest resolved status)
+and **`SOURCING_HIERARCHY.md` §3.4's re-check obligation on it REMAINS LIVE.** *Required Research*
+is still unsatisfied and **V12 is still the cheapest route to Tier 1 closure.**
+
+**⚠ The same ruling overturned two rows of `A-020`** — **ketchup = 5, mustard = 13**, inverting the
+prior record. It contradicts **no recording** (`ketchup` occurs nowhere in genuine audio; `mustard`
+0× in V05–V08) and overturns only Tier 3 and the project's own V06 inference. Recorded on the
+integration branch at `D-041`; flagged here and in `REVIEW_INDEX.md` item 97 because **a reviewer
+is entitled to put it back to the owner.**
+
+**`SETUP_ISSUES.md` was NOT written and item 100 is closed anyway.** §3.2 **Case C** is *"genuine
+conflict — do not adjudicate, log it, surface to the owner."* The owner has adjudicated; there is
+no live conflict for an entry to describe. **Discharged, not performed** — `D-041` consequence 5.
+
+### 2. ⭐ `PT-037` → `PT-039` — owner REVERSED this session's proposed resolution
+
+> ***"Move V11 not V10 since V11 is after."*** — owner, 2026-08-13
+
+**V10 KEEPS `PT-037` and `PT-038`. V11's hold-duration test is re-issued as `PT-039`.**
+
+This session proposed the **opposite** (V11 keeps 037; V10's reservations move to 039/040), and
+reasoned from the **artifact**: a committed, run pre-registration should not move, a prose
+reservation is free to. **The owner ruled on precedence** — V10 filed first, so V10 keeps its
+numbers. **The reversal is applied exactly as this session said it would be if reversed:**
+`SUPERSEDED — NUMBERING`, re-issued, **result retained in full**, nothing in the pre-registration's
+§§1–9 touched.
+
+**⚠ `PT-040` WAS NOT ALLOCATED, AND A SESSION EXPECTING IT WILL BE CONFUSED.** The reversal was
+framed as *"V11 moves to `PT-039`/`PT-040`"*, on the reading that V11 held both numbers. **It did
+not — V11 filed exactly ONE pre-registration.** Every `PT-038` reference anywhere in V11's
+artifacts points at **V10's** safety-trade reservation, which was never V11's to move. **`PT-039`
+is the only renumbering; `PT-040` remains free.**
+
+**V10's numbering was NOT touched, at all.** `BT_V10_0001.md` §9, `V10_REVIEW_R1.md`,
+`V10_MASTERY_REPORT.md`, `REVIEW_INDEX.md` items 86 and 89, and every V10 `LOG.md` and
+`COURSE_PROGRESS.md` line keep `PT-037`/`PT-038` unchanged — verified by grep after the edit, not
+assumed. `REVIEW_PROTOCOL.md` §11 (no overwriting a completed review) is intact.
+
+**Renames are git-tracked, and no stub was left at the old paths.** A `PT-037` placeholder would
+squat the number the owner has just ruled belongs to V10 — the opposite of the ruling. Nothing is
+deleted: content is unchanged, `git log --follow` reaches the full history, and the pre-run
+ordering is recorded in the file.
+
+**⭐ The `D-026`/`D-027` commit-timestamp ordering is UNAFFECTED**, and this is the thing a reviewer
+should check first. Verification rests on **commit order, not filename**:
+`beee96a` (pre-registration) → `6da82b3` (runner) → `4d2bdcd` (output) → `735a458` (scoring).
+**This re-issue is a later commit than all four**, so it cannot backdate anything.
+
+**The self-disclosure is what made this cheap.** The collision was found late — by the check
+`D-038a` consequence 1 requires, run against **files** when the reservations were **prose** — but it
+was disclosed with a specific remedy attached, and the owner could therefore rule in one sentence.
+
+### Files
+
+- **Renamed (git-tracked, content unchanged):**
+  `06_MANUAL_BACKTEST/PRE_REGISTERED/PT-037_how_long_must_the_low_hold.md` → `PT-039_…md`;
+  `06_MANUAL_BACKTEST/scripts/run_pt037.py` → `run_pt039.py`;
+  `06_MANUAL_BACKTEST/V11/data/pt037_output.txt` → `pt039_output.txt`.
+- **Updated (V11-owned references only):** the re-issued pre-registration (governing block + §0
+  reversal note; §§1–9 self-references relabelled, **design untouched**);
+  `06_MANUAL_BACKTEST/V11/BT_V11_0001.md`; `07_MASTERY_REPORTS/V11_MASTERY_REPORT.md`;
+  `03_LESSON_NOTES/V11_INTERPRETATION.md`, `V11_SOURCE_NOTES.md`;
+  `05_HOMEWORK/V11/V11_HOMEWORK.md`; `02_TRANSCRIPTS/V11/V11_TRANSCRIPT.md` (**notes only — the
+  verbatim body is untouched**); `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` (`A-020` V11
+  annotation cleared; one `PT` reference); `11_CONTRADICTIONS/CONTRADICTIONS.md` (`C-018` closed);
+  `18_REVIEW/REVIEW_INDEX.md` (items **97**, **98**, **99**, **100**, **101**);
+  `00_SYSTEM/COURSE_PROGRESS.md` (V11 row, carry-forwards **(g)** and **(h)**); this log.
+- **NOT touched, deliberately:** `18_REVIEW/V10/V10_REVIEW_R1.md`, `06_MANUAL_BACKTEST/V10/**`,
+  `07_MASTERY_REPORTS/V10_MASTERY_REPORT.md`, `REVIEW_INDEX.md` items **86**/**89**, and every
+  other V10-owned `PT-037`/`PT-038` reference — **V10's numbering stays exactly as filed**;
+  `00_SYSTEM/DECISIONS.md` and `00_SYSTEM/SETUP_ISSUES.md` (**POLICY** ledgers — `D-041` was made
+  on the integration branch, `D-038a`); all superseded text, retained per
+  `REMEDIATION_PROTOCOL.md` §2.
+
+### Git
+
+Branch `video/v11`, own worktree. `git fetch origin` first, **zero divergence** confirmed. Paths
+staged **explicitly**; `git diff --staged` read before the commit; **`git add -A` never used.**
+
+`scripts/validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+### Next Action
+
+**V11's independent review (R1) — unchanged, still owed, still the only thing that can make V11
+`COMPLETE`.** Three things are handed to the reviewer: (1) the **ketchup/mustard inversion** in
+`D-041`, reversible on a word; (2) `PT-039`'s re-issue and the commit-ordering audit trail above;
+(3) `PT-040` is **free**, not V11's, despite the framing of the ruling that produced this entry.

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""PT-037 -- V11's hold-duration claim: "the low has to hold -- how long? 30 to 90 minutes".
+"""PT-039 -- V11's hold-duration claim: "the low has to hold -- how long? 30 to 90 minutes".
 
 Runs the design pre-registered in
-`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-037_how_long_must_the_low_hold.md`,
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-039_how_long_must_the_low_hold.md`,
 which was committed at `beee96a`, BEFORE this file existed and before any bar was read.
 
 `COMMON_PROTOCOL.md` §9 rule 7: if this runner and that pre-registration disagree,
@@ -12,7 +12,7 @@ reported in `BT_V11_0001.md`.
 Everything here reads M1 bars parsed from the checksummed HistData corpus (`D-036a`).
 No value is read from a rendering of any kind.
 
-usage:  python3 run_pt037.py > ../V11/data/pt037_output.txt
+usage:  python3 run_pt039.py > ../V11/data/pt039_output.txt
 """
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ import numpy as np
 
 import mmm_lib as L
 
-SEED = 20260813          # PT-037 §4, recorded before the run
+SEED = 20260813          # PT-039 §4, recorded before the run
 ITERATIONS = 1000        # D-029
 THRESHOLDS = [5, 10, 15, 30, 45, 60, 90, 120, 180, 240]   # §3.2 O1
 NAMED = {30, 90, 120}                                     # §1 -- 120 is the agent's extension
@@ -132,7 +132,7 @@ def rate_line(k, n, extra=""):
 
 
 def main():
-    print(L.header("PT-037", "V11 -- how long must the low hold? 30 / 90 / 120 minutes",
+    print(L.header("PT-039", "V11 -- how long must the low hold? 30 / 90 / 120 minutes",
                    "D-031: BOTH arms reported for every observable (binding)"))
     qa_txt, _ = L.qa_gate()   # raises unless "GATE: PASS" -- §7b.4
     print("QA GATE (precondition, D-036a): " +

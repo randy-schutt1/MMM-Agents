@@ -43,7 +43,7 @@ all"*, not *"can this be done today"*.
 ## 1. H1 — chart study
 
 **PERFORMED.** This session performed substantially more than two hours of GBP/USD chart and data
-work: 27 curated frames reviewed and named across 28 detected screen states, and `PT-037` run over
+work: 27 curated frames reviewed and named across 28 detected screen states, and `PT-039` run over
 **894 session days / 26,028 candidate lows** of the `D-036a` corpus.
 
 **Recorded honestly as a partial match to the assignment's intent.** His two hours are
@@ -159,9 +159,9 @@ them**, and V12 — same session, same day — is the first place to look.
 | Window | **`W-C′` 2013-01-06 → 2016-06-30** — `D-035` DEVELOPMENT |
 | Holdout | **NOT OPENED.** Not on disk; `assert_development` re-checked every slice |
 | QA gate | `GATE: PASS — C1-C4 clean` (precondition) |
-| Timeframe | **M15** for §3 (`[00:31:39]` names 15-minute first); **M1** for `PT-037` |
+| Timeframe | **M15** for §3 (`[00:31:39]` names 15-minute first); **M1** for `PT-039` |
 | Measurement | Every number parsed from a checksummed file. **No value read from any rendering** — `E06` as restated by `D-036a` |
-| Level comparability | **NOT comparable with the V02–V06 FXCM homework** (`D-036a`). §3 reports occupancy fractions and `PT-037` reads no level at all, so neither is affected |
+| Level comparability | **NOT comparable with the V02–V06 FXCM homework** (`D-036a`). §3 reports occupancy fractions and `PT-039` reads no level at all, so neither is affected |
 
 **No TradingView chart was opened for V11.** This is the first lesson whose homework runs entirely
 on the CSV corpus, which is a change from V02–V06 and is recorded as such.
@@ -172,5 +172,5 @@ on the CSV corpus, which is a change from V02–V06 and is recorded as such.
 |---|---|
 | `scripts/rsi_period_sensitivity.py` | §3's demonstration. Committed before its output |
 | `data/rsi_period_sensitivity_output.txt` | Its output |
-| `../../06_MANUAL_BACKTEST/PRE_REGISTERED/PT-037_how_long_must_the_low_hold.md` | The pre-registration |
+| `../../06_MANUAL_BACKTEST/PRE_REGISTERED/PT-039_how_long_must_the_low_hold.md` | The pre-registration |
 | `../../06_MANUAL_BACKTEST/V11/BT_V11_0001.md` | The observation |

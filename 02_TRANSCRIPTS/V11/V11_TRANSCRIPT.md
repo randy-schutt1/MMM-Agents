@@ -114,7 +114,7 @@ artifact on"*:
 | Clip | Span | Why chosen |
 |---|---|---|
 | `c1` | `00:46:30`–`00:47:15` | The ***"mayonnaise / the 50"*** line — this session opens a contradiction record on it (`C-018`) and an ASR-only basis would not be good enough |
-| `c2` | `00:14:15`–`00:14:55` | The ***"30 to 90 minutes"*** hold claim — the claim `PT-037` pre-registers |
+| `c2` | `00:14:15`–`00:14:55` | The ***"30 to 90 minutes"*** hold claim — the claim `PT-039` pre-registers |
 | `c3` | `00:07:25`–`00:08:20` | The ***"25 to 50 pips out of the box second leg W formation"*** protocol statement |
 | `c4` | `00:30:05`–`00:31:10` | The **RSI baseline = 50** definition |
 
@@ -2105,7 +2105,7 @@ because an engine disagreement that goes *against* the newer engine is worth sta
 
 **AGREEMENT on every number** — `30`, `90`, `30`, `two hours`. And it **resolves the ASR
 mishearing**: the transcript's *"30 minutes is for **rarer tracks**"* is ***railroad tracks***, a
-candlestick pattern. `PT-037` is pre-registered on this claim and **quotes the ASR body while
+candlestick pattern. `PT-039` is pre-registered on this claim and **quotes the ASR body while
 citing this correction**, per `REMEDIATION_PROTOCOL.md` §2.
 
 ### `c3` — `00:07:25`–`00:08:20` · the second-leg protocol
