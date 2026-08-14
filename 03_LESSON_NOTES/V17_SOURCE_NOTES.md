@@ -14,7 +14,8 @@ but not written.
 | # | What | Consequence |
 |---|---|---|
 | `D1` | ⚠ **`SWF_CAPTURE_RECIPE.md` §9's transcript-before-frames ordering was BROKEN**, as in V13–V16. The frames were captured and read before these notes were written. **Mitigated by the `[AUDIO]`/`[PRINTED]`/`[VISUAL]` tag on every item**, so a reviewer can strike the visual legs and see what survives | The §9 rationale — *"keeping the two passes separate is what lets a reviewer see which conclusions survive on audio alone"* — is **not** satisfied by tagging. It is mitigated, not met. **Fifth consecutive lesson.** Open item **206** |
-| `D2` | **Four conclusions rest on frames and would not exist without them.** Named individually: `D2a` §7's identification of the two quiz pairs as **GBPUSD** and **GBPJPY** (the audio's *"G U"* at `[00:21:10]` is **wrong**); `D2b` §8's seven-point answer key, which is **printed and never read aloud in full**; `D2c` §11's *"50/200"*, printed, against the audio's *"5200"*; `D2d` §14's live slide edit | A reviewer who discards the frames loses all four |
+| `D2` | **Four conclusions rest on frames and would not exist without them.** Named individually: `D2a` §7's identification of the two quiz pairs as **GBPUSD** and **GBPJPY**; `D2b` §8's seven-point answer key, which is **printed and never read aloud in full**; `D2c` §11's *"50/200"*, printed, against the audio's *"5200"*; `D2d` §14's live slide edit | A reviewer who discards the frames loses all four |
+| `D2a′` | ⚠⚠ **`D2a` AS FIRST COMMITTED OVERSTATED ITS CASE AND IS CORRECTED HERE.** It carried the clause *"(the audio's ~~`"G U"` at `[00:21:10]` is **wrong**~~)"*. **The independent ASR pass renders `GU` as well** — the committed transcript is faithful, and **the SPEAKER is the one who is wrong**, as `[00:21:50]`'s *"Now this is pound yen"* about the same chart shows. `V17_TRANSCRIPT.md` §5a; **`C-027`**. Superseded text retained per `REMEDIATION_PROTOCOL.md` §2 | ⭐ **The pair identification itself is UNAFFECTED** — GBP/JPY on three supports |
 | `D3` | ⚠ **The frame sweep DID NOT follow §10's script literally** — `t0` is set **before** the click, which is open item **188**'s proposed fix and V16's `D3`. **This is why §8a's offset measured zero for the second consecutive lesson.** The recipe file itself was **NOT** edited (`D-038a`: policy ledger, integration branch only) | `04_SCREENSHOTS/V17/INDEX.md` §0.2; item **197** is now **twice**-confirmed and still owed |
 | `D4` | **No forward read.** V18+ was not opened. V16's committed artifacts *were* read — a **backward** read, which needs no precedent | — |
 | `D5` | ⚠ **The §7 screen detector under-samples short-lived screens, and it did so here.** The 5-second grid missed nothing structural, but *"trade two"* was on screen for **≈7 seconds** and is caught by exactly **one** frame (`i=245`). A screen shown for under 5 s would have been missed entirely | Declared rather than discovered later. Open item **207** |
@@ -100,7 +101,7 @@ close it. **`C-024`.**
 | 1 | Yesterday's daily candle is **red** → V16's rule selects **`M1`/`M3`** |
 | 2 | Price has been **dropping for three days** |
 | 3 | It is **midweek or approaching the end of the week** |
-| 4 | There is a **`W` formation on the 1-hour chart** *("double-rearer" — `double bottom`, `A-108`)* |
+| 4 | There is a **`W` formation on the 1-hour chart** with ⭐ **`double railroad tracks`** to the week's low *(`A-108`, **ARBITRATED** — not `double bottom`, which is what this session first guessed)* |
 | 5 | That `W` **tracks to the low of the week** |
 | **⇒** | **Override: use `M2`/`M4` tomorrow**, against what the candle colour says |
 
@@ -250,12 +251,21 @@ each, *"I want you to tell me which one is better and \| Why it's better."*
 > `Answers:` · `Safety Trades` · `Better selection: G/J gives clear confirmation by a close above the
 > ketchup and mustard then soars to TP` · `G/U uses one bar to confirm and shift…no entry`
 
-⭐⭐ **AND THE FRAME CORRECTS THE TRANSCRIPT.** At `[00:21:10]` the committed ASR reads *"All right,
-this is **G U** safety trade"* — but the chart on screen at burned timecode `21:10` is
-**`GBPJPY,M15`**, and the printed slide credits **`G/J`**. **The ASR's *"G U"* is a mishearing of
-*"G J"*.** Two independent supports, one printed and one visual, and the second ASR pass is a third
-(`V17_TRANSCRIPT.md` §5). **This is `SWF_CAPTURE_RECIPE.md` §9 step 4 doing exactly what it exists
-to do**, and it is why `D1`'s broken ordering is a real cost rather than a formality.
+### ⚠⚠ THE PARAGRAPH THAT STOOD HERE WAS WRONG, AND ITS RETRACTION IS THE MORE INTERESTING RESULT
+
+> *Superseded, retained per `REMEDIATION_PROTOCOL.md` §2:* *"~~AND THE FRAME CORRECTS THE
+> TRANSCRIPT. At `[00:21:10]` the committed ASR reads "All right, this is **G U** safety trade" — but
+> the chart on screen at burned timecode `21:10` is `GBPJPY,M15`, and the printed slide credits
+> `G/J`. The ASR's "G U" is a mishearing of "G J".~~"*
+
+**The independent ASR pass renders it `GU` too.** Two engines, same word. **The transcript is
+faithful; the speaker misnamed his own chart** — forty seconds later, on the same chart, he says
+`[00:21:50]` *"Now this is pound yen"*. **Filed as `C-027`.**
+
+⭐ **The substantive answer is UNCHANGED and never depended on the retracted claim.** The better
+trade is **GBP/JPY**, on three independent supports: the slide's printed `G/J`, the chart header's
+`GBPJPY,M15`, and `[00:21:50]`. ⚠ **What the frames actually corrected was my reading of the
+SPEAKER, which is a weaker claim than correcting the ASR.**
 
 **The trade, from audio** `[00:21:16]`–`[00:21:48]`:
 
@@ -305,7 +315,7 @@ instructor's own slide, walked through aloud for five minutes.
 | # | Audio | Marker |
 |---|---|---|
 | 1 | *"peak formation… is a miss peak formation low in the low of the week"* | `[00:24:46]` |
-| 2 | *"the dealer handles the breakout traders here by grabbing their orders \| Right past the man using the dragon and backwards"* ⚠ garbled | `[00:26:01]`–`[00:26:10]` |
+| 2 | *"the dealer handles the breakout traders here by grabbing their orders \| Right past the man using the dragon and backwards"* — ⭐⭐ **ARBITRATED: *"right past the mayonnaise and then dragging them backwards"***, so the mechanism is *take the orders beyond the Mayo, then drag price back* (`V17_TRANSCRIPT.md` §5c) | `[00:26:01]`–`[00:26:10]` |
 | 3 | *"There's yesterday's low peak formation the distance from here here. Yes, he is"* | `[00:26:36]` |
 | 4 | *"he extends the Asian low… with the session in a visible stop hunting motion. He gives you a clean stop hunt"* | `[00:26:45]` |
 | 5 | ⭐ *"he came right back above that low… and stayed up there for a look one two three four five \| **An hour and 15 minutes**… if the dealer quits extending the low for **an hour and 15 minutes** You take a long position"* | `[00:27:30]`–`[00:27:48]` |
@@ -462,9 +472,11 @@ not supply. **V17 supplies one, and it is qualitative** (*"aggressively"*). `A-1
 > `Traditional Indicators Will Cross Over Or Fire A Signal` · `Zero Line MACD Crossover CCI Zero
 > line Cross` · `Retail Traders Will Wait For Confirmations To Enter`
 
-⭐⭐ **THE SLIDE SETTLES THE AUDIO.** The committed ASR renders it *"you get a **5200** crossover"*
-`[00:45:16]` and *"**The 5200** will cross over"* `[00:45:52]`. **The slide prints `50/200`.** There
-is no *"5200"* in this methodology; it is the **50 EMA crossing the 200 EMA**. `[00:45:55]`'s
+⭐⭐ **THE SLIDE SUPPLIES THE REFERENT.** The committed ASR renders *"you get a **5200** crossover"*
+`[00:45:16]` and *"**The 5200** will cross over"* `[00:45:52]`, **and the independent ASR pass reads
+it the same way** — so the transcript is faithful, and *"fifty-two-hundred"* is simply how `50/200`
+is read aloud. **The slide prints `50/200`.** There is no *"5200"* period in this methodology; it is
+the **50 EMA crossing the 200 EMA**. `[00:45:55]`'s
 *"if the blueberries present you'll get the crossover on the old blueberry"* is consistent — the
 crossover moves to the 800 when the 800 is on the chart.
 
@@ -554,11 +566,14 @@ method's answer to its own ambiguity is risk control, not a rule. **`A-122`, and
 honest thing in the lesson.**
 
 ⭐ **The stop, finally, and it is garbled:** `[00:53:42]` *"**15 25's** \| Total above the high below
-the low if you grab a good entry."* Read as **15–25 pips total beyond the high/low**. ⚠ **This is
-the first stop-loss distance stated in the corpus since `A-023`** and it is stated in a
-five-word fragment. **Recorded as `TIER 2 — GARBLED`**, queued for the second ASR pass
-(`V17_TRANSCRIPT.md` §5), and **`A-123`** records that *"total"* is not resolved (per-side, or the
-sum of both).
+the low if you grab a good entry."* ⚠ **This is the first stop-loss distance stated in the corpus
+since `A-023`** and it is stated in a five-word fragment.
+
+⭐ **ARBITRATED (`V17_TRANSCRIPT.md` §5, candidate 3):** the second engine reads *"**15, 20 pips.**
+Total above the high, below the low."* **Both engines agree on `15` and on `total above the high,
+below the low`; they disagree on the second number — `25` against `20`.** **Recorded as
+`TIER 2 — PARTLY RECOVERED`:** the band starts at 15 and ends at 20 or 25, and **no V17 artifact
+uses the upper figure.** `A-123` also records that *"total"* is unresolved (per-side, or summed).
 
 ---
 

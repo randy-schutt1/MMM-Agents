@@ -1,7 +1,8 @@
 # V17 — SCREENSHOT INDEX
 
 **Source:** `Bootcamp1 Wk8 051312 Part1 (57mins).swf` · V17 · 2012-05-13 · 00:57:09
-**36 curated frames** from a **694-frame** 10× sweep. Every frame is the full **1024 × 786** stage
+**37 curated frames** — 36 from a **694-frame** 10× sweep at `1024 × 786`, plus **one** `2048 × 1572`
+re-capture from a second, targeted sweep (`§6`). Every frame is the full **1024 × 786** stage
 **including the control bar**, so each image **proves its own timestamp** from the burned-in player
 readout (`SWF_CAPTURE_RECIPE.md` §8).
 
@@ -129,6 +130,9 @@ missing**, and the difference is why this section exists. Open item **207**.
 
 ## §1 — HOW THE 36 WERE CHOSEN
 
+*(The 37th, `V17_00-21-09_hidpi-recapture-…`, comes from the separate hi-DPI run in `§6` and is
+not part of this selection.)*
+
 1. Pairwise diff of all 694 sweep frames (grayscale, control bar excluded, downsampled `256 × 186`),
    keeping `mean > 6.0`, runs collapsed within 10 s → **31 screen states**.
 2. A second pass at `mean > 1.6` → **32** (one addition, `i = 316`).
@@ -206,15 +210,18 @@ sections named.
 
 ---
 
-## §4 — ⭐⭐ WHERE THE FRAMES CORRECT THE TRANSCRIPT
+## §4 — ⚠ WHERE THE FRAMES ACT ON THE TRANSCRIPT — **AND ONE ROW HERE WAS WRONG**
 
-**Three places. Each is a claim that would be wrong in this project's records if the frames had not
-been read.**
+**Three places — and after the independent ASR pass returned, only ONE of the three is a
+correction.** Row 1 is **retracted** and re-filed as a **speaker** contradiction; row 2 is a
+disambiguation; row 3 stands. **This section's original framing overstated what the frames did and
+is corrected in place rather than quietly softened** (`REMEDIATION_PROTOCOL.md` §2,
+`V17_TRANSCRIPT.md` §5a).
 
 | # | Committed ASR | What the frame shows | Consequence |
 |---|---|---|---|
-| 1 | `[00:21:10]` *"this is **G U** safety trade"* | `00:21:10` header reads **`GBPJPY,M15`**, and the `00:20:30` slide credits **`G/J`** | The better trade is **GBP/JPY**. Naming it `G/U` would have inverted the lesson's answer |
-| 2 | `[00:45:16]`, `[00:45:52]` *"a **5200** crossover"* | `00:45:15` prints **`50/200 Cross Over Etc.`** | The pair is the **50 and 200 EMAs**. `5200` is not a period and does not exist |
+| 1 | `[00:21:10]` *"this is **G U** safety trade"* | `00:21:10` header reads **`GBPJPY,M15`**, and the `00:20:30` slide credits **`G/J`** | ⚠⚠ **THIS ROW IS CORRECTED.** It read *"~~The better trade is GBP/JPY. Naming it `G/U` would have inverted the lesson's answer~~"* on the premise that the ASR was wrong. **The independent ASR pass renders `GU` too** — the transcript is faithful and **the speaker misnamed his own chart**, calling it *"pound yen"* forty seconds later at `[00:21:50]`. **Filed as `C-027`.** The frames corrected my reading of the **speaker**, not of the ASR. ⭐ The answer — **GBP/JPY** — is unchanged, on three supports |
+| 2 | `[00:45:16]`, `[00:45:52]` *"a **5200** crossover"* | `00:45:15` prints **`50/200 Cross Over Etc.`** | ⚠ **DISAMBIGUATES rather than corrects** — both engines hear *"5,200"*, because that is how `50/200` is read aloud. The pair is the **50 and 200 EMAs**; `5200` is not a period |
 | 3 | `[00:44:56]` *"I got a correct… the news is used"* — unclear what is being corrected | `00:42:10` prints `News Is **Use** To`; `00:45:05` shows the **editor** with the caret after `News Is **Used**` | He is correcting **his own slide, live**, and the deck is therefore mutable mid-session (`A-124`) |
 
 ---
@@ -234,3 +241,72 @@ been read.**
 | §8a offset | ✅ **MEASURED**, 14 points, **zero** |
 | §8a rate check | ✅ **RUN SEPARATELY**, 6 intervals + PNG mtimes |
 | Frames named from | **the images**, at `1024 × 786` and, for four of them, enlarged (`§3`) |
+
+---
+
+## §6 — ⭐⭐ A HIGH-DPI RE-CAPTURE WAS RUN, AND IT RETURNS A NEGATIVE RESULT THAT MATTERS FOR OPEN ITEM 198
+
+**`REVIEW_INDEX.md` item 198** (V16 student) proposed that *"`A-101`'s cheapest close is a
+higher-resolution re-capture of two named frames whose price axis is illegible at `1024 × 786`"*,
+and `COURSE_PROGRESS.md`'s V17 GATE carry-forward `(a)` repeated it: *"A re-capture at higher
+`deviceScaleFactor` would settle it in one frame."*
+
+**V17 gave a cheap opportunity to test that proposal on its own material.** Three V17 frames show
+the pivot indicator's `R1` / `M3` / `M2` / `Pivot` labels **on live MT4 charts** rather than on V16's
+schematic — the first time in the corpus. So the same experiment was run here.
+
+### §6.1 — WHAT WAS RUN
+
+A second sweep, **same patched `v17_x10.swf`, same port, same play coordinate, same
+`t0`-before-click**, with `deviceScaleFactor: 2` → a **`2048 × 1572`** stage, capturing six indices
+around the pop-quiz charts.
+
+### §6.2 — ⚠⚠ AND §8a HAD TO BE RE-RUN, AND IT CAME BACK **DIFFERENT**
+
+| Run | Offset, measured from the burned timecode | Points |
+|---|---|---|
+| main sweep (`1024 × 786`) | **0** | 14 |
+| **hi-DPI sweep (`2048 × 1572`)** | ⚠ **−1** | **6, uniform** |
+
+Burned readings: `16:59`, `20:04`, `20:24`, `21:09`, `21:59`, `24:29` against nominal `17:00`,
+`20:05`, `20:25`, `21:10`, `22:00`, `24:30` — **exactly `−1 s` at every point, over 7.5 minutes of
+presentation time**, so the rate is right and the origin moved. The pre-click guard screenshot took
+**1,651 ms** on this run against **1,578 ms** on the main sweep.
+
+⭐ **This is `SWF_CAPTURE_RECIPE.md` §8a's own warning demonstrated: *"IT IS LATENCY, SO IT VARIES
+PER RUN. DO NOT HARDCODE IT."* Two runs of the same script, on the same machine, forty minutes
+apart, gave `0` and `−1`.** **The hi-DPI frame is named from its burned timecode, `00-21-09`, not
+from `i × 5`.**
+
+### §6.3 — ⛔ THE RESULT: IT DOES NOT WORK, AND THE REASON GENERALISES
+
+`V17_00-21-09_hidpi-recapture-gbpjpy-m15-chart.png` is a genuine `2048 × 1572` capture. **It
+recovers no price axis and no additional level label.**
+
+**The reason is structural, not a capture setting: the chart is a BITMAP EMBEDDED IN A POWERPOINT
+SLIDE.** The limiting resolution is the picture the author pasted into the deck, which was cropped
+before pasting — **the price scale is not in the source image at all.** Doubling
+`deviceScaleFactor` doubles the sampling of the *player*, and the player is faithfully rendering an
+already-low-resolution bitmap. **A 2× capture of a 1× source is a 2× upscale and nothing more.**
+
+### §6.4 — WHAT THIS DOES AND DOES NOT SAY ABOUT ITEM 198
+
+**Does:** for any frame whose chart is a **slide-embedded picture**, item 198's proposed remedy
+**cannot work**, and this is now measured rather than argued. **The check is cheap and should be run
+first: does the frame show the MT4 window chrome (title bar, price axis, `F10` board), or does it
+show a cropped picture sitting inside a slide?** V17's quiz charts show an MT4 **symbol header**
+(`GBPJPY,M15 128.848 …`) but **no axis and no window frame** — they are pictures.
+
+⚠ **Does NOT:** settle item 198 for **V16's** two named frames (`V16_00-16-50_…`,
+`V16_00-17-30_…`), which are V16's material on V16's branch and were **not** re-captured here
+(`D-038`). If either of those is a full-screen MT4 capture rather than a slide picture, a hi-DPI
+pass could still pay there. **This section narrows item 198 from "do it" to "check what kind of
+image it is first, because on one lesson's frames it provably does not help."**
+
+### §6.5 — AND `A-101` IS UNCHANGED
+
+No tenth level appears on any V17 chart. The visible labels across
+`V17_00-17-00_…`, `V17_00-20-05_…`, `V17_00-20-25_…`, `V17_00-21-10_…` and `V17_00-21-09_hidpi…`
+are **`R1`, `M3`, `M2`, `Pivot`** — a subset of V16's printed nine-level grid, with **no `M5`**
+(V17 GATE carry-forward `(c)`). ⚠ **That is not evidence against `M5`**: only part of the grid is in
+view on any of these charts, and absence from a cropped picture is not absence from the indicator.

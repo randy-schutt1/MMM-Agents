@@ -60,7 +60,7 @@ completely specified setup checklist in the corpus.
 | 10 | A **reset** re-anchors the peak and buys 3 more days; a **reversal** changes direction | `[PRINTED]` `00:51:00` + `[AUDIO]` | **HIGH** *(as a distinction)* / ⚠ **LOW** *(as something decidable live)* | the slide concedes it itself — `A-122` |
 | 11 | The daily candle's **wick** is the end-of-cycle consolidation | `[AUDIO]` `[00:42:48]`–`[00:43:03]` | **MEDIUM** | ⭐ testable — `PT-045` §2 |
 | 12 | The dealer becomes **heavy net short** over 3–4 days and must correct to book it | `[AUDIO]` `[00:48:44]`–`[00:48:57]` | ⚠ **MEDIUM as mechanism, UNVERIFIABLE as fact** | dealer inventory is not observable from price. **This is the lesson's load-bearing causal claim and nothing in the corpus can check it** |
-| 13 | The better pop-quiz trade was **GBP/JPY**, not GBP/USD | `[PRINTED]` + `[VISUAL]` + 2nd ASR | **CERTAIN** | the committed ASR alone says the opposite — see §4 |
+| 13 | The better pop-quiz trade was **GBP/JPY**, not GBP/USD | `[PRINTED]` slide + `[VISUAL]` header + `[AUDIO]` `[00:21:50]` | **CERTAIN** | ⚠ `[00:21:10]` says *"GU"* **on both ASR engines** — the speaker contradicts himself (`C-027`). **§4 is corrected** |
 | 14 | `Mayo` and `Blue Berry` are moving-average nicknames | `[PRINTED]` ×2 | **CERTAIN** *(that they are nicknames)* / **REFUSED** *(which periods)* | V09 gives `blueberry = 800 on the 15-min`; V17 prints neither mapping |
 | 15 | The deck was **edited during the live session** | `[VISUAL]` + `[AUDIO]` | **CERTAIN** | — |
 
@@ -90,26 +90,34 @@ states arrives with an undefined term inside it.**
 
 ---
 
-## §4 — Q2: THE FRAME-CORRECTS-TRANSCRIPT FINDING, AND WHY IT MATTERS MORE THAN THE FINDING
+## §4 — Q2: ⚠⚠ THE "FRAME CORRECTS TRANSCRIPT" FINDING — **RETRACTED, AND THE RETRACTION IS THE BETTER RESULT**
 
-At `[00:21:10]` the committed transcript says *"this is **G U** safety trade"*. The chart on screen
-is `GBPJPY,M15`. The slide 40 seconds earlier credits `G/J`. **The ASR is wrong and the frames say
-so.**
+> *Superseded, retained per `REMEDIATION_PROTOCOL.md` §2. This section originally argued that
+> `[00:21:10]`'s *"G U"* was an ASR error, called it* "the session's most important methodological
+> result"*, and drew three lessons from it.*
 
-**Why this is the session's most important methodological result rather than a footnote:**
+**The independent ASR pass renders `GU` as well.** Two engines, one word. **The committed transcript
+is right and the speaker is wrong** — he names a `GBPJPY,M15` chart *"GU"* at `[00:21:10]` and
+*"pound yen"* at `[00:21:50]`, forty seconds later, without changing chart. **Filed as `C-027`.**
 
-1. **It is the exact scenario `SWF_CAPTURE_RECIPE.md` §9 was written for**, and §9's ordering was
-   **broken** in this session (`D1`). The correction landed **anyway**, because the pairs are printed
-   on the chart headers — **which is luck, not process.** Had the charts been unlabelled (as
-   `§9`'s *"level three week"* chart is), the error would have entered the record.
-2. **It is the mirror image of V16's `S1`.** V16 fabricated eleven frame names *from the transcript*.
-   V17 corrected the transcript *from the frames*. **Same coupling, opposite direction** — and the
-   V16 failure is why this session re-rendered four frames and read them character by character
-   instead of trusting a contact-sheet glance.
-3. ⚠ **It means the committed transcript has at least one currency-pair error, and pair identity is
-   load-bearing.** A reviewer should assume there are others. `[00:20:37]`'s *"it was pound yen and
-   pound dollar"* is rendered correctly, which is what makes the `[00:21:10]` slip survivable — but
-   nothing structural caught it. **Open item 202.**
+| Original claim | Status |
+|---|---|
+| The better trade is **GBP/JPY** | ✅ **STANDS** — the printed slide's `G/J`, the chart header, and `[00:21:50]`, three independent supports |
+| *"The ASR is wrong and the frames say so"* | ❌ **RETRACTED** |
+| *"It is the exact scenario `§9` was written for"* | ◐ **WEAKENED.** §9 is about frames correcting *interpretation*, and they did — they corrected my reading of an inconsistent **speaker**. Real, and smaller |
+| *"The committed transcript has at least one currency-pair error… assume there are others"* | ❌ **RETRACTED. It has none.** ⚠ A reviewer should not carry forward a suspicion this session raised and then disproved |
+
+⭐ **Why the retraction is worth more than the finding was.** The claim was **queued for arbitration
+before the answer was known**, and it was queued precisely *because* it was this session's most
+confident non-audio conclusion. **A pre-committed check that only ever ratifies the session that
+wrote it is theatre.** This one overturned the session's own headline.
+
+⚠ **And it inverts V16's failure rather than mirroring it.** V16's `S1` was a *transcript
+contaminating frames*. This was **frames contaminating the reading of a transcript** — I saw
+`GBPJPY` on the header, saw `G/J` on the slide, and concluded the audio must be wrong. **Both come
+from the same place: letting one channel adjudicate another with no independent third.** Here the
+third channel was the second ASR engine, and it was queued in advance. **That is the only reason
+this was caught.**
 
 ---
 
@@ -186,10 +194,12 @@ about the same trade.**
 
 ## §8 — WHAT I WOULD BE WRONG ABOUT IF I AM WRONG
 
-1. ⚠ **§4's pair correction.** I am reading `GBPJPY,M15` from a chart header at native resolution.
-   If that header is misread, the lesson's quiz answer inverts. **I re-rendered it at 2× and it is
-   unambiguous, and the printed slide agrees independently** — but this is the claim in the set with
-   the most riding on one act of reading.
+1. ⚠⚠ **§4 — AND I ALREADY WAS.** This entry listed §4, before the second ASR pass returned, as
+   *"the claim in the set with the most riding on one act of reading"*. **It was the wrong worry
+   about the right claim.** The header reading was fine; **the inference built on it was not.**
+   ⭐ The lesson I take: *the thing most likely to be wrong was not the measurement, it was the story
+   told about the measurement* — and no amount of re-rendering the frame would have caught that.
+   Only the independent third channel did.
 2. ⚠ **§2 item 8.** I graded the `OHLC`↔session mapping as framing rather than arithmetic. If a later
    lesson turns it into an equation, I will have under-read the corpus's best idea. **I chose the
    weaker reading deliberately** because the stronger one is not stated and would be very easy to

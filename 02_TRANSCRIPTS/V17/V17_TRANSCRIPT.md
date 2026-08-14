@@ -155,25 +155,130 @@ transcript.
 Corrections live here and nowhere else, each attached to **the marker grid's** timestamp — never the
 second pass's clock, per the TIMESTAMP CONVENTION at the top of this file.
 
-⏳ **STATUS AT THIS COMMIT: THE SECOND PASS IS STILL RUNNING.** It was started at the beginning of
-this session on the extracted audio and had not finished when the capture commit was made. **This
-section is completed in a later commit on this branch**, exactly as V16's was (`315db2c`
-*"verify(V16): the independent ASR pass completed"*). ⚠ **Until it lands, treat every `[AUDIO]`-only
-claim in the V17 set as single-engine.**
+**Engine:** `openai-whisper` **`large-v3-turbo`**, English, run this session on the audio extracted
+from the original `.swf`. **≈ 140 minutes of CPU**, 8,882 words against the committed transcript's
+8,870. It shares **no code and no lineage** with whatever produced the committed transcript.
 
-**FIVE CANDIDATES ARE QUEUED, fixed here BEFORE the second pass returns so the arbitration cannot be
-retro-fitted to the answer:**
+**All five queued candidates are resolved. The queue was fixed and committed at `f55c2f3`, BEFORE
+the second pass returned** — it is in this file's git history and can be checked.
 
-| # | Marker | Committed ASR | Why it is queued |
-|---|---|---|---|
-| **1** | `[00:21:10]` | *"All right, this is **G U** safety trade"* | ⭐⭐ **LOAD-BEARING.** The chart on screen is `GBPJPY,M15` and the slide credits `G/J`. **Two non-audio supports already say the ASR is wrong**; the second pass is the third, independent one |
-| **2** | `[00:45:16]`, `[00:45:52]` | *"a **5200** crossover"* · *"The **5200** will cross over"* | ⭐ The slide prints `50/200`. Queued to see whether a second engine hears the slash |
-| **3** | `[00:53:42]`–`[00:53:45]` | *"**15 25's** \| Total above the high below the low"* | ⭐⭐ **LOAD-BEARING.** This is the corpus's only spoken stop-loss distance and it is a five-word fragment (`A-123`) |
-| **4** | `[00:26:10]` | *"Right past the man using the **dragon and backwards**"* | Answer-key point 2's mechanism is unrecoverable as rendered |
-| **5** | `[00:09:13]` | *"You got a W formation on the one-hour chart **double-rearer**"* | `A-108` — almost certainly *double bottom*, but the pivot-zone shift rule (`§3`) turns on it |
+⚠⚠ **AND THE HEADLINE RESULT IS THAT CANDIDATE 1 GOES AGAINST THIS SESSION.** It was queued with two
+non-audio supports already lined up against the committed ASR. **The second engine sided with the
+committed ASR.** That correction is made in full in `§5a` and propagated to every artifact that
+carried it.
 
-**A sixth, not queued but flagged:** `[00:03:48]`'s *"chat box still love you. I still an onion"* is
-garbled and carries nothing; no artifact cites it.
+| # | Marker | Committed ASR | Second pass | Disposition |
+|---|---|---|---|---|
+| **1** | `[00:21:10]` | *"All right, this is **G U** safety trade"* | *"All right. **This is GU, safety trade.**"* | ⚠⚠ **NOT CORRECTED — AND THIS SESSION WAS WRONG.** See `§5a` |
+| **2** | `[00:45:16]` | *"you get a **5200** crossover"* | *"You'll get a **5,200** crossover."* | ⭐ **NOT CORRECTED, AND THE SLIDE STILL SUPPLIES THE REFERENT.** Both engines hear the same thing because **that is what he says** — *"fifty-two-hundred"* is how a person reads `50/200` aloud. The frame does not correct the transcript; it **identifies** what the transcript faithfully records. See `§5b` |
+| **3** | `[00:53:42]` | *"**15 25's** \| Total above the high below the low"* | *"**15, 20 pips.** Total above the high, below the low."* | ⭐⭐ **PARTLY CORRECTED, AND IT IS LOAD-BEARING.** Both engines agree on **`15`** and on **`total above the high, below the low`**; they **disagree on the second number** (`25` vs `20`). `A-123` sharpens and stays open |
+| **4** | `[00:26:10]` | *"Right past the man using the **dragon and backwards**"* | *"grabbing their orders right past **the mayonnaise and then dragging them backwards**"* | ⭐⭐ **CORRECTED, AND IT RECOVERS A MECHANISM.** Answer-key point 2 is: the dealer takes the breakout traders' orders **past the Mayo**, then **drags price backwards**. See `§5c` |
+| **5** | `[00:09:13]` | *"a W formation on the one-hour chart **double-rearer**"* | *"You've got a W formation on the one-hour chart. **Double railroad tracks** to the low of the week."* | ⭐⭐ **CORRECTED, AND IT IS NOT WHAT I GUESSED.** `A-108` predicted *double bottom*. It is **double railroad tracks** — existing corpus vocabulary. See `§5d` |
+
+---
+
+### §5a — ⚠⚠ CANDIDATE 1: I CLAIMED THE FRAMES CORRECTED THE TRANSCRIPT. THEY DO NOT. THE SPEAKER CONTRADICTS HIMSELF.
+
+**What this session claimed before the second pass returned** (`V17_SOURCE_NOTES.md` §7 as first
+committed, `04_SCREENSHOTS/V17/INDEX.md` §4 row 1, `V17_INTERPRETATION.md` §2 item 13 and §4, and
+the `f55c2f3` commit message): that `[00:21:10]`'s *"G U"* was **an ASR mishearing of *"G J"***,
+because the chart on screen reads `GBPJPY,M15` and the slide credits `G/J`.
+
+**The second engine renders it `GU` as well.** Two independent ASR systems, same word.
+
+**So the sentence is not mis-transcribed. What is actually happening is this:**
+
+| Burned timecode | On screen | What he says |
+|---|---|---|
+| `20:30` | the `Answers` slide | printed: *"Better selection: **G/J** gives clear confirmation by a close above the ketchup and mustard"* |
+| `21:09`–`21:10` | **`GBPJPY,M15`** | `[00:21:10]` *"All right, this is **GU** safety trade"* |
+| `21:16`–`21:48` | still `GBPJPY,M15` | the close above ketchup and mustard, the confirmed entry, zero drawdown, the 18–19 pip stop, the 40 taken |
+| `21:50` | still `GBPJPY,M15` | `[00:21:50]` *"Now **this is pound yen**"* — **the same chart, named the other way** |
+| `22:00` | **`GBPUSD,M15`** | `[00:21:54]` *"Look at pound dollar"* |
+
+⚠⚠ **He calls one chart `GU` at `21:10` and `pound yen` at `21:50`, and the chart is `GBPJPY`
+throughout.** The slide, the chart header and his own second naming all agree; **the `21:10` naming
+is a speaker slip.**
+
+**Consequences, all applied:**
+
+1. **This is filed as `C-027`, a contradiction**, not as a transcript correction.
+2. ⭐ **The substantive reading is UNCHANGED and was never at risk**: the better trade is
+   **GBP/JPY**, on three independent supports (the printed slide, the chart header, and
+   `[00:21:50]`).
+3. ⚠ **What IS retracted is the METHODOLOGICAL claim** that the frames corrected the transcript at
+   this point. `04_SCREENSHOTS/V17/INDEX.md` §4 row 1 and `V17_INTERPRETATION.md` §4 were built on
+   it, and both are corrected in place with the original text struck and retained
+   (`REMEDIATION_PROTOCOL.md` §2). **The frames corrected my reading of the SPEAKER, which is a
+   different and weaker thing than correcting the ASR.**
+4. ⚠ **`V17_SOURCE_NOTES.md` §0 `D2a` overstated its case** and is corrected.
+
+**Why this is worth the space it takes.** The claim was queued for arbitration **before** the answer
+was known, precisely because it was the session's most confident non-audio finding. **A queue that
+only ever confirms the session that wrote it is not a check.** This one did not.
+
+---
+
+### §5b — CANDIDATE 2: THE `5200` IS FAITHFUL, AND THE SLIDE IS STILL LOAD-BEARING
+
+Both engines render *"a 5,200 crossover"*, twice. **The committed transcript is right.** What the
+frame supplies is the **referent**: `V17_00-45-15_…png` prints `50/200 Cross Over Etc.`, and
+`[00:45:55]`'s *"if the blueberries present you'll get the crossover on the old blueberry"* is
+consistent with a 50-against-a-long-MA reading.
+
+⚠ **`04_SCREENSHOTS/V17/INDEX.md` §4 row 2 said the frame *"corrects"* the transcript. It does not
+— it DISAMBIGUATES it**, and the row is corrected. **The practical consequence for an automation
+project is unchanged**: the pair is the 50 and the 200, and *"5200"* is not a period.
+
+---
+
+### §5c — ⭐⭐ CANDIDATE 4 RECOVERS A MECHANISM THE COMMITTED TRANSCRIPT HAD LOST
+
+> *"the dealer handles the breakout traders here by grabbing their orders **right past the mayonnaise
+> and then dragging them backwards**"*
+
+Answer-key point 2 — `Dealer Handles The BO Traders and 200 Traders` — was recorded in
+`V17_SOURCE_NOTES.md` §8 as *"⚠ garbled"* and carried no mechanism. **It now has one:** the orders
+are taken **beyond the Mayo**, and price is then **dragged back**. That is the same shape as the
+Asian-range stop hunt, applied to a moving average instead of a session range.
+
+⭐ **And it is a THIRD instance of the `Mayo` nickname in this one lesson** — spoken here, printed on
+the `00:51:00` slide as `(Mayo ,Blue Berry)`, and printed on the `00:14:15` flashcard as
+`Pins to the Blueberry & Mayo`. **`A-020` gains an audio leg to go with its two printed ones.**
+
+---
+
+### §5d — ⭐⭐ CANDIDATE 5: `A-108` RESOLVES, AND NOT TO WHAT I GUESSED
+
+`A-108` recorded *"double-rearer"* as *"almost certainly **double bottom**"*. **It is
+*"double railroad tracks"*.**
+
+> *"You've got a W formation on the one-hour chart. **Double railroad tracks to the low of the
+> week.**"*
+
+⚠ **`railroad` returns ZERO in the committed transcript** — the term is present in this lesson only
+on the second engine. It **is** corpus vocabulary elsewhere, which is why it is credible here.
+
+⭐ **And it feeds `A-114`.** The student flashcard's unexplained `RR on 2nd leg of M pattern` now has
+a candidate expansion — **`RR` = railroad** — that the same lesson independently supplies.
+⚠ **`A-114` is NARROWED, NOT CLOSED**: the card is a student's, the two occurrences are 5 minutes
+apart in different mouths, and *risk/reward* remains possible.
+
+---
+
+### WHAT THE SECOND PASS DID **NOT** CHANGE
+
+Every figure and term any V17 artifact relies on was re-checked against the second pass's full text
+and **survives unchanged**: *"25 to 75 pips off of that level as a safety trade"* · *"25 to 50
+pips"* · *"18, 19 pips"* · *"40 off of there"* · *"plus 40 and change"* · *"45 minutes to an hour"*
+· *"hour and 15 minutes"* · *"eight candles or above"* · *"at least 50 pips"* · *"two and a half to
+three days"* · *"heavy net short"* · *"three candles straight up"* · *"20 EMA"* · *"blueberry"* ·
+*"ketchup and the mustard"* · *"the news is used"* · *"week eight"* · *"the 13th"* ·
+*"Andrew, double this demo"* · *"V bottom peak formation"*.
+
+⭐ **And the `Q-018` absence terms are absent from the SECOND pass as well** — `5/13`, `M15`,
+`800`, `Asian Box` and `10 to 15` all return **zero** on an independently produced transcript.
+**`Q-018`'s fabrication finding does not depend on the committed transcript being right.**
 
 ---
 

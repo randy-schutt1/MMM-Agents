@@ -2944,3 +2944,57 @@ C-026 -- OPEN, LOW severity, NO downstream dependency. Recorded because it is th
   Closeable cheaply: a higher-resolution re-capture of V17_00-13-40 would read
   the balance column. See open item 205.
 ```
+
+---
+
+## C-027 — ⭐ He calls one chart *"GU"* at `[00:21:10]` and *"pound yen"* at `[00:21:50]`, and the chart is `GBPJPY` throughout — **and this record exists because a pre-committed check overturned the session that raised it**
+
+**Raised by:** V17 · `[00:21:10]` vs `[00:21:50]`, against `V17_00-21-10_…png` and
+`V17_00-20-30_…png`
+**Speaker:** the course author, same file, **40 seconds apart, same chart on screen**
+**Class:** Tier 1 against itself, on the identity of the instrument in a worked example
+**Severity:** ⚠ **LOW substantively, HIGH methodologically**
+
+### The sequence, with the screen
+
+| Burned timecode | On screen | Said / printed |
+|---|---|---|
+| `20:30` | `Answers` slide | printed: *"Better selection: **G/J** gives clear confirmation by a close above the ketchup and mustard then soars to TP"* |
+| `21:09`–`21:10` | **`GBPJPY,M15 128.848 128.876 128.760 128.813`** | `[00:21:10]` *"All right, this is **GU** safety trade"* |
+| `21:16`–`21:48` | same chart | the confirming close, zero drawdown, the 18–19 pip stop, the 40 taken |
+| `21:50` | same chart | `[00:21:50]` *"Now **this is pound yen**"* |
+| `22:00` | **`GBPUSD,M15`** | `[00:21:54]` *"Look at pound dollar"* |
+
+### ⚠⚠ WHY THIS RECORD IS FILED AS A CONTRADICTION AND NOT AS A TRANSCRIPT CORRECTION
+
+**The V17 session first concluded the opposite** — that *"G U"* was an ASR mishearing of *"G J"* —
+and recorded that as its headline methodological finding in four artifacts and one commit message.
+**It queued the line for independent ASR arbitration before the answer was known** (the queue is in
+`V17_TRANSCRIPT.md` §5 at commit `f55c2f3`).
+
+**The second engine — `large-v3-turbo`, no shared lineage — renders it *"This is GU, safety
+trade"*.** Both engines, same word. **The transcript is faithful and the speaker is inconsistent.**
+
+**All four artifacts are corrected in place with the original text struck and retained**
+(`REMEDIATION_PROTOCOL.md` §2): `V17_SOURCE_NOTES.md` §0 `D2a′` and §7, `V17_INTERPRETATION.md` §2
+item 13 / §4 / §8, `04_SCREENSHOTS/V17/INDEX.md` §4 row 1.
+
+### What is NOT in dispute
+
+⭐ **The better trade is GBP/JPY**, on three independent supports that never rested on the retracted
+claim: the printed slide's `G/J`, the chart header, and `[00:21:50]`'s *"Now this is pound yen"*.
+**No downstream figure changes.**
+
+### Current Status
+
+```text
+C-027 -- OPEN, LOW substantive severity. It costs the project nothing except a
+  note that in this corpus THE INSTRUMENT NAMED ALOUD IS NOT RELIABLE and the
+  chart header is. That generalises: every worked example in this corpus is
+  narrated live, and V17 shows the narration can misname the instrument on screen.
+
+  ITS VALUE IS METHODOLOGICAL. It is the corpus's first instance of a session's
+  own pre-committed check overturning that session's headline claim, and the
+  V17 mastery report charges it as self-correction S1 rather than presenting the
+  corrected text as if it had always read that way.
+```

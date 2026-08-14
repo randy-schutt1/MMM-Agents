@@ -2519,6 +2519,19 @@ mustard**"*.
 `Mayo` and `Blue Berry` are *"chart landmark[s]"* where *"there are retail order build ups"*.
 **ADVANCED, NOT CLOSED.**
 
+### ⭐ A THIRD V17 INSTANCE, RECOVERED BY THE SECOND ASR ENGINE (2026-08-14) — AND IT IS SPOKEN
+
+`V17_TRANSCRIPT.md` §5c: `[00:26:10]`'s garbled *"Right past the man using the dragon and
+backwards"* is recovered by `large-v3-turbo` as:
+
+> *"grabbing their orders right past **the mayonnaise** and then dragging them backwards"*
+
+⭐ **So V17 carries `Mayo` three times — twice printed (the `00:51:00` slide's `(Mayo ,Blue Berry)`
+and the `00:14:15` flashcard's `Pins to the Blueberry & Mayo`) and once spoken.** The V17 addendum
+above recorded the printed pair; **this adds the audio leg.**
+
+⚠ **The mapping to periods is still not supplied by V17 on any channel.**
+
 ## A-021 — the letter sequence for "the cycle"
 
 ### Course Meaning
@@ -8951,6 +8964,30 @@ A-108 -- OPEN pending the independent ASR pass. LOW stakes on its own,
 
 ---
 
+### ⭐⭐ RESOLVED SAME SESSION (2026-08-14) — IT IS **`DOUBLE RAILROAD TRACKS`**, NOT `DOUBLE BOTTOM`
+
+The independent `large-v3-turbo` pass reads:
+
+> *"You've got a **W formation on the one-hour chart. Double railroad tracks to the low of the
+> week.**"*
+
+⚠ **This record's own guess was `double bottom`, and it was wrong.** `railroad` returns **zero** in
+the committed transcript; the term is recovered only by the second engine, and it **is** existing
+corpus vocabulary, which is what makes it credible.
+
+⭐ **Consequence for `A-109`:** condition 4 of the pivot-zone shift rule is not *"a W"* alone — it is
+*"a W **with double railroad tracks** to the low of the week"*, which adds a second undefined shape
+rather than removing one. **`A-109` does not improve.**
+
+⭐ **Consequence for `A-114`:** the flashcard's unexplained `RR` now has a candidate expansion the
+same lesson independently supplies. See that record.
+
+```text
+A-108 -- CLOSED as a transcription question, 2026-08-14, by independent ASR.
+  The TERM is recovered; "double railroad tracks" is itself undefined in this
+  corpus and that is A-109's problem, not this record's.
+```
+
 ## A-109 — ⭐ The pivot-zone shift rule has five antecedents and three of them are undefined — so V16's *"most completely specified rule"* acquires an uncodeable override
 
 **Raised by:** V17 · `[00:08:49]`–`[00:09:35]`
@@ -9088,6 +9125,24 @@ A-114 -- OPEN. DO NOT GUESS. Tier 2 anyway (A-112).
 ```
 
 ---
+
+### ⭐ NARROWED SAME SESSION (2026-08-14) — `RAILROAD` IS NOW THE LEADING CANDIDATE, AND IT IS STILL NOT PROVEN
+
+`A-108`'s arbitration recovered *"**double railroad tracks** to the low of the week"* from
+`[00:09:13]` — **the same lesson, in the instructor's own voice, using `railroad tracks` as a
+pattern name.** That makes `RR` = *railroad* substantially more likely than it was when this record
+was opened.
+
+⚠ **NOT CLOSED, for three reasons stated so a later session does not close it on this note alone:**
+
+1. The card is a **student's** (`A-112`), and the two usages are 5 minutes apart in **different
+   mouths**.
+2. *Risk/reward* remains a live reading — `RR on 2nd leg of M pattern` parses naturally either way.
+3. **The card never expands it**, and the instructor never reads that line aloud.
+
+```text
+A-114 -- OPEN, NARROWED. Leading candidate: railroad (tracks). DO NOT CODE.
+```
 
 ## A-115 — Two entry DISQUALIFIERS are stated and neither has a threshold: a *"blown out"* bar, and an entry *"45 pips off the low of the day"*
 
@@ -9303,6 +9358,30 @@ A-123 -- OPEN. This is the single highest-value number V17 could supply and it
 ```
 
 ---
+
+### ⭐⭐ ARBITRATED SAME SESSION (2026-08-14) — BOTH ENGINES AGREE ON `15` AND DISAGREE ON THE SECOND NUMBER
+
+| Engine | Rendering |
+|---|---|
+| committed ASR | *"**15 25's** \| Total above the high below the low if you grab a good entry"* |
+| `large-v3-turbo` | *"**15, 20 pips.** Total above the high, below the low. If you grab a good entry, you're going to be good."* |
+
+⭐ **What is now firm:** the phrase is a **two-number pip range beginning at 15**, and the qualifier
+is **`total above the high, below the low`** — both engines agree on that clause word for word.
+
+⚠ **What is still open:** the second number is **20 or 25**, and *"total"* is still unresolved
+(per-side, or summed across both sides). **The two unknowns compound**: the stop is somewhere between
+**7.5 and 25 pips** per side depending on which reading of each is taken.
+
+⭐ **And the corpus has an independent sanity check that does not settle it either:** `[00:21:39]`'s
+narrated *"about 18, 19 pips"* on the actual `G/J` trade is inside **both** candidate bands.
+
+```text
+A-123 -- OPEN, SHARPENED. The corpus's only Tier 1 stop-loss distance is a range
+  whose upper bound differs by engine and whose per-side/total split is unstated.
+  NO V17 ARTIFACT USES THE UPPER FIGURE, and none should until this closes.
+  See also A-125 -- a Tier 3 ticket in this same lesson shows 60 and 15 pips.
+```
 
 ## A-124 — ⚠ The course deck is MUTABLE and was edited during the recorded session, so *"the slide says X"* is a claim about a timecode
 
