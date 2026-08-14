@@ -27,8 +27,17 @@ internet defaults (see A-039 below) — but *matching a rendering* still is not 
 method*, and the band's std-dev multiple remains unrecovered.
 
 **3. It contains parameters that are outright guesses, and they are labelled as such.**
-Every input in both files carries one of three tags — `[TIER 1]`, `[TIER 2]`, `[DEFAULT]` — in
-the code comments and in the TradingView tooltips. The table below is the same information.
+Every input in both files carries one tag — `[TIER 1]`, `[TIER 2]`, `[TOOLING]`,
+`[OWNER-ATTESTED]` or `[DEFAULT]` — in the code comments and in the TradingView tooltips. The
+table below is the same information.
+
+> **`[OWNER-ATTESTED]` was added 2026-08-13 (`D-042`).** It means *the project owner stated this
+> directly*. It ranks **above `[DEFAULT]`** — testimony beats this file's invention — and **below
+> `[TIER 1]`** — no recording or frame shows it. It is **not a tier**: `D-041` established that
+> owner attestation sits *outside* the source hierarchy, as an adjudication warrant.
+> **Where a recording contradicts an `[OWNER-ATTESTED]` value, the contradiction is named at the
+> value and put to the owner — never resolved here.** That is live right now for the 5 and 13 EMA
+> colours; see the ⚠ block below.
 
 ---
 
@@ -97,7 +106,7 @@ collapsed.
 
 | Parameter | Value | Source |
 |---|---|---|
-| **EMA 50 / 200 / 800 colours** | **Aqua / White / Blue** | `3M-shadow-boxes-15M.tpl` — a **15-minute** template, `method=1` (MT4 `MODE_EMA`), colours `16776960` / `16777215` / `16711680`. The 800-on-15m independently corroborates Tier-1 V09. **5 and 13 are not in that template and stay `[DEFAULT]`.** ⚠ the 200 is white — invisible on a white background. |
+| **EMA 50 / 200 / 800 colours** | **Aqua / White / Blue** | `3M-shadow-boxes-15M.tpl` — a **15-minute** template, `method=1` (MT4 `MODE_EMA`), colours `16776960` / `16777215` / `16711680`. The 800-on-15m independently corroborates Tier-1 V09. ⭐ **`[OWNER-ATTESTED]` too, as of 2026-08-13 (`D-042`): the owner, asked separately and without reference to this template, named the same three colours for the same three periods** — water aqua, mayonnaise white, blueberry blue. Two warrants that were never consulted against each other and agree. ⚠ the 200 is white — invisible on a white background. |
 | "mktopen" open-hour **window length** | 2 × 1 hour | `!sm_WorkTime_v1.5b` `Begin_5a=10:00/End_5a=11:00`, `Begin_5b=16:00/End_5b=17:00` — independently reproduced by the 284 rectangles in `3M-shadow-boxes-15M.tpl`. **Their ET placement is NOT sourced — see below. Ships disabled.** |
 | TDI RSI period | **21** | `Ultimate Blue.tpl`, block `name=!SM_TDI`: `RSI_Period=21` |
 | TDI RSI price | `close` | `RSI_Price=0` (MT4 `PRICE_CLOSE`) |
@@ -112,7 +121,7 @@ collapsed.
 
 | Parameter | Default | Why it is a default |
 |---|---|---|
-| **EMA 5 and 13 colours** | cyan / orange | **No colour for any moving average is stated in any source** — `03_LESSON_NOTES/V05_SOURCE_NOTES.md` §8: *"No colours, no nicknames, no periods assigned."* 50/200/800 have since been recovered from tooling (above); 5 and 13 are not in that template, so these two remain invented. |
+| ~~**EMA 5 and 13 colours**~~ | ~~cyan / orange~~ | ⬆ **PROMOTED OUT OF THIS TABLE 2026-08-13 — they are now `[OWNER-ATTESTED]` (`D-042`), no longer invented. Retained struck-through per `REMEDIATION_PROTOCOL.md` §2. See the ⚠ block immediately below — the new values are contested by a Tier 1 recording.** |
 | **"mktopen" boxes' ET placement** | 03:00–04:00 and 09:00–10:00 | The artifacts record **broker server** time and no artifact states the offset. A GMT+3 server fits well (see below) but **that is a curve-fit by this session, not a source**. Ships **disabled**. |
 | EMA source | `close` | Not specified by any source. |
 | **Session timezone** | Arm A, `UTC-5` | **This is the big one — see the next section.** |
@@ -121,6 +130,58 @@ collapsed.
 | The name *"prime"* on the NY box | — | The source calls it the **NY Reversal** box. The *window* is Tier 2; only the *name* is invented. |
 | **TDI volatility-band std-dev multiple** | 1.6185 | **Still a guess.** The MT4 indicator exposes no input for it, so it is compiled into the `.ex4` and the template cannot reveal it. Remains the Tier-3 public value. See the A-039 section. |
 | Box styling, label text, right-extension | — | Cosmetic. |
+
+### ⚠ Owner-attested — and two of the five are CONTRADICTED BY TAPE (`D-042`, `I-011`)
+
+**The full colour mapping the owner stated on 2026-08-13**, now the script's defaults:
+
+| Period | Nickname (`D-041`) | Colour | Warrant |
+|---|---|---|---|
+| **5** | ketchup | **red** `#FF0000` | `[OWNER-ATTESTED]` (`D-042`) — ⚠ **contested, see below** |
+| **13** | mustard | **yellow** `#FFFF00` | `[OWNER-ATTESTED]` (`D-042`) — ⚠ **contested, see below** |
+| **50** | water | **aqua** `#00FFFF` | `[OWNER-ATTESTED]` + `[TOOLING]` |
+| **200** | mayonnaise | **white** `#FFFFFF` | `[OWNER-ATTESTED]` + `[TOOLING]` |
+| **800** | blueberry | **blue** `#0000FF` | `[OWNER-ATTESTED]` + `[TOOLING]` |
+
+**Cite them as `OWNER-ATTESTED (D-042), not observed on-screen.`** No captured frame in
+`04_SCREENSHOTS/` carries a legend, and no speaker in V01–V11 names a colour and a nickname in the
+same sentence. **This is owner testimony about the owner's own charts — a stronger basis than the
+generic placeholders it replaced, and categorically not a video observation.** Do not let the
+promotion out of the DEFAULT table read as "the course says so".
+
+#### The contradiction, stated plainly
+
+> **V07 `[00:25:34]`** — Tier 1, frame `04_SCREENSHOTS/V07/INDEX.md` row 22:
+>
+> *"The only other lines in here, look, **this yellow one is a five moving average.** I made it
+> dotted in the 13, 50 and the 200."*
+
+**Tier 1 puts YELLOW on the 5. The owner puts RED on the 5 and YELLOW on the 13.**
+
+**And the consequence runs past colour.** The owner's mapping also gives ketchup = red and
+mustard = yellow. Chain that to V07's yellow = 5 and you get **mustard = 5, ketchup = 13** — the
+assignment `D-041` **overturned** on 2026-08-13. This is a **second, independent route back to the
+reversed nickname mapping**, and unlike the first (three Tier 3 web sources) it **starts from a
+recording**.
+
+#### Why this file ships the owner's colours anyway, and refuses to resolve it
+
+1. **No speaker makes the join.** V07 gives colour→period. The owner gives nickname→colour.
+   **Nothing gives colour→nickname on one warrant.** Chaining them is the same `D-030` error this
+   README already refuses to make for *white = 200 = "mayonnaise"* in the `A-020` section below.
+   **The discipline has to hold when the inference points somewhere inconvenient, or it was never
+   discipline.**
+2. **`D-041` is an explicit, definitive owner ruling.** Only the owner reverses it, and
+   `REMEDIATION_PROTOCOL.md` §2 forbids the quiet edit in either direction.
+3. **A cheap innocent explanation is live.** The V07 speaker is a **guest** on his own platform
+   who, minutes later in the same lesson, describes his own multi-timeframe palette —
+   `[00:27:24]` *"the dashed ones like this are 30 minute versions"*, `[00:27:33]` *"the blue heavy
+   ones are 60 minutes."* His colours may simply not be the course's. `D-033` makes a guest
+   normative on **method**; it does not promote his chart cosmetics to shared furniture.
+
+**Filed `00_SYSTEM/SETUP_ISSUES.md` `I-011`, `OPEN`**, per `SOURCING_HIERARCHY.md` §3.2 **Case C**
+(*do not adjudicate, surface to the owner*). **One owner sentence closes it.** Until then: if you
+are matching this script against a V07 screenshot, **expect the 5 to look wrong.**
 
 ---
 
@@ -366,6 +427,16 @@ untouched and `D-031`'s two arms are undisturbed.
 > A-020's still-open half (the *period* behind "Mayo"). It is inference from colour semantics
 > with no speaker behind it, which is exactly what **`D-030`** forbids adopting. No EMA in the
 > script is labelled "Mayo". Logged as the best lead A-020 has had; the register decides.
+
+> **UPDATE 2026-08-13 — the register decided, and it decided the other way round.**
+> `D-042` records the owner's full colour mapping, which **agrees with this template on all three
+> of its rows** (water aqua, mayonnaise white, blueberry blue) — so the lead above turns out to
+> have been pointing at the right answer. **It was still correct not to adopt it**, because what
+> settled it was an attestation, not the colour semantics. The same session then found the mirror
+> case: V07 `[00:25:34]` puts **yellow on the 5**, which chained through the owner's
+> *mustard = yellow* would reverse `D-041` — and that chain is **refused on exactly the grounds
+> quoted above**. See the ⚠ `[OWNER-ATTESTED]` block earlier in this file and
+> `00_SYSTEM/SETUP_ISSUES.md` `I-011`.
 
 *284 drawn rectangles* (Mar–May 2015), whose start/end times cluster hard:
 

@@ -31,6 +31,15 @@
 //   [TIER 2]  — stated in MMM-NOTES
 //   [TOOLING] — recovered from the owner's MT4 artifacts in
 //               ~/Desktop/Trading/Indicators/. NOT a tier: see the note below.
+//   [OWNER-ATTESTED] — stated directly by the project owner, cited to the
+//               DECISIONS.md entry that records the attestation. STRONGER than
+//               [DEFAULT] (it is testimony, not this file's invention) and
+//               WEAKER than [TIER 1] (no recording or frame shows it). It is
+//               NOT a tier either — D-041 established that owner attestation
+//               sits OUTSIDE the source hierarchy as an adjudication warrant.
+//               Where an [OWNER-ATTESTED] value is contradicted by a recording,
+//               the contradiction is named AT THE VALUE and put to the owner;
+//               it is never resolved by this file.
 //   [DEFAULT] — NOT source-verified. This file's choice. Change freely.
 //
 // ON [TOOLING] — a class that does not yet formally exist.
@@ -94,12 +103,32 @@ indicator(
 //       it: every EMA is computed on the chart's own timeframe, nothing is
 //       resampled, and no timeframe is forced.
 //
-// COLOURS — 50 / 200 / 800 are now [TOOLING]; 5 and 13 remain [DEFAULT].
-//   No colour is stated in the corpus or in MMM-NOTES —
+// COLOURS — ALL FIVE are now [OWNER-ATTESTED] (D-042). 50/200/800 additionally
+//   carry the [TOOLING] warrant. NOTHING here is observed on-screen.
+//
+//   ⚠ READ THE 5-AND-13 BLOCK BELOW BEFORE TRUSTING THOSE TWO COLOURS.
+//     A Tier 1 recording contradicts them and the question is with the owner.
+//
+//   No colour is stated in the corpus or in MMM-NOTES as a *nickname* mapping —
 //   03_LESSON_NOTES/V05_SOURCE_NOTES.md §8 records the negative result
 //   explicitly: "No colours, no nicknames, no periods assigned." The
 //   quarantined RULES.md files DO assert colours; they are fabricated (Q-001)
 //   and are NOT used here.
+//
+//   THE OWNER'S MAPPING, 2026-08-13, DECISIONS.md D-042:
+//
+//       5   "ketchup"      RED       [OWNER-ATTESTED]  ⚠ CONTESTED — see below
+//       13  "mustard"      YELLOW    [OWNER-ATTESTED]  ⚠ CONTESTED — see below
+//       50  "water"        AQUA      [OWNER-ATTESTED] + [TOOLING]
+//       200 "mayonnaise"   WHITE     [OWNER-ATTESTED] + [TOOLING]
+//       800 "blueberry"    BLUE      [OWNER-ATTESTED] + [TOOLING]
+//
+//   Cite these as "OWNER-ATTESTED (D-042), not observed on-screen." No captured
+//   frame in 04_SCREENSHOTS/ carries a legend, and no speaker in V01-V11 names
+//   a colour and a nickname in the same sentence. Owner attestation is a
+//   STRONGER basis than the generic [DEFAULT] placeholders these two replaced —
+//   it is testimony about the owner's own charts — but it is NOT a Tier 1
+//   observation and must never be written up as one.
 //
 //   What IS now available is the owner's MT4 template
 //   `~/Desktop/Trading/Indicators/3M-shadow-boxes-15M.tpl` — a FIFTEEN-MINUTE
@@ -116,6 +145,13 @@ indicator(
 //      15-minute template independently corroborates Tier 1 V09's "the
 //      blueberry is the 800 on the 15 minute time frame".
 //
+//      ⭐ AND AS OF 2026-08-13 THESE THREE ARE DOUBLY WARRANTED. The owner,
+//      asked separately and without reference to this template, named the
+//      same three colours for the same three periods: 50 aqua, 200 white,
+//      800 blue (D-042). The attestation and the artifact were never
+//      consulted against each other, so the agreement is genuine
+//      corroboration rather than one source echoing the other.
+//
 //   2. NOT ADOPTED — the nickname inference. The 800 being BLUE makes
 //      "blueberry" look like plain colour-naming, which in turn makes
 //      WHITE = 200 = "mayonnaise" a strong candidate for A-020's open half
@@ -124,8 +160,52 @@ indicator(
 //      definition the course has not supplied. A-020 is NOT advanced here and
 //      no EMA below is labelled "Mayo". Recorded for the register, not acted on.
 //
-//   5 and 13 are NOT in that template, so their colours stay [DEFAULT].
+//   5 and 13 are NOT in that template. As of 2026-08-13 they are no longer
+//   [DEFAULT] either — see the contested block immediately below.
 //   ⚠ The 200 is WHITE and will be invisible on a white chart background.
+//
+// ⚠⚠ THE 5 AND THE 13 ARE CONTESTED BY A TIER 1 RECORDING — SETUP_ISSUES I-011
+//   The owner attests 5 = RED and 13 = YELLOW (D-042 §2). Against that:
+//
+//       V07 [00:25:34], on tape, frame 04_SCREENSHOTS/V07/INDEX.md row 22:
+//       "The only other lines in here, look, THIS YELLOW ONE IS A FIVE MOVING
+//        AVERAGE. I made it dotted in the 13, 50 and the 200."
+//
+//   Tier 1 says the 5 is YELLOW. The owner says the 5 is RED and the 13 is
+//   YELLOW. They cannot both be right about the same chart.
+//
+//   AND THE CHAIN MATTERS MORE THAN THE COLOUR DOES. The owner's nickname
+//   colours are ketchup = red, mustard = yellow. Join that to V07's yellow = 5
+//   and you get mustard = 5, ketchup = 13 — which is precisely the assignment
+//   D-041 OVERTURNED on 2026-08-13. So this is a second, independent route back
+//   to the reversed nickname mapping, and unlike the first (three Tier 3 web
+//   sources) this one starts from a recording.
+//
+//   THIS FILE DOES NOT RESOLVE IT, AND MUST NOT. Three reasons:
+//     (a) No speaker makes the join. V07 gives colour->period; the owner gives
+//         nickname->colour; NOTHING gives colour->nickname on one warrant.
+//         Chaining them is exactly the D-030 error this file already refuses
+//         to make for WHITE = 200 = "mayonnaise" six lines up. The same
+//         discipline has to survive when the inference points somewhere
+//         inconvenient, or it was never discipline.
+//     (b) D-041 is an explicit, definitive OWNER ruling. Only the owner
+//         reverses it. REMEDIATION_PROTOCOL.md §2 forbids the quiet edit in
+//         either direction.
+//     (c) A cheap innocent explanation is live: the V07 speaker is a GUEST on
+//         his own platform who, minutes later in the same lesson, describes
+//         his own multi-timeframe palette — [00:27:24] "the dashed ones like
+//         this are 30 minute versions", [00:27:33] "the blue heavy ones are 60
+//         minutes". His colours may simply not be the course's. D-033 makes a
+//         guest normative on METHOD; it does not make his chart cosmetics the
+//         shared furniture.
+//
+//   DISPOSITION: SOURCING_HIERARCHY.md §3.2 Case C — do not adjudicate,
+//   surface to the owner. Filed 00_SYSTEM/SETUP_ISSUES.md I-011, OPEN.
+//   The owner's red/yellow ship as the defaults meanwhile, because owner
+//   attestation still beats the invented cyan/orange they replaced — but they
+//   ship WITH this warning attached, not laundered into a clean value.
+//   ONE OWNER SENTENCE CLOSES I-011. Until it does, if you are matching this
+//   script against a V07 screenshot, expect the 5 to look wrong.
 //
 // NICKNAMES — deliberately NOT applied to the plot titles.
 //   "blueberry = 800 on the 15m" is Tier 1 and is safe, so it appears in a
@@ -134,31 +214,40 @@ indicator(
 //   and `Mayo` as line names with NO period attached. So no EMA here is
 //   labelled "Mayo". Naming it would invent the mapping the corpus withholds.
 
-grpEma = "EMAs  —  periods: TIER 1 / TIER 2  ·  colours: 50/200/800 TOOLING, 5/13 DEFAULT"
+grpEma = "EMAs  —  periods: TIER 1 / TIER 2  ·  colours: OWNER-ATTESTED (D-042); 50/200/800 also TOOLING; ⚠ 5/13 contested by V07 (I-011)"
 
 emaSrc = input.source(close, "EMA source", group = grpEma,
      tooltip = "[DEFAULT] No source (close/hl2/…) is specified by any source. `close` is the conventional choice.")
 
 show5   = input.bool(true,  "EMA 5    — signal line",   group = grpEma, inline = "e5")
 len5    = input.int(5,      "",  minval = 1,            group = grpEma, inline = "e5")
-col5    = input.color(#00E5FF, "",                      group = grpEma, inline = "e5")    // [DEFAULT]
+// [OWNER-ATTESTED] (D-042) RED — "5/ketchup = red", owner 2026-08-13. NOT observed
+// on-screen. ⚠ CONTESTED: V07 [00:25:34] says the 5 is YELLOW. SETUP_ISSUES I-011.
+col5    = input.color(#FF0000, "",                      group = grpEma, inline = "e5",
+     tooltip = "[OWNER-ATTESTED] (D-042) red — 'ketchup'. NOT observed on-screen: no frame carries a legend. ⚠ CONTESTED by TIER 1 V07 [00:25:34] 'this yellow one is a five moving average'. Open as SETUP_ISSUES.md I-011 — awaiting the owner. Do not cite this colour as a course observation.")
 
 show13  = input.bool(true,  "EMA 13   — signal line",   group = grpEma, inline = "e13")
 len13   = input.int(13,     "",  minval = 1,            group = grpEma, inline = "e13")
-col13   = input.color(#FF9800, "",                      group = grpEma, inline = "e13")   // [DEFAULT]
+// [OWNER-ATTESTED] (D-042) YELLOW — "13/mustard = yellow", owner 2026-08-13. NOT
+// observed on-screen. ⚠ CONTESTED via the same V07 line. SETUP_ISSUES I-011.
+col13   = input.color(#FFFF00, "",                      group = grpEma, inline = "e13",
+     tooltip = "[OWNER-ATTESTED] (D-042) yellow — 'mustard'. NOT observed on-screen. ⚠ CONTESTED: V07 [00:25:34] attaches YELLOW to the 5, not the 13 — which chained through the owner's mustard=yellow would put mustard on 5 and ketchup on 13, reversing D-041. Open as SETUP_ISSUES.md I-011 — awaiting the owner. Not resolved here.")
 
 show50  = input.bool(true,  "EMA 50   — balance line",  group = grpEma, inline = "e50")
 len50   = input.int(50,     "",  minval = 1,            group = grpEma, inline = "e50")
-col50   = input.color(#00FFFF, "",                      group = grpEma, inline = "e50")   // [TOOLING] AQUA
+col50   = input.color(#00FFFF, "",                      group = grpEma, inline = "e50",   // [TOOLING] + [OWNER-ATTESTED] AQUA
+     tooltip = "[TOOLING] 3M-shadow-boxes-15M.tpl period=50 color=16776960 → RGB(0,255,255) aqua. [OWNER-ATTESTED] (D-042) independently: '50/water = aqua'. Two warrants that agree and were not consulted against each other. Still not observed on-screen.")
 
 show200 = input.bool(true,  "EMA 200  — home base",     group = grpEma, inline = "e200")
 len200  = input.int(200,    "",  minval = 1,            group = grpEma, inline = "e200")
-col200  = input.color(#FFFFFF, "",                      group = grpEma, inline = "e200")  // [TOOLING] WHITE
+col200  = input.color(#FFFFFF, "",                      group = grpEma, inline = "e200",  // [TOOLING] + [OWNER-ATTESTED] WHITE
+     tooltip = "[TOOLING] 3M-shadow-boxes-15M.tpl period=200 color=16777215 → RGB(255,255,255) white. [OWNER-ATTESTED] (D-042) independently: '200/mayonnaise = white'. ⚠ Invisible on a white chart background — change it, the warrant is about the owner's chart, not about legibility on yours.")
 
 show800 = input.bool(true,  "EMA 800  — 'blueberry' (15m)", group = grpEma, inline = "e800",
      tooltip = "[TIER 1] V09 [00:41:43]: 'The blueberry is the 800 on the 15 minute time frame.' Note C-010: MMM-NOTES contains no 800 at all.")
 len800  = input.int(800,    "",  minval = 1,            group = grpEma, inline = "e800")
-col800  = input.color(#0000FF, "",                      group = grpEma, inline = "e800")  // [TOOLING] BLUE
+col800  = input.color(#0000FF, "",                      group = grpEma, inline = "e800",  // [TOOLING] + [OWNER-ATTESTED] BLUE
+     tooltip = "[TOOLING] 3M-shadow-boxes-15M.tpl period=800 color=16711680 (MT4 BGR) → RGB(0,0,255) blue. [OWNER-ATTESTED] (D-042) independently: '800/blueberry = blue'. Note this is the one nickname with a TIER 1 PERIOD (V09 [00:41:43]) — but its COLOUR is still not observed on-screen.")
 
 emaWidth = input.int(1, "EMA line width", minval = 1, maxval = 4, group = grpEma)
 

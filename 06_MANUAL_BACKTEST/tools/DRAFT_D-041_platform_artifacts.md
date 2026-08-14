@@ -13,6 +13,25 @@
 > integration branch at adoption time — `D-038a` consequence 1 records that concurrent branches
 > have already collided on identifiers.
 >
+> ### ⚠️ THE COLLISION PREDICTED ABOVE HAS HAPPENED — 2026-08-13
+>
+> **`D-041` and `D-042` are both TAKEN on the integration branch**, by entirely different
+> decisions:
+>
+> | ID | What it actually is, on integration |
+> |---|---|
+> | **`D-041`** | The owner's definitive moving-average **nickname↔period** mapping, and the ketchup/mustard inversion it forces |
+> | **`D-042`** | The exhaustive nickname search (**negative**), the owner's **colour** mapping, and the V07 `[00:25:34]` Tier 1 conflict (`SETUP_ISSUES.md` `I-011`) |
+>
+> **This draft is neither of them.** **Adopt it as `D-043`** — the next free identifier as at
+> 2026-08-13 — and re-check that again at adoption time, because this file has now been wrong
+> about its own number once.
+>
+> **Not renamed here.** Renumbering an unadopted draft is the adopting session's act, and this
+> branch may not write `DECISIONS.md` at all (`D-038a`: policy ledger, integration only). The
+> filename still reads `DRAFT_D-041_…`; **the filename is stale and the table above governs.**
+> Recorded by the `D-042` session, which found the collision while doing something else.
+>
 > **Until this is adopted:** the `[TOOLING]` tag used in `MMM_Indicator.txt` / `MMM_TDI.txt` is
 > **provisional**, closes no `A-xxx`, and is deliberately not called a tier.
 
