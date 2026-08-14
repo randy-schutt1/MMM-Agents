@@ -608,6 +608,59 @@ negative result for *quarter of wood* / `COW` across BTMM sources.
 > **Governing:** `D-041` · `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` `A-020` (⛔ SUPERSEDED IN
 > PART block) · `11_CONTRADICTIONS/CONTRADICTIONS.md` `C-018` (closed) · `SOURCING_HIERARCHY.md`
 > §3.4 (the re-check obligation on `A-020` **remains live**).
+>
+> ---
+>
+> ### 🔎 UPDATED 2026-08-13 — `D-042` — THE COURSE WAS SEARCHED IN FULL. RESULT: **NEGATIVE.**
+>
+> The owner directed that *"whatever the course says"* should govern the ketchup/mustard question.
+> **The course says nothing.** V01–V10 (this branch), V11 (`origin/video/v11`, unmerged), the full
+> 84-page `MMM-NOTES` extract and every `04_SCREENSHOTS/*/INDEX.md` were swept for all five
+> nicknames and proximity-scanned against `5 / 13 / 50 / 200 / 800`.
+>
+> **`ketchup` occurs 0× in genuine audio in the entire corpus. `mustard` occurs twice, both in
+> V04, both with no number.** The only explicit pairings anywhere are the two `D-041` already
+> cites — blueberry = 800 (V09 `[00:41:43]`, Tier 1) and mayo = 200 (`MMM-NOTES` p.66, Tier 2).
+>
+> **The mapping above therefore stands unchanged.** The Tier 3 table further down stays **wrong**
+> and stays superseded — a negative search does not rehabilitate it.
+>
+> ---
+>
+> ### 🎨 ADDED 2026-08-13 — `D-042` — THE OWNER'S **COLOUR** MAPPING
+>
+> | Period | Nickname | **Colour** | Warrant |
+> |---|---|---|---|
+> | **5** | Ketchup | **red** | `OWNER-ATTESTED` (`D-042`) — ⚠️ **CONTESTED, see below** |
+> | **13** | Mustard | **yellow** | `OWNER-ATTESTED` (`D-042`) — ⚠️ **CONTESTED, see below** |
+> | **50** | Water | **aqua** | `OWNER-ATTESTED` + `[TOOLING]` — `3M-shadow-boxes-15M.tpl`, `color=16776960` → RGB(0,255,255) |
+> | **200** | Mayonnaise | **white** | `OWNER-ATTESTED` + `[TOOLING]` — same template, `color=16777215` → RGB(255,255,255) |
+> | **800** | Blueberry | **blue** | `OWNER-ATTESTED` + `[TOOLING]` — same template, `color=16711680` → RGB(0,0,255) |
+>
+> **Cite it as `OWNER-ATTESTED (D-042), not observed on-screen.`** No captured frame carries a
+> legend and no speaker in V01–V11 names a colour and a nickname in the same sentence. This is
+> owner attestation, **not** a video observation, and the tag must say so. The bottom three rows
+> carry the extra `[TOOLING]` warrant from the owner's own MT4 template, read independently off
+> disk on `feature/tradingview-mmm-indicator` — an agreement that was **not** arranged.
+>
+> #### ⚠️ V07 `[00:25:34]` — TIER 1 — SAYS THE **5 IS YELLOW**
+>
+> > *"The only other lines in here, look, **this yellow one is a five moving average.** I made it
+> > dotted in the 13, 50 and the 200."* — frame `04_SCREENSHOTS/V07/INDEX.md` row 22
+>
+> Owner: mustard = yellow. V07: yellow = 5. Chained, that is **mustard = 5, ketchup = 13** — the
+> assignment this very banner declares superseded, arriving by a second route that **starts from a
+> recording** rather than from the Tier 3 table below.
+>
+> **It changes nothing here.** No speaker makes the colour→nickname join, so chaining is the
+> `D-030` error; `D-041` was an explicit owner ruling only the owner can reverse; and the V07
+> speaker is a **guest** describing his own multi-timeframe palette minutes later (`[00:27:24]`,
+> `[00:27:33]`), so his colours may not be the course's. Filed
+> `00_SYSTEM/SETUP_ISSUES.md` **`I-011`**, `OPEN`, per `SOURCING_HIERARCHY.md` §3.2 **Case C**.
+>
+> **The §5 warning below applies to this section too, in the opposite direction:** §5.16's Tier 3
+> unanimity was wrong, and now a Tier 1 recording points **back** at it. Neither fact settles the
+> other. **Do not treat this note as quiet permission to re-invert the mapping.**
 
 **Course status: UNCHANGED — `DO NOT CODE`. The open half of `A-020` is the *period*, and no
 period is printed anywhere in V01–V07.**

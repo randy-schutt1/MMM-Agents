@@ -7397,3 +7397,132 @@ not a method concept, and promoting it would launder a label into a definition.
 put to the reviewer: (1) the **ketchup/mustard inversion** — a reviewer is entitled to put it back
 to the owner, and nothing here is protected from that; (2) `C-018`'s closure arrives on
 `video/v11`, so a reviewer reading integration alone will not see it until merge-back.
+
+---
+
+## 2026-08-13 — Integration Session — `D-042`: the nickname↔period search returns NEGATIVE; the owner's colour mapping; and a Tier 1 conflict flagged
+
+**Branch:** `claude/add-documents-repository-fdfb3u` (integration) — `DECISIONS.md`,
+`SETUP_ISSUES.md` and the standing standards are **policy ledgers** under `D-038a`.
+Also touched: `feature/tradingview-mmm-indicator` (Pine tool defaults) — logged in its own entry.
+
+### What was asked
+
+Two things, and they turned out to be of different sizes.
+
+1. **Resolve the open ketchup/mustard question** against the course. Owner direction: *"Let's go
+   with whatever the course says. I'm sure it's 5 ketchup, 13 mustard but I could be wrong."*
+   A **conditional** instruction — the course governs **if the course speaks**.
+2. **Add the owner's colour mapping** — described as new and uncontested: 5/ketchup = red,
+   13/mustard = yellow, 50/water = aqua, 200/mayonnaise = white, 800/blueberry = blue.
+
+### 1 — The search: exhaustive, and NEGATIVE
+
+Coverage: **V01–V10** transcripts in full on this branch; **V11 read from
+`origin/video/v11`**, which is unmerged and whose omission would have made the result a **false
+negative**; the full 84-page `MMM-NOTES` text extract; every `04_SCREENSHOTS/VXX/INDEX.md` and
+`09_CHART_EXAMPLES/`. Method: case-insensitive sweep for `ketchup` / `catsup` / `catch up` /
+`mustard` / `mayonnaise` / `mayo` / `blueberry` / `water` / `condiment`, then a **±4-line
+proximity scan of every hit** against `5 / 13 / 50 / 200 / 800` — so a pairing split across a
+sentence boundary would still have been caught. Every proximity hit was then read in context by
+hand; all of them resolved to unrelated numbers (*"25 to 50 pips"*, *"50 pip stop hunt"*, the RSI
+50 baseline) except the two already on the record.
+
+**Result: not one new pairing.** `ketchup` occurs **0× in genuine audio anywhere in V01–V11**
+(V01 `[00:19:24]`'s *"catch up in the mustard"* is logged garble; V10 `[00:37:02]` *"I'll never
+catch up"* is the ordinary English phrase). `mustard` occurs **twice**, both V04 `[00:14:42]` /
+`[00:14:47]`, both numberless. The only explicit pairings in existence are the two `D-041` already
+cites: **blueberry = 800** (V09 `[00:41:43]`, Tier 1) and **mayo = 200** (`MMM-NOTES` p.66,
+Tier 2).
+
+**So the owner's condition is not met, and `D-041` stands unchanged.** Ketchup = 5,
+mustard = 13, on owner attestation. `D-041`'s own Evidence-block claim that no Tier 1 statement
+attaches a period to either nickname is now **verified by independent search rather than
+inherited**, and `SOURCING_HIERARCHY.md` §3.4 is **discharged as at V11** while staying **live for
+V12 onward**.
+
+### 2 — The colours: three rows corroborated, and **two rows contradicted by tape**
+
+The 50/200/800 rows are corroborated `[TOOLING]` by the owner's own MT4 template
+`3M-shadow-boxes-15M.tpl` (aqua/white/blue), read off disk on `feature/tradingview-mmm-indicator`
+by an earlier session. The attestation and the artifact were never consulted against each other,
+so that agreement is a real result.
+
+**The 5 and 13 rows are not uncontested, and this is the finding of the session.**
+
+> V07 `[00:25:34]`: *"The only other lines in here, look, **this yellow one is a five moving
+> average.** I made it dotted in the 13, 50 and the 200."*
+
+**Tier 1 says the 5 is yellow; the owner says the 5 is red and the 13 is yellow.** The utterance
+was already on the record — `A-020` calls it *"the first time in the corpus a colour is attached
+to a period in genuine audio"* — but **there was no owner colour mapping for it to contradict
+until today**, which is why it had never been read this way.
+
+**And the chain is the part that matters.** Owner: mustard = yellow. V07: yellow = 5. Joined:
+**mustard = 5, ketchup = 13** — precisely the assignment `D-041` overturned, arriving by a
+**second, independent route that starts from a recording** rather than from the Tier 3 table.
+
+**Nothing was changed on it, for three reasons.** (1) **No speaker makes the join** — colour→period
+is V07's, nickname→colour is the owner's, nothing gives colour→nickname on a single warrant, and
+chaining them is the `D-030` error the tooling README already refuses for white/mayonnaise;
+`SOURCING_HIERARCHY.md` §3.2 **Case C** governs — *do not adjudicate, surface to the owner*.
+(2) **`D-041` was an explicit definitive owner ruling** and only the owner reverses it;
+`REMEDIATION_PROTOCOL.md` §2 forbids the quiet edit in either direction. (3) **A cheap innocent
+reading is live** — the V07 speaker is a **guest** who describes his own multi-timeframe palette
+minutes later (`[00:27:24]`, `[00:27:33]`), so his colours may simply not be the course's.
+
+**Filed as `SETUP_ISSUES.md` `I-011`, `OPEN`.** Deliberately **not** a `C-xxx`:
+`CONTRADICTIONS.md` records course-source against course-source, and this is a course source
+against an **owner attestation** — an adjudication question, not a doctrinal one.
+
+### The temptation this session had, named because it was live
+
+The instruction described the colour mapping as *"new, uncontested information, just add it."*
+On three rows that is exactly right. On two it is not, and the fastest path was to take the
+sentence at face value, ship red and yellow into the Pine defaults under a **strengthened**
+warrant, and never open V07 at all — the file's own README says no colour for the 5 or 13 exists
+in any source, so nothing would have looked wrong. **The conflict was only visible because the
+colour search was run over the transcripts as part of the nickname sweep rather than as a
+separate, skippable step.** That is worth remembering as a method point: sweeping for the
+adjacent attribute costs nothing and is what caught this.
+
+### A numbering collision, flagged not fixed
+
+`feature/tradingview-mmm-indicator` holds `DRAFT_D-041_platform_artifacts.md` — a **different,
+unadopted** draft (MT4 artifacts as parameter-only evidence) that reserved `D-041` when `D-040`
+was the highest on integration. `D-041` is now taken. Exactly the collision `D-038a` consequence 1
+predicts; the draft already says its number is provisional. **Renumbering is the adopting
+session's act, not this one's.** Next free identifier: **`D-043`**.
+
+### Files
+
+- **Updated:** `00_SYSTEM/DECISIONS.md` (**`D-042`**, appended — `D-041` **not edited**, per the
+  file's append-only rule); `00_SYSTEM/SETUP_ISSUES.md` (**`I-011`**, appended);
+  `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` (`A-020` — two appended blocks + two Related rows);
+  `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §5.16 (search-negative note + colour table +
+  conflict flag); `00_SYSTEM/SOURCING_HIERARCHY.md` §3.4 (re-check performed, result recorded);
+  this log.
+- **NOT touched, deliberately:** `00_SYSTEM/DECISIONS.md` `D-041` (append-only; and its mapping is
+  correct as far as anything here shows); every block of superseded text in `A-020` and §5.16,
+  retained unedited per `REMEDIATION_PROTOCOL.md` §2; `11_CONTRADICTIONS/CONTRADICTIONS.md`
+  (reasoned above); `08_CONCEPT_LIBRARY/CONCEPT_INDEX.md` (a colour is a label expansion, not a
+  method concept — same `A-026` reasoning `D-041` used); `CHANGELOG.md` (no prior decision entry
+  sets that convention); all `18_REVIEW/**` (`REVIEW_PROTOCOL.md` §11).
+
+### Git
+
+`git fetch --all` first; **zero divergence** against `origin/claude/add-documents-repository-fdfb3u`
+confirmed before any edit. Paths staged **explicitly**; `git diff --staged` read in full before the
+commit; **`git add -A` never used.** The two untracked directories present at session start
+(`19_STUDENT_TEST_SUITE_V01_V10/`, `20_CHART_HEAVY_PRACTICAL_V01_V10/`) were **left untracked and
+unstaged** — they are not this session's work.
+
+`scripts/validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+### Next Action
+
+**One owner sentence closes `I-011`.** *V07's guest says on tape the yellow line is the 5 EMA; you
+have said the 5 is red and the 13 is yellow. Is he using his own colours, or is the 5 actually
+yellow — which would also put ketchup back on 13?* If the owner confirms red/yellow, `I-011`
+closes and V07 is annotated as a guest's private palette. If the owner reverses, that is a **new
+decision entry superseding both `D-041` and `D-042` §2** — never an edit to either.

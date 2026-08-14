@@ -2216,12 +2216,103 @@ survive its closure and are **not** answered by the mapping:
 2. **`[00:05:00]`'s *"manays"* is still PROBABLE, not confirmed.** No audio re-check has been
    performed. Resolving the nickname's period does not promote a disputed ASR string.
 
+> ### 🔎 SEARCH DISCHARGED — 2026-08-13 — `D-042`: THE COURSE WAS SEARCHED IN FULL, AND THE RESULT IS **NEGATIVE**
+>
+> **All text above is retained unedited** per `REMEDIATION_PROTOCOL.md` §2. **Nothing in this
+> record changes. `D-041`'s mapping stands.** This block records a search that was performed and
+> what it did *not* find — because an unrecorded negative gets re-run, or worse, gets remembered
+> as a positive.
+>
+> **Why it was run.** Owner direction, 2026-08-13: *"Let's go with whatever the course says. I'm
+> sure it's 5 ketchup, 13 mustard but I could be wrong."* That is **conditional** — the course
+> governs **if the course speaks** — so the course had to be searched before `D-041` could be
+> either confirmed or left standing.
+>
+> **Coverage.** V01–V10 transcripts in full (verbatim bodies *and* analysis headers); **V11 read
+> from `origin/video/v11`**, which is unmerged and would otherwise have produced a false negative;
+> the full 84-page `MMM-NOTES` text extract; and every `04_SCREENSHOTS/VXX/INDEX.md` plus
+> `09_CHART_EXAMPLES/`. Method: case-insensitive sweep for `ketchup` / `catsup` / `catch up` /
+> `mustard` / `mayonnaise` / `mayo` / `blueberry` / `water` / `condiment`, then a **±4-line
+> proximity scan of every hit** against `5 / 13 / 50 / 200 / 800`.
+>
+> **RESULT — NOT ONE NEW PAIRING. Nothing beyond what this record and `D-041` already cite:**
+>
+> | Nickname | Explicit period pairing anywhere in V01–V11 + `MMM-NOTES` |
+> |---|---|
+> | **Blueberry** | V09 `[00:41:43]` — **already cited above**, Tier 1, 15-minute |
+> | **Mayo** | `MMM-NOTES` p.66 *"Hold the Mayo – 200 Bounce"* — **already cited above**, Tier 2 |
+> | **Water** | **none** |
+> | **Mustard** | **none.** Two corpus occurrences total, both V04, both numberless — `[00:14:42]`, `[00:14:47]` (*"M formation with the mustard"*). V01 `[00:19:24]` is logged garble |
+> | **Ketchup** | **none. The word occurs 0× in genuine audio in the entire corpus.** V10 `[00:37:02]` *"I'll never catch up"* is the ordinary English phrase |
+>
+> **Consequence.** The condition in the owner's instruction is **not met** for ketchup or mustard.
+> `D-041`'s **ketchup = 5, mustard = 13** stands unchanged, on owner attestation, and this record's
+> status line is unaffected. `SOURCING_HIERARCHY.md` §3.4's obligation is **discharged as at V11**
+> and **stays live for V12 onward**. `D-041`'s own claim that no Tier 1 statement attaches a period
+> to either nickname is now **verified by independent exhaustive search**, not inherited.
+
+> ### 🎨 COLOURS — ADDED 2026-08-13 — `D-042`: OWNER-ATTESTED, AND **CONTESTED ON TWO ROWS BY TIER 1**
+>
+> A new, separate mapping. It answers a different question from this record's open half and **does
+> not close, narrow, or reopen anything here.**
+>
+> | Period | Nickname (`D-041`) | **Colour** | Warrant |
+> |---|---|---|---|
+> | **5** | Ketchup | **red** | `OWNER-ATTESTED` (`D-042`) — ⚠️ **CONTRADICTED BY V07, see below** |
+> | **13** | Mustard | **yellow** | `OWNER-ATTESTED` (`D-042`) — ⚠️ **CONTRADICTED BY V07, see below** |
+> | **50** | Water | **aqua** | `OWNER-ATTESTED` + `[TOOLING]` `3M-shadow-boxes-15M.tpl` `color=16776960` |
+> | **200** | Mayonnaise | **white** | `OWNER-ATTESTED` + `[TOOLING]` same template, `color=16777215` |
+> | **800** | Blueberry | **blue** | `OWNER-ATTESTED` + `[TOOLING]` same template, `color=16711680` |
+>
+> **The warrant, stated precisely: `OWNER-ATTESTED — NOT OBSERVED ON-SCREEN.`** No captured frame
+> carries a legend; no speaker in V01–V11 names a colour and a nickname in one sentence. The
+> bottom three rows carry the extra `[TOOLING]` warrant — the owner's own MT4 template, read off
+> disk on `feature/tradingview-mmm-indicator`, independently produces the same three colours for
+> the same three periods. **That agreement is a real result and it is worth noting that it was not
+> arranged: the attestation and the artifact were never consulted against each other.**
+>
+> #### ⚠️ V07 `[00:25:34]` IS TIER 1 AND IT SAYS THE **5 IS YELLOW**
+>
+> > *"The only other lines in here, look, **this yellow one is a five moving average.** I made it
+> > dotted in the 13, 50 and the 200."*
+> > — frame `04_SCREENSHOTS/V07/INDEX.md` row 22, `EURJPYm` M15, `00:25:30`
+>
+> This utterance is **already in this record**, in the V07 reconciliation row of the register's
+> per-lesson table, described there as *"the first time in the corpus a colour is attached to a
+> period in genuine audio."* What is new is that **there was no owner colour mapping for it to
+> contradict until 2026-08-13.**
+>
+> **And the chain matters more than the colour does.** Owner: *mustard = yellow*. V07:
+> *yellow = 5*. Joined, that gives **mustard = 5, ketchup = 13** — **the exact assignment `D-041`
+> overturned**, the one that had agreed with three Tier 3 sources, with `Q-002`, and with this
+> project's own V06 inference. **This is a second route back to the reversed mapping, and unlike
+> the first it starts from a recording.**
+>
+> **NOTHING IS CHANGED ON IT.** (1) **No speaker makes the join** — colour→period comes from V07,
+> nickname→colour from the owner, and nothing supplies colour→nickname on one warrant; chaining
+> them is the `D-030` error. `SOURCING_HIERARCHY.md` §3.2 **Case C** applies: *do not adjudicate,
+> surface to the owner.* (2) **`D-041` was an explicit definitive owner ruling** and only the owner
+> reverses it. (3) **A cheap innocent reading is live** — the V07 speaker is a **guest** who,
+> minutes later in the same lesson, describes his own multi-timeframe palette (`[00:27:24]` *"the
+> dashed ones… are 30 minute versions"*, `[00:27:33]` *"the blue heavy ones are 60 minutes"*), so
+> his colours may be his and not the course's. `D-033` makes a guest normative on **method**, not
+> on his chart's cosmetics.
+>
+> **Filed as `00_SYSTEM/SETUP_ISSUES.md` `I-011`, `OPEN`, awaiting one owner sentence.** Not a
+> `C-xxx`: `CONTRADICTIONS.md` records course-source against course-source, and this is a course
+> source against an **owner attestation**.
+>
+> **Source:** `00_SYSTEM/DECISIONS.md` `D-042` (full entry); `00_SYSTEM/SETUP_ISSUES.md` `I-011`;
+> `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §5.16.
+
 ### Related — added 2026-08-13
 
 | Type | Reference |
 |---|---|
 | Decision | `D-039` (admission of `MMM-NOTES`; owner attestation as warrant) |
 | Decision | **`D-041`** — the owner's **definitive** five-nickname mapping. **Supersedes the ketchup/mustard rows of this record (inverted to 5/13)**; reaffirms mayo=200; closes `C-018` |
+| Decision | **`D-042`** — the exhaustive V01–V11 + `MMM-NOTES` search returned **NEGATIVE** (`D-041` stands unchanged); adds the owner's **colour** mapping; flags the V07 `[00:25:34]` Tier 1 conflict |
+| Setup issue | **`I-011`** — ⚠️ `OPEN`. V07 `[00:25:34]` (*"this yellow one is a five moving average"*) contradicts the owner's **5 = red / 13 = yellow**, and transitively points back at **mustard = 5, ketchup = 13**. Awaiting owner adjudication; **`D-041` untouched meanwhile** |
 | Contradiction | **`C-010`** — the corpus's `800` vs the notes' four-EMA enumeration |
 | Contradiction | **`C-018`** — V11 `[00:46:45]` *"There's the mayonnaise. There's the 50"*. **CLOSED by `D-041`** as reading B (enumeration); this record untouched by the utterance. Lives on `video/v11` until merge-back (`D-038a`) |
 | Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.4 and **§5.16** (Tier 3 table, now carrying a `D-041` superseding banner); `MMM-NOTES` p.38, p.66 |

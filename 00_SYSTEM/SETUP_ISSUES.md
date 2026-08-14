@@ -558,3 +558,76 @@ exactly the class of thing this project would rather pin now than discover in a 
 **To close:** one line appended to `D-035` stating the clock. Recommend **absolute**, in
 the corpus's native UTC−5 (Arm A) clock, since the boundary was computed on calendar
 grounds independent of any arm — but that is an owner call, not a session's.
+
+---
+
+## I-011 — The owner's EMA colour mapping is contradicted on two rows by V07 `[00:25:34]`
+
+**Status:** `OPEN` — awaiting owner adjudication. **Blocks nothing**; the affected artifacts ship
+the owner's colours with the conflict recorded beside them.
+**Raised by:** `D-042`, 2026-08-13, during the exhaustive nickname↔period search the owner's
+*"let's go with whatever the course says"* instruction required.
+**Governing:** `SOURCING_HIERARCHY.md` §3.2 **Case C** — *"Do not adjudicate. Surface to the
+owner."* This is the finding half of that obligation.
+
+### The conflict
+
+The owner attested a colour for each of the five moving averages, 2026-08-13:
+
+| Period | Nickname (`D-041`) | Owner's colour | Corroboration |
+|---|---|---|---|
+| 5 | Ketchup | **red** | ⚠️ **contradicted by Tier 1 — see below** |
+| 13 | Mustard | **yellow** | ⚠️ **contradicted by Tier 1 — see below** |
+| 50 | Water | aqua | ✅ `[TOOLING]` `3M-shadow-boxes-15M.tpl` |
+| 200 | Mayonnaise | white | ✅ `[TOOLING]` same template |
+| 800 | Blueberry | blue | ✅ `[TOOLING]` same template |
+
+Against that, **V07 `[00:25:34]`, on tape**:
+
+> *"The only other lines in here, look, **this yellow one is a five moving average.** I made it
+> dotted in the 13, 50 and the 200."*
+
+**Tier 1 says the 5 is yellow. The owner says the 5 is red and the 13 is yellow.**
+
+### Why it is worth the owner's time rather than a session's judgement
+
+The owner's colour mapping also gives **ketchup = red, mustard = yellow**. Chain that to V07's
+**yellow = 5** and you get **mustard = 5, ketchup = 13** — which is the assignment `D-041`
+**overturned** on 2026-08-13, and which had independently agreed with three Tier 3 web sources
+(`EXTERNAL_VOCABULARY_REFERENCE.md` §5.16), with `Q-002`'s fabricated `NOTES.md`, and with the
+project's own inference from V06's *"closed below 13"* rule.
+
+So this is not a cosmetic disagreement about line colours. **It is a second, independent route
+back to the mapping `D-041` reversed** — and unlike the first, this one starts from a recording.
+
+### Why no session should resolve it either way
+
+1. **No speaker makes the join.** V07 gives colour→period. The owner gives nickname→colour.
+   **Nothing gives colour→nickname on the same warrant.** Chaining two different kinds of
+   evidence to reach a third claim is what `D-030` forbids and what the tooling README already
+   refuses for white/mayonnaise.
+2. **`D-041` was explicit and definitive.** Only the owner can reverse it.
+3. **A cheap innocent explanation exists.** The V07 speaker is a **guest** using his own platform
+   and, minutes later in the same lesson, his own multi-timeframe colour convention —
+   `[00:27:24]` *"The dashed ones like this are 30 minute versions"*, `[00:27:33]` *"the blue heavy
+   ones are 60 minutes."* His palette may simply not be the course palette. `D-033` makes a guest
+   normative on **method**; it does not make his chart colours the shared furniture.
+
+### The question, in one line
+
+> *V07's guest says on tape that the yellow line is the 5 EMA. You have said the 5 is red and the
+> 13 is yellow. Is he using his own colours, or is the 5 actually yellow — which would also put
+> ketchup back on 13 and reopen `D-041`?*
+
+### Handling until it is answered
+
+- **`D-041` is untouched.** Ketchup = 5, mustard = 13.
+- The owner's colours are recorded and propagated **tagged `OWNER-ATTESTED (D-042), not observed
+  on-screen`**, with this conflict named in the same place, in: `D-042`, `A-020`,
+  `EXTERNAL_VOCABULARY_REFERENCE.md` §5.16, and
+  `06_MANUAL_BACKTEST/tools/MMM_Indicator.txt` / `_README.md` on
+  `feature/tradingview-mmm-indicator`.
+- **To close:** one owner sentence. If the owner confirms red/yellow, `I-011` closes `RESOLVED`
+  and V07 is annotated as a guest's private palette. If the owner reverses, that is a **new
+  decision entry** superseding both `D-041` and `D-042` §2 — not an edit to either
+  (`REMEDIATION_PROTOCOL.md` §2, and `DECISIONS.md`'s append-only rule).

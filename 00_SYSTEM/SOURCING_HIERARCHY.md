@@ -212,6 +212,31 @@ against the lesson and run §3.1 if Tier 1 speaks. Closed on Tier 2 is **not** c
 >
 > `A-014` was re-checked against V09 and **not** changed; `A-023` is untouched. Both remain listed.
 
+> ### 🔎 UPDATED 2026-08-13 — `D-042`: THE `A-020` RE-CHECK WAS **PERFORMED** AND RETURNED **NEGATIVE**
+>
+> The obligation above was discharged **as at V11**, not deferred. V01–V10 (integration branch),
+> **V11 (`origin/video/v11`, unmerged — a search that skipped it would have been a false
+> negative)**, the full 84-page `MMM-NOTES` extract and every `04_SCREENSHOTS/*/INDEX.md` were
+> swept for all five nicknames and proximity-scanned against `5 / 13 / 50 / 200 / 800`.
+>
+> **Tier 1 still does not speak on ketchup or mustard.** `ketchup` occurs **0×** in genuine audio
+> anywhere in the corpus; `mustard` occurs **twice**, both V04, both numberless. The only explicit
+> pairings in existence remain blueberry = 800 (V09 `[00:41:43]`, Tier 1) and mayo = 200
+> (`MMM-NOTES` p.66, Tier 2). **§3.1 was therefore not triggered and `D-041` is unchanged.**
+>
+> **`A-020` STAYS ON THIS LIST for V12 onward.** A discharged re-check is a dated result, not a
+> discharge of the obligation.
+>
+> **One thing the search did turn up, and it is Tier 1.** V07 `[00:25:34]` — *"this yellow one is
+> a five moving average"* — attaches a **colour** to a period, and it **contradicts** the owner's
+> new colour mapping (`D-042` §2: 5 = red, 13 = yellow). Chained through the owner's
+> mustard = yellow it points back at **mustard = 5, ketchup = 13**. **Not adjudicated** — §3.2
+> **Case C**, surfaced to the owner as `SETUP_ISSUES.md` `I-011`, `OPEN`. Note that Case C is the
+> right rule even though this is Tier 1 vs. an **owner attestation** rather than Tier 1 vs. Tier 2:
+> the hierarchy has no rung for the owner, because `D-041` established that owner attestation sits
+> **outside** the tiers as an adjudication warrant. A source cannot be ranked against the
+> adjudicator; it can only be put back to them.
+
 ---
 
 ## 4. WHAT THIS FILE DOES NOT CHANGE

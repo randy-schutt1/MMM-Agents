@@ -2776,3 +2776,213 @@ supplies no rule for acting in real time.
    put the inversion back to the owner. Nothing here is protected from that.
 
 **Status:** ACTIVE
+
+---
+
+## D-042 — The exhaustive nickname↔period search returns NEGATIVE; the owner's colour mapping is recorded; and one Tier 1 colour statement contradicts it
+
+**Date:** 2026-08-13
+**Bears on:** `D-041` (the nickname↔period mapping), `A-020`, `C-010`,
+`EXTERNAL_VOCABULARY_REFERENCE.md` §5.16, `SOURCING_HIERARCHY.md` §3.4,
+`06_MANUAL_BACKTEST/tools/MMM_Indicator.txt` (branch `feature/tradingview-mmm-indicator`).
+**`D-041` is NOT amended, NOT superseded, and NOT reopened by this entry.** Its five rows stand
+exactly as written. What this entry adds is (1) the discharged search obligation, (2) a new
+owner-attested **colour** mapping, and (3) **one Tier 1 finding that the owner must adjudicate
+before anything is changed.**
+
+---
+
+### 1. THE SEARCH — DISCHARGED, AND THE RESULT IS NEGATIVE
+
+Owner direction, 2026-08-13:
+
+> *"Let's go with whatever the course says. I'm sure it's 5 ketchup, 13 mustard but I could be
+> wrong."*
+
+That is a **conditional** instruction: the course governs **if the course speaks**. The search
+was therefore run before anything was changed.
+
+**What was searched, in full:**
+
+| Corpus | Coverage | Method |
+|---|---|---|
+| **V01–V10 transcripts** | `02_TRANSCRIPTS/V01…V10/VXX_TRANSCRIPT.md`, complete files, verbatim bodies **and** the analysis headers | case-insensitive term sweep (`ketchup`, `catsup`, `catch up`, `mustard`, `mayonnaise`, `mayo`, `blueberry`, `water`, `condiment`) **plus** a ±4-line proximity scan of every hit against the token set `5 / 13 / 50 / 200 / 800` |
+| **V11 transcript** | `02_TRANSCRIPTS/V11/V11_TRANSCRIPT.md` read from `origin/video/v11` (unmerged — it does **not** exist on the integration branch, and a search that skipped it would have been a false negative) | same |
+| **`MMM-NOTES` (Tier 2)** | `00_SYSTEM/EXTERNAL_REFERENCE/EXTERNAL_Mauro_MMM_seminar_notes_TEXT_EXTRACT.md`, all 84 pages | same |
+| **On-screen / printed text** | every `04_SCREENSHOTS/VXX/INDEX.md`, plus `09_CHART_EXAMPLES/` | nickname terms and colour terms against period labels and legends |
+
+**RESULT — NO NEW PAIRING EXISTS. Nothing found beyond what `D-041` already cites:**
+
+| Nickname | Every explicit period pairing in the whole corpus | Tier |
+|---|---|---|
+| **Blueberry** | V09 `[00:41:43]` *"The blueberry is the 800 on the 15 minute time frame"* — **already cited by `D-041`** | 1 |
+| **Mayo** | `MMM-NOTES` p.66 entry list, *"Hold the Mayo – 200 Bounce"* — **already cited by `D-041`** | 2 |
+| **Water** | **none** | — |
+| **Mustard** | **none.** Total corpus occurrences: **2**, both in V04, both with no number — `[00:14:42]` *"the averages open making an M formation with the mustard"*, `[00:14:47]` *"There's your M formation in your mustard right there."* (V01 `[00:19:24]` *"the man is the water that catch up in the mustard"* is logged garble and sources nothing) | — |
+| **Ketchup** | **none.** The word **occurs zero times in genuine audio anywhere in V01–V11.** The only near-hits are V01 `[00:19:24]`'s garble above and V10 `[00:37:02]` *"I'll never catch up"*, which is the ordinary English phrase about falling behind on homework | — |
+
+**Therefore: the condition in the owner's instruction is NOT met for ketchup and mustard. The
+course never pairs either nickname with a period.** `D-041`'s **ketchup = 5, mustard = 13**
+stands unchanged as the best-attested answer, on owner attestation, exactly as recorded.
+
+**This also re-confirms `D-041`'s own statement in its Evidence block** — *"No Tier 1 statement
+attaches a period to ketchup or mustard anywhere in V01–V11"* — by independent exhaustive search
+rather than by inheritance. That claim is now **verified, not assumed**, and
+`SOURCING_HIERARCHY.md` §3.4's standing re-check obligation on `A-020` is **discharged as at
+V11** and **remains live for V12 onward**.
+
+---
+
+### 2. THE OWNER'S COLOUR MAPPING — NEW, UNCONTESTED ON THREE OF FIVE ROWS
+
+Owner attestation, 2026-08-13. Recorded here because there was previously **no single place** a
+session could look up a line's colour, which is the same failure `D-041` was written to fix for
+periods.
+
+| Period | Nickname (`D-041`) | **Colour** | Independent corroboration |
+|---|---|---|---|
+| **5** | Ketchup | **red** | ⚠️ **NONE — and CONTRADICTED by Tier 1. See §3.** |
+| **13** | Mustard | **yellow** | ⚠️ **NONE — and CONTRADICTED by Tier 1. See §3.** |
+| **50** | Water | **aqua** | ✅ `[TOOLING]` — owner's own MT4 template `3M-shadow-boxes-15M.tpl`, `period=50 color=16776960` → RGB(0,255,255) **AQUA** |
+| **200** | Mayonnaise | **white** | ✅ `[TOOLING]` — same template, `period=200 color=16777215` → RGB(255,255,255) **WHITE** |
+| **800** | Blueberry | **blue** | ✅ `[TOOLING]` — same template, `period=800 color=16711680` (MT4 BGR) → RGB(0,0,255) **BLUE** |
+
+**The three corroborated rows are a genuinely good result and should be read as one.** The owner
+stated these colours from memory; the owner's own charting template, read independently off disk
+on a different branch by a different session, produces **the same three colours for the same
+three periods**. That is agreement between an attestation and an artifact that were not
+consulted against each other.
+
+**It also makes the nicknames read as plain colour-naming** — *blueberry* = blue, and by the
+same logic *ketchup* = red and *mustard* = yellow, which is internally consistent with the owner's
+period mapping in `D-041`. **This is noted as consistency, NOT adopted as proof.** Colour
+semantics as an inference route is `D-030` territory and the tooling README already refuses it
+for `mayonnaise`/white on exactly those grounds.
+
+**Warrant, stated precisely so no artifact overstates it:** `OWNER-ATTESTED (D-042)` — **not
+observed on-screen**. No frame in `04_SCREENSHOTS/` carries a legend, and no speaker in V01–V11
+names a colour and a nickname in the same sentence. The 50/200/800 rows carry the additional
+`[TOOLING]` warrant; the 5 and 13 rows carry owner attestation **alone**.
+
+---
+
+### 3. ⚠️ THE CONFLICT — V07 `[00:25:34]` IS TIER 1 AND IT SAYS THE **5** IS **YELLOW**
+
+**This is the finding of this session and it is not a small one.**
+
+> V07 `[00:25:34]`, verbatim from `02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md`:
+>
+> > *"The only other lines in here, look, **this yellow one is a five moving average.** I made it
+> > dotted in the 13, 50 and the 200."*
+>
+> Frame: `04_SCREENSHOTS/V07/INDEX.md` row 22,
+> `chart-eurjpy-m15-revisited-for-the-adr-and-ma-question`, `00:25:30` — the frame under
+> discussion, `EURJPYm` M15.
+
+**This is Tier 1, it is unambiguous on the colour-to-period join, and it is already on the
+record** — `A-020`'s V07 reconciliation row calls it *"the first time in the corpus a colour is
+attached to a period in genuine audio."* What is **new** is that **there was no owner colour
+mapping for it to contradict until today.**
+
+| Source | 5 EMA | 13 EMA |
+|---|---|---|
+| **Owner attestation, 2026-08-13 (§2 above)** | **red** | **yellow** |
+| **V07 `[00:25:34]`, Tier 1** | **yellow** | — (dotted; no colour given) |
+
+**And the transitive consequence is the part that matters.** The owner also supplies
+ketchup = red and mustard = yellow. Joining that to V07's yellow = 5 gives **mustard = 5,
+ketchup = 13** — which is **precisely the assignment `D-041` overturned**, the one that had agreed
+with `EXTERNAL_VOCABULARY_REFERENCE.md` §5.16's three Tier 3 sources, with `Q-002`'s fabricated
+`NOTES.md`, and with the project's own inference from V06's *"closed below 13"* rule.
+
+**NOTHING IS CHANGED ON THIS BASIS, AND THE REASONS ARE THREE:**
+
+1. **The join is not made by any speaker.** V07 says *yellow = 5*. The owner says
+   *mustard = yellow*. **No source says both.** Chaining them is inference across two warrants of
+   different kinds, which is the `D-030` error and the exact move the tooling README already
+   refuses for white/mayonnaise. `SOURCING_HIERARCHY.md` §3.2 **Case C** governs: *"Do not
+   adjudicate. Surface to the owner."*
+2. **`D-041` was an explicit, definitive owner ruling.** Reversing it requires the owner, in
+   terms, not a session's chain of inference. `REMEDIATION_PROTOCOL.md` §2 forbids the quiet edit
+   in either direction.
+3. **The alternative explanation is live and cheap.** The V07 speaker is a **guest**, on his own
+   platform, whose charts elsewhere in that same lesson show *"the dashed ones… are 30 minute
+   versions"* and *"the blue heavy ones are 60 minutes"* `[00:27:24]`–`[00:27:33]` — i.e. **this
+   presenter's colour scheme is demonstrably his own multi-timeframe convention**, not
+   necessarily the course palette. A guest's personal chart colours are weaker evidence about the
+   shared palette than a guest's spoken doctrine is about method, and `D-033` does not flatten
+   that difference.
+
+**Disposition: `CONFLICT — OWNER ADJUDICATION REQUIRED`.** Logged in `00_SYSTEM/SETUP_ISSUES.md`
+as **`I-011`** per §3.2 Case C. The owner's colour mapping in §2 is recorded and propagated **as
+owner-attested**, and the conflict is recorded **beside it, in every file that carries it**, so
+it cannot be adopted unnoticed. **`D-041` is untouched.**
+
+**The question for the owner, in one line:** *V07's guest says on tape that the yellow line is the
+5 EMA. You have said the 5 is red and the 13 is yellow. Is the guest using his own colours, or is
+the 5 actually yellow — which would also put ketchup back on 13?*
+
+---
+
+### 4. A NUMBERING COLLISION, FOUND WHILE DOING THIS AND FLAGGED RATHER THAN FIXED
+
+`feature/tradingview-mmm-indicator` carries
+`06_MANUAL_BACKTEST/tools/DRAFT_D-041_platform_artifacts.md` — a **different, unadopted** draft
+decision (*MT4 platform artifacts are admitted as evidence of PARAMETERS ONLY*) which reserved the
+identifier **`D-041`** when `D-040` was the highest on integration. **`D-041` has since been taken
+by the nickname mapping on this branch.** This is exactly the collision `D-038a` consequence 1
+predicts and instructs the merging session to renumber. The draft file itself already says its
+number is provisional and must be re-checked at adoption time.
+
+**Not renumbered here.** That draft is unadopted policy on an unmerged branch; renaming it is the
+adopting session's act, not this one's. **The next free identifier after this entry is `D-043`.**
+
+---
+
+**Reason:** The owner made the course the tie-breaker on ketchup/mustard, so the course had to be
+searched before the ruling could be either confirmed or left standing — and a negative result that
+is not written down gets re-searched by the next session, or worse, gets assumed to be positive.
+The colour mapping needed a home for the same reason `D-041`'s period mapping did. And the V07
+contradiction is a finding: `SOURCING_HIERARCHY.md` §3.3's rule that *"a divergence is a finding,
+not noise"* applies with more force here, not less, because the divergence points back toward the
+assignment `D-041` overturned.
+
+**Evidence:** Owner attestation, 2026-08-13 (colours; and the conditional instruction quoted in
+§1). Exhaustive search of V01–V10 on this branch, V11 on `origin/video/v11`, the 84-page
+`MMM-NOTES` text extract, and all eleven `04_SCREENSHOTS/*/INDEX.md` files — method and coverage
+in §1. Tier 1 conflict: V07 `[00:25:34]`, frame `V07/INDEX.md` row 22. `[TOOLING]` corroboration:
+`3M-shadow-boxes-15M.tpl`, decoded in `06_MANUAL_BACKTEST/tools/MMM_Indicator_README.md`
+(`feature/tradingview-mmm-indicator`).
+
+**Alternatives considered:** *Adopting the V07 chain and re-inverting ketchup/mustard back to
+13/5* — rejected on all three grounds in §3; it would overturn an explicit owner ruling on a
+two-step inference no speaker makes. *Recording the colours and staying silent about V07 because
+the mapping is "new, uncontested information"* — **rejected outright, and this was the live
+temptation**: three of five rows are indeed uncontested, but two are contradicted by tape, and
+shipping the palette into the Pine defaults without the flag would have put an unverified colour
+on the chart under a strengthened warrant. *Filing the conflict as a `C-xxx` in
+`CONTRADICTIONS.md`* — rejected; that file records contradictions **within the course sources**,
+and this is a course source against an **owner attestation**, which is an infrastructure/adjudication
+question and belongs in `SETUP_ISSUES.md`, per that file's own opening rule. *Withholding the
+colours from the Pine script until the owner answers* — rejected; the 50/200/800 rows are
+independently corroborated and were already shipping, and 5/13 were shipping **invented** cyan and
+orange, which owner attestation strictly improves on even while contested.
+
+**Consequences:**
+
+1. **`D-041` stands unchanged.** Ketchup = 5, mustard = 13, on owner attestation.
+2. **`A-020` gains an appended block** recording the negative search result, the colour mapping,
+   and the V07 conflict. Nothing in it is edited or deleted (`REMEDIATION_PROTOCOL.md` §2).
+3. **`EXTERNAL_VOCABULARY_REFERENCE.md` §5.16 gains the colour rows and the same conflict flag.**
+4. **`SOURCING_HIERARCHY.md` §3.4 records that the re-check obligation was performed as at V11 and
+   returned negative.** The obligation itself **stays live** for V12 onward.
+5. **`SETUP_ISSUES.md` `I-011` is opened** and stays `OPEN` until the owner answers §3's question.
+6. **The Pine tool adopts the colours** on `feature/tradingview-mmm-indicator`, tagged
+   **`[OWNER-ATTESTED] (D-042) — not observed on-screen`** for all five, with the additional
+   `[TOOLING]` warrant retained on 50/200/800 and the V07 conflict written into the comment block
+   above the 5 and the 13. **`[OWNER-ATTESTED]` ranks above `[DEFAULT]` and below `[TIER 1]`.**
+7. **Any artifact citing a line's colour must cite the warrant**, exactly as `D-041` consequence 6
+   requires for periods: *"the 5 EMA, red (`OWNER-ATTESTED`, `D-042`, contested by V07
+   `[00:25:34]`)"* — never *"the red 5 EMA the instructor uses"*.
+
+**Status:** ACTIVE — with `I-011` open against §3.
