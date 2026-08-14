@@ -3295,3 +3295,274 @@ warrant.
 
 **Status:** ACTIVE — **AUTHORITATIVE. Supersedes `D-041`'s ketchup/mustard rows and `D-042` §2's
 5/13 rows on both axes.** `I-011` CLOSED against it.
+
+---
+
+## D-044 — The corpus is EXTENDED to 2017-2025 for forward-testing and backtesting; `D-035`'s 2013-2016 split is untouched and the 2016H2 holdout stays sealed
+
+**Date:** 2026-08-14
+**Owner decision, given in session:** *"This can be used to forward test and backtest. Pull
+2017-2025 if that's easiest."* · *"We can do some verification or have the student do it"*
+(on re-measuring the format/clock past 2016) · *"I don't plan on redistributing"* (closing the
+redistribution caveat `HISTDATA_RECENCY_CHECK.md` §4.4 left open).
+**Extends:** `D-036a`'s HistData corpus, by adding data. **Amends nothing in it.**
+**Adds a usage policy for a date range `D-035` had classified one way and the owner has now
+classified another.** See §2, which states precisely what moved and what did not.
+**Executes the feasibility finding in** `06_MANUAL_BACKTEST/datasets/HISTDATA_RECENCY_CHECK.md`
+(2026-08-14), which established that the free tier serves 2016H2-2025 and authorised nothing.
+
+---
+
+### 1. WHAT WAS PULLED
+
+| Field | Value |
+|---|---|
+| Source | **HistData.com**, free tier, no account — the `D-036a` vendor, the `D-036a` `get.php` method, unchanged |
+| Product | `MetaTrader` format, **M1 bid bars**, GBP/USD |
+| Files | `DAT_MT_GBPUSD_M1_{2017…2025}.csv` — **nine full-year files** |
+| Retrieved | **2026-08-14**, HTTP POST to the public `get.php` form endpoint |
+| Integrity | **SHA-256 per file**, `datasets/HISTDATA_GBPUSD_M1/raw/SHA256SUMS.txt` (the four `D-036a` hashes in it are **unchanged**) |
+| Span as served | **2017-01-02 02:00 → 2025-12-31 16:57** |
+| Rows as served | **3,297,475** · **3,297,055** after the §4 de-duplication |
+| Corpus now on disk | **13 files, 4,594,836 M1 bars**, 2013-01-01 17:00 → 2025-12-31 16:57 |
+
+**2016H2 WAS NOT PULLED, AND PULLING 2017 DID NOT REQUIRE IT.** `HISTDATA_RECENCY_CHECK.md`
+§4.1 warned that the vendor sells past years whole, so 2016H2 is unreachable without the
+2016 file and its holdout. That warning is about the **2016** file and does not reach 2017:
+each year is an independent download, and 2017 was retrieved on its own with no 2016 request
+issued. **`DAT_MT_GBPUSD_M1_2016H1.csv` was never re-fetched, re-read or rewritten** — its
+SHA-256 is byte-identical to the one `D-036a` recorded.
+
+### 2. WHAT THIS CHANGES ABOUT `D-035`, STATED PRECISELY
+
+`D-035` is **NOT superseded, NOT reopened, and NOT reinterpreted.** Its ratio, its arithmetic,
+its 2016-07-01 boundary and every conformance verdict it issued stand exactly as written. What
+this entry does is record an **owner ruling on how one part of its HOLDOUT block, plus a range
+lying entirely outside its corpus, may now be used.**
+
+`D-035`'s corpus was `2013-01-06 → 2017-12-29` split at `2016-07-01`. The extension range
+therefore lands in **two different relationships to it**, and conflating them is the error this
+section exists to prevent:
+
+| Range | Relationship to `D-035` | Status after this entry |
+|---|---|---|
+| **2013-01-06 → 2016-06-30** (1,272 d) | `D-035` DEVELOPMENT | **UNCHANGED.** Development, exactly as before. Not on this entry's account in any way. |
+| **2016-07-01 → 2016-12-31** (184 d) | `D-035` HOLDOUT | **UNCHANGED — STILL SEALED.** Not pulled, not on disk, never read. The owner said *"2017-2025 if that's easiest"*, and it was. |
+| **2017-01-01 → 2017-12-29** (362 d) | `D-035` HOLDOUT | **RELEASED FOR USE** by the ruling above. No longer a sealed pre-registration holdout. |
+| **2017-12-30 → 2025-12-31** (2,924 d) | **Outside `D-035`'s corpus entirely** — beyond its `T1`. Never was development, never was holdout. | **AVAILABLE.** `D-035` says nothing about it and never did; this entry is the first to classify it at all. |
+
+`184 + 362 = 546`, which is `D-035`'s HOLDOUT day count on its own difference convention. So
+**exactly two thirds of the `D-035` holdout is released and one third remains sealed**, and the
+sealed third is the part the corpus never held.
+
+**THE COST OF THE RELEASE, STATED BEFORE IT CAN BE DISCOVERED LATER.** A holdout is worth what
+it is worth because nothing has been fitted to it. `2017-01-01 → 2017-12-29` was a clean,
+never-inspected 362-day out-of-sample block, and after this entry **it is not one, and cannot
+be made one again.** That is a real loss and it is the owner's to accept; it is recorded here
+so that no later session cites 2017 as out-of-sample evidence on the strength of `D-035`.
+**`2016-07-01 → 2016-12-31` remains the project's only intact `D-035` holdout**, and it now
+carries the whole of that role — including the **October 2016 flash crash** (`D-035`
+consequence 3), which stays out of reach of the Student Phase.
+
+**WHAT WAS ALREADY TESTED IS UNAFFECTED.** Every `PT` result committed before this entry was
+measured on `W-A`, `W-B` or `W-C′`, all of which end on or before 2016-06-30. Verified rather
+than asserted — see §6.
+
+### 3. THE FORMAT AND CLOCK WERE RE-MEASURED, NOT ASSUMED — AND THEY DO NOT FULLY MATCH
+
+`HISTDATA_RECENCY_CHECK.md` §4.2 recorded the column layout, the fixed clock, the zero volume
+field and the week-open convention as **2013-2016 facts expected to hold, never checked on a
+single post-2016 bar**, and `D-034` makes the clock probe mandatory. It was run on all nine
+files, with the `D-036a` corpus as a control.
+
+**HOLDS, on all nine years:**
+
+| Fact | Result |
+|---|---|
+| Column layout `YYYY.MM.DD,HH:MM,O,H,L,C,V` | ✅ 3,297,475 / 3,297,475 rows |
+| Quotes 6 d.p., positive | ✅ zero exceptions |
+| **Volume structurally zero** | ✅ zero non-zero values. Still **not traded volume; no test may read it** |
+| OHLC coherence (`C4`) | ✅ PASS |
+| **Week open at stamp 17:00, no seasonal shift** | ✅ modal open is **17h in all twelve months**, pooled over 465 week opens |
+
+> The **per-year** form of that last measurement says the opposite, and it is wrong. A year
+> holds ~52 week opens, so a month holds ~4, and the modal open of 4 samples is decided by a
+> minute of jitter — every year "shifts". Pooled (~39 per month) the answer is unambiguous.
+> Recorded because the flawed version was run first and would have been a false alarm.
+
+**DOES NOT HOLD — two differences, both absent from 2013-2018 and both dated to a vendor
+pipeline change in 2019:**
+
+1. **A DUPLICATED HOUR ON THE EU FALL-BACK SUNDAY.** The 60 minutes `19:00`-`19:59` are emitted
+   **twice** on 2019-10-27, 2020-10-25, 2021-10-31, 2022-10-30, 2023-10-29, 2024-10-27 and
+   2025-10-26 — **420 rows**. `D-036a`'s corpus has **zero** duplicate stamps in 1,297,781 rows,
+   and so do 2017 and 2018. **This fails `C2` and `C3`, which are GATING checks.** Disposition
+   in §4.
+2. **OFF-HOUR WEEK OPENS IN THE US/EU DST-DISAGREEMENT WINDOWS.** 23 week opens sit at 16h
+   instead of 17h, every one of them in the three March Sundays where the US is on DST and the
+   EU is not, or the October Sunday where the EU is off and the US is not. The `D-036a` corpus
+   has **0 of 181** off-hour opens; 2017 and 2018 have none either. **Any week-boundary claim
+   inheriting `W-C′`'s 17:00 week open BY NAME (`D-034` fact 1, `D-036a`) does not automatically
+   inherit it for 2019+**, and must state which convention it used.
+
+**A THIRD FINDING, NOT A CLOCK FACT: 2023 IS MATERIALLY DEGRADED.** 322,467 bars against a
+~372,000 median — **~13% light** — with the loss concentrated in **2023-02-26 → 2023-07-23**
+(April is 36% down). Its gap census is **672 intra-week gaps totalling 32 d 15 h**, against
+**≤ 7 gaps and ≤ 7 h for every other year in the corpus, old or new.** The remaining 16
+off-hour week opens are all in this block, at 18h/19h. For scale: `D-036a` flagged a **22-hour**
+hole (`2014-06-01`) as the corpus's one unexplained absence and required every test spanning it
+to exclude it by name. **2023 is that defect roughly thirty-five times over.**
+**`2023-02-26 → 2023-07-23` must carry an explicit pre-registered disposition in any test that
+spans it, and the honest default is to exclude the block and say so.**
+
+### 4. THE DUPLICATED HOUR — DISPOSITION
+
+**Nothing is normalised silently, and the raw files are not edited.** The nine CSVs on disk are
+byte-for-byte as the vendor served them and still match `raw/SHA256SUMS.txt`.
+
+The repair is admissible for one reason and only that reason: **in all 420 cases the two rows
+are IDENTICAL in open, high, low and close.** Nothing is being chosen between; one emission is
+a copy of the other. So `mmm_lib._dedupe_exact()` and `aggregate_m15.dedupe_exact()` drop the
+second copy, **report the count and the dates**, and **refuse to run** — rather than guessing —
+if a duplicated stamp is ever found carrying a *different* bar, which is what a genuine
+folded-back hour would look like.
+
+**Both QA reports are committed, and one of them fails:**
+
+| Report | Scope | Gate |
+|---|---|---|
+| `QA_REPORT.txt` | `D-035` DEVELOPMENT, 2013-2016 | **PASS** — unchanged from `D-036a`, every check identical |
+| `QA_REPORT_EXT_RAW.txt` | 2017-2025 **as served** | **FAIL** — `C2` 420, `C3` 420. Kept as the honest record of the vendor's output |
+| `QA_REPORT_EXT.txt` | 2017-2025 **as consumed**, post-de-duplication | **PASS** — `C1`-`C4` clean, 3,297,055 bars |
+
+Gating only on the repaired report would hide the defect; gating only on the raw one would
+block a corpus whose sole gating defect is 420 rows the vendor sent twice. **Both, committed.**
+
+### 5. `C5`-`C8` HUMAN-JUDGEMENT REVIEW, FOR THE NEW YEARS
+
+- **`C5` spikes — 2,042 flagged, nothing excluded.** The extremes are Christmas-Eve thin-book
+  bars (2019-12-24 at ×216 of a 0.1-pip local median), i.e. the ratio is inflated by a near-zero
+  denominator, not by a large numerator — 21.6 pips is not a corrupt tick. `D-036a`'s rule
+  stands: **a news bar and a bad tick are indistinguishable to a threshold, so nothing is
+  auto-excluded.**
+- **`C6` gaps — 691 ≥ 30 min.** **672 of them are 2023.** Excluding that block the nine years
+  total 19 gaps, comparable to the control corpus's 3.
+- **`C7` week opens — 465 Sunday-delimited, 15 intra-week re-opens, 3 non-Friday weeks**
+  (`2020-12-27`, `2023-04-02`, `2025-12-28`). Re-opens are **never** week boundaries — the
+  `D-036a` correction applies verbatim.
+- **`C8` sessions — 24 below 60% of nominal.** 15 are Dec/Jan closures, real. **Nine are not
+  and are named here so no session has to rediscover them:** `2019-05-26` (absent),
+  `2019-05-27`, `2020-11-30` (300 bars), `2021-05-31` (239 bars), `2023-03-17`, `2023-03-24`,
+  `2023-04-06`, `2023-04-07` (absent), and the `2023-02-26 → 2023-07-23` block they sit in.
+  The three May/November entries coincide with US Memorial Day / UK bank holidays; that is an
+  explanation, not a clearance, and the `D-036a` rule stands — **a partial session cannot
+  support a full-window measurement whether the cause is a defect or a real closure.**
+
+### 6. NO COMMITTED `PT` RESULT MOVED — MEASURED, NOT ASSERTED
+
+The extension broke an assumption ten runners relied on without stating it: that *"load the
+corpus"* and *"load DEVELOPMENT"* were the same act, true only because `D-036a` had truncated
+2016 on arrival. `PT-025`…`PT-032`, `PT-036` and `PT-039` derive their bar universe from the
+whole corpus and then call `assert_development()` on it; unchanged, all ten would have raised
+**HOLDOUT BREACH** on the first run after this entry.
+
+**The fix makes the coupling explicit rather than redefining anything.** `mmm_lib.load_m1()`
+and `load_m15()` now take a **scope** and **default to DEVELOPMENT** — precisely what every
+existing runner was already getting. Reaching the `D-044` years requires naming them.
+`SCOPES["development"]` is `D-035`'s block unchanged to the minute and `assert_development()`
+is untouched.
+
+**Verification: all 25 `run_ptNNN.py` scripts were re-run against the 13-file corpus. Every one
+of the 27 committed `*_results.json` and every committed `*_report.txt` is BYTE-IDENTICAL.**
+`git status` reports no change under `06_MANUAL_BACKTEST/V01…V13/`.
+
+**One near-miss, recorded because it is the exact failure this entry could most easily have
+caused.** The first draft clipped the scope on the **arm's own clock**, which looks more
+principled and is a silent redefinition: under Arm B the `+1h` DST shift relabels the last four
+development M15 bars to wall-clock 2016-07-01 (`I-010` Q2), so an arm-clock clip drops them and
+**Arm-B DEVELOPMENT quietly becomes 86,820 M15 bars where `D-036a` committed 86,824** — moving
+a boundary governed by an **open owner question**, while adding data unrelated to it.
+`verify_against_committed("B")` caught it on row count. The clip is applied on the **raw file
+clock**, both arms return 86,824, and **`I-010` Q2 is exactly as open as it was.**
+
+### 7. THE THREE CODE HAZARDS, FIXED
+
+1. **`_dst_intervals()` was `range(2012, 2018)`.** Not an error for a corpus ending in 2016;
+   **silently wrong** the moment 2017-2025 arrived. Every Arm-B bar from 2018 on would have
+   fallen through with `dst` False — **Arm B would have become Arm A for eight years and gone
+   on reporting itself as Arm B.** No exception, no warning. Now derived from
+   `CORPUS_YEAR_MIN/MAX` with a year of margin: **15 transition pairs, 2012-03-11 → 2026-11-01.**
+2. **The M1 parse cache was keyed on nothing.** `m1_raw_v2.npz` was reused whenever it existed,
+   so adding nine files would have served a stale parse of a corpus that no longer existed, with
+   correct-looking bar counts. Now `m1_raw_v3.npz`, keyed on a `(name, size, mtime_ns)`
+   fingerprint of the whole raw file set. *(A first draft stored the de-dup census as a numpy
+   `U10` column, which truncated every date and round-tripped nonsense **out of the cache while
+   the fresh-parse path was correct** — a cache returning a plausible wrong answer. Fixed and
+   recorded rather than quietly repaired.)*
+3. **`verify_against_committed()`'s row count.** `GBPUSD_M15_ARM{A,B}.csv` **remain
+   DEVELOPMENT-scope files** — 86,824 bars, byte-identical to `D-036a`'s. Rebuilding them over
+   the extended corpus would have failed the row-count arm against every runner, and the honest
+   reading of that failure is *the reference moved*, not *the module drifted*. **So the
+   reference does not move**, and `D-044`'s bars live separately under `derived_ext/`. Both arms
+   verify `ts=True px=True`.
+
+### 8. M15 AND H1 DERIVED FOR THE EXTENDED RANGE
+
+Built by the project's own committed `aggregate_m15.py` — the `D-036a` / unmerged
+`feature/m15-h1-chart-backtest` pattern, unchanged in rule: **open of the first M1 bar in the
+bucket, high = max, low = min, close of the last; a bucket is emitted only if at least one M1
+bar falls inside it**, so holidays and weekends stay absent rather than becoming flat synthetic
+candles. **The bucket boundaries are ours** and that is deliberate (`D-031` makes the boundary
+the tested variable); the vendor publishes no M15 or H1 at all.
+
+| File (`datasets/HISTDATA_GBPUSD_M1/derived_ext/`) | Bars | Span |
+|---|---|---|
+| `GBPUSD_M15_ARM{A,B}.csv` | **307,576** per arm | 2013-01-01 17:00 → 2025-12-31 16:45 |
+| `GBPUSD_H1_ARM{A,B}.csv` | **76,901** per arm | 2013-01-01 17:00 → 2025-12-31 16:00 |
+
+Continuous 2013-2025, **not** 2017-2025 — a chart series with a hole where the development
+corpus ends would be worse than useless for the study this data was pulled for, and the
+development/extension distinction is enforced in code, not by which file a bar sits in.
+Hashes in `derived_ext/SHA256SUMS.txt`. **Two independent implementations agree**:
+`aggregate_m15.py` (dict-wise) and `mmm_lib.resample()` (numpy/pandas) return 307,576 and
+76,901 for both arms. `aggregate_m15.py` gains `--from` / `--to` because the span used to be
+decided by whatever the directory happened to hold; run with `--to 2016-06-30` it reproduces
+both committed development M15 files at **identical SHA-256**.
+
+### 9. WHAT IS STILL OWED
+
+- **`I-010` Q2** — which arm's clock the `D-035` boundary is stated in — is **still an open
+  owner call** and this entry deliberately does not settle it.
+- **The 2019+ off-hour week opens (§3.2) mean `W-C′`'s 17:00 week open does not carry forward
+  by name.** Any test using 2019-2025 week boundaries must state its convention.
+- **`2023-02-26 → 2023-07-23` needs a pre-registered disposition** in any test spanning it.
+- **The `2014-06-01` hole and the `D-034` cross-vendor level caveat are unaffected** and still
+  stand. Price levels remain **not comparable** with the V02-V06 FXCM homework.
+- **No `PT` is re-issued, re-scoped or unblocked by this entry.** It supplies data and a usage
+  policy, not conformance. A test wanting the `D-044` years is a **new pre-registration**.
+- **The 2026 partial year was not pulled** and remains subject to `HISTDATA_RECENCY_CHECK.md`
+  §4.3 — it moves between fetches and must not be treated as stable.
+
+**Reason:** `HISTDATA_RECENCY_CHECK.md` established the data was reachable and explicitly
+authorised nothing, listing a new owner decision as the first thing owed. The owner gave one.
+Recording it as a new entry rather than an append to `D-035` is the whole point: `D-035` pinned
+a split *"final"* by explicit owner decision and its verdicts are cited across the batch, so
+editing it to fit new data would be exactly the selection pressure `D-027` and `D-028` exist to
+remove. A later ruling that **releases part of a holdout** is a different act from **moving a
+boundary**, and only the first one happened.
+**Evidence:** `datasets/HISTDATA_RECENCY_CHECK.md` (all sections); `raw/SHA256SUMS.txt`;
+`QA_REPORT.txt`, `QA_REPORT_EXT_RAW.txt`, `QA_REPORT_EXT.txt`;
+`derived_ext/SHA256SUMS.txt`; `datasets/HISTDATA_GBPUSD_M1/README.md`; `D-034` (fact 1, the
+mandatory clock probe), `D-035`, `D-036`, `D-036a`, `D-031`, `I-010`.
+**Alternatives considered:** *Amending `D-035` to move the boundary to 2026* — **rejected, and
+this is the important one.** It would retroactively reclassify a block against which
+conformance verdicts have already been issued, and it is indistinguishable from moving a
+holdout to suit the data. *Pulling 2016H2 as well, for a continuous series* — rejected; the
+owner scoped the pull to 2017-2025, it would have required downloading the whole 2016 file
+including the sealed block, and `D-036a`'s truncate-on-arrival rule exists precisely to stop
+that being done casually. *Editing the raw CSVs to remove the 420 duplicated rows* — rejected;
+it breaks the vendor checksums and destroys the evidence that the defect exists. *Rebuilding
+`GBPUSD_M15_ARM{A,B}.csv` over the extended corpus* — rejected; §7.3. *Letting the ten
+whole-corpus runners keep meaning "whatever is in the directory"* — rejected; that is how a
+holdout gets read by accident.
+**Status:** ACTIVE

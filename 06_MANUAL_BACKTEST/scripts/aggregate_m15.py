@@ -28,7 +28,15 @@ holidays and the weekend stay absent rather than becoming flat synthetic candles
 is summed and is structurally zero in this vendor's data; it is carried for format
 compatibility and must not be read as traded volume.
 
+`--from` / `--to` EXIST BECAUSE THE CORPUS OUTGREW THE DIRECTORY. Until `D-044` this
+script's span was decided by whatever `RAW_DIR` happened to contain, and that was safe
+only because the directory held exactly `D-035` DEVELOPMENT. `D-044` added 2017-2025 to
+the same directory, so an unbounded run silently produces a different file under the
+same name. The bounds are read on the RAW FILE CLOCK, before the arm shift, matching
+`mmm_lib.load_m1()` — see the note there for why the arm clock is the wrong place to cut.
+
 usage: python3 aggregate_m15.py RAW_DIR --arm {A,B} [--timeframe 15] [--out FILE]
+                                [--from YYYY-MM-DD] [--to YYYY-MM-DD]
 """
 import argparse
 import glob
@@ -49,7 +57,7 @@ def shift_to_arm(ts, arm):
     return utc.astimezone(NY).replace(tzinfo=None)
 
 
-def load_m1(raw_dir):
+def load_m1(raw_dir, lo=None, hi=None):
     rows = []
     for path in sorted(glob.glob(os.path.join(raw_dir, "DAT_MT_GBPUSD_M1_*.csv"))):
         with open(path) as fh:
@@ -58,9 +66,40 @@ def load_m1(raw_dir):
                 if len(p) != 7:
                     continue
                 ts = datetime.strptime(p[0] + " " + p[1], "%Y.%m.%d %H:%M")
+                if (lo is not None and ts < lo) or (hi is not None and ts > hi):
+                    continue
                 rows.append((ts, float(p[2]), float(p[3]), float(p[4]), float(p[5]), float(p[6])))
     rows.sort(key=lambda r: r[0])
-    return rows
+    return dedupe_exact(rows)
+
+
+def dedupe_exact(rows):
+    """`D-044`. Drop rows the vendor emitted twice; refuse anything else.
+
+    From 2019 on, HistData re-emits the 60 minutes 19:00-19:59 on the EU fall-back
+    Sunday. Both copies carry identical OHLC, so removing the second loses nothing —
+    but that identity is CHECKED here, not assumed, and a duplicated stamp whose bars
+    differ stops the run rather than being resolved by whichever happened to sort last.
+    Reported on stderr; never silent.
+    """
+    out, removed, conflicts = [], [], []
+    for r in rows:
+        if out and r[0] == out[-1][0]:
+            if r[1:5] == out[-1][1:5]:
+                removed.append(r[0])
+            else:
+                conflicts.append(r[0])
+            continue
+        out.append(r)
+    if conflicts:
+        raise SystemExit(
+            f"duplicate stamps carrying DIFFERENT bars ({len(conflicts)}): "
+            f"{conflicts[:5]} — not a re-emission, decide it explicitly (`D-044`)")
+    if removed:
+        days = sorted({d.date() for d in removed})
+        print(f"  de-duplicated  : {len(removed)} re-emitted rows on {len(days)} day(s): "
+              f"{', '.join(str(d) for d in days)}", file=sys.stderr)
+    return out
 
 
 def bucket(ts, minutes):
@@ -94,9 +133,16 @@ def main():
     ap.add_argument("--arm", choices=["A", "B"], required=True)
     ap.add_argument("--timeframe", type=int, default=15)
     ap.add_argument("--out")
+    ap.add_argument("--from", dest="frm", metavar="YYYY-MM-DD",
+                    help="earliest RAW-CLOCK date to include (inclusive)")
+    ap.add_argument("--to", metavar="YYYY-MM-DD",
+                    help="latest RAW-CLOCK date to include (inclusive, to 23:59)")
     args = ap.parse_args()
 
-    m1 = load_m1(args.raw_dir)
+    lo = datetime.strptime(args.frm, "%Y-%m-%d") if args.frm else None
+    hi = (datetime.strptime(args.to, "%Y-%m-%d") + timedelta(days=1)
+          - timedelta(minutes=1)) if args.to else None
+    m1 = load_m1(args.raw_dir, lo, hi)
     if not m1:
         print("no M1 rows found in", args.raw_dir, file=sys.stderr)
         return 1

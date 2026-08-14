@@ -148,6 +148,15 @@ yarn-error.log*
 !06_MANUAL_BACKTEST/datasets/*/raw/SHA256SUMS.txt
 !06_MANUAL_BACKTEST/datasets/*/derived/
 !06_MANUAL_BACKTEST/datasets/*/derived/SHA256SUMS.txt
+# `D-044` adds a second derived set and a second QA gate. Same principle: the
+# manifests and the gate reports are the audit trail. `QA_REPORT_EXT_RAW.txt` is
+# committed FAILING on purpose — it is the record of what the vendor served, and
+# a defect that is only ever seen in its repaired form is not on the record.
+!06_MANUAL_BACKTEST/datasets/*/derived_ext/
+!06_MANUAL_BACKTEST/datasets/*/derived_ext/SHA256SUMS.txt
+!06_MANUAL_BACKTEST/datasets/*/QA_REPORT.txt
+!06_MANUAL_BACKTEST/datasets/*/QA_REPORT_EXT.txt
+!06_MANUAL_BACKTEST/datasets/*/QA_REPORT_EXT_RAW.txt
 
 # Same principle, one directory up: a vendor-availability finding is documentation
 # about where data can come from, not the data. Un-ignored 2026-08-14.

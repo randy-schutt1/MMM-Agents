@@ -17,14 +17,24 @@ from a rendering of any kind. Re-running a runner against the files whose SHA-25
 in `datasets/HISTDATA_GBPUSD_M1/raw/SHA256SUMS.txt` reproduces every figure exactly,
 seed included.
 
-HOLDOUT — `D-035`
------------------
-DEVELOPMENT is 2013-01-06 -> 2016-06-30; HOLDOUT is 2016-07-01 -> 2017-12-29 and is
-never opened. The corpus on disk stops at 2016-06-30 (`D-036a` truncated it on
-arrival) and `assert_development()` re-checks every window a runner asks for rather
-than trusting that. Arm B shifts file stamps +1h during US DST, so the last four Arm-B
-bars carry the wall-clock label 2016-07-01 while being the same M1 bars as Arm A's
-last four (`I-010` Q2). No test in this batch reaches them: W-A and W-B end 2015-12-31.
+HOLDOUT — `D-035`, AS AMENDED IN ITS USE BY `D-044`
+---------------------------------------------------
+DEVELOPMENT is 2013-01-06 -> 2016-06-30. `D-035`'s HOLDOUT was 2016-07-01 -> 2017-12-29;
+`D-044` records the owner releasing **2017-01-01 -> 2017-12-29** of it for forward-testing
+and backtesting, and leaves **2016-07-01 -> 2016-12-31 sealed and not on disk**.
+
+THE CORPUS ON DISK NO LONGER STOPS AT THE BOUNDARY, and that is the one sentence in this
+file most likely to be read from memory rather than from the code. `D-036a` truncated 2016
+on arrival, so for a while "everything in `raw/`" and "DEVELOPMENT" were the same set and
+ten runners quietly depended on it. `D-044` added 2017-2025. What protects the boundary now
+is not the directory: it is `SCOPES` + the DEVELOPMENT default on `load_m1()`/`load_m15()`,
+with `assert_development()` re-checking every window a runner asks for.
+
+Arm B shifts file stamps +1h during US DST, so the last four Arm-B development bars carry
+the wall-clock label 2016-07-01 while being the same M1 bars as Arm A's last four
+(`I-010` Q2, STILL AN OPEN OWNER CALL — `load_m1()` clips on the raw clock precisely so
+that this entry does not move it). No test in this batch reaches them: W-A and W-B end
+2015-12-31.
 
 TIME REPRESENTATION
 -------------------
@@ -103,6 +113,7 @@ usage: imported by the run_ptNNN.py scripts in this directory.
 """
 from __future__ import annotations
 
+import collections
 import os
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
@@ -124,7 +135,8 @@ DATA_DIR = os.path.join(ROOT, "06_MANUAL_BACKTEST", "datasets", "HISTDATA_GBPUSD
 RAW_DIR = os.path.join(DATA_DIR, "raw")
 CACHE_DIR = os.path.join(DATA_DIR, "_cache")     # inside the gitignored bulk dir
 
-QA_REPORT = os.path.join(DATA_DIR, "QA_REPORT.txt")
+QA_REPORT = os.path.join(DATA_DIR, "QA_REPORT.txt")          # `D-035` DEVELOPMENT
+QA_REPORT_EXT = os.path.join(DATA_DIR, "QA_REPORT_EXT.txt")  # `D-044`, post-dedupe
 SHA_FILE = os.path.join(RAW_DIR, "SHA256SUMS.txt")
 
 NY = ZoneInfo("America/New_York")
@@ -147,6 +159,39 @@ DEV_START = dt2m("2013-01-06")
 DEV_END = dt2m("2016-06-30 23:59")          # `D-035`
 HOLDOUT_START = dt2m("2016-07-01")
 
+# ---------------------------------------------------------------- corpus scope
+#
+# `D-044` EXTENDED THE CORPUS ON DISK to 2017-01-01 -> 2025-12-31, and that broke an
+# assumption every runner in this directory silently relied on: that "load the corpus"
+# and "load DEVELOPMENT" were the same act, because the only thing on disk WAS
+# DEVELOPMENT (`D-036a` truncated 2016 on arrival). Ten scripts — `PT-025`...`PT-032`,
+# `PT-036`, `PT-039` — derive their bar universe from the whole corpus and then call
+# `assert_development()` on it. Left alone they would have raised HOLDOUT BREACH on the
+# first run after the extension: loud, correct, and useless.
+#
+# So the coupling is made explicit instead of accidental. `load_m1()` and `load_m15()`
+# take a SCOPE and DEFAULT TO DEVELOPMENT, which is exactly what every existing runner
+# was already getting. Reaching the `D-044` years requires naming them.
+#
+# THIS IS NOT A REDEFINITION OF "DEVELOPMENT". `SCOPES["development"]` is `D-035`'s
+# block, unchanged to the minute, and `assert_development()` is untouched. What changed
+# is that a runner now gets it because it asked, not because the vendor's other years
+# happened to be missing from a directory.
+
+SCOPES = {
+    # `D-035` DEVELOPMENT — the default, and the only scope any pre-`D-044` runner sees.
+    "development": (None, DEV_END),
+    # `D-044` — the extension the owner released for forward-testing and backtesting.
+    # 2016-07-01 -> 2016-12-31 is NOT here: it is still sealed and is not on disk.
+    "extended": (None, dt2m("2025-12-31 23:59")),
+}
+DEFAULT_SCOPE = "development"
+
+# `D-044`: the years whose files are on disk. `_dst_intervals()` reads this rather than
+# a literal, so extending the corpus again cannot leave Arm B's DST table short.
+CORPUS_YEAR_MIN = 2013
+CORPUS_YEAR_MAX = 2025
+
 # The pre-registered windows this batch uses (`COMMON_PROTOCOL.md` §3)
 WINDOWS = {
     "W-A": (dt2m("2015-01-04"), dt2m("2015-12-31 23:59")),
@@ -160,20 +205,29 @@ DAY_END_MIN = 17 * 60             # 17:00
 
 # ---------------------------------------------------------------- QA gate
 
-def qa_gate():
+def qa_gate(scope: str = DEFAULT_SCOPE):
     """`COMMON_PROTOCOL.md` §1 makes the QA report a PRECONDITION on every run.
 
     Returns (report, sha256 manifest) so a runner can cite both. Raises if C1-C4 did
     not pass: a silent wrong number is the failure mode a CSV corpus has and a chart
     does not (`D-036a`).
+
+    THE PRECONDITION IS PER-SCOPE, because after `D-044` the corpus has two of them and
+    they do not pass or fail together. `QA_REPORT.txt` gates `D-035` DEVELOPMENT and is
+    unchanged. `QA_REPORT_EXT.txt` gates the `D-044` years as the project consumes them
+    — i.e. after the exact-duplicate removal that `_dedupe_exact()` applies at load.
+    `QA_REPORT_EXT_RAW.txt` is committed beside it and DOES NOT PASS; it is the record
+    of what the vendor actually served and is deliberately not the gate, because gating
+    on it would block a corpus whose only defect is 420 rows the vendor sent twice.
     """
-    with open(QA_REPORT) as fh:
+    path = QA_REPORT if scope == "development" else QA_REPORT_EXT
+    with open(path) as fh:
         txt = fh.read()
     if "GATE: PASS" not in txt:
-        raise SystemExit("QA gate did not PASS — refusing to run (`D-036a`)")
-    with open(SHA_FILE) as fh:
-        sha = fh.read()
-    return txt, sha
+        raise SystemExit(
+            f"QA gate did not PASS for scope {scope!r} ({os.path.basename(path)}) — "
+            "refusing to run (`D-036a`, `D-044`)")
+    return txt, scope_manifest(scope)
 
 
 # ---------------------------------------------------------------- DST arms
@@ -183,9 +237,16 @@ def _dst_intervals():
 
     Computed from `zoneinfo` rather than hard-coded, so a tzdata change is visible
     instead of silently wrong.
+
+    THE YEAR RANGE IS DERIVED, NOT TYPED. It was `range(2012, 2018)` — correct for a
+    corpus that stopped in 2016 and SILENTLY WRONG the moment `D-044` added 2017-2025:
+    every Arm-B bar from 2018 on would have fallen through the loop below with `dst`
+    False and been left on Arm A's clock. Not an exception, not a warning — Arm B would
+    simply have become Arm A for eight years and reported itself as Arm B. It now spans
+    the corpus with a year of margin either side.
     """
     out = []
-    for year in range(2012, 2018):
+    for year in range(CORPUS_YEAR_MIN - 1, CORPUS_YEAR_MAX + 2):
         start = end = None
         prev = None
         t = datetime(year, 1, 1, tzinfo=timezone.utc)
@@ -224,17 +285,111 @@ def shift_to_arm(tm: np.ndarray, arm: str) -> np.ndarray:
 
 # ---------------------------------------------------------------- loading
 
+def _raw_files():
+    return sorted(n for n in os.listdir(RAW_DIR)
+                  if n.startswith("DAT_MT_GBPUSD_M1_") and n.endswith(".csv"))
+
+
+def _fileset_fingerprint():
+    """Identify the raw file set by (name, size, mtime_ns) for every file in it.
+
+    THE CACHE USED TO BE KEYED ON NOTHING. `m1_raw_v2.npz` was reused whenever it
+    existed, so adding, removing or re-downloading a raw CSV left every runner reading
+    a stale parse of a corpus that no longer existed — and reading it SILENTLY, with
+    correct-looking bar counts for the old file set. `D-044` adds nine files at once,
+    which is exactly the event that would have triggered it.
+
+    Cheap and honest beats cheap: this stats the files (microseconds) rather than
+    hashing 400 MB, and a stat change is a superset of the content changes that matter
+    here, because a raw file is only ever replaced wholesale by a re-download.
+    `raw/SHA256SUMS.txt` remains the integrity record; this is a staleness check.
+    """
+    parts = []
+    for n in _raw_files():
+        st = os.stat(os.path.join(RAW_DIR, n))
+        parts.append(f"{n}:{st.st_size}:{st.st_mtime_ns}")
+    return "|".join(parts)
+
+
+def _dedupe_exact(tm, o, h, l, c):
+    """`D-044`. Remove re-emitted rows — and ONLY re-emitted rows — reporting the count.
+
+    THE DEFECT THIS EXISTS FOR, MEASURED NOT ASSUMED. From 2019 onward the vendor emits
+    the 60 minutes `19:00`-`19:59` TWICE on the EU fall-back Sunday (the last Sunday in
+    October): 2019-10-27, 2020-10-25, 2021-10-31, 2022-10-30, 2023-10-29, 2024-10-27,
+    2025-10-26 — 60 minutes each, 420 rows in total. The 2013-2018 files contain ZERO
+    duplicate stamps, so this is a change in the vendor's pipeline, not a property of
+    the product `D-036a` declared.
+
+    THE REASON THIS IS SAFE TO REPAIR AT ALL, AND THE ONLY REASON: in all 420 cases the
+    two rows are IDENTICAL in open, high, low and close. Nothing is being chosen
+    between and no bar is ambiguous — one emission is a copy of the other. A repeated
+    wall-clock hour folded onto itself would look completely different, and this
+    function REFUSES to touch that case: a duplicated stamp whose bars DIFFER raises,
+    because picking one of two genuinely different bars for the same minute is a
+    modelling decision and it is not this function's to make.
+
+    Nothing is normalised silently. The raw CSVs on disk are untouched and still match
+    `raw/SHA256SUMS.txt`; the census below is carried in `DEDUPE_REPORT` and printed by
+    the QA gate.
+    """
+    if len(tm) == 0:
+        return tm, o, h, l, c, []
+    dup = np.zeros(len(tm), dtype=bool)
+    dup[1:] = tm[1:] == tm[:-1]
+    if not dup.any():
+        return tm, o, h, l, c, []
+    same = (o[1:] == o[:-1]) & (h[1:] == h[:-1]) & \
+           (l[1:] == l[:-1]) & (c[1:] == c[:-1])
+    conflict = np.zeros(len(tm), dtype=bool)
+    conflict[1:] = dup[1:] & ~same
+    if conflict.any():
+        bad = [m2s(t) for t in tm[conflict][:10]]
+        raise SystemExit(
+            f"DUPLICATE STAMPS CARRYING DIFFERENT BARS ({int(conflict.sum())}): {bad}. "
+            "This is not a re-emission and `_dedupe_exact()` will not guess which bar "
+            "is the minute. Record it and decide it explicitly (`D-044`)."
+        )
+    census = sorted(collections.Counter(
+        str(np.datetime64(int(t), "m").astype("datetime64[D]")) for t in tm[dup]
+    ).items())
+    keep = ~dup
+    return tm[keep], o[keep], h[keep], l[keep], c[keep], census
+
+
+DEDUPE_REPORT = []       # [(date, n_removed)], filled by `_load_raw_m1()`
+
+
+def _census_encode(census):
+    """Serialise the de-dup census as one string.
+
+    Deliberately a string and not two arrays: the first draft stored the dates as a
+    numpy `U10` column, which SILENTLY TRUNCATED every entry and round-tripped a census
+    of nonsense dates out of the cache while the fresh-parse path was correct. A cache
+    that returns a plausible-looking wrong answer is worse than no cache.
+    """
+    return ";".join(f"{d}={n}" for d, n in census)
+
+
+def _census_decode(s):
+    if not s:
+        return []
+    return [(p.split("=")[0], int(p.split("=")[1])) for p in s.split(";")]
+
+
 def _load_raw_m1():
-    """Parse the four checksummed raw CSVs once; cache the parse, never the results."""
+    """Parse every checksummed raw CSV once; cache the parse, never the results."""
+    global DEDUPE_REPORT
     os.makedirs(CACHE_DIR, exist_ok=True)
-    cache = os.path.join(CACHE_DIR, "m1_raw_v2.npz")
+    cache = os.path.join(CACHE_DIR, "m1_raw_v3.npz")
+    fp = _fileset_fingerprint()
     if os.path.exists(cache):
         z = np.load(cache, allow_pickle=False)
-        return z["tm"], z["o"], z["h"], z["l"], z["c"]
+        if str(z["fingerprint"]) == fp:
+            DEDUPE_REPORT = _census_decode(str(z["dedupe"]))
+            return z["tm"], z["o"], z["h"], z["l"], z["c"]
     tms, os_, hs, ls, cs = [], [], [], [], []
-    for name in sorted(os.listdir(RAW_DIR)):
-        if not name.startswith("DAT_MT_GBPUSD_M1_") or not name.endswith(".csv"):
-            continue
+    for name in _raw_files():
         df = pd.read_csv(
             os.path.join(RAW_DIR, name), header=None,
             names=["d", "t", "o", "h", "l", "c", "v"],
@@ -252,7 +407,10 @@ def _load_raw_m1():
     l = np.concatenate(ls); c = np.concatenate(cs)
     k = np.argsort(tm, kind="stable")
     tm, o, h, l, c = tm[k], o[k], h[k], l[k], c[k]
-    np.savez(cache, tm=tm, o=o, h=h, l=l, c=c)
+    tm, o, h, l, c, census = _dedupe_exact(tm, o, h, l, c)
+    DEDUPE_REPORT = census
+    np.savez(cache, tm=tm, o=o, h=h, l=l, c=c, fingerprint=np.array(fp),
+             dedupe=np.array(_census_encode(census)))
     return tm, o, h, l, c
 
 
@@ -286,8 +444,33 @@ class Bars:
         return (self.h - self.l) / PIP
 
 
-def load_m1(arm: str) -> Bars:
+def load_m1(arm: str, scope: str = DEFAULT_SCOPE) -> Bars:
+    """Load M1 on an arm's clock, clipped to `scope` (`SCOPES`, default DEVELOPMENT).
+
+    THE CLIP IS APPLIED ON THE RAW FILE CLOCK, BEFORE THE ARM SHIFT, AND THE CHOICE IS
+    LOAD-BEARING. Clipping on the arm's own clock instead looks more principled and is
+    a silent redefinition: under Arm B the +1h DST shift relabels the last four
+    development M15 bars to wall-clock 2016-07-01 (`I-010` Q2), so an arm-clock clip
+    drops them and Arm-B DEVELOPMENT quietly becomes 86,820 M15 bars where `D-036a`
+    committed 86,824. That is precisely the kind of change `D-044` must not make — it
+    would move a boundary that an OPEN OWNER QUESTION governs, in the course of adding
+    data that has nothing to do with it. `verify_against_committed("B")` catches it,
+    and did: it failed on row count on the first draft of this function.
+
+    So DEVELOPMENT stays exactly the set of raw stamps `D-035` names, on both arms, and
+    `I-010` Q2 stays exactly as open as it was.
+    """
+    if scope not in SCOPES:
+        raise SystemExit(f"unknown scope {scope!r}; known: {sorted(SCOPES)}")
     tm, o, h, l, c = _load_raw_m1()
+    lo, hi = SCOPES[scope]
+    if lo is not None or hi is not None:
+        m = np.ones(len(tm), dtype=bool)
+        if lo is not None:
+            m &= tm >= lo
+        if hi is not None:
+            m &= tm <= hi
+        tm, o, h, l, c = tm[m], o[m], h[m], l[m], c[m]
     tm2 = shift_to_arm(tm, arm)
     k = np.argsort(tm2, kind="stable")
     return Bars(tm2[k], o[k], h[k], l[k], c[k], arm, 1)
@@ -309,22 +492,37 @@ def resample(b: Bars, minutes: int) -> Bars:
                 g["l"].values, g["c"].values, b.arm, minutes)
 
 
-def load_m15(arm: str) -> Bars:
-    return resample(load_m1(arm), 15)
+def load_m15(arm: str, scope: str = DEFAULT_SCOPE) -> Bars:
+    """M15 on an arm's clock, clipped to `scope`.
+
+    The clip happens at M1, BEFORE bucketing, so a bucket is never built from a
+    partial set of the minutes that belong to it. Bucketing first and clipping after
+    would silently hand back a 15-minute bar assembled from whichever minutes fell
+    inside the scope — a different bar wearing the right timestamp.
+    """
+    return resample(load_m1(arm, scope), 15)
 
 
-def verify_against_committed(arm: str):
+def verify_against_committed(arm: str, scope: str = DEFAULT_SCOPE):
     """Re-derive M15 and diff it against the committed `aggregate_m15.py` output.
 
     The check that keeps the batch honest about its own tooling: if this module's
     bucketing ever drifts from the committed aggregator, every result downstream is
     quietly measuring something else.
+
+    `GBPUSD_M15_ARM{A,B}.csv` ARE AND REMAIN DEVELOPMENT-SCOPE FILES — 86,824 bars,
+    2013 -> 2016-06-30, byte-identical to what `D-036a` committed. `D-044`'s extended
+    bars are a SEPARATE artifact under `derived_ext/` and are deliberately not compared
+    here. Rebuilding these two files over the extended corpus instead would have made
+    the row-count arm of this check fail against every runner in the directory, and the
+    honest reading of that failure is that the reference moved, not that the module
+    drifted. So the reference does not move.
     """
     path = os.path.join(DATA_DIR, f"GBPUSD_M15_ARM{arm}.csv")
     ref = pd.read_csv(path, header=None, names=["d", "t", "o", "h", "l", "c", "v"])
     ref_tm = (pd.to_datetime(ref["d"] + " " + ref["t"], format="%Y.%m.%d %H:%M")
               .values.astype("datetime64[m]").astype("int64"))
-    mine = load_m15(arm)
+    mine = load_m15(arm, scope)
     if len(ref_tm) != len(mine):
         return False, len(ref_tm), len(mine), "row count"
     ts_ok = bool((ref_tm == mine.tm).all())
@@ -884,19 +1082,48 @@ def nlabel(n: int) -> str:
             if n < 30 else f"n = {n}")
 
 
-def header(test_id: str, title: str, arm_note: str = "") -> str:
-    qa, sha = qa_gate()
+def scope_manifest(scope: str = DEFAULT_SCOPE) -> str:
+    """The `raw/SHA256SUMS.txt` lines for the files a `scope` can actually reach.
+
+    A provenance header must describe the data the run READ, not every file that
+    happens to sit in the directory. `D-044` put nine more years on disk; echoing the
+    whole manifest into a DEVELOPMENT run would append nine hashes for years that run
+    cannot see, and would have rewritten the header of all sixteen committed `PT`
+    artifacts for no change in a single measured number.
+    """
+    with open(SHA_FILE) as fh:
+        lines = [l for l in fh.read().strip().splitlines() if l.strip()]
+    if scope != "development":
+        return "\n".join(lines)
+    keep = []
+    for l in lines:
+        name = l.split()[-1]
+        year = os.path.basename(name)[len("DAT_MT_GBPUSD_M1_"):][:4]
+        if year.isdigit() and int(year) <= 2016:
+            keep.append(l)
+    return "\n".join(keep)
+
+
+def header(test_id: str, title: str, arm_note: str = "",
+           scope: str = DEFAULT_SCOPE) -> str:
+    qa, _sha = qa_gate(scope)
     lines = [
         "=" * 78,
         f"{test_id} — {title}",
         "=" * 78,
         "corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:",
     ]
-    lines += ["           " + l for l in sha.strip().splitlines()]
+    lines += ["           " + l for l in scope_manifest(scope).strip().splitlines()]
+    holdout = (
+        "holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced"
+        if scope == "development" else
+        "holdout  : `D-044` released 2017-01-01 -> 2017-12-29 for use; "
+        "2016-07-01 -> 2016-12-31 REMAINS SEALED and is not on disk"
+    )
     lines += [
         "QA gate  : " + [l for l in qa.splitlines() if l.startswith("GATE:")][0],
         f"seed     : {SEED}   iterations: {ITERATIONS}   pip: {PIP}",
-        "holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced",
+        holdout,
         "levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).",
         "           Only shape and distance claims travel.",
     ]

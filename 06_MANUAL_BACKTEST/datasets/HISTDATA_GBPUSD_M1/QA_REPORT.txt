@@ -1,0 +1,76 @@
+==============================================================================
+HISTDATA GBP/USD M1 — DATA QA GATE
+==============================================================================
+files    : 4
+bars     : 1,297,781
+span     : 2013-01-01 17:00:00 -> 2016-06-30 23:59:00
+years    : (start) -> 2016
+
+--- GATING CHECKS (must be clean) ---
+C1 parse integrity     : PASS
+C2 duplicate timestamps: PASS
+C3 ordering            : PASS
+C4 OHLC coherence      : PASS
+
+--- REPORTS (human review, not gates) ---
+C5 spike census        : 578 bars > 12x rolling median range
+      2016-06-07 00:10:00  range   180.1 pips   local median   2.0   x 90.1
+      2016-03-25 14:09:00  range     6.5 pips   local median   0.1   x 65.0
+      2014-07-11 16:59:00  range    41.3 pips   local median   0.7   x 59.0
+      2016-03-25 14:08:00  range     5.3 pips   local median   0.1   x 53.0
+      2014-06-12 16:00:00  range    52.7 pips   local median   1.3   x 40.5
+      2013-09-27 01:20:00  range    48.6 pips   local median   1.2   x 40.5
+      2014-04-16 20:18:00  range    21.7 pips   local median   0.6   x 36.2
+      2013-04-25 04:30:00  range   108.5 pips   local median   3.0   x 36.2
+      2016-03-25 14:10:00  range     3.5 pips   local median   0.1   x 35.0
+      2013-07-04 07:00:00  range    94.0 pips   local median   2.7   x 34.8
+      2016-03-24 20:55:00  range    27.0 pips   local median   0.8   x 33.8
+      2016-06-23 19:17:00  range   469.9 pips   local median  14.0   x 33.6
+      2016-03-25 14:01:00  range     6.7 pips   local median   0.2   x 33.5
+      2015-10-15 16:59:00  range    36.4 pips   local median   1.1   x 33.1
+      2016-03-25 14:07:00  range     6.5 pips   local median   0.2   x 32.5
+      ... 563 more
+
+C6 gap census          : 3 intra-week gaps >= 30m, 4:43:00 total
+      2015-01-01 13:33:00 -> 2015-01-01 17:00:00   3:27:00
+      2015-08-21 13:16:00 -> 2015-08-21 13:57:00   0:41:00
+      2013-04-11 19:11:00 -> 2013-04-11 19:46:00   0:35:00
+
+C7 week-open census    : 181 week opens (Sunday-delimited)
+      time-of-day : {'17:00': 170, '17:01': 2, '17:03': 2, '17:04': 2, '17:06': 2}
+      6 INTRA-WEEK RE-OPENS — these are NOT week boundaries:
+        2013-01-01 17:00:00 (Tue) — mid-week re-open after a closure
+        2013-12-26 06:02:00 (Thu) — mid-week re-open after a closure
+        2014-01-01 17:00:00 (Wed) — mid-week re-open after a closure
+        2014-06-02 15:01:00 (Mon) — mid-week re-open after a closure
+        2014-12-25 18:00:00 (Thu) — mid-week re-open after a closure
+        2015-01-01 13:01:00 (Thu) — mid-week re-open after a closure
+      Deriving week boundaries from re-opens would split those weeks in two.
+      3 week(s) not closing on a Friday — invisible to this census:
+        week of 2015-12-20 ends 2015-12-24 (Thu), 5 sessions
+        week of 2015-12-27 ends 2015-12-31 (Thu), 5 sessions
+        week of 2016-06-26 ends 2016-06-30 (Thu), 5 sessions
+      modal open by month: {1: '17:00', 2: '17:00', 3: '17:00', 4: '17:00', 5: '17:00', 6: '17:00', 7: '17:00', 8: '17:00', 9: '17:00', 10: '17:00', 11: '17:00', 12: '17:00'}
+      seasonal shift (DST): NO — fixed offset year-round
+
+C8 session completeness: 11 sessions below 60% of nominal bars
+      2013-01-01 Tue    405 bars  (nominal ~1440,  28.1%)  <- Dec/Jan holiday, a real market closure
+      2013-12-25 Wed      0 bars  (nominal ~1440,   0.0%)  <- Dec/Jan holiday, a real market closure
+      2014-01-01 Wed    392 bars  (nominal ~1440,  27.2%)  <- Dec/Jan holiday, a real market closure
+      2014-06-01 Sun      0 bars  (nominal ~ 420,   0.0%)  <- *** ABSENT AND UNEXPLAINED ***
+      2014-06-02 Mon    521 bars  (nominal ~1440,  36.2%)  <- *** SHORT AND UNEXPLAINED ***
+      2014-12-24 Wed    840 bars  (nominal ~1440,  58.3%)  <- Dec/Jan holiday, a real market closure
+      2014-12-25 Thu    360 bars  (nominal ~1440,  25.0%)  <- Dec/Jan holiday, a real market closure
+      2015-01-01 Thu    424 bars  (nominal ~1440,  29.4%)  <- Dec/Jan holiday, a real market closure
+      2015-12-24 Thu    840 bars  (nominal ~1440,  58.3%)  <- Dec/Jan holiday, a real market closure
+      2015-12-25 Fri      0 bars  (nominal ~1020,   0.0%)  <- Dec/Jan holiday, a real market closure
+      2016-01-01 Fri      0 bars  (nominal ~1020,   0.0%)  <- Dec/Jan holiday, a real market closure
+      A short session is not automatically a defect. Holidays are closures;
+      an unexplained absence is a hole. Only a human tells them apart.
+
+==============================================================================
+GATE: PASS — C1-C4 clean
+C5-C8 require human sign-off before any PT test is run.
+Any session flagged by C8 must have an explicit, PRE-REGISTERED disposition
+(include / exclude / report separately) in the test that spans it.
+==============================================================================

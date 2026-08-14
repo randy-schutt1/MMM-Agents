@@ -7,6 +7,13 @@ Provenance for chart data used in manual backtesting.
 | Dataset | Governing decision | Directory |
 |---|---|---|
 | HistData GBP/USD M1, 2013 → 2016-H1 | `D-036a` | `HISTDATA_GBPUSD_M1/` |
+| …**extended** 2017 → 2025, M1 + derived M15/H1 | `D-044` | `HISTDATA_GBPUSD_M1/` (`raw/`, `derived_ext/`) |
+
+> **⚠ THE SAME DIRECTORY NOW HOLDS TWO POLICY BLOCKS.** `2013-01-06 → 2016-06-30` is `D-035`
+> DEVELOPMENT; `2017-01-01 → 2025-12-31` is the `D-044` extension, released by the owner for
+> forward-testing and backtesting. `2016-07-01 → 2016-12-31` is **still a sealed `D-035`
+> holdout and is not on disk.** Loading code defaults to DEVELOPMENT and the extension must be
+> named to be reached — see the `D-044` section below, and `D-044` §2 in `DECISIONS.md`.
 
 ## WHAT LIVES HERE
 
@@ -81,6 +88,64 @@ live chart work.
   2013–2016 data, so the `D-034` cross-vendor offset cannot be measured for these windows.
   Only *shape* and *distance* claims travel. See `D-036a`.
 - **Open clock questions:** `SETUP_ISSUES.md` `I-010`.
+
+## REGISTERED: THE `D-044` EXTENSION — 2017 → 2025
+
+Declared by **`D-044`** (2026-08-14) on the owner's ruling *"This can be used to forward test
+and backtest. Pull 2017-2025 if that's easiest."* Same vendor, same product, same `get.php`
+method as `D-036a`. **`D-036a`'s four files are untouched and their SHA-256 is unchanged.**
+
+| Field | Value |
+|---|---|
+| Files | `raw/DAT_MT_GBPUSD_M1_{2017…2025}.csv` — nine full-year files |
+| Retrieved | **2026-08-14** |
+| Span | **2017-01-02 02:00 → 2025-12-31 16:57** · 3,297,475 rows served, **3,297,055** after de-duplication |
+| Corpus total | **13 files, 4,594,836 M1 bars**, 2013-01-01 → 2025-12-31 |
+| Derived | `derived_ext/GBPUSD_M15_ARM{A,B}.csv` **307,576** bars/arm · `derived_ext/GBPUSD_H1_ARM{A,B}.csv` **76,901** bars/arm, continuous 2013 → 2025 |
+| Integrity | `raw/SHA256SUMS.txt`, `derived_ext/SHA256SUMS.txt` — **both committed** |
+| QA | `QA_REPORT_EXT.txt` **PASS** (as consumed) · `QA_REPORT_EXT_RAW.txt` **FAIL** (as served — kept deliberately, see below) |
+
+### Usage policy — read this before loading anything
+
+- **`2013-01-06 → 2016-06-30`** — `D-035` DEVELOPMENT. Unchanged.
+- **`2016-07-01 → 2016-12-31`** — `D-035` HOLDOUT, **STILL SEALED, NOT ON DISK.** This is now
+  the project's *only* intact holdout, and it carries the October 2016 flash crash.
+- **`2017-01-01 → 2017-12-29`** — was `D-035` HOLDOUT, **RELEASED** by `D-044`. It is no
+  longer out-of-sample and **must not be cited as such.**
+- **`2017-12-30 → 2025-12-31`** — outside `D-035`'s corpus entirely. Available.
+
+`mmm_lib.load_m1()` / `load_m15()` **default to DEVELOPMENT**; pass `scope="extended"` to reach
+the `D-044` years. Every pre-`D-044` runner therefore behaves exactly as it did — verified: all
+25 re-run byte-identical (`D-044` §6).
+
+### Notes — what differs from 2013-2016, and it is not nothing
+
+- **⚠ A DUPLICATED HOUR, EVERY YEAR FROM 2019.** The vendor emits `19:00`-`19:59` **twice** on
+  the EU fall-back Sunday — 2019-10-27, 2020-10-25, 2021-10-31, 2022-10-30, 2023-10-29,
+  2024-10-27, 2025-10-26; **420 rows**. 2013-2018 have **zero** duplicate stamps. All 420 pairs
+  carry **identical OHLC**, which is the only reason removing the copy is admissible; the
+  loaders check that identity and **refuse to run** if a duplicated stamp ever carries a
+  different bar. **The raw CSVs are not edited** — they still match `raw/SHA256SUMS.txt`, and
+  `QA_REPORT_EXT_RAW.txt` is committed *failing* so the defect stays visible.
+- **⚠ 2023-02-26 → 2023-07-23 IS MATERIALLY DEGRADED.** 2023 is ~13% light (322,467 bars vs a
+  ~372,000 median) with **672 intra-week gaps totalling 32 d 15 h** — every other year in the
+  corpus has ≤ 7 gaps and ≤ 7 h. For scale, the `2014-06-01` hole `D-036a` flagged is 22 hours.
+  **Any test spanning this block needs an explicit pre-registered disposition, and the honest
+  default is to exclude it by name and count the exclusion.**
+- **⚠ THE 17:00 WEEK OPEN DOES NOT CARRY FORWARD BY NAME PAST 2018.** 23 week opens sit at 16h,
+  all inside the March/October windows where US and EU DST disagree. The `D-036a` corpus has
+  **0 of 181** off-hour opens; 2017 and 2018 have none. Pooled across all nine years the modal
+  open is still 17h in all twelve months and there is **no seasonal shift** — but a
+  week-boundary test on 2019+ must state its convention rather than inheriting `W-C′`'s.
+- **Format holds otherwise:** column layout, 6-d.p. quotes, **structurally zero volume** (still
+  not traded volume, still unreadable by any test), and `C4` OHLC coherence all pass on
+  3,297,475 / 3,297,475 rows.
+- **Other unexplained short sessions,** named so nobody rediscovers them: `2019-05-26` (absent),
+  `2019-05-27`, `2020-11-30` (300 bars), `2021-05-31` (239 bars), `2023-03-17`, `2023-03-24`,
+  `2023-04-06`, `2023-04-07` (absent).
+- **Price levels remain NOT comparable with the V02-V06 FXCM homework** (`D-034` fact 2,
+  `D-036a`). Unchanged by this extension.
+- **2026 was not pulled.** The current year is partial and moves between fetches.
 
 ## LATER: DATASET GOVERNANCE (PHASE 4+)
 

@@ -48,7 +48,28 @@ C8 in particular CANNOT be a gate — Christmas and New Year produce genuinely s
 sessions that are market closures, not defects, and only a human separates those from a
 hole.
 
+`--from-year` / `--to-year` / `--dedupe-exact` WERE ADDED BY `D-044`, WHICH PUT NINE MORE
+YEARS IN THE SAME DIRECTORY. Two things stopped being true when it did:
+
+  1. "Run the gate on DATA_DIR" no longer means "run the gate on `D-035` DEVELOPMENT".
+     The year filter lets the DEVELOPMENT report stay exactly the report it was, and
+     lets the extension be gated as its own thing rather than averaged in with it.
+
+  2. C2 NO LONGER PASSES ON THE RAW FILES, and the reason is specific and bounded: from
+     2019 on the vendor emits the 60 minutes 19:00-19:59 TWICE on the EU fall-back
+     Sunday — 420 rows over seven years, every pair carrying IDENTICAL OHLC.
+     `--dedupe-exact` drops the re-emitted copy and REPORTS THE COUNT AND THE DATES; it
+     refuses outright if a duplicated stamp carries a different bar, because that would
+     be a real ambiguity rather than a copy.
+
+     RUN IT BOTH WAYS AND COMMIT BOTH. The un-repaired report is the honest record of
+     what the vendor served; the repaired one is the gate on the corpus as the project
+     actually consumes it (`mmm_lib.py` applies the same rule at load). A gate that only
+     ever sees the repaired form would hide the defect; a project that only ever sees
+     the raw form could never run.
+
 usage: python3 qa_histdata_m1.py DATA_DIR [--spike-mult 12] [--gap-min 30]
+                                 [--from-year Y] [--to-year Y] [--dedupe-exact]
        DATA_DIR holds DAT_MT_GBPUSD_M1_*.csv
 """
 import argparse
@@ -62,10 +83,13 @@ from datetime import datetime, timedelta
 PIP = 0.0001
 
 
-def load(data_dir):
+def load(data_dir, from_year=None, to_year=None):
     """Parse every CSV in the directory. Returns (rows, c1_errors).
 
     rows: list of (datetime, open, high, low, close, volume, source_file, line_no)
+
+    The year filter is applied to the BAR STAMP, not to the filename, so a file whose
+    name and contents disagree cannot slip a year past the bound.
     """
     rows, errors = [], []
     for path in sorted(glob.glob(os.path.join(data_dir, "DAT_MT_GBPUSD_M1_*.csv"))):
@@ -86,9 +110,33 @@ def load(data_dir):
                 except ValueError as exc:
                     errors.append((name, n, f"unparseable: {exc}"))
                     continue
+                if from_year is not None and ts.year < from_year:
+                    continue
+                if to_year is not None and ts.year > to_year:
+                    continue
                 rows.append((ts, o, h, l, c, v, name, n))
     rows.sort(key=lambda r: r[0])
     return rows, errors
+
+
+def dedupe_exact(rows):
+    """`D-044`. Drop re-emitted rows only, and say exactly what was dropped.
+
+    Returns (rows, removed_by_day, conflicts). A "conflict" is a repeated stamp whose
+    OHLC DIFFER — this function never resolves one, it reports it, because choosing
+    between two different bars for the same minute is a modelling decision and not a
+    cleanup.
+    """
+    out, removed, conflicts = [], [], []
+    for r in rows:
+        if out and r[0] == out[-1][0]:
+            if r[1:5] == out[-1][1:5]:
+                removed.append(r[0])
+            else:
+                conflicts.append(r[0])
+            continue
+        out.append(r)
+    return out, sorted(collections.Counter(d.date() for d in removed).items()), conflicts
 
 
 def check_duplicates(rows):
@@ -245,12 +293,21 @@ def main():
     ap.add_argument("data_dir")
     ap.add_argument("--spike-mult", type=float, default=12.0)
     ap.add_argument("--gap-min", type=int, default=30)
+    ap.add_argument("--from-year", type=int)
+    ap.add_argument("--to-year", type=int)
+    ap.add_argument("--dedupe-exact", action="store_true",
+                    help="drop vendor re-emitted rows before gating (`D-044`); "
+                         "the removal is always reported, never silent")
     args = ap.parse_args()
 
-    rows, c1 = load(args.data_dir)
+    rows, c1 = load(args.data_dir, args.from_year, args.to_year)
     if not rows:
         print("FAIL C1: no parseable rows found in", args.data_dir)
         return 1
+
+    dedup_days, conflicts = [], []
+    if args.dedupe_exact:
+        rows, dedup_days, conflicts = dedupe_exact(rows)
 
     print("=" * 78)
     print("HISTDATA GBP/USD M1 — DATA QA GATE")
@@ -258,6 +315,18 @@ def main():
     print(f"files    : {len(set(r[6] for r in rows))}")
     print(f"bars     : {len(rows):,}")
     print(f"span     : {rows[0][0]} -> {rows[-1][0]}")
+    if args.from_year or args.to_year:
+        print(f"years    : {args.from_year or '(start)'} -> {args.to_year or '(end)'}")
+    if args.dedupe_exact:
+        n = sum(k for _d, k in dedup_days)
+        print(f"dedupe   : `D-044` exact-duplicate removal APPLIED — {n} row(s) dropped")
+        for d, k in dedup_days:
+            print(f"           {d}  {k} re-emitted minute(s)")
+        if conflicts:
+            print(f"           *** {len(conflicts)} DUPLICATED STAMP(S) CARRY DIFFERENT "
+                  f"BARS — NOT REPAIRED, NOT REPAIRABLE HERE ***")
+            for t in conflicts[:10]:
+                print(f"           {t}")
     print()
 
     c2 = check_duplicates(rows)
@@ -333,7 +402,7 @@ def main():
     print("      an unexplained absence is a hole. Only a human tells them apart.")
     print()
 
-    gate_ok = not (c1 or c2 or c3 or c4)
+    gate_ok = not (c1 or c2 or c3 or c4 or conflicts)
     print("=" * 78)
     print("GATE:", "PASS — C1-C4 clean" if gate_ok else "FAIL — see above")
     print("C5-C8 require human sign-off before any PT test is run.")
