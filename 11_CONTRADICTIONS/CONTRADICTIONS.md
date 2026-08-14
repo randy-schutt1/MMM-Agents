@@ -2372,3 +2372,166 @@ session NOT to resolve something it could have resolved.**
 `02_TRANSCRIPTS/V12/V12_TRANSCRIPT.md` clip `c6`;
 `04_SCREENSHOTS/V12/INDEX.md` frames 11, 18, 19;
 `03_LESSON_NOTES/V12_SOURCE_NOTES.md` §6b, §6c.
+
+---
+
+## C-020 — V13's answer slide contradicts V13's spoken answers, twice, on the same slide — and the two conflicts are different in kind
+
+**Raised by:** V13 · printed `[00:29:35]` vs spoken `[00:29:13]` and `[00:30:11]`
+**Speaker:** course author — **both sides. This is a Tier 1 internal contradiction, not a
+Tier 1/Tier 2 divergence.**
+**Frame:** `04_SCREENSHOTS/V13/V13_00-29-35_answers-boxes-blue-shadow-red-and-stop-hunt-distance.png`
+
+> ⭐ **NEITHER CONFLICT IS VISIBLE ON AUDIO ALONE, AND NEITHER IS VISIBLE ON THE FRAME ALONE.**
+> They exist only in the comparison. This is `SWF_CAPTURE_RECIPE.md` §9's stated rationale for the
+> separate screenshot pass, producing its intended effect for the second time in the corpus after
+> V01's *"pendings"*.
+
+---
+
+## §1 — THE SHADOW BOX'S TIMEZONE
+
+| Side | Content |
+|---|---|
+| **PRINTED**, `[00:29:35]` | *"What time should the shadow box paint? **3 to 4 am NYYC**"* — the deck's own typo for `NYC` |
+| **SPOKEN**, `[00:29:13]`–`[00:29:26]` | *"What time should the shadow box paint? **3 to 4 a.m. New York? 9 to 10. I'm sorry, 3 to 4 a.m. London? And 9 to 10. U.S.**"* |
+
+**The speaker reads his slide, hears himself, and corrects it in real time.** The *"I'm sorry"* is
+the pivot. **Independently ASR-confirmed by `faster-whisper small.en` in a segment cut for this
+purpose** (`V13_TRANSCRIPT.md` VERIFICATION), so the correction is not a transcription artefact.
+
+### Why this is material and not pedantry
+
+**3–4 AM London and 3–4 AM New York are five hours apart.** On 2012-04-15 both zones are on summer
+time (BST = UTC+1, EDT = UTC−4). The two readings put the shadow box on **opposite sides of the
+London session**:
+
+- **3–4 AM London** = 02:00–03:00 UTC = **the last hour of Asia, immediately before the London
+  open.**
+- **3–4 AM New York** = 07:00–08:00 UTC = **08:00–09:00 London — the hour spanning the London
+  open.**
+
+### ⭐ EVIDENCE FROM OUTSIDE V13, FOUND WHILE GRADING THE HOMEWORK, AND IT FAVOURS THE **SLIDE**
+
+> ⚠️ **THIS PARAGRAPH REVERSES THIS SESSION'S OWN FIRST DRAFT AND IS LEFT VISIBLE**
+> (`REMEDIATION_PROTOCOL.md` §2). The draft asserted that *"the London reading is the one that
+> coheres with the Brinks times"*. **That was reasoning from the number `3:45` with no timezone
+> attached to it, and the corpus already carries one.**
+
+`V06_SOURCE_NOTES.md` records a **printed** slide — the DMR curriculum, `V06_00-48-29`, Week 10 —
+reading:
+
+> *"**Brinks Trade** - 2nd Leg of a M or W pattern Falling inside the **Shadow Box** and more
+> specifically at **3:45am or 9:45am est**."*
+
+**V13 `[00:29:29]` says the Brinks trade is what sets up in the shadow box.** If the Brinks times
+are `est`, and Brinks sits inside the shadow box, then **the shadow box's `3 to 4 am` is EST/NYC —
+which is what the SLIDE says and what the speaker retracted.**
+
+**This does not resolve §1; it makes non-resolution better-founded.** Before it, the conflict was a
+slide against a live correction, and the correction would ordinarily win. After it, **both sides
+have independent Tier 1 printed support** — V13's own slide and V06's DMR slide on one side, V13's
+spoken *"I'm sorry"* on the other.
+
+⚠ **Two limits on the V06 evidence, stated rather than glossed:** the DMR curriculum is the
+syllabus of a **different, paid programme** shown inside a bootcamp lesson, so it is Tier 1 by
+authorship but not by venue; and `est` in a 2012 April document may be loose usage for EDT. Neither
+limit changes the direction of the evidence.
+
+### ⚠ WHY THIS SESSION DOES NOT RESOLVE IT
+
+`SOURCING_HIERARCHY.md`'s *"the recording wins"* would ordinarily favour the spoken London reading.
+**A resolution is declined on four grounds:**
+
+1. **Both sides are Tier 1.** The slide is not a secondary source being overruled by a recording —
+   it is the same author in the same lesson. `SOURCING_HIERARCHY.md` §3 has no case for *Tier 1 vs
+   Tier 1 within one lesson*.
+2. ⚠ **The correction may be about the SECOND clause, not the first.** He says four things in
+   thirteen seconds: `3–4 NY`, `9–10`, *"I'm sorry"*, `3–4 London`, `9–10 US`. **If `3:45` is a
+   London-session time and `9:45` a US one, then a two-window answer of `3–4 London` + `9–10 US` is
+   coherent — but so is a reading where he mislabels the first window and the "I'm sorry" attaches
+   to the missing `US` qualifier on the second.** Nothing in the audio disambiguates which word he
+   is retracting.
+3. **`D-030` binds and `D-031` doubles it.** A session-boundary definition is never approximated,
+   and session timezone is a **tested variable, not an assumption**. Adopting either reading
+   silently would fix a five-hour question by preference.
+4. ⭐ **The V06 Brinks evidence points at the SLIDE**, i.e. at the side the *"recording wins"* rule
+   would have discarded. **A rule that would have thrown away the better-corroborated reading is a
+   rule being applied outside its scope** — it exists for Tier 1 vs Tier 2, not for one author
+   against himself.
+
+**`C-011`'s asymmetry applies exactly**: the slide is defeated as an authority **without** the audio
+supplying an unambiguous replacement, so the record stays blocked rather than flipping.
+
+---
+
+## §2 — THE STOP-HUNT BOX'S DISTANCE FROM THE BLUE BOX
+
+| Side | Content |
+|---|---|
+| **PRINTED**, `[00:29:35]` | *"What distance should the stop Hunt box be from the blue box? **25 to 50**"* |
+| **SPOKEN**, `[00:30:11]`–`[00:30:31]` | *"**25 at the bottom or start? 50 pips on the top side of the range.** … Okay. **It's a 25 pip box. 25 pips away from the top or bottom of the blue box.**"* — ASR-confirmed |
+
+**This is a different failure from §1: there is no correction, and no *"I'm sorry"*.** He offers an
+**asymmetric** reading (25 below / 50 above) and then, nine seconds later and without retracting it,
+a flatly **symmetric** one (25 from either side, twice).
+
+### The three readings the evidence supports, none of which can be eliminated
+
+| # | Reading | Consistent with printed `25 to 50`? |
+|---|---|---|
+| **A** | The box sits **25 pips** from whichever edge of the blue box it is measured from — symmetric | ⚠ Only if `25 to 50` is read as *"somewhere in 25–50"* |
+| **B** | **25 below** the blue box's low, **50 above** its high — asymmetric | ✅ Reads `25 to 50` as *"25 and 50"* |
+| **C** | The distance is a **range**, 25–50 pips, either side | ✅ |
+
+**`[00:30:31]` is the last word spoken on it and states A twice**, which is the strongest single
+piece of evidence — **and it is the reading LEAST consistent with the slide he is reading from.**
+
+### ⚠ AND IT COLLIDES WITH AN EXISTING RECORD
+
+`A-076` already carries a `25 to 50` collision: V12 `[00:23:43]` attaches `25 to 50 pips` to the
+**size of the blue box** (*"is the blue box 25 to 50 pips, is your tight trading range?"*), while
+`MMM-NOTES` p.45 and V04 `[00:37:26]` attach it to a **distance above the Asian range**. **V13 now
+supplies a THIRD referent for the same number — the distance of a DIFFERENT box from the blue box.**
+
+> ⭐ **THE SAME TWO NUMBERS, `25` AND `50`, NOW DENOTE AT LEAST THREE DISTINCT QUANTITIES IN THIS
+> CORPUS**: the blue box's own width, a stop-hunt excursion beyond the Asian range, and the
+> stop-hunt box's offset from the blue box. **This is recorded as the finding, and it is a stronger
+> reason not to code any of them than any one of the three conflicts is.** A pattern-matching
+> session that greps `25 to 50` and adopts a hit will pick one of three meanings at random.
+>
+> ⚠ **It is also a warning about `[00:35:24]`**, which uses the same numbers a fourth time — *"if
+> the Asian range is 25 to 50 pips, and the dealer makes a 25 to 50 pips stop hunt"* — **inside a
+> worked example**. `PT-041` pre-registers a test of that arithmetic and is scoped **explicitly** to
+> the excursion sense, naming this record, precisely so the test cannot be mistaken for evidence
+> about the other three.
+
+---
+
+## Current Status
+
+```text
+DO NOT CODE -- neither the shadow-box window nor the stop-hunt-box distance.
+
+Shadow box   : PRINTED "3-4 am NYC" vs SPOKEN self-corrected "3-4 am London".
+               Five hours apart. NOT resolved -- Tier 1 vs Tier 1, and the
+               scope of the correction is itself ambiguous.
+Stop-hunt box: PRINTED "25 to 50" vs SPOKEN asymmetric (25/50) vs SPOKEN
+               symmetric (25). Three readings, none eliminable.
+               Feeds A-076, which was already carrying a 25-to-50 collision.
+```
+
+### Required Research
+
+For §1: any later lesson stating the shadow box's window **with a timezone**. Note that the
+Brinks-times route is now **partially discharged** by `V06_00-48-29`'s `est`, which favours the
+slide; what is still missing is a statement about **the box** rather than about the trade inside
+it. For §2: a single
+statement of the offset that is not read off this deck.
+
+### Related
+
+`A-076`, `A-039`, `A-088`, `C-011`, `D-030`, `D-031`, `D-040`; `PT-041`;
+`03_LESSON_NOTES/V13_SOURCE_NOTES.md` §4, `V13_INTERPRETATION.md` Q4;
+`04_SCREENSHOTS/V13/INDEX.md` frame `00:29:35`; `03_LESSON_NOTES/V06_SOURCE_NOTES.md` (DMR
+curriculum, frame `V06_00-48-29`, Week 10).

@@ -1,0 +1,107 @@
+==============================================================================
+PT-041 — The range arithmetic — '50 pips on the table' (W-B)
+==============================================================================
+corpus   : HistData GBP/USD M1 (`D-036a`), SHA-256 manifest:
+           c816de54e63775480f037e09db4fa1e3568afbdf75ea15cd3bf17fe7e58aba09  raw/DAT_MT_GBPUSD_M1_2013.csv
+           660eb43e92f75e8f8cfc617095e5f03b3c65df2d877dfeb69d175d3640598377  raw/DAT_MT_GBPUSD_M1_2014.csv
+           88e48765e2113cbcff053ca23cd965c3016416b2b8268db0046e2b8dcedf2673  raw/DAT_MT_GBPUSD_M1_2015.csv
+           8c3900e147e69930bff231d8581038f18fc90200b70b91cf33c1f40d0140e8b3  raw/DAT_MT_GBPUSD_M1_2016H1.csv
+QA gate  : GATE: PASS — C1-C4 clean
+seed     : 20260812   iterations: 1000   pip: 0.0001
+holdout  : `D-035` 2016-07-01 -> never opened; assert_development() enforced
+levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).
+           Only shape and distance claims travel.
+window   : W-B 2014-01-05 -> 2015-12-31 (wholly inside DEVELOPMENT)
+==============================================================================
+PRE-REG  : PRE_REGISTERED/PT-041_the_range_arithmetic_fifty_on_the_table.md
+           committed BEFORE this script existed (see the module docstring).
+SOURCE   : V13 [00:35:24], course author, independently ASR-confirmed.
+QA GATE  : PASS (qa_histdata_m1.py) — precondition per `D-036a`.
+
+!! BEST-CASE / UPPER BOUND. `PT-041` §1a caveat 1: 'you catch absolute zero'
+!! is the speaker's own perfect-entry stipulation, so F4's origin is the
+!! post-box extreme -- knowable only after the fact, DECLARED IN ADVANCE as a
+!! measurement origin and NOT used as a classification. THIS TEST PRODUCES NO
+!! TRADEABLE SIGNAL. It measures only whether a DISTANCE EXISTS.
+!! `25 to 50` is a colliding token (`C-020` §2, three senses). F1 uses the
+!! box-WIDTH sense, F3 the EXCURSION-BEYOND sense -- both V13's own. No result
+!! here is evidence about the third sense or about `C-020`.
+
+==============================================================================
+ARM A
+==============================================================================
+  n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+  F1  box width in [25,50] pips : 291 of 512 days (0.568); median box width all days = 31.0 pips
+  F2  ties excluded (equal or both-zero excursions), within F1 : 0
+  F3  excursion in [25,50] pips        : 83
+  F4  days excluded, no bars after the extreme : 2
+  n   DECISION POINTS = 81   n = 81
+
+  ORDER (`PT-041` §7 step 5): O4 -- the claim's PREMISE -- is computed first.
+  O4  P(price returns INTO the box)      = 0.704 (57/81), 95% CI [0.597, 0.792]
+  O1  P(MFE >= 50 pips)                  = 0.543 (44/81), 95% CI [0.435, 0.647]
+  O2  P(MFE >= 40 pips)                  = 0.630 (51/81), 95% CI [0.521, 0.727]
+  O3  median MFE                        = 56.8 pips  (boot 95% CI 41.4 .. 65.2)
+      mean 54.9 · p25 33.9 · p75 74.2 · max 112.7
+
+  C-PRE  (as pre-registered; NOT like-for-like -- grid MFE is truncated by
+          the stop/target resolution, so this UNDERSTATES the control)
+          n_grid = 81   median 17.59, 5-95% [14.37, 20.67]
+
+  C-LIKE (added at run time; SAME metric, SAME code path, random origin bar)
+          O1 control  P(MFE >= 50) = 0.094  [p2.5 0.049 .. p97.5 0.148]
+          O2 control  P(MFE >= 40) = 0.167  [p2.5 0.099 .. p97.5 0.235]
+          median MFE control    = 14.4 pips
+  DELTA   O1 rule - control = +44.9 pp   (SS6 clause requires >= +10.0 pp)
+          O2 rule - control = +46.2 pp
+
+==============================================================================
+ARM B
+==============================================================================
+  n = 512 (3 excluded for incomplete sessions: 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))
+  F1  box width in [25,50] pips : 252 of 512 days (0.492); median box width all days = 26.7 pips
+  F2  ties excluded (equal or both-zero excursions), within F1 : 0
+  F3  excursion in [25,50] pips        : 69
+  F4  days excluded, no bars after the extreme : 2
+  n   DECISION POINTS = 67   n = 67
+
+  ORDER (`PT-041` §7 step 5): O4 -- the claim's PREMISE -- is computed first.
+  O4  P(price returns INTO the box)      = 0.701 (47/67), 95% CI [0.583, 0.798]
+  O1  P(MFE >= 50 pips)                  = 0.522 (35/67), 95% CI [0.405, 0.637]
+  O2  P(MFE >= 40 pips)                  = 0.642 (43/67), 95% CI [0.522, 0.746]
+  O3  median MFE                        = 52.9 pips  (boot 95% CI 41.1 .. 66.6)
+      mean 53.7 · p25 33.5 · p75 76.6 · max 112.2
+
+  C-PRE  (as pre-registered; NOT like-for-like -- grid MFE is truncated by
+          the stop/target resolution, so this UNDERSTATES the control)
+          n_grid = 67   median 18.25, 5-95% [14.9, 21.89]
+
+  C-LIKE (added at run time; SAME metric, SAME code path, random origin bar)
+          O1 control  P(MFE >= 50) = 0.101  [p2.5 0.030 .. p97.5 0.179]
+          O2 control  P(MFE >= 40) = 0.176  [p2.5 0.104 .. p97.5 0.269]
+          median MFE control    = 15.3 pips
+  DELTA   O1 rule - control = +42.2 pp   (SS6 clause requires >= +10.0 pp)
+          O2 rule - control = +46.5 pp
+
+==============================================================================
+BOTH ARMS SIDE BY SIDE — `D-031` requires both, always. NEVER POOLED.
+==============================================================================
+                                             ARM A       ARM B
+n (decision points)                             81          67
+O4  P(returns into the box)                  0.704       0.701
+O1  P(MFE >= 50 pips)                        0.543       0.522
+O2  P(MFE >= 40 pips)                        0.630       0.642
+O3  median MFE (pips)                         56.8        52.9
+
+==============================================================================
+DECISION RULE — `PT-041` §6, applied verbatim, boundaries fixed before the run
+==============================================================================
+  VERDICT: PARTIALLY SUPPORTED
+  BASIS  : O2 >= 0.50 but not every SUPPORTED clause is met in both arms
+
+  NOTE ON THE CONTROL CLAUSE: `PT-041` §6 requires O1 to exceed the matched-
+  random control by >= 10 pp. The control is a distribution over a different
+  outcome family (the TradeGrid's stop/target resolution), so the comparison
+  is stated and adjudicated IN THE REPORT rather than silently coerced here.
+  Coercing it would be exactly the post-hoc move `PT-040` was praised for
+  refusing. The control's own numbers are printed above, per arm.
