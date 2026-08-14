@@ -22,6 +22,56 @@ V14 (2026-08-14):    ⭐ R1 RETURNED — REVISE, 0 CRITICAL / 0 MAJOR / 5 MINOR 
                      Items 172-176 (MINOR) are owed before V14 reaches COMPLETE;
                      V14 is NOT COMPLETE and only a reviewer PASS makes it so
                      (D-004). Items 177-185 are NOTE/RULING/OWNER.
+
+                     ⚠⚠ STATUS SUPERSEDED 2026-08-14 BY THE R1 REMEDIATION.
+                     Retained per REMEDIATION_PROTOCOL.md §2 -- the two lines
+                     above ("V14 is NOT COMPLETE and only a reviewer PASS makes
+                     it so") were the correct state to hold until items 172-176
+                     were addressed. THEY NOW ARE. See below.
+
+V14 (2026-08-14)     ⚠ V14 IS NOW **COMPLETE -- SELF-VERIFIED AT OWNER
+  REMEDIATION:       DIRECTION**, NOT "COMPLETE -- VERIFIED".
+
+                     Items 172-176 were FIXED AND CLOSED BY THE SAME SESSION,
+                     on the owner's explicit authorisation for this round
+                     specifically, on the ground that all five are small
+                     documentation edits. THAT AUTHORISATION IS REAL AND IT IS
+                     RECORDED -- BUT IT DOES NOT MANUFACTURE INDEPENDENCE, AND
+                     THIS ROUND DOES NOT SATISFY D-003. All five carry
+                     CLOSED -- SELF-VERIFIED AT OWNER DIRECTION, which exists
+                     for no other purpose than to be visibly different from
+                     CLOSED -- VERIFIED. THERE WAS NO R2 AND NO INDEPENDENT
+                     PASS. R1's REVISE verdict stands as the last arm's-length
+                     judgement anyone made about V14.
+                     FOURTH use of the pattern, after V09 R2 (items 81-83),
+                     V10 R1 (91-94) and V12 R1 (137-138).
+
+                     ⭐ Item 186 OPENED BY the remediation: item 174's frame
+                     offset is a DROPPED STEP, NOT a broken tool. V12's
+                     INDEX.md §0 already documents the same +16 s offset with a
+                     6/6 verification table and V13 documents +15 s; both named
+                     frames FROM THE BURNED TIMECODE. V14 has no §0 section and
+                     named from the raw sweep index. The offset is click
+                     latency amplified 10x by the fast sweep, so it VARIES per
+                     run and cannot be hardcoded. SWF_CAPTURE_RECIPE.md §8a now
+                     makes measuring it a MANDATORY numbered step.
+
+                     Nothing that bears on a measurement, classification,
+                     disposition, threshold or grade moved. PT-042's verdict and
+                     all four outcome measures, A-084's blocker status, A-056's
+                     non-closure, Q-015, C-021's non-adjudication and every
+                     D-0xx are UNTOUCHED. pt042_output.txt and pt042_result.json
+                     were NOT regenerated. validate_project.py: 103 passed,
+                     0 warnings, 0 failures.
+
+                     ⚠⚠⚠ THE V15 GATE WAS ALREADY OPEN AND THIS ROUND DID NOT
+                     CHANGE IT AND COULD NOT HAVE. "GATE OPEN" IS NOT "PROCEED
+                     TO V15". THE OWNER'S HARD STOP FOR THE COMPREHENSION/GAP
+                     AUDIT STANDS. V14 reaching COMPLETE removes the last
+                     review-severity obstacle to V15 work; IT DOES NOT
+                     AUTHORISE V15 WORK. NO SESSION MAY OPEN V15 WITHOUT THE
+                     OWNER'S SEPARATE GO-AHEAD. Item 185 is the audit input
+                     still awaiting that decision.
                      CONFIRMED BY RE-DERIVATION, NOT BY READING: PT-042
                      re-implemented from PT-042 §3 before run_pt042.py was
                      opened -- O1 0.3468/0.3030, O2 0.4617/0.4483, medMFE
@@ -2044,7 +2094,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V11 | Wk4 P1 | 00:50:56 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | **R1 REVISE 0C/0M/5min** | **IN REMEDIATION (items 109-113) · V12 GATE OPEN** |
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-080 + A-064 + A-031 + A-032 CLOSED, A-020 mayo row → Tier 1, C-019 opened, PT-040 MATERIAL |
 | V13 | Wk5 P1 | 01:05:22 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-084 NARROWED not closed (A-087), legend route CLOSED corpus-wide, A-088 + C-020 opened, Q-014 filed, PT-041 PARTIALLY SUPPORTED |
-| V14 | Wk5 P2 | 00:47:48 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | **R1 REVISE** 0C/0M/5m/9n, HIGH, 2026-08-14 | ⭐ **R1 RETURNED — V15 GATE OPEN under D-024, AND THE OWNER'S HARD STOP STANDS.** Items 172-176 (MINOR) OWED; V14 **NOT COMPLETE**. Rulings: A-056 **NOT CLOSED** (item 178) · A-084 defeater **HOLDS** vs 4 attacks (184) · D3 **legitimate but unnecessary and unverified** (179) · C-021 forwarded to owner · ⭐ A-056 ANSWERED (closure put to reviewer), A-077 advanced (A-094), A-084 NARROWED not closed 2nd consecutive, A-086 advanced + C-021 opened, A-089-A-094 filed, Q-015 filed, PT-042 NOT SUPPORTED |
+| V14 | Wk5 P2 | 00:47:48 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** *(superseded, retained: `REVIEW REQUIRED`)* | **R1 REVISE** 0C/0M/5m/9n, HIGH, 2026-08-14 → **R1 fix round** ⚠ **SELF-VERIFIED**, items 172–176 `CLOSED — SELF-VERIFIED AT OWNER DIRECTION`, **NOT** `CLOSED — VERIFIED`; **D-003 NOT satisfied for the fix round, no R2, no independent PASS**; item 186 opened | ⭐ **R1 RETURNED — V15 GATE OPEN under D-024, AND THE OWNER'S HARD STOP STANDS.** Items 172-176 (MINOR) OWED; V14 **NOT COMPLETE**. Rulings: A-056 **NOT CLOSED** (item 178) · A-084 defeater **HOLDS** vs 4 attacks (184) · D3 **legitimate but unnecessary and unverified** (179) · C-021 forwarded to owner · ⭐ A-056 ANSWERED (closure put to reviewer), A-077 advanced (A-094), A-084 NARROWED not closed 2nd consecutive, A-086 advanced + C-021 opened, A-089-A-094 filed, Q-015 filed, PT-042 NOT SUPPORTED  · ⚠ **REMEDIATION 2026-08-14:** all five MINORs closed **SELF-VERIFIED**; ⭐ item **186** opened — the item-174 frame offset is a **dropped step, not a broken tool** (V12 §0 and V13 both document and correct it; `SWF_CAPTURE_RECIPE.md` §8a now mandatory); ⭐ item **176** — a **second, larger, UNEXAMINED** `Wk9→Wk10` four-week gap, so the gap audit's figure is **2 KNOWN + up to ~3 UNKNOWN, not 2**; ⚠⚠ **V15 GATE OPEN ≠ PROCEED — THE OWNER'S HARD STOP STANDS** |
 | V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V16 | Wk7 P2 | 00:44:35 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V17 | Wk8 P1 | 00:57:09 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |

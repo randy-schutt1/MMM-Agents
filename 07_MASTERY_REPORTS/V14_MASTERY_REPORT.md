@@ -210,3 +210,93 @@ disclosed as defective.**
    four coloured lines. **Re-open the frame.** If red is faster than yellow, the claim is wrong.
 6. **`C-021`.** Is leaving it unadjudicated right, or does `SOURCING_HIERARCHY.md` in fact supply a
    rule this session missed?
+
+---
+
+# ⚠ REVISION R1 — REMEDIATION OF `V14_REVIEW_R1.md`, ITEMS 172–176
+
+**Date:** 2026-08-14 · **Branch:** `fix/v14-r1-minors` · **Appended, not overwritten**
+(`REMEDIATION_PROTOCOL.md` §3.5).
+
+> ## ⚠⚠ READ THIS FIRST — THIS ROUND IS **SELF-VERIFIED**, NOT INDEPENDENTLY VERIFIED
+>
+> **Items 172–176 were FIXED AND CLOSED BY THE SAME SESSION**, on the owner's explicit
+> authorisation for this round specifically, on the ground that all five are small documentation
+> edits. **That authorisation is real and it is recorded — but it does not manufacture
+> independence, and this round does NOT satisfy `D-003`.**
+>
+> All five carry **`CLOSED — SELF-VERIFIED AT OWNER DIRECTION`**, **not** `CLOSED — VERIFIED`.
+> **There was no R2 and no independent reviewer `PASS`.** R1's `REVISE` verdict stands as the last
+> arm's-length judgement anyone made about V14. **Fourth use of the pattern**, after V09 R2
+> (items 81–83), V10 R1 (91–94) and V12 R1 (137–138).
+
+## What changed, by item
+
+| Item | Finding | Disposition |
+|---|---|---|
+| **172** | `M1` — `A-089` quotes the middle-of-range verdict as a declarative | **Documentation fix.** Corrected to the interrogative at `A-089` and `V14_SOURCE_NOTES.md` §2, citing both engines; logged as **correction 8** in `V14_TRANSCRIPT.md`, flagged as **R1's** ASR pass rather than this session's. ⭐ **`A-056`'s disposition re-checked — unchanged** |
+| **173** | `M2` — two clocks mixed; citations absent from the marker index | **Documentation fix.** Convention **declared once**; **59 sites rewritten** to the marker grid; `[00:34:35]` → **`[00:35:37]`**; full crosswalk retains every superseded citation |
+| **174** | `M3` — all 29 frames `+16 s`; `INDEX.md` §2 misquotes | **Documentation fix + root-cause investigation.** All 29 re-measured from the pixels; `§0a` correction table added; §2 corrected to `27:06`; the *"proves its own timestamp"* claim **withdrawn**. ⭐ **Root cause found — item 186** |
+| **175** | `M4` — twelve moved records carry no pointer; two read false | **Documentation fix.** Pointers in all twelve; **`A-056`** rewritten per item 178's disposition; **`A-084`**'s stale prediction closed out |
+| **176** | `M5` — `A-092`'s count is corpus-wide and wrong | **Documentation fix + a new measurement.** `A-092` rescoped; **full 21-file calendar audit**; **Gap B** recorded and left **UNEXAMINED** pending item 179 |
+
+## Work redone (not edited)
+
+⚠️ **NONE, AND NONE WAS OWED.** All five findings are `MINOR` and every one is a **documentation
+fix** under `REMEDIATION_PROTOCOL.md` §3.3. **No finding impugned an underlying test, a
+classification, a sample or a measurement**, so §2's *redo-do-not-reword* rule is **not engaged** —
+and the distinction is stated explicitly rather than assumed, because §2 exists precisely to stop a
+session from calling an evidence fix a documentation fix.
+
+⭐ **`PT-042` WAS NOT RE-RUN AND MUST NOT BE.** `pt042_output.txt` and `pt042_result.json` are
+**untouched**. Five of the pre-registration's *citations* moved and **an amendment banner discloses
+it**: no threshold, window, filter, arm, outcome measure or decision rule moved, and the whole diff
+is five timestamp tokens.
+
+## Retesting
+
+**Nothing required retesting**, and that is a finding rather than an omission: **no rule definition,
+threshold or classification changed anywhere in this round**, so no chart classification or backtest
+observation became suspect under §3.4.
+
+**What was re-measured — three times, and in each case this round's own figure was recorded, not
+R1's:**
+
+1. **The citation scan** — re-run mechanically against the 600-marker index. **25 distinct
+   timestamps at 59 sites across 7 files**, against R1's *20 at 30 across 9*. **More than the review
+   found.** Re-runs clean.
+2. **All 29 burned timecodes** — re-cropped and re-read. **Reproduces R1 exactly.**
+3. **The corpus calendar** — audited over **all 21 files**, not the named region. **Exactly two
+   anomalous regions**, tighter than R1's *"at least one further"*.
+
+## ⭐ The one place this round DISAGREES with R1, and it matters
+
+**R1 charged item 174 as a V14 regression caused by *"something in this lesson's sweep."*** **It is
+not.** `04_SCREENSHOTS/V12/INDEX.md` §0 already documents the identical offset with a 6/6
+verification table, and V13 documents `+15 s`. **Both measured it and named frames from the burned
+timecode; V14 did neither.** **The harness never changed — the step was dropped.** Recorded as item
+**186**, and `SWF_CAPTURE_RECIPE.md` **§8a** now makes the measurement mandatory so it cannot recur.
+
+## Remaining open items — **NOT closed by this round**
+
+| | Owed to |
+|---|---|
+| **177** | `PT-042` §5a amendment (with item 167's) — **on re-issue**, and `PT-042` was deliberately not re-issued |
+| **179** | ⚠️ **`D3` forward-read precedent — OWNER.** **Item 176's Gap B decider is BLOCKED on it** |
+| **168** | `C-021` Tier-1-against-itself — **OWNER** |
+| **157** | `!SM_TDI` admissibility — **OWNER.** Per item 185 this is the highest-value unblock in the project |
+| **180** | `verify_quotes.py` still accepts only `V07\|V09`; un-run on V10–V14 — **project-wide.** ⚠️ **It would have caught items 172 and 173** |
+| **185** | The gap audit — **OWNER.** Item 176 corrects the figure it would otherwise have carried |
+
+## Git
+
+`fix/v14-r1-minors`, cut fresh from the integration head `ddd226f`. Explicit path staging only.
+`validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+## Next action
+
+⚠️ **NOT "PROCEED TO V15".** The V15 gate was already open under `D-024` and this round neither
+changed it nor could have. ⚠️⚠️ **THE OWNER'S HARD STOP FOR THE COMPREHENSION/GAP AUDIT STANDS.**
+V14 reaching `COMPLETE` removes the last review-severity obstacle to V15 work; **it does not
+authorise V15 work.** **The next action is the owner's — the gap audit (item 185), now carrying
+item 176's corrected figure — and the four owner decisions at items 157, 168, 179 and 185.**

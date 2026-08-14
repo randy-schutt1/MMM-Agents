@@ -8787,3 +8787,129 @@ independent read of it — the submission's summary is fair and nowhere flatters
 four additions, of which the load-bearing one is that **the highest-value unblock left (`A-084`) is
 now an owner decision on `!SM_TDI`'s admissibility (item 157), not something more lessons will
 supply.**
+
+---
+
+## 2026-08-14 — Remediation Session (V14 R1) — items 172–176 · ⚠ **SELF-VERIFIED AT OWNER DIRECTION**
+
+> ### ⚠⚠ READ THIS BEFORE THE ENTRY — THIS ROUND IS NOT INDEPENDENTLY VERIFIED
+>
+> **Items 172–176 were FIXED AND CLOSED BY THE SAME SESSION**, on the owner's explicit
+> authorisation for this round specifically, on the ground that all five are small documentation
+> edits. **That authorisation is real and it is recorded — but it does not manufacture
+> independence, and this round does NOT satisfy `D-003`.** All five carry
+> **`CLOSED — SELF-VERIFIED AT OWNER DIRECTION`**, **not** `CLOSED — VERIFIED`. **There was no R2
+> and no independent reviewer `PASS`.** R1's `REVISE` verdict stands as the last arm's-length
+> judgement anyone made about V14. **FOURTH use of the pattern**, after V09 R2 (items 81–83),
+> V10 R1 (91–94) and V12 R1 (137–138).
+
+### Objective
+
+Address the five required corrections from `18_REVIEW/V14/V14_REVIEW_R1.md` (items 172–176) and
+bring V14 to `COMPLETE`.
+
+### Findings Addressed
+
+- **[`M1` / 172 / MINOR]** `A-089` quoted the middle-of-range verdict as a **declarative**; two
+  independent engines return an **interrogative** the speaker asks and answers → corrected at
+  `A-089` and `V14_SOURCE_NOTES.md` §2 citing both engines; logged as **correction 8** in
+  `V14_TRANSCRIPT.md`, **flagged as R1's ASR pass rather than the student session's** so the
+  seven-correction count and its provenance stay separable. ⭐ **`A-056`'s disposition was
+  re-checked and does NOT change.**
+- **[`M2` / 173 / MINOR]** Marker grid and ASR segment clock mixed silently → convention **declared
+  once**; **59 sites rewritten**; `[00:34:35]` → **`[00:35:37]`** (the 62-second miss); **full
+  crosswalk retains every superseded citation**.
+- **[`M3` / 174 / MINOR]** All 29 frames `+16 s` from their burned timecode; `INDEX.md` §2
+  misquoted it → all 29 **re-measured from the pixels**; `§0a` per-frame correction table added;
+  §2 → **`27:06`**; the *"proves its own timestamp"* claim **withdrawn**. ⭐ **Root cause found —
+  item 186.**
+- **[`M4` / 175 / MINOR]** Twelve moved records carried no pointer and two read false → pointers in
+  all twelve; **`A-056`** rewritten per item 178's disposition (**NARROWED**, Required Research
+  `ANSWERED`, **still NOT CLOSED**); **`A-084`**'s stale V13 prediction closed out.
+- **[`M5` / 176 / MINOR]** `A-092`'s count was corpus-wide and wrong → rescoped to Week 5 → Week 7;
+  **full 21-file calendar audit**; **Gap B (`Wk9 → Wk10`, four weeks) recorded and left
+  UNEXAMINED** pending item 179.
+
+### Work Redone (not edited)
+
+⚠️ **NONE, AND NONE WAS OWED.** All five are `MINOR` **documentation fixes** under
+`REMEDIATION_PROTOCOL.md` §3.3. **No finding impugned an underlying test, classification, sample or
+measurement**, so §2's *redo-do-not-reword* rule is **not engaged** — stated explicitly rather than
+assumed, because §2 exists to stop a session calling an evidence fix a documentation fix.
+
+⭐ **`PT-042` WAS NOT RE-RUN.** `pt042_output.txt` and `pt042_result.json` are **untouched**. Five
+of the pre-registration's *citations* moved and an **AMENDMENT banner** discloses it, superseding
+(not breaking) its prior *"this banner is the only change"* claim. **No threshold, window, filter,
+arm, outcome measure or decision rule moved** — the whole diff is five timestamp tokens.
+
+### Work Corrected (documentation only)
+
+`AUTOMATION_AMBIGUITIES.md` (`A-089`, `A-092`, `A-056`, `A-084`, + 10 pointer blocks) ·
+`V14_TRANSCRIPT.md` · `V14_SOURCE_NOTES.md` · `V14_INTERPRETATION.md` · `V14_HOMEWORK.md` ·
+`BT_V14_0001.md` · `PT-042_…md` · `04_SCREENSHOTS/V14/INDEX.md` · `SWF_CAPTURE_RECIPE.md` §8a ·
+`V14_MASTERY_REPORT.md` · `COURSE_PROGRESS.md` · `REVIEW_INDEX.md`.
+
+### Retesting
+
+**Nothing required retesting**, and that is a finding rather than an omission: **no rule definition,
+threshold or classification changed anywhere**, so nothing became suspect under §3.4.
+
+⭐ **Three things were RE-MEASURED, and in each case this round's own figure was recorded, not
+R1's:**
+
+1. **The citation scan**, re-run mechanically rather than copied — **25 distinct timestamps at 59
+   sites across 7 files**, against R1's *20 at 30 across 9*. **More than the review found.**
+   Re-runs clean.
+2. **All 29 burned timecodes**, re-cropped and re-read — **reproduces R1 exactly** (28 × `+16 s`;
+   29th clamped at EOF at `+14`, corroborating the 2869.0 s duration).
+3. **The corpus calendar**, audited over **all 21 files** rather than the named region —
+   **exactly two anomalous regions**, tighter than R1's *"at least one further"*.
+
+### ⭐ Where this round DISAGREES with R1 — item 186
+
+**R1 charged item 174 as a V14 regression caused by *"something in this lesson's sweep."* It is
+not.** `04_SCREENSHOTS/V12/INDEX.md` §0 already documents the identical `+16 s` offset with a 6/6
+verification table; V13 documents **`+15 s`**. **Both measured it and named frames from the burned
+timecode. V14 has no §0 section and named from the raw sweep index.** The harness never changed —
+**the step was dropped.**
+
+The offset is **click latency amplified 10× by the fast sweep** (~1.5 s real → ~15 s presentation),
+so **it varies per run and cannot be hardcoded** — which is why V12 read `+16` and V13 read `+15` on
+the same recipe. **Confirmed an ORIGIN error, not a RATE error:** consecutive filename deltas equal
+consecutive burned deltas throughout, so it does not drift.
+
+✅ **Prevented:** `SWF_CAPTURE_RECIPE.md` gains **§8a**, a mandatory numbered step — measure per
+lesson against the pixels, confirm origin-not-rate, **name from the burned timecode**, publish the
+verification table.
+
+### Remaining Open Items — **NOT closed by this round**
+
+**177** (`PT-042` §5a amendment, on re-issue) · **179** (⚠️ `D3` precedent — **OWNER**; item 176's
+Gap B decider is **blocked on it**) · **168** (`C-021` — **OWNER**) · **157** (`!SM_TDI`
+admissibility — **OWNER**; per item 185 the highest-value unblock in the project) · **180**
+(`verify_quotes.py` still `V07|V09`-only, un-run on V10–V14 — ⚠️ **it would have caught items 172
+and 173**) · **185** (the gap audit — **OWNER**).
+
+### Files Created/Updated
+
+No files created. 12 updated; see *Work Corrected*.
+
+### Git
+
+Branch `fix/v14-r1-minors`, cut fresh from integration head `ddd226f`. Explicit path staging only;
+`git diff --staged` reviewed before each commit. `validate_project.py`: **103 passed, 0 warnings,
+0 failures.** Merged back into the integration branch per `D-038`.
+
+### Next Action
+
+⚠️⚠️ **NOT "PROCEED TO V15".** The V15 gate was already open under `D-024`, was opened on the merits
+by R1 itself, and **this round neither changed it nor could have.** **`D-024` is a finding-severity
+rule and says nothing about the comprehension/gap audit the owner scheduled at V14.**
+
+**THE OWNER'S HARD STOP STANDS.** V14 reaching `COMPLETE` removes the last **review-severity**
+obstacle to V15 work; **it does not authorise V15 work, and no session may open V15 without the
+owner's separate go-ahead.**
+
+**The next action is the owner's:** the gap audit (item 185), **now carrying item 176's corrected
+figure — `2 KNOWN + up to ~3 UNKNOWN`, not `2`** — and the four owner decisions at items **157**,
+**168**, **179** and **185**.
