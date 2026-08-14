@@ -148,6 +148,10 @@ yarn-error.log*
 !06_MANUAL_BACKTEST/datasets/*/raw/SHA256SUMS.txt
 !06_MANUAL_BACKTEST/datasets/*/derived/
 !06_MANUAL_BACKTEST/datasets/*/derived/SHA256SUMS.txt
+
+# Same principle, one directory up: a vendor-availability finding is documentation
+# about where data can come from, not the data. Un-ignored 2026-08-14.
+!06_MANUAL_BACKTEST/datasets/HISTDATA_RECENCY_CHECK.md
 # ...but never the bars themselves.
 06_MANUAL_BACKTEST/datasets/**/*.csv
 
