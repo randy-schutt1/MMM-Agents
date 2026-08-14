@@ -80,8 +80,25 @@ V14 (2026-08-14):    ⭐ R1 RETURNED — REVISE, 0 CRITICAL / 0 MAJOR / 5 MINOR 
                      put to the OWNER (item 168). Tier 2 sides with V14. Period
                      still never stated, so A-031/A-032 stay uncomputable.
                      ⭐ THE WEEK-6 QUESTION IS SETTLED: TWO artifacts are missing
-                     from this corpus -- the Week 6 session (~2012-04-29) and the
-                     Orlando meetup recording (2012-04-21). A-092.
+                     FROM THE WEEK 5 -> WEEK 7 REGION -- the Week 6 session
+                     (~2012-04-29) and the Orlando meetup recording
+                     (2012-04-21). A-092.
+                     ⚠ SCOPE CORRECTED 2026-08-14 (item 176). This line
+                     previously read "TWO artifacts are missing FROM THIS
+                     CORPUS" -- superseded, retained per REMEDIATION_PROTOCOL
+                     §2. It is NOT a corpus-wide count and must not be carried
+                     into the gap audit as a bound.
+                     ⚠⚠ A SECOND, LARGER, UNEXAMINED GAP: Wk9 052012
+                     (2012-05-20) -> Wk10 061712 (2012-06-17) is FOUR calendar
+                     weeks and ONE week number. 2012-05-27, 06-03 and 06-10
+                     carry no file and no week number. Either ~3 sessions are
+                     absent or the course broke for three weeks; NOTHING in
+                     the corpus decides it. Its cheap decider is the D3 shape
+                     and WAITS ON ITEM 179.
+                     FOR THE GAP AUDIT: 2 KNOWN + up to ~3 UNKNOWN, not 2.
+                     A full 21-file calendar audit is in A-092 -- these are the
+                     ONLY two anomalies; every other transition is +1 week /
+                     +1 week number.
                      PT-042 -> NOT SUPPORTED. O1 0.3461/0.3041 vs >=0.80 (a
                      45-point miss); O2 0.4607/0.4433 vs >=0.50. BUT O2 doubles
                      matched-random and O4 median MFE is 40 pips: the distance is

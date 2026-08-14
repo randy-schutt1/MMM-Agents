@@ -486,6 +486,28 @@ Foundational. This is the lesson's central object and the thing the trader is to
 | Ambiguity | A-003, A-015 |
 | Interpretation | `03_LESSON_NOTES/V01_INTERPRETATION.md` I1, I9 |
 
+> ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
+>
+> **V14 MOVED THIS RECORD AND THE RECORD DID NOT SAY SO.** Every V14 effect was written only into
+> the trailing `# THE V14 PASS OVER EXISTING RECORDS` table (`AUTOMATION_AMBIGUITIES.md`), which is
+> invisible to a reader who lands here — and these records are read by landing on them. That is
+> `M4`. **The V14 pass table is unchanged and remains the canonical summary; this block is the
+> pointer into it.**
+>
+> ❌ **NOT ADVANCED BY V14 — AND THE NEGATIVE IS SHARPER THAN USUAL.**
+> Counted in the committed 600-marker body: `trap` **×4**, `stop hunt` **×3**, plus **×1** as the ASR
+> variant *"stop-hon"* `[00:03:36]`. ⚠️ **These are the CORRECTED figures** — the V14 session's draft
+> asserted `trap ×7 / stop hunt ×4` and re-counting returned these; the correction is `S3` in
+> `V14_MASTERY_REPORT.md` §2, and **R1 re-counted in the committed body and confirmed the corrected
+> figures, including the `stop-hon` variant.** The printed slides add three further `TRAP MOVE` titles
+> and one `Extended Stop Hunt` — those are in the frames, not the transcript.
+> ⭐ **Why this negative is sharper: `REVIEW_INDEX.md` item 37 asks whether the two families are ever
+> compared. V14 IS THE FIRST LESSON TO USE BOTH HEAVILY IN THE SAME SLIDE SEQUENCE** — *"MARKET MAKER
+> TRAP MOVES"* whose failure mode is printed as *"**Extended Stop Hunt** Will Be Seen (2HR Time
+> Gap)"* — **and it still does not distinguish them.** Tenth lesson, no comparison. **The best
+> opportunity the corpus has offered came and went.**
+
+
 ---
 
 ## A-003 — "picks up the [?penings?]"
@@ -660,6 +682,21 @@ High. It is the only unit in which V01 expresses expected move size. Quantifying
 |---|---|
 | Ambiguity | A-001 |
 | Contradiction | C-001 ("three days, three levels") |
+
+> ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
+>
+> **V14 MOVED THIS RECORD AND THE RECORD DID NOT SAY SO.** Every V14 effect was written only into
+> the trailing `# THE V14 PASS OVER EXISTING RECORDS` table (`AUTOMATION_AMBIGUITIES.md`), which is
+> invisible to a reader who lands here — and these records are read by landing on them. That is
+> `M4`. **The V14 pass table is unchanged and remains the canonical summary; this block is the
+> pointer into it.**
+>
+> ❌ **NOT ADVANCED BY V14.** `[00:19:17]` *"he's got to hit the stops **one more level**, 25 to 50
+> pips higher"*, and the printed slide *"Wait For Next Level Rise/Fall."*
+> **Levels are again spaced `25 to 50` and again not counted, not ordered and not located.** The
+> printed slide makes it worse rather than better: *"next level"* is given as an instruction a student
+> is expected to act on, with no statement of what makes a level the next one.
+
 
 ---
 
@@ -1920,6 +1957,25 @@ inverting the method.
 |---|---|
 | Interpretation | `03_LESSON_NOTES/V02_INTERPRETATION.md` I21, I29, I30, M3, M6 |
 | Source | `03_LESSON_NOTES/V02_SOURCE_NOTES.md` §2k, §10 |
+
+> ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
+>
+> **V14 MOVED THIS RECORD AND THE RECORD DID NOT SAY SO.** Every V14 effect was written only into
+> the trailing `# THE V14 PASS OVER EXISTING RECORDS` table (`AUTOMATION_AMBIGUITIES.md`), which is
+> invisible to a reader who lands here — and these records are read by landing on them. That is
+> `M4`. **The V14 pass table is unchanged and remains the canonical summary; this block is the
+> pointer into it.**
+>
+> ⚠️ **NOT CLOSED BY V14 — BUT V14 SUPPLIES THE CORPUS'S FIRST EXPLICITLY TIMEZONED CLOCK
+> STATEMENT.** ⭐ *"At **1am NYC time**"* **printed** on the assignment slide; `[00:27:05]` spoken
+> *"1 a.m. **New York time**"*.
+> ❌ **It does not close this record** — it is a **different slide and a different clock reference**
+> from the session map this record is about, and the session map still carries no timezone.
+> ⭐ **What it does supply is provenance, and it cuts against the figure's authority:** `[00:45:18]`
+> *"1 a.m. is the time **I was taught** to do it, man"* — **the hour is INHERITED, not derived.**
+> Recorded because a number a speaker cannot justify is weaker evidence than one he can, and this
+> record's whole problem is unjustified clock values.
+
 
 ---
 
@@ -4591,6 +4647,56 @@ what the skill is.
 
 ### Current Status
 
+> ## ⭐⭐ UPDATED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEMS 175 / 178
+>
+> ⚠️ **THE TEXT BELOW WAS STALE AND SAID THE OPPOSITE OF WHAT THE PROJECT NOW KNOWS.** V14 answered
+> this record's Required Research and **the record itself did not say so** — the finding lived only
+> in the trailing `# THE V14 PASS OVER EXISTING RECORDS` table, invisible to anyone landing here.
+> That is `M4`, and this block is the fix.
+>
+> ```text
+> A-056 -- NARROWED.
+>
+>   RESOLVED BY COURSE as to the EXISTENCE of a stated real-time method.
+>     V14 (Bootcamp1 Wk5 041512 Part2) teaches one, PRINTED, in six steps, by
+>     the COURSE AUTHOR -- not the deferred "Jim" of V07 [00:07:38].
+>     ⭐ THE REQUIRED RESEARCH BELOW IS ANSWERED. It is marked so.
+>
+>   OPEN as to COMPUTABILITY.
+>     Step 2, "find a pair that is trading in the middle of the range", carries
+>     no tolerance and is A-089. The speaker's own two worked examples sit at
+>     the 45.5th and 20.0th percentile of their ranges, and he proceeds with
+>     both. STILL DO NOT CODE AS A FILTER.
+>
+>   OPEN as to the PREMISE.
+>     PT-042 pre-registered the method's own load-bearing premise -- that a
+>     level holding for one hour IS the day's extreme -- and MEASURED IT.
+>     O1 = 0.3461 / 0.3041 against a pre-registered >= 0.80. NOT SUPPORTED.
+>
+> A RECORD CANNOT BE CLOSED AS "RESOLVED BY COURSE" BY A METHOD THE SAME
+> PROJECT MEASURED AND REFUTED. That is the second reason for non-closure and
+> it is independent of A-089.
+> ```
+>
+> **`A-056` IS NOT CLOSED.** The V14 student session recorded it `MATERIALLY ADVANCED` and put
+> closure to a reviewer rather than taking it — **verified, and it was right to.** R1 dispositioned
+> it at item 178 and this is that disposition, applied.
+>
+> ⭐ **The Required Research is ANSWERED and the answer is on the record**, which is the half V14
+> genuinely delivered: **the corpus does contain a stated real-time method.** What V14 also
+> established, and what stops closure, is that **the method is not computable and its premise does
+> not hold.** Both halves are the contribution.
+>
+> **Where the evidence is:** `04_SCREENSHOTS/V14/INDEX.md` §2 (the printed slide, transcribed
+> verbatim and confirmed at full resolution by R1, including punctuation); `A-089` (step 2);
+> `06_MANUAL_BACKTEST/V14/BT_V14_0001.md` and `PT-042` (the premise); V14 `[00:46:19]`
+> *"technically, Keith, you will be able to trade off of the board only"*; the V14 pass table.
+>
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — the `Current Status` block
+> below is the pre-V14 state. **It is retained because it was correct when written**, and it is
+> superseded on exactly one word: `the method is absent` was true through V13 and is **no longer
+> true after V14**.)*
+
 ```text
 DO NOT CODE — the target is computable, the method is absent.
 A high ceiling is NOT support for the claim; it is the precondition for the claim
@@ -4598,6 +4704,29 @@ being worth anything. See BT_V07_0001.md §8, the mandatory scope statement.
 ```
 
 ### Required Research
+
+> ## ✅ ANSWERED BY V14 — 2026-08-14, per items 175 / 178
+>
+> **The question below asked whether any later lesson states HOW the day's extreme is identified
+> before it is known. V14 DOES.** A printed six-step procedure, taught by the course author.
+> **The Required Research is discharged.**
+>
+> ⚠️ **DISCHARGING IT DOES NOT CLOSE THE RECORD**, and the two are being kept apart deliberately:
+> the research asked whether the corpus *contains* such a method, and it does. **Whether that
+> method is usable is a different question, and `A-089` and `PT-042` answer it NO.**
+>
+> **The clause below — *"if no lesson does, the project must record that the corpus recommends a
+> method it does not contain"* — is now MOOT and is retained rather than deleted**, per
+> `REMEDIATION_PROTOCOL.md` §2. **The corpus does contain it.** What the project must record
+> instead, and now does, is that **the corpus recommends a method it does contain, states it
+> incompletely (`A-089`), and rests it on a premise the project's own pre-registered measurement
+> refutes (`PT-042` `NOT SUPPORTED`).** That is a sharper finding than the one this clause
+> anticipated, and it is worse for the method rather than better.
+>
+> **What remains open, and is the successor Required Research:** a tolerance for step 2 (`A-089`),
+> and any statement reconciling the drill's premise with `PT-042`'s 30–35%. **`REVIEW_INDEX.md`
+> GATE (g) flags that V15 is when the two-week drill reports back** — if V15 discusses student
+> results, that is Tier-1 evidence about this method's real-world behaviour.
 
 Whether any later lesson — or "Jim" in any recording in this library — states **how** the
 day's extreme is identified before it is known. If no lesson does, the project must record that
@@ -5680,6 +5809,24 @@ DO NOT CODE
 `A-019` (session timezone, converted to a tested variable by `D-031`), `A-077`, `A-007`
 (second leg), `D-030`, `D-010`; `04_SCREENSHOTS/V10/INDEX.md` frame `46:17`.
 
+> ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
+>
+> **V14 MOVED THIS RECORD AND THE RECORD DID NOT SAY SO.** Every V14 effect was written only into
+> the trailing `# THE V14 PASS OVER EXISTING RECORDS` table (`AUTOMATION_AMBIGUITIES.md`), which is
+> invisible to a reader who lands here — and these records are read by landing on them. That is
+> `M4`. **The V14 pass table is unchanged and remains the canonical summary; this block is the
+> pointer into it.**
+>
+> ⭐ **ADVANCED BY V14 — NOT CLOSED.** Two uses: `[00:08:03]` *"here's the blue box, I know it's black
+> and white but it's blue"*, and ⭐ `[00:38:48]` *"if `3190` subtract `3155` is less than 50, **you're
+> making your own blue box**… that is an essence of blue box."*
+> **`[00:38:48]` is the first statement in the corpus that the blue box IS the ≤ 50-pip 01:00 range
+> rather than a drawn object** — i.e. a computable criterion rather than an artifact on a chart.
+> ❌ **It still does not close the record.** *"An essence of"* is not a definition, and it **collides
+> with this record's existing `25 to 50` size reading** rather than replacing it. **Stays
+> `DO NOT CODE`.**
+
+
 ---
 
 ## A-077 — "the lock": V10's real-time substitute for a retrospective definition, with no threshold
@@ -5733,6 +5880,27 @@ DO NOT CODE
 
 `A-010` (narrowed by V10 — the definition this record is the counterpart to), `A-076`, `A-007`,
 `D-030`, `D-010`, `E08`.
+
+> ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
+>
+> **V14 MOVED THIS RECORD AND THE RECORD DID NOT SAY SO.** Every V14 effect was written only into
+> the trailing `# THE V14 PASS OVER EXISTING RECORDS` table (`AUTOMATION_AMBIGUITIES.md`), which is
+> invisible to a reader who lands here — and these records are read by landing on them. That is
+> `M4`. **The V14 pass table is unchanged and remains the canonical summary; this block is the
+> pointer into it.**
+>
+> ⭐ **ADVANCED BY V14 — NOT CLOSED.** `A-077`'s missing `N` and `M` finally arrive, **printed** on
+> V14's assignment slide and spoken: a level that holds for **1 hour** is treated as the day's
+> extreme, with entry ~10 pips inside and a **5**-pip stop. **See `A-094`, which records the full
+> finding — the lock exists at TWO SCALES and V14's is ~10× shorter than V10's.**
+> ⚠️ **The WEEKLY scale is untouched**, and that is the scale `A-077` was raised about.
+> ⭐ **And V14 did more than state the threshold — it TESTED it.** `PT-042` pre-registered this exact
+> premise and returned **`NOT SUPPORTED`** (`O1` = 0.3461 / 0.3041 against `≥ 0.80`). ⭐ **The
+> population finding is the useful half: `no-lock = 0` and `no-extension = 0` across 938 arm-days —
+> the lock does NOT select days, it selects a TIME.** Over a 16-hour window a 60-minute gap always
+> eventually occurs, so all the filtering is done by the range filter. **`N4`'s control is degenerate
+> at `n = 0`, and R1 reproduced that exactly in independent code.**
+
 
 ---
 
@@ -6242,6 +6410,23 @@ forward pointer is recorded so the session reaching V12/V13 knows to look.
 
 `A-007`, `D-030`; `V11_SOURCE_NOTES.md` §3a, §11.
 
+> ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
+>
+> **V14 MOVED THIS RECORD AND THE RECORD DID NOT SAY SO.** Every V14 effect was written only into
+> the trailing `# THE V14 PASS OVER EXISTING RECORDS` table (`AUTOMATION_AMBIGUITIES.md`), which is
+> invisible to a reader who lands here — and these records are read by landing on them. That is
+> `M4`. **The V14 pass table is unchanged and remains the canonical summary; this block is the
+> pointer into it.**
+>
+> ❌ **NOT ADVANCED BY V14 — THE TENTH LESSON, AND STILL ZERO DEFINITIONS.**
+> `[00:08:13]` *"this looks like an M to you and you want to take it — **but nothing has happened yet
+> other than consolidation**"*; `[00:06:28]` *"this is the M formation for the day."*
+> ⭐ **The new use is NEGATIVE, and that is the only thing that is new:** the shape is invoked to
+> **forbid** a trade inside the box rather than to trigger one. **Still no anatomy** — no leg count,
+> no symmetry requirement, no failure condition, nothing that separates an M from a range.
+> **Ten lessons, zero definitions, and V14 uses the term as freely as ever.**
+
+
 ---
 
 ## A-020 — ⚠ STATUS ANNOTATION: `CONFLICT — OWNER ADJUDICATION REQUIRED` (V11)
@@ -6519,6 +6704,29 @@ A-014 and A-023 remain listed and untouched.
 `A-064`, `C-018`, `D-039`, `D-041`, `D-042`, `D-043`, `I-011`, `SOURCING_HIERARCHY.md` §3.1/§3.4;
 `03_LESSON_NOTES/V12_SOURCE_NOTES.md` §5; `03_LESSON_NOTES/V12_INTERPRETATION.md` Q3.
 
+> ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
+>
+> **V14 MOVED THIS RECORD AND THE RECORD DID NOT SAY SO.** Every V14 effect was written only into
+> the trailing `# THE V14 PASS OVER EXISTING RECORDS` table (`AUTOMATION_AMBIGUITIES.md`), which is
+> invisible to a reader who lands here — and these records are read by landing on them. That is
+> `M4`. **The V14 pass table is unchanged and remains the canonical summary; this block is the
+> pointer into it.**
+>
+> ⭐ **TIER-1 ORDINAL CORROBORATION FROM V14 — DOES NOT CLOSE.**
+> `04_SCREENSHOTS/V14/V14_00-13-05_emas-yellow-red-cyan-white-low-test-candle.png` is a **2012,
+> Tier-1, instructor's-own price chart** carrying four moving averages whose speed ordering is
+> unambiguous: **`yellow < red < cyan < white`.** Under `D-043` that is exactly **`5 < 13 < 50 <
+> 200`**, and it is **inconsistent with `D-042` §2's superseded `5 = red` / `13 = yellow`**, under
+> which red would be the faster of the pair.
+> ✅ **R1 re-opened the frame and independently confirmed the ordering** (`V14_REVIEW_R1.md` § `D-043`
+> CORROBORATION) — the ten-second falsification test the submission offered was taken, and it passed.
+> ⚠️ **ORDINAL ONLY. No period is printed, so `A-020` does NOT close.** No claim is made about
+> Blueberry/800 — no fifth line is in the window. **`D-042` §1 recorded the nickname↔period search as
+> NEGATIVE with thin Tier-1 support; this is support on the one axis a picture can carry.**
+> ⚠️ **This frame's filename stamp runs `+16 s` behind its burned timecode — true position `13:21`.**
+> See `04_SCREENSHOTS/V14/INDEX.md` §0a. **The ordering is a property of the pixels and is unaffected.**
+
+
 ---
 
 ## A-031 — STATUS CHANGE: ⭐ **CLOSED — `RESOLVED BY COURSE`** ("blood in the water"), and its Tier 2 basis is **REPLACED**
@@ -6785,6 +6993,27 @@ retained in `V12_SOURCE_NOTES.md` §9 and §9a.
 `02_TRANSCRIPTS/V03/V03_TRANSCRIPT.md` `[00:40:57]`–`[01:06:55]`;
 `03_LESSON_NOTES/V12_SOURCE_NOTES.md` §9a; `03_LESSON_NOTES/V12_INTERPRETATION.md` Q6.
 
+> ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
+>
+> **V14 MOVED THIS RECORD AND THE RECORD DID NOT SAY SO.** Every V14 effect was written only into
+> the trailing `# THE V14 PASS OVER EXISTING RECORDS` table (`AUTOMATION_AMBIGUITIES.md`), which is
+> invisible to a reader who lands here — and these records are read by landing on them. That is
+> `M4`. **The V14 pass table is unchanged and remains the canonical summary; this block is the
+> pointer into it.**
+>
+> ⭐ **A LIVE INSTANCE IN V14 — CAUGHT AND FENCED BEFORE THE RUN, NOT AFTER.**
+> The tension is explicit in the lesson itself: `[00:32:42]` *"That's a drill"* against `[00:46:19]`
+> *"technically, Keith, **you will be able to trade off of the board only**"* — the second being a
+> direct answer to a student asking whether it is deployable. **`V14_INTERPRETATION.md` Q4 states both
+> and refuses to pick.**
+> ✅ **THE FENCE HELD, AND IT WAS SET IN ADVANCE.** `PT-042` §1a declared before the run that it tests
+> **the drill's own claim** and not adopted doctrine. **R1 verified the fence independently:
+> `12_MASTER_SPEC/` and `13_MACHINE_SPEC/` contain only `.gitkeep` and a README, and V14's 5-pip stop
+> and 30–50-pip target appear in NEITHER.**
+> ⚠️ **This stays the standing audit target.** Per `V14_REVIEW_R1.md` GATE (e): **if V15 restates
+> either parameter as method, that is a finding; if a V15 artifact adopts them, that is the error.**
+
+
 ---
 
 ## A-084 — Is the TDI's plotted green line the `RSI(21)`, or a smoothing of it?
@@ -6917,6 +7146,52 @@ remaining unblock in the project.**~~
 > `COURSE_PROGRESS.md` V13 GATE (f)'s promise/delivery split makes it a better-than-average
 > candidate, because V13 defers its "lesson part" into it. **Stop scanning legends.**
 
+> ## ⭐ UPDATED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
+>
+> ⚠️ **THE V13 PREDICTION IMMEDIATELY ABOVE HAS BEEN RESOLVED AND WAS LEFT READING AS LIVE.** It is
+> retained per `REMEDIATION_PROTOCOL.md` §2 — **V13 was right to make it and right about where to
+> look** — but a reader landing here was being told to watch a lesson that has since been checked.
+> **V14 HAS BEEN CHECKED. THE ANSWER IS: NARROWED, NOT CLOSED, FOR A SECOND CONSECUTIVE LESSON.**
+>
+> ```text
+> A-084 -- STILL OPEN. STILL AN ACTIVE BLOCKER.
+>          V11's RSI THRESHOLD CLAIMS STAY BLOCKED.
+> ```
+>
+> **What V14 supplied, and why it does not close this.** V14 `[00:44:45]`–`[00:44:56]` is the best
+> spoken opportunity the corpus is likely to offer — a student's question read aloud asking exactly
+> what the three TDI lines are, answered live. **The temptation is real:** *"does the green RSI line
+> represent the 15-minute chart candles?"* → **"Yes"** reads as `k = 1`.
+>
+> **The defeater: that "Yes" answers a COMPOUND question whose red half is demonstrably a
+> lag-gloss** — no TDI build reads another timeframe. **You cannot take one half literally and the
+> other figuratively from a single "Yes."** ⭐ **R1 attacked this defeater four separate ways and it
+> HELD every time** (`V14_REVIEW_R1.md` § `A-084`), including the strongest attack — that
+> `[00:44:56]` *"The TDI line, RSI is green"* is an unprompted identity statement. **That attack is
+> defeated at source by the project's own tooling: `MMM_TDI.txt`'s buffer is literally named
+> `RSI Price Line` and is `SMA(2)` of `RSI(21)`. Naming a smoothed buffer after its input is the
+> shipped convention**, so the sentence is lineage, not identity.
+>
+> ⭐ **AND R1 ADDS A FIFTH, STRUCTURALLY DIFFERENT DEFEATER, RECORDED HERE SO IT IS NOT LOST:**
+> **the student's question already presupposes the standard TDI buffer naming** — *"green RSI
+> line"*, *"red trade signal line"*, *"yellow market baseline"* are the indicator's own published
+> buffer names. **A speaker affirming a question phrased in an indicator's own vocabulary has
+> affirmed the vocabulary, not a construction, and an affirmation of a naming convention carries no
+> information about smoothing length** — independently of the compound-question argument. Folded
+> into `A-093`.
+>
+> **Even granting the literal reading, it does not fix `k`:** *"the 15-minute"* on a 15-minute chart
+> is satisfied by `k = 1` **and** by `k = 2`, and `PT-040` already measured those at **5.16 pp at
+> `t = 50`**, past its own materiality boundary. **The passage cannot separate them.**
+>
+> ⭐ **THE SPOKEN ROUTE IS NOW EMPIRICALLY AND STRUCTURALLY DRY, AND THAT IS THE ACTIONABLE
+> FINDING.** `A-093` establishes the failure is **structural** — the speaker answers what the
+> indicator *feels like*, never what it computes. **2,047 frames across V12–V14 hold no properties
+> dialog.** ⚠️ **Do not treat a sixth restatement as new evidence.** Per `V14_REVIEW_R1.md` GATE
+> (a), **the live route is `REVIEW_INDEX.md` item 157's owner ruling on `!SM_TDI`'s admissibility —
+> that template answers this record at `k = 2` directly and `PT-040` has already measured that arm.
+> It costs one owner decision rather than seven more lessons.**
+
 ### Related
 
 `A-080`, `A-039`, `A-085`, `A-086`, `D-030`; `03_LESSON_NOTES/V12_INTERPRETATION.md` Q2;
@@ -6983,6 +7258,26 @@ mechanism from the same phrase as a description of lag.
 `A-039`, `A-084`, `A-086`, `A-031`, `D-030`, `D-040`; `MMM-NOTES` p.45;
 `03_LESSON_NOTES/V12_SOURCE_NOTES.md` §4b.
 
+> ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
+>
+> **V14 MOVED THIS RECORD AND THE RECORD DID NOT SAY SO.** Every V14 effect was written only into
+> the trailing `# THE V14 PASS OVER EXISTING RECORDS` table (`AUTOMATION_AMBIGUITIES.md`), which is
+> invisible to a reader who lands here — and these records are read by landing on them. That is
+> `M4`. **The V14 pass table is unchanged and remains the canonical summary; this block is the
+> pointer into it.**
+>
+> ⚠️ **EXTENDED BY V14, AND MADE WORSE — NOT CLOSED.** V14 `[00:44:45]` asks whether *"the red trade
+> signal line represent[s] the one hour"*, and `[00:44:56]` answers *"The red line, blood in the
+> water, **is** the one hour."*
+> **This is the FIFTH such statement and the SECOND lesson, and there is still no period, no formula
+> and no mechanism.** ⚠️ **The flat IDENTITY phrasing is a regression against this record's own
+> Required Research**, which asked for something separating mechanism from lag: *"polls"* at least
+> carried a hedge, and *"is"* removes it. **V14 supplies the opposite of what was asked for.**
+> ❌ **No TDI build reads another timeframe**, which is why `V14_INTERPRETATION.md` Q3a treats this
+> half of the compound question as a demonstrable **lag-gloss** — and that reading is load-bearing for
+> `A-084`'s defeater, which R1 attacked four ways and could not break.
+
+
 ---
 
 ## A-086 — The volatility bands: a basis retracted mid-sentence and a deviation the speaker disclaims
@@ -7048,6 +7343,27 @@ are still not testable.**
 
 `A-031`, `A-032`, `A-039`, `A-084`, `A-085`, `C-019`, `C-011`, `D-030`, `D-040`; `MMM-NOTES` p.45;
 `03_LESSON_NOTES/V12_SOURCE_NOTES.md` §4d.
+
+> ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
+>
+> **V14 MOVED THIS RECORD AND THE RECORD DID NOT SAY SO.** Every V14 effect was written only into
+> the trailing `# THE V14 PASS OVER EXISTING RECORDS` table (`AUTOMATION_AMBIGUITIES.md`), which is
+> invisible to a reader who lands here — and these records are read by landing on them. That is
+> `M4`. **The V14 pass table is unchanged and remains the canonical summary; this block is the
+> pointer into it.**
+>
+> ⭐ **ADVANCED BY V14 ON ONE OF ITS THREE QUANTITIES — STAYS `DO NOT CODE`.** V14 `[00:45:07]`:
+> *"The bands are **two standard deviations** away from the **market base**"* — **flat, unhedged and
+> unprompted**, one week after V12's *"deviation 2%, I don't know… I don't really know because I
+> didn't invent it."* **The MULTIPLIER is resolved.**
+> ⚠️ **BUT THE BASIS REVERTS TO THE ANSWER V12 RETRACTED UNDER A CHAT PROMPT** (*"from the RSI line.
+> Thank you."*), one week later and this time unprompted — **and Tier 2 (`MMM-NOTES` p.45) sides with
+> V14, which REVERSES the shape of `C-019` §3.** Raised as **`C-021`** and **left unadjudicated**:
+> `SOURCING_HIERARCHY.md` §3.2's *"the recording wins"* resolves Tier 1 against Tier 2, **not Tier 1
+> against itself across lessons.** ⚠️ **`C-021` is an OWNER decision** (`REVIEW_INDEX.md` item 168).
+> ❌ **The band's PERIOD is still never stated in Tier 1 or Tier 2**, so this record stays
+> `DO NOT CODE` and **`A-031`/`A-032` remain uncomputable.**
+
 
 ---
 
@@ -7455,9 +7771,95 @@ GBP/USD only (D-007). It would need a multi-pair dataset that does not exist her
 
 ---
 
-## A-092 — ⭐ TWO artifacts are missing from this corpus, and V14 identifies both
+## A-092 — ⭐ TWO artifacts are missing **from the Week 5 → Week 7 region**, and V14 identifies both — **plus a SECOND, LARGER, UNEXAMINED calendar gap at Week 9 → Week 10**
 
-**Raised by:** V14 · `[00:00:57]`–`[00:01:08]`, `[00:40:46]`, `[00:47:34]`; with V13 `[00:05:20]`,
+> ## ⚠⚠ TITLE AND SCOPE CORRECTED 2026-08-14 — `V14_REVIEW_R1.md` `M5` / `REVIEW_INDEX.md` ITEM 176
+>
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this record was previously titled:
+> "**A-092 — ⭐ TWO artifacts are missing from this corpus, and V14 identifies both**".)*
+>
+> ⚠️ **THE COUNT WAS RIGHT AND THE SCOPE WAS WRONG, AND THE SCOPE IS THE PART THAT MATTERS.**
+> Everything this record establishes about **Week 5 → Week 7** is correct and unchanged — the Orlando
+> recording and the Week 6 session are both genuinely absent, and V14 identifies both. **But the
+> record was titled and read as a CORPUS-WIDE count**, and `V14_MASTERY_REPORT.md` §3.5 and
+> `COURSE_PROGRESS.md` repeated *"two artifacts are missing"* in that form. **As a corpus-wide count
+> it is false: there is a second, larger gap, and nothing in `DECISIONS.md`, `SOURCE_MANIFEST.md` or
+> this register recorded it.**
+>
+> ⚠️ **WHY THIS MATTERS MORE THAN ITS SIZE, AND WHY IT IS FIXED BEFORE THE AUDIT RATHER THAN AFTER.**
+> The owner is using the comprehension/gap audit to decide whether to continue to V15+. ***"Two
+> artifacts are missing"* is exactly the kind of headline that gets carried into that decision as a
+> BOUND on what the source material lacks. IT WAS NOT A BOUND.** It is now scoped to the region it
+> actually evidences, and the real bound is established below.
+>
+> ### ⭐ THE CORPUS-WIDE CALENDAR AUDIT — RUN IN FULL THIS ROUND, NOT SAMPLED
+>
+> `M5` reported *"at least one further"* gap. **This round audited all 21 files end to end from
+> `SOURCE_MANIFEST.md`'s own filenames — parsing each `WkN DDMMYY` to a real date and differencing
+> consecutive sessions — rather than checking only the region the review named.** The result is a
+> tighter statement than `M5` could make: **there are EXACTLY TWO anomalous regions in the entire
+> corpus, and the rest is contiguous.**
+>
+> | Files | Week | Date | Δ calendar | Δ week no. | Verdict |
+> |---|---|---|---|---|---|
+> | V01–V02 | Wk1 | 2012-03-18 Sun | — | — | ✅ |
+> | V03–V05 | Wk2 | 2012-03-25 Sun | +1 wk | +1 | ✅ |
+> | V06–V09 | Wk2 | 2012-03-26 **Mon** | +1 d | 0 | ✅ **same week, second day** — not a gap |
+> | V10 | Wk3 | 2012-04-01 Sun | +1 wk | +1 | ✅ |
+> | V11–V12 | Wk4 | 2012-04-08 Sun | +1 wk | +1 | ✅ |
+> | V13–V14 | Wk5 | 2012-04-15 Sun | +1 wk | +1 | ✅ |
+> | **V15–V16** | **Wk7** | **2012-05-06 Sun** | ⚠️ **+3 wk** | **+2** | ⚠️ **GAP A — this record.** 3 calendar weeks, 2 week-numbers. **Fully accounted for below** |
+> | V17–V18 | Wk8 | 2012-05-13 Sun | +1 wk | +1 | ✅ |
+> | V19–V20 | Wk9 | 2012-05-20 Sun | +1 wk | +1 | ✅ |
+> | **V21** | **Wk10** | **2012-06-17 Sun** | ⚠️ **+4 wk** | ⚠️ **+1** | ⚠️⚠️ **GAP B — NEW, UNEXAMINED, AND LARGER.** See below |
+>
+> **Every other transition in the corpus is +1 calendar week and +1 week number.** The corpus is
+> otherwise perfectly contiguous, which is what makes both anomalies legible.
+>
+> ### ⚠️ GAP B — `Wk9 052012` → `Wk10 061712`: FOUR weeks apart, ONE week number apart
+>
+> ```text
+> V19/V20   Bootcamp1 Wk9  052012   =  2012-05-20 (Sun)
+> V21       Bootcamp1 Wk10 061712   =  2012-06-17 (Sun)   <- 28 DAYS LATER
+>
+> 2012-05-27, 2012-06-03 and 2012-06-10 carry NO FILE and NO WEEK NUMBER.
+> ```
+>
+> **Four calendar weeks elapse and the week number advances by one.** Only two readings fit, and
+> **this record adopts NEITHER**:
+>
+> 1. **~3 further sessions are absent from this corpus** (Weeks 9a–9c, or an unnumbered run), or
+> 2. **the course itself broke for three weeks** and the numbering simply continued — in which case
+>    nothing is missing at all and `Wk10` is week 10 by *count of sessions*, not by calendar.
+>
+> ❌ **NOTHING IN THE INGESTED CORPUS DECIDES BETWEEN THEM, AND THIS ROUND DID NOT GO LOOKING.**
+> `DECISIONS.md`, `SOURCE_MANIFEST.md` and this register were all checked and **none records either
+> possibility** — R1 checked, and this round re-checked.
+>
+> ```text
+> GAP B STATUS:  UNEXAMINED. DELIBERATELY.
+>
+>   The cheap decider is one string check in Wk10's own opening -- does the
+>   speaker say "week ten", and does he refer back to a break?
+>
+>   THAT IS EXACTLY THE D3 SHAPE, and D3's admissibility is item 179, still
+>   OPEN and PUT TO THE OWNER. Running it now would pre-empt the precedent
+>   this project is in the middle of deciding, and would repeat D3's actual
+>   defect -- importing an UNVERIFIED datum from a pre-ingestion supplied
+>   transcript of exactly the class Q-008...Q-015 show to be fabricated in
+>   its headers.
+>
+>   SO IT WAITS FOR ITEM 179. Recorded now so the owner's gap audit sees the
+>   real shape of the hole rather than a bound that was never a bound.
+> ```
+>
+> ⚠️ **AND NOTE WHICH DIRECTION THIS CUTS.** Gap B is **larger** than Gap A — 4 weeks against 3 —
+> and unlike Gap A it is **entirely unaccounted for**. Gap A has a mechanism, a date, an announcement
+> and a corroborating week number; **Gap B has a hole and nothing else.** ⭐ **The honest summary for
+> the owner's audit is therefore: `2 artifacts KNOWN missing (Gap A) + up to ~3 UNKNOWN (Gap B)`,
+> not `2`.**
+
+**Raised by:** V14 · `[00:00:57]`–`[00:01:08]`, `[00:40:45]`, `[00:47:32]`; with V13 `[00:05:20]`,
 `[00:05:33]`
 **Speaker:** course author
 
@@ -7479,10 +7881,11 @@ and again at `[00:00:23]`. **Had the 04-29 session not happened, 05-06 would hav
 
 ### Why this is an ambiguity record and not a closed finding
 
-**What is established is that the corpus is missing two artifacts.** What is **not** established,
-and cannot be from inside the recordings, is **whether they were ever recorded** — the library is
-the owner's copy, and *"absent from this corpus"* and *"never made"* are different claims. **This
-record makes only the first.**
+**What is established is that the corpus is missing two artifacts** *(in the Week 5 → Week 7 region
+— scope corrected, see the header block)*. What is **not** established, and cannot be from inside
+the recordings, is **whether they were ever recorded** — the library is the owner's copy, and
+*"absent from this corpus"* and *"never made"* are different claims. **This record makes only the
+first.**
 
 ### Current Status
 
@@ -7490,17 +7893,40 @@ record makes only the first.**
 RECORDED. Not a blocker. It bounds what the corpus can be expected to contain:
 any V15+ session that finds Week 6 material referred back to should expect the
 referent to be ABSENT, and should not read the absence as its own error.
+
+⚠ SCOPE CORRECTED 2026-08-14 (item 176). THE BOUND ABOVE IS REGIONAL, NOT
+  CORPUS-WIDE, and it must not be quoted as a corpus-wide count.
+
+  GAP A -- Week 5 -> Week 7.  TWO artifacts, both IDENTIFIED:
+             the Orlando meetup recording (2012-04-21) and the
+             Week 6 session (approx. 2012-04-29). Mechanism, date and
+             corroborating week number all present. UNCHANGED.
+
+  GAP B -- Week 9 -> Week 10.  2012-05-20 -> 2012-06-17, FOUR calendar
+             weeks, ONE week number. Up to ~3 sessions, or a three-week
+             course break. ⚠ UNEXAMINED -- the cheap decider is the D3
+             shape and WAITS FOR ITEM 179.
+
+  FOR THE OWNER'S GAP AUDIT, the honest figure is:
+      2 KNOWN missing  +  up to ~3 UNKNOWN,
+  NOT "two artifacts are missing".
+
+  The full 21-file calendar audit is in the header block. Every OTHER
+  transition in the corpus is +1 week / +1 week number -- these are the
+  only two anomalies, and that was measured, not sampled.
 ```
 
 ### Related
 
-`A-042` (material deferred elsewhere), `D-017`; `18_REVIEW/V13/V13_REVIEW_R1.md` GATE (c).
+`A-042` (material deferred elsewhere), `D-017`; `18_REVIEW/V13/V13_REVIEW_R1.md` GATE (c);
+`18_REVIEW/V14/V14_REVIEW_R1.md` `M5`; `REVIEW_INDEX.md` items 176, 179 (`D3` precedent — **Gap B's
+decider is blocked on it**), 185 (the gap audit); `00_SYSTEM/SOURCE_MANIFEST.md` V19–V21.
 
 ---
 
 ## A-093 — ⭐ Why the spoken route to `A-084` is structurally weak, not merely untried
 
-**Raised by:** V14 · `[00:44:41]`–`[00:45:14]`, with V12 `[00:15:40]`
+**Raised by:** V14 · `[00:44:40]`–`[00:45:14]`, with V12 `[00:15:40]`
 **Speaker:** course author
 
 ### The finding

@@ -107,7 +107,17 @@ is **false for red**, or it describes felt equivalence, in which case **it says 
 > `A-093` records **why**: the speaker answers what the indicator *feels like*, never what it
 > *computes*, and says so himself (V12 `[00:15:40]` *"I don't know the math on it"*).
 
-### 3.5 ⭐ `A-092` — the Week 6 question is SETTLED, and TWO artifacts are missing
+### 3.5 ⭐ `A-092` — the Week 6 question is SETTLED, and TWO artifacts are missing **from the Week 5 → Week 7 region**
+
+> ⚠ **SCOPE CORRECTED 2026-08-14 — `V14_REVIEW_R1.md` `M5` / `REVIEW_INDEX.md` item 176.**
+> *(Superseded text, retained per `REMEDIATION_PROTOCOL.md` §2 — this heading previously read
+> "…and TWO artifacts are missing", and the paragraph below said "**Missing from this corpus**".)*
+> **The count is right for this region and wrong as a corpus-wide figure.** A full 21-file calendar
+> audit run during remediation found a **second, larger, unrecorded gap: `Wk9 052012` (2012-05-20)
+> → `Wk10 061712` (2012-06-17) — FOUR calendar weeks, ONE week number**, with 2012-05-27, 06-03 and
+> 06-10 carrying no file and no week number. It is **UNEXAMINED**: its cheap decider is the `D3`
+> shape and waits on item 179. **For the owner's gap audit the honest figure is `2 KNOWN + up to ~3
+> UNKNOWN`, not `2`.** Full audit table in `A-092`.
 
 `V13_REVIEW_R1.md` GATE (c) asked for the cheap decider. **The decider is the week numbering in the
 next surviving file**: `Wk7 050612` opens *"Alright, **week seven**"* twice in 25 seconds. Had the
