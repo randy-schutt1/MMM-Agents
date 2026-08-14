@@ -2407,15 +2407,41 @@ time (BST = UTC+1, EDT = UTC−4). The two readings put the shadow box on **oppo
 London session**:
 
 - **3–4 AM London** = 02:00–03:00 UTC = **the last hour of Asia, immediately before the London
-  open** — which is coherent with the second half of the same sentence, *"and 9 to 10 U.S."*, and
-  with the Brinks times `3:45` / `9:45` that the very next answer gives.
-- **3–4 AM New York** = 07:00–08:00 UTC = **an hour after the London open.**
+  open.**
+- **3–4 AM New York** = 07:00–08:00 UTC = **08:00–09:00 London — the hour spanning the London
+  open.**
 
-### ⚠ WHY THIS SESSION DOES NOT RESOLVE IT, THOUGH IT COULD ARGUE THE CASE
+### ⭐ EVIDENCE FROM OUTSIDE V13, FOUND WHILE GRADING THE HOMEWORK, AND IT FAVOURS THE **SLIDE**
 
-The spoken correction is strong: `SOURCING_HIERARCHY.md`'s *"the recording wins"* would ordinarily
-apply, the *"I'm sorry"* is unambiguous, and the London reading is the one that coheres with the
-Brinks times. **A resolution is deliberately declined on three grounds:**
+> ⚠️ **THIS PARAGRAPH REVERSES THIS SESSION'S OWN FIRST DRAFT AND IS LEFT VISIBLE**
+> (`REMEDIATION_PROTOCOL.md` §2). The draft asserted that *"the London reading is the one that
+> coheres with the Brinks times"*. **That was reasoning from the number `3:45` with no timezone
+> attached to it, and the corpus already carries one.**
+
+`V06_SOURCE_NOTES.md` records a **printed** slide — the DMR curriculum, `V06_00-48-29`, Week 10 —
+reading:
+
+> *"**Brinks Trade** - 2nd Leg of a M or W pattern Falling inside the **Shadow Box** and more
+> specifically at **3:45am or 9:45am est**."*
+
+**V13 `[00:29:29]` says the Brinks trade is what sets up in the shadow box.** If the Brinks times
+are `est`, and Brinks sits inside the shadow box, then **the shadow box's `3 to 4 am` is EST/NYC —
+which is what the SLIDE says and what the speaker retracted.**
+
+**This does not resolve §1; it makes non-resolution better-founded.** Before it, the conflict was a
+slide against a live correction, and the correction would ordinarily win. After it, **both sides
+have independent Tier 1 printed support** — V13's own slide and V06's DMR slide on one side, V13's
+spoken *"I'm sorry"* on the other.
+
+⚠ **Two limits on the V06 evidence, stated rather than glossed:** the DMR curriculum is the
+syllabus of a **different, paid programme** shown inside a bootcamp lesson, so it is Tier 1 by
+authorship but not by venue; and `est` in a 2012 April document may be loose usage for EDT. Neither
+limit changes the direction of the evidence.
+
+### ⚠ WHY THIS SESSION DOES NOT RESOLVE IT
+
+`SOURCING_HIERARCHY.md`'s *"the recording wins"* would ordinarily favour the spoken London reading.
+**A resolution is declined on four grounds:**
 
 1. **Both sides are Tier 1.** The slide is not a secondary source being overruled by a recording —
    it is the same author in the same lesson. `SOURCING_HIERARCHY.md` §3 has no case for *Tier 1 vs
@@ -2429,6 +2455,10 @@ Brinks times. **A resolution is deliberately declined on three grounds:**
 3. **`D-030` binds and `D-031` doubles it.** A session-boundary definition is never approximated,
    and session timezone is a **tested variable, not an assumption**. Adopting either reading
    silently would fix a five-hour question by preference.
+4. ⭐ **The V06 Brinks evidence points at the SLIDE**, i.e. at the side the *"recording wins"* rule
+   would have discarded. **A rule that would have thrown away the better-corroborated reading is a
+   rule being applied outside its scope** — it exists for Tier 1 vs Tier 2, not for one author
+   against himself.
 
 **`C-011`'s asymmetry applies exactly**: the slide is defeated as an authority **without** the audio
 supplying an unambiguous replacement, so the record stays blocked rather than flipping.
@@ -2493,12 +2523,15 @@ Stop-hunt box: PRINTED "25 to 50" vs SPOKEN asymmetric (25/50) vs SPOKEN
 
 ### Required Research
 
-For §1: any later lesson stating the shadow box's window with a timezone, **or** any lesson stating
-the Brinks times with a timezone — `3:45` / `9:45` would settle it by implication. For §2: a single
+For §1: any later lesson stating the shadow box's window **with a timezone**. Note that the
+Brinks-times route is now **partially discharged** by `V06_00-48-29`'s `est`, which favours the
+slide; what is still missing is a statement about **the box** rather than about the trade inside
+it. For §2: a single
 statement of the offset that is not read off this deck.
 
 ### Related
 
 `A-076`, `A-039`, `A-088`, `C-011`, `D-030`, `D-031`, `D-040`; `PT-041`;
 `03_LESSON_NOTES/V13_SOURCE_NOTES.md` §4, `V13_INTERPRETATION.md` Q4;
-`04_SCREENSHOTS/V13/INDEX.md` frame `00:29:35`.
+`04_SCREENSHOTS/V13/INDEX.md` frame `00:29:35`; `03_LESSON_NOTES/V06_SOURCE_NOTES.md` (DMR
+curriculum, frame `V06_00-48-29`, Week 10).
