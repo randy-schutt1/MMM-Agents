@@ -9418,3 +9418,150 @@ under `D-047` (second consecutive collision; item 188's validator check still un
 
 ### Next Review Trigger
 Student remediation of items 222–225, or a V17 submission.
+---
+## 2026-08-14 — Student Session — V17 (`Bootcamp1 Wk8 051312 Part1`, Week 8, 2012-05-13)
+
+**Branch:** `video/v17` · **Worktree:** `MMM-Agents-v17` (`D-038`) · **Submitted as:** ⚠ REVIEW
+REQUIRED
+
+### ⚠⚠ GATE, FIRST AND UNSOFTENED
+
+**V17 was opened with its `D-004` gate CLOSED.** The V17 GATE block read *"CLOSED until V16's R1
+returns"*, and **V16's R1 had not returned when this session finished** — it is in progress in a
+parallel session. The owner's 2026-08-14 authorisation covers *"the remainder of the training, V16
+onward"* and the owner said *"start v17"*; **that is permission, and permission is not a gate.**
+**V16 was the first lesson built on an unreviewed predecessor. V17 is the second. We are two lessons
+deep on unreviewed ground.** V15's R1 has returned (REVISE, 0C/0M/6 MINOR/13 NOTE, HIGH); V16's has
+not. **Reviewing V16 is the highest-value action available to this project.** Item 185's gap audit is
+not discharged here either.
+
+### CAPTURE
+
+Source SHA verified against `SOURCE_MANIFEST.md` before the frame-rate patch and **re-verified
+after**. Stage `1024 × 786` and `frameRate 3.0` read from **this file's own header**; patched to
+`30.0` for a 10× sweep. `GOTCHA 4`: ports **8931, 8947 and 8953 were all found BUSY** by other
+sessions before 8961 was verified with `lsof` and a shasum match on the served bytes under a unique
+filename. `GOTCHA 5`: the play click was **confirmed by the before/after guard**. Duration agrees to
+**1.00 s** across three independent sources — the tightest of any lesson so far. **694 frames, 36
+curated**, plus one `2048 × 1572` re-capture (below).
+
+**§8a MEASURED, not assumed: offset ZERO at fourteen points**, with the rate check run separately on
+six intervals **and** on the PNGs' own mtimes, because the ASR pass was running concurrently on the
+same machine (declared as `D6`). Item **188**'s `t0`-before-click fix is now confirmed on **two
+lessons by two sessions across 24 measured points**; the recipe is a policy ledger and was **not**
+edited (item **218**, still owed).
+
+### THE LESSON
+
+Two lessons welded together: a Week-8 progress audit with two graded pop quizzes, then — under a
+printed `TREND` card — the corpus's most structured teaching content to date.
+
+* ⭐ **First lesson to state its own date AND week number AND print them.** *"Today's the 13th"*,
+  *"Welcome to week eight"*, and a seven-row printed schedule. ⚠ Qualified at `[00:11:18]`:
+  *"eight weeks? **Actually nine** because we took an extra weekend between"* — bears on `A-01`'s
+  missing Week 6 (item **238**).
+* ⭐⭐ **Why student pivots never match his**: the daily candle closes at 17:00 dealer time; the
+  **indicator re-cuts its own 24-hour window at 00:00–01:00** *"depending on your dealer and what his
+  GMT offset is"*. **`C-023` explained — and DOWNGRADED, not closed**, because the explanation
+  replaces a two-way fork with a free broker parameter (`A-107`) and creates **`C-024`**, the
+  corpus's **first cross-lesson contradiction**, against V16's printed `2:00 To 3:00 AM, EST`.
+* ⭐⭐ **The three-day cycle**, printed across three slides and narrated, with the corpus's first
+  **causal** account of the reversal: the dealer sells into three days of buying, becomes *"heavy net
+  short"*, and can only book it by correcting against retail.
+* ⭐⭐ **`A-010` and `A-011` both advance in one lesson** — *"eight candles or above"* on M15, and
+  *"you don't have a `W` in price, you have a `W` in the **closing** of price"*. **Neither closes.**
+* ⭐ **Reset vs reversal** (`A-122`), and the slide concedes its own undecidability, answering itself
+  with `That Is Why We Use A Stop Loss!!!!!` — the most honest sentence in the lesson.
+* ⭐ **`Mayo` and `Blue Berry` PRINTED twice**, `ketchup`/`mustard` printed once, plus a spoken
+  `mayonnaise` recovered by the second ASR engine. `A-020`'s nickname half is settled; **the periods
+  are still not printed anywhere.**
+* ⭐ **`A-124`: the deck is MUTABLE** — he edits a slide's typo on camera at `45:05`, caret visible
+  after `News Is Used`. `[PRINTED]` evidence is **timecode-scoped, not deck-scoped**.
+
+### ⚠⚠ THE SESSION'S OWN HEADLINE CLAIM WAS WRONG, AND A PRE-COMMITTED CHECK CAUGHT IT
+
+The capture commit (`f55c2f3`) led with the claim that `[00:21:10]`'s *"G U"* was **an ASR
+mishearing of *"G J"***, on a `GBPJPY,M15` chart header and a printed `G/J` slide. **The independent
+`large-v3-turbo` pass renders `GU` as well.** The transcript is faithful; **the speaker misnamed his
+own chart**, calling it *"pound yen"* forty seconds later. **Filed as `C-027`; retracted in four
+artifacts with the original text struck and retained.** The derived suspicion that *"the transcript
+has at least one currency-pair error, assume there are others"* is **also retracted — it has none.**
+
+**The five arbitration candidates were fixed and committed BEFORE the pass returned**, which is the
+only reason this was caught. **It is the inverse of V16's item 220**: V16 let a transcript contaminate
+frame names; V17 let frames contaminate the reading of a transcript. **Same root — one channel
+adjudicating another with no independent third.** Item **237**.
+
+The other four candidates: `5200` is **faithful on both engines** (the slide *disambiguates*, it does
+not correct); the stop is **`15, 20`** on the second engine against `15 25's` on the first, so
+`A-123` **sharpens and stays open**; *"the dragon and backwards"* is **"right past the mayonnaise and
+then dragging them backwards"**, recovering answer-key point 2's mechanism; and `A-108`'s
+*"double-rearer"* is **`double railroad tracks`**, not the *double bottom* this session guessed —
+which also narrows `A-114`'s `RR`.
+
+### BACKTEST — `PT-045`, PRE-REGISTERED AT `7eaf4d1`
+
+**Claim `W` (the daily wick).** Median wick **share** of range: real `0.542`–`0.555` against a
+volatility-matched shuffled-day null of `0.541`–`0.556` — **inside `±0.05` in four cells of four.**
+Fraction of days with **both** wicks ≥ 5 pips: real `0.799`–`0.854` against `0.718`–`0.738` —
+**`+0.081` to `+0.116`, four of four.** ⭐ **The wick's SIZE is path geometry; its PRESENCE ON BOTH
+ENDS is not.** ⚠ The pre-registered decision table has **no cell** for one-null-one-positive, so all
+four report `INDETERMINATE` — a defect in my own rule, reported rather than repaired.
+
+**Claim `S` (the three-day swing).** Median run 2 in three cells of four. ⭐ **The unconditional
+`P(run ≥ 3)` sits inside the conditional Wilson 95% in four cells of four** — conditioning on a
+reversal is statistically indistinguishable from not conditioning. ⚠ **The two `D-031` arms disagree
+on `W-E`.**
+
+⚠⚠ **And the first execution produced a clean, confident, four-of-four `CONTRADICTED AS STATED` that
+was ENTIRELY A WEEKEND.** *"Consecutive"* was implemented as consecutive **calendar** days; FX has no
+weekend session; every run truncated at Friday. **Caught only by a pre-registered control returning
+an impossible `0.0`.** Both readings executed, both printed, the pre-registration untouched. A second
+defect — a per-process-salted `hash()` in the shuffle seed — made `O3` irreproducible and was fixed;
+two full runs are now byte-identical. Item **243**.
+
+### HOMEWORK
+
+V17 assigns no `R&D` slide; it assigns a printed **audit of the whole course**. Six of its seven
+items are chart drills a machine cannot do. **The seventh was done by carrying V17's own seven-point
+answer key onto real data: it completes to TWO of seven and stops.** ⭐⭐ **And the student
+flashcard's headline filter — `Asian range less than 50pips` — passes `0.851` / `0.893` of all days
+and changes the downstream rate by 1.6 points. It is not a filter** (`A-112`). Point 4's *"cuts the
+Asian range"* is true on **99.7%** of days; point 3's *"25 to 75 pips off Y-LOD"* describes **21%**,
+and the median day makes its low **2.8 pips below** yesterday's. Comprehension probe **33/33**, with
+the report saying why that is weak evidence.
+
+### QUARANTINE — `Q-018`, AND ITEM 221'S PREDICTION IS FALSIFIED
+
+Item 221 predicted the generator had *"moved to paraphrasing"* so *"a byte `diff` will not flag
+V17–V21"*. **V17's trio is a BYTE CLONE of V16's — zero content lines differ in any of the three
+files.** It paraphrased **once**, at V15→V16, and propagated it verbatim. **The correct detector is
+the invariant, not `diff` and not paraphrase-awareness.** Machine-checked zeroes on **both**
+transcripts: `5/13`, `M15`, `800`, `Asian Box`, `10 to 15`. `V18-R002` is **worse than absent** — it
+states `10 to 15 pips` where the lesson states `15, 20`/`15 25's`. ⚠ **And one cloned claim partly
+lands by coincidence**, which is why the audit is on provenance, never plausibility. Item **236**.
+
+### ITEM 219's REMEDY, TESTED — AND A NEGATIVE RESULT
+
+A targeted `2048 × 1572` re-capture was run on V17's pivot-labelled charts. **It recovers nothing:
+the charts are bitmaps embedded in PowerPoint slides**, so the limiting resolution is the pasted
+picture. Item 219 narrows from *"do it"* to *"check the image type first"*. ⭐⭐ **And §8a on that
+second sweep came back `−1`, not `0`** — same script, same machine, forty minutes apart — which is
+§8a's own *"it varies per run"* warning demonstrated rather than quoted. Item **240**.
+
+### RECORDS
+
+`A-107`–`A-125` opened (**19**); `A-010`, `A-011`, `A-020`, `A-036`, `A-084`, `A-097`, `A-100`,
+`A-101` amended (**8**); `A-108` **closed as a transcription question only**. `C-024`–`C-027` filed
+(**4**), `C-023` amended and downgraded. `Q-018` filed. `PT-045` pre-registered and run.
+**REVIEW_INDEX items 236–243** (allocated as 201–208). ⚠ **Nineteen opened against eight advanced is the finding:** V17 is
+the densest lesson since V09 and moves the automation project backwards on net, because every new
+rule it states arrives with an undefined term inside it.
+
+### HYGIENE
+
+No `I-009` collision. No policy ledger edited (`D-038a`) — which is why items 218, 240 and 242 are
+deferred rather than applied. The main worktree, which was on `review/v16` with a merge in progress
+belonging to a parallel session, **was not touched**. The dataset was **copied, never symlinked**
+(V16 §2's process error is not repeated) and verified `13 OK` + `4 OK` before a bar was read.
+**Nothing merged to integration.**

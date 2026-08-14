@@ -1,0 +1,74 @@
+[
+  {
+    "arm": "A",
+    "n_days": 899,
+    "completeness": "n = 899 (5 excluded for incomplete sessions: 2013-12-24 (box 26/26, post 49/56), 2013-12-31 (box 26/26, post 52/56), 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))",
+    "HW1_box_range_median_pips": 33.1,
+    "HW1_box_range_p25_p75": [
+      24.7,
+      43.8
+    ],
+    "HW1_frac_under_50": 0.8509,
+    "HW1_frac_under_50_ci": [
+      0.8262,
+      0.8727
+    ],
+    "HW2_frac_cuts_either_edge": 0.9967,
+    "HW2_median_down_ext": 25.5,
+    "HW2_median_up_ext": 21.1,
+    "HW2_frac_down_in_25_50": 0.208,
+    "HW2_frac_up_in_25_50": 0.1802,
+    "HW2_frac_either_in_25_50": 0.3648,
+    "HW2_frac_either_in_25_50_ci": [
+      0.334,
+      0.3968
+    ],
+    "HW2_band_rate_small_box": 0.3673,
+    "HW2_band_rate_big_box": 0.3507,
+    "HW3_n": 898,
+    "HW3_median_low_vs_ylod": -2.8,
+    "HW3_frac_low_25_75_above_ylod": 0.2138,
+    "HW3_frac_high_25_75_below_yhod": 0.2261,
+    "HW3_frac_either": 0.4243,
+    "HW3_frac_either_ci": [
+      0.3923,
+      0.4569
+    ]
+  },
+  {
+    "arm": "B",
+    "n_days": 898,
+    "completeness": "n = 898 (6 excluded for incomplete sessions: 2013-04-12 (box 25/26, post 56/56), 2013-12-24 (box 26/26, post 49/56), 2013-12-31 (box 26/26, post 52/56), 2014-12-24 (box 26/26, post 44/56), 2015-08-21 (box 26/26, post 55/56), 2015-12-24 (box 26/26, post 44/56))",
+    "HW1_box_range_median_pips": 29.3,
+    "HW1_box_range_p25_p75": [
+      21.9,
+      39.3
+    ],
+    "HW1_frac_under_50": 0.8931,
+    "HW1_frac_under_50_ci": [
+      0.8712,
+      0.9117
+    ],
+    "HW2_frac_cuts_either_edge": 0.9978,
+    "HW2_median_down_ext": 27.0,
+    "HW2_median_up_ext": 22.7,
+    "HW2_frac_down_in_25_50": 0.2127,
+    "HW2_frac_up_in_25_50": 0.1759,
+    "HW2_frac_either_in_25_50": 0.3608,
+    "HW2_frac_either_in_25_50_ci": [
+      0.33,
+      0.3927
+    ],
+    "HW2_band_rate_small_box": 0.3616,
+    "HW2_band_rate_big_box": 0.3542,
+    "HW3_n": 897,
+    "HW3_median_low_vs_ylod": -2.9,
+    "HW3_frac_low_25_75_above_ylod": 0.2062,
+    "HW3_frac_high_25_75_below_yhod": 0.2297,
+    "HW3_frac_either": 0.4214,
+    "HW3_frac_either_ci": [
+      0.3895,
+      0.454
+    ]
+  }
+]
