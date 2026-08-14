@@ -1072,6 +1072,209 @@ V11 STATUS NOW:      **IN REMEDIATION, NOT COMPLETE.** Items 109-113 are
                      none alters a method, threshold, disposition or
                      number.
 
+V12 STATUS NOW:      **STUDENT PASS COMPLETE, SUBMITTED, AWAITING R1.**
+                     Branch video/v12, isolated worktree (D-038), pushed,
+                     NOT MERGED -- D-004 reserves that for after review.
+                     Self-assessment: REVIEW REQUIRED (not PASS), on three
+                     named judgement calls listed in the mastery report §3.
+
+                     WHAT V12 IS: 55 minutes on the Traders Dynamic Index --
+                     titled that, in print, on a frame held 8.5 minutes.
+                     Four components built one at a time, two setups
+                     (shark fin short/long), a three-rung scale-in ladder,
+                     an exit rule, six worked charts, and the week-4
+                     assignment V11 promised and did not give.
+                     Speaker: course author, 100%, HIGH, over-determined --
+                     nine non-acoustic strands, four of them NEW evidence
+                     not present in Part 1; 17-pattern handover scan ZERO.
+
+                     ⭐ FOUR RECORDS CLOSE, ALL `RESOLVED BY COURSE`:
+                     A-080  RSI lookback = 21 closing periods. Stated FOUR
+                            times by the course author with the rationale
+                            ("21 slows it down"), the default it replaces
+                            ("instead of 14 periods") and its status as the
+                            group's TEMPLATE PRESET. Two ASR engines agree.
+                            ⚠ IT CLOSES ON THE AUDIO. No properties dialog
+                            exists in the lesson -- measured across all 672
+                            frames at a threshold a THIRD of the detector's.
+                            The predicted route was a frame; it was not.
+                     A-064  Mayo/mail/male are ONE word. "Shark Fin Hold The
+                            Mayo" is PRINTED at burned 26:11 while the audio
+                            says "hold the mail" at [00:26:11].
+                     A-031  blood in the water = the RSI line re-entering the
+                            band AND crossing the TRADE SIGNAL LINE.
+                     A-032  shark fin = the RSI line's excursion above the
+                            BLUE band and back; the band IS the waterline.
+                     ⚠ A-031 and A-032 are closed AS TO MEANING and are NOT
+                     COMPUTABLE -- both turn on the band, and A-086 leaves
+                     the band unspecified. Do not read "RESOLVED BY COURSE"
+                     as "testable".
+
+                     ⭐⭐ A-020 SPLITS -- THE MAYO ROW REACHES TIER 1:
+                     [00:31:22] "held by the mayonnaise perfectly. Held by
+                     the 200" -- two adjacent sentences, one object -- while
+                     the slide ON SCREEN prints "TDI VB BREAK, PRICE HELD BY
+                     200". Corroborated independently five minutes earlier
+                     at [00:26:20]. Second nickname EVER to reach Tier 1,
+                     after blueberry=800, and the FIRST from the course
+                     author. This is what V12 GATE (b) asked for and it is
+                     BETTER than what was asked for -- a legend would have
+                     shown a period on a line; this is the speaker joining
+                     the nickname to the period himself.
+                     ⚠ D-043 IS AGREED WITH, NOT AMENDED. Only the WARRANT
+                     moves, not the value. Ketchup, mustard and water are
+                     UNCHANGED, stay owner-attested, and STAY on
+                     SOURCING_HIERARCHY §3.4's list. D-042 §1's exhaustive
+                     negative is UNAFFECTED -- ketchup, mustard, blueberry
+                     and raspberry all occur 0x in V12.
+                     ⚠ THE COLOUR AXIS DOES NOT MOVE. Two frames show price
+                     held at a WHITE line under captions naming "Mayo" and
+                     "200". Suggestive, and DELIBERATELY NOT ADOPTED -- no
+                     legend says the white line is that line. Refusing the
+                     free upgrade is the same discipline that made item 109
+                     right about RSI(21).
+
+                     C-019 OPENED and resolved in Tier 1's favour. MMM-NOTES
+                     p.46 put "blood in the water" on the MARKET BASE LINE;
+                     V12 puts it on the TRADE SIGNAL LINE, printed and
+                     spoken, three times. §3.2 Case A + §3.3.
+                     ⭐ EXTERNAL_VOCABULARY_REFERENCE §5.7's own Tier 3
+                     reasoning -- from V04's "the secondary line" -- had
+                     predicted the RED signal line CORRECTLY, while the
+                     NORMATIVE Tier 2 document named the wrong line. Both
+                     held their conclusions provisionally, which is the
+                     finding. Had §9.2 closed A-031 on "the only definition
+                     anyone could find", the corpus would now carry the
+                     wrong line for its own entry trigger.
+
+                     ⛔ AND THE HEADLINE FINDING DID NOT BUY WHAT IT WAS
+                     SUPPOSED TO BUY. PT-040 pre-registered, at 83110f1,
+                     BEFORE its runner existed: does A-084's smoothing
+                     ambiguity change the RSI thresholds V11 states?
+                     M = 10.481 pp at k=5,t=50 -- and 5.16 pp even at k=2,
+                     the shipped TDI's own default. Pre-registered bands
+                     <=2 / 2-5 / >5.  VERDICT: MATERIAL.
+                     A-084 is PROMOTED TO AN ACTIVE BLOCKER and V11's RSI
+                     threshold claims STAY BLOCKED. A-080's closure is
+                     NECESSARY AND NOT SUFFICIENT: the period is known and
+                     the series that period belongs to is not.
+                     The 2pp/5pp boundaries were fixed before a single RSI
+                     value was computed, and M=10.48 sits close enough to a
+                     defensible-sounding "10 pp" that a post-hoc boundary
+                     would have been a live temptation. D-029 and commit
+                     ordering foreclosed it. Both D-031 arms agree to
+                     0.000 pp exactly, W-B agrees, the simple-average RSI
+                     variant agrees.
+
+                     ⭐ A-082's PREMISE IS FALSE, AND THE ERROR WAS THIS
+                     SESSION'S OWN FIRST DRAFT TOO. Gate (e)'s sweep was
+                     run: "flashcard" occurs 119 times across 18 of 21
+                     lessons, and V03 [00:40:57]-[01:06:55] TEACHES them --
+                     40 cards, 15-minute default, labelled, winners only.
+                     A-082 is REFRAMED, not closed: its CONTENT is the
+                     corpus's other open records.
+                     THE PROCESS FINDING IS BIGGER THAN THE FLASHCARDS.
+                     A-082 was raised against ALREADY-INGESTED material,
+                     was wrong ON THE DAY IT WAS WRITTEN, and survived V11
+                     R1. What caught it was a carry-forward that named the
+                     command -- and the V11 session's explicit disclosure
+                     that it had NOT run the sweep. V12_INTERPRETATION Q6
+                     lists FIVE more records carrying unverified
+                     corpus-wide negatives (A-004, A-011, A-076, A-056,
+                     A-002) with the cheap test for each. NOT RUN by this
+                     session, and that is stated rather than implied.
+
+                     A-039 NARROWS AGAIN and does NOT close. V12 teaches
+                     the TDI in full, but plotting it needs four numbers
+                     and V12 gives ONE. The record states the OPPOSITE case
+                     at full strength and flags that this session may be
+                     UNDER-crediting, declining the call only because
+                     closing A-039 would silently unblock A-031's stated
+                     dependency. R1 may reasonably split it.
+                     A-084, A-085, A-086 opened. Ten records CHECKED and
+                     NOT advanced, recorded as negative results per item
+                     107. Q-013 filed.
+
+V13 GATE:            ⭐ **OPEN.** V12 R1 returned 2026-08-14 on branch
+                     review/v12: **REVISE — 0 CRITICAL, 0 MAJOR, 2 MINOR,
+                     6 NOTE, confidence HIGH.** Under D-024 a round carrying
+                     zero CRITICAL and zero MAJOR OPENS the gate for V13.
+                     V12 stays IN REMEDIATION, not COMPLETE: items 137-138
+                     are owed. Neither can contaminate V13 -- 137 rescopes a
+                     completeness claim about frame legends while LEAVING
+                     A-080 AND ITS NEGATIVE INTACT AND STRENGTHENED, and 138
+                     corrects a novelty claim in Q-013 §4 while every
+                     quarantined file stays quarantined.
+                     ⭐ R1 re-derived PT-040 from the raw M1 corpus in
+                     independent code and reproduced EVERY Wilder cell to the
+                     printed decimal (M = 10.4812 pp, k=2 max 5.1638 pp), and
+                     re-verified all four A-080 timestamps against the SOURCE
+                     AUDIO with a third ASR engine. A-084 IS AN ACTIVE
+                     BLOCKER and V11's RSI threshold claims STAY BLOCKED.
+                     R1 also adjudicated the three questions V12 put to it:
+                     item 124 colour restraint UPHELD, item 130 A-039 STAYS
+                     NARROWED, item 135 EXTERNAL_VOCABULARY_REFERENCE.md is
+                     an EVIDENCE ledger. See 18_REVIEW/V12/V12_REVIEW_R1.md.
+                     *(Superseded, retained per REMEDIATION_PROTOCOL.md §2:
+                     "CLOSED until V12's R1 returns.")*
+                     D-004: the gate opens
+                     on a REVIEWER verdict, never on a student submission,
+                     and what R1 returns then governs per D-024.
+                     Carry into V13, and read this before starting:
+                     (a) ⭐ **THE CHEAPEST REMAINING UNBLOCK IN THE PROJECT
+                     IS ONE SENTENCE OR ONE FRAME.** A-084 needs either "the
+                     plotted line IS the RSI" -- which sets k=1, makes O2
+                     identically 0, and unblocks V11's WHOLE RSI half
+                     immediately -- or a smoothing length. A TDI properties
+                     dialog in ANY of V13-V21 does the same job. V12 was
+                     predicted to be that place and was NOT: 672 frames, no
+                     dialog, measured.
+                     (b) **SPEAKER: TEST IT, DO NOT ASSUME.** V13 is a NEW
+                     WEEK and a NEW DATE (2012-04-15) -- exactly the
+                     condition under which the corpus's course-author
+                     runtime has broken before (100% V03 -> 31% V04 -> 0%
+                     for five lessons -> 100% V10). V11 and V12 agreeing
+                     proves NOTHING about V13: they are two halves of one
+                     recording.
+                     (c) ⭐ **THE A-082 CLASS OF ERROR IS THE V13/V14 AUDIT
+                     ITEM.** See above. Five named candidates, cheap tests,
+                     not run.
+                     (d) **A DIRECTLY ANSWERABLE VERSION OF (a), AVAILABLE
+                     NOW WITHOUT A NEW LESSON.** Extend PT-040's sweep to
+                     EMA and Wilder smoothings -- PT-040 §6 limitation 1
+                     names that family as one the design deliberately does
+                     not cover. It would not resolve A-084, but it would say
+                     whether MATERIAL is robust to the smoothing FAMILY or
+                     only to its LENGTH.
+                     (e) **A-031/A-032 ARE CLOSED AND NOT COMPUTABLE.** Do
+                     not read "RESOLVED BY COURSE" as "testable".
+                     (f) **V12 GAVE V11'S MISSING ASSIGNMENT.** If V13
+                     promises one and does not give it, CHECK V14 BEFORE
+                     recording it as missing. V11/V12 is the precedent that
+                     a two-part session splits promise from delivery.
+                     (g) **I-008 STILL STANDS.** Seven spot-checks over ~6
+                     minutes of 55. No lesson has had a full independent
+                     re-transcription, and BOTH records V12 closed on audio
+                     rest on ASR confirmed by one other engine.
+                     (h) **THE LIBRARY SEED DEFECT (item 113) IS STILL OWED
+                     on the integration branch.** Harmless in PT-040, which
+                     uses no randomisation. NOT harmless in the next PT that
+                     bootstraps.
+                     (i) ⚠ **EXTERNAL_VOCABULARY_REFERENCE.md WAS EDITED ON
+                     THE TASK BRANCH.** It is named in NEITHER of D-038a's
+                     lists; classified as an EVIDENCE ledger by D-038a's own
+                     test, which is also what SOURCING_HIERARCHY §3.1
+                     requires of the reconciling session. FLAGGED for R1 to
+                     overrule.
+                     (j) ⭐ **08_CONCEPT_LIBRARY: V12 IS THE FIRST LESSON
+                     THAT GENUINELY TESTS ITS 0-CONCEPT POLICY.** shark fin
+                     and blood in the water are now RESOLVED BY COURSE --
+                     exactly the terms the index was written to wait for --
+                     but both are NOT COMPUTABLE, so an entry could be
+                     mistaken for a codable rule. That is a change to the
+                     index's own rules and a task branch should not make it.
+                     PUT TO R1 AND THE OWNER.
+
 V12 GATE:            ✅ **OPEN — CONFIRMED BY R1 under D-024** (0 CRITICAL,
                      0 MAJOR). **This review does NOT qualify that and V12
                      work is NOT held by items 109-113.** The owner had
@@ -1569,7 +1772,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V10 | Wk3 | 01:36:16 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ✅ **R1 REVISE 0C/0M/4m** | **IN REMEDIATION** (items 91-94) |
 | V11 | Wk4 P1 | 00:50:56 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | **R1 REVISE 0C/0M/5min** | **IN REMEDIATION (items 109-113) · V12 GATE OPEN** |
-| V12 | Wk4 P2 | 00:55:18 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V12 | Wk4 P2 | 00:55:18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-080 + A-064 + A-031 + A-032 CLOSED, A-020 mayo row → Tier 1, C-019 opened, PT-040 MATERIAL |
 | V13 | Wk5 P1 | 01:05:22 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V14 | Wk5 P2 | 00:47:48 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |

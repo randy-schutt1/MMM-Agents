@@ -8045,3 +8045,255 @@ Explicit path staging only; `git add -A` never used; `git diff --staged` read be
 item 97 / item 114 notes above, and (2) `A-020` remains on `SOURCING_HIERARCHY.md` §3.4's standing
 re-check list for **V12 onward** — the corpus still attaches no period to *ketchup* or *mustard*,
 and V12 is the cheapest route to a Tier 1 closure.
+
+---
+
+# 2026-08-13 — V12 STUDENT PASS — `Bootcamp1 Wk4 040812 Part2 (55mins).swf` — *Traders Dynamic Index*
+
+**Branch:** `video/v12`, isolated worktree at `../MMM-Agents-v12` (`D-038`), branched from
+`origin/claude/add-documents-repository-fdfb3u` @ `e70a6f6`. **Pushed, NOT merged** — `D-004`
+reserves merge-back for after independent review.
+**Session type:** Student. **Self-assessment:** `REVIEW REQUIRED`.
+**New records:** `Q-013`, `C-019`, `A-084`, `A-085`, `A-086`, `PT-040`, `REVIEW_INDEX.md` items
+**121–136**.
+
+---
+
+## What V12 is
+
+**55 minutes on the Traders Dynamic Index** — titled that, **in print**, on the opening frame,
+held eight and a half minutes. Four components built one at a time (RSI line → trade signal line →
+market baseline → volatility bands), two named setups (shark fin short / long), a three-rung
+scale-in ladder, an exit rule, six worked charts, and **the week-4 assignment V11 promised at
+`[00:00:46]` and did not give.**
+
+**Speaker: course author, 100%, HIGH, over-determined.** Nine non-acoustic strands fixed before the
+answer was known; **four of them are new evidence not present in Part 1** (forum ownership, the
+DMR paid tier, the New Jersey venue, template distribution). **17-pattern handover scan returns
+ZERO.** `COURSE_PROGRESS.md` V12 GATE (a) said *test it, do not assume*, and it was tested rather
+than inherited from V11.
+
+**Capture:** header **read, not assumed** — `frameRate 3.0`, stage `1024×786`, 9,956 frames; three
+independent durations agreeing to 0.7 s; port verified by `lsof` **and** byte-diff (`GOTCHA 4`);
+pre/post-click guard fired (`GOTCHA 5`); 672 frames, 27 screen states, burned timecode linear at
+`frame×5+16 s` **verified 6/6 with zero drift** and confirmed a second way on **content**.
+
+---
+
+## The four closures — all `RESOLVED BY COURSE`
+
+| Record | What settles it |
+|---|---|
+| ⭐ **`A-080`** | **RSI lookback = 21 closing periods.** Stated **four times**, with the rationale, the default it replaces (*"instead of 14 periods"*) and its status as the group's **template preset**. Two ASR engines agree |
+| ⭐ **`A-064`** | **`Shark Fin Hold The Mayo` PRINTED at burned `26:11`** while the audio says *"hold the **mail**"* at `[00:26:11]`. The three-rendering hazard is demonstrated to be one word |
+| **`A-031`** | *"When the fin goes back under the water line — back inside the band — **and crosses the signal line, the trade signal line, TSL** — that's where we get blood in the water"* `[00:20:00]`, printed `19:06` |
+| **`A-032`** | *"since the band is colored blue for our purposes, **it looks like the shark fin is coming out of the water**"* `[00:19:51]`, printed `19:06` |
+
+⚠️ **`A-031` and `A-032` are closed AS TO MEANING and are NOT COMPUTABLE** — both turn on the band,
+and `A-086` leaves the band unspecified. **Do not read `RESOLVED BY COURSE` as "testable".**
+
+## `A-020` splits — the mayo row reaches Tier 1
+
+`[00:31:22]`–`[00:31:27]`, **two adjacent sentences, one object**: *"Price comes out and it's
+**held by the mayonnaise** perfectly. **Held by the 200**, okay."* — while the slide **on screen at
+that instant** prints **`TDI VB BREAK, PRICE HELD BY 200`**. Corroborated independently five
+minutes earlier on a different chart.
+
+**Second nickname ever to reach Tier 1 after blueberry = 800, and the first from the course
+author.** This is what V12 GATE (b) asked for and it is **stronger** than what was asked for.
+
+⚠️ **`D-043` is AGREED WITH, not amended — only the WARRANT moves, not the value.** `D-042` §1's
+exhaustive negative is **unaffected**: `ketchup`, `mustard`, `blueberry`, `raspberry` all **0×** in
+V12. **Ketchup, mustard and water stay owner-attested and STAY on `SOURCING_HIERARCHY.md` §3.4's
+list.**
+⚠️ **The COLOUR axis does not move** (item 124). Two frames show price held at a **white** line
+under captions naming *Mayo* and *200* — **suggestive and deliberately not adopted**, because no
+legend says the white line is that line.
+
+## `C-019` — and the tier that guessed right was the one forbidden to decide
+
+`MMM-NOTES` p.46 puts *blood in the water* on the **market base line**; V12 puts it on the **trade
+signal line**, printed and spoken, three times. §3.2 Case A + §3.3: **the recording wins**, and
+Tier 2's basis is **replaced, not supplemented**.
+
+⭐ **`EXTERNAL_VOCABULARY_REFERENCE.md` §5.7's own Tier 3 reasoning — from V04's *"the secondary
+line"* — had predicted the RED signal line CORRECTLY**, while the **normative Tier 2** document
+named the wrong line, and §9.2 had correctly labelled the Tier 2 answer *"a lead for the promised
+TDI lesson, **not an answer**"*. **Had it closed `A-031` on the only definition anyone could find,
+the corpus would now carry the wrong line for its own entry trigger.** Second time in two days
+`D-040`'s machinery caught an error **by forbidding a session to resolve something it could have
+resolved** (`D-043` §3 is the first).
+
+---
+
+## ⛔ AND THE HEADLINE FINDING DID NOT BUY WHAT IT WAS SUPPOSED TO BUY
+
+`A-080`'s closure was meant to unblock V11's RSI half. **`A-084`** — opened this session — asks
+whether the line plotted in the TDI sub-window **is** `RSI(21)` or **a smoothing of it**; V12 says
+only *"TDI is developed off of the RSI"*, which is **lineage, not identity**.
+
+**`PT-040` was pre-registered at `83110f1` (2026-08-13T22:00:37-04:00), a commit that contains the
+design and NO runner**, and then run:
+
+```text
+side disagreement between RSI(21) and MA_k(RSI(21)) at every threshold V11 prints,
+24,730 M15 bars, W-A / D-031 Arm A:
+    k=2  t=50   5.16 pp        <- the shipped TDI's own default smoothing
+    k=3  t=50   7.48 pp
+    k=5  t=50  10.48 pp        <- M
+pre-registered bands: <=2 IMMATERIAL | 2-5 INCONCLUSIVE | >5 MATERIAL
+VERDICT: MATERIAL
+```
+
+**`A-084` is PROMOTED TO AN ACTIVE BLOCKER. V11's RSI threshold claims STAY BLOCKED. `A-080`'s
+closure is NECESSARY AND NOT SUFFICIENT: the period is known and the series that period belongs to
+is not.**
+
+**The boundaries were fixed before a single RSI value was computed**, and `M = 10.48` sits close
+enough to a defensible-sounding *"10 pp"* that a post-hoc boundary would have been a live
+temptation. `D-029` and commit ordering foreclosed it. **The damage is concentrated at `t = 50`,
+which is V11's bias baseline and the single most-used RSI rule in the corpus.**
+
+Both `D-031` arms agree to **0.000 pp**, `W-B` agrees (10.66), the simple-average RSI variant
+agrees (12.15). **`PT-040` is the first test since item 101 for which Arm B is a clean robustness
+cell** — its unit of analysis is the **bar**, not the session day — **and it comes back clean**
+(item 127).
+
+---
+
+## ⭐ `A-082`'s premise is false, and this session asserted the same falsehood first
+
+`COURSE_PROGRESS.md` V12 GATE (e) named the command; it was run. **`flash ?cards?` occurs 119 times
+across 18 of 21 lessons**, and **V03 `[00:40:57]`–`[01:06:55]` TEACHES them** — 40 cards, 15-minute
+default, labelled, winners only, generalised to the trader's own entry timeframe. **`A-082` is
+REFRAMED, not closed:** its *content* is `A-011`/`A-002`/`A-007`/`A-076`, all open.
+
+**The process finding is bigger than the flashcards.** `A-082` was raised by V11 **against
+already-ingested, already-transcribed, already-reviewed material**; the claim was **reachable and
+wrong on the day it was written** and **survived V11's own pass and V11 R1**. **What caught it was
+a carry-forward that named the command — and the V11 session's explicit disclosure that it had NOT
+run the sweep.**
+
+**And this session's own first draft of that row asserted the same falsehood**, written from a
+local census where `\bflashcard\b` returns 0 because it does not match the plural. **Superseded
+text retained** in `V12_SOURCE_NOTES.md` §9 and §9a.
+
+**Generalised as a V13/V14 gap-audit item (item 129), with five named candidates and the cheap test
+for each — `A-004`, `A-011`, `A-076`, `A-056`, `A-002`. NOT RUN by this session, and that is stated
+rather than implied.**
+
+---
+
+## Errors this session made and corrected in its own record
+
+1. **The transcript-only draft said the lesson prints no title.** It does — the opening frame.
+   Corrected in place, superseded text retained. `SWF_CAPTURE_RECIPE.md` §9 step 4 earning its keep
+   for the third time in the project.
+2. **The gate-(e) row asserted a false corpus-wide negative** (above).
+3. **`V12_HOMEWORK.md` mis-cited `D-006`** as an independent blocker on the demo-trade drill.
+   `D-006` defers *automated backtesting and Pine Script*, not demo orders. **The correction reduced
+   the blocker count from two to one** and the file says so.
+4. **Two measurement artifacts caught in the `Q-013` census** — a naive `EMA` count of 7 against 2
+   word-boundary, and **a naive `morning star` count of 1 that is a substring of *"morning
+   started"* and would have appeared to CORROBORATE a fabricated file** (item 134).
+
+## `Q-013`
+
+`VISUAL_INDEX.md` shown **by exact `diff`** to be one file across **ten lessons** — V11's and
+V12's differ by four identifier lines and **zero content lines**. Fourth instance of the sixth
+failure mode, **second consecutive title card**, indexed with the identical sentence used on V11.
+⭐ **V12 is the first lesson on which the generator's text is ABOUT THE RIGHT SUBJECT**, which is
+its most dangerous form yet and is dangerous specifically to a reviewer sampling quickly.
+
+## Git discipline
+
+Six commits, explicit path staging only, **never `git add -A`**, `git diff --staged` inspected
+before each, `validate_project.py` **PASS** before each push, and **`stage → validate → commit` in
+that order** — the ordering `REVIEW_INDEX.md` item 108 asks for after V11 shipped one commit in a
+failing state.
+
+### Next Action
+
+**Request an independent R1 for V12** (`REVIEW_PROTOCOL.md`). **Do not merge `video/v12`** until it
+returns — `D-004`. **`V13`'s gate is CLOSED until then**, and `COURSE_PROGRESS.md`'s V13 GATE block
+carries ten carry-forward items, of which **(a) — one sentence or one frame naming the TDI's
+smoothing — is the cheapest remaining unblock in the project.**
+
+---
+
+# V12 — INDEPENDENT REVIEW R1 (`review/v12`)
+
+**Date:** 2026-08-14 · **Branch:** `review/v12`, cut from integration @ `e70a6f6`, own worktree
+(`D-038`) · **Submission:** `video/v12` @ `ecc2f75`
+
+## Verdict
+
+```text
+REVISE -- 0 CRITICAL / 0 MAJOR / 2 MINOR / 6 NOTE
+GATE TO V13:  OPEN (D-024)
+V12 STATUS:   IN REMEDIATION (items 137-138 owed before COMPLETE)
+CONFIDENCE:   HIGH
+```
+
+## `D-003` independence
+
+This session authored no V12 artifact. It read the full 690-marker transcript **before** any
+student conclusion was opened; **extracted the audio from the source `.swf`** (SHA-256 re-matched
+against `SOURCE_MANIFEST.md`) and ran **its own ASR with a different engine and a larger model**
+than the student's; re-derived `PT-040` in code sharing no line with `run_pt040.py` or `mmm_lib`;
+and re-ran the `Q-013` `diff`, the flashcard census and the nickname census at source.
+
+## What was re-derived rather than read
+
+- **`PT-040` — every Wilder cell reproduced to the printed decimal**, across `W-A`/A, `W-A`/B and
+  `W-B`/A: `O1` ×20, `O2` ×15, `O3` ×20, `O4` ×16, bars 24,755 / 24,730 / discarded 25, `W-B`
+  49,421 / 49,396. **`M = 10.4812 pp` at `k=5, t=50`; `5.1638 pp` at `k=2`.** Verdict `MATERIAL`
+  re-derived from the reviewer's own numbers. All four pre-registered secondary checks hold.
+  Ordering verified with `git cat-file`: **`run_pt040.py` provably absent at `83110f1`.**
+- **`A-080` — all four cited timestamps plus the fifth restatement, re-transcribed from the source
+  audio.** All confirm. Two ASR defects in the project transcript resolved **in the submission's
+  favour** (*"at all"* → *"that's all"*; *"our SI"* → *"RSI"*).
+- **The mayo/200 identification** — confirmed in speech by a **third** engine (*"it's held by the
+  mayonnaise perfectly. It's held by the 200"*) and in print by opening both frames
+  (`TDI VB BREAK, PRICE HELD BY 200`; `Shark Fin  Hold The Mayo`).
+- **`C-019`** — all four limbs, including **both Tier 2 page citations read at source** (p.46 line
+  1471, p.45 line 1414) and the printed `19:06` bullet read off the pixels.
+- **`Q-013`** — the exact `diff` re-run (**four identifier lines, zero content lines**) and the
+  ten-lesson claim re-derived by normalised hash: **03, 04, 09, 10, 11, 12, 13, 14, 15, 21**, with
+  a further five at 16–20. **Both figures exact.**
+- **`A-082`** — the flashcard census re-run across all 21 lessons: **119 across 18 of 21, every one
+  of the 21 per-lesson cells matching.** Seven of eight V03 citations verified at their markers.
+
+## The two MINORs
+
+1. **Item 137.** `04_SCREENSHOTS/V12/INDEX.md` §1's categorical *"every legend legible in any V12
+   frame is transcribed below"* is false — frame `00-34-26` carries an untranscribed
+   `MACD / STR / EMA` multi-timeframe dashboard. **`A-080` unaffected and its negative
+   strengthened**: the columns are timeframes not periods, the `EMA` row carries no number, the
+   chart is a student's (`[00:34:19]`), and the dashboard appears on no other frame.
+2. **Item 138.** `Q-013` §4's *"the first time the generator's text is about the right subject"* is
+   false — **`Q-003` Finding 2 and `Q-004` Finding 3 record the same hazard, on the same sentence.**
+   Measured: V03 `TDI` 12 / `shark fin` 3; V04 `TDI` 11 / `shark fin` 5; both share the
+   `VISUAL_INDEX.md` body **and** the `NOTES.md` TDI sentence with V12. **The correction strengthens
+   the entry** — three instances of an escalating pattern, not one curiosity.
+
+## The three questions V12 put to R1 — all adjudicated
+
+- **Item 124 — colour axis:** restraint **UPHELD**. `COMMON_PROTOCOL.md` §2 forbids measuring off a
+  rendering. The reviewer found a *further* strand (curve ordering by responsiveness, consistent
+  with `D-043` on all four rows) **and refused it too**.
+- **Item 130 — `A-039`:** stays **NARROWED**. Measured dependency surface: **287 references across
+  65 files** — but the decisive reason is `D-003`, since the same session opened the three
+  replacement records.
+- **Item 135 — `EXTERNAL_VOCABULARY_REFERENCE.md`:** **EVIDENCE ledger**, classified correctly.
+
+## Git discipline
+
+Explicit path staging only, **never `git add -A`**, `git diff --staged` inspected before each
+commit, `validate_project.py` **PASS** before push.
+
+### Next Action
+
+**Merge `review/v12` into the integration branch** per `D-038`, single-threaded, as a deliberate
+separate step. **V13 may then begin** — `A-084` is the cheapest remaining unblock and V13 is the
+next place it could be answered.

@@ -1647,3 +1647,216 @@ these files were opened.
 - **`VISUAL_INDEX.md`:** **11 of 21 audited** (V01–V11), **11 fabricated.** V11 is the **third**
   confirmed instance of the sixth failure mode, and the first in which the misdescribed frame is
   a **title card** — i.e. a frame containing no chart content at all.
+
+---
+
+## Q-013 — V12's `NOTES.md` and `VISUAL_INDEX.md`, confirmed fabricated; and `VISUAL_INDEX.md` is now shown by **exact `diff`** to be ONE document shared by **TEN lessons**, with V11's and V12's differing by **four identifier lines and ZERO content lines**
+
+```text
+STATUS:        QUARANTINED — DO NOT USE
+DATE:          2026-08-13
+QUARANTINED BY: V12 Student session (branch video/v12, isolated worktree, D-038)
+DECISION:      D-017 (Q-001 blanket action). RULES.md is NOT re-derived here on the
+               merits — it is discharged by Q-007's mechanical template-marker test,
+               as Q-007 explicitly authorizes. An exact diff was nonetheless run
+               because it is one command, and it is the THIRD such demonstration.
+LOCATION:      01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/
+               per_lesson/12_Bootcamp1_Wk4_040812_Part2_55mins/
+               (in place; nothing moved, renamed or deleted)
+```
+
+### Scope
+
+| File | Disposition | Basis |
+|---|---|---|
+| `RULES.md` | Already quarantined, **not re-audited on the merits** | **`Q-007`**. Exact `diff` against V01 re-run here as a free cross-check — §1 |
+| `NOTES.md` | **Fabricated — confirmed here** | Per-lesson audio cross-check, §2 |
+| `VISUAL_INDEX.md` | **Fabricated — confirmed here** | Per-lesson image cross-check, §3 |
+| `TRANSCRIPT.md` | **SOUND — adopted** | `SETUP_ISSUES.md` `I-008`, all four criteria, plus **seven** Whisper `small.en` spot-checks. Recorded in `02_TRANSCRIPTS/V12/V12_TRANSCRIPT.md` § VERIFICATION |
+
+**Measurement note — `Q-012`'s method was inherited, and it earned its keep immediately.**
+Every count below uses **word-boundary matching against the spoken body only**, after stripping
+`[HH:MM:SS]` marker lines. Two artifacts were caught in this session's own first pass and are
+recorded rather than hidden:
+
+- A naive `grep -ci "EMA"` over the raw file returns **7**; word-boundary against the stripped
+  body returns **2**. The five extras are *them a*, *problem*, *systematically*.
+- A naive `grep -ci "morning star"` returns **1**, which would have appeared to corroborate the
+  `NOTES.md` claim *"Evening/Morning Stars"*. **It is a substring of `[00:30:20]` *"10 in the
+  **morning star**ted the US session"*.** The true count is **0**. This is the same class of error
+  as `Q-012`'s `9:30`-matches-a-timestamp trap, in a new costume, and it is the closest this
+  register has come to a **false positive that would have flattered a fabricated file**.
+
+---
+
+### 1. `RULES.md` — the THIRD exact-`diff` demonstration of the one-generator finding
+
+`diff 01_.../RULES.md 12_.../RULES.md` returns **12 differing lines — six substitutions — and
+ZERO content lines.**
+
+| Line | V01 | V12 |
+|---|---|---|
+| 1 | `…Bootcamp1 Wk1 031812 Part1 (55mins).swf` | `…Bootcamp1 Wk4 040812 Part2 (55mins).swf` |
+| 3 | `## Rule ID: V01-R001` | `## Rule ID: V13-R001` |
+| 15 | `VIDEO_01_SCREENSHOT_001_00-02-00.jpg` | `VIDEO_13_SCREENSHOT_001_00-02-00.jpg` |
+| 19 | `## Rule ID: V01-R002` | `## Rule ID: V13-R002` |
+| 31 | `VIDEO_01_SCREENSHOT_002_00-15-00.jpg` | `VIDEO_13_SCREENSHOT_002_00-15-00.jpg` |
+| 41 | `Asian Box Stop Hunt Reversal (Week 1 - Part 1)` | `Asian Box Stop Hunt Reversal (Week 4 - Part 2)` |
+
+**Every rule, threshold, timestamp, parameter, ambiguity and "coding implication" is byte-identical
+across two lessons recorded three weeks apart on entirely different subjects** — V01 is week 1's
+opening lesson, V12 is a 55-minute treatment of the Traders Dynamic Index. `Q-011` (V10) and
+`Q-012` (V11) each demonstrated this once; **this is the third, and the identifier substituted in
+is `V13`, not `V12`** — the generator inherited the pre-ingestion *"Video 13 of 21"* numbering that
+`D-017` §2 corrects.
+
+---
+
+### 2. `NOTES.md` — fabricated, and wrong about the lesson's subject
+
+The file's own §1 header reads **`Topic Focus: London/NY Overlap, Evening/Morning Stars, Dynamic
+Targets`**, and the per-lesson `# VIDEO` block reads `Primary Topics: M & W Anatomy, Time Gaps
+Between Peaks (30-90 Mins) & Rejection Signatures`.
+
+**The lesson is a 55-minute treatment of the Traders Dynamic Index.** It is titled that, in print,
+on the opening frame, held for eight and a half minutes.
+
+| `NOTES.md` claim | Measured in the spoken body | Verdict |
+|---|---|---|
+| *"Evening/Morning Stars"* | `evening star` **0×**; `morning star` **0×** (the naive **1** is a substring of *"morning started"*) | ❌ **FALSE** |
+| *"London/NY Overlap"* | `overlap` **0×**; `New York` **0×**; `London` **2×**, and neither is about an overlap | ❌ **FALSE** |
+| *"Dynamic Targets"* | `dynamic target` **0×** | ❌ **FALSE** |
+| *"Time Gap: 30 to 90 minutes between peak 1 and peak 2"* | `30 to 90` **0×** | ❌ **FALSE — and it is a MIGRATED REAL NUMBER.** `30 to 90 minutes` is **V11**'s figure for how long a candidate low must hold (`PT-039`), re-attributed here to a peak-to-peak gap. `Q-012` recorded the identical migration on V11's own file. **The same false claim is now attached to both halves of one session** |
+| *"Peak Formation High (PFH) & Low (PFL)"* | `PFH` **0×**, `PFL` **0×**, `peak formation high` **0×** (`peak formation` **2×**, unabbreviated, in passing) | ❌ **FALSE as stated** |
+| *"Asian Session: 7:00 PM – 3:00 AM EST"* etc. | `7:00` **0×**, `3:00` **0×**, `9:30` **0×**, `5:00 PM` **0×**. The lesson's only clock references are *"two to four o'clock in the morning eastern time"* `[00:23:35]`, *"between one and four in the morning"* and *"between eight and 10 in the morning"* `[00:30:13]`–`[00:30:20]` | ❌ **FALSE — no stated boundary matches** |
+| *"M & W Pattern Anatomy: 2nd leg must fail to make a new extreme… Railroad tracks or pin bars"* | `railroad` **6×** ✅; `pin bar` **0×**; the anatomy is never stated | ⚠️ **PARTLY TRUE BY COINCIDENCE.** `railroad tracks` really is in this lesson. **Nothing else in the sentence is** |
+| *"TDI Indicator: Green Price Line crossing Red Signal Line after breaking outside Blue Volatility Bands (Shark Fin)"* | Colours and mechanism are **broadly right** | ⚠️ ⭐ **TRUE-ISH, AND THIS IS THE HAZARD — SEE §4** |
+
+#### ⚠️ The `EMAs` line — wrong on FOUR of five rows, and invariant across all 21 lessons
+
+```text
+- **EMAs:** 5 (Mustard), 13 (Water), 50 (Mayo), 200 (Blueberry), 800 (Raspberry).
+```
+
+**Measured across the whole quarantined set: this line is byte-identical in 16 of the 21
+`NOTES.md` files**, and the other five carry one variant with colours bolted on
+(*"5 (Mustard/Yellow), 13 (Red/Water), 50 (Light Blue/Mayo), 200 (White/Blueberry), 800 (Dark
+Blue/Raspberry)"*, lessons 16–20). **It is not a per-lesson observation. It is a constant.**
+
+Against `D-043`, the authoritative mapping:
+
+| Nickname | `D-043` (authoritative) | Fabricated table | |
+|---|---|---|---|
+| Mustard | **5** | 5 | ✅ right |
+| Ketchup | **13** | **absent entirely** | ❌ |
+| Water | **50** | **13** | ❌ |
+| Mayonnaise | **200** | **50** | ❌ |
+| Blueberry | **800** | **200** | ❌ |
+| — | — | **800 = "Raspberry"** | ❌ **a nickname that occurs ZERO times in V01–V12's audio, in `MMM-NOTES`, and in every `EXTERNAL_VOCABULARY_REFERENCE.md` tier** |
+
+**Four of five rows wrong, one invented from nothing, one real nickname missing.** The table is the
+five real periods and four of the five real nicknames, **shifted by one position** — which is
+precisely the shape of an error that survives a careless glance.
+
+> ### ⭐ AND V12 IS THE LESSON THAT REFUTES IT FROM THE TAPE
+>
+> `[00:31:22]`–`[00:31:27]`, course author, two adjacent sentences, one object:
+> ***"Price comes out and it's held by the mayonnaise perfectly. Held by the 200."***
+> Confirmed by an independent Whisper `small.en` pass (`c5`), and the slide **on screen at that
+> moment** prints **`TDI VB BREAK, PRICE HELD BY 200`** (`V12_00-31-31_…png`).
+>
+> **The fabricated table says mayo = 50. The lesson it is attached to says mayo = 200, in print
+> and in speech, at the same instant.** `Q-010` recorded that V09's audio refutes this table;
+> **V12 refutes it on the strongest evidence the corpus has produced.**
+
+---
+
+### 3. `VISUAL_INDEX.md` — the FIRST exact-`diff` demonstration on THIS file, and it covers TEN lessons
+
+`diff 11_.../VISUAL_INDEX.md 12_.../VISUAL_INDEX.md` returns **four differing lines — the filename
+header and three `VIDEO_12` → `VIDEO_13` identifiers — and ZERO content lines.** Every timestamp,
+`Visual Type`, `What is visible`, `Instructor's Explanation` and `Trading Significance` is
+byte-identical between **Part 1 and Part 2 of the same session, which are 51 and 55 minutes of
+entirely different material.**
+
+Normalising the `VIDEO_NN` identifiers and the filename line and hashing the remainder, **ten of
+the twenty-one lessons share one identical body**:
+
+```text
+03, 04, 09, 10, 11, 12, 13, 14, 15, 21
+```
+
+and a further **five** (16–20) share a second. `Q-009` measured this across all 21 by
+*normalised hash*; **this entry demonstrates it by exact `diff` on a specific pair**, which is the
+upgrade `Q-011`/`Q-012` made for `RULES.md` and which `VISUAL_INDEX.md` had not yet had.
+
+#### What is actually at the three claimed timestamps
+
+Every frame below was **opened and looked at**. The burned-in player timecode is legible in each
+and is quoted from the image, not computed.
+
+| # | Claimed | `VISUAL_INDEX.md` says | **Actually on screen** | |
+|---|---|---|---|---|
+| 001 | `[00:02:00]` | *"Asian Box accumulation range with **5, 13, 50, 200, and 800 EMAs**"* | **THE TITLE CARD.** Burned `02:01`. Black-on-white: **`Traders Dynamic Index`** / *"Thank You Dean & CompassFX"*. **No chart. No candles. No axis. No moving average of any period.** | ❌ |
+| 002 | `[00:15:00]` | *"London Open Stop Hunt false breakout forming 2nd leg M-formation at High of Day"* | Burned `15:01`. A **teaching slide**: `Traders Dynamic Index` / *"Market Base Line forecasts Market Reversals"*, over an **EURUSD Daily** panel with four red circles drawn on the yellow baseline. Daily, not intraday; no box, no London, no M | ❌ |
+| 003 | `[00:30:00]` | *"TDI Shark Fin setup with green line hooking inside volatility bands + **5/13 EMA cross**"* | Burned `30:01`. A **black text bullet slide** headed `TDI`: *"You Are In The Right Market Segment / Price Is In The Channel / RSI Line Breaks Outside The Bands As A Stop Hunt / … / Enter The Trade Stop Loss 23 Pips above the HOD / Add To The Trade At MB Break And VB Break / Exit All Units @ VB Return Crossover"*. **No chart, no green line, no bands, no EMAs** | ❌ |
+
+**Fourth confirmed instance of the sixth failure mode** — a genuine frame carrying an invented
+description — **and the SECOND CONSECUTIVE one in which the misdescribed frame is a TITLE CARD**,
+indexed with **the identical sentence** used on V11 (`Q-012`).
+
+---
+
+### 4. ⭐ THE FINDING THIS ENTRY EXISTS FOR: THE FIRST TIME THE GENERATOR'S TEXT IS *ABOUT THE RIGHT SUBJECT*
+
+On eleven previous lessons the fabricated files were wrong in an obvious way — they described
+Asian boxes and London stop hunts over lessons about equity curves, position sizing or the RSI.
+**On V12 they are not obviously wrong, because V12 really is about the TDI shark fin.**
+
+- `NOTES.md` §3 says *"TDI Indicator: **Green Price Line** crossing **Red Signal Line** after
+  breaking outside **Blue Volatility Bands** (**Shark Fin**)"*. **Every one of those four objects
+  is real, correctly coloured, and correctly related** — the lesson's own printed deck is
+  `Step 1: RSI Price Line` (green) → `Step 2: Trade Signal Line` (red) → `Step 3: Market Base Line`
+  (yellow) → `Step 4: Volatility Bands` (blue), and `[00:20:07]` really does put the fin crossing
+  the TSL at the entry.
+- `VISUAL_INDEX.md` 003 says *"TDI Shark Fin setup with green line hooking inside volatility
+  bands"*. **That is a fair description of this lesson's central claim.**
+
+**Neither is evidence of anything, and both must still be refused**, for a reason that is
+mechanical rather than a matter of judgement:
+
+> **Those exact sentences are attached to TEN OTHER LESSONS, including lessons in which the token
+> `TDI` occurs zero times** (`Q-009` measured `TDI` = 0 in V08's audio while a TDI panel sat on
+> screen for 43 minutes). **A sentence that is printed identically on ten lessons cannot be an
+> observation about any one of them.** It is right about V12 the way a stopped clock is right
+> twice a day, and the clock did not start working.
+
+**This is the most dangerous form the fabrication has taken so far**, and it is dangerous
+*specifically to a reviewer working quickly*: a spot-check of V12's `NOTES.md` against V12's audio
+would return *"broadly correct"* on the one line a spot-check is most likely to sample. The defence
+is not vigilance — it is **`Q-007`'s blanket rule and the exact-`diff` test**, which do not care
+whether the text happens to be true.
+
+**No V12 artifact draws on any of these three files.** `V12_SOURCE_NOTES.md` was written from the
+transcript alone, before they were opened, per `SWF_CAPTURE_RECIPE.md` §9.
+
+---
+
+### 5. Disposition
+
+All three files remain quarantined **in place**, covered by the tree-wide
+`README_WHY_QUARANTINED.md` banner. Nothing was moved, renamed or deleted.
+
+### Running tally for the fabrication pattern
+
+- **`RULES.md`:** 21 of 21 covered. **Shown by exact `diff` on THREE lessons — V10 (`Q-011`),
+  V11 (`Q-012`), V12 (this entry) — to be a single document re-badged by six string
+  substitutions.**
+- **`NOTES.md`:** **12 of 21 audited** (V01–V12), **12 fabricated, zero exceptions.** V12 adds the
+  measurement that the `EMAs` nickname line is a **constant across all 21 files**, wrong on four of
+  five rows against `D-043`, and containing one nickname (`Raspberry`) with **zero occurrences
+  anywhere in the corpus or in either external tier**.
+- **`VISUAL_INDEX.md`:** **12 of 21 audited** (V01–V12), **12 fabricated.** V12 is the **fourth**
+  confirmed instance of the sixth failure mode and the **second consecutive** one whose
+  misdescribed frame is a **title card** — and the first lesson on which the file's text is
+  *about the right subject*, for the reason given in §4.
