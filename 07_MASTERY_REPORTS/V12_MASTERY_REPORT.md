@@ -226,3 +226,86 @@ REVIEW REQUIRED
 | **(h)** | **The library seed defect (`REVIEW_INDEX.md` item 113) is STILL OWED on the integration branch.** It was harmless in `PT-040` because that test uses no randomisation, and it will **not** be harmless in the next `PT` that bootstraps |
 | **(i)** | ⚠️ **`EXTERNAL_VOCABULARY_REFERENCE.md` was edited on this task branch.** It is named in **neither** of `D-038a`'s two lists; classified here as an **evidence ledger** by `D-038a`'s own test, which is also what `SOURCING_HIERARCHY.md` §3.1 requires of the reconciling session. **Flagged for R1 to overrule if that classification is wrong** |
 | **(j)** | ⭐ **`08_CONCEPT_LIBRARY/` IS THE ONE UNCHECKED BOX, AND V12 IS THE FIRST LESSON THAT GENUINELY TESTS ITS POLICY — the question is put to the reviewer rather than decided here.** The index holds **0 concepts** on a reasoned, review-upheld rule: promote a term only when the course defines it, never when it is an open `A-xxx`, because that *"would launder an open ambiguity into a citable definition"*. **Every prior lesson made that easy — nothing was defined.** V12 breaks the pattern: **`shark fin` and `blood in the water` are now `RESOLVED BY COURSE`, printed and spoken**, and `mayonnaise = 200` is Tier 1. **These are exactly the terms the index was written to wait for.** ⚠️ **This session did NOT create entries, and the reason is a real tension it does not think it should resolve alone:** all three are closed **as to meaning** and **not computable** (`A-086`), so promoting them would produce a concept entry a reader could mistake for a codable rule — a *different* laundering than the one the index's rules name, in the opposite direction. **The right answer is probably an entry that carries the closure AND the blocker in the same breath, and that is a change to the index's own rules, which a task branch should not make.** Put to R1 and to the owner as the decision V12 forces |
+
+---
+
+## Revision R1 — items 137–138 applied, ⚠ SELF-VERIFIED AT OWNER DIRECTION (2026-08-14)
+
+```text
+REMEDIATION:     items 137-138 APPLIED and SELF-VERIFIED AT OWNER DIRECTION
+DECISION:        COMPLETE — SELF-VERIFIED AT OWNER DIRECTION
+                 (NOT "PASS". NOT "COMPLETE — VERIFIED".)
+```
+
+> ### ⚠⚠ THIS IS NOT AN INDEPENDENT VERDICT
+>
+> **This round was fixed AND verified by ONE session**, on the owner's explicit authorisation for
+> this round specifically, on the ground that both items are small documentation edits. That
+> authorisation is real and it is recorded — **but it does not manufacture independence, and this
+> round does NOT satisfy `D-003`.** Both items carry **`CLOSED — SELF-VERIFIED AT OWNER
+> DIRECTION`**, a status string that exists for no purpose other than to be visibly different from
+> `CLOSED — VERIFIED`. **There was no R2 and no independent `PASS`.** `V12_REVIEW_R1.md`'s `REVISE`
+> stands as the last arm's-length judgement anyone made about V12.
+>
+> **THIRD use of the pattern**, after V09 R2's items 81–83 and V10 R1's items 91–94 (both
+> 2026-08-13), recorded in the same words so the three are comparable and countable.
+
+**§3's `REVIEW REQUIRED` above is NOT superseded.** Its three named reasons were adjudicated by R1
+(item 124 restraint upheld, item 130 `A-039` stays narrowed, item 143/144), not by this remediation,
+and the self-assessment stands as written.
+
+### What changed
+
+| Item | Change | Where |
+|---|---|---|
+| **137** (`M1`) | The categorical *"every legend legible in any V12 frame is transcribed below"* is **rescoped** to *"every legend and on-screen readout block identified in the 28 curated frames"*, and a **sixth row** is added transcribing the `00-34-26` multi-timeframe `MACD`/`STR`/`EMA` dashboard. Superseded text retained. | `04_SCREENSHOTS/V12/INDEX.md` §1 |
+| **137**, second site — **not named by the review**, found by repo-wide sweep | §2 row 21 had **mis-transcribed the same dashboard**: `108.083` for `108.093`, *"At Hi Low 215"* for `Hi to Low 315`, a *"Daily Hi 105"* that does not exist (the label is `Daily Av`, value illegible), and **`Spread 33` omitted entirely**. Corrected; superseded text retained. | `04_SCREENSHOTS/V12/INDEX.md` §2 |
+| **137**, third site — **not named by the review** | §10.5 repeated the same categorical claim. Rescoped identically; superseded text retained. | `03_LESSON_NOTES/V12_SOURCE_NOTES.md` |
+| **138** (`M2`) | `Q-013` §4's *"THE FIRST TIME the generator's text is about the right subject"* corrected to **THE THIRD AND MOST COMPLETE TIME**, naming `Q-003` Finding 2 (V03) and `Q-004` Finding 3 (V04). Superseded heading and opening retained in full. | `00_SYSTEM/QUARANTINE_REGISTER.md` |
+| **138**, second site | The `VISUAL_INDEX.md` running tally at the foot of `Q-013` carried the same false *"first"*. Corrected; superseded text retained. | `00_SYSTEM/QUARANTINE_REGISTER.md` |
+
+### How it was verified — re-derived, not read
+
+- **Item 137 was re-derived FROM THE IMAGE.** `00-34-26` was cropped and enlarged at four increasing
+  magnifications and read off the pixels. **Legible and confirmed:** the nine-column header
+  `1 5 15 30 H1 H4 D W MN`, the three `MACD`/`STR`/`EMA` rows (nine coloured cells each, **no
+  numerals**), `108.093`, `Spread 33`, `Hi to Low 315`. **`Pips to Open` and `Daily Av` DO NOT
+  RESOLVE** at the `1024 × 786` capture resolution and are recorded **illegible, not
+  reconstructed**.
+- **The *"no other frame"* claim was re-tested, not accepted.** The identical pixel region was
+  extracted from **all 28 curated frames** and mean-differenced against `00-34-26`; the nearest
+  non-identical frame is `00-40-36` at **8.76**, and the two closest candidates were additionally
+  **opened as images**. Neither carries the dashboard.
+- **`[00:34:19]` was re-read at source** — *"Another example this came to me from my good friend
+  that / Who graduated Harvard business school and he's hanging with us"* — confirming the frame is
+  a **student's** chart.
+- **Item 138's census was re-run at source** over the **verbatim body** of each transcript with a
+  word-boundary regex, reproducing R1's table exactly for V03, V04, V10 and V11. **Two V12 cells
+  diverge by one and both divergences are disclosed** — the `shark fin` cause is located
+  (`[00:23:17]` carries two occurrences on one line), the `volatility band` cause is **explicitly
+  marked undeterminable** from the review file rather than silently reconciled.
+- **The shared-body claim was verified mechanically.** `diff` of V03's and V04's quarantined
+  `VISUAL_INDEX.md` against V12's returns **exactly four differing lines each — title and three
+  `Filename:` stems — and ZERO content lines**; the `NOTES.md` `TDI Indicator` sentence is
+  **byte-identical at line 18 of all three**.
+
+### What did NOT move
+
+**Nothing that bears on a measurement, classification, disposition, threshold or rule.**
+
+- **`A-080` stays `RESOLVED BY COURSE`, and its negative is STRENGTHENED** — the dashboard's columns
+  are **timeframes, not lookback periods**, the `EMA` row carries no number, and the chart is a
+  student's, so it is one more on-screen block carrying no period.
+- **`Q-013`'s disposition is unchanged** — all three files stay quarantined, and the negative that
+  **no V12 artifact draws on any of them** was re-tested during the fix. **Item 138's correction
+  STRENGTHENS the entry**: a recurring, escalating hazard is a better argument for `Q-007`'s blanket
+  rule and the exact-`diff` test than a one-off curiosity was.
+- **`A-084` remains an ACTIVE BLOCKER** and V11's RSI threshold claims stay blocked. `PT-040`, its
+  runner and its output are **untouched**.
+- **The V13 gate was already open under `D-024`** on R1's 0 `CRITICAL` / 0 `MAJOR`; these minors
+  were non-gating. **Re-confirmed open; nothing regressed.**
+- **Still open and not gating:** items **139–144**, all `NOTE`.
+
+`validate_project.py`: **103 passed, 0 warnings, 0 failures.** Applied on branch
+`fix/v12-r1-minors`, cut from the integration branch at `b38d31b` after `git fetch --all` confirmed
+**zero divergence** (`D-038`).
