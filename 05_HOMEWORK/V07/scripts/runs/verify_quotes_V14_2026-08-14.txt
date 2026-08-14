@@ -1,0 +1,259 @@
+LESSON       V14
+TRANSCRIPT   02_TRANSCRIPTS/V14/V14_TRANSCRIPT.md
+             600 markers, 7471 normalised words of spoken body
+ARTIFACTS    7, by convention (ARTIFACT_TEMPLATES + LESSON_PT), + 2 shared register(s), lesson rows only
+             03_LESSON_NOTES/V14_SOURCE_NOTES.md
+             03_LESSON_NOTES/V14_INTERPRETATION.md
+             05_HOMEWORK/V14/V14_HOMEWORK.md
+             07_MASTERY_REPORTS/V14_MASTERY_REPORT.md
+             04_SCREENSHOTS/V14/INDEX.md
+             06_MANUAL_BACKTEST/V14/BT_V14_0001.md
+             06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_the_lock_and_the_high_low_board.md
+ALLOWLIST    EMPTY for V14. No non-transcript quotation in this lesson has ever been
+             dispositioned, so printed slide text, quotations of other documents
+             and quotations of the student's own prose have no entries to land
+             in. Expect cited-tier FLAGS that are printed source rather than
+             misquotes: each needs ruling ONCE and writing here, exactly as V07
+             and V09 were. A FLAG is a question, not a verdict.
+
+03_LESSON_NOTES/V14_SOURCE_NOTES.md                                       71 fragments
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:83 [cited]
+              "the four majors plus the two commodity crosses"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:88 [cited]
+              "start a stopwatch right here every time the dealer extends the high or low start a stopwatch"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:102 [uncited]
+              "he s off of the low and off of the high he s closer to the low right now"
+              tracks the transcript for 9 words -- "he s off of the low and off of" -- then diverges
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:104 [uncited]
+              "45 minutes an hour and price hasn t come off of 61 05"
+              tracks the transcript for 12 words -- "45 minutes an hour and price hasn t come off of 61" -- then diverges
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:106 [uncited]
+              "32 30 plus 5 stop loss is 32 35"
+              tracks the transcript for 6 words -- "32 30 plus 5 stop loss" -- then diverges
+    retained  line 112   "is he in the middle of the range hell yeah he "
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:130 [cited]
+              "if you re going to try it in the u s session re bracket the data and do it 8 to 9 re bracket from 8 to 9 30 session changeover and look for the move to come 9 45 10 o clock"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:132 [cited]
+              "it s harder for new york it s easier in london"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:135 [cited]
+              "the high s all the way up here on the big board you can t reset your big board that s the problem with the u s"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:143 [cited]
+              "at 1am nyc time"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:144 [cited]
+              "ted if you can t make it at 1 a m do 2 a m 1 a m is the time i was taught to do it man"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:194 [cited]
+              "used to activate pendings trigger the stops"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:196 [cited]
+              "that is a stop hunt candle"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:199 [cited]
+              "indecision of traders bullshit"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:199 [cited]
+              "an evening star morning star formation is a bullshit ploy by people that don t know any better there is absolutely no indecision the dealer knows exactly where he s going"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:204 [cited]
+              "momentum we know is bullshit"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:243 [cited]
+              "he s handling the crosses if you understand fractional disparity"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:243 [cited]
+              "to create a disparity between the numerator and the denominator one pair has to freeze at a level and hold it and another pair has to be moved creates the disparity in the crosses in the fraction makes ej move ec move ea move eg move"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_SOURCE_NOTES.md:254 [cited]
+              "exploits people and their 24 hour body cycle because he s three guys working eight hours apiece"
+              cited to a marker but not in the transcript
+03_LESSON_NOTES/V14_INTERPRETATION.md                                     70 fragments
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:21 [cited]
+              "if you don t get a link from me on saturday then after the meetup tannen will take this recording go home render it and then we ll post it up for sunday morning"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:23 [cited]
+              "week five r d you got two weeks to do this stuff"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:24 [cited]
+              "you ve got two weeks we re off next week"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:25 [cited]
+              "i ll see you in two weeks unless you come to orlando"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:37 [cited]
+              "this is week five"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:39 [cited]
+              "next session is going to be sunday the 29th that s two weeks"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:39 [cited]
+              "we ll get started again with week six through ten"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:84 [cited]
+              "if it does not that is when a gap is recorded"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:97 [uncited]
+              "trading in the middle of the range"
+              tracks the transcript for 6 words -- "in the middle of the range" -- then diverges
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:119 [cited]
+              "the green rsi line represent the 15 minute chart candles"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:164 [cited]
+              "i don t know the math on it"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:197 [uncited]
+              "away from the market baseline"
+              tracks the transcript for 4 words -- "away from the market" -- then diverges
+    retained  line 212   "a 086 closed"
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:236 [cited]
+              "promise me you will do this this and the tdi are priceless"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:240 [uncited]
+              "no technically you will be able to"
+              tracks the transcript for 5 words -- "you will be able to" -- then diverges
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:241 [uncited]
+              "now technically you will be able to"
+              tracks the transcript for 5 words -- "you will be able to" -- then diverges
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:263 [cited]
+              "seems to be a master at the high of the day"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:266 [uncited]
+              "entry at or within a few pips of the day s high or low"
+              tracks the transcript for 4 words -- "s high or low" -- then diverges
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:267 [cited]
+              "a method of identifying the extreme in real time"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:269 [cited]
+              "the strongest resistance in the day is 32 30 it s the high of the day"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:273 [uncited]
+              "find a pair that is trading in the middle of the range"
+              tracks the transcript for 6 words -- "in the middle of the range" -- then diverges
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:300 [cited]
+              "fails to hit it again for 1 hour take a position"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:300 [cited]
+              "a lock for one hour one and a half hours ninety minutes"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V14_INTERPRETATION.md:370 [cited]
+              "trading in the middle of the range"
+              cited to a marker but not in the transcript
+05_HOMEWORK/V14/V14_HOMEWORK.md                                           23 fragments
+    FLAG      05_HOMEWORK/V14/V14_HOMEWORK.md:5 [cited]
+              "week five r d you got two weeks to do this stuff"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V14/V14_HOMEWORK.md:11 [cited]
+              "i want you to use the big board to enter all your trades"
+              cited to a marker but not in the transcript
+    retained  line 27    "record your results and post it in the forum"
+    FLAG      05_HOMEWORK/V14/V14_HOMEWORK.md:97 [cited]
+              "if you are caught by this move you must wait for next level rise fall minimum 2 hrs session change over"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V14/V14_HOMEWORK.md:107 [uncited]
+              "it s the high of the day"
+              tracks the transcript for 6 words -- "s the high of the day" -- then diverges
+07_MASTERY_REPORTS/V14_MASTERY_REPORT.md                                  20 fragments
+    FLAG      07_MASTERY_REPORTS/V14_MASTERY_REPORT.md:48 [uncited]
+              "find a pair that is trading in the middle of the range"
+              tracks the transcript for 6 words -- "in the middle of the range" -- then diverges
+    retained  line 108   "i don t know the math on it"
+              tracks transcript 4 words ("i don t know") -- expected in a retention block, hand-rule if unexpected
+    FLAG      07_MASTERY_REPORTS/V14_MASTERY_REPORT.md:150 [uncited]
+              "there s no 15 minute that s all bullshit throw it out"
+              tracks the transcript for 7 words -- "that s all bullshit throw it out" -- then diverges
+04_SCREENSHOTS/V14/INDEX.md                                               22 fragments
+    retained  line 43    "a v14 regression something in this lesson s sw"
+    retained  line 52    "the filename timestamp is the burned timecode "
+    retained  line 53    "burned timecode frame index 5 s 15 s"
+    retained  line 53    "timecodes are the burned in player timecode wh"
+    FLAG      04_SCREENSHOTS/V14/INDEX.md:152 [uncited]
+              "identify the market condition candles in the wrong market condition are meaningless"
+              tracks the transcript for 4 words -- "identify the market condition" -- then diverges
+    FLAG      04_SCREENSHOTS/V14/INDEX.md:153 [uncited]
+              "retail traders call it momentum candles they couldn t be more wrong"
+              tracks the transcript for 6 words -- "retail traders call it momentum candles" -- then diverges
+    FLAG      04_SCREENSHOTS/V14/INDEX.md:155 [uncited]
+              "to better understand the process let s add the high low board to candles"
+              tracks the transcript for 12 words -- "to better understand the process let s add the high low board" -- then diverges
+    FLAG      04_SCREENSHOTS/V14/INDEX.md:160 [uncited]
+              "when a candle spikes at the appropriate time it is extending the hi lo for the session when it is pulled back the high low is formed when mms go near the level and fail to break it you have your setup"
+              tracks the transcript for 9 words -- "when a candle spikes at the appropriate time it" -- then diverges
+    FLAG      04_SCREENSHOTS/V14/INDEX.md:168 [uncited]
+              "held for an additional 15m allows the dealer to flash a cross or grab a few more contracts"
+              tracks the transcript for 7 words -- "cross or grab a few more contracts" -- then diverges
+    FLAG      04_SCREENSHOTS/V14/INDEX.md:168 [uncited]
+              "holds the level opens the spread induces traders to take continuation"
+              tracks the transcript for 6 words -- "holds the level opens the spread" -- then diverges
+    FLAG      04_SCREENSHOTS/V14/INDEX.md:168 [uncited]
+              "get in grab the money create immediate dd and panic"
+              tracks the transcript for 7 words -- "get in grab the money create immediate" -- then diverges
+    FLAG      04_SCREENSHOTS/V14/INDEX.md:169 [uncited]
+              "at or near the hod and lod"
+              tracks the transcript for 4 words -- "at or near the" -- then diverges
+    FLAG      04_SCREENSHOTS/V14/INDEX.md:170 [uncited]
+              "1 hit the stops and rise fall 2 hold the level and handle the cross"
+              tracks the transcript for 7 words -- "hold the level and handle the cross" -- then diverges
+    FLAG      04_SCREENSHOTS/V14/INDEX.md:214 [uncited]
+              "trading in the middle of the range"
+              tracks the transcript for 6 words -- "in the middle of the range" -- then diverges
+06_MANUAL_BACKTEST/V14/BT_V14_0001.md                                     16 fragments
+    FLAG      06_MANUAL_BACKTEST/V14/BT_V14_0001.md:9 [uncited]
+              "it s the high of the day"
+              tracks the transcript for 6 words -- "s the high of the day" -- then diverges
+    FLAG      06_MANUAL_BACKTEST/V14/BT_V14_0001.md:19 [cited]
+              "at 1am nyc time record the high and low of the majors"
+              cited to a marker but not in the transcript
+    FLAG      06_MANUAL_BACKTEST/V14/BT_V14_0001.md:19 [cited]
+              "when the dealer pulls off of the level and fails to hit it again for 1 hour take a position stop loss level is 5 pips above below that number that appears on the board"
+              cited to a marker but not in the transcript
+    FLAG      06_MANUAL_BACKTEST/V14/BT_V14_0001.md:19 [cited]
+              "the strongest resistance in the day is 32 30 it s the high of the day"
+              cited to a marker but not in the transcript
+    FLAG      06_MANUAL_BACKTEST/V14/BT_V14_0001.md:216 [uncited]
+              "trading in the middle of the range"
+              tracks the transcript for 6 words -- "in the middle of the range" -- then diverges
+    FLAG      06_MANUAL_BACKTEST/V14/BT_V14_0001.md:226 [cited]
+              "a drill to help you understand the candles"
+              cited to a marker but not in the transcript
+    FLAG      06_MANUAL_BACKTEST/V14/BT_V14_0001.md:241 [cited]
+              "one hour one and a half hours ninety minutes"
+              cited to a marker but not in the transcript
+06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_the_lock_and_the_high_low_board.md  23 fragments
+    retained  line 79    "the strongest resistance in the day is 32 30 i"
+              tracks transcript 13 words ("the strongest resistance in the day is 32 30 it s the high") -- expected in a retention block, hand-rule if unexpected
+    retained  line 81    "an extension of the high or an extension of th"
+              tracks transcript 5 words ("an extension of the high") -- expected in a retention block, hand-rule if unexpected
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_the_lock_and_the_high_low_board.md:96 [uncited]
+              "find a pair that is trading in the middle of the range"
+              tracks the transcript for 6 words -- "in the middle of the range" -- then diverges
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_the_lock_and_the_high_low_board.md:130 [cited]
+              "the high s all the way up here on the big board you can t reset your big board"
+              cited to a marker but not in the transcript
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_the_lock_and_the_high_low_board.md:131 [cited]
+              "1am nyc time"
+              cited to a marker but not in the transcript
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_the_lock_and_the_high_low_board.md:135 [cited]
+              "every time the dealer extends the high or low start a stopwatch"
+              cited to a marker but not in the transcript
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_the_lock_and_the_high_low_board.md:209 [uncited]
+              "it s the high of the day"
+              tracks the transcript for 6 words -- "s the high of the day" -- then diverges
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-042_the_lock_and_the_high_low_board.md:263 [cited]
+              "one hour one and a half hours ninety minutes"
+              cited to a marker but not in the transcript
+10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md [V14 rows only]                   0 fragments
+11_CONTRADICTIONS/CONTRADICTIONS.md [V14 rows only]                        0 fragments
+
+FRAGMENTS CHECKED      245
+  matched transcript   119
+  allowed (see list)   0
+  retained (audit)     10
+  uncited, unrelated   46
+  FLAGGED              70
+
+RESULT: FAIL -- 70 quotation(s) assert words the source does not contain.
