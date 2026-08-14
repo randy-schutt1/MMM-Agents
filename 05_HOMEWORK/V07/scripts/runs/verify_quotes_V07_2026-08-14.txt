@@ -1,0 +1,115 @@
+LESSON       V07
+TRANSCRIPT   02_TRANSCRIPTS/V07/V07_TRANSCRIPT.md
+             539 markers, 7726 normalised words of spoken body
+ARTIFACTS    7, by explicit override (a committed claim names it), + 2 shared register(s), lesson rows only
+
+03_LESSON_NOTES/V07_SOURCE_NOTES.md                                      160 fragments
+    allowed   line 205   "m a1 a2"  (A-047's object, quoted from an earlier lesson and named as such)
+    retained  line 217   "joe s question i m confused about second legs "
+              tracks transcript 49 words ("joe s question i m confused about second legs it seems that they are different opinions than what you think a second leg is lower than the first leg or a w or if the second leg on the m is higher than the first do all the dm") -- expected in a retention block, hand-rule if unexpected
+    allowed   line 345   "i made a dot it in the 13 50 and the 200"  (declared second ASR pass (V07_TRANSCRIPT.md PROVENANCE criterion 2))
+    retained  line 367   "30 minute of the water 30 minute of the mayo"
+              tracks transcript 9 words ("30 minute of the water 30 minute of the") -- expected in a retention block, hand-rule if unexpected
+    retained  line 452   "a definition of level 26 uses no definition a "
+    retained  line 462   "is used 4 as a location"
+    retained  line 470   "stated as measured negatives so a later sessio"
+    allowed   line 492   "gotta get that m or w"  (PRINTED slide V07_00-04-00)
+    allowed   line 494   "like um homework i mean r d"  (PRINTED slide V07_00-04-55)
+    retained  line 501   "it turns red when it s met"
+              tracks transcript 4 words ("it turns red when") -- expected in a retention block, hand-rule if unexpected
+    retained  line 504   "s unrecovered word"
+    retained  line 507   "the word itself is not reconstructed here"
+    allowed   line 517   "enter after 2nd leg rr tracks"  (PRINTED annotation V07_00-19-15)
+    allowed   line 517   "exit 50 pips 8 57 gain"  (PRINTED annotation V07_00-19-15)
+    allowed   line 518   "shark fin in tdi"  (PRINTED annotation V07_00-18-25)
+    allowed   line 519   "enter short pos 1"  (PRINTED annotation V07_00-18-25)
+    allowed   line 519   "enter short pos 2"  (PRINTED annotation V07_00-18-25)
+    allowed   line 519   "1 st tp 52 pips"  (PRINTED annotation V07_00-18-25)
+    allowed   line 519   "2 nd tp 67 pips"  (PRINTED annotation V07_00-18-25)
+    allowed   line 519   "bias level 1 short"  (PRINTED annotation V07_00-18-25)
+    allowed   line 523   "mig trading station"  (PRINTED platform title V07_00-00-10)
+    allowed   line 523   "go trader 4"  (PRINTED platform title V07_00-19-15)
+    allowed   line 541   "bias level 1 short"  (PRINTED annotation V07_00-18-25)
+03_LESSON_NOTES/V07_INTERPRETATION.md                                     31 fragments
+    allowed   line 46    "tell the whole story"  (spoken at [00:00:32] ("do they tell us the whole story?") and PRINTED verbatim on slide V07_00-00-35; an un-elided partial, not a substituted word)
+    allowed   line 134   "couple it with a hi lo entry for smaller risk "  (PRINTED closing synopsis slide, quoted in full at V07_INTERPRETATION.md Sec 2.4)
+    allowed   line 152   "do all the dm speaker agree on this if so how "  (same intra-word bracket, spanning [00:29:49]-[00:29:52]; both sentences are verbatim in the transcript -- RULED NOT A DEFECT at V07 R3 N2)
+    allowed   line 167   "m or w"  (PRINTED slide V07_00-04-00, settling a two-way ASR garble)
+    allowed   line 172   "shark fin in tdi"  (PRINTED annotation V07_00-18-25)
+    allowed   line 235   "do they matter"  (PRINTED slide V07_00-06-00, one of the deck's four questions)
+    allowed   line 235   "do they help"  (PRINTED slide V07_00-06-00, one of the deck's four questions)
+    allowed   line 235   "isn t that all that matters"  (PRINTED slide V07_00-09-00, one of the deck's four questions)
+05_HOMEWORK/V07/V07_HOMEWORK.md                                           23 fragments
+    allowed   line 14    "like um homework i mean r d"  (PRINTED slide V07_00-04-55)
+    allowed   line 50    "exit 50 pips 8 57 gain"  (PRINTED annotation V07_00-19-15)
+    retained  line 94    "essentially every day"
+    retained  line 151   "these are everywhere"
+    retained  line 175   "they are everywhere"
+07_MASTERY_REPORTS/V07_MASTERY_REPORT.md                                  53 fragments
+    retained  line 135   "if it doesn t do what you expect and your flas"
+              tracks transcript 8 words ("if it doesn t do what you expect") -- expected in a retention block, hand-rule if unexpected
+    retained  line 256   "30 minute of the mayo"
+              tracks transcript 4 words ("30 minute of the") -- expected in a retention block, hand-rule if unexpected
+    retained  line 257   "it turns red when it s met"
+              tracks transcript 4 words ("it turns red when") -- expected in a retention block, hand-rule if unexpected
+    retained  line 258   "it turns red when it s met"
+              tracks transcript 4 words ("it turns red when") -- expected in a retention block, hand-rule if unexpected
+    retained  line 267   "a later session will rely on it rather than re"
+    retained  line 288   "no quotation mark in any v07 artifact contains"
+    allowed   line 308   "go trader 4"  (PRINTED platform title V07_00-19-15)
+    allowed   line 308   "exit 50 pips 8 57 gain"  (PRINTED annotation V07_00-19-15)
+    allowed   line 309   "and so i have 12 pairs that i look at"  (V04 quote at a V04 marker, labelled)
+    retained  line 310   "essentially every day"
+    retained  line 310   "my first reading was that the answer is"
+    retained  line 311   "could be asr garble for"
+    allowed   line 312   "tell the whole story"  (spoken at [00:00:32] ("do they tell us the whole story?") and PRINTED verbatim on slide V07_00-00-35; an un-elided partial, not a substituted word)
+    allowed   line 312   "but do they tell the whole story"  (PRINTED slide V07_00-00-35)
+    allowed   line 313   "i made it dotted in the 13 50 and the 200"  (declared second ASR pass (V07_TRANSCRIPT.md PROVENANCE criterion 2))
+    retained  line 323   "do not refresh it as a separate task fold it i"
+    allowed   line 346   "shark fin in tdi"  (PRINTED annotation V07_00-18-25)
+    allowed   line 363   "just 12 pairs"  (V04's guest, quoted at V04 [00:30:22]/[00:38:19] and labelled V04)
+    allowed   line 364   "so i paired it down about six weeks ago to jus"  (V04 quote at V04 [00:30:22], labelled V04 in the same sentence)
+    allowed   line 365   "and so i have 12 pairs that i look at"  (V04 quote at a V04 marker, labelled)
+    allowed   line 371   "do all the dm speaker agree on this if so how "  (same intra-word bracket, spanning [00:29:49]-[00:29:52]; both sentences are verbatim in the transcript -- RULED NOT A DEFECT at V07 R3 N2)
+04_SCREENSHOTS/V07/INDEX.md                                               47 fragments
+    retained  line 9     "all knowledge is created equal"
+    allowed   line 151   "setups what level am i at gotta get that m or "  (PRINTED slide V07_00-04-00, the full bullet deck (INDEX.md row 6))
+    allowed   line 151   "m or w"  (PRINTED slide V07_00-04-00, settling a two-way ASR garble)
+    allowed   line 152   "i can do something else like um homework i mea"  (PRINTED slide V07_00-04-55)
+    allowed   line 152   "signature trade setup"  (PRINTED slide V07_00-04-55)
+    allowed   line 156   "money management those pesky stoplosses is it "  (PRINTED slide V07_00-10-00)
+    allowed   line 162   "bias level 1 short"  (PRINTED annotation V07_00-18-25)
+    allowed   line 162   "enter short pos 1"  (PRINTED annotation V07_00-18-25)
+    allowed   line 162   "enter short pos 2"  (PRINTED annotation V07_00-18-25)
+    allowed   line 162   "1 st tp 52 pips"  (PRINTED annotation V07_00-18-25)
+    allowed   line 162   "2 nd tp 67 pips"  (PRINTED annotation V07_00-18-25)
+    allowed   line 162   "shark fin in tdi"  (PRINTED annotation V07_00-18-25)
+    allowed   line 163   "enter after 2nd leg rr tracks"  (PRINTED annotation V07_00-19-15)
+    allowed   line 163   "exit 50 pips 8 57 gain"  (PRINTED annotation V07_00-19-15)
+    allowed   line 163   "go trader 4 2001 2011 metaquotes software corp"  (PRINTED platform title V07_00-19-15)
+    allowed   line 167   "i made it dotted in the 13 50 and the 200"  (declared second ASR pass (V07_TRANSCRIPT.md PROVENANCE criterion 2))
+    allowed   line 178   "m or w"  (PRINTED slide V07_00-04-00, settling a two-way ASR garble)
+    retained  line 193   "it turns red when it s met"
+              tracks transcript 4 words ("it turns red when") -- expected in a retention block, hand-rule if unexpected
+    allowed   line 199   "shark fin in tdi"  (PRINTED annotation V07_00-18-25)
+    allowed   line 202   "enter after 2nd leg rr tracks"  (PRINTED annotation V07_00-19-15)
+    allowed   line 202   "exit 50 pips"  (PRINTED annotation V07_00-19-15)
+06_MANUAL_BACKTEST/V07/BT_V07_0001.md                                     11 fragments
+    allowed   line 33    "exit 50 pips 8 57 gain"  (PRINTED annotation V07_00-19-15)
+06_MANUAL_BACKTEST/PRE_REGISTERED/PT-033_hi_lo_ceiling_and_the_untaught_gap.md  13 fragments
+    allowed   line 37    "hi lo can this be all i need"  (PRINTED slide V07_00-08-00)
+    allowed   line 49    "exit 50 pips 8 57 gain"  (PRINTED annotation V07_00-19-15)
+10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md [V07 rows only]                  15 fragments
+    allowed   line 4624  "hi lo can this be all i need"  (PRINTED slide V07_00-08-00)
+11_CONTRADICTIONS/CONTRADICTIONS.md [V07 rows only]                        0 fragments
+
+FRAGMENTS CHECKED      353
+  matched transcript   237
+  allowed (see list)   59
+  retained (audit)     23
+  uncited, unrelated   34
+  FLAGGED              0
+
+RESULT: PASS -- every marker-cited quotation resolves to the transcript body, and no
+        uncited quotation is a near miss of a transcript sentence. Bracketed
+        insertions, printed source and retention blocks are dispositioned above.

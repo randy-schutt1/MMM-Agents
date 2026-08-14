@@ -1,13 +1,41 @@
 # CUMULATIVE SUMMARY — every pre-registered test run to date
 
 ```text
-STATUS:   21 of the 33 pre-registered PT files have been RUN and REPORTED.
+STATUS:   40 pre-registered PT files exist (PT-001…PT-036, PT-039…PT-042; there is
+          no PT-037 and no PT-038 -- see §1a). 32 of them have a committed BT
+          record; 31 were ACTUALLY EXECUTED AND REPORTED (PT-022 is superseded,
+          its period unobtainable); 8 have never been run.
 COVERAGE: this file lists EVERY test that has been run, whatever it found.
           `BACKTEST_EVIDENCE_STANDARD.md` §4.3: "A summary naming only the tests
           that worked is invalid." Nothing here is omitted for being null.
-UPDATED:  2026-08-13, on branch `infra/gbpusd-historical-data`, after the eight
-          `D-035` re-issues and `PT-002`'s W-A arm were run.
+UPDATED:  2026-08-14, on branch `fix/verify-quotes-and-summary-refresh`, after the
+          gap audit found this file stale by seven tests.
 ```
+
+> ### ⚠ WHY THIS FILE WAS REWRITTEN, AND WHAT WAS WRONG WITH IT
+>
+> `00_SYSTEM/GAP_AUDIT_2026-08-14.md` found this summary **stale and not quotable as current**,
+> and it was right on every count. As of its previous revision (dated 2026-08-13) it:
+>
+> 1. headlined ***"21 of the 33 pre-registered PT files"*** — **both numbers wrong.** 40 PT
+>    files exist, not 33, and 31 have been executed and reported, not 21;
+> 2. **carried no row at all for `PT-034`, `PT-035`, `PT-036`, `PT-039`, `PT-040`, `PT-041` or
+>    `PT-042`** — seven tests, comprising **every test run from V08 onward** and all three of
+>    the recent honest negatives that the V14 review calls the project's strongest output;
+> 3. **did not sum to its own headline.** §1's disposition column totalled **22** against a
+>    stated total of **21**, and §2's three tables listed **24** rows against the same 21.
+>
+> This is the **maintained-prose-over-unmaintained-table** decay that `REVIEW_INDEX.md` open
+> item 96 charges against `COURSE_PROGRESS.md` and `REVIEW_INDEX.md`'s own SEVERITY TOTALS. This
+> was the third instance, and it was in the one file a reader would go to for the backtest
+> picture. **Item 96's durable fix — declare which layer is authoritative, or delete the derived
+> table — is still owed and is still unmade.** This refresh corrects the contents; it does not
+> close item 96, and a fourth instance is expected until item 96 is actually done.
+>
+> Every figure below was re-read out of the named `BT_*` record for this refresh rather than
+> carried forward, and §1's counts are re-derived from the directory rather than from the
+> previous revision. **The arithmetic is stated so it can be checked: 7 + 4 + 5 + 11 + 3 + 1 + 1
+> = 32 PT ids with a committed record, plus 8 never run, = 40 PT files on disk.**
 
 **Summaries never replace individual observations.** Every figure below is a pointer;
 the record is the `BT_VXX_NNNN.md` file named beside it, and the caveats that govern
@@ -17,21 +45,37 @@ each number live there, not here.
 
 ## 1. THE HEADLINE COUNT
 
-| Disposition | Count |
-|---|---|
-| **`SUPPORTED`** (clears its own pre-registered null) | **4** |
-| **`SUPPORTED` but trivially / not specially** | **1** |
-| **`SPLIT`** — the comparison and the magnitude disagree | **2** |
-| **`CONTRADICTED`** — the data runs against the taught claim | **3** |
-| **`INDISTINGUISHABLE FROM THE NULL` / `NOT SUPPORTED`** | **9** |
-| **`INDETERMINATE` / `DESCRIPTIVE` only** | **2** |
-| **RUN, but `SAMPLE INSUFFICIENT` by design** | **1** (PT-023) |
-| **Total run** | **21** |
+Across the **32** PT ids that have a committed `BT_*` record:
 
-**Never run, and never to be run:** `PT-008`, `PT-009`, `PT-010`, `PT-011`, `PT-012`,
-`PT-013`, `PT-019`, and `PT-002`'s W-C arm — all **retired unrun** as non-conforming
-under `D-035`, and all re-issued. `PT-022` — **superseded, period unobtainable**.
-`PT-001` — still pins its period at run time.
+| Disposition | Count | Tests |
+|---|---:|---|
+| **Clears its own pre-registered null** | **7** | `PT-007`, `PT-017`, `PT-018`, `PT-026`, `PT-027`, `PT-032`, `PT-034` |
+| **`SPLIT` / `PARTIALLY SUPPORTED`** | **4** | `PT-004`, `PT-029`, `PT-039`, `PT-041` |
+| **`CONTRADICTED`** — the data runs against the taught claim | **5** | `PT-006`, `PT-028`, `PT-030`, `PT-035`, `PT-036` |
+| **`NOT SUPPORTED` / `INDISTINGUISHABLE FROM THE NULL`** | **11** | `PT-002`, `PT-003`, `PT-005`, `PT-014`, `PT-015`, `PT-016`, `PT-020`, `PT-021`, `PT-025`, `PT-031`, `PT-042` |
+| **`INDETERMINATE` / `DESCRIPTIVE` only** | **3** | `PT-023`, `PT-024`, `PT-033` |
+| **`MATERIAL`** — measures an *ambiguity*, not a taught claim | **1** | `PT-040` |
+| **Superseded, period unobtainable** | **1** | `PT-022` |
+| **Total with a committed record** | **32** | of which **31 executed and reported** |
+
+**Never run:** **8** — `PT-008`, `PT-009`, `PT-010`, `PT-011`, `PT-012`, `PT-013`, `PT-019` (all
+**retired unrun** as non-conforming under `D-035`, and **all re-issued**) and `PT-001`, which
+still pins its period at run time. `PT-002`'s **W-C arm** is likewise retired unrun; its **W-A
+arm** was run and is listed below.
+
+⚠ **Two of the seven "clears its own null" results are partial and one is nearly empty.**
+`PT-017` and `PT-018` clear on **timing only**, `PT-026` clears **trivially** (see §2a), and
+`PT-034`'s headline form is **arithmetically guaranteed and was shown to be so before the run**
+(see §2d). Read the count with §3 attached; it is not a scoreboard.
+
+### 1a. There is no `PT-037` and no `PT-038`, and a session expecting them will be confused
+
+Both numbers were **reserved by V10** — `PT-037` for a path-length reading of `M1`, `PT-038` for
+the safety trade — and **neither was ever filed as a pre-registration.** V11's hold-duration test
+was filed and run as `PT-037`, then **re-issued as `PT-039`** by owner ruling of 2026-08-13
+(*"Move V11 not V10 since V11 is after"*), with nothing but the label changed. The full account
+is in `PT-039`'s own banner. The gap between `PT-036` and `PT-039` in `PRE_REGISTERED/` is
+therefore expected, not a missing file.
 
 ---
 
@@ -77,15 +121,32 @@ W-A / W-B on the same corpus. Summarised from their own records.
 
 | PT | Record | **Disposition** |
 |---|---|---|
+| PT-022 | `V06/BT_V06_0001` | **SUPERSEDED** — the period is unobtainable. Not executed, and it is counted as superseded rather than as a result |
 | PT-023 | `V06/BT_V06_0001` | **`DESCRIPTIVE`** — n = 12, below the floor **by design**, and partly contaminated |
-| PT-024 | `V06/BT_V06_0001` | run on a second vendor; see that file |
+| PT-024 | `V06/BT_V06_0001` | **`DESCRIPTIVE`** — the same question on a second vendor; see that file |
 | PT-033 | `V07/BT_V07_0001` | **`INDETERMINATE`** — and the day boundary is why |
+
+### 2d. ⭐ V08 onward — the seven tests this summary was missing until 2026-08-14
+
+All figures re-read from the named record for this refresh. Where two numbers appear separated by
+a slash they are the two `D-031` arms, reported separately and **never pooled**.
+
+| PT | Lesson | Question | Record | **Disposition** |
+|---|---|---|---|---|
+| **PT-034** | V08 | *"Risk Reward to 3:1 or greater"* — the "crown jewel" | `V08/BT_V08_0001` | **`CONFIRMED AS TAUGHT`** — resolution rate **0.7046–0.7676** across all four cells against a 0.25 break-even, `n` = 1,803–2,172 per cell. ⚠ **Read narrowly.** The headline 3:1 form is **arithmetic, not a finding** — an entry within `X` pips of the day's extreme cannot draw down more than `X`. The real result is the size of the **hindsight** advantage (`N1` = **0.243** → 0.705–0.768, a factor of **2.9–3.2**), and **that advantage is entirely attributable to knowing where the day's extreme is, which neither V07 nor V08 teaches** (`A-056`, `A-061`). The record also discloses a **defect in its own decision rule** (§6): the second condition — beating `N1`'s 95th percentile — came back **100.0 in all four cells** and is near-tautological under hindsight |
+| **PT-035** | V09 | *"It's highly unlikely we're gonna lose three or four times in a row"* | `V09/BT_V09_0001` | **`CONTRADICTED AS STATED`** — and the contradiction rests on **closed-form arithmetic written into `PT-035` §2c before the corpus was touched**, at every hit rate this corpus has ever measured. A four-loss run reaches ≥10% in all four cells. ⚠ **The MEASURED route is `INDETERMINATE`**: `N3`, the pre-registered sanity control, **FAILED**, which voids `O3`'s clustering statistic entirely (`INVALID`, not hedged). The verdict survives because it never needed the measurement |
+| **PT-036** | V10 | The **600–1000 pip week** and the **Friday close 25–50 off both extremes** | `V10/BT_V10_0001` | **`CONTRADICTED AS STATED`, twice.** `M1`: a 600–1000 pip week occurs in **0 of 180 weeks (0.00%)**; observed median **243.8** pips. `M2`: the joint band is met in **13/178 = 7.30%** (arm B 5.62%) against a `< 20%` contradiction threshold — and it **fails its own specificity control**, with Friday ranking **4th of 5 weekdays** and Thursday satisfying the band nearly twice as often. ⚠ **V10's headline SAFETY TRADE was NOT tested, and that omission is itself a reported finding** — five of its seven conditions rest on undefined terms and `D-030` forbids approximating them |
+| **PT-039** | V11 | *"the low has to hold — how long? 30 to 90 minutes"* | `V11/BT_V11_0001` | **`SPLIT` / `PARTIALLY SUPPORTED`** — four measures, and they disagree by design. `M1a` **PARTIALLY SUPPORTED** (19.24% vs `N1` 3.43%, margin **+15.80 pp**); `M1b` **CONFIRMED AS STATED** (+12.17 pp across the 30→90 band); `M1c` **CONTRADICTED AS STATED** — **no feature at 30 and none at 90, in both arms**; `M1d` **PARTIALLY SUPPORTED** — the margin survives in only **3 of 6** time-of-day strata. **The direction is supported and the named numbers are not**, and most of the apparent effect tracks **how much of the session is left**, not how long the low held |
+| **PT-040** | V12 | Does `A-084`'s smoothing ambiguity change the RSI thresholds V11 states? | `V12/BT_V12_0001` | **`MATERIAL`** — this measures **an ambiguity, not a taught claim**, and so appears in no supported/contradicted column. Side disagreement `M = 5.16 pp` on the 50-line against a pre-registered **`> 5.0 pp` = MATERIAL** boundary, `n = 24,730` bars; `N2` (**10.661 pp**) and `N3` (**12.147 pp**) land in the same band. ⚠ **The result is the opposite of what the session wanted:** `A-084` is not a bookkeeping ambiguity, and every RSI threshold V11 states is under-determined until it is resolved |
+| **PT-041** | V13 | *"50 to 100 pips on the table… you'll hit your 50 pips"* | `V13/BT_V13_0001` | **`PARTIALLY SUPPORTED`** — **the distance is real, the promise is not.** Median MFE **56.8 / 52.9 pips**, and `O1` beats a same-metric control by **+44.9 / +42.2 pp** against a `≥ +10 pp` clause — four times the margin required. But `O4`, **the claim's own premise** that the dealer comes back into the Asian levels, holds only **0.704 / 0.701** against a pre-registered `≥ 0.80`, and `O2` reaches **0.630 / 0.642** against `≥ 0.70`. Both boundaries were fixed before the runner existed and both are honoured. ⚠ §5's named control was **DEFECTIVE in a direction that flattered the claim**; a like-for-like control was added at run time and **both are reported** |
+| **PT-042** | V14 | "The lock" — does a session extreme that holds one hour become the day's extreme? | `V14/BT_V14_0001` | **`NOT SUPPORTED`** — **the distance is real, the premise is not.** `O1` = **0.3461 / 0.3041** against `≥ 0.80` — a **45-point miss**, wrong about two days in three; `O2` = **0.4607 / 0.4433** against `≥ 0.50`; `n` = **471 / 467**. ⚠ **This is a precisely located negative, not an empty one:** median MFE from entry is **40.10 / 40.40 pips** against a matched-random **18.90 / 20.30**, and `O2` **doubles** matched-random (0.4607 vs 0.2251). The record also discloses **two defects in `PT-042` itself**, owed an amendment before any re-issue: `N4` is degenerate (`n = 0`), and §5a underspecified `N1`'s `O1` construction in a direction that flatters the rule arm |
 
 ---
 
 ## 3. WHAT SURVIVES, AND WHAT DOES NOT
 
-**Four claims clear their own pre-registered nulls**, and none of them is an entry rule:
+**Four claims clear their own pre-registered nulls in a way that means anything**, and none of
+them is an entry rule:
 
 1. **`PT-032` — the Friday-flat rationale.** One weekend in five gaps past the 18-pip stop
    the course itself teaches, and the figure is a **lower bound** (no spread in the corpus).
@@ -98,13 +159,36 @@ W-A / W-B on the same corpus. Summarised from their own records.
    is unidentified and the mundane candidate — the release calendar — is strongly indicated.**
 4. **`PT-017` / `PT-018`** — partial, on timing rather than on anything bankable.
 
-**Three claims are contradicted by the data**, not merely unsupported:
+**Three more clear a null and should not be read as support.** `PT-026` clears **trivially** —
+the week's first eight hours are cut in 180/180 weeks, but rank **7 of 23** on a matched basis.
+`PT-034` clears on a form that is **arithmetically guaranteed**, and what it actually measures is
+the size of a hindsight advantage the course does not teach a trader to obtain.
+
+**Five claims are contradicted by the data**, not merely unsupported:
 
 - **`PT-028`** — the week's extremes print on **Friday**, and Tuesday/Wednesday are the two
   most *depleted* cells. The taught mid-week turn is the opposite of what GBP/USD did.
 - **`PT-030`** — *"they will not go below last week's peak formation"* is stated absolutely
   and is breached in about half of weeks, by a median of 76–101 pips.
 - **`PT-006`** — a new session **continues** the old one's direction rather than reversing it.
+- **`PT-035`** — *"highly unlikely to lose three or four in a row"* is false at the course's own
+  claimed accuracy. At >50%, P(a four-loss run in 200 trades) ≈ **99.9%**; you would need
+  **p ≥ 84.2%** for the claim to hold.
+- **`PT-036`** — **both** of V10's quantitative claims, and the second also fails its own
+  specificity control.
+
+### 3a. ⭐ THE HONEST HEADLINE, NOW THAT V08–V14 ARE IN THE TABLE
+
+The seven tests added in §2d change what this summary says, and the change is the finding:
+
+> **The direction and the distance are frequently real. The specific numeric premise almost
+> never holds as stated.**
+
+The three most recent tests say it three different ways, and **each was pre-registered before its
+runner existed**: `PT-041` — *the distance is real, the promise is not*; `PT-042` — *the distance
+is real, the premise is not*; `PT-036` — contradicted as stated, twice, with the pip-vs-point
+rescue also failing. **A `NOT SUPPORTED` verdict of this shape is not an empty result — it is a
+precisely located one**, and it is the strongest output the project has produced.
 
 **A recurring mechanism explains several of the nulls, and it is worth stating once.** The
 extremes of a random-walk path concentrate at the **edges of any window**, wherever the edges
@@ -115,7 +199,7 @@ against a naive uniform-time expectation and false against a shift control**, an
 
 ---
 
-## 4. FIVE PLACES WHERE THE MEASUREMENT ALMOST PRODUCED A FALSE POSITIVE
+## 4. SIX PLACES WHERE THE MEASUREMENT ALMOST PRODUCED A FALSE POSITIVE
 
 Recorded because each was caught by a pre-registered control or a disclosed check, and
 each would otherwise have been reported as a finding:
@@ -127,10 +211,20 @@ each would otherwise have been reported as a finding:
 | 3 | `PT-031` | "Sun+Mon is the quietest span in 63% of weeks" | A 31-hour span against 48-hour ones. Normalised: **mid-pack** |
 | 4 | `PT-025` | N3 percentile 8.3 (raw share) | The real week boundaries coincide with 17:00 and add no covered area; corrected: **20.8** |
 | 5 | `PT-027` | 66,443 "later breaches" in 180 weeks | Bars spent outside the block, not breach events. Corrected: **1,586** |
+| 6 | **`PT-041`** | *the claim clears its control comfortably* | §5's **named control was not like-for-like** and would have **understated the baseline and flattered the claim**. A same-metric control was added at run time; **both are reported**, and the verdict does not rest on the clause either way |
 
-**And one place where a pre-registration's own expectation was reversed:** `PT-032` §3a‴
-expected the two ≥ 72 h extended closures to be the sample's strongest evidence. They are two
-of its **smallest** gaps (−7.10 and +0.40 pips) — they are Christmas and New Year.
+**And two places where a pre-registration's own expectation was reversed:** `PT-032` §3a‴
+expected the two ≥ 72 h extended closures to be the sample's strongest evidence — they are two
+of its **smallest** gaps (−7.10 and +0.40 pips), because they are Christmas and New Year. And
+`PT-034` §6a predicted a verdict of `OVERSTATED` at a rate of 0.30–0.55; the run returned
+`CONFIRMED AS TAUGHT` at **0.7046–0.7676**, which the record scores **WRONG, and badly**.
+
+**Two tests disclose a defect in their own pre-registration**, which is recorded here because a
+summary that hid it would be the `E20` class again: `PT-034` §6 (a near-tautological second
+condition under hindsight) and `PT-042` (`N4` degenerate at `n = 0`; §5a underspecified `N1`'s
+`O1` construction, in a direction that flatters the rule arm). Neither pre-registration was
+edited — `COMMON_PROTOCOL.md` §9 rule 7 forbids it — and both defects are owed an amendment
+before any re-issue.
 
 ---
 
@@ -138,13 +232,18 @@ of its **smallest** gaps (−7.10 and +0.40 pips) — they are Christmas and New
 
 - **No win rate anywhere in this corpus validates the method** (`D-009`). Every claimed
   accuracy figure from the course is a **hypothesis under test**, never a target.
-- **Nothing here is an entry rule.** The four supported results are a prohibition, a
-  risk rationale, a clock observation with an unidentified cause, and a timing observation.
+- **Nothing here is an entry rule.** The supported results are a prohibition, a risk rationale,
+  a clock observation with an unidentified cause, and a timing observation. **The course's actual
+  entry machinery has never been tested, because `D-030` blocks it** — five of the safety trade's
+  seven conditions are undefined, and `PT-033`'s own mandatory scope statement says a Hi-Lo test
+  *"can never be executed forward"* because the corpus does not teach real-time extreme
+  identification.
 - **Price levels on this corpus are not comparable with the V02–V06 FXCM homework**
   (`D-036a`). Only **shape and distance** claims travel.
 - **The `D-035` HOLDOUT (2016-07-01 → 2017-12-29) has never been opened** and is not on
-  disk. Every result above is a **DEVELOPMENT-block** result and carries whatever
-  optimism that implies.
+  disk; `D-044`'s 2017–2025 extension is likewise sealed. Every result above is a
+  **DEVELOPMENT-block** result and carries whatever optimism that implies.
 - **The undefined vocabulary is still undefined.** `A-001`, `A-002`, `A-004`, `A-006`,
   `A-010`, `A-011`, `A-012`, `C-001` and the rest are untouched by any test above;
-  `D-030` blocked them and still does.
+  `D-030` blocked them and still does. `PT-040` now measures that one of them (`A-084`) is
+  **`MATERIAL`** rather than cosmetic.

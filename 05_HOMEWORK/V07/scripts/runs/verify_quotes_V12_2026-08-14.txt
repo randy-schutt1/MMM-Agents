@@ -1,0 +1,315 @@
+LESSON       V12
+TRANSCRIPT   02_TRANSCRIPTS/V12/V12_TRANSCRIPT.md
+             690 markers, 8830 normalised words of spoken body
+ARTIFACTS    7, by convention (ARTIFACT_TEMPLATES + LESSON_PT), + 2 shared register(s), lesson rows only
+             03_LESSON_NOTES/V12_SOURCE_NOTES.md
+             03_LESSON_NOTES/V12_INTERPRETATION.md
+             05_HOMEWORK/V12/V12_HOMEWORK.md
+             07_MASTERY_REPORTS/V12_MASTERY_REPORT.md
+             04_SCREENSHOTS/V12/INDEX.md
+             06_MANUAL_BACKTEST/V12/BT_V12_0001.md
+             06_MANUAL_BACKTEST/PRE_REGISTERED/PT-040_does_the_A084_smoothing_ambiguity_change_the_rsi_thresholds.md
+ALLOWLIST    EMPTY for V12. No non-transcript quotation in this lesson has ever been
+             dispositioned, so printed slide text, quotations of other documents
+             and quotations of the student's own prose have no entries to land
+             in. Expect cited-tier FLAGS that are printed source rather than
+             misquotes: each needs ruling ONCE and writing here, exactly as V07
+             and V09 were. A FLAG is a question, not a verdict.
+
+03_LESSON_NOTES/V12_SOURCE_NOTES.md                                      156 fragments
+    retained  line 48    "next week s lesson"
+    retained  line 49    "i m going to explain the tdi in a minute"
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:64 [cited]
+              "a hybrid indicator developed to indicate market conditions related to trend direction momentum and market volatility"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:83 [cited]
+              "i like the rsi line to be set at 21 why it just matches up with the averages a little better and lines up a price action for our purposes"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:84 [cited]
+              "21 slows it down a little bit you don t see as much noise it smooths the line and it helps us see m s and w s more clearly than you would normally get on a more radical or shorter period line"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:85 [cited]
+              "that means we re looking at 21 closing periods back for our line we re averaging that out instead of 14 periods"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:86 [cited]
+              "we have this line set to 21 21 look back periods that s all"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:87 [cited]
+              "we have our rsi set to 21"
+              cited to a marker but not in the transcript
+    retained  line 110   "get rid of all this crap"
+    retained  line 111   "check whose chart it is before reading a perio"
+    retained  line 120   "this was cars chart when i met them"
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:158 [cited]
+              "gives better signals and trade confirmations a powerful tool to scale in with when used in proper context of the market will help build confidence in your trade calls will identify divergence easily"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:165 [cited]
+              "the tsl in essence is a polling of the one hour chart brought into your view on the 15 minute let me say it again so you understand the trade signal line pulls the one hour chart and brings it into the 15 minute"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:168 [cited]
+              "blood in the water indicates that the one hour signal has fired at the same time or in congruency with the 15 minute chart"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:169 [cited]
+              "rsi line green one hour trade signal line red"
+              cited to a marker but not in the transcript
+    retained  line 172   "polls the one hour chart"
+              tracks transcript 4 words ("the one hour chart") -- expected in a retention block, hand-rule if unexpected
+    retained  line 173   "a trade signal line which provides entry signa"
+              tracks transcript 4 words ("a trade signal line") -- expected in a retention block, hand-rule if unexpected
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:183 [cited]
+              "the gold line is a moving or liquid 50 so to speak okay there s your 50 static on all other indicators except the tdi"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:184 [cited]
+              "normally a trend change would be indicated on price crossing above the 50 but because the market basis line went down there to meet the price action the signal came in here instead of three or four bars later"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:186 [cited]
+              "market base line forecasts market reversals"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:222 [uncited]
+              "price comes out and it s held by the mayonnaise perfectly held by the 200 okay"
+              tracks the transcript for 9 words -- "price comes out and it s held by the" -- then diverges
+    retained  line 240   "if you add an extra filter like my friend zayi"
+              tracks transcript 9 words ("if you add an extra filter like my friend") -- expected in a retention block, hand-rule if unexpected
+    retained  line 240   "you got a nice shark fin to the low right past"
+              tracks transcript 12 words ("you got a nice shark fin to the low right past the") -- expected in a retention block, hand-rule if unexpected
+    retained  line 240   "notice the mayonnaise has risen"
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:275 [cited]
+              "static on all other indicators except the tdi"
+              cited to a marker but not in the transcript
+    retained  line 319   "this is where we get the shark fin from the de"
+              tracks transcript 13 words ("coming out of the water that s where it came from shark fin") -- expected in a retention block, hand-rule if unexpected
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:325 [uncited]
+              "bands are tight rsi line breaks out and comes right back a shark s dorsal fin appears to be emerging from the water fin goes back under the waterline and crosses the signal red blood in the water"
+              tracks the transcript for 4 words -- "blood in the water" -- then diverges
+    retained  line 336   "when the fin goes back under the water line ba"
+              tracks transcript 18 words ("when the fin goes back under the water line back inside the band and crosses the signal line") -- expected in a retention block, hand-rule if unexpected
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:339 [uncited]
+              "fin goes back under the waterline and crosses the signal red blood in the water"
+              tracks the transcript for 5 words -- "fin goes back under the" -- then diverges
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:344 [cited]
+              "the rsi line crosses back inside the water and the blood at the same time"
+              cited to a marker but not in the transcript
+    retained  line 353   "the appearance of the shark fin 1st the market"
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:360 [cited]
+              "add to the trade at mb break"
+              cited to a marker but not in the transcript
+    retained  line 372   "a lead for the promised tdi lesson not an answ"
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:380 [cited]
+              "enter the trade stop loss 23 pips above the hod"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:380 [cited]
+              "stop loss 23 pips above the high"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:381 [cited]
+              "if you re a second leg trader and you got a nice tight second leg seven to ten pips above the second leg because he ain t coming back"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:382 [cited]
+              "you add to the trade at the market baseline break remember the gold baseline"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:383 [cited]
+              "you add again at the volatility band break"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:384 [cited]
+              "you will exit all units when the rsi line returns back inside the band"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:384 [cited]
+              "exit all units vb return crossover"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:387 [cited]
+              "the setups got to coincide with the other indicators"
+              cited to a marker but not in the transcript
+    retained  line 395   "price is in the right area 25 to 50 pips above"
+    retained  line 398   "second leg out of the box 25 to 50 pips"
+              tracks transcript 5 words ("box 25 to 50 pips") -- expected in a retention block, hand-rule if unexpected
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:405 [cited]
+              "so now you have two setups shark fin short shark fin long based on the tdi"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:406 [cited]
+              "same criteria as short inverted"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:421 [cited]
+              "the tsl polls the one hour chart"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:431 [cited]
+              "you were probably in level three because in order to get down to the extreme extreme extreme on tdi you have to have been dropping for a few days"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:442 [cited]
+              "a really good assignment coming up this week"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:442 [cited]
+              "i m gonna insist that you do it"
+              cited to a marker but not in the transcript
+    retained  line 448   "find and identify the trade signals using tdi "
+              tracks transcript 6 words ("find and identify the trade signals") -- expected in a retention block, hand-rule if unexpected
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:456 [cited]
+              "take everything off of your chart including the candles"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:459 [cited]
+              "let s do euro usd and gbp usd"
+              cited to a marker but not in the transcript
+    retained  line 468   "four or five the lesson says both"
+    retained  line 496   "flashcard flashcards occurs in v11 1 and v12 1"
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:530 [cited]
+              "we re going to cover flash cards and then i m going to cover the trading zone"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:531 [cited]
+              "i asked you last week to make 40 flash cards and identify"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:532 [cited]
+              "let me pull up my flashcards"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:532 [cited]
+              "this is my flashcards"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:533 [cited]
+              "save your flashcards"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:533 [cited]
+              "you should have in essence some flashcards that are labeled"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:534 [cited]
+              "you know how to make a flash card now right"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:534 [cited]
+              "you have to make the flash card"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:535 [cited]
+              "do you do flashcards on the four hour 15 minute"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:535 [cited]
+              "the flashcards are on a 15 minute"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:536 [cited]
+              "having a flashcard of a loser is not going to help you stay out of it"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:537 [cited]
+              "make your flashcards on the compression you re looking for your entries"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_SOURCE_NOTES.md:537 [cited]
+              "your flashcards need to be one hour entries"
+              cited to a marker but not in the transcript
+    retained  line 569   "the corpus never says x"
+    retained  line 618   "the cheapest route to closing a 080"
+    retained  line 669   "every legend legible in any frame is recorded "
+03_LESSON_NOTES/V12_INTERPRETATION.md                                     38 fragments
+    FLAG      03_LESSON_NOTES/V12_INTERPRETATION.md:38 [uncited]
+              "polls the one hour chart"
+              tracks the transcript for 4 words -- "the one hour chart" -- then diverges
+    retained  line 59    "the course never taught the tdi"
+    retained  line 63    "a 039 is upstream and still blocks"
+    FLAG      03_LESSON_NOTES/V12_INTERPRETATION.md:107 [cited]
+              "held by the mayonnaise perfectly held by the 200"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_INTERPRETATION.md:148 [uncited]
+              "23 pips above the high of the day"
+              tracks the transcript for 5 words -- "23 pips above the high" -- then diverges
+    FLAG      03_LESSON_NOTES/V12_INTERPRETATION.md:152 [cited]
+              "if you re a second leg trader"
+              cited to a marker but not in the transcript
+    retained  line 187   "simply taking the second leg of an m or w spre"
+              tracks transcript 31 words ("w spread out over five bars that presents itself above or below the blue box within the appropriate times irrespective of any other indicator or criterion is good for approximately 85") -- expected in a retention block, hand-rule if unexpected
+    retained  line 190   "outside above or below the blue box solid gold"
+              tracks transcript 7 words ("outside above or below the blue box") -- expected in a retention block, hand-rule if unexpected
+    retained  line 211   "the corpus never says x"
+    FLAG      03_LESSON_NOTES/V12_INTERPRETATION.md:228 [cited]
+              "the object every v10 trigger references and it is never defined"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_INTERPRETATION.md:250 [cited]
+              "enter the trade stop loss 23 pips above the hod"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_INTERPRETATION.md:250 [cited]
+              "what size stop loss you tell me"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_INTERPRETATION.md:256 [cited]
+              "maybe 15 years ago"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V12_INTERPRETATION.md:256 [cited]
+              "i m not even sure these slides came from that guy"
+              cited to a marker but not in the transcript
+05_HOMEWORK/V12/V12_HOMEWORK.md                                           33 fragments
+    FLAG      05_HOMEWORK/V12/V12_HOMEWORK.md:10 [cited]
+              "a really good assignment coming up this week"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V12/V12_HOMEWORK.md:10 [cited]
+              "i m gonna insist that you do it"
+              cited to a marker but not in the transcript
+    retained  line 28    "find and identify the trade signals using tdi "
+              tracks transcript 6 words ("find and identify the trade signals") -- expected in a retention block, hand-rule if unexpected
+    retained  line 37    "is there anything here to do at all"
+    retained  line 38    "can this be done today"
+    retained  line 68    "and independently blocked by d 006"
+    retained  line 124   "enter the trade stop loss 23 pips above the ho"
+              tracks transcript 4 words ("enter the trade stop") -- expected in a retention block, hand-rule if unexpected
+    retained  line 125   "stop loss 23 pips above the high"
+              tracks transcript 5 words ("23 pips above the high") -- expected in a retention block, hand-rule if unexpected
+07_MASTERY_REPORTS/V12_MASTERY_REPORT.md                                  25 fragments
+    FLAG      07_MASTERY_REPORTS/V12_MASTERY_REPORT.md:18 [cited]
+              "held by the mayonnaise perfectly held by the 200"
+              cited to a marker but not in the transcript
+    FLAG      07_MASTERY_REPORTS/V12_MASTERY_REPORT.md:59 [cited]
+              "you got to be in the right parts of the cycle"
+              cited to a marker but not in the transcript
+    FLAG      07_MASTERY_REPORTS/V12_MASTERY_REPORT.md:85 [cited]
+              "variation on the theme just understand there s gonna be variances but i took these slides out because in here i don t want you to have any variations i want you to trade a certain way"
+              cited to a marker but not in the transcript
+    FLAG      07_MASTERY_REPORTS/V12_MASTERY_REPORT.md:150 [uncited]
+              "polls the one hour chart"
+              tracks the transcript for 4 words -- "the one hour chart" -- then diverges
+04_SCREENSHOTS/V12/INDEX.md                                               20 fragments
+    retained  line 6     "play click confirmed stage changed"
+    retained  line 50    "every legend legible in any v12 frame is trans"
+    FLAG      04_SCREENSHOTS/V12/INDEX.md:70 [cited]
+              "check whose chart a legend belongs to before reading a period off it"
+              cited to a marker but not in the transcript
+    retained  line 85    "no other frame"
+    FLAG      04_SCREENSHOTS/V12/INDEX.md:134 [uncited]
+              "volatility bands act as support resistance based on the close much stronger when the bands contain the rsi line after a break it is divergent stop hunt when viewed in the proper context they can identify stop hunts scale ins and exits"
+              tracks the transcript for 4 words -- "scale ins and exits" -- then diverges
+    FLAG      04_SCREENSHOTS/V12/INDEX.md:144 [uncited]
+              "bands are tight rsi line breaks out and comes right back a shark s dorsal fin appears to be emerging from the water fin goes back under the waterline and crosses the signal red blood in the water"
+              tracks the transcript for 4 words -- "blood in the water" -- then diverges
+    FLAG      04_SCREENSHOTS/V12/INDEX.md:152 [cited]
+              "held by the mayonnaise perfectly held by the 200"
+              cited to a marker but not in the transcript
+    FLAG      04_SCREENSHOTS/V12/INDEX.md:153 [uncited]
+              "tdi offers a few key points to scale in with after entry is made add to your trade on a mb cross add again on a vb break exit all units on vb return"
+              tracks the transcript for 8 words -- "tdi offers a few key points to scale" -- then diverges
+    FLAG      04_SCREENSHOTS/V12/INDEX.md:154 [cited]
+              "a coloured signal tile grid top right with 108 083 and pips to open at hi low 215 daily hi 105 readouts"
+              cited to a marker but not in the transcript
+    FLAG      04_SCREENSHOTS/V12/INDEX.md:164 [cited]
+              "find and identify the trade signals using tdi use any pair you like black out price action and check your knowledge"
+              cited to a marker but not in the transcript
+    FLAG      04_SCREENSHOTS/V12/INDEX.md:166 [uncited]
+              "finally i am working closely with the venue in nj to lock up some dates for june i will deliver a web class review prior to my trip to new jersey i am looking at late may everyone is always welcomed i will post the details as i lock down the availability"
+              tracks the transcript for 9 words -- "post the details as i lock down the availability" -- then diverges
+06_MANUAL_BACKTEST/V12/BT_V12_0001.md                                      5 fragments
+    retained  line 72    "the choice of smoothing changes the answer v11"
+    FLAG      06_MANUAL_BACKTEST/V12/BT_V12_0001.md:101 [cited]
+              "above the 50 the bias is up"
+              cited to a marker but not in the transcript
+    retained  line 148   "overbought oversold 80 20"
+06_MANUAL_BACKTEST/PRE_REGISTERED/PT-040_does_the_A084_smoothing_ambiguity_change_the_rsi_thresholds.md  17 fragments
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-040_does_the_A084_smoothing_ambiguity_change_the_rsi_thresholds.md:34 [cited]
+              "we have this line set to 21 21 look back periods that s all"
+              cited to a marker but not in the transcript
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-040_does_the_A084_smoothing_ambiguity_change_the_rsi_thresholds.md:86 [cited]
+              "the second leg of an m or w"
+              cited to a marker but not in the transcript
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-040_does_the_A084_smoothing_ambiguity_change_the_rsi_thresholds.md:129 [cited]
+              "mid point or basis level of 50"
+              cited to a marker but not in the transcript
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-040_does_the_A084_smoothing_ambiguity_change_the_rsi_thresholds.md:267 [cited]
+              "21 closing periods back for our line"
+              cited to a marker but not in the transcript
+10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md [V12 rows only]                   0 fragments
+11_CONTRADICTIONS/CONTRADICTIONS.md [V12 rows only]                        0 fragments
+
+FRAGMENTS CHECKED      294
+  matched transcript   145
+  allowed (see list)   0
+  retained (audit)     38
+  uncited, unrelated   35
+  FLAGGED              76
+
+RESULT: FAIL -- 76 quotation(s) assert words the source does not contain.

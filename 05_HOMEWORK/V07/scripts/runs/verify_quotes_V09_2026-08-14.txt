@@ -1,0 +1,123 @@
+LESSON       V09
+TRANSCRIPT   02_TRANSCRIPTS/V09/V09_TRANSCRIPT.md
+             721 markers, 9564 normalised words of spoken body
+ARTIFACTS    7, by explicit override (a committed claim names it), + 2 shared register(s), lesson rows only
+
+03_LESSON_NOTES/V09_SOURCE_NOTES.md                                      141 fragments
+    retained  line 112   "we multiply our account balance by 02 and divi"
+              tracks transcript 10 words ("pips into that number that will determine the lot size") -- expected in a retention block, hand-rule if unexpected
+    retained  line 171   "2 of 11 500 is 9 2 minis or 0 92 lots"
+              tracks transcript 11 words ("of 11 500 is 9 2 minis or 0 92 lots") -- expected in a retention block, hand-rule if unexpected
+    retained  line 171   "brings us back up to 11 960"
+              tracks transcript 6 words ("us back up to 11 960") -- expected in a retention block, hand-rule if unexpected
+    retained  line 182   "talking about a cumulative risk that s never g"
+              tracks transcript 31 words ("talking about a cumulative risk that s never greater than two percent across your account if you re looking at three pairs to trade you want to carve that lot size") -- expected in a retention block, hand-rule if unexpected
+    allowed   line 197   "until one develops the hod lod skill"  (PRINTED slide, frame burned 04:40; same HOD/LOD garble as above)
+    allowed   line 198   "mastering hod lod entries"  (PRINTED slide, frame burned 03:45; the audio garbles HOD/LOD to "high low-day" (V09_REVIEW_R1.md M1))
+    retained  line 217   "example solid hod lod entries can warrant a 15"
+              tracks transcript 8 words ("entries can warrant a 15 pip stop loss") -- expected in a retention block, hand-rule if unexpected
+    retained  line 225   "greater than 50 accuracy will bring upward equ"
+              tracks transcript 5 words ("accuracy will bring upward equity") -- expected in a retention block, hand-rule if unexpected
+    allowed   line 263   "moving your stop loss after you have placed it"  (PRINTED, five-errors frame burned 21:40, error 1)
+    allowed   line 264   "putting on multiple positions which add up to "  (PRINTED, five-errors frame burned 21:40, error 2)
+    allowed   line 265   "not having the discipline to keep to the risk "  (PRINTED, five-errors frame burned 21:40, error 3)
+    allowed   line 265   "what it s titanium"  (RETAINED superseded text, inline in V09_SOURCE_NOTES.md Sec 5 row 3. Corrected at V09 R1 (M1) to "what it's it's titanium", the speaker's own stutter)
+    allowed   line 266   "miscalculating lot size on non usd quote pairs"  (PRINTED, five-errors frame burned 21:40, error 4)
+    allowed   line 266   "usd jpy on a usd based account"  (RETAINED superseded text, inline in V09_SOURCE_NOTES.md Sec 5 row 4. Corrected at V09 R2 (item 81) to the literal "USD JP why", the ASR form)
+    allowed   line 285   "only five successful trades per week 20 gains "  (PRINTED slide, frame burned 25:00. The AUDIO at [00:24:52]-[00:24:55] reads "only five successful trades per week... it brings 20% gains" and is quoted separately)
+    retained  line 290   "only five successful trades per week brings 20"
+              tracks transcript 6 words ("only five successful trades per week") -- expected in a retention block, hand-rule if unexpected
+    retained  line 367   "this pattern can always impose itself on the w"
+              tracks transcript 9 words ("this pattern can always impose itself on the week") -- expected in a retention block, hand-rule if unexpected
+    retained  line 391   "and experience shows me"
+    retained  line 429   "experience shows me"
+    retained  line 452   "i like to keep my emas consistent throughout a"
+              tracks transcript 15 words ("steve doesn t teach it it s okay this is my my twist on it") -- expected in a retention block, hand-rule if unexpected
+    retained  line 466   "what is the grape fred"
+    retained  line 467   "verbatim across five markers"
+    allowed   line 505   "do not blend"  (SOURCING_HIERARCHY.md Sec 3.2 Case A, quoted as the rule applied)
+    retained  line 563   "type in a lot size calculator forex lot size c"
+              tracks transcript 7 words ("lot size calculator tons of free ones") -- expected in a retention block, hand-rule if unexpected
+    retained  line 566   "do what you can take notes heavily"
+              tracks transcript 4 words ("do what you can") -- expected in a retention block, hand-rule if unexpected
+    retained  line 568   "we don t cover it in the dmr"
+              tracks transcript 7 words ("we don t cover it in the") -- expected in a retention block, hand-rule if unexpected
+    retained  line 569   "pop in an arrow in the direction"
+              tracks transcript 4 words ("pop in an arrow") -- expected in a retention block, hand-rule if unexpected
+    retained  line 600   "instead 05 homework v09 runs the exercise h3 s"
+    allowed   line 640   "multiple positions which add up to greater tha"  (PRINTED, five-errors frame burned 21:40, error 2 -- un-elided partial)
+    allowed   line 641   "no impulsive increases in lot size"  (PRINTED slide, frame burned 17:05)
+    allowed   line 641   "looking for the most pristine setups where the"  (MMM-NOTES p.50, cited as such in the Tier 2 comparison table)
+    allowed   line 641   "you can afford to trade heavily"  (MMM-NOTES p.51, cited as such)
+03_LESSON_NOTES/V09_INTERPRETATION.md                                     17 fragments
+    allowed   line 90    "mastering hod lod entries"  (PRINTED slide, frame burned 03:45; the audio garbles HOD/LOD to "high low-day" (V09_REVIEW_R1.md M1))
+    retained  line 100   "stop extreme 15"
+    allowed   line 167   "do not blend"  (SOURCING_HIERARCHY.md Sec 3.2 Case A, quoted as the rule applied)
+    retained  line 173   "this session believes it is more likely than n"
+    retained  line 195   "three pushes the third being the longest"
+              tracks transcript 5 words ("the third being the longest") -- expected in a retention block, hand-rule if unexpected
+05_HOMEWORK/V09/V09_HOMEWORK.md                                           14 fragments
+    retained  line 20    "tons of free ones i suggest you go get one"
+              tracks transcript 6 words ("i suggest you go get one") -- expected in a retention block, hand-rule if unexpected
+    retained  line 24    "do what you can take notes heavily"
+              tracks transcript 4 words ("do what you can") -- expected in a retention block, hand-rule if unexpected
+    retained  line 163   "we ve had four losses and in two wins we came "
+              tracks transcript 8 words ("we ve had four losses and in two") -- expected in a retention block, hand-rule if unexpected
+07_MASTERY_REPORTS/V09_MASTERY_REPORT.md                                  36 fragments
+    retained  line 29    "v08 r1 revise 2026 08 13 0 critical 0 major 3 "
+    retained  line 29    "v08 reaches complete only at r2"
+    retained  line 52    "v08 is the front half of a talk its presenter "
+    allowed   line 232   "no lesson does"  (A-020's own retained text, quoted back at it in the mastery report's reconciliation row. Not a transcript quotation)
+    allowed   line 233   "do not blend"  (SOURCING_HIERARCHY.md Sec 3.2 Case A, quoted as the rule applied)
+    allowed   line 337   "do not blend"  (SOURCING_HIERARCHY.md Sec 3.2 Case A, quoted as the rule applied)
+    allowed   line 343   "do not blend"  (SOURCING_HIERARCHY.md Sec 3.2 Case A, quoted as the rule applied)
+    allowed   line 482   "what is the grape"  (The DEFECTIVE rendering, quoted in Revision R2 while reporting it. The transcript reads "What is the grade Fred?"; 04_SCREENSHOTS/V09/INDEX.md row 26 is corrected)
+    allowed   line 513   "risk management however i believe that with ou"  (The DEFECTIVE rendering inside PT-035, quoted in Revision R2 while disclosing it. The transcript reads "risk management. How are I believe that with our training?" -- NOT fixed, because COMMON_PROTOCOL.md Sec 9 rule 7 forbids editing a pre-registration after the fact. See the Revision R2 disclosure)
+04_SCREENSHOTS/V09/INDEX.md                                               42 fragments
+    allowed   line 16    "risk in forex is defined as what of our accoun"  (PRINTED slide, frame burned 01:15. The AUDIO at [00:01:17]-[00:01:21] says "your" for "our" twice, which is why this is tagged PRINTED and not AUDIO)
+    retained  line 30    "the coordinate that starts the camtasia player"
+    retained  line 33    "the first 529 frame sweep produced one distinc"
+    retained  line 33    "misses the play target on this file v08 s spla"
+    allowed   line 83    "risk in forex is defined as what of our accoun"  (PRINTED slide, frame burned 01:15. The AUDIO at [00:01:17]-[00:01:21] says "your" for "our" twice, which is why this is tagged PRINTED and not AUDIO)
+    allowed   line 84    "one of the great benefits of trading with defi"  (PRINTED slide, frame burned 02:05)
+    allowed   line 84    "what makes the risk defined is the lot size we"  (PRINTED slide, frame burned 02:05 -- the corpus's first position-sizing rule)
+    allowed   line 86    "mastering hod lod entries can allow one to tra"  (PRINTED slide, frame burned 03:45, quoted in full)
+    allowed   line 87    "until one develops the hod lod skill they can "  (PRINTED slide, frame burned 04:40, quoted in full)
+    allowed   line 88    "the idea is that we use a consistent lot size "  (PRINTED slide, frame burned 05:25)
+    allowed   line 89    "if one takes four stop losses in a row it s ti"  (PRINTED slide, frame burned 06:00. Note "mini's" and ".92" -- the slide's own spelling, distinct from the audio wording quoted at V09_SOURCE_NOTES.md Sec 2c)
+    allowed   line 90    "with a 2 1 ratio 25 50 first winning trade bri"  (PRINTED slide, frame burned 07:05. The AUDIO at [00:07:03] reads "our first-winning winning trade will bring us back up to 11,960" and is quoted separately)
+    allowed   line 91    "to recap calculate lot size in relation to of "  (PRINTED slide, frame burned 08:20 -- the complete rule)
+    allowed   line 92    "the basic idea is that as you hit winning trad"  (PRINTED slide, frame burned 09:20)
+    allowed   line 95    "1 define risk by choosing lot size which is 2 "  (PRINTED slide, frame burned 14:35)
+    allowed   line 97    "3 simply trading with greater than 50 accuracy"  (PRINTED slide, frame burned 16:00 -- the A-067 sufficient-not-necessary row)
+    allowed   line 97    "think of what your equity curve will look like"  (PRINTED slide, frame burned 16:00)
+    allowed   line 98    "basic idea is to keep a consistent ratio of lo"  (PRINTED slide, frame burned 17:05)
+    allowed   line 98    "and to consistently keep take profits larger t"  (PRINTED slide, frame burned 17:05 -- "then" for "than" is the slide's own typo)
+    allowed   line 99    "possible errors to guard against 1 moving your"  (PRINTED slide, the five-errors frame burned 21:40, quoted in full)
+    allowed   line 100   "example of equity curve of 85 win rate with 2 "  (PRINTED caption, frame burned 22:45 -- C-012's object)
+    allowed   line 100   "7 wins 6 losses"  (PRINTED, frame burned 22:45, in the presenter's own hand beneath the caption)
+    allowed   line 101   "possible equity gain scenario 1 2 risk at s l "  (PRINTED slide, frame burned 25:00 -- C-013's object)
+    retained  line 113   "what is the grape"
+06_MANUAL_BACKTEST/V09/BT_V09_0001.md                                     10 fragments
+    retained  line 135   "n3 fails shuffled sequences do not centre run4"
+    retained  line 235   "no o3 number may be reported as a finding"
+    retained  line 280   "run4 obs will exceed 10 in all four cells givi"
+06_MANUAL_BACKTEST/PRE_REGISTERED/PT-035_highly_unlikely_to_lose_three_or_four_in_a_row.md   9 fragments
+    retained  line 29    "believe it or not this is still a rather aggre"
+              tracks transcript 37 words ("i believe that with our training it s highly unlikely we re gonna lose three or four times in a row if of course we ve put the time in to develop the rest of our game") -- expected in a retention block, hand-rule if unexpected
+10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md [V09 rows only]                  47 fragments
+    allowed   line 5512  "if we see a nice up here we expect three level"  (bracket-strip artifact. [00:34:55] reads "if we see a nice am up here"; the register brackets the ASR's "am" as [M]. Every unbracketed word is verbatim)
+    allowed   line 5512  "it s possible that we can see an form here and"  (bracket-strip artifact. [00:35:06] reads "we can see an m form here"; the register brackets the bare "m" as [M] for legibility. Every unbracketed word is verbatim)
+    allowed   line 5610  "i am personally a reset that formed the beginn"  (bracket-strip artifact. [00:30:02] reads "I am personally staying a reset"; the register brackets [seeing], which V09_TRANSCRIPT.md TRANSCRIPTION NOTES already record as the Whisper-correct reading of that garble)
+11_CONTRADICTIONS/CONTRADICTIONS.md [V09 rows only]                        0 fragments
+
+FRAGMENTS CHECKED      316
+  matched transcript   189
+  allowed (see list)   45
+  retained (audit)     35
+  uncited, unrelated   47
+  FLAGGED              0
+
+RESULT: PASS -- every marker-cited quotation resolves to the transcript body, and no
+        uncited quotation is a near miss of a transcript sentence. Bracketed
+        insertions, printed source and retention blocks are dispositioned above.
