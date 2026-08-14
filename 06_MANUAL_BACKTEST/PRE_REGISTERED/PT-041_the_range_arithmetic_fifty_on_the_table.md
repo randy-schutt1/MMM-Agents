@@ -1,7 +1,15 @@
 # PT-041 — The range arithmetic: is there "50 pips on the table" after a 25–50 pip stop hunt out of a 25–50 pip Asian range?
 
+> ### RUN 2026-08-14 — **VERDICT: PARTIALLY SUPPORTED.** See `06_MANUAL_BACKTEST/V13/BT_V13_0001.md`.
+> The distance is real and large (median MFE **56.8 / 52.9 pips**; `P(MFE ≥ 50)` beats a same-metric
+> random-origin control by **+44.9 / +42.2 pp** against a `+10 pp` clause) — **but `O4`, the claim's
+> own premise that *"the dealer comes back into the Asian levels"*, holds only **0.704 / 0.701**
+> against a pre-registered `0.80`, and `O2` reaches only **0.630 / 0.642** against `0.70`. Both near
+> misses; both boundaries were fixed before the runner existed and are honoured.
+> ⚠ **§5's control was DEFECTIVE and the defect flattered the claim** — see `BT_V13_0001` §5.
+
 ```text
-STATUS:      PRE-REGISTERED -- NOT RUN
+STATUS:      PRE-REGISTERED -- RUN 2026-08-14 -- PARTIALLY SUPPORTED
 WRITTEN:     2026-08-14, V13 student session, branch video/v13
 ATTESTATION: The session that wrote this file had, at the moment of writing, loaded NO
              price series for this test, run NO aggregation, and computed NO outcome of
