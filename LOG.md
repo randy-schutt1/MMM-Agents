@@ -8696,3 +8696,94 @@ except an explicitly-labelled RUN banner.
 declared HARD STOP**: after V14 passes review, the plan is a comprehension/gap audit before deciding
 whether to continue to V15+. **`V15 GATE: CLOSED` until R1 returns.** Items **162–171** are raised
 for that round; **162, 163, 165 and 168 are the ones that need a ruling** rather than a note.
+
+---
+
+## 2026-08-14 — V14 INDEPENDENT REVIEW R1 · `review/v14` · **REVISE, 0C / 0M / 5 MINOR / 9 NOTE**
+
+**Worktree `MMM-Agents-v14-review`, branch `review/v14` cut from integration head `5218cce` —
+POST-`D-044`, so this review ran against the 13-file, 4.59 M-bar corpus while the submission was
+built on the 4-file one.** `video/v14` @ `ba2e474` merged in for review; **no ledger conflict.**
+`D-003` satisfied: this session authored no V14 artifact.
+
+### Verdict
+
+`REVISE` — **0 CRITICAL, 0 MAJOR, 5 MINOR, 9 NOTE. HIGH confidence.** `D-024` **opens the V15
+gate.** ⚠️ **The owner's hard stop stands independently of it** — `D-024` rules on finding severity
+and says nothing about the comprehension/gap audit scheduled here. Items **172–176** are owed
+before V14 reaches `COMPLETE`; `D-004` is untouched and V14 is **NOT COMPLETE**.
+
+### What was re-derived rather than read
+
+- **`PT-042` re-implemented from `PT-042` §3's definition table before `run_pt042.py` was opened** —
+  own CSV parse, own `zoneinfo` DST table, own session day / board range / extension / stopwatch /
+  lock / resolution. `O1` **0.3468 / 0.3030** vs the committed **0.3461 / 0.3041**; `O2`
+  **0.4617 / 0.4483** vs **0.4607 / 0.4433**; median MFE **40.20 / 42.35** vs **40.10 / 40.40**.
+  **Every headline figure within 0.005**, and **`no-extension = 0` / `no-lock = 0` exactly in both
+  arms** — the `N4` degeneracy independently confirmed.
+- ⭐ **`PT-042` re-run in this post-`D-044` worktree rewrites both committed data files
+  BYTE-IDENTICALLY.** `D-044` does not move V14's result — **measured**, not inferred from `D-044`
+  §6, which could not have covered a runner that did not yet exist.
+- **The lesson's load-bearing TDI passage re-transcribed on `openai-whisper large-v3-turbo` and
+  `medium.en`** from audio extracted off the SHA-re-verified `.swf` (2869.0025 s vs the
+  submission's 2869.002449 s). **Correction 5 confirms verbatim, including *"the green RSI line"*
+  and the compound question with a single *"Yes"*.**
+- **Both worked-example percentiles recomputed by hand** — 45.5% and 20.0%, both right.
+- **`Q-015` reproduced exact**: `diff` 8 lines / 4 pairs / zero content lines; mean luminance
+  **0.9964**; fraction above 60 **0.00321**; light rows **11–20 and 752**; the text legible at 8×
+  autocontrast as PowerPoint's exit screen.
+- **All 29 frames' burned-in timecodes cropped and read in code** — this is where `M3` came from.
+- **`SOURCE_MANIFEST.md` and the 21-folder library tree read in full** — this is where `M5` came
+  from.
+
+### The five minors
+
+`M1` `A-089` quotes the middle-of-range verdict as a declarative; **two engines return an
+interrogative** — inside the record that blocks `A-056`. · `M2` the artifacts **mix two clocks**;
+**20 distinct citations are absent from the committed 600-marker index** and one (`[00:34:35]`) is
+62 s wrong on both. · `M3` **all 29 frames run exactly `+16 s`** against their own burned timecode
+and `INDEX.md` §2 misquotes it — a **V14 regression**, V12/V13 measured at 0–1 s. · `M4` **twelve
+moved records carry no pointer**, and `A-056`'s and `A-084`'s own bodies now read false. · `M5`
+**`A-092`'s corpus-wide count is wrong** — `Wk9 052012` → `Wk10 061712` is a four-week gap recorded
+nowhere, and the gap audit was about to carry "two artifacts" into the V15+ decision as a bound.
+
+### The rulings the submission asked for
+
+- **Item 162 — `A-056` is NOT closed.** The session was right, and a **second reason** is added:
+  `PT-042` refuted the method's own premise, so closing it as *"RESOLVED BY COURSE"* would record a
+  working method the same submission measured at 30–35% against a required 80%. Recommended
+  `NARROWED` wording supplied.
+- **Item 163 — the `A-084` defeater HOLDS.** Attacked four ways, including the strongest available
+  (the speaker's own unprompted *"the TDI line, RSI is green"*), which is defeated by the project's
+  own `MMM_TDI.txt` buffer naming. **A fifth defeater is offered for `A-093`**: the student's
+  question is phrased in the TDI's own published buffer names, so affirming it affirms the
+  vocabulary and says nothing about smoothing length.
+- **Item 165 — `D3` is legitimate in kind, unnecessary in fact, unverified in substance.** No gate
+  breach and no finding charged. But `SOURCE_MANIFEST.md` **already** shows `Wk5 → Wk7` with no
+  `Wk6`, so the conclusion was reachable without reaching forward — and the V15 body carries **none**
+  of the `I-008` verification V14's own body received, while its header is exactly the class
+  `Q-015` §5 quarantines. **A four-part forward-read precedent is put to the owner at item 179; its
+  clause (d) is the part worth making policy.**
+- **Item 168 (`C-021`) forwarded to the owner unchanged.** V12's passage was read at source and
+  every element of `C-021` §1 confirms, including the third basis (*"from price action"*) that a
+  careless record would have dropped.
+
+### Credited
+
+Five deviations declared before a reviewer found any of them; three self-corrections that all verify
+at the corrected figures; the `A-082` fence set **before** the run and holding; and **on the two
+occasions where the attractive reading would have unblocked the most work — `A-084` and `A-056` —
+the session declined and put the call to a reviewer. Both times it was right.**
+
+### Git discipline
+
+Explicit path staging only, **never `git add -A`**, `git diff --staged` inspected before each
+commit, `validate_project.py` **PASS** before push.
+
+### Next Action
+
+**The owner's comprehension/gap audit.** `REVIEW_INDEX.md` item **185** is this reviewer's
+independent read of it — the submission's summary is fair and nowhere flatters the project, with
+four additions, of which the load-bearing one is that **the highest-value unblock left (`A-084`) is
+now an owner decision on `!SM_TDI`'s admissibility (item 157), not something more lessons will
+supply.**
