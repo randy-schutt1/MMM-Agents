@@ -2,17 +2,47 @@
 """Quotation verifier -- mechanically checks every quoted fragment in every artifact of a given
 lesson against that lesson's verbatim transcript body.
 
-GENERALISED AT V09 R2 (open item 81). This script was written at the V07 R2/R3 remediation and
-was V07-specific: its `TRANSCRIPT` constant, its `ARTIFACTS` list and its printed-slide allowlist
-all named V07. `V09_REVIEW_R1.md` `M1` required it to be generalised and run over V09;
-`V09_REVIEW_R2.md` item 81 recorded that the generalisation and the run never happened, and that
-a FIFTH instance of the defect class survived at `V09_SOURCE_NOTES.md` line 410 as a result. It
-now takes a lesson identifier.
+PARTIALLY GENERALISED AT V09 R2 (open item 81). This script was written at the V07 R2/R3
+remediation and was V07-specific: its `TRANSCRIPT` constant, its `ARTIFACTS` list and its
+printed-slide allowlist all named V07. `V09_REVIEW_R1.md` `M1` required it to be generalised and
+run over V09; `V09_REVIEW_R2.md` item 81 recorded that the generalisation and the run never
+happened, and that a FIFTH instance of the defect class survived at `V09_SOURCE_NOTES.md`
+line 410 as a result. It was then given a lesson argument.
+
+⭐ ACTUALLY GENERALISED AT THE 2026-08-14 GAP AUDIT (item 180), AND THE PREVIOUS CLAIM WAS FALSE.
+`GAP_AUDIT_2026-08-14.md` found that the V09 R2 "generalisation" reached the docstring and the
+argument name but NOT the code: `ARTIFACTS` and `ALLOWLIST` remained two hardcoded dictionaries
+keyed `V07` and `V09`, and `main()` validated the positional argument against `ARTIFACTS`, so
+every other lesson exited with `usage: verify_quotes.py {V07|V09}`. **The tool that catches the
+`E01`/`E11` narrative-quotation class had therefore never run against V10, V11, V12, V13 or
+V14** — and items 172/173, the fifth and sixth instances of that class, are exactly what it
+exists to catch. This is a fix RECORDED AS MADE THAT NEVER REACHED THE CODE, and the audit's
+finding stands: *"An un-run check is how the fifth instance survives."*
+
+What changed, and nothing else did:
+
+  * The lesson argument is validated against `^V\\d\\d$` PLUS the existence of that lesson's
+    transcript, not against the keys of a dictionary. Any lesson with a transcript now runs.
+  * `ARTIFACTS` becomes `ARTIFACT_OVERRIDES` and keeps V07 and V09 verbatim, because each of
+    those two sets is the NAMED set a committed mastery-report claim is about and must not
+    silently change. Every other lesson resolves its set from `ARTIFACT_TEMPLATES` — a fixed,
+    documented list of path shapes, existence-filtered, plus that lesson's pre-registration from
+    `LESSON_PT`. The resolved set is PRINTED at the head of every run, so the coverage a run
+    asserts is visible in its own output rather than inferred from this file.
+  * `ALLOWLIST` is looked up with `.get(lesson, {})`. A lesson with no allowlist is not an
+    error — it is a lesson whose non-transcript quotations have never been dispositioned, which
+    is the honest starting state and is reported as such.
+
+  NO tier rule, threshold, disposition, regex or matching rule is touched. `MIN_WORDS`,
+  `NEAR_MISS_MIN_WORDS`, the two tiers, the four dispositions and full-fragment allowlist
+  equality are all exactly as V09 R2 / V07 R3 left them, so a re-run of V07 or V09 reproduces
+  the committed numbers (V07: 338 fragments, 0 FLAGS) and this change is verifiable by that.
 
   usage: python3 05_HOMEWORK/V07/scripts/verify_quotes.py LESSON [--verbose] [--dump-allowed]
+                                                                 [--list-artifacts]
                                                                  [--transcript PATH]
   e.g.:  python3 05_HOMEWORK/V07/scripts/verify_quotes.py V09
-         python3 05_HOMEWORK/V07/scripts/verify_quotes.py V07 --verbose
+         python3 05_HOMEWORK/V07/scripts/verify_quotes.py V14 --verbose
 
   exit 1 if any FLAG survives, so it can gate a commit.
 
@@ -124,16 +154,20 @@ TOUCHED". This is that touch. Two are adopted and one is deliberately refused, w
            hand-ruled, exactly as R3 hand-ruled them. Mechanised visibility, not a mechanised
            verdict.
 """
+import glob
 import os
 import re
 import sys
 
 BODY_HEADING = '# VERBATIM TRANSCRIPT'
 
-# Per-lesson artifact sets. Listed explicitly rather than globbed: the claim under test in each
-# lesson's mastery report is about a NAMED set of artifacts, and a glob would silently change what
-# the claim covers when a file is added.
-ARTIFACTS = {
+LESSON_RE = re.compile(r'^V\d\d$')
+
+# EXPLICIT per-lesson artifact sets, for the lessons where a COMMITTED claim names the set.
+# Listed explicitly rather than resolved: the claim under test in V07's and V09's mastery reports
+# is about a NAMED set of artifacts, and resolving them would silently change what the claim
+# covers when a file is added. Every other lesson resolves from ARTIFACT_TEMPLATES below.
+ARTIFACT_OVERRIDES = {
     # The seven V07 artifacts named in V07_MASTERY_REPORT.md Sec H's sweep claim.
     'V07': [
         '03_LESSON_NOTES/V07_SOURCE_NOTES.md',
@@ -157,6 +191,65 @@ ARTIFACTS = {
         'PT-035_highly_unlikely_to_lose_three_or_four_in_a_row.md',
     ],
 }
+
+# The CONVENTION, for every lesson without an explicit override above. `%s` is the lesson id.
+# These are the six artifact shapes `FILE_NAMING_STANDARD.md` fixes and that every lesson from
+# V07 onward actually uses; V07's and V09's own override lists are one instance of this shape
+# each, which is why the templates are written from them rather than invented.
+#
+# Entries are GLOBS, existence-filtered, and the resolved set is printed at the head of the run.
+# A glob rather than a literal list is a deliberate departure from the override rule above, and
+# the reason is that no committed claim yet names V10-V14's artifact sets: there is nothing for a
+# literal list to protect, and a glob is what makes a newly added artifact get CHECKED instead of
+# silently skipped. When a lesson's mastery report does name its set, add an override.
+ARTIFACT_TEMPLATES = [
+    '03_LESSON_NOTES/%s_SOURCE_NOTES.md',
+    '03_LESSON_NOTES/%s_INTERPRETATION.md',
+    '05_HOMEWORK/%s/%s_*.md',
+    '07_MASTERY_REPORTS/%s_MASTERY_REPORT.md',
+    '04_SCREENSHOTS/%s/INDEX.md',
+    '06_MANUAL_BACKTEST/%s/BT_%s_*.md',
+]
+
+# Each lesson's own pre-registration(s). Mapped explicitly, NOT resolved: a `PT` file's filename
+# does not carry its lesson, several PT files cite a lesson they are not "of", and PT-037/PT-038
+# do not exist (`PT-039`'s re-issue banner, owner ruling 2026-08-13). Each entry below was read
+# out of that file's own header block. A lesson absent here contributes no PT file, which is
+# reported in the resolved set rather than assumed.
+LESSON_PT = {
+    'V07': ['PT-033_hi_lo_ceiling_and_the_untaught_gap.md'],
+    'V08': ['PT-034_crown_jewel_three_to_one.md'],
+    'V09': ['PT-035_highly_unlikely_to_lose_three_or_four_in_a_row.md'],
+    'V10': ['PT-036_weekly_range_and_the_friday_close.md'],
+    'V11': ['PT-039_how_long_must_the_low_hold.md'],
+    'V12': ['PT-040_does_the_A084_smoothing_ambiguity_change_the_rsi_thresholds.md'],
+    'V13': ['PT-041_the_range_arithmetic_fifty_on_the_table.md'],
+    'V14': ['PT-042_the_lock_and_the_high_low_board.md'],
+}
+
+PT_DIR = '06_MANUAL_BACKTEST/PRE_REGISTERED'
+
+
+def resolve_artifacts(lesson):
+    """Return (paths, source) for a lesson -- its override list, or the convention.
+
+    Sorted within each template so a run is reproducible, and de-duplicated so a lesson whose PT
+    file is also matched by a template is not checked twice.
+    """
+    if lesson in ARTIFACT_OVERRIDES:
+        return list(ARTIFACT_OVERRIDES[lesson]), 'explicit override (a committed claim names it)'
+    paths = []
+    for template in ARTIFACT_TEMPLATES:
+        pattern = template % ((lesson,) * template.count('%s'))
+        paths.extend(sorted(glob.glob(pattern)))
+    paths.extend(os.path.join(PT_DIR, name) for name in LESSON_PT.get(lesson, []))
+    seen, unique = set(), []
+    for path in paths:
+        if path not in seen:
+            seen.add(path)
+            unique.append(path)
+    return unique, 'convention (ARTIFACT_TEMPLATES + LESSON_PT)'
+
 
 # SHARED REGISTERS, scanned for every lesson. These outlive the lesson that wrote into them, which
 # is exactly why V09 R2 charged item 82 against them: a wrong pointer here is read by every later
@@ -578,14 +671,16 @@ def main():
     argv = sys.argv[1:]
     verbose = '--verbose' in argv
     dump_allowed = '--dump-allowed' in argv
+    list_artifacts = '--list-artifacts' in argv
     transcript = None
     if '--transcript' in argv:
         transcript = argv[argv.index('--transcript') + 1]
         argv = [a for a in argv if a != transcript]
     positional = [a for a in argv if not a.startswith('--')]
-    if len(positional) != 1 or positional[0] not in ARTIFACTS:
-        sys.exit('usage: verify_quotes.py {%s} [--verbose] [--dump-allowed] [--transcript PATH]'
-                 % '|'.join(sorted(ARTIFACTS)))
+    usage = ('usage: verify_quotes.py VNN [--verbose] [--dump-allowed] [--list-artifacts]'
+             ' [--transcript PATH]')
+    if len(positional) != 1 or not LESSON_RE.match(positional[0]):
+        sys.exit(usage)
     lesson = positional[0]
 
     root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
@@ -594,8 +689,14 @@ def main():
 
     if transcript is None:
         transcript = '02_TRANSCRIPTS/%s/%s_TRANSCRIPT.md' % (lesson, lesson)
-    artifacts = ARTIFACTS[lesson]
-    allowlist = ALLOWLIST[lesson]
+    # The lesson is validated by the existence of its transcript, not by a hardcoded key set.
+    # That hardcoded key set IS item 180: it is what refused V10-V14 for five lessons.
+    if not os.path.exists(transcript):
+        sys.exit('FATAL: no transcript for %s at %s. %s' % (lesson, transcript, usage))
+    artifacts, source = resolve_artifacts(lesson)
+    if not artifacts:
+        sys.exit('FATAL: %s resolved to zero artifacts (%s)' % (lesson, source))
+    allowlist = ALLOWLIST.get(lesson, {})
 
     body, markers = load_body(transcript)
     body_words = body.split()
@@ -603,8 +704,19 @@ def main():
     print('TRANSCRIPT   %s' % transcript)
     print('             %d markers, %d normalised words of spoken body'
           % (markers, len(body_words)))
-    print('ARTIFACTS    %d + %d shared register(s), lesson rows only'
-          % (len(artifacts), len(SHARED_REGISTERS)))
+    print('ARTIFACTS    %d, by %s, + %d shared register(s), lesson rows only'
+          % (len(artifacts), source, len(SHARED_REGISTERS)))
+    if list_artifacts or lesson not in ARTIFACT_OVERRIDES:
+        for path in artifacts:
+            print('             %s' % path)
+    if not allowlist:
+        print('ALLOWLIST    EMPTY for %s. No non-transcript quotation in this lesson has ever'
+              ' been' % lesson)
+        print('             dispositioned, so printed slide text, quotations of other documents')
+        print('             and quotations of the student\'s own prose have no entries to land')
+        print('             in. Expect cited-tier FLAGS that are printed source rather than')
+        print('             misquotes: each needs ruling ONCE and writing here, exactly as V07')
+        print('             and V09 were. A FLAG is a question, not a verdict.')
     print()
 
     tally = {'MATCH': 0, 'ALLOWED': 0, 'RETAINED': 0, 'UNRELATED': 0, 'FLAG': 0}

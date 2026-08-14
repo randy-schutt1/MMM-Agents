@@ -1,9 +1,13 @@
 # CUMULATIVE BACKTEST SUMMARIES
 
-## STATUS: `CUMULATIVE_SUMMARY.md` COVERS ALL 21 TESTS RUN TO DATE
+## STATUS: `CUMULATIVE_SUMMARY.md` COVERS ALL 31 TESTS EXECUTED AND REPORTED TO DATE
 
-*(was: "EMPTY — NO OBSERVATIONS TO SUMMARIZE", retained rather than deleted so the
-progression is visible.)*
+*(was: "EMPTY — NO OBSERVATIONS TO SUMMARIZE", then "COVERS ALL 21 TESTS RUN TO DATE",
+both retained rather than deleted so the progression is visible. The "21" line was
+**stale and wrong in both of its numbers** when `GAP_AUDIT_2026-08-14.md` found it —
+see the `⚠ WHY THIS FILE WAS REWRITTEN` block at the head of `CUMULATIVE_SUMMARY.md`.
+40 PT files exist; 32 have a committed `BT_*` record; **31 were executed and
+reported**; 8 have never been run.)*
 
 Aggregate views across lessons: `CUMULATIVE_SUMMARY.md`,
 `CUMULATIVE_VXX_TO_VYY.md`.

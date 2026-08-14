@@ -1,0 +1,219 @@
+LESSON       V10
+TRANSCRIPT   02_TRANSCRIPTS/V10/V10_TRANSCRIPT.md
+             1184 markers, 15056 normalised words of spoken body
+ARTIFACTS    9, by convention (ARTIFACT_TEMPLATES + LESSON_PT), + 2 shared register(s), lesson rows only
+             03_LESSON_NOTES/V10_SOURCE_NOTES.md
+             03_LESSON_NOTES/V10_INTERPRETATION.md
+             05_HOMEWORK/V10/V10_COMPREHENSION_ANSWERS.md
+             05_HOMEWORK/V10/V10_FLASHCARDS.md
+             05_HOMEWORK/V10/V10_HOMEWORK.md
+             07_MASTERY_REPORTS/V10_MASTERY_REPORT.md
+             04_SCREENSHOTS/V10/INDEX.md
+             06_MANUAL_BACKTEST/V10/BT_V10_0001.md
+             06_MANUAL_BACKTEST/PRE_REGISTERED/PT-036_weekly_range_and_the_friday_close.md
+ALLOWLIST    EMPTY for V10. No non-transcript quotation in this lesson has ever been
+             dispositioned, so printed slide text, quotations of other documents
+             and quotations of the student's own prose have no entries to land
+             in. Expect cited-tier FLAGS that are printed source rather than
+             misquotes: each needs ruling ONCE and writing here, exactly as V07
+             and V09 were. A FLAG is a question, not a verdict.
+
+03_LESSON_NOTES/V10_SOURCE_NOTES.md                                      174 fragments
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:50 [cited]
+              "execute in demo the concepts as illustrated"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:105 [cited]
+              "the same thing inverted applies for the low"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:111 [cited]
+              "i asked you for four hour chart markups"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:114 [cited]
+              "last week the assignments to start highlighting the first eight hours of the business the open sunday tonight mark the high low and extend those lines out through the course of the week"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:122 [cited]
+              "the first eight hours of the week is the asian session psychological support and resistance are established out to here all the way out for the week"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:126 [cited]
+              "psychological support and resistance is set by the dealer therefore it is exploited by the dealer"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:136 [cited]
+              "i m officially designating everyone in here your signature trade as of today"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:150 [cited]
+              "the safety trade allows you to trade in line with peak formation high low as a confirmed directional move"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:161 [cited]
+              "pfh pfl has formed as how or low 4hr tie in"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:162 [cited]
+              "price has moved away from the area and has confirmed the formation"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:163 [cited]
+              "level one consolidation is clear"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:164 [cited]
+              "dnc remember this is level 1 consolidation a sucker trades the breakout back towards the peak don t be a sucker"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:165 [cited]
+              "dealer makes a visible stop hunt preferably above or below blue box"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:167 [cited]
+              "obvious ones are still valid sets"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:168 [cited]
+              "dealer issues second leg m or w this locks the trade"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:175 [cited]
+              "add a moving average or pivot for strong confluence"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:177 [cited]
+              "look for the stop hunt to come in around 25 to 75 pips off of the low how anchor"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:188 [cited]
+              "the dealer will rise from that level for at least two days offering you 50 pips"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:192 [cited]
+              "if you re stalking ten pairs and there s two weekly reversals that s 20 trades a week that are available"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:229 [cited]
+              "the answer to the rest of that question is time day you don t take stuff late in the us session"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:253 [cited]
+              "w is false dealer vectors to s h zone m formation shark fin above resist band price action above blue tracer multisession m level 3 sell"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:288 [cited]
+              "displayed not taught"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:301 [uncited]
+              "finish flash cards you should build your book every week by adding a few snapshots"
+              tracks the transcript for 13 words -- "cards you should build your book every week by adding a few snapshots" -- then diverges
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:302 [cited]
+              "mark 10 safety setups in any pairs 5 long 5 short"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V10_SOURCE_NOTES.md:325 [cited]
+              "au still gonna be there buddy at 830"
+              cited to a marker but not in the transcript
+    retained  line 335   "no session clock times sessions are named cons"
+    retained  line 336   "no hour is ever stated"
+    retained  line 340   "v10 states no clock time for any session"
+03_LESSON_NOTES/V10_INTERPRETATION.md                                     26 fragments
+    retained  line 94    "the extreme is unbroken for n hours and price "
+    FLAG      03_LESSON_NOTES/V10_INTERPRETATION.md:233 [cited]
+              "there s looks like the lowest point on the chart right now let me draw a line on the lowest point of the chart"
+              cited to a marker but not in the transcript
+05_HOMEWORK/V10/V10_COMPREHENSION_ANSWERS.md                              45 fragments
+    FLAG      05_HOMEWORK/V10/V10_COMPREHENSION_ANSWERS.md:26 [cited]
+              "i m officially designating everyone in here your signature trade as of today"
+              cited to a marker but not in the transcript
+    retained  line 61    "yes blue box asian session high low so it s de"
+    FLAG      05_HOMEWORK/V10/V10_COMPREHENSION_ANSWERS.md:103 [uncited]
+              "look for the stop hunt to come in around 25 to 75 pips off of the low how anchor"
+              tracks the transcript for 16 words -- "look for the stop hunt to come in around 25 to 75 pips off of the" -- then diverges
+    retained  line 108   "25 to 75 pips off the blue tracer"
+              tracks transcript 5 words ("25 to 75 pips off") -- expected in a retention block, hand-rule if unexpected
+    retained  line 119   "four of six spoken instances"
+    retained  line 120   "the speaker says it four times"
+    retained  line 123   "frequency is not authority"
+    FLAG      05_HOMEWORK/V10/V10_COMPREHENSION_ANSWERS.md:137 [uncited]
+              "beyond the peak formation high"
+              tracks the transcript for 4 words -- "the peak formation high" -- then diverges
+    FLAG      05_HOMEWORK/V10/V10_COMPREHENSION_ANSWERS.md:139 [cited]
+              "place your stop loss 10 to 15 pips beyond the high or low of the day"
+              cited to a marker but not in the transcript
+    retained  line 167   "two per pair per week so 20 and the lesson say"
+    retained  line 196   "yes it s on the charts throughout and he menti"
+05_HOMEWORK/V10/V10_FLASHCARDS.md                                          3 fragments
+    FLAG      05_HOMEWORK/V10/V10_FLASHCARDS.md:3 [cited]
+              "finish flash cards you should build your book every week by adding a few snapshots"
+              cited to a marker but not in the transcript
+05_HOMEWORK/V10/V10_HOMEWORK.md                                           18 fragments
+    retained  line 16    "finish flash cards you should build your book "
+              tracks transcript 13 words ("cards you should build your book every week by adding a few snapshots") -- expected in a retention block, hand-rule if unexpected
+    retained  line 17    "mark 10 safety setups in any pairs 5 long 5 sh"
+    retained  line 18    "post in the forum for review"
+    retained  line 19    "i will try to organize the forum better going "
+    FLAG      05_HOMEWORK/V10/V10_HOMEWORK.md:101 [cited]
+              "there s looks like the lowest point on the chart right now let me draw a line on the lowest point of the chart"
+              cited to a marker but not in the transcript
+07_MASTERY_REPORTS/V10_MASTERY_REPORT.md                                  19 fragments
+    retained  line 198   "4 of 6 spoken instances"
+    retained  line 285   "patch declared rate 10"
+    retained  line 287   "cites open item 82"
+04_SCREENSHOTS/V10/INDEX.md                                               48 fragments
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:51 [cited]
+              "there is no question that some of you are mental"
+              cited to a marker but not in the transcript
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:51 [cited]
+              "reading through the e mails here are some of the problems"
+              cited to a marker but not in the transcript
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:52 [uncited]
+              "entering too soon not confirmed second leg exiting too early displacing the blame mental blocks from old systems to many indicators lack self confidence"
+              tracks the transcript for 4 words -- "entering too soon not" -- then diverges
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:53 [uncited]
+              "i can teach you all day and all night you have to get your head on straight i can t teach you this"
+              tracks the transcript for 6 words -- "i can t teach you this" -- then diverges
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:55 [uncited]
+              "my only valid e mail address"
+              tracks the transcript for 4 words -- "my only valid e" -- then diverges
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:56 [cited]
+              "i remember you and some of the other mentioning not to trade on sunday monday would it not make sense to trade against the false move week beginning until the h low is met"
+              cited to a marker but not in the transcript
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:58 [cited]
+              "three times adr high low divided by two"
+              cited to a marker but not in the transcript
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:60 [uncited]
+              "r d review asked for 4hr markups flash cards going forward do not mail me the home work hold it for review in here on sunday compile your work in a binder post it in the forum"
+              tracks the transcript for 5 words -- "post it in the forum" -- then diverges
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:61 [uncited]
+              "how many of you watched this cycle unfold like i drew up for you"
+              tracks the transcript for 4 words -- "how many of you" -- then diverges
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:64 [cited]
+              "displayed not taught"
+              cited to a marker but not in the transcript
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:66 [cited]
+              "w is false dealer vectors to s h zone m formation shark fin above resist band price action above blue tracer multisession m level 3 sell"
+              cited to a marker but not in the transcript
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:67 [uncited]
+              "you should have a nice collection of these now if you don t it is not too late complete them this week"
+              tracks the transcript for 8 words -- "you should have a nice collection of these" -- then diverges
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:68 [uncited]
+              "i am officially designating everyone s signature trade as of today you all are now safety trade traders this doesn t have to be your only trade i insist that you add it to your sets and scan for it everyday you should become comfortable enough that you can anticipate its arrival 12 to 24 hrs out let s go over the rules"
+              tracks the transcript for 6 words -- "let s go over the rules" -- then diverges
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:69 [uncited]
+              "dnc remember this is level 1 consolidation a sucker trades the breakout back towards the peak don t be a sucker"
+              tracks the transcript for 5 words -- "don t be a sucker" -- then diverges
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:70 [uncited]
+              "dealer makes a visible stop hunt preferably above or below blue box"
+              tracks the transcript for 10 words -- "dealer makes a visible stop hunt preferably above or below" -- then diverges
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:70 [uncited]
+              "obvious ones are still valid sets"
+              tracks the transcript for 5 words -- "obvious ones are still valid" -- then diverges
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:74 [cited]
+              "add a moving average or pivot for strong confluence"
+              cited to a marker but not in the transcript
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:74 [cited]
+              "the dealer can repeat the level but it must hold"
+              cited to a marker but not in the transcript
+    FLAG      04_SCREENSHOTS/V10/INDEX.md:74 [cited]
+              "look for the stop hunt to come in around 25 to 75 pips off of the low how anchor"
+              cited to a marker but not in the transcript
+    retained  line 121   "patch declared rate 10"
+    retained  line 124   "cites open item 82"
+06_MANUAL_BACKTEST/V10/BT_V10_0001.md                                     11 fragments
+    retained  line 248   "the prediction i am least confident in"
+    FLAG      06_MANUAL_BACKTEST/V10/BT_V10_0001.md:362 [uncited]
+              "600 to 1000 pips a week"
+              tracks the transcript for 4 words -- "600 to 1000 pips" -- then diverges
+06_MANUAL_BACKTEST/PRE_REGISTERED/PT-036_weekly_range_and_the_friday_close.md  13 fragments
+10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md [V10 rows only]                   0 fragments
+11_CONTRADICTIONS/CONTRADICTIONS.md [V10 rows only]                        0 fragments
+
+FRAGMENTS CHECKED      357
+  matched transcript   249
+  allowed (see list)   0
+  retained (audit)     21
+  uncited, unrelated   35
+  FLAGGED              52
+
+RESULT: FAIL -- 52 quotation(s) assert words the source does not contain.

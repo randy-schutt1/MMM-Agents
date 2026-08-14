@@ -1,0 +1,276 @@
+LESSON       V11
+TRANSCRIPT   02_TRANSCRIPTS/V11/V11_TRANSCRIPT.md
+             643 markers, 8547 normalised words of spoken body
+ARTIFACTS    7, by convention (ARTIFACT_TEMPLATES + LESSON_PT), + 2 shared register(s), lesson rows only
+             03_LESSON_NOTES/V11_SOURCE_NOTES.md
+             03_LESSON_NOTES/V11_INTERPRETATION.md
+             05_HOMEWORK/V11/V11_HOMEWORK.md
+             07_MASTERY_REPORTS/V11_MASTERY_REPORT.md
+             04_SCREENSHOTS/V11/INDEX.md
+             06_MANUAL_BACKTEST/V11/BT_V11_0001.md
+             06_MANUAL_BACKTEST/PRE_REGISTERED/PT-039_how_long_must_the_low_hold.md
+ALLOWLIST    EMPTY for V11. No non-transcript quotation in this lesson has ever been
+             dispositioned, so printed slide text, quotations of other documents
+             and quotations of the student's own prose have no entries to land
+             in. Expect cited-tier FLAGS that are printed source rather than
+             misquotes: each needs ruling ONCE and writing here, exactly as V07
+             and V09 were. A FLAG is a question, not a verdict.
+
+03_LESSON_NOTES/V11_SOURCE_NOTES.md                                      159 fragments
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:48 [cited]
+              "give me 2 hrs a week"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:75 [cited]
+              "this is not a trade is that lower than the blue box is that 25 to 50 pips in the stop zone it s not even in the shadow"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:76 [cited]
+              "that you re stepping in front of a moving train"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:77 [cited]
+              "this is not a trade there is no vector there s no distance between the blue box and where the dealer has made a stop hunt"
+              cited to a marker but not in the transcript
+    retained  line 89    "how many times do i have to tell you 25 to 50 "
+              tracks transcript 50 words ("or above the resistance inside the tdi the double band above the double band below the double band is gold why because it takes about three levels of drop an excessive drop or excessive rise to get to the outer band of the tdi because it s averaging the closes") -- expected in a retention block, hand-rule if unexpected
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:101 [cited]
+              "this is a trade when the dealer makes the second attempt towards the low of the day or the high the distance is what 25 to 50 pi s"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:115 [cited]
+              "that s why the formation is aggressive and big the formation needs to look like that or like this if the formation doesn t look like that it s a gamble"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:117 [cited]
+              "this is inverted head and shoulders head shoulder head shoulder that hammer right there s a great entry"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:117 [cited]
+              "i like to see when they hold the low and they issue a couple hammers to the downside wick and then rise"
+              cited to a marker but not in the transcript
+    retained  line 122   "understand that the low has to hold how long 3"
+              tracks transcript 17 words ("understand that the low has to hold how long 30 to 90 minutes 30 minutes is for") -- expected in a retention block, hand-rule if unexpected
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:130 [cited]
+              "the dealer goes into consolidation hits it again you re like oh well that wasn t this ought to be the low you grab it again"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:144 [cited]
+              "help you spot the right segments of the market how to stay the course how to add to a winner scaling in using the tdi for confirmations how to spot divergence"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:161 [cited]
+              "in order to use tdi you must understand rsi"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:162 [cited]
+              "to understand the nuances of the indicator and understand its behavior"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:164 [cited]
+              "the reason why is it plots based on the closing value it doesn t fall for the spikes that s why divergence shows up so nicely"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:164 [cited]
+              "rsi based on close won t fall for spikes"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:165 [cited]
+              "when there s a spike in the market macd s histogram bars will push all the way down and follow price more closely that to me is not helpful"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:166 [cited]
+              "besides if you have moving averages on your chart it s exactly what macd tells you the distance of the averages before they cross"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:167 [cited]
+              "levels can be counted inside the indicator"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:186 [cited]
+              "in the sub graph on your chart the market baseline is 50 it s zero another indicator cci macd it s zero for our purposes it s 50"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:188 [cited]
+              "if it s above the 50 the basis is positive up the trend is up if it is below the 50 below the baseline the basis or bias is to the downside"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:188 [cited]
+              "above below market base line 50"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:190 [cited]
+              "if the market is in an uptrend one hour 15 minute even the"
+              cited to a marker but not in the transcript
+    retained  line 197   "parameters of rsi"
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:209 [cited]
+              "this is the market baseline the 50 this would be the trend reversal level three coming off the bottom it will oscillate and cross the 50 and then pull back to slightly below the 50 around 40 38 42 and then rise again towards 80"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:211 [cited]
+              "and then it ll do it one more time it may or may not come back below the 50 it might find support on the 50 and then rise you will find yourself in level three here"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:212 [cited]
+              "when tdi or rsi is overextended you re going to get a pullback and it s tradable"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:213 [cited]
+              "notice when it comes off the extreme areas pulls back finds support slightly below at around 40 and continues higher gets extreme again you can expect it to come back"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:220 [cited]
+              "price comes off the top level three pulls down pulls back finds resistance at around 60 which means it slightly crosses over and rolls back down so when you re in this part of the market this is peak formation high"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:222 [cited]
+              "may extend all the way down and pull back and maybe gives you one more day where it finds resistance at the market baseline and then drops again that would be your level three extreme the bottom of the graph it would probably read something like 12 or 14 or 10 very very low below 20"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:223 [cited]
+              "when you get in here you re more than likely at level three and you can expect a signal to the downside which would be what anybody stop hunt low rise"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:224 [cited]
+              "the 80 40 will switch to 60 20"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:224 [cited]
+              "you re oscillating up here then all of a sudden you get to level three and it will make the switch over and start oscillating around"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:226 [cited]
+              "what i m telling you to look for is the peak formation high and lows inside the tdi itself with the rsi line they ll be marked they will extend down and come right above the base look for the m or v top formation for the continuation inside the tdi"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:226 [cited]
+              "m formation w formation"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:227 [cited]
+              "home key on your chart and open up your tdi or rsi all the way and then scroll through kind of fast and you ll see what it does"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:251 [cited]
+              "what they call the short term trend turning up when rsi starts to rise"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:252 [cited]
+              "the longer term thing starting to turn upside they call that upside acceleration trend acceleration but we know better as a group trend acceleration is a sucker s play man"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:264 [cited]
+              "so if there s a spike to the high rsi is not going to fall for it hence you have divergence the indicator has already picked off the move to the downside price is still spiking higher"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:268 [cited]
+              "the other way what happened in this one price stayed flat but rsi is averaging the closing value and it s starting to rise higher they call that hidden divergence"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:269 [cited]
+              "notice how rsi spiked below and it came slightly above remember i told you there s the 50 rsi will find resistance where around 60 it comes slightly above and makes the formation for us"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:278 [cited]
+              "you guys know i told you don t hit the high in front of me or the low in front of me three times there you go look how the dealer has made the same level every time"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:281 [cited]
+              "price comes back to the same level but closes further away it means the dealer is grabbing the money and pulling the trading zone away from those traders"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:284 [cited]
+              "he did it three times he did it from mid london into the us session to right around 11 12 o clock and then he decided all right i picked up all these jerkwads"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:286 [cited]
+              "we all know what that is he grabbed the stop i open the spread"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:286 [cited]
+              "price went to here the guy opens the spread down into here what happens he s able to grab up the orders that are sitting just outside of that reach"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:305 [cited]
+              "before you take any trade any trade at all in your live account or demo because you need to form the habits in demo that you ll take in live"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:317 [uncited]
+              "win or lose one trade is simply one trade"
+              tracks the transcript for 7 words -- "lose one trade is simply one trade" -- then diverges
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:325 [cited]
+              "if you have done your flashcards and i ve done them so you can t bullshit me there is not one flashcard in my collection that looks like that shit that he called a trade"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:366 [cited]
+              "you are never gonna ramp up to 10 15 20 standard lots if you take those careless first leg vector candle moves"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:367 [cited]
+              "i think non farm was and you should have scratched out or took what you had before non farm shouldn t have stayed through non farm"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:420 [cited]
+              "how many times have i explained the m w i m gonna do it again next week"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_SOURCE_NOTES.md:432 [cited]
+              "two hours a week looking at charts"
+              cited to a marker but not in the transcript
+03_LESSON_NOTES/V11_INTERPRETATION.md                                     41 fragments
+    FLAG      03_LESSON_NOTES/V11_INTERPRETATION.md:187 [cited]
+              "before the lower of the day"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_INTERPRETATION.md:210 [uncited]
+              "if the formation doesn t look like that it s a gamble"
+              tracks the transcript for 10 words -- "if the formation doesn t look like that it s" -- then diverges
+    FLAG      03_LESSON_NOTES/V11_INTERPRETATION.md:217 [cited]
+              "how many times have i explained the m w i m gonna do it again next week"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_INTERPRETATION.md:262 [cited]
+              "they call that upside acceleration trend acceleration but we know better as a group trend acceleration is a sucker s play"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_INTERPRETATION.md:264 [cited]
+              "then the dealer applies the brakes"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V11_INTERPRETATION.md:308 [cited]
+              "the first real teaching of the tdi substrate"
+              cited to a marker but not in the transcript
+05_HOMEWORK/V11/V11_HOMEWORK.md                                           15 fragments
+    retained  line 11    "make an honest effort to do the assignments we"
+              tracks transcript 14 words ("to do the assignments we got a really good assignment coming up this week") -- expected in a retention block, hand-rule if unexpected
+    retained  line 11    "i m gonna insist that you do it it s good it s"
+              tracks transcript 10 words ("i m gonna insist that you do it it s") -- expected in a retention block, hand-rule if unexpected
+    FLAG      05_HOMEWORK/V11/V11_HOMEWORK.md:108 [cited]
+              "time above 80"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V11/V11_HOMEWORK.md:144 [cited]
+              "there is not one flashcard in my collection"
+              cited to a marker but not in the transcript
+07_MASTERY_REPORTS/V11_MASTERY_REPORT.md                                  49 fragments
+    FLAG      07_MASTERY_REPORTS/V11_MASTERY_REPORT.md:79 [cited]
+              "25 to 50 pips below the blue box and the tdi or rsi in the extreme 80 to 90 range and it gives me the formation"
+              cited to a marker but not in the transcript
+    FLAG      07_MASTERY_REPORTS/V11_MASTERY_REPORT.md:115 [uncited]
+              "but we know better trend acceleration is a sucker s play"
+              tracks the transcript for 7 words -- "trend acceleration is a sucker s play" -- then diverges
+    FLAG      07_MASTERY_REPORTS/V11_MASTERY_REPORT.md:190 [cited]
+              "hold the mayo 200 bounce"
+              cited to a marker but not in the transcript
+    FLAG      07_MASTERY_REPORTS/V11_MASTERY_REPORT.md:272 [cited]
+              "do we use tdi to confirm these yes that s next week s lesson my friend"
+              cited to a marker but not in the transcript
+    FLAG      07_MASTERY_REPORTS/V11_MASTERY_REPORT.md:273 [cited]
+              "the single most specific forward commitment the corpus has ever carried"
+              cited to a marker but not in the transcript
+    retained  line 378   "genuine conflict do not adjudicate log it surf"
+    retained  line 391   "move v11 not v10 since v11 is after"
+    retained  line 401   "v11 moves to 039 040"
+04_SCREENSHOTS/V11/INDEX.md                                               37 fragments
+    FLAG      04_SCREENSHOTS/V11/INDEX.md:23 [uncited]
+              "please post all research work in the forum for review grade your work against my posts or slides"
+              tracks the transcript for 10 words -- "please post all research work in the forum for review" -- then diverges
+    FLAG      04_SCREENSHOTS/V11/INDEX.md:47 [uncited]
+              "you are entering on the vector candles leg 1 with no confirmations before lod hod have locked in inside the blue box with no reason other than the dealer has made a move not taking the timing into consideration afraid you will miss something and causing your own demise"
+              tracks the transcript for 4 words -- "causing your own demise" -- then diverges
+    FLAG      04_SCREENSHOTS/V11/INDEX.md:48 [uncited]
+              "these items are the only reason you are failing to generate winning trades it must stop immediately"
+              tracks the transcript for 6 words -- "these items are the only reason" -- then diverges
+    FLAG      04_SCREENSHOTS/V11/INDEX.md:50 [uncited]
+              "this will be our new group mantra i have ordered bracelets"
+              tracks the transcript for 4 words -- "i have ordered bracelets" -- then diverges
+    FLAG      04_SCREENSHOTS/V11/INDEX.md:52 [uncited]
+              "all indicators measure the same thing all plot above or below a base or zero line if you use several which one wins why not master the use of one"
+              tracks the transcript for 6 words -- "all indicators measure the same thing" -- then diverges
+    retained  line 95    "parameters of rsi"
+    FLAG      04_SCREENSHOTS/V11/INDEX.md:115 [uncited]
+              "i will only take m or w outside the box"
+              tracks the transcript for 9 words -- "i will only take m or w outside the" -- then diverges
+06_MANUAL_BACKTEST/V11/BT_V11_0001.md                                     10 fragments
+    FLAG      06_MANUAL_BACKTEST/V11/BT_V11_0001.md:28 [cited]
+              "25 to 50 pips below the blue box and the tdi or rsi in the extreme 80 to 90 range and it gives me the formation"
+              cited to a marker but not in the transcript
+    retained  line 197   "the 5 pm boundary is doing the work"
+    FLAG      06_MANUAL_BACKTEST/V11/BT_V11_0001.md:345 [uncited]
+              "the low of the move"
+              tracks the transcript for 4 words -- "the low of the" -- then diverges
+06_MANUAL_BACKTEST/PRE_REGISTERED/PT-039_how_long_must_the_low_hold.md    20 fragments
+    retained  line 11    "move v11 not v10 since v11 is after"
+    retained  line 28    "v11 moves to pt 039 pt 040"
+    retained  line 109   "move v11 not v10 since v11 is after"
+    retained  line 124   "understand that the low has to hold how long 3"
+              tracks transcript 17 words ("understand that the low has to hold how long 30 to 90 minutes 30 minutes is for") -- expected in a retention block, hand-rule if unexpected
+    retained  line 135   "you guys are seeing a move out of the box you "
+              tracks transcript 43 words ("you guys are seeing a move out of the box you re grabbing the trade anticipating that s gonna be the low because it s one candle the dealer goes into consolidation hits it again you re like oh well that wasn t") -- expected in a retention block, hand-rule if unexpected
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-039_how_long_must_the_low_hold.md:146 [uncited]
+              "30 minutes is for tracks"
+              tracks the transcript for 4 words -- "30 minutes is for" -- then diverges
+    FLAG      06_MANUAL_BACKTEST/PRE_REGISTERED/PT-039_how_long_must_the_low_hold.md:450 [uncited]
+              "the low of the move"
+              tracks the transcript for 4 words -- "the low of the" -- then diverges
+10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md [V11 rows only]                   0 fragments
+11_CONTRADICTIONS/CONTRADICTIONS.md [V11 rows only]                        0 fragments
+
+FRAGMENTS CHECKED      331
+  matched transcript   182
+  allowed (see list)   0
+  retained (audit)     15
+  uncited, unrelated   61
+  FLAGGED              73
+
+RESULT: FAIL -- 73 quotation(s) assert words the source does not contain.

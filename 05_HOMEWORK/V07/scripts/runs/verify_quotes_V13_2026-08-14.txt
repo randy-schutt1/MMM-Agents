@@ -1,0 +1,214 @@
+LESSON       V13
+TRANSCRIPT   02_TRANSCRIPTS/V13/V13_TRANSCRIPT.md
+             1183 markers, 10982 normalised words of spoken body
+ARTIFACTS    7, by convention (ARTIFACT_TEMPLATES + LESSON_PT), + 2 shared register(s), lesson rows only
+             03_LESSON_NOTES/V13_SOURCE_NOTES.md
+             03_LESSON_NOTES/V13_INTERPRETATION.md
+             05_HOMEWORK/V13/V13_HOMEWORK.md
+             07_MASTERY_REPORTS/V13_MASTERY_REPORT.md
+             04_SCREENSHOTS/V13/INDEX.md
+             06_MANUAL_BACKTEST/V13/BT_V13_0001.md
+             06_MANUAL_BACKTEST/PRE_REGISTERED/PT-041_the_range_arithmetic_fifty_on_the_table.md
+ALLOWLIST    EMPTY for V13. No non-transcript quotation in this lesson has ever been
+             dispositioned, so printed slide text, quotations of other documents
+             and quotations of the student's own prose have no entries to land
+             in. Expect cited-tier FLAGS that are printed source rather than
+             misquotes: each needs ruling ONCE and writing here, exactly as V07
+             and V09 were. A FLAG is a question, not a verdict.
+
+03_LESSON_NOTES/V13_SOURCE_NOTES.md                                      184 fragments
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:40 [cited]
+              "ok we are going to test on the first 4 weeks of material i want you to make sure you are grasping everything that i have covered thus far"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:71 [cited]
+              "next session will be the following sunday the 29th"
+              cited to a marker but not in the transcript
+    retained  line 92    "remove everything from the chart except the td"
+              tracks transcript 5 words ("remove everything from the chart") -- expected in a retention block, hand-rule if unexpected
+    retained  line 93    "enter and exit the trades from what i have sho"
+              tracks transcript 8 words ("enter and exit the trades from what i") -- expected in a retention block, hand-rule if unexpected
+    retained  line 94    "use 25 or 30 pips as a stop loss no limit orde"
+    retained  line 95    "a clean entry is a shark fin at the extreme no"
+    retained  line 96    "a check point is mb cross vb break vb return t"
+              tracks transcript 8 words ("return these are reasons to hold or fold") -- expected in a retention block, hand-rule if unexpected
+    retained  line 97    "keep after it until you can have success are y"
+              tracks transcript 5 words ("keep after it until you") -- expected in a retention block, hand-rule if unexpected
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:129 [uncited]
+              "what is the purpose of the blue box"
+              tracks the transcript for 6 words -- "the purpose of the blue box" -- then diverges
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:134 [uncited]
+              "what is the purpose of the red box"
+              tracks the transcript for 6 words -- "the purpose of the red box" -- then diverges
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:149 [cited]
+              "it s a 25 pip box 25 pips away from the top or bottom of the blue box"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:161 [uncited]
+              "what do the first two 4hr candles determine in the weekly cycle"
+              tracks the transcript for 6 words -- "candles determine in the weekly cycle" -- then diverges
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:165 [uncited]
+              "how many days should this bias be expected"
+              tracks the transcript for 4 words -- "how many days should" -- then diverges
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:166 [uncited]
+              "what is the reason to vacate any trade before the stop loss is triggered"
+              tracks the transcript for 12 words -- "the reason to vacate any trade before the stop loss is triggered" -- then diverges
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:166 [uncited]
+              "dealer hits the level again and closes above below it on 15m chart"
+              tracks the transcript for 8 words -- "dealer hits the level again and closes above" -- then diverges
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:168 [uncited]
+              "how many days of data is needed to evaluate the market at any time"
+              tracks the transcript for 13 words -- "how many days of data is needed to evaluate the market at any" -- then diverges
+    retained  line 174   "pf is clearly identified level one consolidati"
+              tracks transcript 8 words ("above or below the asian level second leg") -- expected in a retention block, hand-rule if unexpected
+    retained  line 178   "what is the difference between a safety trade "
+    retained  line 179   "price appears as if it is a straight rise out "
+              tracks transcript 7 words ("a straight rise out of the area") -- expected in a retention block, hand-rule if unexpected
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:186 [cited]
+              "what did the first two four hour candles determine in the weekly cycle simple answer is psychological support and resistance level"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:191 [cited]
+              "if you let the market prove you wrong it s going to prove you wrong"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:192 [cited]
+              "week begin end session day"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:197 [cited]
+              "the dealer is trading 25 to 75 pips off of the previous high or low away from the peak"
+              cited to a marker but not in the transcript
+    retained  line 209   "no stop loss anywhere stop loss occurs 0 times"
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:234 [cited]
+              "because they make the stop hunt higher and tdi is already falling off based on the closes"
+              cited to a marker but not in the transcript
+    retained  line 243   "this did not break out the level but here s th"
+              tracks transcript 18 words ("that it doesn t take into consideration anything more than what it s programmed to look back at") -- expected in a retention block, hand-rule if unexpected
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:265 [cited]
+              "rsi is typically 14 we have it set to 21"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:291 [uncited]
+              "what is this trade why"
+              tracks the transcript for 4 words -- "what is this trade" -- then diverges
+    retained  line 299   "the cheapest remaining unblock in the project"
+    retained  line 300   "a tdi properties dialog in any of v13 v21 does"
+    FLAG      03_LESSON_NOTES/V13_SOURCE_NOTES.md:422 [cited]
+              "typically 14 we have it set to 21"
+              cited to a marker but not in the transcript
+03_LESSON_NOTES/V13_INTERPRETATION.md                                     45 fragments
+    retained  line 37    "here s the weakness with any indicator the ind"
+              tracks transcript 9 words ("set to 21 it only looks back 21 periods") -- expected in a retention block, hand-rule if unexpected
+    retained  line 37    "how come this didn t rise very high there coul"
+              tracks transcript 30 words ("it sees if you compare this whole structure to the low down here then yes it should plot higher but it may not because it only looks back 21 hours") -- expected in a retention block, hand-rule if unexpected
+    retained  line 105   "the cheapest remaining unblock in the project"
+    FLAG      03_LESSON_NOTES/V13_INTERPRETATION.md:144 [cited]
+              "why not scratch yourself out with 10 or 12 pips instead of giving the dealer 25"
+              cited to a marker but not in the transcript
+    retained  line 153   "it is not about these items"
+    FLAG      03_LESSON_NOTES/V13_INTERPRETATION.md:174 [uncited]
+              "it s a 25 pip box 25 pips away from the top or bottom"
+              tracks the transcript for 9 words -- "box 25 pips away from the top or bottom" -- then diverges
+    FLAG      03_LESSON_NOTES/V13_INTERPRETATION.md:234 [cited]
+              "i don t want you to go oh since there s no difference i m going to start trading in one minute it s not what i m telling you"
+              cited to a marker but not in the transcript
+    FLAG      03_LESSON_NOTES/V13_INTERPRETATION.md:259 [uncited]
+              "dealer hits the level again and closes above below on 15m"
+              tracks the transcript for 8 words -- "dealer hits the level again and closes above" -- then diverges
+05_HOMEWORK/V13/V13_HOMEWORK.md                                           42 fragments
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:60 [cited]
+              "denotes the mm s spread measures asian range"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:60 [cited]
+              "the dealer break the asian low"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:60 [cited]
+              "higher or lower than the blue box"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:60 [cited]
+              "vectors at above or below the blue box"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:60 [cited]
+              "mm s spread"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:61 [cited]
+              "3 30 in the morning inside the shadow box"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:63 [cited]
+              "it s a 25 pip box"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:63 [cited]
+              "distance beyond the blue box that qualifies the stop hunt"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:64 [cited]
+              "a red box with us session times marked"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:76 [cited]
+              "high of week"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:78 [cited]
+              "away from peak"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:78 [cited]
+              "is for suckers"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:79 [cited]
+              "two and a half to three days day one day two hold the level in day three"
+              cited to a marker but not in the transcript
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:80 [uncited]
+              "dealer hits the level again and closes above below it on 15m chart"
+              tracks the transcript for 8 words -- "dealer hits the level again and closes above" -- then diverges
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:82 [uncited]
+              "remember three to five days"
+              tracks the transcript for 4 words -- "three to five days" -- then diverges
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:92 [uncited]
+              "pf clearly identified level one consolidation identified dealer trading 25 to 75 pips off the previous hi lo dealer issues a visible stop hunt m or w above or below the asian level second leg"
+              tracks the transcript for 11 words -- "m or w above or below the asian level second leg" -- then diverges
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:93 [uncited]
+              "price appears as if it is a straight rise out of the area"
+              tracks the transcript for 7 words -- "a straight rise out of the area" -- then diverges
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:102 [uncited]
+              "what is this trade why"
+              tracks the transcript for 4 words -- "what is this trade" -- then diverges
+    FLAG      05_HOMEWORK/V13/V13_HOMEWORK.md:166 [uncited]
+              "dealer hits the level again and closes above below it on 15m chart"
+              tracks the transcript for 8 words -- "dealer hits the level again and closes above" -- then diverges
+07_MASTERY_REPORTS/V13_MASTERY_REPORT.md                                  16 fragments
+    FLAG      07_MASTERY_REPORTS/V13_MASTERY_REPORT.md:17 [cited]
+              "we have it set to 21 it only looks back 21 periods"
+              cited to a marker but not in the transcript
+    FLAG      07_MASTERY_REPORTS/V13_MASTERY_REPORT.md:94 [cited]
+              "some dealers do not have the double black tracer"
+              cited to a marker but not in the transcript
+    FLAG      07_MASTERY_REPORTS/V13_MASTERY_REPORT.md:230 [cited]
+              "week six through ten i don t know how many we re going to do yet"
+              cited to a marker but not in the transcript
+04_SCREENSHOTS/V13/INDEX.md                                               32 fragments
+    retained  line 45    "the cheapest remaining unblock in the project"
+    FLAG      04_SCREENSHOTS/V13/INDEX.md:74 [uncited]
+              "take this time to catch up"
+              tracks the transcript for 4 words -- "time to catch up" -- then diverges
+    FLAG      04_SCREENSHOTS/V13/INDEX.md:74 [uncited]
+              "spend another week with just the tdi"
+              tracks the transcript for 4 words -- "spend another week with" -- then diverges
+    FLAG      04_SCREENSHOTS/V13/INDEX.md:79 [uncited]
+              "why should you go to one"
+              tracks the transcript for 4 words -- "why should you go" -- then diverges
+    FLAG      04_SCREENSHOTS/V13/INDEX.md:106 [uncited]
+              "dealer hits the level again and closes above below it on 15m chart"
+              tracks the transcript for 8 words -- "dealer hits the level again and closes above" -- then diverges
+    FLAG      04_SCREENSHOTS/V13/INDEX.md:107 [uncited]
+              "pf is clearly identified level one consolidation is identified dealer is trading 25 to 75 pips off of the previous hi low dealer issues a visible stop hunt m or w formation above or below the asian level second leg"
+              tracks the transcript for 8 words -- "above or below the asian level second leg" -- then diverges
+    FLAG      04_SCREENSHOTS/V13/INDEX.md:112 [uncited]
+              "what is this trade why"
+              tracks the transcript for 4 words -- "what is this trade" -- then diverges
+    retained  line 133   "look at each frame before naming it"
+06_MANUAL_BACKTEST/V13/BT_V13_0001.md                                      4 fragments
+06_MANUAL_BACKTEST/PRE_REGISTERED/PT-041_the_range_arithmetic_fifty_on_the_table.md   7 fragments
+10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md [V13 rows only]                   0 fragments
+11_CONTRADICTIONS/CONTRADICTIONS.md [V13 rows only]                        0 fragments
+
+FRAGMENTS CHECKED      330
+  matched transcript   195
+  allowed (see list)   0
+  retained (audit)     19
+  uncited, unrelated   66
+  FLAGGED              50
+
+RESULT: FAIL -- 50 quotation(s) assert words the source does not contain.
