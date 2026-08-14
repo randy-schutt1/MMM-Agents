@@ -8297,3 +8297,80 @@ commit, `validate_project.py` **PASS** before push.
 **Merge `review/v12` into the integration branch** per `D-038`, single-threaded, as a deliberate
 separate step. **V13 may then begin** — `A-084` is the cheapest remaining unblock and V13 is the
 next place it could be answered.
+
+---
+
+## 2026-08-14 — V13 STUDENT SESSION (`Bootcamp1 Wk5 041512 Part1`, 65 min)
+
+**Branch:** `video/v13`, dedicated worktree at `../MMM-Agents-v13` per `D-038`, cut fresh from
+integration head `b38d31b`. Gitignored source-video and dataset paths symlinked back from the
+primary checkout (the V08–V12 pattern; the dataset link needed per-payload symlinks because
+`raw/SHA256SUMS.txt` is now tracked).
+
+**What V13 is:** **not a lesson.** 18½ min announcements → 6 min re-specifying the TDI drill →
+3½ min of a silent **pop quiz** → 22 min of **printed and spoken answers** covering weeks 1–4 →
+15 min of TDI chart review. The lesson part is promised twice (`[00:35:59]`, `[00:48:53]`) and
+never arrives; per `V13 GATE` (f) that is **not** recorded as missing, because V14 is the same
+session.
+
+**Speaker:** **100% course author, HIGH confidence, over-determined.** `V13 GATE` (b) required
+this be tested rather than assumed — a new week and a new date is the condition under which this
+corpus's author runtime has broken before. Eight non-acoustic strands; a 17-pattern handover
+superset returning **exactly one** non-handover hit; twenty-nine third parties named, **none
+speaks**. Cross-file acoustic screen **not** run, per V07's prohibition.
+
+**The gate's headline question, answered NO.** `A-084` — is the TDI's plotted green line the
+`RSI(21)` or a smoothing of it? V13 `[00:54:51]` *"RSI is typically 14, we have it set to 21. It
+only looks back 21 periods"* explains **a plotted line's height** by the RSI's lookback, and is the
+closest near-miss the corpus has produced. **It does not close**, because `MA_k(RSI(21))` inherits
+the same lookback — the passage explains a property the two candidates **share**. Three further
+defeaters, including the speaker's own *"15 hours"* / *"21 hours"* contradiction 21 seconds apart,
+which **both ASR engines transcribe**. `A-084` stays an **ACTIVE BLOCKER**; V11's RSI claims stay
+blocked; `PT-040`'s `MATERIAL` verdict is undisturbed.
+
+**Three narrowings banked.** `RSI = 21` corroborated from a **second** lesson, first-person, as a
+configuration choice — `A-080` now rests on three independent Tier 1 instances. The 21 **sourced**
+as a lookback in **chart periods**, scaling with timeframe. And ⭐ **the legend route is closed for
+the whole corpus**: the sub-window prints `TDI_MMM <values>` with **no parameter tuple**, so no
+legend in any lesson can ever close `A-084`. **Stop scanning legends.**
+
+**Capture.** 793 frames at 10× (rate **3.0 read from this file's own header**), 37 screen states,
+30 curated. Original SHA-256 re-verified after the patch. Port owned and bytes diffed before
+capture. Play-click guard fired and logged. Frame→timecode relation **derived and verified against
+the burned-in OSD**. **New from frames:** TDI level lines at **63 / 50 / 37** — the shipped TDI's
+are 68/50/32 — which grounds the otherwise-referentless spoken *"Shark fin below the support. 37,
+right?"*.
+
+**Records:** `A-087` (the `A-084` narrowing), `A-088` (`blue tracer`, `strike zone`, the red box's
+window), `C-020` (V13's answer slide contradicts V13's own speech **twice, differently** — neither
+visible on audio alone or on a frame alone), `Q-014` (three fabricated files; `VISUAL_INDEX.md`
+differs from V12's by **four identifier lines and zero content lines**; 15 of 21 lessons covered by
+**two** documents; the one surviving image is a **title card** captioned as an EMA chart, for the
+third consecutive lesson).
+
+**`PT-041`** pre-registered **before its runner existed** (proven at `3ca5beb`) and run:
+**PARTIALLY SUPPORTED**. The distance is real and large — median MFE **56.8 / 52.9 pips**, ~5–6×
+a matched same-metric control — but the claim's **antecedent** *"the dealer comes back into the
+Asian levels"* holds **0.704 / 0.701** against a pre-registered **0.80**, and `P(MFE ≥ 40)` reaches
+**0.630 / 0.642** against **0.70**. Both near misses; both boundaries honoured.
+
+**Four deviations and three self-corrections, all disclosed** — `V13_MASTERY_REPORT.md` §2,
+`REVIEW_INDEX.md` items 147–151. The two self-corrections are the useful ones: `Q-014` §4a first
+claimed novelty belonging to `Q-013`/`D-042`, and `C-020` §1 first argued a direction that V06's
+printed *"3:45am or 9:45am **est**"* reverses. **Both were caught by checking the repository
+instead of memory.**
+
+**Homework substituted, declared.** The exam's answer key is in the same file, so it could not be
+sat closed-book and no first attempt was fabricated. The exam was turned on the **repository**:
+17 questions, **10 HELD · 4 PARTIAL · 2 ABSENT · 1 WRONG**. Biggest find — **the pre-stop vacate
+rule is ABSENT from twelve lessons of notes.**
+
+**Gap-audit note for V14 (the owner's hard stop).** V13 gives Tier 1 evidence bearing on the
+missing Week 6: *"no boot camp next week"*, *"Next session is going to be **Sunday the 29th**"*
+(2012-04-29), and *"week six through ten — **I don't know how many we're going to do yet**"*. The
+next surviving file is **2012-05-06**, one week after the announced return. ⚠ **Consistent with
+both "Week 6 was recorded and is missing" and "the break ran long" — nothing decides between them.**
+
+**Status:** V13 **AWAITING REVIEW R1**. **V14 GATE CLOSED** — only a reviewer verdict opens it
+(`D-004`). Validator: **103 passed, 0 warnings, 0 failures** before every push. No `git add -A` at
+any point; explicit paths only; `git diff --staged` before each commit.

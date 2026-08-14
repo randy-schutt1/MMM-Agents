@@ -11,6 +11,12 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
+V13 (2026-08-14):    STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on branch
+                     video/v13. A-084 NARROWED NOT CLOSED (A-087); A-088 and C-020
+                     opened; Q-014 filed; PT-041 run -> PARTIALLY SUPPORTED. Speaker
+                     TESTED: 100% course author, HIGH, eight non-acoustic strands.
+                     FOUR declared deviations and THREE self-corrections -- see
+                     V13_MASTERY_REPORT.md §2. V14 GATE CLOSED until R1 returns.
 VIDEOS IN PROGRESS:  0  (Superseded text, retained per REMEDIATION_PROTOCOL.md
                         §2 -- this line previously read: "VIDEOS IN PROGRESS: 1
                         (V10 — R1 returned REVISE 0C/0M/4m 2026-08-13, HIGH
@@ -1195,6 +1201,74 @@ V12 STATUS NOW:      **STUDENT PASS COMPLETE, SUBMITTED, AWAITING R1.**
                      NOT advanced, recorded as negative results per item
                      107. Q-013 filed.
 
+V14 GATE:            **CLOSED until V13's R1 returns.** `D-004`: the gate opens on a
+                     REVIEWER verdict, never on a student submission, and what R1
+                     returns then governs per `D-024`.
+                     ⚠ **V14 IS THE OWNER'S HARD STOP FOR THE GAP AUDIT.** The audit
+                     happens after V14, not after V13.
+                     V13 R1 will be reviewing: A-087 (does V13 close A-084 — this
+                     session says NO), A-088, C-020, Q-014, PT-041, and FOUR declared
+                     deviations plus THREE self-corrections listed in
+                     V13_MASTERY_REPORT.md §2.
+                     Carry into V14, and read this before starting:
+                     (a) ⭐ **THE A-084 HUNT IS NARROWED AND ONE ROUTE IS RULED OUT
+                     FOREVER. STOP SCANNING LEGENDS.** V13's TDI sub-window prints
+                     `TDI_MMM <three values>` and NO parameter tuple — MT4's behaviour
+                     for an indicator whose short name omits its inputs. No legend in
+                     ANY lesson can close A-084. The remaining routes are exactly
+                     three: a properties dialog, a Navigator/inputs tab, or a spoken
+                     identity statement. V12: 672 frames, none. V13: 793 frames, none.
+                     (b) ⭐ **V14 IS THE SAME SESSION AND V13 DEFERS ITS LESSON INTO
+                     IT.** [00:35:59] "when we get to the lesson part" and [00:48:53]
+                     "I know why you guys are taking trades in the blue box now. And
+                     it's my fault and I'm going to explain it tonight" are BOTH
+                     undelivered in V13. Per V13 GATE (f) they are NOT recorded as
+                     missing. The blue-box promise is the more interesting one: the
+                     instructor announcing he taught something in a way that produced
+                     a specific student error. A-076-adjacent.
+                     (c) **SPEAKER: TEST IT AGAIN, DO NOT ASSUME.** V13 and V14 being
+                     two halves of one recording proves nothing on its own — that is
+                     exactly the V11/V12 reasoning, and V13 GATE (b) required a
+                     re-test anyway. Non-acoustic strands only; the cross-file
+                     acoustic screen stays PROHIBITED (V07). The course-author run now
+                     stands at four (V10, V11, V12, V13).
+                     (d) ⭐⭐ **THE WEEK-6 GAP AUDIT — V13 SUPPLIES REAL TIER 1
+                     EVIDENCE AND V14 CAN CHEAPLY ADD MORE.** V13 establishes:
+                     [00:01:55] "no boot camp next week"; [00:05:20] "Next session is
+                     going to be Sunday the 29th" (2012-04-29); [00:05:33] "week six
+                     through ten — I don't know how many we're going to do yet". The
+                     next surviving file is Wk7 050612 = 2012-05-06, ONE WEEK AFTER
+                     the announced return. ⚠ This is consistent BOTH with "Week 6 was
+                     recorded on 04-29 and is missing from this corpus" AND with "the
+                     break ran long and Week 6 never happened". NOTHING DECIDES
+                     BETWEEN THEM. No session may fabricate, interpolate or infer
+                     Week 6 content. **V14 has one cheap thing to listen for: any
+                     statement about the return date or the week numbering.**
+                     (e) **A-086 IS UNTOUCHED AND IS NOW THE MOST EXPENSIVE OPEN
+                     RECORD.** V13 uses `shark fin` and `blood in the water` ~20 times,
+                     makes them the drill's entire entry criterion, and states NO band
+                     construction. Every TDI signal in the corpus stays untestable.
+                     (f) **THE A-082 CLASS OF ERROR HAS A LIVE INSTANCE IN V13.**
+                     "25 or 30 pips" is real, printed, spoken by the author — and
+                     disqualified by him four times in thirty seconds ("It is not about
+                     these items!"). The tell is a number in a context that denies it
+                     authority. Expect more in V14.
+                     (g) **C-020 NEEDS ONE SENTENCE FROM V14** — any statement of THE
+                     SHADOW BOX's window with a timezone. The Brinks route is partially
+                     discharged by V06's printed "3:45am or 9:45am est", which favours
+                     the SLIDE over the spoken correction.
+                     (h) **THE LIBRARY SEED DEFECT (item 113) IS NOW REAL, NOT
+                     THEORETICAL.** PT-041 randomises where PT-040 did not. Still owed
+                     on the integration branch.
+                     (i) ⭐ **THE V13 EXAM IS A REUSABLE INSTRUMENT, COMMITTED IN
+                     PAIRS.** Unlabelled question frames AND the instructor's answered
+                     versions are both in 04_SCREENSHOTS/V13/. A session that has NOT
+                     read V13 can sit the chart questions closed-book. Put to R1 and
+                     the owner as a candidate for 19_STUDENT_TEST_SUITE.
+                     (j) **I-008 STILL STANDS.** V13 adds five spot-checks over ~5 min
+                     of 65 (7.9%). No lesson has had a full independent
+                     re-transcription except V01/V05.
+
 V13 GATE:            ⭐ **OPEN.** V12 R1 returned 2026-08-14 on branch
                      review/v12: **REVISE — 0 CRITICAL, 0 MAJOR, 2 MINOR,
                      6 NOTE, confidence HIGH.** Under D-024 a round carrying
@@ -1773,7 +1847,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V10 | Wk3 | 01:36:16 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ✅ **R1 REVISE 0C/0M/4m** | **IN REMEDIATION** (items 91-94) |
 | V11 | Wk4 P1 | 00:50:56 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | **R1 REVISE 0C/0M/5min** | **IN REMEDIATION (items 109-113) · V12 GATE OPEN** |
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-080 + A-064 + A-031 + A-032 CLOSED, A-020 mayo row → Tier 1, C-019 opened, PT-040 MATERIAL |
-| V13 | Wk5 P1 | 01:05:22 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V13 | Wk5 P1 | 01:05:22 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-084 NARROWED not closed (A-087), legend route CLOSED corpus-wide, A-088 + C-020 opened, Q-014 filed, PT-041 PARTIALLY SUPPORTED |
 | V14 | Wk5 P2 | 00:47:48 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V16 | Wk7 P2 | 00:44:35 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
