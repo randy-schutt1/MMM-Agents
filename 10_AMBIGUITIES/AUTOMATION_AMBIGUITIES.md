@@ -6825,6 +6825,44 @@ unblocked for "the line V11 was describing"**, unless the two are the same, whic
 
 ### Current Status
 
+> ### ⭐ UPDATED THE SAME SESSION — **`PT-040` RAN, AND THIS RECORD IS PROMOTED TO AN ACTIVE BLOCKER**
+>
+> The status below was written **before** `PT-040` was run and is **superseded**
+> (`REMEDIATION_PROTOCOL.md` §2). It read that this record *"does NOT re-block `RSI(21)`
+> itself"*. **`PT-040`'s pre-registered decision rule says otherwise.**
+>
+> `PT-040` measured the **side disagreement** between `RSI(21)` and `MA_k(RSI(21))` across
+> every threshold V11 prints, on 24,730 M15 bars, and the rule fixed **before** the run was:
+> `≤ 2 pp` immaterial · `2–5 pp` inconclusive · `> 5 pp` **material**.
+>
+> ```text
+> M = 10.481 pp   at k = 5, t = 50        VERDICT: MATERIAL
+> and even at k = 2 -- the shortest non-trivial smoothing and the shipped TDI's own
+> default -- the t = 50 disagreement is 5.16 pp, already past the boundary.
+> ```
+>
+> **The disagreement is concentrated at `t = 50`, which is V11's bias baseline and the
+> single most-used RSI rule in the corpus.** Both `D-031` arms agree to `0.000 pp`, the
+> `W-B` window agrees (`10.66 pp`), and the simple-average RSI variant agrees (`12.15 pp`).
+>
+> **Consequence, exactly as pre-registered:**
+>
+> ```text
+> A-084 -- ACTIVE BLOCKER. DO NOT CODE.
+> V11's RSI threshold claims (the 50 bias baseline, 80/40, 60/20, 80/20, the 38-42
+> pullback band, both divergence forms, the [00:36:19] composite) STAY BLOCKED.
+> A-080's closure is NECESSARY AND NOT SUFFICIENT: the period is known, and the
+> series that period belongs to is not.
+> ```
+>
+> ⚠️ **This is the session that closed `A-080` reporting that its own headline finding did
+> not unblock what it was supposed to.** The 2 pp / 5 pp boundaries were committed at
+> `83110f1`, **before `run_pt040.py` existed**, and `M = 10.48` sits close enough to a
+> defensible-sounding *"10 pp"* that a post-hoc boundary would have been a live temptation.
+> **`D-029` and commit ordering foreclosed it.** See `06_MANUAL_BACKTEST/V12/BT_V12_0001.md` §3.
+
+*(Superseded status, retained:)*
+
 ```text
 DO NOT CODE -- and NOTE THE SCOPE:
 This does NOT re-block RSI(21) itself. A test may be pre-registered on RSI(21)
@@ -6834,10 +6872,20 @@ and names this record as the gap. PT-040 does exactly that.
 
 ### Required Research
 
-Either (a) a statement that the plotted line **is** the RSI, (b) a smoothing length, or (c) an
-empirical demonstration on this corpus that the two series do not differ materially over the
-thresholds V11 states. **(c) is available now** with the HistData GBP/USD M1 corpus and is
-recommended in `V12_MASTERY_REPORT.md` as the cheapest single unblock remaining.
+Either (a) a statement that the plotted line **is** the RSI — which would set `k = 1`, make
+`O2 ≡ 0` by construction and unblock V11's RSI half **immediately** — or (b) a smoothing length,
+which would replace the sweep with a single series. ~~or (c) an empirical demonstration that the
+two series do not differ materially~~ — **(c) was performed as `PT-040` and returned `MATERIAL`;
+it is discharged and it did not go the convenient way.**
+
+⚠️ **A fourth possibility is open and would make `PT-040`'s `M` the wrong quantity:** the plotted
+line may be smoothed by something **outside** the swept simple-MA family — an EMA, or Wilder
+smoothing. `PT-040` §6 limitation 1 names this and the sweep deliberately does not cover it,
+because widening it without a course statement would be guessing at the construction rather than
+measuring the ambiguity.
+
+**V13 (`Wk5 041512 Part1`) is the next place (a) or (b) could appear, and it is the cheapest
+remaining unblock in the project.**
 
 ### Related
 
