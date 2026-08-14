@@ -1,0 +1,90 @@
+==============================================================================
+HISTDATA GBP/USD M15 (DERIVED) — DATA QA GATE — D-031 ARM B
+==============================================================================
+file     : 06_MANUAL_BACKTEST/datasets/HISTDATA_GBPUSD_M15_H1/derived/GBPUSD_M15_ARMB.csv
+bars     : 86,824
+span     : 2013-01-01 17:00:00 -> 2016-07-01 00:45:00
+clock    : America/New_York, DST-tracking (file stamp +1h during US DST)
+
+PROVENANCE: these bars are DERIVED from the D-036a M1 corpus by
+aggregate_m15.py. HistData publishes no native M15 or H1 — see the dataset's
+VENDOR_TIMEFRAME_AVAILABILITY.md. The bucket boundaries are OURS.
+This gate does not, and cannot, validate them against an outside feed.
+
+--- GATING CHECKS (must be clean) ---
+C0 timeframe grid      : PASS   — every stamp on the 15-minute grid
+C1 parse integrity     : PASS
+C2 duplicate timestamps: PASS
+C3 ordering            : PASS
+C4 OHLC coherence      : PASS
+C9 known-defect regr.  : PASS   — the D-036a 2014-06-01/02 hole must STILL be visible
+      asserted-empty buckets (arm B): 2014-06-01 18:00:00 -> 2014-06-02 16:00:00  — 0 bar(s) found, expected 0
+      resumption bucket 2014-06-02 16:00:00: present, expected present
+
+--- REPORTS (human review, not gates) ---
+C5 spike census        : 104 bars > 8x rolling median range
+      threshold is a TUNING CHOICE of this script, rescaled from M1's 12x
+      because a 15-minute bar aggregates more movement. Not source-derived.
+      2014-08-13 06:30:00  range   113.6 pips   local median    4.3   x 26.4
+      2013-09-06 09:30:00  range   114.7 pips   local median    5.3   x 21.6
+      2013-03-08 08:30:00  range   153.0 pips   local median    7.8   x 19.6
+      2013-07-04 08:00:00  range   164.5 pips   local median    9.0   x 18.3
+      2016-06-07 01:00:00  range   185.3 pips   local median   10.5   x 17.6
+      2015-11-05 07:00:00  range   116.6 pips   local median    7.1   x 16.4
+      2015-03-18 17:00:00  range   228.4 pips   local median   14.3   x 16.0
+      2013-04-25 05:30:00  range   123.8 pips   local median    8.0   x 15.5
+      2013-08-28 09:45:00  range   109.5 pips   local median    7.4   x 14.8
+      2016-06-23 20:15:00  range   557.6 pips   local median   39.9   x 14.0
+      2014-06-18 05:30:00  range    68.0 pips   local median    4.9   x 13.9
+      2013-08-02 09:30:00  range   123.2 pips   local median    8.9   x 13.8
+      2014-02-12 05:30:00  range    95.3 pips   local median    7.0   x 13.6
+      2015-07-14 06:45:00  range   125.0 pips   local median    9.2   x 13.6
+      2014-03-19 15:00:00  range    89.8 pips   local median    6.7   x 13.4
+      ... 89 more
+
+C6 missing-bucket census: 4 intra-week runs, 17 buckets absent
+      COARSER THAN THE M1 GAP CHECK AND NOT A SUBSTITUTE FOR IT — an absence
+      shorter than one bucket cannot appear here. qa_histdata_m1.py is the
+      authority on gaps.
+      2015-01-01 13:30:00 -> 2015-01-01 17:00:00   3:30:00  (13 buckets)
+      2013-04-11 20:00:00 -> 2013-04-11 20:45:00   0:45:00  (2 buckets)
+      2015-01-01 13:00:00 -> 2015-01-01 13:30:00   0:30:00  (1 buckets)
+      2015-08-21 14:15:00 -> 2015-08-21 14:45:00   0:30:00  (1 buckets)
+
+C7 week-open census    : 181 week opens (Sunday-delimited)
+      time-of-day : {'18:00': 117, '17:00': 64}
+      6 INTRA-WEEK RE-OPENS — these are NOT week boundaries:
+        2013-01-01 17:00:00 (Tue) — mid-week re-open after a closure
+        2013-12-26 06:00:00 (Thu) — mid-week re-open after a closure
+        2014-01-01 17:00:00 (Wed) — mid-week re-open after a closure
+        2014-06-02 16:00:00 (Mon) — mid-week re-open after a closure
+        2014-12-25 18:00:00 (Thu) — mid-week re-open after a closure
+        2015-01-01 13:00:00 (Thu) — mid-week re-open after a closure
+      2 week(s) not closing on a Friday — invisible to this census:
+        week of 2015-12-20 ends 2015-12-24 (Thu), 5 sessions
+        week of 2015-12-27 ends 2015-12-31 (Thu), 5 sessions
+      modal open by month: {1: '17:00', 2: '17:00', 3: '18:00', 4: '18:00', 5: '18:00', 6: '18:00', 7: '18:00', 8: '18:00', 9: '18:00', 10: '18:00', 11: '17:00', 12: '17:00'}
+      seasonal shift (DST): YES — EXPECTED on arm B
+
+C8 session completeness: 12 sessions below 60% of nominal bars
+      2013-01-01 Tue     28 bars  (nominal ~  96,  29.2%)  <- Dec/Jan holiday, a real market closure
+      2013-12-25 Wed      0 bars  (nominal ~  96,   0.0%)  <- Dec/Jan holiday, a real market closure
+      2014-01-01 Wed     28 bars  (nominal ~  96,  29.2%)  <- Dec/Jan holiday, a real market closure
+      2014-06-01 Sun      0 bars  (nominal ~  28,   0.0%)  <- *** ABSENT AND UNEXPLAINED ***
+      2014-06-02 Mon     32 bars  (nominal ~  96,  33.3%)  <- *** SHORT AND UNEXPLAINED ***
+      2014-12-24 Wed     56 bars  (nominal ~  96,  58.3%)  <- Dec/Jan holiday, a real market closure
+      2014-12-25 Thu     24 bars  (nominal ~  96,  25.0%)  <- Dec/Jan holiday, a real market closure
+      2015-01-01 Thu     30 bars  (nominal ~  96,  31.2%)  <- Dec/Jan holiday, a real market closure
+      2015-12-24 Thu     56 bars  (nominal ~  96,  58.3%)  <- Dec/Jan holiday, a real market closure
+      2015-12-25 Fri      0 bars  (nominal ~  68,   0.0%)  <- Dec/Jan holiday, a real market closure
+      2016-01-01 Fri      0 bars  (nominal ~  68,   0.0%)  <- Dec/Jan holiday, a real market closure
+      2016-07-01 Fri      4 bars  (nominal ~  68,   5.9%)  <- *** SHORT AND UNEXPLAINED ***
+      A short session is not automatically a defect. Holidays are closures;
+      an unexplained absence is a hole. Only a human tells them apart.
+
+==============================================================================
+GATE: PASS — C0-C4 and C9 clean
+C5-C8 require human sign-off before any study window is drawn from this file.
+Any session flagged by C8 that falls inside a rendered window must be named in
+the rendering's caption, so a hole is never mistaken for a quiet market.
+==============================================================================

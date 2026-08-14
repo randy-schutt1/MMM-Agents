@@ -135,10 +135,42 @@ yarn-error.log*
 06_MANUAL_BACKTEST/datasets/**
 !06_MANUAL_BACKTEST/datasets/README.md
 !06_MANUAL_BACKTEST/datasets/.gitkeep
+
+# PROVENANCE IS NOT BULK DATA — the hash manifests, QA reports and dataset
+# READMEs are the audit trail and belong in history. The `**` above swallowed
+# them, which is why `D-036a` cites
+# `datasets/HISTDATA_GBPUSD_M1/raw/SHA256SUMS.txt` as evidence for a corpus and
+# THAT FILE IS IN NO BRANCH OF THIS REPOSITORY — it exists only on the machine
+# that built it. A checksum nobody else holds cannot verify anything.
+# Un-ignored below for the M15/H1 dataset; the M1 dataset's manifest is owed the
+# same treatment by whoever owns that corpus.
+!06_MANUAL_BACKTEST/datasets/*/
+!06_MANUAL_BACKTEST/datasets/*/README.md
+!06_MANUAL_BACKTEST/datasets/*/*.md
+!06_MANUAL_BACKTEST/datasets/*/QA_REPORT*.txt
+!06_MANUAL_BACKTEST/datasets/*/CROSSCHECK_REPORT.txt
+!06_MANUAL_BACKTEST/datasets/*/derived/
+!06_MANUAL_BACKTEST/datasets/*/derived/SHA256SUMS.txt
+!06_MANUAL_BACKTEST/datasets/*/raw/
+!06_MANUAL_BACKTEST/datasets/*/raw/SHA256SUMS.txt
+# ...but never the bars themselves.
+06_MANUAL_BACKTEST/datasets/**/*.csv
+
 *.parquet
 *.feather
 *.sqlite
 *.db
+
+# --------------------------------------------------------------------------
+# RENDERED STUDY CHARTS — bulk output of 06_MANUAL_BACKTEST/tools/
+# mmm_chart_render.py. Regenerate them from the committed script and the
+# checksummed CSVs rather than carrying hundreds of PNGs in history. A small
+# committed sample under `samples/` exists so a reviewer can see what the tool
+# produces without running it.
+# --------------------------------------------------------------------------
+06_MANUAL_BACKTEST/tools/chart_renders/**
+!06_MANUAL_BACKTEST/tools/chart_renders/samples/
+!06_MANUAL_BACKTEST/tools/chart_renders/samples/**
 
 # --------------------------------------------------------------------------
 # INTENTIONALLY TRACKED

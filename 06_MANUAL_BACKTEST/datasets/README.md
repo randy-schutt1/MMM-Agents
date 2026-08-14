@@ -2,11 +2,19 @@
 
 Provenance for chart data used in manual backtesting.
 
-## STATUS: ONE DATASET REGISTERED
+## STATUS: TWO DATASETS REGISTERED
 
 | Dataset | Governing decision | Directory |
 |---|---|---|
 | HistData GBP/USD M1, 2013 → 2016-H1 | `D-036a` | `HISTDATA_GBPUSD_M1/` |
+| **Derived** GBP/USD **M15 + H1**, both `D-031` arms | `D-036a` (parent); no new decision — it introduces no new source | `HISTDATA_GBPUSD_M15_H1/` |
+
+> ⚠ **The second is DERIVED, not imported.** HistData publishes **tick and M1 only** — its
+> own FAQ: *"We can only deliver you time ordered Tick and M1 (1 minute) data."* Measured
+> and hashed at `HISTDATA_GBPUSD_M15_H1/VENDOR_TIMEFRAME_AVAILABILITY.md`. Those M15/H1
+> bucket boundaries are **ours**: reproducible, internally cross-checked seven ways, and
+> **never compared against an independent vendor's bars.** Read that directory's `README.md`
+> before citing anything built on it.
 
 ## WHAT LIVES HERE
 
