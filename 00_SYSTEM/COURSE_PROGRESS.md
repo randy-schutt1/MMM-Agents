@@ -1030,6 +1030,63 @@ V11 STATUS:          **STUDENT PASS COMPLETE 2026-08-13, SUBMITTED AS
                      BT_V11_0001 records M1a PARTIAL / M1b CONFIRMED /
                      M1c CONTRADICTED / M1d PARTIAL.
 
+V11 REVIEW:          **R1 RETURNED 2026-08-13 — REVISE, HIGH confidence,
+                     0 CRITICAL / 0 MAJOR / 5 MINOR / 7 NOTE.**
+                     ⭐ FULLY INDEPENDENT — D-003 SATISFIED. The reviewer
+                     authored no V11 artifact and cut review/v11 from
+                     INTEGRATION (not from video/v11), reading the source
+                     before the submission existed on its branch; the
+                     submission was merged in only AFTER the verdict was
+                     committed. NOT a self-verified round, unlike V09 R2
+                     and V10 R1's fix round.
+                     PT-039 was RE-DERIVED END TO END by reviewer-written
+                     code on the RAW corpus, sharing no line with
+                     run_pt039.py or mmm_lib: all four cells reproduce
+                     EXACTLY and all four verdicts reproduce. Homework H6
+                     reproduced 36/36 cells. Q-012's diff re-run (12
+                     lines, 6 substitutions, ZERO content lines). Title
+                     card opened: it is a title card. Lookahead
+                     re-derived: CLEAN.
+                     HOST-VS-GUEST CONFIRMED — course author, 100%, HIGH,
+                     over-determined. Handover scan re-run with a
+                     17-pattern superset: ZERO. FIVE new strands added,
+                     including [00:23:06]'s CHECKABLE back-reference to
+                     V01's own week-1 blue-box instruction.
+                     C-018's closure is FAITHFUL to D-041 in BOTH
+                     directions. V10's PT-037/PT-038 VERIFIED UNTOUCHED.
+                     Items 101 and 108 VERIFIED, NOT understated.
+                     Item 105 ANSWERED: A-039's narrowing is NOT
+                     generous — it is accurate. Item 105 can close.
+                     ⭐ THE ONE FINDING A READING-ONLY REVIEW WOULD HAVE
+                     MISSED (item 109) CAME FROM OPENING AN IMAGE: the
+                     categorical "no frame shows an indicator legend" is
+                     FALSE — frame 14 (27:35) carries RSI(21), ATR(14),
+                     CCI(14), MACD(12,26,9), Sto(5,3,3), Mom, AO and
+                     GBPUSD,H1. A-080's DISPOSITION IS CORRECT AND
+                     UNCHANGED (disowned anti-example, on H1) but
+                     RSI(21) is a NEARER trap than the 13 it names.
+                     18_REVIEW/V11/V11_REVIEW_R1.md.
+
+V11 STATUS NOW:      **IN REMEDIATION, NOT COMPLETE.** Items 109-113 are
+                     owed first. All five are DOCUMENTATION corrections —
+                     none alters a method, threshold, disposition or
+                     number.
+
+V12 GATE:            ✅ **OPEN — CONFIRMED BY R1 under D-024** (0 CRITICAL,
+                     0 MAJOR). **This review does NOT qualify that and V12
+                     work is NOT held by items 109-113.** The owner had
+                     already begun V12 on the correct reading of D-024.
+                     ⭐ ITEM 109 SHARPENS (a)/(b) BELOW RATHER THAN
+                     WEAKENING THEM: V11's frames DO contain an RSI
+                     period — RSI(21) on frame 27:35 — and it MUST NOT be
+                     adopted, because that chart is the anti-example the
+                     instructor tells students to delete and it is on H1.
+                     **When hunting V12's frames for an
+                     indicator-properties dialog, CHECK WHOSE CHART IT IS
+                     BEFORE READING A PERIOD OFF IT.**
+                     *(Superseded text, retained below per
+                     REMEDIATION_PROTOCOL.md §2:)*
+
 V12 GATE:            **CLOSED until V11's R1 returns.** D-004: the gate
                      opens on a REVIEWER verdict, never on a student
                      submission, and what R1 returns then governs per
@@ -1511,7 +1568,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | REVISE R1 0C/0M/3m | **IN REMEDIATION** (items 64-66) |
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V10 | Wk3 | 01:36:16 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ✅ **R1 REVISE 0C/0M/4m** | **IN REMEDIATION** (items 91-94) |
-| V11 | Wk4 P1 | 00:50:56 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
+| V11 | Wk4 P1 | 00:50:56 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | **R1 REVISE 0C/0M/5min** | **IN REMEDIATION (items 109-113) · V12 GATE OPEN** |
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V13 | Wk5 P1 | 01:05:22 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V14 | Wk5 P2 | 00:47:48 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |

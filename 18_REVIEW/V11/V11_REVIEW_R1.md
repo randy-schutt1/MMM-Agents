@@ -842,13 +842,62 @@ away, and the "cheap" prediction `P1` is reported as **failed** and separately.
 
 | # | Item | Observation |
 |---|---|---|
-| `N1` | **114** | **⭐ `D-041`'s *"`ketchup` occurs nowhere at all"* is exact-token true and has one near-miss the corpus already flags. My body-only census across V01–V11 returns `ketchup` **0×** — confirmed. **But V01 `[00:19:24]` reads *"the man is the **water** that **catch up** in the **mustard**"***, which V01's own `TRANSCRIPTION NOTES` already call *"the **only** appearance of that vocabulary in V01 and too garbled to source anything from"*. It is the corpus's single line naming three condiment nicknames together, and *"catch up"* is a plain ASR candidate for *ketchup*. **This does NOT disturb `D-041`:** the line attaches **no period to anything**, so `D-041`'s operative claim — *"No Tier 1 statement attaches a period to ketchup or mustard anywhere in V01–V11"* — **survives, and I confirmed it independently** (V04's two `mustard` uses attach no number either). **This reviewer therefore does NOT put the inversion back to the owner**; the ruling stands. Recorded so the `§3.4` re-check does not rely on a flat *"nowhere at all"*. **Charged against no one — `D-041` is an integration-branch policy entry, not V11's work** |
+| `N1` | **114** | **⭐ THE KETCHUP/MUSTARD INVERSION WAS INDEPENDENTLY RE-CHECKED, AND `D-042` LANDED ON INTEGRATION WHILE THIS REVIEW WAS BEING WRITTEN AND REACHED THE SAME RESULT BY A DIFFERENT ROUTE.** See the boxed note below this table — the convergence is worth more than either finding alone, and the review's original wording is retained there unedited |
 | `N2` | **115** | **`PT-039`'s `N1` is the conservative construction.** An eligibility-matched base rate (`P(FINAL \| R ≥ 30)` = 3.33%) would give `M1a` **+15.91 pp** rather than +15.80 — a *better* result for the claim. `M1a` stays `PARTIALLY SUPPORTED` under both. **The verdict is robust to a design choice the submission does not discuss** |
 | `N3` | **116** | **`PT-039` §4 `N2`'s feature test is under-specified at `T* = 90`.** It requires *"the two adjacent **unnamed** intervals"*, but only one exists there because 120 is named. The runner used one neighbour (excess **−1.23 pp**); this reviewer used both (**−0.20 pp**). **Both are far below the +5 pp bar and both return *no feature*.** Specify the rule for boundary cases in the next `PT` carrying an `N2` feature test |
 | `N4` | **117** | **Available Tier 2 corroboration on the range parameters is not cited.** `MMM-NOTES` pp.48–49 give *"RSI in the **80 to 40** range"* for an uptrend and *"**60 to 20**"* for a downtrend — independent support for two of the six printed parameters. Nothing changes (Tier 1 already carries them printed **and** spoken, which outranks Tier 2), but the corroboration exists and the submission searched that document for the *period* without noting what it does supply |
 | `N5` | **118** | **A labelling convention worth stating once.** The transcript's `COVERAGE` block reports the largest gap as *"14 s, ONCE, at `[00:31:17]`"*, labelling it by the marker that **ends** it; the prose beneath describes it as sitting between `[00:31:03]` and `[00:31:25]`, which spans two gaps (14 s then 8 s). I re-measured: **643 markers, 643 distinct, strictly increasing, max gap 14 s from `[00:31:03]` to `[00:31:17]`** — every figure in the block is correct. Only the labelling convention is unstated |
 | `N6` | **119** | **Item 108's *"pushed in the failing state"* is not verifiable by repository inspection**, and this reviewer could neither confirm nor refute it. **The validator failure itself IS verified**: `735a458` contains zero `EVIDENTIAL` tokens, `d2c1d57` adds eight, and `validate_project.py:412` enforces the classification. **Not charged** — volunteering a fact the record cannot prove is the opposite of understatement |
 | `N7` | **120** | **No *"V14-not-V13"* recommendation exists in V11's artifacts.** `SOURCE_MANIFEST` gives V13 = `Wk5 041512 Part1`, V14 = `Wk5 041512 Part2`; nothing proposes skipping or reordering them. **The V12 reasoning is present and HOLDS on every limb** (§ THE V12 RECOMMENDATION). Recorded so a later session does not go looking for a recommendation that was never made |
+
+### ⭐ `N1` IN FULL — AND A CONVERGENCE THAT ARRIVED MID-REVIEW
+
+**What this reviewer found, written before `D-042` existed and retained here unedited:**
+
+> `D-041`'s *"`ketchup` occurs nowhere at all"* is exact-token true and has one near-miss the
+> corpus already flags. My body-only census across V01–V11 returns `ketchup` **0×** — confirmed.
+> **But V01 `[00:19:24]` reads *"the man is the **water** that **catch up** in the **mustard**"***,
+> which V01's own `TRANSCRIPTION NOTES` already call *"the **only** appearance of that vocabulary
+> in V01 and too garbled to source anything from"*. It is the corpus's single line naming three
+> condiment nicknames together, and *"catch up"* is a plain ASR candidate for *ketchup*. **This
+> does NOT disturb `D-041`:** the line attaches **no period to anything**, so `D-041`'s operative
+> claim — *"No Tier 1 statement attaches a period to ketchup or mustard anywhere in V01–V11"* —
+> **survives, and I confirmed it independently** (V04's two `mustard` uses attach no number
+> either). **This reviewer therefore does NOT put the inversion back to the owner**; the ruling
+> stands.
+
+**`D-042` was committed to the integration branch at `195970d` while this review was in progress,
+and this reviewer did not have it when the paragraph above was written.** It runs the same search
+on the owner's conditional instruction (*"Let's go with whatever the course says"*), reaches the
+same negative result, and **cites the same two near-hits by name** — V01 `[00:19:24]`'s garble and
+V10 `[00:37:02]`'s *"I'll never catch up"*, both of which this reviewer's own sweep surfaced
+independently.
+
+**The convergence is the useful part, and it is worth more than either finding alone.** Two
+sessions, on different branches, with different code, different search designs and no knowledge
+of each other, swept V01–V11 plus the 84-page Tier 2 extract for a nickname↔period pairing and
+**both returned the same exhaustive negative**. `D-041`'s Evidence-block claim is therefore
+**doubly verified rather than inherited**, and this review's `N1` and `D-042` §1 are mutually
+confirming rather than redundant.
+
+**Three consequences for this round, stated so nothing is left ambiguous:**
+
+1. **`N1` requires no correction and charges no one.** It is not a V11 defect — `D-041` and
+   `D-042` are integration-branch policy entries. `N1` stands as a **verified negative**, now
+   corroborated.
+2. **This reviewer's declined escalation stands, and is strengthened.** `D-041` consequence 7
+   invited a reviewer to put the inversion back to the owner. Having searched the corpus
+   independently and found nothing that contradicts it on **periods**, **this reviewer declines**,
+   and `D-042` §1 reaches the same conclusion from the owner's own tie-breaker instruction.
+3. **⚠ `D-042` §3 opens a NEW live conflict, and it does not touch V11.** V07 `[00:25:34]` says on
+   tape *"this yellow one is a five moving average"*, against the owner's `5 = red / 13 = yellow`
+   colour mapping — which, chained through the owner's own nicknames, would point back at
+   `mustard = 5`. **That is a question about COLOURS, not about the period mapping this review
+   checked**, it is correctly filed as `SETUP_ISSUES.md` `I-011` awaiting the owner, and **no V11
+   artifact, record, number or verdict depends on it.** It is recorded here only so the V11 file
+   does not read as though this reviewer swept a live conflict past unnoticed.
+
+**Nothing in `D-042` changes any finding, severity or verdict in this round.**
 
 ---
 
@@ -891,8 +940,11 @@ would see Arm B silently report a null.
    Carried unchanged.
 3. **The ketchup/mustard inversion:** this reviewer was invited by `D-041` consequence 7 to put it
    back to the owner and, having checked the corpus independently, **declines to** — no recording
-   contradicts the ruling and `N1` explains why the one near-miss does not either. **Recorded as a
-   checked-and-declined escalation rather than an unexamined one.**
+   contradicts the ruling on **periods**, and `N1` explains why the one near-miss does not either.
+   **Recorded as a checked-and-declined escalation rather than an unexamined one**, and now
+   independently corroborated by `D-042` §1's exhaustive search. **No question is put back to the
+   owner from this round on the period mapping.** `D-042` §3's separate **colour** conflict
+   (`I-011`, V07 `[00:25:34]`) is the owner's live question and is **not** V11's.
 
 ---
 

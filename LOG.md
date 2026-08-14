@@ -7687,3 +7687,138 @@ staged **explicitly**; `git diff --staged` read before the commit; **`git add -A
 `COMPLETE`.** Three things are handed to the reviewer: (1) the **ketchup/mustard inversion** in
 `D-041`, reversible on a word; (2) `PT-039`'s re-issue and the commit-ordering audit trail above;
 (3) `PT-040` is **free**, not V11's, despite the framing of the ruling that produced this entry.
+
+---
+
+## 2026-08-13 — Reviewer Session (V11 R1) — INDEPENDENT AUDIT
+
+**Branch:** `review/v11`, dedicated git worktree at
+`/Users/randyschutt/Desktop/Trading/MMM-Agents-v11-review`, cut from the **integration** branch
+(`e63e85e`) per `D-038`. **Act:** the independent review `D-003`/`D-004` require.
+
+### ⭐ Independence — `D-003` SATISFIED, and the branch choice was deliberate
+
+This session **authored no V11 artifact**. It cut from **integration rather than from
+`video/v11`**, so the transcript, the frames and the quarantined tree could be read **before the
+submission existed on the branch at all** — `REVIEW_PROTOCOL.md` §4's required review order,
+enforced structurally rather than by intention. `origin/video/v11` was merged in only **after the
+verdict was written and committed** at `c6ebbac`, so the evidence-ledger entries could be appended
+on top of V11's own additions rather than spliced into a file that did not yet contain them.
+
+**This is the first fully independent round since V09 R1.** V09 R2 and V10 R1's fix round were
+both `SELF-VERIFIED AT OWNER DIRECTION` and both said so; this one is not, and the distinction is
+recorded because the two preceding rounds made it worth recording.
+
+### Verdict
+
+```text
+REVISE — 0 CRITICAL / 0 MAJOR / 5 MINOR / 7 NOTE.  Confidence HIGH.
+GATE TO V12: OPEN (D-024, zero CRITICAL and zero MAJOR).
+V11 STATUS:  IN REMEDIATION. Items 109-113 owed before COMPLETE.
+```
+
+**The gate to V12 is open and this review does not qualify that.** The owner has already begun
+V12 on the correct reading of `D-024`, and **nothing found here is capable of contaminating it.**
+The one finding that touches V12's own work-list — item 109 — makes that list *more* precise.
+
+### What was re-derived rather than read
+
+- **`PT-039`, END TO END.** `reviewer_pt039.py` was written from the pre-registration §§3–6 alone
+  and parses the **raw HistData CSVs** directly — not the student's `_cache/m1_raw_v2.npz` — with
+  its own DST rule, its own `C-1` labelling, its own 96-bucket gate, its own candidate detector,
+  its own Wilson interval. **It shares no line with `run_pt039.py` or `mmm_lib`.**
+  **Every number in all four cells reproduced exactly**: the `O1` curve to four decimal places,
+  every `n(T)`, every Wilson bound, all six `N3` strata, `O3`/`O4`/`O5`, 894 / 777 session days,
+  11 / 245 exclusions, `n_unresolved = 0`, one `FINAL` per day. **All four verdicts reproduce** —
+  `M1a` PARTIAL (+15.80 pp), `M1b` CONFIRMED (+12.18 pp), `M1c` CONTRADICTED (no feature at 30 or
+  90, both arms), `M1d` PARTIAL (3 of 6 strata).
+- **Homework H6**: an independent Wilder RSI over the committed M15 file reproduced **all 36 cells
+  to two decimal places**, including the `144.04×` spread.
+- **`Q-012` §1**: the `diff` was re-run at source — **12 differing lines, 6 substitutions, ZERO
+  content lines**, both files 69 lines. §3a's title card was **opened and looked at**: it is a
+  title card. §3b's negative was re-derived — 21 `SCREENSHOT_001` files, **21 distinct MD5s**.
+- **Lookahead**: re-derived rather than accepted. `held(T)` is logically identical to
+  *"not superseded within `[t, t+T)`"* and is real-time knowable at `t+T`. **CLEAN.**
+- **Host-vs-guest**: four strands confirmed at their markers, the handover scan re-run with a
+  **17-pattern superset** (zero matches in 51 minutes), and **five further strands added** —
+  including `[00:23:06]`'s **checkable back-reference to V01's own week-1 blue-box instruction**,
+  the only cross-file strand in the determination and the one that most resists an impersonation
+  hypothesis.
+- **`A-080` on both admissible tiers**: every `rsi`/`tdi` line containing an integer was printed
+  and inspected (three, none a lookback), and the 84-page Tier 2 extract was swept for any RSI
+  numeral. **Both silent — verified, not repeated.**
+
+### The five MINORs (items 109-113)
+
+1. **⭐ 109** — the categorical *"no frame shows an indicator legend or a settings dialog"* is
+   **FALSE** at six sites. **Frame 14 (`27:35`) carries `GBPUSD,H1`, `RSI(21)`, `ATR(14)`,
+   `CCI(14)`, `MACD(12,26,9)`, `Sto(5,3,3)`, `Mom`, `AO`.** **`A-080`'s disposition is CORRECT and
+   does not move** — the chart is the lesson's **disowned anti-example** on `H1`, and the
+   instructor's own charts carry no legend at all — **but `RSI(21)` is a nearer near-miss trap than
+   the `13` the record names, and it sits inside V11's own curated frames.** This is the one
+   finding a reading-only review would not have produced.
+2. **110** — `C-018`'s *"every unambiguous instance of 'the 50' is the sub-graph baseline"* is
+   false: `[00:12:42]` *"out to the 50 in no time"*, fourteen minutes before RSI is introduced.
+   **The correction RUNS IN THE CLAIM'S FAVOUR** — it is a fourth ground for reading B.
+3. **111** — `pt039_output.txt` is still titled `PT-037`; the body must **not** be edited, a banner
+   is owed. The only un-annotated stale reference in the tree.
+4. **112** — `V11_MASTERY_REPORT.md:391` says *"V10 keeps `PT-039` and `PT-038`"*; must read
+   `PT-037`. **Invisible to a `PT-037` grep** because the defect is that number's absence.
+5. **113** — the run output prints two seeds (`20260812` banner vs `20260813` actual). No number
+   affected; the durable fix is in `mmm_lib.provenance_header()` and is a policy-branch act.
+
+### What was checked and found sound
+
+**`C-018`'s closure is faithful to `D-041` in both directions** — no "Tier 0", no Tier 1 override,
+`§3.4` stays live, superseded status retained, the inversion flagged not buried. **V10's
+`PT-037`/`PT-038` numbering is verified untouched at every site**, `REVIEW_PROTOCOL.md` §11
+intact, and `PT-040` is correctly **not** allocated. **Items 101 and 108 are accurate and not
+understated** — Arm B's DST defect reproduces exactly (Mon 118 / Sat 117; 119 days at `92/96` and
+118 at `4/96`; **64.8% of Mondays lost**), and `735a458` does contain zero `EVIDENTIAL` tokens
+against a validator that enforces them. **Item 105's requested judgement is answered: `A-039`'s
+narrowing is NOT generous, it is accurate, and item 105 can close.**
+
+### `D-042` arrived mid-review, and the convergence is recorded
+
+`D-042` (`195970d`) was committed to integration while this review was being written. It ran the
+same nickname↔period search this reviewer ran, returned the same exhaustive negative, and **named
+the same two near-hits independently** (V01 `[00:19:24]`'s garble, V10 `[00:37:02]`'s ordinary
+English). **Two sessions, two branches, two search designs, one negative — `D-041` is doubly
+verified rather than inherited.** `D-042` §3's new **colour** conflict (`I-011`) touches **no V11
+artifact** and changes no finding here. Item 114 carries it.
+
+### Git
+
+Own branch, own worktree (`D-038`). Paths staged **explicitly**; `git diff --staged` read before
+every commit; **`git add -A` never used.**
+
+**⚠ `LOG.md` conflicted on the `video/v11` merge and the conflict was a FALSE-COMMON-CONTEXT
+SPLICE** — `git` aligned two different session entries on their identical `### Git` / validator /
+`### Next Action` boilerplate. Taking both sides in place would have welded integration's `D-041`
+entry and `video/v11`'s entries into one entry with two Next Actions, which is the class of damage
+the V10 merge-back had to repair. **Resolved by rebuilding from the parents rather than editing
+the conflicted file**: both sides proved to be pure appends to a byte-identical 7,301-line prefix;
+the three entries were reassembled **whole, contiguous and in true chronological order**, split
+only at a heading boundary; and the result was **verified by multiset** — every line from both
+sides present exactly once, none invented, none dropped. Record-ID sets re-derived after the
+merge: **no duplicate `A-`, `C-`, `Q-` or `D-` identifier**, `REVIEW_INDEX` max item 108 before
+this round's additions.
+
+`scripts/validate_project.py`: **103 passed, 0 warnings, 0 failures.**
+
+### Next Action
+
+**Items 109-113 are owed before V11 can reach `COMPLETE`**, and they are documentation
+corrections — none alters a method, a threshold, a disposition or a number. **V12 work is NOT held
+by them** (`D-024`).
+
+**Two things are handed forward.** (1) **Reviewer question 1 to the owner:** should
+`mmm_lib.provenance_header()` print the *calling runner's* seed rather than the batch constant?
+Every future `PT` that overrides the seed inherits item 113's contradiction. (2) **Item 109
+sharpens V12's own instruction** — the V12 session is told to hunt frames for an
+indicator-properties dialog, and it must check **whose chart** a legend belongs to before reading
+a period off it.
+
+**No question is put back to the owner on the `D-041` period mapping.** The escalation `D-041`
+consequence 7 invited was checked independently and **declined**, and `D-042` §1 reached the same
+conclusion.
