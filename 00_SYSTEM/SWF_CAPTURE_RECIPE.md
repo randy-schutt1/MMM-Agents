@@ -274,6 +274,40 @@ ffmpeg -v error -y -ss <seconds> -i VNN.mp4 -frames:v 1 "VNN_HH-MM-SS_descriptor
 - **Look at each frame before naming it.** Naming from the transcript alone reproduces
   the exact failure that produced the quarantined `VISUAL_INDEX.md`.
 
+> ### ⚠⚠ 8a. REQUIRED — MEASURE THE SWEEP→CLOCK OFFSET, AND NAME FROM THE BURNED TIMECODE
+>
+> **Added 2026-08-14 by the V14 R1 remediation** (`REVIEW_INDEX.md` items 174 / 186,
+> `V14_REVIEW_R1.md` `M3`). **This step is MANDATORY when frames come from the §10 fast sweep.**
+>
+> **The sweep index is NOT the player clock.** Sweep frame *i* is captured at presentation second
+> `i × 5`, but the player's own clock runs **ahead** of that by the wall-clock interval between the
+> sweep's `t0` and the play click actually taking effect — **multiplied by the sweep's speed
+> factor.** At 10×, ~1.5 s of real latency becomes **~15 s of presentation time.**
+>
+> ⚠️ **IT IS LATENCY, SO IT VARIES PER RUN. DO NOT HARDCODE IT AND DO NOT CARRY A PREVIOUS
+> LESSON'S VALUE FORWARD.** Measured values so far: **V12 `+16 s`, V13 `+15 s`, V14 `+16 s`** — same
+> recipe, same machine, three different sweeps, and **V13 differs from the other two.**
+>
+> **Do this, every lesson, before any frame is named:**
+>
+> 1. Crop the bottom-right ~`110 × 18` px of any frame (the player's `MM:SS / MM:S` readout),
+>    upscale ~5×, and **read the burned timecode from the pixels.**
+> 2. `offset = burned − (i × 5)`. **Confirm it on at least 3 frames spread across the file**, plus
+>    the last frame — which **clamps** at the file's duration and will read low. That is expected
+>    and is not drift.
+> 3. **Confirm it is an ORIGIN error and not a RATE error:** consecutive filename deltas must equal
+>    consecutive burned deltas. If they diverge, the fps patch is wrong — stop and fix §10, do not
+>    apply an offset.
+> 4. ⭐ **NAME THE FILES FROM THE BURNED TIMECODE**, not from `i × 5`.
+> 5. **Publish the verification table in the lesson's `INDEX.md` §0**, as `04_SCREENSHOTS/V12/` and
+>    `V13/` both do. **An unpublished measurement is not checkable.**
+>
+> **Why this is a numbered required step rather than advice.** V12 measured and applied it; V13
+> measured and applied it; **V14 skipped it and shipped 29 frames whose filenames were all `+16 s`
+> wrong, while its `INDEX.md` claimed each frame *"proves its own timestamp"*.** The harness never
+> changed. **The step was simply left to memory, and memory is where it failed** — so it lives here
+> now.
+
 Target ~20–25 images per lesson (V01: 22, ~11 MB). The full mp4 is retained outside the
 repo, so anything not curated can be pulled later in about a second.
 
