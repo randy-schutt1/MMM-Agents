@@ -8631,3 +8631,68 @@ Explicit path staging only, **never `git add -A`**, `git diff --staged` inspecte
 **Merge `review/v13` into the integration branch** per `D-038`, single-threaded, as a deliberate
 separate step. **V14 may then begin** — it is Part 2 of the same recording and is the owner's hard
 stop for the gap audit.
+
+---
+
+## 2026-08-14 — V14 STUDENT PASS · `Bootcamp1 Wk5 041512 Part2 (48mins)` · branch `video/v14`
+
+**Worktree `MMM-Agents-v14`, cut fresh from integration head `e46d8f2` (`D-038`).** Gitignored
+source-video and dataset directories symlinked back from the primary checkout — the proven
+V08–V13 pattern. **No merge/fetch conflict was hit**; the concurrent data-extension work has landed
+`derived_ext/` and `QA_REPORT_EXT_RAW.txt` in the primary dataset directory and **this session
+deliberately used neither.**
+
+### The decision that was NOT made about the extended dataset
+
+`HISTDATA_RECENCY_CHECK.md` (committed at `e46d8f2`) establishes that HistData's free tier serves
+**2016H2 → 2025**, and says in its own header that it **"authorises nothing"** and that extending
+the corpus past 2016-06-30 **"requires a new owner decision"**. **`DECISIONS.md` ends at `D-043`; no
+such decision has landed.** `PT-042` therefore runs on `W-B` (2014-01-05 → 2015-12-31), wholly
+inside `DEVELOPMENT` per `D-035`, and `assert_development()` enforced it at load. **The holdout was
+never opened.**
+
+### What V14 is
+
+**The lesson V13 promised twice and deferred.** The high/low board drill — a **printed** six-step
+method for identifying the day's extreme in real time **with no chart at all**. Six of its seven
+steps are arithmetic, which is why V14 supports a pre-registered test where most lessons cannot.
+
+### The findings
+
+- ⭐⭐ **`A-056`'s seven-lesson-old Required Research is ANSWERED** — and closure was **declined**,
+  on `A-089` alone. Put to the reviewer as item 162.
+- ⭐ **`A-077`'s missing lock threshold `N` arrives PRINTED at 1 hour** — on a *session* extreme,
+  ~10× short of V10's *weekly* narration. `A-094`. **Advances, does not close.**
+- ⚠️ **`A-084` NARROWED, NOT CLOSED — second consecutive lesson**, on the corpus's **best** spoken
+  opportunity. `A-093` records why the route is structurally weak rather than merely unlucky.
+- ⚠️ **`A-086` advanced on the multiplier; the basis reverts → `C-021`**, left **unadjudicated** and
+  put to the owner. **The bands still have no period, so nothing is unblocked.**
+- ⭐ **The Week-6 question is SETTLED** — two artifacts are missing, not one (`A-092`).
+- ⭐ **`D-043` gets Tier-1 ordinal corroboration** from a 2012 instructor chart, and `D-042` §2's
+  superseded 5/13 rows are falsified by it.
+- **`PT-042` → `NOT SUPPORTED`.** `O1` 0.3461/0.3041 vs ≥0.80; `O2` 0.4607/0.4433 vs ≥0.50. **The
+  distance is real (median MFE 40 pips) and the premise is not.**
+- ❌ **Item 157 gets no help** — `shark` and `63` occur **zero** times in 600 markers.
+- **`Q-015`** — fourth consecutive `VISUAL_INDEX.md` instance, and its surviving image is a **blank
+  PowerPoint exit screen** indexed as a five-EMA chart.
+
+### Five declared deviations, three self-corrections
+
+`D1` §9 ordering · `D2` the assignment cannot be performed and no notebook was faked · `D3` a
+forward `grep` into V15 for week numbers only · `D4` `PT-042`'s `N1` `O1` construction is
+underspecified **in a direction that flatters this session's own result** · `D5` `N4` is degenerate.
+`S1`–`S3` are three draft claims corrected by measuring them. **All in `V14_MASTERY_REPORT.md` §2.**
+
+### Git discipline
+
+Explicit path staging only, **never `git add -A`**, `git diff --staged` inspected before each of the
+six commits, `validate_project.py` **PASS** before push. **`PT-042` pre-registration ordering is
+PROVEN**: `run_pt042.py` was ABSENT at `ae3b07a` and the pre-registration is byte-identical since,
+except an explicitly-labelled RUN banner.
+
+### Next Action
+
+**Independent review R1 of `video/v14`** (`REVIEW_PROTOCOL.md`, `D-003`). **This is the owner's
+declared HARD STOP**: after V14 passes review, the plan is a comprehension/gap audit before deciding
+whether to continue to V15+. **`V15 GATE: CLOSED` until R1 returns.** Items **162–171** are raised
+for that round; **162, 163, 165 and 168 are the ones that need a ruling** rather than a note.
