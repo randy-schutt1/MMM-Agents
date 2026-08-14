@@ -2535,3 +2535,101 @@ statement of the offset that is not read off this deck.
 `03_LESSON_NOTES/V13_SOURCE_NOTES.md` §4, `V13_INTERPRETATION.md` Q4;
 `04_SCREENSHOTS/V13/INDEX.md` frame `00:29:35`; `03_LESSON_NOTES/V06_SOURCE_NOTES.md` (DMR
 curriculum, frame `V06_00-48-29`, Week 10).
+
+---
+
+## C-021 — ⭐ The TDI volatility bands' BASIS: V12 retracts it to the RSI line, V14 states it back as the market baseline — and Tier 2 sides with V14
+
+**Raised by:** V14 · `[00:45:09]`, against V12 `[00:15:47]`–`[00:16:20]`
+**Speaker:** **course author, both times.** This is an internal Tier 1 contradiction, not a
+Tier 1/Tier 2 divergence
+**Separation:** **ONE WEEK.** V12 is `Wk4 040812` = 2012-04-08; V14 is `Wk5 041512` = 2012-04-15.
+**The tightness is the point** — this is not a speaker drifting over months, it is the same speaker
+seven days later
+
+---
+
+### 1. THE TWO STATEMENTS
+
+**V12, `[00:15:47]`–`[00:16:20]` — three positions in thirty-three seconds, ending in a retraction
+prompted from the chat:**
+
+> `[00:15:47]` *"There's some formula deviation 2%, **I don't know**, two standard deviations away
+> from **the market baseline** **or something like that. I don't really know because I didn't
+> invent it.**"*
+> `[00:16:03]` *"They're essentially Bollinger bands **based on the RSI line itself. That's what
+> someone said, telling me — not sure.**"*
+> `[00:16:16]`–`[00:16:20]` *"it's two standard deviations away from price action… **from the RSI
+> line. Thank you.**"*
+
+**V12's final position is `the RSI line`, reached under correction, and held with the least
+confidence of anything in that lesson** (`A-086`).
+
+**V14, `[00:45:09]` — one position, unhedged, unprompted, confirmed verbatim by two ASR engines:**
+
+> *"**The bands are two standard deviations away from the market base.**"*
+
+### 2. WHAT CONFLICTS, AND WHAT DOES NOT
+
+| Quantity | V12 | V14 | Verdict |
+|---|---|---|---|
+| **Multiplier** | *"deviation **2%**"* **or** *"**two standard deviations**"*, both disclaimed | *"**two standard deviations**"*, **no disclaimer** | ✅ **NOT a conflict — a RESOLUTION.** V14 states one of V12's two alternatives and drops the other. See `A-086`, advanced |
+| **Basis** | ⚠️ *"the market baseline"* → **retracted** → *"**the RSI line**"* | *"the **market base**"* | 🔴 **CONFLICT.** V14 states the answer V12 explicitly withdrew |
+| **Period** | never stated | never stated | ➖ unchanged, and it is why nothing is unblocked |
+
+### 3. ⭐ TIER 2 SIDES WITH V14 — WHICH REVERSES `C-019` §3's SUBSIDIARY DIVERGENCE
+
+`MMM-NOTES` p.45 (Tier 2, normative under `D-039`):
+
+> *"Volatility bands which are similar to a Bollinger band but applied to **the market baseline** of
+> the indicator instead of price."*
+
+**`C-019` §3 recorded this as Tier 2 agreeing with V12's FIRST answer and disagreeing with its
+CORRECTED one.** V14 changes the shape of that record: **the corrected answer is no longer the
+speaker's standing position.** Tier 1's latest, most confident statement and Tier 2 now **agree**,
+and the outlier is V12's chat-prompted retraction.
+
+### 4. HOW THIS IS ADJUDICATED — AND WHY IT IS NOT
+
+`SOURCING_HIERARCHY.md`'s *"the recording wins"* presupposes **a recording that is clear.** Here
+there are **two** recordings by the same speaker and they disagree. **The hierarchy has no rule for
+Tier 1 versus itself across lessons**, and this session does not invent one.
+
+**Three readings are available and this record adopts none:**
+
+| Reading | Argument | Against |
+|---|---|---|
+| **V14 wins — later and more confident** | Unhedged, unprompted, one week later, Tier 2 corroborates | Confidence is not accuracy, and V12 `[00:15:40]` *"I don't know the math on it"* applies to V14's sentence too |
+| **V12 wins — it was corrected on the record** | The `[00:16:20]` *"Thank you"* means someone supplied a correction he accepted | The corrector is unidentified, and Dean Malone's shipped TDI **does** build the bands on the RSI line, so the chat may have been right about the *public* build and wrong about **this altered one** (V12 `[00:07:20]` *"I've altered it or tweaked it a little bit"*) |
+| **Neither — the speaker does not know** | He says so, twice, in V12 | V14's sentence carries no hedge, so *"he doesn't know"* is this project's inference rather than his statement |
+
+> **⚠️ Note the third reading's bite.** `A-086` currently records the final position as *"the RSI
+> line, low confidence"*. **That is now out of date whichever way this is decided** — either the
+> position changed, or the corpus holds two. `A-086` is updated to point here.
+
+### 5. WHY THIS CHANGES NOTHING OPERATIONALLY — AND SAY SO PLAINLY
+
+**The bands remain unconstructible and `A-086` stays `DO NOT CODE`**, because **the period is
+still never stated in Tier 1 or Tier 2.** A multiplier and a basis do not build a band without a
+lookback.
+
+**Consequently `A-031` and `A-032` — *"blood in the water"* and *"shark fin"*, the corpus's
+best-defined signals — remain uncomputable**, exactly as `A-086` says. **This contradiction
+resolves one of three required quantities and creates a dispute over a second.**
+
+### 6. STATUS
+
+```text
+OPEN -- UNADJUDICATED, DELIBERATELY.
+Both statements stand on the record. Neither is coded. Nothing in any V14
+artifact rests on either basis.
+This is a candidate for the same owner ruling that D-041/D-043 handled for the
+EMA nicknames: an internal Tier 1 conflict that the sourcing hierarchy is not
+built to settle. Raised to the owner as REVIEW_INDEX.md item 168.
+```
+
+### Related
+
+`A-086` (updated), `A-031`, `A-032`, `A-039`, `A-084`, `A-085`, `C-019` §3, `C-011`, `D-030`,
+`D-039`, `D-040`; `MMM-NOTES` p.45; `03_LESSON_NOTES/V12_SOURCE_NOTES.md` §4d;
+`03_LESSON_NOTES/V14_INTERPRETATION.md` Q3c.

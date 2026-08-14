@@ -193,7 +193,7 @@ completed. `[00:07:05]` *"Understand something about candles: it represents wher
 ⭐ **`[00:03:30]` and `[00:15:55]` are the third and fourth instances in the corpus of the speaker
 repudiating a named retail concept off a slide he is presenting** — the pattern `REVIEW_INDEX.md`
 item 132 records (V12 `[00:09:51]` *"momentum we know is bullshit"* on Dean Malone's definition;
-V11's `POSITIVE TREND`). **V14 `[00:03:30]` repudiates the same word V12 did, five weeks later, on
+V11's `POSITIVE TREND`). **V14 `[00:03:30]` repudiates the same word V12 did, one week later, on
 a different slide.**
 
 ## §7 — THE TRAP-MOVE SLIDES `[PRINTED]`

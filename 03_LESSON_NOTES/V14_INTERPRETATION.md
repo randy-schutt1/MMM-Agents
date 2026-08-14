@@ -193,13 +193,13 @@ to separate.** Stays `DO NOT CODE`.
 
 | Axis | V12 | **V14 `[00:45:09]`** | Effect |
 |---|---|---|---|
-| **Multiplier** | *"some formula deviation **2%**, I don't know, **two standard deviations**… or something like that. **I don't really know because I didn't invent it**"* | *"**two standard deviations**"* — **flat, unhedged, unprompted** | ⭐ **ADVANCED.** The `2%` alternative is not repeated; the speaker states one value with no disclaimer, five weeks later |
+| **Multiplier** | *"some formula deviation **2%**, I don't know, **two standard deviations**… or something like that. **I don't really know because I didn't invent it**"* | *"**two standard deviations**"* — **flat, unhedged, unprompted** | ⭐ **ADVANCED.** The `2%` alternative is not repeated; the speaker states one value with no disclaimer, one week later |
 | **Basis** | *"away from **the market baseline**"* → corrected on a chat prompt to *"based on **the RSI line itself**… **from the RSI line. Thank you.**"* | *"away from **the market base**"* | ⚠️ **REVERTS to the answer V12 RETRACTED** |
 | **Period** | never stated | **never stated** | ❌ unchanged |
 
 **The basis reversion is a genuine Tier-1 contradiction and is filed as `C-021`.** Its shape matters:
 V12's final position was reached **under correction from the chat** and held with the least
-confidence in the lesson; V14's is **unprompted, unhedged, and five weeks later**. ⭐ **And
+confidence in the lesson; V14's is **unprompted, unhedged, and one week later**. ⭐ **And
 `MMM-NOTES` p.45 — Tier 2 — sides with V14**: *"applied to the **market baseline** of the indicator
 instead of price."*
 
