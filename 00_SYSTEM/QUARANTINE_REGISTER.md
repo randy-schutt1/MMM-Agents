@@ -2607,3 +2607,178 @@ Q-017 -- QUARANTINED. All three files. No V16 artifact cites them.
   Check 1 and 2 FIRST; they are exact matches and cost nothing. Quarantine on
   any hit. Only fall through to 4 if a file has changed 1 and 2 as well.
 ```
+
+---
+
+## Q-018 — Lesson 17 (`Bootcamp1 Wk8 051312 Part1`): `NOTES.md`, `RULES.md`, `VISUAL_INDEX.md`
+
+**Filed:** 2026-08-14 by the V17 student session
+**Location:** `01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/per_lesson/17_Bootcamp1_Wk8_051312_Part1_57mins/`
+**Status:** **QUARANTINED ON SIGHT.** No V17 artifact cites any of these three files as evidence.
+Every reference in the V17 set is to **this register entry**, never to the files.
+
+**SHA-256, recorded so the audited objects are pinned:**
+
+| File | Bytes | SHA-256 |
+|---|---|---|
+| `RULES.md` | 3,173 | `da6c56a665293c32f185f9788f86e1ff4f296c57fc6f77ef7da5dc63862c4701` |
+| `NOTES.md` | 1,712 | `80c3db870302bc5be68df9bc79353cf895979559d65d945272e864e46d11ecee` |
+| `VISUAL_INDEX.md` | 1,253 | `ebfe0c6d77fa4cc41aac6ec73c4c53bbe76b1f464422f3429299d5d6128c3b35` |
+
+**This is the SEVENTH CONSECUTIVE lesson carrying the `VISUAL_INDEX.md` pattern** — `Q-012` (V11),
+`Q-013` (V12), `Q-014` (V13), `Q-015` (V14), `Q-016` (V15), `Q-017` (V16), and now V17.
+
+---
+
+## 0. ⭐⭐ WHAT IS NEW HERE: THE PATTERN REVERTS TO A BYTE CLONE, AND `REVIEW_INDEX.md` ITEM 221'S PREDICTION IS **HALF RIGHT**
+
+**Item 221**, raised by the V16 session, reads: *"`Q-017`'s detection note: the generator now
+**paraphrases**, so a byte-`diff` will not flag V17–V21."*
+
+**It was checkable and it has now been checked. The prediction is half right, and the half that is
+wrong is the important half.**
+
+`Q-017` found V16's trio to be a **rewording** of V15's — every content line differed, nothing
+structural did. **V17's trio is NOT a further rewording. It is a BYTE CLONE of V16's**, and the
+`diff` is as small as any in this register's history:
+
+```text
+diff 16_…Wk7_050612_Part2/VISUAL_INDEX.md  17_…Wk8_051312_Part1/VISUAL_INDEX.md
+  -> 8 differing lines = FOUR changed pairs:
+       the .swf filename, and three VIDEO_17 -> VIDEO_18 screenshot names.
+     ZERO content lines differ.
+
+diff 16_…/RULES.md  17_…/RULES.md
+  -> 12 differing lines = SIX changed pairs:
+       the .swf filename, V17-R001/R002 -> V18-R001/R002, and two visual filenames.
+     ZERO content lines differ.  ZERO rule text, condition, trigger, threshold or
+     numerical parameter differs.
+
+diff 16_…/NOTES.md  17_…/NOTES.md
+  -> 2 differing lines = ONE changed pair: the .swf filename.
+     ZERO content lines differ.
+```
+
+⭐ **WHAT THIS MEANS FOR DETECTION, AND IT IS THE OPPOSITE OF WHAT ITEM 221 EXPECTED.** The generator
+did not "move to paraphrasing". **It paraphrased ONCE, at V15→V16, and then propagated that
+paraphrase verbatim.** A byte-`diff` against the immediately preceding lesson **would** have flagged
+V17 in one command. Item 221's warning is still correct in its narrow form — *a `diff` against V15
+would have missed V16* — but its forward-looking claim, that `diff` will not flag V17–V21, is
+**FALSIFIED at the first opportunity**.
+
+⚠ **The right detection rule is therefore neither "byte-diff" nor "paraphrase-aware".** It is the
+**invariant**, which has now survived seven lessons and both mutation modes:
+
+```text
+THREE screenshots.  THREE timestamps: [00:02:00] [00:15:00] [00:30:00].
+THREE subjects: 5/13/50/200/800 EMA template + Asian Box
+                London-open stop hunt out of the Asian Box
+                TDI shark-fin + 5/13 cross confirmation
+TWO rules, at [00:05:00] and [00:18:00], each with a quoted "Instructor Statement".
+```
+
+**Open item 236 carries this forward.**
+
+---
+
+## 1. THE THREE CLAIMED SCREENSHOTS, AGAINST THE REAL FRAMES AT THOSE TIMECODES
+
+**V17 is the first lesson in this register audited against a `§8a`-verified frame set with a
+MEASURED ZERO offset**, so the comparison below is exact to ±5 s rather than approximate.
+
+| Claimed | `VISUAL_INDEX.md` says | **What is actually on screen** |
+|---|---|---|
+| `[00:02:00]` | *"Initial setup slide / chart template with 5, 13, 50, 200, 800 EMAs and Asian Box boundaries."* | **The printed session-schedule slide** — `May 13th – Regular Session … July 1st 2 month break`. No chart. No EMA. No box. (`i = 24`) |
+| `[00:15:00]` | *"Stop Hunt move out of Asian Box during London Open session transition."* | **The `Level 3 week after a correction / Confuse traders` chart**, annotated `HOW` / `LOW`. A week-in-review of GBP/USD. (`i = 180`) |
+| `[00:30:00]` | *"TDI (Traders Dynamic Index) Shark Fin setup and 5/13 EMA cross confirmation."* | **The seven-point `Answer Key` slide under heavy hand annotation.** A TDI sub-window *is* present at the bottom of the embedded chart — see §1a. (`i = 360`) |
+
+### §1a — ⚠⚠ THE THIRD CLAIM PARTLY LANDS, AND THAT IS THE MOST INSTRUCTIVE THING IN THIS ENTRY
+
+`Q-016` recorded V15's surviving image as *"the title card, described as a five-EMA chart"*, i.e. a
+clean miss. **Here, one of the three cloned claims brushes against something real**: the `00:30:00`
+screen does contain a TDI panel, and V17 genuinely does discuss shark fins (`shark` returns **4**).
+
+**This is coincidence, and it is exactly why claim-plausibility is not the test.** The claim was
+written for a different lesson, copied unchanged into two more, and happened to intersect the third.
+**`5/13` — the other half of the same sentence — returns ZERO in V17's 690-marker transcript.**
+
+> **The rule this entry adds to the register: a cloned claim that happens to be true is still a
+> fabricated claim.** The audit must be against **provenance**, never against plausibility.
+
+---
+
+## 2. THE TWO `RULES.md` "EXPLICIT INSTRUCTOR STATEMENTS", MACHINE-CHECKED
+
+Both are presented as **`Source: Explicit`** with a timestamp and a quotation.
+
+| | `V18-R001` | `V18-R002` |
+|---|---|---|
+| Claimed marker | `[00:05:00]` | `[00:18:00]` |
+| Claimed quote | *"Wait for the M15 candle to close before taking the 5/13 EMA cross."* | *"Place your stop loss 10 to 15 pips beyond the High or Low of the Day."* |
+| **What is at that marker** | `[00:05:03]` *"the recordings will be left up during the live event"* — **web-class logistics** | `[00:18:00]` *"One two three four one hour one two three four two hours…"* — **a student counting quarter-hour candles aloud** |
+
+**Machine counts on the committed 690-marker transcript:**
+
+```text
+'5/13'        : 0
+'M15'         : 0
+'800'         : 0
+'Asian Box'   : 0
+'10 to 15'    : 0
+'10-15'       : 0
+'candle close': 0
+'EMA'         : 4   (all "20 EMA" or moving-average glosses; none is 5, 13, 50 or 800)
+```
+
+⚠⚠ **`V18-R001`'s quoted sentence contains two terms that occur ZERO times in the lesson.** It is
+not a paraphrase of anything said; it is text.
+
+⚠⚠ **`V18-R002` is worse than absent — it CONTRADICTS the lesson.** V17 does state a stop-loss
+distance, once, at `[00:53:42]`: *"**15 25's** \| Total above the high below the low"* — **15–25
+pips**, not 10–15, and *"total"* is itself unresolved (`A-123`). **A fabricated file states a
+confident number where the real lesson states a garbled one**, and the fabricated number is wrong.
+
+**The `NUMERICAL PARAMETERS` table compounds it**, asserting `EMA Fast 5 / EMA Fast Confirm 13 /
+EMA Baseline 50 / EMA Major 200 / EMA Macro 800`, all marked **`Explicit`** at `[00:04:00]` — where
+the real lesson is reading out web-class dates — and a `Peak Time Gap 30-90 mins Between M/W Legs`
+marked **`Explicit`** at `[00:22:00]`, where the real lesson is comparing the two pop-quiz entries.
+
+⭐ **And the `CONTRADICTIONS` section reads `- None detected within this video.`** The V17 session
+files **three** (`C-024`, `C-025`, `C-026`), two of them arithmetic errors made on air.
+
+---
+
+## 3. THE SURVIVING IMAGE
+
+`VISUAL_INDEX.md` indexes **three** screenshots. **Only `VIDEO_18_SCREENSHOT_001_00-02-00.jpg`
+exists on disk** — `002` and `003` are absent, confirmed this session.
+
+**`001` was opened and measured:** `1024 × 768`, mean luminance `138.8`, 96% of pixels above 60 —
+**not blank**, unlike `Q-015`'s.
+
+**It is the deck's `MARKET MAKERS BOOT CAMP` diagonal title card**, described by `VISUAL_INDEX.md`
+as *"chart template with 5, 13, 50, 200, 800 EMAs and Asian Box boundaries"*. **The same failure as
+`Q-016` §2: a title card described as a five-EMA chart.**
+
+⭐ **AND IT IS COLOUR-CORRUPTED, WHICH IS NEW.** The deck's title cards are orange and blue
+throughout V17's 694 frames (`V17_00-02-40_…png`, `V17_00-03-55_…png`, `V17_00-30-10_…png`). **This
+JPEG renders the same card in magenta, pink, cyan and violet** — a channel/palette failure in
+whatever produced it. **Nothing in the three quarantined files mentions it**, and a note-writer who
+had opened the image could not have missed it.
+
+⚠ **It is also at the wrong timecode.** At the burned `02:00` the real screen is the **schedule
+slide**; the title card is at `02:40`.
+
+---
+
+## 4. WHAT THIS ENTRY DOES **NOT** CLAIM
+
+* It does not claim the files were produced maliciously, or by whom. **The register records what is
+  in them and what is in the lesson.**
+* It does not claim the underlying `TRANSCRIPT.md` in the same folder is defective. **The transcript
+  is separately verified and passes** — `V17_TRANSCRIPT.md` VERIFICATION §§1–4. The three
+  fabricated files sit beside a good transcript, which is what makes the folder dangerous rather
+  than obviously worthless.
+* It does not depend on the committed transcript being right. The `5/13`, `800`, `Asian Box` and
+  `M15` zeroes are re-checkable against the independent ASR pass (`V17_TRANSCRIPT.md` §5), as
+  `Q-017` §5 did for V16.

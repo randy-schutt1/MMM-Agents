@@ -1,0 +1,103 @@
+PT-045 -- V17's daily wick and three-day swing
+pre-registration: PT-045_the_daily_wick_and_the_three_day_swing.md @ 7eaf4d1
+
+QA GATE [development]: PASSED
+QA GATE [extended]: PASSED
+
+--- W-D / arm A / 2013-01-02 -> 2016-06-30 ---
+    n_days                       896
+    excluded                     12
+    O1_median_wick_frac          0.5424
+    O2_both_wicks_ge_5pips       0.8371
+    O3_shuffled_median           0.5476
+    O3_shuffled_both             0.7377
+    O3_diff_frac                 -0.0053
+    O3_diff_both                 0.0994
+    O3_shuffle_n                 17920
+    verdict_W                    INDETERMINATE
+    n_reversals                  21
+    reversals_dropped            557
+    O4_median_run                1.0
+    O4_p_run_in_2_4              0.2857
+    O5_p_run_ge3_rev             0.0
+    O5_p_run_ge3_uncond          0.2715
+    O5_margin                    -0.2715
+    N3_p_run_ge3_matched         0.0
+    O6_mean_cum_pips_R_to_R2     24.85
+    O6_boot_ci                   [-10.31, 60.69]
+    verdict_S                    CONTRADICTED AS STATED
+    underpowered                 True
+
+--- W-E / arm A / 2017-01-03 -> 2025-12-31 ---
+    n_days                       2174
+    excluded                     189
+    O1_median_wick_frac          0.5422
+    O2_both_wicks_ge_5pips       0.799
+    O3_shuffled_median           0.5481
+    O3_shuffled_both             0.7213
+    O3_diff_frac                 -0.0059
+    O3_diff_both                 0.0777
+    O3_shuffle_n                 43480
+    verdict_W                    INDETERMINATE
+    n_reversals                  76
+    reversals_dropped            1387
+    O4_median_run                1.0
+    O4_p_run_in_2_4              0.1447
+    O5_p_run_ge3_rev             0.0
+    O5_p_run_ge3_uncond          0.2689
+    O5_margin                    -0.2689
+    N3_p_run_ge3_matched         0.0
+    O6_mean_cum_pips_R_to_R2     10.16
+    O6_boot_ci                   [-8.99, 31.22]
+    verdict_S                    CONTRADICTED AS STATED
+    underpowered                 False
+
+--- W-D / arm B / 2013-01-02 -> 2016-06-30 ---
+    n_days                       779
+    excluded                     246
+    O1_median_wick_frac          0.5534
+    O2_both_wicks_ge_5pips       0.8537
+    O3_shuffled_median           0.5445
+    O3_shuffled_both             0.7392
+    O3_diff_frac                 0.0089
+    O3_diff_both                 0.1145
+    O3_shuffle_n                 15580
+    verdict_W                    INDETERMINATE
+    n_reversals                  12
+    reversals_dropped            555
+    O4_median_run                1.0
+    O4_p_run_in_2_4              0.1667
+    O5_p_run_ge3_rev             0.0
+    O5_p_run_ge3_uncond          0.2981
+    O5_margin                    -0.2981
+    N3_p_run_ge3_matched         0.0
+    O6_mean_cum_pips_R_to_R2     -19.55
+    O6_boot_ci                   [-70.79, 37.18]
+    verdict_S                    CONTRADICTED AS STATED
+    underpowered                 True
+
+--- W-E / arm B / 2017-01-03 -> 2025-12-31 ---
+    n_days                       1945
+    excluded                     664
+    O1_median_wick_frac          0.5549
+    O2_both_wicks_ge_5pips       0.8067
+    O3_shuffled_median           0.5556
+    O3_shuffled_both             0.7251
+    O3_diff_frac                 -0.0006
+    O3_diff_both                 0.0816
+    O3_shuffle_n                 38900
+    verdict_W                    INDETERMINATE
+    n_reversals                  48
+    reversals_dropped            1382
+    O4_median_run                1.0
+    O4_p_run_in_2_4              0.1042
+    O5_p_run_ge3_rev             0.0
+    O5_p_run_ge3_uncond          0.2799
+    O5_margin                    -0.2799
+    N3_p_run_ge3_matched         0.0
+    O6_mean_cum_pips_R_to_R2     15.43
+    O6_boot_ci                   [-9.0, 38.27]
+    verdict_S                    CONTRADICTED AS STATED
+    underpowered                 True
+
+wrote ../V17/data/pt045_results.json

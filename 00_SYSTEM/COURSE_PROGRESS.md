@@ -11,6 +11,162 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ```text
 PHASE:               1 — STUDENT  (unblocked; ingestion complete)
 VIDEOS INGESTED:     21
+V17 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
+                     branch video/v17 (worktree MMM-Agents-v17, D-038).
+
+                     ⚠⚠⚠ GATE, DECLARED FIRST AND NOT SOFTENED. V17 WAS OPENED
+                     WITH ITS D-004 GATE CLOSED. The V17 GATE block below read
+                     "CLOSED until V16's R1 returns", and V16's R1 HAD NOT
+                     RETURNED when this session finished -- it is in progress in
+                     a parallel session.
+
+                     (a) The OWNER'S PERMISSION half was already granted and is
+                         NOT single-video-scoped: the 2026-08-14 authorisation
+                         covers "the remainder of the training, V16 onward", and
+                         the owner said "start v17" knowing the pipeline has been
+                         running continuously. No fresh go-ahead was needed and
+                         none was sought.
+                     (b) PERMISSION IS NOT A GATE. D-004 is untouched by it.
+                         V17 DOES NOT SATISFY D-004.
+                     (c) ⚠⚠ V16 was the FIRST lesson built on an unreviewed
+                         predecessor. V17 IS THE SECOND, AND THE QUALIFICATION
+                         COMPOUNDS. V15's R1 HAS returned (REVISE, 0C/0M/6
+                         MINOR/13 NOTE, HIGH, gate opened). V16's HAS NOT.
+                         A reviewer, or any session reaching into V17, should
+                         treat V17's WHOLE ARTIFACT SET AS PROVISIONAL PENDING
+                         V16's R1, and this session does not contest that.
+                     (d) ⭐⭐ THE CHEAPEST THING ANYONE CAN DO FOR THIS PROJECT
+                         RIGHT NOW IS REVIEW V16. One review retires the
+                         compounding; another student pass deepens it.
+                         WE ARE NOW TWO LESSONS DEEP ON UNREVIEWED GROUND.
+                     (e) Item 185's gap audit is NOT discharged by this session.
+
+                     ⭐ FIRST LESSON IN THE CORPUS TO STATE ITS OWN DATE AND WEEK
+                     NUMBER AND PRINT THEM. [00:00:11] "Today's the 13th",
+                     [00:02:36] "Welcome to week eight", and a printed schedule
+                     slide carrying seven dated rows. ⚠ And he qualifies it at
+                     [00:11:18]: "eight weeks? Actually nine because we took an
+                     extra weekend between" -- which bears on A-01's missing
+                     Week 6. Item 238.
+
+                     ⭐⭐ WHY YOUR PIVOTS DON'T MATCH HIS -- C-023 EXPLAINED, AND
+                     DOWNGRADED RATHER THAN CLOSED. [00:08:22]: the daily candle
+                     closes at 5pm dealer time; THE INDICATOR RE-CUTS ITS OWN
+                     24-HOUR WINDOW AT 12-1am "depending on your dealer and what
+                     his GMT offset is" so the levels are fresh for London. Two
+                     objects, not two definitions. ⚠ But it replaces a two-way
+                     fork with a FREE BROKER PARAMETER (A-107) and creates C-024
+                     against V16's own printed "2:00 To 3:00 AM, EST" slide --
+                     the corpus's FIRST CROSS-LESSON CONTRADICTION.
+
+                     ⭐⭐ THE THREE-DAY CYCLE, PRINTED AND NARRATED DAY BY DAY,
+                     with the corpus's first CAUSAL account of why a reversal
+                     must come: the dealer sells into three days of buying,
+                     becomes "heavy net short", and can only book it by
+                     correcting against the retail traders.
+
+                     ⭐⭐ M/W ADVANCES ON TWO INDEPENDENT AXES IN ONE LESSON --
+                     "eight candles or above" (A-010) and "you don't have a W in
+                     price, you have a W in the CLOSING of price" (A-011).
+                     NEITHER CLOSES. The pair now has a series and a floor and
+                     still no shape.
+
+                     ⚠⚠ AND THE HEADLINE CLAIM OF THIS SESSION'S FIRST COMMIT WAS
+                     WRONG. I claimed [00:21:10]'s "G U" was an ASR mishearing of
+                     "G J" on the strength of a GBPJPY chart header and a printed
+                     G/J slide. THE INDEPENDENT ASR PASS RENDERS "GU" TOO. The
+                     transcript is faithful; THE SPEAKER MISNAMED HIS OWN CHART
+                     (C-027). Retracted in four artifacts with the original text
+                     struck and retained. It was caught by a check committed AT
+                     f55c2f3, BEFORE the answer was known. Item 237, and it is
+                     the INVERSE of V16's item 220.
+
+                     ⚠ AND PT-045's FIRST EXECUTION PRODUCED A CLEAN, CONFIDENT,
+                     FOUR-OF-FOUR REFUTATION OF THE THREE-DAY CYCLE THAT WAS
+                     ENTIRELY A WEEKEND. "Consecutive" was read as consecutive
+                     CALENDAR days; FX has no weekend session; every run
+                     truncated. Caught ONLY by a pre-registered control returning
+                     an impossible 0.0. Both readings printed. Item 243.
+
+                     ⭐ HOMEWORK: V17's seven-point printed answer key completes
+                     to TWO OF SEVEN on real data and stops. And the student
+                     flashcard's headline filter "Asian range less than 50pips"
+                     PASSES 85-89% OF ALL DAYS and moves the downstream rate by
+                     1.6 points -- it is not a filter (A-112).
+
+                     ⭐ PT-045: the daily wick's SIZE is indistinguishable from a
+                     shuffled version of the same day; its PRESENCE ON BOTH ENDS
+                     is not (+0.08 to +0.12, four cells of four). More than half
+                     of a GBP/USD daily bar being "wick" is a fact about paths.
+
+                     Q-018 -- and item 221's forward prediction is FALSIFIED at
+                     the first opportunity. PATTERN REVERTS TO A BYTE CLONE: zero
+                     content lines differ across all three files against V16's.
+                     The generator paraphrased ONCE at V15->V16 and propagated it
+                     verbatim. The right detector is the INVARIANT, not diff and
+                     not paraphrase-awareness. Item 236.
+
+                     A-107..A-125 opened (19), A-010/A-011/A-020/A-036/A-084/
+                     A-097/A-100/A-101 amended (8), A-108 CLOSED as a
+                     transcription question only. C-024..C-027 filed (4).
+                     NINETEEN OPENED AGAINST EIGHT ADVANCED IS THE FINDING.
+
+                     ⚠ Item 219's proposed remedy for A-101 was TESTED at
+                     2048x1572 and RETURNS A NEGATIVE RESULT: the charts are
+                     bitmaps embedded in PowerPoint slides, so the limiting
+                     resolution is the pasted picture, not the capture. And 8a
+                     on that second sweep came back -1, NOT 0 -- same script,
+                     same machine, forty minutes apart. Item 240.
+
+                     ⭐ ADDENDUM, AFTER THE WORK WAS COMPLETE: V16's R1 HAS NOW
+                     RETURNED and merged to integration at 0fee48c -- REVISE,
+                     0 CRITICAL / 0 MAJOR / 4 MINOR / 11 NOTE, HIGH confidence,
+                     V17 GATE OPEN under D-024. The D-004 timing defect V16
+                     declared is DISCHARGED. So V17's PROVISIONALITY ON V16 IS
+                     DISCHARGED TOO, and the compounding warned about above is
+                     RETIRED. ⚠ The block above is NOT retracted: it is accurate
+                     as the record of what V17 was OPENED AGAINST, and every V17
+                     artifact was produced under a closed gate. ⚠ V17's OWN
+                     status is unchanged -- still REVIEW REQUIRED, still no R1.
+
+                     ⚠⚠ AND THE D-047 RENUMBERING THIS SESSION ANTICIPATED HAS
+                     HAPPENED. V16's items were renumbered 195-200 -> 216-221 at
+                     4d5dbdf; integration now runs to 235. V17's items 236-208
+                     COLLIDE and become 236-243 on integration, and every V16
+                     item cited inside the V17 set needs +21: 197->218, 198->219,
+                     199->220, 200->221 (188 is a V15 item and is unaffected).
+                     The full mapping is in V17_MASTERY_REPORT.md 0b. NOT applied
+                     on the task branch, per D-038a / D-047 4.
+
+                     ⭐⭐ R1 HAS NOW RETURNED (review/v17, 2026-08-14):
+                     REVISE, 0 CRITICAL / 0 MAJOR / 6 MINOR / 13 NOTE, HIGH
+                     confidence, D-003 SATISFIED. V18 GATE OPEN under D-024.
+                     Items 244-249 are owed before V17 can reach COMPLETE.
+                     ** AND THE GATE BLOCK ABOVE IS WRONG ON THE GRAPH: V16's
+                     R1 merged to integration at 0fee48c 17:16:53, BEFORE this
+                     session's first content commit f55c2f3 17:20:11 and before
+                     all eight of them. The belief was honest -- the worktree
+                     could not see integration -- but V17's D-004 COMPOUNDING
+                     NEVER HAPPENED and the "second consecutive lesson on
+                     unreviewed ground" framing is not true of its committed
+                     work. Item 246; fix it here and in the row above.
+                     WHAT THE REVIEW RE-DERIVED RATHER THAN READ: PT-045 end to
+                     end from its pre-registration before the runner was opened
+                     -- ARM A REPRODUCES TO FOUR DECIMAL PLACES in every cell;
+                     the superseded calendar-consecutive reading RE-EXECUTED,
+                     and it really does return median run 1 and CONTRADICTED AS
+                     STATED in four cells of four; the homework recomputed
+                     (<50pips passes 0.8512 arm A / 0.8893 arm B); five ASR
+                     engines; all 63 quarantined files re-diffed.
+                     ** THE FABRICATION PATTERN IS SOLVED FOR THE WHOLE COURSE:
+                     two content templates, A for lessons 1-15 AND 21, B for
+                     16-20. V18/V19/V20 trios are BYTE CLONES of V17's; V21
+                     reverts. Q-019..Q-022 are answered in advance -- item 254.
+
+                     V18 GATE CLOSED until V17's own R1 returns (D-004) -- the
+                     OWNER's authorisation covers V18 and D-004 does not.
+                     See V17_MASTERY_REPORT.md 0, 0a and 5.
+
 V16 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
                      branch video/v16 (worktree MMM-Agents-v16, D-038).
 
@@ -2358,7 +2514,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V14 | Wk5 P2 | 00:47:48 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** *(superseded, retained: `REVIEW REQUIRED`)* | **R1 REVISE** 0C/0M/5m/9n, HIGH, 2026-08-14 → **R1 fix round** ⚠ **SELF-VERIFIED**, items 172–176 `CLOSED — SELF-VERIFIED AT OWNER DIRECTION`, **NOT** `CLOSED — VERIFIED`; **D-003 NOT satisfied for the fix round, no R2, no independent PASS**; item 186 opened | ⭐ **R1 RETURNED — V15 GATE OPEN under D-024, AND THE OWNER'S HARD STOP STANDS.** Items 172-176 (MINOR) OWED; V14 **NOT COMPLETE**. Rulings: A-056 **NOT CLOSED** (item 178) · A-084 defeater **HOLDS** vs 4 attacks (184) · D3 **legitimate but unnecessary and unverified** (179) · C-021 forwarded to owner · ⭐ A-056 ANSWERED (closure put to reviewer), A-077 advanced (A-094), A-084 NARROWED not closed 2nd consecutive, A-086 advanced + C-021 opened, A-089-A-094 filed, Q-015 filed, PT-042 NOT SUPPORTED  · ⚠ **REMEDIATION 2026-08-14:** all five MINORs closed **SELF-VERIFIED**; ⭐ item **186** opened — the item-174 frame offset is a **dropped step, not a broken tool** (V12 §0 and V13 both document and correct it; `SWF_CAPTURE_RECIPE.md` §8a now mandatory); ⭐ item **176** — a **second, larger, UNEXAMINED** `Wk9→Wk10` four-week gap, so the gap audit's figure is **2 KNOWN + up to ~3 UNKNOWN, not 2**; ⚠⚠ **V15 GATE OPEN ≠ PROCEED — THE OWNER'S HARD STOP STANDS** |
 | V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 197–202) · ⭐ **V16 GATE OPEN under D-024** · ⚠⚠ **the six student-owned columns to the left are STILL `⬜` and that is open item 199 — the narrative block and the V16 GATE section of this same file record a complete student pass. Only the Reviewer and Final Status cells were filled in by R1** |
 | V16 | Wk7 P2 | 00:44:35 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/4m/11n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 222–225) · ⭐ **V17 GATE OPEN under D-024** · ⭐⭐ **the `D-004` deviation V16 declared is DISCHARGED** — V15's R1 returned 0C/0M and opened the gate unconditionally; only V15 item 197 reaches a record V16 amends (`A-095`) and V16's addendum does NOT inherit it · ⭐⭐ **`A-100`'s *"two weeks, 15 days"* CONFIRMED VERBATIM ON A THIRD ENGINE**; `PT-044` RE-DERIVED from its pre-registration and all three verdicts reproduce; **all five `A-106` pips EXACT**; `Q-017`'s paraphrase sub-pattern CONFIRMED · ⚠ **item 222: `A-101` declares the `M1`–`M4` construction unevidenced and V16's own chart frames carry it** (4 midpoint relations to ~1.5 px on 2 frames) — weighed for MAJOR, charged MINOR, **severity put to the owner** · ⚠ item 224: `PT-044`'s `W-D` ran 4 days wide, undeclared, and **that is the sole cause of its one "missed" prediction — run to its pre-registration it scores 5 OF 5** |
-| V17 | Wk8 P1 | 00:57:09 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V17 | Wk8 P1 | 00:57:09 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 244–249) · ⭐ **V18 GATE OPEN under D-024** · ⭐⭐ **the `D-004` gate was ACTUALLY OPEN THE WHOLE TIME** — V16's R1 merged at `0fee48c` **17:16:53**, before V17's first content commit `f55c2f3` **17:20:11**; the addendum's *"returned after this session's last content commit"* is refuted by the graph (item 246) and **the compounding never happened** · ⭐⭐ **`PT-045` RE-DERIVED from its pre-registration before the runner was opened and ARM A REPRODUCES TO FOUR DECIMAL PLACES**; the calendar-consecutive artefact RE-EXECUTED and it really does return a clean 4-of-4 refutation; the homework's `<50 pips` filter recomputed at **0.8512 / 0.8893**; `C-023`, `C-024`, `C-027`, `A-011` all confirmed on a third engine or off the pixels · ⭐⭐ **THE FABRICATION PATTERN IS SOLVED FOR THE WHOLE COURSE — two templates, A for 1–15 and 21, B for 16–20; V18/V19/V20 are BYTE CLONES of V17's (item 254)** · ⚠ item 244: `[00:11:22]` is *"an extra **week in between**"* on THREE engines, not *"weekend"* — **item 238's inference INVERTS and is ANSWERED, not returned** |
 | V18 | Wk8 P2 | 00:46:08 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V19 | Wk9 P1 | 01:07:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V20 | Wk9 P2 | 00:45:49 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -2792,7 +2948,124 @@ Carry into V16, and read this before starting:
       content (an Asian-box chart with five EMAs), whatever the lesson and
       whatever the image behind it. Quarantine V16's trio on sight as Q-017;
       do not spend a session re-deriving what six entries have established.
-V17 GATE:            🔴 **CLOSED until V16's R1 returns (`D-004`).** V16's student
+V18 GATE:            🟢 **OPEN.** ⭐⭐ **V17's R1 RETURNED 2026-08-14** on branch
+                     `review/v17`: **REVISE, 0 CRITICAL / 0 MAJOR / 6 MINOR /
+                     13 NOTE, HIGH confidence, `D-003` satisfied.** Under
+                     **`D-024`** a round carrying zero `CRITICAL` and zero
+                     `MAJOR` **opens the gate for V18 immediately** — the six
+                     minors (items **244–249**) do **not** have to be applied
+                     first. ⚠ **AN OPEN GATE IS NOT A `PASS`: V17 is
+                     `IN REMEDIATION`, not `COMPLETE`.**
+                     ⭐⭐ **AND THE DEBT IS NOW ZERO DEEP.** V15, V16 and V17
+                     have all been independently reviewed and all three returned
+                     **0 CRITICAL / 0 MAJOR**. **A V18 session is the first in
+                     four lessons to open on fully reviewed ground.**
+                     ⭐ The owner's 2026-08-14 authorisation covers V18 and
+                     needs no fresh go-ahead; **`D-004` is now satisfied too.**
+
+                     ⚠⚠ **SUPERSEDED TEXT, RETAINED per `REMEDIATION_PROTOCOL.md`
+                     §2:** 🔴 **CLOSED until V17's R1 returns (`D-004`).**
+                     ⭐ **UPDATED after V16's R1 landed at `0fee48c`** (REVISE,
+                     0C/0M/4 MINOR/11 NOTE, HIGH, **V17 GATE OPEN under `D-024`**).
+                     **V16 is reviewed. V17 is NOT** — its student pass is complete
+                     and submitted as REVIEW REQUIRED on branch `video/v17`.
+                     ⭐ **The debt is no longer two deep: it is one deep**, and the
+                     highest-value action available to this project is now
+                     **reviewing V17**.
+                     `D-003` reserves closure to an independent reviewer.
+                     ⭐ **THE OWNER'S PERMISSION HALF IS ALREADY GRANTED AND DOES
+                     NOT NEED ASKING AGAIN** — the 2026-08-14 authorisation covers
+                     the remainder of the training, V16 onward. **No V18 session
+                     needs a fresh go-ahead.**
+                     ⚠⚠ **BUT PERMISSION IS NOT A GATE.** V16 ran with its gate
+                     closed and V17 ran with its gate closed; **V16's R1 has since
+                     returned and discharged V16's**, but **V17's has not.** A V18
+                     session would still inherit an **unreviewed V17**.
+                     ⭐⭐ **REVIEWING V17 IS NOW THE HIGHEST-VALUE ACTION AVAILABLE
+                     TO THIS PROJECT.** V16's R1 is the evidence for that claim:
+                     it returned **0 CRITICAL / 0 MAJOR**, discharged a declared
+                     `D-004` defect, confirmed `A-100` on a third engine and
+                     re-derived `PT-044` from its pre-registration — **one review
+                     retired a whole qualification.**
+
+Carry into V18, and read this before starting:
+
+  (a) ⚠⚠ **READ `REVIEW_INDEX.md` ITEM 237 BEFORE TRUSTING ANY FRAME-DERIVED
+      CLAIM.** The V17 session's lead finding — that a frame corrected the
+      transcript — was **wrong**, and it was wrong because two channels agreed
+      (a chart header and a slide) with no independent third. **Queue every
+      load-bearing cross-channel inference for the independent ASR pass BEFORE
+      the pass returns, and put the queue in the commit.** That is the only
+      reason V17 caught its own error.
+
+  (b) ⭐ `A-107` IS THE NEW BINDING CONSTRAINT ON PIVOTS, alongside `A-101`. The
+      indicator's recalculation instant is *"around 12, 1 o'clock in the morning
+      **depending on your dealer and what his GMT offset is**"*. **Do NOT code a
+      recalculation time.** V18 is Part 2 of the same night; if it names an
+      offset, a broker, or a server time, that is the single highest-value thing
+      it could contain.
+
+  (c) ⭐ `A-010`/`A-011` MOVED TWICE IN ONE LESSON AND STILL HAVE NO SHAPE TEST.
+      V17 gave *"eight candles or above"* and *"a `W` in the closing of price"*.
+      **Missing: depth, symmetry tolerance, and whether "eight" is the whole
+      formation or one leg.** Any V18 statement of a leg count, a retracement
+      depth or a tolerance closes a record that has been open since `A-010`.
+
+  (d) SPEAKER: TEST IT, DO NOT ASSUME. V18 is `Wk8 P2` — **Part 2 of the SAME
+      recording session**, which is the WEAKER condition (it is V16's situation,
+      not V15's). V17's `CERTAIN` proves nothing about V18. ⭐ Note V17 supplied
+      the self-naming V16 lacked: `[00:56:46]` he reads mail addressed to
+      *"Steve"* and answers as *"I"* in the same breath.
+
+  (e) ⛔ `Q-018`'s DETECTION NOTE IS AN INSTRUCTION. **The generator has now used
+      BOTH mutation modes** — a paraphrase at V15→V16 and a byte clone at
+      V16→V17 — so **neither a `diff` nor a paraphrase-detector is sufficient.**
+      Quarantine on the INVARIANT: three screenshots, timestamps `[00:02:00]` /
+      `[00:15:00]` / `[00:30:00]`, the three fixed subjects, and two quoted
+      "Explicit" rules at `[00:05:00]` / `[00:18:00]`. **Quarantine V18's trio on
+      sight as `Q-019`.** ⚠ And note one of V17's cloned claims **partly landed
+      by coincidence** — audit on provenance, never on plausibility.
+
+  (f) ⚠ **DO NOT SPEND EFFORT ON A HIGH-DPI RE-CAPTURE WITHOUT CHECKING THE IMAGE
+      TYPE FIRST** (item 240). V17 ran item 219's proposed remedy at
+      `2048 × 1572` and it recovered nothing, because the charts are bitmaps
+      embedded in PowerPoint slides. **Check for MT4 window chrome before
+      spending the run.**
+
+  (g) ⚠ `SWF_CAPTURE_RECIPE.md` §8a: **MEASURE IT, EVERY SWEEP, EVEN A SHORT
+      ONE.** V17 ran two sweeps forty minutes apart on the same machine with the
+      same script and measured **0** and **−1**. Two zeroes in a row (V16, V17)
+      do not license assuming a third.
+
+  (h) ⚠ **`PT-045` §3a's word *"consecutive"* is a trap in ANY multi-day test on
+      FX data.** Calendar-consecutive excludes every weekend and truncates every
+      run. **Pre-register "consecutive among present session days" explicitly**,
+      and keep a control that would return an impossible value if you got it
+      wrong — that is the only thing that caught it (item 243).
+
+  (i) ⚠ **`A-084` HAS NOW SURVIVED 3,908 FRAMES ACROSS SIX LESSONS WITH ZERO
+      INDICATOR PROPERTIES DIALOGS**, and V17 raised its cost: the lesson states
+      a quantified, falsifiable TDI claim (*"prices gonna reverse at least 50
+      pips"*) that cannot be tested without the band levels. **If V18 shows a
+      properties dialog for one frame, capture it.**
+
+  (j) ⚠ Item **239** reaches past its own test: **`D-031` arm B excludes ~25% of
+      days to arm A's 1–8%.** Any V18 backtest reporting *"both arms agree"* is
+      reporting agreement between two different samples, and should say so.
+
+V17 GATE:            ⚠⚠ **SUPERSEDED 2026-08-14 BY THE V17 SESSION ITSELF. Retained
+                     per `REMEDIATION_PROTOCOL.md` §2 because it is the record of
+                     what V17 was opened against — and it was opened against a
+                     CLOSED gate, exactly as this block said.** V16's R1 had still
+                     not returned when V17 finished. The owner's authorisation
+                     covered the work; `D-004` did not. **All ten carry-forwards
+                     below were addressed and the dispositions are in
+                     `V17_MASTERY_REPORT.md` §4 and §6 — including (a), whose
+                     proposed re-capture was RUN and RETURNS A NEGATIVE RESULT
+                     (item 240), and (e), whose `diff`-will-not-flag prediction is
+                     FALSIFIED (item 236).**
+
+                     🔴 **ORIGINAL TEXT: CLOSED until V16's R1 returns (`D-004`).** V16's student
                      pass is complete and is submitted as REVIEW REQUIRED on
                      branch `video/v16`. `D-003` reserves closure to an
                      independent reviewer; V16 reaches COMPLETE only at a

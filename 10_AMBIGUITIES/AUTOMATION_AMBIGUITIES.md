@@ -1274,6 +1274,16 @@ Foundational, and compounded: if this is the same object as the anchor point (A-
 
 ---
 
+### ⭐ V17 ADDENDUM (2026-08-14) — A MINIMUM WIDTH ARRIVES: **EIGHT CANDLES**
+
+V17 `[00:34:55]`–`[00:35:04]`, answering a student: *"how many tails that take to form a good M and W
+on a on a 15-minute chart"* → *"**eight**"* → *"**Candles or above is a good solid M or W**"*.
+
+⭐ **The first quantitative constraint on `M`/`W` in seventeen lessons.** ⚠ **`A-010` does NOT
+close:** no depth, no symmetry tolerance, no statement of whether *"eight"* counts the whole
+formation or one leg, said once, never printed, and delivered as a two-word answer from the floor —
+the same production mode that produced `C-025`. **ADVANCED, NOT CLOSED.**
+
 ## A-011 — "M and W formation"
 
 ### Course Meaning
@@ -1356,6 +1366,17 @@ Foundational. It is the shape of the anchor point, the thing the survey treats a
 | Interpretation | `03_LESSON_NOTES/V01_INTERPRETATION.md` I7, §4 |
 
 ---
+
+### ⭐ V17 ADDENDUM (2026-08-14) — THE SERIES IS NAMED: **THE CLOSES**
+
+V17 `[00:28:09]`, glossing answer-key point 6: *"You don't have a W in price **you have a W in the
+closing of price**. It's pretty good"*.
+
+⭐ **The first statement in the corpus of what an `M`/`W` is measured ON.** It also explains why
+these shapes are argued about in candles and obvious in the TDI, which is a line of closes.
+⚠ **`A-011` does NOT close:** a series is not a test. Stated once, in passing. **ADVANCED, NOT
+CLOSED**, and read with `A-010`'s V17 addendum the pair now has a *series* and a *floor* and still
+no *shape*.
 
 ## A-012 — "midweek reversal"
 
@@ -2479,6 +2500,38 @@ survive its closure and are **not** answered by the mapping:
 
 ---
 
+### ⭐⭐ V17 ADDENDUM (2026-08-14) — `Mayo` AND `Blue Berry` ARE **PRINTED**, TWICE, AND THE PERIODS STILL ARE NOT
+
+Two independent printed instances in one lesson:
+
+* `V17_00-51-00_trend-reset-mayo-blue-berry-slide.png` — *"This will usually appear on a chart
+  landmark **(Mayo ,Blue Berry)**"* — the instructor's own slide, `TIER 1`.
+* `V17_00-14-15_student-flash-card-…png` — *"**Pins to the Blueberry & Mayo**"* — a student's card,
+  `TIER 2` (`A-112`).
+
+And `ketchup` / `mustard` are printed for the first time on
+`V17_00-20-30_pop-quiz-answers-gj-ketchup-and-mustard-slide.png`: *"a close above the **ketchup and
+mustard**"*.
+
+⭐ **`A-020`'s "these are nicknames, not ASR noise" half is now beyond dispute — it is on slides.**
+⚠ **The MAPPING half is untouched.** V17 prints no period for any of the four. V09's
+`blueberry = 800 on the 15-minute` remains the only mapping in the corpus, and V17 adds only that
+`Mayo` and `Blue Berry` are *"chart landmark[s]"* where *"there are retail order build ups"*.
+**ADVANCED, NOT CLOSED.**
+
+### ⭐ A THIRD V17 INSTANCE, RECOVERED BY THE SECOND ASR ENGINE (2026-08-14) — AND IT IS SPOKEN
+
+`V17_TRANSCRIPT.md` §5c: `[00:26:10]`'s garbled *"Right past the man using the dragon and
+backwards"* is recovered by `large-v3-turbo` as:
+
+> *"grabbing their orders right past **the mayonnaise** and then dragging them backwards"*
+
+⭐ **So V17 carries `Mayo` three times — twice printed (the `00:51:00` slide's `(Mayo ,Blue Berry)`
+and the `00:14:15` flashcard's `Pins to the Blueberry & Mayo`) and once spoken.** The V17 addendum
+above recorded the printed pair; **this adds the audio leg.**
+
+⚠ **The mapping to periods is still not supplied by V17 on any channel.**
+
 ## A-021 — the letter sequence for "the cycle"
 
 ### Course Meaning
@@ -3342,6 +3395,12 @@ V03's transcript and its 24 screenshots bear on seven earlier records. One recor
 | **A-019** — session times | No session-times slide appears anywhere in V03 (see `CONTRADICTIONS.md` C-004). Spoken only: `[00:55:05]` *"right before the US session at 9.30"*, `[01:03:21]` *"3 30 in the morning inside the shadow box"* — neither carries a timezone | **No progress.** Two more untimezoned references added to the pile. |
 
 ---
+
+### V17 ADDENDUM (2026-08-14) — THE LEVEL VOCABULARY IS EXTENDED TO A **WEEK**, WITHOUT DEFINITION
+
+V17 prints and speaks *"a **level three week**"* (`[00:14:42]`, `V17_00-14-40_…png`). See `A-118`.
+`A-036` is UNCHANGED; the extension is filed separately so that an intraday definition is not
+retro-fitted to a weekly usage.
 
 ## A-037 — halving the Asian range ("27 divided by 2 … you have a 13.5 trading range")
 
@@ -7295,6 +7354,18 @@ immediately below.
 
 ---
 
+### ⚠⚠ V17 ADDENDUM (2026-08-14) — STILL BLOCKED, AND V17 RAISES THE COST OF THE BLOCK
+
+**Zero indicator properties dialogs in V17's 694 sweep frames. Running total across V12–V17:
+3,908 frames, zero dialogs.** This session did **not** hunt for one.
+
+⚠ **And V17 makes the block more expensive than it was.** `[00:38:29]`–`[00:38:41]` states a
+**quantified, falsifiable** claim — *"You get a sharp fin above these lines or below these lines on a
+four hour chart \| You get blood in the water \| prices gonna reverse \| **at least 50 pips**"* —
+where *"these lines"* are the TDI's own bands. **The corpus now contains a testable prediction that
+cannot be tested because `A-084` is open.** That is a different and worse situation from a blocked
+definition with nothing riding on it.
+
 ## A-085 — *"The trade signal line polls the one-hour chart"* — a mechanism with no construction
 
 **Raised by:** V12 · `[00:11:49]`, restated `[00:11:59]`, relied on at `[00:12:18]`
@@ -8470,6 +8541,24 @@ A-097 -- STILL OPEN. "33 trade" CORROBORATED AS A REAL TERM (2 uses, V16),
 
 ---
 
+### ⭐ V17 ADDENDUM (2026-08-14) — THE CLEAREST STATEMENT YET, AND STILL NOT A TEST
+
+V17 `[00:47:34]`–`[00:48:31]`:
+
+> *"you'll even get on the 30 the **333 trade** \| The third leg of the third leg will show **three
+> candles straight up** acceleration \| That acceleration at 333 trade where he hits the last three
+> bars \| He gives you **three vector candles at the end of a nice run** \| Is **the end of the
+> dealer cycle most of the time** and that's where we take the opposite"*
+
+⭐ **Position, count and function are all now stated**: end of the third leg, three candles, read as
+**terminal** rather than confirming. The printed Day-3 slide corroborates the surrounding claim
+(`Market Makers Show Acceleration & Separation From MAs A Certain Trap`).
+
+⚠ **`A-097` does NOT close:** *"vector candle"* is undefined in this corpus, *"straight up"* has no
+size or body-ratio test, *"the third leg of the third leg"* presupposes a leg count that
+`A-036`/`A-118` leave open, and the reliability claim is *"most of the time"*. **ADVANCED, NOT
+CLOSED.**
+
 ## A-098 — The *"five for five"* result: the corpus's first stated student outcome, and it is an anecdote
 
 **Raised by:** V15 · `[00:39:31]`, `[00:40:03]`
@@ -8674,6 +8763,13 @@ A-100 -- STILL OPEN. Required research is now NARROWER:
 
 ---
 
+### V17 ADDENDUM (2026-08-14) — AN ADR-COMPLETION CONDITION EXISTS IN THE CORPUS, ON TIER 2, AND IT IS `(close enough)`
+
+`A-100` has wanted a statement of how much ADR must be consumed before the reversal is expected.
+**V17 contains the corpus's only answer and it is on a student's flashcard** —
+`ADR nearly filled(close enough)` (`V17_00-14-15_…png`, `Long Trade` item 4). Filed separately as
+`A-113` so that `A-100` is not credited with a `TIER 2` non-number. **`A-100` is UNCHANGED.**
+
 ## A-101 — ⭐⭐ `M1`–`M4`: V16 PRINTS THEIR ORDER AND NEVER STATES THEIR CONSTRUCTION — the diagram that looks like it encodes the formula is a schematic, but the CHART FRAMES DO carry the construction
 
 **Raised by:** V16 · `V16_00-01-40_pivot-grid-diagram-100-pips-annotated.png`, `[00:17:53]`–`[00:18:19]`
@@ -8861,6 +8957,19 @@ A-101 ADDENDUM -- "M5": SPOKEN TWICE, CONFIRMED BY TWO ENGINES, ABSENT FROM THE
 
 ---
 
+### V17 ADDENDUM (2026-08-14) — THE `M`-LEVEL LABELS APPEAR ON LIVE CHARTS, AND THE CONSTRUCTION STILL DOES NOT
+
+⭐ V17 is the first lesson to show the pivot indicator's labels **on real MT4 charts** rather than on
+a schematic: `R1`, `M3`, `M2` and `Pivot` are legible on
+`V17_00-20-05_pop-quiz-trade-one-gbpusd-m15-chart.png`, `V17_00-20-25_…png` and
+`V17_00-17-00_…png`, alongside an `R = 35.6` Asian-range readout. **The nine-level grid V16 printed
+is confirmed as a real indicator output, not a teaching diagram.**
+
+⚠ **`A-101` is UNCHANGED.** Seeing labels on a chart does not supply their arithmetic, and the price
+axis on these frames is not legible at `1024 × 786` — the same limitation V16 raised as open item
+198, now on three further frames. **`A-101` stays OPEN**, and `A-107` (the recalculation window) is
+now a second independent blocker on computing the same grid.
+
 ## A-102 — *"line up"* / *"lay in there"* / *"slightly below"*: the confluence rule's TOLERANCE is never stated
 
 **Raised by:** V16 · `[00:27:36]`–`[00:28:06]`, `[00:28:25]`–`[00:28:48]`
@@ -9031,4 +9140,522 @@ A-106 -- OPEN. DO NOT CODE a Monday pivot basis.
   two to escalate should escalate THIS one.
   It also compounds: A-101 means the M-levels are uncomputable anyway, so the
   Monday fork is currently invisible -- it becomes binding the moment A-101 closes.
+```
+
+---
+
+## A-107 — ⭐⭐ The pivot indicator's recalculation window is *"around 12, 1 o'clock in the morning, DEPENDING ON YOUR DEALER AND WHAT HIS GMT OFFSET IS"* — a one-hour band whose position is an unstated broker parameter
+
+**Raised by:** V17 · `[00:08:22]`–`[00:08:37]`
+**Speaker:** course author · **Tier 1, unhedged, answering *"the biggest question"* of the week**
+
+> *"Our indicators designed to take the pivots \| Around 12 1 o'clock in the morning **depending on
+> your dealer and what his GMT offset is** and recalculate the 24-hour period \| So the pivots are
+> freshly put in place right before the London open"*
+
+**Why this is the most consequential ambiguity V17 opens.** It is not a missing constant — it is a
+statement that **there is no constant**. The recalculation instant is a function of a broker
+setting the corpus never names, and it is the instant that fixes every level the method trades
+against. Two students on two brokers running the same indicator get **different pivots on the same
+day**, and V17 says so approvingly: that is the *answer* to why their pivots do not match his.
+
+**What is missing:** which offset his own dealer ran; whether *"12, 1 o'clock"* is a range, a
+tolerance or a hedge; whether the indicator reads the platform's server time or a configured value.
+
+### Current Status
+
+```text
+A-107 -- OPEN. DO NOT CODE a pivot recalculation instant.
+  Compounds with A-101 (M1-M4 construction unknown) and A-106 (the Monday basis
+  fork). All three must close before a pivot grid can be computed at all.
+  It is ALSO the resolution of C-023 -- see that record. Explaining a
+  contradiction by naming a free parameter is not the same as closing it.
+```
+
+---
+
+## A-108 — *"a W formation on the one-hour chart, DOUBLE-REARER"* — the word carrying the pivot-shift rule's trigger is garbled
+
+**Raised by:** V17 · `[00:09:13]` · **queued for ASR arbitration before the answer was known**
+(`V17_TRANSCRIPT.md` §5 candidate 5)
+
+Almost certainly *"double bottom"*. It matters because it is condition 4 of the pivot-zone shift
+rule (`A-109`) and is the only thing in that rule that names a shape.
+
+### Current Status
+
+```text
+A-108 -- OPEN pending the independent ASR pass. LOW stakes on its own,
+  MEDIUM as an input to A-109.
+```
+
+---
+
+### ⭐⭐ RESOLVED SAME SESSION (2026-08-14) — IT IS **`DOUBLE RAILROAD TRACKS`**, NOT `DOUBLE BOTTOM`
+
+The independent `large-v3-turbo` pass reads:
+
+> *"You've got a **W formation on the one-hour chart. Double railroad tracks to the low of the
+> week.**"*
+
+⚠ **This record's own guess was `double bottom`, and it was wrong.** `railroad` returns **zero** in
+the committed transcript; the term is recovered only by the second engine, and it **is** existing
+corpus vocabulary, which is what makes it credible.
+
+⭐ **Consequence for `A-109`:** condition 4 of the pivot-zone shift rule is not *"a W"* alone — it is
+*"a W **with double railroad tracks** to the low of the week"*, which adds a second undefined shape
+rather than removing one. **`A-109` does not improve.**
+
+⭐ **Consequence for `A-114`:** the flashcard's unexplained `RR` now has a candidate expansion the
+same lesson independently supplies. See that record.
+
+```text
+A-108 -- CLOSED as a transcription question, 2026-08-14, by independent ASR.
+  The TERM is recovered; "double railroad tracks" is itself undefined in this
+  corpus and that is A-109's problem, not this record's.
+```
+
+## A-109 — ⭐ The pivot-zone shift rule has five antecedents and three of them are undefined — so V16's *"most completely specified rule"* acquires an uncodeable override
+
+**Raised by:** V17 · `[00:08:49]`–`[00:09:35]`
+**Speaker:** course author · Tier 1, stated once, never repeated, never printed
+
+V16's candle-colour rule (red daily candle ⇒ `M1`/`M3`; green ⇒ `M2`/`M4`) was graded by the V16
+session as *"the most completely specified rule in the lesson, and mechanically checkable"*.
+**V17 attaches this override to it:**
+
+| | Condition | Definable today? |
+|---|---|---|
+| 1 | yesterday's candle **red** | ✅ yes |
+| 2 | **three days of drop** | ❌ no tolerance, no definition of "drop" |
+| 3 | **midweek or coming to the end of the week** | ❌ no day list |
+| 4 | a **`W` on the 1-hour chart** *(`A-108`)* | ❌ `A-010`/`A-011` |
+| 5 | that `W` **tracks to the low of the week** | ❌ no distance or tolerance |
+| ⇒ | use **`M2`/`M4`** tomorrow instead | — |
+
+⚠ **The consequence for the project is not that a new rule is unusable. It is that a rule already
+recorded as usable is not.** A machine implementing V16's colour rule alone would be implementing
+something the course itself overrides under conditions it never specifies.
+
+### Current Status
+
+```text
+A-109 -- OPEN. V16's colour rule is DOWNGRADED from "mechanically checkable" to
+  "mechanically checkable ONLY IF this override never fires", and nothing in the
+  corpus says when it fires.
+```
+
+---
+
+## A-110 — The `OHLC`↔session mapping is stated as an identity and is almost certainly an analogy — and the corpus contains nothing that decides which
+
+**Raised by:** V17 · `[00:09:39]`–`[00:10:27]`
+
+> *"Support and resistance is the high below the Asian range **which is where it opens** \| The
+> consolidation at the end of New York going into Asia, **which is where it closes**"*
+
+Read as **framing**, this is the best idea in V17 and explains why pivots work at all on this
+methodology. Read as **arithmetic** — `O = Asian range boundary` — it is a rule, and it is wrong
+in the obvious way (an open is an instant, a range is an interval).
+
+⚠ **He never writes an equation and never gives a number.** The V17 session graded it `TIER 3 —
+FRAMING` deliberately, choosing the weaker reading.
+
+### Current Status
+
+```text
+A-110 -- OPEN. DO NOT convert into arithmetic. If a later lesson supplies an
+  equation, this record is where the earlier, weaker reading is on file.
+```
+
+---
+
+## A-111 — `Big Board` is finally defined, and the definition does not identify the window
+
+**Raised by:** V17 · `[00:38:48]`–`[00:39:16]`
+
+> *"the big board is all price action with the high and low"* … *"F10 \| 12 F10 thank you guys"*
+
+⭐ **First definition in seventeen lessons**, and it turns out to be an **MT4 platform window**
+(`F10` opens the Market Watch / popup prices window; a student supplies the key, and the ASR renders
+his own attempt as *"it's like control left. I can't remember"*).
+
+⚠ **What it does not say:** which window exactly, what *"the high and low"* columns are, over what
+period they reset, or how the *"drill"* (`[00:07:26]`–`[00:07:41]`) is scored. The drill is assigned
+five separate times in this file and never specified.
+
+### Current Status
+
+```text
+A-111 -- OPEN, but NARROWED from "undefined term" to "unspecified platform
+  window". Not automation-blocking: nothing in the method computes from it.
+```
+
+---
+
+## A-112 — ⚠⚠ THE MOST CODEABLE-LOOKING ARTIFACT IN V17 IS A STUDENT'S, AND THE INSTRUCTOR ENDORSES ITS LABELLING, NOT ITS CRITERIA
+
+**Raised by:** V17 · `[00:14:03]`–`[00:14:25]`, `V17_00-14-15_…png`
+**Tier:** ⚠ **2 — third-party artifact shown approvingly**
+
+The flashcard prints an eleven-line entry checklist (`V17_SOURCE_NOTES.md` §6) including an
+**Asian-range size filter** (`< 50 pips`) and an **ADR-fill condition** that appear nowhere else in
+the corpus.
+
+**The endorsement, verbatim:** *"I just like the way it was labeled and he did a really nice job"*
+and *"if yours don't look like this Take a picture make them look like this."* **He praises the
+form.** He does not walk the criteria, does not correct them, and does not say they are right.
+
+⭐ **One line IS independently corroborated:** `Stophunt 25-50pips above Asian range` matches
+`[00:28:59]`'s *"25 to 50 pips as his normal stop hunt"*, fifteen minutes later, in his own voice.
+
+### Current Status
+
+```text
+A-112 -- OPEN, and it exists to STOP a later session citing this card as a course
+  rule. Only the 25-50 stop-hunt line has independent Tier 1 support.
+  The `< 50 pips` Asian-range FILTER in particular has NO other support anywhere.
+```
+
+---
+
+## A-113 — *"ADR nearly filled (close enough)"* — the corpus's only statement of how much ADR must be consumed, and it is not a number
+
+**Raised by:** V17 · `V17_00-14-15_…png`, `Long Trade` item 4 · **Tier 2, see `A-112`**
+
+`A-100` has wanted an ADR-completion threshold since V15. **This is the only thing in seventeen
+lessons that answers it, it is on a student's card, and the answer is the parenthesis
+`(close enough)`.**
+
+### Current Status
+
+```text
+A-113 -- OPEN. Records that the corpus's answer to "how full is full?" is
+  literally "close enough", on Tier 2 evidence. Feeds A-100.
+```
+
+---
+
+## A-114 — `RR on 2nd leg of M pattern` — `RR` is undefined and unexpanded
+
+**Raised by:** V17 · `V17_00-14-15_…png`, `Short Trade` item 4
+
+Not expanded on the card, not spoken anywhere in 690 markers, not in
+`EXTERNAL_VOCABULARY_REFERENCE.md`. Candidates the V17 session considered and **did not choose
+between**: *risk/reward*, *railroad tracks* (a two-candle reversal pattern; `railroad` returns
+**0** in this transcript but is corpus vocabulary elsewhere), or a student's private shorthand.
+
+### Current Status
+
+```text
+A-114 -- OPEN. DO NOT GUESS. Tier 2 anyway (A-112).
+```
+
+---
+
+### ⭐ NARROWED SAME SESSION (2026-08-14) — `RAILROAD` IS NOW THE LEADING CANDIDATE, AND IT IS STILL NOT PROVEN
+
+`A-108`'s arbitration recovered *"**double railroad tracks** to the low of the week"* from
+`[00:09:13]` — **the same lesson, in the instructor's own voice, using `railroad tracks` as a
+pattern name.** That makes `RR` = *railroad* substantially more likely than it was when this record
+was opened.
+
+⚠ **NOT CLOSED, for three reasons stated so a later session does not close it on this note alone:**
+
+1. The card is a **student's** (`A-112`), and the two usages are 5 minutes apart in **different
+   mouths**.
+2. *Risk/reward* remains a live reading — `RR on 2nd leg of M pattern` parses naturally either way.
+3. **The card never expands it**, and the instructor never reads that line aloud.
+
+```text
+A-114 -- OPEN, NARROWED. Leading candidate: railroad (tracks). DO NOT CODE.
+```
+
+## A-115 — Two entry DISQUALIFIERS are stated and neither has a threshold: a *"blown out"* bar, and an entry *"45 pips off the low of the day"*
+
+**Raised by:** V17 · `[00:22:23]`, `[00:22:45]`
+
+> *"this bar is not an entry. **It's blown out. It's too big**"*
+> *"the first confirmed entry comes up here too late… **45 pips off the low of the day too late
+> scratch ain't no trade**"*
+
+⭐ **These are the corpus's first explicit NON-entry conditions** — everything prior has specified
+when to enter, never when to refuse. **Both are stated about one chart, in narration.**
+
+⚠ *"Too big"* relative to what — the ATR, the recent bars, the stop? And is **45 pips** the
+threshold, or a description of this instance?
+
+### Current Status
+
+```text
+A-115 -- OPEN. Recorded because a NON-entry rule is worth more to an automation
+  than another entry rule, and these are the only two in the corpus.
+```
+
+---
+
+## A-116 — The printed answer key anchors the peak formation to *"Yesterday"*; the audio anchors it to *"the low of the week"*; and point 3 treats `Y-LOD` as a separate object
+
+**Raised by:** V17 · `V17_00-24-45_…png` point 1 vs `[00:24:46]`–`[00:24:48]`
+
+| Source | Anchor |
+|---|---|
+| Printed key, point 1 | `Visible Trap Yesterday (PFL) LOW` |
+| Audio, same point | *"peak formation… is a **miss peak formation low in the low of the week**"* |
+| Printed key, point 3 | `Dealer is Trading 25 to 75 pips off **Y-LOD**` |
+
+If the peak-formation low **is** yesterday's low, point 3 is measuring off the peak formation and
+`25–75` is the peak-formation band. If it is the **week's** low, points 1 and 3 name two different
+levels and the checklist has two anchors. **On this one chart they may coincide; the rule cannot be
+read off one chart.**
+
+### Current Status
+
+```text
+A-116 -- OPEN. Blocks mechanical use of the seven-point key, which is otherwise
+  the most complete printed setup specification in the corpus.
+  Related: A-117 (a THIRD anchor for the same pip band).
+```
+
+---
+
+## A-117 — ⚠ The `25–75 pip` band is applied to THREE different reference points inside one lesson
+
+**Raised by:** V17 · `[00:10:54]`, `[00:26:30]` + printed key point 3, `[00:55:20]`
+
+| Marker | Band | Measured from |
+|---|---|---|
+| `[00:28:59]` | **25–50** | the **Asian range** boundary — the stop hunt |
+| `[00:10:54]`, `[00:26:30]`, key point 3 | **25–75** | **yesterday's** high/low |
+| `[00:55:20]` | **25–75** | *"that number"* — **the peak-formation level** |
+
+⭐ **The first two are a genuine advance**: the corpus had been carrying one figure where the lesson
+uses two, for two anchors, and V17 uses both in the same paragraph. ⚠ **The third undoes some of
+it.** Unless the peak formation, yesterday's extreme and the stop-hunt origin coincide — which is
+`A-116` — three anchors share one band and the band cannot be applied.
+
+### Current Status
+
+```text
+A-117 -- OPEN. The 25-50 (Asian range) vs 25-75 (yesterday) split is NEW and
+  should be preserved. The third anchor is what blocks it.
+```
+
+---
+
+## A-118 — *"a level three week"* — the level vocabulary is applied to a WEEK, and the corpus defines it only intraday
+
+**Raised by:** V17 · `[00:14:42]`, `V17_00-14-40_…png` (printed: `Level 3 week after a correction`)
+
+`level one` / `level two` / `level three` are intraday consolidation counts in this corpus
+(`A-036`). V17 applies the same word to a **week** — printed on the slide and spoken — and never
+says whether that means three levels completed within the week, a severity grade, or a week that
+sits at level three of a larger cycle.
+
+### Current Status
+
+```text
+A-118 -- OPEN. Also note the slide's gloss -- "after a correction / Confuse
+  traders" -- describes an INTENT, not a measurement.
+```
+
+---
+
+## A-119 — The same chart image is called *"pound dollar"* at `14:50` and *"the four-hour chart on GU"* at `31:39`, and the frame carries no legible symbol or period
+
+**Raised by:** V17 · `[00:14:50]` vs `[00:31:39]`; `V17_00-14-40_…png` and `V17_00-35-00_…png`
+
+The two frames are the same chart image (the second under hand annotation). **Unlike the pop-quiz
+charts, this one has no MT4 header** — the region where `GBPUSD,M15` appears on frames 14 and 15 is
+blank grey here. **The timeframe rests on one spoken sentence.**
+
+⚠ **Both statements agree on the instrument** (pound dollar = GU). They differ on whether the
+lesson's entire week-in-review was conducted on a 4-hour or a 15-minute chart, which changes what
+*"level three week"* (`A-118`) counts.
+
+### Current Status
+
+```text
+A-119 -- OPEN. NOT recoverable from the frames -- this is a case where looking
+  harder does not help, and that is worth recording alongside the three cases
+  where looking did help (04_SCREENSHOTS/V17/INDEX.md §4).
+```
+
+---
+
+## A-120 — ⭐ The corpus gets its first CYCLE-START test, and it is the word *"aggressively"*
+
+**Raised by:** V17 · `[00:40:39]`–`[00:40:46]`
+
+> *"Look to take positions when the dealer extends the high or low coming out of the Asian range
+> **aggressively** \| **He is setting the trend for the day**"*
+
+⭐ `V16_MASTERY_REPORT.md` §4 listed *"no cycle-start test"* among what V16 does not supply.
+**V17 supplies one.** It is the only statement in the corpus of how to know the cycle has begun
+rather than how to recognise it afterwards.
+
+⚠ **And its entire discriminating content is an adverb.** No pip distance, no time limit, no
+comparison base.
+
+### Current Status
+
+```text
+A-120 -- OPEN. ADVANCE over "nothing", which is what the corpus had. Not codeable.
+```
+
+---
+
+## A-121 — The trend cycle's length is given as 3 days, 4 days and 2.5–3 days within twenty seconds — and he flags the instability himself
+
+**Raised by:** V17 · `[00:42:04]`–`[00:42:39]`, plus the printed `3 Day Cycle` slide
+
+> `[00:42:04]` *"The trend is generally set up as a three-day cycle **as soon as I say that it goes
+> six days right?**"*
+> `[00:42:14]` *"after the midweek reversal the reversal comes on Tuesday you'll probably have a
+> **four-day** trend Until Friday"*
+> `[00:42:25]` *"Once the trend is set there'll be a unidirectional swing for **two and a half to
+> three days**"*
+
+⚠ **This is NOT filed as a contradiction.** He is describing a distribution and says so in the same
+breath (*"as soon as I say that it goes six days"*). **It is filed as an ambiguity because a
+distribution with no bounds and no central tendency cannot be coded**, and because the printed
+slide states the flat *"3 Day Cycle"* without the hedge.
+
+### Current Status
+
+```text
+A-121 -- OPEN. The printed slide is MORE confident than the speaker. Where the
+  two differ, this record says the speaker is the better evidence.
+```
+
+---
+
+## A-122 — ⚠⚠ A trend RESET and a trend REVERSAL are the same shape, and the slide that distinguishes them concedes it cannot be decided in real time
+
+**Raised by:** V17 · `V17_00-51-00_…png`, `[00:50:58]`–`[00:52:40]`
+
+The distinction is real and stated: a reset **books profit without changing direction**, re-anchors
+the peak formation, and buys `3 More Days`. A reversal changes direction.
+
+**And the same slide removes every way to tell them apart at the time:**
+
+> `However, If No One Falls For It, He May Reverse After Only One More Level Of Rise/Fall`
+> `4 Or 5 Levels Might Be Identified…….That Is Why We Use A Stop Loss!!!!!`
+
+The first makes the outcome depend on **other traders' behaviour**, which is unobservable. The
+second removes the **level count** as a discriminator.
+
+⭐ **The slide's own resolution is risk control, not a rule** — and the V17 session records that as
+the most honest sentence in the lesson rather than as a defect.
+
+### Current Status
+
+```text
+A-122 -- OPEN, and it may be UNCLOSEABLE by construction. A reviewer should
+  consider whether this record should be re-classed as a documented limit of the
+  method rather than an ambiguity awaiting an answer. That is an owner call.
+```
+
+---
+
+## A-123 — The corpus's only spoken stop-loss DISTANCE is the five-word fragment *"15 25's total above the high below the low"*
+
+**Raised by:** V17 · `[00:53:42]`–`[00:53:45]` · **queued for ASR arbitration**
+(`V17_TRANSCRIPT.md` §5 candidate 3)
+
+> *"**15 25's** \| Total above the high below the low if you grab a good entry \| You're gonna be
+> good"*
+
+Read as **15–25 pips beyond the high/low**. ⚠ **`total` is not resolved:** 15–25 per side, or 15–25
+summed across both? The two readings differ by a factor of two on the only risk parameter the
+corpus states.
+
+⚠ **And it sits against `[00:21:39]`'s narrated *"about 1819 pips"*** — 18–19 pips on the actual
+`G/J` trade, which is inside 15–25 and is therefore consistent, but is a narration and not a rule.
+
+### Current Status
+
+```text
+A-123 -- OPEN. This is the single highest-value number V17 could supply and it
+  arrives garbled. If the second ASR pass recovers it cleanly, this record
+  NARROWS; if both engines stutter, it stays as evidence that the corpus states
+  no usable stop.
+  See also A-125 -- a real S/L is legible on a broker statement in this lesson,
+  and it is Tier 3 and must not be promoted.
+```
+
+---
+
+### ⭐⭐ ARBITRATED SAME SESSION (2026-08-14) — BOTH ENGINES AGREE ON `15` AND DISAGREE ON THE SECOND NUMBER
+
+| Engine | Rendering |
+|---|---|
+| committed ASR | *"**15 25's** \| Total above the high below the low if you grab a good entry"* |
+| `large-v3-turbo` | *"**15, 20 pips.** Total above the high, below the low. If you grab a good entry, you're going to be good."* |
+
+⭐ **What is now firm:** the phrase is a **two-number pip range beginning at 15**, and the qualifier
+is **`total above the high, below the low`** — both engines agree on that clause word for word.
+
+⚠ **What is still open:** the second number is **20 or 25**, and *"total"* is still unresolved
+(per-side, or summed across both sides). **The two unknowns compound**: the stop is somewhere between
+**7.5 and 25 pips** per side depending on which reading of each is taken.
+
+⭐ **And the corpus has an independent sanity check that does not settle it either:** `[00:21:39]`'s
+narrated *"about 18, 19 pips"* on the actual `G/J` trade is inside **both** candidate bands.
+
+```text
+A-123 -- OPEN, SHARPENED. The corpus's only Tier 1 stop-loss distance is a range
+  whose upper bound differs by engine and whose per-side/total split is unstated.
+  NO V17 ARTIFACT USES THE UPPER FIGURE, and none should until this closes.
+  See also A-125 -- a Tier 3 ticket in this same lesson shows 60 and 15 pips.
+```
+
+## A-124 — ⚠ The course deck is MUTABLE and was edited during the recorded session, so *"the slide says X"* is a claim about a timecode
+
+**Raised by:** V17 · `[00:44:56]` + `V17_00-42-10_…png` vs `V17_00-45-05_…png`
+
+At `42:10` and `43:20` the Day-1 slide reads `News Is **Use** To Perpetuate False Trend`. At
+`44:56` he says *"I got a correct… the news is used"*. At `45:05` **the PowerPoint editor is open on
+that slide with the text caret immediately after `News Is Used`.**
+
+⚠⚠ **This is a provenance finding, not an anecdote.** Every `[PRINTED]` claim in this project is a
+claim about the deck **as it stood at that timecode**. Two lessons could legitimately print
+different text for the same slide. **The corrected slide is never shown again in slideshow mode in
+this file**, so V17 contains the typo, the correction, and no image of the corrected result.
+
+### Current Status
+
+```text
+A-124 -- OPEN as a standing caveat rather than a question awaiting an answer.
+  Consequence for the project: PRINTED evidence is timecode-scoped, not
+  deck-scoped. No existing record needs revising; future ones should cite the
+  frame, which this project's naming convention already forces.
+```
+
+---
+
+## A-125 — ⚠⚠ A real `S/L` is legible on a real broker ticket in V17 — and it is `TIER 3` and must not become a rule
+
+**Raised by:** V17 · `V17_00-13-40_…png`
+
+```text
+106637069  2012.03.26 14:07  sell        0.10  eurusd  1.33213  S/L 1.33813  T/P 0.00000
+106637070  2012.03.26 14:07  sell limit  0.20  eurusd  1.33663  S/L 1.33813  T/P 0.00000
+```
+
+**60.0 pips** and **15.0 pips** to a shared stop price — a scale-in, not two trades. **`T/P` is
+`0.00000` on both: no take-profit was set.**
+
+⚠⚠ **The instructor never reads the `S/L` column.** The statement is shown to praise a doubled demo
+balance (`[00:13:31]`–`[00:13:56]`). Under `SOURCING_HIERARCHY.md` this is a **third party's
+execution record**, `TIER 3`.
+
+⭐ **It is recorded because the sentence *"the corpus contains no stop-loss distance"* would now be
+false**, and because a future session that finds this frame must find this caveat attached to it.
+
+### Current Status
+
+```text
+A-125 -- OPEN as a caveat. DO NOT CODE 60 or 15. Read together with A-123, which
+  is the Tier 1 version of the same question and is garbled.
 ```
