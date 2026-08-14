@@ -1010,6 +1010,70 @@ V08 GATE:            **OPEN. V07 R1, 2026-08-13 — REVISE, 0 CRITICAL / 0 MAJOR
                      REVIEW REQUIRED, but D-004 opens the next gate on a *reviewer*
                      verdict, not a student submission.
 
+V11 STATUS:          **STUDENT PASS COMPLETE 2026-08-13, SUBMITTED AS
+                     REVIEW REQUIRED. NOT reviewed, NOT merged to
+                     integration.** Branch video/v11, dedicated worktree
+                     (D-038). No I-009 collision. Validator 103/0/0.
+                     Speaker: COURSE AUTHOR, 100% of runtime, HIGH
+                     confidence, four non-acoustic strands, zero handover
+                     language in 51 minutes. Acoustic screen NOT run
+                     (V07's ruling).
+                     Q-012 filed (NOTES.md + VISUAL_INDEX.md fabricated).
+                     A-080..A-083 new; A-039 and A-011 NARROWED; A-020
+                     annotated CONFLICT. C-018 filed, NOT adjudicated.
+                     PT-037 pre-registered before its runner and run;
+                     BT_V11_0001 records M1a PARTIAL / M1b CONFIRMED /
+                     M1c CONTRADICTED / M1d PARTIAL.
+
+V12 GATE:            **CLOSED until V11's R1 returns.** D-004: the gate
+                     opens on a REVIEWER verdict, never on a student
+                     submission, and what R1 returns then governs per
+                     D-024. Carry into V12, and read this before starting:
+                     (a) **V12 IS THE SAME SESSION AS V11.** Bootcamp1 Wk4
+                     040812 Part2 (55mins) — same date, same charts, same
+                     speaker almost certainly. **Still TEST the speaker on
+                     non-acoustic strands; do not assume.**
+                     (b) ⭐ **V12 IS THE CHEAPEST ROUTE TO CLOSING C-018 AND
+                     A-080 — THE TWO BIGGEST THINGS V11 LEFT OPEN.** One
+                     frame showing an MT4 indicator-properties dialog, a
+                     Navigator entry or a sub-window legend closes A-080
+                     (the RSI period) and unblocks the whole RSI half of
+                     V11. One recurrence of "mayonnaise" with a legend
+                     visible closes C-018 / A-020 on Tier 1 evidence.
+                     **LOOK FOR BOTH DELIBERATELY.**
+                     (c) **V11 PROMISES A WEEK-4 ASSIGNMENT AND DOES NOT
+                     GIVE IT.** [00:00:46] "a really good assignment coming
+                     up this week… I'm gonna insist that you do it." V11
+                     ends mid-sentence 50 minutes later. **If V12 gives it,
+                     it is V11's assignment as much as V12's.** Nothing was
+                     inferred or reconstructed in V11's homework.
+                     (d) **V11 PROMISES THE TDI PROPER AND DOES NOT DELIVER
+                     IT.** [00:32:34] "I'm going to explain the TDI in a
+                     minute" — the file ends 18 minutes later with no
+                     volatility-band and no signal-line treatment. A-039 is
+                     NARROWED, not closed, partly for this reason. **If V12
+                     delivers it, A-039 may close.**
+                     (e) **A-082 (the flashcards) is a CURRICULUM blocker,
+                     not a coding one.** V11 makes doing them a
+                     precondition on trading for the week ([00:16:58]) and
+                     specifies them nowhere. Grep `flashcard` across V01-V10
+                     and V12+ — this session did NOT run that sweep and says
+                     so.
+                     (f) **A-077 (the lock) and A-004 (the level) were both
+                     CHECKED against V11 and NEITHER ADVANCED.** Recorded as
+                     negative results, not as unchecked. Carry both forward.
+                     (g) ⭐ **A PT NUMBERING COLLISION IS OUTSTANDING.**
+                     BT_V10_0001 §9, this register's item 86 and LOG.md
+                     reserved PT-037 (path-length) and PT-038 (safety trade)
+                     in prose with no files; the V11 session allocated
+                     PT-037 to its own test and RAN it. Proposed: V11 keeps
+                     PT-037, V10's reservations move to PT-039 / PT-040.
+                     **Owner or reviewer may reverse it.** See item 99.
+                     (h) **SETUP_ISSUES.md IS OWED AN ENTRY FOR C-018** —
+                     SOURCING_HIERARCHY.md §3.2 Case C requires it and it is
+                     a POLICY ledger, so a task branch cannot write it.
+                     **Do it at integration.** See item 100.
+
 V11 GATE:            **OPEN as of 2026-08-13 — V10 R1 returned REVISE with
                      0 CRITICAL / 0 MAJOR / 4 MINOR, HIGH confidence, which
                      opens the next gate under D-024. V11 MAY START.**
@@ -1427,7 +1491,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | REVISE R1 0C/0M/3m | **IN REMEDIATION** (items 64-66) |
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V10 | Wk3 | 01:36:16 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ✅ **R1 REVISE 0C/0M/4m** | **IN REMEDIATION** (items 91-94) |
-| V11 | Wk4 P1 | 00:50:56 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V11 | Wk4 P1 | 00:50:56 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V13 | Wk5 P1 | 01:05:22 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V14 | Wk5 P2 | 00:47:48 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |

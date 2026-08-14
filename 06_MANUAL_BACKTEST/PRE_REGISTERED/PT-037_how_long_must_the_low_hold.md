@@ -24,6 +24,37 @@ ordering is the verification.
 against the **integration branch** state (`a004e88`), per `D-038a` consequence 1, and re-checked at
 merge-back.
 
+> ### ⚠ APPENDED AFTER THE RUN — A NUMBERING COLLISION, DISCLOSED
+>
+> **The paragraph above is WRONG in one respect and is retained unedited** per
+> `REMEDIATION_PROTOCOL.md` §2. `PT-037` was the next free **FILE** number, and it was not the next
+> free **RESERVED** number.
+>
+> **`BT_V10_0001.md` §9, `REVIEW_INDEX.md` open item 86 and `LOG.md` had already reserved
+> `PT-037`** for a different successor — *the path-length reading of V10's 600–1000-pip weekly-range
+> claim* — and **`PT-038`** for *the safety trade*. Both are **prose reservations with no file**;
+> `06_MANUAL_BACKTEST/PRE_REGISTERED/` contained neither when this file was written. §0's search was
+> for existing files and it missed them. **This is exactly the concurrent-allocation hazard
+> `D-038a` consequence 1 names, and it was found by the check that consequence requires** — just
+> later than it should have been.
+>
+> **RESOLUTION, and it is proposed rather than imposed:**
+>
+> - **This file KEEPS the number `PT-037`.** It is a **committed, run** pre-registration whose
+>   number appears in four commits, the runner, the output file and `BT_V11_0001`. Renumbering a
+>   pre-registration after its run is the one move `D-027`'s retention rule exists to prevent.
+> - **V10's two reservations move forward to `PT-039` (path-length) and `PT-040` (safety trade).**
+>   A reservation with no file is free to move; a run test is not.
+> - **`BT_V10_0001.md` and `V10_REVIEW_R1.md` are NOT edited.** They are a completed observation and
+>   a completed review, and `REVIEW_PROTOCOL.md` §11 forbids overwriting the latter. The
+>   re-designation is recorded in `REVIEW_INDEX.md` (an evidence ledger) and here.
+> - **Carried to the reviewer as an open item.** If the owner or reviewer prefers the opposite
+>   assignment, this file is marked `SUPERSEDED — NUMBERING` and re-issued, and its result is
+>   retained, not deleted.
+>
+> **NOTHING IN §§1–9 CHANGES.** No threshold, prediction, null, window, or decision rule is
+> touched by this block; the number is a label and the design is untouched.
+
 ---
 
 ## 1. THE CLAIM UNDER TEST
