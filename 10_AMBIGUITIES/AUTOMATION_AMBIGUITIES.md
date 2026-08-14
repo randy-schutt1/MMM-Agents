@@ -8250,6 +8250,46 @@ A-095 -- OPEN. NONE of the three figures is adopted into any spec file.
   DO NOT CODE any of the three.
 ```
 
+### ⭐ V16 ADDENDUM, 2026-08-14 — FIVE MORE FIGURES, ONE WITH AN INSTRUMENT SCOPE, AND A DURABILITY DATA POINT
+
+**V16 states five pip figures in forty-five minutes** (`V16_SOURCE_NOTES.md` §10):
+
+| # | Marker | Verbatim | Kind |
+|---|---|---|---|
+| 1 | `[00:01:27]` | *"I have a hundred pips to work with"* | example, flagged as such at `[00:02:05]` |
+| 2 | `[00:06:02]`–`[00:06:15]` | *"there's about 120 pips ADR"* | worked example, pair unnamed |
+| 3 | `[00:16:59]` | *"about 150 pips… possible for the day"* | worked example, `EJ` |
+| 4 | `[00:22:44]`–`[00:22:50]` | *"approximately what? **200 pips in every pair except GJ and some of the crosses**"* | ⚠ **stated as FACT** |
+| 5 | `[00:30:12]` | *"these guys are told **do not exceed 200 pips on the average day**"* | ⚠ **stated as an externally-imposed LIMIT** |
+
+⭐ **#4 IS THE FIRST FIGURE IN THIS RECORD'S HISTORY THAT CARRIES AN INSTRUMENT SCOPE** — *"every
+pair except GJ and some of the crosses"*. That is not an instrument list, but it is the thing this
+record keeps saying is always missing, and it made #4/#5 **testable**.
+
+**`PT-044` / `BT_V16_0001.md` tested them on GBP/USD.** The CEILING reading (#5) came back
+**WEAKLY SUPPORTED** in both windows (`P(range > 200) = 0.0725` / `0.0492`); the TYPICAL reading
+(#4) came back **PARTIALLY SUPPORTED** in `W-D` (median 102.6 pips) and **CONTRADICTED AS STATED**
+in `W-E` (median 92.3). ⚠ **Figure 3 of the original record (*"~200 pip ADR"*) is the SAME NUMBER
+as #4 and is no longer untestable — V16 supplied the scope V15 lacked.**
+
+### ⚠ AND THE `600–1000` PIP WEEK IS RESTATED A SECOND TIME — DURABILITY, NOT A NEW TEST
+
+V16 `[00:23:24]`: *"it always comes back within a range within a **600 to 1000 pips range for the
+week**."*
+
+**`BT_V10_0001` CONTRADICTED that figure AS STATED — 0 of 180 weeks, median 243.8 pips.**
+**`D-027` and `COURSE_PROGRESS.md`'s V16 GATE (e) both forbid a re-run, and it was NOT re-run.**
+Its value here is **durability**: the same figure, from the same speaker, across V10 and V16, with
+a measured refutation standing against it.
+
+```text
+A-095 -- STILL OPEN, now with EIGHT figures across V15 and V16.
+  Figure 4/5 (200 pips): TESTED -> PT-044. Verdicts DIFFER by reading and by
+    window; see BT_V16_0001.md. GBP/USD ONLY -- "every pair" is untested.
+  Figure 2 (600-1000 wk): RESTATED in V16. NOT re-tested (D-027). Durability only.
+  DO NOT CODE any of the eight.
+```
+
 ---
 
 ## A-096 — ⭐ `S1` / `R1` / `M1`–`M4` are PIVOT levels, not M-formations — DECODED from the frames, DEFINED only at Tier 2
@@ -8324,6 +8364,33 @@ A-096 -- DECODED, NOT DEFINED.
   DO NOT CODE.
 ```
 
+### ⭐⭐ V16 ADDENDUM, 2026-08-14 — THE IDENTITY HALF CLOSES; THE CONSTRUCTION HALF MOVES TO `A-101`
+
+**V16 is the lesson V15 promised.** Three things this record needed arrive in Tier 1:
+
+1. ⭐ **The complete printed grid**, `V16_00-01-40_…png`: `R2 · M4 · R1 · M3 · CPP · M2 · S1 · M1 ·
+   S2`. **`M1`–`M4` are interstitial levels on a floor-trader pivot grid** — not M-formations, not
+   moving averages. **This record's DECODED reading is CONFIRMED FROM TIER 1.**
+2. ⭐ **The `"M1/M3 day"` trigger, which this record says is Tier 2 only, is PRINTED IN TIER 1** —
+   *"Red Candle Indicates M1/M3 Day"* / *"Green Candle Indicates M2/M4 Day"*
+   (`V16_00-00-50_…png`), spoken twice (`[00:00:59]`, `[00:14:50]`–`[00:15:11]`) and hand-drawn once
+   (`V16_00-15-00_…png`). **The `TIER 2 ONLY` clause above is SUPERSEDED.**
+3. ⭐ **A session boundary is PRINTED** — `London Session Start / 2:00 To 3:00 AM, EST`
+   (`V16_00-14-25_…png`). See `A-105`; it is narrower than it was and it is not yet a parameter.
+
+⛔ **The pivot formula is STILL ABSENT, and it is now a record of its own: `A-101`.** V16's diagram
+looks like it encodes the construction of `M1`–`M4` and does not — all nine levels are drawn
+**equally spaced to within one pixel**, which is a schematic. `A-101` carries the measurement and
+the defeated midpoint hypothesis.
+
+```text
+A-096 -- IDENTITY: CLOSED by V16 (PRINTED, TIER 1, HIGH).
+         COLOUR TRIGGER: CLOSED by V16 (PRINTED + SPOKEN x2 + DRAWN).
+         CONSTRUCTION: STILL ABSENT -> see A-101, which supersedes this record
+         for anything to do with computing a level.
+  DO NOT CODE remains in force, via A-101.
+```
+
 ---
 
 ## A-097 — Two undefined trade names: *"a 22-trade"* and *"the 3333 trade"*
@@ -8366,6 +8433,35 @@ last leg is 3 pushes**, which would motivate either rendering.
 A-097 -- OPEN. Two named trades, zero definitions, zero Tier-2 support.
   DO NOT CODE. DO NOT GUESS the expansion of either name.
   Required research: V16-V21 for either term used with a definition.
+```
+
+### V16 ADDENDUM, 2026-08-14 — CORROBORATED AS REAL, STILL UNDEFINED, AND THE `22` HALF GETS NOTHING
+
+The Required Research above named V16 first. **V16 uses one of the two terms twice and defines
+neither:**
+
+* `[00:09:06]` *"they're making their intraday pushes until they find, and even in here, perhaps on
+  the last leg, **you get a 33 trade**."*
+* `[00:09:57]` *"intraday you got your intraday pushes, you got your **33 trade** inside of a daily
+  candle."*
+
+⭐ **What V16 adds is REALITY and LOCATION, not meaning.** The term is not an ASR artefact of V15 —
+it recurs in a different file, twice, from the same speaker — and both uses place it **intraday**,
+**late in the move** (*"on the last leg"*), **inside a single daily candle**. That is more than
+V15 gave and it is nothing like a definition.
+
+⚠ **The *"22-trade"* half gets ZERO help: the token does not occur in V16 at all.**
+
+⚠ **Note the rendering differs from V15's.** V15's transcript carries *"3333"* / *"3.33"*; V16's
+carries *"33"*. **Whether these are the same term is NOT decided here** — two ASR passes on two
+files, and no printed rendering of either exists anywhere in the corpus.
+
+```text
+A-097 -- STILL OPEN. "33 trade" CORROBORATED AS A REAL TERM (2 uses, V16),
+  scoped to intraday / last leg / inside one daily candle. STILL UNDEFINED.
+  "22-trade": zero occurrences in V16. No advance.
+  DO NOT CODE. DO NOT GUESS. DO NOT ASSUME 33 == 3333 == 3.33.
+  Required research: V17-V21, and any PRINTED rendering of either term.
 ```
 
 ---
@@ -8528,4 +8624,317 @@ A-100 -- OPEN, and it BLOCKS any coding of V15's lesson.
   Required research: V16-V21 for an ADR construction statement; the June 2012
   web class "Indicator chart setup day" is where it would have been shown and
   is NOT in this corpus (see A-087, REVIEW_INDEX item 189).
+```
+
+### ⭐⭐ V16 ADDENDUM, 2026-08-14 — THE LOOKBACK ARRIVES IN TIER 1, AND IT DISAGREES WITH ITSELF
+
+**The Required Research above is ANSWERED IN PART, one lesson later, by the file that continues the
+same recording session.** V16 `[00:09:31]`, course author, Tier 1:
+
+> *"the ADR is calculated over **the last two weeks, 15 days**."*
+
+and `[00:09:37]` corroborates the *"average"* framing independently — *"We have an average of what
+prices moved over the last two weeks. The ranges will tighten up when the market is quiet."*
+
+⭐ **This CORROBORATES the Tier 2 *"last 2 weeks"* from inside Tier 1 and ADDS a day count Tier 2
+did not have.** `D-039`'s tiering problem on this row is dissolved: the number is now the course
+author's own.
+
+⚠ **AND IT CARRIES ITS OWN DEFECT.** *"Two weeks"* and *"15 days"* are not the same number on any
+convention this corpus uses — two trading weeks is **10**, two calendar weeks is **14**, two forex
+weeks is **10**. **No reading yields 15.** Nothing in V16 resolves it and this project is not
+picking one.
+
+**A-100 is ADVANCED, NOT CLOSED**, and the reason it stays open is now smaller and different:
+
+| Needed | Status after V16 |
+|---|---|
+| Lookback window | ⚠ **STATED, TIER 1**, and internally inconsistent: `10` **or** `14` **or** `15` |
+| What is averaged — true range or high−low | ❌ still absent |
+| Marker anchor | ❌ still absent |
+| Intraday update | ❌ still absent; `C-022` untouched — **V16 never says the word *repaint*** |
+| Day boundary | ❌ still absent **for the ADR**. ⚠ V16 `[00:40:22]`–`[00:40:34]` gives *"midnight to midnight"* **for PIVOTS**, and `C-023` shows he does not hold even that firmly. **Transplanting it onto the ADR would be the `A-082` error** |
+
+⚠ **`BT_V16_0001.md`'s `N2` control computes a 15-day trailing mean and reports medians of 111.6
+(`W-D`) and 97.7 (`W-E`) pips on GBP/USD. THOSE ARE NOT *"the MMM ADR, measured"*** — they are this
+session's construction from a number the course author spoke, on an instrument he was not
+discussing, in years the lesson predates. Any later session citing them as the course's object is
+making the error this record exists to prevent.
+
+```text
+A-100 -- STILL OPEN. Required research is now NARROWER:
+  V17-V21 for (a) the range definition, (b) the marker anchor, (c) the ADR's own
+  day boundary, and (d) any statement that resolves 10 vs 14 vs 15.
+  DO NOT CODE the ADR marker. Unchanged.
+```
+
+---
+
+## A-101 — ⭐⭐ `M1`–`M4`: V16 PRINTS THEIR ORDER AND NEVER STATES THEIR CONSTRUCTION — and the diagram that looks like it encodes the formula is a schematic
+
+**Raised by:** V16 · `V16_00-01-40_pivot-grid-diagram-100-pips-annotated.png`, `[00:17:53]`–`[00:18:19]`
+**Speaker:** course author
+**Succeeds:** `A-096`, whose IDENTITY half this closes (see below)
+
+### What V16 settles
+
+`A-096` was opened by V15 as *"`S1`/`R1`/`M1`–`M4` are PIVOT levels, not M-formations — DECODED
+from the frames, DEFINED only at Tier 2."* **V16 prints the complete grid in Tier 1**, top to
+bottom:
+
+```text
+R2 · M4 · R1 · M3 · CPP · M2 · S1 · M1 · S2
+```
+
+and states the roles out loud and in print: `[00:17:53]`–`[00:18:19]` and
+`V16_00-18-00_m3-m4-hods-m1-m2-lods-slide.png` — *"M3 And M4 Are Possible HODs"*, *"M1 And M2 Are
+Possible LOD's"*, *"Subtract The Value Of Today's Projection And This Is The Trading Range · Ex:
+( M1 – M3)"*.
+
+⭐ **`A-096`'s identity question is ANSWERED. `M1`–`M4` are interstitial price levels on a
+floor-trader pivot grid. They are not M-formations and they are not moving averages.**
+
+### ⛔ What V16 does NOT settle, and why the obvious answer was tested and rejected
+
+**The construction is never stated.** The tempting reading — `M3 = midpoint(CPP, R1)`,
+`M4 = midpoint(R1, R2)`, `M2 = midpoint(S1, CPP)`, `M1 = midpoint(S2, S1)` — is **consistent with
+the printed order and is not established by it.**
+
+**The one available piece of evidence was measured rather than eyeballed.** On the clean,
+unannotated frame (sweep `i = 19`), the y-pixel centres of the nine level labels are
+`235 · 288 · 340 · 393 · 446 · 497 · 549.5 · 602.5`, giving gaps of
+**`53 · 52 · 53 · 53 · 51 · 52.5 · 53`** — **mean 52.5, spread ±1 px.**
+
+**All nine levels are equally spaced.** Under every standard floor-trader formula the `R1→R2` gap
+differs from the `CPP→R1` gap. **So the slide is a SCHEMATIC and carries no information about the
+arithmetic — it would look exactly like this whatever the real formula is.** The midpoint reading
+is neither confirmed nor refuted; it is **unsupported**.
+
+### The consequence, demonstrated rather than asserted
+
+`05_HOMEWORK/V16/` does the lesson's own assigned homework and **it stops here.** The five standard
+pivots compute; **`M3` and `M1` — the two numbers the assignment asks for — do not.**
+`V16_HOMEWORK.md` §3a preserves this session's first attempt, which computed them as midpoints
+anyway and produced a plausible 104.8-pip expected range on real data. **Nothing downstream would
+have caught it.**
+
+### Current Status
+
+```text
+A-101 -- OPEN, and it BLOCKS the whole of V16's lesson.
+  ORDER:  R2 M4 R1 M3 CPP M2 S1 M1 S2   [PRINTED, TIER 1, HIGH confidence]
+  ROLE:   M3/M4 = candidate day highs; M1/M2 = candidate day lows
+                                        [PRINTED + SPOKEN, HIGH confidence]
+  CONSTRUCTION: STATED NOWHERE. The midpoint hypothesis is recorded here WITH
+                its defeater so no later session re-derives it as a finding.
+  DO NOT CODE M1, M2, M3 or M4. Any PT touching them must pre-register its own
+  definition as an ASSUMPTION and say so (D-027, D-030).
+  Cheapest open route: a legible price axis beside the grid. V16_00-16-50 and
+  V16_00-17-30 show exactly that and are ILLEGIBLE at 1024x786; a
+  higher-resolution re-capture of those two moments would settle it in one frame.
+  See REVIEW_INDEX item 198.
+  Also required: V17-V21 for a construction statement, and the June 2012 web
+  class "Indicator chart setup day" which is NOT in this corpus (A-087).
+```
+
+### ⚠ ADDENDUM, same session — `M5` IS SPOKEN TWICE AND IS NOT ON THE PRINTED GRID
+
+`[00:33:24]`–`[00:33:30]`, and **both ASR engines agree, twice inside one sentence**
+(`V16_TRANSCRIPT.md` §5 correction **#3**):
+
+> *"You have to understand the M&W might form an **M5**, oh, Steve, it wasn't M4, M3, it was **M5**."*
+
+**There is no `M5` on the printed nine-level grid.** The committed transcript's *"Most of you"* was
+a student's voice (*"oh, Steve"*) — that half was ASR damage — **but `M5` was not.**
+
+**Two readings, neither adopted:**
+
+1. The instructor's **live** grid carries levels his slide does not (an `M5` above `M4`, i.e. above
+   `R2`), and the printed enumeration is incomplete.
+2. He misspoke, twice, in one sentence, while correcting a student.
+
+⚠ **Nothing in V16 decides it, and this record does not.** It matters because reading (1) would
+mean **§2's nine-level enumeration is not the whole grid** — which does *not* affect the
+pixel-spacing argument above (that argument is about the drawing, not about completeness) but does
+affect any attempt to enumerate the levels exhaustively.
+
+```text
+A-101 ADDENDUM -- "M5": SPOKEN TWICE, CONFIRMED BY TWO ENGINES, ABSENT FROM THE
+  PRINTED GRID. DO NOT CODE. DO NOT assume the printed nine levels are exhaustive.
+  Required research: V17-V21 for any further M5 use, or any grid image with a
+  tenth level.
+```
+
+---
+
+## A-102 — *"line up"* / *"lay in there"* / *"slightly below"*: the confluence rule's TOLERANCE is never stated
+
+**Raised by:** V16 · `[00:27:36]`–`[00:28:06]`, `[00:28:25]`–`[00:28:48]`
+**Speaker:** course author
+
+The confluence rule is printed (`V16_00-27-45_pp-are-an-adr-grid-slide.png`) — *"Since The Grid Is
+Fixed, And Trading Ranges Are Not, We Couple Pivots With ADR Markers For Strong Confirmations"* —
+and spoken with three different proximity words and **no number attached to any of them**:
+
+| Marker | Word used | Number |
+|---|---|---|
+| `[00:27:53]` | *"So M1 and ADR line line up"* | ❌ |
+| `[00:28:25]` | *"It's an M1 or M2 and ADR lows **lay in there**"* | ❌ |
+| `[00:28:34]` | *"right around **slightly below** M1 a big fat blueberry line"* | ❌ |
+
+**A confluence rule is a proximity predicate. Without a tolerance it is not a predicate at all.**
+Two levels 3 pips apart and two levels 30 pips apart are both *"lined up"* on this language.
+
+⚠ **This is `A-082`-class in reverse:** the corpus's usual problem is a number with no definition;
+here it is a definition with no number.
+
+### Current Status
+
+```text
+A-102 -- OPEN. DO NOT CODE a confluence proximity threshold.
+  Any implementation MUST pre-register its own tolerance as an ASSUMPTION.
+  Blocked downstream by A-101 (the pivot leg) and A-100/C-022 (the ADR leg)
+  regardless, so this is not currently the binding constraint -- but it will
+  become one the moment either of those closes.
+```
+
+---
+
+## A-103 — *"the wrong segment of the trading zone"*: shown on three charts, defined never
+
+**Raised by:** V16 · `[00:33:43]`–`[00:33:58]`, `V16_00-32-05_…png`, and the three charts at
+`34:10` / `34:30` / `34:50`
+**Speaker:** course author
+
+Printed: *"In Order To Find Opportunity, We Must Set Some Rules For Trading When Price Comes Out At
+The Wrong Segment Of The Trading Zone…."* Spoken, `[00:33:43]`–`[00:33:58]`: *"You know what the
+rule is? Ignore the pivots and identify what I've taught you, the pattern, the pattern, that's the
+answer."*
+
+⭐ **The escape rule is clear and honest. Its TRIGGER is not.** *"The wrong segment"* is never
+defined — the three charts that follow are captioned *"Price in wrong Segment M is clearly
+visible….Sell"* and *"Straight Away….Sell"*, i.e. they **demonstrate** it. The nearest thing to a
+criterion is `[00:14:23]`'s London-open read (price on the overbought side → seller), but that is a
+different rule about a different moment, and **joining them would be this project's inference, not
+the lesson's.**
+
+### Current Status
+
+```text
+A-103 -- OPEN. DO NOT CODE a "wrong segment" test.
+  What IS clear and codeable in principle: the DISPOSITION -- when the condition
+  holds, the pivots are ignored and the pattern governs. The condition itself is
+  demonstrated and not stated.
+```
+
+---
+
+## A-104 — A SECOND BOOTCAMP CYCLE WAS PLANNED FOR AUTUMN 2012 AND THIS CORPUS HOLDS NOTHING FROM IT
+
+**Raised by:** V16 · `[00:36:50]`–`[00:38:57]`
+**Speaker:** course author, first person throughout
+**Class:** out-of-corpus dependency — the `A-042` class, **not** a gap in this library
+
+`[00:37:41]` *"I'll start another bootcamp cycle, and we'll go through this stuff again together."*
+`[00:38:57]` *"another cycle of bootcamp, probably September, October, and maybe end right before
+Thanksgiving."* `[00:36:59]` *"when bootcamp is over, I'm going to teach a couple of classes."*
+
+**`SOURCE_MANIFEST.md`'s last file is `Bootcamp1 Wk10 061712` (2012-06-17), which is the final
+session of THIS cycle** — consistent with V15's *"we're going to wind up around 10 or 11 weeks"*
+and V16's *"a couple of weeks left"*. **Nothing after June 2012 is in this library.**
+
+⚠ **This is deliberately NOT filed as a corpus gap.** `A-092` covers the two absences *inside* this
+cycle. A second cycle that was announced for a later year is **material this project was never
+given**, and the distinction matters for `REVIEW_INDEX.md` item 185's gap audit: **the audit should
+not count autumn 2012 against the corpus's completeness.**
+
+### Current Status
+
+```text
+A-104 -- RECORDED, NOT OPEN AS A DEFECT.
+  Consequence: some A-xxx records may be UNRESOLVABLE FROM THIS CORPUS IN
+  PRINCIPLE (the A-042 problem). A-101's construction statement and A-100's
+  ADR specification are both plausible candidates for "taught in a later cycle
+  or in the web class, not here".
+  NO SESSION SHOULD SEARCH FOR AUTUMN-2012 MATERIAL. It is not in the library.
+```
+
+---
+
+## A-105 — ⭐ A PRINTED, TIMEZONE-STAMPED SESSION BOUNDARY — and the timezone is `EST` in May
+
+**Raised by:** V16 · `V16_00-14-25_london-session-start-2-to-3am-est-slide.png`
+**Basis:** `[PRINTED]` only
+
+The slide reads, and carries nothing else:
+
+> **`London Session Start`** / **`2:00 To 3:00 AM, EST`** / red capsule → `SELL` · green → `BUY`
+
+⭐ **This is the corpus's first printed, timezone-stamped, labelled SESSION BOUNDARY.** V10's source
+notes record (as corrected under open item 93) that clock times occur in this corpus but **none
+delimits a session**. **This one does.** V06's `3:45am or 9:45am est.` (V06 R1 item 57) is a clock
+time on a chart, not a labelled boundary.
+
+### ⚠ Three reasons it is not yet a parameter
+
+1. **`EST` on 2012-05-06, which is inside US daylight time.** Either the slide means *"New York
+   time"* loosely (i.e. EDT, UTC−4 that day) or it means standard time literally (UTC−5).
+   **The two differ by an hour**, and `BT_V06_0001` already showed a one-hour shift can flip a
+   result's sign. This is `A-019`'s problem with a printed source attached.
+2. **The same lesson's audio gives a different, wider, timezone-free window for a different event:**
+   `[00:02:36]` *"At 1 o'clock or 2 o'clock or 3 o'clock depending on when I feel like it."*
+   That is the stop-hunt trigger, not the session start. **Both are recorded; neither is
+   reconciled.**
+3. **It bounds only the START.** No London close, no New York boundary, no Asian-range bounds.
+
+### Current Status
+
+```text
+A-105 -- OPEN, but NARROWER than anything before it.
+  London session START: 2:00-3:00 AM, "EST"   [PRINTED, TIER 1]
+  UNRESOLVED: whether "EST" is literal (UTC-5) or means New York local time
+              (UTC-4 on the session date). ONE HOUR.
+  DO NOT CODE a session boundary from this alone. It is, however, the best
+  evidence the corpus has, and any D-031-style arm choice should now cite it.
+```
+
+---
+
+## A-106 — ⭐ *"Yesterday's price action"* on a MONDAY: the lesson assigns Monday and never says whether yesterday is Sunday or Friday — and the two grids differ by 72 pips
+
+**Raised by:** V16 · `[00:00:47]`, and the homework at `[00:35:03]`–`[00:35:36]`
+**Speaker:** course author
+**Found by:** doing the homework (`05_HOMEWORK/V16/` §4a), not by reading
+
+The rule is printed: *"Yesterday's Price Action Gives Tomorrow's Pivot Points"*
+(`V16_00-00-50_…png`). The assignment is printed: *"Do it pre London for **Mon** & Tues"*
+(`V16_00-35-05_…png`).
+
+**In FX, Sunday is a partial session.** On 2015-05-31 it carries **418 M1 bars against a full
+day's 1,440**. So *"yesterday"* for a Monday is either a **stub Sunday** or the preceding
+**Friday**, and the lesson never chooses.
+
+**Measured on GBP/USD for Monday 2015-06-01 — Sunday-stub basis minus Friday basis, in pips:**
+
+| `CPP` | `R1` | `S1` | **`R2`** | **`S2`** |
+|---|---|---|---|---|
+| −7.1 | −36.6 | +28.9 | **−72.6** | **+58.4** |
+
+⭐ **A 72.6-pip disagreement on `R2`, on a day whose entire realised range was 133.9 pips.** These
+are not two readings of the same grid; they are two different grids.
+
+⚠ **A one-day coincidence is recorded here WITH its warning**: the Sunday-stub `R1` landed **0.9
+pips** from the day's actual high while the Friday-basis `R1` missed by 37.5. **`n = 1`. That is
+not evidence for the Sunday reading**, the same Sunday grid missed the day's low by 72.2 pips, and
+it is written down only so that nobody later selects a convention because of it.
+
+### Current Status
+
+```text
+A-106 -- OPEN. DO NOT CODE a Monday pivot basis.
+  This is LARGER in effect than C-023 (the midnight-vs-daily-candle fork, which
+  measured under 4 pips on the same two days). A reviewer choosing which of the
+  two to escalate should escalate THIS one.
+  It also compounds: A-101 means the M-levels are uncomputable anyway, so the
+  Monday fork is currently invisible -- it becomes binding the moment A-101 closes.
 ```
