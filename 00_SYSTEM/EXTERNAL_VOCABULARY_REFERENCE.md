@@ -574,7 +574,61 @@ negative result for *quarter of wood* / `COW` across BTMM sources.
 
 ### 5.16 — the moving averages and their nicknames · `A-020`
 
+> ## ⭐ FINAL — 2026-08-13 — `D-043` — OWNER RULING #2 REVERSES RULING #1. **READ THIS BANNER FIRST; EVERYTHING BELOW IT IS SUPERSEDED.**
+>
+> > *"I was wrong. It's the reverse. **5=mustard=yellow, 13=ketchup=red.**"* — project owner,
+> > 2026-08-13, answering `SETUP_ISSUES.md` `I-011`
+>
+> | Nickname | **Period** | **Colour** | Warrant |
+> |---|---|---|---|
+> | **Mustard** | **5 EMA** | **yellow** | `RESOLVED — OWNER ATTESTATION` (`D-043`); colour ✅ **corroborated by Tier 1**, V07 `[00:25:34]` |
+> | **Ketchup** | **13 EMA** | **red** | `RESOLVED — OWNER ATTESTATION` (`D-043`); colour uncorroborated |
+> | **Water** | **50 EMA** | **aqua** | `OWNER-ATTESTED` + `[TOOLING]` — unchanged |
+> | **Mayonnaise / Mayo** | **200 EMA** | **white** | `OWNER-ATTESTED` + `MMM-NOTES` p.66 (Tier 2) + `[TOOLING]` — unchanged |
+> | **Blueberry** | **800 EMA** (15-minute) | **blue** | ✅ **`RESOLVED BY COURSE`** V09 `[00:41:43]` + `[TOOLING]` — unchanged |
+>
+> **⚠️ TWO axes reversed; the obvious one did not.** `D-041`'s **nickname↔period** and `D-042`
+> §2's **period↔colour** both flip; their composition — **nickname↔colour**, ketchup = red,
+> mustard = yellow — is **identical before and after**. The condiments kept their colours; the
+> periods moved underneath them. See `D-043` §2.
+>
+> ### ⛔ THE `D-041` BANNER BELOW IS ITSELF NOW WRONG, INCLUDING ITS CALIBRATION LESSON
+>
+> That banner declared the Tier 3 table at the bottom of this section *"wrong on two of its five
+> rows"* and called the episode *"the single best-calibrated warning in this entire file"* against
+> §5 and *"the receipt"* for `D-030`. **On the two rows in question — mustard = 5, ketchup = 13 —
+> the Tier 3 table was RIGHT.** That claim is **withdrawn**. Both banners are retained unedited
+> per `REMEDIATION_PROTOCOL.md` §2 so the three-state history stays legible.
+>
+> ### 🛑 THIS IS NOT PERMISSION TO CITE §5. THE TABLE BELOW IS A **WORSE** TRAP NOW, NOT A BETTER SOURCE.
+>
+> Being right once does not make a method reliable, any more than being wrong once made it
+> worthless. `SOURCING_HIERARCHY.md` §1.3 still applies in full: these three sources are very
+> probably **one document quoted three times**, so their agreement was never independent
+> corroboration and still is not. **An accidentally-correct source is more dangerous than a plainly
+> wrong one**, because the next session that cites it will be right for no reason and will not
+> learn anything from being right. Tier 3 remains **non-normative**, closes nothing (`D-040`), and
+> the table below is **still not citable** — the mapping's warrant is the owner's attestation in
+> `D-043`, and it would be exactly as authoritative if this section did not exist.
+>
+> **The lesson that survives is about owner attestation, not about Tier 3.** A one-sentence ruling
+> marked *definitive* propagated into five files and a Pine script inside a day, and was wrong. It
+> was caught because `D-042` ran a search it was not required to run, found a Tier 1 sentence on a
+> *different axis* of the same mapping, and **refused to adjudicate it** —
+> `SOURCING_HIERARCHY.md` §3.2 **Case C** is what caught this, and `D-041`'s decision to record the
+> inversion *loudly* rather than quietly is what made the reversal cost one entry instead of an
+> archaeology exercise.
+>
+> **Governing:** `D-043` (authoritative) · `A-020` (⭐ FINAL block, third of three) ·
+> `SETUP_ISSUES.md` `I-011` (**CLOSED**) · `SOURCING_HIERARCHY.md` §3.4 (obligation **still live**).
+>
+> ---
+
 > ## ⛔ STOP — THIS ENTRY IS SUPERSEDED, AND TWO ROWS OF ITS TABLE ARE NOW KNOWN TO BE **WRONG**
+>
+> ### ⚠️ 2026-08-13 — **THIS BANNER IS ITSELF SUPERSEDED BY `D-043` ABOVE.** Its mapping is
+> ### reversed and its "Tier 3 was wrong" lesson is withdrawn. Retained unedited as the record of
+> ### owner ruling #1 (`REMEDIATION_PROTOCOL.md` §2). **Do not cite it either.**
 >
 > **Updated 2026-08-13 · `00_SYSTEM/DECISIONS.md` `D-041`.** The text and table below are retained
 > unedited per `REMEDIATION_PROTOCOL.md` §2. **Do not cite them.**

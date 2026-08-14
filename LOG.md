@@ -7951,3 +7951,97 @@ a period off it.
 **No question is put back to the owner on the `D-041` period mapping.** The escalation `D-041`
 consequence 7 invited was checked independently and **declined**, and `D-042` §1 reached the same
 conclusion.
+
+---
+
+## 2026-08-13 — Integration Session — `D-043`: the owner REVERSES ruling #1; `I-011` closes with the tape agreeing
+
+**Branch:** `claude/add-documents-repository-fdfb3u` (integration). `DECISIONS.md`,
+`SETUP_ISSUES.md`, `AUTOMATION_AMBIGUITIES.md`, `EXTERNAL_VOCABULARY_REFERENCE.md` and
+`SOURCING_HIERARCHY.md` are **policy ledgers** under `D-038a` — worked directly on integration,
+fetched fresh, no divergence from `origin` confirmed before starting.
+
+### The ruling
+
+> *"I was wrong. It's the reverse. **5=mustard=yellow, 13=ketchup=red.**"* — owner, 2026-08-13,
+> answering `I-011`.
+
+**Final mapping:** mustard = 5 = yellow · ketchup = 13 = red · water = 50 = aqua ·
+mayonnaise = 200 = white · blueberry = 800 = blue.
+
+### ⚠ The finding of this session: TWO mappings reversed, and it is not the one the instruction named
+
+The raising instruction framed this as a correction to the **nickname↔colour** pairing. **It is
+not.** The owner's sentence bundles three attributes, and the project stores two decisions on two
+axes:
+
+| Axis | Stored in | Before → After | |
+|---|---|---|---|
+| nickname ↔ period | `D-041` | ketchup 5 · mustard 13 → **ketchup 13 · mustard 5** | 🔄 REVERSED |
+| period ↔ colour | `D-042` §2 | 5 red · 13 yellow → **5 yellow · 13 red** | 🔄 REVERSED |
+| nickname ↔ colour | the composition | ketchup red · mustard yellow → **unchanged** | ✅ INVARIANT |
+
+The two reversals are on adjacent axes and cancel where they meet — the condiments keep their
+obvious colours, the **periods move underneath them**. Correcting only the nickname↔colour pairing
+would have corrected nothing that was wrong while leaving both real errors in the Pine script and
+three ledgers. This is written into `D-043` §2 and repeated in every propagated banner.
+
+### Second finding: `D-041`'s calibration lesson is false and is withdrawn
+
+`D-041` printed, in three files, that Tier 3 §5.16's unanimity had been *"wrong on two of five
+rows"* and called it *"the best-calibrated warning"* against §5 and *"the receipt"* for `D-030`.
+**§5.16's table was right on those two rows.** Withdrawn in `A-020`, §5.16 and `D-043` §4 — and
+explicitly **not** converted into permission to cite Tier 3: those sources are still one document
+quoted three times, and an accidentally-correct source is a worse trap than a wrong one. The
+lesson that survives is about **owner attestation**, and about `SOURCING_HIERARCHY.md` §3.2
+**Case C** being the rule that caught this — `D-042` found a Tier 1 sentence on a different axis,
+declined to chain it, and surfaced it instead.
+
+`D-041`'s `Q-002` by-product reverses with it (back to *"the real sequence shifted one place"*, a
+mid-list drop of *Ketchup*). **`Q-002`/`Q-012` are not rehabilitated** — `raspberry` still 0×.
+
+### Applied
+
+| File | Change |
+|---|---|
+| `00_SYSTEM/DECISIONS.md` | **`D-043` appended.** Next free identifier is **`D-044`** |
+| `00_SYSTEM/SETUP_ISSUES.md` | **`I-011` CLOSED** `RESOLVED — OWNER ATTESTATION`; prior text retained unedited |
+| `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` | `A-020` **third** annotation block (⭐ FINAL); index row and Related table updated; the `D-041` ⛔ and `D-042` 🎨 blocks retained unedited — **three states now legible in sequence** |
+| `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` | §5.16 new ⭐ FINAL banner above the retained `D-041` banner, which is marked superseded in place |
+| `00_SYSTEM/SOURCING_HIERARCHY.md` | §3.4 **third** dated update block; obligation on `A-020` **stays live for V12** |
+
+**Nothing deleted anywhere** (`REMEDIATION_PROTOCOL.md` §2). `D-041` and `D-042` are not edited —
+`DECISIONS.md` is append-only.
+
+### ⚠ Flagged, not fixed — completed review artifacts
+
+1. **`18_REVIEW/V11/V11_REVIEW_R1.md` `N1` / REQUIRED CORRECTIONS item 3** characterised the V07
+   conflict as *"a question about COLOURS, not about the period mapping"*. **It reached the period
+   mapping** — it is the thread the owner pulled. **Not edited** (`R1` is never edited); **no fault
+   charged** — the reviewer's census is verified and unaffected, and its recording of the conflict
+   is what made this correction possible. A note is owed in `REVIEW_INDEX.md` item 114.
+2. **`REVIEW_INDEX.md` item 97** still prints *"now ketchup = 5, mustard = 13"*. Stale; the index is
+   a live tracking surface and a superseding note is appropriate. **Left for the owner** — items
+   109–113 are already owed against that file.
+3. **`18_REVIEW/V09/V09_REVIEW_R1.md` ~line 290** prints *"mustard 5, ketchup 13"* — correct when
+   written, staled by `D-041`, **correct again now**. No action; recorded so a staleness audit
+   un-flags it.
+
+### Pine script
+
+`06_MANUAL_BACKTEST/tools/MMM_Indicator.txt` on `feature/tradingview-mmm-indicator` — colours
+swapped (5 → yellow, 13 → red), comments and README recited to `D-043`. **Committed and pushed on
+that branch; NOT merged.** Note: the file is `.txt`, not `.pine`.
+
+### Git
+
+Explicit path staging only; `git add -A` never used; `git diff --staged` read before every commit.
+
+`scripts/validate_project.py`: **PASS.**
+
+### Next Action
+
+**`I-011` needs no further work.** Two things are handed to the owner: (1) the `REVIEW_INDEX.md`
+item 97 / item 114 notes above, and (2) `A-020` remains on `SOURCING_HIERARCHY.md` §3.4's standing
+re-check list for **V12 onward** — the corpus still attaches no period to *ketchup* or *mustard*,
+and V12 is the cheapest route to a Tier 1 closure.

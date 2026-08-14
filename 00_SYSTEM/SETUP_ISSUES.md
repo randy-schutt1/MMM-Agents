@@ -563,8 +563,51 @@ grounds independent of any arm — but that is an owner call, not a session's.
 
 ## I-011 — The owner's EMA colour mapping is contradicted on two rows by V07 `[00:25:34]`
 
-**Status:** `OPEN` — awaiting owner adjudication. **Blocks nothing**; the affected artifacts ship
-the owner's colours with the conflict recorded beside them.
+> ## ✅ CLOSED — `RESOLVED — OWNER ATTESTATION` — 2026-08-13 — `D-043`
+>
+> **The owner adjudicated, and REVERSED the earlier ruling. The tape was right.**
+>
+> > *"I was wrong. It's the reverse. 5=mustard=yellow, 13=ketchup=red."* — project owner,
+> > 2026-08-13, answering the question posed below
+>
+> **The final, authoritative mapping — `00_SYSTEM/DECISIONS.md` `D-043`:**
+>
+> | Nickname | **Period** | **Colour** | vs. the table below |
+> |---|---|---|---|
+> | **Mustard** | **5 EMA** | **yellow** | 🔄 both changed — was ketchup/13/yellow |
+> | **Ketchup** | **13 EMA** | **red** | 🔄 both changed — was mustard/5/red |
+> | **Water** | **50 EMA** | **aqua** | ✅ unchanged |
+> | **Mayonnaise / Mayo** | **200 EMA** | **white** | ✅ unchanged |
+> | **Blueberry** | **800 EMA** (15-minute) | **blue** | ✅ unchanged |
+>
+> **⚠️ TWO mappings reversed, and the obvious one did NOT.** `D-041`'s **nickname↔period** and
+> `D-042` §2's **period↔colour** both flip. Their composition — **nickname↔colour**, ketchup = red
+> and mustard = yellow — is **identical before and after**. See `D-043` §2; correcting only the
+> nickname↔colour pairing corrects nothing that was wrong.
+>
+> **V07 `[00:25:34]` now AGREES with the owner** — the tape says the 5 is yellow, and the owner
+> now says the 5 is yellow. That is **corroboration, not the warrant**: the owner's attestation
+> closes this issue either way, and had the owner confirmed red/yellow this would have closed
+> `RESOLVED` with V07 annotated as a guest's private palette. The `[00:27:24]`/`[00:27:33]`
+> guest-palette explanation is **no longer needed and is not thereby disproven**.
+>
+> **One warrant upgrade, and only one:** *"the 5 EMA is yellow"* is now stated **directly** by a
+> Tier 1 speaker on a single warrant. **Nothing becomes `RESOLVED BY COURSE`** — *mustard = 5*
+> still requires chaining V07's *yellow = 5* through the owner's *mustard = yellow*, which no
+> speaker joins. Only **blueberry** is `RESOLVED BY COURSE` (V09 `[00:41:43]`).
+>
+> **Propagated to:** `D-043` · `A-020` (third annotation block) ·
+> `EXTERNAL_VOCABULARY_REFERENCE.md` §5.16 · `SOURCING_HIERARCHY.md` §3.4 ·
+> `06_MANUAL_BACKTEST/tools/MMM_Indicator.txt` and `_README.md`
+> (`feature/tradingview-mmm-indicator`, **unmerged**).
+>
+> **The text below is retained unedited** per `REMEDIATION_PROTOCOL.md` §2. Read it as the
+> question that was asked, not as the current state. Its *"To close"* clause predicted this
+> outcome exactly and prescribed the new-decision-entry route that `D-043` took.
+
+**Status:** ~~`OPEN` — awaiting owner adjudication~~ → **`RESOLVED` 2026-08-13 (`D-043`)**.
+**Blocked nothing**; the affected artifacts shipped the owner's colours with the conflict recorded
+beside them, and now ship the corrected colours.
 **Raised by:** `D-042`, 2026-08-13, during the exhaustive nickname↔period search the owner's
 *"let's go with whatever the course says"* instruction required.
 **Governing:** `SOURCING_HIERARCHY.md` §3.2 **Case C** — *"Do not adjudicate. Surface to the

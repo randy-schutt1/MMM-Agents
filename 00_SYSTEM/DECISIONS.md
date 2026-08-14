@@ -2986,3 +2986,312 @@ orange, which owner attestation strictly improves on even while contested.
    `[00:25:34]`)"* — never *"the red 5 EMA the instructor uses"*.
 
 **Status:** ACTIVE — with `I-011` open against §3.
+
+---
+
+## D-043 — Owner ruling #2 REVERSES `D-041`'s nickname↔period mapping AND `D-042` §2's period↔colour mapping; the nickname↔**colour** pairing is the one thing that does NOT change; `I-011` closes with Tier 1 agreeing
+
+**Date:** 2026-08-13
+**Bears on:** `D-041` (**reversed in part**), `D-042` §2 (**reversed in part**), `D-042` §3
+(**resolved**), `A-020`, `I-011` (**CLOSED**), `EXTERNAL_VOCABULARY_REFERENCE.md` §5.16,
+`SOURCING_HIERARCHY.md` §3.4, `06_MANUAL_BACKTEST/tools/MMM_Indicator.txt` and
+`MMM_Indicator_README.md` (branch `feature/tradingview-mmm-indicator`).
+**Supersedes:** `D-041`'s **ketchup** and **mustard** rows; `D-042` §2's **5** and **13** rows.
+Neither entry is edited, reopened or deleted — both stand on the record and this entry is the
+correction (`DECISIONS.md` append-only; `REMEDIATION_PROTOCOL.md` §2).
+
+**The ruling, verbatim, owner, 2026-08-13, issued after reading `I-011`:**
+
+> *"I was wrong. It's the reverse. 5=mustard=yellow, 13=ketchup=red."*
+
+---
+
+### 1. THE FINAL MAPPING — ALL FIVE LINES, PERIOD **AND** COLOUR
+
+| Nickname | **Period** | **Colour** | Warrant on the period | Warrant on the colour |
+|---|---|---|---|---|
+| **Mustard** | **5 EMA** | **yellow** | `RESOLVED — OWNER ATTESTATION` (`D-043`) — ⚠️ **CHANGED from `D-041`'s 13** | `OWNER-ATTESTED` (`D-043`) — ⚠️ **CHANGED from `D-042`'s 13=yellow → now 5=yellow.** ✅ **Corroborated by Tier 1**, V07 `[00:25:34]` |
+| **Ketchup** | **13 EMA** | **red** | `RESOLVED — OWNER ATTESTATION` (`D-043`) — ⚠️ **CHANGED from `D-041`'s 5** | `OWNER-ATTESTED` (`D-043`) — ⚠️ **CHANGED from `D-042`'s 5=red → now 13=red.** No corroboration |
+| **Water** | **50 EMA** | **aqua** | `RESOLVED — OWNER ATTESTATION` (`D-039`, `D-041`, reaffirmed) — ✅ unchanged | `OWNER-ATTESTED` + `[TOOLING]` `3M-shadow-boxes-15M.tpl` `color=16776960` → RGB(0,255,255) — ✅ unchanged |
+| **Mayonnaise / Mayo** | **200 EMA** | **white** | `RESOLVED — OWNER ATTESTATION` (`D-039`, `D-041`) + `MMM-NOTES` p.66 (Tier 2) — ✅ unchanged | `OWNER-ATTESTED` + `[TOOLING]` same template, `color=16777215` → RGB(255,255,255) — ✅ unchanged |
+| **Blueberry** | **800 EMA**, **on the 15-minute** | **blue** | ✅ **`RESOLVED BY COURSE`** — V09 `[00:41:43]`, `GUEST`, normative under `D-033`. **The stronger basis and its timeframe are RETAINED** — ✅ unchanged | `OWNER-ATTESTED` + `[TOOLING]` same template, `color=16711680` (MT4 BGR) → RGB(0,0,255) — ✅ unchanged |
+
+**This is the authoritative mapping. Cite this entry, not `D-041` and not `D-042` §2, for the
+5 and the 13 — on either axis.**
+
+---
+
+### 2. ⚠️ WHICH MAPPING REVERSED — AND THE ONE THAT DID NOT. **READ THIS BEFORE PROPAGATING ANYTHING.**
+
+The owner's sentence bundles nickname, period and colour into one clause — *"5=mustard=yellow"* —
+and the project stores those as **two separate decisions on two separate axes**. Mapping the
+sentence onto the wrong axis is the single most likely way to get this correction wrong, so the
+axes are separated here explicitly.
+
+| Axis | Where it lives | Before (`D-041`/`D-042`) | After (`D-043`) | Verdict |
+|---|---|---|---|---|
+| **nickname ↔ period** | `D-041` | ketchup = 5 · mustard = 13 | **ketchup = 13 · mustard = 5** | 🔄 **REVERSED** |
+| **period ↔ colour** | `D-042` §2 | 5 = red · 13 = yellow | **5 = yellow · 13 = red** | 🔄 **REVERSED** |
+| **nickname ↔ colour** | neither, directly — it is the *composition* of the two | ketchup = red · mustard = yellow | **ketchup = red · mustard = yellow** | ✅ **UNCHANGED** |
+
+**Both stored decisions reverse. The composition of them does not.** Because the two reversals
+are on adjacent axes, they cancel where they meet: *ketchup* was red when it was the 5 and it is
+still red now that it is the 13; *mustard* was yellow when it was the 13 and it is still yellow now
+that it is the 5. The condiments keep their obvious colours throughout — the **periods moved
+underneath them.**
+
+**Three consequences of that, and none is cosmetic:**
+
+1. **A session correcting only "the colour mapping" corrects nothing that was wrong and leaves
+   both real errors standing.** Any artifact keyed on *nickname → colour* (*"mustard is yellow"*)
+   was **already correct** under `D-041`/`D-042` and needs **no edit**. Every artifact keyed on
+   *nickname → period* or on *period → colour* — which is the Pine script, `A-020`'s tables,
+   §5.16's tables and §3.4's summary line — is **wrong** and must be corrected.
+2. **`D-042`'s own observation that the nicknames "read as plain colour-naming" survives intact
+   and is now the only part of that section that never moved.** It was noted there as consistency
+   and explicitly *not* adopted as proof; it is still not proof, and it is still not adopted. But
+   it is the invariant across two contradictory owner rulings, which is worth recording as the
+   thing to hold onto if a third ruling ever arrives.
+3. **The Pine script's five colour constants change on exactly two lines** — the 5-period EMA
+   goes red → **yellow**, the 13-period EMA goes yellow → **red**. Because the *nickname* labels
+   in that file are attached to *periods*, the nickname on each of those two lines changes too.
+   50/200/800 are untouched on both axes and keep their `[TOOLING]` warrant.
+
+---
+
+### 3. `I-011` CLOSES — AND TIER 1 NOW **AGREES** WITH THE OWNER
+
+`I-011` asked the owner one question, and it anticipated this exact outcome in its own
+*"To close"* clause: *"If the owner reverses, that is a **new decision entry** superseding both
+`D-041` and `D-042` §2 — not an edit to either."* **That is what this entry is.**
+
+| Source | 5 EMA colour | 13 EMA colour | Agreement |
+|---|---|---|---|
+| **Owner ruling #1** — `D-042` §2, 2026-08-13 | red | yellow | ❌ contradicted by tape |
+| **V07 `[00:25:34]`, Tier 1, `GUEST` (normative, `D-033`)** | **yellow** | — (dotted, no colour given) | — |
+| **Owner ruling #2** — this entry | **yellow** | **red** | ✅ **agrees with tape** |
+
+> V07 `[00:25:34]`, verbatim: *"The only other lines in here, look, **this yellow one is a five
+> moving average.** I made it dotted in the 13, 50 and the 200."*
+> Frame: `04_SCREENSHOTS/V07/INDEX.md` row 22, `00:25:30`, `EURJPYm` M15.
+
+**What the agreement is worth, stated precisely so no artifact overstates it:**
+
+- **It is corroboration, not the warrant.** The owner's attestation is authoritative here
+  regardless of what the tape says — `I-011` was a Case C surfacing, and the owner adjudicated.
+  Had the owner confirmed red/yellow instead, that would equally have closed `I-011`, with V07
+  annotated as a guest's private palette. **The record must not read as though the tape forced
+  the ruling.**
+- **One cell does get a genuine warrant upgrade, and only one.** *"The 5 EMA is yellow"* is now
+  stated **directly** by a Tier 1 speaker, on a single warrant, with no chaining: V07 joins a
+  colour to a period in one sentence. That cell is `OWNER-ATTESTED` **+ Tier 1 corroborated**.
+- **Nothing becomes `RESOLVED BY COURSE`.** *Mustard = 5* still requires chaining V07's
+  *yellow = 5* through the owner's *mustard = yellow*, and **no speaker makes that join** — it is
+  still the `D-030` two-warrant chain that `D-042` §3 refused to walk, and the fact that it now
+  points the *convenient* way does not make it a different kind of inference. **Only blueberry is
+  `RESOLVED BY COURSE`.** Mustard, ketchup, water and mayo remain `RESOLVED — OWNER ATTESTATION`
+  on both axes and must be cited that way.
+- **`D-042` §3's third reason is no longer needed, and it is not thereby disproven.** The guest's
+  palette may still be his own — `[00:27:24]`'s *"the dashed ones… are 30 minute versions"* and
+  `[00:27:33]`'s *"the blue heavy ones are 60 minutes"* still show a personal multi-timeframe
+  convention, and the owner's ruling says nothing about that. What has gone away is the **need**
+  to explain the divergence, because there is no divergence left.
+
+**`I-011` is closed `RESOLVED — OWNER ATTESTATION`, in place, in `SETUP_ISSUES.md`, against this
+entry.** No `C-xxx` is opened or closed by it: `I-011` was Tier 1 against an owner attestation,
+which is an adjudication question, not a contradiction within the course sources.
+
+---
+
+### 4. THE THREE-STATE HISTORY — AND `D-041`'s HEADLINE CALIBRATION LESSON IS ITSELF NOW WRONG
+
+**This is the most useful thing in this entry and it is not the mapping.**
+
+| # | State | ketchup | mustard | Colours | Basis |
+|---|---|---|---|---|---|
+| **1** | `A-020` closure table, 2026-08-13 (`D-039`) | **13** | **5** | none recorded | Owner attestation as then recorded, agreeing with `EXTERNAL_VOCABULARY_REFERENCE.md` §5.16's three Tier 3 web sources and with the project's own inference from V06's *"closed below 13"* rule |
+| **2** | `D-041` + `D-042` §2, 2026-08-13 | **5** | **13** | 5 = red, 13 = yellow | Owner ruling #1, *"definitive"* |
+| **3** | **`D-043`, this entry** | **13** | **5** | **5 = yellow, 13 = red** | Owner ruling #2, correcting ruling #1 |
+
+**On periods, state 3 is state 1.** The project's original assignment was right, `D-041`
+overturned it, and it is now restored. The colours are genuinely new — state 1 had none — so this
+is **not** a clean revert, and treating it as one would lose `D-042`'s three `[TOOLING]`-corroborated
+rows and the V07 corroboration that state 1 never had.
+
+**`D-041` drew a headline lesson from the inversion, and that lesson is false as written.** It
+said, in `A-020`, in §5.16 and in §3.4, that Tier 3 convergence had been *"wrong on a point where
+it was internally coherent, cross-source consistent, and agreed with the project's own inference
+from V06"*, and called it *"the single best-calibrated warning this project has yet produced
+against `EXTERNAL_VOCABULARY_REFERENCE.md` §5"* and *"the receipt"* for `D-030`. **§5.16's table
+was right on the two rows in question.** Every place that claim is printed is superseded by this
+entry and annotated in place.
+
+**The correct lesson is a different one, and it is stronger, not weaker:**
+
+- **`D-030` and §1.3 are NOT vindicated by this and are NOT retired by it either.** §5.16's three
+  sources are still very probably **one document quoted three times**; their unanimity was never
+  independent corroboration, and it still is not. **Being right once does not make a method
+  reliable** any more than being wrong once made it worthless. Tier 3 stays non-normative, stays
+  `DO NOT CODE` as a closure route, and closes nothing (`D-040`). The §5.16 table remains a thing
+  a session must not cite — it is now *accidentally* correct on two rows, which is a worse trap
+  than being plainly wrong, and the banner there says so.
+- **The real calibration datum is about OWNER ATTESTATION, which is where this project actually
+  gets its answers.** An attestation was issued in a single sentence, marked *definitive*,
+  overturned a standing record on two rows, propagated into five files and a Pine script inside a
+  day, and was **wrong**. It was corrected only because `D-042` ran a search it was not strictly
+  required to run, found one Tier 1 sentence that contradicted a *different* axis of the same
+  mapping, and **refused to adjudicate it**. `SOURCING_HIERARCHY.md` §3.2 Case C is what caught
+  this. Had `D-042` chained the inference and "fixed" it, or suppressed the finding as a mere
+  colour question, the error would have stood.
+- **`D-041`'s alternatives block anticipated exactly this and chose correctly.** It rejected
+  querying the inversion before acting, on the grounds that the ruling was reversible if recorded
+  loudly enough — *"recorded in the loudest terms this file has… so it cannot be adopted unnoticed
+  and is trivially reversible if the owner reads it back and says otherwise."* **The owner has now
+  read it back and said otherwise, and the reversal cost one decision entry and five annotations
+  rather than an archaeology exercise.** That design worked. It is the reason this correction is
+  cheap.
+- **The standing re-check obligation is vindicated twice over.** `SOURCING_HIERARCHY.md` §3.4's
+  *"closed on owner attestation is not closed for good"* has now been demonstrated against an
+  attestation **twice in one day, in opposite directions.** `A-020` stays on that list.
+
+**A by-product: `D-041`'s `Q-002` analysis reverses with it, and the quarantine is unaffected
+either way.** `D-041` argued that against ketchup(5)/mustard(13), the fabricated `NOTES.md`
+sequence — *5 Mustard, 13 Water, 50 Mayo, 200 Blueberry, 800 Raspberry* — became *"a clean
+truncation from the front"*. Against the corrected order — **Mustard(5), Ketchup(13), Water(50),
+Mayo(200), Blueberry(800)** — the fabricated file's **first pair is now correct** (*5 Mustard*) and
+the corruption is a **mid-list drop of *Ketchup*** with everything below it slid up one rung, plus
+an invented *Raspberry* tail. That is `A-020`'s **original** pre-`D-041` reading — *"the real
+sequence shifted one place"* — **restored verbatim**. `D-041`'s *"gets cleaner"* by-product claim
+is superseded. **`Q-002` and `Q-012` are not rehabilitated by one accidentally-correct pair**:
+`raspberry` still occurs **0×** in genuine audio anywhere in the corpus, `Q-012` §2's *"50 (Mayo)"*
+is still wrong, and a fabricated file that gets its first row right is still fabricated.
+
+---
+
+### 5. WHAT THIS DECISION DOES **NOT** DO
+
+- **It does not reopen `C-018`.** `D-041` had two operative halves and **only the second is
+  reversed here.** Half 1 — `C-018` closed as reading B, V11 `[00:46:45]`'s *"There's the
+  mayonnaise. There's the 50"* is an **enumeration**, not an apposition equating mayo with 50 — is
+  untouched, because it concerns the **mayo** row, which does not move. `D-041` was explicit that
+  that closure *"does not rest on the owner outranking a recording"* but on the V11 session's own
+  three independent grounds, with the owner supplying a disambiguation the sources left open. **A
+  closure that never leaned on the attestation's infallibility is not weakened by the attestation
+  turning out to be fallible elsewhere.** `C-018` stays closed on `video/v11` where it lives.
+- **It does not establish a "Tier 0", and it does not demote the owner either.** Owner attestation
+  remains an **adjudication warrant sitting outside the source hierarchy**, and
+  `AUTOMATION_AMBIGUITIES.md`'s `STATUS VALUES` table still ranks `RESOLVED — OWNER ATTESTATION`
+  as the **weakest** of its three resolved statuses. Nothing here promotes it; the fact that it
+  needed correcting is an argument for that ranking, not against it.
+- **It does not discharge `SOURCING_HIERARCHY.md` §3.4.** `A-020` stays on the standing re-check
+  list. `D-042`'s exhaustive search remains **discharged as at V11 and live for V12 onward**; its
+  **negative result is unaffected** — no Tier 1 statement attaches a period to *ketchup* or
+  *mustard* anywhere in V01–V11, and that was true before this ruling and is true after it. **This
+  entry changes which owner-attested numbers fill the gap, not whether the gap exists.**
+- **It does not touch water, mayo or blueberry on either axis**, nor their `[TOOLING]` warrants,
+  nor blueberry's `RESOLVED BY COURSE` status or its 15-minute timeframe, nor `MMM-NOTES` p.66's
+  Tier 2 corroboration of mayo = 200.
+- **It does not touch `C-010`.** The 800-vs-notes discrepancy is about what `MMM-NOTES` omits, not
+  about which nickname carries which number.
+- **It supplies no threshold and unblocks no rule.** `A-020`'s surviving cautions stand: *"enough
+  distance between the entry and the mayonnaise"* (V02 `[00:19:46]`) is still an undefined
+  viability filter `D-030` forbids numbering, and `[00:05:00]`'s *"manays"* is still PROBABLE.
+- **It changes no mastery grade and no review verdict**, and it corrects no completed review
+  artifact. See §6.
+
+---
+
+### 6. DOWNSTREAM ARTIFACTS THAT ARE NOW STALE — FLAGGED, NOT EDITED
+
+Completed review artifacts are not retro-edited (`REMEDIATION_PROTOCOL.md` §3.9 — *"`R1` is never
+edited"*). Three are affected and are recorded here for the owner and for the next reviewer:
+
+| Artifact | What is now stale | Disposition |
+|---|---|---|
+| `18_REVIEW/V11/V11_REVIEW_R1.md` § `N1` (item 114) and § REQUIRED CORRECTIONS item 3 | The reviewer **declined** `D-041` consequence 7's invitation to put the inversion back to the owner, and characterised `D-042` §3's V07 conflict as *"a question about COLOURS, not about the period mapping this review checked"*. **The colour conflict did in fact reach the period mapping** — it is the thread the owner pulled to reverse `D-041`. | **No correction owed and no fault charged.** The reviewer's *factual* work is untouched and remains correct: the body-only V01–V11 census (`ketchup` 0×, V04's two numberless `mustard` uses, V01 `[00:19:24]`'s garble) is **verified and unaffected** — the corpus still says nothing, which is precisely why an owner ruling was the only thing that could move this. The declined escalation was reasonable on what was in front of it, and the reviewer **explicitly recorded the V07 conflict rather than sweeping it past**, which is why it survived to be answered. The stale part is one *characterisation*, not a finding, a number or a verdict. **A note is owed in `REVIEW_INDEX.md` item 114, not an edit to `V11_REVIEW_R1.md`.** |
+| `18_REVIEW/REVIEW_INDEX.md` item 97 (V11 student) | Its closing line reads *"⚠ The same ruling **overturned `A-020`'s ketchup/mustard rows** (now **ketchup = 5, mustard = 13**…)"*. | Stale. **Index rows are the live tracking surface, not a frozen review artifact** — a superseding note is appropriate here. Flagged for the owner rather than applied in this session, since items 109–113 are already owed against this index. |
+| `18_REVIEW/V09/V09_REVIEW_R1.md` line ~290 | States the attested set as *"mustard 5, ketchup 13, water 50, mayo 200, blueberry 800"*. | **This was correct when written, was made stale by `D-041`, and is now correct again.** No action. Recorded because a session auditing for `D-041` staleness would have flagged it, and must now un-flag it. Its surrounding arithmetic (the 800×15m = 200×60m factor-of-four argument) never depended on the ketchup/mustard rows at all. |
+
+`LOG.md`, `00_SYSTEM/QUARANTINE_REGISTER.md`, `00_SYSTEM/COURSE_PROGRESS.md` and
+`03_LESSON_NOTES/V09_SOURCE_NOTES.md` also carry the nicknames. **None states a ketchup or mustard
+period as a live fact** — they are narrative records of what happened on a date, and a dated record
+of a ruling that was later reversed is **correct as a record**. They are not annotated, and that is
+deliberate: annotating history for having been history is how an audit trail gets destroyed.
+
+---
+
+**Reason:** `I-011` asked the owner a question that only the owner could answer, and the owner
+answered it. Recording that answer as an edit to `D-041` or `D-042` was forbidden twice over
+(`DECISIONS.md` append-only; `REMEDIATION_PROTOCOL.md` §2), and recording it *without* separating
+the two axes it moves would have propagated a half-correction into the Pine script and three
+ledgers — the nickname↔colour pairing is unchanged and looks like the thing being corrected, which
+is a trap laid by the shape of the owner's own sentence. Beyond the mapping, `D-041` printed a
+confident calibration lesson against Tier 3 in three files, and that lesson is now known to be
+drawn from a false premise; leaving it standing would mis-train every session that reads it.
+
+**Evidence:** Owner attestation, 2026-08-13, verbatim in the header — issued in direct response to
+`I-011`'s stated question, under the same `D-039` warrant as the owner-attested closures of
+`A-014`, `A-020` and `A-023`. **Tier 1 corroboration on 5 = yellow:** V07 `[00:25:34]`, frame
+`04_SCREENSHOTS/V07/INDEX.md` row 22 — `GUEST`, normative under `D-033`, and the only place in
+V01–V11 where a speaker joins a colour to a period in one sentence. **`[TOOLING]` corroboration on
+50/200/800 colours, carried forward unchanged from `D-042` §2:** `3M-shadow-boxes-15M.tpl`, decoded
+in `06_MANUAL_BACKTEST/tools/MMM_Indicator_README.md` (`feature/tradingview-mmm-indicator`).
+**Tier 3 agreement on the restored periods:** `EXTERNAL_VOCABULARY_REFERENCE.md` §5.16 and its
+three cited web sources (mustard = 5, ketchup = 13) — **noted, non-normative, closes nothing**
+(`D-040`), and see §4 for why this is not a rehabilitation of that table. **Negative search result,
+unchanged and still governing:** `D-042` §1 — no Tier 1 statement attaches a period to *ketchup* or
+*mustard* anywhere in V01–V11, independently re-verified by the V11 R1 reviewer (`N1`).
+
+**Alternatives considered:** *Editing `D-041` and `D-042` in place, since they are now known to be
+wrong* — rejected outright; `DECISIONS.md` is append-only and `REMEDIATION_PROTOCOL.md` §2 requires
+superseded text retained and marked, and the two-reversals-in-one-day sequence is itself the most
+instructive thing in this record. *Recording this as a reversal of the nickname↔**colour** pairing,
+which is how the owner's sentence and the raising instruction both frame it* — **rejected on the
+evidence, and this was the live trap**: ketchup = red and mustard = yellow **before and after**, so
+correcting that axis would have changed nothing while leaving both real errors — the periods and
+the period↔colour assignment — in place in the Pine script and three ledgers. §2 exists to stop
+that. *Treating the V07 agreement as promoting the mapping to `RESOLVED BY COURSE`* — rejected; the
+nickname↔period join is still a two-warrant chain no speaker makes, and adopting a chain because it
+now points the convenient way is the same `D-030` error `D-042` §3 correctly refused when it
+pointed the inconvenient way. **The reasoning must not be run in one direction only.**
+*Downgrading blueberry to owner attestation for table consistency* — rejected for the same reason
+`D-041` rejected it. *Retro-editing `V11_REVIEW_R1.md`'s now-stale characterisation* — rejected;
+`R1` is never edited (`REMEDIATION_PROTOCOL.md` §3.9), the reviewer's findings and census are
+unaffected, and the review's own recording of the conflict is what made this correction possible.
+*Deferring the Pine change until a legend is observed on-screen* — rejected; the script already
+ships owner-attested colours under `D-042` consequence 6, and shipping the **superseded** pair
+while a corrected one exists is strictly worse than shipping the corrected one under the same
+warrant.
+
+**Consequences:**
+
+1. **`D-041` and `D-042` remain on the record, unedited, `ACTIVE` as historical entries, and are
+   annotated as superseded in part by this one.** `D-041`'s `C-018` closure and `D-042`'s §1
+   search result and §2 50/200/800 rows all stand.
+2. **`A-020` gains a third annotation block** recording ruling #2, the restored periods, the
+   corrected colours and the V07 agreement. Its two earlier blocks (`D-041`'s ⛔ SUPERSEDED IN PART
+   and `D-042`'s 🎨 COLOURS) are **retained unedited** — the record now carries all three states in
+   sequence and a session can read the history off the file (`REMEDIATION_PROTOCOL.md` §2).
+3. **`EXTERNAL_VOCABULARY_REFERENCE.md` §5.16's banner is corrected**, including the withdrawal of
+   its *"Tier 3 was unanimous and it was wrong"* claim, which is false. The Tier 3 table below it
+   stays **non-normative and uncitable** — now on the stronger ground that an accidentally-correct
+   source is a worse trap than a plainly wrong one.
+4. **`SOURCING_HIERARCHY.md` §3.4 gains a third dated update block** carrying the final mapping,
+   and the obligation on `A-020` **stays live for V12 onward**.
+5. **`SETUP_ISSUES.md` `I-011` is CLOSED** `RESOLVED — OWNER ATTESTATION`, against this entry, with
+   the note that the ruling agrees with the V07 tape.
+6. **The Pine tool swaps two colour constants** on `feature/tradingview-mmm-indicator` — 5-period
+   EMA → **yellow**, 13-period EMA → **red** — with their nickname labels following the periods,
+   the comment block rewritten to cite `D-043`, and the V07 conflict note **replaced by a V07
+   corroboration note** on the 5. 50/200/800 unchanged. **The branch is not merged.**
+7. **Any artifact citing either axis must cite this entry and the warrant.** *"Mustard (5 EMA,
+   yellow, `OWNER-ATTESTED`, `D-043`; colour corroborated by V07 `[00:25:34]`)"* and *"Ketchup
+   (13 EMA, red, `OWNER-ATTESTED`, `D-043`)"*. **Never** *"the red ketchup 5 EMA"* — that phrasing
+   is now wrong twice, and it is the exact string a session will copy from `D-041`.
+8. **The next free identifier is `D-044`.** `feature/tradingview-mmm-indicator` still carries
+   `06_MANUAL_BACKTEST/tools/DRAFT_D-041_platform_artifacts.md`, whose reserved number was taken on
+   integration; that collision is unchanged by this entry and is still the adopting session's to
+   renumber (`D-042` §4, `D-038a` consequence 1).
+
+**Status:** ACTIVE — **AUTHORITATIVE. Supersedes `D-041`'s ketchup/mustard rows and `D-042` §2's
+5/13 rows on both axes.** `I-011` CLOSED against it.

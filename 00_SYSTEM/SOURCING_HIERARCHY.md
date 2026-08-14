@@ -237,6 +237,46 @@ against the lesson and run §3.1 if Tier 1 speaks. Closed on Tier 2 is **not** c
 > **outside** the tiers as an adjudication warrant. A source cannot be ranked against the
 > adjudicator; it can only be put back to them.
 
+> ### ⭐ FINAL 2026-08-13 — `D-043`: THE OWNER WAS PUT BACK TO AND **REVERSED**. THE TAPE WAS RIGHT.
+>
+> **The two blocks above are superseded on the ketchup/mustard rows and are retained unedited**
+> (`REMEDIATION_PROTOCOL.md` §2). **`D-043` is the authoritative mapping:**
+>
+> > *"I was wrong. It's the reverse. **5=mustard=yellow, 13=ketchup=red.**"* — owner, 2026-08-13
+>
+> **mustard = 5 (yellow) · ketchup = 13 (red) · water = 50 (aqua) · mayonnaise = 200 (white) ·
+> blueberry = 800 (blue)** — blueberry alone is `RESOLVED BY COURSE`, V09 `[00:41:43]`, on the
+> **15-minute**. The other four are `RESOLVED — OWNER ATTESTATION` on **both** axes.
+>
+> **⚠️ Two mappings reversed and their composition did not.** `D-041`'s nickname↔period **and**
+> `D-042` §2's period↔colour both flip; **nickname↔colour** (ketchup = red, mustard = yellow) is
+> unchanged. Correcting only the colour pairing corrects nothing. See `D-043` §2.
+>
+> **`I-011` is CLOSED**, `RESOLVED — OWNER ATTESTATION`. V07 `[00:25:34]`'s *"this yellow one is a
+> five moving average"* now **agrees** with the owner. That is **corroboration, not the warrant** —
+> the attestation would have closed `I-011` either way. **One cell gains a real Tier 1 basis** —
+> *"the 5 EMA is yellow"*, stated directly in one sentence — but **nothing becomes
+> `RESOLVED BY COURSE`**: *mustard = 5* still needs V07's *yellow = 5* chained through the owner's
+> *mustard = yellow*, and no speaker makes that join.
+>
+> #### THIS SECTION IS THE THING THAT WAS VINDICATED, TWICE, IN OPPOSITE DIRECTIONS
+>
+> `D-041` argued that its own existence — a definitive attestation overturning two rows of an
+> earlier attested closure — was the strongest argument for this obligation. **`D-043` overturned
+> `D-041` the same day, back to the original assignment.** *"Closed on owner attestation is not
+> closed for good"* has now been demonstrated against an attestation **twice within twenty-four
+> hours**, and the second time it restored what the first had discarded.
+>
+> **And §3.2 Case C is what caught it.** `D-042` found one Tier 1 sentence contradicting a
+> *different axis* of the mapping, declined to chain the inference, and surfaced it. Had it
+> adjudicated — in either direction — the error would have stood. **The rule that forbids a session
+> from resolving a genuine conflict is what produced the correct answer here.**
+>
+> **`A-020` STAYS ON THIS LIST for V12 onward.** `D-042` §1's exhaustive negative is **unaffected
+> and still governs**: no Tier 1 statement attaches a period to *ketchup* or *mustard* anywhere in
+> V01–V11. `D-043` changes **which owner-attested numbers fill that gap, not whether the gap
+> exists.** `A-014` and `A-023` remain listed and untouched.
+
 ---
 
 ## 4. WHAT THIS FILE DOES NOT CHANGE

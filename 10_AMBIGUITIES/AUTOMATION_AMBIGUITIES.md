@@ -314,7 +314,7 @@ resolved record keeps its history.
 | A-017 | "big entry candle" | V01 `[00:48:41]` | DO NOT CODE | Medium. The only entry-trigger language in the lesson. |
 | A-018 | `R = <number>` labels on the shaded boxes | V01 `[00:48:35]` | DO NOT CODE | Medium. If misread as a risk-to-reward ratio it would invent a target rule the lesson never states. |
 | A-019 | session times with **no timezone stated** | V02 `[00:50:32]` | DO NOT CODE — **materially constrained** by slide `[00:45:55]` | Foundational. The full session table is now recovered from the slide; only the timezone is missing. |
-| A-020 | "mayonnaise" (a moving average) | V02 `[00:19:46]` | **RESOLVED — OWNER ATTESTATION** (`D-039`), *not* by course. **Mapping SUPERSEDED IN PART by `D-041`** — ketchup/mustard **inverted** to **5/13**; mayo=200 reaffirmed; blueberry=800 stays `RESOLVED BY COURSE`. Closes `C-018`. See `C-010` | High. Used as a support/resistance reference *and* as the distance test for whether a trade is worth taking. |
+| A-020 | "mayonnaise" (a moving average) | V02 `[00:19:46]` | **RESOLVED — OWNER ATTESTATION** (`D-039`), *not* by course. ⭐ **FINAL MAPPING IS `D-043`: mustard = 5 = yellow, ketchup = 13 = red**, water = 50 = aqua, mayo = 200 = white, blueberry = 800 = blue. `D-043` **reverses** `D-041`'s nickname↔period rows **and** `D-042` §2's period↔colour rows (the nickname↔colour pairing is unchanged); ~~`D-041` inverted ketchup/mustard to 5/13~~. Mayo=200 reaffirmed throughout; blueberry=800 stays `RESOLVED BY COURSE`. `C-018` closed by `D-041` and **not** reopened. `I-011` closed by `D-043`. See `C-010` | High. Used as a support/resistance reference *and* as the distance test for whether a trade is worth taking. |
 | A-021 | the letter sequence for "the cycle" | V02 `[00:07:28]` / `[00:19:31]` | DO NOT CODE | Medium. Two incompatible strings ("M-A-A-W", "WVVM") for the same named object. |
 | A-022 | "half-Batman" | V02 `[00:20:37]` | DO NOT CODE — **narrowed** by `MMM-NOTES` p.19 (`D-039`) | High. One of exactly two named continuations at outside structure high. |
 | A-023 | "33 trade" | V02 `[00:22:16]` | **RESOLVED BY `MMM-NOTES`** p.64 (`D-039`) — digits decoded; remains DO NOT CODE; **constrained** by V02 slide `[00:18:00]` | Medium. Printed on the **Level 3** move, tying it to level rather than calendar day. ~~Digits still undecoded.~~ **Decoded 2026-08-13**: 3 levels over 3 days + an intraday Level III. |
@@ -2305,14 +2305,117 @@ survive its closure and are **not** answered by the mapping:
 > **Source:** `00_SYSTEM/DECISIONS.md` `D-042` (full entry); `00_SYSTEM/SETUP_ISSUES.md` `I-011`;
 > `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §5.16.
 
+> ### ⭐ FINAL — 2026-08-13 — `D-043`: OWNER RULING #2 **REVERSES** RULING #1. THIS BLOCK IS AUTHORITATIVE.
+>
+> **Everything above this line about ketchup and mustard — on periods (`D-041`) AND on colours
+> (`D-042`) — is SUPERSEDED.** All of it is retained unedited per `REMEDIATION_PROTOCOL.md` §2, and
+> this record now carries **three states in sequence** so the history is legible. **Do not cite
+> `D-041` or `D-042` §2 for the 5 or the 13 on either axis. Cite `D-043`.**
+>
+> Owner attestation, 2026-08-13, issued in answer to `I-011`:
+>
+> > *"I was wrong. It's the reverse. **5=mustard=yellow, 13=ketchup=red.**"*
+>
+> #### THE FINAL MAPPING
+>
+> | Nickname | **Period** | **Colour** | Warrant | Change |
+> |---|---|---|---|---|
+> | **Mustard** | **5 EMA** | **yellow** | `RESOLVED — OWNER ATTESTATION` (`D-043`); colour ✅ **corroborated by Tier 1**, V07 `[00:25:34]` | 🔄 **period and colour BOTH changed** |
+> | **Ketchup** | **13 EMA** | **red** | `RESOLVED — OWNER ATTESTATION` (`D-043`); colour uncorroborated | 🔄 **period and colour BOTH changed** |
+> | **Water** | **50 EMA** | **aqua** | `RESOLVED — OWNER ATTESTATION` (`D-039`/`D-041`/`D-043`) + `[TOOLING]` `3M-shadow-boxes-15M.tpl` | ✅ unchanged |
+> | **Mayonnaise / Mayo** | **200 EMA** | **white** | `RESOLVED — OWNER ATTESTATION` + `MMM-NOTES` p.66 (Tier 2) + `[TOOLING]` | ✅ unchanged |
+> | **Blueberry** | **800 EMA**, **on the 15-minute** | **blue** | ✅ **`RESOLVED BY COURSE`** — V09 `[00:41:43]` (`GUEST`, normative `D-033`) + `[TOOLING]` | ✅ unchanged |
+>
+> #### ⚠️ THE TRAP — WHICH MAPPING ACTUALLY REVERSED
+>
+> The owner's sentence bundles all three attributes — *"5=mustard=yellow"* — but this project
+> stores **two** decisions on **two** axes, and **both reverse while their composition does not:**
+>
+> | Axis | Before | After | |
+> |---|---|---|---|
+> | **nickname ↔ period** (`D-041`) | ketchup 5 · mustard 13 | **ketchup 13 · mustard 5** | 🔄 REVERSED |
+> | **period ↔ colour** (`D-042` §2) | 5 red · 13 yellow | **5 yellow · 13 red** | 🔄 REVERSED |
+> | **nickname ↔ colour** (the composition) | ketchup red · mustard yellow | ketchup red · mustard yellow | ✅ **UNCHANGED** |
+>
+> The two reversals are on adjacent axes and **cancel where they meet**. The condiments keep their
+> obvious colours throughout; **the periods moved underneath them.** A session "correcting the
+> colour mapping" therefore corrects nothing that was wrong and leaves both real errors standing.
+>
+> #### THE THREE STATES OF THIS RECORD — AND WHAT `D-041` GOT WRONG BEYOND THE MAPPING
+>
+> | # | State | ketchup | mustard | Colours |
+> |---|---|---|---|---|
+> | 1 | This record's closure table (`D-039`), agreeing with Tier 3 §5.16 and with the V06 *"closed below 13"* inference | **13** | **5** | none recorded |
+> | 2 | `D-041` + `D-042` §2 — owner ruling #1, *"definitive"* | **5** | **13** | 5 red · 13 yellow |
+> | 3 | **`D-043` — owner ruling #2, FINAL** | **13** | **5** | **5 yellow · 13 red** |
+>
+> **On periods, state 3 is state 1: this record's original assignment was right and is restored.**
+> It is **not** a clean revert — state 1 had no colours, and `D-042`'s three `[TOOLING]`-corroborated
+> rows and the V07 corroboration are genuinely new and are kept.
+>
+> **`D-041`'s headline lesson is therefore FALSE and is withdrawn.** It claimed the inversion was
+> *"the single best-calibrated warning this project has yet produced against
+> `EXTERNAL_VOCABULARY_REFERENCE.md` §5"* and *"the receipt"* for `D-030`. **§5.16's Tier 3 table
+> was right on the two rows in question.** But this is **not** a rehabilitation of Tier 3: those
+> three sources are still very probably one document quoted three times, their unanimity was never
+> independent corroboration, and an **accidentally correct** source is a worse trap than a plainly
+> wrong one. The table stays non-normative and uncitable. **The real calibration datum is about
+> owner attestation** — a *definitive* one-sentence ruling propagated into five files and a Pine
+> script inside a day and was wrong, and it was caught only because `D-042` ran a search it was not
+> required to run and then **refused to adjudicate** what it found (`SOURCING_HIERARCHY.md` §3.2
+> Case C). Case C is what caught this.
+>
+> #### `Q-002`: `D-041`'s BY-PRODUCT REVERSES TOO; THE QUARANTINE IS UNAFFECTED
+>
+> `D-041` argued that against ketchup(5)/mustard(13) the fabricated `NOTES.md` sequence became *"a
+> clean truncation from the front"*. Against the corrected order — **Mustard(5), Ketchup(13),
+> Water(50), Mayo(200), Blueberry(800)** — the fabricated file's **first pair is correct**
+> (*"5 Mustard"*) and the corruption is a **mid-list drop of *Ketchup*** with everything below slid
+> up one rung, plus an invented *Raspberry* tail. **That is this record's ORIGINAL pre-`D-041`
+> reading — *"the real sequence shifted one place"* — restored verbatim.** `D-041`'s *"gets
+> cleaner"* claim is superseded. **`Q-002` and `Q-012` are NOT rehabilitated**: `raspberry` is
+> still **0×** in genuine audio corpus-wide, `Q-012` §2's *"50 (Mayo)"* is still wrong, and a
+> fabricated file that gets its first row right is still fabricated.
+>
+> #### WHAT DOES NOT CHANGE
+>
+> - **Course status stays `DO NOT CODE` on the period question.** Nothing here is
+>   `RESOLVED BY COURSE` except **blueberry**. *Mustard = 5* still needs V07's *yellow = 5* chained
+>   through the owner's *mustard = yellow*, and **no speaker makes that join** — it is the same
+>   `D-030` chain `D-042` §3 refused when it pointed the *inconvenient* way, and it does not become
+>   sound by now pointing the convenient way.
+> - **`D-042` §1's exhaustive search result is unaffected and still governs.** No Tier 1 statement
+>   attaches a period to *ketchup* or *mustard* anywhere in V01–V11. That was true before the
+>   ruling and is true after it — this entry changes **which owner-attested numbers fill the gap,
+>   not whether the gap exists.** `SOURCING_HIERARCHY.md` §3.4's obligation on this record **stays
+>   live for V12 onward**, now vindicated against an owner attestation twice in one day in opposite
+>   directions.
+> - **`C-018` is NOT reopened.** `D-041` had two halves and only the second reverses. The `C-018`
+>   closure concerns the **mayo** row, which does not move, and it rested on the V11 session's own
+>   three grounds rather than on the attestation being infallible.
+> - **Water, mayo and blueberry are untouched on both axes**, as are their `[TOOLING]` warrants,
+>   blueberry's Tier 1 status and its 15-minute timeframe, and `C-010`.
+> - **The surviving cautions stand:** `[00:19:46]`'s *"enough distance… to the mayonnaise"* is
+>   still an undefined viability filter `D-030` forbids numbering, and `[00:05:00]`'s *"manays"* is
+>   still PROBABLE.
+>
+> **Cite as:** *"Mustard (5 EMA, yellow, `OWNER-ATTESTED`, `D-043`; colour corroborated by V07
+> `[00:25:34]`)"* · *"Ketchup (13 EMA, red, `OWNER-ATTESTED`, `D-043`)"*. **Never** *"the red
+> ketchup 5 EMA"* — wrong twice, and it is the exact string a session will copy from `D-041`.
+>
+> **Source:** `00_SYSTEM/DECISIONS.md` `D-043` (full entry, §2 on the axes, §4 on the calibration);
+> `00_SYSTEM/SETUP_ISSUES.md` `I-011` (**CLOSED**); `EXTERNAL_VOCABULARY_REFERENCE.md` §5.16;
+> `SOURCING_HIERARCHY.md` §3.4.
+
 ### Related — added 2026-08-13
 
 | Type | Reference |
 |---|---|
+| Decision | ⭐ **`D-043` — AUTHORITATIVE, read this one.** Owner ruling #2 **reverses** ruling #1: **mustard = 5 = yellow, ketchup = 13 = red**; water/mayo/blueberry unchanged. Supersedes `D-041`'s nickname↔period rows **and** `D-042` §2's period↔colour rows; the nickname↔**colour** pairing is unchanged. Closes `I-011`. V07 `[00:25:34]` now **corroborates** |
 | Decision | `D-039` (admission of `MMM-NOTES`; owner attestation as warrant) |
-| Decision | **`D-041`** — the owner's **definitive** five-nickname mapping. **Supersedes the ketchup/mustard rows of this record (inverted to 5/13)**; reaffirms mayo=200; closes `C-018` |
-| Decision | **`D-042`** — the exhaustive V01–V11 + `MMM-NOTES` search returned **NEGATIVE** (`D-041` stands unchanged); adds the owner's **colour** mapping; flags the V07 `[00:25:34]` Tier 1 conflict |
-| Setup issue | **`I-011`** — ⚠️ `OPEN`. V07 `[00:25:34]` (*"this yellow one is a five moving average"*) contradicts the owner's **5 = red / 13 = yellow**, and transitively points back at **mustard = 5, ketchup = 13**. Awaiting owner adjudication; **`D-041` untouched meanwhile** |
+| Decision | ~~**`D-041`** — the owner's **definitive** five-nickname mapping. **Supersedes the ketchup/mustard rows of this record (inverted to 5/13)**; reaffirms mayo=200; closes `C-018`~~ ⛔ **its ketchup/mustard rows are SUPERSEDED by `D-043`** — the inversion is reversed. Its `C-018` closure and its mayo/water/blueberry rows **stand** |
+| Decision | **`D-042`** — the exhaustive V01–V11 + `MMM-NOTES` search returned **NEGATIVE** (~~`D-041` stands unchanged~~ — see `D-043`); adds the owner's **colour** mapping; flags the V07 `[00:25:34]` Tier 1 conflict. ⛔ **§2's 5/13 colour rows are SUPERSEDED by `D-043`** (5 = yellow, 13 = red). Its **§1 negative search result stands unchanged and still governs**; its 50/200/800 `[TOOLING]` rows stand; **§3's flagged conflict is RESOLVED — in the tape's favour** |
+| Setup issue | **`I-011`** — ✅ **CLOSED 2026-08-13 (`D-043`)**, `RESOLVED — OWNER ATTESTATION`. The owner reversed: the 5 **is** yellow, agreeing with V07 `[00:25:34]`. **Corroboration, not the warrant** — the attestation closed it either way |
 | Contradiction | **`C-010`** — the corpus's `800` vs the notes' four-EMA enumeration |
 | Contradiction | **`C-018`** — V11 `[00:46:45]` *"There's the mayonnaise. There's the 50"*. **CLOSED by `D-041`** as reading B (enumeration); this record untouched by the utterance. Lives on `video/v11` until merge-back (`D-038a`) |
 | Reference | `00_SYSTEM/EXTERNAL_VOCABULARY_REFERENCE.md` §9.4 and **§5.16** (Tier 3 table, now carrying a `D-041` superseding banner); `MMM-NOTES` p.38, p.66 |
