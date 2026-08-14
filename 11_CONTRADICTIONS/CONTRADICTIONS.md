@@ -2798,3 +2798,149 @@ C-023 -- OPEN, LOGGED, AND EXPLICITLY LOW-SEVERITY.
   Measured cost on GBP/USD, n=2 days: under 4 pips per level.
   See A-106 for the same class of defect at ~20x the magnitude.
 ```
+
+---
+
+### ⭐⭐ V17 ADDENDUM (2026-08-14) — THE COURSE ITSELF EXPLAINS THIS, ONE WEEK LATER, AND `C-023` IS **DOWNGRADED, NOT CLOSED**
+
+V17 `[00:08:09]`–`[00:08:37]`, answering what he calls *"one of the biggest questions"*:
+
+> *"When you measure the 24-hour period on a daily candle that can look **closes at 5 p.m** \| **Our
+> indicator's designed** to take the pivots \| Around 12 1 o'clock in the morning depending on your
+> dealer and what his GMT offset is and **recalculate the 24-hour period** \| So the pivots are
+> freshly put in place right before the London open \| **and that's why your pivots will not match**"*
+
+**Both V16 statements are true of different objects.** The **daily candle** is the broker's, closing
+at 17:00 dealer time. The **indicator** re-cuts its own 24-hour window overnight so the levels are
+fresh for the London session. *"They're based on price action from midnight to midnight"* describes
+the indicator; *"just do it on the daily candle for right now"* is the teaching simplification he
+flagged it as.
+
+**Why this is a DOWNGRADE and not a closure — three reasons, and the third is the strongest:**
+
+1. **V17 does not say the two agree; it says they differ, and treats the difference as the
+   answer.** A student's pivots *should not* match his. That resolves the puzzle without
+   reconciling the numbers.
+2. **The recalculation instant is a free parameter** — *"depending on your dealer and what his GMT
+   offset is"* (`A-107`). Replacing *"which of two definitions?"* with *"a window whose position is
+   an unstated broker setting"* is not an improvement for an automation project.
+3. ⚠ **The explanation itself conflicts with V16's own printed slide** — *"right before the London
+   open"* at 00:00–01:00, against `London Session Start / 2:00 To 3:00 AM, EST`. **That is `C-024`,
+   and it is a new contradiction created by the resolution of this one.**
+
+### Current Status after the V17 addendum
+
+```text
+C-023 -- OPEN, SEVERITY DOWNGRADED from "Tier 1 against itself on a computation"
+  to "two objects, one clock question". The measured impact stays under 4 pips
+  on the two days V16's homework tested.
+  It now depends on A-107 and has spawned C-024. It CANNOT be closed while the
+  recalculation window's position is a free parameter.
+```
+
+---
+
+## C-024 — The pivots are re-cut *"around 12, 1 o'clock in the morning"* so they are fresh *"right before the London open"* — but V16's own slide prints the London session start as `2:00 To 3:00 AM, EST`
+
+**Raised by:** V17 · `[00:08:27]`–`[00:08:33]` against V16 `V16_00-14-25_london-session-start-2-to-3am-est-slide.png`
+**Both speakers:** the course author · **Class:** Tier 1 audio against Tier 1 print, **across two
+lessons one week apart**
+**Severity:** ⚠ **MEDIUM — it is a gap, not an inversion**
+
+### The two statements
+
+> **V17 `[00:08:27]`–`[00:08:33]`** *"Our indicators designed to take the pivots \| Around **12 1
+> o'clock in the morning** depending on your dealer and what his GMT offset is and recalculate the
+> 24-hour period \| So the pivots are freshly put in place **right before the London open**"*
+
+> **V16, printed** — `London Session Start` / `2:00 To 3:00 AM, EST`
+
+### Why it is a conflict
+
+*"Right before"* an 02:00–03:00 event does not naturally describe an event at 00:00–01:00; there is
+a **one-to-two-hour gap**, and on the widest reading a **three-hour** one. Either the recalculation
+is not *"right before"* the London open, or the London open is not at 02:00–03:00, or the two
+statements are on **different clocks**.
+
+⚠ **AND THE THIRD OPTION IS THE LIKELIEST, WHICH IS WHY THIS IS FILED RATHER THAN DISMISSED.** V17's
+clock is explicitly the **dealer's** (*"depending on your dealer and what his GMT offset is"*,
+`A-107`); V16's slide is explicitly **`EST`**, whose May validity is itself unresolved (`A-105`).
+**Two clocks, neither anchored to the other, is not a resolution — it is the reason the conflict
+cannot be closed from the corpus.**
+
+### What it does NOT touch
+
+**V17's explanation of `C-023` stands.** That explanation turns on the *existence* of a separate
+indicator recalculation window, not on where it sits. This record narrows the window's position
+question; it does not reopen the daily-candle question.
+
+### Current Status
+
+```text
+C-024 -- OPEN. Compounds A-105 (EST-in-May) and A-107 (dealer GMT offset).
+  NOT resolvable without a timezone anchor, which no lesson has supplied in 17.
+  A reviewer should note this is the FIRST contradiction in this corpus that
+  spans two lessons rather than sitting inside one.
+```
+
+---
+
+## C-025 — `11 × 15 minutes` is answered as *"four hour fifteen"* from the floor, accepted, and then restated as *"three to four hours"* — and the correct answer is 2 h 45 m
+
+**Raised by:** V17 · `[00:17:41]`–`[00:18:17]`
+**Speakers:** a student and the course author · **Class:** arithmetic, on air
+**Severity:** ⚠ **LOW — nothing downstream depends on it**
+
+> `[00:17:41]` *"one two three four five six seven eight nine ten eleven. **What's eleven times
+> fifteen minutes** anybody"*
+> `[00:17:55]` *"**165 divided by 60** how many hours is that it's easy to go?"*
+> `[00:18:00]` *"One two three four one hour one two three four two hours one two three four **three
+> hours**"*
+> `[00:18:06]` *"Yeah, **four hour fifteen minutes**. Thanks man. All right, so roughly"*
+> `[00:18:10]` *"**Three to four hours** right the dealer trapped this area worked it for three to
+> four hours"*
+
+**11 × 15 = 165 min = 2 h 45 m.** He sets up the division correctly, starts counting quarter-hours
+correctly, reaches *"three hours"*, accepts a wrong answer from the floor, thanks the student, and
+then produces a third figure. **None of the three stated answers is right.**
+
+### Why it is recorded at all
+
+**Because the figure he uses downstream — *"roughly three to four hours"* — is the one closest to
+the true 2 h 45 m being wrong in the safe direction, and because no rule depends on it.** It is
+filed as evidence about **how numbers are produced in this corpus**: a figure supplied by a student
+and accepted without checking becomes the lesson's figure. `C-026` is the second instance in the
+same file.
+
+### Current Status
+
+```text
+C-025 -- OPEN, LOW severity, NO downstream dependency.
+  Do NOT remediate the transcript: it renders what was said, correctly.
+```
+
+---
+
+## C-026 — Three mutually inconsistent growth figures for the same student account in seven seconds
+
+**Raised by:** V17 · `[00:13:31]`–`[00:13:56]`, `V17_00-13-40_…png`
+**Speaker:** course author · **Class:** arithmetic · **Severity:** ⚠ **LOW**
+
+> `[00:13:31]` *"Andrew **double** this demo"* · `[00:13:49]` *"couple of weeks double this demo.
+> That's about **50% a week** in it"* · `[00:13:56]` *"**33% over three weeks**"*
+
+Doubling is **+100%**. 50%/week compounded over three weeks is **+238%**; simple, **+150%**. 33%
+over three weeks is neither. **The three cannot all describe one account.**
+
+⚠ **The statement on screen is legible and does not settle it** — the visible `Closed Transactions`
+rows run `2012.03.25`–`2012.03.26` and the balance column is not readable at `1024 × 786`.
+
+### Current Status
+
+```text
+C-026 -- OPEN, LOW severity, NO downstream dependency. Recorded because it is the
+  SECOND arithmetic inconsistency in this one file (see C-025), and two in one
+  lesson is a pattern worth a reviewer's attention even when neither matters.
+  Closeable cheaply: a higher-resolution re-capture of V17_00-13-40 would read
+  the balance column. See open item 205.
+```
