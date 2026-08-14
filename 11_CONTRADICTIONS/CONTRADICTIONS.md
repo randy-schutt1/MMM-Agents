@@ -2710,3 +2710,77 @@ C-022 -- OPEN. Reading A and reading B are both defensible from Tier 1 and are
   assume an ADR level was visible at a past timestamp without pre-registering
   WHICH reading it assumes, per D-027.
 ```
+
+---
+
+## C-023 — Pivots are computed *"from midnight to midnight"* — and, forty seconds later, *"just do it on the daily candle"*
+
+**Raised by:** V16 · `[00:40:22]`–`[00:40:34]` vs `[00:41:09]`–`[00:41:18]`
+**Both speakers:** the course author, same file, same Q&A, **41 seconds apart**
+**Class:** Tier 1 against itself, on a computation
+**Severity after measurement:** ⚠ **LOWER THAN IT LOOKS — see §4**
+
+### The two statements
+
+**A student (Frank/Franco) asks directly what the daily candle is.** `[00:40:22]`–`[00:40:34]`:
+
+> *"I wanted the pivot points of price action to be as fresh as possible right before we trade. So
+> we calculate our pivot points **from midnight to midnight**. I know they're based on the daily
+> candle, **but they're based on price action from the 24 hour period from midnight to midnight.**"*
+
+**A second student (Reese) asks the same thing. He answers the other way.** `[00:41:09]`–`[00:41:18]`:
+
+> *"Reese, when we calculate pivot points from the open high, low close from midnight, time to
+> midnight, **no, just do it on the daily candle for right now.** You don't have to get all
+> technical. I just want you to understand what you're doing."*
+
+### Why this is a real conflict and not a misreading
+
+Statement 1 **explicitly distinguishes** the two — *"I know they're based on the daily candle, **but**
+they're based on price action from … midnight to midnight"*. **He is telling the first student the
+broker's daily candle is NOT the input.** He then tells the second student to use it.
+
+**The two produce different numbers whenever the broker's daily candle does not run
+midnight-to-midnight, which is the normal case in retail FX** (a 17:00 New York or 00:00 broker-server
+boundary are both common, and neither is midnight New York).
+
+**And *"midnight"* carries no timezone anywhere in the file.**
+
+### ⚠ THE MITIGATION, RECORDED BECAUSE IT WEAKENS THIS RECORD
+
+**He flags the second answer as a deliberate simplification** — *"for right now"*, *"You don't have
+to get all technical"*, *"I just want you to understand what you're doing"*. **This is a teacher
+lowering a bar for a homework exercise, not a teacher unaware of a conflict.** That makes it a
+**weak** contradiction rather than a strong one.
+
+**It is still logged, because for anyone implementing the rule the two instructions are two
+different computations and nothing in the corpus says which is normative.**
+
+### §4 — ⭐ MEASURED, AND THE MEASUREMENT CUTS AGAINST THIS RECORD
+
+`05_HOMEWORK/V16/V16_HOMEWORK.md` §4b computed both grids on GBP/USD for the two days V16's own
+homework assigns. **Midnight-basis minus session-basis, in pips:**
+
+| Target day | `CPP` | `R1` | `S1` | `R2` | `S2` |
+|---|---|---|---|---|---|
+| Mon 2015-06-01 (Friday basis) | −0.3 | −0.5 | +0.3 | −1.1 | +0.5 |
+| Tue 2015-06-02 | +1.9 | +3.7 | +3.7 | +1.9 | +1.9 |
+
+**Under 4 pips on every level, on both days.** ⚠ `n = 2` days, one pair, one window — **this is an
+illustration, not a measurement of the general case, and it is not a pre-registered test.**
+
+⭐ **The comparison that matters:** `A-106` — *"yesterday"* on a **Monday**, Sunday stub vs Friday —
+measured **72.6 pips on `R2`** on the same day. **A reviewer deciding which of the two to escalate
+should escalate `A-106`, not this record.**
+
+### Current Status
+
+```text
+C-023 -- OPEN, LOGGED, AND EXPLICITLY LOW-SEVERITY.
+  NOT resolved: the corpus never says which basis is normative, and never
+  attaches a timezone to "midnight".
+  NOT to be silently reconciled (D-030). Any implementation must pre-register
+  its choice of daily-candle boundary as an ASSUMPTION.
+  Measured cost on GBP/USD, n=2 days: under 4 pips per level.
+  See A-106 for the same class of defect at ~20x the magnitude.
+```
