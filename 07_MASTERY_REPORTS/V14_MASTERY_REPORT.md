@@ -88,7 +88,7 @@ to trade the day.** Not knowable before the run.
 
 ### 3.4 ⭐ `A-084`/`A-085`/`A-086` — one direct student question, three different effects
 
-`[00:44:41]`–`[00:45:14]`, confirmed verbatim by two ASR engines.
+`[00:44:40]`–`[00:45:14]`, confirmed verbatim by two ASR engines.
 
 | Record | Effect |
 |---|---|
@@ -157,7 +157,7 @@ ZERO** across all 600 markers, re-run in this session's own code — **V13 retur
 | **`A-084` stays blocked** | And `A-093` explains why the spoken route is structurally weak |
 | **Item 157 gets NO help** | ⭐ `shark` and `63` occur **ZERO** times in 600 markers. **V14 contributes nothing to the `!SM_TDI` / 63-37 provenance question** |
 | **The TDI bands are still not constructible** | No period, in Tier 1 or Tier 2 |
-| **`A-011` untouched for a tenth lesson** | `[00:08:11]` uses the M to **forbid** a trade and still does not describe it |
+| **`A-011` untouched for a tenth lesson** | `[00:08:13]` uses the M to **forbid** a trade and still does not describe it |
 | **`A-002`/`C-006` uncompared for a tenth lesson** | ⭐ **V14 is the first lesson to use both families heavily in the SAME slide sequence and still not distinguish them** |
 | **`A-004`, `A-038` unmoved** | Checked, reported as negatives |
 

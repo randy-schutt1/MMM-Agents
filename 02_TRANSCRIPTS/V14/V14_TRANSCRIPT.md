@@ -75,11 +75,87 @@ load-bearing; the rest of the file is left exactly as supplied.**
 | **6** | `[00:45:16]` | *"10 if you if you can't make it at 1 a.m."* | *"**Ted**, if you can't make it at 1 a.m."* | A student's name misheard as a number, inside the passage that fixes the drill's clock time |
 | **7** | `[00:46:20]` | *"No technically Keith you will be able to trade off of the board only"* | **Both engines return the same words.** The leading token is *"No"* or *"Now"* and **neither pass resolves it** | ⚠️ **Recorded as UNRESOLVED, not corrected.** The substance is unaffected — *"No, technically you will be able to trade off the board only"* and *"Now technically you will be able to trade off the board only"* **both assert the same thing** — but the record says so rather than picking the convenient one. Load-bearing for `A-056` |
 
+### CORRECTION 8 — ADDED IN REMEDIATION OF `V14_REVIEW_R1.md` `M1` / `REVIEW_INDEX.md` ITEM 172
+
+⚠️ **This correction is NOT from this session's own ASR pass.** It comes from the R1 reviewer's
+independent ASR, on a different runtime (`openai-whisper`, PyTorch) at **two** model sizes, on audio
+extracted from the SHA-verified `.swf`. The seven corrections above are unaltered; this one is
+appended so the count and its provenance stay separable.
+
+| # | `[ts]` (marker grid) | Supplied | **R1's independent pass** | Why it matters |
+|---|---|---|---|---|
+| **8** | `[00:29:24]`–`[00:29:28]` | *"The dealer is trading at one o'clock at 61"* / *"42 is in the middle of the range. Hell yeah, it is"* | **`openai-whisper medium.en`** (ASR clock `[00:29:29]`/`[00:29:30]`) and **`large-v3-turbo`** (ASR clock `[00:29:29]`) both return an **INTERROGATIVE**: *"**Is he in the middle of the range? Hell yeah, he is.**"* | ⚠️ **The speaker ASKS the question and answers it himself.** The supplied file splits the sentence across two markers and the split hides the question mark. **The substance is unaffected** — `6142` is still endorsed as *"the middle"* and the **45.5%** figure stands — but `A-089` had printed it inside quotation marks as a flat assertion, in the record that blocks `A-056`'s closure. Corrected at `A-089` and at `V14_SOURCE_NOTES.md` §2; superseded text retained at both per `REMEDIATION_PROTOCOL.md` §2 |
+
+**The verbatim body below is NOT edited.** It is the supplied file and it stays as supplied — the
+correction lives here, in the verification record, exactly as corrections 1–7 do.
+
 ### ONE PASSAGE THAT DID NOT RESOLVE
 
 `[00:45:14]` *"It's a liquid 50."* — **both engines return the same nonsense.** It sits between the
 volatility-band statement and the clock answer and this session cannot say what it is. **It is left
 exactly as supplied and nothing is built on it.**
+
+---
+
+## ⚠ TIMESTAMP CONVENTION — DECLARED ONCE, IN REMEDIATION OF `M2` / ITEM 173
+
+**Every `[HH:MM:SS]` citation in the V14 artifact set is a MARKER-GRID citation** — i.e. it names a
+marker that exists in the verbatim body below, and `grep`ping this file for it returns a hit.
+
+**Where an ASR clock time is given it is labelled `ASR` at the point of use**, because the two
+clocks genuinely differ: this lesson's marker grid is coarser than a `whisper` segment clock and the
+same words land up to ~3 s apart on the two. Both are defensible; **mixing them silently is not**,
+and the V14 set did mix them. R1 `M2` found **20 distinct citations at 30 sites across 9 files** that
+exist on the ASR clock and not in this file's 600-marker index.
+
+**Remediation applied — and this round's own sweep found MORE than the review named.** R1 reported
+**20 distinct timestamps at 30 sites across 9 files**. This round re-ran the scan mechanically
+against this file's own 600-marker index rather than copying R1's list, and returns **25 distinct
+non-marker timestamps at 59 sites across 7 files**, after excluding citations that are explicitly
+attributed to *another* lesson (V07 `[00:07:38]`, V10 `[01:05:31]`, V12 `[00:15:40]`, V13
+`[00:05:33]`, and V15's `Wk7` `[00:00:23]` — those are correct as written and were left alone).
+**All 59 have been rewritten to the marker grid.** The scan is re-runnable and returns zero.
+
+### THE CROSSWALK — every superseded citation retained, per `REMEDIATION_PROTOCOL.md` §2
+
+**Nothing is silently deleted.** Each row below preserves the figure the artifacts previously
+carried, beside the marker that actually holds the words.
+
+| Superseded citation | **Corrected marker** | Δ | The words it points at |
+|---|---|---|---|
+| `[00:07:40]` | **`[00:07:39]`** | −1 | *"This is how I learned and this is why I don't take shit inside the blue box"* |
+| `[00:07:43]` | **`[00:07:39]`** | −4 | same segment — *"why I don't take shit inside the blue box"* |
+| `[00:08:04]` | **`[00:08:03]`** | −1 | *"Here's the blue box. I know it's black and white, but it's blue"* |
+| `[00:08:11]` | **`[00:08:13]`** | +2 | *"But nothing has happened yet other than consolidation"* |
+| `[00:23:20]` | **`[00:23:22]`** | +2 | *"You wait for the next rise or fall minimum of two hours"* (slide-range end) |
+| `[00:24:26]` | **`[00:24:27]`** | +1 | *"Tdi drill do at least five more trades using only tdi"* |
+| `[00:26:50]` | **`[00:26:52]`** | +2 | *"Okay, here's the assignment"* — the assignment slide's onset |
+| `[00:27:28]` | **`[00:27:27]`** | −1 | *"Identify the pairs that have not made more than a 50 pip range"* |
+| `[00:32:25]` | **`[00:32:23]`** | −2 | *"Go long open a long position in demo at about 61 15"* |
+| ⚠️ `[00:34:35]` | **`[00:35:37]`** | **+62** | *"Promise me you will do this this and the tdi or priceless"* — **wrong on BOTH clocks** |
+| `[00:36:35]` | **`[00:36:36]`** | +1 | *"if you're going to try it in the u.s. Session rebracket the data"* |
+| `[00:37:12]` | **`[00:37:08]`** | −4 | *"Okay, this is a very important drill to help you understand the candles"* |
+| `[00:40:46]` | **`[00:40:45]`** | −1 | *"you got two weeks. We're off next week"* |
+| `[00:44:41]` | **`[00:44:40]`** | −1 | *"All right, john has a question. Let me see"* |
+| `[00:44:43]` | **`[00:44:40]`** | −3 | same segment — *"you're not looking at comments, but I am right now"* |
+| `[00:44:49]` | **`[00:44:45]`** | −4 | *"…as the red trade signal line represent the one hour"* |
+| `[00:44:52]` | **`[00:44:51]`** | −1 | *"Yes, does the yellow market baseline represent the four-hour candles? No"* |
+| `[00:44:55]` | **`[00:44:51]`** | −4 | same segment — the *"No"* |
+| `[00:44:59]` | **`[00:44:56]`** | −3 | *"the red line blood in the water is the one hour"* |
+| `[00:45:02]` | **`[00:45:04]`** | +2 | *"Is the basis"* |
+| `[00:45:09]` | **`[00:45:07]`** | −2 | *"the bands are two standard deviations away from the market base"* |
+| `[00:45:16]` | **`[00:45:18]`** | +2 | *"if you can't make it at 1 a.m. Do 2 a.m."* |
+| `[00:45:21]` | **`[00:45:18]`** | −3 | same segment — *"1 a.m. Is the time I was taught to do it"* |
+| `[00:46:20]` | **`[00:46:19]`** | −1 | *"No technically Keith you will be able to trade off of the board only"* |
+| `[00:47:34]` | **`[00:47:32]`** | −2 | *"See you in two weeks unless you come to Orlando"* |
+
+⚠️ **`[00:34:35]` is the one that was wrong on both clocks**, exactly as `M2` says: the sentence is
+at **`[00:35:37]`**, a **62-second** miss, and R1's independent ASR of `34:20`–`35:20` contains no
+such sentence. **Every other row is a sub-5-second clock difference; this one was a genuine error**
+and it is corrected in `V14_INTERPRETATION.md` Q4.
+
+**No conclusion, measurement, disposition, threshold or grade moves anywhere as a result of this
+crosswalk.** Every corrected marker holds the same words the artifact quoted; only the pointer moved.
 
 ---
 

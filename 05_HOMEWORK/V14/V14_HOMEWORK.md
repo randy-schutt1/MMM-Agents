@@ -7,7 +7,7 @@ this stuff"*, in two parts:
 
 | # | `[ts]` | Assignment |
 |---|---|---|
-| **1** | `[00:24:26]` | *"**TDI drill: do at least five more trades using only TDI.** Keep going till you get it. It's demo, folks"* — the V13 assignment, carried forward |
+| **1** | `[00:24:27]` | *"**TDI drill: do at least five more trades using only TDI.** Keep going till you get it. It's demo, folks"* — the V13 assignment, carried forward |
 | **2** | `[00:24:51]`, printed | ⭐ *"I want you to **use the big board** to enter all your trades"* — the six-step high/low board drill |
 
 > ### ⚠️ `D2` — DECLARED DEVIATION: THE ASSIGNMENT AS SET CANNOT BE PERFORMED, AND A FAKED VERSION WOULD BE WORSE THAN A DECLARED SUBSTITUTION
@@ -66,7 +66,7 @@ What is the why?**
 
 **The argument is that a pattern inside the range is not evidence of anything, because the
 information the method uses — which level the dealer chose to extend — has not yet been produced.**
-`[00:08:11]` *"this looks like an M to you and you want to take it, but **nothing has happened yet
+`[00:08:13]` *"this looks like an M to you and you want to take it, but **nothing has happened yet
 other than consolidation**."*
 
 ⭐ This is the clearest statement in the corpus of **why** the blue box is a no-trade zone, and it is
@@ -74,8 +74,8 @@ a *causal* reason rather than a rule. **It still does not define the M** (`A-011
 
 **Q2. What is the drill's stated purpose, and does the lesson claim it is tradeable?**
 
-**It says both, and `V14_INTERPRETATION.md` Q4 refuses to pick.** Purpose: `[00:37:12]` *"a very
-important drill **to help you understand the candles**"*. Tradeable: `[00:46:20]` *"technically,
+**It says both, and `V14_INTERPRETATION.md` Q4 refuses to pick.** Purpose: `[00:37:08]` *"a very
+important drill **to help you understand the candles**"*. Tradeable: `[00:46:19]` *"technically,
 Keith, **you will be able to trade off of the board only**"* — ⚠️ whose first word two ASR engines
 render differently (*"No"* / *"Now"*), which the transcript records rather than resolves.
 
