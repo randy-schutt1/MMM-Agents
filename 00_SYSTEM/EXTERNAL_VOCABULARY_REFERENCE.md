@@ -319,7 +319,28 @@ Sources: [howtotrade.com — TDI guide](https://howtotrade.com/indicators/trader
 
 ### 5.6 — "shark fin" · `A-032`
 
-**Course status: UNCHANGED — `DO NOT CODE`.**
+> ### ✅ SUPERSEDED BY COURSE — 2026-08-13 — **V12 `[00:19:28]`, printed frame `19:06`**
+>
+> **`A-032` is CLOSED, `RESOLVED BY COURSE`.** `SOURCING_HIERARCHY.md` §3.1 step 3; the text below
+> is retained unedited per `REMEDIATION_PROTOCOL.md` §2 and **is no longer the current status.**
+>
+> > *"The vector candles will force the RSI line **outside of the band**. Then when the dealer
+> > pulls back… it causes the RSI line to **turn back over** and create the shark's dorsal fin.
+> > And **since the band is colored blue for our purposes, it looks like the shark fin is coming
+> > out of the water.**"* — V12 `[00:19:28]`–`[00:19:55]`, course author
+>
+> **The Tier 3 material below is CORRECT and was never adopted, which is the right outcome twice
+> over.** Its description — *"exits the blue volatility band and quickly returns inside it"* — is
+> what the course says. **`SOURCING_HIERARCHY.md` §1.3 is vindicated exactly as written:** Tier 3
+> let the project ask a sharper question of the course and **decided nothing**, and the course
+> then answered. Its *"what is still missing"* paragraph also survives intact — **the
+> quantitative gaps are still gaps** (`A-086`: the band itself is unspecified), so `A-032` closes
+> **as to meaning** and remains **not computable.**
+>
+> **Course status is therefore NOT what the line below says.** New: `RESOLVED BY COURSE` as to
+> meaning; `DO NOT CODE` as to construction.
+
+**Course status: UNCHANGED — `DO NOT CODE`.** *(superseded — see the block above)*
 
 🟢 **CONVERGENT, and it confirms the corpus's own inference.** `A-032`'s assessment reasons from
 *"crosses back in"* that the shark fin is TDI geometry rather than a candle pattern. External
@@ -344,7 +365,39 @@ Sources: [Forex Factory — TDI Shark Fin thread](https://www.forexfactory.com/t
 
 ### 5.7 — "blood in the water" / "bloodline" · `A-031`
 
-**Course status: UNCHANGED — `DO NOT CODE`.**
+> ### ⭐ SUPERSEDED BY COURSE — 2026-08-13 — **V12 `[00:20:00]`, printed frame `19:06`**
+>
+> **`A-031` is CLOSED, `RESOLVED BY COURSE` as to meaning.** `SOURCING_HIERARCHY.md` §3.1 step 3;
+> the text below is retained unedited per `REMEDIATION_PROTOCOL.md` §2.
+>
+> > *"When the fin goes back under the water line — **back inside the band** — **and crosses the
+> > signal line, the trade signal line, TSL** — that's where we get blood in the water."*
+> > — V12 `[00:20:00]`, course author. Printed at frame `19:06`: *"Fin Goes Back Under The
+> > Waterline **and Crosses The Signal (Red, Blood In The Water)**"*
+>
+> ### ⭐⭐ AND THE PARAGRAPH BELOW WAS RIGHT — WHILE THE **TIER 2** ANSWER WAS WRONG
+>
+> The paragraph beginning *"The only structural hint is the corpus's own"* reasons from V04
+> `[00:13:43]`'s *"the secondary line"* that the bloodline *"in generic TDI naming would be the
+> **red Trade Signal Line**."* **That is exactly what V12 says.**
+>
+> Meanwhile **§9.2's Tier 2 entry** — `MMM-NOTES` p.46's *"the Market base line cross (referred to
+> as Blood in the Water)"*, recorded as *"a direct definition, the only one found anywhere"* —
+> **names the wrong line.** See **`C-019`**.
+>
+> **This is a real result about the tiers and it should not be read as more than it is.**
+> A **Tier 3 section that is forbidden to close anything** reasoned correctly from the corpus and
+> **explicitly declined to adopt its own conclusion** (*"That is a reading of the corpus, not
+> external evidence"*). A **Tier 2 document that IS permitted to close records** supplied a
+> confident, specific and **wrong** answer. **It does not make Tier 3 stronger than Tier 2** —
+> one instance decides nothing about a ranking, and §9.0's trap still stands. **What it shows is
+> that the value of the hierarchy is the DISCIPLINE, not the ordering**: both sections held their
+> conclusions provisionally, said so in their own text, and the course settled it.
+>
+> ⚠️ **NOT CODABLE.** The definition turns on the RSI line's position relative to **the band**,
+> and the band is unspecified — `A-086`, and `C-019` §3.
+
+**Course status: UNCHANGED — `DO NOT CODE`.** *(superseded — see the block above)*
 
 🔴 **UNCLEAR — no external definition found.** This was searched directly and repeatedly. The
 phrase appears in BTMM discussion **only alongside** *shark fin*, never with a definition of its
@@ -854,8 +907,8 @@ Every row is an **external candidate**. Every corresponding `A-xxx` is **UNCHANG
 
 | Term / record | What the PDF says | Effect |
 |---|---|---|
-| **"blood in the water"** `A-031` | **A direct definition, the only one found anywhere:** the scaling-in entries are listed as *"the appearance of the shark fin (1st) · **the Market base line cross (referred to as Blood in the Water)** (2nd) · break out of the opposite volatility band during the trend run (3rd)"* | 🟡 §5.7 was 🔴 NOT FOUND; it now has **one** candidate. It answers `A-031`'s exact question (*which TDI line?*) — **the market base line**. From an anonymous source, so it is a lead for the promised TDI lesson, not an answer |
-| **"shark fin"** `A-032` | A full multi-step description: volatility bands tight during the Asian range → RSI line breaks **out** of the bands while price is 25–50 pips beyond the Asian range → overbought → RSI **crosses back below the signal line**, tracing the fin. Explicitly **location-gated**: *"this is only valid when it is occurring at the correct place. If it occurs during the consolidation phase for instance, it is meaningless"* | 🟡 Much richer than §5.6, and it **adds a constraint §5.6 lacked** — the fin is only a signal where the M/W stop hunt is. Still no numeric thresholds |
+| **"blood in the water"** `A-031` | ⛔ **SUPERSEDED BY COURSE 2026-08-13 — THIS ROW NAMES THE WRONG LINE. See `C-019`.** V12 `[00:20:00]` and printed frame `19:06` put *blood in the water* at the **TRADE SIGNAL LINE (red)** cross combined with the RSI line re-entering the band — **not** at the market base line cross, which V12 makes the **first ADD** (`[00:30:45]`, printed `29:11`). Row retained unedited below per `REMEDIATION_PROTOCOL.md` §2. *(Superseded text:)* **A direct definition, the only one found anywhere:** the scaling-in entries are listed as *"the appearance of the shark fin (1st) · **the Market base line cross (referred to as Blood in the Water)** (2nd) · break out of the opposite volatility band during the trend run (3rd)"* | 🟡 §5.7 was 🔴 NOT FOUND; it now has **one** candidate. It answers `A-031`'s exact question (*which TDI line?*) — **the market base line**. From an anonymous source, so it is a lead for the promised TDI lesson, not an answer |
+| **"shark fin"** `A-032` | ✅ **SUPERSEDED BY COURSE 2026-08-13 — and this row was COMPATIBLE, not wrong.** V12 `[00:19:28]` + printed `19:06` define the fin as the RSI line breaking out of the (blue) band on a vector candle and turning back over; V12 `[00:23:30]`–`[00:24:12]` supplies its own location gate, and **the Tier 1 gate is what is adopted** (`SOURCING_HIERARCHY.md` §3.2 **Case B** — adopt only what Tier 1 states). `A-032` is `RESOLVED BY COURSE` as to meaning and still **not computable** (`A-086`). Row retained per `REMEDIATION_PROTOCOL.md` §2. *(Superseded text:)* A full multi-step description: volatility bands tight during the Asian range → RSI line breaks **out** of the bands while price is 25–50 pips beyond the Asian range → overbought → RSI **crosses back below the signal line**, tracing the fin. Explicitly **location-gated**: *"this is only valid when it is occurring at the correct place. If it occurs during the consolidation phase for instance, it is meaningless"* | 🟡 Much richer than §5.6, and it **adds a constraint §5.6 lacked** — the fin is only a signal where the M/W stop hunt is. Still no numeric thresholds |
 | **`M0`/`M1`/`M2`/`M3`** `A-055` | **Identifies the labels.** They are **mid-pivot points** — M1 between S2/S1, M2 between S1/PP, M3 between PP/R1, M4 between R1/R2 — with *"the HOD is more likely to be located at the M3 or M4 mid-pivot points"* and the LOD at M1/M2 | 🟡 `A-055` recorded these as unexplained labels printed beside `Pivot` and `ADR High`. **A mid-pivot reading fits that placement exactly** and is a strong lead. `A-055` stays open — a plausible fit is not a course statement |
 | **ADR lookback** `A-038` | **The first stated window found anywhere:** *"an ADR indicator which tells us the average daily trading range of the **last 2 weeks**"* — i.e. ~10 trading days | 🟡 §5.8 was 🔴 (no source stated a period). Now one anonymous source says **2 weeks**. **This does NOT resolve `A-038`**: the corpus's problem is that its *guests* used 2-day and unbounded bases, and a third number from outside makes three, not one. `D-030` applies with full force |
 | **"the trading zone"** `A-005` | A definition, and it is **spatial, not temporal**: *"The trading zone is set 25 to 50 pips higher (or lower) than the Asian range"*, because *"most people put their stops 25 to 50 pips behind the trades"* — widened for volatile pairs (GBPJPY), narrowed for slow ones (CAD). Ideal Asian range ≤50 pips | 🟡 `A-005` is the record the instructor **deferred twice** and never delivered. An external answer to a question the course explicitly promised to answer itself is the *most* tempting and *least* admissible kind |

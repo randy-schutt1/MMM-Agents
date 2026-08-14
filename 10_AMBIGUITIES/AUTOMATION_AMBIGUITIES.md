@@ -6305,3 +6305,736 @@ no settings dialog. **`A-020`'s own *Required Research* is still unsatisfied.**
 
 `C-018`, `C-010`, `C-011`, `D-039`, `D-040`, `SOURCING_HIERARCHY.md` §3.4;
 `04_SCREENSHOTS/V11/INDEX.md` §4; `03_LESSON_NOTES/V11_INTERPRETATION.md` Q2.
+
+---
+
+# THE V12 PASS
+
+> `Bootcamp1 Wk4 040812 Part2 (55mins).swf` — *Traders Dynamic Index* — **the same session as
+> V11**. Course author, 100%. Branch `video/v12`, isolated worktree (`D-038`).
+>
+> **V12 closes four records and opens three.** Every status change below is appended per
+> `REMEDIATION_PROTOCOL.md` §2; **no record above this line is edited.**
+
+---
+
+## A-080 — STATUS CHANGE: ⭐ **CLOSED — `RESOLVED BY COURSE`** (the RSI lookback period)
+
+> **Update to the record above, appended. The original `A-080` entry is UNEDITED.**
+
+### The evidence — Tier 1, course author, four statements, one lesson
+
+| # | Verbatim | Timestamp |
+|---|---|---|
+| 1 | *"**I like the RSI line to be set at 21.** Why? It just matches up with the averages a little better and lines up a price action for our purposes"* | `[00:07:24]` |
+| 2 | *"**21 slows it down a little bit.** You don't see as much noise. It smooths the line and it helps us see M's and W's more clearly than you would normally get on a more radical or shorter period line"* | `[00:07:53]` |
+| 3 | *"That means **we're looking at 21 closing periods back for our line. We're averaging that out instead of 14 periods**"* | `[00:08:09]` |
+| 4 | *"**We have this line set to 21, 21 look back periods, that's all**"* | `[00:10:51]` |
+
+Restated in summary at `[00:15:13]`. **Independently confirmed by a Whisper `small.en` pass** on
+both passages (`V12_TRANSCRIPT.md` § AUDIO SPOT-CHECKS, clips `c2` and `c3`) — two ASR engines,
+verbatim agreement on the number in all four places.
+
+**It is the group's standard, not a personal preference:** `[00:07:38]` *"what I'm telling you as
+a group, **the way it's preset in the templates is the way I want us to learn how to use it**"*.
+
+### Why this closes rather than narrows
+
+`A-080`'s *Required Research* asked for **a frame showing an MT4 indicator-properties dialog, a
+Navigator entry, or a sub-window legend**, naming V12 as the cheapest place to look.
+
+**No such frame exists in V12, and the negative is measured, not assumed** — all 672 sweep frames
+scanned at a mean-difference threshold of 2.0 (a third of the screen-state detector's 6.0, so a
+modal open for a single 5-second sample could not be missed): **no dialog, no Navigator, no
+parenthesised parameter in any of the five legible legends** (`04_SCREENSHOTS/V12/INDEX.md` §1, §3).
+
+**What arrived instead is stronger than what was asked for.** A dialog would have shown a setting.
+This shows the setting, **the reason for it**, **the default it replaces** (*"instead of 14
+periods"*), and **its status as the course's own template preset**.
+
+### ⚠️ The `RSI(21)` near-miss, resolved — V11 R1 item 109
+
+Item 109 required `RSI(21)` be added to this record's named-trap list, because V11's frame 14
+carries it on **the lesson's disowned anti-example, on `H1`**, and instructed the V12 session to
+**check whose chart a legend belongs to before reading a period off it.**
+
+**That instruction was followed and the number turns out to be the same.** Stated precisely,
+because the tempting conclusion is the wrong one:
+
+- **`A-080` does NOT close on V11's frame 14 and nothing here makes it admissible.** It closes on
+  V12's **audio**, from the course author, about **his own** preset.
+- **The agreement is explicable, not coincidental.** That chart belonged to a student who had
+  presumably been given the same template — so `RSI(21)` on it is what a group preset *predicts*.
+  It is corroboration **after** the fact and it carries no weight in the closure.
+- **⭐ Item 109's rule cost nothing and would have saved everything in the other branch.** Had the
+  anti-example carried **`RSI(13)`** — the TDI's shipped default and this record's originally
+  named trap — adopting it would have produced a **wrong number with a screenshot behind it**.
+  **The value of a precaution is not measured by whether it turned out to be needed.**
+
+### Revised status
+
+```text
+RESOLVED BY COURSE
+RSI lookback = 21 closing periods.
+V12 [00:07:24], [00:07:53], [00:08:09], [00:10:51], [00:15:13]. Course author. Tier 1.
+Tier 2 (MMM-NOTES pp.44-46) is SILENT on the period and contributes nothing.
+```
+
+### ⚠️ What it does NOT resolve
+
+**`21` is the RSI's period. It is not stated that the green line plotted in the TDI sub-window IS
+that RSI rather than a smoothing of it.** See **`A-084`**.
+
+### Related
+
+`A-084` (new), `A-039`, `D-030`, `D-040`, `SOURCING_HIERARCHY.md` §2;
+`03_LESSON_NOTES/V12_SOURCE_NOTES.md` §3; `04_SCREENSHOTS/V12/INDEX.md` §1;
+`REVIEW_INDEX.md` item 109.
+
+---
+
+## A-064 — STATUS CHANGE: ⭐ **CLOSED — `RESOLVED BY COURSE`** ("the Mayo" / "the mail" / "the male")
+
+> **Update to the record above, appended. The original `A-064` entry is UNEDITED.**
+
+This record exists for two reasons: to stop a future session reading `mail`/`male` as a **different
+object** from `Mayo`, and to carry V08's usage evidence. **V12 settles both.**
+
+### 1. The word is PRINTED, at the same second the audio mishears it
+
+`04_SCREENSHOTS/V12/INDEX.md` frame 16 —
+`V12_00-26-11_shark-fin-hold-the-mayo-captioned-chart.png`, burned timecode **`26:11`** — carries
+the instructor's own chart caption in large white text:
+
+```text
+Shark Fin  Hold The Mayo
+```
+
+The transcript at **`[00:26:11]`** — **the same second** — reads *"Shark fin **hold the mail**"*.
+
+**The three-rendering hazard is therefore not a hazard but a demonstrated ASR failure**, and V12
+demonstrates it four more ways in one file: `mannees` ×4, `man is` ×2, `manate's` ×1, `mail` ×2 —
+**seven mishearings of one word, none of them the word.**
+
+### 2. And the object it denotes is now stated
+
+`[00:31:22]`–`[00:31:27]`, two adjacent sentences, one object, Whisper `c5` verbatim:
+
+> *"Price comes out and it's **held by the mayonnaise** perfectly. **Held by the 200**, okay."*
+
+Corroborated independently at `[00:26:20]`–`[00:27:19]` (Whisper `c4`), where one continuous
+passage moves between *"a 200 EMA"* and *"the mayonnaise"* four times as one subject.
+
+**V08's *"back to the water"* is NOT covered by this closure** — `water = 50` remains
+`RESOLVED — OWNER ATTESTATION` under `D-043` and V12 says nothing that changes it.
+
+### Revised status
+
+```text
+RESOLVED BY COURSE
+"Mayo" / "mayonnaise" is the 200 moving average. The ASR renderings mail / male /
+mannees / man is / manate's are all the same word, demonstrated by a PRINTED caption
+at the same second as a spoken "mail".
+V12 [00:26:11] printed; [00:26:20]-[00:27:19] and [00:31:22]-[00:31:27] spoken.
+```
+
+### Related
+
+`A-020`, `C-018`, `D-039`, `D-043`, `SOURCING_HIERARCHY.md` §3.4;
+`04_SCREENSHOTS/V12/INDEX.md` frames 16, 19.
+
+---
+
+## A-020 — STATUS CHANGE: ⭐ **THE MAYO ROW REACHES TIER 1 — `RESOLVED BY COURSE`**
+
+> **Update to the record above, appended. `D-041`, `D-042` and `D-043` are UNEDITED and `D-043`
+> remains the authoritative mapping. This entry changes ONE row's WARRANT and NO row's VALUE.**
+
+### What changes
+
+| Nickname | Period | Warrant before V12 | Warrant after V12 |
+|---|---|---|---|
+| **Mayonnaise** | **200** | `RESOLVED — OWNER ATTESTATION` (`D-039`, `D-043`) + `MMM-NOTES` p.66 (Tier 2) | ⭐ **`RESOLVED BY COURSE`** — V12 `[00:31:22]`, printed **and** spoken |
+| Blueberry | 800 | `RESOLVED BY COURSE` (V09 `[00:41:43]`) | ✅ unchanged |
+| Mustard | 5 | `RESOLVED — OWNER ATTESTATION` (`D-043`) | ✅ **unchanged.** `mustard` occurs **0×** in V12 |
+| Ketchup | 13 | `RESOLVED — OWNER ATTESTATION` (`D-043`) | ✅ **unchanged.** `ketchup` occurs **0×** in V12 |
+| Water | 50 | `RESOLVED — OWNER ATTESTATION` (`D-043`) | ✅ **unchanged** — see the ⚠️ note below |
+
+**Mayonnaise is the SECOND nickname in the corpus to reach Tier 1**, and the first to do so from
+the **course author** (blueberry's V09 `[00:41:43]` is a `GUEST`, normative under `D-033`).
+
+### The evidence — and why it needs no chaining
+
+1. **`[00:31:22]`–`[00:31:27]`, two adjacent sentences:** *"held by the **mayonnaise** perfectly.
+   Held by the **200**."* One line, one chart, one moment, named twice.
+2. **The slide on screen at that instant prints `TDI VB BREAK, PRICE HELD BY 200`**
+   (`V12_00-31-31_…png`, burned `31:31`). **The identification survives without the audio.**
+3. **A second, independent passage** five minutes earlier on a different chart:
+   *"perhaps a **200 EMA**… a spike to **the mayonnaise** would be it… right past the mayonnaise,
+   almost like the mayonnaise offers support… people take a **close below the 200** as a trade
+   signal… notice **the mayonnaise has risen**"* `[00:26:20]`–`[00:27:19]`.
+4. **Two ASR engines agree verbatim** on both passages.
+
+This is **not** the `D-030` two-warrant chain `D-042` §3 refused to walk. **No speaker had to join
+two facts; one speaker states one fact twice.**
+
+### ⚠️ WHAT THIS DOES **NOT** DO — four limits, each stated because each is tempting
+
+1. **`D-042` §1's exhaustive negative is UNAFFECTED and still governs.** `ketchup`, `mustard`,
+   `blueberry` and `raspberry` all occur **0×** in V12. **No Tier 1 statement attaches a period to
+   ketchup or mustard anywhere in V01–V12.**
+2. **`D-043` is not contradicted or amended.** It says mayo = 200; V12 says mayo = 200. **Only the
+   warrant moves.** This is the first entry in the mayo/ketchup/mustard family that **agrees** with
+   what it supersedes.
+3. **⚠️ The COLOUR axis does NOT move.** Two frames show price held at a **white** line under
+   captions naming *Mayo* and *200* — **suggestive, and NOT adopted**, because no legend on either
+   frame says the white line is that line, and reading a period off a colour by eye is exactly what
+   `D-030` forbids. **`D-043` §1's mayo colour row stays `OWNER-ATTESTED` + `[TOOLING]`.**
+4. **The `[00:03:53]` student question is NOT evidence that water = 50.** The instructor reads a
+   chat message — *"is the 50 in the TDI the same as 50 in the MA — water? No, Greg"* — and
+   **flags that he may have misread it** (*"I don't know if I read that right"*). His *"no"*
+   answers the question asked, not the gloss inside it. **Declining to correct a premise is not
+   asserting it.** `SOURCING_HIERARCHY.md` §3.2 **Case D**; nothing closes.
+
+### `SOURCING_HIERARCHY.md` §3.4 — the standing obligation, PARTIALLY discharged
+
+§3.4 lists `A-020` as a **highest-priority reconciliation target**, obligation live *"for V12
+onward"*. **§3.1's six steps are run in full for the mayo row** — noticed (step 1), classified as
+**Case A**, Tier 2 (`MMM-NOTES` p.66) annotated **`COMPATIBLE — TIER 1 NOW GOVERNS`** rather than
+`SUPERSEDED` because it **agrees**, superseded text left visible, this record updated to the
+Tier 1 basis, and logged.
+
+```text
+A-020 -- SPLIT.
+  mayonnaise = 200   RESOLVED BY COURSE          <- V12, Tier 1, course author
+  blueberry  = 800   RESOLVED BY COURSE          <- V09, Tier 1, GUEST (D-033)
+  mustard = 5 / ketchup = 13 / water = 50
+                     RESOLVED -- OWNER ATTESTATION (D-043), UNCHANGED
+A-020 STAYS ON THE §3.4 LIST for V13-V21 on the three owner-attested rows.
+A-014 and A-023 remain listed and untouched.
+```
+
+### Related
+
+`A-064`, `C-018`, `D-039`, `D-041`, `D-042`, `D-043`, `I-011`, `SOURCING_HIERARCHY.md` §3.1/§3.4;
+`03_LESSON_NOTES/V12_SOURCE_NOTES.md` §5; `03_LESSON_NOTES/V12_INTERPRETATION.md` Q3.
+
+---
+
+## A-031 — STATUS CHANGE: ⭐ **CLOSED — `RESOLVED BY COURSE`** ("blood in the water"), and its Tier 2 basis is **REPLACED**
+
+> **Update to the record above, appended. The original entry and its 🟡 `MMM-NOTES` narrowing are
+> UNEDITED.**
+
+### The definition, printed AND spoken
+
+**Spoken**, `[00:20:00]`–`[00:20:14]`, Whisper `c6` verbatim:
+
+> *"**When the fin goes back under the water line — back inside the band — and crosses the signal
+> line, the trade signal line, TSL — that's where we get blood in the water.**"*
+
+**Printed**, frame `19:06`, fourth bullet of `TDI SIGNALS`:
+
+> *"Fin Goes Back Under The Waterline **and Crosses The Signal (Red, Blood In The Water)**"*
+
+**Confirmed a third time on a worked chart**, `[00:31:34]`–`[00:31:47]`: *"it crosses back in the
+same side, you get blood in the water… the RSI line crosses back inside the water and the blood at
+the same time"*.
+
+**Two conditions, conjunctive, both named:** (i) the RSI line **re-enters the volatility band**,
+and (ii) it **crosses the trade signal line** (the red one).
+
+### And its operational meaning is stated too
+
+`[00:12:24]`–`[00:12:37]`: *"Blood in the water indicates that the **one-hour signal has fired** at
+the same time or in congruency with the 15 minute chart."*
+
+### ⚠️ THIS CONTRADICTS `MMM-NOTES` p.46 — `C-019` OPENED
+
+The 🟡 narrowing above adopted, provisionally, Tier 2's answer to this record's exact question:
+*"the Market base line cross (referred to as Blood in the Water)"*. **`EXTERNAL_VOCABULARY_REFERENCE.md`
+§9.2 correctly called it *"a lead for the promised TDI lesson, not an answer."***
+
+**The promised lesson has arrived and it names a different line.**
+
+| | Tier 2 — `MMM-NOTES` p.46 | Tier 1 — V12, printed and spoken |
+|---|---|---|
+| The line crossed | **the market base line** (yellow/gold) | **the trade signal line** (red) |
+| Position in the ladder | the **2nd** scale-in entry | **the 1st — it IS the entry signal** |
+| What the 2nd add is | — | *"you add to the trade at **the market baseline break**"* `[00:30:45]`, printed `29:11` |
+
+**`SOURCING_HIERARCHY.md` §3.2 Case A — Tier 1 is clear and specific — and §3.3: the recording
+wins.** The Tier 2 basis is **REPLACED, not supplemented** (§3.1 step 5). `C-019` is filed per
+§3.3, which makes the contradiction record **mandatory, not optional**.
+
+### The three reasons the 🟡 narrowing gave for not closing — each answered
+
+1. *"A named line is not a decision rule"* → **answered.** Two conjunctive conditions, a direction
+   convention (fin **back under**, i.e. re-entry), and its place in the ladder.
+2. *"`bloodline` is not covered"* → **substantially answered.** V12 makes the metaphor literal —
+   the **blue band is the water**, `[00:19:51]` — so *"hits the bloodline"* (V03) and *"blood in
+   the water"* denote **the same event at the band**. ⚠️ *"Hits"* vs *"crosses"* is a residual
+   wording difference, recorded and **not** treated as a second object.
+3. *"`A-039` is upstream and still blocks"* → ⚠️ **PARTLY answered, and this is the one live
+   limit.** `A-039` narrows but does not close (`V12_INTERPRETATION.md` Q1): three of four TDI
+   parameters are still unstated, so **the event is now DEFINED but not yet COMPUTABLE.**
+
+```text
+A-031 -- RESOLVED BY COURSE as to MEANING.
+"Blood in the water" = the RSI line re-entering the volatility band AND crossing the
+trade signal line (red), simultaneously.
+V12 [00:20:00] spoken + frame 19:06 printed + [00:31:34] worked.
+Tier 2's "market base line cross" is SUPERSEDED -- see C-019.
+⚠ NOT YET CODABLE: A-039/A-085/A-086 leave the TSL and the bands unspecified.
+   The record is closed on MEANING; the reconstruction blocker lives in A-039.
+```
+
+### Related
+
+`A-032`, `A-039`, `A-085`, `A-086`, `C-019` (new), `D-030`, `D-040`,
+`SOURCING_HIERARCHY.md` §3.1/§3.2 Case A/§3.3; `EXTERNAL_VOCABULARY_REFERENCE.md` §5.7, §9.2.
+
+---
+
+## A-032 — STATUS CHANGE: ⭐ **CLOSED — `RESOLVED BY COURSE`** ("shark fin")
+
+> **Update to the record above, appended. The original entry is UNEDITED.**
+
+### The definition, and the metaphor is the definition
+
+`[00:19:28]`–`[00:19:55]`, Whisper `c6` verbatim:
+
+> *"**The dealer makes a vector candle; the vector candles will force the RSI line outside of the
+> band.** Then when the dealer pulls back off of the high or off of the low it causes the RSI line
+> to **turn back over** and **create the shark's dorsal fin**. And **since the band is colored blue
+> for our purposes, it looks like the shark fin is coming out of the water.** That's where it came
+> from — shark fin."*
+
+**Printed**, frame `19:06`: *"Bands Are Tight · **RSI Line Breaks Out And Comes Right Back** · A
+Shark's Dorsal Fin Appears To Be Emerging From The Water"*.
+
+**The record's own open question is answered explicitly.** The *Assessment* above asks *"whether
+the fin is the shape of the TDI line excursion or of price."* **It is the TDI line** — the **blue
+volatility band is the waterline**, and the fin is the RSI line's excursion above it and back.
+
+**And the long form is `shark fin short` / `shark fin long`**, `[00:23:17]`: *"you have two setups
+— shark fin short, shark fin long, based on the TDI"*; printed `23:26` *"Shark Fin Long · Same
+Criteria As Short (Inverted)"*.
+
+**Tier 2 `MMM-NOTES` p.45–46 is COMPATIBLE and adds nothing Tier 1 lacks** —
+`SOURCING_HIERARCHY.md` §3.2 **Case B**, annotate `COMPATIBLE — COURSE IS NARROWER`, adopt only
+what Tier 1 states. Tier 2's location gate (*"only valid… where the M/W stop hunt is"*) has a Tier 1
+counterpart at `[00:23:30]`–`[00:24:12]` and **the Tier 1 version is what is adopted.**
+
+```text
+A-032 -- RESOLVED BY COURSE as to MEANING.
+"Shark fin" = the TDI's RSI line breaking OUT of the (blue) volatility band on a vector
+candle and turning back over, tracing a dorsal fin above the "waterline" (the band).
+Two variants, shark fin short and shark fin long, the long being the short inverted.
+V12 [00:19:28] spoken + frames 19:06 and 23:26 printed.
+⚠ NOT YET CODABLE -- same limit as A-031: the band itself is unspecified (A-086).
+```
+
+### Related
+
+`A-031`, `A-039`, `A-086`, `A-011`, `D-040`; `EXTERNAL_VOCABULARY_REFERENCE.md` §5.6, §9.2;
+`03_LESSON_NOTES/V12_SOURCE_NOTES.md` §6a.
+
+---
+
+## A-039 — STATUS CHANGE: NARROWED AGAIN BY V12 (`TDI`) — **NOT CLOSED**
+
+> **Second update to `A-039`, appended. The original entry and the V11 narrowing are UNEDITED.**
+
+**V11 narrowed this record to *"taught as to its substrate and its reading; unspecified as to every
+parameter"* and listed four things still missing. V12 supplies two of the four in full and one in
+part.**
+
+| V11's gap | V12 |
+|---|---|
+| 1. No RSI period | ✅ **SUPPLIED — 21.** `A-080` closes |
+| 2. No TDI component periods | ❌ **STILL MISSING.** `A-085` |
+| 3. No volatility-band settings | ⚠️ **BASIS attempted and retracted; deviation hedged.** `A-086` |
+| 4. **The TDI proper promised and not delivered** | ✅ **DELIVERED IN FULL** — four components, two setups, three-rung ladder, exit rule, six worked charts, a printed deck and a homework drill |
+
+### What V12 adds that no earlier lesson had
+
+| # | Now stated by the course | Where |
+|---|---|---|
+| 1 | The **four components**, named and built one at a time | `[00:10:36]`–`[00:16:22]`; frames `10:36`, `11:36`, `12:56`, `15:31` |
+| 2 | The **market baseline is a *dynamic* 50** — *"a moving or liquid 50… static on all other indicators except the TDI"* | `[00:13:32]` |
+| 3 | **Why** the dynamic baseline: it fires *"three or four bars"* earlier than a static 50 | `[00:13:44]`–`[00:14:10]` |
+| 4 | **`shark fin` defined** (`A-032`) | `[00:19:28]`; printed `19:06` |
+| 5 | **`blood in the water` defined** (`A-031`) | `[00:20:00]`; printed `19:06` |
+| 6 | The **entry**, with a stop distance and an anchor: *"Stop Loss 23 Pips above the HOD"* | printed `29:11`; spoken `[00:30:33]` |
+| 7 | The **scale-in ladder**: MB break, then VB break *"not during the stop hunt but during the actual trend run"* | printed `29:11`, `33:41`; spoken `[00:30:45]`, `[00:33:51]` |
+| 8 | The **exit**: all units on the RSI line's return inside the bands | printed `29:11`; spoken `[00:30:58]`, `[00:34:03]` |
+| 9 | The **non-scaling use** — the same markers as *"check points"* to stay in a trade | printed `41:41`; spoken `[00:29:16]`, `[00:38:05]` |
+| 10 | The bands **act as support/resistance** and are *"much stronger"* because close-based | printed `16:26`; spoken `[00:16:23]` |
+
+### Why it narrows and does not close
+
+**`DO NOT CODE` is a claim about reconstructibility, not about pedagogy.** Plotting this indicator
+needs four numbers; V12 gives **one**. And `[00:07:20]` *"I've altered it or tweaked it a little
+bit"* is the reason substituting Dean Malone's shipped defaults is **not** a permissible fallback —
+it would reconstruct a **different indicator** and the lesson says so itself.
+
+### Revised status
+
+```text
+NARROWED AGAIN -- DO NOT CODE
+Was (V04-V10): "displayed, not taught"
+Was (V11):     "TAUGHT AS TO ITS SUBSTRATE AND ITS READING; UNSPECIFIED AS TO EVERY PARAMETER"
+Now (V12):     "TAUGHT IN FULL AS TO MECHANISM, SIGNALS, ENTRY, SCALING AND EXIT.
+                ONE OF FOUR PARAMETERS SUPPLIED (RSI = 21, A-080).
+                THE PEDAGOGICAL DEBT IS DISCHARGED; THE RECONSTRUCTION BLOCKER IS NOT."
+```
+
+> ### ⚠️ FLAGGED FOR R1 — this session may be UNDER-crediting, and says so
+>
+> A reviewer could reasonably hold that `A-039`'s subject is *"the course never taught the TDI"*,
+> that V12 plainly teaches it, and that the residue belongs to `A-080`(closed), `A-084`, `A-085`
+> and `A-086` — in which case **`A-039` CLOSES** and three narrow records carry the parameters.
+> **That reading is coherent.** This session declines it for one reason: **`A-039` is cited as an
+> upstream blocker by other records** — `A-031`'s third narrowing reason is verbatim *"`A-039` is
+> upstream and still blocks"* — and closing it here would **silently unblock dependents as a side
+> effect.** If R1 prefers the split, the mechanism is clean: close `A-039`, re-point its dependents
+> at `A-085`/`A-086`. **The call is left to the reviewer because it changes other records' status.**
+
+### Related
+
+`A-080` (closed), `A-084`, `A-085`, `A-086` (all new), `A-031`, `A-032`, `D-030`;
+`03_LESSON_NOTES/V12_SOURCE_NOTES.md` §4, §6; `03_LESSON_NOTES/V12_INTERPRETATION.md` Q1.
+
+---
+
+## A-082 — STATUS CHANGE: ⭐ **REFRAMED — ITS PREMISE IS FALSE**, and the error was this session's own first draft
+
+> **Update to the record above, appended. The original `A-082` entry is UNEDITED.**
+
+`A-082` reads *"`flashcards`: standing required work, **referred to as already existing, never
+specified**."*
+
+**`COURSE_PROGRESS.md` V12 GATE (e) instructed this session to grep `flashcard` across V01–V10 and
+V12+, noting that the V11 session had not run it. The sweep was run. The premise does not survive.**
+
+### The measurement — word-boundary `flash ?cards?`, marker lines stripped, all 21 lessons
+
+```text
+V01  0   V02  3   V03 23   V04 17   V05 15   V06  0   V07 14
+V08  3   V09  0   V10 12   V11  7   V12  1   V13  3   V14  4
+V15  2   V16  1   V17  6   V18  2   V19  4   V20  1   V21  1
+                                    TOTAL 119, across 18 of 21 lessons
+```
+
+### V03 teaches them — quantity, timeframe, labelling and a selection criterion
+
+| Timestamp | V03, course author |
+|---|---|
+| `[00:12:25]` | *"**We're going to cover flash cards** and then I'm going to cover the trading zone"* — an agenda item |
+| `[00:40:57]` | *"**I asked you last week to make 40 flash cards** and identify"* — ⭐ **a QUANTITY, back-dated to week 1** |
+| `[00:49:43]`, `[00:56:20]` | *"Let me pull up **my** flashcards" / "**This is my flashcards**"* — worked examples on screen |
+| `[00:53:04]` | *"**Save your flashcards**… you should have… some flashcards **that are labeled**"* |
+| `[00:58:21]` | *"**You know how to make a flash card now, right?**"* — the instruction treated as complete |
+| `[01:02:41]` | *"**The flashcards are on a 15 minute**"* — ⭐ **a TIMEFRAME**, in answer to a direct question |
+| `[01:04:20]` | *"**Having a flashcard of a loser is not going to help you**"* — a selection criterion |
+| `[01:06:51]` | *"make your flashcards on the compression you're looking for your entries… **your flashcards need to be one hour entries**"* — the timeframe rule generalised |
+
+### Why it REFRAMES rather than closes
+
+V03 supplies a quantity, a default timeframe, a generalisation rule, a labelling requirement and a
+selection criterion. **What it does not supply is what goes ON a card** — the instruction is
+*"identify"* the setups, and **every one of those setups is itself an open record** (`A-011` M/W
+anatomy, `A-002` trap move, `A-007` second leg, `A-076` blue box).
+
+```text
+A-082 -- REFRAMED, NOT CLOSED.
+Was: "referred to as already existing, NEVER SPECIFIED"  <- FALSE
+Now: "SPECIFIED AS A STUDY PRACTICE IN V03 (40 cards, 15-minute default, labelled,
+      winners only, generalised to the trader's own entry timeframe);
+      UNSPECIFIED AS TO CONTENT, because its content IS the corpus's other open records."
+It is a CURRICULUM record and was never a coding blocker.
+```
+
+### ⭐ THE PROCESS FINDING — recorded because it is worth more than the record
+
+**`A-082` was raised by V11 against material already ingested, already transcribed and already
+reviewed.** V03 has a transcript, source notes, an interpretation and a completed R1. **The claim
+*"never specified"* was reachable and wrong on the day it was written, and it survived V11's own
+pass and V11 R1.**
+
+**What caught it was a carry-forward that named the command — and the V11 session's explicit
+disclosure that it had NOT run the sweep.** That disclosure is the whole mechanism.
+
+**And this session made the same class of error first.** Its own first draft of the gate-(e) row
+asserted *"V11 (×1) and V12 (×1) only… specified nowhere in the entire corpus"* — written from
+V12's local token census, where `\bflashcard\b` returns **0** because it does not match the
+**plural**. **It was falsified by running the sweep it was describing.** The superseded text is
+retained in `V12_SOURCE_NOTES.md` §9 and §9a.
+
+> **Generalisation, carried to the V13/V14 gap audit:** a record asserting *"the corpus never says
+> X"* is only as good as the sweep behind it, and **late-raised records are systematically the
+> least likely to have had one.** `V12_INTERPRETATION.md` Q6 lists five candidates — `A-004`,
+> `A-011`, `A-076`, `A-056`, `A-002` — with the cheap test for each. **None is asserted to be
+> wrong; the point is that `A-082` was wrong in exactly this way and nobody noticed for a lesson
+> and a review.**
+
+### Related
+
+`A-011`, `A-002`, `A-007`, `A-076`; `COURSE_PROGRESS.md` V12 GATE (e);
+`02_TRANSCRIPTS/V03/V03_TRANSCRIPT.md` `[00:40:57]`–`[01:06:55]`;
+`03_LESSON_NOTES/V12_SOURCE_NOTES.md` §9a; `03_LESSON_NOTES/V12_INTERPRETATION.md` Q6.
+
+---
+
+## A-084 — Is the TDI's plotted green line the `RSI(21)`, or a smoothing of it?
+
+**Raised by:** V12 · `[00:11:22]`, `[00:10:36]`, and the whole of §4a
+**Speaker:** course author
+
+### The gap
+
+`A-080` closes: **the RSI's lookback is 21.** The lesson then says:
+
+> `[00:10:36]` *"The RSI line is simply **the underlying indicator that the TDI is built upon**"*
+> `[00:11:22]` *"So now **TDI is developed off of the RSI**, so there's your RSI line"*
+
+**Both are lineage statements. Neither is an identity statement.** Dean Malone's shipped Traders
+Dynamic Index does not plot the raw RSI: its green "RSI Price Line" is a **short moving average of
+the RSI**. V12 states **no such smoothing length**, and `[00:07:20]` *"I've altered it or tweaked
+it a little bit"* means the shipped default cannot be assumed either.
+
+### Why this is a record and not a footnote
+
+**It is the difference between testing `RSI(21)` and testing `MA(n)` of `RSI(21)`, and the two are
+different series.** A 2-period average of an RSI crosses its midline **less often**, spends a
+**different fraction** of its life beyond 80, and traces **different** M/W shapes — and V11's
+threshold claims are read off *the line in the sub-window*, not off a raw RSI.
+
+**The near-miss is the hazard, exactly as in `A-080`:** a session that has just closed `A-080`
+has **a period in hand** and will feel unblocked. It is unblocked for `RSI(21)`. **It is not
+unblocked for "the line V11 was describing"**, unless the two are the same, which is unstated.
+
+### `SOURCING_HIERARCHY.md` / `D-040`
+
+| Tier | Searched | Result |
+|---|---|---|
+| **1 — the course** | V12's full transcript; all 672 sweep frames and their 27 screen states; the 28 curated frames and all five legible legends | **SILENT.** No smoothing length; **no properties dialog exists in the lesson** (`04_SCREENSHOTS/V12/INDEX.md` §1) |
+| **2 — `MMM-NOTES`** | pp.44–46, the RSI and TDI sections in full | **SILENT.** p.45 lists *"1. A basic RSI line"* and gives **no period and no smoothing for any of the four components** |
+| **3 — web** | Not consulted for a value | Could not close this record if it were (`D-040`) |
+
+### Current Status
+
+> ### ⭐ UPDATED THE SAME SESSION — **`PT-040` RAN, AND THIS RECORD IS PROMOTED TO AN ACTIVE BLOCKER**
+>
+> The status below was written **before** `PT-040` was run and is **superseded**
+> (`REMEDIATION_PROTOCOL.md` §2). It read that this record *"does NOT re-block `RSI(21)`
+> itself"*. **`PT-040`'s pre-registered decision rule says otherwise.**
+>
+> `PT-040` measured the **side disagreement** between `RSI(21)` and `MA_k(RSI(21))` across
+> every threshold V11 prints, on 24,730 M15 bars, and the rule fixed **before** the run was:
+> `≤ 2 pp` immaterial · `2–5 pp` inconclusive · `> 5 pp` **material**.
+>
+> ```text
+> M = 10.481 pp   at k = 5, t = 50        VERDICT: MATERIAL
+> and even at k = 2 -- the shortest non-trivial smoothing and the shipped TDI's own
+> default -- the t = 50 disagreement is 5.16 pp, already past the boundary.
+> ```
+>
+> **The disagreement is concentrated at `t = 50`, which is V11's bias baseline and the
+> single most-used RSI rule in the corpus.** Both `D-031` arms agree to `0.000 pp`, the
+> `W-B` window agrees (`10.66 pp`), and the simple-average RSI variant agrees (`12.15 pp`).
+>
+> **Consequence, exactly as pre-registered:**
+>
+> ```text
+> A-084 -- ACTIVE BLOCKER. DO NOT CODE.
+> V11's RSI threshold claims (the 50 bias baseline, 80/40, 60/20, 80/20, the 38-42
+> pullback band, both divergence forms, the [00:36:19] composite) STAY BLOCKED.
+> A-080's closure is NECESSARY AND NOT SUFFICIENT: the period is known, and the
+> series that period belongs to is not.
+> ```
+>
+> ⚠️ **This is the session that closed `A-080` reporting that its own headline finding did
+> not unblock what it was supposed to.** The 2 pp / 5 pp boundaries were committed at
+> `83110f1`, **before `run_pt040.py` existed**, and `M = 10.48` sits close enough to a
+> defensible-sounding *"10 pp"* that a post-hoc boundary would have been a live temptation.
+> **`D-029` and commit ordering foreclosed it.** See `06_MANUAL_BACKTEST/V12/BT_V12_0001.md` §3.
+
+*(Superseded status, retained:)*
+
+```text
+DO NOT CODE -- and NOTE THE SCOPE:
+This does NOT re-block RSI(21) itself. A test may be pre-registered on RSI(21)
+directly, provided it states that it tests RSI(21) and NOT "the TDI's green line",
+and names this record as the gap. PT-040 does exactly that.
+```
+
+### Required Research
+
+Either (a) a statement that the plotted line **is** the RSI — which would set `k = 1`, make
+`O2 ≡ 0` by construction and unblock V11's RSI half **immediately** — or (b) a smoothing length,
+which would replace the sweep with a single series. ~~or (c) an empirical demonstration that the
+two series do not differ materially~~ — **(c) was performed as `PT-040` and returned `MATERIAL`;
+it is discharged and it did not go the convenient way.**
+
+⚠️ **A fourth possibility is open and would make `PT-040`'s `M` the wrong quantity:** the plotted
+line may be smoothed by something **outside** the swept simple-MA family — an EMA, or Wilder
+smoothing. `PT-040` §6 limitation 1 names this and the sweep deliberately does not cover it,
+because widening it without a course statement would be guessing at the construction rather than
+measuring the ambiguity.
+
+**V13 (`Wk5 041512 Part1`) is the next place (a) or (b) could appear, and it is the cheapest
+remaining unblock in the project.**
+
+### Related
+
+`A-080`, `A-039`, `A-085`, `A-086`, `D-030`; `03_LESSON_NOTES/V12_INTERPRETATION.md` Q2;
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-040_…md` §2.
+
+---
+
+## A-085 — *"The trade signal line polls the one-hour chart"* — a mechanism with no construction
+
+**Raised by:** V12 · `[00:11:49]`, restated `[00:11:59]`, relied on at `[00:12:18]`
+**Speaker:** course author
+
+### What the lesson says
+
+> `[00:11:49]` *"**The TSL in essence is a polling of the one-hour chart, brought into your view on
+> the 15 minute.**"*
+> `[00:11:59]` *"Let me say it again so you understand: **the trade signal line pulls the one-hour
+> chart and brings it into the 15 minute.**"*
+> `[00:12:07]` *"So when you get a crossover right here, in essence **you now have a signal on the
+> one-hour chart**."*
+> `[00:12:24]` *"**Blood in the water indicates that the one-hour signal has fired** at the same
+> time or in congruency with the 15 minute chart."*
+
+### The gap, and why it matters operationally
+
+**No period, no formula, no basis, and no account of what "polling" means.** A trade signal line
+in the shipped TDI is a short moving average of the RSI line **computed on the chart's own
+timeframe**; nothing in that construction reads a higher timeframe. **The claim may be a
+description of an *effect* — a smoothed line lags like a slower timeframe — stated as if it were a
+*mechanism*.** The lesson does not distinguish the two and this record does not adjudicate it.
+
+**It is load-bearing, which is why it is a record.** `[00:12:18]` uses it to answer the lesson's
+opening student question: *"**so you need to look at the one-hour chart — not necessarily**, if you
+got a shark fin blood in the water."* **A student is told they may stop consulting a timeframe, on
+the strength of this claim.**
+
+### `SOURCING_HIERARCHY.md` / `D-040`
+
+| Tier | Result |
+|---|---|
+| **1** | The four statements above and nothing more. `TSL` ×5, `trade signal line` ×4 |
+| **2 — `MMM-NOTES` p.45** | ⚠️ **Describes the same line and makes NO higher-timeframe claim at all**: *"a trade signal line which provides entry signals when the RSI crosses over and this tends to be much earlier than would be possible if you waited for the RSI to cross the midline."* **The stated benefit is EARLINESS, not a second timeframe** |
+
+**This is a divergence and it is deliberately NOT filed as a `C-xxx`.** Tier 2 is **silent** on the
+mechanism, not **contradictory** — it offers a different rationale for the same line without
+denying V12's. `SOURCING_HIERARCHY.md` §3.2 has no case for *"Tier 1 asserts more than Tier 2"*
+beyond Case B, and Case B's instruction — **adopt only what Tier 1 states** — is what is done here:
+**the claim is recorded and nothing is built on it.**
+
+### Current Status
+
+```text
+DO NOT CODE -- an unsourced mechanism claim.
+Recorded, not adopted. Nothing in any V12 artifact rests on it.
+```
+
+### Required Research
+
+A construction for the TSL, or any statement distinguishing *"polls the one-hour chart"* as a
+mechanism from the same phrase as a description of lag.
+
+### Related
+
+`A-039`, `A-084`, `A-086`, `A-031`, `D-030`, `D-040`; `MMM-NOTES` p.45;
+`03_LESSON_NOTES/V12_SOURCE_NOTES.md` §4b.
+
+---
+
+## A-086 — The volatility bands: a basis retracted mid-sentence and a deviation the speaker disclaims
+
+**Raised by:** V12 · `[00:15:29]`–`[00:16:20]`
+**Speaker:** course author
+
+### What the lesson says — in full, because the hedging IS the evidence
+
+> `[00:15:29]` *"some bands that are **very similar to Bollinger type bands**"*
+> `[00:15:40]` *"**I don't know the math on it**, but I think it's very similar to Bollinger bands"*
+> `[00:15:47]` *"There's some formula deviation 2%, **I don't know**, two standard deviations away
+> from the market baseline **or something like that. I don't really know because I didn't invent
+> it.** But I'm telling you it's some formulation like that"*
+> `[00:16:03]` *"They're essentially Bollinger bands **based on the RSI line itself. That's what
+> someone said, telling me — not sure.** But anyway, it's two standard deviations away from price
+> action… **from the RSI line. Thank you.**"*
+
+### The gap — `D-030` binds twice over
+
+1. **The deviation multiplier is offered in two incompatible forms in one sentence** — *"deviation
+   2%"* and *"two standard deviations"* are **different quantities**, and the speaker attaches
+   *"I don't know"* to both.
+2. **⭐ The BASIS is retracted mid-sentence, on a prompt from the chat.** `[00:15:47]` says the
+   bands are *"away from **the market baseline**"*; `[00:16:03]` says *"based on **the RSI line
+   itself**"*, sourced to *"what someone said"*; and `[00:16:16]`–`[00:16:20]` corrects a third
+   utterance from *"price action"* to *"**from the RSI line. Thank you**"* — thanking whoever
+   corrected him.
+
+**The final position is the RSI line, and it is held with the least confidence of anything in the
+lesson.**
+
+### ⚠️ AND TIER 2 SAYS THE OTHER ONE — see `C-019` §3
+
+`MMM-NOTES` p.45: *"Volatility bands which are similar to a Bollinger band but applied to **the
+market baseline** of the indicator instead of price."*
+
+**Tier 2 agrees with V12's FIRST answer and disagrees with its CORRECTED one.** This is recorded in
+`C-019` §3 as a **subsidiary divergence** rather than as its own contradiction record, because
+**Tier 1 is self-hedged here** and `SOURCING_HIERARCHY.md`'s *"the recording wins"* presupposes a
+recording that is **clear**. `C-011`'s asymmetry applies exactly: **Tier 2 is defeated as an
+authority without Tier 1 supplying a replacement**, and the record stays blocked.
+
+### Current Status
+
+```text
+DO NOT CODE
+Basis: STATED AND RETRACTED AND RE-STATED. Final position "the RSI line", low confidence.
+Deviation: "2%" or "two standard deviations", explicitly disclaimed by the speaker.
+Period: NEVER STATED.
+Nothing here is adoptable. This is the D-030 case in its purest form: the speaker
+himself says he does not know.
+```
+
+### What this blocks
+
+`A-031` and `A-032` are closed **as to meaning** and are **not computable** without this: both
+definitions turn on the RSI line's position relative to **the band**, and the band cannot be
+constructed. **`shark fin` and `blood in the water` are the corpus's best-defined signals and they
+are still not testable.**
+
+### Related
+
+`A-031`, `A-032`, `A-039`, `A-084`, `A-085`, `C-019`, `C-011`, `D-030`, `D-040`; `MMM-NOTES` p.45;
+`03_LESSON_NOTES/V12_SOURCE_NOTES.md` §4d.
+
+---
+
+## THE V12 PASS OVER EXISTING RECORDS
+
+Every record V12 touches and does **not** move. Recorded as **negative results** per
+`REVIEW_INDEX.md` item 107 — a checked-and-unmoved record is reported, not left silent.
+
+| ID | V12 evidence | Effect |
+|---|---|---|
+| **`A-004`** — "the level" | `level three` ×2, `level one` ×2. `[00:25:38]` *"you were probably in **level three** because in order to get down to the extreme extreme extreme on TDI you have to have been dropping for a few days — two and a half days, three days, four days"*; `[00:32:29]` *"coming off a **level one**"*; `[00:41:06]` *"goes into **level one** consolidation"* | **NOT ADVANCED.** `[00:25:38]` is a level → **expectation** statement (level 3 implies a multi-day decline), the same shape V07 and V08 supplied, and it runs **backwards** — it infers the level from the TDI's extremity rather than locating the level. **V10's observation that the course routes around `A-004` rather than defining it is strengthened for a second consecutive lesson.** Stays `DO NOT CODE` |
+| **`A-011`** — M/W anatomy | `second leg` ×13; *"perfect M formation that ended on **two hammers**"* `[00:18:43]`; *"this is a **big fat W**"* `[00:27:43]`; *"M formation divergence… W formation back into the range"* `[00:11:09]` | **EXTENDED BY VOLUME, NOT CONTENT. Ninth lesson, zero definitions.** ⭐ **One genuinely new locus:** `[00:37:07]` *"it's a **multi-session RSI W**"* — an M/W read **inside the indicator, across sessions**. New place to look for the shape; **still no anatomy.** Stays `DO NOT CODE` |
+| **`A-066`** — stop size with no placement rule | ⭐ **`23 pips above the HOD`, printed `29:11` AND spoken `[00:30:33]`** — the first stop in the corpus stated **with its anchor**. But `[00:30:37]` gives a second, incompatible one — *"seven to ten pips above the second leg"* — and `[00:48:24]`–`[00:48:54]` **declines to restate any of it when asked directly**: *"what size stop loss? **You tell me**… seven, ten sounds great"* | **EXTENDED, NOT DISCHARGED.** Three reasons in `V12_INTERPRETATION.md` Q4, the binding one being that **`HOD` is `A-056`'s undefined object** — a placement rule anchored to an undefined anchor is not a placement rule. **MEDIUM confidence; a reviewer may reasonably discharge it** |
+| **`A-076`** — `blue box` | `[00:23:43]` *"**is the blue box 25 to 50 pips**, is your tight trading range?"*; `[00:00:57]` *"presents itself **above or below the blue box**"*; `[00:01:52]` *"outside above or below the blue box"* | **EXTENDED WITH A SIZE, NOT A DEFINITION.** ⚠️ **And the size collides with Tier 2's referent:** `MMM-NOTES` p.45 attaches `25 to 50` to a **distance above the Asian range**, V12 to the **size of the box**. **NOT filed as a `C-xxx`** — V04 `[00:37:26]` already uses it in the Tier 2 sense (*"second leg out of the box, 25 to 50 pips"*), so **the corpus is internally inconsistent before Tier 2 is consulted at all**, which makes this `A-076`'s business and not a Tier 1/Tier 2 contradiction. Stays `DO NOT CODE` |
+| **`A-077`** — "the lock" | Full transcript searched | **NOT ADVANCED.** V12 supplies **no real-time confirmation threshold of any kind.** `[00:22:27]` *"he held it for 45 minutes"* is a description of one chart, not a rule. **Second consecutive lesson checked and unmoved** |
+| **`A-038`** — ADR lookback | `ADR` ×2, both readings of a chart overlay (`To ADR High= 544`) | **NOT ADVANCED** |
+| **`A-002`, `A-049`/`C-006`** — trap move vs stop hunt | `stop hunt` ×9, always as a **market phase**; `trap` **0×** | **NOT ADVANCED — and the negative is the useful part.** `REVIEW_INDEX.md` item 37 asks each lesson whether the two families are ever compared. **V12's answer is `no` for a ninth time, and it is the first lesson to use one family nine times and the other zero** |
+| **`A-056`** — Hi-Lo | `HOD` printed once (`29:11`), spoken once (`[00:30:33]`); `high of the day` otherwise absent | **NOT ADVANCED — and it became MORE load-bearing.** `A-066`'s new placement rule is anchored to `HOD`, so this record now blocks a stop rule as well as an entry method |
+| **`A-042`** — operative detail deferred elsewhere | `[00:52:04]` *"I'm preparing some lessons for **the DMR**… on the other side for the paid subscribers"*; `[00:53:09]` *"I'm gonna deliver **a web class**"*; `[00:45:46]` *"I'm gonna try to get that cleaned up tonight or tomorrow"* | **EXTENDED.** Three more deferrals, one to a **paid tier this project has no access to.** Stays open |
+| **`A-020`** | See the dedicated entry above | ⭐ **MAYO ROW MOVES TO TIER 1**; ketchup/mustard/water unchanged |
