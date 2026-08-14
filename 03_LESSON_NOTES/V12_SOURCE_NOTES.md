@@ -660,5 +660,21 @@ where they did *not* agree.
 
 Full per-frame index with what is visible in each: `04_SCREENSHOTS/V12/INDEX.md`. **Every frame in
 that index was opened and looked at before it was named** (`SWF_CAPTURE_RECIPE.md` §8), and — per
-V11 R1 item 109 — **every legend legible in any frame is recorded there whether or not it was
-thought relevant**, including the two that carry no periods.
+V11 R1 item 109 — **every legend and on-screen readout block identified in the 28 curated frames is
+recorded there whether or not it was thought relevant**, including the ones that carry no periods.
+
+> **⚠️ SUPERSEDED — V12 R1 item 137 (`M1`), ⚠ SELF-VERIFIED AT OWNER DIRECTION.**
+> **NOT `VERIFIED`** — one session both fixed and verified this on the owner's explicit
+> authorisation; it does not satisfy `D-003`. Full disclosure at `REVIEW_INDEX.md` item 137.
+> Retained per `REMEDIATION_PROTOCOL.md` §2, this sentence originally claimed **"every legend
+> legible in any frame is recorded there whether or not it was thought relevant, including the two
+> that carry no periods."**
+>
+> **The categorical half was FALSE** — frame `00-34-26` carries a sixth block, a multi-timeframe
+> `MACD`/`STR`/`EMA` dashboard, that `INDEX.md` §1 did not transcribe; it is now recorded there as
+> row 6. **This site was NOT named by the review** — item 137 charged only `INDEX.md` — and was
+> found by a repo-wide sweep during the fix, then corrected here so the two files do not disagree
+> about the same claim. The trailing count is corrected from *"the two"* to *"the ones"*: §1 now
+> carries **six** rows, of which **all six** carry no period.
+> **`A-080` does not move, and its negative is strengthened** — one more block carrying no lookback
+> period.

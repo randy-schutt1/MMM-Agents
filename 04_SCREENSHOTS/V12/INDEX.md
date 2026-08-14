@@ -38,17 +38,67 @@ prints `Shark Fin Hold The Mayo` at burned `26:11`, and the transcript's `[00:26
 ## 1. ⚠️ LEGENDS — RECORDED IN FULL, WHETHER OR NOT THEY SEEMED RELEVANT
 
 **V11 R1 item 109 required this.** V11's `INDEX.md` recorded a frame's *pane count* and not its
-*legend stack*, and the legend turned out to carry `RSI(21)`. **Every legend legible in any V12
-frame is transcribed below, including the ones that carry no parameters** — the negative is the
-point.
+*legend stack*, and the legend turned out to carry `RSI(21)`. **Every legend and on-screen readout
+block identified in the 28 curated frames is transcribed below, including the ones that carry no
+parameters** — the negative is the point. **The claim is scoped to the 28 curated frames and to the
+blocks this index has identified in them; it is not a claim that no further legible text exists
+anywhere in the 672-frame sweep.**
 
-| Where | Verbatim | Carries a period? |
-|---|---|---|
-| **TDI sub-window**, every charted frame | `Traders Dynamic Index Visual 51.9428 44.5136 37.0844 52.6318 47.2979 46.5466` (values vary per frame) | ❌ **NO.** The indicator's **name and its six output buffers**. MT4 prints an indicator's inputs in parentheses after the name when they are set; **here there are none** |
-| **Price pane**, `00-34-26` | `EURJPY,M15  108.054 108.140 108.047 108.093` / `High= 108.538  Previous Days Range= 180` / `Low= 106.798  Current Days Range= 85.4` / `Close= 107.629` | ❌ **NO.** Symbol, timeframe, OHLC and a custom daily-range readout. **No moving-average periods** |
-| **Price pane**, `00-37-21` | `EURUSD.M15  1.22257 1.22363 1.22256 1.22317` / `High= 1.2303  Previous Days Range= 110.8` / `Low= 1.2193  Current Days Range= 39.9` / `Close= 1.221` | ❌ **NO** |
-| **Price pane**, `00-22-11` and `00-40-36` | `…33629 1.33397 1.33816` / `…de No, Today's Range= 952, T's High= 1.3414…` / `…rget Low= 1.32972 / To ADR High= 544, To ADR…` | ❌ **NO.** A custom text overlay of range/ADR figures, **partly clipped at the left edge by the stage crop** — recorded as partial rather than reconstructed |
-| **Hover tooltip**, `00-26-11` | `UPPERLINE  67.8351` | ❌ **NO.** An MT4 **buffer-name hover**, the closest thing in the lesson to an indicator dialog. It names an output, not an input |
+> **⚠️ SUPERSEDED — V12 R1 item 137 (`M1`).** `REMEDIATION_PROTOCOL.md` §2: retained, not deleted.
+> The sentence above originally read:
+>
+> > *"**Every legend legible in any V12 frame is transcribed below, including the ones that carry no
+> > parameters** — the negative is the point."*
+>
+> **That categorical claim was FALSE when written.** The V12 R1 reviewer cropped and enlarged frame
+> `00-34-26` and found a **sixth on-screen text block this table did not mention** — the
+> multi-timeframe `MACD / STR / EMA` dashboard now recorded as row 6 below. **The defect is the same
+> class V11 R1 item 109 charged — a categorical claim about images not tested against the images —
+> committed inside the very section written to discharge it**, which is why it is retained here in
+> full rather than quietly rescoped.
+>
+> **`A-080` DOES NOT MOVE.** Its status stays `RESOLVED BY COURSE`, closed on the audio, and the
+> correction runs **in its favour** — see row 6's disposition column and § `A-080` note below.
+
+| # | Where | Verbatim | Carries a period? |
+|---|---|---|---|
+| 1 | **TDI sub-window**, every charted frame | `Traders Dynamic Index Visual 51.9428 44.5136 37.0844 52.6318 47.2979 46.5466` (values vary per frame) | ❌ **NO.** The indicator's **name and its six output buffers**. MT4 prints an indicator's inputs in parentheses after the name when they are set; **here there are none** |
+| 2 | **Price pane**, `00-34-26` | `EURJPY,M15  108.054 108.140 108.047 108.093` / `High= 108.538  Previous Days Range= 180` / `Low= 106.798  Current Days Range= 85.4` / `Close= 107.629` | ❌ **NO.** Symbol, timeframe, OHLC and a custom daily-range readout. **No moving-average periods** |
+| 3 | **Price pane**, `00-37-21` | `EURUSD.M15  1.22257 1.22363 1.22256 1.22317` / `High= 1.2303  Previous Days Range= 110.8` / `Low= 1.2193  Current Days Range= 39.9` / `Close= 1.221` | ❌ **NO** |
+| 4 | **Price pane**, `00-22-11` and `00-40-36` | `…33629 1.33397 1.33816` / `…de No, Today's Range= 952, T's High= 1.3414…` / `…rget Low= 1.32972 / To ADR High= 544, To ADR…` | ❌ **NO.** A custom text overlay of range/ADR figures, **partly clipped at the left edge by the stage crop** — recorded as partial rather than reconstructed |
+| 5 | **Hover tooltip**, `00-26-11` | `UPPERLINE  67.8351` | ❌ **NO.** An MT4 **buffer-name hover**, the closest thing in the lesson to an indicator dialog. It names an output, not an input |
+| 6 ⭐ | **Multi-timeframe dashboard**, top-right quadrant, `00-34-26` **ONLY** — *added at V12 R1 item 137 (`M1`)* | Column header row: `1  5  15  30  H1  H4  D  W  MN` — **nine columns.** Three labelled rows, each **nine coloured status cells and no numerals**: `MACD` / `STR` / `EMA`. Beneath, right-aligned: `108.093` (large, yellow) / `Spread  33` / `Pips to Open  ‹illegible›` / `Hi to Low  315` / `Daily Av  ‹illegible›`. **The two `‹illegible›` values are recorded as unread, NOT reconstructed** — both render as small red glyphs that do not resolve at the `1024 × 786` capture resolution, the same handling row 4 gives its left-clipped overlay | ❌ **NO — the columns are TIMEFRAMES, not lookback periods.** `1 · 5 · 15 · 30` are **minutes** and `H1 · H4 · D · W · MN` are hours/day/week/month; reading the `5` or the `15` as an EMA period would be exactly the error this project exists to prevent. **The `EMA` row carries no number anywhere.** ⚠️ **The frame is a STUDENT-SUPPLIED chart, not the instructor's** — `[00:34:19]`–`[00:34:24]`: *"Another example this came to me from my good friend that / Who graduated Harvard business school and he's hanging with us."* `A-080`'s own closure text states the governing rule: *"check whose chart a legend belongs to before reading a period off it."* **The dashboard appears on NO OTHER FRAME** — it belongs to the guest chart's template alone |
+
+> ### ⚠ HOW ROW 6 WAS DERIVED — V12 R1 item 137, ⚠ SELF-VERIFIED AT OWNER DIRECTION
+>
+> **NOT `VERIFIED`.** This correction was applied **and** verified by **one session** on the owner's
+> explicit authorisation. It does **not** satisfy `D-003` and must never be read as an arm's-length
+> verdict. The full disclosure is at `REVIEW_INDEX.md` item 137 and `LOG.md`.
+>
+> **Row 6 was re-derived FROM THE IMAGE, not copied from the review.** The frame was cropped at four
+> increasing magnifications (top-right quadrant; the header/status band; the readout column; the
+> `108.093`/`Spread` pair) and read off the pixels. **The nine-column header, the three
+> `MACD`/`STR`/`EMA` rows and `Spread 33`, `Hi to Low 315`, `108.093` all resolve cleanly. `Pips to
+> Open` and `Daily Av` DO NOT, and are recorded as illegible** rather than guessed — the review's
+> own rendering left both blank for the same reason.
+>
+> **The *"no other frame"* claim was re-tested, not accepted.** The identical pixel region was
+> extracted from **all 28 curated frames** and mean-differenced against `00-34-26`. The nearest
+> non-identical frame is `00-40-36` at **8.76**, and the two closest candidates (`00-40-36`,
+> `00-22-11`) were additionally **opened and read as images**: neither carries the dashboard.
+> `00-40-36` shows only *"…s High"* and price lines; `00-22-11` shows only the range/ADR overlay
+> already recorded at row 4. **Confirmed: the dashboard is unique to `00-34-26`.**
+>
+> **⚠ ONE DEFECT FOUND THAT THE REVIEW DID NOT NAME, and it is in §2 row 21** — see the correction
+> retained at that row. `§2`'s description of this same dashboard carried **three wrong figures and
+> one omission**. Leaving it would have left **two V12 records disagreeing about the same block**,
+> which is the defect class this project charges elsewhere; it is corrected here under item 137's
+> scope and disclosed rather than absorbed.
+>
+> **`A-080` IS UNAFFECTED AND ITS NEGATIVE IS STRENGTHENED.** Row 6 is one more on-screen text block
+> that **carries no lookback period**, so the substantive finding — *the lesson never shows its own
+> RSI setting on screen* — survives with one additional confirming instance. **No status, marker,
+> disposition or number moves anywhere in the project as a result of item 137.**
 
 > ### ⭐ THE MEASURED NEGATIVE — NO SETTINGS DIALOG EXISTS IN THIS LESSON
 >
@@ -101,7 +151,7 @@ in audio.** 4/4 agreement (`V12_SOURCE_NOTES.md` §10.1).
 | 18 | `V12_00-29-11_tdi-entry-and-scale-in-bullet-slide.png` | `29:11` | `TDI`: *"You Are In The Right Market Segment · Price Is In The Channel · RSI Line Breaks Outside The Bands As A Stop Hunt · Reversal Is Imminent Look For Signals / Setup · **Enter The Trade Stop Loss 23 Pips above the HOD** · **Add To The Trade At MB Break And VB Break** · **Exit All Units @ VB Return Crossover**"*. ⭐ **The lesson's whole trade management, printed** |
 | 19 | ⭐⭐ `V12_00-31-31_tdi-vb-break-price-held-by-200-chart.png` | `31:31` | **Captioned: `TDI VB BREAK, PRICE HELD BY 200  FOLLOWED BY MB BREAK, LOWER VB BREAK EXIT`.** Dark-blue box `wt = 28.5` top left; **`400+ Pips`** printed mid-chart; red highlight box at `wt = 60.0`; hand-drawn `1` `2` `3` and `Exit` marks in the TDI sub-window. **A WHITE line descends across the top of the chart and price turns at it.** ⭐ **This frame's caption and the audio at `[00:31:22]`–`[00:31:27]` (*"held by the mayonnaise perfectly. Held by the 200"*) are the same moment — the evidence that moves `A-020`'s mayo row to `RESOLVED BY COURSE`** |
 | 20 | `V12_00-33-41_scaling-with-tdi-bullet-slide.png` | `33:41` | `SCALING WITH TDI`: *"TDI Offers A Few Key Points To Scale In With · After Entry Is Made, Add To Your Trade On A MB Cross · Add Again On A VB Break · Exit All Units On VB Return"* |
-| 21 | `V12_00-34-26_eurjpy-m15-chart-110-pips.png` | `34:26` | **EURJPY M15** (legend §1). Light-blue box; **`110 pips`** and **`60 pips`** printed measurements; red down-arrow; red highlight box `wt = 70.4`; `Exit` marked; a coloured signal-tile grid top right with `108.083` and `Pips to Open / At Hi Low 215 / Daily Hi 105` readouts |
+| 21 | `V12_00-34-26_eurjpy-m15-chart-110-pips.png` | `34:26` | **EURJPY M15** (legend §1). Light-blue box; **`110 pips`** and **`60 pips`** printed measurements; red down-arrow; red highlight box `wt = 70.4`; `Exit` marked; **a multi-timeframe `MACD`/`STR`/`EMA` dashboard top right — transcribed in full at §1 row 6** (`108.093` / `Spread 33` / `Hi to Low 315`, columns `1 5 15 30 H1 H4 D W MN`). ⚠️ **SUPERSEDED — V12 R1 item 137.** This cell originally read *"a coloured signal-tile grid top right with `108.083` and `Pips to Open / At Hi Low 215 / Daily Hi 105` readouts"* — **retained per `REMEDIATION_PROTOCOL.md` §2.** Re-reading the pixels shows **three wrong figures and one omission**: the price is `108.093` **not** `108.083`; the row is `Hi to Low  315` **not** `At Hi Low 215`; there is **no** `Daily Hi 105` — the label is `Daily Av` and its value is **illegible**; and `Spread  33` was **omitted entirely**. The block's three indicator rows and nine timeframe columns were not recorded at all. **Nothing downstream used these figures** — they are descriptive chart furniture, carry no lookback period, and belong to a **student's** chart (`[00:34:19]`) |
 | 22 | `V12_00-37-21_eurusd-m15-chart-white-line-support.png` | `37:21` | **EURUSD M15** (legend §1). Dark-blue box left; red highlight box `wt = 83.6`; magenta and green candles; **a WHITE line runs flat across the lower third and price bounces from it**; `Exit` and count marks `1 2 3` in the TDI sub-window |
 | 23 | `V12_00-40-11_chart-blue-box-with-tdi-subgraph.png` | `40:11` | 15-minute chart with a **dark-blue box** lower left, magenta down-arrow, sharp run up; hand-drawn white trend strokes in both panes. TDI sub-window legend `52.6318 47.2979 46.5466` |
 | 24 | `V12_00-40-36_mm-hit-the-stops-high-chart-plus-284.png` | `40:36` | **Captioned `MM Hit The Stops High`.** Light-blue box `wt = 30.7`; count `1 2 3` down the decline; a printed running total **`114 / 95 / 75` over `+284`**; red highlight box `wt = 34.5`; **`EXIT ALL TRADES`** captioned bottom right |
