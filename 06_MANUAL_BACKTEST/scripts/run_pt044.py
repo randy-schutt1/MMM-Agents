@@ -126,6 +126,18 @@ def main() -> None:
     # superseded W-E figures are reported in BT_V16_0001.md §6a rather than discarded.
     W_E_LO, W_E_HI = L.dt2m("2017-01-01"), L.dt2m("2025-12-31 23:59")
 
+    # §4 fixes W-D = 2013-01-06 -> 2016-06-30 (`D-035` DEVELOPMENT). `mmm_lib`'s
+    # `SCOPES["development"]` is `(None, DEV_END)` -- the UPPER bound only, because
+    # `assert_development()` guards the holdout and nothing guards the other end. So
+    # "development" loads from the CORPUS start, 2013-01-01, and the first execution
+    # of this runner silently took four extra days (2013-01-02...05) into W-D. The
+    # clip below implements the pre-registration; `L.DEV_START` IS 2013-01-06 and is
+    # the same constant §4 quotes. Superseded W-D figures are reported in
+    # BT_V16_0001.md §6a rather than discarded, as the W-E clip's were.
+    # NOTE: the four days lie BEFORE development, not inside the sealed holdout, so
+    # no seal was broken. See REVIEW_INDEX item 224.
+    W_D_LO, W_D_HI = L.DEV_START, L.DEV_END
+
     for scope, wname in [("development", "W-D"), ("extended", "W-E")]:
         report, manifest = L.qa_gate(scope)
         print(f"=== {wname}  (scope={scope}) ===")
@@ -136,6 +148,8 @@ def main() -> None:
             b = L.load_m1(arm, scope=scope)
             if wname == "W-E":
                 b = b.slice(W_E_LO, W_E_HI)
+            else:
+                b = b.slice(W_D_LO, W_D_HI)
             days, rng, excluded = day_ranges(b)
             m = measures(rng)
             a15 = adr15(days, rng)
