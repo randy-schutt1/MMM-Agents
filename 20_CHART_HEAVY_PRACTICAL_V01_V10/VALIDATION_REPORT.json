@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "checks": {
+    "student_cases": 60,
+    "key_cases": 60,
+    "charts": 52,
+    "csvs": 52,
+    "source_cards": 8,
+    "sealed_reveals": 4,
+    "status_balance": {
+      "negative/lookalike": 18,
+      "borderline/insufficient": 16,
+      "positive/valid": 18,
+      "neutral": 8
+    },
+    "videos": {
+      "V01": 21,
+      "V02": 4,
+      "V03": 29,
+      "V04": 11,
+      "V05": 6,
+      "V06": 4,
+      "V07": 4,
+      "V08": 10,
+      "V09": 16,
+      "V10": 27
+    }
+  },
+  "errors": []
+}
