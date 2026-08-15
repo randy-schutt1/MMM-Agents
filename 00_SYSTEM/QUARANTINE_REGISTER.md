@@ -3226,3 +3226,98 @@ is refuted by the file the index itself ships.**
   this session's own frames, each of which carries its own burned player timecode.
 * The diff counts in §0 are **enumerated as well as counted, and the two agree** — which is the
   specific defect open item 249 charged against `Q-018`.
+
+---
+
+## Q-021 — Lesson 20 (`Bootcamp1 Wk9 052012 Part2`): `NOTES.md`, `RULES.md`, `VISUAL_INDEX.md`
+
+**Filed:** 2026-08-15 by the V20 student session
+**Location:** `01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/per_lesson/20_Bootcamp1_Wk9_052012_Part2_46mins/`
+**Status:** **ALREADY QUARANTINED ON ARRIVAL.** The lesson folder now holds only `TRANSCRIPT.md`,
+`SCREENSHOTS/` and the `.swf`. **No V20 artifact cites any of these three files as evidence**; every
+reference in the V20 set is to this register entry.
+
+| File | Bytes | SHA-256 |
+|---|---|---|
+| `RULES.md` | 3,177 | `4a31c9fdedf1b1e2c6838c39fe029a944b6603b13743979abade1d3afd0bcff0` |
+| `NOTES.md` | 1,716 | `64c6bbf2863a27cbb71fb1f98603669c934902e13656947c5f1219597eea9389` |
+| `VISUAL_INDEX.md` | 1,257 | `117cf91c13104073786cedbede4e460bb80f003fcf107abfe18358a77379256d` |
+
+**TENTH CONSECUTIVE lesson carrying the pattern** — `Q-012` (V11) through `Q-020` (V19), now V20.
+
+---
+
+### 0. ⭐⭐ THE V16–V20 TEMPLATE BLOCK IS **CLOSED**. THIS IS ITS LAST MEMBER, AND THE PREDICTION HELD FOR ALL FIVE.
+
+`REVIEW_INDEX.md` item **254** (V17 R1) predicted **two content templates — A for lessons 1–15 and
+21, B for lessons 16–20**. `Q-019` re-derived it by normalised hashing; `Q-020` confirmed it from
+inside the block by direct `diff` and corroborated V21's break. **V20 is the fifth and final member,
+and it closes the block:**
+
+```text
+V20's trio vs V16's, V17's, V18's, V19's  ->  NOTES 2 / RULES 10 / VISUAL_INDEX 8  differing lines
+V20's trio vs V15's                       ->  NOTES 32 / RULES 30 / VISUAL_INDEX 26
+V20's trio vs V21's                       ->  NOTES 32 / RULES 30 / VISUAL_INDEX 26
+```
+
+⭐ **Every member of the predicted block now diffs against every other member at `2/10/8`, and
+against both neighbours outside it at `32/30/26`. The prediction is confirmed on all five, in both
+directions, with no exceptions.**
+
+⚠️ **AND THE LENGTHS ARE NOT IDENTICAL, WHICH `Q-020` PREDICTED WOULD HAPPEN.** `Q-020` recorded
+V16–V19 sharing byte lengths `3,173 / 1,712 / 1,253` **because the identifier substitutions were
+same-length**. V20's are **`3,177 / 1,716 / 1,257` — exactly 4 bytes larger on each file**, because
+its `.swf` filename is 4 characters longer (`Part2 (46mins) (1).swf` against `Part1 (67mins).swf`).
+⭐ **The `+4` is the same on all three files, which is what a pure filename substitution predicts and
+what a rewritten file would not produce.**
+
+⚠️ **THE OFF-BY-ONE CONTINUES AND IS NOW UNBROKEN ACROSS THREE LESSONS.** Lesson 20's folder
+contains rules numbered **`V21-R001`/`V21-R002`**, screenshots named **`VIDEO_21_`**, and a
+`TRANSCRIPT.md` header reading *"Course Position: **Video 21 of 21**"*. **Lesson 18 carried `V19-`,
+lesson 19 carried `V20-`, lesson 20 carries `V21-`.**
+
+---
+
+### 1. ⭐⭐ ALL THREE `VISUAL_INDEX.md` CLAIMS REFUTED FROM THE PIXELS — AND THE SHIPPED SCREENSHOT REFUTES ITS OWN ENTRY, AGAIN
+
+**This session captured its own frames at the three claimed timestamps and looked at them.**
+
+| Claimed | Fabricated description | ⛔ **What is actually on screen at that timecode** |
+|---|---|---|
+| `[00:02:00]` | *"Initial setup slide / chart template with 5, 13, 50, 200, 800 EMAs and Asian Box boundaries"* | An **annotated trade chart** under `MARKET MAKER TRAP MOVES`, with an aggressive drop hand-circled in red. **Not a template slide, and no template is being introduced** — the lesson is 2 minutes into a continuation and has never shown a setup slide |
+| `[00:15:00]` | *"Stop Hunt move out of Asian Box during London Open session transition"* | The **`Multiday Outside Structure`** chart (`GBPCHF,M15`), carrying the typed labels `LOW is established`, `V3`, `Hit The Stops`, `B/O handled`, `Straight Rise`. ⚠️ **The words *"stop hunt"* are adjacent to a real label, and the CLAIM is still wrong**: no Asian box, no London-open transition, and the subject is a multi-day structure |
+| `[00:30:00]` | *"TDI (Traders Dynamic Index) Shark Fin setup and 5/13 EMA cross confirmation […] on closed M15 candles"* | A `MARKET MAKER TRAP MOVES` chart with a magenta freehand `W`, a green up-arrow and a red down-arrow over candles and two MAs. ⛔⛔ **NO TDI PANEL ANYWHERE ON SCREEN.** **`TDI`, `shark fin` and `RSI` are spoken ZERO times in the whole of V20** |
+
+⭐⭐ **AND THE ONE SCREENSHOT THE FOLDER SHIPS REFUTES ITS OWN INDEX ENTRY — THE SECOND LESSON
+RUNNING.** `VIDEO_21_SCREENSHOT_001_00-02-00.jpg` **exists**, is named for `00:02:00`, and is
+**the deck's title slide — `MARKET MAKER BOOT CAMP / THE OUT SIDE STRUCTURE` over a gazebo photo.**
+⭐ **This session's own capture places that slide at `00:17`, not `02:00`**, and shows a chart at
+`02:00`. **So the shipped image is neither what the index says is at that timestamp nor from that
+timestamp.** (V19's shipped file was its cover slide; the failure mode is identical.)
+
+⭐⭐ **THE FABRICATED FILE ACCIDENTALLY PRESERVED SOMETHING TRUE AND USEFUL, AND IT IS RECORDED AS
+LUCK, NOT AS EVIDENCE.** The shipped `.jpg` is a **real frame of this lesson** and it is the frame
+carrying the lesson's printed title. ⛔ **It is cited for NOTHING**: this session recovered the same
+slide independently from its own sweep (`V20_00-00-17_…png`) and every V20 artifact cites **that**.
+**A true artifact inside a fabricated folder is still not evidence** — `Q-019` §1's warning about
+coincidental true cells applies to images exactly as it applies to table rows.
+
+---
+
+### 2. THE COINCIDENTAL-TRUE-CELL COUNT — ⭐ **V20 SCORES ZERO, AND THE TREND BREAKS**
+
+`Q-019` predicted the trio would land occasional true cells by coincidence as the lessons vary;
+**V18 landed one, V19 landed two.** **V20 lands none.**
+
+| Fabricated `NUMERICAL PARAMETERS` claim | V20 |
+|---|---|
+| `EMA Baseline 50` / `EMA Major 200` | ⛔ **`EMA` is spoken ZERO times.** `50` occurs (spike size, `+50` on a slide) and `200` occurs once (*"I've seen him 200"*, `[00:22:25]`, spike size) — **never together, never as an average** |
+| `Peak Time Gap 30-90 mins` | ⛔ **`90` occurs ZERO times in V20** |
+| TDI row naming *"Green (Price Line) … Blue (Volatility Bands)"* | ⛔ **`TDI`, `band`, `shark fin` all ZERO** |
+
+⭐ **The one number V20 shares with the template is `30 minutes`, and the template does not claim
+it.** **V20's most quotable figures — `30 minutes or less`, `20 to 25 pip pullbacks`, `3 levels`,
+`15 to 25 pips`, `one third off the high` — appear nowhere in the fabricated trio.**
+
+⚠️ **This is not evidence that the template improved or degraded.** It is one draw. **The correct
+reading is `Q-019`'s: a true cell in these files is evidence of nothing, and so is a false one.**

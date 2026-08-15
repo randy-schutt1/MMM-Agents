@@ -197,3 +197,22 @@ Built once enough concepts exist to have real relationships. Do not draw it earl
 a premature map becomes a lens that distorts later lessons.
 
 _(not yet applicable)_
+
+---
+
+## V20 — `THE OUT SIDE STRUCTURE` (Week 9 Part 2, 2012-05-20)
+
+⚠️ **This block does NOT close `REVIEW_INDEX.md` item 264**, which remains the remediating session's
+act. It is added because `CONCEPT_INDEX.md` is the index of concepts and V20 introduces one.
+
+| Concept | Status | Where |
+|---|---|---|
+| **Outside structure** | ⭐ **NEW.** The aggressive **single-leg** move that sets the HOD/LOD, and the HOW/LOW. *"All trap moves will come in as an outside structure"* | `V20_SOURCE_NOTES.md` §2; slide `00:25` |
+| **Intraday vs multi-day outside structure** | ⭐ NEW — an explicit two-scale distinction | §2.2; slides `11:20`, `18:20` |
+| **Level 3 (`L3`)** | named earlier, **defined here** — separated averages + chop going nowhere + an extreme repeatedly approached and not broken. ⚠️ **unquantified, `A-138`** | §3; slide `39:45` |
+| **The spike** | **defined here** — aggressive change usually on news, used to clear stops or move the trading zone. ⛔ **never an entry** (`[00:26:06]`) | §4; slide `20:30` |
+| **Railroad tracks** | ⭐ **DEFINED AS A FUNCTION** — *"a 30 minute structure where the Market Makers trigger the stops, Shift the zone and Set the HOD or LOD on one move"*. Consistent with V19's *"30 minutes, 15 in, 15 out"* | §5.1; slide `26:15` |
+| **The one-third entry** | ⭐ **NEW and mechanical** — entry one third off the high of the *handle*. ⛔ **BLOCKED: *handle* undefined, `A-136`** | §5.3 |
+| **Dealer open volume** | ⭐ NEW — the stated **cause** of spike direction. ⛔ **no observable, `A-137`** | §6; slide `20:30` |
+| **The nine-pattern set** | ⭐ **The course's first complete enumeration of the patterns a student must hold** | slide `38:15` |
+| **`M15`** | ⭐⭐ **printed on three charts** — the timeframe stops being derived | `04_SCREENSHOTS/V20/INDEX.md` §11 |

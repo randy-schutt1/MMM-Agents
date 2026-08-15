@@ -3268,3 +3268,39 @@ lesson.** Every V19 artifact uses 30 as the working figure and 45 as the toleran
 
 **See also:** `A-134` (the verbal spread), `PT-047` §2a (which runs both caps as separate arms, and
 both confirm).
+
+---
+
+## C-030 — V20 states the second-leg time cap as `30 minutes or less`, flat, against V19's on-camera `30M` / `30 to 45 m` split
+
+**Opened:** 2026-08-15 by the V20 student session. **Status: ⚠️ PROVISIONAL — `C-029` NARROWS, IT
+DOES NOT CLOSE.**
+
+**`C-029`** records V19 writing **two different caps into its own deck on camera**: `with in 30M` on
+the `" M " Formation` slide (`23:25`) and `with in 30 to 45 m` on the `"W"` slide (`50:34`).
+
+**V20 is the third witness and it says one number:**
+
+| Marker | Line |
+|---|---|
+| `[00:27:49]` | *"**In 30 minutes or less** — o[r] you get three pepperoni on the pizza"* |
+| `[00:28:01]` | ⭐ *"In **15 minutes**, do I get out? **No.**"* — the cap has a floor as well |
+| `[00:28:09]` | *"If the dealer stays above the previous high […] **I recommend you scratch the trade out**"* |
+| `[00:28:27]` | *"comes back below the previous high **on a nice solid close**. Take him."* |
+
+⛔ **`45`, `90` and `30 to 45` occur ZERO times in V20** (string-checked over the marker grid).
+
+### ⚠️ WHY THIS NARROWS RATHER THAN CLOSES `C-029`
+
+**V20's passage is explicitly the M-side case.** The student is *"shorting here"* `[00:28:01]` and
+the level under discussion is *"the **previous high**"*. **So V20 is a third witness to the figure
+on V19's `M` slide (`30M`) and is SILENT on the `W` slide's (`30 to 45 m`).**
+
+⭐ **What can be said:** the `M`-side cap now has **three independent attestations at 30 minutes** —
+V19 audio `[00:22:43]`, V19's on-camera slide edit, and V20 `[00:27:49]` — plus an explicit refusal
+of a shorter figure. ⛔ **What cannot:** that the `W` side is also 30. **No V20 sentence addresses
+it.**
+
+**Disposition: `PROVISIONAL`.** `A-134` (the cap stated four ways) remains **OPEN**. **A later
+lesson or an owner ruling closes it; this session does not adjudicate a question V20 does not
+answer.**

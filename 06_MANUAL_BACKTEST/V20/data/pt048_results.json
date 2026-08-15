@@ -1,0 +1,296 @@
+{
+  "test": "PT-048",
+  "seed": 20260812,
+  "band": [
+    20.0,
+    25.0
+  ],
+  "primary_cell": "A|W-A|P1",
+  "n3_fired": [],
+  "verdict": "REFUTED",
+  "cells": {
+    "A|W-A": {
+      "arm": "A",
+      "window": "W-A",
+      "n_days": 256,
+      "n_legs": 1017,
+      "n_p1": 702,
+      "n_p2": 1017,
+      "n_p3": 1017,
+      "P1": {
+        "n": 702,
+        "median": 30.1,
+        "iqr": [
+          22.0,
+          41.77
+        ],
+        "median_ci": [
+          28.8,
+          31.25
+        ],
+        "frac_in_band": 18.2,
+        "frac_in_band_wilson": [
+          15.6,
+          21.3
+        ]
+      },
+      "P2": {
+        "n": 1017,
+        "median": 32.5,
+        "iqr": [
+          24.6,
+          44.0
+        ],
+        "median_ci": [
+          31.4,
+          33.5
+        ],
+        "frac_in_band": 17.3,
+        "frac_in_band_wilson": [
+          15.1,
+          19.8
+        ]
+      },
+      "P3": {
+        "n": 1017,
+        "median": 23.0,
+        "iqr": [
+          17.4,
+          30.0
+        ],
+        "median_ci": [
+          22.4,
+          23.7
+        ],
+        "frac_in_band": 21.7,
+        "frac_in_band_wilson": [
+          19.3,
+          24.4
+        ]
+      }
+    },
+    "A|W-B": {
+      "arm": "A",
+      "window": "W-B",
+      "n_days": 512,
+      "n_legs": 1669,
+      "n_p1": 1230,
+      "n_p2": 1669,
+      "n_p3": 1669,
+      "P1": {
+        "n": 1230,
+        "median": 27.1,
+        "iqr": [
+          20.0,
+          39.15
+        ],
+        "median_ci": [
+          26.6,
+          28.5
+        ],
+        "frac_in_band": 18.5,
+        "frac_in_band_wilson": [
+          16.5,
+          20.8
+        ]
+      },
+      "P2": {
+        "n": 1669,
+        "median": 30.8,
+        "iqr": [
+          23.4,
+          42.7
+        ],
+        "median_ci": [
+          29.7,
+          31.7
+        ],
+        "frac_in_band": 18.6,
+        "frac_in_band_wilson": [
+          16.8,
+          20.5
+        ]
+      },
+      "P3": {
+        "n": 1669,
+        "median": 21.6,
+        "iqr": [
+          16.3,
+          28.5
+        ],
+        "median_ci": [
+          21.0,
+          22.2
+        ],
+        "frac_in_band": 20.0,
+        "frac_in_band_wilson": [
+          18.2,
+          22.0
+        ]
+      }
+    },
+    "B|W-A": {
+      "arm": "B",
+      "window": "W-A",
+      "n_days": 256,
+      "n_legs": 1082,
+      "n_p1": 782,
+      "n_p2": 1082,
+      "n_p3": 1082,
+      "P1": {
+        "n": 782,
+        "median": 30.95,
+        "iqr": [
+          22.82,
+          44.05
+        ],
+        "median_ci": [
+          29.9,
+          32.3
+        ],
+        "frac_in_band": 18.8,
+        "frac_in_band_wilson": [
+          16.2,
+          21.7
+        ]
+      },
+      "P2": {
+        "n": 1082,
+        "median": 33.3,
+        "iqr": [
+          25.2,
+          45.07
+        ],
+        "median_ci": [
+          32.3,
+          34.4
+        ],
+        "frac_in_band": 16.0,
+        "frac_in_band_wilson": [
+          13.9,
+          18.3
+        ]
+      },
+      "P3": {
+        "n": 1082,
+        "median": 23.35,
+        "iqr": [
+          17.9,
+          30.5
+        ],
+        "median_ci": [
+          22.9,
+          24.1
+        ],
+        "frac_in_band": 22.6,
+        "frac_in_band_wilson": [
+          20.2,
+          25.1
+        ]
+      }
+    },
+    "B|W-B": {
+      "arm": "B",
+      "window": "W-B",
+      "n_days": 512,
+      "n_legs": 1775,
+      "n_p1": 1357,
+      "n_p2": 1775,
+      "n_p3": 1775,
+      "P1": {
+        "n": 1357,
+        "median": 27.3,
+        "iqr": [
+          20.2,
+          40.2
+        ],
+        "median_ci": [
+          26.7,
+          28.6
+        ],
+        "frac_in_band": 18.9,
+        "frac_in_band_wilson": [
+          16.9,
+          21.0
+        ]
+      },
+      "P2": {
+        "n": 1775,
+        "median": 31.3,
+        "iqr": [
+          23.8,
+          42.7
+        ],
+        "median_ci": [
+          30.5,
+          32.1
+        ],
+        "frac_in_band": 18.0,
+        "frac_in_band_wilson": [
+          16.3,
+          19.9
+        ]
+      },
+      "P3": {
+        "n": 1775,
+        "median": 21.8,
+        "iqr": [
+          16.4,
+          28.7
+        ],
+        "median_ci": [
+          21.1,
+          22.3
+        ],
+        "frac_in_band": 20.8,
+        "frac_in_band_wilson": [
+          19.0,
+          22.7
+        ]
+      }
+    },
+    "N1_baseline_A_W-A": {
+      "n": 1558,
+      "median": 29.15,
+      "frac_in_band": 18.2
+    },
+    "swing_scale_sensitivity": {
+      "k=1": {
+        "n": 2506,
+        "median": 22.45,
+        "ci": [
+          22.0,
+          23.2
+        ],
+        "median_in_band": true
+      },
+      "k=2": {
+        "n": 1200,
+        "median": 26.8,
+        "ci": [
+          25.9,
+          27.6
+        ],
+        "median_in_band": false
+      },
+      "k=3": {
+        "n": 702,
+        "median": 30.1,
+        "ci": [
+          28.8,
+          31.25
+        ],
+        "median_in_band": false
+      },
+      "k=4": {
+        "n": 440,
+        "median": 33.1,
+        "ci": [
+          31.3,
+          34.9
+        ],
+        "median_in_band": false
+      }
+    }
+  }
+}

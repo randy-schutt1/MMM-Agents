@@ -10497,3 +10497,322 @@ free and no renumber was owed.**
 
 **Items 303 and 304**, and the independent `PASS` V19 still needs. ⚠️ **A future reviewer should
 note that item 302's closure was self-verified and may reopen it on the merits.**
+
+---
+
+## 2026-08-15 — V20 INGESTION (`Bootcamp1 Wk9 052012 Part2`, Week 9 Part 2)
+
+**Lesson:** `Bootcamp1 Wk9 052012 Part2 (46mins) (1).swf` · 2012-05-20 · **00:45:49**
+**Printed subject:** `MARKET MAKER BOOT CAMP` / **`THE OUT SIDE STRUCTURE`**
+**Branch:** `video/v20`, forked from integration `50edf5f`, in an isolated worktree (`D-038`).
+
+### Provenance
+
+**`.swf` SHA-256 re-computed to `96eba8c8…5d522a43c6` and length to 17,724,102 bytes — both matching
+`SOURCE_MANIFEST.md` exactly.** ⭐ **Four independent length measures agree to 0.33 s:** header
+(`frameCount 8248 ÷ frameRate 3.0` = 2749.333 s), extracted audio (2749.100 s), manifest (2749 s)
+and filename (*"46mins"*).
+
+### Capture
+
+10× fast sweep, **558 frames**, 23 kept. Stage `1024 × 786` and `frameRate 3.0` **read from this
+file's header, not carried forward**; patched to `30.0`. ⚠️ **`GOTCHA 4` fired for real** — the
+first port picked was already serving another session, and the check caught it before anything was
+captured. Play-click before/after guard passed.
+
+⭐ **§8a returns a FIFTH shape: a DECAYING TRANSIENT.** `+17 / +13 / +9 s` at `i = 0,1,2`, then
+**EXACTLY ZERO** from `i = 24` through `i = 549`. **This corroborates item 296's mechanism from a
+second sweep** — an absolute-deadline loop absorbs the play-click latency instead of accumulating
+it. ⚠️ Corroborated, **not proven**; the predicted incremental-sleep control was not run.
+⭐⭐ **And the lesson's TITLE frame is `i = 0`, inside the transient** — `i × 5` would have stamped it
+`00:00` when its burned clock reads `00:17`. **Named from the burned value, which is what §8a step 4
+exists for.**
+
+### ⭐ The §9 two-pass order was FOLLOWED
+
+**§§1–9 of `V20_SOURCE_NOTES.md` were written while the sweep was still running, with no V20 frame
+on disk.** **Item 286 did not recur.** ⚠️ **This sidesteps item 306's contradiction by scheduling
+luck, not by resolving it**, and 306 stands.
+
+**And it paid immediately:** the committed transcript renders `shift his zone` as *"shift his own"*
+**five times, one of them inside the railroad-track definition**, and the `26:15` slide prints
+**`Shift the zone`**.
+
+### Headline findings
+
+* ⭐⭐⭐ **`M15` IS PRINTED ON THREE CHARTS** — `GBPCHF,M15`, `GBPUSD,M15`, `USDCHF,M15`. **The
+  course's timeframe stops being a derivation from V19's `8 bars = 2 hours`.** ⚠️ V20 never *says*
+  `M15` either. **Item 245's remediation should route through it** (item 318).
+* ⭐⭐ **The railroad track is defined as a FUNCTION** — *"a 30 minute structure where the Market
+  Makers trigger the stops, Shift the zone and Set the HOD or LOD on one move"*. **V19 gave the
+  shape; V20 gives the purpose; both say 30 minutes.**
+* ⭐⭐ **The time cap gains an ACTION and a FLOOR** — `30 minutes or less`; **15 minutes explicitly
+  refused**; **stays above ⇒ scratch the trade**; re-entry on *"a nice solid close"*. **`C-030`,
+  `PROVISIONAL`: it narrows `C-029` on the M side and is silent on the W side** (item 325).
+* ⭐ **A mechanical entry arrives and one word blocks it** — *"one third off the high of this
+  handle"*, worked at 100 → 33 pips. ***Handle* undefined: `A-136`, now the cheapest high-value
+  blocker in the project** (item 327).
+* ⭐ **`A-019` gains its first named timezone in twenty lessons — and does not close.** *"three
+  thirty, four o'clock **New York time**"* timestamps a **reading**, not a boundary, and `EST`/`EDT`
+  is not said (item 329).
+* ⭐⭐ **`Q-021` closes the V16–V20 template block** on all five members in both directions, with the
+  byte lengths diverging by **exactly `+4` on all three files** — what a pure filename substitution
+  predicts. **V20 scores ZERO coincidental true cells**, recorded as one draw, not a trend.
+
+### `PT-048` — ⚠️ `CONFIRMED`, AND THE BASELINE MATCHES IT
+
+Pre-registered at `bb526f1` **before `run_pt048.py` existed**. Primary cell median `P1` =
+**22.45 pips, boot95 `[22.0, 23.2]`**, inside V20's printed `[20, 25]` band; `N3` clear.
+⛔⛔ **`N1` matched-random windows return median 23.00 and 18.9 % in band, against 22.45 and 17.1 %.**
+
+⚠️⚠️ **`PT-048` §4 stated the null correctly and §5 never scored it.** The verdict stands as the rule
+produced it (`COMMON_PROTOCOL.md` §9 rule 7) and **the report leads with the defect** rather than
+burying it, classifies itself **`DESCRIPTIVE` not `EVIDENTIAL`**, and invites a reviewer to treat
+the `CONFIRMED` as a null (item 320). **Same class as item 289.**
+
+⭐ **`PT-048` did make the INTERVAL a condition of the verdict, pre-registered, citing item 302 by
+number** — a `MAJOR` from one lesson earlier changing the design of the next test (item 321).
+
+### Owed
+
+⚠️⚠️ **NO independent ASR pass of any kind was run — the weakest verification position in six
+lessons** (item 326). Records opened: **`A-136`, `A-137`, `A-138`, `C-030`, `Q-021`**, review items
+**318–331**. **`A-133` (*blue tracer*) survives V20; dimension B blocked for a SEVENTH lesson.**
+
+### Git
+
+`video/v20`, pushed, **NOT merged to integration** — `D-003` reserves review to a separate session.
+**`D-047` re-check owed at merge-back.** Validator **103 / 0 / 0**.
+
+### Next Review Trigger
+
+**V20 R1**, by an independent session.
+
+---
+
+## 2026-08-15 — Reviewer Session (V20 R1)
+
+### Lesson
+**V20** — `Bootcamp1 Wk9 052012 Part2 (46mins) (1).swf` · 2012-05-20 · 00:45:49
+Submission: `video/v20` @ `2ab5e83` (3 commits), forked from `50edf5f`.
+Review branch `review/v20`, isolated worktree `MMM-Agents-v20-review` (`D-038`).
+
+### Review Objective
+Independent mastery audit under `D-003`. Fresh session; this reviewer did not author the ingestion.
+**Both items the session flagged for hardest scrutiny were ruled on, and the round went underneath
+them.**
+
+### Source Evidence Reviewed
+* `.swf` **SHA-256 re-computed to `96eba8c8…d522a43c6`** and **17,724,102 bytes** — both matching the
+  manifest. Audio **2749.100 s** against `frameCount/fps` **2749.333 s** and **00:45:49**: three
+  measures to **0.33 s**.
+* ⭐ **A FULL-FILE INDEPENDENT ASR PASS — the channel the submission declared it did not run.**
+  `faster-whisper` / CTranslate2 `large-v3`, 848 segments, plus four targeted multi-model decodes.
+* **Printed slides read directly from the pixels**: three `M15` chart headers, the railroad-track
+  definition, the nine-item answer key.
+* **All 23 burned frame timecodes cropped and read.**
+* The quarantined trio re-hashed and re-diffed **against all 21 lessons** in this reviewer's shell.
+* GBP/USD M1 via `mmm_lib`, DEVELOPMENT, both arms, `W-A` and `W-B`.
+
+### Findings
+**`REVISE` — 0 CRITICAL, 2 MAJOR, 2 MINOR, 12 NOTE. HIGH confidence.
+⛔ V21's GATE IS CLOSED under `D-024`.**
+
+**`M1` (item 332)** — `PT-048`'s **primary** measure does not implement the pre-registration's own
+swing definition. §3.1 fixes a swing pivot at `±3`; the runner applies that to leg endpoints only and
+finds every `P1` counter-swing with a hardcoded `±1` test. Holding all else identical: **`±1` → 22.40
+`[22.00, 23.20]` = `CONFIRMED`; `±3` → 30.10 `[28.70, 31.25]` = `REFUTED`.** The `±1` choice also
+inflates `n` from **706 to 2,519**, narrowing the interval — **manufacturing both conditions of
+`CONFIRMED`.** `BT_V20_0001.md` §6 records *"no other disagreement"*.
+
+**`M2` (item 333)** — ⭐ **found by the ASR pass.** The committed grid renders **`candle` as
+`handle`** at all five noun positions. **Four decodes across two models and both VAD settings return
+`candle`; none returns `handle`.** **`A-136` is an artifact**; the one-third entry is fully mechanical
+as spoken — `entry = high − (range ÷ 3)` — and **`PT-048` §1a excluded that rule from testing citing
+`A-136` by name.**
+
+**MINOR 334 / 335** — the session's own items 320 and 326, both **upheld**: `PT-048`'s standing result
+is a **NULL**, and no ASR pass was run. **Both `MINOR` because the session disclosed them everywhere
+and raised them against itself.**
+
+### What Was Re-Derived Rather Than Read
+`PT-048` re-implemented **from the pre-registration before `run_pt048.py` was opened**; `P2` and `P3`
+reproduce (31.20 / 21.70 against 32.50 / 23.00), **which is what localises `M1` to `P1`**. All 23
+frame timecodes verified 23/23. `Q-021` re-derived entirely — hashes, the `+4` bytes, `2/10/8` against
+all four block members, `32/30/26` against both neighbours, the `V21-`/`VIDEO_21_`/*"Video 21 of 21"*
+off-by-one. `M15` verified on all three chart headers. The nine-item answer key matches the pixels
+en-dash-exact.
+
+⭐ **And the ASR pass vindicated the submission's own corrections**: `shift the zone` returned at 4 of
+5 markers, `the high of the week and the low of the week`, `as a single leg only` (a clause the grid
+had lost), `the AB equals`, `length`. **It also upgraded the audio-only M/W claim** the interpretation
+had graded MEDIUM — *"the vector side of the M or W formation"*, returned verbatim twice.
+
+### Required Corrections
+Items 332–335, specified at `V20_REVIEW_R1.md` §6. **Action 1 changes one constant and re-runs a
+90-second script; action 2 corrects one word in four files and closes a record.** Nothing needs
+re-capturing, re-transcribing or re-testing.
+
+### Decision
+**`REVISE`. ⛔ V21 GATE CLOSED** — two `MAJOR`s. **V20 STATUS: `IN REMEDIATION`.**
+Not `COMPLETE` until 332–335 are applied **and independently re-reviewed** (`D-003`).
+
+### Git
+Branch `review/v20` from `2ab5e83`; `00ba10e` (findings checkpoint), then the ASR round and the
+index/progress/log updates. **NOT merged to integration — `D-024` bars it on two `MAJOR`s.**
+
+### Next Review Trigger
+A V20 resubmission applying items 332–335.
+
+### ⭐ The Note This Round Wants On The Record
+**The session self-charged almost everything it could see** — the unwired baseline, the missing ASR
+pass, the `N1` reduction, the self-scored recall test, and a gate residue it disclosed *while
+benefiting from it*. **Both items it put to the reviewer were upheld, and both are `MINOR` precisely
+because it disclosed them.** ⚠️ **The two `MAJOR`s are the two things a session cannot find about
+itself: one needed an independent re-implementation, the other an independent ear.** That is the
+argument for `D-003` — and for never letting the ASR pass become optional.
+## 2026-08-15 — V20 REMEDIATION ROUND (V20 R1 `M1` + `M2`), AT OWNER DIRECTION
+
+**Owner direction:** *"Fix it."* **Branch `video/v20`, isolated worktree, `D-038`.**
+
+### ⛔⛔ NOT SELF-VERIFIED, AND THAT IS THE POINT
+
+**`D-024` holds the gate closed on any `MAJOR` until it is fixed *and re-reviewed in a fresh
+round*.** ⭐ **V20 R1's reviewer raised the concern that owner-authorised self-verify was becoming
+the default** — V19's item 302 was closed that way, `D-003` unsatisfied. **This round does not use
+the exception.** **These fixes are applied and pushed for the V20 R1 session to re-check.**
+
+### Both findings were VERIFIED before being acted on
+
+⭐ **`M1`** — confirmed by reading my own code. `PT-048` §3.1 defines a swing pivot at `±3`;
+`run_pt048.py` honoured it for the leg **endpoints** and used a hardcoded **`±1`** for the interior
+counter-swings producing every `P1` value.
+
+⭐ **`M2`** — confirmed by running **my own fifth ASR decode** (`openai-whisper medium.en`,
+`beam_size 5`, temperature 0) over three windows **before** accepting the finding. Every position
+returns **`candle`**.
+
+### `M1` — the verdict moves `CONFIRMED` → `REFUTED`
+
+| swing scale | `n` | median `P1` | boot 95 % | in band? |
+|---|---|---|---|---|
+| `k = 1` — the bug | 2506 | 22.45 | `[22.00, 23.20]` | ✅ |
+| `k = 2` | 1200 | 26.80 | `[25.90, 27.60]` | ❌ |
+| ⭐ **`k = 3` — the spec** | **702** | ⛔ **30.10** | `[28.80, 31.25]` | ❌ |
+| `k = 4` | 440 | 33.10 | `[31.30, 34.90]` | ❌ |
+
+⛔ **`k = 1` was the only scale of the four that put the median in band, and by inflating `n` it also
+narrowed the interval enough to satisfy §5's interval condition. It manufactured both halves of
+`CONFIRMED`.** ⭐ **The reviewer's independent code returned 30.10 `[28.70, 31.25]`; the corrected
+runner returns 30.10 `[28.80, 31.25]` — agreement to the second decimal.**
+
+**The pre-registration is NOT edited. It was right; the runner was wrong.** `BT_V20_0001.md` §6
+previously said *"No other disagreement"* — **false, and now corrected.** ⭐ **The swing-scale
+sensitivity is published on every run**, because `N3`'s four conditions do not bracket it.
+
+⭐ **The baseline finding is scale-invariant and survives untouched**: 30.10 against `N1`'s 29.15 at
+`k = 3`, as 22.45 against 23.00 at `k = 1`. **The claim fails twice over — wrong magnitude at the
+pre-registered scale, and non-diagnostic at every scale.**
+
+### `M2` — `A-136` was opened on a word that does not exist
+
+The committed grid mis-hears **`candle`** as *"handle"* at all five noun positions; the two genuine
+verb uses are correct. **With the right word the rule is complete:**
+
+> **`entry = high − (candle range ÷ 3)`**, worked at 100 pips → *"**Subtract 33 pips off the high**,
+> a third."*
+
+* **`A-136` CLOSED as an ASR artifact**, superseded title retained (`REMEDIATION_PROTOCOL.md` §2).
+* **`A-139` opened** for what survives — ⭐ **which candle** is never stated in words, a much narrower
+  question, because the calculation is determined once a bar is chosen.
+* ⛔ **The cost is recorded:** the artifact called `A-136` *"the cheapest high-value blocker in the
+  project"* and **`PT-048` §1a excluded the one V20 rule mechanical enough to test.**
+* ⭐ **`PT-049` pre-registered BEFORE `run_pt049.py` exists**, testing the rule the artifact
+  suppressed. **It makes the baseline an EXPLICIT CONDITION of every non-null verdict** — the
+  `PT-048` §3a defect — names its primary bar-selection convention in advance, requires all three
+  conventions and all four fractions published on every run, and **closes the §5 decision-table hole
+  R1 §2.6 found.**
+
+### ⚠️⚠️ ROOT CAUSE OF BOTH `MAJOR`s IS THE SAME, AND IT IS ITEM 326
+
+**This session ran no independent ASR pass and no independent re-implementation of its own runner.**
+**The reviewer ran both, and each found a `MAJOR`.** ⭐ *"A transcript defect that WITHHOLDS a rule is
+as costly as one that inverts it, and only an independent pass finds either."*
+
+### Git
+
+`video/v20`, pushed. ⛔ **NOT merged and NOT self-verified.** **Awaiting V20 R1 re-review.**
+Validator **103 / 0 / 0**.
+
+---
+
+## 2026-08-15 — Reviewer Session (V20 R2 — remediation re-review)
+
+### Lesson
+**V20** · `video/v20` @ **`a761eb4`** — **2 commits** (`7bac6a9`, `a761eb4`) on top of R1's
+`2ab5e83`. Review branch `review/v20`, worktree `MMM-Agents-v20-review` (`D-038`).
+
+### Review Objective
+Re-review of the two `MAJOR`s raised in `V20_REVIEW_R1.md`, per `D-024`'s *"fixed **and
+re-reviewed**"*. **Both fixes were re-derived independently rather than checked against R1's own
+numbers.**
+
+### Decision
+**`REVISE` — 0 CRITICAL, 0 MAJOR, 1 MINOR, 8 NOTE. HIGH confidence.**
+⭐ **V21 GATE OPEN under `D-024`. R1's items 332–335 all discharged.**
+
+### `M1` (332) — CLOSED
+`run_pt048.py`'s `measures()` is wired to `PIVOT_K`; **`PT-048` itself is unedited** (`git diff` over
+the pre-registration between the two commits is empty). **A fresh implementation was written for this
+round with a different bootstrap seed (`987654321`) and iteration count (50,000 vs 20,000)**, so the
+interval is an independent estimate:
+
+| | submission | **reviewer, fresh** |
+|---|---|---|
+| `k=1` | 22.45 `[22.00,23.20]` | 22.40 `[22.00,23.20]` |
+| `k=2` | 26.80 `[25.90,27.60]` | 26.80 `[25.85,27.60]` |
+| ⭐ **`k=3`** | ⛔ **30.10** `[28.80,31.25]` | ⛔ **30.10** `[28.70,31.20]` |
+| `k=4` | 33.10 `[31.30,34.90]` | 33.10 `[31.20,34.60]` |
+
+⭐ **And `REFUTED` holds on all four arm × window cells** (30.10 / 27.10 / 30.90 / 27.30) — which R1
+had not established. ⚠️ *"Agrees to the second decimal"* is true of the **median**; this reviewer's
+own two bootstraps differ in the interval's last digit, so that bound is resampling noise.
+
+### `M2` (333) — CLOSED
+`A-136` closed as **`RAISED IN ERROR`** with its superseded title struck and retained; **`A-139`
+opened** for the narrower *which candle* residue, listing two candidates and refusing to choose;
+**the transcript body annotated, not edited** (§2a, six markers, verb uses excluded). ⭐ **This round
+added a 6th and 7th decode on `small.en` and `distil-large-v3` — families neither side had used.
+Seven decodes, four families, none returning `handle`.**
+
+### `PT-049`
+Reviewed as a pre-registration; **no runner and no `BT_V20_0002.md` exist — verified.** ⭐ **It closes
+every methodological hole R1 found, by name**: `N1` an explicit verdict condition (334), every scale
+stated inside its own measure (`M1`), the §5 decision-table hole closed (345), `N3` extended to the
+*"not special"* outcome (R1 question 3). Primary cell named before any number exists; conventions
+declared as conventions; `CONFIRMED` defined not to mean profitable.
+
+### New Finding
+**MINOR 348** — `PT-048` §4 never says how a matched-random window's **direction** is assigned, and
+`P1` needs one. The runner uses the window's own endpoints; **reproduced at 28.20 against its 29.15.**
+⚠️ **Under the alternative convention this reviewer gets 34.20–35.47, which separates from the legs'
+30.10 with an interval excluding it** — so §3's *"non-diagnostic at every scale"* is
+**convention-dependent**. ⭐ The runner's rule is the faithful generalisation of how observed legs get
+their direction and is arguably better; **what is charged is the undeclared convention behind a
+universal claim.** ⛔ **The primary verdict `REFUTED` is unaffected.**
+
+### Git
+`review/v20`: merged `a761eb4`, then R2's review file, index, progress and log.
+**Merged to integration per `D-024` — 0 CRITICAL, 0 MAJOR.**
+
+### Next Review Trigger
+V21's student submission, or a V20 resubmission applying item 348.
+
+### ⭐ The Note This Round Wants On The Record
+**R1's two `MAJOR`s were the two things a session cannot find about itself** — one needed an
+independent re-implementation, the other an independent ear. **Both were accepted without argument,
+verified by the session before being acted on, fixed at the root rather than the symptom, and
+deliberately NOT self-closed** — declining, in writing, the owner-authorised self-verify route that
+R1's review question 1 flagged as becoming the default. ⭐ **And `PT-049` generalises the lessons
+instead of patching the instance.** ⚠️ **The owner question still stands**: the self-verify exception
+has no numbered decision, and this round shows the practice correcting itself without one.
