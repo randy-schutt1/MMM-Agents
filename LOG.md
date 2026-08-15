@@ -11314,3 +11314,87 @@ all unchanged.** ⚠️ **`A-143` still has never been opened in the ledger** �
   proposed-entry Part 3 rewritten; Q1 replaced with the timeframe question
 - `00_SYSTEM/DECISION_DRAFT_D-061_CANONICAL_EMA_SET.md` — §5's three-row table updated: row 2
   **ANSWERED**, row 3 flagged as **the only blocker**
+
+---
+
+## 2026-08-15 — OWNER RULING #11 — **M15.** `A-143` CLOSES AND `D-058` TIER 1'S TRIGGER IS COMPUTABLE
+
+**Branch:** `decisions/owner-m15-timeframe`. **Folded into `DECISION_DRAFT_D-058` and `D-061` —
+both still NOT ADOPTED.**
+
+> *"So this is a **universal rule**. If I decide to take an entry in any time frame then I need to
+> wait for the ema cross. **Based on the strategy now with MMM then it's M15**"* — owner, 2026-08-15
+
+### ✅✅ `A-143` CLOSES — all three substantive rows ruled in one day
+
+| Row | Ruling |
+|---|---|
+| **SET** | `5 · 13 · 50 · 200 · 800` — `D-061` |
+| **PAIR** | **EMA(5) × EMA(13)** — *"5/13 cross entry"* |
+| **TIMEFRAME** | ⭐ **M15** — *"with MMM then it's M15"* |
+| **DIRECTION** | ⭐ **DISSOLVED, not answered** — it was mis-specified; see below |
+
+### ✅ THE TRIGGER IS COMPUTABLE
+
+**On M15: `EMA(5, close)` crosses `EMA(13, close)`; the entry is the NEXT BAR'S CLOSE.**
+Deterministic, backtestable, **no undefined term in it**. ⭐ **The first fully-specified executable
+entry trigger the project has obtained from any source in twenty-one lessons.**
+
+Every component now has a warrant: averages and type (owner, *"5/13"*, *"ema"*); set (`D-061`);
+**applied to close** (`MMM.tpl` `apply=0` ×6 `[TOOLING]`, and both project tools already use
+`close`); timeframe (owner); trigger event (owner); entry price (owner, §1).
+
+### ⛔⛔ BUT IT IS A TIMING GATE, NOT A SIGNAL — established by the owner's own wording
+
+> *"**If I decide to take an entry** … then I need to **wait for** the ema cross."*
+
+⭐⭐ **The decision to enter — and its DIRECTION — is made BEFORE the cross is consulted.** The cross
+is a **timing condition on an entry already chosen**, not the thing that chooses it.
+
+⭐ **That dissolves `A-143`'s direction row rather than answering it:** direction was never a property
+of the cross rule — it belongs to the **setup**, which `D-055` fixes as the **M/W formation**. And
+**`A-011` (M/W anatomy) is `DO NOT CODE`**, so:
+
+| | |
+|---|---|
+| ✅ **COMPUTABLE** | *"Given a decision to go long/short on M15, WHEN do I enter?"* |
+| ⛔ **NOT COMPUTABLE** | *"Should I enter, and in which direction?"* — blocked on `A-011` |
+
+⭐ **For the setup-detection agent that is precisely the useful half.** ⛔ **Tier 1 must not be
+described as a complete entry signal.**
+
+### ⭐ M15 IS NOW DIRECTLY ATTESTED — a different warrant from the earlier inference
+
+⚠️ **The distinction the request asked for, recorded explicitly.** Previously M15 was only *"the
+better-supported arm"* — an **inference** from V09 `[00:41:43]`'s Tier 1 *"the 800 on the 15 minute"*
+plus V19/V20's M15 entry material — and it was **NOT adopted**, because the owner's own templates run
+**3–2 the other way (H1)**. ⭐ **It is now adopted on DIRECT OWNER ATTESTATION about his own
+practice, not on that inference.**
+
+⭐ **The two agree, and the agreement is not the warrant.** Had he said H1, **H1 would be the
+answer**, and V09's M15 fact would have stayed a fact about *the course* rather than his practice —
+the `D-052` §3.5 distinction again.
+
+⚠️ **The 3–2 split is OUTRANKED, NOT EXPLAINED.** `MMM.tpl` is **named for this method** and is saved
+on **H1**. Why his MMM-named templates sit on H1 while he trades the entry on M15 is **unresolved** —
+plausibly analysis charts rather than entry charts, but he has not said so. **Blocks nothing;** asked
+as `D-058` §7 Q7.
+
+⚠️ **And the generalisation is recorded and NOT used.** *"A universal rule… any time frame"* licenses
+**the owner** to wait for the cross on any chart; it does **not** license the project to compute
+tier 1 on H1 or H4. **For MMM the parameter is M15, flat.**
+
+### ⚠️ TWO DECLARED CONVENTIONS (`D-027`) — neither a blocker, both must be stated
+
+1. That the **awaited cross is the one in the TRADE'S direction** (down-cross for a short off an M).
+   Near-certain; **the owner has not said it.**
+2. That the **EMAs are applied to CLOSE.** TOOLING-attested (`MMM.tpl` `apply=0` ×6) and already what
+   both tools do — **attested by an artifact, not stated by the owner.**
+
+### ⛔ UNCHANGED
+
+**`D-058` anchors 2, 3 and 4 still block tiers 2 and 3** — *"confidence and probability"* (subjective
+gate), *"second leg"* (→ `A-011`), *"the outside bar"* (undefined). ⛔ **`A-139`, `A-133`, `A-011`,
+`A-090`, `A-115`, `A-056`, `A-020` unchanged.** ⚠️ **`A-143` has still never been opened in the
+ledger** — it is a proposal in `D-058` §4.1, now marked **CLOSED** there, so if it is ever opened it
+should be opened **already closed**, as a record of a question asked and answered.

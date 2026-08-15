@@ -135,7 +135,7 @@ does not resolve them; **it defends them.**
 |---|---|---|
 | 1 | **Which candidate SET?** — `D-043`'s 5/13/… vs `MMM.tpl`'s 4/10/…/3200 | ✅ **ANSWERED — 5 · 13 · 50 · 200 · 800** |
 | 2 | ⛔ **Which TWO of the five cross?** | ✅ **ANSWERED 2026-08-15 — *"5/13 cross entry"*.** ⭐ **EMA(5) × EMA(13).** Ten pairs → **one**. *(This row read "OPEN — 5×13 is the obvious pair and he did not say it"; he has now said it.)* |
-| 3 | ⛔ **On which TIMEFRAME? In which DIRECTION?** | ⛔⛔ **OPEN — AND NOW THE ONLY BLOCKER.** The owner's templates split **3–2, H1 vs M15**; V09 `[00:41:43]`'s *"800 on the 15 minute"* is Tier 1 for M15. `!SM_Crossover_Arrows`' *"Cross Up on … min … EMA"* prints the timeframe **because it varies** (`D-060` §7). ⚠️ Direction is unstated but **constrained** by `D-055`'s M/W anchor |
+| 3 | ⛔ **On which TIMEFRAME? In which DIRECTION?** | ✅ **TIMEFRAME ANSWERED 2026-08-15 — M15** (*"with MMM then it's M15"*), **by direct attestation, not by the inference below.** ⭐ **`A-143` CLOSES.** Direction is **dissolved, not answered**: the cross is a **timing gate** on an already-decided entry, so direction belongs to the **M/W setup** (`A-011`), not to the cross. *(Superseded:)* ⛔⛔ **OPEN — AND NOW THE ONLY BLOCKER.** The owner's templates split **3–2, H1 vs M15**; V09 `[00:41:43]`'s *"800 on the 15 minute"* is Tier 1 for M15. `!SM_Crossover_Arrows`' *"Cross Up on … min … EMA"* prints the timeframe **because it varies** (`D-060` §7). ⚠️ Direction is unstated but **constrained** by `D-055`'s M/W anchor |
 
 > ⭐ **THE COMBINATORICS COLLAPSE AND THE RECORD SURVIVES.** `D-058` §4.1 put the space at
 > *"15 possible pairs"* across six averages plus an unresolved set. **It is now ten pairs across one
