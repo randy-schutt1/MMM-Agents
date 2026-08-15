@@ -10494,3 +10494,87 @@ lessons** (item 326). Records opened: **`A-136`, `A-137`, `A-138`, `C-030`, `Q-0
 ### Next Review Trigger
 
 **V20 R1**, by an independent session.
+
+---
+
+## 2026-08-15 — Reviewer Session (V20 R1)
+
+### Lesson
+**V20** — `Bootcamp1 Wk9 052012 Part2 (46mins) (1).swf` · 2012-05-20 · 00:45:49
+Submission: `video/v20` @ `2ab5e83` (3 commits), forked from `50edf5f`.
+Review branch `review/v20`, isolated worktree `MMM-Agents-v20-review` (`D-038`).
+
+### Review Objective
+Independent mastery audit under `D-003`. Fresh session; this reviewer did not author the ingestion.
+**Both items the session flagged for hardest scrutiny were ruled on, and the round went underneath
+them.**
+
+### Source Evidence Reviewed
+* `.swf` **SHA-256 re-computed to `96eba8c8…d522a43c6`** and **17,724,102 bytes** — both matching the
+  manifest. Audio **2749.100 s** against `frameCount/fps` **2749.333 s** and **00:45:49**: three
+  measures to **0.33 s**.
+* ⭐ **A FULL-FILE INDEPENDENT ASR PASS — the channel the submission declared it did not run.**
+  `faster-whisper` / CTranslate2 `large-v3`, 848 segments, plus four targeted multi-model decodes.
+* **Printed slides read directly from the pixels**: three `M15` chart headers, the railroad-track
+  definition, the nine-item answer key.
+* **All 23 burned frame timecodes cropped and read.**
+* The quarantined trio re-hashed and re-diffed **against all 21 lessons** in this reviewer's shell.
+* GBP/USD M1 via `mmm_lib`, DEVELOPMENT, both arms, `W-A` and `W-B`.
+
+### Findings
+**`REVISE` — 0 CRITICAL, 2 MAJOR, 2 MINOR, 12 NOTE. HIGH confidence.
+⛔ V21's GATE IS CLOSED under `D-024`.**
+
+**`M1` (item 332)** — `PT-048`'s **primary** measure does not implement the pre-registration's own
+swing definition. §3.1 fixes a swing pivot at `±3`; the runner applies that to leg endpoints only and
+finds every `P1` counter-swing with a hardcoded `±1` test. Holding all else identical: **`±1` → 22.40
+`[22.00, 23.20]` = `CONFIRMED`; `±3` → 30.10 `[28.70, 31.25]` = `REFUTED`.** The `±1` choice also
+inflates `n` from **706 to 2,519**, narrowing the interval — **manufacturing both conditions of
+`CONFIRMED`.** `BT_V20_0001.md` §6 records *"no other disagreement"*.
+
+**`M2` (item 333)** — ⭐ **found by the ASR pass.** The committed grid renders **`candle` as
+`handle`** at all five noun positions. **Four decodes across two models and both VAD settings return
+`candle`; none returns `handle`.** **`A-136` is an artifact**; the one-third entry is fully mechanical
+as spoken — `entry = high − (range ÷ 3)` — and **`PT-048` §1a excluded that rule from testing citing
+`A-136` by name.**
+
+**MINOR 334 / 335** — the session's own items 320 and 326, both **upheld**: `PT-048`'s standing result
+is a **NULL**, and no ASR pass was run. **Both `MINOR` because the session disclosed them everywhere
+and raised them against itself.**
+
+### What Was Re-Derived Rather Than Read
+`PT-048` re-implemented **from the pre-registration before `run_pt048.py` was opened**; `P2` and `P3`
+reproduce (31.20 / 21.70 against 32.50 / 23.00), **which is what localises `M1` to `P1`**. All 23
+frame timecodes verified 23/23. `Q-021` re-derived entirely — hashes, the `+4` bytes, `2/10/8` against
+all four block members, `32/30/26` against both neighbours, the `V21-`/`VIDEO_21_`/*"Video 21 of 21"*
+off-by-one. `M15` verified on all three chart headers. The nine-item answer key matches the pixels
+en-dash-exact.
+
+⭐ **And the ASR pass vindicated the submission's own corrections**: `shift the zone` returned at 4 of
+5 markers, `the high of the week and the low of the week`, `as a single leg only` (a clause the grid
+had lost), `the AB equals`, `length`. **It also upgraded the audio-only M/W claim** the interpretation
+had graded MEDIUM — *"the vector side of the M or W formation"*, returned verbatim twice.
+
+### Required Corrections
+Items 332–335, specified at `V20_REVIEW_R1.md` §6. **Action 1 changes one constant and re-runs a
+90-second script; action 2 corrects one word in four files and closes a record.** Nothing needs
+re-capturing, re-transcribing or re-testing.
+
+### Decision
+**`REVISE`. ⛔ V21 GATE CLOSED** — two `MAJOR`s. **V20 STATUS: `IN REMEDIATION`.**
+Not `COMPLETE` until 332–335 are applied **and independently re-reviewed** (`D-003`).
+
+### Git
+Branch `review/v20` from `2ab5e83`; `00ba10e` (findings checkpoint), then the ASR round and the
+index/progress/log updates. **NOT merged to integration — `D-024` bars it on two `MAJOR`s.**
+
+### Next Review Trigger
+A V20 resubmission applying items 332–335.
+
+### ⭐ The Note This Round Wants On The Record
+**The session self-charged almost everything it could see** — the unwired baseline, the missing ASR
+pass, the `N1` reduction, the self-scored recall test, and a gate residue it disclosed *while
+benefiting from it*. **Both items it put to the reviewer were upheld, and both are `MINOR` precisely
+because it disclosed them.** ⚠️ **The two `MAJOR`s are the two things a session cannot find about
+itself: one needed an independent re-implementation, the other an independent ear.** That is the
+argument for `D-003` — and for never letting the ASR pass become optional.

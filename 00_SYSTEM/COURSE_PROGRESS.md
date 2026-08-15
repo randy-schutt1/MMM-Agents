@@ -2517,7 +2517,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V17 | Wk8 P1 | 00:57:09 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 244–249) · ⭐ **V18 GATE OPEN under D-024** · ⭐⭐ **the `D-004` gate was ACTUALLY OPEN THE WHOLE TIME** — V16's R1 merged at `0fee48c` **17:16:53**, before V17's first content commit `f55c2f3` **17:20:11**; the addendum's *"returned after this session's last content commit"* is refuted by the graph (item 246) and **the compounding never happened** · ⭐⭐ **`PT-045` RE-DERIVED from its pre-registration before the runner was opened and ARM A REPRODUCES TO FOUR DECIMAL PLACES**; the calendar-consecutive artefact RE-EXECUTED and it really does return a clean 4-of-4 refutation; the homework's `<50 pips` filter recomputed at **0.8512 / 0.8893**; `C-023`, `C-024`, `C-027`, `A-011` all confirmed on a third engine or off the pixels · ⭐⭐ **THE FABRICATION PATTERN IS SOLVED FOR THE WHOLE COURSE — two templates, A for 1–15 and 21, B for 16–20; V18/V19/V20 are BYTE CLONES of V17's (item 254)** · ⚠ item 244: `[00:11:22]` is *"an extra **week in between**"* on THREE engines, not *"weekend"* — **item 238's inference INVERTS and is ANSWERED, not returned** |
 | V18 | Wk8 P2 | 00:46:08 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/5m/16n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 264–268) · ⭐ **V19 GATE OPEN under D-024** · ⭐⭐ **THE COMMITTED TRANSCRIPT INVERTS A RULE and R1 CONFIRMED IT FROM THE PIXELS** — `[00:19:40]` reads *"Counter trends are advised"*; both printed slides read `Counter Trend Is Ill Advised` (`On V1` / `on A1`). The raw line is retained verbatim and no artifact quotes it as a rule · ⭐⭐ **`PT-046` NULL RE-DERIVED ON INDEPENDENT REVIEWER CODE** — the pre-committed baseline `O2 = 0.5124 [0.4928, 0.5320]`, n = 2,498 reproduces EXACTLY; run-length mode 1 not 2; length-2 runs 366 vs 367 expected · ⭐⭐ **`N3` FIRED IN BOTH IMPLEMENTATIONS**, refusing a positive-lift replication as a boundary artefact · ⭐ **ALL 26 FRAME TIMECODES VERIFIED 26/26 FROM THE PIXELS**; the `0 → −3 s` drift is genuine and new to the corpus · ⭐ **the gate was OPEN and the session CHECKED rather than repeating a stale briefing** (item 278)
 | V19 | Wk9 P1 | 01:07:21 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⚠️ **R1 REVISE** 0C/**1M**/3m/18n, HIGH, 2026-08-14, `D-003` satisfied · ⭐ **item 302 CLOSED 2026-08-15 — SELF-VERIFIED AT OWNER DIRECTION**, standing tally **0C/0M/3m/19n** | **IN REMEDIATION** (items 303–304 owed; 305 owes the student nothing) · ⭐ **V20 GATE OPEN under `D-024`** as of 2026-08-15 · ⚠️⚠️ **`D-003` IS NOT SATISFIED FOR THE FIX ROUND — the session that raised item 302 also applied and closed it, on the owner's explicit authorisation for that round only; there was no R2 and no independent re-review.** FIFTH use of the pattern, after V09 R2, V10 R1, V12 R1 and V14 R1 · ⚠️⚠️ **item 302 — `E24`: NOT ONE CONFIDENCE INTERVAL IS REPORTED ANYWHERE IN THE V19 QUANTITATIVE CHAIN, and `BT_V19_0001.md` §0a classifies itself `EVIDENTIAL`, which `BACKTEST_EVIDENCE_STANDARD.md` §5 defines as requiring one.** With the intervals computed **BOTH LEGS OF THE `CONFIRMED` GATE LIE INSIDE THE 95 % INTERVAL OF FAILING** — Δ = **+25.75 boot95 `[7.95, 38.60]`** against a pre-registered floor of **10**, and median `O1`(`HELD`) = **43.20 boot95 `[32.30, 54.50]`** against a band closing at **50**. ⛔ **The verdict is NOT asked to change** and the direction is robust (`p` = 0.0004 on an independent seed, Mann-Whitney `p` = 7.0 × 10⁻⁵) · ⭐⭐ **`PT-047` REPRODUCES BYTE-IDENTICALLY AND AGAIN ON INDEPENDENTLY WRITTEN REVIEWER CODE** — every `n`, median and Δ on all eight cells, plus the day accounting · ⭐ **item 290 ANSWERED: at 60 minutes `N3`'s `n < 30` guard DOES fire (29 / 27) — but Δ GROWS to +29.45**, so it would have returned `FRAGILE` on a strengthening result; and the 30/45 arms are **source-derived from the two slide edits**, verified from the pixels · ⭐⭐ **item 287's DEBT DISCHARGED BY THE REVIEWER** — the four genuinely-owed segments plus `S1` all run, **every one corroborates, nothing overturned**; `S9` settles *"An M formation … 8 candles or greater … which is by the way 2 hours"* **from the audio** · ⚠️ **item 303: `S8` RETURNED and `S1` is NOT missing** — two runs concatenated under one header; **eight of twelve returned, four owed**, and the debt was **overstated** · ⭐ **items 285, 291, 294, 297 VERIFIED; `A-132`'s 9.0 s gap verified to 9.005 s** · ⭐ **item 286 ANSWERED: the two-pass mitigation HOLDS UNDER A FULL LEAK TEST** — exactly one frame-derived datum in §§1–9 and it is labelled · ⚠️ **item 306: `SWF_CAPTURE_RECIPE.md` §9 mandates an order its own §8a and `GOTCHA 4` make impossible** — put to the owner · ⭐⭐ **TWO RULE LINES WRITTEN INTO THE DECK ON CAMERA, AND BOTH BEFORE/AFTER PAIRS CAPTURED** — the `M` slide gains `with in 30M` at `23:25` (editor visible at `23:10`) and the `W` slide gains `with in 30 to 45 m` at `50:34` (editor at `50:19`). **These rule lines did not exist in the course material before 2012-05-20**, which is dateable and checkable — and ⚠ **the two edits DISAGREE** (`C-029`) · ⭐⭐ **`PT-047` CONFIRMED, 8 of 8 cells**, primary Δ = **+25.75 pips**, p = **0.0007**, median MFE(`HELD_ABOVE`) = **43.2 pips** inside the lesson's own `[25,50]` band, `N3` clear — **and the pre-registration MISSED an obvious objection** (the classifier's bars sat inside the outcome window), **raised by the session against itself, re-tested over a DISJOINT window, and the effect GREW** (Δ → +26.90, p → 0.0005) · ⭐⭐ **THE COMMITTED TRANSCRIPT CANNOT RENDER THE LETTER `M`** — the lesson's central structure reads as *"the end"* throughout, and its printed title *`Trap Candle Patterns` / `Dealer Structures`* reads as *"Track King patterns fuel structures"*. **The second engine makes the same error, so it is the audio, not the transcriber** · ⭐ **`Q-020`: the V17 review's V16-V20 template prediction CONFIRMED from inside the block by direct diff, and V21's break CORROBORATED** (V21 diffs against V19 exactly as V15 does) — **and the trio scores TWO coincidental true hits, double V18's**, one of which puts `30-90 mins` on the very quantity V19 caps BELOW 90 · ⭐ **`EMA` is a CLEAN ZERO** — the raw count of 4 is the substring inside *"email"* · ⭐ **§8a returns a FOURTH shape** (`0 s` → `−1 s`, step bracketed to 49 seconds) and the first two frames suggest **why V12/V14 measured `+16 s`** · ⚠⚠ **THE §9 TWO-PASS ORDER WAS NOT FOLLOWED, SELF-DISCLOSED** (item 286) · ⚠⚠ **THE FULL-FILE ASR PASS IS OWED** — 7 of 12 pre-registered segments returned (item 287) · ⚠ **Dimension B BLOCKED for the sixth lesson running** — the `blue tracer` is spoken 15× and never defined (`A-133`), and V19 was the lesson that should have supplied it |
-| V20 | Wk9 P2 | 00:45:49 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW** · ⭐⭐ **`M15` IS PRINTED ON THREE CHARTS** — `GBPCHF,M15` (`04:35`), `GBPUSD,M15` (`18:20`), `USDCHF,M15` (`33:15`). **The course's timeframe stops being a DERIVATION from V19's `8 bars = 2 hours` and becomes DIRECT ATTESTATION** — ⚠️ though V20 never SAYS `M15` either. **Item 245's remediation should route through `04_SCREENSHOTS/V20/INDEX.md` §11** · ⭐⭐ **THE DECK SETTLES AN ASR DEFECT INSIDE A DEFINITION** — *"shift his own"* (5×, one inside the railroad-track definition) is **`Shift the zone`**, printed at `26:15`. ⭐ **The §9 two-pass order WAS followed this time** (§§1–9 written while the sweep still ran, no frame on disk) — **item 286 did not recur** · ⭐⭐ **THE RAILROAD TRACK IS DEFINED AS A FUNCTION**: *"A 30 minute structure where the Market Makers trigger the stops, Shift the zone and Set the HOD or LOD on one move"* — **V19 gave the shape, V20 gives the purpose, both say 30 minutes** · ⭐⭐ **THE TIME CAP GAINS AN ACTION AND A FLOOR** — `30 minutes or less`, **15 minutes explicitly REFUSED**, **stays above ⇒ scratch the trade**, re-entry on *"a nice solid close"* (`C-030`) ⚠️ **but V20's passage is the M-side case and is SILENT on the W slide, so `C-029` NARROWS and does NOT close** · ⭐ **A MECHANICAL ENTRY, BLOCKED BY ONE WORD** — *"one third off the high of this handle"* with a 100→33 pip worked example; ***handle* is never defined (`A-136`)**, now **the cheapest high-value blocker in the project** · ⭐ **`A-019` GAINS ITS FIRST NAMED TIMEZONE** — *"three thirty, four o'clock **New York time**"* `[00:34:05]` ⛔ **but it timestamps a READING, not a session boundary, and `EST`/`EDT` is not said — EXTENDED, NOT CLOSED** · ⚠️⚠️ **`PT-048` returns `CONFIRMED` AND THE BASELINE MATCHES IT** — median `P1` **22.45 pips boot95 `[22.0, 23.2]`** inside the claimed `[20,25]`, **and `N1` matched-random windows return 23.00 pips.** ⛔ **The pre-registration named the right null and never wired it into the verdict — a self-reported defect of the same class as item 289** · ⭐ **`PT-048` made the INTERVAL a CONDITION OF THE VERDICT, pre-registered**, which is item 302's lesson applied before the fact · ⭐ **§8a returns a FIFTH shape — a DECAYING transient** (`+17/+13/+9` absorbed to **exactly 0** by two minutes) **corroborating item 296's mechanism from a second sweep**, and **the title frame sits INSIDE the transient**, so `i×5` would have mis-stamped it by 17 s · ⭐ **`Q-021` CLOSES the V16–V20 template block on all five members in both directions**, and **V20 scores ZERO coincidental true cells** · ⚠️⚠️ **NO INDEPENDENT ASR PASS OF ANY KIND WAS RUN — the weakest verification position in six lessons, and OWED** · ⚠️ **Dimension B BLOCKED for a SEVENTH lesson** — the `blue tracer` survives V20 (`A-133`) |
+| V20 | Wk9 P2 | 00:45:49 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⛔ **R1 REVISE** 0C/**2 MAJOR**/2m/12n, HIGH, 2026-08-15, `D-003` satisfied | ⛔ **IN REMEDIATION** (items 332–335) · ⛔⛔ **V21 GATE CLOSED under D-024 — TWO MAJORs** · **M1:** `PT-048`'s primary measure `P1` uses a `±1` interior swing detector where `PT-048` §3.1 defines `±3`; correcting it moves the median **22.40 [22.00,23.20] → 30.10 [28.70,31.25]** and flips **CONFIRMED → REFUTED**, and `BT_V20_0001.md` §6 records *"no other disagreement"* · **M2:** the committed grid renders **`candle` as `handle`** at all five noun positions, so **`A-136` is an ARTIFACT** — the one-third entry is fully mechanical (`entry = high − range ÷ 3`) and `PT-048` §1a excluded it from testing citing `A-136` by name; found by **the independent ASR pass the submission declared it owed** · ⭐ the submission's own two flagged items (320 baseline, 326 ASR gap) were **both upheld and both charged MINOR** · ⭐⭐ **`M15` VERIFIED ON ALL THREE CHART HEADERS**, 23/23 frame timecodes, and `Q-021`'s V16–V20 block closure fully re-derived
 | V21 | Wk10 | 01:14:47 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 
 ### Notes on the marks above
@@ -2948,6 +2948,96 @@ Carry into V16, and read this before starting:
       content (an Asian-box chart with five EMAs), whatever the lesson and
       whatever the image behind it. Quarantine V16's trio on sight as Q-017;
       do not spend a session re-deriving what six entries have established.
+V21 GATE:            ⛔⛔ **CLOSED.** **V20's R1 returned 2026-08-15** on branch
+                     `review/v20`: **REVISE, 0 CRITICAL / 2 MAJOR / 2 MINOR /
+                     12 NOTE, HIGH confidence, `D-003` satisfied.** Under
+                     **`D-024`** a `MAJOR` holds the next lesson's gate CLOSED
+                     **until fixed AND RE-REVIEWED**. Items **332-335**.
+
+                     **THE TWO MAJORs, AND NEITHER IS WHAT THE SESSION FLAGGED:**
+
+                     **M1 (332)** -- `PT-048`'s PRIMARY measure does not
+                     implement the pre-registration's own swing definition.
+                     §3.1 fixes a swing pivot at `+/-3`; the runner applies that
+                     to leg endpoints only and finds every `P1` counter-swing
+                     with a hardcoded `+/-1` test. Holding all else identical:
+
+                         +/-1 (runner)      n=2519  22.40 [22.00,23.20] CONFIRMED
+                         +/-2               n=1204  26.80 [25.85,27.60] outside
+                         +/-3 (§3.1's own)  n= 706  30.10 [28.70,31.25] REFUTED
+
+                     The `+/-1` choice also inflates `n` 706 -> 2,519, narrowing
+                     the bootstrap interval -- so it manufactures BOTH conditions
+                     of `CONFIRMED`, including the interval condition §5 adopted
+                     in direct response to item 302. `BT_V20_0001.md` §6 states
+                     *"No other disagreement"*.
+
+                     **M2 (333)** -- ⭐ **found by running the independent ASR
+                     pass the submission declared it owed.** The committed grid
+                     renders **`candle` as `handle`** at all five noun positions.
+                     Four decodes across two models and both VAD settings return
+                     `candle`; none returns `handle`. **`A-136` -- billed as
+                     "the cheapest high-value blocker in the project" -- is an
+                     ARTIFACT.** The one-third entry is fully mechanical as
+                     spoken: `entry = high - (range / 3)`, worked at 100 ->
+                     "subtract 33 pips off the high". ⛔ **`PT-048` §1a excluded
+                     that rule from testing citing `A-136` by name**, so the
+                     artifact suppressed the one V20 rule mechanical enough to
+                     test.
+
+                     ⭐ **BOTH ITEMS THE SESSION PUT TO THE REVIEWER WERE
+                     UPHELD AND BOTH CHARGED `MINOR`** -- 334 (the `PT-048`
+                     baseline was never wired into §5; the standing result is a
+                     NULL) and 335 (no ASR pass was run). **They are MINOR
+                     because the session disclosed both everywhere and raised
+                     them against itself**; `M2` is 335's realised cost.
+
+                     ⚠️ **WHAT A REMEDIATION ROUND MUST DO -- IT IS SHORT.**
+                     Action 1 changes one constant and re-runs a 90-second
+                     script. Action 2 corrects one word in four files and closes
+                     a record. **Nothing needs re-capturing, re-transcribing or
+                     re-testing.** Then it must be **independently re-reviewed**
+                     (`D-003`) before V21 opens.
+
+                     ⚠️⚠️ **AND THE STANDING GATE QUESTION IS NOW LOAD-BEARING
+                     TWICE OVER.** V20 itself was opened on a gate that V19's R1
+                     had closed and that was reopened by a fix the raising
+                     session **self-verified at owner direction** -- which the
+                     V20 session disclosed unprompted, while benefiting from it
+                     (item 336). **`D-024` says "fixed AND re-reviewed" and
+                     `D-003` reserves closure to an independent reviewer.** If
+                     V20's own remediation takes the same route, the exception
+                     will have become the rule without a numbered decision
+                     authorising it. **Put to the owner as review question 1.**
+
+                     ⚠️ **CARRY FORWARD TO V21:**
+
+                     (a) **RUN THE INDEPENDENT ASR PASS.** V20's own declared gap
+                         produced a `MAJOR`. A full-file pass on a 46-minute
+                         lesson costs roughly 50-80 minutes of CPU and is the
+                         only check that catches a homophone.
+
+                     (b) **A COUNT CENSUS CANNOT CATCH A HOMOPHONE.** `handle`=7
+                         was arithmetically right and wrong about its object.
+                         Token discipline (items 249/293/317) needs an audio
+                         channel behind it.
+
+                     (c) **EVERY FREE PARAMETER IN A PRIMARY MEASURE MUST BE
+                         FIXED BY THE PRE-REGISTRATION OR REPORTED AT THREE
+                         SETTINGS.** `N3` brackets boundaries, arms and windows
+                         -- it does not cover measure internals. That is the
+                         hole `M1` went through.
+
+                     (d) **WIRE THE BASELINE INTO THE DECISION RULE.** Item 334
+                         is the second time a pre-registration has named the
+                         right null and never scored it.
+
+                     (e) **`Q-022` (V21) SHOULD BREAK THE TEMPLATE.** `Q-021`
+                         closed the V16-V20 block and this round re-derived it:
+                         V21 diffs at `32/30/26` against the block on all three
+                         files. **Expect a DIFFERENT fabrication template, not
+                         the same one.**
+
 V20 GATE:            🟢 **OPEN as of 2026-08-15 — ITEM 302 IS CLOSED AT OWNER
                      DIRECTION AND THE STANDING TALLY IS 0 CRITICAL / 0 MAJOR /
                      3 MINOR / 19 NOTE.** That is `D-024`'s second row: the
