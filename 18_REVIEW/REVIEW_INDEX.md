@@ -11,10 +11,103 @@ stays visible with its round number.
 ## STATUS
 
 ```text
-LESSONS REVIEWED: 16 (superseded text, retained: "LESSONS REVIEWED: 15",
+LESSONS REVIEWED: 17 (superseded text, retained: "LESSONS REVIEWED: 16",
+                  before it "LESSONS REVIEWED: 15",
                   before it "LESSONS REVIEWED: 14",
                   before it "LESSONS REVIEWED: 13",
                   before it "LESSONS REVIEWED: 12", before that 11, then 10)
+
+V19:              R1 2026-08-14 -- REVISE, HIGH confidence,
+                  0 CRITICAL / 1 MAJOR / 3 MINOR / 18 NOTE.
+                  MAJOR item 302; MINOR items 303-305; NOTE items 306-315.
+                  ** V20 GATE CLOSED under D-024. V19 IS NOT COMPLETE.
+
+                  * R1 IS A FULLY INDEPENDENT ROUND -- D-003 SATISFIED.
+                  The reviewer authored no V19 artifact; re-computed the source
+                  SHA-256 AND byte length (7e8a1c2b...5c1ab28e / 25,694,598,
+                  both matching SOURCE_MANIFEST.md); extracted the audio itself
+                  (4042.005 s) and RAN THE FOUR GENUINELY-OWED ASR SEGMENTS
+                  PLUS S1 AND THREE FURTHER PROBES; re-ran run_pt047.py,
+                  posthoc047.py, hw_v19.py and validate_project.py in a CLEAN
+                  WORKTREE; and WROTE AN INDEPENDENT RE-IMPLEMENTATION OF
+                  PT-047 from its pre-registration.
+
+                  * THE MAJOR (302) IS A REPORTING FAILURE, NOT A DATA, METHOD
+                  OR INTEGRITY FAILURE. PT-047 is the best-executed test in the
+                  corpus to date: pre-registered before its runner existed,
+                  reproducing BYTE-IDENTICALLY on re-run, reproducing EXACTLY
+                  on independently written code with a different seed, and
+                  surviving four robustness probes the reviewer invented after
+                  the fact. What it does not do is report a single confidence
+                  interval anywhere, while classifying itself EVIDENTIAL --
+                  which BACKTEST_EVIDENCE_STANDARD.md §5 defines as requiring
+                  one, §4.2 requires on every rate, and §7 makes at least
+                  MAJOR. With the intervals computed BOTH LEGS OF THE
+                  CONFIRMED GATE LIE INSIDE THE 95% INTERVAL OF FAILING:
+                  delta = +25.75 [7.95, 38.60] against a pre-registered
+                  materiality floor of 10, and median O1(HELD) = 43.20
+                  [32.30, 54.50] against a band closing at 50.
+                  ** THE VERDICT IS NOT ASKED TO CHANGE. The decision rule was
+                  pre-registered on point estimates and re-opening it after
+                  seeing intervals would be REVIEW_PROTOCOL.md §17.5 run
+                  backwards. The direction and the non-randomness are robust:
+                  p = 0.0004 on an independent seed, Mann-Whitney p = 7.0e-05,
+                  all eight cells positive, and every probe holds.
+                  ** IT IS A REGRESSION, NOT A NOVEL DEMAND -- BT_V17_0001.md
+                  and BT_V18_0001.md both carry Wilson 95% columns, mmm_lib
+                  ships boot_ci(), and TWELVE prior runners call it.
+
+                  WHAT REPRODUCED EXACTLY: pt047_results.json BYTE-IDENTICAL;
+                  every n, median and delta on all eight cells on independent
+                  code, plus the day accounting (256/2, 512/3); the disjoint-
+                  window post-hoc line for line; hw_v19.py byte-identical;
+                  validate_project.py 103/0/0; all three Q-020 SHA-256s, byte
+                  lengths, the full 2/10/8 vs 32/30/26 diff matrix AND its
+                  line-by-line enumeration; A-132's 9.0 s gap to the
+                  centisecond (9.005 s); six deck frames off the pixels
+                  including both on-camera slide edits.
+
+                  * THE THREE MINORS. (303) The ASR returned/owed lists are
+                  wrong in four places -- S8 RETURNED and S1 is NOT missing;
+                  the two runs were concatenated under one header. True counts
+                  are eight of twelve returned, four owed. The three S1
+                  citations are SOUND. The error runs in the CONSERVATIVE
+                  direction -- the debt was OVERSTATED. (304) The interpretation
+                  §2.6 says the manual backtest "goes after" the star-formation
+                  claim; PT-047 tests the time cap and §1a expressly excludes
+                  the formations. V19's star claim REMAINS UNTESTED. (305) The
+                  SWF_CAPTURE_RECIPE.md §9 two-pass order was not followed --
+                  item 286, self-disclosed -- AND THE CLAIMED MITIGATION HOLDS
+                  UNDER TEST: a full leak test finds EXACTLY ONE frame-derived
+                  datum in §§1-9 and it is explicitly labelled. No student
+                  artifact change is owed; the fix belongs to the recipe (306).
+
+V20 GATE:         ** CLOSED under D-024 -- one MAJOR (302). No V20 work of any
+                  kind until item 302 is fixed AND re-reviewed in a fresh
+                  round. Items 303-304 are also owed before V19 can reach
+                  COMPLETE; 305 owes the student nothing.
+                  ** THE REMEDIATION IS SHORT AND ADDS FIGURES RATHER THAN
+                  CHANGING ANY. Item 302 is satisfied by pasting intervals
+                  into BT_V19_0001.md §2, one qualifying sentence into §0, one
+                  line into §5's "does NOT establish", and intervals into
+                  V19_HOMEWORK.md §§4-6. PT-047 IS NOT EDITED (COMMON_PROTOCOL
+                  §9 rule 7) and the verdict does not move.
+                  ** ITEM 302'S SEVERITY IS PUT TO THE OWNER, as item 222's was
+                  at V16. If "an EVIDENTIAL claim filed without the interval
+                  its own classification requires, where both legs of the
+                  verdict gate sit inside the 95% interval of failing" reads
+                  as MINOR, THIS GATE OPENS. The reasoning is on the record in
+                  V19_REVIEW_R1.md M1 so it can be overruled.
+                  ** V19 IS NOT MERGED TO INTEGRATION. Every prior review
+                  branch merged on a 0C/0M round; this one does not, and the
+                  student work waits with it. The D-047 re-check nevertheless
+                  PASSES against the MOVED integration tip (cf1fda9): seven
+                  first-parent commits since the 847ebd2 fork added no A-1xx
+                  and no C-0xx, so A-132-A-135 and C-029 remain free and NO
+                  RENUMBER IS OWED at merge-back (item 314).
+                  ** A NEW METHOD DEFECT is surfaced by item 306 and is NOT
+                  fixed: SWF_CAPTURE_RECIPE.md §9 mandates an order that its
+                  own §8a and GOTCHA 4 make impossible. OWNER TO SCHEDULE.
 
 V14:              R1 2026-08-14 — REVISE, HIGH confidence,
                   0 CRITICAL / 0 MAJOR / 5 MINOR / 9 NOTE.
@@ -2734,3 +2827,17 @@ CONFIRMED as recorded**, with 167's owed `PT-042` §5a amendment extended by ite
 | 299 | **V19 student** | ⚠ **`A-135` WAS OPENED AND CLOSED IN THE SAME SESSION, AND IS RECORDED THAT WAY RATHER THAN DELETED.** | The committed transcript reads `25 to 55` at `[00:23:57]` / `[00:24:32]` and `25 to 50` at `[00:25:06]` / `[00:25:31]` — same rule, four times, two numbers. **An independent engine reads `50` at BOTH disputed markers**, and the committed file's own two later readings agree. **All four are `25 to 50 pips`; the `55`s are ASR defects.** ⭐ Recorded as opened-tested-resolved so the ledger shows the work rather than a silent disappearance. | **`NOTE`** |
 | 300 | **V19 student** | ⚠ **THREE TRACKED `QA_REPORT*.txt` FILES WERE BRIEFLY REPLACED BY SYMLINKS WHILE WIRING THE GIT-IGNORED CORPUS INTO THE WORKTREE.** | Caught by `git status --porcelain` (type-change ` T `) and restored with `git checkout --` **before any commit**. **No commit contains them** and `git log --stat` will confirm it. Recorded because it was a real mistake against tracked files, not a near-miss — and because the `D-038` worktree pattern *requires* wiring ignored assets in, so the next session will face the same step. | **`NOTE`** |
 | 301 | **V19 student** | ⭐ **ITEM 245's REMEDIATION SHOULD ROUTE THROUGH V19, AND ITEM 264's CONVENTION IS RESTORED (BUT 264 IS *NOT* CLOSED).** | **245:** it corrected `A-010` to *"how many candles… On a 15-minute chart, eight"*. **V19 restates the eight-bar minimum five times and adds `[00:41:32]` *"eight candles or greater… which is by the way two hours"*, which fixes the 15-minute timeframe ARITHMETICALLY** — the lesson never says `M15`. **264:** `CONCEPT_INDEX.md` now carries a V18+V19 block; ⚠ **the entry states explicitly that it does NOT close 264**, which remains the remediating session's act. | **`NOTE`** |
+| 302 | **V19 R1** | ⚠️⚠️ **MAJOR — `E24` — NOT ONE CONFIDENCE INTERVAL IS REPORTED ANYWHERE IN THE V19 QUANTITATIVE CHAIN, AND `BT_V19_0001.md` §0a CLASSIFIES ITSELF `EVIDENTIAL`.** `BACKTEST_EVIDENCE_STANDARD.md` §5 defines `EVIDENTIAL` as requiring *"interval reported"*; §4.2 requires one on **every** rate; §7 makes a failing §6.G check **at least `MAJOR`**. `grep` for `Wilson` / `95%` / `confidence interval` / `boot_ci` returns **zero** across `BT_V19_0001.md`, `PT-047`, `run_pt047.py`, `posthoc047.py`, `pt047_results.json`, `V19_HOMEWORK.md`, `hw_v19.py`, the interpretation and the mastery report. ⚠ **A REGRESSION, NOT A NOVEL DEMAND** — `BT_V17_0001.md` and `BT_V18_0001.md` both carry Wilson 95 % columns, `mmm_lib` ships `boot_ci()`, and **twelve prior runners call it**, including `hw_v17.py`. ⭐⭐ **WHY IT IS `MAJOR`: with the intervals computed, BOTH LEGS OF THE `CONFIRMED` GATE LIE INSIDE THE 95 % INTERVAL OF FAILING** — **Δ = +25.75 boot95 `[7.95, 38.60]`** against a pre-registered materiality floor of **10**, and **median `O1`(`HELD`) = 43.20 boot95 `[32.30, 54.50]`** against a band closing at **50**. `O2` = 76.9 % Wilson `[61.7, 87.4]`; `O3` = 33.3 % Wilson `[20.6, 49.0]`. ⛔ **THE VERDICT IS NOT ASKED TO CHANGE** — the decision rule was pre-registered on point estimates and re-opening it now would be §17.5 run backwards. **The direction and the non-randomness are robust and survive every reviewer probe.** Owed: intervals in `BT_V19_0001.md` §2, a qualifying sentence in §0, a line in §5's *"does NOT establish"*, intervals in `V19_HOMEWORK.md` §§4–6 | `V19_REVIEW_R1.md` `M1`; `BACKTEST_EVIDENCE_STANDARD.md` §4.2/§5/§7; `REVIEW_PROTOCOL.md` §6.G check 19; `BT_V17_0001.md`; `BT_V18_0001.md`; `06_MANUAL_BACKTEST/V19/data/rev_pt047_intervals.txt` | ⚠️ **MAJOR — OPEN. GATE-HOLDING under `D-024`** |
+| 303 | **V19 R1** | ⚠️ **MINOR — `E11` — THE ASR RETURNED/OWED LISTS ARE WRONG IN FOUR PLACES: `S8` RETURNED AND `S1` IS NOT MISSING.** `V19_TRANSCRIPT.md:144` lists the seven returned as `S1 S2 S4 S5 S6 S7 S11`; line 282, item **287** and `V19_MASTERY_REPORT.md` §2.2/§7 name `S3 S8 S9 S10 S12` as owed. **`asr_segment_results.txt` carries seven headers — `S2 S4 S5 S6 S11 S7 S8` — and NO `S1` header.** The `S8` block runs from the genuine `32:45–33:15` content straight into *"Okay, so let's talk about this for a second. The definition of a half of Batman…"*, which is **`S1`'s 13:05–14:00 window**: the reviewer's own `S1` run reproduces it line for line, and the committed transcript shows the definition is spoken **once**, at `[00:13:06]`–`[00:13:52]`. ⭐ **BOTH RETURNED AND WERE CONCATENATED UNDER ONE HEADER.** True counts: **eight of twelve returned, four owed** (`S3`, `S9`, `S10`, `S12`). ⭐ **The three `S1` citations at lines 178 / 261 / 272 are therefore SOUND, not unsupported.** The error runs in the **conservative** direction — the debt was overstated — which is why it is `MINOR` | `V19_REVIEW_R1.md` `m1`; item 287; `asr_segment_results.txt`; `06_MANUAL_BACKTEST/V19/data/rev_asr_owed_segments.txt` | ⚠️ **MINOR — OPEN** |
+| 304 | **V19 R1** | ⚠️ **MINOR — `E20` — `V19_INTERPRETATION.md` §2.6 MISDESCRIBES WHAT ITS OWN BACKTEST TESTED.** §2.6 says of the star formation *"it is also the most directly testable claim V19 makes, **which is why the manual backtest goes after it** (`BT_V19_0001.md`)"*. ⛔ **It does not.** `PT-047` tests the second-leg time cap and the `25–50` extension — §2.1/§2.2 of the same file — and `PT-047` §1a expressly states *"It does not test the M or W formation"*. **No star formation is measured anywhere in the runner.** A later session reading §2.6 would believe V19's star claim has been tested; **it has not.** Owed: correct the cross-reference and state that the star claim **remains untested** | `V19_REVIEW_R1.md` `m2`; `V19_INTERPRETATION.md` §2.6; `PT-047` §1a | ⚠️ **MINOR — OPEN** |
+| 305 | **V19 R1** | ⚠️ **MINOR — `E20` — ITEM 286 ANSWERED: THE §9 TWO-PASS ORDER WAS NOT FOLLOWED, AND THE CLAIMED MITIGATION HOLDS UNDER TEST.** The reviewer ran the leak test the disclosure invites — every frame-only string grepped across §§1–9 of `V19_SOURCE_NOTES.md` (`HOD`, `LOD`, `LOS`, `30M`, `with in`, `Hi/Lo`, `ADR`, `Half – a - Batman`, `Trap Candle Patterns`, `Dealer Structures`, `Behavioral Analysis`, `Memorial day weekend`, `Live in New Jersey`, `PowerPoint`, and every frame-referring word). ⭐ **Result: §§1–9 contain EXACTLY ONE frame-derived datum — `HOS` at line 122 — and it is explicitly bracketed, attributed and cross-referenced to §10.** The three `30 to 45 m` hits are the substring inside *"30 to 45 **minutes**"*, spoken, and **verified from the audio by the reviewer** at `[00:26:12]` and `[00:47:21]`. **`MINOR` and not `NOTE` because a written protocol was not followed and verifying it cost the reviewer real work** — which is what the session said it had pushed downstream. **No student artifact change is owed; the fix belongs to the recipe (item 306)** | `V19_REVIEW_R1.md` `m3`, `N11`; item 286; `SWF_CAPTURE_RECIPE.md` §9 | ⚠️ **MINOR — OPEN, no student action** |
+| 306 | **V19 R1** | ⚠️⚠️ **`SWF_CAPTURE_RECIPE.md` CONTRADICTS ITSELF AND EVERY FUTURE SESSION WILL HIT IT.** §9 step 2 requires the source notes to be written *"from the transcript alone, before looking at screenshots"* — but **§8a's offset verification cannot be done without reading frames**, and **`GOTCHA 4` requires a frame/transcript content check *"in the first two minutes instead of after an hour"***. **Two MANDATORY steps make the prescribed order impossible as written**, which is why item 286 exists at all. ⭐ **Recommended amendment:** §9 step 2 permits frame reads **for §8a offset verification and the `GOTCHA 4` sanity check only**, requiring the datum to be labelled at point of use and confined to §10 — **which is exactly what V19 did and what the item-305 leak test shows works.** ⛔ **A policy file; `D-038a` bars a lesson branch from touching one, and this reviewer did not** | `V19_REVIEW_R1.md` `N16`, §7 q1; `SWF_CAPTURE_RECIPE.md` §9, §8a, `GOTCHA 4`; item 286 | 🔷 **PUT TO THE OWNER — method** |
+| 307 | **V19 R1** | ⭐⭐ **`PT-047` REPRODUCES BYTE-IDENTICALLY, AND AGAIN ON INDEPENDENTLY WRITTEN CODE.** `run_pt047.py` and `posthoc047.py` re-run in a clean worktree returned `pt047_results.json` **byte-identical to the committed file** (`git status` clean). `rev_pt047_independent.py`, written from `PT-047` §3–§5 alone with a vectorised scan, a close-count classifier, **a different seed** (`77190419`) and a rank test the runner does not contain, reproduces **every `n`, every median and every Δ EXACTLY** on all eight cells, and the day accounting (256/2, 512/3). `p` differs only in the fourth decimal — the different seed doing its job. **`hw_v19.py` also reproduces byte-identically; `validate_project.py` returns 103/0/0** | `V19_REVIEW_R1.md` §2.1, §2.3; `06_MANUAL_BACKTEST/scripts/rev_pt047_independent.py`; `06_MANUAL_BACKTEST/V19/data/rev_pt047_output.txt` | ⬜ **NOTE — no action** |
+| 308 | **V19 R1** | ⭐ **ITEM 290 ANSWERED, AND SHARPENED FROM *"very likely"* TO CERTAIN — BUT IT CUTS THE OTHER WAY.** At a 60-minute cap the `N3` `n < 30` guard **fires on two cells**: `A｜W-A｜60m` `n_H` = **29**, `B｜W-A｜60m` `n_H` = **27**. ⚠ **And Δ GROWS — 25.75 → +29.45, `p` = 0.0003.** `N3` would have returned **`FRAGILE` on a STRENGTHENING result**: its `n < 30` condition guards precision and here it would have fired against the effect's own direction. **An observation about `N3`'s design, not a defect in `PT-047`.** ⭐⭐ **And the arm choice is SOURCE-DERIVED, not chosen for the result** — `30M` is on the M slide and `30 to 45 m` on the W slide, **both verified from the pixels by this reviewer**; **60 minutes is nowhere in the lesson and 90 is expressly excluded by it** (`[00:47:21]`, verified from the audio). ⭐ **The three attacks `PT-047` §6 named against itself were also run and the test survives all of them:** `MAX_AGE` is not load-bearing (Δ 25.75–36.80 across 12→∞, every `p ≤ 0.0005`; **removing the bound entirely gives +27.50**), all-events-per-day gives Δ = +26.05 `p` = 0.0002, and Mann-Whitney returns `z` = 3.975, **two-sided `p` = 7.0 × 10⁻⁵** — the separation is **distributional**, not a median artifact | `V19_REVIEW_R1.md` `N2`, `N3`, §2.2; items 289, 290; `PT-047` §4, §6 | ⬜ **NOTE — no action**; `N3`'s guard design raised to the owner at `V19_REVIEW_R1.md` §7 q2 |
+| 309 | **V19 R1** | ⭐⭐ **ITEM 287's DEBT IS DISCHARGED BY THE REVIEWER. ALL FOUR GENUINELY-OWED SEGMENTS RAN, PLUS `S1`, AND EVERY ONE CORROBORATES.** Audio extracted independently from the `.swf` (**SHA-256 `7e8a1c2b…5c1ab28e` and 25,694,598 bytes, BOTH matching `SOURCE_MANIFEST.md`**), `whisper medium.en`. `S3`: *"push it 15 to 20 pips … consolidation off of the low should be, depending on the pair, **15 to 25 pips** … as high as **50** on some of the crosses."* `S9`: ⭐⭐ *"**An M formation** that is **8 candles or greater** to form, **which is by the way 2 hours**"* — **settling items 288 and 301 FROM THE AUDIO**, not from the deck. `S10`: *"can be slightly below the first but must close above … He must close back above **in 30 minutes. 45 max**."* `S12`: *"Railroad track consists of **30 minutes, 15 in, 15 out** … he gets an **extra 15 minutes**."* `S1`: the four Half-A-Batman clauses verbatim. ⭐ **NOTHING IS OVERTURNED.** ⚠ **Independence is partial** — the same engine the session pre-registered, so this **completes** its pass rather than being a third-engine check | `V19_REVIEW_R1.md` `N7`, `N10`, §9.5; item 287; `06_MANUAL_BACKTEST/V19/data/rev_asr_owed_segments.txt` | ⬜ **NOTE — closes item 287's substance** |
+| 310 | **V19 R1** | ⭐ **ITEM 291 VERIFIED INDEPENDENTLY, IN FULL — AND `Q-020` §0 IS EXACT TO THE LINE.** All three V19 SHA-256 values match the pinned figures; byte lengths **3,173 / 1,712 / 1,253** match; the diff matrix is **exactly `2/10/8`** against V16, V17, V18 **and** V20, and **exactly `32/30/26`** against **both** V15 **and** V21. ⭐ **V21 diffs against V19 precisely as V15 does — the V17 review's block prediction is confirmed from INSIDE the block, in both directions.** The `V18 → V19` enumeration matches its count line for line (5 pairs at `1c1,3c3,16c16,20c20,33c33`; 1 at `1c1`; 4 at `1c1,5c5,13c13,21c21`), **zero content lines**, and the `V20-`/`VIDEO_20_` off-by-one in lesson 19's folder is confirmed. **Open item 249's specific complaint — a stated count its own enumeration contradicts — is honoured** | `V19_REVIEW_R1.md` `N4`; item 291; `Q-020` §0; items 249, 254 | ⬜ **NOTE — no action** |
+| 311 | **V19 R1** | ⭐ **ITEMS 285 AND 294 VERIFIED FROM THE PIXELS.** **285:** all four slide frames read, burned timecodes matching filenames (`21:15`, `23:25`, `45:00`, `50:34`); the M slide gains **`with in 30M`**, the W slide gains **`with in 30 to 45 m`**, **and the two edits DO differ** — `C-029` is real and is a **Tier-1-against-Tier-1 conflict inside one deck**, forty-five minutes apart. **294:** all three fabricated `VISUAL_INDEX.md` claims refuted — `02:00` is the printed **course schedule** (May 20 → July 1), `15:00` is the **`Half – a - Batman`** chart, `30:00` is `MARKET MAKER TRAP MOVES` with a freehand magenta M, a yellow and a red MA and a cyan dashed level and **no TDI panel anywhere on screen**. ⚠ **Coverage disclosure: SIX frames were read, not all 27** — V18 R1 verified 26/26 and **this round did not**, so item **296**'s §8a *"fourth shape"* is **unverified by this reviewer** | `V19_REVIEW_R1.md` `N5`, `N6`, §9.6; items 285, 294, 296 | ⬜ **NOTE — item 296 left UNVERIFIED** |
+| 312 | **V19 R1** | ⭐ **`A-132` IS VERIFIED AND ITS MEASUREMENT ARM CAN CLOSE; `Q-020`'s THREE LOAD-BEARING QUOTES ARE VERBATIM.** Independently extracted audio measures **4042.005 s**; the last marker `[01:07:13]` = 4033 s; **the gap is 9.005 s** — the session's 9.0 s to the centisecond. And item 292's quotes, from the audio: *"**90 minutes is too long**, 30 to 45 minutes back above the previous low"*; *"in order for the **50** to cross the **200** and to get separation on it"*; *"**30 to 90 minutes** up to two hours the dealer holds the level"* — the last **in the Half-A-Batman consolidation context**, confirming that the fabricated row attaches `30–90` to **the one quantity the lesson caps below 90** | `V19_REVIEW_R1.md` `N8`, `N9`; `A-132`; item 292 | ⬜ **NOTE — `A-132`'s measurement arm may close** |
+| 313 | **V19 R1** | **`REVIEW_PROTOCOL.md` §6a — ALL THREE CHECKS RUN. (1) `D-046`: NOT ENGAGED** — `grep` returns **zero** `EXCLUDED BY DECISION` across the V19 set; dimension B is `BLOCKED — D-030` and **`D-030` was READ, not taken on trust** — it bars substituting *"an approximation, a plausible reading … or a 'reasonable' numeric stand-in"* for a named-but-undefined concept, which is exactly the *"blue tracer"*. **The disposition is right.** **(2) `D-048`: NOT ENGAGED** — no rung is claimed; ⭐ **`C-029` IS a genuine Tier-1-against-Tier-1 conflict and the session records it OPEN rather than picking a winner**, which is what rung 4 requires anyway, reached without the ladder. **(3) `D-049`: ENGAGED IN FORM, SATISFIED ON EVERY CLAUSE, AND NEVER NAMED** — `Q-020` §0 diffs V19's trio against **V20's and V21's** quarantined files. **(a)** a diff line-count is maximally bibliographic ✅ **(b)** disclosed in the artifact that relies on it ✅ **(c)** the claim is about quarantined fabricated metadata, not lesson content ✅ **(d)** independently reproduced by this reviewer ✅ **fifth** no ingested source could answer it ✅. ⭐ **And the practice is established by item 254, where the V17 REVIEWER did it first, and by `Q-019`. No finding.** Recommended: `Q-020` add one line saying so, so the next session need not re-derive the permission | `V19_REVIEW_R1.md` `N12`, `N13`, `N14`; `REVIEW_PROTOCOL.md` §6a; `D-030`, `D-046`, `D-048`, `D-049`; items 212, 254 | ⬜ **NOTE — one optional line owed to `Q-020`** |
+| 314 | **V19 R1** | ⭐ **ITEM 297 VERIFIED, AND THE `D-047` RE-CHECK PASSES AGAINST THE *MOVED* INTEGRATION TIP.** `A-131` is genuinely V18's (*"V18 supplies NO clock time for any trading session"*) and V19's four records sit at `A-132`–`A-135`. ⭐ **Integration has advanced SEVEN first-parent commits since the `847ebd2` fork (to `cf1fda9`) and added NO `A-1xx` and NO `C-0xx` record** — the tip's highest are still `A-131` and `C-028`, so **`A-132`–`A-135` and `C-029` remain free and no renumber is owed at merge-back.** ⭐ **And reverting the bulk renumber of `PT-047` was the correct call** — it still reads `A-132`, the correction lives in `BT_V19_0001.md` §6, and `COMMON_PROTOCOL.md` §9 rule 7 means what it says | `V19_REVIEW_R1.md` `N17`; item 297; `D-047`; `COMMON_PROTOCOL.md` §9 rule 7 | ⬜ **NOTE — no renumber owed** |
+| 315 | **V19 R1** | ⭐ **THE STRONGEST JUDGEMENT IN THE SUBMISSION IS IN THE HOMEWORK, NOT THE BACKTEST.** `V19_HOMEWORK.md` §6 measures a median 2-hour pullback of **41–46 pips** against V19's stated **`15 to 25`** — a gap that would read as a refutation — and **refuses to read it as one**, because a **maximum excursion** and a **resting distance** are different quantities and *"a gap in this direction is expected a priori"*. It then records the **size** of the gap as a starting distribution for a future test and puts it under a *"no verdict"* heading rather than in a `PT-` file. **`REVIEW_PROTOCOL.md` §6.I, applied unprompted.** ⭐ **Six of seven homework items are refused WITH REASONS rather than approximated, four of them expressly on `D-030`** | `V19_REVIEW_R1.md` `N18`; `V19_HOMEWORK.md` §2, §6; `REVIEW_PROTOCOL.md` §6.I; `D-030` | ⬜ **NOTE — no action** |

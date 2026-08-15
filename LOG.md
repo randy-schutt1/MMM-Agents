@@ -9942,3 +9942,111 @@ second leg.
 
 **A REVIEWER session on `video/v19`** (`REVIEW_PROTOCOL.md`). **A student session must not proceed
 to V20.** Items **286**, **287**, **289**, **290** are addressed to the reviewer specifically.
+
+---
+
+## 2026-08-14 — Reviewer Session
+
+### Lesson
+
+**V19** — `Bootcamp1 Wk9 052012 Part1 (67mins).swf`, Week 9 Part 1, 2012-05-20.
+Branch `video/v19` @ `854d402`, 7 commits, forked from `847ebd2`.
+
+### Review Objective
+
+Independent mastery audit, `D-003`. This session authored no V19 artifact and did not
+participate in the ingestion. Reviewed on `review/v19` in a dedicated worktree.
+
+### ⚠ A HYGIENE EVENT, DISCLOSED FIRST
+
+**The primary checkout was in use by another session during this review.** `HEAD` moved from
+`review/v19` to `tools/indicator-folder-survey-and-owner-risk-rule` underneath this session
+mid-audit. All work from that point was moved into `/Users/randyschutt/Desktop/Trading/MMM-Agents-review-v19`
+(`D-038`) and **every quantitative result reported was re-run there from a clean tree.**
+**No commit was made to the shared checkout.** Wiring the git-ignored corpus in was done by
+symlinking the CSVs individually, never the directory, with `git status` checked for
+type-changes afterwards — **zero**. That is the step item **300** warns about, and the warning
+was useful.
+
+### Source Evidence Reviewed — FIRST, per `REVIEW_PROTOCOL.md` §3
+
+* The `.swf` itself — **SHA-256 re-computed to `7e8a1c2b…5c1ab28e` and length to 25,694,598
+  bytes, BOTH matching `SOURCE_MANIFEST.md` exactly.**
+* Its audio — extracted independently, **4042.005 s**.
+* **The four genuinely-owed ASR segments plus `S1` and three further probes**, `whisper
+  medium.en`. ⭐ **Every one corroborates the student's reading; nothing is overturned.**
+* The committed transcript, read in the **body** at every load-bearing marker.
+* **Six deck frames as pixels**, burned timecodes compared with filenames.
+* The three quarantined `Q-020` files across seven lessons — SHA-256, byte length and `diff`.
+
+### What Was Re-Derived Rather Than Read
+
+* `run_pt047.py` / `posthoc047.py` — **`pt047_results.json` came back BYTE-IDENTICAL.**
+* `06_MANUAL_BACKTEST/scripts/rev_pt047_independent.py` — **written from `PT-047` §3–§5 alone**,
+  vectorised scan, close-count classifier, **different seed**, plus a rank test the runner does
+  not contain. ⭐⭐ **Every `n`, every median and every Δ on all eight cells reproduces EXACTLY**,
+  as does the day accounting (256/2, 512/3).
+* Four robustness probes: the **60-minute arm** (item 290), `MAX_AGE` sensitivity, all-events-per-day,
+  and Mann-Whitney U. ⭐ **The test survives all four.**
+* `hw_v19.py` — byte-identical. `validate_project.py` — **103 / 0 / 0**.
+
+### Findings
+
+> **REVISE — 0 CRITICAL / 1 MAJOR / 3 MINOR / 18 NOTE. HIGH confidence.**
+
+**⚠️⚠️ `M1` / item 302 — MAJOR, `E24`.** Not one confidence interval is reported anywhere in the
+V19 quantitative chain, while `BT_V19_0001.md` §0a classifies the observation `EVIDENTIAL` —
+which `BACKTEST_EVIDENCE_STANDARD.md` §5 **defines** as requiring one, §4.2 requires on every
+rate, and §7 makes **at least `MAJOR`**. ⭐⭐ **With the intervals computed, BOTH LEGS of the
+`CONFIRMED` gate lie inside the 95 % interval of failing: Δ = +25.75 `[7.95, 38.60]` against a
+pre-registered materiality floor of 10, and median `O1`(`HELD`) = 43.20 `[32.30, 54.50]` against
+a band closing at 50.** ⚠ **A regression, not a novel demand** — `BT_V17_0001.md` and
+`BT_V18_0001.md` both carry Wilson columns, `mmm_lib` ships `boot_ci()`, and twelve prior
+runners call it. ⛔ **The verdict is NOT asked to change**; the direction and non-randomness are
+robust (`p` = 0.0004 on an independent seed, Mann-Whitney `p` = 7.0 × 10⁻⁵).
+
+**`m1` / item 303 — MINOR.** ⭐ **`S8` RETURNED and `S1` is NOT missing** — the two runs were
+concatenated under one header. **Eight of twelve returned, four owed**, not seven and five. The
+three `S1` citations are **sound**. The debt was **overstated**, which is why it is `MINOR`.
+
+**`m2` / item 304 — MINOR.** `V19_INTERPRETATION.md` §2.6 says the manual backtest *"goes after"*
+the star-formation claim. **It does not** — `PT-047` tests the time cap and §1a expressly
+excludes the formations. **V19's star claim remains untested.**
+
+**`m3` / item 305 — MINOR.** Item 286 answered: the §9 two-pass order was not followed, and ⭐ **the
+claimed mitigation HOLDS UNDER A FULL LEAK TEST** — exactly one frame-derived datum in §§1–9
+(`HOS`), explicitly labelled and cross-referenced to §10.
+
+**The reviewer-addressed items, adjudicated:** **286** answered (`m3`, verified clean); **287**
+answered **and its debt discharged** (item 309); **289** answered — the post-hoc reproduces, and
+the reviewer relied on four independent probes instead; **290** answered and **sharpened from
+*"very likely"* to certain**, with the twist that Δ **grows** at 60 minutes so `N3` would have
+returned `FRAGILE` on a strengthening result (item 308).
+
+### Required Corrections
+
+1. **Item 302** — add Wilson/bootstrap intervals to `BT_V19_0001.md` §2, a qualifying sentence to
+   §0, a line to §5's *"does NOT establish"*, and intervals to `V19_HOMEWORK.md` §§4–6.
+   ⛔ **Do not change the verdict, the decision rule, or `PT-047`.**
+2. **Item 303** — correct the ASR returned/owed lists in four places; split the `S8` block;
+   mark the four owed segments **DISCHARGED** by this round.
+3. **Item 304** — fix the §2.6 cross-reference.
+4. **Item 305** — no student action; the fix belongs to the recipe (item 306).
+
+### Decision
+
+**REVISE.** ⛔ **V20's gate is CLOSED** under `D-024` — one `MAJOR`.
+🔷 **Item 302's severity is put to the owner**, as item 222's was at V16. **If it reads as
+`MINOR`, the gate opens.**
+
+### Git
+
+`review/v19` from `video/v19` @ `854d402`. **NOT merged to integration** — every prior review
+branch merged on a `0C/0M` round and this one does not. ⭐ The `D-047` re-check nevertheless
+**passes against the moved integration tip** (`cf1fda9`): seven first-parent commits since the
+fork added **no `A-1xx` and no `C-0xx`**, so `A-132`–`A-135` and `C-029` remain free.
+
+### Next Review Trigger
+
+Student resubmission of V19 with items 302–304 applied. **A short round — item 302 adds figures
+rather than changing any.**

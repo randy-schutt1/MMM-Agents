@@ -1,0 +1,83 @@
+V19 R1 — REVIEWER ASR RUN: the segments REVIEW_INDEX item 287 recorded as OWED.
+Engine: openai-whisper medium.en, temperature 0.0, fp16 off — the same engine the
+session pre-registered, so this COMPLETES its pass rather than being a third engine.
+Audio extracted independently from the .swf (SHA-256 7e8a1c2b...5c1ab28e, verified).
+Measured audio length 4042.005 s. Segment windows are those of
+asr_segments_PREREGISTERED.txt, unedited.
+
+NOTE: S8 was NOT owed — it returned, concatenated under its own header with S1's
+output. S1 is re-run below to prove it. The genuinely owed set was S3, S9, S10, S12.
+
+===== S1 (00:13:05-00:14:00 Half-A-Batman definition (4 clauses)) =====
+Okay, so let's talk about this for a second.
+The definition of a half of Batman.
+The dealer has spiked the high or low as a means to set it for the session or the day.
+Okay?
+The dealer is now trading off of that level.
+That's pretty funny.
+Can anything else go wrong today?
+The dealer is now trading off of that level as an outside structure.
+Okay?
+He will not repeat that level again.
+If he does, he will allow some type of profit booking by the traders.
+Price appears to roll off of the level and the trend is now underway.
+That is the true definition of a half of Batman.
+And every time you see that set up...
+
+===== S3 (00:17:20-00:18:55 15-20/15-25 push; 15-25 pip consolidation; 50 on crosses) =====
+The dealer never comes back to the high. That is the definition of a half a Batman.
+Okay, inverted, same thing.
+He throws an extra spike right there. Remember I told you he'll push it 15 to 20 pips, push it 15 to 20 pips, tap it 5 to 10 pips.
+Open the spread to reach below that level. Consolidate or accumulate above below once it's established.
+Again, he vectors in different, okay, he does 1, he taps here, 2, and then he goes down to 3 here.
+And then he just barely breaks it right there.
+Okay, same thing. The consolidation off of the low should be, depending on the pair, 15 to 25 pips.
+Okay, the dealer will consolidate off of the low or the high 15 to 25 pips, pound yen, GBPCHF about 50.
+He'll make an aggressive move and get off the number. They'll get off, alright, they got the traps here, traders stuck in here, they'll get off the number and consolidate a good distance.
+15 to 25 on average, as high as 50 on some of the crosses, okay?
+Alright, next slide.
+
+===== S9 (00:41:25-00:42:05 eight candles or greater = two hours) =====
+9, then the dealer shifts the zone starts his method, starts his work.
+An M formation that is 8 candles or greater to form, which is by the way 2 hours,
+and if the dealer comes back one more time and nails the stops and closes the low,
+that's a pretty damn good M.
+Counting from when the high is formed, 8 bars or greater is a solid M formation where the dealer pulls off of the low.
+
+===== S10 (00:46:30-00:47:20 W second leg below first, must close above; 30min/45 max) =====
+that went short, pulls back, hits the stops, gets into reverse, and then he
+pulls back again. The second leg of the correction can be slightly below the
+first but must close above...how fast anybody?
+Come on, test question. Really, you typed that slow? There you go. Thank you, Jack.
+Kevin, thank you. Avis, there you go. Coke? Have another Coke. The hell are you talking about?
+It's a tiny element, tiny element. Not pips element. No, not pips. Timing. Okay.
+He must close back above in 30 minutes. 45 mats. There you go, Coke. Thank you, buddy.
+I don't know...ah, no. Let me see. Okay.
+
+===== S12 (01:02:45-01:03:20 star formation = extra 15 minutes; 15 in / 15 out) =====
+the market maker to take your money. That's what it is. Alright? Railroad track consists
+of 30 minutes, 15 in, 15 out. Alright? 15 in, 15 out. The dealer will throw the star
+formation. He gets an extra 15 minutes to screw him in with you. Right here. This is
+15 minutes. What happens? When you see the wick like that, this was green.
+===== ADDITIONAL PROBES (not pre-registered; run to verify Q-020's quotes) =====
+===== R1  (00:47:10-00:47:55  '90 minutes is too long' — item 292 / Q-020 HIT 1) =====
+in 30 minutes 45 max there you go coke thank you buddy I don't know I know let
+me see okay
+90 minutes is too long 30 to 45 minutes back above the previous low the dealers
+got to come back above this number right he's got a spike it we're allowing him a
+doji in there and then some railroad tracks because when he stays down he
+induces people to go short okay then he's gonna run form out the other piece
+of the W all right so if he extends the second leg below the first which means
+
+===== R2  (00:55:00-00:55:25  'the 50 to cross the 200' — item 292 / Q-020 HIT 2) =====
+No, the separation from doing the average only trades and understanding the separation
+between those averages tells me that in order for the 50 to cross the 200 and to get separation
+on it, you got to be dropping for two and a half, three days, maybe four days.
+Now, what behavior is this my friends?
+
+===== R3  (00:15:55-00:16:25  '30 to 90 minutes' hold — item 292 attach) =====
+coming in here, right? Your entry is in here in the consolidation when the low
+has been established for how long? 30 to 90 minutes up to two hours the dealer
+holds the level and sometimes he'll take this into the next day. Alright? Inverted
+half of Batman, same thing.
+
