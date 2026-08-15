@@ -186,9 +186,16 @@ EMA_SPEC = [
 #   the water") or `A-032` ("shark fin"), and no backtest depending on these
 #   numbers may be reported as a test of the method. What has changed is only
 #   that the numbers trace to an artifact instead of to a forum post.
-RSI_LEN    = 21      # [TOOLING] !SM_TDI RSI_Period=21 — NOT the Tier-3 13
+RSI_LEN    = 21      # ⭐ [TIER 1] — the ONLY Tier 1 parameter here. A-080 CLOSED,
+                     #   RESOLVED BY COURSE on three independent Tier 1 instances
+                     #   (incl. V13 first-person "we have it set to 21"); V13
+                     #   [00:54:51] makes it a lookback in CHART PERIODS, scaling
+                     #   with timeframe. !SM_TDI RSI_Period=21 CORROBORATES and is
+                     #   no longer the warrant (tag corrected at D-053, which found
+                     #   both tools understating this to [TOOLING]). NOT the Tier-3 13.
 FAST_LEN   = 2       # [TOOLING] RSI_Price_Line=2,   RSI_Price_Type=0 (SMA)
 SLOW_LEN   = 7       # [TOOLING] Trade_Signal_Line=7, Trade_Signal_Type=0 (SMA)
+                     # ⛔ A-085 — see the TSL warning block at the TDI computation.
 BAND_LEN   = 34      # [TOOLING] Volatility_Band=34
 BAND_MULT  = 1.6185  # [DEFAULT] ⚠ STILL A GUESS — not exposed by the MT4 indicator
 TDI_LEVELS = (68, 50, 32)          # [TOOLING] template levels
@@ -405,7 +412,25 @@ def render(bars, i0, i1, args, out_path):
 
     r = rsi(c, RSI_LEN)
     base = sma(r, BAND_LEN)
+    # [OWNER-RULED] D-052: the bands are a deviation of THE RSI LINE (`r`), not of
+    # the base line. OWNER EMPIRICAL PREFERENCE — NOT course-verified: Tier 1 V14
+    # [00:45:09] and Tier 2 MMM-NOTES p.45 both say the market base and are
+    # OVERRIDDEN. Matches MMM_TDI.txt, the primary instrument (D-053).
     dev = BAND_MULT * stdev(r, BAND_LEN)
+    # ⛔⛔ A-085 — THE TRADE SIGNAL LINE ("slow", below). D-053 §3(a).
+    #   V12 [00:11:49]: "The TSL in essence is a POLLING OF THE ONE-HOUR CHART,
+    #   brought into your view on the 15 minute." [00:12:07]: "you now have a
+    #   SIGNAL ON THE ONE-HOUR CHART."
+    #   WHAT IT ACTUALLY IS HERE: a 7-period SMA of the RSI on THE RENDERED
+    #   TIMEFRAME. Nothing reads a higher timeframe; nothing in the shipped TDI
+    #   ever did. A-085 records that the claim may describe an EFFECT stated as a
+    #   MECHANISM, does not adjudicate which, and is DO NOT CODE.
+    #   => A crossover of this line is NOT evidence that "a one-hour signal has
+    #   fired" and may not be reported as one. V12 [00:12:18] tells a student
+    #   they "not necessarily" need the one-hour chart on the strength of this —
+    #   a student is told they may STOP LOOKING AT A TIMEFRAME.
+    #   DO NOT "fix" this by resampling H1 in here: that is D-030's forbidden act
+    #   and it would look authoritative on a rendered PNG.
     tdi = {
         "fast": sma(r, FAST_LEN)[i0:i1],
         "slow": sma(r, SLOW_LEN)[i0:i1],

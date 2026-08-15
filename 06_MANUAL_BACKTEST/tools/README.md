@@ -17,13 +17,25 @@
 | `MMM_TDI.txt` | Pine v6 panel — TDI | TradingView |
 | `MMM_Indicator_README.md` | The Pine tools' disclosure document | — |
 
-> ⚠ **Branch note.** The three Pine files live on `feature/tradingview-mmm-indicator`,
-> which is **not yet merged into the integration branch**, so on integration head this
-> directory currently contains only the Python renderer. `mmm_chart_render.py` is a
-> deliberate **port** of those two Pine files and carries their tags verbatim. **If the two
-> branches merge, the Pine files and this one must be reconciled as a pair** — a parameter
-> changed in one and not the other is exactly the divergence this project keeps registers
-> to prevent.
+> ### ⭐ UPDATED 2026-08-14 — **THE BRANCHES ARE MERGED, AND THE PAIR RULE IS NOW STANDING.**
+>
+> The note that stood here said the Pine files were *"not yet merged"* and that **if the two
+> branches merged, the Pine files and this one must be reconciled as a pair.** **They merged
+> at `b8b2c80`**, under `D-052` (the owner standardised on `MMM_TDI.txt`). That conditional
+> is therefore spent, and `D-053` consequence 3 adopts its substance as a **standing rule**:
+>
+> ⛔ **A TDI or EMA parameter changed in `MMM_TDI.txt` / `MMM_Indicator.txt` MUST be changed
+> in `mmm_chart_render.py` in the same commit, or the reason recorded.** A parameter changed
+> in one and not the other is exactly the divergence this project keeps registers to prevent.
+>
+> **Reconciled 2026-08-14 at `D-053`:** all seven TDI numeric parameters and the band basis
+> **agree** across the pair. The one divergence found was a **warrant tag, not a value** —
+> both files called `RSI period 21` `[TOOLING]` when `A-080` had closed it
+> `RESOLVED BY COURSE`. Corrected in both.
+>
+> ⭐ **`MMM_TDI.txt` is the PRIMARY TDI INSTRUMENT** (`D-053`). `mmm_chart_render.py` is its
+> Python port; where they are ever found to disagree, **the Pine file is the reference and
+> the disagreement is a defect to be recorded, not silently reconciled in either direction.**
 
 ---
 
@@ -166,15 +178,42 @@ explicitly.
 
 | Parameter | Value | Tag |
 |---|---|---|
-| RSI period | **21** | `[TOOLING]` — `RSI_Period=21`, **not** the Tier-3 13 |
+| RSI period | **21** | ⭐ **`[TIER 1]`** — `A-080` **`CLOSED — RESOLVED BY COURSE`**, three independent Tier 1 instances (incl. V13 first-person *"we have it set to 21"*); V13 `[00:54:51]` makes it a lookback in **chart periods, scaling with timeframe**. `!SM_TDI RSI_Period=21` **corroborates** and is no longer the warrant — **tag corrected at `D-053`**, which found both tools understating this. **Not** the Tier-3 13 |
 | RSI source | close | `[TOOLING]` — `RSI_Price=0` = MT4 `PRICE_CLOSE` |
-| Fast MA (RSI Price Line) | **2**, SMA | `[TOOLING]` — `RSI_Price_Line=2`, `Type=0` |
-| Slow MA (Trade Signal Line) | **7**, SMA | `[TOOLING]` — `Trade_Signal_Line=7`, `Type=0` |
-| Volatility band / base-line period | **34** | `[TOOLING]` — `Volatility_Band=34` |
-| **Band std-dev multiple** | **1.6185** | ⚠ **`[DEFAULT]` — STILL A GUESS.** The MT4 indicator exposes no input for it, so it is compiled into the `.ex4` and the template cannot reveal it. **Still the Tier-3 public value.** |
+| Fast MA (RSI Price Line) | **2**, SMA | `[TOOLING]` — `RSI_Price_Line=2`, `Type=0`. `A-084` **`PROVISIONALLY RESOLVED — TOOLING`** at `k = 2`, on the §3.4 re-check list |
+| Slow MA (Trade Signal Line) | **7**, SMA | `[TOOLING]` — `Trade_Signal_Line=7`, `Type=0`. ⛔ **`A-085` — see the box below. This line does NOT poll the one-hour chart** |
+| Volatility band / base-line period | **34** | ⛔ `[TOOLING]` — `Volatility_Band=34`. **THIS IS `A-086`'s MISSING QUANTITY.** `D-045`-**ELIGIBLE, NOT ADOPTED**; never stated in Tier 1 or Tier 2. **It is why the bands are unconstructible and why `A-031`/`A-032` are uncomputable** |
+| **Band BASIS** — deviation of *what*? | **the RSI line** | ⚠ `[OWNER-RULED]` — **`D-052`, `OWNER EMPIRICAL PREFERENCE`.** `dev = mult × stdev(RSI)`, **not** of the base line. ⛔ **NOT course-verified:** Tier 1 V14 `[00:45:09]` and Tier 2 `MMM-NOTES` p.45 **both** say the market base, both stand unretracted, and the ruling **overrides** them. `C-021` closed on it |
+| **Band std-dev multiple** | **1.6185** | ⛔ **`[DEFAULT]` — STILL A GUESS, AND STILL OWED.** The MT4 indicator exposes no input for it, so it is compiled into the `.ex4` and the template cannot reveal it. **Still the Tier-3 public value.** ⚠ **And V14 `[00:45:09]`'s unhedged *"two standard deviations"* has a Tier 1 warrant this number does not** — `D-052` consequence 6, reaffirmed at `D-053` consequence 5, **not resolved** |
 | Levels 68 / 50 / 32 | | `[TOOLING]` — template level list |
 | Shark-fin levels 63 / 37 | | `[TOOLING]` — `SharkFin_Upper/Lower_Level`, with dedicated buffers. **`A-032` remains OPEN** — these are the indicator's thresholds, not a definition of the pattern. |
 | Line colours | | `[TOOLING]`, **but the buffer→line mapping is INFERRED** — the template does not name its buffers. Sensible, not proven. |
+
+> ## ⛔⛔ `A-085` — THE TRADE SIGNAL LINE. **THIS TOOL DOES NOT DO WHAT THE LESSON SAYS THE TSL DOES.**
+>
+> **`D-053` §3(a).** V12 `[00:11:49]`, restated `[00:11:59]`: *"The TSL in essence is a **polling
+> of the one-hour chart**, brought into your view on the 15 minute."* `[00:12:07]`: *"when you get
+> a crossover right here, in essence **you now have a signal on the one-hour chart**."*
+>
+> **What the line actually is, in both tools:** a **7-period SMA of the RSI, on the chart's /
+> render's own timeframe.** Nothing in it reads a higher timeframe, and nothing in the shipped TDI
+> ever did. `A-085` records that the claim may describe an **effect** (a smoothed line lags like a
+> slower timeframe) stated as though it were a **mechanism**, does **not** adjudicate which, and is
+> ⛔ `DO NOT CODE`.
+>
+> ⛔ **A crossover of this line is a crossover of a 7-SMA of the RSI on the timeframe in front of
+> you. It is NOT evidence that "a one-hour signal has fired" and may not be reported as one.**
+>
+> ⚠️ **Why this outranks the other open records in practical danger:** V12 `[00:12:18]` tells a
+> student they *"not necessarily"* need to consult the one-hour chart given a shark fin and blood
+> in the water. **A student is told they may stop looking at a timeframe on the strength of this
+> claim** — and if the claim is an effect rather than a mechanism, that advice is unsafe. Neither
+> tool can tell you which it is.
+>
+> ⛔ **Do not "fix" this** by wiring an H1 `request.security()` / resample into either tool. That is
+> `D-030`'s forbidden act — inventing a construction the corpus never gave — and it would look
+> authoritative on a chart or a rendered PNG. `A-085` closes on a lesson that states a
+> construction, or it does not close.
 
 **Why `A-039` does not close.** An MT4 template on the owner's disk is neither Tier 1 (the
 recordings) nor Tier 2 (the Mauro PDF). It is an evidence class with no tier and no
