@@ -68,8 +68,8 @@ quietly substituting the swing high.
 >
 > ⚠️ **RENUMBERING.** §4's proposed `A-132` **collides with V19's own `A-132`** (a transcript-tail
 > record, `review/v19`). Under the `D-047` collision convention this draft's record is renumbered
-> **`A-136`** — the next free number after V19's `A-132`–`A-135`. Every reference below reads
-> `A-132`; **read it as `A-136`.**
+> **`A-142`** — the next free number after V19's `A-132`–`A-135`. Every reference below reads
+> `A-132`; **read it as `A-142`.**
 
 ---
 
@@ -308,7 +308,7 @@ BY VOLUME, NOT CONTENT. Ninth lesson, zero definitions."*
 
 ⭐ **So the ruling identifies the anchor without, by itself, making it locatable** — the `D-053`
 pattern exactly: *fixing which object the principle refers to does not make the principle
-computable.* **`A-136` therefore does NOT close on the ruling alone. It RESOLVES INTO `A-011`.**
+computable.* **`A-142` therefore does NOT close on the ruling alone. It RESOLVES INTO `A-011`.**
 
 ⭐⭐ **Except that V19 has just changed `A-011`'s footing — see §4B.**
 
@@ -340,7 +340,7 @@ is exactly a stop beyond the permitted overshoot.**
 
 ⚠️ **This is a READING and it is not adopted here.** V19's own artifacts do not make this join, this
 draft is not the V19 review, and **whether the M's "high" is the second-leg high, the higher of the
-two legs, or the formation's outer envelope is not stated.** ⛔ **`A-136` stays OPEN.** It is now,
+two legs, or the formation's outer envelope is not stated.** ⛔ **`A-142` stays OPEN.** It is now,
 however, **open on a Tier 1 construction rather than on nothing** — a materially better position
 than §4A.2 alone.
 
@@ -499,12 +499,12 @@ slides were given **different caps on camera**.
 > ⚠️ Residue: the owner did not separately restate **TP1 30 / TP2 50** for longs; they are
 > direction-neutral distances and the mirror is routine, but it is noted rather than assumed.
 >
-> **Part 4 REPLACED — the anchor is RULED and the record is RENUMBERED `A-136`.**
-> *"The perceived high"* = **the extreme of the M/W formation**. ⚠️ **`A-136` (renumbered from
+> **Part 4 REPLACED — the anchor is RULED and the record is RENUMBERED `A-142`.**
+> *"The perceived high"* = **the extreme of the M/W formation**. ⚠️ **`A-142` (renumbered from
 > `A-132`, which V19 has taken) does NOT close: it RESOLVES INTO `A-011`** — M/W anatomy,
 > `DO NOT CODE` across ten lessons. ⭐ **But V19 (`review/v19`) prints the second-leg rule for both
 > M and W** — *"The Second Leg Rise can be slightly above the first, but must close below within
-> 30M"* — **the corpus's first M/W construction.** `A-136` is therefore **open on a Tier 1
+> 30M"* — **the corpus's first M/W construction.** `A-142` is therefore **open on a Tier 1
 > construction rather than on nothing**, and its remaining gap is narrow and nameable: **which
 > extreme of the formation the stop measures from, and how the FIRST leg is identified.**
 >
@@ -522,7 +522,7 @@ slides were given **different caps on camera**.
 > within the hour of being written, which is the strongest possible argument for having written it.
 >
 > **Status:** ACTIVE — `OWNER EMPIRICAL PREFERENCE`, **NOT COURSE-VERIFIED**, **NOT EXECUTABLE**
-> while `A-136` is open — but the anchor is **RULED**, the long side is **ATTESTED**, and the
+> while `A-142` is open — but the anchor is **RULED**, the long side is **ATTESTED**, and the
 > remaining gap is **`A-011`'s leg identification**, not the whole formation
 
 ---

@@ -11075,3 +11075,584 @@ taken, both log entries kept), then the R2 review file and ledgers. **Merged to 
 
 ### Next Review Trigger
 The V17–V20 minor sweep, then `FINAL_COURSE_REVIEW.md`.
+---
+
+## 2026-08-15 — OWNER RULING #6 (THE ENTRY LADDER) AND A CORRECTION TO `A-141` — plus the V20 renumbering collisions this branch inherited
+
+**Branch:** `tools/owner-entry-rule-and-a141-correction`, from integration `19e6c2a`.
+**Two drafts, one correction proposal, one tool note. NOTHING ADOPTED. No `A-xxx` changed status.**
+
+### ⭐⭐ RULING #6 — the three-tier ENTRY ladder → `DECISION_DRAFT_D-058_OWNER_ENTRY_RULE.md`
+
+> *"the entry is the close of the candle after the ema cross. But when your confidence and probably
+> is on your side then you can take it on the second leg hammer, railroad tracks, doji, etc. then
+> high level is placing a limit order on the close of the outside bar. That's the safest entry."*
+
+Recorded at **`OWNER EMPIRICAL PREFERENCE`** (the `D-052` category), identical to `D-055` — **the
+owner's own practice, NOT COURSE-VERIFIED.** ⭐ **With `D-055` the project now holds its first
+complete trade template from one source: ENTRY + STOP + TP1 + TP2.**
+
+⛔ **And not one component of it is executable.** Four undefined anchors: *"the EMA cross"* (which
+two? which timeframe? which direction? — and the project holds **two incompatible EMA sets whose
+FAST periods are exactly the disputed ones**, `D-043`'s 5/13 vs `MMM.tpl`'s 4/10, giving 15
+possible pairs) → **proposed `A-143`, `DO NOT CODE`**; *"confidence and probability on your side"*
+— a **subjective gate with no threshold**, and it is the *condition* on tier 2, so tier 2 cannot be
+evaluated at all; *"second leg"* → chains to `A-011`; *"the outside bar"* → **undefined by the
+course and by the owner**, and importing the retail definition is the `A-082` error.
+
+⚠️⚠️ **IT DISAGREES WITH `A-139`, THE COURSE'S MOST MECHANICAL ENTRY.** V20:
+`entry = high − (candle range ÷ 3)`. Owner: **the CLOSE**. ⭐ **Different entries; no arithmetic
+makes them the same.** ⚠️ **No `C-xxx` opened** — `A-139` is about **what V20 taught**, this is
+**owner practice**; a category difference is not a conflict (`D-052` §3.5).
+⛔⛔ **And the tempting move is refused explicitly: `A-139`'s open question is WHICH CANDLE, and the
+owner's rule supplies a candle-selection principle — it MUST NOT be imported.** That would be
+*"do not blend"* and would hand an owner-tier warrant the authority of Tier 1. **`A-139` stays
+`OPEN`; `PT-049`'s convention stays a convention.**
+
+⭐ **Negative result, stated plainly: NO lesson in V01–V21 states an EMA-cross entry trigger at
+all.** The corpus's EMA material is about which averages exist and confluence, never a cross as a
+trigger. **That is the strongest reason the record refuses `RESOLVED — OWNER ATTESTATION`** — an
+owner recollecting the teaching would not produce a trigger the teaching never mentions.
+
+⭐ Also recorded: the project now holds **four incompatible entry geometries** — `A-090`'s 10 or
+5–8 pips inside, `A-139`'s one-third retracement, V19's close-below-the-blue-tracer, and this.
+**That count is itself a finding about the corpus.**
+
+### ⭐⭐ `A-141` CORRECTED — the High/Low Trainer is NOT a total void
+
+> *"The high low trainer is part of the sessions indicator. It's embedded in it. It just doesn't
+> have the auto-places."* — owner, 2026-08-15
+
+⚠️ **`A-141` lives on `origin/video/v21`, UNMERGED**, so this is written as
+`00_SYSTEM/A-141_CORRECTION_PROPOSAL_HIGH_LOW_TRAINER.md` **for the V21 session to apply** — not
+written into a ledger this branch does not contain.
+
+**The session ribbon was re-examined** (`!sm_WorkTime_v1.5b`, via its readable pre-600 sibling and
+`MMM.tpl`'s saved block). ⭐ **The owner is right about the shape:**
+
+| | |
+|---|---|
+| ⭐ **PRESENT** | session **high/low tracking**; **fixed pip offsets** from that extreme — shipped literally as *"25/50 Pips above/below blue box"*; **alerting** |
+| ⛔ **ABSENT** | **all order placement** — market order, two pendings, hard stop, `+30` TP, the `30+50+70` cycle, `MAX RISK 5%` / by-order-percent, the four variants |
+| ⚠️ **DIVERGENT** | Trainer **`+20`/`+40`** vs ribbon **`+25`/`+50`** — a **25% difference on every level** |
+
+⭐⭐ **The missing piece is CATEGORICAL and independently checkable: an MT4 INDICATOR CANNOT PLACE
+ORDERS — only an EA or a SCRIPT can — and V21 calls the Trainer a *"script"* (`[00:41:49]`).** So
+*"it just doesn't have the auto-places"* names a real division in the MT4 program model rather than
+a vague gap: **the levels belong to an indicator, the orders to a script.**
+
+⛔ **But the identity claim is NOT adopted.** The `+20`/`+40` vs `+25`/`+50` divergence means the
+ribbon is **demonstrably not the Trainer's code at the Trainer's settings** — it is a **structural
+analogue**. Whether *"embedded"* means the same code re-parameterised or the same idea in a sibling
+tool is **left open**; `D-030` bars picking one. ⚠️ **A second unestablished point:** V21 describes
+two pendings relative to an ORDER; the ribbon's offsets hang off the **Asian box**. If the
+Trainer's grid is anchored to the fill rather than a session extreme, the resemblance is weaker
+than it looks. ⚠️ **Third check, run and negative:** the *other* session indicator in the materials
+(KimIV's `Sessions.mq4`) has boxes and **nothing else** — no offsets, no alerts.
+
+⭐ **What changes in practice:** `A-141` no longer reads *"nothing to work from."* The shortfall is
+now **specific — an order-placement layer over a level geometry the project already implements.**
+⛔ **Not a licence to build it.**
+
+**`MMM_SESSION_RIBBON.txt` re-checked: it needs a cross-reference, not a rewrite** — it already
+implements the ±25/±50 bands, already defaults them OFF per `MMM.tpl`, already refuses to treat them
+as a course rule. A note was added recording the `A-141` relationship and the number divergence.
+⛔ **No `+20`/`+40` option was added** — that would inject V21's Trainer figures into a tool whose
+contract is to replicate `MMM.tpl`. It waits on the owner.
+
+### ⚠️ Two renumbering collisions inherited from V20, fixed here
+
+The V20 session took **`A-136`** (closed as an ASR artifact) and **`C-030`** (its time-cap
+contradiction) — **both numbers this branch's earlier drafts had claimed.** Renumbered, skipping the
+unmerged V21 block (`A-140`, `A-141`, `C-031`) so they survive that merge:
+
+| Record | Was | Now |
+|---|---|---|
+| `D-055`'s *"perceived high"* anchor | `A-132` → `A-136` | ⭐ **`A-142`** |
+| `D-056`'s ribbon-vs-slide contradiction | `C-029` → `C-030` | ⭐ **`C-032`** |
+| `D-058`'s *"the EMA cross"* anchor | — | ⭐ **`A-143`** |
+
+⭐ **All four new numbers were swept against integration AND `origin/video/v21` before use** —
+`A-142`, `A-143`, `C-032`, `D-058` all free. ⚠️ One residual was caught inside a fenced code block
+in `D-056` that the first pass missed.
+
+### ⚠️ Ancestry note
+
+This branch's predecessor `tools/indicator-folder-survey-and-owner-risk-rule` **was merged to
+integration by another session** — all three of its commits (`cf1fda9`, `c0fb7c9`, `b0eb95e`) are
+ancestors of `19e6c2a`, and `D-055`/`D-056`/the inventory/the ribbon are on integration as **draft
+files**. ⚠️ **`D-055` and `D-056` are NOT adopted entries** — `DECISIONS.md`'s highest is `D-057` —
+so their numbers are held by drafts only, and `D-047` gives the number to whoever adopts first.
+
+---
+
+## 2026-08-15 — OWNER RULING #7 — THE CANONICAL TOOLSET IS SCOPED TO FOUR, and the scoping immediately shows THREE OF THE FOUR ARE UNSETTLED
+
+**Branch:** `tools/owner-canonical-toolset`. **One draft — `DECISION_DRAFT_D-059_CANONICAL_TOOLSET.md`.
+NOT ADOPTED. ⛔ NO record closed, excluded or deprioritised.**
+
+> *"The indicators that we'll need while trading are: 1. Worktime ribbon: highlights sessions and
+> previous highs and lows. 2. TDI. 3. EMAs. 4. ADR. I believe that's it."* — owner, 2026-08-15
+
+Recorded at **`OWNER EMPIRICAL PREFERENCE`** (`D-052`). ⚠️ **The hedge is kept**: *"I believe that's
+it"* is not *"that is it"*, and a hedged enumeration is not a closed set.
+
+### ⭐⭐ THE SCORECARD — one of four is settled
+
+| Tool | Status |
+|---|---|
+| **TDI** | ⭐ `D-045` + `D-052` + `D-053`, all **ADOPTED** — ⚠️ and `A-086`'s band period is still stated nowhere |
+| **Worktime ribbon** | ⛔ `D-056` **DRAFT, UNADOPTED**; `A-019`/`A-105`/`A-131` open; the Pine port never run |
+| **ADR** | ⛔ `D-051` **DRAFT, UNADOPTED**; `A-100` lookback **10/14/15/21**; ⚠️ *"ADR"* names **three** indicators and picks none |
+| **EMAs** | ⛔⛔ **actively contradictory** — `D-043` (adopted) **5·13**·50·200·800 vs `MMM.tpl` **4·10**·50·200·800·**3200** (`A-143`) |
+
+⭐ **The owner named the four things that matter and the project can compute none of them but the
+TDI.** The shortest path to a usable toolset is `D-056` → `D-051` → `A-143` → `A-100`, and **each
+waits on one owner sentence, not on more research.** That prioritisation is the entry's real product.
+
+### ⚠️ THE RIBBON DESCRIPTION DOES NOT MATCH HIS OWN CHART — and it is the SECOND instance
+
+He says the ribbon highlights *"sessions **and previous highs and lows**."* **Verified against
+`MMM.tpl`:** #8 (the ribbon) draws **sessions only**; previous highs/lows are **#7
+`!SM_Daily_HiLo`** and **#9 `Weekly_High_Low Great`** — two separate indicators. The ribbon's full
+recovered input surface has no daily/weekly-extreme input at all.
+
+⭐ **`A-141` was the first instance** (*"the high low trainer is part of the sessions indicator"*).
+**Three readings, none adopted:** a functional **bundle**; ⭐⭐ **a NEWER `!sm_WorkTime` build that
+really does bundle them** — which would be **the most valuable artifact the project could receive**,
+closing `A-141` and settling `D-056`'s auto-GMT question in one file; or misrecollection.
+⚠️ Under the bundle reading the set is **four FUNCTIONS delivered by SIX indicators**, pulling
+`!SM_Daily_HiLo` and `Weekly_High_Low Great` **into** scope.
+
+### ⚠️⚠️ PIVOTS WERE NOT MENTIONED — flagged, not resolved
+
+⭐ The omission **agrees with his chart files**: no pivot indicator on any of his three templates,
+and `PivotPoints.ex4` sits unused in a Downloads folder. ⚠️ **But the list also omits
+`PZ_QuartersTheory`, which IS on all three** — so the list provably under-reports his own charts and
+silence establishes nothing.
+
+⛔⛔ **`A-101` STAYS OPEN AT FULL PRIORITY REGARDLESS.** **V16 is an entire lesson on pivot points**
+and prints the grid at Tier 1. `A-101` asks **what the course taught**, which does not depend on what
+the owner trades. ⭐ **A confirmed "I don't use pivots" would only change the priority of BUILDING a
+pivot tool — an effort question, not an evidence question.**
+
+### ⛔ WHAT THIS RULING DOES NOT DO — the easiest error here
+
+**Nothing is closed, excluded or deprioritised.** `PZ_QuartersTheory`, `PivotPoints.ex4`/`A-101`,
+`Weekly_High_Low Great`, `!SM_Daily_HiLo`, `Candle Timer`, `ICT Day Of Week`, `mm_adr`/`D-051`,
+`A-100`, `A-086`, `A-143`, `C-022`, `C-032` — **all unchanged.**
+
+⭐ **The governing distinction, and it is doing real work:** `D-055`/`D-058` are **rules** (how to
+trade); **this is SCOPE** (what he uses). **A statement about the owner's practice says nothing about
+the course's curriculum, and the project exists to study the corpus.** Treating it as a curriculum
+filter would narrow the corpus on non-Tier-1 authority — the `A-082`/`D-030` error in its most
+consequential form. `SOURCING_HIERARCHY.md` §2's *"silence is never permission"* applies to the
+owner's silence exactly as to the corpus's.
+
+⭐ **`A-143` does NOT close.** *"EMAs"* confirms the family is load-bearing and states nothing about
+membership. It does raise the record's priority sharply — it blocks the whole of `D-058`'s tier 1.
+
+### Numbering
+
+**D-059**, verified free across integration **and every remote branch**. Adopted max is `D-057`;
+`D-051`/`D-055`/`D-056`/`D-058` are held by unadopted drafts. ⚠️ `D-047` still gives the number to
+whoever adopts first.
+
+---
+
+## 2026-08-15 — OWNER RULING #8 — PIVOTS ARE *"AN ADDED BONUS"*, and the answer is a THIRD position neither reading had offered
+
+**Folded into `DECISION_DRAFT_D-059_CANONICAL_TOOLSET.md` §5A (still NOT ADOPTED), plus a ledger
+annotation on `A-101` and a downgrade in `D-056`.**
+
+> *"Pivot points aren't how I trade. **It's an added bonus.**"* — owner, 2026-08-15
+
+### ⭐⭐ A third position — and it makes the omission PRINCIPLED
+
+`D-059` §5 offered **(a)** pivots aren't part of his approach, or **(b)** he forgot to list them.
+⭐ **Neither.** He uses them as a **supplementary / confluence** factor, not as a driver — and since
+his list was a ***"indicators we'll NEED"*** list, **a bonus is by definition not a need, so the
+omission was correct by his own criterion and no inference about disuse was ever available from it.**
+
+⚠️⚠️ ***"An added bonus"* is NOT *"I don't use them"***, and the record does not flatten it. He said
+pivots are not **how he trades**, not that he ignores them.
+
+### ⭐⭐ And it agrees with Tier 1 — the course frames pivots the same way
+
+`V15_00-41-30_confluence-slide-yesterday-high-low-pivot-adr.png` is the course's own **confluence**
+slide: **yesterday's high/low · PIVOT · ADR**. ⭐ **Two of those three are on the owner's canonical
+list** (*"previous highs and lows"*, *"ADR"*) **and the third is the one he calls a bonus.** The
+owner's *"bonus"* and the course's *"confluence"* describe the same role for the same object,
+arrived at independently. ⚠️ **Corroborates a ROLE, not a CONSTRUCTION** — `A-101` does not narrow
+by one line.
+
+### ⛔ `A-101` IS NOT CLOSED, and the "if the lessons ever reference it" condition is ALREADY MET
+
+Pivots are referenced in **FOUR lessons** — **V10** (`01-23-42`), **V15** (`00-41-30`),
+⭐ **V16 (the dedicated lesson, nine frames)**, **V17** (`00-22-00`). **So `A-101` is an ACTIVE
+course-content record, not a dormant one awaiting a future trigger.** It asks **what the course
+taught**, which does not depend on what the owner trades.
+
+| | |
+|---|---|
+| ✅ **Confirmed** | pivots are **NON-LOAD-BEARING for the owner's practice**; **NOT** part of `D-059`'s canonical four |
+| ✅ **Changed** | ⭐ **TOOL-BUILDING priority → LOW.** `D-056` §7's request for `PivotPoints.mq4`, previously *"the single highest-value artifact the owner could supply"*, is **downgraded to a low-priority nice-to-have** (struck, not deleted, per `REMEDIATION_PROTOCOL.md` §2) |
+| ⛔ **Unchanged** | **`A-101` STATUS: `OPEN`, `DO NOT CODE`.** Course-study priority **untouched.** The **`M5` addendum** stays live in full |
+| ⚠️ **Not established** | **HOW** he uses pivots as a bonus — so whether a pivot tool is *eventually* wanted is **not settled**, only that it is not urgent. New `D-059` §8 Q6 |
+
+### ⭐ It also retro-explains the `PZ_QuartersTheory` omission — as a HYPOTHESIS only
+
+§5 leaned on *"the list omits `PZ_QuartersTheory`, which IS on all three templates"* to argue silence
+established nothing. The **need-vs-bonus** distinction now supplies a candidate explanation for that
+omission too. ⚠️ **A hypothesis, not a finding — he has not said it**, and §5's reasoning is **not
+retracted**: it was correct that *at the time* no inference from silence was available. Sharpened
+into `D-059` §8 Q5.
+
+### Files touched
+
+- `00_SYSTEM/DECISION_DRAFT_D-059_CANONICAL_TOOLSET.md` — new §5A; Part 5A in the proposed ledger
+  entry; header and §0 reconciled (they had said *"not resolved in either direction"*); Q1 marked
+  answered, Q5 sharpened, **Q6 added**
+- `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` — **`A-101` ANNOTATED.** ⛔ **Status line untouched**;
+  the annotation records the attestation, the LOW tool-building priority, and — emphatically — that
+  the record is neither closed nor deprioritised for course study
+- `00_SYSTEM/DECISION_DRAFT_D-056_MMM_TPL_AND_TIME_RIBBON.md` — the pivot-source request downgraded
+  at **three** sites, superseded text struck rather than deleted
+
+---
+
+## 2026-08-15 — THE BTMM INDICATOR PACK — the canonical `!SM_` suite arrives, and it OVERTURNS `D-051`'s central negative finding
+
+**Branch:** `tools/btmm-indicator-pack-survey`. **One survey + one proposed entry (`D-060`), NOT
+ADOPTED. `D-051` factually CORRECTED. No `A-xxx` changed status.**
+
+> *"I added another template… called basic btmm. I added another indicator folder within the
+> folder… **It does have the pivot points.** If it helps the agent then we can add it."*
+
+### ⛔⛔ THE ANSWER TO *"DOES IT HELP THE AGENT?"* — PARTLY, AND NOT THE WAY HOPED
+
+**All 20 files are compiled `.ex4`. There is not one `.mq4` in the folder.** So the pack yields
+**parameter surfaces and field names, never algorithms** — the one exception being
+`!SM_ADR_Marker`'s leaked `DebugLogger` branch labels. ⛔ **`D-030` bars reconstructing any of it
+into setup-detection logic, and no agent component may be built on it.** ⭐ What it *does* give is
+real: it identifies which tools are canonical, and it corrects a standing error.
+
+### ⭐⭐⭐ `D-051` §1 IS FALSE AND HAS BEEN CORRECTED
+
+`D-051` §1 said the course's ADR indicator is *"NOT FOUND anywhere on the volume"* and that
+`Reached=` / `To ADR High` / `Today's Range` return *"zero files"*. ⛔ **All three are in
+`!SM_ADR_Marker.ex4`** (`cddecc00…`), with the **complete nine-field readout** §3 reconstructed from
+the V07 frames. ⚠️ It is **v1.00 (`20051027`)**, not the course's **v1.5 (`20100528`)** — same
+indicator, five years earlier, and **the build whose stamp §4 already found in
+`3M-shadow-boxes-15M.tpl`. That loop closes.**
+
+⚠️⚠️ **AND `D-051` PART 3 IS NOW IN DOUBT.** Part 3 provisionally closes `A-100`'s range definition
+as *"plain range, NOT true range"* on `mm_adr`. ⭐ **The course-family indicator's period input is
+named `ATRPeriod`** — ATR is by definition true range. ⛔ **Not overturned** — an input name is not
+an implementation, and `High-Low/adr-Reached` sits in the same string table pointing the other way —
+**but `D-051` may not be adopted without re-arguing it.** Also new: `UseManualADR` admits a
+**hand-set ADR**, which no `A-100` candidate has considered.
+
+### ⭐⭐⭐ THE NICKNAMES NOW HAVE AN ARTIFACT — and it still does not close `A-020`
+
+`!sw_Multi-MA.ex4` (Steve Wilson, 2011) names its inputs **`Mustard · Ketchup · Water · Mayo ·
+Blueberry`**. ⭐⭐ **`Ultimate Blue.tpl` — the artifact `D-045` ALREADY ADMITTED — saves
+`5 · 13 · 50 · 200 · 800`**, matching `D-043` in all five cells, **with the pairing made by the
+indicator author's labels rather than by recollection.** ⭐ `Mustard=5`/`Ketchup=13` hold across
+**all three** saved configurations found — precisely the two cells `D-041`/`D-042`/`D-043` fought
+over and that §3.4 records as having **no Tier 1 statement anywhere**.
+
+⛔ **`A-020` and `A-143` STAY OPEN.** Four restraints: `TOOLING` ranks below Tier 1; ⚠️ **it is
+unresolved whether `D-045` admitted the whole template or only its TDI block** (surfaced as a
+question, not assumed); one user's saves are not independent witnesses (`D-056` §6); and
+⚠️ **`The Beast.tpl`'s second Multi-MA instance saves `195/750/3000`, proving the values are freely
+re-parameterised.**
+
+### ⭐⭐ THE PIVOT INDICATOR IS REAL, ON-LINEAGE, AND STILL UNREADABLE
+
+`!SM_PivotPoints.ex4` — **`!SM_`-prefixed and dated the SAME DAY (2011-05-08) as `!SM_TDI` and
+`!SM_ADR_Marker`**, strong evidence they shipped as one pack. Exposes **`MidPivots` /
+`MidPivotColor` / `MidFontSize`** alongside standard/Fib/Camarilla sets, and standard pivots have
+**four** interstitial gaps matching `A-101`'s `M1`–`M4` positions.
+
+⛔ **`A-101` UNCHANGED — `OPEN`, `DO NOT CODE`.** Compiled, no source, **no template on the volume
+attaches it so not even its input VALUES are recoverable**, and the `MidPivots` formula is
+unreadable — a variable name is not a construction (`D-030`). ⚠️ Its `GMTshift` input means the
+pivot day boundary is **configurable**, which widens `A-082`'s caution. Per `D-059` §5A: **LOW
+priority for tool-building, unchanged for course study.**
+
+### ⭐⭐ THE CHEAPEST UNBLOCK IN THE PROJECT
+
+`!sm_gmtoffset.ex4` — a dedicated **broker GMT-offset display** (`GetSystemTime`/`kernel32.dll`,
+prints *"GMT Offset is "*). ⛔ It records nothing historically, so **`C-032` is not settled by its
+existence.** ⭐⭐ **But attaching it to the owner's chart prints the one number that separates
+`D-056` §4A.2's two one-hour-apart arms.** No research required.
+
+⭐ Also: **three `!sm_WorkTime` builds ship together** — `!sm_WorkTime.ex4` (2011, **new**),
+`no_autogmt`, and `v1.5b` (**byte-identical to the `D-056` artifact**). A pack shipping both a
+`no_autogmt` variant *and* a separate offset tool **corroborates `D-056` §4.3's inference that the
+plain builds auto-adjust** — ⚠️ corroboration of an inference, not a reading of code.
+
+### ⭐ AND THE EMA CROSS IS A NATIVE BTMM OBJECT
+
+`!SM_Crossover_Arrows.ex4` (2010, the oldest file) — inputs `FasterEMA` / `SlowerEMA`, strings
+*"Cross Up on … min … EMA"*. ⭐ **`D-058` tier 1's *"the close of the candle after the ema cross"* is
+therefore a native object of this toolset, not the owner's invention** — which strengthens `D-058`
+as a description of real practice. ⛔ **`A-143` does not close**: the default periods are not in the
+string table, no template attaches it, and `BASIC BTMM.tpl` is empty.
+
+### ⚠️ `BASIC BTMM.tpl` IS EMPTY
+
+**650 bytes, 47 lines, ZERO indicators** — chart cosmetics only (`USDCHF`, **M15**, grey background,
+green/red candles). ⛔ Contributes nothing to any record. **Worth telling the owner plainly**: if he
+expected it to carry the stack, it does not — the populated template is where the values live.
+
+### ⚠️ One artifact noted and NOT admitted
+
+`Desktop/Trading/Steve Mauro ORIGINAL The Market Maker Method BTMM.pdf`. Under
+`EXTERNAL_REFERENCE/README.md`'s ⛔ default it is **not a source, not evidence, never cited** until
+it has its own `D-039`-class ruling. ⭐ Flagged as potentially high-value; **out of scope here.**
+
+### Numbering
+
+**`D-060`**, verified free across integration and **every** remote branch. Adopted max `D-057`;
+`D-051`/`D-055`/`D-056`/`D-058`/`D-059` held by unadopted drafts.
+
+---
+
+## 2026-08-15 — OWNER RULING #9 — THE CANONICAL EMA SET IS `5 · 13 · 50 · 200 · 800`, and the tooling audit came back CLEAN
+
+**Branch:** `decisions/owner-canonical-ema-set`. **One draft (`D-061`, NOT ADOPTED), one ledger
+annotation, three cross-reference updates. ⛔ NO record changed status.**
+
+> *"The canonical one is the one that has **5=mustard, 13=ketchup**"* — owner, 2026-08-15
+
+⭐ **This settles a conflict three drafts had open** (`D-056` §3, `D-059` §3.2, `D-058`/`A-143`):
+the owner's own 2023 `MMM.tpl` runs **4 · 10 · 50 · 200 · 800 · 3200** while `D-043` says
+**5 · 13 · 50 · 200 · 800**. ⭐ **`D-043` wins. The chart is not canonical. `3200` is dropped.**
+
+### ⛔⛔ AND IT PROVES NOTHING ABOUT THE COURSE — the hard limit on this ruling
+
+**It is the owner ruling on which set HE uses and wants. No V-lesson said anything new; the corpus
+was not re-read.** `D-042`'s exhaustive negative **stands**: *ketchup* occurs **0×** in genuine
+audio corpus-wide and *mustard* **twice, both numberless**. ⛔ **Nothing becomes `RESOLVED BY
+COURSE`** — the only two rows that are (`mayonnaise = 200`, V12; `blueberry = 800`, V09 guest) were
+so already. ⚠️ `MMM-NOTES` p.38 agrees with the set but is **not independent corroboration**
+(§1.3's trap), and `C-010` is untouched — the notes still omit the 800.
+
+### ⚠️ `A-020` IS RE-AFFIRMED, NOT NEWLY RESOLVED — and this corrects the framing of the request
+
+`A-020`'s live status is a **SPLIT**, and its mustard/ketchup/water rows were **already**
+`RESOLVED — OWNER ATTESTATION` under `D-043`. ⭐ **So the ruling defends them rather than resolving
+them.** What it genuinely adds: it **discharges a live, artifact-backed challenge** (`MMM.tpl`'s
+4/10), and it brings **artifact corroboration** — `!sw_Multi-MA.ex4` labels its inputs
+`Mustard · Ketchup · …` and `Ultimate Blue.tpl` saves `5 · 13 · 50 · 200 · 800`, so the pairing is
+made by the **indicator author's labels, not by recollection** (`D-060` §5).
+
+⛔ **`A-020`'s STATUS IS UNCHANGED and it STAYS ON `SOURCING_HIERARCHY.md` §3.4's re-check list.**
+Owner re-affirmation cannot promote a record above Tier 1. ⚠️ **V21 is ingested but UNMERGED**, so
+the V13–V21 obligation is owed on merge. Ledger annotated; **status line untouched.**
+
+⭐ Worth recording: §3.4 documents an owner attestation being **reversed within 24 hours**
+(`D-041` → `D-043`). **`D-043` has now been re-affirmed against a documented counter-artifact** —
+materially stronger, **without changing its tier.**
+
+### ⚠️ `A-143` NARROWS AND DOES NOT CLOSE — and it was never in the ledger
+
+⚠️ **`A-143` has never been opened** — it is a proposal in `D-058` §4.1 and exists nowhere else, so
+there is no status to change, only a proposal to rewrite. It asked **three** questions and the
+ruling answers **one**:
+
+| | |
+|---|---|
+| ✅ **Which SET** | **ANSWERED — `5 · 13 · 50 · 200 · 800`** |
+| ⛔ **Which TWO cross** | **OPEN.** ⚠️ **5×13 is the obvious pair and the owner did not say it** — five averages give **ten** pairs |
+| ⛔ **Timeframe / direction** | **OPEN** |
+
+⭐ The space falls from *"15 pairs across an unresolved set"* to **ten pairs across a known set** — a
+real reduction, **and still not a rule.** ⛔ **`D-058` tier 1 stays `DO NOT CODE`.** The proposal in
+`D-058` §4.1 was rewritten to the narrower scope.
+
+### ⭐⭐ THE TOOLING AUDIT — RUN, AND NOTHING NEEDS FIXING
+
+| Tool | Periods | Verdict |
+|---|---|---|
+| `MMM_Indicator.txt` | `ta.ema` at **5 · 13 · 50 · 200 · 800** | ✅ **ALIGNED** |
+| `mmm_chart_render.py` | `EMA_SPEC` = **5 · 13 · 50 · 200 · 800** with per-row warrants | ✅ **ALIGNED** |
+| `MMM_TDI.txt` | no EMAs; only `RSI_Period=21` (Tier 1) | ✅ N/A |
+| `MMM_SESSION_RIBBON.txt` | no EMAs — its `50` is `NumberOfDays`, a **lookback** | ✅ **false positive checked and cleared** |
+
+⭐⭐ **Nothing needs fixing, and that is itself the finding.** The tools were built to `D-043` — and
+**had they been built to `MMM.tpl` when it arrived looking authoritative (it is, after all, the
+owner's actual chart), every EMA in the project would now be wrong.** The `TOOLING`-tier discipline
+that refused to let a 2023 chart override `D-043` (`D-056` §3: *"a 4/10 chart in 2023 is not
+testimony that the course taught 4/10 in 2012"*) **is what prevented that, and this ruling
+vindicates it.**
+
+⚠️ **One follow-up deferred:** on adoption, the tools' warrant comments should also cite `D-061` and
+record that the `MMM.tpl` divergence was **considered and rejected**, so a future reader does not
+rediscover 4/10 and think the tools are stale. ⛔ **Not done now** — the tools are correct and
+editing them to cite an unadopted decision would be worse.
+
+### Numbering
+
+**`D-061`**, verified free across integration and **every** remote branch. Adopted max `D-057`;
+`D-051`/`D-055`/`D-056`/`D-058`/`D-059`/`D-060` held by unadopted drafts.
+
+---
+
+## 2026-08-15 — OWNER RULING #10 — *"5/13 cross entry"* — `D-058` TIER 1 IS NOW **ONE SCALAR** SHORT OF COMPUTABLE
+
+**Branch:** `decisions/owner-513-cross`. **Folded into `DECISION_DRAFT_D-058` and
+`DECISION_DRAFT_D-061` — both still NOT ADOPTED. ⛔ No record changed status.**
+
+> *"**5/13 cross entry**"* — owner, 2026-08-15
+
+### ✅ WHAT IT SETTLES
+
+`A-143` asked **three** things. Two rulings in one day have now answered two of them:
+
+| Row | State |
+|---|---|
+| **SET** | ✅ **SETTLED** — `5 · 13 · 50 · 200 · 800` (`D-061`); `MMM.tpl`'s 4/10/…/3200 is not canonical |
+| ⭐ **PAIR** | ✅ **SETTLED — EMA(5) × EMA(13).** Ten candidate pairs → **one** |
+| **DIRECTION** | ⚠️ **not stated, but CONSTRAINED** — see below |
+| ⛔ **TIMEFRAME** | ⛔⛔ **OPEN — AND NOW THE ONLY BLOCKER** |
+
+### ⛔⛔ THE ANSWER TO *"IS IT COMPUTABLE NOW?"* — **NO, BY EXACTLY ONE MISSING INPUT**
+
+Tier 1 is `entry = the close of the candle after the EMA cross`. **Which averages ✅, which set ✅,
+what the trigger event is ✅, what the entry price is ✅** — *the close of the bar AFTER the cross
+bar.* ⛔ **The chart it is computed on: unstated.**
+
+⚠️ **That is not a detail. A 5/13 cross on M15 and on H1 are different signals, fire at different
+times, and produce different trades**, so no timeframe-agnostic tool can be written.
+
+⭐ **But it is a real milestone and the draft says so: this is the closest any entry rule in the
+project has come to computable.** `A-139`'s one-third entry is missing its **bar**; V19's
+close-below-the-blue-tracer is missing its **line** (`A-133`); `A-090` contradicts itself on its
+**offset**. **All of those are missing something structural. This one is missing a single number.**
+
+### ⚠️ AND THE TIMEFRAME IS GENUINELY CONTESTED — the owner's own templates split 3–2
+
+| Artifact | Saved |
+|---|---|
+| `MMM.tpl` · `MMM INDICES.tpl` · `RS5P.tpl` | ⚠️ **H1** (`period=60`) |
+| ⭐ `BASIC BTMM.tpl` (newest, 2026-08-15) · `Ultimate Blue.tpl` | ⭐ **M15** (`period=15`) |
+
+⭐ **Tier 1's only timeframe-stamped EMA fact points to M15** — V09 `[00:41:43]`, *"the blueberry is
+the 800 **on the 15 minute time frame**"*, `RESOLVED BY COURSE` — and V19/V20's entry material is
+M15 too. ⛔ **M15 is the better-supported arm and it is NOT adopted**: three of the five saved
+templates say H1, including **all three `MMM*` ones**, the family named for this method. `D-030`
+bars picking the convenient arm. ⚠️ **`!SM_Crossover_Arrows`' own alert string is *"Cross Up on …
+min … EMA"* — the tool prints the timeframe because it varies.**
+
+### ⚠️ DIRECTION — not stated, but no longer floating free
+
+The ruling says *"cross **entry**"* and names no direction. ⭐ It is now **constrained rather than
+open**: `D-055`'s M/W anchor already fixes trade direction (**M at tops ⇒ short, W at bottoms ⇒
+long**), so **the trade has a direction before the cross is consulted** and the cross is a **trigger
+inside a directional setup**, not the direction-chooser. ⛔ **That the cross must AGREE with the M/W
+is the obvious reading and is NOT adopted** (`D-030`) — a rule firing on either cross direction
+inside an M is a different rule. ⚠️ Lower risk than the timeframe: it changes signal **count**, not
+signal **timing**.
+
+### ⛔ What is unchanged
+
+**`D-058` anchors 2, 3 and 4 are untouched and still block tiers 2 and 3** — *"confidence and
+probability"* (subjective gate, no threshold), *"second leg"* (→ `A-011`), *"the outside bar"*
+(undefined by course and owner). ⛔ **`A-139`, `A-133`, `A-011`, `A-090`, `A-115`, `A-056`, `A-020`
+all unchanged.** ⚠️ **`A-143` still has never been opened in the ledger** — it remains a proposal in
+`D-058` §4.1, now rewritten so its single surviving row is the timeframe.
+
+### Files touched
+
+- `00_SYSTEM/DECISION_DRAFT_D-058_OWNER_ENTRY_RULE.md` — §0 update block; **§4.1 rewritten**;
+  **new §4.1A** (is it computable?), **§4.1B** (the 3–2 timeframe split), **§4.1C** (direction);
+  proposed-entry Part 3 rewritten; Q1 replaced with the timeframe question
+- `00_SYSTEM/DECISION_DRAFT_D-061_CANONICAL_EMA_SET.md` — §5's three-row table updated: row 2
+  **ANSWERED**, row 3 flagged as **the only blocker**
+
+---
+
+## 2026-08-15 — OWNER RULING #11 — **M15.** `A-143` CLOSES AND `D-058` TIER 1'S TRIGGER IS COMPUTABLE
+
+**Branch:** `decisions/owner-m15-timeframe`. **Folded into `DECISION_DRAFT_D-058` and `D-061` —
+both still NOT ADOPTED.**
+
+> *"So this is a **universal rule**. If I decide to take an entry in any time frame then I need to
+> wait for the ema cross. **Based on the strategy now with MMM then it's M15**"* — owner, 2026-08-15
+
+### ✅✅ `A-143` CLOSES — all three substantive rows ruled in one day
+
+| Row | Ruling |
+|---|---|
+| **SET** | `5 · 13 · 50 · 200 · 800` — `D-061` |
+| **PAIR** | **EMA(5) × EMA(13)** — *"5/13 cross entry"* |
+| **TIMEFRAME** | ⭐ **M15** — *"with MMM then it's M15"* |
+| **DIRECTION** | ⭐ **DISSOLVED, not answered** — it was mis-specified; see below |
+
+### ✅ THE TRIGGER IS COMPUTABLE
+
+**On M15: `EMA(5, close)` crosses `EMA(13, close)`; the entry is the NEXT BAR'S CLOSE.**
+Deterministic, backtestable, **no undefined term in it**. ⭐ **The first fully-specified executable
+entry trigger the project has obtained from any source in twenty-one lessons.**
+
+Every component now has a warrant: averages and type (owner, *"5/13"*, *"ema"*); set (`D-061`);
+**applied to close** (`MMM.tpl` `apply=0` ×6 `[TOOLING]`, and both project tools already use
+`close`); timeframe (owner); trigger event (owner); entry price (owner, §1).
+
+### ⛔⛔ BUT IT IS A TIMING GATE, NOT A SIGNAL — established by the owner's own wording
+
+> *"**If I decide to take an entry** … then I need to **wait for** the ema cross."*
+
+⭐⭐ **The decision to enter — and its DIRECTION — is made BEFORE the cross is consulted.** The cross
+is a **timing condition on an entry already chosen**, not the thing that chooses it.
+
+⭐ **That dissolves `A-143`'s direction row rather than answering it:** direction was never a property
+of the cross rule — it belongs to the **setup**, which `D-055` fixes as the **M/W formation**. And
+**`A-011` (M/W anatomy) is `DO NOT CODE`**, so:
+
+| | |
+|---|---|
+| ✅ **COMPUTABLE** | *"Given a decision to go long/short on M15, WHEN do I enter?"* |
+| ⛔ **NOT COMPUTABLE** | *"Should I enter, and in which direction?"* — blocked on `A-011` |
+
+⭐ **For the setup-detection agent that is precisely the useful half.** ⛔ **Tier 1 must not be
+described as a complete entry signal.**
+
+### ⭐ M15 IS NOW DIRECTLY ATTESTED — a different warrant from the earlier inference
+
+⚠️ **The distinction the request asked for, recorded explicitly.** Previously M15 was only *"the
+better-supported arm"* — an **inference** from V09 `[00:41:43]`'s Tier 1 *"the 800 on the 15 minute"*
+plus V19/V20's M15 entry material — and it was **NOT adopted**, because the owner's own templates run
+**3–2 the other way (H1)**. ⭐ **It is now adopted on DIRECT OWNER ATTESTATION about his own
+practice, not on that inference.**
+
+⭐ **The two agree, and the agreement is not the warrant.** Had he said H1, **H1 would be the
+answer**, and V09's M15 fact would have stayed a fact about *the course* rather than his practice —
+the `D-052` §3.5 distinction again.
+
+⚠️ **The 3–2 split is OUTRANKED, NOT EXPLAINED.** `MMM.tpl` is **named for this method** and is saved
+on **H1**. Why his MMM-named templates sit on H1 while he trades the entry on M15 is **unresolved** —
+plausibly analysis charts rather than entry charts, but he has not said so. **Blocks nothing;** asked
+as `D-058` §7 Q7.
+
+⚠️ **And the generalisation is recorded and NOT used.** *"A universal rule… any time frame"* licenses
+**the owner** to wait for the cross on any chart; it does **not** license the project to compute
+tier 1 on H1 or H4. **For MMM the parameter is M15, flat.**
+
+### ⚠️ TWO DECLARED CONVENTIONS (`D-027`) — neither a blocker, both must be stated
+
+1. That the **awaited cross is the one in the TRADE'S direction** (down-cross for a short off an M).
+   Near-certain; **the owner has not said it.**
+2. That the **EMAs are applied to CLOSE.** TOOLING-attested (`MMM.tpl` `apply=0` ×6) and already what
+   both tools do — **attested by an artifact, not stated by the owner.**
+
+### ⛔ UNCHANGED
+
+**`D-058` anchors 2, 3 and 4 still block tiers 2 and 3** — *"confidence and probability"* (subjective
+gate), *"second leg"* (→ `A-011`), *"the outside bar"* (undefined). ⛔ **`A-139`, `A-133`, `A-011`,
+`A-090`, `A-115`, `A-056`, `A-020` unchanged.** ⚠️ **`A-143` has still never been opened in the
+ledger** — it is a proposal in `D-058` §4.1, now marked **CLOSED** there, so if it is ever opened it
+should be opened **already closed**, as a record of a question asked and answered.

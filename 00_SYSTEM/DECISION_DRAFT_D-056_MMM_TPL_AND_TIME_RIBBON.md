@@ -70,12 +70,12 @@ single fact the owner can supply in one sentence. §4.5.
 > template's values are stored in). Those are two different unknowns and only one was answered.**
 > ⚠️⚠️ **And converting to EST makes the residual gap SHARPER, not smaller: the ribbon's two best
 > anchors now demand offsets EXACTLY ONE HOUR APART.** `A-105`'s one-hour question reappears from an
-> independent direction instead of being closed by it. **Proposed `C-030`** (renumbered — V19 has
+> independent direction instead of being closed by it. **Proposed `C-032`** (renumbered — V19 has
 > taken `C-029`).
 >
 > ⚠️ **RENUMBERING.** V19 landed on `review/v19` while this draft was open, taking `A-132`–`A-135`
-> and `C-029`. This draft's proposed contradiction is renumbered **`C-030`**, and `D-055`'s
-> proposed `A-132` is renumbered **`A-136`**, under the `D-047` collision convention.
+> and `C-029`. This draft's proposed contradiction is renumbered **`C-032`**, and `D-055`'s
+> proposed `A-132` is renumbered **`A-142`**, under the `D-047` collision convention.
 
 ---
 
@@ -92,12 +92,12 @@ single fact the owner can supply in one sentence. §4.5.
 > template's values are stored in). Those are two different unknowns and only one was answered.**
 > ⚠️⚠️ **And converting to EST makes the residual gap SHARPER, not smaller: the ribbon's two best
 > anchors now demand offsets EXACTLY ONE HOUR APART.** `A-105`'s one-hour question reappears from an
-> independent direction instead of being closed by it. **Proposed `C-030`.**
+> independent direction instead of being closed by it. **Proposed `C-032`.**
 >
 > ⚠️ **RENUMBERING — TWICE, BY TWO CONCURRENT SESSIONS.** This draft was written as `D-055` and is
 > now `D-056`: a parallel session adopted `D-054` (the `D-053` §3(a) withdrawal) and renumbered
 > this family. Separately, **V19 landed on `review/v19` taking `A-132`–`A-135` and `C-029`**, so
-> this draft's proposed contradiction is **`C-030`** and `D-055`'s proposed ambiguity is **`A-136`**,
+> this draft's proposed contradiction is **`C-032`** and `D-055`'s proposed ambiguity is **`A-142`**,
 > under the `D-047` collision convention.
 >
 > ✅ **THE BODY HAS NOW BEEN SWEPT AND CORRECTED** (2026-08-14, at owner direction). ⚠️ **One real
@@ -165,6 +165,15 @@ would repeat the `D-041` error the `D-043` reversal exists to warn about.**
 
 ⭐ **It is, however, a real divergence and it is owed to the owner as a question** — §7 Q3.
 **`A-020` is untouched. `D-043` stands. Nothing is coded.**
+
+> ### ✅ ANSWERED 2026-08-15 — the owner ruled, and it went `D-043`'s way.
+>
+> > *"The canonical one is the one that has **5=mustard, 13=ketchup**"* — owner, 2026-08-15
+>
+> ⭐ **The canonical set is `5 · 13 · 50 · 200 · 800`. `MMM.tpl`'s `4 · 10 · … · 3200` is NOT
+> canonical, and `3200` is dropped.** See `DECISION_DRAFT_D-061_CANONICAL_EMA_SET.md` (**NOT
+> ADOPTED**). ⛔ **`A-020`'s status is still unchanged** and it stays on the §3.4 re-check list —
+> this is owner **preference**, not evidence about what the course taught.
 
 ---
 
@@ -352,7 +361,7 @@ one table:
 > **They cannot both be right.** §4.5's original finding survives the ruling **in a sharper form**:
 > the question is no longer *"which timezone?"* but *"which of two one-hour-apart alignments?"*
 
-### 4A.3 ⭐ PROPOSED `C-030` — the ribbon and the V16 slide disagree by one hour
+### 4A.3 ⭐ PROPOSED `C-032` — the ribbon and the V16 slide disagree by one hour
 
 **On the better-supported UTC+2 arm**, V16's printed *"London Session Start 2:00 To 3:00 AM, EST"*
 (**Tier 1**) and the ribbon's London market-open box at `03:00–04:00 EST` (**`TOOLING`**) describe
@@ -371,7 +380,7 @@ it is **not adjudicated here** — for a reason that is not deference:
 > rungs disagree, the record is load-bearing, **do not adjudicate.**
 
 ```text
-C-030 (proposed) -- V16's printed "London Session Start 2:00 To 3:00 AM, EST"
+C-032 (proposed) -- V16's printed "London Session Start 2:00 To 3:00 AM, EST"
   [TIER 1] vs !sm_WorkTime v1.5b's London market-open box at 03:00-04:00 EST
   [TOOLING, on the UTC+2 arm]. One hour apart, same event.
   NOT ADJUDICATED. Tier 1 outranks TOOLING if they conflict -- but a benign
@@ -444,7 +453,7 @@ switch, so the `Mid` family is **not** Camarilla.
 A-101 -- OPEN and DO NOT CODE. UNCHANGED BY THIS DRAFT.
 ```
 
-⭐ **The one thing that would change this: `PivotPoints.mq4` — the SOURCE.** With it,
+⭐ **The one thing that would change this: `PivotPoints.mq4` — the SOURCE.** ⚠️ *(Low priority as of 2026-08-15 — `D-059` §5A.)* With it,
 `Plot_middle`'s formula is readable in one line and `A-101`'s construction row becomes decidable at
 `TOOLING` tier — exactly as `mm_adr.mq4`'s source did for `A-100`'s range row in `D-051`. **§7 Q4.**
 
@@ -580,9 +589,14 @@ Forex222's `807876a6…`). `diff` shows **one moved declaration line and no func
 >    trigger is named so a session knows what to watch for: **any lesson showing a session box, an
 >    indicator PROPERTIES DIALOG for a time tool, a stated GMT offset, or a broker/server clock.**
 > 5. `MMM_SESSION_RIBBON.txt` stays a **draft tool**, citable by nothing, until the §4.4 test runs.
-> 6. ⭐ **`PivotPoints.mq4` (the SOURCE) is recorded as the single highest-value artifact the owner
->    could supply for `A-101`**, exactly as `D-051` §7 recorded the course's own ADR build for
->    `A-100`.
+> 6. ⚠️ ~~**`PivotPoints.mq4` (the SOURCE) is recorded as the single highest-value artifact the
+>    owner could supply for `A-101`**, exactly as `D-051` §7 recorded the course's own ADR build for
+>    `A-100`.~~ ⭐ **DOWNGRADED 2026-08-15 BY OWNER RULING** (`D-059` §5A): *"Pivot points aren't how
+>    I trade. It's an added bonus."* **Pivots are non-load-bearing for the owner's practice and are
+>    not in his canonical toolset, so this request drops to a LOW-PRIORITY nice-to-have.**
+>    ⛔ **`A-101` itself is NOT closed and its COURSE-STUDY priority is unchanged** — pivots are
+>    referenced in V10, V15, V16 (dedicated lesson) and V17. Superseded text retained per
+>    `REMEDIATION_PROTOCOL.md` §2.
 >
 > **Status:** ACTIVE — admission only; **every `A-xxx` remains OPEN**; the Pine port is a **DRAFT**
 
@@ -642,7 +656,8 @@ all.* **That test belongs to the V19 review, not to this draft**, and is flagged
    own attestation)? **And what is the 3200?** — it appears nowhere in the corpus at any tier. §3
    treats this as *your current practice*, not as evidence against `D-043`; confirm or correct that
    reading.
-4. ⭐ **Do you have `PivotPoints.mq4` — the SOURCE?** The compiled `.ex4` has a `Plot_middle` input
+4. ⚠️ **[LOW PRIORITY as of 2026-08-15 — see `D-059` §5A: *"Pivot points aren't how I trade. It's
+   an added bonus."*]** ~~⭐~~ **Do you have `PivotPoints.mq4` — the SOURCE?** The compiled `.ex4` has a `Plot_middle` input
    that is very likely `A-101`'s `M1`–`M4`, but **a variable name is not a formula**. The source
    would make `A-101`'s construction decidable in one line.
 5. **Do you attest `MMM.tpl` as your working configuration for this method**, in the sense you
@@ -651,7 +666,7 @@ all.* **That test belongs to the V19 review, not to this draft**, and is flagged
    winter, EDT in summer)?** §4A.4 — the two differ by an hour for half the year, and this is
    **the last unanswered half of `A-105`'s original question.** One line closes it.
 7. ⭐ **NEW — Q8: is your ribbon's London box at 2 AM EST or 3 AM EST on your own chart?** §4A.3 —
-   that single observation picks between the two server arms and settles `C-030` outright. **You can
+   that single observation picks between the two server arms and settles `C-032` outright. **You can
    read it straight off the chart; you do not need to remember the broker's offset.**
 8. **Is the Euro band deliberately off?** `draw_euro_box=false` is saved in both MMM templates — a
    configured band you have chosen not to display. That may be a real fact about how you read the

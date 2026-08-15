@@ -55,9 +55,42 @@ Spotlight sweep of the whole volume for `*adr*` and for every `.ex4 / .mq4 / .ex
 | **5** | `FX dynasty.tpl` | `Desktop/Trading/Indicators/` | — | Same `[ADR]` object family, later dates |
 | **6** | `Ultimate Blue.tpl` | `Desktop/Trading/Indicators/` | `ea22c8cf527921cef072586b6fa28296` | ⭐ **The exact artifact `D-045` already admitted** — and it carries a **third, different** ADR: `Daily Range PeterE`, `NumOfDays=10`, printing `ADR = 118.7  (10 days)  Today = 135.3` |
 
-⚠ **NOT FOUND anywhere on the volume:** the course's own `ADR 1.5 20100528 01 Mod 01`, in either
+⚠ ~~**NOT FOUND anywhere on the volume:** the course's own `ADR 1.5 20100528 01 Mod 01`, in either
 source or compiled form. A grep for its distinctive strings (`Reached=`, `To ADR High`,
-`Today's Range`) across every indicator folder and the MT4 install returns **zero files**.
+`Today's Range`) across every indicator folder and the MT4 install returns **zero files**.~~
+
+> ### ⛔⛔ CORRECTED 2026-08-15 — **THIS PARAGRAPH IS FALSE.** Original retained per `REMEDIATION_PROTOCOL.md` §2.
+>
+> The owner supplied a **BTMM indicator pack** on 2026-08-15
+> (`Desktop/Trading/Indicators/INDICATORS/`, 20 files). It contains **`!SM_ADR_Marker.ex4`**
+> (md5 `cddecc008ea0314238361ea0535747dd`), and **all three "zero files" strings are in it**:
+>
+> ```text
+> ADR Value=  | Reached=  | Today's Range=  | T's High=  | T's Low=
+> Target High=  | Target Low=  | To ADR High=  | To ADR Low=
+> ```
+>
+> ⭐ **That is the complete nine-field readout §3 reconstructed from the V07 frames.** ⚠️ **It is
+> version `ADR 1.00 20051027 01 Mod 01`, NOT the course's `ADR 1.5 20100528 01 Mod 01`** — the same
+> indicator five years earlier, and the build whose stamp §4 already found saved in
+> `3M-shadow-boxes-15M.tpl`. **That loop closes: the tool that wrote that comment is this file.**
+>
+> ⚠️⚠️ **AND PART 3 OF THIS DRAFT IS NOW IN DOUBT AND MUST BE RE-ARGUED BEFORE ADOPTION.** Part 3
+> provisionally closes `A-100`'s **range definition** as *"`high − low`, NOT true range"* on
+> `mm_adr` — while conceding *"`mm_adr` is not the indicator on the course's charts."* ⭐ **The
+> course-family indicator's period input is named `ATRPeriod`**, and ATR is by definition **true
+> range**. ⛔ **This does not overturn Part 3** — an input name is not an implementation, the binary
+> is compiled, and the same string table also carries `High-Low/adr-Reached`, which points the other
+> way. **But a named artifact now argues against Part 3 and the draft may not be adopted without
+> addressing it.**
+>
+> ⭐ **Also newly relevant to `A-100`:** `UseManualADR` / `ManualADRValuePips` permit a **hand-set
+> ADR** — so a displayed value may not be computed at all, a possibility no `A-100` candidate has
+> considered. And `TimeZoneOfData` / `TimeZoneOfSession` are **two separate timezone inputs**,
+> bearing on §5's *"the UTC offset stays unknown"*.
+>
+> **Full survey and the proposed admission: `BTMM_INDICATOR_PACK_SURVEY_2026-08-15.md` (`D-060`,
+> UNADOPTED). `D-051` REMAINS UNADOPTED and `A-100` REMAINS OPEN.**
 
 Note for the record: `Documents/Forex indicator/Forex222/` also holds `MM4XSF_TDI (1).ex4` —
 **the TDI family that grounded `D-045` lives in this same folder.** The `mm_` / `MM4XSF_` prefix
