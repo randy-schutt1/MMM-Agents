@@ -228,3 +228,88 @@ Recording it honestly costs nothing now and protects every downstream claim that
 - This kit and its branch stay **unmerged** either way. They are test artifacts. If the picked
   variant is later promoted into `MMM_TDI.txt`, that is a separate, deliberate act on the
   `feature/tradingview-mmm-indicator` line, carrying the `OWNER EMPIRICAL PREFERENCE` tag with it.
+
+---
+
+# 7. ⭐⭐ OUTCOME — **THE OWNER PICKED. 2026-08-14. VARIANT A, THE RSI LINE.**
+
+> ## ⛔ THIS EXERCISE IS CLOSED. There is nothing left to pick.
+>
+> §1–§6 above are retained **unedited** and describe the kit **as it stood while the question was
+> open**. §6's *"Report back… A, B, or neither"* is **discharged, not still owed.** Read this
+> section first; the rest is the record of how the answer was obtained.
+
+## 7.1 The ruling
+
+**Owner, 2026-08-14, direct instruction, after using the kit:**
+
+> *"It's definitely not the market basis. It's the RSI [line]."*
+
+> *"the one we created a couple days ago is the one I want to use. We can apply all the same
+> concepts that are taught with that particular TDI."*
+
+| | |
+|---|---|
+| **Picked** | ⭐ **VARIANT A — `MMM_TDI_RSI_BASIS.txt`** — `dev = bandMult * ta.stdev(rsiVal, bandLen)` |
+| **Rejected** | **VARIANT B — `MMM_TDI_MARKETBASE_BASIS.txt`** — `dev = bandMult * ta.stdev(baseLine, bandLen)` |
+| **Basis of the judgment** | The owner's own **visual / experiential** recognition of the indicator, informed by §3's measurement (**8.7%** of bars outside the bands under A against **52.6%** under B — an event versus the default state) |
+| **Logged as** | **`OWNER EMPIRICAL PREFERENCE`** — exactly the tier §6 pre-specified, and §6's ⛔ list was honoured item for item |
+| **Ledger** | **`D-052`** (new decision); **`C-021` §8** (closed); `A-086` basis line replaced, **status unchanged**; `A-031`/`A-032` pointers, **no status change**; **`REVIEW_INDEX.md` item 187 CLOSED**; `SOURCING_HIERARCHY.md` §3.5 discharged |
+
+⚠️ **The measurement did not decide it and is not the warrant.** A comparison of two candidate
+constructions can say what each *looks like*; it cannot say which one the course taught. The warrant
+is the owner's instruction and nothing else — which is precisely why §6 insisted on a tier of its
+own, and why that insistence was followed.
+
+⚠️⚠️ **AND THE CORPUS DISAGREES WITH THE PICK.** §1's table shows variant B carrying **Tier 1 V14
+`[00:45:09]`** *and* **Tier 2 `MMM-NOTES` p.45**. Both still stand, unretracted. **The ruling
+overrides them; it does not reconcile them, and it must never be reported as the corpus agreeing.**
+Variant A's V12 arm agreeing with the outcome is a **coincidence** — the owner neither cited nor was
+shown V12, and `D-048` rung 1 had already found that arm *"arguably answers… NOT clean."*
+
+## 7.2 ⛔ §4 IS UNAFFECTED. **NOTHING WAS UNBLOCKED.**
+
+§4 warned *"nothing is unblocked whichever way you pick"*, and it was right:
+
+- **`A-086` stays `DO NOT CODE`** — the bands' **PERIOD** is still never stated in Tier 1 or Tier 2.
+- **`A-031`** and **`A-032`** stay **uncomputable**, with **no status change**.
+- **No backtest** depending on these numbers may be reported as a test of the method.
+- **`C-021` was not deleted or downgraded** — it closed with both statements intact and visible.
+
+**The ruling bought clarity in the record. It did not buy an unblock.**
+
+## 7.3 ⭐ WHAT IS CANONICAL NOW — AND IT IS **NOT** THESE TWO FILES
+
+**`06_MANUAL_BACKTEST/tools/MMM_TDI.txt` is the standardised project TDI tool.** The owner named it:
+*"the one we created a couple days ago"* — commit `076c066`, **2026-08-13** — as against this kit's
+`93db3aa`, **2026-08-14**. Confirmed from commit timestamps.
+
+**It already computed the RSI basis**; what it got wrong was its *stated reason* — it cited
+`MMM-NOTES` p.45 in support, which is variant **B**'s Tier 2 warrant. That is corrected on
+`feature/tradingview-mmm-indicator`.
+
+| File | Status from 2026-08-14 |
+|---|---|
+| **`MMM_TDI.txt`** | ⭐ **CANONICAL. Build new work on this file.** |
+| `MMM_TDI_RSI_BASIS.txt` | **RETAINED AS HISTORY.** The arm that was picked — but **not** the tool. **Do not build on it.** It differs from canon deliberately: multiplier `2.0` (canon carries `1.6185`, still open) and Pine **v5** (canon is **v6**) |
+| `MMM_TDI_MARKETBASE_BASIS.txt` | **RETAINED AS HISTORY.** The **rejected** arm. Kept because it is the evidence of how the ruling was obtained — deleting the losing arm would leave a record of a choice with nothing to choose between |
+
+**Neither variant is deleted, and neither is a starting point.** Copying either one forward would
+reintroduce the two deliberate departures listed above.
+
+## 7.4 ⚠️ ONE DEPARTURE FROM §6, STATED RATHER THAN DONE QUIETLY
+
+§6's last bullet says **this kit and its branch stay unmerged either way.** **They are now merged to
+integration.** That instruction is deliberately not followed, and the reasoning is recorded here so
+it reads as a decision rather than as drift:
+
+- Its stated ground was that the kit produces **un-adopted test artifacts** for an **open** exercise.
+  The exercise is **closed**, and the kit is now **cited evidence** — `D-052`'s Evidence line and
+  `C-021` §8 both point at §3's measurement and at §6's tier specification.
+- Leaving cited evidence on an unmerged branch is a failure mode this project has already hit:
+  `D-048`'s own Evidence line had to carry the warning *"unmerged — re-verify against the merged tree
+  before citing."*
+- **The two Pine files are unchanged by the merge.** Only this README is amended, and only by
+  appending §7.
+
+Recorded at **`D-052` consequence 7**.
