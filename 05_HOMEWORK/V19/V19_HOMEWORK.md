@@ -78,12 +78,20 @@ that no single one is privileged, and **none of them is presented as the course'
 
 Session range = post-box high − post-box low (`03:00`–`17:00`), in pips.
 
-| arm | window | `ADR5` median | `ADR10` median | `ADR20` median | next day exceeds `ADR10` |
-|---|---|---|---|---|---|
-| A | `W-A` (2015) | 114.64 | 112.06 | 110.52 | 37.8 % |
-| A | `W-B` (2014–15) | 95.42 | 99.45 | 101.11 | 39.8 % |
-| B | `W-A` | 115.74 | 114.45 | 112.05 | 39.0 % |
-| B | `W-B` | 95.92 | 100.05 | 102.21 | 40.4 % |
+**⚠️ Wilson 95 % intervals added 2026-08-15 — `REVIEW_INDEX.md` item 302's secondary instance
+(`BACKTEST_EVIDENCE_STANDARD.md` §4.2). Every rate below now carries `k/n` and its interval, and
+none of the point figures moved.**
+
+| arm | window | `ADR5` median | `ADR10` median | `ADR20` median | next day exceeds `ADR10` | **Wilson 95 %** |
+|---|---|---|---|---|---|---|
+| A | `W-A` (2015) | 114.64 | 112.06 | 110.52 | 37.8 % (93/246) | **`[32.0, 44.0]`** |
+| A | `W-B` (2014–15) | 95.42 | 99.45 | 101.11 | 39.8 % (200/502) | **`[35.7, 44.2]`** |
+| B | `W-A` | 115.74 | 114.45 | 112.05 | 39.0 % (96/246) | **`[33.1, 45.2]`** |
+| B | `W-B` | 95.92 | 100.05 | 102.21 | 40.4 % (203/502) | **`[36.2, 44.8]`** |
+
+**All four intervals overlap heavily**, so the *"roughly two days in five"* reading below is
+supported and no arm/window difference in this rate is established. Raw:
+`data/rev_hw_v19_intervals.txt`.
 
 **Descriptive reading, offered as description only:**
 
@@ -104,10 +112,19 @@ How often the **previous** session's extreme is reached in the **next** session:
 
 | arm | window | prev high touched | prev low touched | both | neither |
 |---|---|---|---|---|---|
-| A | `W-A` | 46.3 % | 52.2 % | 12.9 % | 14.5 % |
-| A | `W-B` | 47.0 % | 51.5 % | 12.1 % | 13.7 % |
-| B | `W-A` | 45.9 % | 52.2 % | 12.2 % | 14.1 % |
-| B | `W-B` | 46.4 % | 51.9 % | 11.9 % | 13.7 % |
+| A | `W-A` | 46.3 % (118/255) | 52.2 % (133/255) | 12.9 % | 14.5 % |
+| A | `W-B` | 47.0 % (240/511) | 51.5 % (263/511) | 12.1 % | 13.7 % |
+| B | `W-A` | 45.9 % (117/255) | 52.2 % (133/255) | 12.2 % | 14.1 % |
+| B | `W-B` | 46.4 % (237/511) | 51.9 % (265/511) | 11.9 % | 13.7 % |
+
+**⚠️ Wilson 95 % intervals, added 2026-08-15 (item 302):**
+
+| arm / window | prev **high** | prev **low** | both | neither |
+|---|---|---|---|---|
+| A `W-A` | `[40.3, 52.4]` | `[46.0, 58.2]` | `[9.4, 17.6]` | `[10.7, 19.4]` |
+| A `W-B` | `[42.7, 51.3]` | `[47.1, 55.8]` | `[9.6, 15.3]` | `[11.0, 17.0]` |
+| B `W-A` | `[39.9, 52.0]` | `[46.0, 58.2]` | `[8.7, 16.7]` | `[10.4, 18.9]` |
+| B `W-B` | `[42.1, 50.7]` | `[47.5, 56.2]` | `[9.4, 15.0]` | `[11.0, 17.0]` |
 
 **Descriptive reading:**
 
@@ -118,6 +135,12 @@ How often the **previous** session's extreme is reached in the **next** session:
   45.9–47.0 %). ⚠ **No explanation is offered.** GBP/USD fell over much of this period, which would
   produce exactly this asymmetry without any dealer behaviour, and **this measurement cannot
   separate the two.** Recorded as an observation, not a finding.
+  * ⚠️⚠️ **AND THE INTERVALS ADDED 2026-08-15 WEAKEN IT FURTHER: THE ASYMMETRY IS NOT ESTABLISHED
+    AT ALL.** On every cell the high and low intervals **overlap substantially** — on `A｜W-A`,
+    `[40.3, 52.4]` against `[46.0, 58.2]`. **The consistency across four cells is real and the
+    gap itself is within sampling error**, which is a stronger reason to leave it as an
+    observation than the confound was. ⭐ **The original bullet's caution was right; the interval
+    shows it was not cautious enough.**
 * **Both extremes are taken on ~12 % of days and neither on ~14 %.** So ~74 % of days take exactly
   one of the two.
 
@@ -133,10 +156,28 @@ Maximum pullback from the session high over the following **8 bars (2 h)**:
 
 | arm | window | n | median | IQR | in 15–25 | < 15 | > 50 |
 |---|---|---|---|---|---|---|---|
-| A | `W-A` | 238 | **45.90** | 33.68 – 64.40 | 10.1 % | 2.1 % | 40.8 % |
-| A | `W-B` | 474 | **40.75** | 27.52 – 58.50 | 16.0 % | 3.8 % | 34.4 % |
-| B | `W-A` | 234 | **46.10** | 33.95 – 62.73 | 8.6 % | 1.7 % | 41.0 % |
-| B | `W-B` | 469 | **40.60** | 28.70 – 57.20 | 14.3 % | 3.2 % | 33.5 % |
+| A | `W-A` | 238 | **45.90** | 33.68 – 64.40 | 10.1 % (24) | 2.1 % (5) | 40.8 % (97) |
+| A | `W-B` | 474 | **40.75** | 27.52 – 58.50 | 16.0 % (76) | 3.8 % (18) | 34.4 % (163) |
+| B | `W-A` | 234 | **46.10** | 33.95 – 62.73 | 8.5 % (20) | 1.7 % (4) | 41.0 % (96) |
+| B | `W-B` | 469 | **40.60** | 28.70 – 57.20 | 14.3 % (67) | 3.2 % (15) | 33.5 % (157) |
+
+**⚠️ Wilson 95 % intervals, added 2026-08-15 (item 302):**
+
+| arm / window | in 15–25 | < 15 | > 50 |
+|---|---|---|---|
+| A `W-A` | `[6.9, 14.6]` | `[0.9, 4.8]` | `[34.7, 47.1]` |
+| A `W-B` | `[13.0, 19.6]` | `[2.4, 5.9]` | `[30.3, 38.8]` |
+| B `W-A` | `[5.6, 12.8]` | `[0.7, 4.3]` | `[34.9, 47.4]` |
+| B `W-B` | `[11.4, 17.7]` | `[1.9, 5.2]` | `[29.4, 37.9]` |
+
+⭐ **The `> 50 %` intervals are the load-bearing ones and they are comfortably clear of zero on
+every cell** — the *"a third to two-fifths of sessions exceed 50 pips"* reading below survives its
+interval. ⚠ **One correction the interval pass surfaced, and its cause is DOUBLE ROUNDING:** `B｜W-A`'s
+*in 15–25* is **8.5 %, not 8.6 %**. The true value is `20/234 = 8.547 %`; `hw_v19.py` stores the
+fraction rounded to four places (`0.0855`) and the table then rendered *that* to one place, giving
+`8.6`. **The count is the authority and it is `20/234`.** ⭐ **Recorded because the same
+round-then-round-again path runs through every percentage in this file** — it is the only cell
+where it changes a displayed digit, checked. **No reading changes.**
 
 ⚠️⚠️ **THIS IS NOT A REFUTATION OF V19 AND MUST NOT BE READ AS ONE. THE TWO QUANTITIES ARE
 DIFFERENT.**

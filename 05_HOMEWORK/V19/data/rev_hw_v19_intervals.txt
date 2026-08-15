@@ -1,0 +1,48 @@
+
+=== arm A / W-A ===
+  next day exceeds ADR5       108/ 251 =  43.0%   Wilson95 [37.1%, 49.2%]
+  next day exceeds ADR10       93/ 246 =  37.8%   Wilson95 [32.0%, 44.0%]
+  next day exceeds ADR20       85/ 236 =  36.0%   Wilson95 [30.2%, 42.3%]
+  prev high touched           118/ 255 =  46.3%   Wilson95 [40.3%, 52.4%]
+  prev low touched            133/ 255 =  52.2%   Wilson95 [46.0%, 58.2%]
+  both touched                 33/ 255 =  12.9%   Wilson95 [ 9.4%, 17.6%]
+  neither touched              37/ 255 =  14.5%   Wilson95 [10.7%, 19.4%]
+  pullback in 15-25            24/ 238 =  10.1%   Wilson95 [ 6.9%, 14.6%]
+  pullback < 15                 5/ 238 =   2.1%   Wilson95 [ 0.9%,  4.8%]
+  pullback > 50                97/ 238 =  40.8%   Wilson95 [34.7%, 47.1%]
+
+=== arm A / W-B ===
+  next day exceeds ADR5       218/ 507 =  43.0%   Wilson95 [38.8%, 47.3%]
+  next day exceeds ADR10      200/ 502 =  39.8%   Wilson95 [35.7%, 44.2%]
+  next day exceeds ADR20      184/ 492 =  37.4%   Wilson95 [33.2%, 41.8%]
+  prev high touched           240/ 511 =  47.0%   Wilson95 [42.7%, 51.3%]
+  prev low touched            263/ 511 =  51.5%   Wilson95 [47.1%, 55.8%]
+  both touched                 62/ 511 =  12.1%   Wilson95 [ 9.6%, 15.3%]
+  neither touched              70/ 511 =  13.7%   Wilson95 [11.0%, 17.0%]
+  pullback in 15-25            76/ 474 =  16.0%   Wilson95 [13.0%, 19.6%]
+  pullback < 15                18/ 474 =   3.8%   Wilson95 [ 2.4%,  5.9%]
+  pullback > 50               163/ 474 =  34.4%   Wilson95 [30.3%, 38.8%]
+
+=== arm B / W-A ===
+  next day exceeds ADR5       107/ 251 =  42.6%   Wilson95 [36.7%, 48.8%]
+  next day exceeds ADR10       96/ 246 =  39.0%   Wilson95 [33.1%, 45.2%]
+  next day exceeds ADR20       87/ 236 =  36.9%   Wilson95 [31.0%, 43.2%]
+  prev high touched           117/ 255 =  45.9%   Wilson95 [39.9%, 52.0%]
+  prev low touched            133/ 255 =  52.2%   Wilson95 [46.0%, 58.2%]
+  both touched                 31/ 255 =  12.2%   Wilson95 [ 8.7%, 16.7%]
+  neither touched              36/ 255 =  14.1%   Wilson95 [10.4%, 18.9%]
+  pullback in 15-25            20/ 234 =   8.5%   Wilson95 [ 5.6%, 12.8%]
+  pullback < 15                 4/ 234 =   1.7%   Wilson95 [ 0.7%,  4.3%]
+  pullback > 50                96/ 234 =  41.0%   Wilson95 [34.9%, 47.4%]
+
+=== arm B / W-B ===
+  next day exceeds ADR5       213/ 507 =  42.0%   Wilson95 [37.8%, 46.4%]
+  next day exceeds ADR10      203/ 502 =  40.4%   Wilson95 [36.2%, 44.8%]
+  next day exceeds ADR20      196/ 492 =  39.8%   Wilson95 [35.6%, 44.2%]
+  prev high touched           237/ 511 =  46.4%   Wilson95 [42.1%, 50.7%]
+  prev low touched            265/ 511 =  51.9%   Wilson95 [47.5%, 56.2%]
+  both touched                 61/ 511 =  11.9%   Wilson95 [ 9.4%, 15.0%]
+  neither touched              70/ 511 =  13.7%   Wilson95 [11.0%, 17.0%]
+  pullback in 15-25            67/ 469 =  14.3%   Wilson95 [11.4%, 17.7%]
+  pullback < 15                15/ 469 =   3.2%   Wilson95 [ 1.9%,  5.2%]
+  pullback > 50               157/ 469 =  33.5%   Wilson95 [29.4%, 37.9%]

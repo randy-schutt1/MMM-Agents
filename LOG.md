@@ -10050,3 +10050,84 @@ fork added **no `A-1xx` and no `C-0xx`**, so `A-132`–`A-135` and `C-029` remai
 
 Student resubmission of V19 with items 302–304 applied. **A short round — item 302 adds figures
 rather than changing any.**
+
+---
+
+## 2026-08-15 — V19 Fix Round (item 302), AT OWNER DIRECTION
+
+### ⚠️⚠️ `D-003` STATUS, DECLARED FIRST
+
+**`D-003` IS NOT SATISFIED FOR THIS ROUND.** The session that raised item 302 in `V19_REVIEW_R1.md`
+also applied and closed it, on the owner's explicit authorisation (*"Fix the major"*) **for this
+round only**. **There was no R2 and no independent re-review.** Item 302 is recorded
+**`CLOSED — SELF-VERIFIED AT OWNER DIRECTION`**, never `CLOSED — VERIFIED`. **Fifth use of the
+pattern**, after V09 R2 (81–83), V10 R1 (91–94), V12 R1 (137–138) and V14 R1 (172–176).
+
+⭐ **AND THE OWNER DID NOT DOWNGRADE THE SEVERITY.** R1 put item 302's severity to him as an
+overrulable call; he directed a **fix** instead, which is the other available answer. **The finding
+stands at `MAJOR` in the permanent record and the gate opens because it was FIXED, not because it
+was reclassified.** `REVIEW_PROTOCOL.md` §8's bar on softening a `MAJOR` to unblock work is
+untouched by this outcome.
+
+### What Was Changed
+
+**`BT_V19_0001.md`** — a new **§2a** carrying the intervals and the working; a qualifying block
+under §0's verdict; an amendment note on §0a's `EVIDENTIAL` classification stating plainly that
+**as originally filed the classification was not earned**; Wilson columns and `k/n` on §2's
+secondary-outcome table; and a new first bullet in §5's *"does NOT establish"* list.
+
+**`V19_HOMEWORK.md`** — `k/n` and Wilson 95 % intervals on every rate in §§4–6.
+
+⛔ **`PT-047` IS NOT EDITED** (`COMMON_PROTOCOL.md` §9 rule 7). ⛔ **The verdict and the decision
+rule are UNCHANGED**, and `BT_V19_0001.md` §2a states in terms why re-scoring a pre-registered rule
+against a criterion invented after the numbers were seen would have been `REVIEW_PROTOCOL.md` §17.5
+run backwards.
+
+### ⭐ THE RE-VERIFICATION IMPROVED THE FIGURES RATHER THAN CONFIRMING THEM VERBATIM
+
+Re-run in a clean isolated worktree before anything was written:
+
+* **`run_pt047.py` re-run → `pt047_results.json` BYTE-IDENTICAL.** No number in §0 or §2 moved.
+* ⭐ **The two median intervals are now EXACT distribution-free order-statistic intervals, not
+  bootstraps.** median `O1`(`HELD`) = 43.20 **`[30.40, 55.40]`**, achieved coverage **97.6 %** —
+  **wider** than R1's bootstrap `[32.30, 54.50]`, deterministic, seed-free, and reported at its
+  real coverage rather than relabelled 95 %.
+* ⚠️ **R1's `Δ` interval carries Monte Carlo error.** Two seeds give `[7.90, 38.90]` and
+  `[8.20, 38.90]` against R1's `[7.95, 38.60]` — **±0.3 pips**. Now reported to **one decimal** as
+  `≈ [7.9, 38.9]`. ⭐ **The finding does not depend on the seed: the lower bound sits below the
+  pre-registered floor of 10 on every seed tried, and the exact median interval straddles 50 more
+  widely than the bootstrap did. UNCHANGED AND SLIGHTLY STRENGTHENED.**
+* **Hodges-Lehmann shift = +22.20 pips**, deterministic, **3.55 pips below** the difference of
+  medians — recorded because the pre-registered statistic is the more favourable of the two.
+
+### ⭐ TWO THINGS THE FIX FOUND THAT R1 DID NOT — item **316**
+
+1. ⚠️ **A DOUBLE-ROUNDING PATH RUNS THROUGH EVERY PERCENTAGE IN `V19_HOMEWORK.md`.** `hw_v19.py`
+   stores each rate rounded to four places and the tables render *that* to one. On `B｜W-A`'s
+   *pullback in 15–25*: `20/234 = 8.547 %` → stored `0.0855` → displayed **`8.6 %`**, true
+   **`8.5 %`**. ⭐ **All 40 rates were checked against recomputed counts; this is the ONLY cell
+   where a displayed digit moves.** Counts are now printed beside every rate.
+2. ⚠️⚠️ **THE HI/LO ASYMMETRY IS NOT ESTABLISHED AT ALL.** §5 recorded the low being touched more
+   often than the high *"consistently, on every cell"* and declined to explain it, citing a trend
+   confound. **The Wilson intervals overlap substantially on every cell** — `A｜W-A` is
+   `[40.3, 52.4]` against `[46.0, 58.2]`. **The gap is within sampling error before the confound
+   is reached.** ⭐ **The original bullet's caution was right; the interval shows it was not
+   cautious enough**, and §5 now says so. **This is `BACKTEST_EVIDENCE_STANDARD.md` §4.2's own
+   rationale biting on a real claim in this corpus.**
+
+### Gate and Merge
+
+⭐ **STANDING TALLY: 0 CRITICAL / 0 MAJOR / 3 MINOR / 19 NOTE. V20's GATE IS OPEN** under `D-024`'s
+second row — minors **deferred, not forgiven**. ⚠️ **Items 303 and 304 are still OWED before V19
+can reach `COMPLETE`**, and ⚠️ **V19 is NOT `COMPLETE`**: `D-004` reserves that to a reviewer
+`PASS`, and none has been given.
+
+**Merged to integration.** ⭐ **The `D-047` re-check was re-run against the tip AT MERGE TIME**
+(`444ab4e` — three further commits after `cf1fda9`, including `D-057`): highest records on the tip
+are still `A-131`, `C-028` and item 284, so **`A-132`–`A-135`, `C-029` and items 285–316 were all
+free and no renumber was owed.**
+
+### Next Review Trigger
+
+**Items 303 and 304**, and the independent `PASS` V19 still needs. ⚠️ **A future reviewer should
+note that item 302's closure was self-verified and may reopen it on the merits.**
