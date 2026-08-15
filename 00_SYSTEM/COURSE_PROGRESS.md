@@ -2713,7 +2713,7 @@ uses V16.
 |---|---|---|---|
 | 25% | V05 | `18_REVIEW/CUMULATIVE_25.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** |
 | 50% | V10 | `18_REVIEW/CUMULATIVE_50.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** |
-| 75% | V16 | `18_REVIEW/CUMULATIVE_75.md` | Not started — lesson gate cleared; targeted retest clearance pending |
+| 75% | V16 | `18_REVIEW/CUMULATIVE_75.md` | **COMPLETED — PROCEED WITH CORRECTIONS** (2026-08-15; final review authorized, specifications remain gated) |
 | 100% | All lessons passed | `18_REVIEW/FINAL_COURSE_REVIEW.md` | Not started |
 
 ---

@@ -2589,7 +2589,7 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 |---|---|---|---|
 | 25% | V05 (5/21 = 23.8%) | `CUMULATIVE_25.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** (2026-08-15) |
 | 50% | V10 (10/21 = 47.6%; existing assessment boundary) | `CUMULATIVE_50.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** (2026-08-15) |
-| 75% | V16 (16/21 = 76.2%) | `CUMULATIVE_75.md` | Ready — lesson gate and cumulative retest gate cleared |
+| 75% | V16 (16/21 = 76.2%) | `CUMULATIVE_75.md` | **COMPLETED — PROCEED WITH CORRECTIONS** (2026-08-15; final review authorized, specifications remain gated) |
 | Final | All lessons passed | `FINAL_COURSE_REVIEW.md` | Not started |
 
 ---
