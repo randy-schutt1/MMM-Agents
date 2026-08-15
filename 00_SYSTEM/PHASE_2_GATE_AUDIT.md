@@ -7,14 +7,14 @@
 ## Result
 
 ```text
-INDEPENDENT REVIEWER PASS: 13 / 21
-LATEST INDEPENDENT DECISION REVISE: 8 / 21
+INDEPENDENT REVIEWER PASS: 14 / 21
+LATEST INDEPENDENT DECISION REVISE: 7 / 21
 FINAL_COURSE_REVIEW PRECONDITION: FAILED
 MASTER SPECIFICATION: PROHIBITED
 MACHINE SPECIFICATION: PROHIBITED
 ```
 
-The thirteen independent passes are V01–V10, V12, V14, and V21. Eight lessons retain latest independent
+The fourteen independent passes are V01–V10, V12, V14, V16, and V21. Seven lessons retain latest independent
 `REVISE` decisions. A gate-opening minor-only `REVISE`, an owner-authorized fix, or a
 student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, D-004, and D-024.
 
@@ -30,7 +30,7 @@ student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, 
 | V13 | R1 `REVISE`, 2 minors | Remediation and R2 required |
 | V14 | R2 `PASS`, 0 findings | Independent re-review closed items 172–176; `COMPLETE` |
 | V15 | R1 `REVISE`, 6 minors | Remediation and R2 required |
-| V16 | R1 `REVISE`, 4 minors | Owner-directed self-verification requires independent R2 |
+| V16 | R2 `PASS`, 0 findings | Independent re-review closed items 222–225; `COMPLETE` |
 | V17 | R1 `REVISE`, 6 minors | Phase 2 remediation applied; independent R2 required |
 | V18 | R1 `REVISE`, 5 minors | Phase 2 remediation applied; independent R2 required |
 | V19 | R1 `REVISE`; major self-closed; 2 student-owned minors remain | Independent R2 must verify item 302 and the Phase 2 edits |
@@ -50,8 +50,8 @@ student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, 
 
 ## Resolution path
 
-1. Independently review existing owner-directed remediation for V16 and V19 item 302.
-   **V09, V10, V12, and V14 now hold independent passes.**
+1. Independently review existing owner-directed remediation for V19 item 302.
+   **V09, V10, V12, V14, and V16 now hold independent passes.**
 2. Remediate V11, V13, and V15, then independently re-review them.
 3. Independently re-review the 14 Phase 2 edits for V17–V20.
 4. Only after 21/21 independent passes, execute the 25/50/75 retrospective checkpoints and the

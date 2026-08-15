@@ -11717,3 +11717,14 @@ most complete. No lesson conclusion or quarantine disposition moved.
 were independently re-derived: quotation mood, marker-clock normalization, the 29-frame offset,
 twelve local ambiguity pointers, and the two-region calendar-gap scope all verify. No setup
 codability status, test result, or trading-edge claim moved. **Formal census: 13/21 PASS.**
+
+---
+
+## 2026-08-15 — PHASE 2 — V16 R2 INDEPENDENT PASS
+
+**Decision:** **PASS — 0 CRITICAL / 0 MAJOR / 0 MINOR / 1 NOTE, HIGH confidence.** Items 222–225
+were independently re-derived. The two real pivot-chart grids reproduce the stated midpoint
+relations while `DO NOT CODE` remains; the schematic now includes `R2`; a clean `PT-044` rerun is
+byte-identical to committed output (`n=894/777`, `O1=0.0727/0.0798`, delta `2.00`); and `Q-017`'s
+13-rewritten/9-identical census and exact `Visual Type` detector verify. No setup formula or
+trading edge was promoted. **Formal census: 14/21 PASS; 7/21 latest independent REVISE.**

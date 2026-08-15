@@ -3081,3 +3081,18 @@ CONFIRMED as recorded**, with 167's owed `PT-042` §5a amendment extended by ite
 | 175 | V14 R1 | Twelve moved records lacked local pointers | **All twelve records now point locally to the V14 pass; A-056 and A-084 states are correctly narrowed without false closure.** | ⛔ **CLOSED — VERIFIED** |
 | 176 | V14 R1 | `A-092` made a false corpus-wide count | **Manifest calendar audit confirms two anomalous regions; Week 5→7 known artifacts and Week 9→10 unknown gap are separately scoped.** | ⛔ **CLOSED — VERIFIED** |
 | 390 | **V14 R2** | **Historical self-verification boundary independently cured.** | R2 did not author the fixes and re-derived all five findings from source. | **`NOTE`** |
+
+
+> ### 🔢 NUMBERING — item 391, allocated 2026-08-15 by the V16 **R2** independent round under `D-047`
+>
+> Allocated against the current Phase 2 branch, where **390** was the highest item. No collision.
+
+## V16 — R2 (2026-08-15) — **`PASS`**, 0 CRITICAL / 0 MAJOR / 0 MINOR / 1 NOTE, HIGH confidence. **Items 222–225 CLOSED — VERIFIED. V16 is `COMPLETE`.**
+
+| # | Source | Item | Evidence | Disposition |
+|---|---|---|---|---|
+| 222 | V16 R1 | `A-101` wrongly generalized schematic non-evidence to all V16 frames | **Two real chart frames independently opened and re-measured. The labelled horizontal rows reproduce the midpoint relations within image-resolution tolerance. `A-101` now distinguishes visual corroboration from a stated formula and retains `DO NOT CODE`.** | ⛔ **CLOSED — VERIFIED** |
+| 223 | V16 R1 | Nine-level measurement listed only eight levels and omitted `R2` | **The schematic independently inspected: all nine labels and eight near-equal gaps are present; `R1→R2` and `CPP→R1` are now explicitly compared.** | ⛔ **CLOSED — VERIFIED** |
+| 224 | V16 R1 | `PT-044` ran four days before its pre-registered start | **Pre-registration and local runner clip checked. Clean rerun reproduced committed output byte for byte and left JSON unchanged: `n=894/777`, `O1=0.0727/0.0798`, median delta `2.00`; the 5-of-5 boundary pass and superseded figures are disclosed.** | ⛔ **CLOSED — VERIFIED** |
+| 225 | V16 R1 | `Q-017` falsely said every content line differed | **V15/V16 comparison verified: 13 rewritten and 9 identical lines. The exact `Visual Type` triple is now part of the invariant and the first-stage detector.** | ⛔ **CLOSED — VERIFIED** |
+| 391 | **V16 R2** | **Historical self-verification boundary independently cured.** | R2 did not author the fixes and independently re-derived all four findings from images, pre-registration, runner output, and quarantine files. | **`NOTE`** |
