@@ -161,6 +161,20 @@ yarn-error.log*
 # Same principle, one directory up: a vendor-availability finding is documentation
 # about where data can come from, not the data. Un-ignored 2026-08-14.
 !06_MANUAL_BACKTEST/datasets/HISTDATA_RECENCY_CHECK.md
+
+# The M15/H1 derivation (`feature/m15-h1-chart-backtest`, merged 2026-08-14)
+# widens the same rule rather than restating it: a per-dataset `README.md` and
+# the prose findings beside it are documentation about the corpus, and its QA
+# gate ships more report names than the three enumerated above. The globs below
+# subsume those explicit lines; the explicit lines are kept because the comment
+# on `QA_REPORT_EXT_RAW.txt` is load-bearing and would otherwise lose its anchor.
+# NOTE: that branch's own comment here claimed the M1 manifest "is in no branch
+# of this repository". That was true when it was written and is FALSE now —
+# `b97fa63` committed it. The HEAD prose above is the accurate record.
+!06_MANUAL_BACKTEST/datasets/*/README.md
+!06_MANUAL_BACKTEST/datasets/*/*.md
+!06_MANUAL_BACKTEST/datasets/*/QA_REPORT*.txt
+!06_MANUAL_BACKTEST/datasets/*/CROSSCHECK_REPORT.txt
 # ...but never the bars themselves.
 06_MANUAL_BACKTEST/datasets/**/*.csv
 
@@ -168,6 +182,17 @@ yarn-error.log*
 *.feather
 *.sqlite
 *.db
+
+# --------------------------------------------------------------------------
+# RENDERED STUDY CHARTS — bulk output of 06_MANUAL_BACKTEST/tools/
+# mmm_chart_render.py. Regenerate them from the committed script and the
+# checksummed CSVs rather than carrying hundreds of PNGs in history. A small
+# committed sample under `samples/` exists so a reviewer can see what the tool
+# produces without running it.
+# --------------------------------------------------------------------------
+06_MANUAL_BACKTEST/tools/chart_renders/**
+!06_MANUAL_BACKTEST/tools/chart_renders/samples/
+!06_MANUAL_BACKTEST/tools/chart_renders/samples/**
 
 # --------------------------------------------------------------------------
 # INTENTIONALLY TRACKED

@@ -2,18 +2,32 @@
 
 Provenance for chart data used in manual backtesting.
 
-## STATUS: ONE DATASET REGISTERED
+## STATUS: THREE BLOCKS REGISTERED ACROSS TWO DIRECTORIES
 
 | Dataset | Governing decision | Directory |
 |---|---|---|
 | HistData GBP/USD M1, 2013 → 2016-H1 | `D-036a` | `HISTDATA_GBPUSD_M1/` |
 | …**extended** 2017 → 2025, M1 + derived M15/H1 | `D-044` | `HISTDATA_GBPUSD_M1/` (`raw/`, `derived_ext/`) |
+| **Derived** GBP/USD **M15 + H1**, both `D-031` arms | `D-036a` (parent); no new decision — it introduces no new source | `HISTDATA_GBPUSD_M15_H1/` |
 
-> **⚠ THE SAME DIRECTORY NOW HOLDS TWO POLICY BLOCKS.** `2013-01-06 → 2016-06-30` is `D-035`
+> **⚠ `HISTDATA_GBPUSD_M1/` NOW HOLDS TWO POLICY BLOCKS.** `2013-01-06 → 2016-06-30` is `D-035`
 > DEVELOPMENT; `2017-01-01 → 2025-12-31` is the `D-044` extension, released by the owner for
 > forward-testing and backtesting. `2016-07-01 → 2016-12-31` is **still a sealed `D-035`
 > holdout and is not on disk.** Loading code defaults to DEVELOPMENT and the extension must be
 > named to be reached — see the `D-044` section below, and `D-044` §2 in `DECISIONS.md`.
+
+> ⚠ **`HISTDATA_GBPUSD_M15_H1/` IS DERIVED, NOT IMPORTED.** HistData publishes **tick and M1
+> only** — its own FAQ: *"We can only deliver you time ordered Tick and M1 (1 minute) data."*
+> Measured and hashed at `HISTDATA_GBPUSD_M15_H1/VENDOR_TIMEFRAME_AVAILABILITY.md`. Those
+> M15/H1 bucket boundaries are **ours**: reproducible, internally cross-checked seven ways, and
+> **never compared against an independent vendor's bars.** Read that directory's `README.md`
+> before citing anything built on it.
+
+> ⚠ **TWO INDEPENDENT M15/H1 DERIVATIONS NOW EXIST** and they were built by different sessions
+> from different date ranges: `HISTDATA_GBPUSD_M1/derived_ext/` (`D-044`, 2017 → 2025) and
+> `HISTDATA_GBPUSD_M15_H1/` (`D-036a` parent, the `D-035` DEVELOPMENT block). They have **never
+> been compared to each other.** Do not treat a result from one as reproducing on the other
+> until someone checks; name the directory whenever you cite M15 or H1 bars.
 
 ## WHAT LIVES HERE
 

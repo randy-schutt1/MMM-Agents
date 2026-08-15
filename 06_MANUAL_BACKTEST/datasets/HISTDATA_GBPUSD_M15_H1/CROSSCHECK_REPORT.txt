@@ -1,0 +1,141 @@
+==============================================================================
+GBP/USD M15 / H1 — DERIVATION CROSS-CHECK
+==============================================================================
+The requested native-vendor comparison is UNAVAILABLE: HistData publishes
+tick and M1 only. See VENDOR_TIMEFRAME_AVAILABILITY.md. What follows are the
+checks that ARE available, and what each can and cannot establish.
+
+M1 source bars : 1,297,781
+M1 span        : 2013-01-01 17:00:00 -> 2016-06-30 23:59:00  (corpus clock, fixed UTC-5)
+
+--- X1  INDEPENDENT RE-IMPLEMENTATION -----------------------------------
+Establishes: the committed aggregator and a structurally different second
+aggregator agree bar-for-bar. Does NOT establish agreement with any vendor.
+
+X1  M15 arm A  aggregate_m15.py vs run-wise          PASS
+      committed: 86,824 bars   independent: 86,824 bars   common: 86,824
+X1  M15 arm B  aggregate_m15.py vs run-wise          PASS
+      committed: 86,824 bars   independent: 86,824 bars   common: 86,824
+X1  H1 arm A  aggregate_m15.py vs run-wise           PASS
+      committed: 21,708 bars   independent: 21,708 bars   common: 21,708
+X1  H1 arm B  aggregate_m15.py vs run-wise           PASS
+      committed: 21,708 bars   independent: 21,708 bars   common: 21,708
+
+--- X2  REPRODUCIBILITY AGAINST THE D-036a M15 FILES ---------------------
+X2  M15 arm A  new derivation vs D-036a committed    PASS
+      new: 86,824 bars   D-036a: 86,824 bars   common: 86,824
+X2  M15 arm B  new derivation vs D-036a committed    PASS
+      new: 86,824 bars   D-036a: 86,824 bars   common: 86,824
+
+--- X3  TRANSITIVITY  H1(M1) vs H1(M15) ---------------------------------
+Establishes: the 15-minute and 60-minute bucket grids nest correctly. A
+boundary error in either aggregation breaks this and little else catches it.
+
+X3  H1 arm A  from M1 vs from M15                    PASS
+      H1(M1): 21,708 bars   H1(M15): 21,708 bars   common: 21,708
+X3  H1 arm B  from M1 vs from M15                    PASS
+      H1(M1): 21,708 bars   H1(M15): 21,708 bars   common: 21,708
+
+--- X4  CONTAINMENT  (every derived bar rebuilt from its own M1 window) --
+Establishes: no bar reads a minute outside its window, and none misses one
+inside it. This is the off-by-one-window check.
+
+X4  M15 arm A: 86,824 bars checked — PASS
+X4  M15 arm B: 86,824 bars checked — PASS
+X4  H1 arm A: 21,708 bars checked — PASS
+X4  H1 arm B: 21,708 bars checked — PASS
+
+--- X5  D-031 ARM CORRESPONDENCE ----------------------------------------
+Arm B is defined as Arm A shifted +1h during US DST. Content must therefore
+be identical under relabelling; a positional mismatch is a real divergence.
+
+X5  M15: PASS  — 86,824 bars aligned
+      label offset (arm B - arm A) distribution:
+                 0:00:00  x30,343    e.g. A 2013-01-01 17:00:00 -> B 2013-01-01 17:00:00
+                 1:00:00  x56,481    e.g. A 2013-03-10 17:00:00 -> B 2013-03-10 18:00:00
+X5  H1: PASS  — 21,708 bars aligned
+      label offset (arm B - arm A) distribution:
+                 0:00:00  x7,587     e.g. A 2013-01-01 17:00:00 -> B 2013-01-01 17:00:00
+                 1:00:00  x14,121    e.g. A 2013-03-10 17:00:00 -> B 2013-03-10 18:00:00
+
+--- X6  DST TRANSITION AUDIT --------------------------------------------
+Every US DST changeover in the corpus span, inspected on both arms. The
+market is shut across the 02:00 local changeover instant (the week opens
+Sunday 17:00), so a well-behaved corpus shows the offset changing at the
+weekend boundary and NO bar landing on a skipped or repeated local hour.
+
+  2013-03-10 (spring-forward)
+     M15: 120 arm-B bars in [2013-03-09, 2013-03-12)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2013-03-10 18:00:00
+     H1: 30 arm-B bars in [2013-03-09, 2013-03-12)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2013-03-10 18:00:00
+  2013-11-03 (fall-back)
+     M15: 124 arm-B bars in [2013-11-02, 2013-11-05)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2013-11-03 17:00:00
+     H1: 31 arm-B bars in [2013-11-02, 2013-11-05)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2013-11-03 17:00:00
+  2014-03-09 (spring-forward)
+     M15: 120 arm-B bars in [2014-03-08, 2014-03-11)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2014-03-09 18:00:00
+     H1: 30 arm-B bars in [2014-03-08, 2014-03-11)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2014-03-09 18:00:00
+  2014-11-02 (fall-back)
+     M15: 124 arm-B bars in [2014-11-01, 2014-11-04)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2014-11-02 17:00:00
+     H1: 31 arm-B bars in [2014-11-01, 2014-11-04)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2014-11-02 17:00:00
+  2015-03-08 (spring-forward)
+     M15: 120 arm-B bars in [2015-03-07, 2015-03-10)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2015-03-08 18:00:00
+     H1: 30 arm-B bars in [2015-03-07, 2015-03-10)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2015-03-08 18:00:00
+  2015-11-01 (fall-back)
+     M15: 124 arm-B bars in [2015-10-31, 2015-11-03)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2015-11-01 17:00:00
+     H1: 31 arm-B bars in [2015-10-31, 2015-11-03)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2015-11-01 17:00:00
+  2016-03-13 (spring-forward)
+     M15: 120 arm-B bars in [2016-03-12, 2016-03-15)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2016-03-13 18:00:00
+     H1: 30 arm-B bars in [2016-03-12, 2016-03-15)   duplicate stamps: 0
+        first arm-B bar on/after the changeover date: 2016-03-13 18:00:00
+
+--- X7  BUCKET OCCUPANCY CENSUS -----------------------------------------
+Partial buckets are EXPECTED at session edges and across holidays; they are
+reported, never repaired. A synthetic flat candle would be worse than a gap.
+
+X7  M15 arm A: 86,824 buckets   complete (15/15 M1 bars): 83,598 (96.28%)   partial: 3,226
+        2013-12-24 15:00:00  1/15 M1 bars
+        2014-02-11 17:00:00  2/15 M1 bars
+        2015-01-01 13:30:00  2/15 M1 bars
+        2015-08-21 13:15:00  2/15 M1 bars
+        2015-01-01 13:00:00  3/15 M1 bars
+X7  M15 arm B: 86,824 buckets   complete (15/15 M1 bars): 83,598 (96.28%)   partial: 3,226
+        2013-12-24 15:00:00  1/15 M1 bars
+        2014-02-11 17:00:00  2/15 M1 bars
+        2015-01-01 13:30:00  2/15 M1 bars
+        2015-08-21 14:15:00  2/15 M1 bars
+        2015-01-01 13:00:00  3/15 M1 bars
+X7  H1 arm A: 21,708 buckets   complete (60/60 M1 bars): 19,381 (89.28%)   partial: 2,327
+        2013-12-24 15:00:00  1/60 M1 bars
+        2015-01-01 13:00:00  5/60 M1 bars
+        2015-08-21 13:00:00  20/60 M1 bars
+        2013-04-11 19:00:00  23/60 M1 bars
+        2014-04-18 12:00:00  41/60 M1 bars
+X7  H1 arm B: 21,708 buckets   complete (60/60 M1 bars): 19,381 (89.28%)   partial: 2,327
+        2013-12-24 15:00:00  1/60 M1 bars
+        2015-01-01 13:00:00  5/60 M1 bars
+        2015-08-21 14:00:00  20/60 M1 bars
+        2013-04-11 20:00:00  23/60 M1 bars
+        2014-04-18 13:00:00  41/60 M1 bars
+
+==============================================================================
+CROSS-CHECK: PASS — X1-X5, X7 clean
+
+WHAT THIS DOES NOT ESTABLISH, restated so it cannot be mislaid:
+  These bars have NOT been compared against an independent vendor's M15 or
+  H1. HistData publishes none. The bucket boundaries are OURS, they are
+  internally consistent, and they are unvalidated against any outside feed.
+  Closing that gap requires adopting a second data source, which is an
+  owner decision of the D-034 / D-036a class, not a tool script's.
+==============================================================================
