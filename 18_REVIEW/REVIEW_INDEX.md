@@ -1719,6 +1719,7 @@ ruling) are carried forward unchanged. **The next review trigger is the V06 subm
 | V13 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V14 OPEN (`D-024`) · 2 MINOR (154–155) owed before `COMPLETE`** |
 | V14 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **V15 GATE OPEN (`D-024`) · 5 MINOR (172–176) owed before `COMPLETE`** · ⚠ **AND THE OWNER'S HARD STOP STANDS** |
 | V14 | REMEDIATION APPLIED | R1 (fix round) | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** · **V15 GATE OPEN, AND THE OWNER'S HARD STOP STANDS** |
+| V14 | REMEDIATION VERIFIED | R2 | **PASS** | 0 | 0 | ✅ **COMPLETE** |
 | V15 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **V16 GATE OPEN (`D-024`) · 6 MINOR (197–202) owed before `COMPLETE`** *(row added by the V17 R1 round — the table was not updated when `review/v15` merged)* |
 | V16 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **V17 GATE OPEN (`D-024`) · 4 MINOR (222–225) owed before `COMPLETE`** *(row added by the V17 R1 round)* |
 | V16 | REMEDIATION APPLIED | R1 (fix round) | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **222–225 `CLOSED — SELF-VERIFIED AT OWNER DIRECTION`** (`fix/v16-r1-minors`) · `D-003` still reserves V16's `PASS` to an independent reviewer |
@@ -3064,3 +3065,19 @@ CONFIRMED as recorded**, with 167's owed `PT-042` §5a amendment extended by ite
 | 137 | V12 R1 | Dashboard omitted from categorical visual inventory | **Dashboard independently read from `00:34:26`; comparison frames opened; corrected row, student provenance, timeframe-not-period treatment, and rescoping all verified. `A-080` does not move.** | ⛔ **CLOSED — VERIFIED** |
 | 138 | V12 R1 | `Q-013` falsely called V12 the first on-topic fabrication | **`Q-003`/`Q-004` read directly; body counts re-run; quarantined V03/V04/V12 visual indexes and line-18 TDI sentence mechanically compared. V12 is the third and most complete recurrence.** | ⛔ **CLOSED — VERIFIED** |
 | 389 | **V12 R2** | **Historical self-verification boundary independently cured.** | R2 did not author the fixes and re-derived both findings from source. The old warning remains append-only; this is the first arm's-length post-fix verdict. | **`NOTE`** |
+
+
+> ### 🔢 NUMBERING — item 390, allocated 2026-08-15 by the V14 **R2** independent round under `D-047`
+>
+> Allocated against the current Phase 2 branch, where **389** was the highest item. No collision.
+
+## V14 — R2 (2026-08-15) — **`PASS`**, 0 CRITICAL / 0 MAJOR / 0 MINOR / 1 NOTE, HIGH confidence. **Items 172–176 CLOSED — VERIFIED. V14 is `COMPLETE`.**
+
+| # | Source | Item | Evidence | Disposition |
+|---|---|---|---|---|
+| 172 | V14 R1 | Declarative quotation hid a self-answered question | **Two-engine interrogative correction, retention, arithmetic, and unchanged disposition independently checked.** | ⛔ **CLOSED — VERIFIED** |
+| 173 | V14 R1 | Marker and ASR clocks silently mixed | **Convention, 25-row crosswalk, `35:37` repair, and citation-only PT-042 amendment independently checked.** | ⛔ **CLOSED — VERIFIED** |
+| 174 | V14 R1 | Frame filenames lag burned clock | **29-frame table reproduces 28× +16 s and EOF +14 s; assignment slide is 26:50 filename / 27:06 burned; withdrawn claim retained.** | ⛔ **CLOSED — VERIFIED** |
+| 175 | V14 R1 | Twelve moved records lacked local pointers | **All twelve records now point locally to the V14 pass; A-056 and A-084 states are correctly narrowed without false closure.** | ⛔ **CLOSED — VERIFIED** |
+| 176 | V14 R1 | `A-092` made a false corpus-wide count | **Manifest calendar audit confirms two anomalous regions; Week 5→7 known artifacts and Week 9→10 unknown gap are separately scoped.** | ⛔ **CLOSED — VERIFIED** |
+| 390 | **V14 R2** | **Historical self-verification boundary independently cured.** | R2 did not author the fixes and re-derived all five findings from source. | **`NOTE`** |

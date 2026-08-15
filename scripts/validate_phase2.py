@@ -52,12 +52,13 @@ checks = {
 for path, needle in checks.items():
     require(path, needle)
 
-gate = require("00_SYSTEM/PHASE_2_GATE_AUDIT.md", "INDEPENDENT REVIEWER PASS: 12 / 21")
-if "LATEST INDEPENDENT DECISION REVISE: 9 / 21" not in gate:
-    errors.append("gate audit missing 9/21 REVISE census")
+gate = require("00_SYSTEM/PHASE_2_GATE_AUDIT.md", "INDEPENDENT REVIEWER PASS: 13 / 21")
+if "LATEST INDEPENDENT DECISION REVISE: 8 / 21" not in gate:
+    errors.append("gate audit missing 8/21 REVISE census")
 require("18_REVIEW/V09/V09_REVIEW_R4.md", "Items **81–83 are `CLOSED — VERIFIED`**")
 require("18_REVIEW/V10/V10_REVIEW_R2.md", "Items **91–94 are `CLOSED — VERIFIED`**")
 require("18_REVIEW/V12/V12_REVIEW_R2.md", "Items **137–138 are `CLOSED — VERIFIED`**")
+require("18_REVIEW/V14/V14_REVIEW_R2.md", "Items **172–176 are `CLOSED — VERIFIED`**")
 
 final_review = require("18_REVIEW/FINAL_COURSE_REVIEW.md")
 if "NOT STARTED" not in final_review:
@@ -92,8 +93,8 @@ if errors:
 
 print("PHASE 2 VALIDATION: PASS")
 print("- remediation findings represented: 14/14")
-print("- formal independent-PASS census: 12/21")
-print("- nine latest independent non-PASS decisions: preserved")
+print("- formal independent-PASS census: 13/21")
+print("- eight latest independent non-PASS decisions: preserved")
 print("- final review: NOT STARTED")
 print("- master/machine specifications: still empty")
 print("- git diff whitespace check: pass")

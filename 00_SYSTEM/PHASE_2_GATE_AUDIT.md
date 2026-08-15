@@ -7,14 +7,14 @@
 ## Result
 
 ```text
-INDEPENDENT REVIEWER PASS: 12 / 21
-LATEST INDEPENDENT DECISION REVISE: 9 / 21
+INDEPENDENT REVIEWER PASS: 13 / 21
+LATEST INDEPENDENT DECISION REVISE: 8 / 21
 FINAL_COURSE_REVIEW PRECONDITION: FAILED
 MASTER SPECIFICATION: PROHIBITED
 MACHINE SPECIFICATION: PROHIBITED
 ```
 
-The twelve independent passes are V01–V10, V12, and V21. Nine lessons retain latest independent
+The thirteen independent passes are V01–V10, V12, V14, and V21. Eight lessons retain latest independent
 `REVISE` decisions. A gate-opening minor-only `REVISE`, an owner-authorized fix, or a
 student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, D-004, and D-024.
 
@@ -28,7 +28,7 @@ student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, 
 | V11 | R1 `REVISE`, 5 minors | Remediation and R2 required |
 | V12 | R2 `PASS`, 0 findings | Independent re-review closed items 137–138; `COMPLETE` |
 | V13 | R1 `REVISE`, 2 minors | Remediation and R2 required |
-| V14 | R1 `REVISE`, 5 minors | Owner-directed self-verification requires independent R2 |
+| V14 | R2 `PASS`, 0 findings | Independent re-review closed items 172–176; `COMPLETE` |
 | V15 | R1 `REVISE`, 6 minors | Remediation and R2 required |
 | V16 | R1 `REVISE`, 4 minors | Owner-directed self-verification requires independent R2 |
 | V17 | R1 `REVISE`, 6 minors | Phase 2 remediation applied; independent R2 required |
@@ -50,8 +50,8 @@ student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, 
 
 ## Resolution path
 
-1. Independently review existing owner-directed remediation for V14, V16, and V19 item 302.
-   **V09, V10, and V12 are complete at independent R4/R2/R2.**
+1. Independently review existing owner-directed remediation for V16 and V19 item 302.
+   **V09, V10, V12, and V14 now hold independent passes.**
 2. Remediate V11, V13, and V15, then independently re-review them.
 3. Independently re-review the 14 Phase 2 edits for V17–V20.
 4. Only after 21/21 independent passes, execute the 25/50/75 retrospective checkpoints and the

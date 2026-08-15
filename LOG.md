@@ -11708,3 +11708,12 @@ censuses and direct comparisons of the quarantined V03/V04/V12 files confirm V12
 most complete. No lesson conclusion or quarantine disposition moved.
 
 **Formal Phase 2 census:** **12/21 independent PASS; 9/21 latest independent REVISE.**
+
+---
+
+## 2026-08-15 — PHASE 2 — V14 R2 INDEPENDENT PASS
+
+**Decision:** **PASS — 0 CRITICAL / 0 MAJOR / 0 MINOR / 1 NOTE, HIGH confidence.** Items 172–176
+were independently re-derived: quotation mood, marker-clock normalization, the 29-frame offset,
+twelve local ambiguity pointers, and the two-region calendar-gap scope all verify. No setup
+codability status, test result, or trading-edge claim moved. **Formal census: 13/21 PASS.**
