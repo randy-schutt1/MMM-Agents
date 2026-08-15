@@ -13,7 +13,7 @@ Naming: `CL-NNN_concept-name.md`
 PROMOTED CONCEPT FILES: 0
 LESSONS INGESTED:       21 / 21
 SETUP KNOWLEDGE:        PRESENT -- see 00_SYSTEM/MMM_SETUP_REGISTRY.md
-FINAL COURSE REVIEW:    NOT STARTED
+FINAL COURSE REVIEW:    COMPLETE — STUDENT PHASE INCOMPLETE; PHASE 3 NOT GRANTED
 ```
 
 > **PHASE 1 CORRECTION — 2026-08-15.** The former headline `CONCEPTS: 0` was technically a count of
@@ -27,10 +27,10 @@ FINAL COURSE REVIEW:    NOT STARTED
 
 > **Formal-status boundary, updated 2026-08-15.** All 21 lessons are ingested, reviewed and
 > approved: 14 formal `PASS` decisions plus seven owner-authorized reviewer-remediation closures
-> under D-062. The 25% and 50% cumulative reviews are complete and both say `HALT AND REMEDIATE`
-> because the existing student practical is formally `NOT MASTERED`. The targeted retest, 75%
-> checkpoint and `FINAL_COURSE_REVIEW.md` remain pending. No concept is promoted and the Master
-> Specification remains prohibited.
+> under D-062. Targeted Retest 002 cleared the historical 25%/50% remediation gate; the 75% review
+> and its corrections are complete; and `FINAL_COURSE_REVIEW.md` returns `STUDENT PHASE:
+> INCOMPLETE` with Phase 3 `NOT GRANTED`. No concept is promoted and the Master Specification
+> remains prohibited.
 
 > **UPDATED 2026-08-14 (V16 session).** `LESSONS STUDIED` read **`3`** while sixteen
 > lessons had been studied. **That is the third time this exact block has gone stale

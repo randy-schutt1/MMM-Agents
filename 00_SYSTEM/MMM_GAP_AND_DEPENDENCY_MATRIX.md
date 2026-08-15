@@ -40,10 +40,10 @@ High/Low Trainer acquisition
     -> shipped tool can be documented rather than reconstructed
 ```
 
-## Phase 2 boundary
+## Final-review boundary
 
-Phase 2 found that the stated twelve are **fourteen** and applied all fourteen V17–V20 remediations.
-It also found that V09–V16 retain non-PASS independent verdicts. Fresh review must clear both
-backlogs. Only then may it run the official cumulative/final review and decide whether the human Master
-Specification can be authoritative, partial or blocked. This matrix does not pre-decide that
-verdict.
+Phase 2 closed the lesson-review backlog under the preserved 14 formal `PASS` plus seven D-062
+owner-authorized reviewer-remediation statuses, passed Targeted Retest 002, and completed every
+cumulative review. The official final review returns `PARTIALLY` on reconstruction,
+`STUDENT PHASE: INCOMPLETE`, and `PHASE 3: NOT GRANTED`. This matrix is now the prioritized
+remediation agenda; it does not authorize selecting values for its gaps or populating a spec.

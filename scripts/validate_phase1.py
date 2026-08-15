@@ -73,14 +73,16 @@ def main() -> int:
             "concept index does not route human setup knowledge")
 
     current = text("00_SYSTEM/MMM_CURRENT_STATE.md")
-    require("lesson ingestion complete; cumulative reconstruction and" in current,
-            "current-state boundary is missing")
+    require("lesson ingestion and cumulative review complete; human" in current,
+            "current-state final-review boundary is missing")
     require("Highest adopted decision in `DECISIONS.md`: `D-062`" in current,
             "current-state decision boundary is missing or stale")
 
     final_review = text("18_REVIEW/FINAL_COURSE_REVIEW.md")
-    require(bool(re.search(r"^NOT STARTED$", final_review, re.M)),
-            "Phase 1 must not start or complete FINAL_COURSE_REVIEW")
+    require("COMPLETED — STUDENT PHASE INCOMPLETE" in final_review,
+            "final review does not preserve the incomplete reconstruction gate")
+    require("PHASE 3 AUTHORIZATION: NOT GRANTED" in final_review,
+            "final review does not preserve the Phase 3 prohibition")
 
     master_files = [p.name for p in (ROOT / "12_MASTER_SPEC").iterdir() if p.name not in {".gitkeep", "README.md"}]
     machine_files = [p.name for p in (ROOT / "13_MACHINE_SPEC").iterdir() if p.name not in {".gitkeep", "README.md"}]
@@ -103,7 +105,7 @@ def main() -> int:
     print("- setup registry: 26 SR families + OR-01")
     print("- 22-trade correction: present")
     print("- knowledge/codability separation: present")
-    print("- cumulative/final review gate: preserved")
+    print("- final review: complete; incomplete reconstruction gate preserved")
     print("- master/machine specifications: still empty")
     print("- git diff whitespace check: pass")
     return 0

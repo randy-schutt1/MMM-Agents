@@ -19,8 +19,8 @@ single deterministic setup-classification pipeline from raw charts.
    surface offered no setup answer even though lesson-level knowledge existed.
 3. All 21 lessons are reviewed and approved under D-062, but lesson approval does not itself create
    the missing cross-lesson retrieval and raw-chart definitions.
-4. The overdue 25% and 50% cumulative checkpoints are now completed, but both return `HALT AND
-   REMEDIATE`; the targeted retest and the 75%/final reviews remain incomplete.
+4. The 25%/50% gate was cleared by sealed Targeted Retest 002, and the 75% and final reviews are
+   complete. The final review independently confirms this audit's `PARTIALLY` result.
 5. Core chart primitives remain undefined: first-leg anatomy, objective level segmentation,
    prospective PFH/PFL formation, blue tracer identity, and several tolerance/time boundaries.
 6. Named patterns such as PFH+M, PFL+W, 22, 33, 3333, stop hunts, Batman variants, stars, and
@@ -53,8 +53,7 @@ of tradeable signals.
 
 ## Final-review consequence
 
-The reconstruction result is `PARTIALLY`, not `YES`. The independently graded V01–V10 practical
-also remains `NOT MASTERED` because a critical ambiguity was falsely closed. Therefore the Student
-Phase is not complete, the official final course review cannot begin, and the Master/Machine
-specifications must remain empty. This locates the missing teaching and retrieval work instead of
-pretending that 21 watched videos necessarily yield a complete system.
+The reconstruction result is `PARTIALLY`, not `YES`. The earlier V01–V10 failure was remediated by
+sealed Targeted Retest 002, but that bounded pass does not supply the missing raw-chart definitions
+or blind V11–V21 recognition. The official final review is complete and returns
+`STUDENT PHASE: INCOMPLETE` and `PHASE 3: NOT GRANTED`. Master/Machine specifications remain empty.

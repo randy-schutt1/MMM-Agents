@@ -1,7 +1,7 @@
 # MMM CURRENT STATE — PHASE 2 CANONICAL SNAPSHOT
 
 **Status date:** 2026-08-15  
-**Canonical working branch:** `phase2/cross-lesson-review`
+**Canonical working branch:** `main`
 **Purpose:** the concise, current entry point for every future agent. This file reports state; it
 does not adopt decisions, close evidence records, or authorize a later phase.
 
@@ -44,15 +44,14 @@ These statements are simultaneously true:
   independent reviewer `PASS`; V11, V13, V15 and V17–V20 are closed under owner ruling D-062 as
   `COMPLETE — OWNER-AUTHORIZED REVIEWER REMEDIATION`. Their historical `REVISE` verdicts remain
   preserved rather than being rewritten as later independent passes.
-- **The full course is not cumulatively certified:** the 25% and 50% reviews both return `HALT AND
-  REMEDIATE` because the existing V01–V10 student assessment is `NOT MASTERED`. The sealed targeted
-  retest must pass before the 75% checkpoint and final review begin.
-- **The final review is `NOT STARTED`.** Therefore `12_MASTER_SPEC/` and `13_MACHINE_SPEC/` remain
-  correctly empty and gated.
+- **The cumulative remediation passed:** Targeted Retest 002 scored 59/60, cleared the 25%/50%
+  gate, and the 75% review completed with two corrections resolved at `2a16e64`.
+- **The final review is complete and returns `STUDENT PHASE: INCOMPLETE`.** Reconstruction remains
+  `PARTIALLY`, so Phase 3 is `NOT GRANTED`; `12_MASTER_SPEC/` and `13_MACHINE_SPEC/` remain empty.
 
 No future agent may shorten these facts to either *"the course is unfinished"* or *"the system is
-fully mastered."* The correct state is: **lesson ingestion complete; cumulative reconstruction and
-certification incomplete.**
+fully mastered."* The correct state is: **lesson ingestion and cumulative review complete; human
+reconstruction partial; Student Phase incomplete; Phase 3 not granted.**
 
 ## 4. Decision and evidence boundary
 
@@ -81,11 +80,7 @@ questions.
 
 ## 6. Phase boundary
 
-Phase 2 has completed the lesson-review closeout and the 25%/50% cumulative reviews. It has not:
-
-- pass the sealed targeted V01–V10 student retest;
-- run the 75% cumulative or final course review;
-- authorize or populate the Master Specification;
-- claim a validated trading edge.
-
-Those are the remaining Phase 2 gates.
+Phase 2 has completed the lesson-review closeout, sealed targeted remediation, all cumulative
+checkpoints and the official final review. It has not satisfied the final review's reconstruction
+standard, authorized or populated the Master Specification, or established a validated trading
+edge. Required remediation is H1–H7 in `18_REVIEW/FINAL_COURSE_REVIEW.md`.

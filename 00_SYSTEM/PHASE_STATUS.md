@@ -1,10 +1,10 @@
 # PHASE STATUS
 
 ```text
-ACTIVE PHASE: 2 — CROSS-LESSON REVIEW AND HUMAN RECONSTRUCTION
-BRANCH: phase2/cross-lesson-review
-STATE: 21/21 REVIEWED AND APPROVED; TARGETED RETEST PASSED; 75% REVIEW NEXT
-NEXT PHASE: 3 — SPECIFICATION, ONLY AFTER TARGETED RETEST, 75% CHECKPOINT AND FINAL REVIEW
+ACTIVE PHASE: 2 — FINAL REVIEW COMPLETE; REMEDIATION REQUIRED
+BRANCH: main
+STATE: STUDENT PHASE INCOMPLETE; RECONSTRUCTION PARTIAL; PHASE 3 NOT GRANTED
+NEXT PHASE: REMAIN IN PHASE 2 UNTIL FINAL-REVIEW BLOCKERS ARE RESOLVED AND RE-REVIEWED
 ```
 
 ## Phase 1 checklist
@@ -35,8 +35,11 @@ Phase 2 may begin only under the boundaries in `MMM_CURRENT_STATE.md` and
 - [x] Clear the lesson-review backlog: 21/21 reviewed and approved.
 - [x] Complete the overdue 25% and 50% cumulative reviews.
 - [x] Pass the sealed targeted Student retest (Retest 002: 59/60, every case >= 9/10).
-- [ ] Complete the 75% cumulative review.
-- [ ] Execute the official cumulative and final reviews.
+- [x] Complete the 75% cumulative review and its two documentation corrections.
+- [x] Execute the official final course review.
+- [ ] Resolve the final review's H1–H6 reconstruction blockers.
+- [ ] Pass a sealed blind integrated V11–V21 chart practical.
+- [ ] Re-run final review and obtain a `YES` reconstruction result.
 
-The unchecked retest/75%/final items are the remaining gates. `FINAL_COURSE_REVIEW.md` remains
-`NOT STARTED` by design.
+`FINAL_COURSE_REVIEW.md` is complete. Its `PARTIALLY` reconstruction result keeps the Student Phase
+incomplete and prohibits Master/Machine specification work.

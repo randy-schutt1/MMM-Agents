@@ -77,7 +77,7 @@ for path, needle in checks.items():
 
 gate = require("00_SYSTEM/PHASE_2_GATE_AUDIT.md", "TOTAL REVIEWED AND APPROVED:                  21 / 21")
 for required in ("LESSON-REVIEW BACKLOG:                         0 / 21",
-                 "TARGETED STUDENT RETEST: PENDING", "D-062"):
+                 "TARGETED STUDENT RETEST: PASSED", "D-062"):
     if required not in gate:
         errors.append(f"gate audit missing owner-closeout state {required!r}")
 require("18_REVIEW/V09/V09_REVIEW_R4.md", "Items **81–83 are `CLOSED — VERIFIED`**")
@@ -100,8 +100,9 @@ for finding_range in ("109–113", "154–155", "197–202", "244–249", "264�
 cumulative_25 = require("18_REVIEW/CUMULATIVE_25.md", "COMPLETED — HALT AND REMEDIATE")
 cumulative_50 = require("18_REVIEW/CUMULATIVE_50.md", "COMPLETED — HALT AND REMEDIATE")
 cumulative_75 = require("18_REVIEW/CUMULATIVE_75.md")
-if "NOT STARTED" not in cumulative_75:
-    errors.append("75% cumulative checkpoint started before its prerequisites cleared")
+for required in ("COMPLETED — PROCEED WITH CORRECTIONS", "PROCEED TO FINAL COURSE REVIEW: AUTHORIZED"):
+    if required not in cumulative_75:
+        errors.append(f"75% cumulative checkpoint missing completed state {required!r}")
 for path, text in (
     ("18_REVIEW/CUMULATIVE_25.md", cumulative_25),
     ("18_REVIEW/CUMULATIVE_50.md", cumulative_50),
@@ -112,15 +113,14 @@ for path, text in (
 
 course_progress = require("00_SYSTEM/COURSE_PROGRESS.md")
 for checkpoint_row in (
-    "| 25% | V05 | `18_REVIEW/CUMULATIVE_25.md` | **COMPLETED — HALT AND REMEDIATE** |",
-    "| 50% | V10 | `18_REVIEW/CUMULATIVE_50.md` | **COMPLETED — HALT AND REMEDIATE** |",
+    "| 25% | V05 | `18_REVIEW/CUMULATIVE_25.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** |",
+    "| 50% | V10 | `18_REVIEW/CUMULATIVE_50.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** |",
 ):
     if checkpoint_row not in course_progress:
         errors.append(f"course progress missing cumulative checkpoint state: {checkpoint_row}")
 
 reconstruction = require("00_SYSTEM/PHASE_2_HUMAN_RECONSTRUCTION_AUDIT.md")
-for required in ("25% and 50% cumulative checkpoints are now completed",
-                 "Tier-1 V13 definition", "`NOT MASTERED`"):
+for required in ("Targeted Retest 002", "Tier-1 V13 definition", "`PARTIALLY`"):
     if required not in reconstruction:
         errors.append(f"human reconstruction audit missing Phase 2 update {required!r}")
 
@@ -145,8 +145,11 @@ if "FUTURE INFORMATION USED: NO" not in results_template:
     errors.append("targeted retest results template missing lookahead declaration")
 
 final_review = require("18_REVIEW/FINAL_COURSE_REVIEW.md")
-if "NOT STARTED" not in final_review:
-    errors.append("final course review gate was changed")
+for required in ("COMPLETED — STUDENT PHASE INCOMPLETE", "STUDENT PHASE: INCOMPLETE",
+                 "PHASE 3 AUTHORIZATION: NOT GRANTED", "AUTHORIZATION TO PROCEED TO PHASE 3",
+                 "NOT GRANTED"):
+    if required not in final_review:
+        errors.append(f"final course review missing verdict boundary {required!r}")
 
 for protected in ("12_MASTER_SPEC", "13_MACHINE_SPEC"):
     live = [p for p in (ROOT / protected).iterdir() if p.name not in {"README.md", ".gitkeep"}]
@@ -181,9 +184,9 @@ print("- V11/V13/V15 remediation represented: 13/13; closed under D-062")
 print("- V17-V20 remediation represented: 14/14; closed under D-062")
 print("- lesson census: 21/21 reviewed and approved; zero lesson-review backlog")
 print("- historical REVISE decisions and owner-closeout labels: preserved")
-print("- cumulative 25/50: completed, HALT AND REMEDIATE; targeted retest required")
-print("- targeted retest: sealed student/instructor packet present; clean Student execution pending")
-print("- cumulative 75: NOT STARTED")
-print("- final review: NOT STARTED")
+print("- cumulative 25/50: cleared by targeted Retest 002")
+print("- targeted retest: 59/60; hard gates passed")
+print("- cumulative 75: completed; corrections resolved")
+print("- final review: complete; Student Phase incomplete; Phase 3 not granted")
 print("- master/machine specifications: still empty")
 print("- git diff whitespace check: pass")

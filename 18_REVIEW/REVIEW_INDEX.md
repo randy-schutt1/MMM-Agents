@@ -10,6 +10,14 @@ stays visible with its round number.
 
 ## STATUS
 
+> **AUTHORITATIVE FINAL STATUS — 2026-08-15.** All 21 lessons are reviewed and approved: 14 formal
+> reviewer `PASS` decisions plus seven D-062 owner-authorized reviewer-remediation closures. The
+> sealed Targeted Retest 002 passed 59/60, the 25%/50% gates are cleared, and the 75% review's two
+> corrections are resolved at `2a16e64`. The official `FINAL_COURSE_REVIEW.md` is now complete.
+> Its reconstruction test is `PARTIALLY`, so `STUDENT PHASE: INCOMPLETE` and Phase 3 is
+> `NOT GRANTED`. Historical status prose and `REVISE` decisions below remain append-only evidence
+> and do not override this block.
+
 ```text
 LESSONS REVIEWED: 17 (superseded text, retained: "LESSONS REVIEWED: 16",
                   before it "LESSONS REVIEWED: 15",
@@ -2590,6 +2598,7 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 | 25% | V05 (5/21 = 23.8%) | `CUMULATIVE_25.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** (2026-08-15) |
 | 50% | V10 (10/21 = 47.6%; existing assessment boundary) | `CUMULATIVE_50.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** (2026-08-15) |
 | 75% | V16 (16/21 = 76.2%) | `CUMULATIVE_75.md` | **COMPLETED — PROCEED WITH CORRECTIONS** (2026-08-15; final review authorized, specifications remain gated) |
+| 100% | V01–V21 | `FINAL_COURSE_REVIEW.md` | **COMPLETED — STUDENT PHASE INCOMPLETE; PHASE 3 NOT GRANTED** (2026-08-15) |
 | Final | All lessons passed | `FINAL_COURSE_REVIEW.md` | Not started |
 
 ---
@@ -3116,3 +3125,18 @@ CONFIRMED as recorded**, with 167's owed `PT-042` §5a amendment extended by ite
 | 392 | **V11 Phase 2 remediation** | Items 109–113 | All five requested corrections applied: image-claim scope, C-018 counterexample, PT-039 numbering banner, V10/V11 PT numbering, and runner-controlled provenance seed. | ✅ **CLOSED — REVIEWER REMEDIATED AT OWNER DIRECTION (`D-062`)** |
 | 393 | **V13 Phase 2 remediation** | Items 154–155 | Both requested corrections applied: two-build legend scope and withdrawal of the uncomputed C-PRE tail-direction claim. | ✅ **CLOSED — REVIEWER REMEDIATED AT OWNER DIRECTION (`D-062`)** |
 | 394 | **V15 Phase 2 remediation** | Items 197–202 | All six requested corrections applied, including A-095's tested figure, sweep mechanism withdrawal, progress row, Q-016 counts, Orlando scope, and C-022's D-048 ladder. | ✅ **CLOSED — REVIEWER REMEDIATED AT OWNER DIRECTION (`D-062`)** |
+
+## FINAL COURSE REVIEW — 2026-08-15
+
+```text
+STUDENT PHASE: INCOMPLETE
+CONFIDENCE: HIGH
+RECONSTRUCTION TEST: PARTIALLY
+PHASE 3 (EXPERT / MASTER SPEC): NOT GRANTED
+```
+
+The final review preserves the 14 formal `PASS` plus seven D-062 closure census and does not rewrite
+the seven historical `REVISE` decisions. The sealed cumulative remediation passed, but the corpus
+still lacks M/W first-leg anatomy, push/level segmentation, prospective PFH/PFL, one complete setup
+lifecycle, and blind integrated V11–V21 recognition. Master and Machine specifications remain
+empty. Full evidence and required remediation: `FINAL_COURSE_REVIEW.md`.

@@ -1,7 +1,7 @@
 # PHASE 2 GATE AUDIT
 
 **Date:** 2026-08-15
-**Branch:** `phase2/cross-lesson-review`
+**Branch:** `main`
 **Owner ruling:** D-062
 
 ## Current result
@@ -11,10 +11,10 @@ FORMAL REVIEWER PASS:                         14 / 21
 OWNER-AUTHORIZED REVIEWER REMEDIATION CLOSE:  7 / 21
 TOTAL REVIEWED AND APPROVED:                  21 / 21
 LESSON-REVIEW BACKLOG:                         0 / 21
-CUMULATIVE 25/50: COMPLETED — HALT AND REMEDIATE
-TARGETED STUDENT RETEST: PENDING
-CUMULATIVE 75: NOT STARTED
-FINAL_COURSE_REVIEW: NOT STARTED
+CUMULATIVE 25/50: CLEARED BY TARGETED RETEST 002
+TARGETED STUDENT RETEST: PASSED — 59/60; ALL HARD GATES PASS
+CUMULATIVE 75: COMPLETED — CORRECTIONS RESOLVED
+FINAL_COURSE_REVIEW: COMPLETED — STUDENT PHASE INCOMPLETE
 MASTER/MACHINE SPECIFICATIONS: PROHIBITED
 ```
 
@@ -36,11 +36,10 @@ The original `REVISE` decisions remain intact. The closeout is recorded in
 
 ## Remaining route
 
-1. A clean Student session takes `PHASE_2_TARGETED_RETEST_001` without reading its key.
-2. A separate instructor grades the immutable attempt.
-3. If the retest passes, complete the 75% cumulative review over V01–V16.
-4. Complete the final course review over all 21 lessons.
-5. Keep Master/Machine specifications empty unless the final review authorizes them.
+1. Resolve H1–H6 with Tier-1 evidence or explicitly tiered owner practice.
+2. Administer the sealed blind integrated V11–V21 practical in H7.
+3. Repeat final review; Phase 3 remains barred until reconstruction returns `YES`.
+4. Keep Master/Machine specifications empty unless a later final review authorizes them.
 
 ## Preserved evidence boundary
 

@@ -9,13 +9,15 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ## SUMMARY
 
 ```text
-PHASE:               2 — CROSS-LESSON REVIEW  (targeted remediation mastered; 75% review next)
+PHASE:               2 — FINAL REVIEW COMPLETE; STUDENT PHASE INCOMPLETE
 VIDEOS INGESTED:     21
 PHASE 2 AUDIT:       21/21 REVIEWED AND APPROVED under D-062.
                      14 formal PASS + 7 owner-authorized reviewer-remediation
                      closures; zero lesson-review backlog. All 27 Phase 2
                      findings are closed. Targeted Retest 002 passed 59/60;
-                     the 75% checkpoint and FINAL_COURSE_REVIEW remain pending;
+                     the 75% checkpoint is complete and its two corrections are
+                     resolved. FINAL_COURSE_REVIEW is complete: reconstruction
+                     remains PARTIAL, so Phase 3 is NOT GRANTED and
                      Master/Machine specs remain gated.
 V17 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
                      branch video/v17 (worktree MMM-Agents-v17, D-038).
@@ -2714,7 +2716,7 @@ uses V16.
 | 25% | V05 | `18_REVIEW/CUMULATIVE_25.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** |
 | 50% | V10 | `18_REVIEW/CUMULATIVE_50.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** |
 | 75% | V16 | `18_REVIEW/CUMULATIVE_75.md` | **COMPLETED — PROCEED WITH CORRECTIONS** (2026-08-15; final review authorized, specifications remain gated) |
-| 100% | All lessons passed | `18_REVIEW/FINAL_COURSE_REVIEW.md` | Not started |
+| 100% | All lessons reviewed and approved | `18_REVIEW/FINAL_COURSE_REVIEW.md` | **COMPLETED — STUDENT PHASE INCOMPLETE; PHASE 3 NOT GRANTED** (2026-08-15) |
 
 ---
 

@@ -2,7 +2,13 @@
 
 **Date:** 2026-08-15
 **Branch:** `phase2/cross-lesson-review`
-**Status:** **LESSON REVIEW COMPLETE — CUMULATIVE RETEST PENDING**
+**Status:** **FINAL REVIEW COMPLETE — STUDENT PHASE INCOMPLETE; PHASE 3 NOT GRANTED**
+
+> **Final-review update, 2026-08-15.** The automated-results table below records the Phase 2
+> closeout state when originally run. Since then Targeted Retest 002 passed 59/60, the 25%/50%
+> gate cleared, the 75% review completed, its two corrections were resolved at `2a16e64`, and the
+> official final review completed. Current validation passes with the final incomplete gate and
+> empty Master/Machine directories preserved.
 
 ## Automated results
 
@@ -17,9 +23,9 @@
 | Phase 2 validator compilation | **PASS** |
 | Whitespace/error check | **PASS** |
 | Master/Machine specification gate | **PASS — still empty** |
-| Official final review gate | **PASS — remains `NOT STARTED`** |
+| Official final review gate | **SUPERSEDED — now complete; Student Phase incomplete** |
 | 25% / 50% cumulative checkpoints | **COMPLETED — both HALT AND REMEDIATE** |
-| Targeted retest packet | **PASS — sealed student/key separation present; clean execution pending** |
+| Targeted retest packet | **PASS — Retest 002 completed 59/60; all hard gates pass** |
 
 ## Phase 2 conclusions validated
 
