@@ -37,6 +37,16 @@ project's own records disagree about which periods even exist (`D-043`'s 5/13 ag
 *"Second leg"* runs into `A-011`. *"The outside bar"* is never defined by the course. **Four
 anchors, four gaps**, and `A-143` is opened for the load-bearing one.
 
+> ### ⭐⭐ UPDATED 2026-08-15 — TIER 1 IS NOW ONE SCALAR SHORT OF COMPUTABLE
+>
+> Two owner rulings have since closed most of anchor 1. `D-061` fixed the **set**
+> (`5 · 13 · 50 · 200 · 800`), and ***"5/13 cross entry"*** fixed the **pair** — the trigger is
+> **EMA(5) crossing EMA(13)**. ⛔ **The TIMEFRAME is now the only thing standing between `D-058`
+> tier 1 and a computable trigger**, and it is contested: the owner's own templates split **3–2, H1
+> vs M15**. ⭐ **This is the closest any entry rule in the project has come** — every other candidate
+> is missing something structural; **this one is missing a single number.** §4.1A–§4.1C.
+> ⚠️ **Anchors 2, 3 and 4 are untouched and still block tiers 2 and 3.**
+
 ⚠️ **And it does not agree with the course's own most mechanical entry.** V20 states
 `entry = high − (candle range ÷ 3)` (`A-139`). **The owner enters at a candle CLOSE, not at a
 one-third retracement.** This draft records the divergence and **does not reconcile it** — they are
@@ -156,9 +166,14 @@ recollecting the teaching would not produce a trigger the teaching never mention
 
 ## 4. ⚠️⚠️ WHAT BLOCKS CODING — FOUR UNDEFINED ANCHORS
 
-### 4.1 The load-bearing one — ⭐ PROPOSED `A-143`
+### 4.1 The load-bearing one — ⭐ PROPOSED `A-143` · ⭐⭐ **NARROWED TO A SINGLE ROW, 2026-08-15**
 
-> **Tier 1 says *"the EMA cross"* and does not say WHICH TWO EMAs CROSS.**
+> ~~**Tier 1 says *"the EMA cross"* and does not say WHICH TWO EMAs CROSS.**~~
+>
+> ✅ **ANSWERED 2026-08-15 — *"5/13 cross entry"* (owner).** The trigger is **EMA(5) crossing
+> EMA(13)**, and with `D-061` fixing the set the pair space collapses from ten to **one**.
+> ⛔ **What remains is the TIMEFRAME**, and it is now the **only** thing standing between tier 1 and
+> a computable trigger. See §4.1A.
 
 This is not a small gap, and the project's own records make it worse rather than better:
 
@@ -170,15 +185,25 @@ This is not a small gap, and the project's own records make it worse rather than
 | **Direction is unstated** | A cross has two directions; the rule does not say the trigger is the cross **in the trade's direction** (though that is the obvious reading, and `D-030` bars adopting it) |
 
 ```text
-A-143 (proposed) -- "the EMA cross": the trigger of the owner's own entry rule
-  (D-058 tier 1) does not name WHICH TWO MOVING AVERAGES CROSS, on WHICH
+A-143 (proposed) -- "the EMA cross": WHICH TWO MOVING AVERAGES CROSS, on WHICH
   TIMEFRAME, in WHICH DIRECTION.
-  NARROWED 2026-08-15 by OWNER RULING (D-061, proposed): the SET is settled --
-  canonical is 5/13/50/200/800; MMM.tpl's 4/10/.../3200 is NOT canonical. The
-  space falls from "15 pairs across an unresolved set" to TEN PAIRS ACROSS A
-  KNOWN SET. Still not a rule: 5x13 is the obvious pair and THE OWNER DID NOT
-  SAY IT, and the timeframe and direction remain unstated.
-  DO NOT CODE. One owner sentence closes this record.
+  NARROWED TWICE ON 2026-08-15 BY OWNER RULING, and it is now down to ONE ROW:
+    [SET]        SETTLED. Canonical is 5/13/50/200/800 (D-061); MMM.tpl's
+                 4/10/.../3200 is NOT canonical.
+    [PAIR]       SETTLED. "5/13 cross entry" -- owner, 2026-08-15. The trigger
+                 is EMA(5) crossing EMA(13). Ten candidate pairs -> ONE.
+    [DIRECTION]  NOT STATED, but CONSTRAINED: trade direction comes from the
+                 M/W (D-055 -- M at tops = short, W at bottoms = long), so the
+                 cross is a TRIGGER inside an already-directional setup. That
+                 the cross must agree with the M/W is the obvious reading and
+                 D-030 still bars adopting it unasked.
+    [TIMEFRAME]  *** OPEN. THE LAST BLOCKER. *** Never stated by the owner, and
+                 HIS OWN TEMPLATES SPLIT 3-2: H1 (MMM.tpl, MMM INDICES, RS5P)
+                 vs M15 (BASIC BTMM, Ultimate Blue). Tier 1's only timeframe-
+                 stamped EMA fact is V09 [00:41:43] "the blueberry is the 800
+                 ON THE 15 MINUTE". A 5/13 cross on M15 and on H1 are DIFFERENT
+                 SIGNALS, so this is not a detail.
+  DO NOT CODE -- on the timeframe alone. One owner sentence closes this record.
   Raised by: owner attestation, 2026-08-15. Basis: OWNER EMPIRICAL PREFERENCE.
   Related: A-020, C-010, D-043, D-055's anchor gap (A-142), A-139.
 ```
@@ -186,6 +211,64 @@ A-143 (proposed) -- "the EMA cross": the trigger of the owner's own entry rule
 ⚠️ **Numbering note:** integration holds `A-139`; the unmerged `origin/video/v21` holds **`A-140`
 and `A-141`**. This record therefore takes **`A-143`**, skipping the V21 block so it survives that
 merge, and leaving **`A-142`** to `D-055`'s anchor, which was raised first. ⚠️ **`D-055`'s *"perceived high"* record must renumber for the same reason** — see §6.
+
+### 4.1A ⭐⭐ IS TIER 1 COMPUTABLE NOW? — **NO, AND THE TIMEFRAME IS THE ONLY REASON**
+
+> *"**5/13 cross entry**"* — owner, 2026-08-15
+
+**Tier 1 is `entry = the close of the candle after the EMA cross`. Component by component:**
+
+| Component | State |
+|---|---|
+| **Which averages** | ✅ **EMA(5) and EMA(13)** — settled by this ruling |
+| **Which set they come from** | ✅ **`5 · 13 · 50 · 200 · 800`** — `D-061` |
+| **What the trigger event is** | ✅ **a cross of the two** |
+| **What the entry price is** | ✅ **the CLOSE of the bar AFTER the cross bar** — `D-058` §1 |
+| **Direction** | ⚠️ **not stated, but constrained** — see below |
+| ⛔ **TIMEFRAME** | ⛔⛔ **OPEN. THE LAST BLOCKER.** |
+
+> ### ⛔⛔ SO: NOT COMPUTABLE — BY EXACTLY ONE MISSING INPUT
+>
+> **Everything about the trigger is now fixed except the chart it is computed on.** ⚠️ **That is not
+> a detail: a 5/13 cross on M15 and a 5/13 cross on H1 are different signals, fire at different
+> times, and produce different trades.** A tool cannot be written that is agnostic to it.
+>
+> ⭐ **But it is a genuine milestone and the draft says so: this is the closest any entry rule in the
+> project has come to computable.** Every other candidate — `A-139`'s one-third entry (bar
+> unstated), V19's close-below-the-blue-tracer (`A-133`, line undefined), `A-090`'s 10-or-5-to-8 —
+> is missing something *structural*. **This one is missing a single scalar.**
+
+### 4.1B ⚠️ THE TIMEFRAME IS GENUINELY CONTESTED — the owner's own artifacts split 3–2
+
+| Artifact | Saved timeframe |
+|---|---|
+| `MMM.tpl` · `MMM INDICES.tpl` · `RS5P.tpl` | ⚠️ **H1** (`period=60`) |
+| ⭐ `BASIC BTMM.tpl` (the newest, 2026-08-15) · `Ultimate Blue.tpl` | ⭐ **M15** (`period=15`) |
+
+**And Tier 1's only timeframe-stamped EMA fact points to M15:** V09 `[00:41:43]` —
+*"the blueberry is the 800 **on the 15 minute time frame**"* (`RESOLVED BY COURSE`). V19/V20's entry
+material is also M15.
+
+> ⭐ **M15 is the better-supported arm and it is NOT adopted.** Three of the owner's five saved
+> templates say H1 — including all three `MMM*` ones, the family named for this method — and
+> `D-030` bars picking the convenient arm. ⚠️ **`!SM_Crossover_Arrows`' own alert string is
+> *"Cross Up on … min … EMA"***, i.e. the tool **prints the timeframe** because it varies.
+> **This is one owner sentence, and §7 Q1 asks it.**
+
+### 4.1C ⚠️ DIRECTION — not stated, but no longer floating free
+
+The ruling says *"cross **entry**"* and names no direction. ⭐ **It is now constrained by the
+surrounding rules rather than open in the way it was:** `D-055`'s anchor ruling makes the **M/W
+formation** the setup — **M at tops ⇒ short, W at bottoms ⇒ long** — so **the trade already has a
+direction before the cross is consulted**, and the cross functions as a **trigger inside a
+directional setup**, not as the direction-chooser.
+
+⛔ **That the cross must AGREE with the M/W direction is the obvious reading and is NOT adopted.**
+`D-030`: the owner has not said it, and a rule that fires on either cross direction inside an M is
+a different rule from one that requires a down-cross. ⚠️ **Lower risk than the timeframe** — it
+changes signal *count*, not signal *timing* — **but still unstated.**
+
+---
 
 ### 4.2 The other three
 
@@ -231,9 +314,16 @@ closes** (at some other level)? **These are different orders.** §7 Q4.
 > artifact citing this rule cites it as **the owner's**, never as the course's.
 >
 > **Part 3 — ⛔ NOT EXECUTABLE. Four undefined anchors, and `A-143` is opened for the first.**
-> **(1)** *"the EMA cross"* — **which two EMAs, which timeframe, which direction** is unstated, and
-> the project holds **two incompatible EMA sets whose fast periods are exactly the disputed ones**
-> (`D-043` 5/13 vs `MMM.tpl` 4/10); 15 possible pairs → **`A-143`, `DO NOT CODE`.**
+> **(1)** ⭐⭐ ***"the EMA cross"* — NARROWED TWICE ON 2026-08-15 AND NOW DOWN TO ONE ROW.**
+> ✅ The **set** is settled (`D-061`: `5 · 13 · 50 · 200 · 800`). ✅ The **pair** is settled — the
+> owner ruled ***"5/13 cross entry"***, so the trigger is **EMA(5) crossing EMA(13)**; ten candidate
+> pairs → **one**. ⚠️ **Direction** is unstated but **constrained** — `D-055`'s M/W anchor already
+> fixes trade direction, so the cross is a trigger *inside* a directional setup.
+> ⛔⛔ **TIMEFRAME IS THE LAST BLOCKER and it is genuinely contested: the owner's own templates split
+> 3–2, H1 (`MMM.tpl`, `MMM INDICES`, `RS5P`) against M15 (`BASIC BTMM`, `Ultimate Blue`)**, while
+> Tier 1's only timeframe-stamped EMA fact — V09 `[00:41:43]`, *"the 800 **on the 15 minute**"* — is
+> M15. **A 5/13 cross on M15 and on H1 are different signals.** → **`A-143`, `DO NOT CODE`, on the
+> timeframe alone.**
 > **(2)** *"confidence and probability is on your side"* — a **subjective gate with no threshold**;
 > it is the *condition* on tier 2, so tier 2 cannot be evaluated. **(3)** *"second leg"* — chains to
 > **`A-011`**, which still never says how the FIRST leg is identified. **(4)** *"the outside bar"* —
@@ -321,7 +411,11 @@ number V20 already holds.
 
 ## 7. THE QUESTIONS FOR THE OWNER
 
-1. ⭐⭐ **Which two EMAs, and on which timeframe?** §4.1. **The single highest-value sentence you
+1. ⭐⭐ **WHICH TIMEFRAME?** §4.1B. ✅ *Which two EMAs* is **ANSWERED** — *"5/13 cross entry"* — so
+   this is **the single remaining input** between tier 1 and a computable trigger. Your own templates
+   split **3–2 (H1 vs M15)**; V09's Tier 1 *"800 on the 15 minute"* points M15. **One word settles
+   it.**
+   ~~**Which two EMAs, and on which timeframe?** §4.1.~~ **The single highest-value sentence you
    could supply** — it is the whole of tier 1 and it closes `A-143`. *(And if the pair involves the
    fast averages, please also settle whether they are your chart's **4 and 10** or the course's
    **5 and 13** — `D-043` and `MMM.tpl` disagree.)*

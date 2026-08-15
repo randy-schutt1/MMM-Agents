@@ -11240,3 +11240,77 @@ editing them to cite an unadopted decision would be worse.
 
 **`D-061`**, verified free across integration and **every** remote branch. Adopted max `D-057`;
 `D-051`/`D-055`/`D-056`/`D-058`/`D-059`/`D-060` held by unadopted drafts.
+
+---
+
+## 2026-08-15 — OWNER RULING #10 — *"5/13 cross entry"* — `D-058` TIER 1 IS NOW **ONE SCALAR** SHORT OF COMPUTABLE
+
+**Branch:** `decisions/owner-513-cross`. **Folded into `DECISION_DRAFT_D-058` and
+`DECISION_DRAFT_D-061` — both still NOT ADOPTED. ⛔ No record changed status.**
+
+> *"**5/13 cross entry**"* — owner, 2026-08-15
+
+### ✅ WHAT IT SETTLES
+
+`A-143` asked **three** things. Two rulings in one day have now answered two of them:
+
+| Row | State |
+|---|---|
+| **SET** | ✅ **SETTLED** — `5 · 13 · 50 · 200 · 800` (`D-061`); `MMM.tpl`'s 4/10/…/3200 is not canonical |
+| ⭐ **PAIR** | ✅ **SETTLED — EMA(5) × EMA(13).** Ten candidate pairs → **one** |
+| **DIRECTION** | ⚠️ **not stated, but CONSTRAINED** — see below |
+| ⛔ **TIMEFRAME** | ⛔⛔ **OPEN — AND NOW THE ONLY BLOCKER** |
+
+### ⛔⛔ THE ANSWER TO *"IS IT COMPUTABLE NOW?"* — **NO, BY EXACTLY ONE MISSING INPUT**
+
+Tier 1 is `entry = the close of the candle after the EMA cross`. **Which averages ✅, which set ✅,
+what the trigger event is ✅, what the entry price is ✅** — *the close of the bar AFTER the cross
+bar.* ⛔ **The chart it is computed on: unstated.**
+
+⚠️ **That is not a detail. A 5/13 cross on M15 and on H1 are different signals, fire at different
+times, and produce different trades**, so no timeframe-agnostic tool can be written.
+
+⭐ **But it is a real milestone and the draft says so: this is the closest any entry rule in the
+project has come to computable.** `A-139`'s one-third entry is missing its **bar**; V19's
+close-below-the-blue-tracer is missing its **line** (`A-133`); `A-090` contradicts itself on its
+**offset**. **All of those are missing something structural. This one is missing a single number.**
+
+### ⚠️ AND THE TIMEFRAME IS GENUINELY CONTESTED — the owner's own templates split 3–2
+
+| Artifact | Saved |
+|---|---|
+| `MMM.tpl` · `MMM INDICES.tpl` · `RS5P.tpl` | ⚠️ **H1** (`period=60`) |
+| ⭐ `BASIC BTMM.tpl` (newest, 2026-08-15) · `Ultimate Blue.tpl` | ⭐ **M15** (`period=15`) |
+
+⭐ **Tier 1's only timeframe-stamped EMA fact points to M15** — V09 `[00:41:43]`, *"the blueberry is
+the 800 **on the 15 minute time frame**"*, `RESOLVED BY COURSE` — and V19/V20's entry material is
+M15 too. ⛔ **M15 is the better-supported arm and it is NOT adopted**: three of the five saved
+templates say H1, including **all three `MMM*` ones**, the family named for this method. `D-030`
+bars picking the convenient arm. ⚠️ **`!SM_Crossover_Arrows`' own alert string is *"Cross Up on …
+min … EMA"* — the tool prints the timeframe because it varies.**
+
+### ⚠️ DIRECTION — not stated, but no longer floating free
+
+The ruling says *"cross **entry**"* and names no direction. ⭐ It is now **constrained rather than
+open**: `D-055`'s M/W anchor already fixes trade direction (**M at tops ⇒ short, W at bottoms ⇒
+long**), so **the trade has a direction before the cross is consulted** and the cross is a **trigger
+inside a directional setup**, not the direction-chooser. ⛔ **That the cross must AGREE with the M/W
+is the obvious reading and is NOT adopted** (`D-030`) — a rule firing on either cross direction
+inside an M is a different rule. ⚠️ Lower risk than the timeframe: it changes signal **count**, not
+signal **timing**.
+
+### ⛔ What is unchanged
+
+**`D-058` anchors 2, 3 and 4 are untouched and still block tiers 2 and 3** — *"confidence and
+probability"* (subjective gate, no threshold), *"second leg"* (→ `A-011`), *"the outside bar"*
+(undefined by course and owner). ⛔ **`A-139`, `A-133`, `A-011`, `A-090`, `A-115`, `A-056`, `A-020`
+all unchanged.** ⚠️ **`A-143` still has never been opened in the ledger** — it remains a proposal in
+`D-058` §4.1, now rewritten so its single surviving row is the timeframe.
+
+### Files touched
+
+- `00_SYSTEM/DECISION_DRAFT_D-058_OWNER_ENTRY_RULE.md` — §0 update block; **§4.1 rewritten**;
+  **new §4.1A** (is it computable?), **§4.1B** (the 3–2 timeframe split), **§4.1C** (direction);
+  proposed-entry Part 3 rewritten; Q1 replaced with the timeframe question
+- `00_SYSTEM/DECISION_DRAFT_D-061_CANONICAL_EMA_SET.md` — §5's three-row table updated: row 2
+  **ANSWERED**, row 3 flagged as **the only blocker**
