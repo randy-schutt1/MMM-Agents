@@ -12,7 +12,7 @@
 
 ## FINAL DECISION
 
-**Decision:** `REVISE` — **0 CRITICAL, 1 MAJOR, 3 MINOR, 11 NOTE.**
+**Decision:** `REVISE` — **0 CRITICAL, 1 MAJOR, 3 MINOR, 12 NOTE.**
 **Confidence:** `HIGH`.
 
 ⛔ **V21 cannot reach `COMPLETE`** until `M1` is fixed and re-reviewed (`D-003`). **There is no V22,
@@ -37,7 +37,7 @@ the borrowed event definition — is cleared by testing it** (§4).
 |---|---|
 | The `.swf` | **SHA-256 re-computed: `9eb3b014b55ad18ef3d2ed4d6c5d2bddf14eb8ec6d1f7e60da390f2544ef23fc`** — matches `SOURCE_MANIFEST.md`. **33,002,964 bytes**, matches |
 | Audio | Extracted independently: **4487.34 s = 01:14:47.3**, matching the manifest's `01:14:47` |
-| **Independent ASR** | **Ten targeted decodes** on the `A-133` passage across **four model families** (`large-v3` at `float32`/`int8`, `medium.en`, `small.en`, `distil-large-v3`), both `vad_filter` settings, plus **0.6× time-stretched** audio — **plus a full-file `large-v3` pass** (§6) |
+| **Independent ASR** | **Ten targeted decodes** on the `A-133` passage across **four model families** (`large-v3` at `float32`/`int8`, `medium.en`, `small.en`, `distil-large-v3`), both `vad_filter` settings, plus **0.6× time-stretched** audio — **plus a full-file `large-v3` pass** (§5a) |
 | Frames | **All 17 burned timecodes cropped from the pixels and read**, and the install-walkthrough frames **read at magnification** |
 | Quarantined corpus | **All 21 lesson folders** re-read for identifier stamps, and V21's trio diffed **against all twenty** others in this reviewer's shell |
 | GBP/USD M1 corpus | `mmm_lib`, DEVELOPMENT, both `D-031` arms, `W-A` and `W-B` |
@@ -250,6 +250,36 @@ plus a slow drift to `−2 s`) is consistent with what the readings show.
 
 ---
 
+## §5a — THE FULL-FILE INDEPENDENT ASR PASS — RUN HERE, AND IT FINDS NOTHING FURTHER
+
+The submission declares (mastery §2.2) that its independent pass was **targeted, not full-file** —
+three passages, ~2 minutes of 75 — and calls the gap owed. **This round ran the full-file pass.**
+
+⚠️ **Disclosed:** the `large-v3` pass entered a **repetition loop at `[01:07:39]`**, a known decoder
+failure mode, after cleanly covering `00:00:00`–`01:07:32` (**90 % of the lesson**). The remaining
+7 minutes were transcribed separately with **VAD enabled**, which resolved it — the real line is
+*"No, not going to happen."* **Combined coverage is complete: 1,481 independent segments against the
+committed grid's 928 markers, 11,867 words against 11,964 (0.8 %).**
+
+**Result: no meaning-inverting error anywhere.** A polarity sweep over every committed line carrying
+a negation flagged **five** candidates; **all five are window-alignment artifacts** on inspection,
+not divergences.
+
+⭐ **And every load-bearing V21 quote verifies verbatim:**
+
+| Marker | Independent pass |
+|---|---|
+| `[00:04:43]` — item 361's claim | *"**The big board is the high-low board.**"* ✅ **exact** |
+| `[00:33:02]` — `PT-050`'s claim under test | *"The average move, **even in stop hunts, is about 50 pips**, right?"* ✅ **exact** |
+| `[00:32:58]` | *"Because the take profit had to be adjusted down."* ✅ **exact** |
+| `[00:32:50]` / `[00:33:14]` — `C-031`'s reconciliation | *"If all three orders are filled, you will **cycle with 150 pips**"* / *"you'll get **a 30 and a 50** most often"* ✅ **both exact** |
+
+⭐ **So V21's transcript is sound on everything a rule rests on, and the one correction the session
+did make is the one that does not hold** (§3). **The targeted-not-full-file gap cost nothing on this
+lesson** — unlike V20, where the same gap produced a `MAJOR`.
+
+---
+
 ## §6 — FINDINGS
 
 ### `CRITICAL` — **NONE**
@@ -281,7 +311,8 @@ plus a slow drift to `−2 s`) is consistent with what the readings show.
 | **375** | ⭐ **THE GATE IS OPEN AND IT IS THE FIRST IN THREE LESSONS OPENED WITHOUT A SELF-VERIFY IN THE CHAIN** — V21 forked from `19e6c2a`, the merge carrying V20's **independent** R2. The mastery report says so and it checks out |
 | **376** | ⭐ **FRAME 9 (`31-25`) IS TRANSCRIBED FROM THE PIXELS AND IS THE MOST VALUABLE FRAME IN THE CORPUS** — the instructor's handwritten `High / Low Trainer` specification, dated `1-27-2010` in his own hand. ⚠️ **It specifies risk, grid spacing and cycle targets and NOT the entry logic**, which is why `A-141`'s substance survives `M1` |
 | **377** | ⭐ **THE HOMEWORK IS HANDLED CORRECTLY** — all four items recorded `NOT DONE` or `NOT APPLICABLE` with reasons, none approximated, and the deliberate absence of a data block explained rather than left as a gap. ⚠️ Item 1's stated reason inherits `M1`'s error and should be re-worded with it |
-| **378** | ⚠️ **THE INDEPENDENT ASR PASS WAS TARGETED, NOT FULL-FILE** — three passages, ~2 minutes of 75. **The session declares this and calls it owed.** ⭐ **This round ran the full-file pass** (§7); charged as nothing because the gap was declared and is now discharged |
+| **378** | ⚠️ **THE SESSION'S ASR PASS WAS TARGETED, NOT FULL-FILE** — three passages, ~2 minutes of 75, declared and called owed. ⭐ **This round ran the full-file pass (§5a) and it found NOTHING FURTHER**: 1,481 independent segments, no meaning-inverting error, five polarity flags all alignment artifacts, and **every load-bearing quote verbatim** — `"The big board is the high-low board"`, `"the average move even in stop hunts is about 50 pips"`, `"cycle with 150 pips"`, `"a 30 and a 50 most often"`. **The gap cost nothing here** — unlike V20, where it produced a `MAJOR`. ⚠️ **Disclosed:** the pass hit a decoder repetition loop at `[01:07:39]` after covering 90 % of the lesson; the tail was re-run with VAD, which resolved it |
+| **380** | ⭐ **`C-031` AND THE `31:25` HANDWRITTEN SPEC VERIFIED FROM THE PIXELS.** All four figures read directly: `MAX Risk 5% on all orders`, `Risk Setting 1% To 5% … Ex: [Risk % 3]`, three `20 pips` gaps, `Open Live order, 2 pendings … immediately following`, `Take profit +30 pips from ORDER 1 = Market order`, `Sell Cycle / 30 pips`, and `30+50+70 = +150 pips / Most often +80`. ⭐ **`C-031`'s reading is right on both halves** — the `150`/`80` pair reconciles an apparent spoken contradiction, and the other two figures are genuinely unglossed. ⛔ **And the sheet gives risk, spacing and targets but NO entry trigger, fill logic or exit** — which is why `A-141`'s substance survives `M1` |
 | **379** | ⭐⭐ **CALIBRATION — THE SESSION SELF-CHARGED A WRONG FIGURE IT HAD ALREADY PUBLISHED MID-ROUND.** `BT_V21_0001.md` §0/§2 were first drafted from a **truncated terminal view** carrying a wrong primary median (26.05 for 29.70), caught by re-reading the JSON before commit, and **recorded as a near-miss of exactly the class items 265 and 332 describe** rather than silently corrected. ⚠️ **`M1` is the mirror image**: the same session that re-checked a number against its artifact did not re-check a claim against its own screenshot |
 
 ---
