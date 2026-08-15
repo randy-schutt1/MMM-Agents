@@ -3321,3 +3321,100 @@ it.** **V20's most quotable figures — `30 minutes or less`, `20 to 25 pip pull
 
 ⚠️ **This is not evidence that the template improved or degraded.** It is one draw. **The correct
 reading is `Q-019`'s: a true cell in these files is evidence of nothing, and so is a false one.**
+
+---
+
+## Q-022 — Lesson 21 (`Bootcamp1 Wk10 061712`): `NOTES.md`, `RULES.md`, `VISUAL_INDEX.md`
+
+**Filed:** 2026-08-15 by the V21 student session. **ELEVENTH and FINAL lesson** carrying the pattern
+— `Q-012` (V11) through `Q-021` (V20), now V21. **The 21-lesson corpus is complete.**
+
+| File | Bytes | SHA-256 |
+|---|---|---|
+| `RULES.md` | 3,023 | `4cad39083581d820e61dc8c67a23505c832889283c8ed4ab8bced121bbe66d99` |
+| `NOTES.md` | 1,299 | `d4e1a469fb31939c3095681c3f150ecd4929c59ee6c72c62346937f25210f346` |
+| `VISUAL_INDEX.md` | 1,250 | `c9adad066c4b156eb9c914ea1f04a199ab09c6d74e77da5ae8ffa04368787ce8` |
+
+---
+
+### 0. ⭐⭐⭐ THE V17 REVIEW'S PREDICTION IS CONFIRMED FROM V21's SIDE, ON ALL TWENTY COMPARISONS
+
+`REVIEW_INDEX.md` item **254** (V17 R1) predicted **two content templates — A for lessons 1–15 and
+21, B for lessons 16–20** — and predicted **V21 BREAKS the block**. `Q-020` confirmed the block from
+V19's side, `Q-021` closed it from V20's. **This session tested it from the other side of the
+boundary, by diffing V21 against every other lesson:**
+
+```text
+V21 vs V16, V17, V18, V19, V20   ->  NOTES 32 / RULES 30 / VISUAL_INDEX 26   (all five identical)
+V21 vs V01..V15                  ->  NOTES 6 or 24 / RULES 12 / VISUAL_INDEX 8..718
+```
+
+⭐⭐ **THE BREAK IS REAL AND IT IS EXACTLY WHERE ITEM 254 PUT IT.** V21 is **maximally distant from
+all five B-block members at identical figures**, and **near every A-block member**. **The
+`32 / 30 / 26` signature is the same one `Q-020` and `Q-021` measured from inside the block —
+so the boundary reads the same from both sides.**
+
+⚠️ **AND THE STRUCTURE IS VISIBLE IN THE HEADERS TOO, not only in the diffs.** V21's
+`TRANSCRIPT.md` header carries a **`Duration:` field**, a **week annotation** (*"(Week 10)"*) and
+**specific `Primary Topics`** — *"Master Review, Daily Pre-Market Routine, Homework Chart
+Walkthroughs"* — where V19's and V20's carried the generic *"Steve Mauro Beat The Market Maker
+(BTMM) Methodology"*. ⭐ **Template A's headers are richer and lesson-specific; template B's are
+boilerplate.** ⛔ **This does NOT make template A trustworthy** — see §2.
+
+---
+
+### 1. ⭐⭐⭐ THE OFF-BY-ONE IS NOT AN OFF-BY-ONE. IT IS A CLOSED PERMUTATION, AND THE CORPUS HAS BEEN DESCRIBING IT FROM A MIDDLE SAMPLE.
+
+**`Q-019`, `Q-020` and `Q-021` each recorded that the fabricated folders *"count one ahead"* —
+lesson 18 carrying `V19-`, lesson 19 `V20-`, lesson 20 `V21-`.** **That description is TRUE for
+lessons 03–20 and FALSE AT BOTH ENDS.** This session read the identifier stamp out of **all
+twenty-one** folders:
+
+```text
+folder V01 -> V01      <= CORRECT
+folder V02 -> V02      <= CORRECT
+folder V03 -> V04   ┐
+folder V04 -> V05   │
+   ...              ├  +1 throughout
+folder V19 -> V20   │
+folder V20 -> V21   ┘
+folder V21 -> V03      <= ⭐⭐ WRAPS TO THE SKIPPED VALUE
+```
+
+⭐⭐ **EVERY IDENTIFIER `01`–`21` IS USED EXACTLY ONCE. It is a BIJECTION, not a shift.** The value
+`03` is skipped in the `+1` run — folder 02 takes `02` and folder 03 takes `04`, so nothing takes
+`03` — **and it reappears on the LAST folder.** In cycle terms the sub-range 03…21 is **rotated by
+one position**.
+
+⚠️⚠️ **CONSEQUENCE FOR THE REGISTER: *"counts one ahead"* is a generalisation from the middle of the
+range and must not be restated unqualified.** ⭐ **It is the same defect class the corpus already
+tracks at items 249, 293 and 317 — a pattern stated without checking its ends** — and it survived
+**three** consecutive quarantine entries because every one of them sampled lessons 18, 19 and 20,
+which sit inside the region where the description happens to hold.
+
+⭐ **What the permutation is evidence OF, stated carefully:** the generator assigned a complete set
+of 21 identifiers to 21 folders in an order where `03` was consumed last. **That is consistent with
+a list built, an element removed and re-appended, or an ordering key that sorted `03` to the end.**
+⛔ **This session does not claim to know which**, and the mechanism is not needed for the
+quarantine finding.
+
+---
+
+### 2. ⭐⭐ ALL THREE `VISUAL_INDEX.md` CLAIMS REFUTED — AND TEMPLATE A IS AS FABRICATED AS TEMPLATE B
+
+| Claimed | Fabricated description | ⛔ **What this session's own sweep shows** |
+|---|---|---|
+| `[00:02:00]` | *"Asian Box accumulation range with 5, 13, 50, 200, and 800 EMAs"* | ⛔ **A SLIDE, not a chart** — the course schedule / expectations deck. **V21 shows no live chart at 02:00**, and the whole first ~16 minutes is administration and the reprinted article |
+| `[00:15:00]` | *"London Open Stop Hunt false breakout forming 2nd leg M-formation at High of Day"* | ⛔ **The reprinted ARTICLE** — printed prose reading *"…there must be a loser. Winners' profits come from the losers."* |
+| `[00:30:00]` | *"TDI Shark Fin setup with green line hooking inside volatility bands + 5/13 EMA cross"* | ⛔ **`How Can We Automatically Set Orders To Handle The Varying Levels Of The Dealer`** — a bullet slide. **No TDI panel; `TDI` is spoken in V21 only as *"TDI only trades"* in the standing checklist** |
+
+⭐⭐ **THE SHIPPED SCREENSHOT IS NAMED `VIDEO_03_SCREENSHOT_001_00-02-00.jpg` — THE THIRD LESSON
+RUNNING WHERE THE FOLDER'S OWN IMAGE CARRIES THE WRONG LESSON'S IDENTIFIER**, and here it carries
+`03` rather than `22`, per §1.
+
+⚠️⚠️ **THE POINT OF THIS SECTION IS THAT TEMPLATE A FAILS THE SAME WAY TEMPLATE B DOES.** §0 shows
+template A's headers are richer and lesson-specific, which could invite the reading that the A files
+are more trustworthy. ⛔ **They are not.** **Its three visual claims are as wrong as V19's and V20's
+were, and they are wrong in the same way — a generic EMA/Asian-box template, a generic London stop
+hunt, and a generic TDI shark fin, none of which is on screen.** ⭐ **`Q-019`'s rule holds across
+both templates: a true cell in these files is evidence of nothing, and so is a plausible header.**
