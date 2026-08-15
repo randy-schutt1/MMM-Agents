@@ -1715,6 +1715,7 @@ ruling) are carried forward unchanged. **The next review trigger is the V06 subm
 | V11 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V12 OPEN (`D-024`) · 5 MINOR (109–113) owed before `COMPLETE`** |
 | V12 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V13 OPEN (`D-024`) · 2 MINOR (137–138) owed before `COMPLETE`** |
 | V12 | REMEDIATION APPLIED | R1 (fix round) | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** · **V13 GATE OPEN** |
+| V12 | REMEDIATION VERIFIED | R2 | **PASS** | 0 | 0 | ✅ **COMPLETE** |
 | V13 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V14 OPEN (`D-024`) · 2 MINOR (154–155) owed before `COMPLETE`** |
 | V14 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **V15 GATE OPEN (`D-024`) · 5 MINOR (172–176) owed before `COMPLETE`** · ⚠ **AND THE OWNER'S HARD STOP STANDS** |
 | V14 | REMEDIATION APPLIED | R1 (fix round) | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** · **V15 GATE OPEN, AND THE OWNER'S HARD STOP STANDS** |
@@ -3050,3 +3051,16 @@ CONFIRMED as recorded**, with 167's owed `PT-042` §5a amendment extended by ite
 | 93 | V10 R1 | Unscoped no-hour claim | **All four incidental times checked at source; none delimits a session. §15 now states the narrower true session-boundary claim, enumerates all four counterexamples, and retains the superseded text.** | ⛔ **CLOSED — VERIFIED** |
 | 94 | V10 R1 | `C-016` omitted its own ASR caution | **Transcript confidence/caution verified; all 32 curated images OCR-screened and the two safety-rule slides opened, with no printed holding period found. The caution strengthens the refusal to reconcile and does not change the disposition.** | ⛔ **CLOSED — VERIFIED** |
 | 388 | **V10 R2** | **Historical self-verification boundary independently cured.** | R2 did not author the fixes and re-derived all four findings from source. The old warning remains append-only; this is the first arm's-length post-fix verdict. | **`NOTE`** |
+
+
+> ### 🔢 NUMBERING — item 389, allocated 2026-08-15 by the V12 **R2** independent round under `D-047`
+>
+> Allocated against the current Phase 2 branch, where **388** was the highest item. No collision.
+
+## V12 — R2 (2026-08-15) — **`PASS`**, 0 CRITICAL / 0 MAJOR / 0 MINOR / 1 NOTE, HIGH confidence. **Items 137–138 CLOSED — VERIFIED. V12 is `COMPLETE`.**
+
+| # | Source | Item | Evidence | Disposition |
+|---|---|---|---|---|
+| 137 | V12 R1 | Dashboard omitted from categorical visual inventory | **Dashboard independently read from `00:34:26`; comparison frames opened; corrected row, student provenance, timeframe-not-period treatment, and rescoping all verified. `A-080` does not move.** | ⛔ **CLOSED — VERIFIED** |
+| 138 | V12 R1 | `Q-013` falsely called V12 the first on-topic fabrication | **`Q-003`/`Q-004` read directly; body counts re-run; quarantined V03/V04/V12 visual indexes and line-18 TDI sentence mechanically compared. V12 is the third and most complete recurrence.** | ⛔ **CLOSED — VERIFIED** |
+| 389 | **V12 R2** | **Historical self-verification boundary independently cured.** | R2 did not author the fixes and re-derived both findings from source. The old warning remains append-only; this is the first arm's-length post-fix verdict. | **`NOTE`** |

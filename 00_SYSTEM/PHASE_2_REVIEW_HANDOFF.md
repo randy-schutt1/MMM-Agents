@@ -21,8 +21,8 @@
 3. Write fresh V17 R2, V18 R2, V19 R2, and V20 R3 review files.
 4. Preserve the original findings; append close-outs rather than overwriting review history.
 5. Issue `PASS` only where the full lesson criteria and all findings support it.
-6. Separately audit the remaining V11–V16 non-PASS backlog. V09 and V10 reached independent R4/R2
-   `PASS`; do not treat the other owner-directed self-verification rounds as independent.
+6. Separately audit the remaining V11–V16 non-PASS backlog. V09, V10, and V12 reached independent
+   R4/R2/R2 `PASS`; do not treat the other owner-directed self-verification rounds as independent.
 7. Keep `FINAL_COURSE_REVIEW.md` `NOT STARTED` until all 21 lessons hold an independent `PASS`.
 
 ## Copy-ready continuation prompt
@@ -43,6 +43,6 @@ Read the governing protocols and then:
    validated trading edge.
 
 The Phase 1 claim of twelve V17–V20 minors was arithmetically wrong: the cited ranges total fourteen.
-The broader formal census is 11/21 independent PASS. V09 and V10 reached R4/R2 PASS; V11–V20
-retain latest independent verdict REVISE.
+The broader formal census is 12/21 independent PASS. V09, V10, and V12 reached R4/R2/R2 PASS;
+nine lessons retain latest independent verdict REVISE.
 ```

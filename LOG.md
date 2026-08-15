@@ -11693,3 +11693,18 @@ disposition, test result, or edge claim moved.
 
 **Formal Phase 2 census:** **11/21 independent PASS; 10/21 latest independent REVISE.** The official
 final review remains `NOT STARTED`; Master and Machine Specification directories remain gated.
+
+---
+
+## 2026-08-15 — PHASE 2 — V12 R2 INDEPENDENT PASS
+
+**Branch:** `phase2/cross-lesson-review`
+**Decision:** **PASS — 0 CRITICAL / 0 MAJOR / 0 MINOR / 1 NOTE, HIGH confidence.**
+
+Items 137–138 were re-derived independently. The `00:34:26` student chart visibly carries the
+omitted multi-timeframe dashboard, whose EMA row has no period; two comparison frames do not carry
+it. `Q-003` and `Q-004` establish the first two on-topic fabrication coincidences, while transcript
+censuses and direct comparisons of the quarantined V03/V04/V12 files confirm V12 is the third and
+most complete. No lesson conclusion or quarantine disposition moved.
+
+**Formal Phase 2 census:** **12/21 independent PASS; 9/21 latest independent REVISE.**
