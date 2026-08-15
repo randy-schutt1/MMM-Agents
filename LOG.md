@@ -11060,3 +11060,102 @@ into `D-059` §8 Q5.
   the record is neither closed nor deprioritised for course study
 - `00_SYSTEM/DECISION_DRAFT_D-056_MMM_TPL_AND_TIME_RIBBON.md` — the pivot-source request downgraded
   at **three** sites, superseded text struck rather than deleted
+
+---
+
+## 2026-08-15 — THE BTMM INDICATOR PACK — the canonical `!SM_` suite arrives, and it OVERTURNS `D-051`'s central negative finding
+
+**Branch:** `tools/btmm-indicator-pack-survey`. **One survey + one proposed entry (`D-060`), NOT
+ADOPTED. `D-051` factually CORRECTED. No `A-xxx` changed status.**
+
+> *"I added another template… called basic btmm. I added another indicator folder within the
+> folder… **It does have the pivot points.** If it helps the agent then we can add it."*
+
+### ⛔⛔ THE ANSWER TO *"DOES IT HELP THE AGENT?"* — PARTLY, AND NOT THE WAY HOPED
+
+**All 20 files are compiled `.ex4`. There is not one `.mq4` in the folder.** So the pack yields
+**parameter surfaces and field names, never algorithms** — the one exception being
+`!SM_ADR_Marker`'s leaked `DebugLogger` branch labels. ⛔ **`D-030` bars reconstructing any of it
+into setup-detection logic, and no agent component may be built on it.** ⭐ What it *does* give is
+real: it identifies which tools are canonical, and it corrects a standing error.
+
+### ⭐⭐⭐ `D-051` §1 IS FALSE AND HAS BEEN CORRECTED
+
+`D-051` §1 said the course's ADR indicator is *"NOT FOUND anywhere on the volume"* and that
+`Reached=` / `To ADR High` / `Today's Range` return *"zero files"*. ⛔ **All three are in
+`!SM_ADR_Marker.ex4`** (`cddecc00…`), with the **complete nine-field readout** §3 reconstructed from
+the V07 frames. ⚠️ It is **v1.00 (`20051027`)**, not the course's **v1.5 (`20100528`)** — same
+indicator, five years earlier, and **the build whose stamp §4 already found in
+`3M-shadow-boxes-15M.tpl`. That loop closes.**
+
+⚠️⚠️ **AND `D-051` PART 3 IS NOW IN DOUBT.** Part 3 provisionally closes `A-100`'s range definition
+as *"plain range, NOT true range"* on `mm_adr`. ⭐ **The course-family indicator's period input is
+named `ATRPeriod`** — ATR is by definition true range. ⛔ **Not overturned** — an input name is not
+an implementation, and `High-Low/adr-Reached` sits in the same string table pointing the other way —
+**but `D-051` may not be adopted without re-arguing it.** Also new: `UseManualADR` admits a
+**hand-set ADR**, which no `A-100` candidate has considered.
+
+### ⭐⭐⭐ THE NICKNAMES NOW HAVE AN ARTIFACT — and it still does not close `A-020`
+
+`!sw_Multi-MA.ex4` (Steve Wilson, 2011) names its inputs **`Mustard · Ketchup · Water · Mayo ·
+Blueberry`**. ⭐⭐ **`Ultimate Blue.tpl` — the artifact `D-045` ALREADY ADMITTED — saves
+`5 · 13 · 50 · 200 · 800`**, matching `D-043` in all five cells, **with the pairing made by the
+indicator author's labels rather than by recollection.** ⭐ `Mustard=5`/`Ketchup=13` hold across
+**all three** saved configurations found — precisely the two cells `D-041`/`D-042`/`D-043` fought
+over and that §3.4 records as having **no Tier 1 statement anywhere**.
+
+⛔ **`A-020` and `A-143` STAY OPEN.** Four restraints: `TOOLING` ranks below Tier 1; ⚠️ **it is
+unresolved whether `D-045` admitted the whole template or only its TDI block** (surfaced as a
+question, not assumed); one user's saves are not independent witnesses (`D-056` §6); and
+⚠️ **`The Beast.tpl`'s second Multi-MA instance saves `195/750/3000`, proving the values are freely
+re-parameterised.**
+
+### ⭐⭐ THE PIVOT INDICATOR IS REAL, ON-LINEAGE, AND STILL UNREADABLE
+
+`!SM_PivotPoints.ex4` — **`!SM_`-prefixed and dated the SAME DAY (2011-05-08) as `!SM_TDI` and
+`!SM_ADR_Marker`**, strong evidence they shipped as one pack. Exposes **`MidPivots` /
+`MidPivotColor` / `MidFontSize`** alongside standard/Fib/Camarilla sets, and standard pivots have
+**four** interstitial gaps matching `A-101`'s `M1`–`M4` positions.
+
+⛔ **`A-101` UNCHANGED — `OPEN`, `DO NOT CODE`.** Compiled, no source, **no template on the volume
+attaches it so not even its input VALUES are recoverable**, and the `MidPivots` formula is
+unreadable — a variable name is not a construction (`D-030`). ⚠️ Its `GMTshift` input means the
+pivot day boundary is **configurable**, which widens `A-082`'s caution. Per `D-059` §5A: **LOW
+priority for tool-building, unchanged for course study.**
+
+### ⭐⭐ THE CHEAPEST UNBLOCK IN THE PROJECT
+
+`!sm_gmtoffset.ex4` — a dedicated **broker GMT-offset display** (`GetSystemTime`/`kernel32.dll`,
+prints *"GMT Offset is "*). ⛔ It records nothing historically, so **`C-032` is not settled by its
+existence.** ⭐⭐ **But attaching it to the owner's chart prints the one number that separates
+`D-056` §4A.2's two one-hour-apart arms.** No research required.
+
+⭐ Also: **three `!sm_WorkTime` builds ship together** — `!sm_WorkTime.ex4` (2011, **new**),
+`no_autogmt`, and `v1.5b` (**byte-identical to the `D-056` artifact**). A pack shipping both a
+`no_autogmt` variant *and* a separate offset tool **corroborates `D-056` §4.3's inference that the
+plain builds auto-adjust** — ⚠️ corroboration of an inference, not a reading of code.
+
+### ⭐ AND THE EMA CROSS IS A NATIVE BTMM OBJECT
+
+`!SM_Crossover_Arrows.ex4` (2010, the oldest file) — inputs `FasterEMA` / `SlowerEMA`, strings
+*"Cross Up on … min … EMA"*. ⭐ **`D-058` tier 1's *"the close of the candle after the ema cross"* is
+therefore a native object of this toolset, not the owner's invention** — which strengthens `D-058`
+as a description of real practice. ⛔ **`A-143` does not close**: the default periods are not in the
+string table, no template attaches it, and `BASIC BTMM.tpl` is empty.
+
+### ⚠️ `BASIC BTMM.tpl` IS EMPTY
+
+**650 bytes, 47 lines, ZERO indicators** — chart cosmetics only (`USDCHF`, **M15**, grey background,
+green/red candles). ⛔ Contributes nothing to any record. **Worth telling the owner plainly**: if he
+expected it to carry the stack, it does not — the populated template is where the values live.
+
+### ⚠️ One artifact noted and NOT admitted
+
+`Desktop/Trading/Steve Mauro ORIGINAL The Market Maker Method BTMM.pdf`. Under
+`EXTERNAL_REFERENCE/README.md`'s ⛔ default it is **not a source, not evidence, never cited** until
+it has its own `D-039`-class ruling. ⭐ Flagged as potentially high-value; **out of scope here.**
+
+### Numbering
+
+**`D-060`**, verified free across integration and **every** remote branch. Adopted max `D-057`;
+`D-051`/`D-055`/`D-056`/`D-058`/`D-059` held by unadopted drafts.
