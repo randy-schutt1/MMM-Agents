@@ -4874,7 +4874,30 @@ to prevent. *Creating a new tier for it* — rejected; it is `D-052`'s class in 
    stays open.
 5. **No tier is added to `SOURCING_HIERARCHY.md`.**
 6. **Housekeeping executed at the owner's direction:** the `D-054` draft-numbering collision
-   resolved (`D-055`/`D-056`, substance unchanged), and three byte-identical `" 2"` duplicate files
-   removed from `06_MANUAL_BACKTEST/tools/`.
+   resolved (`D-055`/`D-056`), and three byte-identical `" 2"` duplicate files removed from
+   `06_MANUAL_BACKTEST/tools/`.
+
+> ### ⚠️ CORRECTION, APPENDED IMMEDIATELY — CONSEQUENCE 6 SAID *"SUBSTANCE UNCHANGED"* AND THAT WAS WRONG
+>
+> **It was true of the renumber and false of the commit.** Both draft files had been **amended in
+> the shared working tree by a CONCURRENT SESSION** between `cf1fda9` and this entry, and this
+> session's `git add -A -- 00_SYSTEM` **carried those amendments into the renumbering commit.**
+> **Nothing was lost or overwritten** — the amendments are intact, and reverting them to make the
+> renumber "clean" would have destroyed another session's work, which is worse. **But they are not
+> this session's work, they were not reviewed here, and the commit says so only because of this
+> note.** Same class as `REVIEW_INDEX.md` item 263, recorded rather than tidied away.
+>
+> ⭐ **AND THE AMENDMENTS CARRY TWO FURTHER OWNER RULINGS THAT ARE NOT YET ADOPTED ANYWHERE.**
+> Surfaced here because they are now sitting in **unadopted drafts** where a reader of
+> `DECISIONS.md` will not find them:
+>
+> | Ruling (owner, 2026-08-14) | Where it landed | Status |
+> |---|---|---|
+> | *"the perceived high is **where the M/W forms**"* | `DECISION_DRAFT_D-055_OWNER_STOP_AND_TARGETS.md` §4A — answers that draft's own *"cheapest blocker in the project"* | ⬜ **UNADOPTED** |
+> | *"We need to offset the GMT so that it's **EST**"* | `DECISION_DRAFT_D-056_MMM_TPL_AND_TIME_RIBBON.md` §4A — and that draft reports the ruling makes the residual gap **sharper**, with the two best anchors demanding offsets **exactly one hour apart** (proposed `C-030`, `A-105`) | ⬜ **UNADOPTED** |
+>
+> ⛔ **`D-057` adopts NEITHER of them and takes no position on either.** They are named here **only**
+> so they are discoverable from the ledger. **Both drafts remain `UNADOPTED` and their numbers
+> remain unreserved.**
 **Status:** ACTIVE — **an attestation on the record. `A-086` stays `DO NOT CODE`; `A-031`/`A-032`
 stay uncomputable; one yes/no question is owed by the owner.**
