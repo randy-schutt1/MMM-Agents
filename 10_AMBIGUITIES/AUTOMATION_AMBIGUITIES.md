@@ -6898,6 +6898,34 @@ Tier 2's "market base line cross" is SUPERSEDED -- see C-019.
 >          D-052 answered the BASIS only, and is NOT course evidence.
 > ```
 
+> ### ⭐ ATTESTATION ADDED 2026-08-14 — `D-057`. **THE OWNER SAYS HE FINDS THIS PATTERN AND IT WORKS. ⛔ THE RECORD DOES NOT MOVE.**
+>
+> **Owner, 2026-08-14:** *"The TDI band is fine. I found the shark fin / blood in the water -
+> working fine."* Recorded as **`OWNER EMPIRICAL ATTESTATION`** — the observation form of `D-052`'s
+> out-of-tier owner class. **Not a new tier.**
+>
+> ⭐ **WHY THIS IS NOT THE CONTRADICTION IT LOOKS LIKE.** This record is `CLOSED — RESOLVED BY
+> COURSE` **as to MEANING** and **uncomputable** as to *criterion*. **A human recognising a shape
+> does not need a numeric criterion** — the owner can point at the pattern the way one points at a
+> face. **What he cannot do by looking, and has not claimed to do, is supply the number a machine
+> would need.** *"They are uncomputable"* and *"I found them, working fine"* are **both true, of
+> different faculties.**
+>
+> ⛔ **NOTHING CHANGES HERE.** He stated **no number**. The blocker was never the meaning and is not
+> his eyesight — **it is `A-086`'s never-stated PERIOD**, and `D-057` supplies none.
+>
+> ⭐ **What it DOES open:** because he can identify the pattern by eye, V12's scoped claim
+> (*shark fin + blood in the water ⇒ the H1 fired in congruency*) is **manually** testable, where
+> `D-054` correctly recorded it as **automatically** untestable. **`D-057` §4 records that route as
+> AVAILABLE and NOT COMMISSIONED** — it needs its own `D-026`/`D-027` pre-registration, and its
+> result would speak to the owner's configuration, not to the course.
+>
+> ```text
+> A-031 -- RESOLVED BY COURSE as to MEANING.  UNCHANGED.  NO STATUS CHANGE.
+>          STILL NOT COMPUTABLE: the band is unspecified (A-086 -- PERIOD).
+>          D-057 is an owner ATTESTATION, not a criterion and not course evidence.
+> ```
+
 ---
 
 ## A-032 — STATUS CHANGE: ⭐ **CLOSED — `RESOLVED BY COURSE`** ("shark fin")
@@ -6991,6 +7019,34 @@ V12 [00:19:28] spoken + frames 19:06 and 23:26 printed.
 > A-032 -- RESOLVED BY COURSE as to MEANING.  UNCHANGED.  NO STATUS CHANGE.
 >          STILL NOT CODABLE: the band is unspecified (A-086 -- PERIOD, MULTIPLIER).
 >          D-052 discharged the BASIS reason only. Two blockers remain; each suffices.
+> ```
+
+> ### ⭐ ATTESTATION ADDED 2026-08-14 — `D-057`. **THE OWNER SAYS HE FINDS THIS PATTERN AND IT WORKS. ⛔ THE RECORD DOES NOT MOVE.**
+>
+> **Owner, 2026-08-14:** *"The TDI band is fine. I found the shark fin / blood in the water -
+> working fine."* Recorded as **`OWNER EMPIRICAL ATTESTATION`** — the observation form of `D-052`'s
+> out-of-tier owner class. **Not a new tier.**
+>
+> ⭐ **WHY THIS IS NOT THE CONTRADICTION IT LOOKS LIKE.** This record is `CLOSED — RESOLVED BY
+> COURSE` **as to MEANING** and **uncomputable** as to *criterion*. **A human recognising a shape
+> does not need a numeric criterion** — the owner can point at the pattern the way one points at a
+> face. **What he cannot do by looking, and has not claimed to do, is supply the number a machine
+> would need.** *"They are uncomputable"* and *"I found them, working fine"* are **both true, of
+> different faculties.**
+>
+> ⛔ **NOTHING CHANGES HERE.** He stated **no number**. The blocker was never the meaning and is not
+> his eyesight — **it is `A-086`'s never-stated PERIOD**, and `D-057` supplies none.
+>
+> ⭐ **What it DOES open:** because he can identify the pattern by eye, V12's scoped claim
+> (*shark fin + blood in the water ⇒ the H1 fired in congruency*) is **manually** testable, where
+> `D-054` correctly recorded it as **automatically** untestable. **`D-057` §4 records that route as
+> AVAILABLE and NOT COMMISSIONED** — it needs its own `D-026`/`D-027` pre-registration, and its
+> result would speak to the owner's configuration, not to the course.
+>
+> ```text
+> A-032 -- RESOLVED BY COURSE as to MEANING.  UNCHANGED.  NO STATUS CHANGE.
+>          STILL NOT COMPUTABLE: the band is unspecified (A-086 -- PERIOD).
+>          D-057 is an owner ATTESTATION, not a criterion and not course evidence.
 > ```
 
 ---
@@ -7557,6 +7613,22 @@ mechanism from the same phrase as a description of lag.
 >          owner ruling sought or given on A-085.
 > ```
 
+> ### ⭐ FOLLOW-ON 2026-08-14 — `D-057`. **THE SCOPED CLAIM BECOMES MANUALLY TESTABLE. STATUS STILL UNCHANGED.**
+>
+> `D-054` §2 recorded that V12's scoped claim — *shark fin + blood in the water ⇒ the H1 fired
+> "at the same time or in congruency"* — **could not be tested**, because `A-031`/`A-032` are
+> uncomputable. **The owner has since said he identifies both patterns on his own chart** (`D-057`).
+>
+> ⭐ **That closes the gap for MANUAL testing and leaves the automated case exactly where `D-054`
+> put it.** A `D-005` manual protocol is now possible: mark **N** independent instances on the
+> owner's configuration and record whether the H1 TDI had fired in congruency, **with the H1 hidden
+> at the point of marking.**
+>
+> ⛔ **`D-057` does NOT run, commission or pre-register that test**, and neither does this block.
+> It needs its own `D-026`/`D-027` pre-registration, and its result would be evidence about **the
+> owner's configuration**, not about the course. **`A-085` stays `OPEN` and `DO NOT CODE`** — it
+> needs a **period and a formula**, and no amount of manual observation supplies either.
+
 > ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
 >
 > **V14 MOVED THIS RECORD AND THE RECORD DID NOT SAY SO.** Every V14 effect was written only into
@@ -7755,6 +7827,37 @@ are still not testable.**
 > ❌ **`A-031` and `A-032` therefore STILL remain uncomputable.** **A basis and a multiplier do not
 > build a band without a lookback**, and the lookback is a candidate, not a closure. Any session
 > reading `D-052` as an unblock has made the `D-039` error by another route.
+
+> ## ⭐ ATTESTATION ADDED 2026-08-14 — `D-057`. **THE OWNER SAYS THE BAND IS FINE. ⛔ THE PERIOD IS STILL NOT STATED, AND THIS RECORD DOES NOT MOVE.**
+>
+> **Owner, 2026-08-14, told that this record blocks `A-031`/`A-032`:** *"The TDI band is fine. I
+> found the shark fin / blood in the water - working fine."* **`OWNER EMPIRICAL ATTESTATION`** —
+> the observation form of `D-052`'s out-of-tier owner class. **Not a new tier.**
+>
+> ⛔⛔ **HE STATED NO NUMBER, AND THAT IS THE WHOLE POINT.** *"The band is fine"* is **satisfaction
+> with a configuration**, not a **specification** of one. This record's missing quantity is a
+> **period**, and an endorsement is not a period. **`Volatility_Band=34` remains `[TOOLING]`,
+> `D-045`-ELIGIBLE and NOT ADOPTED**, and the period is **still never stated in Tier 1 or Tier 2**.
+>
+> ⚠️ **AND HIS SATISFACTION MAY NOT EVEN BE WITH THIS TOOL'S NUMBERS.** The owner runs the MT4
+> `!SM_TDI`; `MMM_TDI.txt` is this project's **port**, and the two are **known to differ on exactly
+> the disputed number** — the multiplier is **compiled into the `.ex4`** and was never recovered
+> (`D-045`, `D-048` §7.3), so the port's `1.6185` is a Tier-3 guess that came from nowhere near his
+> tooling. ⭐ ***"My band is fine" is therefore fully consistent with the port's multiplier being
+> wrong.*** Inferring otherwise would be `D-039`'s error.
+>
+> ⭐ **A YES/NO IS OWED BY THE OWNER** (`D-057` §5): is he looking at `MMM_TDI.txt` or at MT4 — and
+> if the port, may `1.6185`/`34` be relabelled **`OWNER-CONFIRMED WORKING`**? ⚠️ **Even a "yes"
+> would upgrade a TAG ON A TOOL, not this record** — `A-086` needs a number **the corpus states**.
+>
+> ```text
+> A-086 -- DO NOT CODE.  UNCHANGED.  NO STATUS CHANGE.
+> Basis:      RSI LINE. OWNER EMPIRICAL PREFERENCE (D-052). Not course-verified.
+> Deviation:  "two standard deviations" (V14). Port still carries 1.6185 [DEFAULT].
+> Period:     ❌ STILL NEVER STATED. D-057 supplies NO number. An owner saying the
+>             band is FINE is not an owner stating what the band IS.
+> => A-031/A-032 STILL uncomputable. The band is STILL NOT BUILDABLE.
+> ```
 >
 > **Related:** `D-052`, `C-021` §8, `D-048` Parts 1–2, `D-045`, `A-031`, `A-032`, `A-039`;
 > `REVIEW_INDEX.md` item 187 (**closed**); `06_MANUAL_BACKTEST/tools/MMM_TDI.txt`.
