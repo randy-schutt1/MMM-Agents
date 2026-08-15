@@ -2782,3 +2782,204 @@ slide**; the title card is at `02:40`.
 * It does not depend on the committed transcript being right. The `5/13`, `800`, `Asian Box` and
   `M15` zeroes are re-checkable against the independent ASR pass (`V17_TRANSCRIPT.md` §5), as
   `Q-017` §5 did for V16.
+
+---
+
+## Q-019 — Lesson 18 (`Bootcamp1 Wk8 051312 Part2`): `NOTES.md`, `RULES.md`, `VISUAL_INDEX.md`
+
+**Filed:** 2026-08-14 by the V18 student session
+**Location:** `01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/per_lesson/18_Bootcamp1_Wk8_051312_Part2_46mins/`
+**Status:** **ALREADY QUARANTINED ON ARRIVAL** — the three files were moved out of the lesson folder
+by an earlier sweep, and this session confirmed the lesson folder now holds only `TRANSCRIPT.md`,
+`SCREENSHOTS/` and the `.swf`. **No V18 artifact cites any of these three files as evidence.** Every
+reference in the V18 set is to **this register entry**, never to the files.
+
+**SHA-256, recorded so the audited objects are pinned:**
+
+| File | Bytes | SHA-256 |
+|---|---|---|
+| `RULES.md` | 3,173 | `8881942a76aafef8aedea61bfcff7ae2cb9a7a40502828abf99a827b03dc0da8` |
+| `NOTES.md` | 1,712 | `bba190528b390a0e62357d8fdb544539b0053abe545cc58e70464725c26b3282` |
+| `VISUAL_INDEX.md` | 1,253 | `9fc093a087eb60b9c5493fd99ce2e0086dea39dd9795f847b08fd9ea9737a017` |
+
+**This is the EIGHTH CONSECUTIVE lesson carrying the `VISUAL_INDEX.md` pattern** — `Q-012` (V11)
+through `Q-018` (V17), and now V18.
+
+---
+
+### 0. ⭐ THIS ENTRY CORROBORATES `REVIEW_INDEX.md` ITEM 254 — IT DOES NOT DISCOVER IT
+
+**Stated first, so the record is not read as a fresh finding.** The V17 R1 round already diffed all
+21 trios and reported: *"exactly TWO content templates — A for lessons 1-15 AND 21, B for lessons
+16-20. V18, V19 and V20's trios are BYTE CLONES of V17's."*
+
+**This session re-derived that independently by a different method** — normalising each of the 63
+files for the three varying token classes (`.swf` filename, `VNN-Rxxx` rule IDs, `VIDEO_NN_`
+screenshot names) and hashing. **The result reproduces item 254 exactly:**
+
+```text
+RULES.md         normalised hash 09fddacefaaf -> lessons 16,17,18,19,20  (identical)
+NOTES.md         normalised hash 440f9076c6aa -> lessons 16,17,18,19,20  (identical)
+VISUAL_INDEX.md  normalised hash f93c49009468 -> lessons 16,17,18,19,20  (identical)
+   ... and lesson 21 reverts to template A on all three.
+```
+
+**The V16-era prediction that the pattern "likely runs through V21" is HALF RIGHT in the same way
+item 221 was**: the block is **V16–V20**, five lessons, and **V21 breaks it**.
+
+**The exact diff, V17 → V18:**
+
+```text
+RULES.md          10 differing lines = 5 changed pairs:
+                    the .swf filename, V18-R001/R002 -> V19-R001/R002,
+                    and two VIDEO_18 -> VIDEO_19 visual filenames.
+                  ZERO content lines differ.
+NOTES.md           2 differing lines = 1 changed pair: the .swf filename.
+                  ZERO content lines differ.
+VISUAL_INDEX.md    8 differing lines = 4 changed pairs:
+                    the .swf filename and three VIDEO_18 -> VIDEO_19 names.
+                  ZERO content lines differ.
+```
+
+**All three are byte-identical in LENGTH to V17's** (3,173 / 1,712 / 1,253) — what a same-length
+identifier substitution produces.
+
+---
+
+### 1. ⚠⚠ WHAT IS NEW HERE, AND IT MAKES THIS FOLDER **MORE** DANGEROUS THAN V17's
+
+**The identical fabricated text scores its FIRST COINCIDENTAL CONTENT HIT against the real lesson —
+on a row that is wrong in every other respect.**
+
+`RULES.md`'s `NUMERICAL PARAMETERS` table asserts:
+
+```
+| Peak Time Gap | 30-90 mins | Between M/W Legs | [00:22:00] | Explicit |
+```
+
+⭐ **V18 REALLY DOES SAY "30 to 90 minutes".** The token census returns **one** hit, and it is
+genuine:
+
+> `[00:42:13]` *"Then he's going to make the new formation. That takes what?"*
+> `[00:42:14]` *"**30 to 90 minutes.**"*
+
+**Confirmed verbatim by an independent `faster-whisper large-v3` pass** (`V18_TRANSCRIPT.md` §5).
+
+**In `Q-018` this same row was pure fabrication** — V17 at `[00:22:00]` is comparing two pop-quiz
+entries. **On V18 the phrase exists.** The row is still wrong on every other field:
+
+| Field | Fabricated claim | What V18 actually has |
+|---|---|---|
+| Value | `30-90 mins` | ✅ **correct — the only correct cell in the table** |
+| Timestamp | `[00:22:00]` | ❌ the real marker is **`[00:42:14]`**. At `[00:22:02]` he says *"all the time compressions two or three times"* |
+| Context | `Between M/W Legs` | ❌ it is the time for the dealer to **build the next level's formation**, one term of the ~2-hour wait rule (`45 min vector + 30–90 min formation`). Nothing to do with a gap between M and W legs |
+| Source | `Explicit` | ⚠ the *number* is explicit; the *rule it is attached to* is invented |
+
+⚠️⚠️ **WHY THIS IS WORSE THAN BEING WRONG.** A reviewer spot-checking this table would most likely
+check a number, and **`30-90 mins` is the number that checks out.** The one true cell sits in a table
+whose other six rows are refuted below. **A single coincidental hit is exactly what converts
+"obviously fabricated" into "mostly right, needs tidying" — which is how a fabricated file
+survives.**
+
+**This is also the mechanism the register should expect going forward:** one template is applied to
+five different lessons, so as the lessons vary it will land occasional true hits **by coincidence**.
+⭐ **A true cell in these files is evidence of nothing.**
+
+---
+
+### 2. THE TOKEN CENSUS — V18 IS A *STRONGER* REFUTATION THAN V17 WAS
+
+Case-insensitive substring counts over the committed V18 transcript body (`census.py`, re-runnable):
+
+```text
+'EMA'          : 0   <-- ZERO      'Asian Box'    : 0   <-- ZERO
+'5/13'         : 0   <-- ZERO      'Asian range'  : 8   (the lesson's OWN term)
+'5 EMA'        : 0   <-- ZERO      'M15'          : 0   <-- ZERO
+'13 EMA'       : 0   <-- ZERO      'candle close' : 0   <-- ZERO
+'50 EMA'       : 0   <-- ZERO      'stop loss'    : 0   <-- ZERO
+'200'          : 0   <-- ZERO      'news'         : 0   <-- ZERO
+'800'          : 0   <-- ZERO      '10 to 15'     : 0   <-- ZERO
+```
+
+⭐ **`EMA` returns a CLEAN ZERO on V18.** In `Q-018`, V17 returned **4** hits (all *"20 EMA"* or
+moving-average glosses). **V18 has not one.** The whole `NUMERICAL PARAMETERS` table — `EMA Fast 5`,
+`EMA Fast Confirm 13`, `EMA Baseline 50`, `EMA Major 200`, `EMA Macro 800`, every one marked
+**`Explicit` at `[00:04:00]`** — rests on a term the lesson never utters. **At `[00:04:00]` he is
+saying** *"But what I'm telling you is if you're struggling still can't see it"*.
+
+**`V19-R001`** — *'Wait for the M15 candle to close before taking the 5/13 EMA cross.'*, marked
+`Explicit` at `[00:05:00]` — quotes a sentence containing **four** zero-occurrence terms (`M15`,
+`candle close`, `5/13`, `EMA`). At `[00:05:00]` he is saying *"You need to know where the peaks are
+to help you get a directional bias for the rest of the week"*. **It is not a paraphrase of anything
+said; it is text.**
+
+**`V19-R002`** — *'Place your stop loss 10 to 15 pips beyond the High or Low of the Day.'*, marked
+`Explicit` at `[00:18:00]` — **`stop loss` occurs 0 times and `10 to 15` occurs 0 times.** At
+`[00:18:00]` he is saying *"The pins, when the dealer leaves the pins on the table like that,
+they're a trap."*
+
+⚠️ **AND V18 DOES CARRY A STOP NUMBER — IT IS `23`, AND IT IS EXPLICITLY DISCLAIMED.** `[00:43:37]`
+*"wait for it to hit your **stop of 23 or whatever number you're using**"*. **So the fabricated file
+supplies a confident rule where the lesson supplies an illustrative example it tells you not to
+treat as one.** Same shape as `Q-018`'s finding, different number.
+
+**The `INFERRED VISUAL RULES` fare no better:** *"Level 1 consolidation typically holds near the 50
+EMA on M15"* and *"Asian Box width under 50 pips indicates higher breakout reliability"* — `50 EMA`,
+`M15` and `Asian Box` are all zero-occurrence in V18.
+
+---
+
+### 3. ⭐ THE `CONTRADICTIONS` SECTION, AGAIN
+
+`RULES.md` reads:
+
+```
+# CONTRADICTIONS
+- None detected within this video.
+```
+
+**The V18 session files `C-028`** — an on-air arithmetic error at `[00:31:02]` (*"So 16, 64
+candles"* for a 12-hour span holding 48 fifteen-minute candles), **confirmed verbatim on a second
+ASR engine**, so it is the instructor's error and not the transcriber's.
+
+**It also files six ambiguities (`A-126`–`A-131`) and, most seriously, a correction that the
+committed transcript INVERTS A RULE** — `[00:19:40]` *"Counter trends are advised"* against the
+slide's printed **`Counter Trend Is Ill Advised`** (`V18_TRANSCRIPT.md` §5 correction #1).
+**A file claiming to have detected nothing sat beside a transcript carrying a 180° rule inversion.**
+
+---
+
+### 4. THE IMAGES
+
+`VISUAL_INDEX.md` indexes **three** screenshots: `VIDEO_19_SCREENSHOT_001_00-02-00.jpg`,
+`_002_00-15-00`, `_003_00-30-00`. **Only `001` exists on disk** — `002` and `003` are absent,
+confirmed this session.
+
+**`001` was opened and looked at.** It is `1024 × 768`, non-blank, and it is **the deck's
+`MARKET MAKERS BOOT CAMP` diagonal title card** — described by `VISUAL_INDEX.md` as *"chart template
+with 5, 13, 50, 200, and 800 EMAs and Asian Box boundaries"*. **The same failure as `Q-016` §2 and
+`Q-018` §3: a title card described as a five-EMA chart.**
+
+⚠️ **It is also at the wrong timecode for V18.** At the burned `02:00` V18's real screen is the
+`TREND` section — this session's sweep frame at `02:09` (`V18_00-02-09_…png`) is an annotated
+`DAY 1 / DAY 2 / DAY 3` candle chart. **The V18 deck carries no `MARKET MAKERS BOOT CAMP` title card
+at all**; V18 opens mid-lesson, and that card belongs to V17's opening (`V17_00-02-40_…png`).
+
+⭐ **So the surviving image is not merely mis-described — it is from THE WRONG HALF OF THE NIGHT.**
+
+---
+
+### 5. WHAT THIS ENTRY DOES **NOT** CLAIM
+
+* It does not claim the files were produced maliciously, or by whom. **The register records what is
+  in them and what is in the lesson.**
+* It does not claim priority over `REVIEW_INDEX.md` item 254 — see §0. **This is corroboration by an
+  independent method, and the one genuinely new fact is §1's coincidental hit.**
+* It does not claim the underlying `TRANSCRIPT.md` in the same folder is defective as a whole. **The
+  transcript is separately verified and passes** — `V18_TRANSCRIPT.md` VERIFICATION §§1–4: 881
+  markers, monotonic, body byte-identical to the pre-ingestion file, last marker 1.0 s before the
+  measured end of audio. ⚠️ **But it does carry one meaning-inverting ASR error** (§3), recorded
+  there rather than here. **The three fabricated files sit beside a good-but-imperfect transcript,
+  which is what makes the folder dangerous rather than obviously worthless.**
+* It does not depend on the committed transcript being right. **Every zero in §2 is re-checkable
+  against the independent ASR pass** (`V18_TRANSCRIPT.md` §5), as `Q-017` and `Q-018` did.

@@ -3075,3 +3075,55 @@ C-027 -- OPEN, LOW substantive severity. It costs the project nothing except a
   V17 mastery report charges it as self-correction S1 rather than presenting the
   corrected text as if it had always read that way.
 ```
+
+---
+
+## C-028 — V18: an on-air arithmetic error, `64` candles where the span holds `48`
+
+**Raised:** V18, 2026-08-14 · **Internal to one lesson, one passage**
+
+**The passage**, `[00:30:39]`–`[00:31:06]`, quoted from the committed marker grid:
+
+> `[00:30:39]` *"You see three, this is **four times three**, four-hour chart, right?"*
+> `[00:30:42]` *"**Four times three, 12 hours.**"*
+> `[00:30:44]` *"When you look at a 15-minute chart, man, there is"* → `[00:30:48]` *"four, let's
+> see, there's four,"* → `[00:30:52]` *"**one hour candles** in there, right?"*
+> `[00:30:55]` *"So there's four, and then times four more of those."*
+> `[00:30:59]` *"So is there **16**, 15-minute candles in there?"*
+> `[00:31:02]` *"So 16, **64 candles**, thank you, man."*
+> `[00:31:06]` *"**I'm half retarded. Can't do math in front of everybody, drives me crazy.**"*
+
+**The contradiction:** he fixes the span at **12 hours** (three 4-hour candles) and then states the
+15-minute count for it as **64**. **12 hours holds 48 fifteen-minute candles.** `16` is correct
+*per 4-hour candle*; `64` is the count for **four** 4-hour candles (16 hours), not the three he
+named.
+
+### ⭐ IT IS THE INSTRUCTOR'S ERROR, NOT THE TRANSCRIBER'S
+
+**Confirmed verbatim by an independent `faster-whisper large-v3` pass** (`V18_TRANSCRIPT.md` §5):
+*"So 16, 64 candles, thank you, man, I'm half retarded."* **Two engines, same words.** The
+*"thank you, man"* is him accepting a correction called out from the floor, which is itself evidence
+the number was contested live.
+
+### WHY IT IS RECORDED, GIVEN IT CHANGES NOTHING
+
+**No rule in V18 depends on the candle count.** The passage is an aside about how a rising 4-hour
+chart looks to a retail trader on M15. **It is recorded for three reasons:**
+
+1. **It calibrates the lesson's numeric reliability.** He flags his own arithmetic as unreliable
+   **three times** in this file — `[00:14:16]` *"I hate math in front of everybody"*, `[00:31:06]`,
+   `[00:31:53]` *"my math is horrible"*. ⭐ **And the two computations that MATTER are both right:**
+   `75 + 50 = 125` `[00:13:48]` and `34 + 75 = 109` `[00:14:18]` (`V18_SOURCE_NOTES.md` §6.1).
+   **The one he gets wrong is the one nothing rests on.** That asymmetry is worth having on record.
+2. **It is a live counter-example to the quarantined `RULES.md`**, which asserts
+   `# CONTRADICTIONS — None detected within this video.` (`QUARANTINE_REGISTER.md` `Q-019` §3).
+3. **It shows the second-engine pass earning its cost in the other direction** — confirming a defect
+   as genuine rather than correcting one away.
+
+### Current Status
+
+```text
+C-028 -- CLOSED AS RECORDED. No rule depends on it; no downstream artifact cites the
+  candle count. Retained as calibration evidence on V18's numeric reliability, and as
+  a counter-example to Q-019's "None detected".
+```
