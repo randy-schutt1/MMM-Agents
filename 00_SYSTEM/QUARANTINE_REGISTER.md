@@ -2983,3 +2983,246 @@ at all**; V18 opens mid-lesson, and that card belongs to V17's opening (`V17_00-
   which is what makes the folder dangerous rather than obviously worthless.**
 * It does not depend on the committed transcript being right. **Every zero in §2 is re-checkable
   against the independent ASR pass** (`V18_TRANSCRIPT.md` §5), as `Q-017` and `Q-018` did.
+
+---
+
+## Q-020 — Lesson 19 (`Bootcamp1 Wk9 052012 Part1`): `NOTES.md`, `RULES.md`, `VISUAL_INDEX.md`
+
+**Filed:** 2026-08-14 by the V19 student session
+**Location:** `01_SOURCE_VIDEOS/Forex Bootcamp/_QUARANTINE_UNVERIFIED_NOTES/per_lesson/19_Bootcamp1_Wk9_052012_Part1_67mins/`
+**Status:** **ALREADY QUARANTINED ON ARRIVAL** — the three files were moved out of the lesson folder
+by an earlier sweep, and this session confirmed the lesson folder now holds only `TRANSCRIPT.md`,
+`SCREENSHOTS/` and the `.swf`. **No V19 artifact cites any of these three files as evidence.** Every
+reference in the V19 set is to **this register entry**, never to the files.
+
+**SHA-256, recorded so the audited objects are pinned:**
+
+| File | Bytes | SHA-256 |
+|---|---|---|
+| `RULES.md` | 3,173 | `f3ae4c127bfef27bed6fe10b081e43dd4873f688001f23fad01570ce66250074` |
+| `NOTES.md` | 1,712 | `d7909d6f4bd8b3b7249a263b7abb1d5e470c199a93c94b1dde1257027c7662a8` |
+| `VISUAL_INDEX.md` | 1,253 | `22d1aadf6d5a85c531355fbd844119357d62e41021b154fd42c59e1cf722e2c4` |
+
+**This is the NINTH CONSECUTIVE lesson carrying the `VISUAL_INDEX.md` pattern** — `Q-012` (V11)
+through `Q-019` (V18), and now V19.
+
+---
+
+### 0. ⭐ THE V17 REVIEW'S PREDICTION IS **CONFIRMED** FOR V19, BY DIRECT DIFF
+
+**Stated first, so this is not read as a discovery.** `REVIEW_INDEX.md` item 254 (V17 R1) reported
+**two content templates — A for lessons 1–15 and 21, B for lessons 16–20** — and predicted that
+V18's, V19's and V20's trios are clones of V17's. `Q-019` re-derived it by normalised hashing.
+
+**This session tested the prediction on V19 by the most direct method available — `diff` — and it
+holds.** The V19 session's obligation was to *confirm or refute*, and the result is **CONFIRM**:
+
+```text
+V19's trio vs V16's, V17's, V18's, V20's   ->  NOTES 2 / RULES 10 / VISUAL_INDEX 8 differing lines
+V19's trio vs V15's                        ->  NOTES 32 / RULES 30 / VISUAL_INDEX 26
+V19's trio vs V21's                        ->  NOTES 32 / RULES 30 / VISUAL_INDEX 26
+```
+
+⭐ **The template boundary is visible from V19 in both directions and the two figures are
+identical**, which is what a two-template model predicts and a three-template model would not.
+**V21 diffs against V19 exactly as V15 does**, corroborating item 254's claim that **V21 breaks the
+block** — tested here from inside it, rather than inferred.
+
+⚠ **"BYTE CLONE" IS THE RIGHT IDEA AND THE WRONG WORD, AND THE RECORD SHOULD SAY SO.** V19's three
+files are **not** byte-identical to V17's or V18's — all nine SHA-256 values differ. **Every
+differing line is a lesson-identifier token and ZERO content lines differ.** The files are identical
+in **length** to V16–V19's (3,173 / 1,712 / 1,253) because the substitutions are same-length.
+
+**The exact diff, V18 → V19** — enumerated, and the enumeration matches the count (open item 249's
+lesson, which was that `Q-018`'s stated count and its own list disagreed):
+
+```text
+RULES.md          10 differing lines = 5 changed pairs, at 1c1, 3c3, 16c16, 20c20, 33c33:
+                    (1) the .swf filename
+                    (2) V19-R001 -> V20-R001
+                    (3) VIDEO_19_SCREENSHOT_001 -> VIDEO_20_SCREENSHOT_001
+                    (4) V19-R002 -> V20-R002
+                    (5) VIDEO_19_SCREENSHOT_002 -> VIDEO_20_SCREENSHOT_002
+                  ZERO content lines differ.                      5 listed = 5 counted.
+NOTES.md           2 differing lines = 1 changed pair, at 1c1:
+                    (1) the .swf filename
+                  ZERO content lines differ.                      1 listed = 1 counted.
+VISUAL_INDEX.md    8 differing lines = 4 changed pairs, at 1c1, 5c5, 13c13, 21c21:
+                    (1) the .swf filename
+                    (2) VIDEO_19_SCREENSHOT_001 -> VIDEO_20_SCREENSHOT_001
+                    (3) VIDEO_19_SCREENSHOT_002 -> VIDEO_20_SCREENSHOT_002
+                    (4) VIDEO_19_SCREENSHOT_003 -> VIDEO_20_SCREENSHOT_003
+                  ZERO content lines differ.                      4 listed = 4 counted.
+```
+
+⚠ **NOTE THE OFF-BY-ONE IN THE FABRICATED CORPUS'S OWN NUMBERING.** The folder for **lesson 19**
+contains rules numbered **`V20-R001`/`V20-R002`** and screenshots named **`VIDEO_20_`**, and its
+`TRANSCRIPT.md` header reads *"Course Position: **Video 20 of 21**"*. **The fabricated corpus counts
+one ahead of `D-017` §2's ordering throughout.** This is consistent with `Q-019`, where lesson 18's
+folder carried `V19-` identifiers.
+
+---
+
+### 1. ⚠⚠ V19's TRIO SCORES **TWO** COINCIDENTAL TRUE HITS — DOUBLE V18's, AND EXACTLY AS `Q-019` PREDICTED
+
+`Q-019` §1 closed with a warning: *"one template is applied to five different lessons, so as the
+lessons vary it will land occasional true hits **by coincidence**. ⭐ A true cell in these files is
+evidence of nothing."*
+
+**V18 landed one. V19 lands two.** Both are in the `NUMERICAL PARAMETERS` table.
+
+#### HIT 1 — `Peak Time Gap | 30-90 mins` — the same row that hit on V18
+
+⭐ **V19 really does say "30 to 90 minutes".** One hit, and it is genuine:
+
+> `[00:16:05]` *"**30 to 90 minutes** [up to] two hours [the dealer] holds the level"*
+
+**Corrected on an independent engine** (`V19_TRANSCRIPT.md` §5 correction #3 — the committed
+*"of two hours"* is *"up to two hours"*). The row is still wrong on every other field:
+
+| Field | Fabricated claim | What V19 actually has |
+|---|---|---|
+| Value | `30-90 mins` | ✅ **correct** |
+| Timestamp | `[00:22:00]` | ❌ the real marker is **`[00:16:05]`**, six minutes earlier. At `[00:22:02]` he is saying *"near the high"* in the middle of the M's second leg |
+| Context | `Between M/W Legs` | ❌⭐ it is the **hold duration off a Half-A-Batman level once the low is established** — a different structure from the M/W entirely. **And V19 supplies the refutation itself**: the M/W second-leg deadline is stated at `[00:47:21]` as *"**90 minutes is too long**"*. The fabricated row assigns `30–90` to the very quantity the lesson caps **below** 90 |
+| Source | `Explicit` | ⚠ the *number* is explicit; the *rule it is attached to* is invented **and is contradicted by the lesson** |
+
+⚠️⚠️ **THIS IS WORSE THAN V18's VERSION OF THE SAME ROW.** On V18 the row was merely misattributed.
+**On V19 the misattribution puts the number on a quantity the lesson explicitly excludes it from.**
+A reviewer who checks the number finds it; a reviewer who checks the *rule* finds the lesson saying
+the opposite 31 minutes later.
+
+#### HIT 2 — `EMA Baseline | 50` and `EMA Major | 200`
+
+⭐ **V19 utters both numbers, together, in one sentence:**
+
+> `[00:55:10]` *"in order for the **50** to cross the **200** and to get separation on it"*
+
+| Field | Fabricated claim | What V19 actually has |
+|---|---|---|
+| The numbers `50` / `200` | present | ✅ **both correct, and adjacent** |
+| Timestamp `[00:04:00]` | — | ❌ the real marker is **`[00:55:10]`**, fifty-one minutes later. At `[00:04:00]` he is saying *"That's what we're gonna do. That's the sketch"* — course administration |
+| Context `Intra-day Trend` / `Institutional Filter` | — | ❌ the sentence is about **reading elapsed time off moving-average separation**: *"I could walk up to this chart and tell you that price[ has] been falling for at least three days"* `[00:54:46]`. Not a trend filter, not an institutional filter |
+| `Explicit` | — | ❌ **the word `EMA` is never spoken in V19** — see §2 |
+
+---
+
+### 2. THE TOKEN CENSUS — AND `EMA` IS A CLEAN ZERO
+
+Case-insensitive substring counts over the committed V19 transcript body:
+
+```text
+'EMA'          : 4  -> ⭐ ALL FOUR ARE THE SUBSTRING INSIDE "email"/"emails".
+                       As a technical term the count is ZERO.
+                       [00:05:50] "an email that came to me"    [00:05:54] "two emails"
+                       [00:06:51] "post a email day"            [00:20:03] "comments and emails"
+'5/13'         : 0   <-- ZERO      'Asian Box'    : 0   <-- ZERO
+'5 EMA'        : 0   <-- ZERO      'Asian range'  : 2   (the lesson's OWN term)
+'13 EMA'       : 0   <-- ZERO      'Asian blue box': 1  (the lesson's OWN term)
+'50 EMA'       : 0   <-- ZERO      'M15'          : 0   <-- ZERO
+'800'          : 0   <-- ZERO      'candle close' : 0   <-- ZERO
+'shark fin'    : 0   <-- ZERO      'news'         : 0   <-- ZERO
+'10 to 15'     : 0   <-- ZERO      'volatility band': 0 <-- ZERO
+'ketchup'      : 0   <-- ZERO      'band'         : 0   <-- ZERO
+'200'          : 1   (see HIT 2)   'Peak Formation': 0  <-- ZERO
+```
+
+⚠️ **The `EMA` count is recorded as `4` and then explained rather than reported as `4`.** A census
+that stopped at the raw number would have credited the fabricated table with four hits it does not
+have. **This is the same defect class as open items 249 and 265 — a count stated without checking
+what it counts — and it was caught by reading the four contexts.**
+
+#### What the zeros refute, row by row
+
+| Fabricated claim | Verdict |
+|---|---|
+| `V20-R001`: *"Wait for the M15 candle to close before taking the 5/13 EMA cross"*, marked **`Explicit`** at `[00:05:00]` | ❌ **REFUTED.** `M15` = 0, `5/13` = 0, `EMA` = 0. At `[00:05:00]` he is saying *"use time you are about com slash mm-fx lodging"* — **hotel information for the New Jersey class** |
+| `V20-R002`: *"Place your stop loss 10 to 15 pips beyond the High or Low of the Day"*, **`Explicit`** at `[00:18:00]` | ❌ **REFUTED.** `10 to 15` = 0. V19's stop figure is **7 to 10 pips below the entry bar** (`[00:43:04]`), and it describes **where retail traders put stops**, i.e. where the dealer goes to hunt them — ⚠ **the opposite use of the number.** At `[00:18:00]` he is counting a spike sequence |
+| `EMA Fast 5` / `Fast Confirm 13` / `Macro 800`, all `Explicit` at `[00:04:00]` | ❌ **REFUTED.** `EMA` = 0, `800` = 0, and `[00:04:00]` is administration |
+| `Stop Loss Buffer 10-15 pips` at `[00:18:00]` | ❌ **REFUTED** — as above |
+| *"Asian Box Stop Hunt Reversal (Prime Trade)"* setup; *"Asian Box"* definition | ❌ **REFUTED.** `Asian Box` = 0. V19 says *"Asian **range**"* (×2) and *"Asian **blue box**"* (×1), and **neither is defined in this lesson** |
+| *"Peak Formation: Multi-day high or low anchor point (PFH / PFL)"* | ❌ **REFUTED.** `Peak Formation` = 0 in V19 |
+| `NOTES.md` §1 session times *"London Session (3:30 AM - 9:00 AM EST)"*, *"New York (9:30 AM - 5:00 PM EST)"* | ❌ **REFUTED AS SOURCED.** V19 gives **one** clock reference — `[00:31:44]` *"at the Asian session at **3 30 in the morning**"* — **with no timezone**. The fabricated file supplies six clock boundaries and an `EST` attribution the lesson does not contain. ⚠ **Same defect class as open item 248** |
+| `NOTES.md` §3 *"TDI Indicator: … Blue (Volatility Bands). Shark Fin occurs when Green breaks outside Volatility Bands"* | ❌ **REFUTED.** `shark fin` = 0, `band` = 0. ⚠⚠ **AND SEE §3 — THIS ROW MUST NOT BE READ AS SUPPORTING THE OWNER'S TDI RULING** |
+| `NOTES.md` §3 *"EMAs: 5 (Mustard/Yellow), 13 (Red/Water) …"* | ❌ **REFUTED AS SOURCED**, and ⚠ **coincidentally consistent with `D-043` on its first pair.** V19 says *"mustard"* 9× and never pairs it with a period. **`D-043` is an owner ruling; this file is not evidence for it and must not be cited as such** |
+| `AMBIGUITIES: "Exact mathematical algorithm for dynamic peak formation detection"` | ❌ not V19's ambiguity. V19's real ones are `A-131`–`A-133` |
+| `CONTRADICTIONS: "None detected within this video."` | ❌ **REFUTED.** V19 contains `C-029` — the deck states the M cap as `30M` and the W cap as `30 to 45 m`, **on camera, forty-five minutes apart** |
+
+---
+
+### 3. ⚠⚠ THE ONE ROW A V19 SESSION COULD HAVE BEEN TEMPTED TO CASH IN — AND WHY IT IS NOT USED
+
+**Recorded prominently because the temptation is live this week and the file is designed to be
+plausible.**
+
+`NOTES.md` §3 asserts *"TDI Indicator: Green (Price Line) vs Red (Signal Line) vs Yellow (Market
+Sentiment) vs **Blue (Volatility Bands)**"*. The owner ruled on 2026-08-14 that the TDI volatility
+bands are a deviation of the **RSI line** — recorded by a parallel session as **`D-052`**, and **not
+yet on the commit this branch forked from (`847ebd2`)**. A fabricated file that names the green
+price line and the blue bands in the same breath *reads* as though it corroborates the ruling.
+
+⚠️⚠️ **IT DOES NOT AND IT IS NOT CITED FOR IT, ANYWHERE, BY ANY V19 ARTIFACT.**
+
+1. **V19 does not mention the bands at all.** `band` = 0, `volatility band` = 0, `shark fin` = 0.
+   **The fabricated row is unsourced against this lesson**, exactly like the eleven rows above it.
+2. **`Q-019` §1's rule governs: a true cell in these files is evidence of nothing.** V19 has just
+   demonstrated the mechanism twice over in §1. A row that happens to sit near a correct answer is
+   the *most* dangerous kind, not the least.
+3. **The corroboration V19 genuinely offers comes from the transcript and is independent of this
+   file** — `[00:27:07]` *"since TDI **RSI line** tracks the closes"* (corrected on an independent
+   engine) and `[00:56:25]`–`[00:56:30]` *"divergence on the TDI or **the RSI line**"* (confirmed
+   **verbatim** on an independent engine). **That is Tier 1 course audio and it stands on its own.**
+   See `V19_SOURCE_NOTES.md` §6, which also states the limit: **V19 establishes what the RSI line
+   is, and says nothing about what the bands are computed from.**
+
+**The V19 session did not re-litigate `D-052` and does not.**
+
+---
+
+### 4. THE `VISUAL_INDEX.md` — REFUTED FROM THE PIXELS, 3 OF 3, AND BY ITS OWN SHIPPED FILE
+
+The file claims three screenshots. **Only one exists on disk.** Each claim was checked against this
+session's own sweep frame at the *claimed* timestamp (offset 0 in this region, `INDEX.md` §0).
+
+| Claimed | Claimed content | **What is actually on screen** | Verdict |
+|---|---|---|---|
+| `[00:02:00]` `VIDEO_20_SCREENSHOT_001` | *"Initial setup slide / chart template with 5, 13, 50, 200, 800 EMAs and Asian Box boundaries"* | ⭐ the printed **course schedule** — `May 20th Regular session`, `May 27th Memorial day weekend`, `June 3rd Web class 4 days`, … `July 1st 2 month break`. **No chart. No EMAs. No box.** | ❌ **REFUTED** |
+| `[00:15:00]` `VIDEO_20_SCREENSHOT_002` | *"Stop Hunt move out of Asian Box during London Open session transition"* | ⭐ the **`Half – a - Batman` chart**, live red annotations. **No Asian box, no London-open transition, and the lesson is 30 minutes away from mentioning either** | ❌ **REFUTED** |
+| `[00:30:00]` `VIDEO_20_SCREENSHOT_003` | *"TDI (Traders Dynamic Index) Shark Fin setup and 5/13 EMA cross confirmation"* | ⭐ **`MARKET MAKER TRAP MOVES`** — an M drawn freehand over candles. **No TDI panel is on screen at all**, and `shark fin` is spoken **zero** times in the lesson | ❌ **REFUTED** |
+
+#### ⭐⭐ AND THE ONE SCREENSHOT IT ACTUALLY SHIPS REFUTES ITS OWN INDEX ENTRY
+
+`SCREENSHOTS/VIDEO_20_SCREENSHOT_001_00-02-00.jpg` (`1024 × 768`,
+`775df59cb825b0bd2eb0e1d84af5abb31bc91cdf979019380e67ff9b622585c5`) **exists and was opened by this
+session.** It is the deck's **cover slide** — `MARKET MAKERS BOOT CAMP` over a magenta/cyan diagonal,
+with `W E E K  9` beneath.
+
+**It is not a chart template with five EMAs and Asian Box boundaries. The index entry describing it
+is refuted by the file the index itself ships.**
+
+⚠️ **Two honest notes attach:**
+
+* **The JPG is a genuine frame of this lesson's deck**, and its `WEEK 9` legend is consistent with
+  `[00:00:00]` *"Welcome back week nine"*. **It is the only accurate thing in the folder, and it is
+  accurate by being a photograph rather than a claim.**
+* ⚠ **It is also the one thing this session could NOT capture independently.** The 10× sweep's first
+  frame is already at `00:16`, past the cover; two 1× attempts failed at the play click
+  (`V19_TRANSCRIPT.md` §6). **So the corroboration runs one way only** — the audio and the printed
+  schedule date the lesson, and this quarantined JPG is *consistent* with them. **No V19 artifact
+  relies on it.**
+
+---
+
+### 5. WHY THIS ENTRY IS SAFE TO RELY ON
+
+* It does not depend on the fabricated files being obviously bad. **They are not** — they carry two
+  numerically correct cells (§1) and a TDI row that reads as though it corroborates a live owner
+  ruling (§3). **That is the danger and it is stated as the danger.**
+* It does not depend on the committed transcript being right. **Six of the twelve refutations in §2
+  are zero-counts**, which survive any transcription error that does not *invent* a term; and the
+  two coincidental hits and the `RSI line` corroboration in §3 were **checked on an independent ASR
+  engine** (`V19_TRANSCRIPT.md` §5).
+* **The `VISUAL_INDEX.md` refutations in §4 depend on no transcript at all** — they are reads off
+  this session's own frames, each of which carries its own burned player timecode.
+* The diff counts in §0 are **enumerated as well as counted, and the two agree** — which is the
+  specific defect open item 249 charged against `Q-018`.
