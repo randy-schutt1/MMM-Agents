@@ -8,7 +8,7 @@
 > said *"the pivot points may be in there"* and *"the time ribbon — we can replicate exactly."*
 > Under `D-045` rule 1, **admission to the `TOOLING` rung is per-artifact and requires its own
 > decision entry.** Nothing listed below is admitted by being listed. The proposals that would
-> admit anything are `DECISION_DRAFT_D-055_MMM_TPL_AND_TIME_RIBBON.md`, and they are **drafts.**
+> admit anything are `DECISION_DRAFT_D-056_MMM_TPL_AND_TIME_RIBBON.md`, and they are **drafts.**
 >
 > **`SOURCING_HIERARCHY.md` §1's `TOOLING` rung still admits exactly two things** —
 > `Ultimate Blue.tpl` / `!SM_TDI` (`D-045`) — plus `mm_adr` **only if `D-051` is adopted**, which
@@ -114,7 +114,7 @@ the strongest internal consistency signal in the whole artifact set.
 
 ⭐ **But it is a real divergence and it is owed to the owner as a question**, not buried:
 **why does your own MMM chart run 4 and 10 where the course taught 5 and 13?** See
-`DECISION_DRAFT_D-055` §7 Q3. Until answered, **`A-020` is untouched**, `D-043` stands, and
+`DECISION_DRAFT_D-056` §8 Q3. Until answered, **`A-020` is untouched**, `D-043` stands, and
 **nothing here is coded.**
 
 ---
@@ -189,7 +189,7 @@ And the consequence is precise:
 
 **Neither branch can be decided from any artifact found.** A faithful port must therefore expose
 the offset as a **declared, owner-supplied input** and must not bake a guess into it. That is what
-the replication plan does — `DECISION_DRAFT_D-055` §4.
+the replication plan does — `DECISION_DRAFT_D-056` §4.
 
 ### 4.5 ⭐ WHAT THE BOUNDARIES IMPLY ABOUT THE CLOCK — AN INFERENCE, LABELLED AS ONE
 
@@ -268,7 +268,7 @@ Color_H4 Color_H3 Color_H2 Color_H1   Color_L1 Color_L2 Color_L3 Color_L4
 
 ```text
 A-101 -- OPEN and DO NOT CODE. UNCHANGED BY THIS SURVEY.
-  A candidate artifact exists and is named in DECISION_DRAFT_D-055 s5.
+  A candidate artifact exists and is named in DECISION_DRAFT_D-056 §5.
   It would need (a) owner attestation and (b) READABLE SOURCE to bear on the
   construction. It currently has neither.
 ```
@@ -439,5 +439,5 @@ confirms what it is extra to.**
 | `SOURCING_HIERARCHY.md` §1 `TOOLING` rung | **Unchanged** — still `Ultimate Blue.tpl` / `!SM_TDI` and nothing else |
 
 **The proposals that would change any of this are drafts:**
-`DECISION_DRAFT_D-054_OWNER_STOP_AND_TARGETS.md` and
-`DECISION_DRAFT_D-055_MMM_TPL_AND_TIME_RIBBON.md`.
+`DECISION_DRAFT_D-055_OWNER_STOP_AND_TARGETS.md` and
+`DECISION_DRAFT_D-056_MMM_TPL_AND_TIME_RIBBON.md`.
