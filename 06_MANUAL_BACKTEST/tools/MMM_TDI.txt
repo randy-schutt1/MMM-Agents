@@ -4,6 +4,24 @@
 // Pine Script v6.  Paste into TradingView → Pine Editor → Add to chart.
 // =============================================================================
 //
+// ⭐⭐ THIS IS THE STANDARDISED PROJECT TDI TOOL. `D-052`, 2026-08-14.
+//
+//   Owner: "the one we created a couple days ago is the one I want to use. We
+//   can apply all the same concepts that are taught with that particular TDI."
+//
+//   BUILD ON THIS FILE. The two comparison variants — `MMM_TDI_RSI_BASIS.txt`
+//   and `MMM_TDI_MARKETBASE_BASIS.txt` (branch `tools/tdi-basis-comparison`) —
+//   were a one-off kit built to obtain the owner's pick on `C-021`. They did
+//   their job, they are RETAINED AS HISTORY, and they are NOT the base for new
+//   work. See `TDI_BASIS_COMPARISON_README.md` §7.
+//
+//   ⚠ Two things about this file are known to differ from that kit and are
+//   DELIBERATE, not drift:
+//     1. `bandMult` here is the Tier-3 guess 1.6185; the kit used 2.0. This is
+//        OPEN — `D-052` ruled the basis and NOT the multiplier. See below.
+//     2. This file is Pine v6; the kit is v5. No v6-only features are used in
+//        the shared parts.
+//
 // WHY THIS IS A SEPARATE FILE
 //   TDI is an oscillator on a 0-100 scale and belongs in its own pane, so it is
 //   declared `overlay = false`. Under Pine v6 this split is a CHOICE, not a
@@ -94,6 +112,10 @@
 //   [TOOLING] — recovered from the owner-supplied MT4 artifacts named above
 //   [TIER 2]  — stated in MMM-NOTES
 //   [DEFAULT] — NOT source-verified. A guess. Change freely.
+//   [OWNER-RULED] — decided by the owner's direct instruction (D-052). Ranks
+//        OUTSIDE the tiers, as D-041 established owner adjudication does.
+//        ⚠ NOT course-verified, and here it OVERRIDES an unretracted Tier 1
+//        statement. Do not change one of these without a ledger entry.
 // =============================================================================
 
 indicator(
@@ -118,7 +140,7 @@ slowLen  = input.int(7,   "Slow MA (Trade Signal Line)", minval = 1, group = grp
 bandLen  = input.int(34,  "Volatility band / Market Base Line period", minval = 2, group = grpP,
      tooltip = "[TOOLING] !SM_TDI Volatility_Band=34.")
 bandMult = input.float(1.6185, "Volatility band std-dev multiple", minval = 0.1, step = 0.0001, group = grpP,
-     tooltip = "⚠ [DEFAULT] STILL A GUESS. The MT4 indicator exposes no input for this, so it is compiled into the .ex4 and the template cannot reveal it. This remains the Tier-3 public value.")
+     tooltip = "⚠ [DEFAULT] STILL A GUESS, AND STILL OPEN. The MT4 indicator exposes no input for this, so it is compiled into the .ex4 and the template cannot reveal it. This remains the Tier-3 public value. ⚠ NOTE THE TENSION, recorded at D-052 consequence 6 and NOT resolved: V14 [00:45:09] says 'two standard deviations' unhedged, and A-086's V14 pass records the MULTIPLIER as the one quantity V14 resolved — so 2.0 has a Tier 1 warrant this 1.6185 does not. D-052 ruled the BASIS only and this value is carried forward UNCHANGED rather than silently corrected. Changing it is a deliberate act that owes a ledger entry.")
 
 // [TOOLING] Both *_Type inputs are 0, which is MT4 MODE_SMA. Kept as a choice
 // so the port can be compared against other TDI builds, but 0 = SMA is what
@@ -187,15 +209,65 @@ colShark    = input.color(color.new(#FF9800, 35), "", group = grpL, inline = "sf
 
 // -------------------------------------------------------------------------
 // Calculation
-//   RSI -> the four TDI lines. The bands are built on the RSI series, not on
-//   price — that much is what MMM-NOTES p.45 describes ("applied to the market
-//   baseline of the indicator instead of price"), and the artifact agrees by
-//   exposing a single Volatility_Band period that also drives the base line.
+//   RSI -> the four TDI lines.
+//
+// ⭐⭐ THE BAND BASIS IS RULED. `D-052`, OWNER RULING, 2026-08-14. READ THIS.
+//
+//   The one disputed question about this indicator was: the volatility bands are
+//   N standard deviations OF WHAT? Two answers were on the record, one week
+//   apart, from the same speaker:
+//
+//     V12 [00:16:16]-[00:16:20]  "...from the RSI line. Thank you."
+//     V14 [00:45:09]             "two standard deviations away from the market base."
+//
+//   `C-021` carried both. `D-048` ran the tie-break ladder in full and returned
+//   RUNG 4 — DO NOT ADJUDICATE, put it to the owner. The owner was then shown
+//   both constructions side by side (`tools/tdi-basis-comparison`) and ruled:
+//
+//       "It's definitely not the market basis. It's the RSI [line]."
+//
+//   ADOPTED:   dev = bandMult * ta.stdev(rsiVal,   bandLen)     <- the RSI line
+//   REJECTED:  dev = bandMult * ta.stdev(baseLine, bandLen)     <- the market base
+//
+//   The band CENTRE is the market base line either way and was never disputed.
+//   Only the WIDTH changes. `C-021` is CLOSED; `REVIEW_INDEX.md` item 187 closed.
+//
+// ⚠⚠ THE WARRANT IS `OWNER EMPIRICAL PREFERENCE` — NOT COURSE-VERIFIED.
+//   It is the owner's judgment against his lived experience of the indicator:
+//   RECOLLECTION OF PRACTICE, NOT COURSE EVIDENCE. It is NOT `RESOLVED BY
+//   COURSE` (D-048 limit 1 forbids that by name), and it is NOT `RESOLVED —
+//   OWNER ATTESTATION` (that status is the owner testifying to what was TAUGHT;
+//   this is the owner judging what the INSTRUMENT DOES).
+//
+//   AND THE CORPUS IS OVERRIDDEN, NOT RECONCILED: Tier 1 V14 [00:45:09] AND
+//   Tier 2 MMM-NOTES p.45 ("applied to the market baseline of the indicator
+//   instead of price") BOTH SAY THE MARKET BASE, both stand unretracted, and
+//   this ruling goes the other way. Never cite p.45 in support of the line
+//   below — an earlier version of this comment did exactly that, conflating
+//   "the bands are on the RSI series rather than on price" (true, undisputed,
+//   and not the question) with "the bands are a deviation of the RSI line
+//   rather than of the market base line" (the actual dispute).
+//
+// ⛔ AND IT UNBLOCKS NOTHING. `A-086` stays DO NOT CODE — the band PERIOD is
+//   still never stated in Tier 1 or Tier 2 (`Volatility_Band=34` is a [TOOLING]
+//   candidate, D-045-ELIGIBLE and NOT ADOPTED), so `A-031` ("blood in the
+//   water") and `A-032` ("shark fin") stay UNCOMPUTABLE. A basis and a
+//   multiplier do not build a band without a lookback.
+//
+//   Tags: [OWNER-RULED] marks what D-052 decided. It ranks OUTSIDE the tiers,
+//   as D-041 established owner adjudication does — it is not [TIER 1] and it is
+//   not [TOOLING].
 // -------------------------------------------------------------------------
 rsiVal = ta.rsi(src, rsiLen)
 
-baseLine = ta.sma(rsiVal, bandLen)                  // Market Base Line (BB basis)
+baseLine = ta.sma(rsiVal, bandLen)                  // Market Base Line — the band CENTRE. Not disputed.
+
+// ⭐ [OWNER-RULED] (D-052) — THE BANDS ARE A DEVIATION OF THE RSI LINE ITSELF.
+//    `rsiVal`, NOT `baseLine`. Changing this line reverses an owner ruling.
+//    ⚠ `bandMult` is a SEPARATE and STILL-OPEN question — see its input tooltip
+//      above and D-052 consequence 6. D-052 ruled the BASIS and nothing else.
 dev      = bandMult * ta.stdev(rsiVal, bandLen)
+
 bandUp   = baseLine + dev                           // upper Volatility Band
 bandDn   = baseLine - dev                           // lower Volatility Band
 
@@ -231,7 +303,7 @@ var label warnLbl = na
 if barstate.islast
     label.delete(warnLbl)
     warnLbl := label.new(bar_index, 100,
-         "TDI params from !SM_TDI tooling — A-039 still OPEN; std-dev multiple still unverified",
+         "TDI params from !SM_TDI tooling — bands = stdev of the RSI LINE (D-052, OWNER-RULED, not course-verified) — A-039 still OPEN; band PERIOD never stated and std-dev multiple still unverified, so A-086 is DO NOT CODE",
          style     = label.style_label_down,
          color     = color.new(color.orange, 25),
          textcolor = color.white,
