@@ -1,4 +1,4 @@
-# DECISION DRAFT — `D-054` (proposed) — THE OWNER'S STOP-LOSS AND TAKE-PROFIT RULE
+# DECISION DRAFT — `D-055` (proposed) — THE OWNER'S STOP-LOSS AND TAKE-PROFIT RULE
 
 > ## ⛔ NOTHING IN THIS FILE IS A DECISION. NOTHING HERE IS ADOPTED.
 >
@@ -10,12 +10,20 @@
 >
 > Until the owner rules:
 >
-> - **`DECISIONS.md` is unchanged.** No `D-054` exists.
+> - **`DECISIONS.md` is unchanged.** No `D-055` exists.
 > - **`A-123` remains `OPEN`.** `C-001`, `C-016`, `A-121`, `A-005` are untouched.
 > - **Nothing about stops or targets becomes codable**, and no `PT`/`BT` may cite this file.
 >
-> **Numbering.** `D-053` is the highest adopted entry (`D-051` is an unadopted draft), so this
-> draft claims **`D-054`**.
+> **Numbering — RENUMBERED `D-054` → `D-055` on 2026-08-14.** This draft was written when `D-053`
+> was the highest adopted entry and it claimed **`D-054`**. **`D-054` was then ADOPTED on the
+> integration branch by a concurrent session** (the `D-053` §3(a) / `A-085` withdrawal), and under
+> `D-047` Consequence A — and the `DRAFT_D-041` → `D-043` precedent — **the number is claimed by
+> ADOPTION, not by drafting, and the later arrival renumbers.** This draft is the later arrival.
+>
+> **It therefore claims `D-055`**, at the owner's direction. ⚠️ **Re-check again at adoption time:**
+> this is now the *third* time a draft in this project has been wrong about its own number
+> (`DRAFT_D-041`, this file, and `DECISION_DRAFT_D-056_MMM_TPL_AND_TIME_RIBBON.md`, which moved
+> `D-055` → `D-056` in the same act). **The substance of this draft is UNCHANGED by the renumber.**
 
 ---
 
@@ -38,6 +46,30 @@ corpus support at all.** The **30** appears nowhere in the corpus at any tier. M
 not defined by the course, and is not the same object as *"the high"*. **A stop distance measured
 from an undefined point is not a codable rule**, and this draft opens `A-132` to say so rather than
 quietly substituting the swing high.
+
+---
+
+> ## ⭐⭐ AMENDED 2026-08-14 — TWO THINGS HAPPENED WITHIN THE HOUR AND BOTH CHANGE THIS DRAFT
+>
+> **1. The owner ruled on the anchor.** §4 asked *"what is the perceived high?"* and called it the
+> cheapest blocker in the project. The answer:
+>
+> > *"the perceived high is **where the M/W forms**"* — owner, 2026-08-14
+>
+> **2. ⭐⭐ V19 LANDED — AND IT IS THE M/W FORMATION LESSON.** §6 warned that *"stops and targets are
+> the subject a trading course is most likely to state explicitly, and THREE LESSONS ARE UNREAD"*,
+> and named V19–V21 as the live risk. **That warning fired within the hour.** V19 (Wk9 Part 1,
+> 2012-05-20) is now ingested on `review/v19` and it **prints the M and W second-leg rules on slides**
+> and states a **`25 to 50 pips`** figure at Tier 1.
+>
+> **All sections below are retained unedited** per `REMEDIATION_PROTOCOL.md` §2. The reconciliation
+> is **§4A** (the ruling) and **§4B** (V19), and **§3.4's negative result is CORRECTED there** —
+> it no longer stands as written.
+>
+> ⚠️ **RENUMBERING.** §4's proposed `A-132` **collides with V19's own `A-132`** (a transcript-tail
+> record, `review/v19`). Under the `D-047` collision convention this draft's record is renumbered
+> **`A-136`** — the next free number after V19's `A-132`–`A-135`. Every reference below reads
+> `A-132`; **read it as `A-136`.**
 
 ---
 
@@ -189,7 +221,7 @@ not "insufficient evidence" — it is that they measure different things.**
 | `C-001` | *2.5–3 days* vs *3 / 3.5 / 4 days* — **how long you hold** |
 | `C-016` | *one day* vs *three days* vs *two days* vs *at least two days* — **how long the lock lasts** |
 | `A-121` | *3 days* / *4 days* / *2.5–3 days* — **how long the trend cycle runs** |
-| ⭐ **`D-054`** | **30 pips and 50 pips — HOW FAR PRICE GOES** |
+| ⭐ **`D-055`** | **30 pips and 50 pips — HOW FAR PRICE GOES** |
 
 **A pip target is a price rule. A holding period is a time rule.** Substituting one for the other
 requires the premise *"the owner exits on price, not on time"* — **which the owner has not stated**,
@@ -230,7 +262,7 @@ among four readings to obtain a codable rule is the precise act `D-030` forbids.
 >
 > ```text
 > A-132 -- "the perceived high" / "the perceived low": the anchor of the owner's
->   own stop rule (D-054) is an undefined term. The DISTANCE is stated (25 pips);
+>   own stop rule (D-055) is an undefined term. The DISTANCE is stated (25 pips);
 >   the POINT it is measured from is not. Four readings are live and the corpus
 >   defines none of them.
 >   DO NOT CODE. One owner sentence closes this record.
@@ -238,15 +270,142 @@ among four readings to obtain a codable rule is the precise act `D-030` forbids.
 >   Related: A-123 (says "the high", not "the perceived high"), A-005, A-001, A-006.
 > ```
 >
-> ⚠️ **Note what this means for the whole record: `D-054` supplies three numbers and NO GEOMETRY.**
+> ⚠️ **Note what this means for the whole record: `D-055` supplies three numbers and NO GEOMETRY.**
 > It is genuinely valuable and it is genuinely **not yet executable**, and both halves are true at
 > once. **`A-132` is the single cheapest blocker to clear in the entire project.**
 
 ---
 
+## 4A. ⭐⭐ OWNER RULING — THE ANCHOR IS THE M/W FORMATION
+
+> *"the perceived high is **where the M/W forms**"* — owner, 2026-08-14
+
+**§4's four candidates are settled by direct owner direction.** The answer is **none of the four as
+worded** — it is the **M/W formation**, which §4 did not list. The stop is placed **25 pips beyond
+the extreme of the M (short) or the W (long).**
+
+### 4A.1 ⭐ What this genuinely delivers
+
+| | |
+|---|---|
+| ⭐ **The anchor is IDENTIFIED** | The object is named. *"Perceived"* is now explained: the extreme **of a formation**, not of the raw bar data — which is exactly why the qualifier was there |
+| ⭐⭐ **THE LONG SIDE IS ANSWERED** | §1.1 refused to assume the mirror. **The owner answered it by naming M/W as a pair** — M at tops (short), W at bottoms (long). **The geometry is now attested in both directions**, and `D-055` Part 3's block on long-side geometry is **discharged** |
+| ⭐ **It connects to `A-010`** | V04 `[00:21:55]` — *"if you see an AM [an M] on the four hour that's your anchor point, if you got an M on the four hour chart that's your **peak formation high**"*. **The owner's *"perceived high"* and the course's *"peak formation high"* are plausibly the same object** — ⚠️ *plausibly*; no speaker joins the two terms, and this draft does not join them |
+
+⚠️ **One limit on the long side, stated so it is not overread.** The owner's M/W pairing settles the
+**geometry** (below the W's low). It does **not** separately restate **TP1 30 / TP2 50** for longs —
+though those are direction-neutral distances and the reading is now routine. **§7 Q2 is
+substantially answered; the TP mirror is noted as the residue.**
+
+### 4A.2 ⛔ AND WHAT IT DOES NOT DELIVER — the ruling chains to the corpus's oldest blocker
+
+> **`A-011` — *"M and W formation"* — has been `DO NOT CODE` since V01 and was recorded as
+> *"NOT ADVANCED — tenth lesson, zero definitions"* as recently as V11.**
+
+The corpus names M/W in **at least ten lessons** and — as of V11 — had never given its anatomy:
+*"the course tolerates badly-formed instances and offers no boundary"* (`A-011`, V04 row); *"EXTENDED
+BY VOLUME, NOT CONTENT. Ninth lesson, zero definitions."*
+
+⭐ **So the ruling identifies the anchor without, by itself, making it locatable** — the `D-053`
+pattern exactly: *fixing which object the principle refers to does not make the principle
+computable.* **`A-136` therefore does NOT close on the ruling alone. It RESOLVES INTO `A-011`.**
+
+⭐⭐ **Except that V19 has just changed `A-011`'s footing — see §4B.**
+
+---
+
+## 4B. ⭐⭐ THE V19 RECONCILIATION — §6's PREDICTED RISK, ARRIVING IMMEDIATELY
+
+**§6 named V19–V21 as the live risk to this entry. V19 is now ingested** (`review/v19`, Wk9 Part 1,
+2012-05-20) and it is **the M/W formation lesson**. `SOURCING_HIERARCHY.md` §3.1 is run here.
+
+### 4B.1 ⭐⭐ V19 PRINTS THE M/W SECOND-LEG RULE — the first anatomy in the corpus
+
+Two slides, **both edited on camera during this recording**:
+
+| Slide | Printed rule |
+|---|---|
+| **`The " M " Formation`** | *"The Second Leg Rise can be slightly above the first, but must close below **with in 30M**"* |
+| **`The W:`** | *"The Second Leg correction can be slightly below the first, but must close above **with in 30 to 45 m**"* |
+
+**This is a construction, not a characterisation** — `D-048` rung 2's distinction. It gives M/W
+**two legs**, permits the **second leg to exceed the first**, and requires a **close back inside
+within a time cap.**
+
+⭐⭐ **AND IT LOCATES THE OWNER'S ANCHOR.** *"The second leg rise **can be slightly above the
+first**"* — **that overshoot is the perceived high.** The owner's *"where the M/W forms"* and V19's
+printed second-leg rule describe the same point, from opposite ends: the owner says *put the stop
+beyond it*, V19 says *it may exceed the first leg but must close back*. **A stop 25 pips beyond it
+is exactly a stop beyond the permitted overshoot.**
+
+⚠️ **This is a READING and it is not adopted here.** V19's own artifacts do not make this join, this
+draft is not the V19 review, and **whether the M's "high" is the second-leg high, the higher of the
+two legs, or the formation's outer envelope is not stated.** ⛔ **`A-136` stays OPEN.** It is now,
+however, **open on a Tier 1 construction rather than on nothing** — a materially better position
+than §4A.2 alone.
+
+### 4B.2 ⚠️⚠️ §3.4's NEGATIVE RESULT IS CORRECTED — `TP1 = 30` IS NO LONGER UNSUPPORTED
+
+**§3.4 states: *"`TP1 = 30` matches nothing. A sweep… finds no 30-pip target at Tier 1, Tier 2,
+`TOOLING` or anywhere else."* That was true when written and V19 makes it FALSE.**
+
+V19 states, four times inside 100 seconds — and `A-135` **closed in-session** on a second ASR engine
+confirming the figure against the committed transcript's two `55` defects:
+
+| Marker | Statement |
+|---|---|
+| `[00:23:57]` | *"He is gonna extend that high to the next level strike zone **25 to 50** higher"* |
+| `[00:25:06]` | *"Look for another entry **25 to 50 pips higher**"* |
+| `[00:25:31]` | *"**25 to 50 pips** [to the] next level strike[ zone]"* |
+| `[00:38:33]` | *"He will extend that level to the next level strike zone"* |
+
+⭐ **`25 to 50 pips` is a TIER 1 BAND, and BOTH of the owner's targets fall inside it — with
+`TP2 = 50` sitting exactly on its upper bound.**
+
+⚠️⚠️ **BUT THE CORRECTION MUST NOT BE OVERSTATED, AND THE OVERSTATEMENT IS TEMPTING.** A band
+contains infinitely many values. **V19 does not state 30.** What changes is precise:
+
+| | Before V19 | After V19 |
+|---|---|---|
+| `TP2 = 50` | four hedged mentions (§3.3) | ⭐ **the stated upper bound of a Tier 1 band** |
+| `TP1 = 30` | ⛔ *"matches nothing at any tier"* | ⚠️ **inside a Tier 1 band, still never stated** |
+
+⭐ **And §2's tier reasoning SURVIVES the correction.** §2 refused `RESOLVED — OWNER ATTESTATION`
+*chiefly* because 30 was unsupported. **That argument weakens and the conclusion does not**: the
+owner still described **his practice**, V19 still never says 30, and a value lying inside a band is
+not testimony that the band's author taught it. ⭐ **§7 Q5 becomes much more valuable** — if the
+owner says he took 30/50 *from this lesson*, the status changes.
+
+⚠️ **V19's `25 to 50` is a LEVEL-EXTENSION distance, NOT a stop distance.** It describes where the
+dealer extends to and where the **next entry** is. The owner's `25` is a **stop**. ⛔ **They are not
+the same quantity and this draft does not equate them** — that they share a number is the kind of
+coincidence §3.3 already refused to promote. It does, however, put `A-005`'s *"25 to 50 pips"*
+trading-zone band and V19's strike-zone band in the same frame, which is a `A-005` question, not
+this record's.
+
+### 4B.3 ⛔⛔ THE TRAP: V19's `30` IS MINUTES, NOT PIPS
+
+V19's most repeated number is **`30`** and it is a **TIME CAP** — *"within 30 minutes"* (`A-134`,
+`C-029`, spoken five ways: 30 / 45 tops / 30–45 / 30-to-an-hour / 90 too long). **The owner's
+`TP1 = 30` is PIPS.**
+
+> ⚠️ **These are different quantities that share a numeral, in the same lesson, about the same
+> formation. A session reading quickly WILL conflate them.** It is flagged here, in the record most
+> likely to be read next to V19, precisely so that it is not.
+
+### 4B.4 What V19 does NOT do to this entry
+
+⛔ **`C-001` / `C-016` / `A-121` are still untouched.** §3.5's categorical point stands: V19's caps
+are **minutes on a formation leg**, not a **holding period in days**. ⛔ **`A-123` still does not
+close** — V19 states no stop distance. ⛔ **`A-011` is not closed by V19 either**: the slides give a
+second-leg rule, **not a rule for identifying the first leg**, and `C-029` records that the two
+slides were given **different caps on camera**.
+
+---
+
 ## 5. THE PROPOSED LEDGER ENTRY — TEXT FOR THE OWNER TO APPROVE, EDIT OR REJECT
 
-> ## D-054 — The owner's stop-loss and take-profit rule is recorded as an OWNER-ATTESTED TRADING RULE at OWNER EMPIRICAL PREFERENCE; it is NOT COURSE-VERIFIED; it closes NO record; and its ANCHOR is undefined
+> ## D-055 — The owner's stop-loss and take-profit rule is recorded as an OWNER-ATTESTED TRADING RULE at OWNER EMPIRICAL PREFERENCE; it is NOT COURSE-VERIFIED; it closes NO record; and its ANCHOR is undefined
 >
 > **Date:** 2026-08-14
 > **Category:** `OWNER EMPIRICAL PREFERENCE`, the status `D-052` established — the owner's judgment
@@ -330,8 +489,41 @@ among four readings to obtain a codable rule is the precise act `D-030` forbids.
 >    outside the corpus, with three lessons still unread.
 > 5. `12_MASTER_SPEC` / `13_MACHINE_SPEC` gain **no** risk parameters from this entry.
 >
+> ---
+>
+> ### ⭐⭐ PARTS 3, 4 AND 5 ARE AMENDED — the text above is retained per `REMEDIATION_PROTOCOL.md` §2
+>
+> **Part 3 REPLACED — the long side is now ATTESTED, not inferred.** The owner ruled the anchor is
+> *"where the **M/W** forms"*. **Naming M and W as a pair attests both directions**: M at tops
+> (short), W at bottoms (long). ✅ **Part 3's `DO NOT CODE` on long-side GEOMETRY is DISCHARGED.**
+> ⚠️ Residue: the owner did not separately restate **TP1 30 / TP2 50** for longs; they are
+> direction-neutral distances and the mirror is routine, but it is noted rather than assumed.
+>
+> **Part 4 REPLACED — the anchor is RULED and the record is RENUMBERED `A-136`.**
+> *"The perceived high"* = **the extreme of the M/W formation**. ⚠️ **`A-136` (renumbered from
+> `A-132`, which V19 has taken) does NOT close: it RESOLVES INTO `A-011`** — M/W anatomy,
+> `DO NOT CODE` across ten lessons. ⭐ **But V19 (`review/v19`) prints the second-leg rule for both
+> M and W** — *"The Second Leg Rise can be slightly above the first, but must close below within
+> 30M"* — **the corpus's first M/W construction.** `A-136` is therefore **open on a Tier 1
+> construction rather than on nothing**, and its remaining gap is narrow and nameable: **which
+> extreme of the formation the stop measures from, and how the FIRST leg is identified.**
+>
+> **Part 5 AMENDED — `TP1 = 30` is no longer unsupported, and `TP2 = 50` gains a Tier 1 bound.**
+> V19 states **`25 to 50 pips`** four times (`A-135`, **CLOSED in-session** on a second ASR engine):
+> *"extend that high to the next level strike zone 25 to 50 higher"*, *"another entry 25 to 50 pips
+> higher"*. ⭐ **Both owner targets fall inside a Tier 1 band and `TP2 = 50` sits on its upper
+> bound.** ⚠️ **A band is not a value — V19 never says 30**, and V19's `25 to 50` is a **level-
+> extension** distance, not a **stop** distance. ⛔ **The `OWNER EMPIRICAL PREFERENCE` status
+> STANDS**; §2's conclusion survives even though its chief supporting argument weakened.
+> ⛔⛔ **AND THE TRAP: V19's own `30` is MINUTES (the second-leg time cap, `A-134`/`C-029`), not
+> pips.** Do not conflate them.
+>
+> **Consequence 4 (the §3.4 re-check) IS DISCHARGED FOR V19 AND STAYS LIVE FOR V20–V21.** It fired
+> within the hour of being written, which is the strongest possible argument for having written it.
+>
 > **Status:** ACTIVE — `OWNER EMPIRICAL PREFERENCE`, **NOT COURSE-VERIFIED**, **NOT EXECUTABLE**
-> while `A-132` is open
+> while `A-136` is open — but the anchor is **RULED**, the long side is **ATTESTED**, and the
+> remaining gap is **`A-011`'s leg identification**, not the whole formation
 
 ---
 

@@ -4540,6 +4540,20 @@ an evidentiary one: nothing is unblocked, and `A-086` stays `DO NOT CODE`.**
 >
 > ⚠️ **This is disclosed rather than done quietly**, and the draft file is **not edited by this
 > session** — renumbering it is its own adopting session's act (`D-043` consequence 8).
+>
+> #### ✅ EXECUTED LATER THE SAME DAY, AT THE OWNER'S DIRECTION — see `D-057`
+>
+> The prediction above held and the renumber was carried out (this block's **meaning is
+> unchanged**; this is a factual follow-through note, not an amendment):
+>
+> | Draft | Was | Now |
+> |---|---|---|
+> | Owner's stop / take-profit rule | `DECISION_DRAFT_D-054_OWNER_STOP_AND_TARGETS.md` | **`DECISION_DRAFT_D-055_OWNER_STOP_AND_TARGETS.md`** |
+> | MMM `.tpl` + time ribbon | `DECISION_DRAFT_D-055_MMM_TPL_AND_TIME_RIBBON.md` | **`DECISION_DRAFT_D-056_MMM_TPL_AND_TIME_RIBBON.md`** |
+>
+> The second draft moved because it had claimed `D-055` behind the first. **Both remain UNADOPTED
+> and their substance is unchanged.** ⚠️ **Neither number is reserved** — `D-057` adopted ahead of
+> both, and a draft that sits unadopted will be overtaken again.
 
 **Date:** 2026-08-14
 **Supersedes:** **`D-053` §3(a) ONLY** — its characterisation of the Trade Signal Line finding, and
@@ -4709,3 +4723,158 @@ point 5.3's prohibition is retained.
    not have been written if `[00:11:39]` had been read.
 **Status:** ACTIVE — **`D-053` §3(a) withdrawn; `A-085` OPEN and unchanged; the owner's reading of
 V12 is the better-supported one, and the conditioned claim remains untested and untestable.**
+
+---
+
+## D-057 — The owner attests the TDI band settings are FINE and that he FINDS shark fin / blood in the water working on his chart. ⛔ **`A-031`, `A-032` and `A-086` DO NOT MOVE — he stated no number, and a human recognising a shape is not a machine criterion.**
+
+**Date:** 2026-08-14
+**Bears on:** `A-031`, `A-032`, `A-086`, `A-085`, `A-039`, `D-052`, `D-053`, `D-054`.
+**Closes:** **NOTHING.** Read §3 before citing this entry for anything.
+**Does not disturb:** `D-030`, `D-026`/`D-027`, `SOURCING_HIERARCHY.md`.
+
+> ### 🔢 NUMBERING — `D-055` AND `D-056` ARE HELD BY UNADOPTED DRAFTS; THIS ENTRY TAKES `D-057`
+>
+> At the owner's direction the two concurrent drafts were renumbered (`D-054` disclosure block,
+> "EXECUTED"): stop/targets → **`D-055`**, MMM `.tpl` + time ribbon → **`D-056`**. Both are
+> **UNADOPTED**. ⚠️ **This entry does not take `D-055` even though adoption normally claims the next
+> free number** — the owner directed that mapping explicitly, and honouring it costs nothing but a
+> number. **Neither draft's number is reserved by this**: a draft that stays unadopted will be
+> overtaken again, exactly as `D-051` has been.
+
+**The owner's statement, 2026-08-14, in response to being told that `A-031`/`A-032` are uncomputable
+because the band's period is never stated, and that V12's scoped claim could not be tested:**
+
+> *"The TDI band is fine. I found the shark fin / blood in the water - working fine."*
+
+---
+
+### 1. WHAT IS RECORDED — AND AT WHAT TIER
+
+**`OWNER EMPIRICAL ATTESTATION`** — the owner reporting **what he observes on his own chart with his
+own configuration.**
+
+⚠️ **This is NOT a new tier and no fifth rung is created.** It is the **observation form** of the
+same out-of-tier class `D-052` used in its **choice** form (`OWNER EMPIRICAL PREFERENCE`): owner
+adjudication sits **outside** the ladder and outside the tiers, as `D-041` established.
+`SOURCING_HIERARCHY.md` gains no new rung from this entry.
+
+**What is attested, stated no more strongly than he said it:**
+
+1. **The TDI band settings, as he is running them, are satisfactory to him.** He did **not** state a
+   period, a multiplier, or any number.
+2. **He can find shark fin and blood in the water on his chart, and they behave sensibly.**
+
+### 2. ⭐ THE DISTINCTION THAT MAKES THIS ENTRY WORTH WRITING
+
+**`A-031` and `A-032` have been `CLOSED — RESOLVED BY COURSE` *as to MEANING* since V13.** What they
+are **not** is *computable* — this project cannot write code that detects them, because the band
+cannot be constructed without a period.
+
+⭐ **The owner's report does not conflict with that, and it never did.** **A human recognising a
+shape does not need a numeric criterion.** He can point at a shark fin the way one points at a
+face — the meaning is settled, his eye is trained, and the pattern is on his screen. **What he
+cannot do by looking, and has not claimed to do, is supply the number a machine would need.**
+
+**So the apparent contradiction — "they're uncomputable" vs "I found them, working fine" — is not a
+contradiction at all. Both are true, of different faculties.** That is worth writing down because a
+future session reading only one of the two will think the other is wrong. **`D-054` was caused by
+exactly that class of error and this entry is written to avoid a repeat.**
+
+### 3. ⛔ WHAT THIS DOES **NOT** DO. NOTHING MOVES.
+
+| Record | Status after this entry | Why |
+|---|---|---|
+| **`A-086`** — band basis + **period** | ⛔ **`DO NOT CODE`. UNCHANGED.** | **He stated NO NUMBER.** *"The band is fine"* is satisfaction with a configuration, not a specification of one. The period is still never stated in Tier 1 or Tier 2, and `Volatility_Band=34` is still `[TOOLING]`, `D-045`-**eligible, not adopted** |
+| **`A-031`** — *"blood in the water"* | ⛔ **Uncomputable. UNCHANGED.** | Still no machine criterion. Recognition by eye is not one |
+| **`A-032`** — *"shark fin"* | ⛔ **Uncomputable. UNCHANGED.** | Same |
+| **`A-085`** — TSL *"polls the H1"* | ⛔ **`OPEN`, `DO NOT CODE`. UNCHANGED.** | Untouched by this statement; the effect-vs-mechanism question stays open |
+| **`A-039`** | ⛔ **`OPEN`.** | Unchanged |
+
+⛔ **AND NO `PT`/`BT` MAY CITE THIS ENTRY AS A WARRANT FOR A BAND SETTING.** It is one person's
+satisfaction with his own chart, reported in one sentence, with no value in it. `D-026`/`D-027` and
+`BACKTEST_EVIDENCE_STANDARD.md` are untouched.
+
+### 4. ⭐ WHAT IT DOES OPEN — A ROUTE THAT WAS PREVIOUSLY CLOSED
+
+**`D-054` recorded that V12's scoped claim — *shark fin + blood in the water ⇒ the H1 has fired "at
+the same time or in congruency"* — is untestable, because `A-031`/`A-032` cannot be computed.**
+**That remains true for AUTOMATED testing and is unchanged.**
+
+⭐ **But the owner has just said he can identify both patterns by eye.** That makes the claim
+**manually testable** — `D-005` (manual backtesting is part of the Student Phase) is the existing
+vehicle, and the design is straightforward: mark up **N** independent shark-fin + blood-in-the-water
+instances on the owner's own configuration, record for each whether the H1 TDI had fired in
+congruency, **with the H1 hidden at the point of marking.**
+
+⚠️ **This entry does NOT run that test, commission it, or pre-register it.** It records that the
+route exists and that it did not before. **Any such test needs its own pre-registration under
+`D-026`/`D-027` before a single observation is marked**, and its result would be evidence about
+**the owner's configuration**, not about the course — the configuration is not course-verified.
+
+### 5. ⭐ WHAT IS PUT BACK TO THE OWNER — AND WHY IT IS NOT ASSUMED
+
+**`MMM_TDI.txt` ships `bandLen = 34` `[TOOLING]` and `bandMult = 1.6185` `[DEFAULT] — a guess`,**
+flagged as owed at `D-052` consequence 6 and reaffirmed at `D-053` consequence 5. **The obvious
+inference from *"the band is fine"* is that those two values are the ones he is running and that
+they can be marked confirmed-working.**
+
+⛔ **THAT INFERENCE IS NOT DRAWN HERE, AND THE REASON IS SPECIFIC.** The owner's own TDI is the MT4
+`!SM_TDI` build; `MMM_TDI.txt` is this project's **port** of it, and **the two are known to differ on
+the one number in question** — the multiplier is **compiled into the `.ex4`** and could not be read
+(`D-045`, `D-048` §7.3), so `1.6185` in the port is a **Tier-3 public guess that was never recovered
+from his tooling.** ⭐ **"My band is fine" is therefore entirely consistent with the port's
+multiplier being wrong**, because he may never have been looking at the port's number at all.
+**Assuming otherwise would be `D-039`'s error — treating the admission of a source as a reading of
+it.**
+
+**The question owed to the owner, in the form it can be answered yes/no:**
+
+> **(a)** When you say *"the band is fine"*, are you looking at **`MMM_TDI.txt` on TradingView**, or
+> at your **MT4 `!SM_TDI`** chart — or both?
+> **(b)** If the port: may `bandMult = 1.6185` and `bandLen = 34` be relabelled
+> **`OWNER-CONFIRMED WORKING`** instead of `[DEFAULT] — a guess` / `[TOOLING]`?
+> **(c)** If MT4: **the port's `1.6185` is still unverified against your build**, and the honest
+> label stays `[DEFAULT]`.
+>
+> ⚠️ **Even a "yes" to (b) does NOT close `A-086`.** It would record that a value **works for its
+> owner**, not that the course taught it — and `A-086` needs a number **the corpus states**. It
+> would upgrade a *tag on a tool*, not a *record in the register*.
+
+**Reason:** The owner answered a blocker report with a practical observation, and the two are easy
+to mistake for a disagreement. Written down plainly, they are not: the corpus still does not state a
+band period, and he can still see the patterns. **Recording the attestation costs nothing, preserves
+a real datum, and — because §5's question is asked rather than assumed — leaves the one genuinely
+decidable thing in his hands rather than in a session's inference.**
+
+**Evidence:** the owner's statement above; `A-031`, `A-032` (both `CLOSED — RESOLVED BY COURSE` as to
+meaning, both uncomputable), `A-086`, `A-085`; `D-045` and `D-048` §7.3 for the multiplier being
+compiled into the `.ex4` and unrecoverable; `D-052` consequence 6; `D-053` consequence 5; `D-054` §2
+for the scoped-claim untestability this entry partially reopens; `MMM_TDI.txt`.
+
+**Alternatives considered:** *Reading *"the band is fine"* as closing `A-086`* — **rejected
+outright; he stated no number**, and `A-086` needs a period, not an endorsement. *Reading *"I found
+the shark fin"* as making `A-031`/`A-032` computable* — **rejected; visual recognition is not a
+machine criterion**, and this is the distinction §2 exists to hold. *Marking `1.6185`
+owner-confirmed on the inference that he must be running the port* — **rejected; the port and his
+MT4 build are known to differ on exactly that number**, so the inference is unsafe and the question
+is asked instead. *Not recording the statement at all because it closes nothing* — rejected; it is a
+real datum, it opens §4's manual route, and an unrecorded owner statement is the thing `D-001` exists
+to prevent. *Creating a new tier for it* — rejected; it is `D-052`'s class in observation form.
+
+**Consequences:**
+
+1. **`A-031`, `A-032`, `A-085`, `A-086` each gain an attestation block. NONE changes status.**
+2. **`A-086`'s period stays the single blocker** on the TDI family, unchanged and unmoved.
+3. ⭐ **A manual test route for V12's scoped claim is recorded as AVAILABLE and NOT COMMISSIONED**
+   (§4). It needs its own pre-registration; `D-054`'s "untestable" finding stands for the
+   **automated** case.
+4. **A yes/no question is owed by the owner** (§5) on whether `1.6185`/`34` may be relabelled
+   `OWNER-CONFIRMED WORKING`. **Until answered, both tags are UNCHANGED** and `D-052` consequence 6
+   stays open.
+5. **No tier is added to `SOURCING_HIERARCHY.md`.**
+6. **Housekeeping executed at the owner's direction:** the `D-054` draft-numbering collision
+   resolved (`D-055`/`D-056`, substance unchanged), and three byte-identical `" 2"` duplicate files
+   removed from `06_MANUAL_BACKTEST/tools/`.
+**Status:** ACTIVE — **an attestation on the record. `A-086` stays `DO NOT CODE`; `A-031`/`A-032`
+stay uncomputable; one yes/no question is owed by the owner.**

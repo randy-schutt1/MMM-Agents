@@ -1,4 +1,4 @@
-# DECISION DRAFT — `D-055` (proposed) — `MMM.tpl`, THE TIME RIBBON, AND THE PIVOT SEARCH
+# DECISION DRAFT — `D-056` (proposed) — `MMM.tpl`, THE TIME RIBBON, AND THE PIVOT SEARCH
 
 > ## ⛔ NOTHING IN THIS FILE IS A DECISION. NOTHING HERE IS ADOPTED.
 >
@@ -9,7 +9,7 @@
 >
 > Until the owner rules:
 >
-> - **`DECISIONS.md` is unchanged.** No `D-055` exists.
+> - **`DECISIONS.md` is unchanged.** No `D-056` exists.
 > - **`SOURCING_HIERARCHY.md` §1's `TOOLING` rung is unchanged** — it admits
 >   `Ultimate Blue.tpl` / `!SM_TDI` **and nothing else** (`D-051` would add `mm_adr`; it is also
 >   unadopted).
@@ -18,8 +18,16 @@
 > - **`06_MANUAL_BACKTEST/tools/MMM_SESSION_RIBBON.txt` is a DRAFT TOOL** and may be cited by
 >   nothing.
 >
-> **Numbering.** `D-053` is the highest adopted entry; `D-054` is claimed by
-> `DECISION_DRAFT_D-054_OWNER_STOP_AND_TARGETS.md`. This draft claims **`D-055`**.
+> **Numbering — RENUMBERED `D-055` → `D-056` on 2026-08-14.** This draft was written when `D-053`
+> was the highest adopted entry and the stop/targets draft held `D-054`; it claimed **`D-055`**.
+> **`D-054` was then ADOPTED by a concurrent session** (the `D-053` §3(a) / `A-085` withdrawal),
+> which pushed the stop/targets draft to `D-055` under `D-047` Consequence A — **so this draft
+> moves to `D-056`.** Adoption claims a number; drafting reserves nothing.
+>
+> ⚠️ **Re-check at adoption time.** `D-057` is adopted (the owner's TDI band / shark-fin
+> attestation), so `D-056` is free **only while this draft and
+> `DECISION_DRAFT_D-055_OWNER_STOP_AND_TARGETS.md` remain unadopted.**
+> **The substance of this draft is UNCHANGED by the renumber.**
 >
 > **The full survey this draft rests on is `INDICATOR_FOLDER_INVENTORY_2026-08-14.md`.**
 
@@ -46,6 +54,52 @@ the owner named is indicator #8 in it, with **six clock boundaries recovered exa
 boundaries against `A-105`'s printed slide produced **the first mechanism the project has ever had
 that could settle the session clock on arithmetic rather than on choosing** — and it turns on a
 single fact the owner can supply in one sentence. §4.5.
+
+---
+
+> ## ⭐⭐ AMENDED 2026-08-14 — **OWNER RULING: THE CLOCK IS EST**
+>
+> §8 Q2 asked for the one fact that could settle the session clock. The owner answered:
+>
+> > *"We need to offset the GMT so that it's **EST**."* — owner, 2026-08-14
+>
+> **All sections below are retained unedited** per `REMEDIATION_PROTOCOL.md` §2. The reconciliation
+> is **§4A**, and the headline is uncomfortable and worth stating up front:
+>
+> ⭐ **The ruling fixes the TARGET frame (EST) and NOT the SOURCE frame (the MT4 server offset the
+> template's values are stored in). Those are two different unknowns and only one was answered.**
+> ⚠️⚠️ **And converting to EST makes the residual gap SHARPER, not smaller: the ribbon's two best
+> anchors now demand offsets EXACTLY ONE HOUR APART.** `A-105`'s one-hour question reappears from an
+> independent direction instead of being closed by it. **Proposed `C-030`** (renumbered — V19 has
+> taken `C-029`).
+>
+> ⚠️ **RENUMBERING.** V19 landed on `review/v19` while this draft was open, taking `A-132`–`A-135`
+> and `C-029`. This draft's proposed contradiction is renumbered **`C-030`**, and `D-055`'s
+> proposed `A-132` is renumbered **`A-136`**, under the `D-047` collision convention.
+
+---
+
+> ## ⭐⭐ AMENDED 2026-08-14 — **OWNER RULING: THE CLOCK IS EST**
+>
+> §8 Q2 asked for the one fact that could settle the session clock. The owner answered:
+>
+> > *"We need to offset the GMT so that it's **EST**."* — owner, 2026-08-14
+>
+> **All sections below are retained unedited** per `REMEDIATION_PROTOCOL.md` §2. The reconciliation
+> is **§4A**, and the headline is uncomfortable and worth stating up front:
+>
+> ⭐ **The ruling fixes the TARGET frame (EST) and NOT the SOURCE frame (the MT4 server offset the
+> template's values are stored in). Those are two different unknowns and only one was answered.**
+> ⚠️⚠️ **And converting to EST makes the residual gap SHARPER, not smaller: the ribbon's two best
+> anchors now demand offsets EXACTLY ONE HOUR APART.** `A-105`'s one-hour question reappears from an
+> independent direction instead of being closed by it. **Proposed `C-030`.**
+>
+> ⚠️ **RENUMBERING — TWICE, BY TWO CONCURRENT SESSIONS.** This draft was written as `D-055` and is
+> now `D-056`: a parallel session adopted `D-054` (the `D-053` §3(a) withdrawal) and renumbered
+> this family. Separately, **V19 landed on `review/v19` taking `A-132`–`A-135` and `C-029`**, so
+> this draft's proposed contradiction is **`C-030`** and `D-055`'s proposed ambiguity is **`A-136`**,
+> under the `D-047` collision convention. **Body text below may still read `D-055`; read it as
+> `D-056`.**
 
 ---
 
@@ -131,7 +185,7 @@ would repeat the `D-041` error the `D-043` reversal exists to warn about.**
 `Alert50BlueBox`, whose strings in the readable sibling build are literally
 **`25 Pips above blue box`** / **`50 Pips below blue box`**. That is `A-005`'s *"the trading zone is
 set 25 to 50 pips higher (or lower) than the Asian range"* **shipped as an alert** — and it is the
-same 25/50 pair the owner's stop rule uses (`D-054` §3.3). ⚠️ **Corroboration of a band, not a
+same 25/50 pair the owner's stop rule uses (`D-055` §3.3). ⚠️ **Corroboration of a band, not a
 closure**: `A-005` is blocked on `A-019`/`D-031`, i.e. on the clock.
 
 ### 4.2 What was recoverable, and what was not
@@ -253,6 +307,98 @@ offset, all landing on real market events.**
 
 ---
 
+## 4A. ⭐⭐ OWNER RULING — THE CLOCK IS EST, AND WHAT THAT DOES AND DOES NOT SETTLE
+
+> *"We need to offset the GMT so that it's **EST**."* — owner, 2026-08-14
+
+### 4A.1 What is settled
+
+⭐ **The ribbon's reference frame is EST / New York.** This is **owner direction on the tool**, and
+it is now implemented: `MMM_SESSION_RIBBON.txt` renders in EST rather than exposing an open-ended
+timezone choice. ⭐ **It also corroborates `A-105` at the frame level** — the corpus's only printed
+session boundary is stamped `EST`, and the owner independently says the working clock is EST. **The
+course's frame and the owner's frame agree.** That was not guaranteed and it is a real result.
+
+### 4A.2 ⚠️ What is NOT settled — the ruling fixes the target, not the source
+
+`MMM.tpl` stores the boundaries in **MT4 server time**. Rendering them in EST requires the **server
+offset**, which the ruling does not supply. Two candidates survive, and here is the whole problem in
+one table:
+
+| Band (server) | **server UTC+2 → EST (−7)** | **server UTC+3 → EST (−8)** |
+|---|---|---|
+| Asian `0:00–8:00` | `17:00–01:00` | `16:00–00:00` |
+| Euro `8:30–14:00` | `01:30–07:00` | `00:30–06:00` |
+| **NY `16:30–20:00`** | ⭐ **`09:30–13:00`** — NYSE cash open | `08:30–12:00` — nothing |
+| **mktopen A `10:00–11:00`** | ⭐ **`03:00–04:00`** — London open (08:00 London) | ⭐⭐ **`02:00–03:00`** — **V16's slide, exactly** |
+| **mktopen B `16:00–17:00`** | ⭐ **`09:00–10:00`** — NY FX open | `08:00–09:00` — nothing |
+
+> ### ⚠️⚠️ THE TWO ANCHORS DEMAND OFFSETS ONE HOUR APART AND NEITHER ARM SATISFIES BOTH
+>
+> - **UTC+2 wins on market events, decisively — THREE boxes on three real opens at once** (NYSE
+>   09:30, London 03:00 EST, NY FX 09:00). `Begin_3 = 16:30` is the strongest single datum in the
+>   set: **a half-hour boundary whose only plausible referent is the 09:30 NYSE open.** Under UTC+3
+>   it is `08:30` and refers to nothing.
+> - **UTC+3 wins on the course's own slide** — it puts the ribbon's London box **exactly** on V16's
+>   printed *"London Session Start · 2:00 To 3:00 AM, EST"*. Under UTC+2 the slide sits **one hour
+>   before** the ribbon's box.
+>
+> **They cannot both be right.** §4.5's original finding survives the ruling **in a sharper form**:
+> the question is no longer *"which timezone?"* but *"which of two one-hour-apart alignments?"*
+
+### 4A.3 ⭐ PROPOSED `C-030` — the ribbon and the V16 slide disagree by one hour
+
+**On the better-supported UTC+2 arm**, V16's printed *"London Session Start 2:00 To 3:00 AM, EST"*
+(**Tier 1**) and the ribbon's London market-open box at `03:00–04:00 EST` (**`TOOLING`**) describe
+the same event one hour apart.
+
+⚠️ **The resolution rule is already known and it does not favour the tool.**
+`SOURCING_HIERARCHY.md` §1 ranks `TOOLING` **below Tier 1**, and §3.3's *"the recording wins"*
+applies: if they genuinely contradict, **the slide governs and the ribbon is superseded on that
+point.** ⛔ **But the finding is still owed** (§3.3: *"a divergence is a finding, not noise"*), and
+it is **not adjudicated here** — for a reason that is not deference:
+
+> **A benign reading is available and is not excluded: the slide may mark the SETUP hour and the
+> ribbon the OPEN hour.** *"London Session **Start** 2:00 To 3:00"* naming the hour **before** the
+> 03:00 London open is coherent — the box would then be the open itself, not a competing claim about
+> it. ⭐ **On that reading the two agree and abut rather than conflict.** `D-048` rung 4 governs: the
+> rungs disagree, the record is load-bearing, **do not adjudicate.**
+
+```text
+C-030 (proposed) -- V16's printed "London Session Start 2:00 To 3:00 AM, EST"
+  [TIER 1] vs !sm_WorkTime v1.5b's London market-open box at 03:00-04:00 EST
+  [TOOLING, on the UTC+2 arm]. One hour apart, same event.
+  NOT ADJUDICATED. Tier 1 outranks TOOLING if they conflict -- but a benign
+  reading (setup hour vs open hour) is live and is not excluded.
+  Needs: the owner's MT4 server offset, or a later lesson.
+  STATUS: OPEN.
+```
+
+⛔ **`A-019`, `A-105` and `A-131` remain `OPEN`.** ⭐ **But `A-105` is materially narrowed and its
+open question is now nameable in one line:** not *"what timezone?"* — the frame is EST on both sides
+— but **"is the ribbon's London box the slide's window, or the hour after it?"**
+
+### 4A.4 ⚠️ AND ONE HALF OF `A-105`'s ORIGINAL QUESTION SURVIVES THE RULING INTACT
+
+`A-105`'s question was whether `EST` is **literal (UTC−5)** or **New York local (EDT, UTC−4 in
+May)**. ⚠️ **The owner said *"EST"*, which is exactly the ambiguous token.** *"EST"* strictly means
+**fixed UTC−5, no DST**; *"New York time"* means **EST in winter, EDT in summer** — a clock that
+shifts twice a year and would move every box by an hour for half the year.
+
+The port implements **literal fixed UTC−5** (what `EST` means, and what the owner said) and exposes
+`America/New_York` as the alternative. ⭐ **§8 Q7 asks the one-line question**, and it is the last
+mile of `A-105`.
+
+### 4A.5 ⭐ A real code consequence, recorded because it is not cosmetic
+
+Converting to EST makes the **Asian band cross midnight** (`17:00–01:00` on the UTC+2 arm). In
+server time it never did. The port's window test **now handles wrap-around**, which the pre-ruling
+version explicitly did not and flagged as a limitation. **The ruling turned a documented limitation
+into a required fix** — the kind of thing that only surfaces when a ruling is actually implemented
+rather than merely recorded.
+
+---
+
 ## 5. ⚠️ THE PIVOT SEARCH — THE ANSWER IS "FOUND, BUT NOT ON THE MMM CHART"
 
 ### 5.1 The negative result comes first, because it is the stronger one
@@ -370,7 +516,7 @@ Forex222's `807876a6…`). `diff` shows **one moved declaration line and no func
 > unreadable behaviours marked `[GUESS]` at the code that implements them. ⚠️ **It has NOT been run
 > on TradingView and has NOT been compared against the owner's chart**, which is stated in the file.
 > ⛔ **No `PT`/`BT` may cite it, and it establishes no session boundary.** Its **acceptance test is
-> pre-registered** at `D-055` §4.4, including the **DST-transition run**, which is the only known
+> pre-registered** at `D-056` §4.4, including the **DST-transition run**, which is the only known
 > procedure that can settle whether v1.5b auto-normalises the clock.
 >
 > **Part 5 — ⛔ the pivot search: NOT FOUND ON THE MMM CHART.** No pivot indicator exists in
@@ -436,6 +582,45 @@ Forex222's `807876a6…`). `diff` shows **one moved declaration line and no func
 
 ---
 
+## 7A. ⭐ AN UNPLANNED HAND-OFF — `MMM.tpl` AND V19's `A-133` *"BLUE TRACER"*
+
+V19 opened **`A-133`** (*the `blue tracer` is undefined, and it blocks V19's entry rule and
+Dimension B*) and named its own closing conditions: *"a later lesson, an owner ruling, **or a
+`D-045`-class artifact (the owner's MT4 template) that names the line**."*
+
+⭐ **This draft admits exactly such an artifact**, so the hand-off is owed. `MMM.tpl`'s six moving
+averages, with MT4's BGR colour words decoded:
+
+| EMA | MT4 colour | RGB | |
+|---|---|---|---|
+| **4** | `16711680` | **`#0000FF`** | ⭐ **pure blue** |
+| 10 | `255` | `#FF0000` | red |
+| 50 | `16776960` | `#00FFFF` | **cyan / aqua** |
+| 200 | `16777215` | `#FFFFFF` | white |
+| **800** | `13434880` | **`#0000CD`** | ⭐ **dark blue** — `D-043`'s *blueberry* |
+| 3200 | `8388736` | `#800080` | purple |
+
+⛔ **`A-133` IS NOT CLOSED HERE AND THIS DRAFT DOES NOT PROPOSE CLOSING IT.** Three reasons, and the
+third is the one that matters:
+
+1. **Two blue candidates, not one** — the **4** (pure blue) and the **800** (dark blue). *"Tracer"*
+   connotes a fast line tracing price, which favours the **4**; `D-043`'s *blueberry = 800* favours
+   the **800**. **Nothing decides between them.**
+2. ⚠️ **V19's frames show CYAN, not blue** — `A-133` records *"a **cyan** dashed horizontal level and
+   a **cyan** solid sloping average"*. In `MMM.tpl` **cyan is the 50** (`#00FFFF`, `D-043`'s
+   *water*). **If the frames are right, the tracer may not be a blue line at all**, and the colour
+   word in the audio and the colour on the chart disagree.
+3. ⛔ **`MMM.tpl` is a 2023 chart and V19 is a 2012 lesson**, and the template's short EMAs are
+   **4 and 10** where `D-043` has **5 and 13** (§3). **An artifact that already disagrees with the
+   corpus about which periods exist cannot be used to name which line a 2012 lesson meant.**
+
+⭐ **What is legitimately delivered: a shortlist and a discriminating test.** The candidates are the
+**4**, the **800** and the **50**; and V19's own frames can discriminate — *a horizontal dashed level
+and a sloping average are different objects, and only the sloping one can be a moving average at
+all.* **That test belongs to the V19 review, not to this draft**, and is flagged for it.
+
+---
+
 ## 8. THE QUESTIONS FOR THE OWNER
 
 1. ⚠️ **Which folder did you add files to?** You said *"Forex222"*, but
@@ -456,6 +641,12 @@ Forex222's `807876a6…`). `diff` shows **one moved declaration line and no func
    would make `A-101`'s construction decidable in one line.
 5. **Do you attest `MMM.tpl` as your working configuration for this method**, in the sense you
    attested `!SM_TDI` for `D-045`? Part 1 depends on it and nothing else does.
-6. **Is the Euro band deliberately off?** `draw_euro_box=false` is saved in both MMM templates — a
+6. ⭐⭐ **NEW — Q7: did you mean EST LITERALLY (fixed UTC−5, no DST), or "New York time" (EST in
+   winter, EDT in summer)?** §4A.4 — the two differ by an hour for half the year, and this is
+   **the last unanswered half of `A-105`'s original question.** One line closes it.
+7. ⭐ **NEW — Q8: is your ribbon's London box at 2 AM EST or 3 AM EST on your own chart?** §4A.3 —
+   that single observation picks between the two server arms and settles `C-030` outright. **You can
+   read it straight off the chart; you do not need to remember the broker's offset.**
+8. **Is the Euro band deliberately off?** `draw_euro_box=false` is saved in both MMM templates — a
    configured band you have chosen not to display. That may be a real fact about how you read the
    chart, or it may be an accident.

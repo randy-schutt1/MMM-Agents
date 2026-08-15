@@ -10010,6 +10010,10 @@ turns**. `D-053` §3(a) would not exist if `[00:11:39]` had been read.
 
 - `00_SYSTEM/INDICATOR_FOLDER_INVENTORY_2026-08-14.md` — the complete survey
 - `00_SYSTEM/DECISION_DRAFT_D-054_OWNER_STOP_AND_TARGETS.md` — the owner's 25/30/50 rule
+  ⚠️ **RENUMBERED `D-054` → `D-055` later the same day** (file is now
+  `DECISION_DRAFT_D-055_OWNER_STOP_AND_TARGETS.md`): `D-054` was ADOPTED by a concurrent
+  session. The companion TPL/time-ribbon draft moved `D-055` → `D-056` in the same act.
+  **Substance unchanged in both.** See `D-057`.
 - `00_SYSTEM/DECISION_DRAFT_D-055_MMM_TPL_AND_TIME_RIBBON.md` — `MMM.tpl`, the ribbon, the pivots
 - `06_MANUAL_BACKTEST/tools/MMM_SESSION_RIBBON.txt` — the Pine port, **draft, unrun**
 
@@ -10086,3 +10090,43 @@ the cheapest blocker in the project — one owner sentence clears it.
 The parallel TDI session landed (merged `34ac3f7`); `MMM_TDI.txt` is the PRIMARY TDI INSTRUMENT.
 Nothing here duplicates or contradicts it. `Volatility_Band=34` is a `TOOLING` number and `D-052`
 already declined to promote one — **`A-086` stays `DO NOT CODE`.**
+
+---
+
+## 2026-08-14 — `D-057` · the owner attests the TDI band is fine and that he finds shark fin / blood in the water. ⛔ **Nothing moves.** Plus the `D-054` numbering collision resolved and duplicates cleaned
+
+**Owner:** *"The TDI band is fine. I found the shark fin / blood in the water - working fine."*
+
+### Recorded as `OWNER EMPIRICAL ATTESTATION` — the observation form of `D-052`'s owner class. **No new tier.**
+
+### ⭐ Why "uncomputable" and "I found them, working fine" are BOTH true
+
+`A-031`/`A-032` are `CLOSED — RESOLVED BY COURSE` **as to meaning** and *uncomputable* as to
+**criterion**. **A human recognising a shape does not need a numeric criterion.** What he cannot do
+by looking — and has not claimed to do — is supply the number a machine needs. **Different
+faculties, no contradiction.** Written down because a session reading only one side will think the
+other is wrong; `D-054` was caused by that class of error.
+
+### ⛔ Status changes: NONE
+
+`A-086` `DO NOT CODE` (**he stated no number** — satisfaction with a configuration is not a
+specification of one), `A-031`/`A-032` uncomputable, `A-085` `OPEN`, `A-039` `OPEN`.
+
+### ⭐ What it does open
+
+V12's scoped claim (*shark fin + blood in water ⇒ H1 congruency*) is now **manually** testable —
+`D-054`'s "untestable" stands for the **automated** case. **Recorded as available, NOT
+commissioned**; needs its own `D-026`/`D-027` pre-registration.
+
+### ⭐ Owed by the owner — a yes/no
+
+Is *"the band is fine"* about **`MMM_TDI.txt`** or his **MT4 `!SM_TDI`**? ⚠️ **They differ on
+exactly the disputed number** — the multiplier is compiled into the `.ex4` and was never recovered,
+so the port's `1.6185` is a Tier-3 guess. *"My band is fine"* is **fully consistent with the port's
+multiplier being wrong.** Not inferred; asked.
+
+### Housekeeping, at the owner's direction
+
+`D-054` collision resolved: stop/targets `D-054`→**`D-055`**, MMM `.tpl`/time-ribbon
+`D-055`→**`D-056`** (both still **UNADOPTED**, substance unchanged, rationale text corrected in
+both). Three byte-identical `" 2"` sync-artifact duplicates deleted from `06_MANUAL_BACKTEST/tools/`.
