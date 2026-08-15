@@ -1,7 +1,7 @@
 # V20 — SCREENSHOT INDEX
 
 **Lesson:** `Bootcamp1 Wk9 052012 Part2 (46mins) (1).swf` — Week 9, Part 2, 2012-05-20
-**22 frames**, captured by the `SWF_CAPTURE_RECIPE.md` §10 fast sweep at **10×**.
+**23 frames**, captured by the `SWF_CAPTURE_RECIPE.md` §10 fast sweep at **10×**.
 **Every frame retains the full 1024×786 stage including the control bar, so each one proves its own
 timestamp from its own burned timecode.**
 
@@ -50,10 +50,14 @@ sweep would show a CONSTANT `+16 s`, and this session did not run one.
 deltas exactly at `24 → 120 → 240 → 480 → 549`: every interval is an exact multiple of 5 s. **The
 fps patch is correct.**
 
-⭐ **CONSEQUENCE FOR NAMING: because the body offset is 0, `i × 5` and the burned timecode are the
-same number, and every filename below carries the BURNED value.** ⚠️ **No frame was taken from the
-transient region** — the earliest kept frame is `i = 5` (`00:25`), past the point where the offset
-had decayed to under 1 s.
+⭐ **CONSEQUENCE FOR NAMING: every filename below carries the BURNED value, and for 22 of the 23
+frames that is the same number as `i × 5`, because the body offset is 0.**
+
+⚠️⚠️ **THE EXCEPTION IS FRAME 0, AND IT IS THE REASON §8a STEP 4 IS WORDED THE WAY IT IS.** The
+title slide is `i = 0`, which sits **inside the transient**: `i × 5` would have named it `00:00`
+and **its own burned clock reads `00:17`**. It is named `V20_00-00-17_…`. **A session that had
+measured the offset, found it zero in the body, and then named everything from `i × 5` would have
+mis-stamped this one frame by 17 seconds — and it is the frame carrying the lesson's title.**
 
 ---
 
@@ -61,6 +65,7 @@ had decayed to under 1 s.
 
 | # | Frame | Burned | What is on screen |
 |---|---|---|---|
+| 0 | `V20_00-00-17_title-the-out-side-structure-gazebo.png` | `00:17` | ⭐⭐ **THE LESSON'S PRINTED TITLE** — `MARKET MAKER BOOT CAMP` / **`THE OUT SIDE STRUCTURE`**, over a photo of a garden gazebo (a visual pun: a structure that is outside). ⚠️ **THIS FRAME IS `i = 0` AND SITS INSIDE THE §8a TRANSIENT** — `i × 5` would name it `00:00` and the burned clock says `00:17`. **It is named from the BURNED value, which is what §8a step 4 exists for.** ⭐ **V20 therefore HAS a printed subject, and it is the concept the lesson introduces** |
 | 1 | `V20_00-00-25_outside-structure-definition-five-clauses.png` | `00:25` | ⭐⭐ **THE DEFINITION SLIDE.** `MARKET MAKER TRAP MOVES` / *"Outside Structure:"* — five printed clauses (§2 below) |
 | 2 | `V20_00-02-00_outside-structure-high-chart-circled.png` | `02:00` | Chart, red/yellow/cyan MAs + blue level; an aggressive drop hand-circled in red |
 | 3 | `V20_00-04-35_classic-outside-structure-gbpchf-m15-annotated.png` | `04:35` | ⭐⭐ **`Classic Outside Structure`** — chart header reads **`GBPCHF,M15`**; printed annotation panel (§3) |

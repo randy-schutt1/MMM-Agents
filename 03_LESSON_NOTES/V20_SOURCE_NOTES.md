@@ -1,6 +1,8 @@
 # V20 — SOURCE NOTES
 
 **Lesson:** `Bootcamp1 Wk9 052012 Part2 (46mins) (1).swf` — Week 9, Part 2, 2012-05-20
+**Printed subject:** `MARKET MAKER BOOT CAMP` / **`THE OUT SIDE STRUCTURE`** — recovered from the title
+frame at `00:17`, **not** from the audio, which opens mid-sentence with no title (§10.7).
 **Every `[HH:MM:SS]` below is the marker grid of `02_TRANSCRIPTS/V20/V20_TRANSCRIPT.md`.**
 
 ---
@@ -362,6 +364,14 @@ corrects one reading: ***"2 Pins High/Low M or W"* is ONE item, not two.**
 either** — the string is spoken zero times. **What is new is that the timeframe is directly attested
 in print, on three instruments, instead of derived from `8 bars = 2 hours`.** See
 `04_SCREENSHOTS/V20/INDEX.md` §11 and `V20_INTERPRETATION.md` §2.7.
+
+### 10.7 ⭐⭐ THE LESSON HAS A PRINTED TITLE AND THE AUDIO NEVER GIVES IT
+
+The `00:17` frame prints `MARKET MAKER BOOT CAMP` / **`THE OUT SIDE STRUCTURE`** over a photo of a
+garden gazebo — a visual pun. ⭐ **V20's subject is therefore recoverable, and only from the pixels:
+the audio opens mid-sentence with no title, no greeting and no week number.** ⚠️ **And the frame
+sits inside the §8a transient**, so it is named from its burned `00:17` rather than from `i × 5`'s
+`00:00` — see `04_SCREENSHOTS/V20/INDEX.md` §0.
 
 ### 10.6 ⚠️ THE CLOSING SLIDE CONTRADICTS THE AUDIO AND NO RECORD IS OPENED
 
