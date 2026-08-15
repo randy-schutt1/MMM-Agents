@@ -10307,3 +10307,46 @@ and gives no selection rule. **The two contextual candidates are:**
 chosen**, so a test can declare a selection convention, state it as a convention, and report the
 sensitivity across candidates. **`PT-049` does exactly that.** ⛔ **A declared test convention is not
 a course rule** (`D-010`, `D-030`), and `PT-049` says so in its own §2.
+
+---
+
+## A-140 — V21's *"lose at a discount"* is demonstrated only on the LOSS side
+
+**Opened:** 2026-08-15 by the V21 student session. **Status: OPEN.**
+
+V21 `[00:21:26]`–`[00:24:05]` shows that splitting a 3-lot budget (1 lot at entry, 2 at half the
+distance to stop) loses **200** where 3 lots at entry lose **300**. ⭐ **The arithmetic is correct and
+needs no test.**
+
+⛔ **The lesson never works the WIN case.** The same split **reduces size at the best price**, so it
+lowers the winning outcome as well as the losing one. **V21 asserts the benefit and does not
+quantify the cost**, and `[00:22:10]` says the numbers are *"to make the math simple"*.
+
+⚠️ **What would close it:** a matched comparison of the two structures over the same event set with
+a stated exit — **which needs a full trade model** (entry, stop, target, costs) that `D-006` defers
+to Phase 8. **`PT-050` §1a declined to build one and said so.**
+
+---
+
+## A-141 — the `High / Low Trainer` script is described, installed on camera, and NOT PRESENT
+
+**Opened:** 2026-08-15 by the V21 student session. **Status: OPEN — and it may be permanently open.**
+
+V21 `[00:30:18]`–`[01:05:00]` names the tool, gives its parameters (`31:25`, handwritten,
+`1-27-2010`), and **installs it live on screen**. ⛔ **The artifact itself is not in this repository
+and no part of the lesson exposes it**: no filename, no code, no parameter dialog, no forum link
+that resolves.
+
+⭐ **This is a different shape from every other `D-030` blocker in the corpus.** Elsewhere the course
+names a concept and withholds a definition. **Here the course SHIPPED a complete implementation and
+the copy did not reach this project.**
+
+⚠️ **What is known, and it is not nothing:** `MAX RISK 5%`; risk dial `1–5 %` *"on all orders
+combined"*; a market order plus **two pendings at +20 and +40 pips**; a hard stop on all three;
+take profit `+30` from order 1; cycle `30 + 50 + 70 = 150`, *"most often +80"*; and
+`[00:26:52]`'s *"the one I recommend using is **by order percent**"*, which implies **at least four
+variants shipped** (`[00:41:49]` *"four scripts in there"*).
+
+⛔ **`D-030` bars reconstructing it from these figures.** A grid whose spacing is known but whose
+entry trigger, fill logic, order management and exit are not **is not the tool** — and a
+reconstruction would acquire the tool's authority without its behaviour.

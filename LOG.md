@@ -10816,3 +10816,74 @@ deliberately NOT self-closed** — declining, in writing, the owner-authorised s
 R1's review question 1 flagged as becoming the default. ⭐ **And `PT-049` generalises the lessons
 instead of patching the instance.** ⚠️ **The owner question still stands**: the self-verify exception
 has no numbered decision, and this round shows the practice correcting itself without one.
+
+---
+
+## 2026-08-15 — V21 INGESTION (`Bootcamp1 Wk10 061712`, Week 10) — ⭐⭐ THE FINAL LESSON
+
+**Lesson:** `Bootcamp1 Wk10 061712 (75mins).swf` · 2012-06-17 · **01:14:47** · the longest and
+fastest-spoken lesson in the corpus (12,902 words, 172.6 wpm).
+**Branch:** `video/v21` from integration `19e6c2a`, isolated worktree (`D-038`).
+
+### Provenance
+
+`.swf` SHA-256 re-computed to `9eb3b014…44ef23fc` and length to 33,002,964 bytes — **both matching
+`SOURCE_MANIFEST.md`.** ⭐ **Four independent length measures agree to 0.33 s** (header 4487.667 s,
+audio 4487.340 s, manifest 4487 s, filename *"75mins"*). ⭐⭐ **And a fifth, independent of all of
+them: `6/17/2012` is legible in the Windows clock during the install walkthrough** — the recording
+dating itself from its own machine.
+
+### Capture
+
+10× sweep, 906 frames, 17 kept. ⚠️ **V21 is one of the three `1280 × 738` files** — play click
+`(512, 325)` per `GOTCHA 5`, and Ruffle letterboxes it so the player chrome sits at `y ≈ 670`.
+**Reusing V20's coordinates would have swept a splash screen and read no timecode.**
+⭐ **§8a returns a SIXTH shape:** a `+16 s` startup transient — **the same value V19 and V20
+measured** — absorbed to zero by 30 s (**item 296 corroborated on a third sweep**), **plus a slow
+negative drift to `−2 s`.** **All 17 frames named from individually-read burned timecodes.**
+
+### ⭐ Process
+
+**§9's two-pass order was followed** — §§1–9 written while the sweep ran, no frame on disk.
+⭐⭐ **And an independent ASR pass WAS run** on the load-bearing passages — the check V20 was charged
+for omitting (item 326). ⚠️ **Targeted, not full-file (~2 min of 75), and owed.**
+
+### Headline findings
+
+* ⭐⭐⭐ **THE COURSE DELIVERS WHAT V19 PROMISED.** V19 `[00:02:12]` — *"we're gonna release the
+  scripts on the last night of boot camp"* — and V21 ships and **installs** the **`High / Low
+  Trainer`**, with the instructor's **own handwritten 2010 spec photographed at `31:25`**.
+  ⛔ **`A-141`: the artifact is NOT in this repository.** The highest-value acquisition available.
+* ⭐⭐ **A ONE-WORD ASR DEFECT WOULD HAVE CLOSED `A-133` WRONGLY.** *"the light blue tracer **in** the
+  ADR line"* reads as an apposition that DEFINES the blue tracer. **The independent decode says
+  `AND`.** **Caught before it reached any artifact.** ⛔ **`A-133` survives, and V21 is the last
+  lesson — dimension B is now PERMANENTLY blocked, eight lessons deep.**
+* ⭐ **V21 defines what V19 could not:** *"the big board **is the high low board**"* `[00:04:41]`,
+  confirmed verbatim independently — **closing item 298's gap.**
+* ⭐⭐ **`Q-022` confirms the V16–V20 template break from V21's side on all twenty comparisons**
+  (`32/30/26` against all five B members, near every A member) — **item 254 proven from both
+  sides** — **and corrects three prior entries: the *"off-by-one"* is a CLOSED PERMUTATION**
+  (`V01→V01`, `V02→V02` correct; `V03`–`V20` `+1`; **`V21` wraps to `V03`**), described until now
+  from a middle sample.
+* ⚠️ **`PT-050` FRAGILE, reported as a null.** `N3` fired on the grid's modal fill flipping between
+  windows; median move **29.70 `[23.20, 39.60]`** against *"about 50"*, excluding the band by
+  0.4 pips. ⭐ **The event is real — roughly double a random window on every cell — it just is not
+  50.** ⚠️ **Its event definition is borrowed from `PT-047` and declared as the largest threat.**
+
+### Owed / recorded against this session
+
+`A-140`, `A-141`, `C-031`, `Q-022`, review items **357–364**. ⚠️ **Item 364 records a `D-047`
+collision** — items 349–355 were allocated against a tail read too early and renumbered to 357–363
+before commit. ⚠️ **Item 363 self-reports a wrong figure drafted from a truncated terminal view and
+corrected from the JSON before commit.**
+
+### ⭐⭐ THE CORPUS IS COMPLETE
+
+**All 21 lessons are ingested.** A **cumulative review** (`REVIEW_PROTOCOL.md` §14) and
+`FINAL_COURSE_REVIEW.md` are now **due**. ⚠️ **Two records opened here can never be closed by a
+later lesson, because there is none: `A-133` and `C-031`.**
+
+### Git
+
+`video/v21`, pushed, **NOT merged** — `D-003`. **`D-047` re-check owed again at merge-back.**
+Validator **103 / 0 / 0**.
