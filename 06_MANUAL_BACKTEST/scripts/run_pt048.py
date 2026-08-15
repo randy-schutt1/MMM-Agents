@@ -73,25 +73,37 @@ def legs_of_day(h, l):
     return out
 
 
-def measures(h, l, a, b, d):
-    """P1 swing retracement, P2 max adverse excursion, P3 largest 1-bar counter-move."""
+def measures(h, l, a, b, d, k=PIVOT_K):
+    """P1 swing retracement, P2 max adverse excursion, P3 largest 1-bar counter-move.
+
+    CORRECTED 2026-08-15 -- V20 R1 `M1`, `REVIEW_INDEX.md` item 332.
+
+    The interior counter-swing detector was hardcoded to a +/-1 local extreme. PT-048
+    §3.1 defines a swing pivot as "a bar whose high is the maximum (or low the minimum)
+    of the +/-3 bars around it", and P1 is defined over "interior counter-swings" -- so
+    the SAME scale governs. `PIVOT_K` was honoured for the leg endpoints and bypassed
+    here, which inflated n and dragged the median down into the claimed band.
+
+    THE PRE-REGISTRATION GOVERNS AND IS NOT EDITED. This is the runner being brought
+    into line with it (`PT-048` header; `COMMON_PROTOCOL.md` §9 rule 7).
+    """
     hh, ll = h[a:b + 1], l[a:b + 1]
+    n = len(hh)
     p1 = []
     if d > 0:
         run = np.maximum.accumulate(hh)
-        # a counter-swing bottoms where the low is a local min of +/-1
-        for t in range(1, len(ll) - 1):
-            if ll[t] <= ll[t - 1] and ll[t] <= ll[t + 1]:
+        for t in range(k, n - k):
+            if ll[t] == ll[t - k:t + k + 1].min():        # swing low at +/-k
                 p1.append((run[t] - ll[t]) / M.PIP)
         p2 = float(np.max((run - ll) / M.PIP))
-        p3 = float(np.max([(hh[t - 1] - ll[t]) / M.PIP for t in range(1, len(hh))]))
+        p3 = float(np.max([(hh[t - 1] - ll[t]) / M.PIP for t in range(1, n)]))
     else:
         run = np.minimum.accumulate(ll)
-        for t in range(1, len(hh) - 1):
-            if hh[t] >= hh[t - 1] and hh[t] >= hh[t + 1]:
+        for t in range(k, n - k):
+            if hh[t] == hh[t - k:t + k + 1].max():        # swing high at +/-k
                 p1.append((hh[t] - run[t]) / M.PIP)
         p2 = float(np.max((hh - run) / M.PIP))
-        p3 = float(np.max([(hh[t] - ll[t - 1]) / M.PIP for t in range(1, len(hh))]))
+        p3 = float(np.max([(hh[t] - ll[t - 1]) / M.PIP for t in range(1, n)]))
     p1 = [v for v in p1 if v > 0]
     return p1, max(0.0, p2), max(0.0, p3)
 
@@ -187,6 +199,39 @@ def main():
 
     res["N1_baseline_A_W-A"] = n1_baseline("A", "W-A")
     print("\nN1 matched-random baseline (A|W-A):", res["N1_baseline_A_W-A"])
+
+    # ---- SWING-SCALE SENSITIVITY, reported always. Added 2026-08-15, V20 R1 M1.
+    # N3's four conditions do NOT bracket the interior swing scale, and that scale was
+    # verdict-determining. It is therefore published on every run rather than left to a
+    # reviewer to discover. REPORTING ONLY -- k=PIVOT_K remains the pre-registered value
+    # and is the only one the verdict is computed from.
+    print("\nSWING-SCALE SENSITIVITY (reporting only; the verdict uses k=PIVOT_K=%d):" % PIVOT_K)
+    sens = {}
+    m15 = M.window(M.load_m15("A"), "W-A")
+    days = M.build_days(m15, offset_min=0, require_full=True)
+    post = (m15.mod >= M.BOX_END_MIN) & (m15.mod < M.DAY_END_MIN)
+    for k in (1, 2, 3, 4):
+        vals = []
+        for day in sorted(days["sd"].tolist()):
+            mm = post & (m15.sd == day)
+            h, l = m15.h[mm], m15.l[mm]
+            if len(h) < LEG_MIN_BARS + 2 * PIVOT_K + 2:
+                continue
+            for a, b, d in legs_of_day(h, l):
+                if b - a >= 2 * k + 1:
+                    p1, _, _ = measures(h, l, a, b, d, k=k)
+                    vals.extend(p1)
+        v = np.asarray(vals, float)
+        if len(v) < 2:
+            continue
+        lo, hi = boot_median(v, M.SEED)
+        inb = BAND[0] <= float(np.median(v)) <= BAND[1]
+        sens[f"k={k}"] = dict(n=len(v), median=round(float(np.median(v)), 2),
+                              ci=[round(lo, 2), round(hi, 2)], median_in_band=inb)
+        star = "  <-- PRE-REGISTERED" if k == PIVOT_K else ""
+        print(f"  k={k}: n={len(v):>5} median={np.median(v):>6.2f} "
+              f"ci=[{lo:.2f}, {hi:.2f}] in_band={inb}{star}")
+    res["swing_scale_sensitivity"] = sens
 
     # ---- N3 fragility guard, PT-048 §4
     fired = []

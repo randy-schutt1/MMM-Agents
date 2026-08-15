@@ -10195,29 +10195,53 @@ resolved, instead of quietly disappearing.
 
 ---
 
-## A-136 — ⭐ V20's one-third entry is fully mechanical except for the word `handle`, which is never defined
+## A-136 — ~~V20's one-third entry is fully mechanical except for the word `handle`~~ — ⛔ **CLOSED 2026-08-15 AS AN ASR ARTIFACT. THERE IS NO SUCH WORD.**
 
-**Opened:** 2026-08-15 by the V20 student session. **Status: OPEN.**
+**Opened:** 2026-08-15 by the V20 student session.
+**Status: ⛔ CLOSED 2026-08-15 — RAISED IN ERROR.** V20 R1 `M2`, `REVIEW_INDEX.md` item **333**.
 
-**V20 `[00:29:14]`–`[00:29:53]`** gives *"the best way to decide the entry"*: *"It's taken from
-distance of this **handle** divided by three […] take your entry **one third off the high of this
-handle**"*, with a worked example — *"Let's say it's 100 pi[p]s […] so [mark] 33 pi[p]s off the
-high, a third."*
+> *Superseded title, retained per `REMEDIATION_PROTOCOL.md` §2:*
+> *"~~V20's one-third entry is fully mechanical except for the word `handle`, which is never
+> defined.~~"*
 
-⭐ **This is the closest the course has come to a mechanical entry rule.** A one-third retracement is
-arithmetic. **It needs no moving average, no colour, no indicator and no nickname** — which is what
-makes it different from every other blocked V19/V20 rule.
+### Why it is closed rather than answered
 
-⛔ ***"Handle"* is used four times as a noun** (`[00:28:36]`, `[00:29:16]`, `[00:29:25]`,
-`[00:29:43]`) **and defined zero times.** Three further string hits are not the word (§ `handle
-them`, `t-handle`, `bullet handles`). The 100-pip example fixes only its order of magnitude.
+**The committed transcript mis-hears `candle` as `handle` at every noun position** in
+`[00:29:14]`–`[00:29:53]` and at `[00:22:41]` and `[00:28:36]`. **The record was opened on a word
+the instructor never says.**
 
-⚠️ **`D-030` applies without qualification: the definition is not approximated.** Candidate readings
-— the railroad-track range, the prior swing leg, the outside structure's vector — **differ by tens
-of pips on the same chart**, so the entry is not computable.
+**Verified by FIVE independent decodes, none returning `handle`:** V20 R1's four (`faster-whisper
+large-v3` at `float32` and `medium.en` at `int8`, each under both `vad_filter` settings,
+`beam_size = 10`, temperature 0) and **this session's own fifth** (`openai-whisper medium.en`,
+`beam_size = 5`, temperature 0), run **before** the finding was accepted.
 
-⭐ **THIS IS THE CHEAPEST HIGH-VALUE BLOCKER IN THE PROJECT.** One owner sentence, or one later
-lesson, converts a fully specified arithmetic rule from unusable to testable.
+### ⭐ What the rule actually says, and it is complete
+
+> `[00:29:16]` *"Take the distance of this **candle** divided by three"* → `[00:29:25]` *"take your
+> entry **one-third off the high of this candle**"* → `[00:29:43]` *"Take the length of the
+> **candle**. Let's say it's **100 pi[p]s**"* → `[00:29:50]` *"**Subtract 33 pi[p]s off the high**,
+> a third."*
+
+**`entry = high − (candle range ÷ 3)`.** ⭐ **Every term is supplied by the course**, the divisor is
+stated, and the worked example fixes the arithmetic in round numbers. **`D-030` does not block it.**
+
+### ⚠️ What survives, and it is narrower — see `A-139`
+
+The lesson points at *"this candle"* and **never states a bar-SELECTION rule in words.** ⛔ **That is
+a different and much smaller question than an undefined term**, and it is carried at `A-139` rather
+than by keeping this record open on a false premise.
+
+### ⚠️⚠️ THE COST OF THE ERROR, RECORDED
+
+1. `V20_MASTERY_REPORT.md` §4.5 called this *"the cheapest high-value blocker in the project"* and
+   `REVIEW_INDEX.md` item **327** repeated it. **It would have aimed the next session at a problem
+   that does not exist.**
+2. ⛔ **`PT-048` §1a excluded the one-third entry from testing citing this record** — *"Not the
+   one-third entry. **'Handle' is undefined — `A-136`, `D-030`**"*. **The artifact suppressed the
+   one V20 rule mechanical enough to test.** `PT-049` now tests it.
+3. ⭐ **Root cause: this session ran NO independent ASR pass** (item 326). **The reviewer's pass found
+   it immediately.** *"A transcript defect that WITHHOLDS a rule is as costly as one that inverts
+   it, and only an independent pass finds either."*
 
 ---
 
@@ -10256,3 +10280,30 @@ between the averages"* `[00:06:32]` is a joke), no **duration** for the chop, an
 
 ⚠️ **And the printed claim carries *"Always"***, which is unfalsifiable as stated while *"powerful"*
 and *"consolidation"* are both unmeasured. **Recorded as taught, not as testable.** `D-030`.
+
+
+---
+
+## A-139 — ⭐ The one-third entry's ARITHMETIC is complete; WHICH CANDLE is never stated in words
+
+**Opened:** 2026-08-15 by the V20 student session, as the narrowed successor to `A-136` (closed as
+an ASR artifact — V20 R1 `M2`, item 333). **Status: OPEN.**
+
+**V20 `[00:29:14]`–`[00:29:53]` fully specifies the calculation** — `entry = high − (candle range ÷
+3)`, worked at 100 → 33 pips. ⭐ **Nothing about the arithmetic is ambiguous.**
+
+⚠️ **What is not stated is which bar.** The instructor points at one on screen (*"**this** candle"*)
+and gives no selection rule. **The two contextual candidates are:**
+
+| Reading | Support |
+|---|---|
+| **The railroad-track bar** | `[00:28:55]` *"Deal[er] railroad tracks right above the blue tracer"* immediately precedes the entry passage, and `25:50`/`26:15` define the track as the structure that sets the HOD/LOD |
+| **The bar that shifts the zone** | `[00:28:36]` *"he does shift his [zone] in the next **candle**"* |
+
+⚠️ **These may be the same bar.** The lesson does not say, and **this record does not guess** —
+`D-030` bars substituting a plausible reading.
+
+⭐ **WHY THIS IS SMALLER THAN `A-136` LOOKED:** the calculation is **determined once a bar is
+chosen**, so a test can declare a selection convention, state it as a convention, and report the
+sensitivity across candidates. **`PT-049` does exactly that.** ⛔ **A declared test convention is not
+a course rule** (`D-010`, `D-030`), and `PT-049` says so in its own §2.

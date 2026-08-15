@@ -10578,3 +10578,148 @@ benefiting from it*. **Both items it put to the reviewer were upheld, and both a
 because it disclosed them.** ⚠️ **The two `MAJOR`s are the two things a session cannot find about
 itself: one needed an independent re-implementation, the other an independent ear.** That is the
 argument for `D-003` — and for never letting the ASR pass become optional.
+## 2026-08-15 — V20 REMEDIATION ROUND (V20 R1 `M1` + `M2`), AT OWNER DIRECTION
+
+**Owner direction:** *"Fix it."* **Branch `video/v20`, isolated worktree, `D-038`.**
+
+### ⛔⛔ NOT SELF-VERIFIED, AND THAT IS THE POINT
+
+**`D-024` holds the gate closed on any `MAJOR` until it is fixed *and re-reviewed in a fresh
+round*.** ⭐ **V20 R1's reviewer raised the concern that owner-authorised self-verify was becoming
+the default** — V19's item 302 was closed that way, `D-003` unsatisfied. **This round does not use
+the exception.** **These fixes are applied and pushed for the V20 R1 session to re-check.**
+
+### Both findings were VERIFIED before being acted on
+
+⭐ **`M1`** — confirmed by reading my own code. `PT-048` §3.1 defines a swing pivot at `±3`;
+`run_pt048.py` honoured it for the leg **endpoints** and used a hardcoded **`±1`** for the interior
+counter-swings producing every `P1` value.
+
+⭐ **`M2`** — confirmed by running **my own fifth ASR decode** (`openai-whisper medium.en`,
+`beam_size 5`, temperature 0) over three windows **before** accepting the finding. Every position
+returns **`candle`**.
+
+### `M1` — the verdict moves `CONFIRMED` → `REFUTED`
+
+| swing scale | `n` | median `P1` | boot 95 % | in band? |
+|---|---|---|---|---|
+| `k = 1` — the bug | 2506 | 22.45 | `[22.00, 23.20]` | ✅ |
+| `k = 2` | 1200 | 26.80 | `[25.90, 27.60]` | ❌ |
+| ⭐ **`k = 3` — the spec** | **702** | ⛔ **30.10** | `[28.80, 31.25]` | ❌ |
+| `k = 4` | 440 | 33.10 | `[31.30, 34.90]` | ❌ |
+
+⛔ **`k = 1` was the only scale of the four that put the median in band, and by inflating `n` it also
+narrowed the interval enough to satisfy §5's interval condition. It manufactured both halves of
+`CONFIRMED`.** ⭐ **The reviewer's independent code returned 30.10 `[28.70, 31.25]`; the corrected
+runner returns 30.10 `[28.80, 31.25]` — agreement to the second decimal.**
+
+**The pre-registration is NOT edited. It was right; the runner was wrong.** `BT_V20_0001.md` §6
+previously said *"No other disagreement"* — **false, and now corrected.** ⭐ **The swing-scale
+sensitivity is published on every run**, because `N3`'s four conditions do not bracket it.
+
+⭐ **The baseline finding is scale-invariant and survives untouched**: 30.10 against `N1`'s 29.15 at
+`k = 3`, as 22.45 against 23.00 at `k = 1`. **The claim fails twice over — wrong magnitude at the
+pre-registered scale, and non-diagnostic at every scale.**
+
+### `M2` — `A-136` was opened on a word that does not exist
+
+The committed grid mis-hears **`candle`** as *"handle"* at all five noun positions; the two genuine
+verb uses are correct. **With the right word the rule is complete:**
+
+> **`entry = high − (candle range ÷ 3)`**, worked at 100 pips → *"**Subtract 33 pips off the high**,
+> a third."*
+
+* **`A-136` CLOSED as an ASR artifact**, superseded title retained (`REMEDIATION_PROTOCOL.md` §2).
+* **`A-139` opened** for what survives — ⭐ **which candle** is never stated in words, a much narrower
+  question, because the calculation is determined once a bar is chosen.
+* ⛔ **The cost is recorded:** the artifact called `A-136` *"the cheapest high-value blocker in the
+  project"* and **`PT-048` §1a excluded the one V20 rule mechanical enough to test.**
+* ⭐ **`PT-049` pre-registered BEFORE `run_pt049.py` exists**, testing the rule the artifact
+  suppressed. **It makes the baseline an EXPLICIT CONDITION of every non-null verdict** — the
+  `PT-048` §3a defect — names its primary bar-selection convention in advance, requires all three
+  conventions and all four fractions published on every run, and **closes the §5 decision-table hole
+  R1 §2.6 found.**
+
+### ⚠️⚠️ ROOT CAUSE OF BOTH `MAJOR`s IS THE SAME, AND IT IS ITEM 326
+
+**This session ran no independent ASR pass and no independent re-implementation of its own runner.**
+**The reviewer ran both, and each found a `MAJOR`.** ⭐ *"A transcript defect that WITHHOLDS a rule is
+as costly as one that inverts it, and only an independent pass finds either."*
+
+### Git
+
+`video/v20`, pushed. ⛔ **NOT merged and NOT self-verified.** **Awaiting V20 R1 re-review.**
+Validator **103 / 0 / 0**.
+
+---
+
+## 2026-08-15 — Reviewer Session (V20 R2 — remediation re-review)
+
+### Lesson
+**V20** · `video/v20` @ **`a761eb4`** — **2 commits** (`7bac6a9`, `a761eb4`) on top of R1's
+`2ab5e83`. Review branch `review/v20`, worktree `MMM-Agents-v20-review` (`D-038`).
+
+### Review Objective
+Re-review of the two `MAJOR`s raised in `V20_REVIEW_R1.md`, per `D-024`'s *"fixed **and
+re-reviewed**"*. **Both fixes were re-derived independently rather than checked against R1's own
+numbers.**
+
+### Decision
+**`REVISE` — 0 CRITICAL, 0 MAJOR, 1 MINOR, 8 NOTE. HIGH confidence.**
+⭐ **V21 GATE OPEN under `D-024`. R1's items 332–335 all discharged.**
+
+### `M1` (332) — CLOSED
+`run_pt048.py`'s `measures()` is wired to `PIVOT_K`; **`PT-048` itself is unedited** (`git diff` over
+the pre-registration between the two commits is empty). **A fresh implementation was written for this
+round with a different bootstrap seed (`987654321`) and iteration count (50,000 vs 20,000)**, so the
+interval is an independent estimate:
+
+| | submission | **reviewer, fresh** |
+|---|---|---|
+| `k=1` | 22.45 `[22.00,23.20]` | 22.40 `[22.00,23.20]` |
+| `k=2` | 26.80 `[25.90,27.60]` | 26.80 `[25.85,27.60]` |
+| ⭐ **`k=3`** | ⛔ **30.10** `[28.80,31.25]` | ⛔ **30.10** `[28.70,31.20]` |
+| `k=4` | 33.10 `[31.30,34.90]` | 33.10 `[31.20,34.60]` |
+
+⭐ **And `REFUTED` holds on all four arm × window cells** (30.10 / 27.10 / 30.90 / 27.30) — which R1
+had not established. ⚠️ *"Agrees to the second decimal"* is true of the **median**; this reviewer's
+own two bootstraps differ in the interval's last digit, so that bound is resampling noise.
+
+### `M2` (333) — CLOSED
+`A-136` closed as **`RAISED IN ERROR`** with its superseded title struck and retained; **`A-139`
+opened** for the narrower *which candle* residue, listing two candidates and refusing to choose;
+**the transcript body annotated, not edited** (§2a, six markers, verb uses excluded). ⭐ **This round
+added a 6th and 7th decode on `small.en` and `distil-large-v3` — families neither side had used.
+Seven decodes, four families, none returning `handle`.**
+
+### `PT-049`
+Reviewed as a pre-registration; **no runner and no `BT_V20_0002.md` exist — verified.** ⭐ **It closes
+every methodological hole R1 found, by name**: `N1` an explicit verdict condition (334), every scale
+stated inside its own measure (`M1`), the §5 decision-table hole closed (345), `N3` extended to the
+*"not special"* outcome (R1 question 3). Primary cell named before any number exists; conventions
+declared as conventions; `CONFIRMED` defined not to mean profitable.
+
+### New Finding
+**MINOR 348** — `PT-048` §4 never says how a matched-random window's **direction** is assigned, and
+`P1` needs one. The runner uses the window's own endpoints; **reproduced at 28.20 against its 29.15.**
+⚠️ **Under the alternative convention this reviewer gets 34.20–35.47, which separates from the legs'
+30.10 with an interval excluding it** — so §3's *"non-diagnostic at every scale"* is
+**convention-dependent**. ⭐ The runner's rule is the faithful generalisation of how observed legs get
+their direction and is arguably better; **what is charged is the undeclared convention behind a
+universal claim.** ⛔ **The primary verdict `REFUTED` is unaffected.**
+
+### Git
+`review/v20`: merged `a761eb4`, then R2's review file, index, progress and log.
+**Merged to integration per `D-024` — 0 CRITICAL, 0 MAJOR.**
+
+### Next Review Trigger
+V21's student submission, or a V20 resubmission applying item 348.
+
+### ⭐ The Note This Round Wants On The Record
+**R1's two `MAJOR`s were the two things a session cannot find about itself** — one needed an
+independent re-implementation, the other an independent ear. **Both were accepted without argument,
+verified by the session before being acted on, fixed at the root rather than the symptom, and
+deliberately NOT self-closed** — declining, in writing, the owner-authorised self-verify route that
+R1's review question 1 flagged as becoming the default. ⭐ **And `PT-049` generalises the lessons
+instead of patching the instance.** ⚠️ **The owner question still stands**: the self-verify exception
+has no numbered decision, and this round shows the practice correcting itself without one.

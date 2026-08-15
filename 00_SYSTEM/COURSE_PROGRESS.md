@@ -2517,7 +2517,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V17 | Wk8 P1 | 00:57:09 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 244–249) · ⭐ **V18 GATE OPEN under D-024** · ⭐⭐ **the `D-004` gate was ACTUALLY OPEN THE WHOLE TIME** — V16's R1 merged at `0fee48c` **17:16:53**, before V17's first content commit `f55c2f3` **17:20:11**; the addendum's *"returned after this session's last content commit"* is refuted by the graph (item 246) and **the compounding never happened** · ⭐⭐ **`PT-045` RE-DERIVED from its pre-registration before the runner was opened and ARM A REPRODUCES TO FOUR DECIMAL PLACES**; the calendar-consecutive artefact RE-EXECUTED and it really does return a clean 4-of-4 refutation; the homework's `<50 pips` filter recomputed at **0.8512 / 0.8893**; `C-023`, `C-024`, `C-027`, `A-011` all confirmed on a third engine or off the pixels · ⭐⭐ **THE FABRICATION PATTERN IS SOLVED FOR THE WHOLE COURSE — two templates, A for 1–15 and 21, B for 16–20; V18/V19/V20 are BYTE CLONES of V17's (item 254)** · ⚠ item 244: `[00:11:22]` is *"an extra **week in between**"* on THREE engines, not *"weekend"* — **item 238's inference INVERTS and is ANSWERED, not returned** |
 | V18 | Wk8 P2 | 00:46:08 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/5m/16n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 264–268) · ⭐ **V19 GATE OPEN under D-024** · ⭐⭐ **THE COMMITTED TRANSCRIPT INVERTS A RULE and R1 CONFIRMED IT FROM THE PIXELS** — `[00:19:40]` reads *"Counter trends are advised"*; both printed slides read `Counter Trend Is Ill Advised` (`On V1` / `on A1`). The raw line is retained verbatim and no artifact quotes it as a rule · ⭐⭐ **`PT-046` NULL RE-DERIVED ON INDEPENDENT REVIEWER CODE** — the pre-committed baseline `O2 = 0.5124 [0.4928, 0.5320]`, n = 2,498 reproduces EXACTLY; run-length mode 1 not 2; length-2 runs 366 vs 367 expected · ⭐⭐ **`N3` FIRED IN BOTH IMPLEMENTATIONS**, refusing a positive-lift replication as a boundary artefact · ⭐ **ALL 26 FRAME TIMECODES VERIFIED 26/26 FROM THE PIXELS**; the `0 → −3 s` drift is genuine and new to the corpus · ⭐ **the gate was OPEN and the session CHECKED rather than repeating a stale briefing** (item 278)
 | V19 | Wk9 P1 | 01:07:21 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⚠️ **R1 REVISE** 0C/**1M**/3m/18n, HIGH, 2026-08-14, `D-003` satisfied · ⭐ **item 302 CLOSED 2026-08-15 — SELF-VERIFIED AT OWNER DIRECTION**, standing tally **0C/0M/3m/19n** | **IN REMEDIATION** (items 303–304 owed; 305 owes the student nothing) · ⭐ **V20 GATE OPEN under `D-024`** as of 2026-08-15 · ⚠️⚠️ **`D-003` IS NOT SATISFIED FOR THE FIX ROUND — the session that raised item 302 also applied and closed it, on the owner's explicit authorisation for that round only; there was no R2 and no independent re-review.** FIFTH use of the pattern, after V09 R2, V10 R1, V12 R1 and V14 R1 · ⚠️⚠️ **item 302 — `E24`: NOT ONE CONFIDENCE INTERVAL IS REPORTED ANYWHERE IN THE V19 QUANTITATIVE CHAIN, and `BT_V19_0001.md` §0a classifies itself `EVIDENTIAL`, which `BACKTEST_EVIDENCE_STANDARD.md` §5 defines as requiring one.** With the intervals computed **BOTH LEGS OF THE `CONFIRMED` GATE LIE INSIDE THE 95 % INTERVAL OF FAILING** — Δ = **+25.75 boot95 `[7.95, 38.60]`** against a pre-registered floor of **10**, and median `O1`(`HELD`) = **43.20 boot95 `[32.30, 54.50]`** against a band closing at **50**. ⛔ **The verdict is NOT asked to change** and the direction is robust (`p` = 0.0004 on an independent seed, Mann-Whitney `p` = 7.0 × 10⁻⁵) · ⭐⭐ **`PT-047` REPRODUCES BYTE-IDENTICALLY AND AGAIN ON INDEPENDENTLY WRITTEN REVIEWER CODE** — every `n`, median and Δ on all eight cells, plus the day accounting · ⭐ **item 290 ANSWERED: at 60 minutes `N3`'s `n < 30` guard DOES fire (29 / 27) — but Δ GROWS to +29.45**, so it would have returned `FRAGILE` on a strengthening result; and the 30/45 arms are **source-derived from the two slide edits**, verified from the pixels · ⭐⭐ **item 287's DEBT DISCHARGED BY THE REVIEWER** — the four genuinely-owed segments plus `S1` all run, **every one corroborates, nothing overturned**; `S9` settles *"An M formation … 8 candles or greater … which is by the way 2 hours"* **from the audio** · ⚠️ **item 303: `S8` RETURNED and `S1` is NOT missing** — two runs concatenated under one header; **eight of twelve returned, four owed**, and the debt was **overstated** · ⭐ **items 285, 291, 294, 297 VERIFIED; `A-132`'s 9.0 s gap verified to 9.005 s** · ⭐ **item 286 ANSWERED: the two-pass mitigation HOLDS UNDER A FULL LEAK TEST** — exactly one frame-derived datum in §§1–9 and it is labelled · ⚠️ **item 306: `SWF_CAPTURE_RECIPE.md` §9 mandates an order its own §8a and `GOTCHA 4` make impossible** — put to the owner · ⭐⭐ **TWO RULE LINES WRITTEN INTO THE DECK ON CAMERA, AND BOTH BEFORE/AFTER PAIRS CAPTURED** — the `M` slide gains `with in 30M` at `23:25` (editor visible at `23:10`) and the `W` slide gains `with in 30 to 45 m` at `50:34` (editor at `50:19`). **These rule lines did not exist in the course material before 2012-05-20**, which is dateable and checkable — and ⚠ **the two edits DISAGREE** (`C-029`) · ⭐⭐ **`PT-047` CONFIRMED, 8 of 8 cells**, primary Δ = **+25.75 pips**, p = **0.0007**, median MFE(`HELD_ABOVE`) = **43.2 pips** inside the lesson's own `[25,50]` band, `N3` clear — **and the pre-registration MISSED an obvious objection** (the classifier's bars sat inside the outcome window), **raised by the session against itself, re-tested over a DISJOINT window, and the effect GREW** (Δ → +26.90, p → 0.0005) · ⭐⭐ **THE COMMITTED TRANSCRIPT CANNOT RENDER THE LETTER `M`** — the lesson's central structure reads as *"the end"* throughout, and its printed title *`Trap Candle Patterns` / `Dealer Structures`* reads as *"Track King patterns fuel structures"*. **The second engine makes the same error, so it is the audio, not the transcriber** · ⭐ **`Q-020`: the V17 review's V16-V20 template prediction CONFIRMED from inside the block by direct diff, and V21's break CORROBORATED** (V21 diffs against V19 exactly as V15 does) — **and the trio scores TWO coincidental true hits, double V18's**, one of which puts `30-90 mins` on the very quantity V19 caps BELOW 90 · ⭐ **`EMA` is a CLEAN ZERO** — the raw count of 4 is the substring inside *"email"* · ⭐ **§8a returns a FOURTH shape** (`0 s` → `−1 s`, step bracketed to 49 seconds) and the first two frames suggest **why V12/V14 measured `+16 s`** · ⚠⚠ **THE §9 TWO-PASS ORDER WAS NOT FOLLOWED, SELF-DISCLOSED** (item 286) · ⚠⚠ **THE FULL-FILE ASR PASS IS OWED** — 7 of 12 pre-registered segments returned (item 287) · ⚠ **Dimension B BLOCKED for the sixth lesson running** — the `blue tracer` is spoken 15× and never defined (`A-133`), and V19 was the lesson that should have supplied it |
-| V20 | Wk9 P2 | 00:45:49 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⛔ **R1 REVISE** 0C/**2 MAJOR**/2m/12n, HIGH, 2026-08-15, `D-003` satisfied | ⛔ **IN REMEDIATION** (items 332–335) · ⛔⛔ **V21 GATE CLOSED under D-024 — TWO MAJORs** · **M1:** `PT-048`'s primary measure `P1` uses a `±1` interior swing detector where `PT-048` §3.1 defines `±3`; correcting it moves the median **22.40 [22.00,23.20] → 30.10 [28.70,31.25]** and flips **CONFIRMED → REFUTED**, and `BT_V20_0001.md` §6 records *"no other disagreement"* · **M2:** the committed grid renders **`candle` as `handle`** at all five noun positions, so **`A-136` is an ARTIFACT** — the one-third entry is fully mechanical (`entry = high − range ÷ 3`) and `PT-048` §1a excluded it from testing citing `A-136` by name; found by **the independent ASR pass the submission declared it owed** · ⭐ the submission's own two flagged items (320 baseline, 326 ASR gap) were **both upheld and both charged MINOR** · ⭐⭐ **`M15` VERIFIED ON ALL THREE CHART HEADERS**, 23/23 frame timecodes, and `Q-021`'s V16–V20 block closure fully re-derived
+| V20 | Wk9 P2 | 00:45:49 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R2 REVISE** 0C/**0 MAJOR**/1m/8n, HIGH, 2026-08-15, `D-003` satisfied *(R1: REVISE 0C/2 MAJOR/2m/12n)* | ⭐ **V21 GATE OPEN under D-024** · **BOTH R1 `MAJOR`s FIXED AND INDEPENDENTLY RE-VERIFIED** · **M1 (332) CLOSED:** the runner is wired to `PIVOT_K`; the reviewer **re-derived k=3 from scratch with an independent bootstrap** — median **30.10**, exact match, `REFUTED` on **all four cells**; a k=1..4 sensitivity table is now permanent output · **M2 (333) CLOSED:** `A-136` closed as an ASR artifact, `A-139` opened for the narrower *which candle* question, and the reviewer confirmed `candle` on **two further model families (six decodes, four models, none returning `handle`)** · **334/335 DISCHARGED** · ⭐ **`PT-049` pre-registered, no runner — and it fixes every R1 lesson**: `N1` is an explicit verdict condition, every scale is stated inside the measure that uses it, the §5 decision-table hole is closed, and all conventions are mandatory published output · ⛔ **the fix round was deliberately NOT self-verified** · ⚠️ one new MINOR (348): `N1`'s direction convention is undeclared and the *"non-diagnostic at every scale"* claim is convention-dependent · ⭐⭐ `M15` on three chart headers, 23/23 frame timecodes, `Q-021` block closure — all re-verified in R1
 | V21 | Wk10 | 01:14:47 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 
 ### Notes on the marks above
@@ -2948,7 +2948,76 @@ Carry into V16, and read this before starting:
       content (an Asian-box chart with five EMAs), whatever the lesson and
       whatever the image behind it. Quarantine V16's trio on sight as Q-017;
       do not spend a session re-deriving what six entries have established.
-V21 GATE:            ⛔⛔ **CLOSED.** **V20's R1 returned 2026-08-15** on branch
+V21 GATE:            🟢 **OPEN as of 2026-08-15 — V20's R2 RETURNED and BOTH
+                     `MAJOR`s ARE CLOSED.** `REVISE, 0 CRITICAL / 0 MAJOR /
+                     1 MINOR / 8 NOTE`, HIGH confidence, `D-003` satisfied.
+                     Under **`D-024`** zero `CRITICAL` and zero `MAJOR` **opens
+                     V21 immediately**; the one MINOR (item **348**) is carried.
+
+                     ⚠️ **AN OPEN GATE IS NOT A `PASS`.** V20 is
+                     `IN REMEDIATION` on item 348 alone. V19 (303-304), V18
+                     (264-268) and V17 (244-249) remain owed and are **not**
+                     discharged by this.
+
+                     **HOW IT CLOSED — both R1 `MAJOR`s, independently re-verified:**
+
+                     **332 / `M1`** -- the runner is wired to `PIVOT_K` and
+                     **`PT-048` itself was NOT edited** (`git diff` over the
+                     pre-registration is empty). R2 **re-derived the numbers from
+                     scratch** with a different bootstrap seed and iteration
+                     count rather than matching R1's: primary `k=3` median
+                     **30.10 -- EXACT**, and ⭐ **`REFUTED` on all four
+                     arm x window cells**, which R1 had not established. A
+                     `k=1..4` sensitivity table is now permanent runner output.
+
+                     **333 / `M2`** -- `A-136` **CLOSED as RAISED IN ERROR**
+                     (superseded title struck and retained), **`A-139` opened**
+                     for the narrower *which candle* question, and the
+                     **transcript body annotated rather than edited**. R2 added a
+                     **6th and 7th decode on model families neither side had
+                     used** -- `small.en` and `distil-large-v3`. **Seven decodes,
+                     four families, none returning `handle`.**
+
+                     ⭐⭐ **AND `PT-049` GENERALISES THE LESSONS INSTEAD OF
+                     PATCHING THE INSTANCE** -- pre-registered, no runner. `N1`
+                     is an **explicit condition of every non-null verdict**;
+                     every scale is stated **inside the measure that uses it**;
+                     the §5 decision-table hole is closed explicitly; and `N3`
+                     now guards the *"not special"* outcome.
+
+                     ⛔ **THE FIX ROUND WAS DELIBERATELY NOT SELF-VERIFIED.** V20
+                     R1's review question 1 was that owner-authorised
+                     self-verify was becoming the default (V19's item 302 closed
+                     that way). **This round declined it in writing.** ⚠️ **The
+                     owner question STANDS** -- the exception still has no
+                     numbered decision -- **but the practice corrected itself
+                     without one.**
+
+                     ⚠️ **CARRY FORWARD TO V21:**
+
+                     (a) **RUN THE INDEPENDENT ASR PASS.** V20's declared gap
+                         (item 326) was the ROOT CAUSE OF BOTH `MAJOR`s. This is
+                         no longer a recommendation.
+
+                     (b) **EVERY FREE PARAMETER OF A PRIMARY MEASURE IS EITHER
+                         FIXED BY THE PRE-REGISTRATION OR PUBLISHED AT THREE
+                         SETTINGS.** Items 332, 348 and V19's 302 are all the
+                         same species. **`PT-049` does this by fiat; owner
+                         question 2 asks for it as a standing clause.**
+
+                     (c) **A COUNT CENSUS CANNOT CATCH A HOMOPHONE** -- `handle`
+                         = 7 was arithmetically right and wrong about its object.
+
+                     (d) **`Q-022` (V21) SHOULD BREAK THE TEMPLATE.** `Q-021`
+                         closed the V16-V20 block; V21 diffs at `32/30/26`
+                         against it on all three files.
+
+                     ⚠️⚠️ **SUPERSEDED TEXT, RETAINED per `REMEDIATION_PROTOCOL.md`
+                     §2 — this was the gate block while V21 was CLOSED. Both
+                     `MAJOR`s have since been fixed and independently re-verified
+                     in V20 R2; the live status is the OPEN block above.**
+
+                     🔴 **[SUPERSEDED] CLOSED.** **V20's R1 returned 2026-08-15** on branch
                      `review/v20`: **REVISE, 0 CRITICAL / 2 MAJOR / 2 MINOR /
                      12 NOTE, HIGH confidence, `D-003` satisfied.** Under
                      **`D-024`** a `MAJOR` holds the next lesson's gate CLOSED
