@@ -10011,6 +10011,14 @@ turns**. `D-053` §3(a) would not exist if `[00:11:39]` had been read.
 - `00_SYSTEM/INDICATOR_FOLDER_INVENTORY_2026-08-14.md` — the complete survey
 - `00_SYSTEM/DECISION_DRAFT_D-054_OWNER_STOP_AND_TARGETS.md` — the owner's 25/30/50 rule
 - `00_SYSTEM/DECISION_DRAFT_D-055_MMM_TPL_AND_TIME_RIBBON.md` — `MMM.tpl`, the ribbon, the pivots
+
+> ⚠️ **THE TWO FILENAMES ABOVE ARE SUPERSEDED AND ARE RETAINED UNEDITED** per
+> `REMEDIATION_PROTOCOL.md` §2. **`D-054` was adopted on integration by the TDI-basis session** (the
+> `D-053` §3(a) / `A-085` withdrawal) and claimed the number first, so under `D-047` these drafts
+> renumbered **`D-054` → `D-055`** and **`D-055` → `D-056`**. The live files are
+> `DECISION_DRAFT_D-055_OWNER_STOP_AND_TARGETS.md` and
+> `DECISION_DRAFT_D-056_MMM_TPL_AND_TIME_RIBBON.md`. **Every `D-054` in the rest of this entry means
+> the stop/targets draft and should be read as `D-055`.**
 - `06_MANUAL_BACKTEST/tools/MMM_SESSION_RIBBON.txt` — the Pine port, **draft, unrun**
 
 ### ⭐⭐ `MMM.tpl` exists
