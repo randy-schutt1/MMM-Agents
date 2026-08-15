@@ -372,6 +372,31 @@ family) and consumed **two owner rulings and one reversal**. This section is tha
 > preference.** Rung 4 is what keeps it honest — and §3.4's `D-042`/`D-043` history is this
 > project's own demonstration that a session **declining** to chain an inference is what produced
 > the correct answer.
+>
+> ##### ⭐⭐ AND THE OWNER PICK ARRIVED — 2026-08-14, `D-052`. **`C-021` IS CLOSED.**
+>
+> The paragraph above stands as written; the sentence *"a direct owner pick is owed"* is
+> **discharged, not withdrawn.** The owner ruled by direct instruction — *"It's definitely not the
+> market basis. It's the RSI [line]"* — and `C-021` closes at a tier of its own:
+>
+> | | |
+> |---|---|
+> | **Status** | `CLOSED — OWNER EMPIRICAL PREFERENCE` (`D-052`) |
+> | **What it means** | The owner's judgment against his **lived experience of the indicator**. **Recollection of practice, NOT course evidence.** |
+> | **Where it sits** | **OUTSIDE the ladder and OUTSIDE the tiers**, exactly as `D-041` established owner adjudication does. It is **not** a fifth rung and **not** a fifth tier — do not add one |
+> | **Distinguish from** | `RESOLVED — OWNER ATTESTATION` (§3.4, `D-039`/`D-043`) = the owner testifying to **what was TAUGHT**. `OWNER EMPIRICAL PREFERENCE` = the owner judging **what the INSTRUMENT DOES** |
+>
+> ⚠️⚠️ **THE CORPUS IS OVERRIDDEN HERE, NOT RECONCILED.** **Tier 1 V14 `[00:45:09]`** and
+> **Tier 2 `MMM-NOTES` p.45** *both* say the **market base**, both stand unretracted, and the
+> ruling goes the other way. **This is the first time in the project that an owner ruling has
+> overridden an unretracted Tier 1 statement rather than filled a Tier 1 silence** — §3.4's
+> standing re-check obligation therefore applies to it with full force: **a later video that
+> states a construction for the bands governs and triggers §3.1.**
+>
+> ⛔ **And it unblocks nothing:** the bands' **PERIOD** is still never stated at any tier, so
+> `A-086` stays `DO NOT CODE` and `A-031`/`A-032` stay uncomputable. **`REVIEW_INDEX.md` item 187
+> is CLOSED.** ✅ **Rung 4 is vindicated, not bypassed** — it named the one input that could settle
+> this, and that input is what settled it.
 
 **`C-017` is NOT ruled by `D-048`.** It becomes **eligible** for a session to apply this ladder to
 it, which is a different act from having applied it.

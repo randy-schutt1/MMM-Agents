@@ -6881,6 +6881,23 @@ Tier 2's "market base line cross" is SUPERSEDED -- see C-019.
 > **A multiplier and a basis do not build a band without a lookback** — and the lookback
 > (`Volatility_Band=34`) is a `TOOLING` **candidate** under `D-045`, not an adopted value.
 
+> ### ⭐ POINTER ADDED 2026-08-14 — `D-052` CLOSED THE BAND'S **BASIS**. **THIS RECORD DOES NOT MOVE.**
+>
+> A **third** owner ruling has landed on the TDI, and — like the two above — **it does not touch
+> this record.** Recorded here for the same reason the block above was: a reader who sees `C-021`
+> close will reasonably ask whether *"blood in the water"* became computable. **It did not.**
+>
+> **`D-052`** rules the volatility bands are a deviation of the **RSI line**, closing `C-021`
+> `OWNER EMPIRICAL PREFERENCE`. That answers the **basis**. **This record's blocker was never the
+> basis — it is `A-086`'s never-stated PERIOD**, and `D-052` supplies no period and expressly
+> unblocks nothing.
+>
+> ```text
+> A-031 -- RESOLVED BY COURSE as to MEANING.  UNCHANGED.  NO STATUS CHANGE.
+>          STILL NOT COMPUTABLE: the band is still unspecified (A-086 -- PERIOD).
+>          D-052 answered the BASIS only, and is NOT course evidence.
+> ```
+
 ---
 
 ## A-032 — STATUS CHANGE: ⭐ **CLOSED — `RESOLVED BY COURSE`** ("shark fin")
@@ -6951,6 +6968,29 @@ V12 [00:19:28] spoken + frames 19:06 and 23:26 printed.
 > A-032 -- RESOLVED BY COURSE as to MEANING.  UNCHANGED.
 >          STILL NOT CODABLE: the band is unspecified (A-086).
 >          63/37 are ELIGIBLE for a TOOLING write-up under D-045. Not adopted here.
+> ```
+
+> ### ⭐ POINTER ADDED 2026-08-14 — `D-052` CLOSED THE BAND'S **BASIS**. **THIS RECORD DOES NOT MOVE.**
+>
+> **`D-052`** — owner ruling, 2026-08-14 — rules the volatility bands are a deviation of the **RSI
+> line**, closing `C-021` `OWNER EMPIRICAL PREFERENCE`. The block above lists *"basis disputed at
+> `C-021`"* as one of three reasons the band is unconstructible. **That one reason is now
+> discharged. The other two are not**, and either alone is sufficient to keep this record
+> uncomputable:
+>
+> - ❌ **PERIOD — still NEVER STATED in Tier 1 or Tier 2.** `Volatility_Band=34` is a `TOOLING`
+>   candidate, `D-045`-eligible, **not adopted**.
+> - ❌ **MULTIPLIER — compiled into the `.ex4` and absent from the template.** V14's *"two standard
+>   deviations"* is the only figure with a Tier 1 warrant and `MMM_TDI.txt` does not yet carry it
+>   (`D-052` consequence 6, **owed**).
+>
+> ⚠️ **And `D-052` is NOT course evidence** — it is `OWNER EMPIRICAL PREFERENCE`, and Tier 1 V14
+> plus Tier 2 `MMM-NOTES` p.45 both still say the market base. It cannot promote anything here.
+>
+> ```text
+> A-032 -- RESOLVED BY COURSE as to MEANING.  UNCHANGED.  NO STATUS CHANGE.
+>          STILL NOT CODABLE: the band is unspecified (A-086 -- PERIOD, MULTIPLIER).
+>          D-052 discharged the BASIS reason only. Two blockers remain; each suffices.
 > ```
 
 ---
@@ -7567,6 +7607,65 @@ are still not testable.**
 >
 > ❌ **`A-031` and `A-032` therefore remain uncomputable.** **A multiplier and a basis do not build
 > a band without a lookback**, and the lookback is a candidate, not a closure.
+
+> ## ⭐⭐ UPDATED 2026-08-14 — **OWNER RULING `D-052`: THE BASIS IS THE RSI LINE.**
+> ## ⛔ **THIS RECORD STAYS `DO NOT CODE`. THE PERIOD IS STILL NEVER STATED.**
+>
+> **The one thing this record has said since V12 — *"final position: the RSI line, low
+> confidence"*, flagged out of date by `D-048` and deliberately left unreplaced — is now
+> replaced.** It is replaced by an **owner ruling**, not by a reading of V12.
+>
+> **Owner, 2026-08-14, direct instruction:** *"It's definitely not the market basis. It's the RSI
+> [line]."* Given after the `tools/tdi-basis-comparison` kit put both candidate constructions in
+> front of him, measured over 86,824 bars. **`C-021` closes at §8** —
+> `CLOSED — OWNER EMPIRICAL PREFERENCE (D-052)`.
+>
+> **THE BASIS, ADOPTED:** the bands are `N` standard deviations **of the RSI line** —
+> `ta.stdev(rsiVal, bandLen)` — not of the market base line. The band **centre** remains the market
+> base line and was never disputed; only the **width** changes.
+>
+> ### ⚠️⚠️ THE WARRANT, AND WHY IT IS NOT ANY EXISTING STATUS IN THIS FILE'S TABLE
+>
+> **`OWNER EMPIRICAL PREFERENCE`** — the owner's judgment against his lived experience of the
+> indicator. **Recollection of practice, NOT course evidence.**
+>
+> - ❌ **NOT `RESOLVED BY COURSE`** — `D-048` limit 1 forbids it by name.
+> - ❌ **NOT `RESOLVED — OWNER ATTESTATION`** — that status is the owner testifying to **what was
+>   taught** (`D-039`, `D-041`, `D-043`). This is the owner judging **what the instrument does**.
+> - ⚠️ **THE CORPUS DISAGREES AND IS OVERRIDDEN, NOT RECONCILED.** **Tier 1 V14 `[00:45:09]`** and
+>   **Tier 2 `MMM-NOTES` p.45** *both* still say **the market base**, both stand unretracted, and
+>   this record's *"AND TIER 2 SAYS THE OTHER ONE"* section above **remains true and is not
+>   withdrawn.** The V12 arm agreeing with the ruling is a **coincidence of outcome, not its
+>   warrant** — the owner neither cited nor was shown V12, and `D-048` rung 1 already found that arm
+>   *"arguably answers… NOT clean."*
+>
+> ### ⛔ WHAT DID **NOT** CHANGE — AND THIS IS THE LOAD-BEARING HALF
+>
+> **The PERIOD is still NEVER STATED in Tier 1 or Tier 2.** `Volatility_Band=34` remains a
+> `[TOOLING]` candidate, `D-045`-**ELIGIBLE, NOT ADOPTED**. **The bands are still
+> unconstructible**, so this record's overall status is **unchanged**, and `A-031` / `A-032` gain a
+> pointer and **no status change** — both stay `CLOSED — RESOLVED BY COURSE` *as to meaning* and
+> both stay **uncomputable**.
+>
+> ```text
+> A-086 -- DO NOT CODE.  UNCHANGED OVERALL.
+> Basis:      ⭐ RESOLVED — RSI LINE. OWNER EMPIRICAL PREFERENCE (D-052), 2026-08-14.
+>             NOT course-verified: V14 Tier 1 and MMM-NOTES p.45 Tier 2 both say the
+>             MARKET BASE, both stand, and the ruling OVERRIDES them.
+> Deviation:  "two standard deviations" (V14, unhedged). Multiplier NOT in the artifact.
+>             ⚠ MMM_TDI.txt still carries the Tier-3 1.6185 — flagged OWED at D-052
+>             consequence 6, NOT ruled on.
+> Period:     ❌ STILL NEVER STATED IN TIER 1 OR TIER 2. Volatility_Band=34 is a TOOLING
+>             candidate under D-045 and is ELIGIBLE, NOT ADOPTED.
+> => TWO of the three quantities now have an answer. The band is STILL NOT BUILDABLE.
+> ```
+>
+> ❌ **`A-031` and `A-032` therefore STILL remain uncomputable.** **A basis and a multiplier do not
+> build a band without a lookback**, and the lookback is a candidate, not a closure. Any session
+> reading `D-052` as an unblock has made the `D-039` error by another route.
+>
+> **Related:** `D-052`, `C-021` §8, `D-048` Parts 1–2, `D-045`, `A-031`, `A-032`, `A-039`;
+> `REVIEW_INDEX.md` item 187 (**closed**); `06_MANUAL_BACKTEST/tools/MMM_TDI.txt`.
 
 
 ---

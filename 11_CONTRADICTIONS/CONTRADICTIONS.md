@@ -2547,6 +2547,17 @@ Tier 1/Tier 2 divergence
 **The tightness is the point** — this is not a speaker drifting over months, it is the same speaker
 seven days later
 
+> ## ⭐⭐ STATUS BANNER ADDED 2026-08-14 — **THIS RECORD IS CLOSED. READ §8 BEFORE §1–§7.**
+>
+> `C-021` is **`CLOSED — OWNER EMPIRICAL PREFERENCE` (`D-052`)**. **The basis is the RSI line.**
+> §1–§7 below describe the dispute **as it stood while open** and are retained unedited; §7's
+> *"`OPEN — UNADJUDICATED`"* is **superseded by §8**, not still in force.
+>
+> ⚠️ **NOT course-verified.** Tier 1 V14 `[00:45:09]` and Tier 2 `MMM-NOTES` p.45 both still say
+> **the market base**, both stand unretracted, and the ruling **overrides** them.
+> ⛔ **`A-086` still `DO NOT CODE`; `A-031`/`A-032` still uncomputable — the PERIOD is still never
+> stated.**
+
 ---
 
 ### 1. THE TWO STATEMENTS
@@ -2710,6 +2721,101 @@ tie-break scheme that always produces a winner is not a tie-break scheme, it is 
 `D-048`'s first live application declining to answer — against a rung that *would* have answered —
 is the same discipline that produced the correct result at `D-042`/`D-043`, where a session's
 refusal to chain an inference is what stopped a wrong mapping being adopted.
+
+---
+
+## 8. ⭐⭐ **CLOSED 2026-08-14 BY OWNER RULING — `D-052`. THE BASIS IS THE RSI LINE.**
+
+**Everything above is retained unedited** (`REMEDIATION_PROTOCOL.md` §2, `D-048` limit 2).
+§7's rung-4 return is **not** withdrawn and was **not** wrong: it correctly recorded that the
+*ladder* cannot answer this, and it named the one input that could. **That input has now arrived.**
+
+### 8.1 The ruling
+
+**Owner, 2026-08-14, direct instruction, after the `tools/tdi-basis-comparison` kit was put in
+front of him:**
+
+> *"It's definitely not the market basis. It's the RSI [line]."*
+
+**The V12 arm is selected. The V14 arm is rejected.**
+
+```text
+ADOPTED:  dev = bandMult * ta.stdev(rsiVal,   bandLen)     <- the RSI line
+REJECTED: dev = bandMult * ta.stdev(baseLine, bandLen)     <- the market base line
+```
+
+The band **centre** is the market base line either way and was never in dispute; only the **width**
+changes.
+
+### 8.2 ⛔ THE TIER — AND THE THING THAT MUST NOT BE GOT WRONG
+
+> **`OWNER EMPIRICAL PREFERENCE`** — the owner's judgment against his own lived experience of the
+> indicator. **Recollection of practice, NOT course evidence.**
+
+⚠️⚠️ **THE CORPUS DISAGREES WITH THIS RULING AND THAT DISAGREEMENT IS NOT RESOLVED — IT IS
+OVERRIDDEN.** Both surviving evidentiary statements point the other way:
+
+| Source | Says | Status after this ruling |
+|---|---|---|
+| **Tier 1 — V14 `[00:45:09]`** | *"The bands are two standard deviations away from the **market base**."* Later, unhedged, unprompted | **STANDS ON THE RECORD, UNRETRACTED, AND IT DISAGREES.** `D-048` rung 3 answered for it |
+| **Tier 2 — `MMM-NOTES` p.45** | *"…applied to the **market baseline** of the indicator instead of price"* | **STANDS, AND IT DISAGREES** |
+| **Tier 1 — V12 `[00:16:16]`–`[00:16:20]`** | *"…from the **RSI line**. Thank you."* Retracted-into position, under an unidentified chat correction | Agrees with the ruling — ⚠️ **by coincidence of outcome, NOT as its warrant.** `D-048` rung 1 already found this arm *"arguably answers… NOT clean"*, and the owner neither cited nor was shown it |
+
+**Therefore this closure is NOT, and must never be written up as:**
+
+- ❌ `RESOLVED BY COURSE` — `D-048` limit 1 forbids it by name; `C-021` is contradicted by
+  construction.
+- ❌ `PROVISIONALLY RESOLVED — TIER 1 STANDING POSITION` — that is the **rung 3** label, and rung 3
+  answered for **V14**, the arm this ruling *rejects*.
+- ❌ `RESOLVED — OWNER ATTESTATION` — that status (`D-039`, `D-041`, `D-043`) is the owner
+  testifying to **what was taught**. This is the owner judging **what the instrument does**. The
+  record has to be able to tell the two apart fourteen years after the fact.
+
+**Cite as:** *"the RSI line (`OWNER EMPIRICAL PREFERENCE`, `D-052`; ⚠️ V14 Tier 1 and `MMM-NOTES`
+p.45 Tier 2 both state the market base)."*
+
+### 8.3 What informed the pick
+
+The owner ruled after seeing the two variants measured over **86,824 bars of GBPUSD M15** at
+identical parameters — the RSI Price Line sits **outside** the bands on **8.7%** of bars under the
+RSI basis against **52.6%** under the market-base basis, i.e. a signal-bearing event versus the
+default state (`TDI_BASIS_COMPARISON_README.md` §3.1). **This is context for the ruling, not a
+warrant for it.** A measurement of two candidate constructions cannot say which one the course
+taught; it can only say what each would look like. The warrant is the owner's instruction and
+nothing else.
+
+### 8.4 ⚠️ NOTHING IS UNBLOCKED — §5 IS UNAFFECTED AND STILL GOVERNS
+
+- **`A-086` stays `DO NOT CODE`.** The bands' **PERIOD is still never stated in Tier 1 or Tier 2**;
+  `Volatility_Band=34` is a `[TOOLING]` candidate, `D-045`-**eligible, not adopted**.
+- **`A-031`** (*"blood in the water"*) and **`A-032`** (*"shark fin"*) stay **uncomputable**, with
+  **no status change** — both remain `CLOSED — RESOLVED BY COURSE` as to meaning.
+- **No backtest** depending on these numbers may be reported as a test of the method.
+- **This record is NOT deleted, downgraded or hidden.** Both statements stay, visible.
+
+**A multiplier and a basis do not build a band without a lookback. This ruling supplies the second
+of three quantities and leaves the third exactly where it was.**
+
+### 8.5 Disposition
+
+```text
+C-021 -- CLOSED.  OWNER EMPIRICAL PREFERENCE (D-052), 2026-08-14.
+BASIS = THE RSI LINE.  ta.stdev(rsiVal, bandLen).
+Supersedes the D-048 Part 2 / §7 disposition of "OPEN -- UNADJUDICATED".
+D-048 Part 1 (the ladder) is UNTOUCHED and remains the general rule.
+NOT course-verified. NOT RESOLVED BY COURSE. NOT owner ATTESTATION.
+  Tier 1 V14 [00:45:09] and Tier 2 MMM-NOTES p.45 BOTH STILL SAY THE MARKET BASE,
+  both stand unretracted on the record, and this ruling OVERRIDES them -- it does
+  not reconcile them and must never be reported as the corpus agreeing.
+A-086 STAYS DO NOT CODE (period never stated). A-031/A-032 STAY UNCOMPUTABLE.
+Tool standardised on: 06_MANUAL_BACKTEST/tools/MMM_TDI.txt (owner's instruction).
+```
+
+### Related (§8)
+
+`D-052` (this closure), `D-048` Parts 1 and 2, `D-045`, `D-041`/`D-043` (owner adjudication outside
+the tiers), `A-086`, `A-031`, `A-032`, `A-039`, `A-093`; `REVIEW_INDEX.md` item 187 (**closed**);
+`06_MANUAL_BACKTEST/tools/MMM_TDI.txt` and `TDI_BASIS_COMPARISON_README.md` §7.
 
 ---
 

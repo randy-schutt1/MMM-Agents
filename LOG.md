@@ -9854,3 +9854,51 @@ of four homework items were refused with reasons rather than approximated. `Q-01
 corroborates rather than discovers, before it says anything else. **Five findings against that is a
 good round, and all five are arithmetic, ledger or citation-precision defects that touch no rule and
 no verdict.**
+
+---
+
+## 2026-08-14 — OWNER RULING #3 · `D-052` · the TDI volatility bands' BASIS is the RSI line; `C-021` CLOSED; `MMM_TDI.txt` standardised
+
+**Session type:** Decision-adoption (integration-branch ledger write + two tool branches).
+**Branches:** `decisions/adopt-052-tdi-band-basis` (this ledger work),
+`feature/tradingview-mmm-indicator` (`MMM_TDI.txt` correction),
+`tools/tdi-basis-comparison` (README outcome). All three merged to integration.
+
+### The ruling
+
+**Owner, direct instruction:** *"It's definitely not the market basis. It's the RSI [line]."* and
+*"the one we created a couple days ago is the one I want to use. We can apply all the same concepts
+that are taught with that particular TDI."*
+
+### Which file "a couple days ago" is — confirmed from commit timestamps, not assumed
+
+| File | First commit | Verdict |
+|---|---|---|
+| `06_MANUAL_BACKTEST/tools/MMM_TDI.txt` | `076c066` **2026-08-13 17:09**, last touched `85d43ab` 17:55 | ⭐ **THIS ONE.** The main project tool |
+| `MMM_TDI_RSI_BASIS.txt` / `MMM_TDI_MARKETBASE_BASIS.txt` | `93db3aa` **2026-08-14 16:50** — *today* | The comparison kit, **not** the standardised tool |
+
+### What was written
+
+- **`D-052`** — the ruling, at the **`OWNER EMPIRICAL PREFERENCE`** tier, explicitly **not**
+  `RESOLVED BY COURSE`, **not** `RESOLVED — OWNER ATTESTATION`, and **not** course-verified.
+  Supersedes **`D-048` Part 2**'s disposition of `C-021` only; **`D-048` Part 1 (the ladder) is
+  untouched**.
+- **`C-021` §8** + a status banner at the top of the record. §1–§7 retained unedited.
+- **`A-086`** — basis line replaced; ⛔ **status still `DO NOT CODE`, because the PERIOD is still
+  never stated.** **`A-031` / `A-032` get pointers and NO status change** — still uncomputable.
+- **`REVIEW_INDEX.md` item 187** closed. No new item number allocated.
+- **`SOURCING_HIERARCHY.md` §3.5** — the rung-4 "owner pick owed" note discharged, and the new
+  tier distinguished from §3.4's `RESOLVED — OWNER ATTESTATION`.
+
+### ⚠️ What this does NOT do
+
+**Nothing is unblocked.** Two of `A-086`'s three quantities now have an answer; the **period** does
+not, so the band is still unbuildable and `A-031`/`A-032` stay uncomputable. ⚠️ **Tier 1 V14
+`[00:45:09]` and Tier 2 `MMM-NOTES` p.45 both still say the market base** — the ruling **overrides**
+them and must never be reported as the corpus agreeing.
+
+### ⚠️ Recorded as OWED, not fixed
+
+`MMM_TDI.txt` still carries the Tier-3 multiplier **`1.6185`** while V14 states *"two standard
+deviations"* unhedged. The owner ruled on the **basis** and this session did not extend that to the
+multiplier. `D-052` consequence 6.
