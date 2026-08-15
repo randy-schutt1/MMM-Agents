@@ -125,7 +125,7 @@ for required in ("Targeted Retest 002", "Tier-1 V13 definition", "`PARTIALLY`"):
         errors.append(f"human reconstruction audit missing Phase 2 update {required!r}")
 
 concept_index = require("08_CONCEPT_LIBRARY/CONCEPT_INDEX.md")
-if "25% and 50% cumulative reviews" not in concept_index:
+if "FINAL COURSE REVIEW:    COMPLETE — STUDENT PHASE INCOMPLETE; PHASE 3 NOT GRANTED" not in concept_index:
     errors.append("concept index formal-status boundary is stale")
 
 retest_root = "19_STUDENT_TEST_SUITE_V01_V10/retests/PHASE_2_TARGETED_RETEST_001"
