@@ -38,18 +38,19 @@ turns out not to be constructible from anything this corpus contains.**
 
 ## 3. THE FINDINGS, RANKED BY WHAT THEY CHANGE
 
-### 3.1 ⭐⭐ THE ORLANDO RECORDING WAS NEVER MADE — first person, contemporaneous
+### 3.1 ⭐⭐ NO USABLE ORLANDO RECORDING WAS OBTAINED — first person, contemporaneous
 
 `[00:05:21]`, and the slide at `04:40` prints the same policy:
 
 > *"**The same shit that happened in Orlando where I didn't get a recording out of there** is
 > exactly why I'm not streaming this class or doing it again."*
 
-V13 announced the Orlando meetup; V14 logged its recording as absent. **V15 says why, and the
-answer is that no recording exists.** This is not a collection failure and no future session can
-find one. `A-092` moves from *"absent"* to *"never existed"*, and the slide's printed
+V13 announced the Orlando meetup; V14 logged its recording as absent. **V15 says no usable
+recording resulted.** V13 `[00:02:26]` records an intent to try to stream or record Orlando, so
+the evidence does not establish that no attempt was made. No future session should search this
+corpus for an absent file. `A-092` moves from *"absent"* to *"not obtained"*, and the slide's printed
 **`This Class will NOT be recorded or streamed!!!!!!!`** shows it was policy, not accident — a
-structural fact about the ceiling on what this corpus can ever hold.
+fact about the in-person events, not a ceiling on recorded web classes this corpus could hold.
 
 ### 3.2 ⭐⭐ WEEK 6 IS 2012-04-29, AND THE DECIDING LINE WAS ALREADY COMMITTED — IN V13
 
@@ -58,12 +59,12 @@ structural fact about the ceiling on what this corpus can ever hold.
 | Date | Status |
 |---|---|
 | 2012-04-22 | ⛔ **no session** — V13 `[00:01:55]`, V14 `[00:40:49]`; the Orlando meetup is that Saturday |
-| **2012-04-29** | ⭐ **WEEK 6** — V13 `[00:05:20]` *"Next session is going to be Sunday the 29th"*; V13 `[00:05:33]` *"we'll get started again with **week six through ten**"* |
+| **2012-04-29** | ⭐ **WEEK 6** — V13 `[00:05:20]` *"Next session is going to be Sunday the 29th"*; V13 `[00:05:33]` *"we'll get started again with **week six through ten—or six through, I don't know how many we're going to do yet**"* |
 | 2012-05-06 | **Week 7** = V15 |
 
 **V13 schedules Week 6 by date and by number.** Its recording is absent. **The two gaps are of
-different kinds and must stop being described as one:** Orlando **was never recorded** (V15 says
-so); Week 6 **was held**, and whether it was ever recorded is **unknown** — no file in this corpus
+different kinds and must stop being described as one:** no usable Orlando recording was obtained;
+Week 6 **was held**, and whether it was ever recorded is **unknown** — no file in this corpus
 says, and this session does not guess.
 
 ⭐ **A process point worth more than the finding.** V14's review offered a cheap forward-read
@@ -151,7 +152,7 @@ pre-registration **before** the run, not offered afterwards.
 ### 3.6 `A-096` — the `M1`/`M3` decoding, and the Tier-2 corroboration that came with it
 
 `S1`/`R1`/`M1`–`M4` are **MT4 pivot levels**, printed on three frames — **not** M-formations.
-Read from audio alone (*"Here's your mayonnaise, your M3"*, *"This is an M1, M3 day"*) they would
+Read from audio alone (*"There's your mayonnaise, your M3"*, *"This is an M1, M3 day"*) they would
 have been misread, and that misreading would have corrupted any level-count logic.
 
 ⭐ **Tier 2 corroborates V15 on three separate points independently** — the pivots are *"a grid of

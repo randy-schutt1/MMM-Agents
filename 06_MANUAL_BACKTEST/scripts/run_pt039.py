@@ -133,7 +133,8 @@ def rate_line(k, n, extra=""):
 
 def main():
     print(L.header("PT-039", "V11 -- how long must the low hold? 30 / 90 / 120 minutes",
-                   "D-031: BOTH arms reported for every observable (binding)"))
+                   "D-031: BOTH arms reported for every observable (binding)",
+                   seed=SEED, iterations=ITERATIONS))
     qa_txt, _ = L.qa_gate()   # raises unless "GATE: PASS" -- §7b.4
     print("QA GATE (precondition, D-036a): " +
           [l for l in qa_txt.splitlines() if l.startswith("GATE:")][0])

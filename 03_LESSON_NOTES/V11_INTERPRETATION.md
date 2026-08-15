@@ -135,7 +135,7 @@ block finds one — and it contains the ranges and not the lookback. **This is t
 
 | Tier | Result |
 |---|---|
-| **1 — the course** | Silent. 33 `rsi` tokens, no period; no frame shows a settings dialog or legend |
+| **1 — the course** | Silent in the instructor's own material. 33 `rsi` tokens, no spoken period; no frame of the instructor's own chart shows a settings dialog or legend. ⚠ A disowned student anti-example on `H1` does show `RSI(21)` and other indicator periods; item 109 records why those are not adoptable course settings |
 | **2 — `MMM-NOTES`** | **Also silent.** The extract describes the TDI's four components (RSI line, signal line, market baseline, volatility bands) and their *uses*, with no lookback for any of them |
 | **3 — web** | Not consulted for a value, and **could not close anything if it were** |
 

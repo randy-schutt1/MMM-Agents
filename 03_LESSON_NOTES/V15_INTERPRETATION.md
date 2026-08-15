@@ -14,7 +14,7 @@ Confidence grades are this session's own and are meant to be attacked.
 material and **not** to reconstruct it. V15 does better than a back-reference: it explains the
 absence.
 
-### 1. Orlando — CLOSED, and the answer is "no recording was ever made"
+### 1. Orlando — CLOSED, and the answer is "no usable recording was obtained"
 
 `[00:05:07]`–`[00:05:26]`:
 
@@ -22,8 +22,10 @@ absence.
 > didn't get a recording out of there is exactly why I'm not streaming this class** or doing it
 > again."*
 
-**This is a Tier-1, first-person, contemporaneous statement by the person who would have made the
-recording, that the recording does not exist.** V13 announced the Orlando meetup
+**This is a Tier-1, first-person, contemporaneous statement that no usable recording resulted.**
+It does not prove no attempt was made. V13 `[00:02:26]` says *"we will try to either stream it and
+record it or just record it. So we'll hang it in the forum"*—intent evidence the original reading
+omitted. V13 announced the Orlando meetup
 (`V13 [00:07:41]`); V14 recorded the speaker saying *"Next week I'll be in Orlando"*
 (`V14 [00:42:31]`) and logged the recording as absent from the corpus. **V15 says why.**
 
@@ -34,8 +36,10 @@ spends effort looking for one is spending it on nothing, and `A-092` should say 
 **`This Class will NOT be recorded or streamed!!!!!!!`** of the June New Jersey class, with the
 reason spoken at `[00:05:35]`: *"The recording and stuff has been a hindrance. It's been holding
 back the flow of the class. For the people that took the time to come over there live, it's not
-right, man."* **This instructor deliberately did not record his live events.** That is a
-structural fact about what this corpus can ever contain, not a one-off.
+right, man."* **The instructor did not obtain a usable Orlando recording and declared the New
+Jersey in-person event would not be recorded.** That is evidence about in-person events, not a
+ceiling on recorded web classes this corpus could contain; the June web class was intended to be
+recorded.
 
 ### 2. Week 6 — the syllabus is intact; only a recording is missing. Confidence: HIGH
 
@@ -62,7 +66,7 @@ The arithmetic looks unbalanced until V13's own announcement is put next to it, 
 | 2012-04-08 | Week 4 | ✅ `Wk4 040812` (×2) |
 | 2012-04-15 | Week 5 | ✅ `Wk5 041512` (×2) — V13, V14 |
 | **2012-04-22** | ⛔ **NO SESSION.** V13 `[00:01:55]` *"There's going to be **no boot camp next week**"*; V14 `[00:40:49]` *"**We're off next week**"*. The **Orlando meetup** is that Saturday, 2012-04-21 (V13 `[00:07:41]`) | — (correctly absent) |
-| **2012-04-29** | ⭐ **WEEK 6.** V13 `[00:05:20]` *"**Next session is going to be Sunday the 29th.** That's two weeks"*; V13 `[00:05:33]` *"we'll get started again with **week six through ten**"*; V14 `[00:47:34]` *"I'll see you in two weeks"* | ❌ **HELD — recording absent** |
+| **2012-04-29** | ⭐ **WEEK 6.** V13 `[00:05:20]` *"**Next session is going to be Sunday the 29th.** That's two weeks"*; V13 `[00:05:33]` *"we'll get started again with **week six through ten—or six through, I don't know how many we're going to do yet**"*; V14 `[00:47:34]` *"I'll see you in two weeks"* | ❌ **HELD — recording absent** |
 | 2012-05-06 | **Week 7** | ✅ `Wk7 050612` (×2) — V15, V16 |
 
 ⭐⭐ **This is the finding, and it changes `A-092` from an inference to a fact.** V13 does not
@@ -74,8 +78,8 @@ are therefore of **different kinds** and should never again be described as one:
 | | Orlando, 2012-04-21 | Week 6, 2012-04-29 |
 |---|---|---|
 | Did it happen? | ✅ Yes | ✅ Yes — announced by date and number |
-| Was it recorded? | ❌ **No** — V15 `[00:05:21]`, first person | ❓ **Unknown** — nothing in V13, V14 or V15 says |
-| Can it be recovered? | ❌ **Never** | ❓ Only from outside this library |
+| Was it recorded? | ❓ Attempt unknown; **no usable recording was obtained** — V15 `[00:05:21]`. V13 `[00:02:26]` records intent to try | ❓ **Unknown** — nothing in V13, V14 or V15 says |
+| Can it be recovered? | ❌ Not from this corpus; existence elsewhere is unestablished | ❓ Only from outside this library |
 
 **Nothing here required reading forward** (`§0 D3`). V14's review offered the Wk9→Wk10 four-week
 gap the same cheap D3-shaped decider and told this session to wait for item 179's ruling; **the
@@ -336,8 +340,8 @@ design.**
 
 ### Contributes
 
-1. ⭐⭐ **The Orlando recording never existed** — first-person, contemporaneous, with the reason.
-   Closes a question two prior lessons could only note.
+1. ⭐⭐ **No usable Orlando recording was obtained** — first-person, contemporaneous. V13 records
+   the intent to try, so attempt status remains unknown; the absent corpus file is the settled fact.
 2. ⭐⭐ **The Week-6 gap is dated, and the calendar closes with zero residual** — Week 6 is
    **2012-04-29**, scheduled in V13 by date and by number (*"week six through ten"*), bracketed by
    two dated forum posts, and followed by V15 as Week 7. **The gap is a gap in RECORDINGS, not in

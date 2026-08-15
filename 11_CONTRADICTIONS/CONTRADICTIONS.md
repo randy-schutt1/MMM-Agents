@@ -2217,6 +2217,14 @@ applied to close this record**, and the reason is the substance of this entry.
    the chart's indicator list or a labelled average, at a timestamp where he says the word"* — is
    STILL UNSATISFIED**, at the one timestamp in the corpus that finally met its first condition.
 
+> **CORRECTION — 2026-08-15, `REVIEW_INDEX` item 110.** The sentence *"every unambiguous
+> instance"* above was too broad. `[00:12:42]` says *"you were out to the 50 in no time"* during a
+> price-chart markup discussion, fourteen minutes before RSI is introduced. The destination
+> language and context identify the water / 50 EMA under `D-041`, not the oscillator baseline.
+> The 14-instance count is unchanged. This counterexample **strengthens reading B**: the lesson
+> already uses *"the 50"* for a distinct price-pane average, making enumeration at `[00:46:45]`
+> more natural. `C-018` remains `CLOSED — OWNER ADJUDICATION`; `A-020` does not move.
+
 ### The governing precedent — `C-011`
 
 `C-011` established the asymmetry this record turns on, and `SOURCING_HIERARCHY.md` §3.3 carries
@@ -2871,7 +2879,7 @@ though it had been visible at 10:00 — textbook lookahead bias.** Under reading
 backtest is clean.
 
 ⚠⚠ **This is the single reason no `PT` in this session tests the confluence rule.** `PT-043`
-tests the weekly-range figure (`A-095` figure 2) instead, which needs no ADR level at all.
+tests the daily-close-distance figure (`A-095` figure 1) instead, which needs no ADR level at all.
 
 ### 4. WHAT WOULD RESOLVE IT
 
@@ -2885,6 +2893,19 @@ tests the weekly-range figure (`A-095` figure 2) instead, which needs no ADR lev
   `REVIEW_INDEX.md` item 157.
 
 ### Current Status
+
+### `D-048` ladder — added 2026-08-15 (`REVIEW_INDEX` item 202)
+
+1. **Explicit correction/retraction:** silent. Neither statement is withdrawn.
+2. **Example-versus-rule:** silent. Both statements characterise indicator behaviour; neither is
+   merely a worked construction.
+3. **Later, clearer wording:** *"Not repaint"* is later and unhedged against *"so to speak"*, but
+   using that alone would close a load-bearing implementation record.
+4. **Material consequence / unresolved construction:** binding. The readings imply different
+   historical level values and different lookahead risk. **Do not adjudicate.**
+
+The ladder therefore reaches the same disposition already carried below: `OPEN`, `DO NOT CODE`.
+No consequence block or `A-100` status changes.
 
 ```text
 C-022 -- OPEN. Reading A and reading B are both defensible from Tier 1 and are

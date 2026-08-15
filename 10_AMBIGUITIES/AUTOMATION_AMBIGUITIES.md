@@ -8610,9 +8610,10 @@ a different record.
 
 All three share the defect `A-082` names: **a number, a scope word, and no instrument.**
 *"Depending on the pair"* (1) and *"about"* (3) place the figure beyond falsification as stated,
-because no pair is named and no tolerance is given. **Figure 2 is the exception** — it names a
-period (a week) and a unit, and can therefore be measured against this project's corpus without
-inventing anything. **`PT-043` pre-registers exactly that**, and only that.
+because no pair is named and no tolerance is given. **CORRECTED 2026-08-15 (`REVIEW_INDEX` item
+197): Figure 1 is the figure `PT-043` pre-registers and tests on GBP/USD. Figure 2 was already
+tested by `PT-036 M1` and contradicted (0 of 180 weeks); `PT-043` §1b deliberately does not re-test
+it.** V15's weekly-range restatement is durability evidence only.
 
 ### ⚠ The near-collision with V14, stated so nobody reconciles them by accident
 
@@ -8641,8 +8642,10 @@ example's ADR — and neither is the daily-excursion claim. **No figure is adopt
 
 ```text
 A-095 -- OPEN. NONE of the three figures is adopted into any spec file.
-  Figure 1 (25-50 pips daily):  UNTESTABLE AS STATED. Do not merge with V14's 30-50.
-  Figure 2 (600-1000 wk range): TESTABLE -> PT-043, pre-registered before any result.
+  Figure 1 (25-50 pips daily):  TESTED -> PT-043 / BT_V15_0001. NOT SUPPORTED on GBP/USD.
+                                Do not merge with V14's 30-50.
+  Figure 2 (600-1000 wk range): ALREADY CONTRADICTED -> PT-036 M1 (0/180 weeks).
+                                NOT re-tested by PT-043; V15 adds durability only.
   Figure 3 (~200 pip ADR):      UNTESTABLE AS STATED. No pair named.
   DO NOT CODE any of the three.
 ```
@@ -8699,7 +8702,7 @@ A-095 -- STILL OPEN, now with EIGHT figures across V15 and V16.
 
 Read from **audio alone**, these lines are a trap:
 
-> `[00:44:53]` *"Here's your mayonnaise, your **M3**."*
+> `[00:44:53]` *"There's your mayonnaise, your **M3**."*
 > `[00:45:47]` *"…finding support on a pivot. **This is an M1, M3 day.** I'll talk about that
 > next, if you're confused."*
 > `[00:51:00]` *"He went right down past the ADR. **He spiked it to the M1.**"*

@@ -11728,3 +11728,13 @@ relations while `DO NOT CODE` remains; the schematic now includes `R2`; a clean 
 byte-identical to committed output (`n=894/777`, `O1=0.0727/0.0798`, delta `2.00`); and `Q-017`'s
 13-rewritten/9-identical census and exact `Visual Type` detector verify. No setup formula or
 trading edge was promoted. **Formal census: 14/21 PASS; 7/21 latest independent REVISE.**
+
+---
+
+## 2026-08-15 — PHASE 2 — V11 / V13 / V15 REMEDIATION SUBMISSION
+
+All **13** outstanding minors were applied: V11 items 109–113, V13 items 154–155, and V15 items
+197–202. The work corrects provenance and scope, preserves immutable test history, repairs the
+runner seed banner contract, withdraws unsupported mechanism/direction claims, and keeps all
+substantive ambiguity and backtest dispositions unchanged. This session authored the fixes, so
+they are **APPLIED — AWAITING INDEPENDENT R2**, not closed or passed under `D-003`.

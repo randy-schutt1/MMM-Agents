@@ -1,3 +1,7 @@
+SUPERSEDED — NUMBERING: this immutable run body was originally emitted as PT-037.
+The test was re-issued as PT-039 by owner ruling; the original body below is retained unchanged.
+Operative randomisation seed: 20260813 (pre-registered PT-039 §4 and printed again below).
+
 ==============================================================================
 PT-037 — V11 -- how long must the low hold? 30 / 90 / 120 minutes
 ==============================================================================

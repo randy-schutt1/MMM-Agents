@@ -2334,8 +2334,9 @@ with five different openings.
 
 ### 3. `RULES.md` — the same two rules, re-badged, and NEITHER IS IN THE LESSON
 
-`diff` against lesson 14's file: **24 differing lines**, and every one is a string substitution —
-the `.swf` filename, `V15-R`→`V16-R` rule prefixes, three `VIDEO_15`→`VIDEO_16` visual references,
+`diff` against lesson 14's file: **12 differing lines = SIX changed pairs** (24 total `diff`
+output lines including hunk headers/separators), and every changed pair is a string substitution —
+the `.swf` filename, `V15-R`→`V16-R` rule prefixes, **two** `VIDEO_15`→`VIDEO_16` visual references,
 and `(Week 5 - Part 2)`→`(Week 7 - Part 1)` in the setup name.
 
 **The two "Instructor Statements" are presented in quotation marks. Neither is spoken in this
@@ -2357,7 +2358,8 @@ number attached**. It is precisely the `A-082` class, manufactured.
 
 ### 4. `NOTES.md` — a near-clone whose ONE substantive difference is an invented topic line
 
-`diff` against lesson 14's file: **10 differing lines** — the `.swf` filename, `Week 5 - Part 2`→
+`diff` against lesson 14's file: **6 differing lines = THREE changed pairs** (10 total `diff`
+output lines including hunk headers/separators) — the `.swf` filename, `Week 5 - Part 2`→
 `Week 7 - Part 1`, and **one invented `Topic Focus`**:
 
 | Lesson | Invented `Topic Focus` | What the lesson is actually about |

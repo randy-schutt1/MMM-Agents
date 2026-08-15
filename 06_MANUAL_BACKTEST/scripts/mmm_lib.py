@@ -1105,7 +1105,8 @@ def scope_manifest(scope: str = DEFAULT_SCOPE) -> str:
 
 
 def header(test_id: str, title: str, arm_note: str = "",
-           scope: str = DEFAULT_SCOPE) -> str:
+           scope: str = DEFAULT_SCOPE, *, seed: int = SEED,
+           iterations: int = ITERATIONS) -> str:
     qa, _sha = qa_gate(scope)
     lines = [
         "=" * 78,
@@ -1122,7 +1123,7 @@ def header(test_id: str, title: str, arm_note: str = "",
     )
     lines += [
         "QA gate  : " + [l for l in qa.splitlines() if l.startswith("GATE:")][0],
-        f"seed     : {SEED}   iterations: {ITERATIONS}   pip: {PIP}",
+        f"seed     : {seed}   iterations: {iterations}   pip: {PIP}",
         holdout,
         "levels   : NOT comparable with the V02-V06 FXCM homework (`D-036a`).",
         "           Only shape and distance claims travel.",

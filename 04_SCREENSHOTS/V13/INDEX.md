@@ -48,8 +48,11 @@ screenshot proves its own timestamp independently of this index.
 >
 > ⭐ **And the frames close the route permanently.** The TDI sub-window legend reads
 > **`TDI_MMM 46.2640 42.8277 40.2789`** — the indicator's **name and three current line values, and
-> NO parameter tuple**. That is MT4's behaviour for an indicator whose `#property` short name omits
-> its inputs, which means **no legend in ANY lesson of this corpus can ever close `A-084`.** The
+> NO parameter tuple**. That is MT4's behaviour for this `TDI_MMM` deployment, whose `#property`
+> short name omits its inputs. **CORRECTED 2026-08-15, item 154:** the inference is limited to this
+> deployment. V10 shows a second build, `Traders Dynamic Index Visual`, with six current values and
+> likewise no parameter tuple; the legend route is empirically dry across both observed builds,
+> not deductively impossible for every build. The
 > remaining routes are exactly three: a properties dialog, a Navigator/inputs tab, or a spoken
 > identity statement. **This narrows the V14–V21 hunt and is recorded for the sessions that will
 > run it.**

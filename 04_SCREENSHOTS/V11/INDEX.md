@@ -165,6 +165,13 @@ written.
 it was extracted for is evidence about the question's difficulty, and leaving it out would let a
 later session assume the check was never run.
 
+> **Scope correction — 2026-08-15, item 109.** The negative immediately above is about frame 25
+> and the instructor's own charts. It is not corpus-wide. Frame 14,
+> `V11_00-27-35_can-you-decide-cluttered-subgraph-chart.png`, is the student's disowned `H1`
+> anti-example and carries the legible stack `GBPUSD,H1`, `RSI(21)`, `ATR(14)`, `CCI(14)`,
+> `MACD(12,26,9)`, `Sto(5,3,3)`, `Mom(N)`, `AO`. The stack is recorded because it is visible;
+> none of its periods is adopted as the instructor's setting.
+
 ---
 
 ## WHAT IS NOT HERE

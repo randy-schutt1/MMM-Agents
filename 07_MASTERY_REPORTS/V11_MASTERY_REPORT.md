@@ -37,7 +37,10 @@ Parameters of RSI:  1. Value of RSI:  0 - 100        4. Bear Range:    60/20
 ```
 
 **Six parameters, and not the lookback period.** `rsi` occurs 33 times in the audio with no period
-attached; no frame among 28 detected screen states shows a settings dialog or a legend; and the
+attached; ~~no frame among 28 detected screen states shows a settings dialog or a legend~~
+**no frame of the instructor's own chart shows a settings dialog or legend**; frame `27:35` is a
+disowned student's `H1` anti-example and carries `RSI(21)` plus six other indicator legends, none
+adoptable as a course setting (`REVIEW_INDEX` item 109); and the
 Tier 2 seminar-notes PDF is **also silent** (`D-040` step 2, searched). **`A-080`** opens on it.
 
 **The near-miss is the hazard**: a session skimming for a parameter block **finds one**, and it
@@ -389,7 +392,7 @@ Ordered by how much it would cost if the reviewer disagrees.
    > ### ✅ RESOLVED 2026-08-13 — OWNER RULED, AND **REVERSED** THE PROPOSAL ABOVE
    >
    > ***"Move V11 not V10 since V11 is after."*** **V11's test is re-issued as `PT-039`. V10 keeps
-   > `PT-039` and `PT-038`.** The paragraph above is retained unedited per
+   > ~~`PT-039`~~ **`PT-037`** and `PT-038`. **Corrected 2026-08-15 under item 112.** The paragraph above is retained unedited per
    > `REMEDIATION_PROTOCOL.md` §2 and is the history, not the current state.
    >
    > **The proposal reasoned from the artifact** (a run test should not move; a prose reservation

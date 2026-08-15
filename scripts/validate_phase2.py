@@ -25,6 +25,7 @@ for artifact in (
     "00_SYSTEM/PHASE_2_GATE_AUDIT.md",
     "00_SYSTEM/SELF_VERIFICATION_POLICY.md",
     "00_SYSTEM/PHASE_2_REMEDIATION_LEDGER.md",
+    "00_SYSTEM/PHASE_2_V11_V15_REMEDIATION_LEDGER.md",
     "00_SYSTEM/PHASE_2_HUMAN_RECONSTRUCTION_AUDIT.md",
     "00_SYSTEM/PHASE_2_VALIDATION_REPORT.md",
     "00_SYSTEM/PHASE_2_REVIEW_HANDOFF.md",
@@ -35,6 +36,11 @@ ledger = require("00_SYSTEM/PHASE_2_REMEDIATION_LEDGER.md", "**14**")
 for item in (244, 245, 246, 247, 248, 249, 264, 265, 266, 267, 268, 303, 304, 348):
     if f"| {item} |" not in ledger:
         errors.append(f"remediation ledger missing item {item}")
+
+legacy_ledger = require("00_SYSTEM/PHASE_2_V11_V15_REMEDIATION_LEDGER.md", "**13**")
+for item in (109, 110, 111, 112, 113, 154, 155, 197, 198, 199, 200, 201, 202):
+    if f"| {item} |" not in legacy_ledger:
+        errors.append(f"V11/V13/V15 remediation ledger missing item {item}")
 
 checks = {
     "02_TRANSCRIPTS/V17/V17_TRANSCRIPT.md": "extra **week in between**",
@@ -94,6 +100,7 @@ if errors:
 
 print("PHASE 2 VALIDATION: PASS")
 print("- remediation findings represented: 14/14")
+print("- V11/V13/V15 backlog remediation represented: 13/13; independent R2 pending")
 print("- formal independent-PASS census: 14/21")
 print("- seven latest independent non-PASS decisions: preserved")
 print("- final review: NOT STARTED")

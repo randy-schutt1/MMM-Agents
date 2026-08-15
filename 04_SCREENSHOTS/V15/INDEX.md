@@ -48,33 +48,20 @@ is `1000 − 500 = 500 s` and `16:55 − 08:35 = 500 s`; `i = 400→600` is `100
 `50:15 − 33:35 = 1000 s`. **The offset does not grow.** The 10× patch (`3.0 → 30.0`, read from
 this file's own header) is correct and no rate correction is applied.
 
-### 3. ⭐ A REFINEMENT TO ITEM 186's DIAGNOSIS — THE DOMINANT TERM IS NOT LATENCY, IT IS A CONSTANT IN THE RECIPE
+### 3. ⚠ MECHANISM CLAIM WITHDRAWN — THE OFFSET MEASUREMENT STANDS (`REVIEW_INDEX` item 198)
 
-Item 186 diagnosed the offset as *"click latency AMPLIFIED 10× by the fast sweep"* and concluded
-*"IT THEREFORE CANNOT BE HARDCODED"*. **The conclusion is right and should stay. The mechanism is
-worth one more turn of the screw**, because it explains why four independent sweeps have now
-returned values inside a 1-second band rather than scattering as latency would:
-
-`SWF_CAPTURE_RECIPE.md` §10's `sweep.mjs` clicks play, then **waits a fixed `1500 ms`** to compare
-the pre-click and post-click screenshots (the `GOTCHA 5` guard), and **only then** sets
-`const t0 = Date.now()`. At `SPEED = 10` that fixed guard is **exactly 15 presentation seconds**
-of playback that elapses before the clock starts.
-
-> **`offset ≈ guard_ms / 1000 × SPEED  +  (true click latency)  ±  1 s of OSD granularity`**
-
-The first term is **15 s and is a constant of the script**; the second is the genuinely variable
-part and is evidently well under a second. **That is why V12 read `+16`, V13 `+15`, V14 `+16` and
-V15 reads `+15` — a 1-second band around 15, not a scatter.**
+~~The prior version attributed the +15-second offset to `t0` being set after the 1500 ms guard and
+proposed moving `t0` before the play click.~~ **That description contradicts the actual recipe:**
+`t0` is already set before the pre-click screenshot, play click, and guard wait. The proposed fix
+was therefore a no-op, and the formula built on the wrong ordering is withdrawn. The repository
+does not retain the timing trace needed to establish a replacement cause.
 
 ⚠️ **This does NOT license hardcoding, and §8a's rule stands unchanged.** The residual term is
 still real, `SPEED` is a per-run choice, and a future session that changed the guard or the speed
 factor would silently break any hardcoded value. **It was measured here, as required.**
 
-⚠️ **A durable fix is available and is NOT applied on this branch**, because
-`SWF_CAPTURE_RECIPE.md` is a POLICY ledger and `D-038a` puts policy edits on the integration
-branch: **set `t0` immediately before `p.mouse.click(...)` and take the guard screenshot
-afterwards**, which removes the 15-second term entirely and leaves only the sub-second latency
-§8a exists to catch. Raised as `REVIEW_INDEX.md` item **188**.
+⚠️ **No mechanism fix is claimed.** The durable rule is unchanged: measure the offset from the
+burned clock on every run under §8a. The stale pointer `item 188` is corrected to **item 190**.
 
 ### 4. WHAT THIS SESSION DID ABOUT IT — §8a step 4
 

@@ -196,7 +196,12 @@ Parameters of RSI:   1. Value of RSI:  0 - 100
 >
 > The slide is headed ***"Parameters of RSI"*** and gives **six** parameters, **none of which is
 > the lookback length.** `rsi` occurs **33** times in the audio and a period is never attached to
-> it. **No frame in the lesson shows an indicator-settings dialog or a legend with a period.**
+> it. ~~**No frame in the lesson shows an indicator-settings dialog or a legend with a period.**~~
+> **CORRECTED 2026-08-15 (`REVIEW_INDEX` item 109): no frame of the INSTRUCTOR'S OWN chart shows
+> an indicator-settings dialog, indicator legend, or period.** Frame `00:27:35` is a disowned
+> student's anti-example on `H1` and visibly carries `RSI(21)`, `ATR(14)`, `CCI(14)`,
+> `MACD(12,26,9)`, `Sto(5,3,3)`, `Mom(N)`, and `AO`. Those values are provenance traps, not course
+> settings. `A-080` names `RSI(21)` explicitly and records why it was not adopted from this frame.
 >
 > **`A-080` is opened on this.** Tier 2 (`MMM-NOTES`) was searched per `D-040` §2 and is **also
 > silent** — it describes the TDI's four components without a lookback. **Tier 1 silent, Tier 2

@@ -81,8 +81,10 @@ VERIFICATION corrections 1–2):
 **No indicator-properties dialog and no Navigator panel appears in any of the 793 swept frames**
 (`V13_SOURCE_NOTES.md` §7.2). ⭐ **And the frames add a durable negative that is worth more than
 this lesson:** the sub-window legend reads **`TDI_MMM 46.2640 42.8277 40.2789`** — **name and
-current values, no parameter tuple**. This is MT4's behaviour for an indicator whose short name
-omits its inputs, which means **no legend in ANY lesson of this corpus will ever close `A-084`.**
+current values, no parameter tuple**. This is MT4's behaviour for this `TDI_MMM` deployment, whose
+short name omits its inputs. **CORRECTED 2026-08-15, item 154:** V10's separate
+`Traders Dynamic Index Visual` build prints six current values and no tuple. The legend route is
+empirically dry across both observed builds, but is not deductively closed for every possible build.
 The remaining routes are exactly three: a properties dialog, a Navigator/inputs tab, or a spoken
 identity statement.
 

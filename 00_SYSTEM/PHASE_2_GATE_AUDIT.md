@@ -25,11 +25,11 @@ student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, 
 | V01–V08 | `PASS` | Eligible for retrospective cumulative review |
 | V09 | R4 `PASS`, 0 findings | Independent re-review closed items 81–83; `COMPLETE` |
 | V10 | R2 `PASS`, 0 findings | Independent re-review closed items 91–94; `COMPLETE` |
-| V11 | R1 `REVISE`, 5 minors | Remediation and R2 required |
+| V11 | R1 `REVISE`, 5 minors | Remediation applied; independent R2 required |
 | V12 | R2 `PASS`, 0 findings | Independent re-review closed items 137–138; `COMPLETE` |
-| V13 | R1 `REVISE`, 2 minors | Remediation and R2 required |
+| V13 | R1 `REVISE`, 2 minors | Remediation applied; independent R2 required |
 | V14 | R2 `PASS`, 0 findings | Independent re-review closed items 172–176; `COMPLETE` |
-| V15 | R1 `REVISE`, 6 minors | Remediation and R2 required |
+| V15 | R1 `REVISE`, 6 minors | Remediation applied; independent R2 required |
 | V16 | R2 `PASS`, 0 findings | Independent re-review closed items 222–225; `COMPLETE` |
 | V17 | R1 `REVISE`, 6 minors | Phase 2 remediation applied; independent R2 required |
 | V18 | R1 `REVISE`, 5 minors | Phase 2 remediation applied; independent R2 required |
@@ -52,7 +52,7 @@ student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, 
 
 1. Independently review existing owner-directed remediation for V19 item 302.
    **V09, V10, V12, V14, and V16 now hold independent passes.**
-2. Remediate V11, V13, and V15, then independently re-review them.
+2. Independently re-review the applied V11, V13, and V15 remediation.
 3. Independently re-review the 14 Phase 2 edits for V17–V20.
 4. Only after 21/21 independent passes, execute the 25/50/75 retrospective checkpoints and the
    final reconstruction test.
