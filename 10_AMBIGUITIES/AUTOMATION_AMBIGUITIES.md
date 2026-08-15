@@ -10192,3 +10192,67 @@ ASR defects**, refuted by a second engine *and* by the committed file's own two 
 **Recorded rather than deleted** so the record shows an ambiguity that was opened, tested and
 resolved, instead of quietly disappearing.
 **Status:** **CLOSED** — the figure is `25 to 50 pips`.
+
+---
+
+## A-136 — ⭐ V20's one-third entry is fully mechanical except for the word `handle`, which is never defined
+
+**Opened:** 2026-08-15 by the V20 student session. **Status: OPEN.**
+
+**V20 `[00:29:14]`–`[00:29:53]`** gives *"the best way to decide the entry"*: *"It's taken from
+distance of this **handle** divided by three […] take your entry **one third off the high of this
+handle**"*, with a worked example — *"Let's say it's 100 pi[p]s […] so [mark] 33 pi[p]s off the
+high, a third."*
+
+⭐ **This is the closest the course has come to a mechanical entry rule.** A one-third retracement is
+arithmetic. **It needs no moving average, no colour, no indicator and no nickname** — which is what
+makes it different from every other blocked V19/V20 rule.
+
+⛔ ***"Handle"* is used four times as a noun** (`[00:28:36]`, `[00:29:16]`, `[00:29:25]`,
+`[00:29:43]`) **and defined zero times.** Three further string hits are not the word (§ `handle
+them`, `t-handle`, `bullet handles`). The 100-pip example fixes only its order of magnitude.
+
+⚠️ **`D-030` applies without qualification: the definition is not approximated.** Candidate readings
+— the railroad-track range, the prior swing leg, the outside structure's vector — **differ by tens
+of pips on the same chart**, so the entry is not computable.
+
+⭐ **THIS IS THE CHEAPEST HIGH-VALUE BLOCKER IN THE PROJECT.** One owner sentence, or one later
+lesson, converts a fully specified arithmetic rule from unusable to testable.
+
+---
+
+## A-137 — V20 makes `dealer open volume` the CAUSE of spike direction and supplies no way to observe it
+
+**Opened:** 2026-08-15 by the V20 student session. **Status: OPEN.**
+
+**Printed** on the `20:30` slide and spoken at `[00:20:51]`: *"**Direction is based solely upon
+dealer open volume** (net short or net longs)."* Expanded `[00:20:59]`–`[00:21:34]`: open volume is
+*"the net long [versus] the net short [he is] holding"*, and *"if the public is net long, the dealers
+are net short."*
+
+⛔ **No source, feed, broker report, proxy, indicator or threshold is given anywhere in V20**, and
+`[00:20:56]` flags the concept as **new** (*"you've never talked about open volume before"*).
+
+⚠️ **This is an unusual shape and worth distinguishing from ordinary vagueness: the rule is not
+imprecise, it is UNMEASURABLE with what the student has.** The course states a **mechanism** and
+withholds the **observable**. **`D-030` blocks it; the only usable residue is the qualitative
+inversion (public net long ⇒ dealer net short), which predicts nothing on its own.**
+
+---
+
+## A-138 — `Level 3` is defined three ways in V20 and quantified none of them
+
+**Opened:** 2026-08-15 by the V20 student session. **Status: OPEN.**
+
+V20 defines `L3` twice in speech and once in print, and the three agree on **components**:
+`[00:06:45]` *"the dealer is [ch]opping back and forth with no clear direction after a big rise"*;
+`[00:13:57]`–`[00:14:13]` *"price is making a hell of a lot of moves and they go [n]owhere […] a low
+has been established[,] and the [dealer] has come near it several times but not broken it"*; and the
+`39:45` slide's *"A Powerful Or Extended Move Is Always Followed By Consolidation […] Level 3"*.
+
+⛔ **Not quantified:** no moving-average **periods**, no **separation** distance (*"a mile and a half
+between the averages"* `[00:06:32]` is a joke), no **duration** for the chop, and no count for
+*"several times"*.
+
+⚠️ **And the printed claim carries *"Always"***, which is unfalsifiable as stated while *"powerful"*
+and *"consolidation"* are both unmeasured. **Recorded as taught, not as testable.** `D-030`.

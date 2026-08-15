@@ -10404,3 +10404,93 @@ free and no renumber was owed.**
 
 **Items 303 and 304**, and the independent `PASS` V19 still needs. ⚠️ **A future reviewer should
 note that item 302's closure was self-verified and may reopen it on the merits.**
+
+---
+
+## 2026-08-15 — V20 INGESTION (`Bootcamp1 Wk9 052012 Part2`, Week 9 Part 2)
+
+**Lesson:** `Bootcamp1 Wk9 052012 Part2 (46mins) (1).swf` · 2012-05-20 · **00:45:49**
+**Printed subject:** `MARKET MAKER BOOT CAMP` / **`THE OUT SIDE STRUCTURE`**
+**Branch:** `video/v20`, forked from integration `50edf5f`, in an isolated worktree (`D-038`).
+
+### Provenance
+
+**`.swf` SHA-256 re-computed to `96eba8c8…5d522a43c6` and length to 17,724,102 bytes — both matching
+`SOURCE_MANIFEST.md` exactly.** ⭐ **Four independent length measures agree to 0.33 s:** header
+(`frameCount 8248 ÷ frameRate 3.0` = 2749.333 s), extracted audio (2749.100 s), manifest (2749 s)
+and filename (*"46mins"*).
+
+### Capture
+
+10× fast sweep, **558 frames**, 23 kept. Stage `1024 × 786` and `frameRate 3.0` **read from this
+file's header, not carried forward**; patched to `30.0`. ⚠️ **`GOTCHA 4` fired for real** — the
+first port picked was already serving another session, and the check caught it before anything was
+captured. Play-click before/after guard passed.
+
+⭐ **§8a returns a FIFTH shape: a DECAYING TRANSIENT.** `+17 / +13 / +9 s` at `i = 0,1,2`, then
+**EXACTLY ZERO** from `i = 24` through `i = 549`. **This corroborates item 296's mechanism from a
+second sweep** — an absolute-deadline loop absorbs the play-click latency instead of accumulating
+it. ⚠️ Corroborated, **not proven**; the predicted incremental-sleep control was not run.
+⭐⭐ **And the lesson's TITLE frame is `i = 0`, inside the transient** — `i × 5` would have stamped it
+`00:00` when its burned clock reads `00:17`. **Named from the burned value, which is what §8a step 4
+exists for.**
+
+### ⭐ The §9 two-pass order was FOLLOWED
+
+**§§1–9 of `V20_SOURCE_NOTES.md` were written while the sweep was still running, with no V20 frame
+on disk.** **Item 286 did not recur.** ⚠️ **This sidesteps item 306's contradiction by scheduling
+luck, not by resolving it**, and 306 stands.
+
+**And it paid immediately:** the committed transcript renders `shift his zone` as *"shift his own"*
+**five times, one of them inside the railroad-track definition**, and the `26:15` slide prints
+**`Shift the zone`**.
+
+### Headline findings
+
+* ⭐⭐⭐ **`M15` IS PRINTED ON THREE CHARTS** — `GBPCHF,M15`, `GBPUSD,M15`, `USDCHF,M15`. **The
+  course's timeframe stops being a derivation from V19's `8 bars = 2 hours`.** ⚠️ V20 never *says*
+  `M15` either. **Item 245's remediation should route through it** (item 318).
+* ⭐⭐ **The railroad track is defined as a FUNCTION** — *"a 30 minute structure where the Market
+  Makers trigger the stops, Shift the zone and Set the HOD or LOD on one move"*. **V19 gave the
+  shape; V20 gives the purpose; both say 30 minutes.**
+* ⭐⭐ **The time cap gains an ACTION and a FLOOR** — `30 minutes or less`; **15 minutes explicitly
+  refused**; **stays above ⇒ scratch the trade**; re-entry on *"a nice solid close"*. **`C-030`,
+  `PROVISIONAL`: it narrows `C-029` on the M side and is silent on the W side** (item 325).
+* ⭐ **A mechanical entry arrives and one word blocks it** — *"one third off the high of this
+  handle"*, worked at 100 → 33 pips. ***Handle* undefined: `A-136`, now the cheapest high-value
+  blocker in the project** (item 327).
+* ⭐ **`A-019` gains its first named timezone in twenty lessons — and does not close.** *"three
+  thirty, four o'clock **New York time**"* timestamps a **reading**, not a boundary, and `EST`/`EDT`
+  is not said (item 329).
+* ⭐⭐ **`Q-021` closes the V16–V20 template block** on all five members in both directions, with the
+  byte lengths diverging by **exactly `+4` on all three files** — what a pure filename substitution
+  predicts. **V20 scores ZERO coincidental true cells**, recorded as one draw, not a trend.
+
+### `PT-048` — ⚠️ `CONFIRMED`, AND THE BASELINE MATCHES IT
+
+Pre-registered at `bb526f1` **before `run_pt048.py` existed**. Primary cell median `P1` =
+**22.45 pips, boot95 `[22.0, 23.2]`**, inside V20's printed `[20, 25]` band; `N3` clear.
+⛔⛔ **`N1` matched-random windows return median 23.00 and 18.9 % in band, against 22.45 and 17.1 %.**
+
+⚠️⚠️ **`PT-048` §4 stated the null correctly and §5 never scored it.** The verdict stands as the rule
+produced it (`COMMON_PROTOCOL.md` §9 rule 7) and **the report leads with the defect** rather than
+burying it, classifies itself **`DESCRIPTIVE` not `EVIDENTIAL`**, and invites a reviewer to treat
+the `CONFIRMED` as a null (item 320). **Same class as item 289.**
+
+⭐ **`PT-048` did make the INTERVAL a condition of the verdict, pre-registered, citing item 302 by
+number** — a `MAJOR` from one lesson earlier changing the design of the next test (item 321).
+
+### Owed
+
+⚠️⚠️ **NO independent ASR pass of any kind was run — the weakest verification position in six
+lessons** (item 326). Records opened: **`A-136`, `A-137`, `A-138`, `C-030`, `Q-021`**, review items
+**318–331**. **`A-133` (*blue tracer*) survives V20; dimension B blocked for a SEVENTH lesson.**
+
+### Git
+
+`video/v20`, pushed, **NOT merged to integration** — `D-003` reserves review to a separate session.
+**`D-047` re-check owed at merge-back.** Validator **103 / 0 / 0**.
+
+### Next Review Trigger
+
+**V20 R1**, by an independent session.
