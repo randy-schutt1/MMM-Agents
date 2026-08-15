@@ -9814,7 +9814,7 @@ session's own working.
   **58 pairs, 52 exact**, five of six flags the checker's fault.
 
 ### Findings
-**`REVISE` — 0 CRITICAL, 0 MAJOR, 5 MINOR, 14 NOTE. HIGH confidence.**
+**`REVISE` — 0 CRITICAL, 0 MAJOR, 5 MINOR, 16 NOTE. HIGH confidence.**
 
 **MINOR (items 264–268):** `CONCEPT_INDEX.md` not updated, breaking a convention V16 and V17 both
 followed · the `4.8×` per-hour figure is wrong in three files (it is **4.3×**) · §8a's *"12 of 26"*
@@ -9823,7 +9823,7 @@ itself) · the `PT-046` runner counts tie-thirds in O1's denominator against pre
 the pre-registration's own governance clause did not fire · a two-marker quote cited under one
 marker in the entry whose whole point is timestamp precision.
 
-**NOTE (items 269–282).** The one worth a reader's time is **270**: the ASR half of the
+**NOTE (items 269–284).** The one worth a reader's time is **270**: the ASR half of the
 inversion corroboration is **VAD-dependent** — same engine, same model, `vad_filter=True` returns
 *"ill-advised"* and `vad_filter=False` returns *"advised"*, across ten decodes including
 time-stretched audio. **The finding is sound because it rests on Tier-2 PRINT, not on the ASR** —

@@ -11,7 +11,7 @@
 
 ## FINAL DECISION
 
-**Decision:** `REVISE` — **0 CRITICAL, 0 MAJOR, 5 MINOR, 14 NOTE.**
+**Decision:** `REVISE` — **0 CRITICAL, 0 MAJOR, 5 MINOR, 16 NOTE.**
 **Confidence:** `HIGH`.
 
 Under `DECISIONS.md` **D-024**, a round carrying zero `CRITICAL` and zero `MAJOR` **opens the gate
@@ -138,6 +138,14 @@ obtains both readings, depending on one decode flag:**
 is acoustically marginal here**: word-level alignment puts *"is"* at 1180.48 s and *"advised"* at
 1180.54 s, 60 ms apart, which is too short for the two words and is the signature of a swallowed
 syllable. **Six of this reviewer's ten decodes drop it.**
+
+⭐ **And the aggregate corroboration is robust even where this single marker is not.** The
+**full-file** independent pass — the one that renders `[00:19:39]` as *"counter trend is advised"* —
+carries ***"ill-advised"* three times in the same topical discussion a few minutes earlier**:
+`[00:14:46]` *"I can only say ill-advised."*, `[00:14:50]` *"It's ill-advised."*, `[00:15:20]`
+*"It's ill-advised."* **So the engine does hear the word in this lesson, on this subject, and only
+drops it on the one marker where he says it fastest.** The submission's reading is right on every
+channel; only the single-marker citation is configuration-sensitive.
 
 ⭐ **This does not weaken the finding — it strengthens the reason the finding was made the way it
 was.** The slide is Tier 2 in `REVIEW_PROTOCOL.md` §5 and the transcript is Tier 3; **the print
@@ -371,6 +379,8 @@ by 0.0009 on a measure whose Wilson interval is 0.058 wide. It alters no rule an
 | **280** | ⭐ **THE HOMEWORK's ONE ROBUST RESULT REPRODUCES ON INDEPENDENT CODE WITH A STRICTER WEEK RULE.** Asian 26.2%/17.4%, London 36.6%/43.6%, US 37.2%/39.0% against the submission's 27.1/16.6, 36.5/43.1, 36.5/40.3. **The `2.3×` high-side per-hour figure is confirmed.** The three-of-four not-done disposition is the correct call, not a gap |
 | **281** | **QUOTE-VS-TRANSCRIPT FIDELITY IS STRONG: 58 PAIRS, 52 EXACT, AND FIVE OF THE SIX FLAGS ARE THE CHECKER'S FAULT.** Only item 268 survives. ⚠ **Offered to the recipe rather than to the student:** `verify_citations.py` tests marker *existence*; extending it to test that the quoted text appears in the cited marker's span would have caught 268 mechanically, as the existence check caught `S2` |
 | **282** | ⭐⭐ **CALIBRATION — THE BEST DECISIONS IN THIS SUBMISSION ARE THE ONES THAT DECLINED.** (1) `PT-046` tests the rule that *can* be tested and says up front that V18's centrepiece — the safety trade — cannot be, rather than testing a proxy and calling it the thing. (2) The `A-129` "fourth session resumes" measure is computed and **explicitly excluded from the decision** because no discriminator exists. (3) The `N3` guard was written to override a favourable result and then did. (4) `Q-019` says it corroborates rather than discovers, before saying anything else. (5) Three of four homework items are refused with reasons. (6) The `§9` two-pass violation (`S1`), the two bad citations (`S2`), the post-hoc runner edit (`S4`) and the un-recaptured frame (`S5`) are all self-charged. **`REVIEW_PROTOCOL.md` §17's five failure modes are being actively defended against, not merely avoided** |
+| **283** | **THE WORD COUNT IS 6,910, NOT 6,879 — AND EVERY OTHER GRID STATISTIC IS EXACT.** Whitespace tokenisation over the 881-marker body returns **6,910** against the transcript §2 figure of 6,879 (0.45%), which also moves the speech rate to **149.8 wpm** from 149.1. ⭐ **Everything else verifies to the digit:** markers **881**, monotonic with zero backward steps, **exactly one** duplicate marker and it is `[00:39:07]`, gaps **min 0 / max 13 / mean 3.15**, first `[00:00:00]`, last `[00:46:08]`. **Nothing rests on the word count.** Same class as V17 R1's item 256, one lesson later |
+| **284** | ⚠ **A FULL-FILE INDEPENDENT PASS FOUND ONE MISHEARING THE EIGHT-SEGMENT CHECK DID NOT COVER — AND THE CORRECTION ONLY STRENGTHENS AN EXISTING READING.** `[00:45:23]` committed: *"I thought I would be able to cover that **to none or** what I was thinking."* Independent: *"I thought I would be able to cover that **tonight. I don't know** what I was thinking."* Two sentences merged into one garbled line. **It is outside the homework block `V18_HOMEWORK.md` quotes (which starts at `[00:45:31]`), and it corroborates `V18_INTERPRETATION.md` §7 point 5** — that he says plainly he did not finish the material. ⭐ **Offered as a coverage observation, not a defect in the submission:** a targeted eight-segment pass is the right economy, and a full-file pass on a 46-minute lesson costs about 50 minutes of CPU. **A full sweep of the remaining transcript found no other polarity or numeric divergence** — every load-bearing figure re-verified verbatim: *"25 to 75 off of yesterday's low"*, *"it lasts six to eight hours"*, *"the 75 pip difference between the anchor point and the level one consolidation… or greater… 75 plus"*, *"45 minutes"*, *"30 to 90 minutes"*, *"about two hours"* |
 
 ---
 
@@ -456,7 +466,7 @@ CONFIDENCE: HIGH
 CRITICAL ISSUES: none
 MAJOR ISSUES:    none
 MINOR:           5   (items 264-268)
-NOTE:            14  (items 269-282)
+NOTE:            16  (items 269-284)
 
 REQUIRED ACTIONS:
   1. Add V18 to CONCEPT_INDEX.md and update its STATUS block.        (264)
@@ -497,5 +507,5 @@ without cost to gate compliance so far. That is a fact about V17 and V18, not a 
    runner were seen earlier via a `grep` for `load_m1` run for the item-247 check.
 4. **Reviewer code is committed** as `06_MANUAL_BACKTEST/scripts/rev_pt046_independent.py` so its
    figures are re-runnable and falsifiable. It is reviewer apparatus, not a project artifact.
-5. **Item numbering.** Items **264–282** allocated against the integration branch's state at
+5. **Item numbering.** Items **264–284** allocated against the integration branch's state at
    `6cd01aa`, where **263** was the highest existing item. Re-check at merge-back per `D-047`.
