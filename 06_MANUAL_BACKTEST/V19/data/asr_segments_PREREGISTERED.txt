@@ -1,0 +1,17 @@
+V19 INDEPENDENT-ASR SEGMENT PRE-REGISTRATION
+Written BEFORE any segment was transcribed. Segments chosen because a V19 rule,
+number or TDI claim rests on them -- not because anything looked wrong.
+Engine: openai-whisper medium.en (independent of the pre-ingestion transcript).
+id  start   end     why
+S1  00:13:05 00:14:00  Half-A-Batman definition (4 clauses)
+S2  00:15:55 00:16:20  "30 to 90 minutes ... two hours" hold time
+S3  00:17:20 00:18:55  15-20 / 15-25 push; 15-25 pip consolidation; 50 on crosses
+S4  00:22:30 00:23:05  second leg slightly above first, must close back below within 30 min
+S5  00:23:45 00:24:45  next level strike zone 25 to 55
+S6  00:26:30 00:27:35  TDI divergence; "TDI RSI line tracks the closes"
+S7  00:27:35 00:29:35  M/W minimum eight bars; "high 80 percent"; the 397-page study
+S8  00:32:45 00:33:15  bar 1 = the bar that forms the high of the day
+S9  00:41:25 00:42:05  eight candles or greater = two hours
+S10 00:46:30 00:47:20  W second leg below first, must close above; 30 min / 45 max
+S11 00:56:15 00:56:40  "divergence on the TDI or the RSI line"
+S12 01:02:45 01:03:20  star formation = extra 15 minutes; 15 in / 15 out
