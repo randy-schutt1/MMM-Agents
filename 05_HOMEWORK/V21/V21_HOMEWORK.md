@@ -19,7 +19,8 @@ via the recordings**"*, with `[00:11:10]`'s expectation of *"a hundred hours und
 
 | # | Item | Executed? | Why |
 |---|---|---|---|
-| 1 | Install the script | ❌ **BLOCKED — `A-141`** | ⛔ **The artifact is not in this repository.** V21 describes and installs it on camera; **no file, filename, code or parameter dialog is legible anywhere in the lesson.** `D-030` bars reconstructing it from the handwritten sheet |
+| 1 | Install the script | ❌ **BLOCKED — `A-141`** | ⛔ **The artifact is not in this repository.** ⚠️⚠️ **CORRECTED 2026-08-15 (item 365): this cell originally said no FILENAME is legible — false.** The `49:33` frame lists `&sm_Buy_Order_Trainer`, `&sm_Buy_Order_Trainer_Pct`, `&sm_Sell_Order_Trainer`,
+`&sm_Sell_Order_Trainer_Pct` and `142 more…`. ⛔ **What is absent is the CODE** — no entry trigger, fill logic, order management, exit logic or parameter dialog anywhere — so `D-030` still bars reconstructing the tool from the handwritten sheet |
 | 2 | The benchmark ladder | ❌ **NOT APPLICABLE** | Its inputs are **one trader's own fills over time**. There is no trader and no account. **`D-018`: not applicable, not blocked** |
 | 3 | Send the work zip | ❌ **NOT APPLICABLE** | Addressed to a human student in 2012 |
 | 4 | Retake the bootcamp | ⭐ **ARGUABLY DONE** | This project has now ingested all 21 lessons in order. **Offered as an observation, not claimed as compliance** |

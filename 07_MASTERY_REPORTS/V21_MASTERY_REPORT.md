@@ -4,7 +4,30 @@
 **Printed subject:** `MARKET MAKERS BOOT CAMP` — master review, money management, and the
 `High / Low Trainer` script
 **Branch:** `video/v21`, isolated worktree per `D-038`
-**Student status:** ⚠️ **REVIEW REQUIRED** — not `PASS`. `D-004`.
+**Student status:** ⚠️ **IN REMEDIATION** — V21 R1 returned **REVISE, 1 `MAJOR` / 3 `MINOR`**, and
+this report is **amended, not re-filed**. See §0a. `D-004`: a student `PASS` is not a gate, and a
+student **fix** is not a verification.
+
+---
+
+## §0a — ⚠️⚠️ AMENDED 2026-08-15 AFTER V21 R1 — ONE `MAJOR`, THREE `MINOR`, ALL ACCEPTED
+
+**All four findings are correct. All four were verified by this session before being acted on.**
+
+| | Finding | What was done |
+|---|---|---|
+| ⛔ **`M1`** 365 | `A-141` claimed **no script filename is legible anywhere**; four are, **in a frame this session captured, named and committed** | ⭐ **Confirmed by opening my own frame.** `A-141` rewritten around the four names; corrected in `V21_SOURCE_NOTES.md` §6/§10.5/§8, `V21_HOMEWORK.md` §2 and this report's §2.3 misdirection. **The gap's substance — no code — is restated intact** |
+| ⚠️ `366` | The `[00:05:21]` *"in"*→*"and"* correction rests on one decode and **does not replicate**; and *"X in Y"* is **locative, not appositive**, so the reasoning was unsound | ⭐ **Correction WITHDRAWN.** `A-133`'s survival restated on the reason that **neither reading defines the tracer** |
+| ⚠️ `367` | `PT-050`'s `N3` fired on **window** differences; §4's clause says **between arms**, and the arms agree — literally, §5 gives **`REFUTED`** | ⭐ **Divergence reported** at `BT_V21_0001.md` §5 and flagged in §0. ⛔ **Not re-run**, per the finding |
+| ⚠️ `368` | `00-62-28` / `00-71-38` are not valid `HH-MM-SS` — the OSD shows `MM:SS` past the hour | ⭐ **Renamed** `01-02-28` / `01-11-38`; cause and recipe recommendation recorded in `INDEX.md` §0 |
+
+⛔⛔ **NOT SELF-VERIFIED.** `D-024` holds the gate on any `MAJOR` until it is fixed **and re-reviewed
+in a fresh round**. **This goes back to V21 R1 for R2, exactly as V20's did.**
+
+⚠️⚠️ **THE ROOT CAUSE OF `M1` IS NOT THE SWEEP DENSITY I BLAMED IN §2.3 — IT IS THAT I DID NOT READ
+MY OWN EVIDENCE.** I captured the frame, named it *"scripts-pasted-into-folder"*, committed it, and
+then asserted four times that it contained no filename. ⭐ **The reviewer found it in the artifact I
+supplied.**
 
 ---
 
@@ -47,8 +70,12 @@ EXPECTATION, `D-049` was never invoked, and it was correct.**
 2. ⭐⭐ **An independent ASR pass WAS run** on the load-bearing passages — the check V20 was charged
    for omitting (item 326). ⚠️ **It was TARGETED, not full-file**: three passages, ~2 minutes of
    audio out of 75. **Weaker than V15/V16/V18's full-file passes and it is owed.**
-3. ⚠️ **The install walkthrough is ~20 minutes of screen recording and five frames were kept.**
-   A reviewer wanting the script's filename would need a denser sweep of `42:38`–`62:28`.
+3. ⚠️⚠️ **CORRECTED 2026-08-15 — V21 R1 `M1`, item 365. This item originally sent a reviewer to
+   re-sweep `42:38`–`62:28` for a filename.** ⛔ **The filenames were already in a frame I captured,
+   named and committed** — `49:33` lists `&sm_Buy_Order_Trainer`, `&sm_Buy_Order_Trainer_Pct`, `&sm_Sell_Order_Trainer`,
+`&sm_Sell_Order_Trainer_Pct` and
+   `142 more…`. **The misdirection was mine and it pointed away from my own evidence.** ⭐ **The
+   density complaint stands for the CODE**, which no frame shows.
 4. ⚠️ **`PT-050` borrows `PT-047`'s event definition.** Declared in the pre-registration as the
    largest threat, but it means **the test's event is not V21's**.
 5. ⚠️ **I published a corrected figure mid-round.** `BT_V21_0001.md` §0/§2 were first written from a
@@ -69,9 +96,9 @@ EXPECTATION, `D-049` was never invoked, and it was correct.**
 | **D** | **Sequence** | ✅ **SATISFIED** | The order structure (market → 2 pendings → stop) and the three choices on a partial fill are recorded in order with markers |
 | **E** | **Exceptions** | ✅ **SATISFIED** | ⭐ V21's central exception is **its own tool's expiry** — `[00:41:48]` *"stop using the script and place regular orders"*. **A lesson that tells you when to stop using what it just gave you** |
 | **F** | **Homework** | ✅ **SATISFIED** | `V21_HOMEWORK.md`. ⚠️ **All four items NOT DONE or NOT APPLICABLE with reasons** — the first lesson whose primary assignment this project cannot perform even in principle (`A-141`) |
-| **G** | **Manual backtesting** | ✅ **SATISFIED** | `PT-050` pre-registered before its runner, **`N1` an explicit verdict condition**, the §5 decision-table hole closed, every scale stated inside its measure. ⛔ **Verdict `FRAGILE`, reported as a null** — and the report leads with it |
+| **G** | **Manual backtesting** | ⚠️ **SATISFIED WITH A REPORTED DIVERGENCE** | `PT-050` pre-registered before its runner, **`N1` an explicit verdict condition**, the §5 decision-table hole closed, every scale stated inside its measure. ⛔ **Verdict `FRAGILE`, reported as a null** — and the report leads with it. ⚠️ **item 367: on §4's literal clause `N3` does not fire and §5 gives `REFUTED`; the divergence is now reported at §5 and the runner is NOT re-run** |
 | **H** | **Provenance** | ✅ **SATISFIED** | `.swf` SHA-256 and byte length re-computed and matching; **four independent length measures agreeing to 0.33 s**; port and bytes verified; §8a measured and published; **17 of 17 frames named from individually-read burned timecodes**; ⭐ **and the recording dates itself — `6/17/2012` legible in the OS clock of the install frames** |
-| **I** | **Ambiguity** | ✅ **SATISFIED** | `A-140`, `A-141` opened, each with what would close it. ⭐ **And a near-miss recorded rather than a closure claimed** — see §4.2 |
+| **I** | **Ambiguity** | ⛔ **NOT SATISFIED — `M1`** | ⛔ **`A-141` asserted a false fact in four places** (item 365) — amended. ⚠️ **And §4.2's *"near-miss"* was itself withdrawn** (item 366). `A-140` stands |
 | **J** | **Contradictions** | ✅ **SATISFIED** | `C-031`, disposition **`UNRESOLVED`** with the reason it is not `PROVISIONAL` — ⚠️ **and it can no longer be closed by a later lesson, because there is no later lesson** |
 
 **Eight satisfied, one blocked, and the blocked one is now permanent.**
@@ -84,16 +111,22 @@ EXPECTATION, `D-049` was never invoked, and it was correct.**
 
 The `31:25` frame photographs handwritten notes dated `1-27-2010`: **`High / Low Trainer`**,
 `MAX RISK 5%`, risk dial `1–5 %`, `↕20 ↕20 ↕20` pips, `Take profit +30 from ORDER 1`,
-`Cycle 30 + 50 + 70` = `150`, *"most often"* `+80`. ⚠️ **The artifact itself is not in this
-repository — `A-141`.**
+`Cycle 30 + 50 + 70` = `150`, *"most often"* `+80`. ⭐⭐ **AND ITS FOUR FILENAMES ARE LEGIBLE** at `49:33` — `&sm_Buy_Order_Trainer`, `&sm_Buy_Order_Trainer_Pct`, `&sm_Sell_Order_Trainer`,
+`&sm_Sell_Order_Trainer_Pct` — **attesting `[00:41:49]`'s *"four scripts in there"* and `[00:26:52]`'s *"by order
+percent"*, both of which were recorded as inferences. ⚠️ **The artifact's CODE is still absent and
+`A-141` rests on that** (item 365).
 
-### 4.2 ⭐⭐ A NEAR-MISS THAT WOULD HAVE CLOSED THE CORPUS'S LONGEST-STANDING BLOCKER — WRONGLY
+### 4.2 ⚠️⚠️ A CORRECTION THIS SESSION MADE THAT DID NOT REPLICATE — WITHDRAWN (item 366)
 
-The committed grid reads `[00:05:21]` as *"the light blue tracer **in** the a DR line"*. **Read as an
-apposition that DEFINES the blue tracer as the ADR line and closes `A-133` after seven lessons.**
-⛔ **The independent decode reads *"the light blue tracer **AND** the ADR line"* — a list of two.**
-⭐ **Caught before it reached any artifact.** ⚠️ **`A-133` is narrowed (the tracer is *light blue* and
-belongs to the ADR/hi-lo marker family) and NOT closed.**
+**Originally filed as a near-miss: that *"the light blue tracer **in** the ADR line"* is an
+apposition defining the tracer, and that an independent decode reading *"and"* prevented a wrong
+closure of `A-133`.** ⛔ **Both halves are withdrawn.** The substitution rested on **one** decode;
+**seven of ten across four model families return `in`.** And *"X in Y"* is **locative, not
+appositive**, so `in` would not have closed `A-133` either.
+
+⭐ **`A-133` survives under both readings because neither defines the tracer** — a better reason than
+the one first given, because it does not depend on which word was said. **The outcome was right and
+the argument was not.**
 
 ### 4.3 ⭐ V21 DEFINES WHAT V19 COULD NOT
 
@@ -130,12 +163,16 @@ to `V03`.** **It is a closed permutation, not a shift.**
 
 ## §6 — WHERE I WOULD MARK MYSELF DOWN
 
-* ⚠️⚠️ **The near-miss on `A-133` is what I would lead with as a reviewer.** I had drafted the
-  closure. **One preposition, and only an independent decode stood between it and the corpus.**
+* ⚠️⚠️ **I made a single-decode substitution against the committed grid and built a grammatical
+  argument on it, and both were wrong** (item 366). **V20's `candle` correction carried five decodes
+  and held; this one carried one and did not.** ⭐ **A substitution needs the replication this
+  project demands of a backtest.**
 * ⚠️ **Quoting `26.05` from a truncated terminal view** instead of the JSON. Caught, corrected,
   and exactly the defect class items 265/332 exist for.
-* ⚠️ **Five frames of a twenty-minute install walkthrough.** If the script's filename is legible
-  anywhere, I did not find it.
+* ⛔⛔ **I asserted four times that no script filename is legible, and the filenames were in my own
+  committed frame.** The `49:33` Navigator tree lists all four. ⚠️ **I captured it, named it
+  *"scripts-pasted-into-folder"*, and did not read it.** **The worst error of this round, and the
+  reviewer found it in the artifact I supplied.**
 * ⚠️ **I did not chase `M3`, the *"25-pip box"* or *"shark fin"***, all named at `[00:18:18]`.
 
 ---

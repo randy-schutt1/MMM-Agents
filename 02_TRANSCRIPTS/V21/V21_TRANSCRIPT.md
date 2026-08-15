@@ -59,14 +59,28 @@ for *"the door"*, *"free swipes"* for `three swipes`, *"m3 pivot"*, *"pale body"
 | Marker | Committed grid | ⭐ **Independent decode** |
 |---|---|---|
 | `[00:04:41]` | *"Work the big board the big board is the high low board"* | ✅ **CONFIRMED VERBATIM** — *"Work the big board. **The big board is the high-low board**, trying to identify the dealer's pushes within that board without looking at a chart."* |
-| ⚠️⚠️ `[00:05:21]` | *"the light blue tracer **in** the a DR line"* | ⛔ *"the light blue tracer **AND** the ADR line"* |
+| ⚠️⚠️ `[00:05:21]` | *"the light blue tracer **in** the a DR line"* | ⛔ **CORRECTION WITHDRAWN — see below** |
 | `[00:05:38]` | *"You're looking for **the door** if you call it a nice W formation"* | *"If you're looking for the door, if you **caught** a nice W formation"* |
 
-⚠️⚠️ **THE `[00:05:21]` CORRECTION IS A NEAR-MISS THAT WOULD HAVE CLOSED `A-133` WRONGLY.** Read as
-*"the light blue tracer **in** the ADR line"* the sentence is an **apposition** and identifies the
-tracer **as** the ADR line — which would close the corpus's longest-standing blocker. **Read as
-*"and"* it is a LIST OF TWO OBJECTS, and if anything it distinguishes them.** ⭐ **The independent
-decode says `and`.** **`A-133` is NARROWED, not closed** — see `V21_INTERPRETATION.md` §2.4.
+> ### ⚠️⚠️ WITHDRAWN 2026-08-15 — V21 R1 item **366**
+>
+> ⛔ **THE CORRECTION DOES NOT REPLICATE.** It rested on **one** `openai-whisper medium.en` decode.
+> **The reviewer ran ten decodes across four model families: `in` returns SEVEN times** — every
+> `large-v3` configuration, `small.en` under both VAD settings, and ⭐ **`medium.en` itself flips to
+> `in` under 0.6× time-stretch.** **The committed grid's `in` is at least as well supported as the
+> `and` this session substituted, and the substitution is withdrawn.**
+>
+> ⛔⛔ **AND THE REASONING WAS UNSOUND EVEN IF `and` HAD REPLICATED.** This session argued that
+> *"tracer **in** the ADR line"* would be an **apposition** identifying the tracer **as** the ADR
+> line, and therefore that `and` was what kept `A-133` open. **That is a grammatical error:
+> *"X in Y"* is LOCATIVE, not appositive** — it places the tracer somewhere relative to the ADR
+> line and does not equate them. **An apposition would be *"the light blue tracer, the ADR line"*.**
+> ⭐ **So the `in` reading would NOT have closed `A-133` either.**
+>
+> ⭐ **`A-133` survives under BOTH readings, for the better reason that NEITHER DEFINES THE TRACER** —
+> one lists it beside the ADR line, the other locates it relative to the ADR line, and neither says
+> what it is computed from. **The outcome this session reached was right; the argument for it was
+> wrong, and the corrected reason is stronger because it does not depend on which word was said.**
 
 ---
 

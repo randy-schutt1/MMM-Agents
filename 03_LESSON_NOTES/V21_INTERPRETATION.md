@@ -72,22 +72,35 @@ scheme, not a contradiction.**
 ⚠️ **CONFIDENCE on `Take profit +30 from ORDER 1` and `Sell Cycle — 30 pips`: LOW.** **Neither is
 ever spoken**, and the sheet does not say how they relate to the `30/50/70` ladder. **`C-031`.**
 
-### 2.4 ⚠️⚠️ The blue tracer — a near-miss, and `A-133` SURVIVES
+### 2.4 ⚠️ The blue tracer — `A-133` SURVIVES, and this section's original reason was wrong
 
-`[00:05:21]`, committed grid: *"the light blue tracer **in** the a DR line"*. **Read that way the
-sentence is an apposition and the tracer IS the ADR line — which would close `A-133` after seven
-lessons.**
+> ### ⚠️⚠️ CORRECTED 2026-08-15 — V21 R1 item **366**
+>
+> **This section originally presented a *"near-miss"*: that the committed *"tracer **in** the ADR
+> line"* is an apposition which DEFINES the tracer, and that an independent decode reading *"and"*
+> is what kept `A-133` open.** ⛔ **Both halves are withdrawn.** The `and` substitution **does not
+> replicate** — seven of ten decodes across four model families return `in`, including `medium.en`
+> itself under time-stretch — **and *"X in Y"* is LOCATIVE, not appositive**, so `in` would not have
+> closed `A-133` either.
 
-⛔ **The independent decode reads *"the light blue tracer **AND** the ADR line"*** — a **list of two
-objects**, which if anything distinguishes them.
+`[00:05:21]`: *"Use the ADR and high-low markers, the light blue tracer **[in / and]** the ADR line,
+to understand that if the dealer has **exceeded the ADR** you're looking for a **retrace back in**."*
 
-**CONFIDENCE that `A-133` is closed: ⛔ NONE.** ⭐ **What V21 does add:** the tracer is **light
-blue**, and it belongs to the **ADR / high-low marker family** — chart furniture used to judge
-whether the dealer has exceeded the ADR. **That narrows the search and defines nothing.**
+**CONFIDENCE that `A-133` is closed: ⛔ NONE — and the reason no longer depends on which word was
+said.** ⭐ **Neither reading defines the tracer.** *"And"* lists it beside the ADR line; *"in"*
+locates it relative to the ADR line. **Neither states what it is computed from, and computation is
+what `A-133` asks for.**
 
-⭐ **Recorded prominently because it is exactly the failure `REVIEW_PROTOCOL.md` §17.3 names** — a
-one-word ASR defect promoting itself into doctrine — **and the only thing that caught it was an
-independent pass over the audio**, the check V20 was charged for omitting (item 326).
+⭐ **What V21 does add, and it stands either way:** the tracer is **light blue**, and it belongs to
+the **ADR / high-low marker family** — chart furniture used to judge whether the dealer has exceeded
+the ADR. **That narrows the search and defines nothing.**
+
+⚠️⚠️ **AND THE METHODOLOGICAL LESSON IS THE OPPOSITE OF THE ONE FIRST DRAWN.** This session framed
+the episode as *"an independent pass caught a defect"*. ⛔ **What actually happened is that a
+SINGLE-DECODE correction was made with more confidence than one decode supports, and a grammatical
+claim was built on top of it.** ⭐ **The correct lesson: a substitution against a committed grid needs
+the same replication the project demands of a backtest** — V20's `candle` finding carried **five**
+decodes and held; this one carried **one** and did not.
 
 ### 2.5 The big board — ⭐ a V19 gap closed
 
