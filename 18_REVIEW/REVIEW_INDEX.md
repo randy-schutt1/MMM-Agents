@@ -1710,6 +1710,7 @@ ruling) are carried forward unchanged. **The next review trigger is the V06 subm
 > superseded, by this round.)*
 | V10 | REVIEW REQUIRED | R1 | REVISE | 0 | 0 | ⏳ |
 | V10 | REMEDIATION APPLIED | R1 (fix round) | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** |
+| V10 | REMEDIATION VERIFIED | R2 | **PASS** | 0 | 0 | ✅ **COMPLETE** |
 | V11 | REVIEW REQUIRED | — | — | — | — | ⏳ *(superseded, retained: `AWAITING R1`)* |
 | V11 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V12 OPEN (`D-024`) · 5 MINOR (109–113) owed before `COMPLETE`** |
 | V12 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V13 OPEN (`D-024`) · 2 MINOR (137–138) owed before `COMPLETE`** |
@@ -3034,3 +3035,18 @@ CONFIRMED as recorded**, with 167's owed `PT-042` §5a amendment extended by ite
 | 82 | V09 R2 | Stale ordinals in shared ambiguity register | **Five PNGs independently opened. `28:45`, `31:50`, `41:25` are the intended chart frames; the former ordinal targets include the `26:40` spreadsheet and `34:35` email screen. `A-069`/`A-073` now use stable burned timecodes with superseded text retained.** | ⛔ **CLOSED — VERIFIED** |
 | 83 | V09 R2 | Mastery report asked the owner a retired question | **`MMM-NOTES` p.38 independently checked: 5/13/50/200, with zero whole-word `800` hits in the extract; p.66 has Mayo=200. The factor-of-four route cannot close the whole-set conflict. Escalation 5 is correctly `RETIRED`; `C-010` remains unresolved.** | ⛔ **CLOSED — VERIFIED** |
 | 387 | **V09 R4** | **The historical self-verification boundary is now cured, not erased.** | R4 did not author the R3 fixes and re-derived all three findings from source. The R3 warning remains append-only; R4 supplies the first independent verdict after R2. | **`NOTE`** |
+
+
+> ### 🔢 NUMBERING — item 388, allocated 2026-08-15 by the V10 **R2** independent round under `D-047`
+>
+> Allocated against the current Phase 2 branch, where **387** was the highest item. No collision.
+
+## V10 — R2 (2026-08-15) — **`PASS`**, 0 CRITICAL / 0 MAJOR / 0 MINOR / 1 NOTE, HIGH confidence. **Items 91–94 CLOSED — VERIFIED. V10 is `COMPLETE`.**
+
+| # | Source | Item | Evidence | Disposition |
+|---|---|---|---|---|
+| 91 | V10 R1 | Open-item collision and policy gap | **V10's live sequence is 86–90; old 81–85 references survive only as explicit history. Both artifact pointers now name 87. Active D-047 independently resolves the policy half and mandates integration-state allocation plus merge-back re-checks.** | ⛔ **CLOSED — VERIFIED** |
+| 92 | V10 R1 | `A-078` / `C-017` undercount | **All seven reference-bearing transcript passages checked: five blue tracer, one LOW/HOW, one ambiguous. `00:54:02` names no object and is correctly excluded. All propagation sites carry the corrected census; `C-017` stays unresolved.** | ⛔ **CLOSED — VERIFIED** |
+| 93 | V10 R1 | Unscoped no-hour claim | **All four incidental times checked at source; none delimits a session. §15 now states the narrower true session-boundary claim, enumerates all four counterexamples, and retains the superseded text.** | ⛔ **CLOSED — VERIFIED** |
+| 94 | V10 R1 | `C-016` omitted its own ASR caution | **Transcript confidence/caution verified; all 32 curated images OCR-screened and the two safety-rule slides opened, with no printed holding period found. The caution strengthens the refusal to reconcile and does not change the disposition.** | ⛔ **CLOSED — VERIFIED** |
+| 388 | **V10 R2** | **Historical self-verification boundary independently cured.** | R2 did not author the fixes and re-derived all four findings from source. The old warning remains append-only; this is the first arm's-length post-fix verdict. | **`NOTE`** |

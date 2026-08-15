@@ -11676,3 +11676,20 @@ append-only. `18_REVIEW/V09/V09_REVIEW_R4.md` supplies the missing `D-003` separ
 final review remains `NOT STARTED`; Master and Machine Specification directories remain gated.
 
 **Validation:** structural **103/0/0**; Phase 1 **PASS**; Phase 2 **PASS**; whitespace check **PASS**.
+
+---
+
+## 2026-08-15 — PHASE 2 — V10 R2 INDEPENDENT PASS
+
+**Branch:** `phase2/cross-lesson-review`
+**Decision:** **PASS — 0 CRITICAL / 0 MAJOR / 0 MINOR / 1 NOTE, HIGH confidence.**
+
+This session independently re-derived and closed V10 items 91–94. The live V10 item sequence is
+86–90 and active D-047 closes item 91's policy half; the transcript census is **five of seven**
+blue-tracer references; all four incidental clock times are real but none defines a session
+boundary; and the `C-016` ASR caution is warranted, with no printed holding period found in an OCR
+screen of all 32 curated frames or direct inspection of the two safety-rule slides. No conclusion,
+disposition, test result, or edge claim moved.
+
+**Formal Phase 2 census:** **11/21 independent PASS; 10/21 latest independent REVISE.** The official
+final review remains `NOT STARTED`; Master and Machine Specification directories remain gated.

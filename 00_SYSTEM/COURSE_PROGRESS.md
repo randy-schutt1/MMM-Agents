@@ -2509,7 +2509,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
 | V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | REVISE R1 0C/0M/3m | **IN REMEDIATION** (items 64-66) |
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R4 PASS — 0C/0M/0m, HIGH, 2026-08-15; items 81–83 independently verified** | **Independent `D-003` separation restored after historical R3 self-verification** |
-| V10 | Wk3 | 01:36:16 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ✅ **R1 REVISE 0C/0M/4m** | **IN REMEDIATION** (items 91-94) |
+| V10 | Wk3 | 01:36:16 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R2 PASS — 0C/0M/0m, HIGH, 2026-08-15; items 91–94 independently verified** | **Independent `D-003` separation restored after historical fix-round self-verification** |
 | V11 | Wk4 P1 | 00:50:56 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | **R1 REVISE 0C/0M/5min** | **IN REMEDIATION (items 109-113) · V12 GATE OPEN** |
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-080 + A-064 + A-031 + A-032 CLOSED, A-020 mayo row → Tier 1, C-019 opened, PT-040 MATERIAL |
 | V13 | Wk5 P1 | 01:05:22 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** · ⭐ A-084 NARROWED not closed (A-087), legend route CLOSED corpus-wide, A-088 + C-020 opened, Q-014 filed, PT-041 PARTIALLY SUPPORTED |
