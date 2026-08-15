@@ -1,0 +1,269 @@
+{
+  "test": "PT-050",
+  "seed": 20260812,
+  "band": [
+    40.0,
+    60.0
+  ],
+  "grid": [
+    0.0,
+    20.0,
+    40.0
+  ],
+  "primary_cell": "A|W-A",
+  "n3_fired": [
+    "A|W-B: modal fill differs",
+    "B|W-B: modal fill differs"
+  ],
+  "verdict": "FRAGILE",
+  "cells": {
+    "A|W-A": {
+      "arm": "A",
+      "window": "W-A",
+      "n_events": 99,
+      "median_mfe": 29.7,
+      "median_ci": [
+        23.2,
+        39.6
+      ],
+      "iqr": [
+        12.85,
+        54.2
+      ],
+      "in_band_pct": 18.2,
+      "in_band_wilson": [
+        11.8,
+        26.9
+      ],
+      "fill_distribution": {
+        "0": {
+          "n": 6,
+          "pct": 6.1,
+          "wilson": [
+            2.8,
+            12.6
+          ]
+        },
+        "1": {
+          "n": 30,
+          "pct": 30.3,
+          "wilson": [
+            22.1,
+            40.0
+          ]
+        },
+        "2": {
+          "n": 25,
+          "pct": 25.3,
+          "wilson": [
+            17.7,
+            34.6
+          ]
+        },
+        "3": {
+          "n": 38,
+          "pct": 38.4,
+          "wilson": [
+            29.4,
+            48.2
+          ]
+        }
+      },
+      "modal_fill": "3",
+      "n1_median_mfe": 15.65,
+      "n1_modal_fill": 1,
+      "n1_fill_pct": {
+        "0": 18.6,
+        "1": 38.6,
+        "2": 23.6,
+        "3": 19.1
+      }
+    },
+    "A|W-B": {
+      "arm": "A",
+      "window": "W-B",
+      "n_events": 206,
+      "median_mfe": 22.95,
+      "median_ci": [
+        19.1,
+        26.65
+      ],
+      "iqr": [
+        9.42,
+        41.45
+      ],
+      "in_band_pct": 15.5,
+      "in_band_wilson": [
+        11.2,
+        21.1
+      ],
+      "fill_distribution": {
+        "0": {
+          "n": 15,
+          "pct": 7.3,
+          "wilson": [
+            4.5,
+            11.7
+          ]
+        },
+        "1": {
+          "n": 76,
+          "pct": 36.9,
+          "wilson": [
+            30.6,
+            43.7
+          ]
+        },
+        "2": {
+          "n": 61,
+          "pct": 29.6,
+          "wilson": [
+            23.8,
+            36.2
+          ]
+        },
+        "3": {
+          "n": 54,
+          "pct": 26.2,
+          "wilson": [
+            20.7,
+            32.6
+          ]
+        }
+      },
+      "modal_fill": "1",
+      "n1_median_mfe": 12.8,
+      "n1_modal_fill": 1,
+      "n1_fill_pct": {
+        "0": 19.1,
+        "1": 44.8,
+        "2": 21.8,
+        "3": 14.3
+      }
+    },
+    "B|W-A": {
+      "arm": "B",
+      "window": "W-A",
+      "n_events": 98,
+      "median_mfe": 27.3,
+      "median_ci": [
+        23.3,
+        38.3
+      ],
+      "iqr": [
+        15.08,
+        53.08
+      ],
+      "in_band_pct": 17.3,
+      "in_band_wilson": [
+        11.1,
+        26.0
+      ],
+      "fill_distribution": {
+        "0": {
+          "n": 3,
+          "pct": 3.1,
+          "wilson": [
+            1.0,
+            8.6
+          ]
+        },
+        "1": {
+          "n": 31,
+          "pct": 31.6,
+          "wilson": [
+            23.3,
+            41.4
+          ]
+        },
+        "2": {
+          "n": 28,
+          "pct": 28.6,
+          "wilson": [
+            20.6,
+            38.2
+          ]
+        },
+        "3": {
+          "n": 36,
+          "pct": 36.7,
+          "wilson": [
+            27.9,
+            46.6
+          ]
+        }
+      },
+      "modal_fill": "3",
+      "n1_median_mfe": 16.6,
+      "n1_modal_fill": 1,
+      "n1_fill_pct": {
+        "0": 18.1,
+        "1": 37.6,
+        "2": 23.1,
+        "3": 21.3
+      }
+    },
+    "B|W-B": {
+      "arm": "B",
+      "window": "W-B",
+      "n_events": 207,
+      "median_mfe": 23.2,
+      "median_ci": [
+        20.2,
+        26.4
+      ],
+      "iqr": [
+        10.4,
+        41.85
+      ],
+      "in_band_pct": 15.0,
+      "in_band_wilson": [
+        10.8,
+        20.5
+      ],
+      "fill_distribution": {
+        "0": {
+          "n": 11,
+          "pct": 5.3,
+          "wilson": [
+            3.0,
+            9.3
+          ]
+        },
+        "1": {
+          "n": 77,
+          "pct": 37.2,
+          "wilson": [
+            30.9,
+            44.0
+          ]
+        },
+        "2": {
+          "n": 64,
+          "pct": 30.9,
+          "wilson": [
+            25.0,
+            37.5
+          ]
+        },
+        "3": {
+          "n": 55,
+          "pct": 26.6,
+          "wilson": [
+            21.0,
+            33.0
+          ]
+        }
+      },
+      "modal_fill": "1",
+      "n1_median_mfe": 12.75,
+      "n1_modal_fill": 1,
+      "n1_fill_pct": {
+        "0": 18.9,
+        "1": 44.2,
+        "2": 22.1,
+        "3": 14.8
+      }
+    }
+  }
+}
