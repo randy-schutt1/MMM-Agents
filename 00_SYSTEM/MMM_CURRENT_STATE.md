@@ -1,7 +1,7 @@
-# MMM CURRENT STATE — PHASE 1 CANONICAL SNAPSHOT
+# MMM CURRENT STATE — PHASE 2 CANONICAL SNAPSHOT
 
 **Status date:** 2026-08-15  
-**Canonical working branch:** `phase1/knowledge-consolidation`  
+**Canonical working branch:** `phase2/cross-lesson-review`
 **Purpose:** the concise, current entry point for every future agent. This file reports state; it
 does not adopt decisions, close evidence records, or authorize a later phase.
 
@@ -40,14 +40,15 @@ These statements are simultaneously true:
 
 - **The corpus is ingested end to end:** all 21 lessons have lesson artifacts.
 - **V21 is complete:** its R1 findings were fixed and independently re-verified at R2.
-- **The full course is not cumulatively certified:** `REVIEW_INDEX.md` item 386 says twelve open
-  `MINOR`s, but its own ranges total **fourteen**: V17 (244–249), V18 (264–268), V19 (303–304) and
-  V20 (348). Phase 2 corrected the count and found the wider gate: V09–V20 all retain `REVISE` as
-  their latest independent verdict.
-- **The self-verification policy is formalized by existing D-003/D-004/D-024:** the qualified
-  status `COMPLETE — SELF-VERIFIED AT OWNER DIRECTION` is not an independent `PASS`.
-- **Every cumulative review and the final review is `NOT STARTED`.** Therefore
-  `12_MASTER_SPEC/` and `13_MACHINE_SPEC/` remain correctly empty and gated.
+- **Lesson review is complete:** all 21 lessons are reviewed and approved. Fourteen hold a formal
+  independent reviewer `PASS`; V11, V13, V15 and V17–V20 are closed under owner ruling D-062 as
+  `COMPLETE — OWNER-AUTHORIZED REVIEWER REMEDIATION`. Their historical `REVISE` verdicts remain
+  preserved rather than being rewritten as later independent passes.
+- **The full course is not cumulatively certified:** the 25% and 50% reviews both return `HALT AND
+  REMEDIATE` because the existing V01–V10 student assessment is `NOT MASTERED`. The sealed targeted
+  retest must pass before the 75% checkpoint and final review begin.
+- **The final review is `NOT STARTED`.** Therefore `12_MASTER_SPEC/` and `13_MACHINE_SPEC/` remain
+  correctly empty and gated.
 
 No future agent may shorten these facts to either *"the course is unfinished"* or *"the system is
 fully mastered."* The correct state is: **lesson ingestion complete; cumulative reconstruction and
@@ -55,8 +56,9 @@ certification incomplete.**
 
 ## 4. Decision and evidence boundary
 
-- Highest adopted decision in `DECISIONS.md`: `D-057`.
-- Consolidated but unadopted drafts: `D-051`, `D-055`, `D-056`, `D-058`, `D-059`, `D-060`, `D-061`.
+- Highest adopted decision in `DECISIONS.md`: `D-062`.
+- D-062 records the owner's authorized reviewer-remediation workflow; it does not claim a later
+  independent re-review or waive the cumulative student gate.
 - The M15 `EMA(5)`/`EMA(13)` next-bar-close rule is recorded at `OWNER EMPIRICAL PREFERENCE` inside
   the `D-058` draft. It is computable as a **timing gate**, not a direction signal and not course
   evidence.
@@ -79,12 +81,11 @@ questions.
 
 ## 6. Phase boundary
 
-Phase 1 establishes a coherent knowledge base. It does not:
+Phase 2 has completed the lesson-review closeout and the 25%/50% cumulative reviews. It has not:
 
-- independently verify the applied fourteen-item V17–V20 sweep;
-- clear the V09–V16 independent-review backlog;
-- run cumulative or final course review;
+- pass the sealed targeted V01–V10 student retest;
+- run the 75% cumulative or final course review;
 - authorize or populate the Master Specification;
 - claim a validated trading edge.
 
-Those are Phase 2 responsibilities.
+Those are the remaining Phase 2 gates.

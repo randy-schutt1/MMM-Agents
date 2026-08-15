@@ -3,8 +3,8 @@
 ```text
 ACTIVE PHASE: 2 — CROSS-LESSON REVIEW AND HUMAN RECONSTRUCTION
 BRANCH: phase2/cross-lesson-review
-STATE: REMEDIATION APPLIED; INDEPENDENT REVIEW GATE OPEN
-NEXT PHASE: 3 — SPECIFICATION, ONLY AFTER 21/21 INDEPENDENT PASS AND FINAL REVIEW
+STATE: 21/21 REVIEWED AND APPROVED; CUMULATIVE STUDENT RETEST PENDING
+NEXT PHASE: 3 — SPECIFICATION, ONLY AFTER TARGETED RETEST, 75% CHECKPOINT AND FINAL REVIEW
 ```
 
 ## Phase 1 checklist
@@ -31,9 +31,12 @@ Phase 2 may begin only under the boundaries in `MMM_CURRENT_STATE.md` and
 - [x] Apply all fourteen V17–V20 student-owned remediations.
 - [x] Formalize the existing self-verification boundary without inventing an owner decision.
 - [x] Complete the human reconstruction audit.
-- [ ] Obtain a fresh independent R2/R3 for the Phase 2 edits.
-- [ ] Clear the V09–V16 independent-review backlog.
-- [ ] Reach 21/21 independent reviewer `PASS`.
+- [x] Close V11/V13/V15/V17–V20 reviewer-remediated findings under owner ruling D-062.
+- [x] Clear the lesson-review backlog: 21/21 reviewed and approved.
+- [x] Complete the overdue 25% and 50% cumulative reviews.
+- [ ] Pass the sealed targeted Student retest.
+- [ ] Complete the 75% cumulative review.
 - [ ] Execute the official cumulative and final reviews.
 
-The unchecked items are real gates. `FINAL_COURSE_REVIEW.md` remains `NOT STARTED` by design.
+The unchecked retest/75%/final items are the remaining gates. `FINAL_COURSE_REVIEW.md` remains
+`NOT STARTED` by design.

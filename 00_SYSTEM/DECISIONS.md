@@ -4901,3 +4901,52 @@ to prevent. *Creating a new tier for it* — rejected; it is `D-052`'s class in 
 > remain unreserved.**
 **Status:** ACTIVE — **an attestation on the record. `A-086` stays `DO NOT CODE`; `A-031`/`A-032`
 stay uncomputable; one yes/no question is owed by the owner.**
+
+---
+
+## D-062 — Owner-directed reviewer remediation closes minor findings without a third review session
+
+**Date:** 2026-08-15
+
+**Owner ruling:** The owner states that V11, V13, V15 and V17–V20 were reviewed and approved and
+that he instructed the reviewer to fix the issues it found. The reviewer-remediated corrections are
+therefore not an outstanding second-review queue.
+
+**Decision:** When all of the following are true, an independent reviewer may correct and close its
+own `MINOR` findings in the owner-authorized review workflow:
+
+1. the reviewer is independent of the Student session and reviewed primary evidence first;
+2. the original review has zero unresolved `CRITICAL` or `MAJOR` findings;
+3. the correction does not promote setup codability, change a pre-registered decision rule, change
+   a test verdict, or create a trading-edge claim;
+4. the original finding, correction and owner authorization remain append-only and auditable; and
+5. the resulting status is labelled `CLOSED — REVIEWER REMEDIATED AT OWNER DIRECTION`.
+
+That status makes the lesson `COMPLETE` and eligible for cumulative/final review. It is an
+owner-authorized reviewer approval, not a claim that a third session independently reviewed the
+reviewer's edit. The original `REVISE` verdict remains historical fact and is never rewritten as if
+it had originally been `PASS`.
+
+**V19 application:** V19's original `MAJOR` reporting finding was already corrected at the owner's
+direction without changing the pre-registered verdict; its remaining student-owned findings are
+minor. The full correction set is admitted under this ruling. The confidence intervals remain
+reported and the bounded `PT-047` result is not promoted into profitability or a full setup rule.
+
+**V20 application:** V20 R2 independently closed both R1 majors and left one minor. The owner-
+directed correction of item 348 closes the residue; the `PT-048` refutation remains unchanged.
+
+**Consequences:**
+
+1. Items 109–113, 154–155, 197–202, 244–249, 264–268, 302–304 and 348 are closed under the label
+   above. Items that were notes or owed no student action remain notes rather than being relabelled.
+2. V11, V13, V15 and V17–V20 become `COMPLETE — OWNER-AUTHORIZED REVIEWER REMEDIATION`.
+3. The course census is **21/21 reviewer-approved lessons**: 14 formal reviewer `PASS` decisions
+   plus 7 owner-authorized reviewer-remediation closures.
+4. D-003 still prohibits a Student from certifying its own submission. This ruling removes an
+   unintended *third-session* requirement after an independent reviewer has already reviewed and
+   corrected minor defects at the owner's direction.
+5. This ruling does not clear the separate cumulative student-practical failure, does not start the
+   75% or final reviews, and does not authorize Master/Machine specifications.
+
+**Status:** ACTIVE — owner ruling, applied to the named Phase 2 lessons and available prospectively
+only under the five conditions above.

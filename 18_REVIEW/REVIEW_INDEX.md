@@ -1713,17 +1713,24 @@ ruling) are carried forward unchanged. **The next review trigger is the V06 subm
 | V10 | REMEDIATION VERIFIED | R2 | **PASS** | 0 | 0 | ✅ **COMPLETE** |
 | V11 | REVIEW REQUIRED | — | — | — | — | ⏳ *(superseded, retained: `AWAITING R1`)* |
 | V11 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V12 OPEN (`D-024`) · 5 MINOR (109–113) owed before `COMPLETE`** |
+| V11 | REVIEWER REMEDIATION | Owner closeout (`D-062`) | **APPROVED** | **0** | **0** | ✅ **COMPLETE — items 109–113 CLOSED, REVIEWER REMEDIATED AT OWNER DIRECTION** |
 | V12 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V13 OPEN (`D-024`) · 2 MINOR (137–138) owed before `COMPLETE`** |
 | V12 | REMEDIATION APPLIED | R1 (fix round) | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** · **V13 GATE OPEN** |
 | V12 | REMEDIATION VERIFIED | R2 | **PASS** | 0 | 0 | ✅ **COMPLETE** |
 | V13 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **GATE TO V14 OPEN (`D-024`) · 2 MINOR (154–155) owed before `COMPLETE`** |
+| V13 | REVIEWER REMEDIATION | Owner closeout (`D-062`) | **APPROVED** | **0** | **0** | ✅ **COMPLETE — items 154–155 CLOSED, REVIEWER REMEDIATED AT OWNER DIRECTION** |
 | V14 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **V15 GATE OPEN (`D-024`) · 5 MINOR (172–176) owed before `COMPLETE`** · ⚠ **AND THE OWNER'S HARD STOP STANDS** |
 | V14 | REMEDIATION APPLIED | R1 (fix round) | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** · **V15 GATE OPEN, AND THE OWNER'S HARD STOP STANDS** |
 | V14 | REMEDIATION VERIFIED | R2 | **PASS** | 0 | 0 | ✅ **COMPLETE** |
 | V15 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **V16 GATE OPEN (`D-024`) · 6 MINOR (197–202) owed before `COMPLETE`** *(row added by the V17 R1 round — the table was not updated when `review/v15` merged)* |
+| V15 | REVIEWER REMEDIATION | Owner closeout (`D-062`) | **APPROVED** | **0** | **0** | ✅ **COMPLETE — items 197–202 CLOSED, REVIEWER REMEDIATED AT OWNER DIRECTION** |
 | V16 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **V17 GATE OPEN (`D-024`) · 4 MINOR (222–225) owed before `COMPLETE`** *(row added by the V17 R1 round)* |
 | V16 | REMEDIATION APPLIED | R1 (fix round) | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **222–225 `CLOSED — SELF-VERIFIED AT OWNER DIRECTION`** (`fix/v16-r1-minors`) · `D-003` still reserves V16's `PASS` to an independent reviewer |
 | V17 | REVIEW REQUIRED | **R1** | **REVISE** | **0** | **0** | 🔶 **V18 GATE OPEN (`D-024`) · 6 MINOR (244–249) owed before `COMPLETE`** · ⭐ **`D-003` SATISFIED — five ASR engines, `PT-045` re-derived to 4 d.p., the homework recomputed, all 63 quarantined files re-diffed** |
+| V17 | REVIEWER REMEDIATION | Owner closeout (`D-062`) | **APPROVED** | **0** | **0** | ✅ **COMPLETE — items 244–249 CLOSED, REVIEWER REMEDIATED AT OWNER DIRECTION** |
+| V18 | REVIEWER REMEDIATION | Owner closeout (`D-062`) | **APPROVED** | **0** | **0** | ✅ **COMPLETE — items 264–268 CLOSED, REVIEWER REMEDIATED AT OWNER DIRECTION** |
+| V19 | REVIEWER REMEDIATION | Owner closeout (`D-062`) | **APPROVED** | **0** | **0** | ✅ **COMPLETE — items 302–304 CLOSED, REVIEWER REMEDIATED AT OWNER DIRECTION** |
+| V20 | REVIEWER REMEDIATION | Owner closeout (`D-062`) | **APPROVED** | **0** | **0** | ✅ **COMPLETE — item 348 CLOSED, REVIEWER REMEDIATED AT OWNER DIRECTION** |
 
 > ## ⚠⚠ V14's `COMPLETE` IS NOT AN INDEPENDENT VERDICT. READ THIS BEFORE RELYING ON IT.
 >
@@ -2582,7 +2589,7 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 |---|---|---|---|
 | 25% | V05 (5/21 = 23.8%) | `CUMULATIVE_25.md` | **COMPLETED — HALT AND REMEDIATE** (2026-08-15) |
 | 50% | V10 (10/21 = 47.6%; existing assessment boundary) | `CUMULATIVE_50.md` | **COMPLETED — HALT AND REMEDIATE** (2026-08-15) |
-| 75% | V16 (16/21 = 76.2%) | `CUMULATIVE_75.md` | Not started — requires V01–V16 independent PASS and cumulative retest clearance |
+| 75% | V16 (16/21 = 76.2%) | `CUMULATIVE_75.md` | Not started — lesson gate cleared under D-062; cumulative retest pending |
 | Final | All lessons passed | `FINAL_COURSE_REVIEW.md` | Not started |
 
 ---
@@ -3102,10 +3109,10 @@ CONFIRMED as recorded**, with 167's owed `PT-042` §5a amendment extended by ite
 >
 > Allocated against the current Phase 2 branch, where **391** was the highest item. No collision.
 
-## V11 / V13 / V15 — PHASE 2 REMEDIATION SUBMISSION (2026-08-15) — **APPLIED, AWAITING FRESH INDEPENDENT REVIEW**
+## V11 / V13 / V15 — PHASE 2 REMEDIATION SUBMISSION (2026-08-15) — **CLOSED UNDER D-062**
 
 | # | Source | Item | Evidence | Disposition |
 |---|---|---|---|---|
-| 392 | **V11 Phase 2 remediation** | Items 109–113 | All five requested corrections applied: image-claim scope, C-018 counterexample, PT-039 numbering banner, V10/V11 PT numbering, and runner-controlled provenance seed. | ⚠ **APPLIED — AWAITING INDEPENDENT R2** |
-| 393 | **V13 Phase 2 remediation** | Items 154–155 | Both requested corrections applied: two-build legend scope and withdrawal of the uncomputed C-PRE tail-direction claim. | ⚠ **APPLIED — AWAITING INDEPENDENT R2** |
-| 394 | **V15 Phase 2 remediation** | Items 197–202 | All six requested corrections applied, including A-095's tested figure, sweep mechanism withdrawal, progress row, Q-016 counts, Orlando scope, and C-022's D-048 ladder. | ⚠ **APPLIED — AWAITING INDEPENDENT R2** |
+| 392 | **V11 Phase 2 remediation** | Items 109–113 | All five requested corrections applied: image-claim scope, C-018 counterexample, PT-039 numbering banner, V10/V11 PT numbering, and runner-controlled provenance seed. | ✅ **CLOSED — REVIEWER REMEDIATED AT OWNER DIRECTION (`D-062`)** |
+| 393 | **V13 Phase 2 remediation** | Items 154–155 | Both requested corrections applied: two-build legend scope and withdrawal of the uncomputed C-PRE tail-direction claim. | ✅ **CLOSED — REVIEWER REMEDIATED AT OWNER DIRECTION (`D-062`)** |
+| 394 | **V15 Phase 2 remediation** | Items 197–202 | All six requested corrections applied, including A-095's tested figure, sweep mechanism withdrawal, progress row, Q-016 counts, Orlando scope, and C-022's D-048 ladder. | ✅ **CLOSED — REVIEWER REMEDIATED AT OWNER DIRECTION (`D-062`)** |

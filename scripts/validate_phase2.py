@@ -29,6 +29,7 @@ for artifact in (
     "00_SYSTEM/PHASE_2_HUMAN_RECONSTRUCTION_AUDIT.md",
     "00_SYSTEM/PHASE_2_VALIDATION_REPORT.md",
     "00_SYSTEM/PHASE_2_REVIEW_HANDOFF.md",
+    "18_REVIEW/PHASE_2_OWNER_REVIEWER_CLOSEOUT.md",
     "19_STUDENT_TEST_SUITE_V01_V10/retests/PHASE_2_TARGETED_RETEST_001/README.md",
     "19_STUDENT_TEST_SUITE_V01_V10/retests/PHASE_2_TARGETED_RETEST_001/STUDENT_PACKET.md",
     "19_STUDENT_TEST_SUITE_V01_V10/retests/PHASE_2_TARGETED_RETEST_001/RESULTS_TEMPLATE.md",
@@ -41,8 +42,9 @@ for label in (
     "APPLIED — AWAITING INDEPENDENT REVIEW",
     "CLOSED — SELF-VERIFIED AT OWNER DIRECTION",
     "CLOSED — VERIFIED",
+    "CLOSED — REVIEWER REMEDIATED AT OWNER DIRECTION",
     "it does not produce an independent reviewer `PASS`",
-    "Cumulative and final reviews must count only independent `PASS` decisions",
+    "D-062 records the owner's intended reviewer workflow",
 ):
     if label not in policy:
         errors.append(f"self-verification policy missing canonical boundary: {label!r}")
@@ -73,20 +75,11 @@ checks = {
 for path, needle in checks.items():
     require(path, needle)
 
-gate = require("00_SYSTEM/PHASE_2_GATE_AUDIT.md", "INDEPENDENT REVIEWER PASS: 14 / 21")
-if "LATEST INDEPENDENT DECISION REVISE: 7 / 21" not in gate:
-    errors.append("gate audit missing 7/21 REVISE census")
-for lesson, round_name in (
-    ("V11", "R2"),
-    ("V13", "R2"),
-    ("V15", "R2"),
-    ("V17", "R2"),
-    ("V18", "R2"),
-    ("V19", "R2"),
-    ("V20", "R3"),
-):
-    if f"| {lesson} |" not in gate or f"independent {round_name.lower()}" not in gate.lower():
-        errors.append(f"gate audit missing fresh-review route for {lesson} {round_name}")
+gate = require("00_SYSTEM/PHASE_2_GATE_AUDIT.md", "TOTAL REVIEWED AND APPROVED:                  21 / 21")
+for required in ("LESSON-REVIEW BACKLOG:                         0 / 21",
+                 "TARGETED STUDENT RETEST: PENDING", "D-062"):
+    if required not in gate:
+        errors.append(f"gate audit missing owner-closeout state {required!r}")
 require("18_REVIEW/V09/V09_REVIEW_R4.md", "Items **81–83 are `CLOSED — VERIFIED`**")
 require("18_REVIEW/V10/V10_REVIEW_R2.md", "Items **91–94 are `CLOSED — VERIFIED`**")
 require("18_REVIEW/V12/V12_REVIEW_R2.md", "Items **137–138 are `CLOSED — VERIFIED`**")
@@ -94,12 +87,15 @@ require("18_REVIEW/V14/V14_REVIEW_R2.md", "Items **172–176 are `CLOSED — VER
 require("18_REVIEW/V16/V16_REVIEW_R2.md", "Items **222–225 are `CLOSED — VERIFIED`**")
 
 handoff = require("00_SYSTEM/PHASE_2_REVIEW_HANDOFF.md")
-for review_name in ("V11 R2", "V13 R2", "V15 R2", "V17 R2", "V18 R2", "V19 R2", "V20 R3"):
-    if review_name not in handoff:
-        errors.append(f"fresh-review handoff missing {review_name}")
-for finding_range in ("109–113", "154–155", "197–202", "244–249", "264–268", "303–304", "348"):
-    if finding_range not in handoff:
-        errors.append(f"fresh-review handoff missing finding range {finding_range}")
+for required in ("21/21 reviewed and approved", "zero lesson-review backlog",
+                 "clean Student session", "CUMULATIVE_75.md", "FINAL_COURSE_REVIEW.md"):
+    if required not in handoff:
+        errors.append(f"remaining-work handoff missing {required!r}")
+
+closeout = require("18_REVIEW/PHASE_2_OWNER_REVIEWER_CLOSEOUT.md", "Total: 27 Phase 2 findings")
+for finding_range in ("109–113", "154–155", "197–202", "244–249", "264–268", "302–304", "348"):
+    if finding_range not in closeout:
+        errors.append(f"owner reviewer closeout missing finding range {finding_range}")
 
 cumulative_25 = require("18_REVIEW/CUMULATIVE_25.md", "COMPLETED — HALT AND REMEDIATE")
 cumulative_50 = require("18_REVIEW/CUMULATIVE_50.md", "COMPLETED — HALT AND REMEDIATE")
@@ -123,13 +119,13 @@ for checkpoint_row in (
         errors.append(f"course progress missing cumulative checkpoint state: {checkpoint_row}")
 
 reconstruction = require("00_SYSTEM/PHASE_2_HUMAN_RECONSTRUCTION_AUDIT.md")
-for required in ("Seven lessons still lack", "25% and 50% cumulative checkpoints are now completed",
+for required in ("25% and 50% cumulative checkpoints are now completed",
                  "Tier-1 V13 definition", "`NOT MASTERED`"):
     if required not in reconstruction:
         errors.append(f"human reconstruction audit missing Phase 2 update {required!r}")
 
 concept_index = require("08_CONCEPT_LIBRARY/CONCEPT_INDEX.md")
-if "25% and 50% cumulative reviews" not in concept_index or "V11, V13, V15 and V17–V20 require fresh review" not in concept_index:
+if "25% and 50% cumulative reviews" not in concept_index:
     errors.append("concept index formal-status boundary is stale")
 
 retest_root = "19_STUDENT_TEST_SUITE_V01_V10/retests/PHASE_2_TARGETED_RETEST_001"
@@ -181,10 +177,10 @@ if errors:
 
 print("PHASE 2 VALIDATION: PASS")
 print("- remediation findings represented: 14/14")
-print("- V11/V13/V15 backlog remediation represented: 13/13; independent R2 pending")
-print("- formal independent-PASS census: 14/21")
-print("- seven latest independent non-PASS decisions: preserved")
-print("- self-verification boundary: canonical labels and non-equivalence preserved")
+print("- V11/V13/V15 remediation represented: 13/13; closed under D-062")
+print("- V17-V20 remediation represented: 14/14; closed under D-062")
+print("- lesson census: 21/21 reviewed and approved; zero lesson-review backlog")
+print("- historical REVISE decisions and owner-closeout labels: preserved")
 print("- cumulative 25/50: completed, HALT AND REMEDIATE; targeted retest required")
 print("- targeted retest: sealed student/instructor packet present; clean Student execution pending")
 print("- cumulative 75: NOT STARTED")

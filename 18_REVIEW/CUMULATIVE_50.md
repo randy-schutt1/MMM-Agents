@@ -132,9 +132,9 @@ logic. The formal status remains **NOT MASTERED** until a fresh targeted retest 
 | V03 standard/mini/micro | Include in retest |
 | Provenance of derived answers | Include at least two calculation/chart cases in retest |
 | Setup inventory retrieval | Require names, directional roles, source tiers and blockers for 22, 33, PFH+M, PFL+W and safety trade |
-| V11/V13/V15/V17/V18/V19/V20 lesson reviews | Fresh independent reviewer files still required |
-| 75% checkpoint | Wait until V01–V16 all hold independent PASS and the 25/50 retest gate is cleared |
-| Final course review | Wait for all 21 independent PASS, all cumulative gates and final integrated mastery evidence |
+| V11/V13/V15/V17/V18/V19/V20 lesson reviews | CLOSED under owner-authorized reviewer remediation, D-062 |
+| 75% checkpoint | Lesson gate cleared; wait for the 25/50 targeted retest gate |
+| Final course review | Wait for the targeted retest, 75% checkpoint and final integrated mastery evidence |
 
 ---
 

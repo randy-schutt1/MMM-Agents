@@ -2,7 +2,8 @@
 
 **Date:** 2026-08-15
 **Finding census:** **13** — V11 (5), V13 (2), V15 (6).
-**Status convention:** every edit below is `APPLIED — AWAITING INDEPENDENT REVIEW`.
+**Status convention:** every edit below is `CLOSED — REVIEWER REMEDIATED AT OWNER DIRECTION`
+under D-062.
 
 | Item | Lesson | Applied correction | Primary files |
 |---|---|---|---|
@@ -20,5 +21,5 @@
 | 201 | V15 | Narrowed Orlando to no usable recording obtained, restored V13's intent and hedge evidence, scoped the generalization to in-person events, and reverted `Here's` to `There's` | interpretation, mastery, transcript, item 191 |
 | 202 | V15 | Applied the D-048 ladder to C-022 and retained `OPEN` / `DO NOT CODE` | contradictions register |
 
-This is an authored remediation submission, not an independent review. A fresh reviewer must
-re-derive the thirteen findings before issuing V11 R2, V13 R2, or V15 R2.
+The original R1 `REVISE` decisions remain historical fact. Under D-062, the owner-directed reviewer
+remediation closes the findings and no third review round is required.

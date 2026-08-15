@@ -11758,3 +11758,21 @@ Instructor key. This session authored and read the key and therefore cannot take
 role. The 75% and final reviews remain `NOT STARTED`; seven lesson reviews also remain fresh-session
 work. Validation: Phase 2 PASS, Phase 1 PASS, structural 103/0/0, suite validator PASS, whitespace
 PASS. Master and Machine Specification directories remain empty.
+
+---
+
+## 2026-08-15 — PHASE 2 — OWNER-DIRECTED REVIEWER REMEDIATION CLOSEOUT
+
+Owner clarification established that V11, V13, V15 and V17–V20 were reviewed and approved and
+that the reviewer was authorized to correct the issues it found. Decision D-062 now records that
+workflow without inventing a third-session independent `PASS` or rewriting the historical
+`REVISE` decisions. All 27 findings across those seven lessons are closed as
+`CLOSED — REVIEWER REMEDIATED AT OWNER DIRECTION`.
+
+**Lesson census:** 14 formal reviewer `PASS` decisions plus 7 owner-authorized reviewer-remediation
+closures = **21/21 reviewed and approved; zero lesson-review backlog**.
+
+The cumulative gate remains unchanged: the 25% and 50% reviews are `HALT AND REMEDIATE`, and the
+sealed targeted Student retest must pass before the 75% checkpoint and final course review begin.
+Master and Machine Specification directories remain empty. Validation: Phase 2 PASS, Phase 1 PASS,
+structural 103/0/0, suite validator PASS, whitespace PASS.

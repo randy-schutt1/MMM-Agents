@@ -17,8 +17,8 @@ single deterministic setup-classification pipeline from raw charts.
    no canonical setup registry existed until Phase 1.
 2. The concept library intentionally contains zero promoted `CL-NNN` concepts, so the old retrieval
    surface offered no setup answer even though lesson-level knowledge existed.
-3. Seven lessons still lack an independent reviewer `PASS`; “reviewed” was repeatedly mistaken for
-   “certified.”
+3. All 21 lessons are reviewed and approved under D-062, but lesson approval does not itself create
+   the missing cross-lesson retrieval and raw-chart definitions.
 4. The overdue 25% and 50% cumulative checkpoints are now completed, but both return `HALT AND
    REMEDIATE`; the targeted retest and the 75%/final reviews remain incomplete.
 5. Core chart primitives remain undefined: first-leg anatomy, objective level segmentation,

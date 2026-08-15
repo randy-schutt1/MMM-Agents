@@ -2,7 +2,8 @@
 
 **Date:** 2026-08-15
 **Finding census:** **14**, correcting the Phase 1 handoff's count of twelve.
-**Status convention:** every edit below is `APPLIED — AWAITING INDEPENDENT REVIEW` unless noted.
+**Status convention:** every edit below is `CLOSED — REVIEWER REMEDIATED AT OWNER DIRECTION`
+under D-062.
 
 | Item | Lesson | Applied correction | Primary files |
 |---|---|---|---|
@@ -21,5 +22,5 @@
 | 304 | V19 | Removed the false star-backtest cross-reference and stated that the star claim remains untested | interpretation |
 | 348 | V20 | Declared the random-window direction convention and narrowed scale-invariant language to the tested convention/scales | BT report |
 
-The original review findings remain unchanged and visible in `REVIEW_INDEX.md`. This ledger records
-remediation; it is not a substitute for the required fresh review round.
+The original review findings remain unchanged and visible in `REVIEW_INDEX.md`. D-062 removes the
+unintended third-review requirement while preserving that historical record.

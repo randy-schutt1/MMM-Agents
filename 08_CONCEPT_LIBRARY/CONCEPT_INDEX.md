@@ -25,11 +25,12 @@ FINAL COURSE REVIEW:    NOT STARTED
 > retains its original promotion history below; zero promoted files must never again be reported as
 > zero setup knowledge.
 
-> **Formal-status boundary, updated 2026-08-15.** All 21 lessons are ingested; 14 hold an independent
-> `PASS`, while V11, V13, V15 and V17–V20 require fresh review. The 25% and 50% cumulative reviews
-> are complete and both say `HALT AND REMEDIATE` because the existing student practical is formally
-> `NOT MASTERED`. The targeted retest, 75% checkpoint and `FINAL_COURSE_REVIEW.md` remain pending.
-> No concept is promoted and the Master Specification remains prohibited.
+> **Formal-status boundary, updated 2026-08-15.** All 21 lessons are ingested, reviewed and
+> approved: 14 formal `PASS` decisions plus seven owner-authorized reviewer-remediation closures
+> under D-062. The 25% and 50% cumulative reviews are complete and both say `HALT AND REMEDIATE`
+> because the existing student practical is formally `NOT MASTERED`. The targeted retest, 75%
+> checkpoint and `FINAL_COURSE_REVIEW.md` remain pending. No concept is promoted and the Master
+> Specification remains prohibited.
 
 > **UPDATED 2026-08-14 (V16 session).** `LESSONS STUDIED` read **`3`** while sixteen
 > lessons had been studied. **That is the third time this exact block has gone stale

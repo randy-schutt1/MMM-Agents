@@ -9,14 +9,14 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ## SUMMARY
 
 ```text
-PHASE:               2 — CROSS-LESSON REVIEW  (ingestion complete; certification blocked)
+PHASE:               2 — CROSS-LESSON REVIEW  (lesson review complete; cumulative retest pending)
 VIDEOS INGESTED:     21
-PHASE 2 AUDIT:       ACTIVE 2026-08-15 on phase2/cross-lesson-review.
-                     Formal census: 9/21 independent PASS; V09-V20 latest
-                     independent verdict remains REVISE. The V17-V20 ranges
-                     total 14 findings, not 12. All 14 remediations are applied
-                     and await a fresh reviewer. FINAL_COURSE_REVIEW remains
-                     NOT STARTED; Master/Machine specs remain gated.
+PHASE 2 AUDIT:       21/21 REVIEWED AND APPROVED under D-062.
+                     14 formal PASS + 7 owner-authorized reviewer-remediation
+                     closures; zero lesson-review backlog. All 27 Phase 2
+                     findings are closed. The targeted Student retest, 75%
+                     checkpoint and FINAL_COURSE_REVIEW remain pending;
+                     Master/Machine specs remain gated.
 V17 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
                      branch video/v17 (worktree MMM-Agents-v17, D-038).
 
@@ -2498,6 +2498,12 @@ fabricate, interpolate, or infer Week 6 content.**
 
 ## PROGRESS TABLE
 
+> **D-062 OWNER CLOSEOUT (2026-08-15):** V11, V13, V15 and V17–V20 are `COMPLETE —
+> OWNER-AUTHORIZED REVIEWER REMEDIATION`. For V17–V20, the unusually long rows below are retained as
+> historical R1/R2 review snapshots; their former `IN REMEDIATION` wording is superseded by
+> `18_REVIEW/PHASE_2_OWNER_REVIEWER_CLOSEOUT.md`. Course lesson-review census: **21/21 reviewed and
+> approved; zero lesson-review backlog.** This does not clear the separate cumulative student retest.
+
 | Video | Session | Duration | Source Verified | Transcript | Notes | Screenshots | Homework | Manual Backtest | Student Mastery | Reviewer | Final Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | V01 | Wk1 P1 | 00:54:43 | ✅ | ✅ | ✅ | ✅ | ⏸ | — | REVIEW REQUIRED (resub) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
@@ -2510,11 +2516,11 @@ fabricate, interpolate, or infer Week 6 content.**
 | V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R2 PASS — 0C/0M/0m** | **COMPLETE** |
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R4 PASS — 0C/0M/0m, HIGH, 2026-08-15; items 81–83 independently verified** | **Independent `D-003` separation restored after historical R3 self-verification** |
 | V10 | Wk3 | 01:36:16 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R2 PASS — 0C/0M/0m, HIGH, 2026-08-15; items 91–94 independently verified** | **Independent `D-003` separation restored after historical fix-round self-verification** |
-| V11 | Wk4 P1 | 00:50:56 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | **R1 REVISE 0C/0M/5min** | **REMEDIATION APPLIED — AWAITING INDEPENDENT R2** (items 109–113) · V12 GATE OPEN |
+| V11 | Wk4 P1 | 00:50:56 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R1 REVISE 0C/0M/5min; reviewer remediated at owner direction (`D-062`)** | **COMPLETE — OWNER-AUTHORIZED REVIEWER REMEDIATION** (109–113 closed) |
 | V12 | Wk4 P2 | 00:55:18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R2 PASS — 0C/0M/0m, HIGH, 2026-08-15; items 137–138 independently verified** | **Independent `D-003` separation restored; substantive A/C/PT results unchanged** |
-| V13 | Wk5 P1 | 01:05:22 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | **R1 REVISE 0C/0M/2min** | **REMEDIATION APPLIED — AWAITING INDEPENDENT R2** (items 154–155) · A-084 remains open · PT-041 remains PARTIALLY SUPPORTED |
+| V13 | Wk5 P1 | 01:05:22 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ⭐ **COMPLETE** | **R1 REVISE 0C/0M/2min; reviewer remediated at owner direction (`D-062`)** | **COMPLETE — OWNER-AUTHORIZED REVIEWER REMEDIATION** (154–155 closed) · A-084 open · PT-041 PARTIALLY SUPPORTED |
 | V14 | Wk5 P2 | 00:47:48 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R2 PASS — 0C/0M/0m, HIGH, 2026-08-15; items 172–176 independently verified** | **Substantive A/C/PT states and the separate Gap B follow-on remain unchanged** |
-| V15 | Wk7 P1 | 00:52:05 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **REMEDIATION APPLIED — AWAITING INDEPENDENT R2** (items 197–202) · ⭐ **V16 GATE OPEN under D-024** |
+| V15 | Wk7 P1 | 00:52:05 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R1 REVISE 0C/0M/6m; reviewer remediated at owner direction (`D-062`)** | **COMPLETE — OWNER-AUTHORIZED REVIEWER REMEDIATION** (197–202 closed) |
 | V16 | Wk7 P2 | 00:44:35 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R2 PASS — 0C/0M/0m, HIGH, 2026-08-15; items 222–225 independently verified** | **Independent `D-003` separation restored; `A-101` remains `DO NOT CODE`, and `PT-044` remains a bounded GBP/USD distribution test rather than trading-edge evidence** |
 | V17 | Wk8 P1 | 00:57:09 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 244–249) · ⭐ **V18 GATE OPEN under D-024** · ⭐⭐ **the `D-004` gate was ACTUALLY OPEN THE WHOLE TIME** — V16's R1 merged at `0fee48c` **17:16:53**, before V17's first content commit `f55c2f3` **17:20:11**; the addendum's *"returned after this session's last content commit"* is refuted by the graph (item 246) and **the compounding never happened** · ⭐⭐ **`PT-045` RE-DERIVED from its pre-registration before the runner was opened and ARM A REPRODUCES TO FOUR DECIMAL PLACES**; the calendar-consecutive artefact RE-EXECUTED and it really does return a clean 4-of-4 refutation; the homework's `<50 pips` filter recomputed at **0.8512 / 0.8893**; `C-023`, `C-024`, `C-027`, `A-011` all confirmed on a third engine or off the pixels · ⭐⭐ **THE FABRICATION PATTERN IS SOLVED FOR THE WHOLE COURSE — two templates, A for 1–15 and 21, B for 16–20; V18/V19/V20 are BYTE CLONES of V17's (item 254)** · ⚠ item 244: `[00:11:22]` is *"an extra **week in between**"* on THREE engines, not *"weekend"* — **item 238's inference INVERTS and is ANSWERED, not returned** |
 | V18 | Wk8 P2 | 00:46:08 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/5m/16n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 264–268) · ⭐ **V19 GATE OPEN under D-024** · ⭐⭐ **THE COMMITTED TRANSCRIPT INVERTS A RULE and R1 CONFIRMED IT FROM THE PIXELS** — `[00:19:40]` reads *"Counter trends are advised"*; both printed slides read `Counter Trend Is Ill Advised` (`On V1` / `on A1`). The raw line is retained verbatim and no artifact quotes it as a rule · ⭐⭐ **`PT-046` NULL RE-DERIVED ON INDEPENDENT REVIEWER CODE** — the pre-committed baseline `O2 = 0.5124 [0.4928, 0.5320]`, n = 2,498 reproduces EXACTLY; run-length mode 1 not 2; length-2 runs 366 vs 367 expected · ⭐⭐ **`N3` FIRED IN BOTH IMPLEMENTATIONS**, refusing a positive-lift replication as a boundary artefact · ⭐ **ALL 26 FRAME TIMECODES VERIFIED 26/26 FROM THE PIXELS**; the `0 → −3 s` drift is genuine and new to the corpus · ⭐ **the gate was OPEN and the session CHECKED rather than repeating a stale briefing** (item 278)
@@ -2707,7 +2713,7 @@ uses V16.
 |---|---|---|---|
 | 25% | V05 | `18_REVIEW/CUMULATIVE_25.md` | **COMPLETED — HALT AND REMEDIATE** |
 | 50% | V10 | `18_REVIEW/CUMULATIVE_50.md` | **COMPLETED — HALT AND REMEDIATE** |
-| 75% | V16 | `18_REVIEW/CUMULATIVE_75.md` | Not started — requires V01–V16 independent PASS and targeted retest clearance |
+| 75% | V16 | `18_REVIEW/CUMULATIVE_75.md` | Not started — lesson gate cleared; targeted retest clearance pending |
 | 100% | All lessons passed | `18_REVIEW/FINAL_COURSE_REVIEW.md` | Not started |
 
 ---

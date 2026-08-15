@@ -2,69 +2,48 @@
 
 **Date:** 2026-08-15
 **Branch:** `phase2/cross-lesson-review`
-**Purpose:** determine whether the cumulative and final course reviews may formally begin.
+**Owner ruling:** D-062
 
-## Result
+## Current result
 
 ```text
-INDEPENDENT REVIEWER PASS: 14 / 21
-LATEST INDEPENDENT DECISION REVISE: 7 / 21
-FINAL_COURSE_REVIEW PRECONDITION: FAILED
+FORMAL REVIEWER PASS:                         14 / 21
+OWNER-AUTHORIZED REVIEWER REMEDIATION CLOSE:  7 / 21
+TOTAL REVIEWED AND APPROVED:                  21 / 21
+LESSON-REVIEW BACKLOG:                         0 / 21
 CUMULATIVE 25/50: COMPLETED — HALT AND REMEDIATE
+TARGETED STUDENT RETEST: PENDING
 CUMULATIVE 75: NOT STARTED
-MASTER SPECIFICATION: PROHIBITED
-MACHINE SPECIFICATION: PROHIBITED
+FINAL_COURSE_REVIEW: NOT STARTED
+MASTER/MACHINE SPECIFICATIONS: PROHIBITED
 ```
 
-The fourteen independent passes are V01–V10, V12, V14, V16, and V21. Seven lessons retain latest independent
-`REVISE` decisions. A gate-opening minor-only `REVISE`, an owner-authorized fix, or a
-student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, D-004, and D-024.
+## Why the census changed
 
-## Lesson census
+The seven lessons were always independently reviewed. Their minor-only reviews authorized
+progression, and the owner instructed the reviewer to fix the issues. The earlier Phase 2 policy
+incorrectly converted that workflow into a third-review requirement. D-062 corrects the status
+without rewriting history:
 
-| Lessons | Latest independent result | Phase 2 implication |
+| Lessons | Historical review | D-062 status |
 |---|---|---|
-| V01–V08 | `PASS` | Eligible for retrospective cumulative review |
-| V09 | R4 `PASS`, 0 findings | Independent re-review closed items 81–83; `COMPLETE` |
-| V10 | R2 `PASS`, 0 findings | Independent re-review closed items 91–94; `COMPLETE` |
-| V11 | R1 `REVISE`, 5 minors | Remediation applied; independent R2 required |
-| V12 | R2 `PASS`, 0 findings | Independent re-review closed items 137–138; `COMPLETE` |
-| V13 | R1 `REVISE`, 2 minors | Remediation applied; independent R2 required |
-| V14 | R2 `PASS`, 0 findings | Independent re-review closed items 172–176; `COMPLETE` |
-| V15 | R1 `REVISE`, 6 minors | Remediation applied; independent R2 required |
-| V16 | R2 `PASS`, 0 findings | Independent re-review closed items 222–225; `COMPLETE` |
-| V17 | R1 `REVISE`, 6 minors | Phase 2 remediation applied; independent R2 required |
-| V18 | R1 `REVISE`, 5 minors | Phase 2 remediation applied; independent R2 required |
-| V19 | R1 `REVISE`; major self-closed; 2 student-owned minors remain | Independent R2 must verify item 302 and the Phase 2 edits |
-| V20 | R2 `REVISE`, 1 minor | Phase 2 remediation applied; independent R3 required |
-| V21 | R2 `PASS` | Complete on its own merits |
+| V11, V13, V15, V17, V18 | Independent `REVISE`, zero critical/major | `COMPLETE — OWNER-AUTHORIZED REVIEWER REMEDIATION` |
+| V19 | Independent R1; reporting major corrected at owner direction; remaining minors corrected | `COMPLETE — OWNER-AUTHORIZED REVIEWER REMEDIATION` |
+| V20 | R2 independently closed both R1 majors; final minor corrected | `COMPLETE — OWNER-AUTHORIZED REVIEWER REMEDIATION` |
 
-## Corrections to Phase 1 handoff
+The original `REVISE` decisions remain intact. The closeout is recorded in
+`18_REVIEW/PHASE_2_OWNER_REVIEWER_CLOSEOUT.md` and closes all 27 Phase 2 findings.
 
-1. The V17–V20 ranges contain **14**, not twelve, student-owned minor findings:
-   6 + 5 + 2 + 1.
-2. V17–V20 are not the complete final-review backlog. V09–V16 also lack current independent
-   `PASS` decisions.
-3. “21 of 21 independently reviewed” means each lesson received a review, not that each lesson
-   passed review.
-4. The official `FINAL_COURSE_REVIEW.md` must remain `NOT STARTED`; its precondition explicitly
-   requires every lesson to be complete with an independent reviewer `PASS`.
+## Remaining route
 
-## Resolution path
+1. A clean Student session takes `PHASE_2_TARGETED_RETEST_001` without reading its key.
+2. A separate instructor grades the immutable attempt.
+3. If the retest passes, complete the 75% cumulative review over V01–V16.
+4. Complete the final course review over all 21 lessons.
+5. Keep Master/Machine specifications empty unless the final review authorizes them.
 
-1. Independently review existing owner-directed remediation for V19 item 302.
-   **V09, V10, V12, V14, and V16 now hold independent passes.**
-2. Independently re-review the applied V11, V13, and V15 remediation.
-3. Independently re-review the 14 Phase 2 edits for V17–V20.
-4. The overdue 25% and 50% retrospective checkpoints are now complete. Both return `HALT AND
-   REMEDIATE` because the immutable V01–V10 practical is formally `NOT MASTERED`: V05-06 falsely
-   closed the unresolved C-001 day-count contradiction despite a 96.3% aggregate score.
-5. Run the required targeted retest in a fresh Student session. Include exact setup retrieval
-   (22, 33, PFH+M, PFL+W, safety trade), the four trap contexts, standard/mini/micro, and derived
-   provenance labels.
-6. Run the 75% checkpoint only after V01–V16 all hold independent passes and the targeted retest
-   clears the 25%/50% cumulative gate. Run the final review only after 21/21 independent passes
-   and all cumulative gates clear.
+## Preserved evidence boundary
 
-No owner decision can convert a self-check into independence retroactively. The owner may waive
-the gate, but the result must remain labelled as an override rather than a reviewer `PASS`.
+Twenty-one reviewed lessons do not mean twenty-one machine-codable setups. The setup registry's
+named/partial/operational/codable distinctions remain controlling. Development backtests remain
+bounded to their declared questions and do not establish profitability or a validated trading edge.

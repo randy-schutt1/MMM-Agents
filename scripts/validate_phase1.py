@@ -75,8 +75,8 @@ def main() -> int:
     current = text("00_SYSTEM/MMM_CURRENT_STATE.md")
     require("lesson ingestion complete; cumulative reconstruction and" in current,
             "current-state boundary is missing")
-    require("Highest adopted decision in `DECISIONS.md`: `D-057`" in current,
-            "current-state decision boundary is missing")
+    require("Highest adopted decision in `DECISIONS.md`: `D-062`" in current,
+            "current-state decision boundary is missing or stale")
 
     final_review = text("18_REVIEW/FINAL_COURSE_REVIEW.md")
     require(bool(re.search(r"^NOT STARTED$", final_review, re.M)),
