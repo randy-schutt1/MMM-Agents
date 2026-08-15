@@ -1,0 +1,174 @@
+{
+  "adr_periods": [
+    5,
+    10,
+    20
+  ],
+  "pullback_bars": 8,
+  "cells": [
+    {
+      "arm": "A",
+      "window": "W-A",
+      "n_days": 256,
+      "n_excluded_incomplete": 2,
+      "adr": {
+        "adr5": {
+          "median": 114.64,
+          "p10": 86.12,
+          "p90": 146.0,
+          "next_day_exceeds": 0.4303
+        },
+        "adr10": {
+          "median": 112.06,
+          "p10": 93.26,
+          "p90": 139.85,
+          "next_day_exceeds": 0.378
+        },
+        "adr20": {
+          "median": 110.52,
+          "p10": 97.32,
+          "p90": 143.88,
+          "next_day_exceeds": 0.3602
+        }
+      },
+      "hilo_markers": {
+        "prev_high_touched": 0.4627,
+        "prev_low_touched": 0.5216,
+        "both_touched": 0.1294,
+        "neither_touched": 0.1451
+      },
+      "pullback_off_high_2h": {
+        "n": 238,
+        "median": 45.9,
+        "p25": 33.68,
+        "p75": 64.4,
+        "frac_in_15_25": 0.1008,
+        "frac_under_15": 0.021,
+        "frac_over_50": 0.4076
+      }
+    },
+    {
+      "arm": "A",
+      "window": "W-B",
+      "n_days": 512,
+      "n_excluded_incomplete": 3,
+      "adr": {
+        "adr5": {
+          "median": 95.42,
+          "p10": 59.44,
+          "p90": 134.94,
+          "next_day_exceeds": 0.43
+        },
+        "adr10": {
+          "median": 99.45,
+          "p10": 59.49,
+          "p90": 130.16,
+          "next_day_exceeds": 0.3984
+        },
+        "adr20": {
+          "median": 101.11,
+          "p10": 60.15,
+          "p90": 131.06,
+          "next_day_exceeds": 0.374
+        }
+      },
+      "hilo_markers": {
+        "prev_high_touched": 0.4697,
+        "prev_low_touched": 0.5147,
+        "both_touched": 0.1213,
+        "neither_touched": 0.137
+      },
+      "pullback_off_high_2h": {
+        "n": 474,
+        "median": 40.75,
+        "p25": 27.52,
+        "p75": 58.5,
+        "frac_in_15_25": 0.1603,
+        "frac_under_15": 0.038,
+        "frac_over_50": 0.3439
+      }
+    },
+    {
+      "arm": "B",
+      "window": "W-A",
+      "n_days": 256,
+      "n_excluded_incomplete": 2,
+      "adr": {
+        "adr5": {
+          "median": 115.74,
+          "p10": 87.26,
+          "p90": 148.46,
+          "next_day_exceeds": 0.4263
+        },
+        "adr10": {
+          "median": 114.45,
+          "p10": 93.36,
+          "p90": 142.54,
+          "next_day_exceeds": 0.3902
+        },
+        "adr20": {
+          "median": 112.05,
+          "p10": 97.43,
+          "p90": 146.62,
+          "next_day_exceeds": 0.3686
+        }
+      },
+      "hilo_markers": {
+        "prev_high_touched": 0.4588,
+        "prev_low_touched": 0.5216,
+        "both_touched": 0.1216,
+        "neither_touched": 0.1412
+      },
+      "pullback_off_high_2h": {
+        "n": 234,
+        "median": 46.1,
+        "p25": 33.95,
+        "p75": 62.73,
+        "frac_in_15_25": 0.0855,
+        "frac_under_15": 0.0171,
+        "frac_over_50": 0.4103
+      }
+    },
+    {
+      "arm": "B",
+      "window": "W-B",
+      "n_days": 512,
+      "n_excluded_incomplete": 3,
+      "adr": {
+        "adr5": {
+          "median": 95.92,
+          "p10": 60.68,
+          "p90": 137.8,
+          "next_day_exceeds": 0.4201
+        },
+        "adr10": {
+          "median": 100.05,
+          "p10": 61.12,
+          "p90": 134.88,
+          "next_day_exceeds": 0.4044
+        },
+        "adr20": {
+          "median": 102.21,
+          "p10": 61.66,
+          "p90": 136.53,
+          "next_day_exceeds": 0.3984
+        }
+      },
+      "hilo_markers": {
+        "prev_high_touched": 0.4638,
+        "prev_low_touched": 0.5186,
+        "both_touched": 0.1194,
+        "neither_touched": 0.137
+      },
+      "pullback_off_high_2h": {
+        "n": 469,
+        "median": 40.6,
+        "p25": 28.7,
+        "p75": 57.2,
+        "frac_in_15_25": 0.1429,
+        "frac_under_15": 0.032,
+        "frac_over_50": 0.3348
+      }
+    }
+  ]
+}

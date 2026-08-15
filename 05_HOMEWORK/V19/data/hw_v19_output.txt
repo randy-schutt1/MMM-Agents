@@ -1,0 +1,30 @@
+
+=== arm A / W-A  (256 days, 2 excluded) ===
+  ADR5   median 114.64 pips  [p10 86.12, p90 146.00]  next day exceeds it 43.0%
+  ADR10  median 112.06 pips  [p10 93.26, p90 139.85]  next day exceeds it 37.8%
+  ADR20  median 110.52 pips  [p10 97.32, p90 143.88]  next day exceeds it 36.0%
+  prev high touched 46.3%  prev low touched 52.2%  both 12.9%  neither 14.5%
+  pullback off high (2h): n=238 median 45.90 pips [IQR 33.68-64.40]  in 15-25: 10.1%  <15: 2.1%  >50: 40.8%
+
+=== arm A / W-B  (512 days, 3 excluded) ===
+  ADR5   median  95.42 pips  [p10 59.44, p90 134.94]  next day exceeds it 43.0%
+  ADR10  median  99.45 pips  [p10 59.49, p90 130.16]  next day exceeds it 39.8%
+  ADR20  median 101.11 pips  [p10 60.15, p90 131.06]  next day exceeds it 37.4%
+  prev high touched 47.0%  prev low touched 51.5%  both 12.1%  neither 13.7%
+  pullback off high (2h): n=474 median 40.75 pips [IQR 27.52-58.50]  in 15-25: 16.0%  <15: 3.8%  >50: 34.4%
+
+=== arm B / W-A  (256 days, 2 excluded) ===
+  ADR5   median 115.74 pips  [p10 87.26, p90 148.46]  next day exceeds it 42.6%
+  ADR10  median 114.45 pips  [p10 93.36, p90 142.54]  next day exceeds it 39.0%
+  ADR20  median 112.05 pips  [p10 97.43, p90 146.62]  next day exceeds it 36.9%
+  prev high touched 45.9%  prev low touched 52.2%  both 12.2%  neither 14.1%
+  pullback off high (2h): n=234 median 46.10 pips [IQR 33.95-62.73]  in 15-25: 8.6%  <15: 1.7%  >50: 41.0%
+
+=== arm B / W-B  (512 days, 3 excluded) ===
+  ADR5   median  95.92 pips  [p10 60.68, p90 137.80]  next day exceeds it 42.0%
+  ADR10  median 100.05 pips  [p10 61.12, p90 134.88]  next day exceeds it 40.4%
+  ADR20  median 102.21 pips  [p10 61.66, p90 136.53]  next day exceeds it 39.8%
+  prev high touched 46.4%  prev low touched 51.9%  both 11.9%  neither 13.7%
+  pullback off high (2h): n=469 median 40.60 pips [IQR 28.70-57.20]  in 15-25: 14.3%  <15: 3.2%  >50: 33.5%
+
+wrote /Users/randyschutt/Desktop/Trading/MMM-Agents-v19/05_HOMEWORK/V19/data/hw_v19_results.json
