@@ -3,7 +3,30 @@
 **Lesson:** `Bootcamp1 Wk9 052012 Part2 (46mins) (1).swf` — Week 9 Part 2, 2012-05-20
 **Printed subject:** `MARKET MAKER BOOT CAMP` / **`THE OUT SIDE STRUCTURE`**
 **Branch:** `video/v20`, in an isolated worktree per `D-038`
-**Student status:** ⚠️ **REVIEW REQUIRED** — not `PASS`. `D-004`: a student `PASS` is not a gate.
+**Student status:** ⚠️ **IN REMEDIATION** — V20 R1 returned **REVISE, 2 `MAJOR`**, and this report is
+**amended, not re-filed**. See §0a. `D-004`: a student `PASS` is not a gate, and a student **fix**
+is not a verification.
+
+---
+
+## §0a — ⚠️⚠️ AMENDED 2026-08-15 AFTER V20 R1 — TWO `MAJOR` FINDINGS, BOTH ACCEPTED
+
+**V20 R1 returned `REVISE` with `M1` and `M2`. Both are correct. Both were verified by this session
+before being acted on, not taken on trust.**
+
+| | Finding | What this session did |
+|---|---|---|
+| **`M1`** item 332 | `run_pt048.py` bypassed `PT-048` §3.1's `±3` swing scale for the primary measure, using a hardcoded `±1`; the divergence **flipped the verdict** and `BT_V20_0001.md` §6 asserted no such divergence existed | ⭐ **Confirmed by reading my own code.** Runner wired to `PIVOT_K`; re-run; **verdict `CONFIRMED` → `REFUTED`** (30.10 `[28.80, 31.25]`). **Sensitivity now published on every run.** `BT_V20_0001.md` §2a, §6 |
+| **`M2`** item 333 | The committed transcript mis-hears `candle` as `handle`; **`A-136` was opened on a word the instructor never says**, and `PT-048` §1a excluded the one testable V20 rule because of it | ⭐ **Verified with my own fifth ASR decode before accepting it.** `A-136` **CLOSED as an ASR artifact**; `A-139` opened for what survives; **`PT-049` pre-registered** to test the rule the artifact suppressed |
+
+⛔⛔ **NEITHER FIX IS SELF-VERIFIED, AND THAT IS DELIBERATE.** `D-024` holds the gate closed on any
+`MAJOR` until it is fixed **and re-reviewed in a fresh round**. ⭐ **The V20 R1 reviewer raised the
+concern that owner-authorised self-verify was becoming the default** (V19 item 302 was closed that
+way). **This round does not use it.** **V20 R1 must re-check.**
+
+⭐ **The root cause of BOTH findings is the same and it is item 326:** this session ran **no
+independent ASR pass** and **no independent re-implementation** of its own runner. **The reviewer
+ran both, and each found a `MAJOR`.**
 
 ---
 
@@ -76,12 +99,12 @@ list and a nine-bullet summary.
 | # | Dimension | Status | Basis |
 |---|---|---|---|
 | **A** | **Recall** | ✅ **SATISFIED** | Every structure, number and rule recorded with its marker in `V20_SOURCE_NOTES.md` §§1–9; 23 frames transcribed from the pixels in `INDEX.md` |
-| **B** | **Recognition** | ⚠️ **BLOCKED — `D-030`** | ⚠️ **SEVENTH lesson running.** The *"blue tracer"* is spoken once (`[00:28:58]`) and still undefined (`A-133`); V20's own entry needs *"handle"* (`A-136`) |
+| **B** | **Recognition** | ⚠️ **BLOCKED — `D-030`** | ⚠️ **SEVENTH lesson running**, and **on `A-133` alone.** The *"blue tracer"* is spoken once (`[00:28:58]`) and still undefined. ⭐ **CORRECTED 2026-08-15:** this row previously also cited *"handle"* (`A-136`); **that half is withdrawn** — the entry arithmetic is complete (`M2`, item 333) |
 | **C** | **Discrimination** | ✅ **SATISFIED** | The lesson's own discriminators are kept apart: intraday vs multi-day outside structure (`[00:12:43]`), spike vs entry (`[00:26:06]` *"No, avoid it"*), stop hunt vs momentum (`[00:31:47]`), and ⭐ the `Rick` anecdote recorded as the **counter**-example the instructor makes it (`§4.1`) |
 | **D** | **Sequence** | ✅ **SATISFIED** | The outside-structure → `L3` → resolution order is recorded with markers (`[00:42:51]`, `[00:43:02]`), and the cap's sequence (break → 30 min → close back / scratch) at `[00:27:44]`–`[00:28:35]` |
 | **E** | **Exceptions** | ⚠️ **PARTIAL** | ⚠️ **V20 states an unqualified universal — *"an absolute sign of reversal"* `[00:01:41]`, twice — and supplies NO invalidation condition.** Recorded as taught, **not** as established (`V20_INTERPRETATION.md` §2.1). The only explicit exception in the lesson is *"is it always three moves? No"* `[00:41:05]` |
 | **F** | **Homework** | ✅ **SATISFIED** | `V20_HOMEWORK.md`. ⭐ The recall test was attempted and **self-scored 8 of 9, with the miss recorded** — and the miss is the lesson's centrepiece, because the audio trails off where the slide names it |
-| **G** | **Manual backtesting** | ⚠️ **SATISFIED WITH A SELF-REPORTED DEFECT** | `PT-048` pre-registered at `bb526f1` **before the runner existed**, with **intervals mandatory by pre-registration**. ⛔ **The verdict is `CONFIRMED` and the baseline matches it** — reported as the report's headline, not its footnote |
+| **G** | **Manual backtesting** | ⛔ **NOT SATISFIED — `M1`** | ⛔ **The runner did not implement its own pre-registration** and the divergence flipped the verdict (`M1`, item 332). ⭐ Corrected: **`REFUTED`**. **The pre-registration itself was right, was committed before the runner existed, and made intervals mandatory** — and `PT-049` now carries the baseline as a verdict condition too |
 | **H** | **Provenance** | ✅ **SATISFIED** | `.swf` SHA-256 re-computed and matching the manifest; **four independent length measures agreeing to 0.33 s**; port and served bytes verified; §8a offset measured, published and bracketed; **23 of 23 frames named from their own burned timecodes**, including one inside the transient |
 | **I** | **Ambiguity** | ✅ **SATISFIED** | `A-136`, `A-137`, `A-138` opened, each with the reason it blocks rather than merely noting vagueness |
 | **J** | **Contradictions** | ✅ **SATISFIED** | `C-030` — ⭐ and it is recorded as **`PROVISIONAL`, narrowing `C-029` on the M side and explicitly silent on the W side**, rather than claimed as a closure |
@@ -120,10 +143,18 @@ shape, V20 gives the purpose, and both say 30 minutes.**
 `30 minutes or less`; **15 minutes is explicitly refused**; **stays above ⇒ scratch the trade**;
 re-entry needs **a nice solid close**. **`C-030`, and it narrows `C-029` without closing it.**
 
-### 4.5 ⭐ A MECHANICAL ENTRY, BLOCKED BY ONE WORD
+### 4.5 ⭐⭐ A MECHANICAL ENTRY — AND IT IS COMPLETE
 
-*"Divide it by three and take your entry one third off the high of this handle"* — with a worked
-100 → 33 pip example. **`A-136` is now the cheapest high-value blocker in the project.**
+> ⚠️⚠️ **CORRECTED 2026-08-15 — `M2`, item 333.** This section originally read *"A MECHANICAL ENTRY,
+> BLOCKED BY ONE WORD"* and called `A-136` ***"the cheapest high-value blocker in the project"***.
+> ⛔ **There is no such blocker.** The word is `candle`, not *"handle"*.
+
+*"Take the distance of this **candle** divided by three […] take your entry **one-third off the high
+of this candle**"*, worked at 100 pips → *"**Subtract 33 pips off the high**, a third."*
+
+⭐⭐ **`entry = high − (candle range ÷ 3)` — the first entry rule in the studied corpus whose
+arithmetic `D-030` does not block.** ⚠️ **What survives is narrower: WHICH candle is never stated in
+words** (`A-139`). **`PT-049` tests it under three declared bar-selection conventions.**
 
 ### 4.6 ⭐ `A-019` GAINS ITS FIRST NAMED TIMEZONE — AND DOES NOT CLOSE
 
@@ -173,7 +204,7 @@ trend.**
 |---|---|
 | 1 | ⚠️⚠️ **An independent ASR pass is OWED for the whole lesson.** Priority passages: `[00:22:15]` *"25 to 50-50 candle"*, `[00:27:49]` *"three pepperoni on the pizza"*, `[00:41:18]` *"a burst, a burst, and a t[r]ack"* |
 | 2 | ⚠️ **`PT-048`'s baseline was not a verdict condition** — `BT_V20_0001.md` §3a. **A reviewer is entitled to treat the `CONFIRMED` as a null** |
-| 3 | ⭐ **`A-136` (*handle*) is the cheapest high-value blocker in the project.** One sentence makes a fully specified arithmetic entry testable |
+| 3 | ⛔ ~~`A-136` is the cheapest high-value blocker~~ — **WITHDRAWN. `M2`/item 333: the word is `candle` and there is no blocker.** ⭐ **`A-139`** carries what survives (which candle), and **`PT-049`** tests the rule |
 | 4 | ⚠️ **`A-133` (*blue tracer*) survives V20** — dimension B blocked for a seventh lesson |
 | 5 | ⭐ **Item 245's remediation should route through `INDEX.md` §11** — `M15` printed on three charts |
 | 6 | ⚠️ **`C-030` is `PROVISIONAL` and I did not adjudicate `C-029`.** If a reviewer thinks V20's silence on the W side is itself evidence, that is a finding I declined to make |

@@ -10494,3 +10494,78 @@ lessons** (item 326). Records opened: **`A-136`, `A-137`, `A-138`, `C-030`, `Q-0
 ### Next Review Trigger
 
 **V20 R1**, by an independent session.
+
+---
+
+## 2026-08-15 — V20 REMEDIATION ROUND (V20 R1 `M1` + `M2`), AT OWNER DIRECTION
+
+**Owner direction:** *"Fix it."* **Branch `video/v20`, isolated worktree, `D-038`.**
+
+### ⛔⛔ NOT SELF-VERIFIED, AND THAT IS THE POINT
+
+**`D-024` holds the gate closed on any `MAJOR` until it is fixed *and re-reviewed in a fresh
+round*.** ⭐ **V20 R1's reviewer raised the concern that owner-authorised self-verify was becoming
+the default** — V19's item 302 was closed that way, `D-003` unsatisfied. **This round does not use
+the exception.** **These fixes are applied and pushed for the V20 R1 session to re-check.**
+
+### Both findings were VERIFIED before being acted on
+
+⭐ **`M1`** — confirmed by reading my own code. `PT-048` §3.1 defines a swing pivot at `±3`;
+`run_pt048.py` honoured it for the leg **endpoints** and used a hardcoded **`±1`** for the interior
+counter-swings producing every `P1` value.
+
+⭐ **`M2`** — confirmed by running **my own fifth ASR decode** (`openai-whisper medium.en`,
+`beam_size 5`, temperature 0) over three windows **before** accepting the finding. Every position
+returns **`candle`**.
+
+### `M1` — the verdict moves `CONFIRMED` → `REFUTED`
+
+| swing scale | `n` | median `P1` | boot 95 % | in band? |
+|---|---|---|---|---|
+| `k = 1` — the bug | 2506 | 22.45 | `[22.00, 23.20]` | ✅ |
+| `k = 2` | 1200 | 26.80 | `[25.90, 27.60]` | ❌ |
+| ⭐ **`k = 3` — the spec** | **702** | ⛔ **30.10** | `[28.80, 31.25]` | ❌ |
+| `k = 4` | 440 | 33.10 | `[31.30, 34.90]` | ❌ |
+
+⛔ **`k = 1` was the only scale of the four that put the median in band, and by inflating `n` it also
+narrowed the interval enough to satisfy §5's interval condition. It manufactured both halves of
+`CONFIRMED`.** ⭐ **The reviewer's independent code returned 30.10 `[28.70, 31.25]`; the corrected
+runner returns 30.10 `[28.80, 31.25]` — agreement to the second decimal.**
+
+**The pre-registration is NOT edited. It was right; the runner was wrong.** `BT_V20_0001.md` §6
+previously said *"No other disagreement"* — **false, and now corrected.** ⭐ **The swing-scale
+sensitivity is published on every run**, because `N3`'s four conditions do not bracket it.
+
+⭐ **The baseline finding is scale-invariant and survives untouched**: 30.10 against `N1`'s 29.15 at
+`k = 3`, as 22.45 against 23.00 at `k = 1`. **The claim fails twice over — wrong magnitude at the
+pre-registered scale, and non-diagnostic at every scale.**
+
+### `M2` — `A-136` was opened on a word that does not exist
+
+The committed grid mis-hears **`candle`** as *"handle"* at all five noun positions; the two genuine
+verb uses are correct. **With the right word the rule is complete:**
+
+> **`entry = high − (candle range ÷ 3)`**, worked at 100 pips → *"**Subtract 33 pips off the high**,
+> a third."*
+
+* **`A-136` CLOSED as an ASR artifact**, superseded title retained (`REMEDIATION_PROTOCOL.md` §2).
+* **`A-139` opened** for what survives — ⭐ **which candle** is never stated in words, a much narrower
+  question, because the calculation is determined once a bar is chosen.
+* ⛔ **The cost is recorded:** the artifact called `A-136` *"the cheapest high-value blocker in the
+  project"* and **`PT-048` §1a excluded the one V20 rule mechanical enough to test.**
+* ⭐ **`PT-049` pre-registered BEFORE `run_pt049.py` exists**, testing the rule the artifact
+  suppressed. **It makes the baseline an EXPLICIT CONDITION of every non-null verdict** — the
+  `PT-048` §3a defect — names its primary bar-selection convention in advance, requires all three
+  conventions and all four fractions published on every run, and **closes the §5 decision-table hole
+  R1 §2.6 found.**
+
+### ⚠️⚠️ ROOT CAUSE OF BOTH `MAJOR`s IS THE SAME, AND IT IS ITEM 326
+
+**This session ran no independent ASR pass and no independent re-implementation of its own runner.**
+**The reviewer ran both, and each found a `MAJOR`.** ⭐ *"A transcript defect that WITHHOLDS a rule is
+as costly as one that inverts it, and only an independent pass finds either."*
+
+### Git
+
+`video/v20`, pushed. ⛔ **NOT merged and NOT self-verified.** **Awaiting V20 R1 re-review.**
+Validator **103 / 0 / 0**.
