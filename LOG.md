@@ -10816,3 +10816,112 @@ deliberately NOT self-closed** — declining, in writing, the owner-authorised s
 R1's review question 1 flagged as becoming the default. ⭐ **And `PT-049` generalises the lessons
 instead of patching the instance.** ⚠️ **The owner question still stands**: the self-verify exception
 has no numbered decision, and this round shows the practice correcting itself without one.
+
+---
+
+## 2026-08-15 — OWNER RULING #6 (THE ENTRY LADDER) AND A CORRECTION TO `A-141` — plus the V20 renumbering collisions this branch inherited
+
+**Branch:** `tools/owner-entry-rule-and-a141-correction`, from integration `19e6c2a`.
+**Two drafts, one correction proposal, one tool note. NOTHING ADOPTED. No `A-xxx` changed status.**
+
+### ⭐⭐ RULING #6 — the three-tier ENTRY ladder → `DECISION_DRAFT_D-058_OWNER_ENTRY_RULE.md`
+
+> *"the entry is the close of the candle after the ema cross. But when your confidence and probably
+> is on your side then you can take it on the second leg hammer, railroad tracks, doji, etc. then
+> high level is placing a limit order on the close of the outside bar. That's the safest entry."*
+
+Recorded at **`OWNER EMPIRICAL PREFERENCE`** (the `D-052` category), identical to `D-055` — **the
+owner's own practice, NOT COURSE-VERIFIED.** ⭐ **With `D-055` the project now holds its first
+complete trade template from one source: ENTRY + STOP + TP1 + TP2.**
+
+⛔ **And not one component of it is executable.** Four undefined anchors: *"the EMA cross"* (which
+two? which timeframe? which direction? — and the project holds **two incompatible EMA sets whose
+FAST periods are exactly the disputed ones**, `D-043`'s 5/13 vs `MMM.tpl`'s 4/10, giving 15
+possible pairs) → **proposed `A-143`, `DO NOT CODE`**; *"confidence and probability on your side"*
+— a **subjective gate with no threshold**, and it is the *condition* on tier 2, so tier 2 cannot be
+evaluated at all; *"second leg"* → chains to `A-011`; *"the outside bar"* → **undefined by the
+course and by the owner**, and importing the retail definition is the `A-082` error.
+
+⚠️⚠️ **IT DISAGREES WITH `A-139`, THE COURSE'S MOST MECHANICAL ENTRY.** V20:
+`entry = high − (candle range ÷ 3)`. Owner: **the CLOSE**. ⭐ **Different entries; no arithmetic
+makes them the same.** ⚠️ **No `C-xxx` opened** — `A-139` is about **what V20 taught**, this is
+**owner practice**; a category difference is not a conflict (`D-052` §3.5).
+⛔⛔ **And the tempting move is refused explicitly: `A-139`'s open question is WHICH CANDLE, and the
+owner's rule supplies a candle-selection principle — it MUST NOT be imported.** That would be
+*"do not blend"* and would hand an owner-tier warrant the authority of Tier 1. **`A-139` stays
+`OPEN`; `PT-049`'s convention stays a convention.**
+
+⭐ **Negative result, stated plainly: NO lesson in V01–V21 states an EMA-cross entry trigger at
+all.** The corpus's EMA material is about which averages exist and confluence, never a cross as a
+trigger. **That is the strongest reason the record refuses `RESOLVED — OWNER ATTESTATION`** — an
+owner recollecting the teaching would not produce a trigger the teaching never mentions.
+
+⭐ Also recorded: the project now holds **four incompatible entry geometries** — `A-090`'s 10 or
+5–8 pips inside, `A-139`'s one-third retracement, V19's close-below-the-blue-tracer, and this.
+**That count is itself a finding about the corpus.**
+
+### ⭐⭐ `A-141` CORRECTED — the High/Low Trainer is NOT a total void
+
+> *"The high low trainer is part of the sessions indicator. It's embedded in it. It just doesn't
+> have the auto-places."* — owner, 2026-08-15
+
+⚠️ **`A-141` lives on `origin/video/v21`, UNMERGED**, so this is written as
+`00_SYSTEM/A-141_CORRECTION_PROPOSAL_HIGH_LOW_TRAINER.md` **for the V21 session to apply** — not
+written into a ledger this branch does not contain.
+
+**The session ribbon was re-examined** (`!sm_WorkTime_v1.5b`, via its readable pre-600 sibling and
+`MMM.tpl`'s saved block). ⭐ **The owner is right about the shape:**
+
+| | |
+|---|---|
+| ⭐ **PRESENT** | session **high/low tracking**; **fixed pip offsets** from that extreme — shipped literally as *"25/50 Pips above/below blue box"*; **alerting** |
+| ⛔ **ABSENT** | **all order placement** — market order, two pendings, hard stop, `+30` TP, the `30+50+70` cycle, `MAX RISK 5%` / by-order-percent, the four variants |
+| ⚠️ **DIVERGENT** | Trainer **`+20`/`+40`** vs ribbon **`+25`/`+50`** — a **25% difference on every level** |
+
+⭐⭐ **The missing piece is CATEGORICAL and independently checkable: an MT4 INDICATOR CANNOT PLACE
+ORDERS — only an EA or a SCRIPT can — and V21 calls the Trainer a *"script"* (`[00:41:49]`).** So
+*"it just doesn't have the auto-places"* names a real division in the MT4 program model rather than
+a vague gap: **the levels belong to an indicator, the orders to a script.**
+
+⛔ **But the identity claim is NOT adopted.** The `+20`/`+40` vs `+25`/`+50` divergence means the
+ribbon is **demonstrably not the Trainer's code at the Trainer's settings** — it is a **structural
+analogue**. Whether *"embedded"* means the same code re-parameterised or the same idea in a sibling
+tool is **left open**; `D-030` bars picking one. ⚠️ **A second unestablished point:** V21 describes
+two pendings relative to an ORDER; the ribbon's offsets hang off the **Asian box**. If the
+Trainer's grid is anchored to the fill rather than a session extreme, the resemblance is weaker
+than it looks. ⚠️ **Third check, run and negative:** the *other* session indicator in the materials
+(KimIV's `Sessions.mq4`) has boxes and **nothing else** — no offsets, no alerts.
+
+⭐ **What changes in practice:** `A-141` no longer reads *"nothing to work from."* The shortfall is
+now **specific — an order-placement layer over a level geometry the project already implements.**
+⛔ **Not a licence to build it.**
+
+**`MMM_SESSION_RIBBON.txt` re-checked: it needs a cross-reference, not a rewrite** — it already
+implements the ±25/±50 bands, already defaults them OFF per `MMM.tpl`, already refuses to treat them
+as a course rule. A note was added recording the `A-141` relationship and the number divergence.
+⛔ **No `+20`/`+40` option was added** — that would inject V21's Trainer figures into a tool whose
+contract is to replicate `MMM.tpl`. It waits on the owner.
+
+### ⚠️ Two renumbering collisions inherited from V20, fixed here
+
+The V20 session took **`A-136`** (closed as an ASR artifact) and **`C-030`** (its time-cap
+contradiction) — **both numbers this branch's earlier drafts had claimed.** Renumbered, skipping the
+unmerged V21 block (`A-140`, `A-141`, `C-031`) so they survive that merge:
+
+| Record | Was | Now |
+|---|---|---|
+| `D-055`'s *"perceived high"* anchor | `A-132` → `A-136` | ⭐ **`A-142`** |
+| `D-056`'s ribbon-vs-slide contradiction | `C-029` → `C-030` | ⭐ **`C-032`** |
+| `D-058`'s *"the EMA cross"* anchor | — | ⭐ **`A-143`** |
+
+⭐ **All four new numbers were swept against integration AND `origin/video/v21` before use** —
+`A-142`, `A-143`, `C-032`, `D-058` all free. ⚠️ One residual was caught inside a fenced code block
+in `D-056` that the first pass missed.
+
+### ⚠️ Ancestry note
+
+This branch's predecessor `tools/indicator-folder-survey-and-owner-risk-rule` **was merged to
+integration by another session** — all three of its commits (`cf1fda9`, `c0fb7c9`, `b0eb95e`) are
+ancestors of `19e6c2a`, and `D-055`/`D-056`/the inventory/the ribbon are on integration as **draft
+files**. ⚠️ **`D-055` and `D-056` are NOT adopted entries** — `DECISIONS.md`'s highest is `D-057` —
+so their numbers are held by drafts only, and `D-047` gives the number to whoever adopts first.

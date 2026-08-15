@@ -41,7 +41,7 @@
 //   slide. On the UTC+3 arm it lands ON the slide but the NY box stops being
 //   the NYSE open. ⇒ THE TWO ANCHORS DEMAND OFFSETS ONE HOUR APART AND NEITHER
 //   ARM SATISFIES BOTH. `A-105`'s one-hour ambiguity REAPPEARS here from an
-//   independent direction rather than being resolved by it. Proposed `C-030`.
+//   independent direction rather than being resolved by it. Proposed `C-032`.
 //   ⛔ `A-019`, `A-105`, `A-131` STAY OPEN. DO NOT CITE THIS FILE AS A SESSION
 //     BOUNDARY.
 //
@@ -116,6 +116,30 @@ mCol    = input.color(#B0B0DE,  "Color_5",              group = gM)
 
 // The 25/50 lines the MT4 build ships as ALERTS ("25 Pips above blue box").
 // MMM.tpl saves BOTH false. NOT a course rule — A-005 is blocked on A-019/D-031.
+//
+// ⭐⭐ AND THESE BANDS ARE THE LEVEL-TRACKING HALF OF V21's "HIGH / LOW TRAINER"
+//     (A-141). Owner, 2026-08-15: "The high low trainer is part of the sessions
+//     indicator. It's embedded in it. It just doesn't have the auto-places."
+//     A-141 originally read as a TOTAL VOID — the tool shipped on camera and no
+//     copy reached the project. That framing is CORRECTED: session high/low
+//     tracking + fixed pip offsets + alerting are all PRESENT, right here.
+//     See 00_SYSTEM/A-141_CORRECTION_PROPOSAL_HIGH_LOW_TRAINER.md.
+//
+// ⚠️ BUT THE NUMBERS DIVERGE AND THAT IS NOT SMOOTHED OVER: the Trainer's
+//    pendings are +20 and +40; these bands are +25 and +50. A 25% difference on
+//    every level. So this is a STRUCTURAL ANALOGUE, demonstrably NOT the
+//    Trainer's code at the Trainer's settings.
+//    ⛔ NO +20/+40 OPTION IS PROVIDED. Adding one would inject V21's Trainer
+//      figures into a tool whose entire contract is to replicate MMM.tpl —
+//      SOURCING_HIERARCHY.md §3.2's "do not blend". It waits on the owner
+//      (A-141 correction §6 Q1).
+//
+// ⛔⛔ AND NO ORDER-PLACEMENT LAYER MAY BE ADDED HERE. That is the half A-141
+//     is actually missing, and it is missing CATEGORICALLY: an MT4 INDICATOR
+//     CANNOT PLACE ORDERS — only an EA or a SCRIPT can — and V21 calls the
+//     Trainer a "script" ([00:41:49] "four scripts in there"). The entry
+//     trigger, fill logic, stop, +30 take profit, 30+50+70 cycle and MAX RISK
+//     5% dial are ALL unstated. D-030 bars reconstructing them.
 gB = "Asian-box 25/50 pip bands  (saved OFF)"
 show25  = input.bool(false, "Alert25BlueBox as lines", group = gB)
 show50  = input.bool(false, "Alert50BlueBox as lines", group = gB)
