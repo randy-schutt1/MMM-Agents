@@ -1,0 +1,310 @@
+//@version=6
+// =============================================================================
+// MMM_TDI.txt — Traders Dynamic Index  (SEPARATE PANE)
+// Pine Script v6.  Paste into TradingView → Pine Editor → Add to chart.
+// =============================================================================
+//
+// ⭐⭐ THIS IS THE STANDARDISED PROJECT TDI TOOL. `D-052`, 2026-08-14.
+//
+//   Owner: "the one we created a couple days ago is the one I want to use. We
+//   can apply all the same concepts that are taught with that particular TDI."
+//
+//   BUILD ON THIS FILE. The two comparison variants — `MMM_TDI_RSI_BASIS.txt`
+//   and `MMM_TDI_MARKETBASE_BASIS.txt` (branch `tools/tdi-basis-comparison`) —
+//   were a one-off kit built to obtain the owner's pick on `C-021`. They did
+//   their job, they are RETAINED AS HISTORY, and they are NOT the base for new
+//   work. See `TDI_BASIS_COMPARISON_README.md` §7.
+//
+//   ⚠ Two things about this file are known to differ from that kit and are
+//   DELIBERATE, not drift:
+//     1. `bandMult` here is the Tier-3 guess 1.6185; the kit used 2.0. This is
+//        OPEN — `D-052` ruled the basis and NOT the multiplier. See below.
+//     2. This file is Pine v6; the kit is v5. No v6-only features are used in
+//        the shared parts.
+//
+// WHY THIS IS A SEPARATE FILE
+//   TDI is an oscillator on a 0-100 scale and belongs in its own pane, so it is
+//   declared `overlay = false`. Under Pine v6 this split is a CHOICE, not a
+//   limit — v6 has `force_overlay`, so one script could push the EMAs and boxes
+//   onto the price pane from an `overlay = false` panel. Two scripts are kept
+//   deliberately: two settings dialogs, independently toggled and restyled.
+//   Companion overlay script: `MMM_Indicator.txt` (EMAs + session boxes).
+//
+// =============================================================================
+// PARAMETER PROVENANCE — REWRITTEN 2026-08-13. READ THIS.
+// =============================================================================
+//
+// The first release of this file shipped the publicly circulating Dean Malone
+// TDI defaults (RSI 13 / fast 2 / slow 7 / bands 34 @ 1.6185) and said so
+// loudly, because SOURCING_HIERARCHY.md §1 makes generic internet material
+// TIER 3 — "EXTERNAL — NON-NORMATIVE, permanently."
+//
+// The owner has since supplied the ACTUAL MT4 TOOLING, and it does not agree
+// with those defaults. Most of the numbers below are now recovered from it.
+//
+// THE ARTIFACTS  (owner's machine, ~/Desktop/Trading/Indicators/)
+//
+//   `Ultimate Blue.tpl`   — an MT4 chart template. Its saved indicator block
+//        `name=!SM_TDI` carries the exact inputs the chart was running.
+//        md5 ea22c8cf527921cef072586b6fa28296
+//   `MM4XSF_TDI.ex4`      — the compiled indicator, 2016-07-31.
+//        md5 42e97991cd6af1dfec95fbb333ae45ac
+//        Embedded strings: "Copyright 2011, CompassFX", "http://www.compassfx.com",
+//        internal name "mm4x-tdi", and a parameter-name list IDENTICAL to the
+//        template block — same indicator, different filename.
+//        Buffer names: "MarketBase Line", "RSI Price Line", "Trade Signal Line",
+//        "Upper Shark Fin", "Lower Shark Fin", "Squeeze High", "Squeeze Low",
+//        "Upper VB Break", "Lower VB Break", "MBL Slope".
+//
+//   `!SM_TDI` / `MM4X` read as Steve Mauro / Market Maker 4X, and the buffer
+//   names line up one-for-one with the four lines MMM-NOTES p.45 describes.
+//
+// THE VERBATIM TEMPLATE BLOCK — this is the evidence, unedited:
+//
+//     name=!SM_TDI
+//     RSI_Period=21              RSI_Price=0            (0 = PRICE_CLOSE)
+//     Volatility_Band=34         RSI_Price_Line=2       RSI_Price_Type=0  (0 = SMA)
+//     Trade_Signal_Line=7        Trade_Signal_Type=0    (0 = SMA)
+//     SharkFin_Upper_Level=63    SharkFin_Lower_Level=37
+//     VB_High_Value=45           VB_Low_Value=55
+//     Draw_MBL_Slope=1           Sensitivity=0.0001
+//     levels: 68 / 63 / 50 / 37 / 32
+//
+// ⚠ THE HEADLINE: `RSI_Period=21`, NOT 13. The Tier-3 default this file
+//   previously shipped was WRONG, and wrong on the single most consequential
+//   number in the indicator. Everything drawn with RSI 13 was a different
+//   oscillator. That is precisely the failure mode A-039's `DO NOT SUBSTITUTE`
+//   exists to prevent, and it is now a demonstrated one rather than a
+//   hypothetical.
+//
+// ⚠ WHAT IS STILL NOT RECOVERED — the standard-deviation multiple.
+//   The MT4 indicator exposes NO input for it, so it is compiled into the
+//   binary and the template cannot reveal it. `bandMult` below is therefore
+//   STILL the Tier-3 1.6185 and is STILL a guess. Four of the five numbers
+//   that shape this oscillator are now sourced; this one is not.
+//
+// ⚠ WHAT THIS DOES *NOT* DO — IT DOES NOT CLOSE `A-039`.
+//   SOURCING_HIERARCHY.md ranks the RECORDINGS (Tier 1) and the Mauro PDF
+//   (Tier 2). An MT4 template on the owner's disk is NEITHER. It is a new
+//   evidence class with no tier and no admitting decision — the Mauro PDF
+//   itself needed `D-039`, an explicit owner attestation, before it could
+//   close anything. Provenance here is also weaker than it looks: the file is
+//   dated 2016 and 2019, the course was recorded in 2012, and nothing in the
+//   template proves the settings are the instructor's rather than a later
+//   user's. `A-039` therefore stays OPEN and stays `DO NOT CODE` until a
+//   register entry and an owner ruling say otherwise. Tagged `[TOOLING]`
+//   below to keep it visibly distinct from `[TIER 1]` and `[TIER 2]`.
+//
+//   Consequently: this panel STILL may not be used to close `A-039`, `A-031`
+//   ("blood in the water" — the market-baseline cross) or `A-032` ("shark
+//   fin"), and no backtest that depends on these numbers may yet be reported
+//   as a test of the method. What HAS changed is that the numbers are now
+//   traceable to an artifact instead of to a forum post.
+//
+//   `A-032` in particular is materially advanced and should be written up:
+//   the indicator has first-class `SharkFin_Upper_Level` / `SharkFin_Lower_Level`
+//   inputs (63 / 37) and dedicated "Upper/Lower Shark Fin" buffers. The record
+//   has carried the phrase since V03 with no definition and only one located
+//   instance (frame `V07_00-18-25`). That write-up is a deliberate act for the
+//   ambiguity register, not something this tool file performs.
+//
+// TAGS USED BELOW
+//   [TOOLING] — recovered from the owner-supplied MT4 artifacts named above
+//   [TIER 2]  — stated in MMM-NOTES
+//   [DEFAULT] — NOT source-verified. A guess. Change freely.
+//   [OWNER-RULED] — decided by the owner's direct instruction (D-052). Ranks
+//        OUTSIDE the tiers, as D-041 established owner adjudication does.
+//        ⚠ NOT course-verified, and here it OVERRIDES an unretracted Tier 1
+//        statement. Do not change one of these without a ledger entry.
+// =============================================================================
+
+indicator(
+     title      = "MMM — TDI (SM_TDI parameters)",
+     shorttitle = "MMM TDI",
+     overlay    = false,
+     precision  = 2)
+
+// -------------------------------------------------------------------------
+// Core parameters
+// -------------------------------------------------------------------------
+grpP = "TDI parameters  —  [TOOLING] from !SM_TDI, except bandMult (see tooltip)"
+
+src      = input.source(close, "RSI source", group = grpP,
+     tooltip = "[TOOLING] !SM_TDI has RSI_Price=0, which is MT4 PRICE_CLOSE.")
+rsiLen   = input.int(21,  "RSI period",                minval = 1, group = grpP,
+     tooltip = "[TOOLING] !SM_TDI RSI_Period=21. NOT the 13 this file shipped previously — that was a Tier-3 internet default and it was wrong.")
+fastLen  = input.int(2,   "Fast MA (RSI Price Line)",  minval = 1, group = grpP,
+     tooltip = "[TOOLING] !SM_TDI RSI_Price_Line=2, RSI_Price_Type=0 (MT4 MODE_SMA).")
+slowLen  = input.int(7,   "Slow MA (Trade Signal Line)", minval = 1, group = grpP,
+     tooltip = "[TOOLING] !SM_TDI Trade_Signal_Line=7, Trade_Signal_Type=0 (MT4 MODE_SMA).")
+bandLen  = input.int(34,  "Volatility band / Market Base Line period", minval = 2, group = grpP,
+     tooltip = "[TOOLING] !SM_TDI Volatility_Band=34.")
+bandMult = input.float(1.6185, "Volatility band std-dev multiple", minval = 0.1, step = 0.0001, group = grpP,
+     tooltip = "⚠ [DEFAULT] STILL A GUESS, AND STILL OPEN. The MT4 indicator exposes no input for this, so it is compiled into the .ex4 and the template cannot reveal it. This remains the Tier-3 public value. ⚠ NOTE THE TENSION, recorded at D-052 consequence 6 and NOT resolved: V14 [00:45:09] says 'two standard deviations' unhedged, and A-086's V14 pass records the MULTIPLIER as the one quantity V14 resolved — so 2.0 has a Tier 1 warrant this 1.6185 does not. D-052 ruled the BASIS only and this value is carried forward UNCHANGED rather than silently corrected. Changing it is a deliberate act that owes a ledger entry.")
+
+// [TOOLING] Both *_Type inputs are 0, which is MT4 MODE_SMA. Kept as a choice
+// so the port can be compared against other TDI builds, but 0 = SMA is what
+// the artifact says.
+maType = input.string("SMA", "MA type for the two signal lines", options = ["SMA", "EMA", "WMA"], group = grpP,
+     tooltip = "[TOOLING] !SM_TDI RSI_Price_Type=0 and Trade_Signal_Type=0; MT4 mode 0 is SMA.")
+
+f_ma(series float s, simple int len, simple string t) =>
+    switch t
+        "EMA" => ta.ema(s, len)
+        "WMA" => ta.wma(s, len)
+        => ta.sma(s, len)
+
+// -------------------------------------------------------------------------
+// Lines
+//
+// COLOURS [TOOLING], with one caveat. The template stores per-buffer colours as
+// MT4 BGR integers; decoded they are exact MT4 web colours, which is a good
+// sign the decode is right:
+//     color_1 = 16748574 -> RGB(30,144,255)   DodgerBlue      weight 0
+//     color_2 = 14599344 -> RGB(176,196,222)  LightSteelBlue  weight 2
+//     color_3 = 16748574 -> RGB(30,144,255)   DodgerBlue      weight 0
+//     color_4 =  7346457 -> RGB(25,25,112)    MidnightBlue    weight 2
+//     color_5 =  2237106 -> RGB(178,34,34)    FireBrick       weight 2
+//     color_6, color_7 = 4294967295 = clrNONE (not drawn)
+// The CAVEAT: the template does not name its buffers, so the buffer->line
+// mapping below is INFERRED — buffers 1 and 3 share a colour and a weight, so
+// they are read as the two volatility bands, leaving 2/4/5 for the RSI price
+// line, the market base line and the trade signal line. Sensible, and not
+// proven. Recolour freely if it disagrees with your chart.
+// -------------------------------------------------------------------------
+grpV = "Lines  —  [TOOLING] colours; buffer→line mapping INFERRED (see comments)"
+
+showRsi   = input.bool(false, "Raw RSI line",           group = grpV, inline = "v1",
+     tooltip = "Off by default: !SM_TDI does not plot the bare RSI, it plots the Fast MA of it.")
+colRsi    = input.color(color.new(#B2B5BE, 40), "",     group = grpV, inline = "v1")
+showFast  = input.bool(true,  "Fast MA / RSI Price Line", group = grpV, inline = "v2")
+colFast   = input.color(#B0C4DE, "",                    group = grpV, inline = "v2")
+showSlow  = input.bool(true,  "Slow MA / Trade Signal", group = grpV, inline = "v3")
+colSlow   = input.color(#B22222, "",                    group = grpV, inline = "v3")
+showBase  = input.bool(true,  "Market Base Line",       group = grpV, inline = "v4")
+colBase   = input.color(#191970, "",                    group = grpV, inline = "v4")
+showBands = input.bool(true,  "Volatility Bands",       group = grpV, inline = "v5")
+colBands  = input.color(#1E90FF, "",                    group = grpV, inline = "v5")
+fillBands = input.bool(true,  "Shade between the bands", group = grpV)
+
+// -------------------------------------------------------------------------
+// Reference levels — [TOOLING], read straight off the template's level list:
+//   level_0=68  level_1=63  level_2=50  level_3=37  level_4=32
+// The 63 / 37 pair are the SharkFin_Upper_Level / SharkFin_Lower_Level inputs
+// (A-032). The 68 / 32 pair are the conventional TDI extremes and are NOT
+// duplicated by any input. 50 is the RSI midline.
+// -------------------------------------------------------------------------
+grpL = "Reference levels  —  [TOOLING] template levels 68 / 63 / 50 / 37 / 32"
+
+showLevels  = input.bool(true, "Show 68 / 50 / 32", group = grpL)
+lvlUp       = input.int(68, "Upper", group = grpL, inline = "lv")
+lvlMid      = input.int(50, "Mid",   group = grpL, inline = "lv")
+lvlDn       = input.int(32, "Lower", group = grpL, inline = "lv")
+
+showShark   = input.bool(true, "Show shark-fin levels (63 / 37)", group = grpL,
+     tooltip = "[TOOLING] !SM_TDI SharkFin_Upper_Level=63, SharkFin_Lower_Level=37, with dedicated 'Upper/Lower Shark Fin' buffers in the .ex4. A-032 remains OPEN — these are the indicator's thresholds, not a definition of the pattern.")
+sharkUp     = input.int(63, "Shark upper", group = grpL, inline = "sf")
+sharkDn     = input.int(37, "Shark lower", group = grpL, inline = "sf")
+colShark    = input.color(color.new(#FF9800, 35), "", group = grpL, inline = "sf")
+
+// -------------------------------------------------------------------------
+// Calculation
+//   RSI -> the four TDI lines.
+//
+// ⭐⭐ THE BAND BASIS IS RULED. `D-052`, OWNER RULING, 2026-08-14. READ THIS.
+//
+//   The one disputed question about this indicator was: the volatility bands are
+//   N standard deviations OF WHAT? Two answers were on the record, one week
+//   apart, from the same speaker:
+//
+//     V12 [00:16:16]-[00:16:20]  "...from the RSI line. Thank you."
+//     V14 [00:45:09]             "two standard deviations away from the market base."
+//
+//   `C-021` carried both. `D-048` ran the tie-break ladder in full and returned
+//   RUNG 4 — DO NOT ADJUDICATE, put it to the owner. The owner was then shown
+//   both constructions side by side (`tools/tdi-basis-comparison`) and ruled:
+//
+//       "It's definitely not the market basis. It's the RSI [line]."
+//
+//   ADOPTED:   dev = bandMult * ta.stdev(rsiVal,   bandLen)     <- the RSI line
+//   REJECTED:  dev = bandMult * ta.stdev(baseLine, bandLen)     <- the market base
+//
+//   The band CENTRE is the market base line either way and was never disputed.
+//   Only the WIDTH changes. `C-021` is CLOSED; `REVIEW_INDEX.md` item 187 closed.
+//
+// ⚠⚠ THE WARRANT IS `OWNER EMPIRICAL PREFERENCE` — NOT COURSE-VERIFIED.
+//   It is the owner's judgment against his lived experience of the indicator:
+//   RECOLLECTION OF PRACTICE, NOT COURSE EVIDENCE. It is NOT `RESOLVED BY
+//   COURSE` (D-048 limit 1 forbids that by name), and it is NOT `RESOLVED —
+//   OWNER ATTESTATION` (that status is the owner testifying to what was TAUGHT;
+//   this is the owner judging what the INSTRUMENT DOES).
+//
+//   AND THE CORPUS IS OVERRIDDEN, NOT RECONCILED: Tier 1 V14 [00:45:09] AND
+//   Tier 2 MMM-NOTES p.45 ("applied to the market baseline of the indicator
+//   instead of price") BOTH SAY THE MARKET BASE, both stand unretracted, and
+//   this ruling goes the other way. Never cite p.45 in support of the line
+//   below — an earlier version of this comment did exactly that, conflating
+//   "the bands are on the RSI series rather than on price" (true, undisputed,
+//   and not the question) with "the bands are a deviation of the RSI line
+//   rather than of the market base line" (the actual dispute).
+//
+// ⛔ AND IT UNBLOCKS NOTHING. `A-086` stays DO NOT CODE — the band PERIOD is
+//   still never stated in Tier 1 or Tier 2 (`Volatility_Band=34` is a [TOOLING]
+//   candidate, D-045-ELIGIBLE and NOT ADOPTED), so `A-031` ("blood in the
+//   water") and `A-032` ("shark fin") stay UNCOMPUTABLE. A basis and a
+//   multiplier do not build a band without a lookback.
+//
+//   Tags: [OWNER-RULED] marks what D-052 decided. It ranks OUTSIDE the tiers,
+//   as D-041 established owner adjudication does — it is not [TIER 1] and it is
+//   not [TOOLING].
+// -------------------------------------------------------------------------
+rsiVal = ta.rsi(src, rsiLen)
+
+baseLine = ta.sma(rsiVal, bandLen)                  // Market Base Line — the band CENTRE. Not disputed.
+
+// ⭐ [OWNER-RULED] (D-052) — THE BANDS ARE A DEVIATION OF THE RSI LINE ITSELF.
+//    `rsiVal`, NOT `baseLine`. Changing this line reverses an owner ruling.
+//    ⚠ `bandMult` is a SEPARATE and STILL-OPEN question — see its input tooltip
+//      above and D-052 consequence 6. D-052 ruled the BASIS and nothing else.
+dev      = bandMult * ta.stdev(rsiVal, bandLen)
+
+bandUp   = baseLine + dev                           // upper Volatility Band
+bandDn   = baseLine - dev                           // lower Volatility Band
+
+fastMa = f_ma(rsiVal, fastLen, maType)              // RSI Price Line
+slowMa = f_ma(rsiVal, slowLen, maType)              // Trade Signal Line
+
+// -------------------------------------------------------------------------
+// Plots
+// -------------------------------------------------------------------------
+pUp = plot(showBands ? bandUp : na, "Volatility Band Up",   color = colBands, linewidth = 1)
+pDn = plot(showBands ? bandDn : na, "Volatility Band Down", color = colBands, linewidth = 1)
+fill(pUp, pDn, color = fillBands and showBands ? color.new(colBands, 92) : na, title = "Band fill")
+
+plot(showBase ? baseLine : na, "Market Base Line",          color = colBase, linewidth = 2)
+plot(showRsi  ? rsiVal   : na, "RSI (raw)",                 color = colRsi,  linewidth = 1)
+plot(showFast ? fastMa   : na, "Fast MA (RSI Price Line)",  color = colFast, linewidth = 2)
+plot(showSlow ? slowMa   : na, "Slow MA (Trade Signal Line)", color = colSlow, linewidth = 2)
+
+// Reference levels are drawn with `plot`, not `hline`: Pine (v5 and v6 alike)
+// requires `hline`'s price to be a const/input, so it cannot take a
+// `showLevels ? … : na` expression. `plot` accepts the series and keeps the
+// toggle working.
+plot(showLevels ? lvlUp  : na, "Level 68", color = color.new(color.gray, 50), style = plot.style_linebr)
+plot(showLevels ? lvlMid : na, "Level 50", color = color.new(color.gray, 20), style = plot.style_linebr)
+plot(showLevels ? lvlDn  : na, "Level 32", color = color.new(color.gray, 50), style = plot.style_linebr)
+plot(showShark ? sharkUp : na, "Shark fin upper (63)", color = colShark, style = plot.style_linebr)
+plot(showShark ? sharkDn : na, "Shark fin lower (37)", color = colShark, style = plot.style_linebr)
+
+// A persistent on-panel reminder of what is and is not established.
+// Held in a `var` and moved rather than re-created, so realtime bars do not
+// accumulate one label per closed bar.
+var label warnLbl = na
+if barstate.islast
+    label.delete(warnLbl)
+    warnLbl := label.new(bar_index, 100,
+         "TDI params from !SM_TDI tooling — bands = stdev of the RSI LINE (D-052, OWNER-RULED, not course-verified) — A-039 still OPEN; band PERIOD never stated and std-dev multiple still unverified, so A-086 is DO NOT CODE",
+         style     = label.style_label_down,
+         color     = color.new(color.orange, 25),
+         textcolor = color.white,
+         size      = size.tiny)
