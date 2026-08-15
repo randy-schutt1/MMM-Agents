@@ -60,7 +60,8 @@ When asked for a live entry, the student must not promote `NAMED` or `PARTIALLY 
 
 - `SR-03` corrects the former synthesis error: V02 gives a genuine 22 definition. The unquantified
   overshoot and raw-chart leg anatomy remain honest blockers.
-- `SR-04` is Tier 2, not Tier 1.
+- `SR-04` has a Tier-1 V13 definition and a separate admitted Tier-2 notes account; they remain
+  related but not mechanically identical.
 - `OR-01` is owner practice in an unadopted draft, not course doctrine and not a complete signal.
 - `EMPIRICALLY TESTED` is deliberately not claimed for a complete setup in this table. `PT-047`
   tested a declared operationalization of the M/W second-leg time rule, not full M/W anatomy or a

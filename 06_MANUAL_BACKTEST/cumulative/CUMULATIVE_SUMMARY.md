@@ -1,15 +1,14 @@
-# CUMULATIVE SUMMARY — every pre-registered test run to date
+# CUMULATIVE SUMMARY — every pre-registered test run through V16
 
 ```text
-STATUS:   40 pre-registered PT files exist (PT-001…PT-036, PT-039…PT-042; there is
-          no PT-037 and no PT-038 -- see §1a). 32 of them have a committed BT
-          record; 31 were ACTUALLY EXECUTED AND REPORTED (PT-022 is superseded,
+STATUS:   42 pre-registered PT files exist through V16 (PT-001…PT-036,
+          PT-039…PT-044; there is no PT-037 and no PT-038 -- see §1a). 34 have a
+          committed BT record; 33 were ACTUALLY EXECUTED AND REPORTED (PT-022 is superseded,
           its period unobtainable); 8 have never been run.
 COVERAGE: this file lists EVERY test that has been run, whatever it found.
           `BACKTEST_EVIDENCE_STANDARD.md` §4.3: "A summary naming only the tests
           that worked is invalid." Nothing here is omitted for being null.
-UPDATED:  2026-08-14, on branch `fix/verify-quotes-and-summary-refresh`, after the
-          gap audit found this file stale by seven tests.
+UPDATED:  2026-08-15, at the 75% cumulative checkpoint, adding PT-043 and PT-044.
 ```
 
 > ### ⚠ WHY THIS FILE WAS REWRITTEN, AND WHAT WAS WRONG WITH IT
@@ -32,10 +31,10 @@ UPDATED:  2026-08-14, on branch `fix/verify-quotes-and-summary-refresh`, after t
 > table — is still owed and is still unmade.** This refresh corrects the contents; it does not
 > close item 96, and a fourth instance is expected until item 96 is actually done.
 >
-> Every figure below was re-read out of the named `BT_*` record for this refresh rather than
-> carried forward, and §1's counts are re-derived from the directory rather than from the
-> previous revision. **The arithmetic is stated so it can be checked: 7 + 4 + 5 + 11 + 3 + 1 + 1
-> = 32 PT ids with a committed record, plus 8 never run, = 40 PT files on disk.**
+> Every figure below was re-read out of the named `BT_*` record for its refresh rather than
+> carried forward. Through V16 the arithmetic is: **7 + 5 + 5 + 12 + 3 + 1 + 1 = 34 PT ids with
+> a committed record, plus 8 never run, = 42 pre-registered PT files through PT-044.** Later
+> lessons have their own records but are outside this V01–V16 checkpoint view.
 
 **Summaries never replace individual observations.** Every figure below is a pointer;
 the record is the `BT_VXX_NNNN.md` file named beside it, and the caveats that govern
@@ -45,18 +44,18 @@ each number live there, not here.
 
 ## 1. THE HEADLINE COUNT
 
-Across the **32** PT ids that have a committed `BT_*` record:
+Across the **34** PT ids through V16 that have a committed `BT_*` record:
 
 | Disposition | Count | Tests |
 |---|---:|---|
 | **Clears its own pre-registered null** | **7** | `PT-007`, `PT-017`, `PT-018`, `PT-026`, `PT-027`, `PT-032`, `PT-034` |
-| **`SPLIT` / `PARTIALLY SUPPORTED`** | **4** | `PT-004`, `PT-029`, `PT-039`, `PT-041` |
+| **`SPLIT` / `PARTIALLY SUPPORTED`** | **5** | `PT-004`, `PT-029`, `PT-039`, `PT-041`, `PT-044` |
 | **`CONTRADICTED`** — the data runs against the taught claim | **5** | `PT-006`, `PT-028`, `PT-030`, `PT-035`, `PT-036` |
-| **`NOT SUPPORTED` / `INDISTINGUISHABLE FROM THE NULL`** | **11** | `PT-002`, `PT-003`, `PT-005`, `PT-014`, `PT-015`, `PT-016`, `PT-020`, `PT-021`, `PT-025`, `PT-031`, `PT-042` |
+| **`NOT SUPPORTED` / `INDISTINGUISHABLE FROM THE NULL`** | **12** | `PT-002`, `PT-003`, `PT-005`, `PT-014`, `PT-015`, `PT-016`, `PT-020`, `PT-021`, `PT-025`, `PT-031`, `PT-042`, `PT-043` |
 | **`INDETERMINATE` / `DESCRIPTIVE` only** | **3** | `PT-023`, `PT-024`, `PT-033` |
 | **`MATERIAL`** — measures an *ambiguity*, not a taught claim | **1** | `PT-040` |
 | **Superseded, period unobtainable** | **1** | `PT-022` |
-| **Total with a committed record** | **32** | of which **31 executed and reported** |
+| **Total with a committed record** | **34** | of which **33 executed and reported** |
 
 **Never run:** **8** — `PT-008`, `PT-009`, `PT-010`, `PT-011`, `PT-012`, `PT-013`, `PT-019` (all
 **retired unrun** as non-conforming under `D-035`, and **all re-issued**) and `PT-001`, which
@@ -140,6 +139,13 @@ a slash they are the two `D-031` arms, reported separately and **never pooled**.
 | **PT-040** | V12 | Does `A-084`'s smoothing ambiguity change the RSI thresholds V11 states? | `V12/BT_V12_0001` | **`MATERIAL`** — this measures **an ambiguity, not a taught claim**, and so appears in no supported/contradicted column. Side disagreement `M = 5.16 pp` on the 50-line against a pre-registered **`> 5.0 pp` = MATERIAL** boundary, `n = 24,730` bars; `N2` (**10.661 pp**) and `N3` (**12.147 pp**) land in the same band. ⚠ **The result is the opposite of what the session wanted:** `A-084` is not a bookkeeping ambiguity, and every RSI threshold V11 states is under-determined until it is resolved |
 | **PT-041** | V13 | *"50 to 100 pips on the table… you'll hit your 50 pips"* | `V13/BT_V13_0001` | **`PARTIALLY SUPPORTED`** — **the distance is real, the promise is not.** Median MFE **56.8 / 52.9 pips**, and `O1` beats a same-metric control by **+44.9 / +42.2 pp** against a `≥ +10 pp` clause — four times the margin required. But `O4`, **the claim's own premise** that the dealer comes back into the Asian levels, holds only **0.704 / 0.701** against a pre-registered `≥ 0.80`, and `O2` reaches **0.630 / 0.642** against `≥ 0.70`. Both boundaries were fixed before the runner existed and both are honoured. ⚠ §5's named control was **DEFECTIVE in a direction that flattered the claim**; a like-for-like control was added at run time and **both are reported** |
 | **PT-042** | V14 | "The lock" — does a session extreme that holds one hour become the day's extreme? | `V14/BT_V14_0001` | **`NOT SUPPORTED`** — **the distance is real, the premise is not.** `O1` = **0.3461 / 0.3041** against `≥ 0.80` — a **45-point miss**, wrong about two days in three; `O2` = **0.4607 / 0.4433** against `≥ 0.50`; `n` = **471 / 467**. ⚠ **This is a precisely located negative, not an empty one:** median MFE from entry is **40.10 / 40.40 pips** against a matched-random **18.90 / 20.30**, and `O2` **doubles** matched-random (0.4607 vs 0.2251). The record also discloses **two defects in `PT-042` itself**, owed an amendment before any re-issue: `N4` is degenerate (`n = 0`), and §5a underspecified `N1`'s `O1` construction in a direction that flatters the rule arm |
+
+### 2e. V15–V16 additions required by the 75% checkpoint
+
+| PT | Lesson | Question | Record | **Disposition** |
+|---|---|---|---|---|
+| **PT-043** | V15 | Does the daily close normally sit 25–50 pips off its own high or low? | `V15/BT_V15_0001` | **`NOT SUPPORTED`** on the headline `or` reading: 36.4% versus a same-day random-minute control of 37.6%. The stricter `and` reading is **CONTRADICTED AS STATED** at 9.4%. All four cells agree; no closing-location edge is established. |
+| **PT-044** | V16 | Is roughly 200 pips a typical GBP/USD day or a ceiling? | `V16/BT_V16_0001` | **`SPLIT` across fixed windows.** The typical-day reading is **PARTIALLY SUPPORTED** in W-D (median 102.6 pips under the test's half-of-200 interpretation) and **CONTRADICTED AS STATED** in W-E (92.3); both are reported and neither is selected. The 200-pip ceiling reading is only **WEAKLY SUPPORTED**. One pair cannot establish the claim's every-pair scope. |
 
 ---
 
