@@ -181,7 +181,7 @@ explicitly.
 | RSI period | **21** | ⭐ **`[TIER 1]`** — `A-080` **`CLOSED — RESOLVED BY COURSE`**, three independent Tier 1 instances (incl. V13 first-person *"we have it set to 21"*); V13 `[00:54:51]` makes it a lookback in **chart periods, scaling with timeframe**. `!SM_TDI RSI_Period=21` **corroborates** and is no longer the warrant — **tag corrected at `D-053`**, which found both tools understating this. **Not** the Tier-3 13 |
 | RSI source | close | `[TOOLING]` — `RSI_Price=0` = MT4 `PRICE_CLOSE` |
 | Fast MA (RSI Price Line) | **2**, SMA | `[TOOLING]` — `RSI_Price_Line=2`, `Type=0`. `A-084` **`PROVISIONALLY RESOLVED — TOOLING`** at `k = 2`, on the §3.4 re-check list |
-| Slow MA (Trade Signal Line) | **7**, SMA | `[TOOLING]` — `Trade_Signal_Line=7`, `Type=0`. ⛔ **`A-085` — see the box below. This line does NOT poll the one-hour chart** |
+| Slow MA (Trade Signal Line) | **7**, SMA | `[TOOLING]` — `Trade_Signal_Line=7`, `Type=0`. ⚠ **`A-085` is `OPEN` — see the box below for what V12 does and does not claim about this line** |
 | Volatility band / base-line period | **34** | ⛔ `[TOOLING]` — `Volatility_Band=34`. **THIS IS `A-086`'s MISSING QUANTITY.** `D-045`-**ELIGIBLE, NOT ADOPTED**; never stated in Tier 1 or Tier 2. **It is why the bands are unconstructible and why `A-031`/`A-032` are uncomputable** |
 | **Band BASIS** — deviation of *what*? | **the RSI line** | ⚠ `[OWNER-RULED]` — **`D-052`, `OWNER EMPIRICAL PREFERENCE`.** `dev = mult × stdev(RSI)`, **not** of the base line. ⛔ **NOT course-verified:** Tier 1 V14 `[00:45:09]` and Tier 2 `MMM-NOTES` p.45 **both** say the market base, both stand unretracted, and the ruling **overrides** them. `C-021` closed on it |
 | **Band std-dev multiple** | **1.6185** | ⛔ **`[DEFAULT]` — STILL A GUESS, AND STILL OWED.** The MT4 indicator exposes no input for it, so it is compiled into the `.ex4` and the template cannot reveal it. **Still the Tier-3 public value.** ⚠ **And V14 `[00:45:09]`'s unhedged *"two standard deviations"* has a Tier 1 warrant this number does not** — `D-052` consequence 6, reaffirmed at `D-053` consequence 5, **not resolved** |
@@ -189,31 +189,51 @@ explicitly.
 | Shark-fin levels 63 / 37 | | `[TOOLING]` — `SharkFin_Upper/Lower_Level`, with dedicated buffers. **`A-032` remains OPEN** — these are the indicator's thresholds, not a definition of the pattern. |
 | Line colours | | `[TOOLING]`, **but the buffer→line mapping is INFERRED** — the template does not name its buffers. Sensible, not proven. |
 
-> ## ⛔⛔ `A-085` — THE TRADE SIGNAL LINE. **THIS TOOL DOES NOT DO WHAT THE LESSON SAYS THE TSL DOES.**
+> ## ⚠️ `A-085` — THE TRADE SIGNAL LINE. **WHAT THE LESSON DOES AND DOES NOT CLAIM.**
 >
-> **`D-053` §3(a).** V12 `[00:11:49]`, restated `[00:11:59]`: *"The TSL in essence is a **polling
-> of the one-hour chart**, brought into your view on the 15 minute."* `[00:12:07]`: *"when you get
-> a crossover right here, in essence **you now have a signal on the one-hour chart**."*
+> > **CORRECTED 2026-08-14 BY `D-054`, WHICH WITHDREW `D-053` §3(a).** The block that stood here
+> > said *"this tool does not do what the lesson says the TSL does"* and that a crossover *"is NOT
+> > evidence that a one-hour signal has fired."* **Both were wrong** — they converted an effect
+> > claim into a mechanism claim and adjudicated a question `A-085` expressly leaves open. The
+> > owner challenged it and was substantially right. What follows is the corrected statement.
 >
-> **What the line actually is, in both tools:** a **7-period SMA of the RSI, on the chart's /
-> render's own timeframe.** Nothing in it reads a higher timeframe, and nothing in the shipped TDI
-> ever did. `A-085` records that the claim may describe an **effect** (a smoothed line lags like a
-> slower timeframe) stated as though it were a **mechanism**, does **not** adjudicate which, and is
-> ⛔ `DO NOT CODE`.
+> **THE CODE FACT.** In both tools the Trade Signal Line is `SMA(7)` of `RSI(21)` computed on the
+> chart's / render's own timeframe. **There is no higher-timeframe read in either file.** That is a
+> statement about the code, **not** a charge against the lesson.
 >
-> ⛔ **A crossover of this line is a crossover of a 7-SMA of the RSI on the timeframe in front of
-> you. It is NOT evidence that "a one-hour signal has fired" and may not be reported as one.**
+> **WHAT V12 ACTUALLY SAYS, IN ITS OWN FRAME:**
 >
-> ⚠️ **Why this outranks the other open records in practical danger:** V12 `[00:12:18]` tells a
-> student they *"not necessarily"* need to consult the one-hour chart given a shark fin and blood
-> in the water. **A student is told they may stop looking at a timeframe on the strength of this
-> claim** — and if the claim is an effect rather than a mechanism, that advice is unsafe. Neither
-> tool can tell you which it is.
+> > `[00:11:39]` *"Someone asked me a few minutes ago about **should I look at the one-hour
+> > chart?** I'm gonna tell you a little secret about the TSL"*
+> > `[00:11:49]` *"The TSL **in essence** is a polling of the one-hour chart"* · `[00:11:55]`
+> > *"Brought into your view on the 15 minute"*
+> > `[00:12:18]` *"you need to look at the one-hour chart **not necessarily** if you got a **shark
+> > fin blood in the water**"*
+> > `[00:12:44]` *"…**one hour trade signal line** red"* — **the lesson's own name for the line**
 >
-> ⛔ **Do not "fix" this** by wiring an H1 `request.security()` / resample into either tool. That is
-> `D-030`'s forbidden act — inventing a construction the corpus never gave — and it would look
-> authoritative on a chart or a rendered PNG. `A-085` closes on a lesson that states a
-> construction, or it does not close.
+> ⭐ **The passage answers a WORKFLOW question** — *should I go look at H1?* — with *"not
+> necessarily."* *"**In essence** is a polling of"* is **effect language, hedged on its face.** The
+> lesson does not say the indicator reads H1 data.
+>
+> ⚠️ **AND THE CLAIM IS SCOPED.** V12 does **not** say every crossover is an H1 signal — he says
+> that **with a shark fin and blood in the water** the H1 has fired *"at the same time or in
+> congruency."* ⛔ **That claim cannot be tested:** `A-032` and `A-031` are uncomputable because the
+> band's **period** is never stated (`A-086`). **It is neither confirmed nor refuted, and may not be
+> reported as either.**
+>
+> **MEASURED** (`06_MANUAL_BACKTEST/scripts/probe_a085_tsl_h1.py`, 307,576 M15 / 76,901 H1 bars,
+> GBPUSD 2013–2025, no look-ahead): the **unconditioned** reading does not hold — **42.9%** of M15
+> crossovers have H1 already on the same side against a **60.3%** base rate, and **`SMA(7)` is not
+> special** (`r` vs H1 `RSI` rises monotonically with smoothing: `2→0.771`, `7→0.782`, `28→0.804`).
+> **This bears on the unconditioned reading only.** It does not touch V12's scoped claim, and it
+> does not touch the practical reading — that a slower line gives a slower-timeframe sense on the
+> chart in front of you, so you flip charts less — **which nothing here refutes.**
+>
+> ⛔ **STILL FORBIDDEN, and this part survived the correction intact:** do **not** wire an H1
+> `request.security()` / resample into either tool to make it *"match"* the lesson. `A-085` supplies
+> no period and no formula; inventing one is `D-030`'s forbidden act, with the aggravating factor
+> that it would look authoritative on a chart or a rendered PNG. **`A-085` is `OPEN` and
+> `DO NOT CODE`.**
 
 **Why `A-039` does not close.** An MT4 template on the owner's disk is neither Tier 1 (the
 recordings) nor Tier 2 (the Mauro PDF). It is an evidence class with no tier and no

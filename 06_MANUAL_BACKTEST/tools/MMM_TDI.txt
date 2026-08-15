@@ -307,40 +307,54 @@ bandDn   = baseLine - dev                           // lower Volatility Band
 
 fastMa = f_ma(rsiVal, fastLen, maType)              // RSI Price Line — [TOOLING], A-084 PROVISIONAL at k=2
 
-// ⛔⛔ `A-085` — THE TRADE SIGNAL LINE. THE MOST DANGEROUS LINE IN THIS PANEL.
-//    THIS TOOL DOES NOT DO WHAT THE LESSON SAYS THE TSL DOES, AND IT MUST NOT
-//    BE MADE TO. D-053 §3(a).
+// ⚠ `A-085` — THE TRADE SIGNAL LINE, AND WHAT THE LESSON DOES AND DOES NOT
+//    CLAIM ABOUT IT. `D-054` (which WITHDREW `D-053` §3(a)'s harsher framing).
 //
-//    V12 [00:11:49], restated [00:11:59]:
-//        "The TSL in essence is a POLLING OF THE ONE-HOUR CHART, brought into
-//         your view on the 15 minute."
-//        "...when you get a crossover right here, in essence you now have a
-//         SIGNAL ON THE ONE-HOUR CHART." [00:12:07]
+//    THE CODE FACT: `slowMa` is SMA(7) of RSI(21) computed on THE CHART'S OWN
+//    TIMEFRAME. There is no `request.security()` call and no higher-timeframe
+//    read anywhere in this file. That is a statement about this code. It is NOT
+//    a charge against the lesson — see below.
 //
-//    WHAT THE LINE BELOW ACTUALLY IS: a 7-period SMA of the RSI, computed on
-//    THE CHART'S OWN TIMEFRAME. Nothing in it reads a higher timeframe, and
-//    nothing in the shipped TDI ever did. A-085 records that the course's claim
-//    may be a description of an EFFECT (a smoothed line lags like a slower
-//    timeframe) stated as though it were a MECHANISM — and does NOT adjudicate
-//    which. A-085 has no period, no formula and no account of "polling", and it
-//    is DO NOT CODE.
+//    WHAT V12 SAYS, IN ITS OWN FRAME:
+//      [00:11:39] "Someone asked me a few minutes ago about SHOULD I LOOK AT THE
+//                  ONE-HOUR CHART? I'm gonna tell you a little secret about the TSL"
+//      [00:11:49] "The TSL IN ESSENCE is a polling of the one-hour chart"
+//      [00:11:55] "Brought into your view on the 15 minute"
+//      [00:12:18] "So you need to look at the one-hour chart NOT NECESSARILY if
+//                  you got a SHARK FIN BLOOD IN THE WATER"
+//      [00:12:44] "...one hour trade signal line red"   <- the lesson's own NAME
+//                  for this line carries the one-hour association
 //
-// ⛔ THEREFORE: a crossover of this line is A CROSSOVER OF A 7-SMA OF THE RSI ON
-//    THE CHART IN FRONT OF YOU. It is NOT evidence that "a one-hour signal has
-//    fired" and it MAY NOT BE REPORTED AS ONE.
+//    ⭐ READ THE FRAME: the passage answers a WORKFLOW question — "should I look
+//    at the one-hour chart?" — with "not necessarily". "IN ESSENCE is a polling
+//    of" is EFFECT language, hedged on its face. The lesson does not say the
+//    indicator reads H1 data. An earlier version of this comment asserted that
+//    "the tool does not do what the lesson says it does" and that a crossover
+//    "is NOT evidence a one-hour signal has fired". BOTH WERE WITHDRAWN AT
+//    `D-054`: they converted an effect claim into a mechanism claim and then
+//    adjudicated a question `A-085` expressly leaves open.
 //
-// ⛔ WHY THIS MATTERS MORE THAN THE OTHER OPEN RECORDS: V12 [00:12:18] tells a
-//    student they "not necessarily" need to consult the one-hour chart if they
-//    have a shark fin and blood in the water. A STUDENT IS TOLD THEY MAY STOP
-//    LOOKING AT A TIMEFRAME, on the strength of this claim. If the claim is an
-//    effect rather than a mechanism, that advice is unsafe — and this tool
-//    cannot tell you which it is.
+//    ⚠ AND THE CLAIM IS SCOPED. V12 does NOT say every crossover is an H1
+//    signal. He says that WITH A SHARK FIN AND BLOOD IN THE WATER the H1 has
+//    fired "at the same time or in congruency". THAT CLAIM CANNOT BE TESTED:
+//    shark fin (A-032) and blood in the water (A-031) are uncomputable, because
+//    the band's PERIOD is never stated (A-086). It is neither confirmed nor
+//    refuted, and may not be reported as either.
 //
-// ⛔ DO NOT "FIX" THIS by wiring an H1 request.security() call in here. That is
-//    D-030's forbidden act — inventing a construction the corpus never gave —
-//    and it would look authoritative on a chart. A-085 closes on a lesson that
-//    states a construction, or it does not close.
-slowMa = f_ma(rsiVal, slowLen, maType)              // Trade Signal Line — chart's OWN timeframe. See above.
+//    MEASURED, on 307,576 M15 / 76,901 H1 bars (probe_a085_tsl_h1.py): the
+//    UNCONDITIONED reading does not hold — 42.9% of M15 crossovers have H1 on
+//    the same side against a 60.3% base rate, and SMA(7) is NOT special (r vs H1
+//    RSI rises monotonically with smoothing: 2->0.771, 7->0.782, 28->0.804).
+//    That bears on the unconditioned reading ONLY. It does not touch V12's
+//    scoped claim, and it does not touch the practical reading that a slower
+//    line gives you a slower-timeframe sense on the chart in front of you.
+//
+// ⛔ STILL FORBIDDEN, AND THIS PART SURVIVED THE CORRECTION INTACT: do NOT wire
+//    an H1 `request.security()` call in here to make the tool "match" the
+//    lesson. A-085 supplies no period and no formula; inventing one is D-030's
+//    forbidden act, and it would look authoritative on a chart. A-085 closes on
+//    a lesson that STATES A CONSTRUCTION, or it does not close. It is OPEN.
+slowMa = f_ma(rsiVal, slowLen, maType)              // Trade Signal Line — SMA(7) of RSI, chart's own timeframe. See A-085 note above.
 
 // -------------------------------------------------------------------------
 // Plots

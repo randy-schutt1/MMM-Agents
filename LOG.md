@@ -9953,3 +9953,51 @@ not a value.
 
 `D-052` consequence 6 — the `1.6185` multiplier is a `[DEFAULT]` guess sitting in the **primary**
 instrument while V14's *"two standard deviations"* has a Tier 1 warrant. **Reaffirmed, not resolved.**
+
+---
+
+## 2026-08-14 — `D-054` · ⚠️ **`D-053` §3(a) WITHDRAWN.** The owner challenged the `A-085` finding and was substantially right
+
+**Owner:** *"What do you mean my signal never done that? It's playing on what V12 said. I compared
+what I chose and what I learned and it's accurate."*
+
+### The finding was wrong on two counts
+
+1. **It mischaracterised V12.** `D-053` was written from `A-085`'s **summary** of V12, not from the
+   transcript — and the summary omits `[00:11:39]`, *"Someone asked me a few minutes ago about
+   **should I look at the one-hour chart?**"*. **The passage answers a WORKFLOW question** and
+   `[00:11:49]` says *"**in essence** is a polling of"* — hedged **effect** language. `D-053` turned
+   it into a **mechanism** claim and charged the tool with failing it.
+2. **It adjudicated a question `A-085` expressly declines** — effect vs mechanism — in the mechanism
+   direction, **without measuring anything.**
+
+### And it tested the wrong claim
+
+V12 conditions it: *"not necessarily **if you got a shark fin blood in the water**."* ⛔ **That claim
+cannot be tested** — `A-031`/`A-032` are uncomputable because `A-086`'s period is never stated.
+**Neither confirmed nor refuted.**
+
+### What was measured (`06_MANUAL_BACKTEST/scripts/probe_a085_tsl_h1.py`)
+
+307,576 M15 / 76,901 H1 bars, GBPUSD 2013–2025, no look-ahead. The **unconditioned** reading does
+not hold — **42.9%** same-side vs a **60.3%** base rate; and ⭐ **`SMA(7)` is not special**,
+correlation with H1 `RSI` rising monotonically with smoothing (`2→0.771`, `7→0.782`, `28→0.804`).
+**Bears on that reading only.**
+
+### Why we disagreed
+
+`D-053` checked *"does the code do a higher-timeframe read?"* — **no, and never in dispute.** The
+owner checked *"does the line behave as taught?"* — **his judgment: yes**, and that is the question
+V12 was answering. Note V12 `[00:12:44]` **names** it *"one hour trade signal line"*.
+
+### Unchanged
+
+**`A-085` stays `OPEN` / `DO NOT CODE`** — still no period, no formula, no account of *"polling"*.
+The owner's comparison is **not** offered as closing it and does not. The `D-030` prohibition on
+wiring an H1 read into the tools **stands, strengthened**. All the rest of `D-053` stands.
+
+### Standing caution, earned
+
+**A session reading an ambiguity record's summary of a lesson is not reading the lesson.** Where a
+finding turns on *what kind of claim* a speaker is making, open the transcript **and its surrounding
+turns**. `D-053` §3(a) would not exist if `[00:11:39]` had been read.
