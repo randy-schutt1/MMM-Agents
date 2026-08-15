@@ -10,19 +10,25 @@ Naming: `CL-NNN_concept-name.md`
 ## STATUS
 
 ```text
-CONCEPTS:        0
-LESSONS STUDIED: 19 (V01-V14 studied; V15-V19 studied and submitted as
-                     REVIEW REQUIRED. See COURSE_PROGRESS.md for per-lesson
-                     review status -- several are COMPLETE only in the
-                     qualified SELF-VERIFIED AT OWNER DIRECTION sense, and
-                     V16 and V17 were both opened with their D-004 gate
-                     CLOSED. V18 and V19 were both opened on a gate that was
-                     OPEN, verified against the commit graph rather than
-                     assumed.)
-
-                     V18's row was added by the V19 session, discharging the
-                     omission REVIEW_INDEX item 264 charged against V18.
+PROMOTED CONCEPT FILES: 0
+LESSONS INGESTED:       21 / 21
+SETUP KNOWLEDGE:        PRESENT -- see 00_SYSTEM/MMM_SETUP_REGISTRY.md
+FINAL COURSE REVIEW:    NOT STARTED
 ```
+
+> **PHASE 1 CORRECTION — 2026-08-15.** The former headline `CONCEPTS: 0` was technically a count of
+> promoted `CL-NNN` files but was routinely readable as *"the student knows no concepts."* That is
+> false. The corpus names and partially defines many setups; it simply has not admitted any into
+> this library under the stricter promotion rules below. `MMM_SETUP_REGISTRY.md` now carries the
+> human-knowledge inventory with separate statuses for **named**, **partially defined**,
+> **human-recognizable**, **operational**, **machine-codable**, and **empirically tested**. This file
+> retains its original promotion history below; zero promoted files must never again be reported as
+> zero setup knowledge.
+
+> **Formal-status boundary.** V21 holds an independent R2 `PASS`, and all 21 lessons are ingested.
+> `REVIEW_INDEX.md` item 386 still records twelve open `MINOR`s across V17–V20, and all cumulative
+> reviews plus `FINAL_COURSE_REVIEW.md` remain `NOT STARTED`. Phase 1 does not promote concepts or
+> authorize the Master Specification.
 
 > **UPDATED 2026-08-14 (V16 session).** `LESSONS STUDIED` read **`3`** while sixteen
 > lessons had been studied. **That is the third time this exact block has gone stale

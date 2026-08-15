@@ -18,19 +18,20 @@ a supplemental video or the owner can answer.
 
 ---
 
-## 0. THE STATE OF THE REPO THIS WAS BUILT FROM — READ THIS FIRST
+## 0. CURRENT REPOSITORY STATE — PHASE 1 CONSOLIDATION
 
-⚠️ **The project's current knowledge is spread across FIVE UNMERGED BRANCHES.** Anyone reading only
-the integration branch (`19e6c2a`) will miss the whole of V21 and every owner ruling from
-2026-08-15. Verified against the commit graph, not assumed:
+⭐ **This file was originally written while the knowledge was spread across five branches. Phase 1
+has now consolidated those sources on `phase1/knowledge-consolidation`:**
 
-| Branch | Tip | What only lives there |
-|---|---|---|
-| **integration** (`claude/add-documents-repository-fdfb3u`) | `19e6c2a` | V01–V20 studied; `DECISIONS.md` ends at **`D-057`** |
-| `video/v21` | `4bee5f4` | ⭐ **V21 ingestion — the corpus is COMPLETE at 21/21.** `A-140`, `A-141`, `C-031`, `PT-050` |
-| `review/v21` | `95b6b1d` | V21 R1 (WIP): REVISE, 1 MAJOR, 3 MINOR |
-| `tools/btmm-indicator-pack-survey` | `f0a7bc9` | The `!SM_` suite survey; `D-060` draft |
-| ⭐ **`decisions/owner-m15-timeframe`** | `a884bd2` | ⭐⭐ **Owner rulings #6–#11 and drafts `D-058`, `D-059`, `D-061`** — including the 5/13 cross and M15 |
+- the integration history through V21 R2 (`PASS`), including all 21 transcript, note, screenshot,
+  homework, backtest and mastery sets;
+- the full owner/tooling chain through the M15 5/13 timing rule and BTMM indicator-pack survey;
+- this setup synthesis.
+
+**No source branch was deleted or rewritten.** `MMM_CURRENT_STATE.md` is the current-state authority;
+the former branch table was a historical warning and is superseded by this block. The Phase 1
+merge does **not** adopt any draft decision, close an ambiguity, perform the cumulative review, or
+authorize the Master Specification.
 
 ### 0.1 ⛔ EVERY 2026-08-15 OWNER RULING IS IN AN **UNADOPTED DRAFT**
 
@@ -116,8 +117,8 @@ scope of the supplemental series' job, not a claim that the job is done.**
 | **S15** | **The one-third entry** | ⭐ **`entry = high − (candle range ÷ 3)`**, worked at 100 → 33 pips; mirrored for a long | ⭐⭐ **TIER 1, ARITHMETICALLY COMPLETE — V20 `[00:29:14]`–`[00:29:53]`** | ⚠️ **`A-139` — the arithmetic is complete; WHICH CANDLE is never stated in words.** Two contextual candidates (the RR-track bar, the zone-shifting bar) and they may be the same bar |
 | **S16** | **Dinosaur pattern** | A weekly shape that can **override the running level count** | ⚠️ **TIER 1 by name + consequence** — V09 `[00:34:44]` | ⛔ `A-071` — drawn live in Paint, described only by its consequence; *"we all know what that is"* points at **material outside this corpus** |
 | **S17** | **"A pattern"** | The expectation at level one, contrasted with a second leg | ⛔ **UNVERIFIED — may not be a real term.** One occurrence, V07 `[00:14:07]` | ⛔ `A-057` — possibly ASR garble for *"an M pattern"*. **Deliberately NOT merged with `A-047`** |
-| **S18** | **33 trade / 22 trade / 3333 trade** | Named trades tied to the level count | 🟡 **TIER 2 — `MMM-NOTES` p.64 decodes the 33 digits** (3 levels over 3 days + an intraday L3) | ⛔ `A-023`, `A-097` — the *"22-trade"* and *"3333 trade"* have **zero definitions and zero Tier 2 support** |
-| **S19** | **High / Low Trainer grid** | An **order-placement tool**: market order + two pendings at **+20/+40**, hard stop on all three, cycle `30+50+70 = 150`, *"most often +80"*, `MAX RISK 5%` | ⭐ **TIER 1 — V21, described, spec photographed (`31:25`, handwritten, dated `1-27-2010`), and INSTALLED ON CAMERA** | ⛔⛔ **`A-141` — THE ARTIFACT IS NOT IN THIS REPOSITORY.** No filename, no code, no parameter dialog. ⭐ **A different shape from every other blocker: the course SHIPPED a complete implementation and the copy did not reach the project** |
+| **S18** | **33 trade / 22 trade / 3333 trade** | Named trades tied to legs/levels | 🟡 **33:** Tier 2 decodes 3 levels over 3 days + an intraday L3. ⭐ **22:** V02 explicitly describes a second leg of a second leg at a repeated level. **3333:** name only | ⛔ **33** remains blocked by undefined `level` segmentation. **22** remains blocked for raw-chart computation by `second leg` anatomy and the unquantified *"slightly"* overshoot; V15's hyphenated use is not independently defined. **3333** has no definition. The former statement that 22 had *"zero definitions"* was false and is superseded here |
+| **S19** | **High / Low Trainer grid** | An **order-placement tool**: market order + two pendings at **+20/+40**, hard stop on all three, cycle `30+50+70 = 150`, *"most often +80"*, `MAX RISK 5%` | ⭐ **TIER 1 — V21, described, spec photographed (`31:25`, handwritten, dated `1-27-2010`), and INSTALLED ON CAMERA** | ⛔⛔ **`A-141` — THE ARTIFACT IS NOT IN THIS REPOSITORY.** Four filenames are recovered: `&sm_Buy_Order_Trainer`, `&sm_Buy_Order_Trainer_Pct`, `&sm_Sell_Order_Trainer`, `&sm_Sell_Order_Trainer_Pct`. No code, trigger, fill/management logic, exit logic or parameter dialog. ⭐ The course shipped a complete implementation and the executable copy did not reach the project |
 
 ---
 
@@ -279,8 +280,9 @@ that names the line would also do it.
 problem rather than a knowledge problem. **The course shipped a complete, working implementation and
 the copy did not reach this repository.**
 
-⚠️ V21 R1 found that **four script filenames are plainly legible in a frame this project already
-captured and committed** — so the names may be recoverable from the pixels without any new material.
+⭐ V21 R1 found and V21 R2 independently re-read **four script filenames** in the committed frame:
+`&sm_Buy_Order_Trainer`, `&sm_Buy_Order_Trainer_Pct`, `&sm_Sell_Order_Trainer`, and
+`&sm_Sell_Order_Trainer_Pct`. **The names are recovered; the executable behavior is not.**
 ⛔ **`D-030` bars reconstructing the tool from the known figures** (`+20/+40`, `30+50+70`, `MAX RISK
 5%`): a grid whose spacing is known but whose entry trigger, fill logic and exit are not **is not the
 tool**, and a reconstruction would acquire the tool's authority without its behaviour.
@@ -469,9 +471,9 @@ first executable entry trigger stops being the owner's and becomes the course's.
 
 ---
 
-*Built by reading `00_SYSTEM/DECISIONS.md` (through `D-057` adopted), the `D-051`/`D-055`/`D-056`/
-`D-058`/`D-059`/`D-061` drafts on `decisions/owner-m15-timeframe`, `10_AMBIGUITIES/
+*Built by reading `00_SYSTEM/DECISIONS.md` (through `D-057` adopted), the consolidated
+`D-051`/`D-055`/`D-056`/`D-058`/`D-059`/`D-061` draft files, `10_AMBIGUITIES/
 AUTOMATION_AMBIGUITIES.md` (`A-001`–`A-143`), `11_CONTRADICTIONS/CONTRADICTIONS.md` (`C-001`–
-`C-031`), `18_REVIEW/REVIEW_INDEX.md`, `00_SYSTEM/COURSE_PROGRESS.md` on both integration and
-`video/v21`, `08_CONCEPT_LIBRARY/CONCEPT_INDEX.md`, and the V19/V20/V21 source notes and screenshot
+`C-031`), `18_REVIEW/REVIEW_INDEX.md`, `00_SYSTEM/COURSE_PROGRESS.md`,
+`08_CONCEPT_LIBRARY/CONCEPT_INDEX.md`, and the V19/V20/V21 source notes and screenshot
 indices. No external summary was used.*
