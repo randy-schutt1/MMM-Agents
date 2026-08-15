@@ -2515,7 +2515,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V15 | Wk7 P1 | 00:52:05 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 197–202) · ⭐ **V16 GATE OPEN under D-024** · ⚠⚠ **the six student-owned columns to the left are STILL `⬜` and that is open item 199 — the narrative block and the V16 GATE section of this same file record a complete student pass. Only the Reviewer and Final Status cells were filled in by R1** |
 | V16 | Wk7 P2 | 00:44:35 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/4m/11n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 222–225) · ⭐ **V17 GATE OPEN under D-024** · ⭐⭐ **the `D-004` deviation V16 declared is DISCHARGED** — V15's R1 returned 0C/0M and opened the gate unconditionally; only V15 item 197 reaches a record V16 amends (`A-095`) and V16's addendum does NOT inherit it · ⭐⭐ **`A-100`'s *"two weeks, 15 days"* CONFIRMED VERBATIM ON A THIRD ENGINE**; `PT-044` RE-DERIVED from its pre-registration and all three verdicts reproduce; **all five `A-106` pips EXACT**; `Q-017`'s paraphrase sub-pattern CONFIRMED · ⚠ **item 222: `A-101` declares the `M1`–`M4` construction unevidenced and V16's own chart frames carry it** (4 midpoint relations to ~1.5 px on 2 frames) — weighed for MAJOR, charged MINOR, **severity put to the owner** · ⚠ item 224: `PT-044`'s `W-D` ran 4 days wide, undeclared, and **that is the sole cause of its one "missed" prediction — run to its pre-registration it scores 5 OF 5** |
 | V17 | Wk8 P1 | 00:57:09 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 244–249) · ⭐ **V18 GATE OPEN under D-024** · ⭐⭐ **the `D-004` gate was ACTUALLY OPEN THE WHOLE TIME** — V16's R1 merged at `0fee48c` **17:16:53**, before V17's first content commit `f55c2f3` **17:20:11**; the addendum's *"returned after this session's last content commit"* is refuted by the graph (item 246) and **the compounding never happened** · ⭐⭐ **`PT-045` RE-DERIVED from its pre-registration before the runner was opened and ARM A REPRODUCES TO FOUR DECIMAL PLACES**; the calendar-consecutive artefact RE-EXECUTED and it really does return a clean 4-of-4 refutation; the homework's `<50 pips` filter recomputed at **0.8512 / 0.8893**; `C-023`, `C-024`, `C-027`, `A-011` all confirmed on a third engine or off the pixels · ⭐⭐ **THE FABRICATION PATTERN IS SOLVED FOR THE WHOLE COURSE — two templates, A for 1–15 and 21, B for 16–20; V18/V19/V20 are BYTE CLONES of V17's (item 254)** · ⚠ item 244: `[00:11:22]` is *"an extra **week in between**"* on THREE engines, not *"weekend"* — **item 238's inference INVERTS and is ANSWERED, not returned** |
-| V18 | Wk8 P2 | 00:46:08 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** (branch `video/v18`, worktree-isolated per `D-038`) · ⭐⭐ **THE COMMITTED TRANSCRIPT INVERTS A RULE** — `[00:19:40]` reads *"Counter trends are advised"*; the deck prints **`Counter Trend Is Ill Advised`** on two slides and an independent `large-v3` engine returns *"ill-advised"*. Corrected in `V18_TRANSCRIPT.md` §5 #1 · ⭐⭐ **`PT-046` returns a CLEAN NULL on the lesson's most-repeated rule** (said 4×, *"write that down"*): `P(3rd corrects │ 2 same)` = **0.5080** vs base **0.5124**, lift **−0.0044** at the **34th percentile** of the shuffled null, **stable across all 3 boundary variants**; **runs of length 2 occur 366× against a coin-flip 367.2**, and the run mode is **1, not 2** · ⭐⭐ **`N3` FIRED ON THE REPLICATION WINDOWS AND FORCED `INCONCLUSIVE` AGAINST THE LESSON'S FAVOUR** — `W-E` shows a positive lift on both arms that is a boundary artefact; the pre-registered guard is why that could not be reported as support · ⭐ **§8a returns a drift the corpus has not seen: `0 → −3 s`, monotonic** (V16 and V17 were flat zero) — every frame named from its own burned timecode · ⭐ **`Q-019`** corroborates item 254's V16–V20 clone block by an independent method **and finds the template's FIRST TRUE CELL** (`30-90 mins` really is said — at `[00:42:14]`, not the claimed `[00:22:00]`, and about a different thing) · ⚠ `A-126`–`A-131`, `C-028` filed · ⚠ **`W-D`/arm B not run — the DEVELOPMENT seal fired (`I-010` Q2) and was NOT overridden** |
+| V18 | Wk8 P2 | 00:46:08 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/5m/14n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 264–268) · ⭐ **V19 GATE OPEN under D-024** · ⭐⭐ **THE COMMITTED TRANSCRIPT INVERTS A RULE and R1 CONFIRMED IT FROM THE PIXELS** — `[00:19:40]` reads *"Counter trends are advised"*; both printed slides read `Counter Trend Is Ill Advised` (`On V1` / `on A1`). The raw line is retained verbatim and no artifact quotes it as a rule · ⭐⭐ **`PT-046` NULL RE-DERIVED ON INDEPENDENT REVIEWER CODE** — the pre-committed baseline `O2 = 0.5124 [0.4928, 0.5320]`, n = 2,498 reproduces EXACTLY; run-length mode 1 not 2; length-2 runs 366 vs 367 expected · ⭐⭐ **`N3` FIRED IN BOTH IMPLEMENTATIONS**, refusing a positive-lift replication as a boundary artefact · ⭐ **ALL 26 FRAME TIMECODES VERIFIED 26/26 FROM THE PIXELS**; the `0 → −3 s` drift is genuine and new to the corpus · ⭐ **the gate was OPEN and the session CHECKED rather than repeating a stale briefing** (item 278)
 | V19 | Wk9 P1 | 01:07:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V20 | Wk9 P2 | 00:45:49 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V21 | Wk10 | 01:14:47 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
@@ -2948,6 +2948,82 @@ Carry into V16, and read this before starting:
       content (an Asian-box chart with five EMAs), whatever the lesson and
       whatever the image behind it. Quarantine V16's trio on sight as Q-017;
       do not spend a session re-deriving what six entries have established.
+V19 GATE:            🟢 **OPEN.** ⭐⭐ **V18's R1 RETURNED 2026-08-14** on branch
+                     `review/v18`: **REVISE, 0 CRITICAL / 0 MAJOR / 5 MINOR /
+                     14 NOTE, HIGH confidence, `D-003` satisfied.** Under
+                     **`D-024`** a round carrying zero `CRITICAL` and zero
+                     `MAJOR` **opens the gate for V19 immediately** — the five
+                     minors (items **264-268**) do **not** have to be applied
+                     first. ⚠ **AN OPEN GATE IS NOT A `PASS`: V18 is
+                     `IN REMEDIATION`, not `COMPLETE`.**
+
+                     ⭐⭐ **V18 IS THE SECOND CONSECUTIVE LESSON OPENED ON A GATE
+                     THAT WAS GENUINELY OPEN, AND THE FIRST TO HAVE CHECKED IT
+                     RATHER THAN ASSUMED IT.** The V18 session was briefed that
+                     V17's R1 was still pending, opened the commit graph instead
+                     of repeating the briefing, and found the briefing stale.
+                     **R1 re-derived the timeline and confirms it**: V17's R1
+                     committed `0cd31a5` 18:50:38, merged `698c682` 18:51:07,
+                     V18's first commit `c1cb2c7` 19:18:04, with `698c682` a
+                     verified ancestor. **Item 278.**
+
+                     ⚠⚠ **THE REMEDIATION DEBT IS NOW TWO DEEP AGAIN.** V17's
+                     items **244-249** and V18's items **264-268** are both owed,
+                     and `D-003` reserves closure of each to an independent
+                     reviewer. **Neither set blocks V19** — both rounds are
+                     0 CRITICAL / 0 MAJOR — but neither lesson is `COMPLETE`.
+
+                     ⭐ **NONE OF V17's SIX OPEN MINORS REACHES V18** — checked
+                     item by item by R1 against added lines (item 279). The V18
+                     session's claim to that effect is verified, including the
+                     substantive one: `run_pt046.py` uses `load_m15`, which item
+                     247's own remediation names as unaffected.
+
+                     ⚠ **WHAT A V19 SESSION SHOULD CARRY FORWARD FROM V18's R1:**
+
+                     (a) **§8a IS NOT OPTIONAL AND ITS RESULT IS NOT PREDICTABLE.**
+                         V16 and V17 both returned a flat zero; **V18 returned a
+                         monotonic `0 -> -3 s` drift** — the first non-constant,
+                         non-zero offset in the corpus. R1 verified all 26 frame
+                         timecodes from the pixels, 26/26. **Measure it. Do not
+                         carry V18's drift forward either.**
+
+                     (b) **§8a step 3 STILL NEEDS A TOLERANCE** (owner question 1).
+                         Its binary test halts on a 0.110% pacing deficit while
+                         targeting a 50%-class multiplier error. **POLICY edit —
+                         `D-038a` puts it on the integration branch.**
+
+                     (c) **AN INDEPENDENT ASR PASS IS WORTH RUNNING AND ITS
+                         CONFIGURATION IS LOAD-BEARING.** V18's transcript inverted
+                         a rule 180 degrees at `[00:19:40]`. R1 confirms the
+                         inversion **from the printed slides** — but also finds
+                         that the ASR corroboration **flips on `vad_filter`**
+                         (item 270). **Record the decode flags, and let PRINT
+                         settle what print can settle.**
+
+                     (d) **A TRUE CELL IN A QUARANTINED FILE IS EVIDENCE OF
+                         NOTHING.** V18's fabricated trio scored its first
+                         coincidental content hit (`30-90 mins`, real number,
+                         wrong timestamp, wrong context). V19's trio is a **BYTE
+                         CLONE** of V17's and V18's — R1 re-derived the V16-V20
+                         block under a third independent normalisation (item 276).
+                         **Quarantine V19's trio on sight as `Q-020`; do not spend
+                         a session re-deriving what item 254 settled.**
+
+                     (e) **CHECK THE ARITHMETIC YOU QUOTE ONWARD.** Item 265 is
+                         the third consecutive lesson to carry a wrong derived
+                         figure into a second file (V16's item 225, V17's item
+                         249, now V18's `4.8x` for `4.3x`). **Recompute; do not
+                         copy.**
+
+                     (f) **`CONCEPT_INDEX.md` IS PART OF THE BOOKKEEPING SET.**
+                         V16 and V17 updated it; V18 did not (item 264).
+
+                     (g) **`I-010` Q2 HAS NOW COST TWO BACKTESTS A REPLICATION
+                         CELL.** `PT-045` and `PT-046` both lose `W-D`/arm B to
+                         the same DST relabelling. **The seal is correct and was
+                         honoured both times** — but the owner question is ripening.
+
 V18 GATE:            🟢 **OPEN.** ⭐⭐ **V17's R1 RETURNED 2026-08-14** on branch
                      `review/v17`: **REVISE, 0 CRITICAL / 0 MAJOR / 6 MINOR /
                      13 NOTE, HIGH confidence, `D-003` satisfied.** Under

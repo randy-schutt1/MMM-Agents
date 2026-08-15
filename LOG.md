@@ -9762,3 +9762,95 @@ recorded (on-air arithmetic, `64` for a span holding `48`, confirmed on two engi
 
 ### Next Review Trigger
 **A V18 R1 review.** ⚠ **V19's `D-004` gate is CLOSED until it returns.**
+
+---
+
+## 2026-08-14 — Reviewer Session (V18 R1)
+
+### Lesson
+**V18** — `Bootcamp1 Wk8 051312 Part2 (46mins).swf` · 2012-05-13 · 00:46:08
+Submission: `video/v18` @ `aa0ba5e` (2 commits). Review branch `review/v18`, isolated worktree
+`MMM-Agents-v18-review` (`D-038`).
+
+### Review Objective
+Independent mastery audit under `D-003`. **Fresh session; this reviewer did not author the
+ingestion.** Every headline claim was **re-derived from source** rather than checked against the
+session's own working.
+
+### Source Evidence Reviewed
+* The `.swf` itself — **SHA-256 re-computed to `cfa425ab…0b1f7181`, matching `SOURCE_MANIFEST.md`
+  exactly**; size 17,852,174 bytes; audio extracted independently, measured **2768.95 s**.
+* **An independent `faster-whisper` / CTranslate2 `large-v3` pass**: full-file, plus targeted
+  passes at `beam_size` 5 and 10, under **both `vad_filter` settings**, at `int8` **and**
+  `float32`, and on **0.5× and 0.35× time-stretched** audio. `medium.en` as a fourth reading.
+* **Both `Counter Trend Is Ill Advised` slides read directly from the pixels** at full resolution.
+* **All 26 burned player timecodes cropped from the PNGs and read.**
+* The quarantined trio, re-hashed and re-diffed against **all 21 lessons** in this reviewer's shell.
+* GBP/USD M1 corpus via `mmm_lib`, DEVELOPMENT and EXTENDED, both `D-031` arms.
+
+### Student Artifacts Reviewed
+`V18_TRANSCRIPT.md`, `V18_SOURCE_NOTES.md`, `V18_INTERPRETATION.md`, `V18_HOMEWORK.md`,
+`BT_V18_0001.md` + `run_pt046.py` + outputs, `PT-046` pre-registration, `04_SCREENSHOTS/V18/INDEX.md`
++ all 26 frames, `QUARANTINE_REGISTER.md` `Q-019`, `AUTOMATION_AMBIGUITIES.md`, `CONTRADICTIONS.md`,
+`COURSE_PROGRESS.md`, `V18_MASTERY_REPORT.md`.
+
+### What Was Re-Derived Rather Than Read
+* ⭐⭐ **`PT-046` re-implemented from its pre-registration BEFORE `run_pt046.py` was opened**
+  (`06_MANUAL_BACKTEST/scripts/rev_pt046_independent.py`, committed). Sessions **2,691**, complete
+  days **897**, exclusions **11**, zero-direction **4**, length-2 runs **366** — all exact. **The
+  pre-committed baseline `O2 = 0.5124 [0.4928, 0.5320]`, n = 2,498, reproduces EXACTLY to four
+  decimal places, interval and sample size.** Verdict `NOT SUPPORTED` reproduces.
+* ⭐⭐ **`N3` fires in reviewer code too**, on both `W-E` arms, refusing a positive-lift replication
+  as a boundary artefact and forcing `INCONCLUSIVE`. **The methodology point the brief asked to be
+  confirmed rigorously is upheld.**
+* ⭐ **The `W-D`/arm B holdout seal fired identically**, at the same timestamp.
+* ⭐ **All 26 frame timecodes verified 26/26 from the pixels** — §8a's naming claim confirmed
+  exhaustively.
+* ⭐ **`Q-019`'s clone block reproduced under a third independent normalisation**; diff counts
+  10/5, 2/1, 8/4 and byte lengths all re-derived.
+* ⭐ **The gate timeline re-derived from the commit graph** — V17's R1 merged **27 minutes** before
+  V18's first commit; `698c682` a verified ancestor.
+* ⭐ **Quote-vs-transcript fidelity check** (stronger than the session's marker-existence check):
+  **58 pairs, 52 exact**, five of six flags the checker's fault.
+
+### Findings
+**`REVISE` — 0 CRITICAL, 0 MAJOR, 5 MINOR, 14 NOTE. HIGH confidence.**
+
+**MINOR (items 264–268):** `CONCEPT_INDEX.md` not updated, breaking a convention V16 and V17 both
+followed · the `4.8×` per-hour figure is wrong in three files (it is **4.3×**) · §8a's *"12 of 26"*
+counterfactual does not derive from its own table (**24 of 26**, so the submission understates
+itself) · the `PT-046` runner counts tie-thirds in O1's denominator against pre-registration §4 and
+the pre-registration's own governance clause did not fire · a two-marker quote cited under one
+marker in the entry whose whole point is timestamp precision.
+
+**NOTE (items 269–282).** The one worth a reader's time is **270**: the ASR half of the
+inversion corroboration is **VAD-dependent** — same engine, same model, `vad_filter=True` returns
+*"ill-advised"* and `vad_filter=False` returns *"advised"*, across ten decodes including
+time-stretched audio. **The finding is sound because it rests on Tier-2 PRINT, not on the ASR** —
+which is exactly why the printed slide is the decisive evidence and the transcript is not.
+
+### Required Corrections
+Items 264–268, all specified in `V18_REVIEW_R1.md` §5. **None requires re-running any test**, and
+item 267 explicitly forbids re-running `PT-046` or editing the pre-registration.
+
+### Decision
+**`REVISE`.** **V19 GATE OPEN under `D-024`** — zero CRITICAL, zero MAJOR.
+**V18 STATUS: `IN REMEDIATION`.** Not `COMPLETE` until 264–268 are applied and independently
+verified (`D-003`).
+
+### Git
+Branch `review/v18` from `aa0ba5e`; `188809e` (findings checkpoint), then index/progress/log.
+Merged to integration per `D-024`.
+
+### Next Review Trigger
+V19's student submission, or a V18 resubmission applying items 264–268.
+
+### ⭐ The Calibration Note This Round Wants On The Record
+**The best decisions in this submission are the ones that declined.** `PT-046` tests what could be
+tested and says up front that V18's centrepiece could not be, instead of testing a proxy and calling
+it the thing. The `A-129` fourth-session measure was computed and then **excluded from the decision**
+for want of a discriminator. `N3` was written to override a favourable result — and then did. Three
+of four homework items were refused with reasons rather than approximated. `Q-019` says it
+corroborates rather than discovers, before it says anything else. **Five findings against that is a
+good round, and all five are arithmetic, ledger or citation-precision defects that touch no rule and
+no verdict.**
