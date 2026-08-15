@@ -27,6 +27,11 @@ but not written.
 
 **Week 8, Sunday 2012-05-13, Part 1 of two.** It is a **two-part** lesson with a printed seam:
 
+**R1 correction (item 244):** `[00:11:22]` is *"we took an extra **week in between**"*, not the
+marker grid's *"extra weekend"*. Three independent ASR engines agree. Nine calendar weeks carrying
+eight sessions supports the **shape** of `A-01`'s missing-week gap, not the missing lesson's date or
+contents.
+
 * `00:00:00`–`00:30:05` — **housekeeping, a progress audit, two graded pop quizzes and a
   week-in-review.** No printed section title; the deck's running head only.
 * `00:30:10`–`00:57:10` — **`TREND`**, a printed section title card followed by eleven slides. This
@@ -58,8 +63,9 @@ open since V16.**
 
 **What this settles.** V16 `§9b` recorded the contradiction `C-023`: he says pivots are computed
 *"midnight to midnight"* and forty seconds later says *"just do it on the daily candle for right
-now."* **V17 says both are true of different objects** — the *daily candle* closes at 17:00 dealer
-time; the *indicator* re-cuts its own 24-hour window at 00:00–01:00 dealer time so the levels are
+now."* **V17 says both are true of different objects** — the *daily candle* closes at 17:00
+**`[INFERRED: dealer time]`**; the source says only *"5 p.m."*. The *indicator* re-cuts its own
+24-hour window at 00:00–01:00 dealer time so the levels are
 fresh at the London open. **`C-023` is not a contradiction between two statements about one thing;
 it is a statement about a chart object and a statement about an indicator.** Recorded as an
 **amendment to `C-023`**, and `C-023` is **downgraded, not closed** — see `§2a`.

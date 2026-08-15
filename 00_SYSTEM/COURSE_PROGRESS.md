@@ -9,16 +9,22 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ## SUMMARY
 
 ```text
-PHASE:               1 — STUDENT  (unblocked; ingestion complete)
+PHASE:               2 — CROSS-LESSON REVIEW  (ingestion complete; certification blocked)
 VIDEOS INGESTED:     21
+PHASE 2 AUDIT:       ACTIVE 2026-08-15 on phase2/cross-lesson-review.
+                     Formal census: 9/21 independent PASS; V09-V20 latest
+                     independent verdict remains REVISE. The V17-V20 ranges
+                     total 14 findings, not 12. All 14 remediations are applied
+                     and await a fresh reviewer. FINAL_COURSE_REVIEW remains
+                     NOT STARTED; Master/Machine specs remain gated.
 V17 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
                      branch video/v17 (worktree MMM-Agents-v17, D-038).
 
                      ⚠⚠⚠ GATE, DECLARED FIRST AND NOT SOFTENED. V17 WAS OPENED
-                     WITH ITS D-004 GATE CLOSED. The V17 GATE block below read
-                     "CLOSED until V16's R1 returns", and V16's R1 HAD NOT
-                     RETURNED when this session finished -- it is in progress in
-                     a parallel session.
+                     FROM A BRANCH WHOSE D-004 GATE READ CLOSED. **R1 item 246
+                     supersedes the timing claim below:** V16 R1 merged before
+                     V17's first content commit. The opening-state defect is
+                     retained; the claimed committed-work compounding is not.
 
                      (a) The OWNER'S PERMISSION half was already granted and is
                          NOT single-video-scoped: the 2026-08-14 authorisation
@@ -28,17 +34,13 @@ V17 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
                          none was sought.
                      (b) PERMISSION IS NOT A GATE. D-004 is untouched by it.
                          V17 DOES NOT SATISFY D-004.
-                     (c) ⚠⚠ V16 was the FIRST lesson built on an unreviewed
-                         predecessor. V17 IS THE SECOND, AND THE QUALIFICATION
-                         COMPOUNDS. V15's R1 HAS returned (REVISE, 0C/0M/6
-                         MINOR/13 NOTE, HIGH, gate opened). V16's HAS NOT.
-                         A reviewer, or any session reaching into V17, should
-                         treat V17's WHOLE ARTIFACT SET AS PROVISIONAL PENDING
-                         V16's R1, and this session does not contest that.
-                     (d) ⭐⭐ THE CHEAPEST THING ANYONE CAN DO FOR THIS PROJECT
-                         RIGHT NOW IS REVIEW V16. One review retires the
-                         compounding; another student pass deepens it.
-                         WE ARE NOW TWO LESSONS DEEP ON UNREVIEWED GROUND.
+                     (c) ~~V17 was the second lesson built on an unreviewed
+                         predecessor.~~ **Superseded by item 246:** `0fee48c`
+                         merged at 17:16:53; first V17 content was `f55c2f3` at
+                         17:20:11. V17's committed work had a reviewed predecessor.
+                     (d) The branch was opened while its local gate still read
+                         closed; that process fact remains recorded without the
+                         false compounding conclusion.
                      (e) Item 185's gap audit is NOT discharged by this session.
 
                      ⭐ FIRST LESSON IN THE CORPUS TO STATE ITS OWN DATE AND WEEK
@@ -46,12 +48,12 @@ V17 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
                      [00:02:36] "Welcome to week eight", and a printed schedule
                      slide carrying seven dated rows. ⚠ And he qualifies it at
                      [00:11:18]: "eight weeks? Actually nine because we took an
-                     extra weekend between" -- which bears on A-01's missing
-                     Week 6. Item 238.
+                     extra **week in between**" (three-engine R1 correction) --
+                     contemporaneous support for A-01's gap shape, not its date.
 
                      ⭐⭐ WHY YOUR PIVOTS DON'T MATCH HIS -- C-023 EXPLAINED, AND
                      DOWNGRADED RATHER THAN CLOSED. [00:08:22]: the daily candle
-                     closes at 5pm dealer time; THE INDICATOR RE-CUTS ITS OWN
+                     closes at 5pm **[INFERRED: dealer time]**; THE INDICATOR RE-CUTS ITS OWN
                      24-HOUR WINDOW AT 12-1am "depending on your dealer and what
                      his GMT offset is" so the levels are fresh for London. Two
                      objects, not two definitions. ⚠ But it replaces a two-way

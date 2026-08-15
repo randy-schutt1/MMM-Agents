@@ -358,7 +358,7 @@ The spoken derivation — every line confirmed verbatim by the second engine:
 | `[00:41:49]` | *"What's the time constraint?"* → `[00:41:50]` *"**Two hours.**"* | the answer |
 | `[00:42:01]` | *"If he vectors in two or three bars, that's **45 minutes**, right?"* | vector leg |
 | `[00:42:07]` | *"**45 minutes** of a move, three bars."* | restated |
-| `[00:42:13]` | *"Then he's going to make the new formation. That takes what?"* → `[00:42:14]` *"**30 to 90 minutes.**"* | formation leg |
+| `[00:42:11]`–`[00:42:13]` | *"Then he's going to make the new formation. That takes what?"* → `[00:42:14]` *"**30 to 90 minutes.**"* | formation leg |
 | `[00:42:17]` | *"Add that together."* | |
 | `[00:42:19]` | *"You need to wait **about two hours** for the dealer to make the next level stop hunt."* | conclusion |
 

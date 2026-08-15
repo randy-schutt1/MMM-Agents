@@ -80,7 +80,7 @@ is the reason no day-of-week claim is carried into any other V18 artifact.
 
 ⭐⭐ **This is the one robust result in the homework, and both arms agree on it.** The Asian session
 is the **longest** of the three at 10 hours and produces the **fewest** weekly extremes. Normalised
-per hour, **London is 2.3× as likely as Asian to contain the weekly high, and 4.8× as likely to
+per hour, **London is 2.3× as likely as Asian to contain the weekly high, and 4.3× as likely to
 contain the weekly low.** Arm B reproduces the pattern (Asian 30.9% / 14.4%; London 32.6% / 37.6%;
 US 36.5% / 48.1%).
 

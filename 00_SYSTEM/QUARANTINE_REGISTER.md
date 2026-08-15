@@ -2649,7 +2649,7 @@ diff 16_…Wk7_050612_Part2/VISUAL_INDEX.md  17_…Wk8_051312_Part1/VISUAL_INDEX
      ZERO content lines differ.
 
 diff 16_…/RULES.md  17_…/RULES.md
-  -> 12 differing lines = SIX changed pairs:
+  -> 10 differing lines = FIVE changed pairs:
        the .swf filename, V17-R001/R002 -> V18-R001/R002, and two visual filenames.
      ZERO content lines differ.  ZERO rule text, condition, trigger, threshold or
      numerical parameter differs.
@@ -2860,7 +2860,7 @@ on a row that is wrong in every other respect.**
 ⭐ **V18 REALLY DOES SAY "30 to 90 minutes".** The token census returns **one** hit, and it is
 genuine:
 
-> `[00:42:13]` *"Then he's going to make the new formation. That takes what?"*
+> `[00:42:11]`–`[00:42:13]` *"Then he's going to make the new formation. That takes what?"*
 > `[00:42:14]` *"**30 to 90 minutes.**"*
 
 **Confirmed verbatim by an independent `faster-whisper large-v3` pass** (`V18_TRANSCRIPT.md` §5).

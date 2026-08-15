@@ -40,10 +40,12 @@ These statements are simultaneously true:
 
 - **The corpus is ingested end to end:** all 21 lessons have lesson artifacts.
 - **V21 is complete:** its R1 findings were fixed and independently re-verified at R2.
-- **The full course is not cumulatively certified:** `REVIEW_INDEX.md` item 386 records twelve open
-  `MINOR`s across V17 (244–249), V18 (264–268), V19 (303–304) and V20 (348).
-- **The self-verification policy is unsettled:** several earlier lessons use the qualified status
-  `COMPLETE — SELF-VERIFIED AT OWNER DIRECTION`; that is not an independent `PASS`.
+- **The full course is not cumulatively certified:** `REVIEW_INDEX.md` item 386 says twelve open
+  `MINOR`s, but its own ranges total **fourteen**: V17 (244–249), V18 (264–268), V19 (303–304) and
+  V20 (348). Phase 2 corrected the count and found the wider gate: V09–V20 all retain `REVISE` as
+  their latest independent verdict.
+- **The self-verification policy is formalized by existing D-003/D-004/D-024:** the qualified
+  status `COMPLETE — SELF-VERIFIED AT OWNER DIRECTION` is not an independent `PASS`.
 - **Every cumulative review and the final review is `NOT STARTED`.** Therefore
   `12_MASTER_SPEC/` and `13_MACHINE_SPEC/` remain correctly empty and gated.
 
@@ -79,8 +81,8 @@ questions.
 
 Phase 1 establishes a coherent knowledge base. It does not:
 
-- perform the V17–V20 minor sweep;
-- settle self-verification policy;
+- independently verify the applied fourteen-item V17–V20 sweep;
+- clear the V09–V16 independent-review backlog;
 - run cumulative or final course review;
 - authorize or populate the Master Specification;
 - claim a validated trading edge.

@@ -141,8 +141,10 @@ stopped. **The full-file pass is OWED and is listed as an open item.**
 `06_MANUAL_BACKTEST/V19/data/asr_segments_PREREGISTERED.txt` **before any segment was transcribed**,
 choosing segments because a V19 rule, number or TDI claim rests on them — **not** because anything
 looked wrong. Engine: **`openai-whisper medium.en`**, independent of the pre-ingestion transcript.
-**Seven of the twelve returned in time for this commit** (`S1`, `S2`, `S4`, `S5`, `S6`, `S7`, `S11`)
-and they cover every load-bearing rule in the lesson. **Its clock is never cited below**; corrections
+**R1 correction, item 303:** eight of twelve returned. The seven headers are `S2`, `S4`, `S5`,
+`S6`, `S11`, `S7`, `S8`; the `S8` output contains the `S1` run concatenated after it. Both `S8`
+and `S1` therefore returned, leaving only `S3`, `S9`, `S10`, and `S12` owed. They cover every
+load-bearing rule in the lesson. **Its clock is never cited below**; corrections
 are attached to the marker grid's own timestamps.
 
 #### ⚠⚠ CORRECTION #1 — THE LESSON'S CENTRAL STRUCTURE IS SYSTEMATICALLY MIS-TRANSCRIBED, AND SO IS ITS TITLE
@@ -279,10 +281,10 @@ and `profit-looking` for `profit booking`.
 
 #### ⚠ WHAT THE SEGMENT PASS DOES **NOT** COVER
 
-Five of the twelve pre-registered segments (`S3`, `S8`, `S9`, `S10`, `S12`) had not returned when
-this file was committed. They cover the `15 to 25` pip consolidation figures, the bar-1 counting
-convention, the `eight candles = two hours` identity, the W time cap, and the star-formation
-`15 in / 15 out`. **Those five passages are therefore carried on the committed transcript alone plus,
+**R1 correction, item 303:** four of the twelve pre-registered segments (`S3`, `S9`, `S10`, `S12`)
+had not returned when this file was committed. `S8` returned and contains `S1` concatenated under
+its header. The owed four cover the `15 to 25` pip consolidation figures, the `eight candles = two
+hours` identity, the W time cap, and the star-formation `15 in / 15 out`. **Those four passages are therefore carried on the committed transcript alone plus,
 where applicable, the printed deck.** Listed as an open item together with the full-file pass.
 
 ### §6 — ⚠ `GOTCHA 5`'s GUARD FIRED THIS SESSION, ON A FILE WHOSE COORDINATE IS "KNOWN"

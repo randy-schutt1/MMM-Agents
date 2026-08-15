@@ -1276,13 +1276,15 @@ Foundational, and compounded: if this is the same object as the anchor point (A-
 
 ### ⭐ V17 ADDENDUM (2026-08-14) — A MINIMUM WIDTH ARRIVES: **EIGHT CANDLES**
 
-V17 `[00:34:55]`–`[00:35:04]`, answering a student: *"how many tails that take to form a good M and W
-on a on a 15-minute chart"* → *"**eight**"* → *"**Candles or above is a good solid M or W**"*.
+V17 `[00:34:55]`–`[00:35:04]`, corrected by three independent ASR engines in R1 item 245:
+*"Okay, **how many candles does it take** to form a good M&W? **On a 15-minute chart, eight candles
+or above is a good solid M or W**, okay?"* The instructor poses and answers his own question in one
+continuous utterance; the timeframe belongs to the answer.
 
 ⭐ **The first quantitative constraint on `M`/`W` in seventeen lessons.** ⚠ **`A-010` does NOT
-close:** no depth, no symmetry tolerance, no statement of whether *"eight"* counts the whole
-formation or one leg, said once, never printed, and delivered as a two-word answer from the floor —
-the same production mode that produced `C-025`. **ADVANCED, NOT CLOSED.**
+close:** no depth, no symmetry tolerance, and no statement of whether *"eight"* counts the whole
+formation or one leg. It is said once and never printed. Those missing shape constraints are
+sufficient to keep the record open. **ADVANCED, NOT CLOSED.**
 
 ## A-011 — "M and W formation"
 

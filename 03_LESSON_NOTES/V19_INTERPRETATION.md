@@ -112,8 +112,9 @@ for the Market Maker to take your money."*
 
 ⭐ **This is the most interesting claim in the lesson because it inverts standard candlestick
 teaching.** The named pattern is explicitly stripped of predictive content and replaced with a
-timing test. **It is also the most directly testable claim V19 makes**, which is why the manual
-backtest goes after it (`BT_V19_0001.md`).
+timing test. **It remains untested.** `PT-047` / `BT_V19_0001.md` tests the second-leg time cap and
+the `25–50` extension; `PT-047` §1a expressly excludes the M/W formation and no star formation is
+measured anywhere in that runner (R1 item 304).
 
 ### 2.7 Position sizing
 

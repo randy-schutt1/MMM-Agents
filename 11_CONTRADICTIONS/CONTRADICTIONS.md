@@ -2993,8 +2993,9 @@ V17 `[00:08:09]`–`[00:08:37]`, answering what he calls *"one of the biggest qu
 > dealer and what his GMT offset is and **recalculate the 24-hour period** \| So the pivots are
 > freshly put in place right before the London open \| **and that's why your pivots will not match**"*
 
-**Both V16 statements are true of different objects.** The **daily candle** is the broker's, closing
-at 17:00 dealer time. The **indicator** re-cuts its own 24-hour window overnight so the levels are
+**Both V16 statements are true of different objects.** The **daily candle** closes at 17:00
+**`[INFERRED: dealer time]`**; V17 says only *"5 p.m."*. The **indicator** re-cuts its own 24-hour
+window overnight so the levels are
 fresh for the London session. *"They're based on price action from midnight to midnight"* describes
 the indicator; *"just do it on the daily candle for right now"* is the teaching simplification he
 flagged it as.

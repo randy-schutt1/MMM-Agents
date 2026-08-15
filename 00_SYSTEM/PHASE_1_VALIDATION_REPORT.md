@@ -57,4 +57,5 @@ The Phase 1 validator's exact verdict was `PHASE 1 VALIDATION: PASS`, followed b
 
 This PASS certifies consolidation accuracy and Phase 1 completeness. It does **not** certify final
 course mastery, promote a setup to machine code, adopt any draft decision, or validate a trading
-edge. The twelve open V17–V20 minor findings and the cumulative/final review remain Phase 2 work.
+edge. **Phase 2 correction:** the listed V17–V20 ranges total fourteen, not twelve, and the official
+final-review precondition also fails for V09–V16. Those reviews remain later-phase work.

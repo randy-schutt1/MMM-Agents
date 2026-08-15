@@ -42,7 +42,8 @@ High/Low Trainer acquisition
 
 ## Phase 2 boundary
 
-Phase 2 must first sweep the twelve open V17–V20 minors and settle the formal self-verification
-policy. Only then may it run cumulative/final review and decide whether the human Master
+Phase 2 found that the stated twelve are **fourteen** and applied all fourteen V17–V20 remediations.
+It also found that V09–V16 retain non-PASS independent verdicts. Fresh review must clear both
+backlogs. Only then may it run the official cumulative/final review and decide whether the human Master
 Specification can be authoritative, partial or blocked. This matrix does not pre-decide that
 verdict.

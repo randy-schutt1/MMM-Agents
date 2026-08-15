@@ -219,8 +219,8 @@ cashed in for this.**
 2. **Dimension B is blocked**, and V19 is the lesson that should have unblocked it.
 3. **The §9 two-pass order was violated** (§2.1). A reviewer cannot verify from the file that no
    visual knowledge leaked into the transcript-only sections.
-4. **The full-file ASR pass is missing** (§2.2), and five of twelve pre-registered segments did not
-   return.
+4. **The full-file ASR pass is missing** (§2.2). R1 item 303 corrects the census: eight of twelve
+   returned; four (`S3`, `S9`, `S10`, `S12`) were owed and were later run by R1 (item 309).
 5. **`PT-047`'s pre-registration had a hole in it** (§2.3), found by the session that wrote it —
    which is better than not finding it and worse than not having it.
 
@@ -250,7 +250,7 @@ cashed in for this.**
 
 | # | Item |
 |---|---|
-| 1 | **The full-file independent ASR pass is OWED.** Five of twelve pre-registered segments (`S3`, `S8`, `S9`, `S10`, `S12`) did not return; those passages rest on the committed transcript plus the deck |
+| 1 | **The full-file independent ASR pass was incomplete at submission.** R1 item 303 corrects the returned set to eight of twelve and the owed set to `S3`, `S9`, `S10`, `S12`; R1 item 309 subsequently ran all four and found no overturned claim. A full-file pass, as distinct from the segment debt, remains absent |
 | 2 | **`A-133` — the `blue tracer` is undefined**, and it blocks dimension B and every V19 entry rule |
 | 3 | **`A-134` / `C-029` — the time cap is `30` / `30–45` / `45 tops` / `30–60`, and the two on-camera slide edits disagree.** Needs an owner call or a later lesson |
 | 4 | **`A-132` — the 9.0-second gap** between the last marker and the end of audio is unverified |

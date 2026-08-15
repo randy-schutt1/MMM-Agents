@@ -9426,14 +9426,13 @@ REQUIRED
 
 ### ⚠⚠ GATE, FIRST AND UNSOFTENED
 
-**V17 was opened with its `D-004` gate CLOSED.** The V17 GATE block read *"CLOSED until V16's R1
-returns"*, and **V16's R1 had not returned when this session finished** — it is in progress in a
-parallel session. The owner's 2026-08-14 authorisation covers *"the remainder of the training, V16
+**V17 was opened with its branch-local `D-004` gate reading CLOSED.** **Superseded correction,
+item 246:** V16 R1 had already merged before V17's first content commit, so the committed work was
+not built on an unreviewed predecessor. The owner's 2026-08-14 authorisation covers *"the remainder of the training, V16
 onward"* and the owner said *"start v17"*; **that is permission, and permission is not a gate.**
-**V16 was the first lesson built on an unreviewed predecessor. V17 is the second. We are two lessons
-deep on unreviewed ground.** V15's R1 has returned (REVISE, 0C/0M/6 MINOR/13 NOTE, HIGH); V16's has
-not. **Reviewing V16 is the highest-value action available to this project.** Item 185's gap audit is
-not discharged here either.
+~~V17 was the second lesson built on an unreviewed predecessor.~~ **Superseded by item 246:** V16 R1
+merged at 17:16:53 and V17's first content commit followed at 17:20:11. Item 185's gap audit was not
+discharged here.
 
 ### CAPTURE
 
@@ -9458,9 +9457,10 @@ printed `TREND` card — the corpus's most structured teaching content to date.
 
 * ⭐ **First lesson to state its own date AND week number AND print them.** *"Today's the 13th"*,
   *"Welcome to week eight"*, and a seven-row printed schedule. ⚠ Qualified at `[00:11:18]`:
-  *"eight weeks? **Actually nine** because we took an extra weekend between"* — bears on `A-01`'s
-  missing Week 6 (item **238**).
-* ⭐⭐ **Why student pivots never match his**: the daily candle closes at 17:00 dealer time; the
+  *"eight weeks? **Actually nine** because we took an extra **week in between**"* — three-engine R1
+  correction supporting `A-01`'s gap shape, not its date (item **244**).
+* ⭐⭐ **Why student pivots never match his**: the daily candle closes at 17:00
+  **`[INFERRED: dealer time]`**; the source says only *"5 p.m."*. The
   **indicator re-cuts its own 24-hour window at 00:00–01:00** *"depending on your dealer and what his
   GMT offset is"*. **`C-023` explained — and DOWNGRADED, not closed**, because the explanation
   replaces a two-way fork with a free broker parameter (`A-107`) and creates **`C-024`**, the
@@ -9729,7 +9729,8 @@ run-length mode 1 (not 2); length-2 runs 366 observed vs 367.2 coin-flip expecta
 ```
 
 ⭐⭐ **`N3` did real work:** `W-E` shows a positive lift on **both** arms — the direction the claim
-wants — and it is a **boundary artefact**; the sign flips negative in all four off-boundary cells.
+wants — and it is a **boundary artefact**. Under §4's literal tie exclusion, two off-boundary cells
+are `+0.0005` / `+0.0000`; `N3` still fires and no verdict changes.
 **Pre-registering `N3` as decision-overriding is why "the replication window shows a positive lift"
 could not be written.**
 
@@ -9737,7 +9738,7 @@ could not be written.**
 Three of four items **NOT DONE — blocked**, because V18 rests them on objects it never constructs
 (`peak formation`: used 17×, defined 0×). The measurable item was run: weekly extremes cluster at
 the ends of the week; **the Asian session is the longest (10 h) and yields the fewest weekly
-extremes** — London 2.3×/hour for highs, 4.8×/hour for lows. ⚠ **Arms disagree by 17 points on the
+extremes** — London 2.3×/hour for highs, 4.3×/hour for lows. ⚠ **Arms disagree by 17 points on the
 day-of-week distribution, so no day-of-week claim is carried forward.**
 
 ### Quarantine — `Q-019`

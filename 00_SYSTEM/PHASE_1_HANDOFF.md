@@ -64,8 +64,9 @@ Read, in order:
 6. 18_REVIEW/REVIEW_INDEX.md item 386
 
 Verify the current branch and run both validators before editing. If Phase 1 is complete, execute
-Phase 2 without changing evidence tiers: sweep and independently verify the twelve V17–V20 minor
-items, settle the formal self-verification policy, then perform the overdue cumulative/final course
+Phase 2 without changing evidence tiers. **Correction recorded by Phase 2:** the cited ranges total
+fourteen, not twelve, and V09–V16 also lack current independent passes. Sweep and independently
+verify the fourteen V17–V20 minor items, clear the earlier review backlog, then perform the official cumulative/final course
 review and human reconstruction. Preserve every original review and failed result. Do not adopt any
 D-051/D-055/D-056/D-058/D-059/D-060/D-061 draft without explicit owner approval. Do not populate
 the Machine Specification and do not claim a validated trading edge.

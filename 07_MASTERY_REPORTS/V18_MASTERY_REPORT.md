@@ -152,7 +152,8 @@ chance predicts**, and the observed run-length **mode is 1, not 2**.
 
 ⭐⭐ **And `N3` did real work.** On the extended window **both arms return a positive lift** — the
 direction the claim wants. **It is a boundary artefact**: move the one invented boundary an hour
-either way and the sign flips negative in all four off-boundary cells. **Without `N3` pre-registered
+either way. Under the pre-registration's literal tie exclusion, two off-boundary cells are slightly
+positive or zero (`+0.0005` / `+0.0000`) rather than negative. **Without `N3` pre-registered
 as decision-overriding, this session could have written "the replication window shows a positive
 lift on both arms" — true, spurious, and flattering to the lesson.** The guard was fixed before any
 bar was read so that sentence could not be written.
@@ -177,7 +178,7 @@ V12 `+16`, V13 `+15`, V14 `+16` (unmeasured, shipped wrong), V15 `+15`, V16 **0*
 **V18 `0 → −3`, drifting monotonically.** First lesson where the offset is neither constant nor zero.
 
 **Had V16/V17's flat zero been carried forward — the reasoning that produced V14's 29 wrong
-filenames — up to 3 s of error would have entered 12 of 26 filenames.** It did not, because §8a was
+filenames — non-zero error would have entered **24 of 26 filenames**.** It did not, because §8a was
 run. ⚠️ **And §8a step 3's binary test tripped on a healthy capture** (0.110% pacing deficit vs the
 50%-class multiplier error the step targets); the judgement call is declared in
 `04_SCREENSHOTS/V18/INDEX.md` §0.3 rather than buried, and **a tolerance is owed to the recipe** —
@@ -189,7 +190,7 @@ V18 sets four homework items. **Three cannot be executed** because they rest on 
 constructs (peak formation — used 17×, defined 0×) or on a V17 artifact. **The one measurable item
 was run:** weekly extremes cluster at the ends of the week, and **the Asian session is the longest of
 the three (10 h) yet produces the fewest weekly extremes** — London is 2.3× as likely per hour to
-hold the weekly high and 4.8× as likely to hold the weekly low. **Both arms agree on that.**
+hold the weekly high and 4.3× as likely to hold the weekly low. **Both arms agree on that.**
 ⚠️ **The arms disagree materially on the day-of-week distribution (17 points on Friday highs), so no
 day-of-week claim is carried forward.**
 

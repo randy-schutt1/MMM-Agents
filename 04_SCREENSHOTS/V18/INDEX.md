@@ -56,7 +56,7 @@ V16 **0**, V17 **0**, **V18 `0 → −3`, drifting.**
 ⭐ **THIS IS THE FIRST LESSON IN THE CORPUS WHERE THE OFFSET IS NEITHER A CONSTANT NOR ZERO**, and
 it is the reason §8a says to measure every time. **V16 and V17 both returned a flat zero. Had this
 session carried that forward — which is exactly the reasoning that produced V14's 29 wrong
-filenames — up to 3 seconds of error would have entered 12 of the 26 filenames.**
+filenames — non-zero error would have entered **24 of the 26 filenames**.**
 
 ### §0.2 — THE RATE CHECK (§8a step 3), RUN SEPARATELY, AND WHAT IT ACTUALLY SHOWS
 

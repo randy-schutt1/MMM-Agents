@@ -10,14 +10,16 @@ The first half carries only the deck's running head.
 
 ## §0 — ⚠⚠ GATE STATUS, DECLARED FIRST AND NOT SOFTENED
 
-> ⭐ **READ `§0a` WITH THIS SECTION. V16's R1 RETURNED AFTER THIS SESSION'S LAST CONTENT COMMIT AND
-> THE V17 GATE IS NOW OPEN.** `§0` is retained unedited because it is the record of what V17 was
-> **opened against**, and every V17 artifact was produced under a closed gate
+> ⭐ **READ `§0a` WITH THIS SECTION. R1 item 246 established that V16's R1 merged before V17's first
+> content commit, although V17 was opened from a branch whose recorded gate was closed.** `§0` is
+> retained as superseded process history
 > (`REMEDIATION_PROTOCOL.md` §2).
 
 **V17 WAS OPENED WITH ITS `D-004` GATE CLOSED.** `COURSE_PROGRESS.md`'s V17 GATE block read
-🔴 **CLOSED until V16's R1 returns**, and **V16's R1 had not returned at any point during this
-session's work.** It was in progress in a parallel session.
+🔴 **CLOSED until V16's R1 returns.** **Superseded correction (item 246):** V16 R1 merged at
+`0fee48c` at 17:16:53, before V17's first content commit `f55c2f3` at 17:20:11. The branch was
+opened against a stale closed-gate view; committed V17 work was not built on an unreviewed
+predecessor.
 
 **What authorised the work, and what it does not authorise:**
 
@@ -32,9 +34,8 @@ set as PROVISIONAL PENDING V16's R1, and this session does not contest that read
 record that leans on a V16 record — `A-101`, `A-100`, `C-023`, the candle-colour rule in `§3` of the
 source notes, `Q-017`'s detection note — inherits that provisionality.
 
-⭐⭐ **THE CHEAPEST THING ANYONE CAN DO FOR THIS PROJECT RIGHT NOW IS REVIEW V16.** One review
-retires the compounding; another student pass deepens it. **This is the second lesson deep on
-unreviewed ground.**
+~~The committed work was the second lesson deep on unreviewed ground.~~ **Superseded by item 246:**
+V17's committed work postdates the V16 R1 merge, so the claimed compounding never happened.
 
 ⚠ **And item 185's gap audit is not discharged by anything in this session.**
 
@@ -42,9 +43,9 @@ unreviewed ground.**
 
 ## §0a — ⭐ ADDENDUM, ADDED AFTER THE WORK WAS COMPLETE: **V16's R1 HAS NOW RETURNED, AND THE V17 GATE IS OPEN**
 
-**Written 2026-08-14, after this session's last content commit (`346417b`), on checking the
-integration branch before reporting.** It is added rather than folded into `§0` so that the record
-of **what V17 was actually opened against** stays intact (`REMEDIATION_PROTOCOL.md` §2).
+**Written 2026-08-14. R1 item 246 later found its timing claim false:** `0fee48c` predates every V17
+content commit. The addendum is retained so the mistaken branch-state reasoning remains auditable
+(`REMEDIATION_PROTOCOL.md` §2).
 
 **V16's R1 returned and merged to integration at `0fee48c`:**
 
@@ -59,7 +60,7 @@ of **what V17 was actually opened against** stays intact (`REMEDIATION_PROTOCOL.
 | | |
 |---|---|
 | ⭐ **The V17 gate is OPEN under `D-024`** — a `REVISE` with 0 CRITICAL and 0 MAJOR opens it | **The compounding warned about in `§0` is RETIRED.** V17 is no longer the second lesson standing on an unreviewed predecessor |
-| ⚠ **`§0` was accurate WHEN WRITTEN and is not retracted** | V16's R1 had not returned at any point during this session's work. **V17 was opened, and every artifact in it was produced, under a CLOSED gate.** That is a fact about the process, not about the outcome |
+| ⚠ **`§0` reflects the stale branch view and is superseded by item 246** | V17 was opened while its branch-local gate read closed, but V16 R1 had already merged before the first V17 content commit. The opening irregularity remains; the claimed committed-work compounding does not |
 | ⚠ **V17's own gate status is UNCHANGED** | **V17 is still submitted as `REVIEW REQUIRED` and still has no R1.** `D-003` reserves closure to an independent reviewer |
 | ⭐ **V17's provisionality on V16 is discharged** | `§0`'s instruction to treat V17's artifact set as *"PROVISIONAL PENDING V16's R1"* is **satisfied**. The V16 records V17 leans on (`A-101`, `A-100`, `C-023`, the candle-colour rule, `Q-017`'s detection note) have now been independently reviewed |
 | ⚠ **`A-100` moved while V17 was being written** | R1 confirms *"two weeks, 15 days"* on a **third** engine. V17's `A-100` addendum (which adds only `A-113`'s `TIER 2` *"close enough"*) is **unaffected** but should be read alongside it |
@@ -164,7 +165,8 @@ advance**, and that is the only reason either is in this report rather than in t
 ### ⭐⭐ The three that matter
 
 1. **WHY YOUR PIVOTS DON'T MATCH HIS.** `[00:08:22]`–`[00:08:37]`: the daily candle closes at 17:00
-   dealer time; **the indicator re-cuts its own 24-hour window at 00:00–01:00 dealer time** so the
+   **`[INFERRED: dealer time]`**; the source says only *"5 p.m."*. **The indicator re-cuts its own
+   24-hour window at 00:00–01:00 dealer time** so the
    levels are fresh for London. **This explains `C-023`** — two objects, not two definitions.
    ⚠ **And it replaces a two-way fork with a FREE BROKER PARAMETER** (`A-107`), which for an
    automation project is worse, and it creates `C-024` against V16's own printed `2:00 To 3:00 AM,

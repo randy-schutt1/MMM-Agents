@@ -68,6 +68,10 @@ FINAL COURSE REVIEW:    NOT STARTED
 > followed. **The convention is restored here; item 264 itself remains OPEN against V18 and is not
 > closed by this entry** — closing it is the remediating session's act, not this one's.
 >
+> **PHASE 2 REMEDIATION CHECK (2026-08-15):** V18's coverage rows and the 18→19 lesson count are
+> present. Item 264's missing update is materially repaired; independent R2 disposition remains
+> required.
+>
 > **V19 is the closest the corpus has come to a promotable rule, and it still does not clear the
 > bar.** V19 supplies a rule that is *spoken*, *repeated six times*, *mirrored for the W*,
 > *confirmed verbatim on an independent ASR engine*, **written into the deck on camera**, and
