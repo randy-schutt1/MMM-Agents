@@ -2,15 +2,15 @@
 
 Independent review records. Maintained by the Reviewer Agent.
 
-## STATUS: NO LESSON REVIEWED
+## STATUS: 14 / 21 LESSONS HOLD INDEPENDENT PASS; 7 REQUIRE FRESH REVIEW
 
 ## STRUCTURE
 
 ```text
 18_REVIEW/
 ├── REVIEW_INDEX.md          ← decisions, error counts, open items
-├── CUMULATIVE_25.md         ← template
-├── CUMULATIVE_50.md         ← template
+├── CUMULATIVE_25.md         ← completed; HALT AND REMEDIATE
+├── CUMULATIVE_50.md         ← completed; HALT AND REMEDIATE
 ├── CUMULATIVE_75.md         ← template
 ├── FINAL_COURSE_REVIEW.md   ← template
 └── VXX/

@@ -1,6 +1,6 @@
 # MMM SETUP REGISTRY — HUMAN KNOWLEDGE VS EXECUTABILITY
 
-**Status:** Phase 1 canonical inventory  
+**Status:** Phase 1 canonical inventory, amended by Phase 2 cumulative review
 **Authority:** reading aid only; source notes and evidence ledgers remain authoritative  
 **Rule:** `DO NOT CODE` never means *unknown*, *untaught* or *nonexistent*.
 
@@ -22,7 +22,7 @@
 | SR-01 | **PFH + M formation** | PARTIALLY DEFINED | Bearish context / short candidate at a weekly high | No | No | PFH is retrospective; M second-leg behavior is taught, but first-leg anatomy is absent (`A-010`, `A-011`) |
 | SR-02 | **PFL + W formation** | PARTIALLY DEFINED | Bullish context / long candidate at a weekly low | No | No | Mirror of SR-01; the W time cap conflicts (`C-029`) |
 | SR-03 | **22 trade / 2-2** | PARTIALLY DEFINED | Reversal at a repeated level; second leg of a second leg | With stipulation | No | V02 explicitly defines the structure and return-through-level variation; `second leg`, level segmentation and *"slightly"* remain open (`A-007`, `A-024`) |
-| SR-04 | **33 trade / 3-3** | PARTIALLY DEFINED | Tier-2 notes call the completed rising form a strong sell signal | No | No | `MMM-NOTES` decodes three levels over three days plus intraday Level III; the level unit is undefined (`A-004`, `A-023`) |
+| SR-04 | **33 trade / 3-3** | PARTIALLY DEFINED — TIER 1 + TIER 2 | Reversal/short context after a three-day rise | No | No | V13 defines it in Tier 1 as **three pushes on the third day of rise** (`[01:01:27]`). `MMM-NOTES` p.64 separately decodes three levels over three days plus intraday Level III. The accounts are related but not mechanically identical; `push`, `level`, alignment and invalidation remain unresolved (`A-004`, `A-007`, `A-023`) |
 | SR-05 | **3333 / 3.33 trade** | NAMED | Unknown | No | No | V15 name survives ASR checks; no definition or Tier-2 support (`A-097`) |
 | SR-06 | **Stop Hunt High M Formation** | NAMED + PARTIAL SEQUENCE | Short | With stipulation | No | V04 printed taxonomy and sequence; stop-hunt boundary and M anatomy unresolved |
 | SR-07 | **Stop Hunt Low W Formation** | NAMED + PARTIAL SEQUENCE | Long | With stipulation | No | Mirror of SR-06 |

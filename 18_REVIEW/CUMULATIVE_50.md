@@ -1,115 +1,140 @@
 # CUMULATIVE REVIEW — 50% CHECKPOINT
 
-> **TEMPLATE — NOT YET PERFORMED.**
-> No conclusions are recorded here. This checkpoint fires when approximately 50% of the
-> verified lessons hold a reviewer `PASS`. The exact trigger lesson is set once
-> the real lesson count is known at ingestion (`DECISIONS.md` D-014).
-
-Individual lesson mastery is not enough. Concepts evolve across lessons: a
-definition passed at V03 may be refined, narrowed, or contradicted by V09. This
-review looks across lessons rather than within one.
+**Performed retrospectively:** 2026-08-15
+**Authority:** `DECISIONS.md` D-014; `REVIEW_PROTOCOL.md` §14
+**Trigger resolution:** V10 (10 of 21 lessons = 47.6%, matching the existing V01–V10 assessment boundary)
 
 | Field | Value |
 |---|---|
 | Checkpoint | 50% |
-| Trigger | TBD at ingestion |
-| Lessons covered | |
-| Review date | |
-| Reviewer session | |
+| Trigger | V10 |
+| Lessons covered | V01–V10 |
+| Review date | 2026-08-15 |
+| Reviewer session | Phase 2 cumulative-review session; independently audited the historical assessment record |
 
 ---
 
 ## STATUS
 
 ```text
-NOT STARTED
+COMPLETED — HALT AND REMEDIATE
 ```
-
----
 
 ## 1. LESSONS IN SCOPE
 
-| Video | Original decision | Round | Still valid? |
-|---|---|---|---|
-
-"Still valid?" is the point of this review — an earlier `PASS` is not immune to
-later evidence.
+V01–V10 each now holds a fresh independent reviewer `PASS`. Those ten artifact decisions remain
+valid. The cumulative student assessment is a separate gate and does **not** pass: attempt
+`AI_STUDENT_ATTEMPT_001` is formally **NOT MASTERED** despite **847/880 (96.3%)** because V05-06
+triggered CF-5, a critical ambiguity-calibration failure.
 
 ## 2. DID LATER LESSONS REFINE EARLIER DEFINITIONS?
 
-| Concept | Earlier definition | Later refinement | Action required |
+| Concept | Earlier definition | V06–V10 refinement | Action required |
 |---|---|---|---|
+| PFH/PFL | Weekly extreme/anchor | V10 permits completed-week retrospective marking; prospective lock remains unsupported | Always distinguish final, candidate and high/low-so-far |
+| M/W / second leg | Named but incomplete | More sequences, examples and confirmation context appear; first-leg geometry remains missing | Explain the role, then state the blocker; do not answer “no setups” |
+| 22 | Nested second leg at repeated level | Survives the practical when unresolved geometry is stipulated | Keep as SR-03, human-recognizable with stipulation |
+| 33 | Not established in Tier 1 V01–V10 | Tier-2 material later supplies a partial three-level/three-day reading | Keep source tier explicit; not operational |
+| Confirmation | Broad confirmation language | V08 adds high/low confirmation concepts but depends on retrospective extremes and undefined inputs | No live-entry authorization |
+| Risk | General restraint | V09 supplies arithmetic/portfolio controls | Calculations are codable only after stop and conversion inputs are supplied |
+| Safety trade | Named/checklist material by V10/V17 | Conditions include undefined stop hunt, M/W, peak and TDI components | Checklist knowledge is not a complete setup |
 
 ## 3. DID TERMINOLOGY CHANGE?
 
-Terminology drift (E16) is gradual and easy to miss inside a single lesson.
-
-| Term | Earlier usage | Later usage | Assessment |
-|---|---|---|---|
+| Term | Earlier/later use | Assessment |
+|---|---|---|
+| setup | Used for named patterns, checklists and complete-looking teaching examples | Retrieval must expose names and roles, then independently report operational status |
+| PFH/PFL | Retrospective fact versus prospective candidate | The agent must never collapse these states |
+| confirmation | Sometimes a taught sequence, sometimes a hindsight extreme | State the source and whether the required object was knowable at decision time |
+| standard / mini / micro | V03 maps standard/mini/micro to week/day/pushes; V06 later maps macro/mini/micro to H4/H1/M15 | Both are course evidence. Student supplied the later timeframe map to a V03 scope-map question; require lesson/presenter attribution |
+| explicit / inferred | Input rule versus calculated/chart conclusion | Student repeatedly labelled the input but not the derived answer; both layers must be labelled |
 
 ## 4. DID EARLY INTERPRETATIONS BECOME INVALID?
 
-| Interpretation | Where recorded | Invalidated by | Action |
-|---|---|---|---|
-
-Any invalidated interpretation that fed a chart classification or a backtest means
-that downstream work must be re-examined.
+| Interpretation | Evidence | Action |
+|---|---|---|
+| A plausible synthesis can resolve inconsistent day counts | V05-06 final adjudication | Invalid; preserve `UNRESOLVED` unless the course supplies a controller |
+| Every named setup should yield a live entry | Setup registry and ambiguity inventory | Invalid; separate name, role, stipulation, operational and machine-codable states |
+| PFH/PFL can be known before the week ends | V01-05 / V10-01 | Invalid except as candidate/high-low-so-far |
+| Correct formulas make calculated outputs `EXPLICIT` | Cross-case provenance deductions | Invalid; explicit inputs can produce an inferred result |
 
 ## 5. ARE CONCEPT-LIBRARY ENTRIES STILL ACCURATE?
 
-| Concept | Status | Issue |
-|---|---|---|
+`CONCEPT_INDEX.md` correctly reports zero promoted `CL-NNN` concepts but is not a sufficient
+retrieval surface for the student's human knowledge. `MMM_SETUP_REGISTRY.md` is therefore a
+required companion: it names PFH+M, PFL+W, 22, 33, safety trade, DNC, stop-hunt variants and other
+setups/signals while preserving their gaps. The central architecture error was treating
+“not promotable/machine-codable” as if it meant “not known.”
 
 ## 6. NEW EXCEPTIONS
 
-| Exception | Affects | Source | Recorded? |
-|---|---|---|---|
+| Exception | Effect |
+|---|---|
+| Outcome never repairs an invalid entry-time decision | Valid/loser and invalid/winner staged cases are graded separately |
+| A chart may be insufficient even when the setup name is known | Raw recognition must refuse missing anatomy rather than hallucinate |
+| Historical support does not rewrite doctrine | PT findings remain bounded development evidence, not setup definitions or edge claims |
+| Owner/guest material keeps its source tier | A lower-tier 33 explanation cannot silently become Tier-1 doctrine |
 
 ## 7. EMERGING CONTRADICTIONS
 
-Conflicts visible only across lessons, invisible within any one of them.
-
-| # | Conflict | Sources | Status |
-|---|---|---|---|
+| Conflict | Status |
+|---|---|
+| Day-count doctrine (C-001) | OPEN and student-critical; targeted retest required |
+| TDI parameters/thresholds | OPEN; blocks machine calculation and several setup conditions |
+| Session/weekly empirical claims versus development results | Preserved as supported, split, null or contradicted per each PT; no reverse edge inferred |
+| PFH/PFL prospective identification | OPEN; completed-week labels do not solve live recognition |
 
 ## 8. INTEGRATION TEST
 
-Can the student combine multiple concepts simultaneously, as the method actually
-requires — rather than reciting them one at a time?
-
-| Scenario | Concepts required | Student performance | Assessment |
-|---|---|---|---|
+The full practical produced **847/880 (96.3%)** and **196/200 (98.0%)** on its integration section.
+The student was strong on recognition with stipulated facts, invalid/winner separation, risk
+arithmetic, sequencing, lookahead control and refusal to invent undefined chart objects. It still
+failed the checkpoint because one critical false closure is enough to corrupt downstream setup
+logic. The formal status remains **NOT MASTERED** until a fresh targeted retest passes.
 
 ## 9. CUMULATIVE CHART RECOGNITION
 
-Recognition on charts requiring several lessons at once, with outcomes unknown.
-
-| Chart | Concepts involved | Classification | Correct? |
-|---|---|---|---|
+| Cluster | Result | Boundary |
+|---|---|---|
+| Weekly context / active-edge extrema | Strong | Final PFH/PFL withheld correctly; one small V03 range-mark error remains |
+| 22 and entry-sequence cases | Strong under stipulated facts | Raw anatomy remains untestable without supplied facts |
+| DNC / stop-hunt / M-W lookalikes | Strong discrimination | Correctly returned insufficient information where the course has no objective boundary |
+| V08 confirmation/high-low | Strong under the assessment contract | No claim that a live extreme is prospectively knowable |
+| V10 safety cluster | Strong checklist recall | No stop, edge or complete entry rule invented |
 
 ## 10. RECURRING ERROR ANALYSIS
 
-From `REVIEW_INDEX.md`. A code recurring three or more times is a systematic
-weakness in the study process, not a property of any one lesson.
-
-| Code | Count | Pattern | Recommended intervention |
-|---|---|---|---|
+| Pattern | Evidence | Intervention |
+|---|---|---|
+| False closure of ambiguity | V05-06 CF-5 | Mixed-source retest; any absent controlling rule forces `UNRESOLVED` |
+| Derived-answer provenance drift | Multiple V01/V03/V04/V09/integration deductions | Two-line answer contract: source status of inputs, then status of conclusion |
+| Exact recall loss | V01-01 and V03-07 | Retrieval drills for exact trap contexts and standard/mini/micro meanings |
+| Status/count/citation staleness | Review-index recurring classes and stale progress rows | Mechanical validator checks and one authoritative status layer |
+| Setup retrieval failure | Zero promoted concepts was previously readable as zero setup knowledge | Make the setup registry mandatory reading and test name/role/blocker recall directly |
 
 ## 11. RESEARCH INTEGRITY AUDIT
 
 | Check | Finding |
 |---|---|
-| Were losing observations preserved across all lessons? | |
-| Were failed hypotheses preserved? | |
-| Were ambiguities left honestly unresolved? | |
-| Did any numeric constants enter without course support? | |
-| Did any external framework terminology creep in? | |
-| Was any earlier work quietly edited rather than superseded? | |
+| Losing observations preserved across all lessons? | Yes |
+| Failed hypotheses preserved? | Yes; the cumulative PT summary includes null, split and contradicted results |
+| Ambiguities left honestly unresolved? | Repository yes; student failed once at a critical boundary |
+| Numeric constants entered without support? | No authoritative specification; unvalidated numbers remain quarantined |
+| External terminology entered? | No; the V03 miss was a cross-lesson attribution error between two course mappings, not an external-framework import |
+| Earlier work quietly edited? | No; original attempts, review rounds and superseded text remain available |
 
 ## 12. OPEN ITEMS CARRIED FORWARD
 
-| # | Item | From | Still open? |
-|---|---|---|---|
+| Item | Required disposition |
+|---|---|
+| V05-06 / C-001 ambiguity | Fresh, reworded targeted retest in a clean student session |
+| V01 exact trap contexts | Include in retest |
+| V03 standard/mini/micro | Include in retest |
+| Provenance of derived answers | Include at least two calculation/chart cases in retest |
+| Setup inventory retrieval | Require names, directional roles, source tiers and blockers for 22, 33, PFH+M, PFL+W and safety trade |
+| V11/V13/V15/V17/V18/V19/V20 lesson reviews | Fresh independent reviewer files still required |
+| 75% checkpoint | Wait until V01–V16 all hold independent PASS and the 25/50 retest gate is cleared |
+| Final course review | Wait for all 21 independent PASS, all cumulative gates and final integrated mastery evidence |
 
 ---
 
@@ -117,18 +142,18 @@ weakness in the study process, not a property of any one lesson.
 
 ```text
 CHECKPOINT: 50%
-DECISION: PROCEED / PROCEED WITH CORRECTIONS / HALT AND REMEDIATE
-CONFIDENCE: HIGH / MEDIUM / LOW
+DECISION: HALT AND REMEDIATE
+CONFIDENCE: HIGH
 
 LESSONS REQUIRING RE-REVIEW:
--
+- None solely from this assessment; the failed gate is cumulative student mastery.
 
 REQUIRED ACTIONS:
-1.
+1. Run the targeted ambiguity/contradiction retest required by FINAL_GRADING_REPORT.md.
+2. Add exact-recall cases for the four trap contexts and standard/mini/micro meanings.
+3. Add setup-retrieval cases for 22, 33, PFH+M, PFL+W and safety trade, requiring role plus blocker.
+4. Add derived-provenance cases that separate explicit inputs from inferred conclusions.
+5. Obtain fresh independent PASS decisions for V11, V13, V15, V17, V18, V19 and V20.
 
-PROCEED TO NEXT LESSONS: AUTHORIZED / NOT AUTHORIZED
+PROCEED TO NEXT LESSONS: NOT AUTHORIZED UNTIL THE TARGETED RETEST PASSES
 ```
-
-If earlier lessons must be revisited, name them and say exactly what must be
-redone. A cumulative review that finds nothing on a substantial body of work is
-more likely to be a shallow review than a clean corpus.

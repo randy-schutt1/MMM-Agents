@@ -10,6 +10,8 @@
 INDEPENDENT REVIEWER PASS: 14 / 21
 LATEST INDEPENDENT DECISION REVISE: 7 / 21
 FINAL_COURSE_REVIEW PRECONDITION: FAILED
+CUMULATIVE 25/50: COMPLETED — HALT AND REMEDIATE
+CUMULATIVE 75: NOT STARTED
 MASTER SPECIFICATION: PROHIBITED
 MACHINE SPECIFICATION: PROHIBITED
 ```
@@ -54,8 +56,15 @@ student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, 
    **V09, V10, V12, V14, and V16 now hold independent passes.**
 2. Independently re-review the applied V11, V13, and V15 remediation.
 3. Independently re-review the 14 Phase 2 edits for V17–V20.
-4. Only after 21/21 independent passes, execute the 25/50/75 retrospective checkpoints and the
-   final reconstruction test.
+4. The overdue 25% and 50% retrospective checkpoints are now complete. Both return `HALT AND
+   REMEDIATE` because the immutable V01–V10 practical is formally `NOT MASTERED`: V05-06 falsely
+   closed the unresolved C-001 day-count contradiction despite a 96.3% aggregate score.
+5. Run the required targeted retest in a fresh Student session. Include exact setup retrieval
+   (22, 33, PFH+M, PFL+W, safety trade), the four trap contexts, standard/mini/micro, and derived
+   provenance labels.
+6. Run the 75% checkpoint only after V01–V16 all hold independent passes and the targeted retest
+   clears the 25%/50% cumulative gate. Run the final review only after 21/21 independent passes
+   and all cumulative gates clear.
 
 No owner decision can convert a self-check into independence retroactively. The owner may waive
 the gate, but the result must remain labelled as an override rather than a reviewer `PASS`.

@@ -11738,3 +11738,23 @@ All **13** outstanding minors were applied: V11 items 109–113, V13 items 154�
 runner seed banner contract, withdraws unsupported mechanism/direction claims, and keeps all
 substantive ambiguity and backtest dispositions unchanged. This session authored the fixes, so
 they are **APPLIED — AWAITING INDEPENDENT R2**, not closed or passed under `D-003`.
+
+---
+
+## 2026-08-15 — PHASE 2 — CUMULATIVE 25/50 AND TARGETED RETEST GATE
+
+The overdue 25% and 50% cumulative reviews were completed retrospectively at V05 and the existing
+V01–V10 assessment boundary. Both return **HALT AND REMEDIATE**. The independently graded student
+attempt scored **847/880 (96.3%)** but remains **NOT MASTERED** because V05-06 falsely resolved the
+open C-001 day-count contradiction. The high aggregate does not override CF-5.
+
+The audit also corrected the retrieval boundary that prompted Phase 1: zero promoted `CL-NNN`
+files does not mean zero setup knowledge. `MMM_SETUP_REGISTRY.md` now restores V13's Tier-1 33
+definition beside the separate Tier-2 account, and the cumulative files require direct retrieval
+of 22, 33, PFH+M, PFL+W and Safety Trade with their known roles and blockers.
+
+`PHASE_2_TARGETED_RETEST_001` supplies a sealed ten-case Student packet, results template and
+Instructor key. This session authored and read the key and therefore cannot take the clean Student
+role. The 75% and final reviews remain `NOT STARTED`; seven lesson reviews also remain fresh-session
+work. Validation: Phase 2 PASS, Phase 1 PASS, structural 103/0/0, suite validator PASS, whitespace
+PASS. Master and Machine Specification directories remain empty.

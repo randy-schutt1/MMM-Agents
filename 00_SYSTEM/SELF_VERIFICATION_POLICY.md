@@ -4,8 +4,10 @@
 
 This file does not create a new owner decision. It restates active D-003, D-004, and D-024:
 
-- self-verification may show that a fix was attempted and may open a progression gate when the
-  owner explicitly authorizes the exception;
+- self-verification may show that a fix was attempted;
+- self-verification itself never opens a progression gate. A separately recorded owner override
+  may authorize progression, and a minor-only independent `REVISE` opens the next-lesson gate under
+  D-024, but neither event turns the self-check into independent verification;
 - it does not satisfy separation of duties;
 - it does not produce an independent reviewer `PASS`;
 - it does not make a lesson eligible for the final-course-review precondition.
@@ -21,6 +23,14 @@ This file does not create a new owner decision. It restates active D-003, D-004,
 
 `COMPLETE — SELF-VERIFIED AT OWNER DIRECTION` is historical qualified language, not equivalent to
 the last row. Cumulative and final reviews must count only independent `PASS` decisions.
+
+## Owner-decision boundary
+
+No new owner decision is needed to interpret the existing record. D-003/D-004 already answer the
+certification question, and D-024 already answers progression after a minor-only independent
+`REVISE`. If the owner chooses to waive a closed gate in a future case, that waiver must name its
+scope and remain labelled `OWNER OVERRIDE`; it cannot authorize the authoring session to emit a
+reviewer `PASS`, `CLOSED — VERIFIED`, or lesson `COMPLETE`.
 
 ## Phase 2 application
 

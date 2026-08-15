@@ -2580,9 +2580,9 @@ Non-foundational issues that permitted a `PASS` but must not be forgotten.
 
 | Checkpoint | Trigger | File | Status |
 |---|---|---|---|
-| 25% | TBD at ingestion | `CUMULATIVE_25.md` | Not started |
-| 50% | TBD at ingestion | `CUMULATIVE_50.md` | Not started |
-| 75% | TBD at ingestion | `CUMULATIVE_75.md` | Not started |
+| 25% | V05 (5/21 = 23.8%) | `CUMULATIVE_25.md` | **COMPLETED — HALT AND REMEDIATE** (2026-08-15) |
+| 50% | V10 (10/21 = 47.6%; existing assessment boundary) | `CUMULATIVE_50.md` | **COMPLETED — HALT AND REMEDIATE** (2026-08-15) |
+| 75% | V16 (16/21 = 76.2%) | `CUMULATIVE_75.md` | Not started — requires V01–V16 independent PASS and cumulative retest clearance |
 | Final | All lessons passed | `FINAL_COURSE_REVIEW.md` | Not started |
 
 ---

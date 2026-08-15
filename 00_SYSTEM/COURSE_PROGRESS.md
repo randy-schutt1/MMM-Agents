@@ -2505,9 +2505,9 @@ fabricate, interpolate, or infer Week 6 content.**
 | V03 | Wk2 03/25 P1 | 01:10:42 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ⏸ | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
 | V04 | Wk2 03/25 P2 | 01:25:41 | ✅ | ✅ | ✅ | ✅ | ✅ | ⏸ | REVIEW REQUIRED (resub) | ✅ R1 REVISE (0C/0M/7m) → **R2 PASS** | **COMPLETE** |
 | V05 | Wk2 03/25 P3 | 01:08:21 | ✅ | ✅ | ✅ | ✅ | ⚠️ | 🚫 | REVIEW REQUIRED (resub ×2) | ✅ R1 REVISE → R1B REVISE → R2 REVISE → **R3 PASS** | **COMPLETE** |
-| V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
-| V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW R1** |
-| V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | REVISE R1 0C/0M/3m | **IN REMEDIATION** (items 64-66) |
+| V06 | Wk2 03/26 P1 | 01:14:33 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ⭐ **COMPLETE** | **R2 PASS — 0C/0M/0m** | **COMPLETE** |
+| V07 | Wk2 03/26 P2 | 00:48:06 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R3 PASS — 0C/0M/0m** | **COMPLETE** |
+| V08 | Wk2 03/26 P3 | 00:43:03 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R2 PASS — 0C/0M/0m** | **COMPLETE** |
 | V09 | Wk2 03/26 P4 | 00:52:26 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R4 PASS — 0C/0M/0m, HIGH, 2026-08-15; items 81–83 independently verified** | **Independent `D-003` separation restored after historical R3 self-verification** |
 | V10 | Wk3 | 01:36:16 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭐ **COMPLETE** | **R2 PASS — 0C/0M/0m, HIGH, 2026-08-15; items 91–94 independently verified** | **Independent `D-003` separation restored after historical fix-round self-verification** |
 | V11 | Wk4 P1 | 00:50:56 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | **R1 REVISE 0C/0M/5min** | **REMEDIATION APPLIED — AWAITING INDEPENDENT R2** (items 109–113) · V12 GATE OPEN |
@@ -2699,14 +2699,15 @@ date and a third presenter ("Carl") is queued at `[01:19:02]`.**
 
 ## CUMULATIVE REVIEW CHECKPOINTS
 
-Triggered at roughly 25% / 50% / 75% / 100% of verified lessons. Exact trigger
-points are set once the real lesson count is known at ingestion.
+Triggered at roughly 25% / 50% / 75% / 100% of verified lessons. With 21 lessons ingested, the
+retrospective 25% and 50% boundaries use V05 and the existing V01–V10 assessment boundary; 75%
+uses V16.
 
 | Checkpoint | Trigger (lessons passed) | File | Status |
 |---|---|---|---|
-| 25% | TBD at ingestion | `18_REVIEW/CUMULATIVE_25.md` | Not started |
-| 50% | TBD at ingestion | `18_REVIEW/CUMULATIVE_50.md` | Not started |
-| 75% | TBD at ingestion | `18_REVIEW/CUMULATIVE_75.md` | Not started |
+| 25% | V05 | `18_REVIEW/CUMULATIVE_25.md` | **COMPLETED — HALT AND REMEDIATE** |
+| 50% | V10 | `18_REVIEW/CUMULATIVE_50.md` | **COMPLETED — HALT AND REMEDIATE** |
+| 75% | V16 | `18_REVIEW/CUMULATIVE_75.md` | Not started — requires V01–V16 independent PASS and targeted retest clearance |
 | 100% | All lessons passed | `18_REVIEW/FINAL_COURSE_REVIEW.md` | Not started |
 
 ---

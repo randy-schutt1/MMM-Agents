@@ -17,9 +17,10 @@ single deterministic setup-classification pipeline from raw charts.
    no canonical setup registry existed until Phase 1.
 2. The concept library intentionally contains zero promoted `CL-NNN` concepts, so the old retrieval
    surface offered no setup answer even though lesson-level knowledge existed.
-3. Twelve lessons still lack an independent reviewer `PASS`; “reviewed” was repeatedly mistaken for
+3. Seven lessons still lack an independent reviewer `PASS`; “reviewed” was repeatedly mistaken for
    “certified.”
-4. No cumulative checkpoint or final reconstruction review has ever been completed.
+4. The overdue 25% and 50% cumulative checkpoints are now completed, but both return `HALT AND
+   REMEDIATE`; the targeted retest and the 75%/final reviews remain incomplete.
 5. Core chart primitives remain undefined: first-leg anatomy, objective level segmentation,
    prospective PFH/PFL formation, blue tracer identity, and several tolerance/time boundaries.
 6. Named patterns such as PFH+M, PFL+W, 22, 33, 3333, stop hunts, Batman variants, stars, and
@@ -28,7 +29,9 @@ single deterministic setup-classification pipeline from raw charts.
 ## What is reconstructable now
 
 - A 22 trade has real V02 course wording: a second leg of a second leg at a repeated level.
-- The 33 trade has a Tier-2 decoding; 3333 remains name-only.
+- The 33 trade has a Tier-1 V13 definition (three pushes on the third day of rise) and a separate
+  Tier-2 decoding (three levels over three days plus intraday Level III); the accounts are not yet
+  mechanically unified. 3333 remains name-only.
 - M/W structures have a closing-price basis, an eight-candle floor in later lessons, and bounded
   second-leg timing evidence, but still lack objective first-leg and tolerance definitions.
 - The owner M15 closed 5/13 crossover rule is computable as a timing gate at its owner-evidence tier;
@@ -50,7 +53,8 @@ of tradeable signals.
 
 ## Final-review consequence
 
-The reconstruction result is `PARTIALLY`, not `YES`. Therefore the Student Phase is not complete,
-the official final course review cannot pass, and the Master/Machine specifications must remain
-empty. This is a useful outcome: it locates the missing teaching instead of blaming retrieval alone
-or pretending that 21 watched videos necessarily yield a complete system.
+The reconstruction result is `PARTIALLY`, not `YES`. The independently graded V01–V10 practical
+also remains `NOT MASTERED` because a critical ambiguity was falsely closed. Therefore the Student
+Phase is not complete, the official final course review cannot begin, and the Master/Machine
+specifications must remain empty. This locates the missing teaching and retrieval work instead of
+pretending that 21 watched videos necessarily yield a complete system.
