@@ -4350,3 +4350,172 @@ ruling was obtained.
 8. **No test becomes runnable and no `A-xxx` is unblocked.**
 **Status:** ACTIVE — **AUTHORITATIVE on the basis question. Supersedes `D-048` Part 2's
 disposition of `C-021`; `D-048` Part 1 is untouched.** ⛔ **`A-086` stays `DO NOT CODE`.**
+
+---
+
+## D-053 — ⭐ `MMM_TDI.txt` is the **PRIMARY TDI INSTRUMENT**, and every TDI principle the course teaches is applied to it. ⛔ **Binding the doctrine to an instrument does NOT make the doctrine computable.**
+
+**Date:** 2026-08-14
+**Bears on:** `06_MANUAL_BACKTEST/tools/MMM_TDI.txt` (**designated primary**),
+`mmm_chart_render.py` (its Python sibling), `MMM_TDI_RSI_BASIS.txt` /
+`MMM_TDI_MARKETBASE_BASIS.txt` (**history, not tools**), `A-031`, `A-032`, `A-039`, `A-080`,
+`A-084`, `A-085`, `A-086`, `A-087`, `C-019`, `C-021`.
+**Extends:** `D-052` §4, which named the tool as a *consequence* of the basis ruling. **This entry
+is the standing instrument rule and it is a different act** — `D-052` settled a parameter; this
+settles what the project points at when it says *"the TDI."*
+**Does not disturb:** `D-030`, `D-006`, `D-040`, `D-045`, `D-052`, `SOURCING_HIERARCHY.md` §3.1/§3.4.
+
+**The owner's instruction, 2026-08-14, confirming and extending `D-052`:**
+
+> *"That's what it is for the TDI. Let's lock that in as our primary. We will take all the
+> principles taught for TDI and use it with this TDI."*
+
+---
+
+### 1. WHAT IS DECIDED
+
+1. **`06_MANUAL_BACKTEST/tools/MMM_TDI.txt` is the PRIMARY TDI INSTRUMENT for this project.**
+   Where any artifact — a lesson note, a manual backtest observation, a chart mark-up, a screenshot
+   annotation, a future Pine or Python build — says *"the TDI"*, it means **this** configuration.
+2. **Every TDI principle the course teaches is read against this instrument.** *Shark fin*
+   (`A-032`), *blood in the water* (`A-031`), the volatility-band break, the `63`/`37` thresholds,
+   the `68`/`50`/`32` levels, V12's scaling and checkpoint material, V15's TDI-only trade
+   discussion, V17's take-aways — all of it is applied to this build and not to a generic or
+   remembered TDI.
+3. **`mmm_chart_render.py` is its Python sibling and the two are a PAIR.** A parameter changed in
+   one and not the other is a defect. The reconciliation obligation that file's README already
+   states is **adopted as a standing rule** — see consequence 3.
+4. **The two comparison variants are HISTORY, not tools.** `MMM_TDI_RSI_BASIS.txt` and
+   `MMM_TDI_MARKETBASE_BASIS.txt` are retained as the evidence of how `C-021` was settled and are
+   **not** to be built on; each carries two deliberate departures from the primary (multiplier
+   `2.0` vs `1.6185`, Pine v5 vs v6).
+
+### 2. ⛔ THE HARD LIMIT — AND IT IS THE REASON THIS ENTRY EXISTS
+
+**Applying the taught principles to a specific instrument does NOT make those principles
+computable, testable, or codable.** Every blocker standing before this entry stands after it:
+
+| Record | Status | Unchanged because |
+|---|---|---|
+| **`A-086`** — the volatility bands | ⛔ `DO NOT CODE` | The band **PERIOD** is still never stated in Tier 1 or Tier 2. `Volatility_Band=34` is `[TOOLING]`, `D-045`-**eligible, not adopted** |
+| **`A-031`** — *"blood in the water"* | **Uncomputable** | Turns on the RSI line's position relative to **the band** |
+| **`A-032`** — *"shark fin"* | **Uncomputable** | Same, and *"outside the band to back in"* needs the band |
+| **`A-039`** — the TDI as a taught entry criterion | ⛔ `OPEN` | Not closed by owning a tool |
+| **`A-085`** — the TSL *"polls the one-hour chart"* | ⛔ `DO NOT CODE` | No period, no formula, no account of *"polling"* — see §3 |
+
+**The failure mode this entry is written to prevent, stated plainly:** *"the owner told us to apply
+the taught principles to this TDI, therefore the taught principles are now implementable on this
+TDI."* **They are not.** The instruction fixes **which instrument** the principles refer to. It does
+not supply the quantities the corpus never stated, and it is **not** course evidence — `D-052`'s
+`OWNER EMPIRICAL PREFERENCE` tier governs the basis and this entry adds no warrant to anything.
+
+**Consequently this instrument is a MANUAL / VISUAL STUDY AID.** It may be used to look at charts,
+to practise recognition, and to mark up observations. **No `PT`/`BT` may report a result computed
+from its bands as a test of the method** (`D-026`/`D-027`, `BACKTEST_EVIDENCE_STANDARD.md`), and
+`D-006`'s Pine gate is untouched.
+
+### 3. ⭐ APPLYING THE PRINCIPLES SURFACED THREE DISCREPANCIES. THEY ARE RECORDED, NOT PAPERED OVER.
+
+This is the useful half of the instruction: reading the taught doctrine against a concrete build
+immediately shows where the two do not meet.
+
+**(a) ⚠️ `A-085` — THE TRADE SIGNAL LINE. THE TOOL DOES NOT DO WHAT THE LESSON SAYS IT DOES, AND
+IT MUST NOT BE MADE TO.**
+
+V12 `[00:11:49]`, restated `[00:11:59]`: *"The TSL in essence is a polling of the one-hour chart,
+brought into your view on the 15 minute."* **`MMM_TDI.txt` computes `slowMa` as `SMA(7)` of the RSI
+on the chart's own timeframe. Nothing in it reads a higher timeframe, and nothing in the shipped
+TDI ever did.** `A-085` records that the claim may be a description of an **effect** (a smoothed
+line lags like a slower timeframe) stated as if it were a **mechanism**, and does not adjudicate it.
+
+⛔ **THIS IS LOAD-BEARING AND IT IS THE MOST DANGEROUS ITEM IN THIS ENTRY.** V12 `[00:12:18]` tells
+a student they *"not necessarily"* need to consult the one-hour chart if they have a shark fin and
+blood in the water — **a student is told they may stop looking at a timeframe, on the strength of
+this claim.** Therefore, under this decision: **a TSL crossover on this instrument is a crossover
+of a 7-period SMA of the RSI on the chart in front of you. It is NOT evidence that "a one-hour
+signal has fired", and it may not be reported as one.** ⛔ **And `A-085` may NOT be "implemented"
+by wiring an H1 `request.security()` call into the tool** — that would be `D-030`'s forbidden act,
+inventing a construction the corpus never gave, and it would look authoritative on a chart.
+
+**(b) ✅ `A-080` — THE TOOL UNDERSTATED ITS OWN STRONGEST WARRANT. FIXED.**
+
+Both tools tagged `RSI period = 21` as `[TOOLING]` (from `!SM_TDI`). **`A-080` is
+`CLOSED — RESOLVED BY COURSE` on THREE independent Tier 1 instances**, including V13's first-person
+*"RSI is typically 14, **we have it set to 21**"*, and V13 `[00:54:51]` establishes the 21 is a
+lookback in **chart periods, scaling with timeframe.** `[TIER 1]` outranks `[TOOLING]`; the tag is
+corrected in **both** files, with `!SM_TDI` demoted to corroboration. **This is the primary
+instrument carrying the strongest available warrant for each parameter, which is the point of
+designating one.**
+
+**(c) ⚠️ THE REST OF THE PARAMETER SET IS WEAKER THAN `[TIER 1]`, AND THE PRIMARY DESIGNATION DOES
+NOT PROMOTE IT.** After (b), exactly one parameter is Tier 1:
+
+| Parameter | Value | Warrant |
+|---|---|---|
+| RSI period | **21** | ✅ **`[TIER 1]`** — `A-080` `RESOLVED BY COURSE`, three instances |
+| Fast MA (RSI Price Line) | **2**, SMA | ⚠️ `[TOOLING]` — `A-084` `PROVISIONALLY RESOLVED — TOOLING` at `k = 2`, on the §3.4 re-check list |
+| Slow MA (Trade Signal Line) | **7**, SMA | ⚠️ `[TOOLING]` — and see (a): `A-085` |
+| Band / base-line period | **34** | ⚠️ `[TOOLING]` — **`A-086`'s missing quantity. ELIGIBLE, NOT ADOPTED** |
+| Band std-dev multiple | **1.6185** | ⛔ `[DEFAULT]` — **a guess**, and V14 `[00:45:09]`'s unhedged *"two standard deviations"* has a Tier 1 warrant it does not (`D-052` consequence 6, **still owed**) |
+| Band basis | **RSI line** | ⚠️ `[OWNER-RULED]` — `D-052`, `OWNER EMPIRICAL PREFERENCE`. **NOT course-verified**; Tier 1 V14 and Tier 2 p.45 both say the market base and are overridden |
+| Levels 68/63/50/37/32 | | ⚠️ `[TOOLING]`, `63`/`37` corroborated by V13 frame `00:53:35` |
+
+**Six of seven rows are below Tier 1. Designating a primary instrument does not raise a single one
+of them**, and `SOURCING_HIERARCHY.md` §3.4's standing re-check obligation applies to every
+non-Tier-1 row: **a later lesson stating a construction governs and triggers §3.1.**
+
+**Reason:** The project has referred to *"the TDI"* across `A-031`, `A-032`, `A-039`, `A-080`,
+`A-084`–`A-087`, `C-019`, `C-021` and five lessons **without a fixed referent** — and the corpus
+itself says the build in use is an **altered** one (V12 `[00:07:20]`). Every one of those records
+argues about a line's behaviour without an agreed instrument to point at, which is how `C-021` ran
+for two lessons, a contradiction record and two decisions before anyone could pick. **Naming one
+build ends that class of ambiguity at zero evidentiary cost** — it decides a *referent*, not a
+*fact*. And the immediate return is §3: three real discrepancies fell out the moment the doctrine
+was read against a concrete build, one of which (`A-085`) is a student being told they may stop
+consulting a timeframe on the strength of a mechanism the tool does not implement.
+
+**Evidence:** the owner's instruction above, 2026-08-14; `D-052` and its §4; `A-080`'s closure and
+V13's three Tier 1 instances; `A-084`'s `PROVISIONALLY RESOLVED — TOOLING` at `k = 2`; `A-085`
+in full, including V12 `[00:11:49]`–`[00:12:24]`; `A-086`; `A-031`/`A-032`; V12 `[00:07:20]`
+(*"I've altered it or tweaked it a little bit"*); `06_MANUAL_BACKTEST/tools/README.md` and its
+reconciliation clause; the parameter-by-parameter reconciliation of `MMM_TDI.txt` against
+`mmm_chart_render.py` run at this entry — **all seven numeric parameters and the band basis agree;
+the only divergence found was the `A-080` tag in (b), corrected in both.**
+
+**Alternatives considered:** *Treating the owner's sentence as covered by `D-052` §4 and writing
+nothing* — rejected; `D-052` §4 says *"build on this file"*, which is a **development** instruction.
+This sentence binds **doctrine to an instrument**, which is a standing interpretive rule of a
+different kind, and it is the one a future session will need to find. *Reading "apply all the
+principles taught" as authorising implementation of those principles* — **rejected outright, and
+§2 exists to forbid it.** The instruction names an instrument; it does not supply a period, and
+`D-030` is untouched. *Implementing `A-085`'s H1 polling so the tool matches the lesson* —
+**rejected; it is the `D-030` violation in its purest form** and would put an invented construction
+on a chart looking authoritative. *Promoting the `[TOOLING]` parameters because the primary
+instrument "should" be authoritative* — rejected; a designation is not evidence, and doing so would
+be `D-039`'s error at scale. *Deleting the two comparison variants now that a primary exists* —
+rejected, per `D-052`.
+
+**Consequences:**
+
+1. **`MMM_TDI.txt` gains a PRIMARY-INSTRUMENT header**, the corrected `A-080` `[TIER 1]` tag, and
+   an ⛔ **`A-085` caveat on the Trade Signal Line** stating that a TSL crossover is not a one-hour
+   signal and must not be reported as one.
+2. **`mmm_chart_render.py` gains the same `A-080` tag correction and the same `A-085` caveat**, so
+   the pair stays reconciled. **No numeric value changes in either file.**
+3. **The pair-reconciliation rule is adopted as standing:** any session changing a TDI or EMA
+   parameter in one of the two files **must** change it in the other in the same commit, or record
+   why not. `06_MANUAL_BACKTEST/tools/README.md`'s stale *"not yet merged"* branch note is
+   corrected — **the branches merged at `b8b2c80`** — and its conditional reconciliation clause
+   becomes this standing rule.
+4. **No `A-xxx` changes status. No `C-xxx` changes status. No test becomes runnable.**
+   `A-086` stays `DO NOT CODE`; `A-031`/`A-032` stay uncomputable; `A-039` stays `OPEN`;
+   `A-085` stays `DO NOT CODE` and is now flagged **at the tool** as well as in the register.
+5. ⚠️ **`D-052` consequence 6 remains OWED and is reaffirmed here**: the `1.6185` multiplier is a
+   `[DEFAULT]` guess sitting in the **primary** instrument while V14's *"two standard deviations"*
+   carries a Tier 1 warrant. Designating this tool primary **raises the cost of leaving that
+   unresolved** and does not resolve it.
+6. **Every non-Tier-1 parameter stays on `SOURCING_HIERARCHY.md` §3.4's re-check list.** A later
+   lesson that states a construction governs, under `D-040` §3.1 — the primary designation is
+   **not** a freeze.
+**Status:** ACTIVE — **`MMM_TDI.txt` is the primary TDI instrument.** ⛔ **A referent decision, not
+an evidentiary one: nothing is unblocked, and `A-086` stays `DO NOT CODE`.**

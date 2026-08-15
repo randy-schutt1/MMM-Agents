@@ -4,10 +4,44 @@
 // Pine Script v6.  Paste into TradingView → Pine Editor → Add to chart.
 // =============================================================================
 //
-// ⭐⭐ THIS IS THE STANDARDISED PROJECT TDI TOOL. `D-052`, 2026-08-14.
+// ⭐⭐ THIS IS THE **PRIMARY TDI INSTRUMENT** FOR THIS PROJECT.
+//     `D-052` (the band basis) and `D-053` (the primary designation), 2026-08-14.
 //
 //   Owner: "the one we created a couple days ago is the one I want to use. We
 //   can apply all the same concepts that are taught with that particular TDI."
+//   And: "Let's lock that in as our primary. We will take all the principles
+//   taught for TDI and use it with this TDI."
+//
+//   WHAT THAT MEANS: wherever this project says "the TDI" — a lesson note, a
+//   manual backtest observation, a chart mark-up, a screenshot annotation — it
+//   means THIS configuration. Shark fin (A-032), blood in the water (A-031),
+//   the volatility-band break, the 63/37 thresholds, V12's scaling and
+//   checkpoint material, V15's TDI-only trades, V17's take-aways: all of it is
+//   read against this build and not against a generic or remembered TDI.
+//
+// ⛔⛔ AND HERE IS WHAT IT DOES *NOT* MEAN — `D-053` §2. READ IT BEFORE USING THIS.
+//
+//   FIXING WHICH INSTRUMENT THE PRINCIPLES REFER TO DOES NOT MAKE THE
+//   PRINCIPLES COMPUTABLE. Every blocker standing before D-053 stands after it:
+//
+//     A-086 (volatility bands)  ⛔ DO NOT CODE — the band PERIOD is STILL never
+//                                  stated in Tier 1 or Tier 2. Volatility_Band=34
+//                                  is [TOOLING], D-045-ELIGIBLE and NOT ADOPTED.
+//     A-031 ("blood in the water")  uncomputable — needs the band
+//     A-032 ("shark fin")           uncomputable — needs the band
+//     A-039 (TDI as entry criterion) ⛔ still OPEN
+//     A-085 (the TSL "polls the H1") ⛔ DO NOT CODE — see the slow-MA caveat below
+//
+//   THE FAILURE MODE THIS BLOCK EXISTS TO PREVENT: "the owner told us to apply
+//   the taught principles to this TDI, therefore they are now implementable on
+//   it." THEY ARE NOT. This is a MANUAL / VISUAL STUDY AID. No PT/BT may report
+//   a result computed from these bands as a test of the method (D-026/D-027),
+//   and D-006's Pine gate is untouched.
+//
+//   SIBLING TOOL — KEEP THE PAIR IN SYNC. `mmm_chart_render.py` is the Python
+//   port of this file. D-053 consequence 3: a TDI parameter changed here MUST
+//   be changed there in the same commit, or the reason recorded. Reconciled
+//   2026-08-14: all seven numeric parameters and the band basis agree.
 //
 //   BUILD ON THIS FILE. The two comparison variants — `MMM_TDI_RSI_BASIS.txt`
 //   and `MMM_TDI_MARKETBASE_BASIS.txt` (branch `tools/tdi-basis-comparison`) —
@@ -132,11 +166,11 @@ grpP = "TDI parameters  —  [TOOLING] from !SM_TDI, except bandMult (see toolti
 src      = input.source(close, "RSI source", group = grpP,
      tooltip = "[TOOLING] !SM_TDI has RSI_Price=0, which is MT4 PRICE_CLOSE.")
 rsiLen   = input.int(21,  "RSI period",                minval = 1, group = grpP,
-     tooltip = "[TOOLING] !SM_TDI RSI_Period=21. NOT the 13 this file shipped previously — that was a Tier-3 internet default and it was wrong.")
+     tooltip = "⭐ [TIER 1] — THE ONLY TIER 1 PARAMETER IN THIS PANEL. A-080 is CLOSED, RESOLVED BY COURSE, on THREE independent Tier 1 instances, including V13's first-person 'RSI is typically 14, we have it set to 21'. V13 [00:54:51] also establishes the 21 is a lookback in CHART PERIODS, scaling with timeframe — which is what ta.rsi does natively. [TOOLING] !SM_TDI RSI_Period=21 CORROBORATES it and is no longer the warrant (corrected at D-053; this tooltip previously cited only the template, understating the record). NOT the 13 this file shipped originally — that was a Tier-3 internet default and it was wrong.")
 fastLen  = input.int(2,   "Fast MA (RSI Price Line)",  minval = 1, group = grpP,
      tooltip = "[TOOLING] !SM_TDI RSI_Price_Line=2, RSI_Price_Type=0 (MT4 MODE_SMA).")
 slowLen  = input.int(7,   "Slow MA (Trade Signal Line)", minval = 1, group = grpP,
-     tooltip = "[TOOLING] !SM_TDI Trade_Signal_Line=7, Trade_Signal_Type=0 (MT4 MODE_SMA).")
+     tooltip = "[TOOLING] !SM_TDI Trade_Signal_Line=7, Trade_Signal_Type=0 (MT4 MODE_SMA). ⛔ A-085 — READ THE COMMENT BLOCK AT THE SLOW-MA CALCULATION BELOW BEFORE YOU TRADE OFF THIS LINE. V12 says the TSL 'polls the one-hour chart'. This line does not, and must not be made to.")
 bandLen  = input.int(34,  "Volatility band / Market Base Line period", minval = 2, group = grpP,
      tooltip = "[TOOLING] !SM_TDI Volatility_Band=34.")
 bandMult = input.float(1.6185, "Volatility band std-dev multiple", minval = 0.1, step = 0.0001, group = grpP,
@@ -271,8 +305,42 @@ dev      = bandMult * ta.stdev(rsiVal, bandLen)
 bandUp   = baseLine + dev                           // upper Volatility Band
 bandDn   = baseLine - dev                           // lower Volatility Band
 
-fastMa = f_ma(rsiVal, fastLen, maType)              // RSI Price Line
-slowMa = f_ma(rsiVal, slowLen, maType)              // Trade Signal Line
+fastMa = f_ma(rsiVal, fastLen, maType)              // RSI Price Line — [TOOLING], A-084 PROVISIONAL at k=2
+
+// ⛔⛔ `A-085` — THE TRADE SIGNAL LINE. THE MOST DANGEROUS LINE IN THIS PANEL.
+//    THIS TOOL DOES NOT DO WHAT THE LESSON SAYS THE TSL DOES, AND IT MUST NOT
+//    BE MADE TO. D-053 §3(a).
+//
+//    V12 [00:11:49], restated [00:11:59]:
+//        "The TSL in essence is a POLLING OF THE ONE-HOUR CHART, brought into
+//         your view on the 15 minute."
+//        "...when you get a crossover right here, in essence you now have a
+//         SIGNAL ON THE ONE-HOUR CHART." [00:12:07]
+//
+//    WHAT THE LINE BELOW ACTUALLY IS: a 7-period SMA of the RSI, computed on
+//    THE CHART'S OWN TIMEFRAME. Nothing in it reads a higher timeframe, and
+//    nothing in the shipped TDI ever did. A-085 records that the course's claim
+//    may be a description of an EFFECT (a smoothed line lags like a slower
+//    timeframe) stated as though it were a MECHANISM — and does NOT adjudicate
+//    which. A-085 has no period, no formula and no account of "polling", and it
+//    is DO NOT CODE.
+//
+// ⛔ THEREFORE: a crossover of this line is A CROSSOVER OF A 7-SMA OF THE RSI ON
+//    THE CHART IN FRONT OF YOU. It is NOT evidence that "a one-hour signal has
+//    fired" and it MAY NOT BE REPORTED AS ONE.
+//
+// ⛔ WHY THIS MATTERS MORE THAN THE OTHER OPEN RECORDS: V12 [00:12:18] tells a
+//    student they "not necessarily" need to consult the one-hour chart if they
+//    have a shark fin and blood in the water. A STUDENT IS TOLD THEY MAY STOP
+//    LOOKING AT A TIMEFRAME, on the strength of this claim. If the claim is an
+//    effect rather than a mechanism, that advice is unsafe — and this tool
+//    cannot tell you which it is.
+//
+// ⛔ DO NOT "FIX" THIS by wiring an H1 request.security() call in here. That is
+//    D-030's forbidden act — inventing a construction the corpus never gave —
+//    and it would look authoritative on a chart. A-085 closes on a lesson that
+//    states a construction, or it does not close.
+slowMa = f_ma(rsiVal, slowLen, maType)              // Trade Signal Line — chart's OWN timeframe. See above.
 
 // -------------------------------------------------------------------------
 // Plots

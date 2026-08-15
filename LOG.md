@@ -9902,3 +9902,54 @@ them and must never be reported as the corpus agreeing.
 `MMM_TDI.txt` still carries the Tier-3 multiplier **`1.6185`** while V14 states *"two standard
 deviations"* unhedged. The owner ruled on the **basis** and this session did not extend that to the
 multiplier. `D-052` consequence 6.
+
+---
+
+## 2026-08-14 — `D-053` · `MMM_TDI.txt` LOCKED IN AS THE **PRIMARY TDI INSTRUMENT**; the taught principles bind to it, and the binding surfaced three discrepancies
+
+**Session type:** Decision-adoption + tool correction. **Branch:** `decisions/adopt-053-tdi-primary`.
+
+**Owner, confirming and extending `D-052`:** *"That's what it is for the TDI. Let's lock that in as
+our primary. We will take all the principles taught for TDI and use it with this TDI."*
+
+### What `D-053` decides
+
+`06_MANUAL_BACKTEST/tools/MMM_TDI.txt` is the **primary TDI instrument**. Wherever this project
+says *"the TDI"*, it means that configuration — shark fin, blood in the water, the VB break, the
+63/37 thresholds, V12's scaling and checkpoints, V15's TDI-only trades, V17's take-aways are all
+read against **this build**, not a generic or remembered one. `mmm_chart_render.py` is its Python
+sibling and the two are a **pair**.
+
+### ⛔ What it does NOT decide
+
+**Binding the doctrine to an instrument does not make the doctrine computable.** `A-086` stays
+`DO NOT CODE` (the band **period** is still never stated), `A-031`/`A-032` stay uncomputable,
+`A-039` stays `OPEN`, `A-085` stays `DO NOT CODE`. **No record changed status.** This is a
+**referent** decision, not an evidentiary one, and it is a **manual/visual study aid** — no `PT`/`BT`
+may report a result computed from these bands as a test of the method.
+
+### ⭐ Reading the doctrine against a real build surfaced three things
+
+1. ⛔ **`A-085` — the tool does not do what the lesson says the TSL does.** V12: the TSL *"polls
+   the one-hour chart."* Both tools compute a 7-SMA of the RSI **on the chart's own timeframe**. A
+   TSL crossover is **not** evidence a one-hour signal fired, and `A-085` **may not be
+   "implemented"** by wiring in an H1 call — that is `D-030`'s forbidden act. **Flagged at the tool
+   now, not only in the register.** This is the one open TDI record that bears on what a person
+   *watches* before risking money (V12 `[00:12:18]`).
+2. ✅ **`A-080` — both tools understated their own strongest warrant.** RSI 21 was tagged
+   `[TOOLING]`; `A-080` closed it **`RESOLVED BY COURSE`** on three Tier 1 instances. **Corrected
+   in both files.** It is now the **only** `[TIER 1]` parameter in the panel.
+3. ⚠️ **Six of seven parameters remain below Tier 1**, and the primary designation promotes none of
+   them. All stay on `SOURCING_HIERARCHY.md` §3.4's re-check list.
+
+### Pair reconciliation — run, and now standing
+
+The tools README's conditional (*"if the two branches merge, reconcile as a pair"*) was triggered by
+`b8b2c80` and is **spent**; `D-053` consequence 3 makes it a standing rule. **Reconciled: all seven
+numeric parameters and the band basis agree.** The only divergence found was the `A-080` **tag**,
+not a value.
+
+### Still owed
+
+`D-052` consequence 6 — the `1.6185` multiplier is a `[DEFAULT]` guess sitting in the **primary**
+instrument while V14's *"two standard deviations"* has a Tier 1 warrant. **Reaffirmed, not resolved.**

@@ -7463,7 +7463,43 @@ mechanism from the same phrase as a description of lag.
 ### Related
 
 `A-039`, `A-084`, `A-086`, `A-031`, `D-030`, `D-040`; `MMM-NOTES` p.45;
-`03_LESSON_NOTES/V12_SOURCE_NOTES.md` §4b.
+`03_LESSON_NOTES/V12_SOURCE_NOTES.md` §4b. **And now `D-053` — see below.**
+
+> ## ⭐ POINTER ADDED 2026-08-14 — `D-053` FLAGS THIS RECORD **AT THE TOOL**, NOT ONLY IN THIS REGISTER. **STATUS UNCHANGED: `DO NOT CODE`.**
+>
+> `D-053` designates `06_MANUAL_BACKTEST/tools/MMM_TDI.txt` the **PRIMARY TDI INSTRUMENT** and
+> applies the course's taught TDI principles to it. **Doing that read surfaced this record as the
+> sharpest discrepancy between the doctrine and any actual build**, so the warning now lives where
+> a user will meet it — in the Pine file at the slow-MA calculation, in `mmm_chart_render.py`, and
+> in `06_MANUAL_BACKTEST/tools/README.md` — as well as here.
+>
+> **The discrepancy, stated once:** V12 says the TSL *"polls the one-hour chart."* **Both tools
+> compute it as a 7-period SMA of the RSI on the chart's own timeframe.** Nothing in either reads a
+> higher timeframe, and nothing in the shipped TDI ever did. **This entry does not adjudicate
+> whether the lesson describes an effect or asserts a mechanism** — that is still this record's open
+> question and `D-053` expressly declines it.
+>
+> ⛔ **Two operative consequences, both recorded at `D-053` §3(a):**
+>
+> 1. **A TSL crossover on the primary instrument is NOT evidence that "a one-hour signal has
+>    fired", and may not be reported as one** in any lesson note, backtest observation or chart
+>    mark-up.
+> 2. ⛔ **`A-085` MAY NOT BE "IMPLEMENTED"** by wiring an H1 `request.security()` call or an H1
+>    resample into either tool to make it match the lesson. **That is `D-030`'s forbidden act** —
+>    inventing a construction the corpus never gave — with the aggravating factor that it would
+>    look authoritative on a chart. This record closes on a lesson that **states a construction**,
+>    or it does not close.
+>
+> ⚠️ **And the reason this one is singled out:** it is the only open TDI record where the corpus
+> tells a student they may **stop consulting a timeframe** (V12 `[00:12:18]`, *"not necessarily"*,
+> given a shark fin and blood in the water). **The others block a calculation; this one bears on
+> what a person watches before risking money.**
+>
+> ```text
+> A-085 -- DO NOT CODE.  UNCHANGED.  NO STATUS CHANGE.
+>          D-053 flagged it AT THE TOOL and forbade implementing it there.
+>          The effect-vs-mechanism question is STILL OPEN and D-053 declines it.
+> ```
 
 > ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
 >
