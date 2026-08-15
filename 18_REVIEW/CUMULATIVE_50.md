@@ -157,3 +157,14 @@ REQUIRED ACTIONS:
 
 PROCEED TO NEXT LESSONS: NOT AUTHORIZED UNTIL THE TARGETED RETEST PASSES
 ```
+
+## POST-REMEDIATION ADDENDUM — 2026-08-15
+
+The first sealed retest failed at 69/100 and is preserved. Following targeted study, a separate
+clean Student passed the reworded Retest 002 at **59/60 (98.3%)**, with every case at least 9/10,
+all hard gates passed and no critical failure. The 22, 33, Safety Trade, V01 trap-context and
+V03/V06 mapping gaps were all corrected without promoting machine-codability or edge.
+
+```text
+CUMULATIVE 50% GATE: CLEARED BY TARGETED RETEST 002
+```

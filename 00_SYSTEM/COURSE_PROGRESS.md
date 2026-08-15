@@ -9,13 +9,13 @@ Updated after every meaningful milestone by both Student and Reviewer sessions.
 ## SUMMARY
 
 ```text
-PHASE:               2 — CROSS-LESSON REVIEW  (lesson review complete; cumulative retest pending)
+PHASE:               2 — CROSS-LESSON REVIEW  (targeted remediation mastered; 75% review next)
 VIDEOS INGESTED:     21
 PHASE 2 AUDIT:       21/21 REVIEWED AND APPROVED under D-062.
                      14 formal PASS + 7 owner-authorized reviewer-remediation
                      closures; zero lesson-review backlog. All 27 Phase 2
-                     findings are closed. The targeted Student retest, 75%
-                     checkpoint and FINAL_COURSE_REVIEW remain pending;
+                     findings are closed. Targeted Retest 002 passed 59/60;
+                     the 75% checkpoint and FINAL_COURSE_REVIEW remain pending;
                      Master/Machine specs remain gated.
 V17 (2026-08-14):    ⭐ STUDENT PASS COMPLETE, submitted as REVIEW REQUIRED on
                      branch video/v17 (worktree MMM-Agents-v17, D-038).
@@ -2711,8 +2711,8 @@ uses V16.
 
 | Checkpoint | Trigger (lessons passed) | File | Status |
 |---|---|---|---|
-| 25% | V05 | `18_REVIEW/CUMULATIVE_25.md` | **COMPLETED — HALT AND REMEDIATE** |
-| 50% | V10 | `18_REVIEW/CUMULATIVE_50.md` | **COMPLETED — HALT AND REMEDIATE** |
+| 25% | V05 | `18_REVIEW/CUMULATIVE_25.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** |
+| 50% | V10 | `18_REVIEW/CUMULATIVE_50.md` | **COMPLETED — CLEARED BY TARGETED RETEST 002** |
 | 75% | V16 | `18_REVIEW/CUMULATIVE_75.md` | Not started — lesson gate cleared; targeted retest clearance pending |
 | 100% | All lessons passed | `18_REVIEW/FINAL_COURSE_REVIEW.md` | Not started |
 

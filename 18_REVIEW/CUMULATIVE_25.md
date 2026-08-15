@@ -159,3 +159,14 @@ REQUIRED ACTIONS:
 
 PROCEED TO NEXT LESSONS: NOT AUTHORIZED UNTIL THE TARGETED RETEST PASSES
 ```
+
+## POST-REMEDIATION ADDENDUM — 2026-08-15
+
+Retest 001 was valid but failed at 69/100. After bounded remediation, a new clean Student completed
+the reworded Retest 002 without key access. The immutable attempt scored **59/60 (98.3%)**, every
+case scored at least 9/10, all hard gates passed, and no critical failure occurred. The original
+`HALT AND REMEDIATE` decision above remains historical; its required remediation is now satisfied.
+
+```text
+CUMULATIVE 25% GATE: CLEARED BY TARGETED RETEST 002
+```

@@ -3,7 +3,7 @@
 ```text
 ACTIVE PHASE: 2 — CROSS-LESSON REVIEW AND HUMAN RECONSTRUCTION
 BRANCH: phase2/cross-lesson-review
-STATE: 21/21 REVIEWED AND APPROVED; CUMULATIVE STUDENT RETEST PENDING
+STATE: 21/21 REVIEWED AND APPROVED; TARGETED RETEST PASSED; 75% REVIEW NEXT
 NEXT PHASE: 3 — SPECIFICATION, ONLY AFTER TARGETED RETEST, 75% CHECKPOINT AND FINAL REVIEW
 ```
 
@@ -34,7 +34,7 @@ Phase 2 may begin only under the boundaries in `MMM_CURRENT_STATE.md` and
 - [x] Close V11/V13/V15/V17–V20 reviewer-remediated findings under owner ruling D-062.
 - [x] Clear the lesson-review backlog: 21/21 reviewed and approved.
 - [x] Complete the overdue 25% and 50% cumulative reviews.
-- [ ] Pass the sealed targeted Student retest.
+- [x] Pass the sealed targeted Student retest (Retest 002: 59/60, every case >= 9/10).
 - [ ] Complete the 75% cumulative review.
 - [ ] Execute the official cumulative and final reviews.
 
