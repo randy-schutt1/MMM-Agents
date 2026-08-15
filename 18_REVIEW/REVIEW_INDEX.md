@@ -1668,6 +1668,7 @@ ruling) are carried forward unchanged. **The next review trigger is the V06 subm
 | V09 | REVIEW REQUIRED | R1 | REVISE | 0 | 0 | ⏳ |
 | V09 | REMEDIATION APPLIED | R2 | REVISE | 0 | 0 | ⏳ |
 | V09 | REMEDIATION APPLIED | R3 | ⚠ **SELF-VERIFIED** | 0 | 0 | ⚠ **COMPLETE — SELF-VERIFIED AT OWNER DIRECTION** |
+| V09 | REMEDIATION VERIFIED | R4 | **PASS** | 0 | 0 | ✅ **COMPLETE** |
 
 > ## ⚠⚠ V09's `COMPLETE` IS NOT AN INDEPENDENT VERDICT. READ THIS BEFORE RELYING ON IT.
 >
@@ -3019,3 +3020,17 @@ CONFIRMED as recorded**, with 167's owed `PT-042` §5a amendment extended by ite
 | 384 | **V21 R2** | ⭐⭐ **THE ROOT-CAUSE STATEMENT IS BETTER THAN THE FIX.** | *"The root cause is not the sweep density I blamed — it is that I did not read my own evidence. I captured the frame, named it 'scripts-pasted-into-folder', committed it, and then asserted four times that it contained no filename."* **`M1` was a reading failure, not a capture failure, and the record now says so** | **`NOTE`** |
 | 385 | **V21 R2** | ⛔ **THE FIX ROUND WAS NOT SELF-VERIFIED, AND SAYS SO.** | *"`D-024` holds the gate on any `MAJOR` until it is fixed **and re-reviewed in a fresh round**."* ⭐ **Second consecutive lesson to decline the owner-authorised self-verify route.** ⚠️ **The owner question stands** — no numbered decision — **but the practice has corrected itself twice without one** | **`NOTE`** |
 | 386 | **V21 R2** | ⭐⭐⭐ **THE CORPUS IS COMPLETE: 21 OF 21 INGESTED AND INDEPENDENTLY REVIEWED.** | V21 is the first lesson to reach `COMPLETE` via a `PASS` on a clean re-review. ⚠️ **Four lessons still carry twelve `MINOR` items** — V17 (244–249), V18 (264–268), V19 (303–304), V20 (348). **The cumulative `FINAL_COURSE_REVIEW.md` is close but not yet warranted**: item 365 is cleared, the minor sweep and the self-verify decision are not | **`NOTE`** |
+
+
+> ### 🔢 NUMBERING — item 387, allocated 2026-08-15 by the V09 **R4** independent round under `D-047`
+>
+> Allocated against the current Phase 2 branch, where **386** was the highest item. No collision.
+
+## V09 — R4 (2026-08-15) — **`PASS`**, 0 CRITICAL / 0 MAJOR / 0 MINOR / 1 NOTE, HIGH confidence. **Items 81–83 CLOSED — VERIFIED. V09 is `COMPLETE`.**
+
+| # | Source | Item | Evidence | Disposition |
+|---|---|---|---|---|
+| 81 | V09 R2 | Required generalized quotation sweep not run; fifth defect survived | **Re-derived from `[00:44:39]`; correction verified. `verify_quotes.py V09` checks 316 fragments with 0 flags; V07 regression checks 353 with 0 flags. The immutable `PT-035` defect remains explicitly allowlisted, not silently edited.** | ⛔ **CLOSED — VERIFIED** |
+| 82 | V09 R2 | Stale ordinals in shared ambiguity register | **Five PNGs independently opened. `28:45`, `31:50`, `41:25` are the intended chart frames; the former ordinal targets include the `26:40` spreadsheet and `34:35` email screen. `A-069`/`A-073` now use stable burned timecodes with superseded text retained.** | ⛔ **CLOSED — VERIFIED** |
+| 83 | V09 R2 | Mastery report asked the owner a retired question | **`MMM-NOTES` p.38 independently checked: 5/13/50/200, with zero whole-word `800` hits in the extract; p.66 has Mayo=200. The factor-of-four route cannot close the whole-set conflict. Escalation 5 is correctly `RETIRED`; `C-010` remains unresolved.** | ⛔ **CLOSED — VERIFIED** |
+| 387 | **V09 R4** | **The historical self-verification boundary is now cured, not erased.** | R4 did not author the R3 fixes and re-derived all three findings from source. The R3 warning remains append-only; R4 supplies the first independent verdict after R2. | **`NOTE`** |

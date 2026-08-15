@@ -20,8 +20,8 @@
 
 - The V17–V20 finding count is fourteen, not twelve.
 - All fourteen requested content remediations are represented in the current worktree.
-- Only 9/21 lessons currently hold an independent reviewer `PASS`.
-- V09–V20 retain `REVISE` as their latest independent verdict.
+- 10/21 lessons currently hold an independent reviewer `PASS`.
+- V10–V20 retain `REVISE` as their latest independent verdict; V09 reached independent R4 `PASS`.
 - Self-verification remains explicitly distinct from independent verification.
 - The repository supports only a `PARTIALLY` answer to the human reconstruction test.
 - No Master or Machine Specification may be populated.

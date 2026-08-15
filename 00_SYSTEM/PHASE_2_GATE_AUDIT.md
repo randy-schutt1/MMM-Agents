@@ -7,15 +7,15 @@
 ## Result
 
 ```text
-INDEPENDENT REVIEWER PASS: 9 / 21
-LATEST INDEPENDENT DECISION REVISE: 12 / 21
+INDEPENDENT REVIEWER PASS: 10 / 21
+LATEST INDEPENDENT DECISION REVISE: 11 / 21
 FINAL_COURSE_REVIEW PRECONDITION: FAILED
 MASTER SPECIFICATION: PROHIBITED
 MACHINE SPECIFICATION: PROHIBITED
 ```
 
-The nine independent passes are V01–V08 and V21. The latest independent decision for every lesson
-from V09 through V20 is `REVISE`. A gate-opening minor-only `REVISE`, an owner-authorized fix, or a
+The ten independent passes are V01–V09 and V21. The latest independent decision for every lesson
+from V10 through V20 is `REVISE`. A gate-opening minor-only `REVISE`, an owner-authorized fix, or a
 student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, D-004, and D-024.
 
 ## Lesson census
@@ -23,7 +23,7 @@ student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, 
 | Lessons | Latest independent result | Phase 2 implication |
 |---|---|---|
 | V01–V08 | `PASS` | Eligible for retrospective cumulative review |
-| V09 | R2 `REVISE`, 3 new minors | Later self-verification cannot replace R3 |
+| V09 | R4 `PASS`, 0 findings | Independent re-review closed items 81–83; `COMPLETE` |
 | V10 | R1 `REVISE`, 4 minors | Fixes require independent R2 |
 | V11 | R1 `REVISE`, 5 minors | Remediation and R2 required |
 | V12 | R1 `REVISE`, 2 minors | Owner-directed self-verification requires independent R2 |
@@ -50,8 +50,8 @@ student status of `COMPLETE` is not an independent reviewer `PASS` under D-003, 
 
 ## Resolution path
 
-1. Independently review existing owner-directed remediation for V09, V10, V12, V14, V16, and V19
-   item 302.
+1. Independently review existing owner-directed remediation for V10, V12, V14, V16, and V19 item
+   302. **V09 is complete at independent R4.**
 2. Remediate V11, V13, and V15, then independently re-review them.
 3. Independently re-review the 14 Phase 2 edits for V17–V20.
 4. Only after 21/21 independent passes, execute the 25/50/75 retrospective checkpoints and the

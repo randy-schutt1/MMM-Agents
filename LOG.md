@@ -11657,3 +11657,22 @@ gate), *"second leg"* (→ `A-011`), *"the outside bar"* (undefined). ⛔ **`A-1
 `A-090`, `A-115`, `A-056`, `A-020` unchanged.** ⚠️ **`A-143` has still never been opened in the
 ledger** — it is a proposal in `D-058` §4.1, now marked **CLOSED** there, so if it is ever opened it
 should be opened **already closed**, as a record of a question asked and answered.
+
+---
+
+## 2026-08-15 — PHASE 2 — V09 R4 INDEPENDENT PASS
+
+**Branch:** `phase2/cross-lesson-review`
+**Decision:** **PASS — 0 CRITICAL / 0 MAJOR / 0 MINOR / 1 NOTE, HIGH confidence.**
+
+This session did not author the historical owner-directed R3 remediation. It independently
+re-derived and closed items 81–83: V09's quote verifier checked **316 fragments with zero flags**
+(V07 regression: **353/0**); the five source PNGs confirm the three corrected chart timecodes and
+the two erroneous ordinal destinations; and `MMM-NOTES` p.38/p.66 confirm why escalation 5 had to
+be retired while `C-010` remains unresolved. The historical self-verification disclosure remains
+append-only. `18_REVIEW/V09/V09_REVIEW_R4.md` supplies the missing `D-003` separation.
+
+**Formal Phase 2 census:** **10/21 independent PASS; 11/21 latest independent REVISE.** The official
+final review remains `NOT STARTED`; Master and Machine Specification directories remain gated.
+
+**Validation:** structural **103/0/0**; Phase 1 **PASS**; Phase 2 **PASS**; whitespace check **PASS**.
