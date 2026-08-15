@@ -10001,3 +10001,88 @@ wiring an H1 read into the tools **stands, strengthened**. All the rest of `D-05
 **A session reading an ambiguity record's summary of a lesson is not reading the lesson.** Where a
 finding turns on *what kind of claim* a speaker is making, open the transcript **and its surrounding
 turns**. `D-053` §3(a) would not exist if `[00:11:39]` had been read.
+
+---
+
+## 2026-08-14 — `tools/indicator-folder-survey-and-owner-risk-rule` — THE OWNER'S WHOLE MMM CHART IS FOUND, THE TIME RIBBON'S BOUNDARIES ARE RECOVERED EXACTLY, AND THE PIVOT INDICATOR IS NOT ON IT
+
+**Three deliverables, all DRAFTS. No `A-xxx` changed status. `DECISIONS.md` is unchanged.**
+
+- `00_SYSTEM/INDICATOR_FOLDER_INVENTORY_2026-08-14.md` — the complete survey
+- `00_SYSTEM/DECISION_DRAFT_D-054_OWNER_STOP_AND_TARGETS.md` — the owner's 25/30/50 rule
+- `00_SYSTEM/DECISION_DRAFT_D-055_MMM_TPL_AND_TIME_RIBBON.md` — `MMM.tpl`, the ribbon, the pivots
+- `06_MANUAL_BACKTEST/tools/MMM_SESSION_RIBBON.txt` — the Pine port, **draft, unrun**
+
+### ⭐⭐ `MMM.tpl` exists
+
+`Desktop/Trading/Indicators/MMM.tpl` (md5 `db617bcdfeb5df26c033036f96c41472`) — the owner's **whole
+MMM chart**, 14 indicators, **every input value saved in plain text**. It names the EMA set, the TDI
+configuration, the ADR tool and the session ribbon in one file. The most informative artifact the
+project has been handed. ⚠️ Dated **2023** against a **2012** course — the `D-045` weakness, not smaller.
+
+⚠️ **And it is NOT in the folder the owner named.** `Documents/Forex indicator/Forex222/` is
+**byte-for-byte unchanged** since the `D-051` survey. **Nothing was added there today.**
+
+### ⭐⭐ The time ribbon is `!sm_WorkTime v1.5b` and its six boundaries are recovered
+
+Asian `0:00–8:00` · Euro `8:30–14:00` (**configured, switched OFF**) · New York `16:30–20:00` ·
+"market open" `10:00–11:00` **and** `16:00–17:00` · `NumberOfDays=50` · all alerts off.
+
+⛔ **"Replicate exactly" is available for the GEOMETRY and not for the CLOCK.** The binary is MT4
+build-600+ packed (`strings` returns noise) and **no source exists on the volume**. Its sibling is
+named **`no_autogmt`** — evidence that the build the owner runs **has an automatic GMT adjustment
+whose rule cannot be read.** The Pine port therefore **exposes the offset as an input** instead of
+baking in a guess, and marks its two reconstructed behaviours `[GUESS]` at the code.
+
+### ⭐⭐ The `A-105` collision — recorded, NOT adjudicated
+
+One offset hypothesis (server = UTC+2/+3) puts **five** saved boundaries on real market events at
+once. Under it, with `EST` read **literally** on a summer clock, V16's printed *"London Session Start
+2:00 To 3:00 AM, EST"* coincides **exactly** with the ribbon's own `10:00–11:00` London market-open
+box — **one cell of four.** ⛔ **NOT ADOPTED:** the offset is inferred from the boundaries it then
+explains. `SOURCING_HIERARCHY.md` §3.2 Case C / `D-048` rung 4 → **put to the owner.** ⭐ It is the
+first mechanism found that could settle the session clock on **arithmetic instead of choosing**, and
+it turns on one fact: **the GMT offset of the owner's MT4 server.**
+
+### ⚠️ The pivot search: FOUND, AND NOT ON THE MMM CHART
+
+⛔ **No pivot indicator in `MMM.tpl`, `MMM INDICES.tpl` or `RS5P.tpl`.** A candidate exists elsewhere
+— `PivotPoints.ex4` (`703ec775dcdff4c6995a722209ce0f2f`), carrying **`Plot_middle`/`Color_Mid`**,
+exactly `A-101`'s missing object — but it is unattested, off-chart, and **compiled with no source**,
+so its formula is unreadable and its variable names are not evidence (`D-030`). **`A-101` UNCHANGED.**
+`PZ_QuartersTheory`, which *is* on the chart, is a **round-number grid, not a pivot tool.**
+
+### ⭐ The owner's risk rule — `D-054` draft
+
+**Stop 25 pips beyond the perceived extreme; TP1 30; TP2 50.** The **first complete stop-and-target
+template the project holds from any source at any tier.** Recorded at **`OWNER EMPIRICAL
+PREFERENCE`** (the `D-052` category) — **the owner's own practice, NOT COURSE-VERIFIED.**
+
+⭐ The **25** sits on the top of `A-123`'s 15–25 range and its per-side geometry answers that
+record's `total` question **for the owner's practice only**; the **per-side reading is
+PRE-REGISTERED** as the expectation the pending ASR arbitration will test. **25 → 50 is exactly V06
+`[01:03:17]`'s *"I usually like 2 to 1"*** — a **ratio** match, not a distance match.
+
+⛔ **`A-123` does NOT close** (it asks what V17's speaker said; an owner preference cannot answer
+that). ⛔ **`C-001`/`C-016`/`A-121` untouched** — they measure **duration**, this is **distance**.
+⛔ **`TP1 = 30` matches nothing in the corpus at any tier** — which is why the record refuses the
+`RESOLVED — OWNER ATTESTATION` status. ⛔ **The long side is INFERRED and flagged, not adopted.**
+
+⭐ **Proposed `A-132`: *"the perceived high"* is undefined** — four live readings, none excluded.
+**The rule supplies three numbers and no geometry: it is valuable and not yet executable.** It is
+the cheapest blocker in the project — one owner sentence clears it.
+
+### Three refusals to strengthen a record, recorded because they were tempting
+
+1. `MMM.tpl`'s `RSI_Price_Line=2` matches `Ultimate Blue.tpl` — ⛔ **two saves of one habit by one
+   user are not two witnesses.** `A-084`'s §3.4 weakness stands at full strength.
+2. A second `NumOfDays=10` — ⛔ does not outrank V16 `[00:09:31]`'s Tier 1 *"15 days"*. **10/14/15/21
+   stands.**
+3. The template's EMA **4 and 10** vs `D-043`'s **5 and 13** (and an unattested **3200**) — ⛔ **2023
+   practice is not testimony about 2012 teaching** (`D-052` §3.5). Put to the owner as a question.
+
+### `D-052`/`D-053` — checked, consistent, not reopened
+
+The parallel TDI session landed (merged `34ac3f7`); `MMM_TDI.txt` is the PRIMARY TDI INSTRUMENT.
+Nothing here duplicates or contradicts it. `Volatility_Band=34` is a `TOOLING` number and `D-052`
+already declined to promote one — **`A-086` stays `DO NOT CODE`.**
