@@ -9249,6 +9249,33 @@ A-101 ADDENDUM -- "M5": SPOKEN TWICE, CONFIRMED BY TWO ENGINES, ABSENT FROM THE
   tenth level.
 ```
 
+> ### ⭐ ANNOTATED 2026-08-15 — OWNER STATEMENT ON PIVOTS. ⛔ **STATUS UNCHANGED: `OPEN`, `DO NOT CODE`.**
+>
+> > *"Pivot points aren't how I trade. **It's an added bonus.**"* — owner, 2026-08-15
+>
+> Recorded here because it is an **owner attestation about his own practice** and is a fact whether
+> or not the decision that discusses it is adopted. **Proposed for the record by
+> `DECISION_DRAFT_D-059_CANONICAL_TOOLSET.md` §5A, which is NOT ADOPTED.**
+>
+> | | |
+> |---|---|
+> | ✅ **What it establishes** | Pivots are **NON-LOAD-BEARING for the owner's trading practice** and are **NOT part of the canonical toolset** he scoped (`D-059`: Worktime ribbon · TDI · EMAs · ADR) |
+> | ✅ **What it changes** | ⭐ **TOOL-BUILDING PRIORITY → LOW.** Hunting `PivotPoints.mq4` source and building a pivot renderer are **deprioritised**; `D-056` §7's *"single highest-value artifact the owner could supply"* is **downgraded to a low-priority nice-to-have** |
+> | ⛔ **What it does NOT change** | **THIS RECORD'S STATUS. `A-101` remains `OPEN` and `DO NOT CODE`, and its COURSE-STUDY priority is UNTOUCHED.** The `M5` addendum above stays live in full |
+>
+> ⛔⛔ **WHY THIS DOES NOT CLOSE OR DEPRIORITISE THE RECORD FOR COURSE STUDY.** `A-101` asks **what
+> the course taught**, and that does not depend on what the owner trades. **Pivots are referenced in
+> FOUR lessons** — V10 (`01-23-42`), V15 (`00-41-30`), ⭐ **V16 (the dedicated lesson, nine frames)**
+> and V17 (`00-22-00`) — so this is an **active** course-content record, **not** one awaiting some
+> future reference. A statement about the owner's practice cannot narrow the corpus
+> (`SOURCING_HIERARCHY.md` §2; `D-030`).
+>
+> ⚠️ **AND THE STATEMENT IS NOT *"I DON'T USE PIVOTS"*.** *"An added bonus"* means **supplementary /
+> confluence**, not **absent**. ⭐ **That agrees with Tier 1**: V15's own confluence slide pairs
+> **yesterday's high/low · PIVOT · ADR**, two of which *are* on the canonical list. **How** he uses
+> them as a bonus is **not established**, and therefore whether a pivot tool is *eventually* wanted
+> is **not settled either** — only that it is not urgent.
+
 ---
 
 ### V17 ADDENDUM (2026-08-14) — THE `M`-LEVEL LABELS APPEAR ON LIVE CHARTS, AND THE CONSTRUCTION STILL DOES NOT

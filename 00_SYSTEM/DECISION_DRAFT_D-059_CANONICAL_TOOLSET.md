@@ -9,11 +9,15 @@
 > Until the owner rules:
 >
 > - **`DECISIONS.md` is unchanged.** No `D-059` exists.
-> - ⛔⛔ **NO AMBIGUITY IS CLOSED, EXCLUDED, DEPRIORITISED OR MARKED OUT-OF-SCOPE BY THIS FILE.**
+> - ⛔⛔ **NO AMBIGUITY IS CLOSED, EXCLUDED OR MARKED OUT-OF-SCOPE BY THIS FILE.**
 >   `A-101`, `A-100`, `A-143`, `A-019`/`A-105`/`A-131`, `A-086` and every record touching
 >   `PZ_QuartersTheory`, `PivotPoints.ex4`, `Weekly_High_Low Great`, `Candle Timer` and
->   `ICT Day Of Week` stand **exactly as they are.** §6 states this at length because it is the
->   easiest thing in this file to get wrong.
+>   `ICT Day Of Week` **keep their status exactly as it is.** §6 states this at length because it is
+>   the easiest thing in this file to get wrong.
+> - ⚠️ **ONE THING IS DEPRIORITISED, AND ONLY ONE, AND ONLY IN ONE SENSE.** Per the owner's
+>   2026-08-15 pivot ruling (§5A), **`A-101`'s TOOL-BUILDING priority drops to LOW.**
+>   ⛔ **Its STATUS is unchanged (`OPEN`, `DO NOT CODE`) and its COURSE-STUDY priority is
+>   unchanged** — pivots are referenced in V10, V15, V16 (dedicated lesson) and V17.
 >
 > **Numbering, verified rather than assumed.** Swept across integration (`19e6c2a`) **and every
 > remote branch**: highest **adopted** entry is **`D-057`**; `D-051`, `D-055`, `D-056` and `D-058`
@@ -42,8 +46,12 @@ incidental. **Four does that in one sentence.**
    `Weekly_High_Low Great` (#9). ⭐ **This is the SECOND time he has described the session indicator
    as containing something `MMM.tpl` puts elsewhere** — the first was `A-141`'s High/Low Trainer.
    **A pattern, and §4 says what it might mean rather than which.**
-3. ⚠️⚠️ **He did not mention pivots** — and **V16 is an entire lesson on pivot points.** §5, and
-   it is put to him as a question, **not resolved in either direction.**
+3. ⚠️ **He did not mention pivots** — and **V16 is an entire lesson on pivot points.** §5 put it to
+   him rather than resolving it, and ⭐ **he has since ANSWERED: *"Pivot points aren't how I trade.
+   It's an added bonus."*** §5A. **A third position, not either reading §5 offered** — his list was
+   a ***need*** list and a bonus is not a need, so the omission was principled. ✅ Pivots are
+   **non-load-bearing for his practice** and **tool-building priority drops to LOW**;
+   ⛔ **`A-101` is NOT closed and its course-study priority is untouched.**
 
 ---
 
@@ -214,6 +222,78 @@ what is on his charts, which weakens any argument from silence — **including t
 
 ---
 
+## 5A. ⭐⭐ THE OWNER ANSWERED Q1 — AND THE ANSWER IS A **THIRD** POSITION, NOT (a) OR (b)
+
+> *"Pivot points aren't how I trade. **It's an added bonus.**"* — owner, 2026-08-15
+
+§5 offered two readings: **(a)** pivots are not part of his approach, or **(b)** he forgot to list
+them. ⭐ **The answer is neither.** He uses them — as a **supplementary / confluence factor**, not as
+a driver. **That is a third position and it is better than either candidate**, because it explains
+the omission *principledly* rather than as disuse or oversight:
+
+> ⭐ **His list was a `NEED` list — *"the indicators that we'll **need** while trading"*. A bonus is
+> by definition not a need. The omission was therefore CORRECT BY HIS OWN CRITERION, and no
+> inference about disuse was ever available from it.**
+
+⚠️⚠️ **AND *"AN ADDED BONUS"* IS NOT *"I DON'T USE THEM"*. THE DIFFERENCE IS LOAD-BEARING AND IS NOT
+FLATTENED HERE.** He did not say he ignores pivots; he said they are not **how he trades**. A record
+that flattened this to *"the owner does not use pivots"* would overstate his statement in exactly
+the direction that would justify dropping the topic — and this draft does not do that.
+
+### 5A.1 ⭐⭐ AND IT AGREES WITH TIER 1 — the course frames pivots the same way
+
+**`04_SCREENSHOTS/V15/V15_00-41-30_confluence-slide-yesterday-high-low-pivot-adr.png`** — the
+course's own **confluence** slide, pairing:
+
+```text
+yesterday's high/low   ·   PIVOT   ·   ADR
+```
+
+⭐⭐ **Two of those three are on the owner's canonical list** — *"previous highs and lows"* (item 1)
+and *"ADR"* (item 4). **The third is the one he calls an added bonus.** So the owner's *"bonus"*
+framing and the course's *"confluence"* framing describe **the same role for the same object**,
+arrived at independently.
+
+⚠️ **This is corroboration of a ROLE, not a closure of a CONSTRUCTION.** It says pivots are used
+*for confluence*; it says nothing about **how `M1`–`M4` are computed**, which is the whole of
+`A-101`. **`A-101` does not narrow by one line.**
+
+### 5A.2 ⛔ Pivots are referenced in FOUR lessons — the "if" in "if the lessons ever reference it" is already satisfied
+
+| Lesson | Frame |
+|---|---|
+| **V10** | `V10_01-23-42_gbpusd-15m-with-adr-low-and-pivot.png` |
+| **V15** | `V15_00-41-30_confluence-slide-yesterday-high-low-pivot-adr.png` |
+| ⭐ **V16** | **nine pivot frames — the dedicated lesson**, title slide through `price-fails-at-m3-pivot-4-times` |
+| **V17** | `V17_00-22-00_gbpusd-m15-chart-with-pivot-labels.png` |
+
+⛔ **So `A-101` is not a dormant record waiting for a trigger — it is an ACTIVE course-content record
+across four lessons, one of them dedicated.** Any framing that treats it as conditional on some
+future reference is **already overtaken by the corpus.**
+
+### 5A.3 ⭐ What actually changes, and what does not
+
+| | |
+|---|---|
+| ✅ **CONFIRMED** | Pivots are **non-load-bearing for the owner's trading practice**, on his own statement. **They are NOT part of `D-059`'s canonical four.** |
+| ✅ **CHANGES** | ⭐ **TOOL-BUILDING PRIORITY drops to LOW** — hunting `PivotPoints.mq4` source, and building a pivot renderer, are **deprioritised**. `D-056` §7's standing request for that source is **downgraded from "the single highest-value artifact the owner could supply" to a low-priority nice-to-have.** |
+| ⛔ **DOES NOT CHANGE** | **`A-101` STATUS: `OPEN`, `DO NOT CODE`.** Its **course-study** priority is **untouched** — V16 is a dedicated lesson and `A-101` asks what the course taught |
+| ⛔ **DOES NOT CHANGE** | The **`M5` addendum** stays live: *"DO NOT assume the printed nine levels are exhaustive"*, with required research across V17–V21 |
+| ⚠️ **NOT ESTABLISHED** | **How** he uses pivots as a bonus — as confluence with the four? as a level filter? — and therefore **whether a pivot tool is eventually wanted at all.** §8 Q6 |
+
+### 5A.4 ⭐ It also retro-explains the `PZ_QuartersTheory` omission — as a hypothesis
+
+§5 leaned hard on *"the list omits `PZ_QuartersTheory`, which IS on all three templates"* to argue
+that silence established nothing. ⭐ **The `need`-vs-`bonus` distinction supplies a candidate
+explanation for that omission too**: quarters/round-number levels are plausibly **also** a bonus
+confluence layer rather than a need.
+
+⚠️ **A hypothesis, not a finding — the owner has not said it**, and §8 Q5 already asks. **§5's
+reasoning is NOT retracted**: it was correct that *at the time* no inference from silence was
+available.
+
+---
+
 ## 6. ⛔⛔ WHAT THIS RULING DOES **NOT** DO — stated at length, because it is the easiest error here
 
 **No record is closed, excluded, deprioritised, or marked out-of-scope. Not one.**
@@ -301,6 +381,27 @@ function he **named explicitly** and those are the tools on his chart that deliv
 > `PivotPoints.mq4` and building a pivot renderer** — effort questions, not evidence questions.
 > **Put to the owner as `D-059` §8 Q1.**
 >
+> **Part 5A — ⭐⭐ THE PIVOT QUESTION IS ANSWERED, AND `A-101` STILL DOES NOT CLOSE.** The owner
+> ruled: *"Pivot points aren't how I trade. **It's an added bonus.**"* ⭐ **This is a THIRD position,
+> not either reading Part 5 offered** — he uses pivots as a **supplementary / confluence** factor,
+> not as a driver, and since his list was a ***need*** list, **the omission was correct by his own
+> criterion and no inference about disuse was ever available from it.**
+> ⚠️⚠️ ***"An added bonus"* is NOT *"I don't use them"***, and this entry does not flatten it.
+> ⭐⭐ **It agrees with Tier 1**: V15's own **confluence** slide pairs *yesterday's high/low · PIVOT ·
+> ADR* — **two of which are on the canonical list** — so the owner's *"bonus"* and the course's
+> *"confluence"* describe the same role for the same object, arrived at independently. ⚠️ That
+> corroborates a **ROLE**, not a **CONSTRUCTION**.
+> ✅ **CONFIRMED: pivots are NON-LOAD-BEARING for the owner's trading practice and are NOT part of
+> the canonical four.** ✅ **TOOL-BUILDING PRIORITY DROPS TO LOW** — hunting `PivotPoints.mq4` and
+> building a pivot renderer are deprioritised, and **`D-056` §7's description of that source as
+> *"the single highest-value artifact the owner could supply"* is DOWNGRADED to a low-priority
+> nice-to-have.**
+> ⛔⛔ **AND `A-101` IS NOT CLOSED AND ITS COURSE-STUDY PRIORITY IS UNCHANGED.** It stays **`OPEN`,
+> `DO NOT CODE`.** Pivots are referenced in **FOUR lessons — V10, V15, V16 (dedicated, nine frames),
+> V17** — so it is an **active** course-content record, not one awaiting a future trigger. `A-101`
+> asks **what the course taught**, and that does not depend on what the owner trades (§2). The
+> **`M5` addendum** stays live in full.
+>
 > **Part 6 — `A-143` does not close.** *"EMAs"* confirms the **family** is load-bearing and states
 > **nothing** about membership — not how many, not which periods, not which two cross for `D-058`'s
 > tier-1 entry. **`D-043` and `MMM.tpl` still disagree on the fast pair.** ⭐ It does **raise
@@ -353,7 +454,11 @@ function he **named explicitly** and those are the tools on his chart that deliv
 
 ## 8. THE QUESTIONS FOR THE OWNER
 
-1. ⭐⭐ **Do you use pivot points at all?** §5. You did not list them, and **no pivot indicator is on
+1. ✅ **ANSWERED 2026-08-15 — see §5A.** *"Pivot points aren't how I trade. It's an added bonus."*
+   ⭐ Pivots are **non-load-bearing for your practice** and **not in the canonical four**;
+   tool-building priority drops to **LOW**. ⛔ **`A-101` stays `OPEN` for course study** — V16 is a
+   dedicated lesson. ⚠️ **Residual, now §8 Q6.** *(Original question retained below.)*
+   ~~**Do you use pivot points at all?** §5.~~ You did not list them, and **no pivot indicator is on
    any of your three templates** — which agrees with the omission. But V16 is a **whole lesson** on
    them, and the project has been hunting `PivotPoints.mq4` on the assumption they matter. ⚠️ **Either
    answer is useful and neither is assumed.** *(Note: the project will keep studying V16's pivots
@@ -371,4 +476,10 @@ function he **named explicitly** and those are the tools on his chart that deliv
    · 800 · 3200; `D-043`, on your own earlier attestation about the teaching, is **5 · 13** · 50 ·
    200 · 800. **Both cannot be the canonical set**, and `D-058`'s entry trigger depends on which.
 5. **Is `PZ_QuartersTheory` in or out?** It is on **all three** of your templates and you did not
-   list it — which is the main reason §5 will not read the pivot omission as disuse.
+   list it. ⭐ **Sharpened by Q1's answer:** is it, like pivots, **an added bonus** rather than a
+   need? §5A.4 offers that as a hypothesis and it is **not** assumed.
+6. ⭐ **NEW — HOW do you use pivots as a "bonus"?** §5A.3. Confluence with the four? A level filter?
+   ⚠️ *"An added bonus"* is **not** *"I don't use them"*, so this decides whether a pivot renderer is
+   **eventually** wanted at all — not just whether it is urgent. ⭐ Note that **V15's own confluence
+   slide pairs *yesterday's high/low · pivot · ADR*, and two of those three are on your list** — so
+   the course appears to frame pivots exactly as you do.

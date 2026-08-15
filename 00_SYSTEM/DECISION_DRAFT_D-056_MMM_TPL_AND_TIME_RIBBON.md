@@ -444,7 +444,7 @@ switch, so the `Mid` family is **not** Camarilla.
 A-101 -- OPEN and DO NOT CODE. UNCHANGED BY THIS DRAFT.
 ```
 
-⭐ **The one thing that would change this: `PivotPoints.mq4` — the SOURCE.** With it,
+⭐ **The one thing that would change this: `PivotPoints.mq4` — the SOURCE.** ⚠️ *(Low priority as of 2026-08-15 — `D-059` §5A.)* With it,
 `Plot_middle`'s formula is readable in one line and `A-101`'s construction row becomes decidable at
 `TOOLING` tier — exactly as `mm_adr.mq4`'s source did for `A-100`'s range row in `D-051`. **§7 Q4.**
 
@@ -580,9 +580,14 @@ Forex222's `807876a6…`). `diff` shows **one moved declaration line and no func
 >    trigger is named so a session knows what to watch for: **any lesson showing a session box, an
 >    indicator PROPERTIES DIALOG for a time tool, a stated GMT offset, or a broker/server clock.**
 > 5. `MMM_SESSION_RIBBON.txt` stays a **draft tool**, citable by nothing, until the §4.4 test runs.
-> 6. ⭐ **`PivotPoints.mq4` (the SOURCE) is recorded as the single highest-value artifact the owner
->    could supply for `A-101`**, exactly as `D-051` §7 recorded the course's own ADR build for
->    `A-100`.
+> 6. ⚠️ ~~**`PivotPoints.mq4` (the SOURCE) is recorded as the single highest-value artifact the
+>    owner could supply for `A-101`**, exactly as `D-051` §7 recorded the course's own ADR build for
+>    `A-100`.~~ ⭐ **DOWNGRADED 2026-08-15 BY OWNER RULING** (`D-059` §5A): *"Pivot points aren't how
+>    I trade. It's an added bonus."* **Pivots are non-load-bearing for the owner's practice and are
+>    not in his canonical toolset, so this request drops to a LOW-PRIORITY nice-to-have.**
+>    ⛔ **`A-101` itself is NOT closed and its COURSE-STUDY priority is unchanged** — pivots are
+>    referenced in V10, V15, V16 (dedicated lesson) and V17. Superseded text retained per
+>    `REMEDIATION_PROTOCOL.md` §2.
 >
 > **Status:** ACTIVE — admission only; **every `A-xxx` remains OPEN**; the Pine port is a **DRAFT**
 
@@ -642,7 +647,8 @@ all.* **That test belongs to the V19 review, not to this draft**, and is flagged
    own attestation)? **And what is the 3200?** — it appears nowhere in the corpus at any tier. §3
    treats this as *your current practice*, not as evidence against `D-043`; confirm or correct that
    reading.
-4. ⭐ **Do you have `PivotPoints.mq4` — the SOURCE?** The compiled `.ex4` has a `Plot_middle` input
+4. ⚠️ **[LOW PRIORITY as of 2026-08-15 — see `D-059` §5A: *"Pivot points aren't how I trade. It's
+   an added bonus."*]** ~~⭐~~ **Do you have `PivotPoints.mq4` — the SOURCE?** The compiled `.ex4` has a `Plot_middle` input
    that is very likely `A-101`'s `M1`–`M4`, but **a variable name is not a formula**. The source
    would make `A-101`'s construction decidable in one line.
 5. **Do you attest `MMM.tpl` as your working configuration for this method**, in the sense you

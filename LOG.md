@@ -10999,3 +10999,64 @@ membership. It does raise the record's priority sharply — it blocks the whole 
 **D-059**, verified free across integration **and every remote branch**. Adopted max is `D-057`;
 `D-051`/`D-055`/`D-056`/`D-058` are held by unadopted drafts. ⚠️ `D-047` still gives the number to
 whoever adopts first.
+
+---
+
+## 2026-08-15 — OWNER RULING #8 — PIVOTS ARE *"AN ADDED BONUS"*, and the answer is a THIRD position neither reading had offered
+
+**Folded into `DECISION_DRAFT_D-059_CANONICAL_TOOLSET.md` §5A (still NOT ADOPTED), plus a ledger
+annotation on `A-101` and a downgrade in `D-056`.**
+
+> *"Pivot points aren't how I trade. **It's an added bonus.**"* — owner, 2026-08-15
+
+### ⭐⭐ A third position — and it makes the omission PRINCIPLED
+
+`D-059` §5 offered **(a)** pivots aren't part of his approach, or **(b)** he forgot to list them.
+⭐ **Neither.** He uses them as a **supplementary / confluence** factor, not as a driver — and since
+his list was a ***"indicators we'll NEED"*** list, **a bonus is by definition not a need, so the
+omission was correct by his own criterion and no inference about disuse was ever available from it.**
+
+⚠️⚠️ ***"An added bonus"* is NOT *"I don't use them"***, and the record does not flatten it. He said
+pivots are not **how he trades**, not that he ignores them.
+
+### ⭐⭐ And it agrees with Tier 1 — the course frames pivots the same way
+
+`V15_00-41-30_confluence-slide-yesterday-high-low-pivot-adr.png` is the course's own **confluence**
+slide: **yesterday's high/low · PIVOT · ADR**. ⭐ **Two of those three are on the owner's canonical
+list** (*"previous highs and lows"*, *"ADR"*) **and the third is the one he calls a bonus.** The
+owner's *"bonus"* and the course's *"confluence"* describe the same role for the same object,
+arrived at independently. ⚠️ **Corroborates a ROLE, not a CONSTRUCTION** — `A-101` does not narrow
+by one line.
+
+### ⛔ `A-101` IS NOT CLOSED, and the "if the lessons ever reference it" condition is ALREADY MET
+
+Pivots are referenced in **FOUR lessons** — **V10** (`01-23-42`), **V15** (`00-41-30`),
+⭐ **V16 (the dedicated lesson, nine frames)**, **V17** (`00-22-00`). **So `A-101` is an ACTIVE
+course-content record, not a dormant one awaiting a future trigger.** It asks **what the course
+taught**, which does not depend on what the owner trades.
+
+| | |
+|---|---|
+| ✅ **Confirmed** | pivots are **NON-LOAD-BEARING for the owner's practice**; **NOT** part of `D-059`'s canonical four |
+| ✅ **Changed** | ⭐ **TOOL-BUILDING priority → LOW.** `D-056` §7's request for `PivotPoints.mq4`, previously *"the single highest-value artifact the owner could supply"*, is **downgraded to a low-priority nice-to-have** (struck, not deleted, per `REMEDIATION_PROTOCOL.md` §2) |
+| ⛔ **Unchanged** | **`A-101` STATUS: `OPEN`, `DO NOT CODE`.** Course-study priority **untouched.** The **`M5` addendum** stays live in full |
+| ⚠️ **Not established** | **HOW** he uses pivots as a bonus — so whether a pivot tool is *eventually* wanted is **not settled**, only that it is not urgent. New `D-059` §8 Q6 |
+
+### ⭐ It also retro-explains the `PZ_QuartersTheory` omission — as a HYPOTHESIS only
+
+§5 leaned on *"the list omits `PZ_QuartersTheory`, which IS on all three templates"* to argue silence
+established nothing. The **need-vs-bonus** distinction now supplies a candidate explanation for that
+omission too. ⚠️ **A hypothesis, not a finding — he has not said it**, and §5's reasoning is **not
+retracted**: it was correct that *at the time* no inference from silence was available. Sharpened
+into `D-059` §8 Q5.
+
+### Files touched
+
+- `00_SYSTEM/DECISION_DRAFT_D-059_CANONICAL_TOOLSET.md` — new §5A; Part 5A in the proposed ledger
+  entry; header and §0 reconciled (they had said *"not resolved in either direction"*); Q1 marked
+  answered, Q5 sharpened, **Q6 added**
+- `10_AMBIGUITIES/AUTOMATION_AMBIGUITIES.md` — **`A-101` ANNOTATED.** ⛔ **Status line untouched**;
+  the annotation records the attestation, the LOW tool-building priority, and — emphatically — that
+  the record is neither closed nor deprioritised for course study
+- `00_SYSTEM/DECISION_DRAFT_D-056_MMM_TPL_AND_TIME_RIBBON.md` — the pivot-source request downgraded
+  at **three** sites, superseded text struck rather than deleted
