@@ -46,7 +46,7 @@ is used for nothing else.** The body is a separate question and is verified in �
 ⭐ **IT PRESERVES ITS OWN MISHEARINGS, WHICH A FABRICATED FILE DOES NOT INVENT** — *"half a bad
 man"*, *"the manays"*, *"Lung and session"*, *"pins to the blueberry"*, *"at the blueberry"*,
 *"Where are your tracks"* / *"Where will tracks"* / *"we're attracts"* / *"roo-tracts"* for
-`railroad tracks`, *"25 to 50-50 candle"*, *"$1,000-pift"* / *"1,000-pifts"* for `1,000-pip`,
+`railroad tracks`, *"25 to 50-50 candle"*, ⭐ *"t-handle"* / *"handle"* for `candle` (§2a), *"$1,000-pift"* / *"1,000-pifts"* for `1,000-pip`,
 *"pits"* / *"picks"* / *"pitch"* for `pips`, *"shift his own"* for `shift his zone`, *"denim,
 denim, denim"*, *"the AV equals"* for `the AB=CD`, *"L3"* / *"level three"*, *"GVPCHF"* /
 *"GPCHF"* / *"pound swissy"* for `GBPCHF`, *"YW"* / *"Y W"*, *"stop on"* for `stop hunt`,
@@ -58,6 +58,50 @@ is rendered **`shift his own`** throughout (`[00:25:55]`, `[00:27:04]`, `[00:28:
 and every V20 artifact quotes it with the correction marked `[zone]`. ⭐ **Unlike V19, this file
 CAN render the letter `M`**: *"M or W"* appears at `[00:00:10]`, `[00:00:28]`, `[00:26:24]`,
 and *"draws an M"* at `[00:33:57]`.
+
+---
+
+## §2a — ⚠️⚠️ ASR CORRECTIONS — ADDED 2026-08-15, V20 R1 `M2` (`REVIEW_INDEX.md` item **333**)
+
+**The original filing of this artifact ran NO independent ASR pass** (item 326). **V20 R1 ran one
+and it found a `MAJOR`.** The corrections are recorded here; ⛔ **the body in §3 is NOT edited.**
+
+### ⭐⭐ CORRECTION #1 — `candle` IS MIS-HEARD AS `handle` AT EVERY NOUN POSITION
+
+| Marker | Committed grid (§3, unedited) | ⭐ **Correct word** |
+|---|---|---|
+| `[00:22:41]` | *"on this **t-handle**"* | *"on this **candle**"* |
+| `[00:28:36]` | *"shift his own in the next **handle**"* | *"shift his [zone] in the next **candle**"* |
+| ⭐ `[00:29:16]` | *"distance of this **handle** divided by three"* | *"Take the distance of this **candle** divided by three"* |
+| ⭐ `[00:29:25]` | *"one third off the high of this **handle**"* | *"take your entry one-third off the high of this **candle**"* |
+| ⭐ `[00:29:43]` | *"Take the length of the **handle**"* | *"Take the length of the **candle**"* |
+| ⭐ `[00:29:50]` | *"So **track** 33 pitch off the high"* | *"**Subtract** 33 pips off the high, a third"* |
+
+⚠️ **The two genuine VERB uses are rendered correctly and are unaffected** — `[00:14:27]` *"handled
+them"* and `[00:40:01]` *"this bullet handles this"*.
+
+**VERIFICATION — FIVE INDEPENDENT DECODES, NONE RETURNING `handle`:**
+
+* **V20 R1's four:** `faster-whisper large-v3` at `float32` and `medium.en` at `int8`, each under
+  **both** `vad_filter` settings, `beam_size = 10`, temperature 0.
+* ⭐ **This session's fifth, run before accepting the finding:** `openai-whisper medium.en`,
+  `beam_size = 5`, temperature 0, over `00:29:05`–`00:30:10`, `00:28:20`–`00:28:40` and
+  `00:22:35`–`00:22:50`. **All positions return `candle`.**
+
+⭐⭐ **CONSEQUENCE — THE RULE IS COMPLETE.** With `candle`, `[00:29:16]`–`[00:29:53]` reads:
+
+> *"Take the distance of this **candle**. Divide it by three […] take your entry **one-third off the
+> high of this candle** […] Take the length of the **candle**, let's say it's **100 pips** […]
+> **Subtract 33 pips off the high**, a third, and put an entry right here."*
+
+**`entry = high − (candle range ÷ 3)`. Arithmetic on one bar, with a worked example.**
+⛔ **`A-136` was opened on the premise that *"handle"* was an undefined term. There is no such word,
+and the record is CLOSED as an ASR artifact.**
+
+### CORRECTION #2 — `[00:29:47]`
+
+Committed *"because I'm happy to guard it"* → independent *"because I'm half regarded"*. **Not
+load-bearing; recorded for completeness.**
 
 ---
 

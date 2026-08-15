@@ -73,22 +73,35 @@ student is *"shorting here"* `[00:28:01]` and the level is *"the previous **high
 third witness to the `M` slide's figure and is SILENT on the `W` slide's.** **`C-029` narrows; it
 does not close.** Recorded as `C-030`.
 
-### 2.3 ⭐⭐ The one-third entry — the most mechanically complete entry rule in the corpus
+### 2.3 ⭐⭐ The one-third entry — the corpus's first COMPLETE mechanical entry rule
 
-> Measure the **handle**. Divide by three. Place the entry **one third off the high** of it.
+> Measure the **candle**. Divide its range by three. Place the entry **one third off the high**.
+> **`entry = high − (range ÷ 3)`.**
+
+> ### ⚠️⚠️ CORRECTED 2026-08-15 — V20 R1 `M2`, item **333**
+>
+> **This section originally graded the rule `BLOCKED — D-030` on the undefined word *"handle"*.**
+> ⛔ **The word is `candle`** (five independent decodes, `V20_TRANSCRIPT.md` §2a). **`A-136` is
+> closed as an ASR artifact, the grade is raised, and `PT-048` §1a's exclusion of this rule from
+> testing rested on the artifact.**
 
 **CONFIDENCE that this is taught: CERTAIN.** `[00:29:14]`–`[00:29:53]`, introduced as *"the best way
-to decide the entry"*, with a worked example in round numbers (100 pips → 33 pips off the high).
+to decide the entry"*, with a worked example in round numbers (100 pips → subtract 33 off the high).
 
-⚠️⚠️ **CONFIDENCE that it can be implemented: BLOCKED — `D-030`.** ***"Handle"* is never defined.**
-It is used four times as a noun and the 100-pip example fixes only its order of magnitude. **A
-one-third retracement is arithmetic; a one-third retracement *of what* is the entire rule**, and
-substituting a plausible reading is exactly what `D-030` forbids. **`A-136`.**
+⭐⭐ **CONFIDENCE that it can be COMPUTED: HIGH — and this is the first V19/V20 entry rule that
+`D-030` does not block.** A candle's range is given by the chart; the divisor is stated; the
+arithmetic is closed. **No moving average, no colour, no indicator, no nickname, no undefined
+level.**
 
-⭐ **This is nevertheless the closest the course has come to a mechanical entry**, and it is worth
-recording why the block is narrower than usual: it needs **no** moving average, **no** colour,
-**no** indicator and **no** nickname. **One definition clears it.** ⚠️ **`A-136` is now the cheapest
-high-value blocker in the project, and `A-133` (*blue tracer*) is the most expensive.**
+⚠️ **CONFIDENCE that it can be APPLIED unaided: MEDIUM.** The lesson points at *"this candle"* and
+never states a **selection rule** in words. Context makes the railroad-track / structure bar the
+obvious reading (`[00:28:36]`, `[00:28:55]`) and **the lesson does not say it.** ⭐ **`A-139`, and it
+is a much narrower question than `A-136` was: the calculation is determined once a bar is chosen.**
+
+⭐⭐ **CONSEQUENCE FOR TESTING: this rule is now testable on price alone** under a declared
+bar-selection convention, and **`PT-049` pre-registers exactly that.** ⚠️ **`PT-048` §1a excluded it
+citing `A-136`; that exclusion is a historical statement of what `PT-048` tested and is not edited
+(`COMMON_PROTOCOL.md` §9 rule 7). The exclusion no longer holds on the merits.**
 
 ### 2.4 The spike
 
@@ -209,7 +222,8 @@ reach without inventing a definition** — see `PT-048` §2.
 
 | ID | Subject |
 |---|---|
-| `A-136` | ***"Handle"* is undefined**, and it blocks the one-third entry — the cheapest high-value blocker in the project |
+| ~~`A-136`~~ | ⛔ **CLOSED 2026-08-15 as an ASR artifact** — the word is `candle`, not *"handle"*. V20 R1 `M2` / item 333 |
+| `A-139` | ⭐ **Which candle?** The one-third entry's arithmetic is complete; the BAR-SELECTION rule is never stated in words |
 | `A-137` | **Dealer open volume has no source, feed, proxy or threshold** — a stated mechanism with no observable |
 | `A-138` | **`L3` has no MA periods, no separation distance and no chop duration** |
 | `C-030` | **V20 says `30 minutes or less` flat**, against V19's `30M` / `30 to 45 m` on-camera slide split (`C-029`) — ⚠️ **narrows `C-029` on the M side, silent on the W side** |

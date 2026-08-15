@@ -189,22 +189,39 @@ minutes` the instructor REFUSES.**
 
 ### 5.3 ⭐⭐ THE ONE-THIRD ENTRY — `[00:29:12]`–`[00:29:57]`
 
-**The most mechanically complete entry instruction in the corpus to date.**
+> ### ⚠️⚠️ CORRECTED 2026-08-15 — V20 R1 `M2`, `REVIEW_INDEX.md` item **333**
+>
+> **This section originally read *"handle"* throughout and treated the word as an undefined term,
+> opening `A-136` on it.** ⛔ **The word is `candle`** — mis-heard by the committed transcript at
+> every noun position, and confirmed by **five independent ASR decodes** (`V20_TRANSCRIPT.md` §2a).
+> **`A-136` is CLOSED as an ASR artifact and the rule is complete.**
 
-| Marker | Line |
+**The most mechanically complete entry instruction in the corpus to date — and it is complete.**
+
+| Marker | Line (⭐ = corrected against the committed grid) |
 |---|---|
 | `[00:29:14]` | *"**I'm going to give you the best way to decide the entry.**"* |
-| `[00:29:16]` | *"It's taken from **distance of this handle divided by three**"* |
-| `[00:29:25]` | *"**Divide it by three and take your entry one third off the high of this handle.** That's the best way to grab that entry."* |
-| `[00:29:43]`–`[00:29:53]` | ⭐ **A WORKED EXAMPLE WITH NUMBERS** — *"Take the length of the handle. Let's say it's **100 pi[p]s** just to make it easy […] So [mark] **33 pi[p]s off the high, a third**, and put an entry right here."* |
+| ⭐ `[00:29:16]` | *"[Take the] distance of this **candle** divided by three"* |
+| ⭐ `[00:29:25]` | *"**Divide it by three and take your entry one-third off the high of this candle.** That's the best way to grab that entry."* |
+| ⭐ `[00:29:43]` | *"Take the length of the **candle**. Let's say it's **100 pi[p]s** just to make it easy"* |
+| ⭐ `[00:29:50]` | *"**Subtract 33 pi[p]s off the high**, a third, and put an entry right here."* |
 | `[00:29:54]` | *"Look for it to come in there and pin around there and grab it"* |
 
-⚠️⚠️ ***"Handle"* IS NOT DEFINED IN V20.** ⭐ **The raw string count is 7 and the count that matters
-is 4** — the noun occurs at `[00:28:36]` (*"shift his [zone] in the next handle"*), `[00:29:16]`,
-`[00:29:25]` and `[00:29:43]`. **The other three are not the word:** `[00:14:27]` *"handle them"*
-is the verb, and `[00:22:41]` *"this t-handle"* and `[00:40:01]` *"This bullet handles this right
-here"* are both garbled beyond reading. **The 100-pip worked example fixes its ORDER OF MAGNITUDE
-and nothing else.**
+⭐⭐ **THE RULE, IN ONE LINE:**
+
+> **`entry = high − (candle range ÷ 3)`**, for a short off the high of a single named candle —
+> mirrored for a long off the low.
+
+⭐ **Every term is supplied by the course.** A candle's high, low and range are given by the chart;
+the divisor is stated; the worked example fixes the arithmetic in round numbers (100 → 33).
+**It needs no moving average, no colour, no indicator, no nickname and no undefined level.**
+
+⚠️ **WHAT IS STILL NOT SPECIFIED, AND IT IS NOT THE ARITHMETIC:** ***which* candle**. The passage
+points at one on screen (*"this candle"*). `[00:28:55]`'s context is the railroad-track bar, and
+`[00:28:36]`'s *"shift his [zone] in the next candle"* suggests the structure bar — **but the lesson
+does not name a selection rule in words.** ⭐ **That is a materially smaller gap than an undefined
+term: the CALCULATION is fully determined once a bar is chosen**, which is why `A-136` closes and a
+narrower successor (`A-139`) is opened for the bar-selection question alone.
 
 ### 5.4 The surrounding entry context
 
@@ -391,7 +408,7 @@ Checked by string search over the marker grid, because absence is evidence too.
 | `45` minutes / `90` minutes / `30 to 45` | **0** | ⭐ **V20's time cap is `30 minutes or less`, flat.** It does not repeat V19's spread — see `C-030` |
 | A period for any moving average | **0** | `L3` needs *"separation"* and no periods are given |
 | A definition of `blue tracer` | **0** | ⚠️ **spoken once (`[00:28:58]`), still undefined — `A-133` SURVIVES V20** |
-| A definition of `handle` | **0** | blocks the one-third entry — `A-136` |
+| A definition of `handle` | ⛔ **the word is `candle`** — V20 R1 `M2`; `A-136` CLOSED as an ASR artifact | ⭐ **the rule is COMPLETE**; only *which* candle is unstated — `A-139` |
 | A source for `dealer open volume` | **0** | blocks the spike-direction rule — `A-137` |
 | `TDI`, `shark fin`, `volatility band` | **0** | V20 is TDI-silent; V19's TDI material is not extended |
 | `RSI` | ⭐ **0 as a word — the raw count of 1 is the substring inside *"unive**RSI**ty"*** (`[00:08:54]`, *"University of Florida"*, in the Gator aside) | ⚠️ **SAME DEFECT CLASS AS `REVIEW_INDEX.md` ITEM 293**, where V19's `EMA` count of 4 was the substring inside *"email"*. **The number is reported and then explained, rather than reported as 0** — item 293's own standard, applied to this session's own census |
