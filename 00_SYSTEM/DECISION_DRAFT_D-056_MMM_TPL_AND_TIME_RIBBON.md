@@ -98,8 +98,14 @@ single fact the owner can supply in one sentence. §4.5.
 > now `D-056`: a parallel session adopted `D-054` (the `D-053` §3(a) withdrawal) and renumbered
 > this family. Separately, **V19 landed on `review/v19` taking `A-132`–`A-135` and `C-029`**, so
 > this draft's proposed contradiction is **`C-030`** and `D-055`'s proposed ambiguity is **`A-136`**,
-> under the `D-047` collision convention. **Body text below may still read `D-055`; read it as
-> `D-056`.**
+> under the `D-047` collision convention.
+>
+> ✅ **THE BODY HAS NOW BEEN SWEPT AND CORRECTED** (2026-08-14, at owner direction). ⚠️ **One real
+> collision was found and fixed: §7's PROPOSED LEDGER ENTRY still opened `## D-055`** — had it been
+> adopted as written it would have been appended to `DECISIONS.md` under a number the stop/targets
+> draft already holds. It now reads `## D-056`. **Every surviving `D-055` in this file refers
+> deliberately either to the renumbering history or to the stop/targets draft, which genuinely is
+> `D-055`.**
 
 ---
 
@@ -478,7 +484,7 @@ Forex222's `807876a6…`). `diff` shows **one moved declaration line and no func
 
 ## 7. THE PROPOSED LEDGER ENTRY — TEXT FOR THE OWNER TO APPROVE, EDIT OR REJECT
 
-> ## D-055 — `MMM.tpl` is admitted to the `TOOLING` rung; the session ribbon's boundaries are RECORDED but CLOSE NOTHING; a Pine replication is admitted as a DRAFT TOOL; and the pivot search returns NOT FOUND ON THE MMM CHART
+> ## D-056 — `MMM.tpl` is admitted to the `TOOLING` rung; the session ribbon's boundaries are RECORDED but CLOSE NOTHING; a Pine replication is admitted as a DRAFT TOOL; and the pivot search returns NOT FOUND ON THE MMM CHART
 >
 > **Date:** 2026-08-14
 > **Extends:** `D-045` Part 1 (the `TOOLING` rung), whose per-artifact rule requires a separate

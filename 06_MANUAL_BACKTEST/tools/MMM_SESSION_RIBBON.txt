@@ -1,150 +1,161 @@
 //@version=6
 // =============================================================================
-// MMM_SESSION_RIBBON.txt — a replication of !sm_WorkTime v1.5b  (PRICE PANE)
+// MMM_SESSION_RIBBON.txt — a replication of !sm_WorkTime v1.5b, RENDERED IN EST
 // Pine Script v6.  Paste into TradingView → Pine Editor → Add to chart.
 // =============================================================================
 //
-// ⛔⛔ THIS FILE IS A DRAFT AND IS PROPOSED BY `DECISION_DRAFT_D-055`, WHICH IS
-//     NOT ADOPTED. IT CLOSES NO RECORD. READ THE FOUR WARNINGS BELOW FIRST.
+// ⛔⛔ THIS FILE IS A DRAFT, PROPOSED BY `DECISION_DRAFT_D-056`, WHICH IS NOT
+//     ADOPTED. IT CLOSES NO RECORD. READ THE WARNINGS BELOW FIRST.
+//
+// ⭐⭐ OWNER RULING #4 — 2026-08-14: "We need to offset the GMT so that it's EST."
+//     THE RIBBON'S CLOCK IS EST. That is settled by owner direction and the
+//     boundaries below are stated in EST, not in MT4 server time.
 //
 // WHAT THIS IS
 //   A port of the session ribbon on the owner's own MMM chart —
 //   `!sm_WorkTime v1.5b AML`, indicator #8 of 14 in `MMM.tpl`
-//   (md5 db617bcdfeb5df26c033036f96c41472). Every DEFAULT below is the value
-//   the owner's template actually has saved in it, transcribed field for field.
-//   Nothing here is invented and nothing is rounded.
+//   (md5 db617bcdfeb5df26c033036f96c41472).
 //
-// ⚠️ WARNING 1 — THE CLOCK IS AN INPUT, NOT A CONSTANT, AND THAT IS DELIBERATE.
-//   The owner said the ribbon "can be replicated exactly". The BOX GEOMETRY can.
-//   THE CLOCK CANNOT. `!sm_WorkTime_v1.5b.ex4` is an MT4 build-600+ packed
-//   binary — `strings` returns nothing — and NO SOURCE EXISTS ANYWHERE ON THE
-//   VOLUME (`find ~ -iname "*WorkTime*"` returns the two .ex4 and nothing else).
-//   Its sibling is named `sm_WorkTime_NO_AUTOGMT`, which is evidence that the
-//   build the owner runs HAS an automatic GMT adjustment — and that adjustment's
-//   rule is exactly what cannot be read.
-//   ⇒ So `ribbonTZ` below is EXPOSED AND UNDEFAULTED-TO-A-GUESS. UTC+2 is
-//     PRE-FILLED because it is the standard MT4 broker clock and because it makes
-//     all five saved boundaries land on real market events (see the table in
-//     `INDICATOR_FOLDER_INVENTORY_2026-08-14.md` §4.5) — BUT THAT IS THIS
-//     PROJECT'S ARITHMETIC, NOT A SOURCE. Set it to the offset your MT4 broker
-//     actually ran on. If you do not know it, THE RIBBON IS NOT VERIFIED.
+// ⚠️ WARNING 1 — THE OWNER'S RULING FIXES THE TARGET FRAME, NOT THE SOURCE ONE.
+//   `MMM.tpl` stores the boundaries in the MT4 SERVER clock, whose offset is not
+//   recorded anywhere. Converting them to EST needs that offset. Two candidates
+//   survive and THEY DIFFER BY EXACTLY ONE HOUR:
 //
-// ⚠️ WARNING 2 — TWO BEHAVIOURS ARE RECONSTRUCTED, NOT READ. Marked `[GUESS]`
-//   inline. They are the asian midline's meaning (§ MIDLINE) and the box
-//   top/bottom rule (§ EXTREMES). Neither is readable from any artifact.
+//     server UTC+2 (shift -7)        server UTC+3 (shift -8)
+//       Asian    17:00-01:00           Asian    16:00-00:00
+//       Euro     01:30-07:00           Euro     00:30-06:00
+//       NewYork  09:30-13:00  <-NYSE   NewYork  08:30-12:00
+//       mktopenA 03:00-04:00  <-LDN    mktopenA 02:00-03:00
+//       mktopenB 09:00-10:00  <-NYFX   mktopenB 08:00-09:00
 //
-// ⚠️ WARNING 3 — THIS SCRIPT HAS NOT BEEN RUN ON TRADINGVIEW. It is written to
-//   v6 syntax and reviewed by eye; it is NOT verified against a chart, and no
-//   visual comparison against the owner's MT4 ribbon has been performed. The
-//   acceptance test that would verify it is specified in `D-055` §4.3 and is
-//   DELIBERATELY NOT RUN HERE — it needs a screenshot of the owner's live chart.
+//   ⭐ UTC+2 IS PRE-FILLED AND IS THE BETTER-SUPPORTED ARM: it puts THREE boxes
+//     on three real market opens at once — NYSE cash 09:30, London 03:00 EST
+//     (= 08:00 London), NY FX 09:00. UTC+3 puts ONE box on a real open.
+//     ⚠️ BUT SEE WARNING 2 — the arm that loses on market events is the arm that
+//     matches the COURSE'S OWN SLIDE. This is NOT settled. `srcServerTZ` is
+//     exposed so both arms can be run.
 //
-// ⚠️ WARNING 4 — THIS RESOLVES NO SESSION-CLOCK AMBIGUITY. `A-019`, `A-105` and
-//   `A-131` are OPEN. Drawing a box at 10:00 does not make 10:00 the course's
-//   London open. DO NOT CITE THIS FILE AS A SESSION BOUNDARY.
+// ⚠️ WARNING 2 — THIS DOES NOT CLOSE `A-105`, AND IT SHOWS EXACTLY WHY.
+//   V16 prints `London Session Start · 2:00 To 3:00 AM, EST`. On the UTC+2 arm
+//   the ribbon's London box is `03:00-04:00 EST` — ONE HOUR LATER than the
+//   slide. On the UTC+3 arm it lands ON the slide but the NY box stops being
+//   the NYSE open. ⇒ THE TWO ANCHORS DEMAND OFFSETS ONE HOUR APART AND NEITHER
+//   ARM SATISFIES BOTH. `A-105`'s one-hour ambiguity REAPPEARS here from an
+//   independent direction rather than being resolved by it. Proposed `C-030`.
+//   ⛔ `A-019`, `A-105`, `A-131` STAY OPEN. DO NOT CITE THIS FILE AS A SESSION
+//     BOUNDARY.
 //
-// PROVENANCE OF EVERY DEFAULT
-//   `MMM.tpl` → <indicator> #8 → <inputs>, verbatim:
-//     Version=!sm_WorkTime v1.5b AML   NumberOfDays=50
-//     draw_asian_box=true  draw_asian_text=true  draw_asian_midline=true
-//     asian_midline_color=65535        asian_midline_hours=9
-//     Begin_1=0:00   End_1=8:00    Color_1=15128749
-//     draw_euro_box=FALSE            (configured, switched OFF)
-//     Begin_2=8:30   End_2=14:00   Color_2=6908265
-//     draw_ny_box=true               Begin_3=16:30  End_3=20:00  Color_3=8419743
-//     draw_mktopen_box=true
-//     Begin_5a=10:00 End_5a=11:00   Begin_5b=16:00 End_5b=17:00  Color_5=14599344
-//     Alert25BlueBox=false  Alert50BlueBox=false  DrawStopHuntBox=false
-//   Band 4 (`Begin_4`/`End_4`, `draw_upd_asian_range_*`) exists in the older
-//   build's input surface and is ABSENT from `MMM.tpl` entirely. It is omitted
-//   here. See `D-055` §4.2.
+// ⚠️ WARNING 3 — "EST" IS IMPLEMENTED AS FIXED UTC-5, NO DST.
+//   That is what EST literally means, and it is what the owner said. The
+//   alternative — "New York time", i.e. EST in winter and EDT in summer — is a
+//   DIFFERENT clock that shifts twice a year, and choosing it would move every
+//   box by an hour for half the year. `estMode` exposes both. ⚠️ THIS IS THE
+//   LAST UNANSWERED HALF OF `A-105`'s ORIGINAL QUESTION and is `D-056` §8 Q7.
+//
+// ⚠️ WARNING 4 — TWO BEHAVIOURS ARE RECONSTRUCTED, NOT READ, and are marked
+//   `[GUESS]` inline: the box top/bottom rule and the asian midline's meaning.
+//   The MT4 binary is build-600+ packed and no source exists on the volume.
+//
+// ⚠️ WARNING 5 — THIS SCRIPT HAS NOT BEEN RUN ON TRADINGVIEW. Written to v6
+//   syntax and reviewed by eye; NOT verified against a chart and NOT compared
+//   against the owner's MT4 ribbon. Acceptance test: `D-056` §4.4.
+//
+// PROVENANCE — `MMM.tpl` → <indicator> #8 → <inputs>, verbatim, IN SERVER TIME:
+//   Version=!sm_WorkTime v1.5b AML   NumberOfDays=50
+//   Begin_1=0:00  End_1=8:00    draw_asian_box=true  draw_asian_midline=true
+//                               asian_midline_color=65535  asian_midline_hours=9
+//   Begin_2=8:30  End_2=14:00   draw_euro_box=FALSE   (configured, switched OFF)
+//   Begin_3=16:30 End_3=20:00   draw_ny_box=true
+//   Begin_5a=10:00 End_5a=11:00 / Begin_5b=16:00 End_5b=17:00 draw_mktopen=true
+//   Alert25BlueBox=false  Alert50BlueBox=false  DrawStopHuntBox=false
+//   Band 4 (Begin_4/End_4) is ABSENT from MMM.tpl entirely — omitted here.
 // =============================================================================
 
-indicator("MMM Session Ribbon (!sm_WorkTime v1.5b replication)", overlay = true, max_boxes_count = 500, max_lines_count = 500)
+indicator("MMM Session Ribbon — EST (!sm_WorkTime v1.5b replication)", overlay = true, max_boxes_count = 500, max_lines_count = 500)
 
-// ── THE CLOCK — see WARNING 1. This is the load-bearing input. ───────────────
-ribbonTZ = input.string("UTC+2", "Ribbon clock (MT4 server offset)", options = ["UTC-5","UTC-4","UTC+0","UTC+1","UTC+2","UTC+3"], tooltip = "The MT4 SERVER clock the saved times are in. UNVERIFIED — see WARNING 1. UTC+2/+3 is the standard broker clock and is a project INFERENCE, not a source.")
-nDays    = input.int(50, "NumberOfDays", minval = 1, maxval = 500, tooltip = "MMM.tpl saves 50.")
+// ── THE CLOCK ───────────────────────────────────────────────────────────────
+estMode = input.string("EST fixed (UTC-5)", "Render clock", options = ["EST fixed (UTC-5)", "New York (EST/EDT)"], tooltip = "Owner ruling: EST. 'EST fixed' is literal UTC-5 year-round. 'New York' shifts with DST. See WARNING 3 — unsettled.")
+tz      = estMode == "EST fixed (UTC-5)" ? "UTC-5" : "America/New_York"
 
-// ── BAND 1 — ASIAN ──────────────────────────────────────────────────────────
+srcServerTZ = input.string("UTC+2  (shift -7)", "MT4 server clock the template was saved in", options = ["UTC+2  (shift -7)", "UTC+3  (shift -8)"], tooltip = "UNSETTLED — see WARNING 1/2. Changing this shifts every box by one hour.")
+shift       = srcServerTZ == "UTC+2  (shift -7)" ? -7 : -8
+
+nDays = input.int(50, "NumberOfDays", minval = 1, maxval = 500, tooltip = "MMM.tpl saves 50.")
+
+// ── THE SAVED SERVER-TIME BOUNDARIES (verbatim from MMM.tpl) ────────────────
+// Kept in SERVER time and converted below, so the transcription stays auditable
+// against the template and the conversion is visible rather than pre-baked.
 gA = "Asian  (Begin_1 / End_1)"
-drawAsian = input.bool(true,    "draw_asian_box",   group = gA)
-aBeg      = input.string("00:00","Begin_1",         group = gA)
-aEnd      = input.string("08:00","End_1",           group = gA)
-aCol      = input.color(#8DDCE6, "Color_1",         group = gA, tooltip = "MT4 15128749 = BGR -> RGB #8DDCE6")
-drawMid   = input.bool(true,    "draw_asian_midline", group = gA)
-midCol    = input.color(#FFFF00,"asian_midline_color", group = gA, tooltip = "MT4 65535 = yellow")
-midHours  = input.int(9,        "asian_midline_hours", group = gA, tooltip = "[GUESS] see MIDLINE note")
+drawAsian = input.bool(true,     "draw_asian_box",      group = gA)
+aBeg      = input.string("00:00","Begin_1  (server)",   group = gA)
+aEnd      = input.string("08:00","End_1  (server)",     group = gA)
+aCol      = input.color(#8DDCE6, "Color_1",             group = gA, tooltip = "MT4 15128749 (BGR) -> #8DDCE6")
+drawMid   = input.bool(true,     "draw_asian_midline",  group = gA)
+midCol    = input.color(#FFFF00, "asian_midline_color", group = gA, tooltip = "MT4 65535 = yellow")
+midHours  = input.int(9,         "asian_midline_hours", group = gA, tooltip = "[GUESS] see MIDLINE note")
 
-// ── BAND 2 — EURO (saved OFF) ───────────────────────────────────────────────
 gE = "Euro  (Begin_2 / End_2)  -- saved OFF"
-drawEuro = input.bool(false,    "draw_euro_box",    group = gE, tooltip = "MMM.tpl saves FALSE. Configured but not drawn.")
-eBeg     = input.string("08:30","Begin_2",          group = gE)
-eEnd     = input.string("14:00","End_2",            group = gE)
-eCol     = input.color(#69690A, "Color_2",          group = gE)
+drawEuro = input.bool(false,     "draw_euro_box",       group = gE, tooltip = "MMM.tpl saves FALSE.")
+eBeg     = input.string("08:30", "Begin_2  (server)",   group = gE)
+eEnd     = input.string("14:00", "End_2  (server)",     group = gE)
+eCol     = input.color(#69690A,  "Color_2",             group = gE)
 
-// ── BAND 3 — NEW YORK ───────────────────────────────────────────────────────
 gN = "New York  (Begin_3 / End_3)"
-drawNY = input.bool(true,     "draw_ny_box",        group = gN)
-nBeg   = input.string("16:30","Begin_3",            group = gN)
-nEnd   = input.string("20:00","End_3",              group = gN)
-nCol   = input.color(#9F7080, "Color_3",            group = gN)
+drawNY = input.bool(true,      "draw_ny_box",           group = gN)
+nBeg   = input.string("16:30", "Begin_3  (server)",     group = gN)
+nEnd   = input.string("20:00", "End_3  (server)",       group = gN)
+nCol   = input.color(#9F7080,  "Color_3",               group = gN)
 
-// ── BAND 5 — MARKET OPEN (two disjoint windows) ─────────────────────────────
-gM = "Market open  (Begin_5a/5b)"
-drawMkt = input.bool(true,     "draw_mktopen_box",  group = gM)
-m1Beg   = input.string("10:00","Begin_5a",          group = gM)
-m1End   = input.string("11:00","End_5a",            group = gM)
-m2Beg   = input.string("16:00","Begin_5b",          group = gM)
-m2End   = input.string("17:00","End_5b",            group = gM)
-mCol    = input.color(#B0B0DE, "Color_5",           group = gM)
+gM = "Market open  (Begin_5a / 5b)"
+drawMkt = input.bool(true,      "draw_mktopen_box",     group = gM)
+m1Beg   = input.string("10:00", "Begin_5a  (server)",   group = gM)
+m1End   = input.string("11:00", "End_5a  (server)",     group = gM)
+m2Beg   = input.string("16:00", "Begin_5b  (server)",   group = gM)
+m2End   = input.string("17:00", "End_5b  (server)",     group = gM)
+mCol    = input.color(#B0B0DE,  "Color_5",              group = gM)
 
-// ── OPTIONAL: the 25/50 lines the MT4 build ships as ALERTS ─────────────────
-// `Alert25BlueBox` / `Alert50BlueBox`, whose strings in the readable sibling
-// build are literally "25 Pips above blue box" / "50 Pips below blue box".
-// MMM.tpl saves BOTH false. They are drawn here only if switched on, and they
-// are NOT a course rule -- see A-005, which is blocked on A-019/D-031.
+// The 25/50 lines the MT4 build ships as ALERTS ("25 Pips above blue box").
+// MMM.tpl saves BOTH false. NOT a course rule — A-005 is blocked on A-019/D-031.
 gB = "Asian-box 25/50 pip bands  (saved OFF)"
-show25 = input.bool(false, "Alert25BlueBox as lines", group = gB)
-show50 = input.bool(false, "Alert50BlueBox as lines", group = gB)
-bandCol= input.color(#808080, "band colour",         group = gB)
+show25  = input.bool(false, "Alert25BlueBox as lines", group = gB)
+show50  = input.bool(false, "Alert50BlueBox as lines", group = gB)
+bandCol = input.color(#808080, "band colour",          group = gB)
 
 // ── helpers ─────────────────────────────────────────────────────────────────
-// "HH:MM" -> minutes past midnight, in the ribbon clock.
-mins(string hhmm) =>
+// "HH:MM" (server) -> minutes past midnight IN THE RENDER CLOCK.
+// This is where the owner's EST ruling is actually applied.
+minsEST(string hhmm) =>
     p = str.split(hhmm, ":")
-    array.size(p) < 2 ? na : str.tonumber(array.get(p, 0)) * 60 + str.tonumber(array.get(p, 1))
+    array.size(p) < 2 ? na : math.round((str.tonumber(array.get(p, 0)) + shift) * 60 + str.tonumber(array.get(p, 1))) % 1440
 
-// Bar's minutes-past-midnight ON THE RIBBON CLOCK.
-nowMin = hour(time, ribbonTZ) * 60 + minute(time, ribbonTZ)
+// Bar's minutes past midnight on the render clock.
+nowMin = hour(time, tz) * 60 + minute(time, tz)
 
-// [begin, end) membership. NOTE: none of the six saved windows wraps midnight,
-// so wrap-around is NOT handled. If a future config wraps, this is WRONG.
+// [begin, end) membership. ⭐ WRAP-AROUND IS HANDLED AND IS NOW REQUIRED:
+// converted to EST the Asian band becomes 17:00-01:00, i.e. it CROSSES MIDNIGHT.
+// The server-time version never did. This is a real consequence of the ruling.
 inWin(string b, string e) =>
-    mb = mins(b), me = mins(e)
-    na(mb) or na(me) ? false : (nowMin >= mb and nowMin < me)
+    mb = minsEST(b), me = minsEST(e)
+    na(mb) or na(me) ? false : mb <= me ? (nowMin >= mb and nowMin < me) : (nowMin >= mb or nowMin < me)
 
-withinLookback = (last_bar_index - bar_index) < nDays * (1440 / math.max(timeframe.in_seconds() / 60, 1))
+barsPerDay     = 1440 / math.max(timeframe.in_seconds() / 60, 1)
+withinLookback = (last_bar_index - bar_index) < nDays * barsPerDay
 
-// ── § EXTREMES — [GUESS], and the reason it is flagged ──────────────────────
+// ── § EXTREMES — [GUESS] ────────────────────────────────────────────────────
 // The MT4 build's box top/bottom rule is NOT readable. This uses the standard
-// MT4 session-box idiom, taken from the ONE readable session indicator on the
-// volume -- KimIV's `Sessions.mq4`, which is a DIFFERENT and UNATTESTED tool:
-//     p1 = High[Highest(...)]   p2 = Low[Lowest(...)]
-// i.e. box top = session HIGH, box base = session LOW. That is the near-
-// universal convention and it is still a GUESS about THIS build.
-// ── a generic band tracker ──────────────────────────────────────────────────
+// MT4 session-box idiom, taken from the one readable session indicator on the
+// volume (KimIV's Sessions.mq4 — a DIFFERENT, UNATTESTED tool, cited for
+// mechanism only): box top = session HIGH, box base = session LOW.
 type Band
     box   bx
     float hi
     float lo
-    int   t0
 
-var Band asian = Band.new(na, na, na, na)
-var Band euro  = Band.new(na, na, na, na)
-var Band ny    = Band.new(na, na, na, na)
-var Band mk1   = Band.new(na, na, na, na)
-var Band mk2   = Band.new(na, na, na, na)
+var Band asian = Band.new(na, na, na)
+var Band euro  = Band.new(na, na, na)
+var Band ny    = Band.new(na, na, na)
+var Band mk1   = Band.new(na, na, na)
+var Band mk2   = Band.new(na, na, na)
 
 step(Band s, bool active, color c, bool enabled) =>
     if enabled and withinLookback
@@ -152,7 +163,6 @@ step(Band s, bool active, color c, bool enabled) =>
             if na(s.bx)
                 s.hi := high
                 s.lo := low
-                s.t0 := time
                 s.bx := box.new(time, s.hi, time, s.lo, xloc = xloc.bar_time, border_color = c, bgcolor = color.new(c, 80))
             else
                 s.hi := math.max(s.hi, high)
@@ -170,23 +180,19 @@ ny    := step(ny,    inWin(nBeg,  nEnd),  nCol, drawNY)
 mk1   := step(mk1,   inWin(m1Beg, m1End), mCol, drawMkt)
 mk2   := step(mk2,   inWin(m2Beg, m2End), mCol, drawMkt)
 
-// ── § MIDLINE — [GUESS], and it is the weaker of the two ────────────────────
-// `draw_asian_midline=true`, `asian_midline_color=65535` (yellow),
-// `asian_midline_hours=9`.
-// ⚠️ THE SAVED ASIAN BOX IS 8 HOURS LONG (0:00-8:00) AND `midline_hours` IS 9.
-//    A "midline" parameterised by a number LARGER than the box it belongs to
-//    cannot mean "the middle of the box". The two readings that survive:
-//      (a) the box mid-price, PROJECTED FORWARD 9 hours past End_1  <- used here
+// ── § MIDLINE — [GUESS], the weaker of the two ──────────────────────────────
+// ⚠️ THE ASIAN BOX IS 8 HOURS LONG AND `asian_midline_hours` IS 9. A "midline"
+//    parameterised by a number LARGER than its own box cannot mean "the middle
+//    of the box". Two readings survive:
+//      (a) the box mid-price PROJECTED FORWARD 9 hours past End_1  <- used here
 //      (b) a line drawn AT hour 9, unrelated to the box mid-price
-//    NEITHER IS READABLE. (a) is chosen because it is the only one for which
-//    "midline" and "hours" are both doing work. THIS IS A RECONSTRUCTION.
-//    If the owner's chart shows otherwise, (a) is wrong and this is the first
-//    thing the D-055 §4.3 acceptance test should look at.
-var line midLn = na
+//    NEITHER IS READABLE. (a) is used because it is the only one in which both
+//    "midline" and "hours" do work. If the owner's chart shows otherwise, (a)
+//    is wrong — this is the first thing the D-056 §4.4 acceptance test checks.
 asianEnded = drawMid and drawAsian and not inWin(aBeg, aEnd) and inWin(aBeg, aEnd)[1]
 if asianEnded and not na(asian.hi) and not na(asian.lo)
     mid = (asian.hi + asian.lo) / 2
-    midLn := line.new(time, mid, time + midHours * 3600 * 1000, mid, xloc = xloc.bar_time, color = midCol, width = 1)
+    line.new(time, mid, time + midHours * 3600 * 1000, mid, xloc = xloc.bar_time, color = midCol, width = 1)
 
 // ── the 25/50 bands off the asian box, if enabled ───────────────────────────
 pip = syminfo.mintick * (syminfo.type == "forex" and syminfo.mintick < 0.001 ? 10 : 1)
@@ -200,10 +206,9 @@ if asianEnded and not na(asian.hi)
 
 // =============================================================================
 // WHAT THIS FILE DOES NOT DO — repeated at the bottom on purpose
-//   * It does not close A-019, A-105 or A-131.
-//   * It does not establish that 10:00 is the London open, or that any drawn
-//     box corresponds to a session the COURSE names.
-//   * It does not reproduce the MT4 build's GMT auto-adjustment, because that
-//     behaviour is unreadable (WARNING 1).
-//   * It has not been run (WARNING 3).
+//   * It does not close A-019, A-105 or A-131. WARNING 2 shows why not.
+//   * It does not establish that any drawn box is a session the COURSE names.
+//   * It does not reproduce the MT4 build's GMT auto-adjustment, which is
+//     unreadable — it SUBSTITUTES the owner's EST ruling for it.
+//   * It has not been run (WARNING 5).
 // =============================================================================

@@ -10015,6 +10015,14 @@ turns**. `D-053` §3(a) would not exist if `[00:11:39]` had been read.
   session. The companion TPL/time-ribbon draft moved `D-055` → `D-056` in the same act.
   **Substance unchanged in both.** See `D-057`.
 - `00_SYSTEM/DECISION_DRAFT_D-055_MMM_TPL_AND_TIME_RIBBON.md` — `MMM.tpl`, the ribbon, the pivots
+
+> ⚠️ **THE TWO FILENAMES ABOVE ARE SUPERSEDED AND ARE RETAINED UNEDITED** per
+> `REMEDIATION_PROTOCOL.md` §2. **`D-054` was adopted on integration by the TDI-basis session** (the
+> `D-053` §3(a) / `A-085` withdrawal) and claimed the number first, so under `D-047` these drafts
+> renumbered **`D-054` → `D-055`** and **`D-055` → `D-056`**. The live files are
+> `DECISION_DRAFT_D-055_OWNER_STOP_AND_TARGETS.md` and
+> `DECISION_DRAFT_D-056_MMM_TPL_AND_TIME_RIBBON.md`. **Every `D-054` in the rest of this entry means
+> the stop/targets draft and should be read as `D-055`.**
 - `06_MANUAL_BACKTEST/tools/MMM_SESSION_RIBBON.txt` — the Pine port, **draft, unrun**
 
 ### ⭐⭐ `MMM.tpl` exists
@@ -10323,6 +10331,91 @@ fork added **no `A-1xx` and no `C-0xx`**, so `A-132`–`A-135` and `C-029` remai
 
 Student resubmission of V19 with items 302–304 applied. **A short round — item 302 adds figures
 rather than changing any.**
+
+
+---
+
+## 2026-08-14 — OWNER RULINGS #4 AND #5 — THE CLOCK IS EST, THE STOP ANCHOR IS THE M/W FORMATION — and V19 landed inside the hour and CORRECTED ONE OF THIS BRANCH'S OWN FINDINGS
+
+**Both drafts AMENDED, not rewritten. Still NOT ADOPTED. No `A-xxx` changed status.**
+
+### ⭐⭐ RULING #4 — *"We need to offset the GMT so that it's EST."*
+
+The ribbon now renders in EST. ⭐ **The course's frame and the owner's frame agree** — V16's slide is
+stamped `EST` and the owner independently says EST.
+
+⚠️⚠️ **But it fixes the TARGET frame, not the SOURCE one, and the residual gap gets SHARPER:**
+
+| | server UTC+2 (−7) | server UTC+3 (−8) |
+|---|---|---|
+| NY box | ⭐ **09:30 EST — NYSE open** | 08:30 — nothing |
+| London box | ⭐ **03:00 EST — London open** | ⭐⭐ **02:00 — V16's slide exactly** |
+| NY FX box | ⭐ 09:00 EST | 08:00 — nothing |
+
+**THE TWO BEST ANCHORS DEMAND OFFSETS EXACTLY ONE HOUR APART AND NEITHER ARM SATISFIES BOTH.**
+`A-105`'s one-hour question **reappears from an independent direction rather than closing.**
+⭐ **Proposed `C-030`** — Tier 1 slide vs `TOOLING` ribbon, **NOT ADJUDICATED**: `TOOLING` ranks below
+Tier 1, *but* a benign reading (**slide = setup hour, box = open hour**) is live and not excluded, so
+`D-048` rung 4 governs. ⛔ **`A-019`/`A-105`/`A-131` stay OPEN.**
+
+⚠️ **And half of `A-105`'s original question survives the ruling intact:** *"EST"* is the ambiguous
+token itself — literal fixed UTC−5, or New York local (EDT in May)? The port implements **literal
+UTC−5** and exposes the alternative. **`D-056` §8 Q7/Q8.** ⭐ **Q8 is answerable off the chart
+without recalling any broker offset: is your London box at 2 AM or 3 AM EST?**
+
+⭐ **One real code consequence:** in EST the Asian band **crosses midnight** (`17:00–01:00`), which
+it never did in server time. **The port's window test now handles wrap-around** — a documented
+limitation turned into a required fix by implementing the ruling rather than just recording it.
+
+### ⭐⭐ RULING #5 — *"the perceived high is where the M/W forms"*
+
+✅ **The anchor is IDENTIFIED**, and *"perceived"* is explained: the extreme **of a formation**, not
+of raw bar data. ✅⭐ **THE LONG SIDE IS NOW ATTESTED** — naming M/W as a pair settles both
+directions, so `D-055` Part 3's block on long-side geometry is **DISCHARGED**.
+
+⛔ **It does not by itself make the stop locatable: it RESOLVES INTO `A-011`** (M/W anatomy,
+`DO NOT CODE` across ten lessons). The `D-053` pattern — *fixing which object a principle refers to
+does not make it computable.* Renumbered **`A-136`** (V19 took `A-132`).
+
+### ⭐⭐ AND THEN V19 LANDED — the predicted risk fired within the hour
+
+`D-055` §6 warned *"stops and targets are the subject a course is MOST likely to state explicitly,
+and THREE LESSONS ARE UNREAD"*, naming V19–V21. **V19 (`review/v19`) is the M/W formation lesson.**
+
+⭐⭐ **It prints the corpus's FIRST M/W CONSTRUCTION**, on two slides edited on camera:
+*"The Second Leg Rise can be slightly above the first, but must close below **with in 30M**"* —
+and the W as its mirror. ⭐ **That overshoot is plausibly the owner's "perceived high"**, which would
+make his stop a stop beyond the permitted overshoot. ⚠️ **A reading, not adopted** — `A-136` stays
+OPEN, but now **open on a Tier 1 construction rather than on nothing.**
+
+⚠️⚠️ **AND V19 CORRECTS THIS BRANCH'S OWN §3.4 NEGATIVE RESULT.** That section stated *"`TP1 = 30`
+matches nothing at any tier."* **V19 makes that false:** `25 to 50 pips` is stated four times
+(`A-135`, **closed in-session** on a second ASR engine). ⭐ **Both owner targets fall inside a Tier 1
+band and `TP2 = 50` sits on its upper bound.** ⚠️ **Not overstated: a band is not a value — V19 never
+says 30**, and V19's `25 to 50` is a **level-extension** distance, not a **stop** distance. The
+`OWNER EMPIRICAL PREFERENCE` status **stands**, though its chief supporting argument weakened.
+
+⛔⛔ **TRAP FLAGGED: V19's own `30` is MINUTES** (the second-leg time cap, `A-134`/`C-029`), **not
+pips.** Same numeral, same lesson, same formation, different quantity.
+
+### ⭐ An unplanned hand-off — `MMM.tpl` and V19's `A-133` *"blue tracer"*
+
+V19 named *"a `D-045`-class artifact (the owner's MT4 template)"* as one of three ways to close
+`A-133`. This branch admits one. Decoded from `MMM.tpl`: **EMA 4 = pure blue `#0000FF`**, **EMA 800 =
+dark blue `#0000CD`** (`D-043`'s blueberry), **EMA 50 = cyan `#00FFFF`** (water).
+⛔ **`A-133` NOT closed** — two blue candidates; V19's frames show **cyan, not blue**; and a 2023
+template that already disagrees with the corpus about which periods exist cannot name a 2012 line.
+⭐ **Delivered instead: a shortlist (4 / 800 / 50) and a discriminating test** — only the *sloping*
+line can be a moving average at all. **That test belongs to the V19 review.**
+
+### ⚠️ Two concurrency events, recorded because they affected this branch
+
+1. **This branch's commit `cf1fda9` was rolled back** — local *and* `origin` refs were reset to
+   `34ac3f7` by a parallel session, leaving it dangling. **Recovered by `git reset --hard cf1fda9`.**
+2. **A parallel session adopted `D-054`** (the `D-053` §3(a) withdrawal) and **renumbered this
+   branch's drafts `D-054`→`D-055` and `D-055`→`D-056`**; `D-057` is in flight. **V19 separately took
+   `A-132`–`A-135` and `C-029`.** All references updated; this session's work was committed **from an
+   isolated worktree** so the shared tree's in-flight adoption was not disturbed.
 
 ---
 
