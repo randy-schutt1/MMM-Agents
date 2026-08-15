@@ -3304,3 +3304,35 @@ it.**
 **Disposition: `PROVISIONAL`.** `A-134` (the cap stated four ways) remains **OPEN**. **A later
 lesson or an owner ruling closes it; this session does not adjudicate a question V20 does not
 answer.**
+
+---
+
+## C-031 — V21's handwritten spec carries two figures the audio never gives, and does not relate them to the ones it does
+
+**Opened:** 2026-08-15 by the V21 student session. **Status: ⚠️ UNRESOLVED — insufficient evidence.**
+
+The `31:25` frame photographs the instructor's own notes (dated `1-27-2010`). **Four figures appear
+there; two are also spoken and two are not.**
+
+| Figure | Sheet | Audio |
+|---|---|---|
+| all three filled ⇒ `30 + 50 + 70` = **150** | ✅ | ✅ `[00:32:55]` *"cycle with a hundred and fifty pips"* |
+| most often ⇒ **+80** | ✅ | ✅ `[00:33:17]` *"you'll get a 30 and a 50 […] cycle with 80"* |
+| ⚠️ **Take profit `+30 pips` from ORDER 1 = Market order** | ✅ | ⛔ **never spoken** |
+| ⚠️ **`Sell Cycle — 30 pips`** | ✅ | ⛔ **never spoken** |
+
+⭐ **The first two RECONCILE what looks like a spoken contradiction** — `150` and `80` are the
+three-fill and two-fill branches of one scheme, not competing claims. **That is the frame earning
+its place.**
+
+⛔ **The second two are unexplained.** The sheet does not state how *"take profit +30 from order
+1"* relates to the `30 / 50 / 70` ladder — whether `30` is the first rung of it, a separate
+per-order target, or a superseded value from 2010 — and *"Sell Cycle — 30 pips"* is unglossed
+entirely.
+
+⚠️ **Disposition `UNRESOLVED`, not `PROVISIONAL`.** `REVIEW_PROTOCOL.md` §6.O permits a provisional
+resolution where timeframe, phase or shorthand explains a conflict. ⛔ **Nothing here explains it:
+the sheet is Tier 2 (printed/handwritten), the audio is Tier 1, they do not contradict each other,
+and the sheet simply says MORE than the lesson does.** ⭐ **The honest reading is that a 2010 working
+note contains detail the 2012 lecture did not repeat — and this session will not guess which figure
+governs.** **The course has now ended, so no later lesson can close it.**

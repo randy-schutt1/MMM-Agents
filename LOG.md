@@ -10816,3 +10816,262 @@ deliberately NOT self-closed** — declining, in writing, the owner-authorised s
 R1's review question 1 flagged as becoming the default. ⭐ **And `PT-049` generalises the lessons
 instead of patching the instance.** ⚠️ **The owner question still stands**: the self-verify exception
 has no numbered decision, and this round shows the practice correcting itself without one.
+
+---
+
+## 2026-08-15 — V21 INGESTION (`Bootcamp1 Wk10 061712`, Week 10) — ⭐⭐ THE FINAL LESSON
+
+**Lesson:** `Bootcamp1 Wk10 061712 (75mins).swf` · 2012-06-17 · **01:14:47** · the longest and
+fastest-spoken lesson in the corpus (12,902 words, 172.6 wpm).
+**Branch:** `video/v21` from integration `19e6c2a`, isolated worktree (`D-038`).
+
+### Provenance
+
+`.swf` SHA-256 re-computed to `9eb3b014…44ef23fc` and length to 33,002,964 bytes — **both matching
+`SOURCE_MANIFEST.md`.** ⭐ **Four independent length measures agree to 0.33 s** (header 4487.667 s,
+audio 4487.340 s, manifest 4487 s, filename *"75mins"*). ⭐⭐ **And a fifth, independent of all of
+them: `6/17/2012` is legible in the Windows clock during the install walkthrough** — the recording
+dating itself from its own machine.
+
+### Capture
+
+10× sweep, 906 frames, 17 kept. ⚠️ **V21 is one of the three `1280 × 738` files** — play click
+`(512, 325)` per `GOTCHA 5`, and Ruffle letterboxes it so the player chrome sits at `y ≈ 670`.
+**Reusing V20's coordinates would have swept a splash screen and read no timecode.**
+⭐ **§8a returns a SIXTH shape:** a `+16 s` startup transient — **the same value V19 and V20
+measured** — absorbed to zero by 30 s (**item 296 corroborated on a third sweep**), **plus a slow
+negative drift to `−2 s`.** **All 17 frames named from individually-read burned timecodes.**
+
+### ⭐ Process
+
+**§9's two-pass order was followed** — §§1–9 written while the sweep ran, no frame on disk.
+⭐⭐ **And an independent ASR pass WAS run** on the load-bearing passages — the check V20 was charged
+for omitting (item 326). ⚠️ **Targeted, not full-file (~2 min of 75), and owed.**
+
+### Headline findings
+
+* ⭐⭐⭐ **THE COURSE DELIVERS WHAT V19 PROMISED.** V19 `[00:02:12]` — *"we're gonna release the
+  scripts on the last night of boot camp"* — and V21 ships and **installs** the **`High / Low
+  Trainer`**, with the instructor's **own handwritten 2010 spec photographed at `31:25`**.
+  ⛔ **`A-141`: the artifact is NOT in this repository.** The highest-value acquisition available.
+* ⭐⭐ **A ONE-WORD ASR DEFECT WOULD HAVE CLOSED `A-133` WRONGLY.** *"the light blue tracer **in** the
+  ADR line"* reads as an apposition that DEFINES the blue tracer. **The independent decode says
+  `AND`.** **Caught before it reached any artifact.** ⛔ **`A-133` survives, and V21 is the last
+  lesson — dimension B is now PERMANENTLY blocked, eight lessons deep.**
+* ⭐ **V21 defines what V19 could not:** *"the big board **is the high low board**"* `[00:04:41]`,
+  confirmed verbatim independently — **closing item 298's gap.**
+* ⭐⭐ **`Q-022` confirms the V16–V20 template break from V21's side on all twenty comparisons**
+  (`32/30/26` against all five B members, near every A member) — **item 254 proven from both
+  sides** — **and corrects three prior entries: the *"off-by-one"* is a CLOSED PERMUTATION**
+  (`V01→V01`, `V02→V02` correct; `V03`–`V20` `+1`; **`V21` wraps to `V03`**), described until now
+  from a middle sample.
+* ⚠️ **`PT-050` FRAGILE, reported as a null.** `N3` fired on the grid's modal fill flipping between
+  windows; median move **29.70 `[23.20, 39.60]`** against *"about 50"*, excluding the band by
+  0.4 pips. ⭐ **The event is real — roughly double a random window on every cell — it just is not
+  50.** ⚠️ **Its event definition is borrowed from `PT-047` and declared as the largest threat.**
+
+### Owed / recorded against this session
+
+`A-140`, `A-141`, `C-031`, `Q-022`, review items **357–364**. ⚠️ **Item 364 records a `D-047`
+collision** — items 349–355 were allocated against a tail read too early and renumbered to 357–363
+before commit. ⚠️ **Item 363 self-reports a wrong figure drafted from a truncated terminal view and
+corrected from the JSON before commit.**
+
+### ⭐⭐ THE CORPUS IS COMPLETE
+
+**All 21 lessons are ingested.** A **cumulative review** (`REVIEW_PROTOCOL.md` §14) and
+`FINAL_COURSE_REVIEW.md` are now **due**. ⚠️ **Two records opened here can never be closed by a
+later lesson, because there is none: `A-133` and `C-031`.**
+
+### Git
+
+`video/v21`, pushed, **NOT merged** — `D-003`. **`D-047` re-check owed again at merge-back.**
+Validator **103 / 0 / 0**.
+
+---
+
+## 2026-08-15 — Reviewer Session (V21 R1) — ⭐⭐ THE FINAL LESSON
+
+### Lesson
+**V21** — `Bootcamp1 Wk10 061712 (75mins).swf` · 2012-06-17 · 01:14:47 — **the last of 21.**
+`video/v21` @ `4bee5f4` (5 commits), forked from `19e6c2a`. Review branch `review/v21`, isolated
+worktree `MMM-Agents-v21-review` (`D-038`).
+
+### Decision
+**`REVISE` — 0 CRITICAL, 1 MAJOR, 3 MINOR, 12 NOTE. HIGH confidence.**
+⚠️ **NO LESSON GATE IS HELD — there is no V22.** `M1` holds **V21's own `COMPLETE`** and **blocks the
+cumulative `FINAL_COURSE_REVIEW.md`**. **NOT merged to integration** (`D-024`).
+
+### `M1` (item 365) — `A-141` IS WRONG ON THE FACT IT TURNS ON
+The brief asked whether the `High / Low Trainer`'s unrecoverability is genuinely true before it is
+accepted as permanent. ⛔ **It is not true as stated.** `A-141`, `V21_SOURCE_NOTES.md` §10.5 and
+`V21_HOMEWORK.md` §2 all assert **no script filename is legible anywhere in the lesson**, and the
+mastery report sends a reviewer to re-sweep `42:38`–`62:28` to find one.
+**`V21_00-49-33_scripts-pasted-into-folder.png` — inside that range, captured and committed by this
+session — shows the MT4 Navigator `Scripts` tree:**
+
+```text
+&sm_Buy_Order_Trainer      &sm_Buy_Order_Trainer_Pct
+&sm_Sell_Order_Trainer     &sm_Sell_Order_Trainer_Pct     142 more…
+```
+
+⭐ They convert two recorded **inferences** into attestation — *"four scripts in there"* `[00:41:49]`
+and *"by order percent"* `[00:26:52]`. ⚠️ **`A-141`'s SUBSTANCE SURVIVES**: no code, entry trigger,
+fill logic or exit; the `51:38` frame is a bare desktop; `D-030` still bars reconstruction.
+**The gap is real. The record describing it is wrong on a checkable fact, in four places, as the
+corpus's closing statement about its only mechanical artifact.**
+
+### The other three brief items — verified
+* **`A-133` (item 366).** ⭐ **The outcome is right and the correction behind it is not.** Ten decodes
+  across four model families return ***"in"* seven times** — every `large-v3` configuration, and
+  **`medium.en` itself flips to `in` under 0.6× time-stretch**. The recorded *"in"→"and"* correction
+  does not replicate. ⛔ And *"X **in** Y"* is **locative, not appositive**, so the feared reading
+  would not have closed `A-133` either. **It survives under both readings, for the better reason that
+  neither defines the tracer — and it is now PERMANENTLY open, the course having ended.**
+* **`PT-050` (item 371).** ⭐⭐ **Its self-declared largest threat is cleared by test.** Three
+  V21-native event definitions built from the `16:40` *"Spike Past …levels"* frame return medians of
+  **32.90 / 24.75 / 31.20** against the borrowed definition's **29.70** — **none reaches `[40,60]`,
+  and the borrowed choice sits in the middle of them.** **The null belongs to the claim.**
+  ⚠️ Item 367: `N3` fired on a condition §4 does not list (window, not arm); the literal reading
+  gives `REFUTED`, not `FRAGILE`, and the divergence is unreported.
+* **The permutation and the numbering (items 370, 373).** ⭐ **Both exactly right.** `L01→V01`,
+  `L02→V02`, `L03→V04 … L20→V21`, `L21→V03` — **a bijection over all 21 labels**, re-derived from all
+  21 folders on two independent stamps. Items 357–364 and the collision history check out in every
+  particular.
+
+### Also run
+Full-file independent ASR (item 378) — **1,481 segments, no meaning-inverting error**, every
+load-bearing quote verbatim. 17/17 frame timecodes from the pixels. `Q-022`'s `32/30/26` on all
+twenty comparisons. Source SHA-256 and duration exact.
+
+### Required Corrections
+Items **365–368**, specified at `V21_REVIEW_R1.md` §7. **None requires re-capturing or re-testing.**
+
+### ⭐⭐ IS A CUMULATIVE `FINAL_COURSE_REVIEW.md` WARRANTED NEXT? — ASSESSED, NOT WRITTEN
+**Yes, but not yet.** Three things should land first: **(1)** item 365, which a cumulative review
+would otherwise inherit verbatim as the corpus's account of its only shipped tool; **(2)** the
+remediation debt, now **five lessons deep and none of it discharged** — V17 (244–249), V18 (264–268),
+V19 (303–304), V20 (348), V21 (365–368) — **all `MINOR` except `M1`**, so a short sweep rather than a
+re-run; **(3)** the standing owner question on `SELF-VERIFIED AT OWNER DIRECTION`, which V14, V16 and
+V19 all used and which still has no numbered decision. ⭐ **What only a cumulative review can say:**
+that `A-133` is now **permanently** open and dimension **B** therefore **permanently blocked
+corpus-wide**; that the course's only mechanical artifact was shipped and did not arrive; and
+**whether the `PT-044`–`PT-050` series' overwhelmingly null record is a fact about the method or
+about this project's operationalisations** — the single most important question the corpus can now
+ask, and one that cannot be asked one lesson at a time.
+
+### Git
+`review/v21` from `4bee5f4`; `95b6b1d` (findings checkpoint), then the ASR round and the ledgers.
+⛔ **NOT merged — `D-024` bars it on one `MAJOR`.**
+
+### Next Review Trigger
+A V21 resubmission applying items 365–368.
+## 2026-08-15 — V21 REMEDIATION ROUND (V21 R1 `M1` + items 366–368)
+
+**Owner direction: fix all four. Branch `video/v21`, isolated worktree (`D-038`).**
+
+### ⛔⛔ NOT SELF-VERIFIED
+
+`D-024` holds the gate on any `MAJOR` until it is fixed **and re-reviewed in a fresh round.**
+**These fixes go back to the V21 R1 session for R2 — the same pattern V20 used, and for the same
+reason the V20 reviewer gave: owner-authorised self-verify must not become the default.**
+
+### All four findings verified before being acted on
+
+⭐ **`M1` (365)** — confirmed by **opening my own committed frame.** `V21_00-49-33` shows the MT4
+Navigator `Scripts` tree: **`&sm_Buy_Order_Trainer`, `&sm_Buy_Order_Trainer_Pct`,
+`&sm_Sell_Order_Trainer`, `&sm_Sell_Order_Trainer_Pct`, `142 more…`** — plus `Heidi_Mauro_closeAll`
+under Expert Advisors and a `TDI_MMM` indicator pane.
+
+⭐ **`366`** — the reviewer's ten-decode replication is decisive, and **the grammatical point is
+independently checkable and correct**: *"X in Y"* is locative, not appositive.
+
+⭐ **`367`** — confirmed against `pt050_results.json`: both `N3` fires are **window** differences
+(`A|W-B`, `B|W-B`); the **arms agree in every window** (3/3, 1/1).
+
+⭐ **`368`** — `62` and `71` in a minutes field; `FILE_NAMING_STANDARD.md` line 74 fixes `HH-MM-SS`.
+
+### What changed
+
+* **`A-141` rewritten** around the four filenames, with the surviving gap restated precisely: **no
+  code, entry trigger, fill logic, order management, exit logic or parameter dialog.** ⭐ **The four
+  names convert `[00:41:49]`'s *"four scripts in there"* and `[00:26:52]`'s *"by order percent"*
+  from inference into attestation.** Corrected in **four** files — the record, the source notes
+  (§6, §8, §10.5), the homework (§2) and this report's §2.3 **misdirection**, which sent a reviewer
+  to re-sweep a range whose answer was already committed.
+* **The `[00:05:21]` correction is WITHDRAWN** in the transcript §2a, source notes §2,
+  interpretation §2.4 and mastery §4.2. ⭐ **`A-133`'s survival is restated on the stronger ground
+  that neither reading defines the tracer** — which does not depend on which word was said.
+* **`BT_V21_0001.md` §5 replaced** — it said *"NONE"*. It now reports the `N3` clause divergence and
+  states that **on §4's literal list the verdict is `REFUTED`, not `FRAGILE`.** ⛔ **Runner not
+  re-run**, per the finding. **The pre-registration is not edited.**
+* **Two frames renamed** `01-02-28` / `01-11-38`, with the cause and a recipe recommendation in
+  `INDEX.md` §0.
+
+### ⚠️ THE LESSON I WOULD CARRY FORWARD
+
+**`M1` was not a sweep-density problem — it was a failure to read my own evidence.** I captured the
+frame, named it *"scripts-pasted-into-folder"*, committed it, and then asserted four times that it
+contained no filename. ⭐ **And `366` is the mirror image: a single-decode substitution asserted with
+more confidence than one decode supports.** **V20's `candle` correction carried five decodes and
+held; this one carried one and did not.**
+
+### Git
+
+`video/v21`, pushed. ⛔ **NOT merged, NOT self-verified. Awaiting V21 R1's R2.** Validator 103/0/0.
+
+---
+
+## 2026-08-15 — Reviewer Session (V21 R2) — ⭐⭐⭐ THE CORPUS CLOSES
+
+### Lesson
+**V21** · `video/v21` @ **`4342a22`** — 1 commit on R1's `4bee5f4`. Review branch `review/v21`,
+worktree `MMM-Agents-v21-review` (`D-038`).
+
+### Decision
+> ## ⭐⭐⭐ **`PASS`** — 0 CRITICAL, 0 MAJOR, 0 MINOR, 6 NOTE. HIGH confidence.
+
+**All four R1 findings discharged. V21 is `COMPLETE`.**
+⭐⭐ **The 21-video corpus is now ingested and independently reviewed end to end.**
+**Merged to integration per `D-024`.**
+
+### The four, each re-verified from source rather than from the remediation's account
+* **365 / `M1`** — the frame was extracted from `4342a22` and **re-cropped at 9×**: the four names
+  are **character-for-character** what `A-141` now records. The rewrite's **four additional
+  readings** (MIG Bank Trading Station, `GBPUSD,M15`, the three tabs, `TDI_MMM` / `Heidi_Mauro_closeAll`)
+  were **also read from the pixels and all four hold**. ⭐ **The restraint is right too** — `TDI_MMM`
+  is recorded and explicitly **not** related to the owner's 2023-era `MMM_TDI.txt`. All four
+  propagation sites corrected, the mastery-report misdirection removed, and **the real gap restated
+  intact**.
+* **366** — correction **withdrawn**, grammatical error **conceded**. ⭐ **R2 re-ran the word count on
+  a DIFFERENT window (296 s/46 s, 0.5× stretch) rather than repeating R1's: 5 `in` / 1 `and`, total
+  **12 of 16** across four model families.** ⚠️ **The per-model instability is the real lesson** —
+  three of the four families flipped between windows.
+* **367** — `BT_V21_0001.md` §5 corrected from *"NONE"*. ⭐ **`git diff` confirms `PT-050`,
+  `run_pt050.py` and `pt050_results.json` are all byte-identical — nothing re-run, pre-registration
+  untouched.**
+* **368** — ⭐ **pure renames** (blob hashes identical), arithmetic checked, `INDEX.md` updated, all
+  17 frames valid `HH-MM-SS`.
+
+### ⭐⭐ CUMULATIVE `FINAL_COURSE_REVIEW.md` — RE-ASSESSED
+**One of R1's three blockers is cleared (365).** ⚠️ **Two remain:** the **twelve `MINOR` items across
+four lessons** — V17 (244–249), V18 (264–268), V19 (303–304), V20 (348) — and the **self-verify
+decision**, still unnumbered after V14, V16 and V19 used it. ⭐ **V21 itself is fully discharged.**
+**The remaining work is a sweep, not a round** — nothing needs re-capturing, re-transcribing or
+re-testing — **but `D-003` makes it a fix round plus a verification round.**
+**Recommended: sweep V17–V20's twelve minors → get the self-verify decision → then write it.**
+
+⭐ **What V21 sharpened for that review:** `A-133` is now **permanently** open, so dimension **B** is
+**permanently blocked corpus-wide** — eight lessons carried it and the course ended without defining
+the blue tracer. `A-141` now has **four filenames**, the difference between an unnamed absence and a
+searchable one. And V21 R1's test of three **V21-native** event definitions (32.90 / 24.75 / 31.20
+against a claimed *"about 50"*) is the first real evidence toward the cumulative review's hardest
+question: **whether the `PT-044`–`PT-050` null record is a fact about the method or about this
+project's operationalisations.**
+
+### Git
+`review/v21`: merged `4342a22` (conflicts in `COURSE_PROGRESS.md` and `LOG.md` resolved — R2 row
+taken, both log entries kept), then the R2 review file and ledgers. **Merged to integration.**
+
+### Next Review Trigger
+The V17–V20 minor sweep, then `FINAL_COURSE_REVIEW.md`.

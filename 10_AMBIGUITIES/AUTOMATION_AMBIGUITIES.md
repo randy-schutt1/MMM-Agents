@@ -10307,3 +10307,87 @@ and gives no selection rule. **The two contextual candidates are:**
 chosen**, so a test can declare a selection convention, state it as a convention, and report the
 sensitivity across candidates. **`PT-049` does exactly that.** ⛔ **A declared test convention is not
 a course rule** (`D-010`, `D-030`), and `PT-049` says so in its own §2.
+
+---
+
+## A-140 — V21's *"lose at a discount"* is demonstrated only on the LOSS side
+
+**Opened:** 2026-08-15 by the V21 student session. **Status: OPEN.**
+
+V21 `[00:21:26]`–`[00:24:05]` shows that splitting a 3-lot budget (1 lot at entry, 2 at half the
+distance to stop) loses **200** where 3 lots at entry lose **300**. ⭐ **The arithmetic is correct and
+needs no test.**
+
+⛔ **The lesson never works the WIN case.** The same split **reduces size at the best price**, so it
+lowers the winning outcome as well as the losing one. **V21 asserts the benefit and does not
+quantify the cost**, and `[00:22:10]` says the numbers are *"to make the math simple"*.
+
+⚠️ **What would close it:** a matched comparison of the two structures over the same event set with
+a stated exit — **which needs a full trade model** (entry, stop, target, costs) that `D-006` defers
+to Phase 8. **`PT-050` §1a declined to build one and said so.**
+
+---
+
+## A-141 — the `High / Low Trainer` scripts are NAMED and INSTALLED on camera, and their CODE is nowhere
+
+**Opened:** 2026-08-15 by the V21 student session.
+**⚠️⚠️ AMENDED 2026-08-15 — V21 R1 `M1`, `REVIEW_INDEX.md` item 365. Status: OPEN, on corrected grounds.**
+
+> *Superseded title, retained per `REMEDIATION_PROTOCOL.md` §2:*
+> *"~~the `High / Low Trainer` script is described, installed on camera, and NOT PRESENT~~"*
+
+### ⛔ WHAT THIS RECORD GOT WRONG
+
+**As first filed it stated that *"no filename, no code, no parameter dialog"* is legible anywhere in
+75 minutes.** ⛔ **The filenames ARE legible — in a frame this session captured, named and committed
+itself**, `V21_00-49-33_scripts-pasted-into-folder.png`, **inside the very range
+`V21_MASTERY_REPORT.md` §2.3 sent a reviewer to re-sweep.** `E01`/`E11`, and it stood as the
+corpus's closing statement about its only mechanical artifact.
+
+### ⭐⭐ WHAT IS ACTUALLY LEGIBLE — THE MT4 NAVIGATOR TREE AT `49:33`
+
+```text
+Expert Advisors
+   Heidi_Mauro_closeAll
+   524 more…
+Custom Indicators            (collapsed)
+Scripts
+   &sm_Buy_Order_Trainer
+   &sm_Buy_Order_Trainer_Pct
+   &sm_Sell_Order_Trainer
+   &sm_Sell_Order_Trainer_Pct
+   142 more…
+```
+
+⭐⭐ **FOUR SCRIPT FILENAMES — AND THEY CONVERT TWO RECORDED INFERENCES INTO ATTESTATION:**
+
+| Was inferred | Now attested |
+|---|---|
+| `[00:41:49]` *"four scripts in there"*, read as *"at least four variants shipped"* | ⭐ **Exactly four `&sm_*_Order_Trainer*` entries** |
+| `[00:26:52]` *"the one I recommend using is **by order percent**"* | ⭐ **The `_Pct` suffix** — *"by order percent"* names the `…_Pct` pair |
+
+⭐ **The `&sm_` prefix is consistent with the author's initials and with MT4 sorting `&`-prefixed
+items to the top of the tree.** ⚠️ **That is a reading of a naming convention, not a stated fact.**
+
+⭐ **Also legible in the same frame, recorded so a future session need not re-derive it:** the
+platform is **`MIG Bank Trading Station — Classic — Demo Account`**, the chart **`GBPUSD,M15`**, the
+open tabs **`GBPUSD,M15` / `GBPCHF,M15` / `AUDUSD,H1`**, an expert advisor **`Heidi_Mauro_closeAll`**
+is installed, and the indicator pane is labelled **`TDI_MMM`**. ⚠️ **`TDI_MMM` is noted and NOT
+pursued** — a 2012 instance name, and this session claims no relation to the owner's 2023-era
+`MMM_TDI.txt` (`D-052`/`D-053`).
+
+### ⭐ WHAT IS STILL MISSING — THE SUBSTANCE OF THE GAP, WHICH SURVIVES INTACT
+
+⛔ **No code. No entry trigger. No fill logic. No order management. No exit logic. No parameter
+dialog.** The `51:38` frame is a bare desktop; the Navigator shows **names in a tree, not
+contents**, and nothing in the lesson opens an editor or a properties panel.
+
+⚠️ **`D-030` still bars reconstruction, for exactly the reason first recorded.** A grid whose
+spacing is known (`↕20 ↕20 ↕20`), whose risk dial is known (`1–5 %`) and whose cycle targets are
+known (`30 + 50 + 70`, *"most often +80"*) **is not the tool** — the trigger that places it, the
+logic that manages it and the condition that closes it are all absent, and a reconstruction would
+acquire the tool's authority without its behaviour.
+
+⭐ **What changed is the ACQUISITION PATH, and it changed for the better.** Four exact filenames are
+searchable; *"not even a filename exists"* implied there was nothing to search for. **`A-141`
+remains the highest-value acquisition available to this project.**
