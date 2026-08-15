@@ -50,7 +50,7 @@ that draft. **No adoption is proposed by this session.**
 | 2 | 4hr markups | ❌ | a drawing task; and the markup convention is not stated in V19 |
 | 3 | TDI-only trades | ❌ **BLOCKED** | `D-030`. V19 gives no TDI level, threshold or setting. The bands are not mentioned at all (`V19_SOURCE_NOTES.md` §6) |
 | 4 | The Big Board | ❌ | undefined in V19 — the phrase occurs only on the slide |
-| 5 | Moving-average-only trades | ❌ **BLOCKED** | `D-030`. *"Mustard"* is bound by `D-043` to a **colour**; V19 supplies no period, and *"blue tracer"* is undefined (`A-132`) |
+| 5 | Moving-average-only trades | ❌ **BLOCKED** | `D-030`. *"Mustard"* is bound by `D-043` to a **colour**; V19 supplies no period, and *"blue tracer"* is undefined (`A-133`) |
 | 6 | Pivot points | ❌ | V19 names them once (`[00:08:06]`) and defines nothing |
 | 7 | **`Use ADR and Hi/Lo Markers`** | ⚠️ **PARTIALLY** | ADR and prior-session extremes are computable from price alone. **The ADR lookback is NOT stated by V19 and is this session's convention** — see §3 |
 

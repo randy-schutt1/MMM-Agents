@@ -218,7 +218,7 @@ lesson prints a period next to a colour, so the pairing is not measured here. `k
 *"Blue tracer"* is spoken **15 times** and is load-bearing for the entry rule at `[00:31:29]`. The
 charts carry **two** candidate blue-family lines — a **cyan dashed horizontal** level and a **cyan
 solid sloping** average — and the lesson never says which. **This session did not resolve it and
-does not guess.** Opened as `A-132`.
+does not guess.** Opened as `A-133`.
 
 ---
 

@@ -9854,3 +9854,91 @@ of four homework items were refused with reasons rather than approximated. `Q-01
 corroborates rather than discovers, before it says anything else. **Five findings against that is a
 good round, and all five are arithmetic, ledger or citation-precision defects that touch no rule and
 no verdict.**
+
+---
+
+## 2026-08-14 — V19 INGESTION (`Bootcamp1 Wk9 052012 Part1`, Week 9 Part 1)
+
+**Session:** student. **Branch:** `video/v19`, in an isolated worktree at
+`/Users/randyschutt/Desktop/Trading/MMM-Agents-v19` per `D-038`. **Forked from `847ebd2`.**
+**Status at close:** **AWAITING REVIEW.** ⛔ **NOT merged to integration** — `D-003`.
+
+### GATE — VERIFIED, NOT ASSUMED
+
+Integration (`claude/add-documents-repository-fdfb3u`, `origin/HEAD`) tip = **`847ebd2`** =
+`merge(review/v18) … V19 GATE OPEN under D-024`, and `origin/review/v18` is **the same commit**.
+This worktree forked from it **before any V19 content commit existed**. **0 CRITICAL / 0 MAJOR
+opens the gate under `D-024`.** ⭐ **Third round running that the gate was checked rather than
+repeated from a briefing — and the first of the three with nothing to disclose.**
+
+### WHAT V19 IS
+
+`MARKET MAKER TRAP MOVE(S)` — `Trap Candle Patterns` / `Dealer Structures` / `Behavioral
+Analysis`, printed. Four structures: **Half-A-Batman** (and inverted), the **M**, the **W**, and
+**star formations**. The organising claim: the day's high and low are manufactured, the manufacture
+leaves a countable eight-bar signature, and the signature has a 30-minute clock on it. The
+Half-A-Batman is the stated exception — if the first move filled the dealer's book there is no
+second leg.
+
+### HEADLINE FINDINGS
+
+1. ⭐⭐ **TWO RULE LINES ARE WRITTEN INTO THE DECK ON CAMERA, AND BOTH BEFORE/AFTER PAIRS ARE
+   CAPTURED.** `M` slide `21:15` → PowerPoint editor `23:10` → `23:25` *"with in 30M"*; `W` slide
+   `45:00` → editor `50:19` → `50:34` *"with in 30 to 45 m"*. **These lines did not exist in the
+   course material before 2012-05-20.** ⚠ **And the two edits disagree** — `C-029`.
+2. ⭐⭐ **`PT-047` CONFIRMED on all eight cells** — primary Δ **+25.75 pips**, p **0.0007**, median
+   MFE(`HELD_ABOVE`) **43.2 pips** inside the lesson's own `[25,50]` band, `N3` clear. ⚠ **The
+   pre-registration missed an obvious objection** — the classifier's bars sat inside the outcome
+   window. **Raised by this session against itself, re-tested over a disjoint window, and the effect
+   GREW** (Δ → +26.90, p → 0.0005).
+3. ⭐⭐ **THE COMMITTED TRANSCRIPT CANNOT RENDER THE LETTER `M`.** The lesson's central structure
+   reads as *"the end"* throughout, and its printed title reads as *"Track King patterns fuel
+   structures"*. **The independent engine makes the same error, so it is the audio, not the
+   transcriber.** The deck settles both.
+4. ⭐ **`Q-020`** — the V17 review's V16–V20 template prediction **CONFIRMED from inside the block**
+   by direct diff, **V21's break corroborated** (V21 diffs against V19 exactly as V15 does). ⚠
+   "Byte clone" corrected to "identifier-substituted clone". ⭐⭐ **The trio scores TWO coincidental
+   true cells, double V18's** — one attaching `30-90 mins` to the very quantity V19 caps **below**
+   90. ⭐ **`EMA` is a clean zero**; the raw count of 4 is the substring inside *"email"*.
+5. ⭐ **§8a returns a FOURTH shape** — `0 s` to `49:10`, `−1 s` after, step bracketed to 49 seconds.
+   And frames `i = 0,1` show the latency×speed effect being **absorbed** by an absolute frame
+   schedule — **a candidate explanation for V12's and V14's constant `+16 s`.**
+6. ⭐ **TDI:** `[00:27:07]` *"since TDI **RSI line** tracks the closes"* (corrected from *"RSI mine"*
+   on a second engine) and `[00:56:25]` *"divergence on the TDI or **the RSI line**"* (**verbatim**).
+   **Corroborates the owner's `D-052` ruling; cited throughout as a recent owner ruling pending its
+   own commit; NOT re-litigated.** ⚠ **Limit stated everywhere: V19 never mentions the bands.**
+7. ⭐ ***"A yard" is `ADR`*** — Tier 1 evidence for `DECISION_DRAFT_D-051_ADR_INDICATOR.md`.
+   **Flagged, not adopted.**
+
+### ⚠ DEFECTS THIS SESSION IS REPORTING AGAINST ITSELF
+
+* ⚠⚠ **`SWF_CAPTURE_RECIPE.md` §9's two-pass order was NOT followed** — frames were read before the
+  source notes were written. Disclosed in `V19_SOURCE_NOTES.md` §0 with a structural, not
+  chronological, mitigation. **The session's most serious process defect.**
+* ⚠⚠ **The full-file independent ASR pass was NOT completed.** Two engines projected multi-hour
+  runtimes under load. **A pre-registered twelve-segment pass ran instead; seven segments
+  returned**, covering every load-bearing rule. **`S3`, `S8`, `S9`, `S10`, `S12` are owed.**
+* ⚠ **`PT-047` §3 called `W-B` an "out-of-window" replication. `W-B` contains `W-A`.** Corrected in
+  the report; **the pre-registration left unedited** per `COMMON_PROTOCOL.md` §9 rule 7.
+* ⚠ **The `D-047` identifier collision happened** — `A-131` was already V18's. Records renumbered
+  `A-132`–`A-135`. **The bulk renumber touched the already-committed `PT-047` and was REVERTED**,
+  because a one-character "harmless" edit is how that rule stops being a rule.
+* ⚠ **Three tracked `QA_REPORT*.txt` files were briefly symlinked** while wiring the Git-ignored
+  corpus into the worktree. Caught by `git status` and restored **before any commit**.
+* ⚠ **The deck's cover slide was not captured** — two 1× attempts failed at the play click and the
+  `GOTCHA 5` guard aborted both, as designed.
+
+### ARTIFACTS
+
+`02_TRANSCRIPTS/V19/`, `03_LESSON_NOTES/V19_{SOURCE_NOTES,INTERPRETATION}.md`,
+`04_SCREENSHOTS/V19/` (27 frames + `INDEX.md`), `05_HOMEWORK/V19/`,
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-047_*.md`, `06_MANUAL_BACKTEST/V19/BT_V19_0001.md`,
+`06_MANUAL_BACKTEST/scripts/{run_pt047,posthoc047,hw_v19}.py`,
+`07_MASTERY_REPORTS/V19_MASTERY_REPORT.md`. Ledgers: `Q-020`, `A-132`–`A-135`, `C-029`,
+`REVIEW_INDEX.md` items **285–301**, `COURSE_PROGRESS.md` V19 row + **V20 GATE** block,
+`CONCEPT_INDEX.md` (V18+V19 block — ⚠ **does not close item 264**).
+
+### NEXT ACTION
+
+**A REVIEWER session on `video/v19`** (`REVIEW_PROTOCOL.md`). **A student session must not proceed
+to V20.** Items **286**, **287**, **289**, **290** are addressed to the reviewer specifically.

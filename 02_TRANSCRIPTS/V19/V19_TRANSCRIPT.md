@@ -102,7 +102,7 @@ tail margin        9.0 s before the measured end of audio
 **The 9.0 s tail margin is the largest in the corpus so far** (V18's was 1.0 s). The final marker
 `[01:07:13]` carries a complete sentence and the audio does not obviously continue past it, but
 **this session did not verify the last nine seconds are silent** and does not claim they are. Open
-as `A-131`.
+as `A-132`.
 
 ### §2 — DURATION AGREES ON FOUR INDEPENDENT MEASUREMENTS
 

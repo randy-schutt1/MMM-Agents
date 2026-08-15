@@ -3127,3 +3127,38 @@ C-028 -- CLOSED AS RECORDED. No rule depends on it; no downstream artifact cites
   candle count. Retained as calibration evidence on V18's numeric reliability, and as
   a counter-example to Q-019's "None detected".
 ```
+
+---
+
+## C-029 — V19's deck states the M time cap as `30M` and the W time cap as `30 to 45 m`, and BOTH were written on camera
+
+**Raised:** V19, 2026-08-14 · **Tier 1 vs Tier 1 (the same deck against itself)**
+
+**The two statements:**
+
+| Slide | Printed line, after the on-camera edit | Frame |
+|---|---|---|
+| `The " M " Formation` | *"The Second Leg Rise can be slightly above the first, but must close below **with in 30M**"* | `V19_00-23-25_m-formation-slide-30m-added.png` |
+| `The W:` | *"The Second Leg correction can be slightly below the first, but must close above **with in 30 to 45 m**"* | `V19_00-50-34_w-formation-slide-30-to-45-added.png` |
+
+**Why this is a contradiction and not a spread:** the lesson states the W as **the exact mirror** of
+the M — `[00:44:54]` *"The W is exactly the opposite of the [M] formation"* — and the spoken rule
+for both is the same (`[00:22:48]` *"within 30 minutes"* / `[00:47:08]` *"in 30 minutes[,] 45 max"*).
+**Two slides for one mirrored rule were given two different caps.**
+
+⭐⭐ **AND BOTH EDITS ARE ON CAMERA, FORTY-FIVE MINUTES APART.** The `"M"` slide is edited at
+`21:15 → 23:10 (PowerPoint) → 23:25`; the `"W"` slide at `45:00 → 50:19 (PowerPoint) → 50:34`. The
+narration matches both (`[00:22:58]` *"I'm gonna change the slide"*; `[00:50:04]` *"Yes, I do need to
+add that to this [slide] as well"*). **This is not a legacy inconsistency inherited from an older
+deck — it was created during this recording**, which makes it dateable and makes the divergence a
+fact about the author's own intent on 2012-05-20 rather than about slide maintenance.
+
+**What is NOT in dispute:** that a cap exists, that it is measured from the second leg, and that
+**90 minutes is too long** (`[00:47:21]`).
+
+**Disposition:** **OPEN.** `D-048`'s tie-break ladder does not resolve it — both sides are Tier 1,
+same lesson, same author, same session, both printed. **It needs an owner ruling or a later
+lesson.** Every V19 artifact uses 30 as the working figure and 45 as the tolerance, and says so.
+
+**See also:** `A-134` (the verbal spread), `PT-047` §2a (which runs both caps as separate arms, and
+both confirm).

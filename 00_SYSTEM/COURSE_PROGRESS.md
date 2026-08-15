@@ -2516,7 +2516,7 @@ fabricate, interpolate, or infer Week 6 content.**
 | V16 | Wk7 P2 | 00:44:35 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/4m/11n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 222–225) · ⭐ **V17 GATE OPEN under D-024** · ⭐⭐ **the `D-004` deviation V16 declared is DISCHARGED** — V15's R1 returned 0C/0M and opened the gate unconditionally; only V15 item 197 reaches a record V16 amends (`A-095`) and V16's addendum does NOT inherit it · ⭐⭐ **`A-100`'s *"two weeks, 15 days"* CONFIRMED VERBATIM ON A THIRD ENGINE**; `PT-044` RE-DERIVED from its pre-registration and all three verdicts reproduce; **all five `A-106` pips EXACT**; `Q-017`'s paraphrase sub-pattern CONFIRMED · ⚠ **item 222: `A-101` declares the `M1`–`M4` construction unevidenced and V16's own chart frames carry it** (4 midpoint relations to ~1.5 px on 2 frames) — weighed for MAJOR, charged MINOR, **severity put to the owner** · ⚠ item 224: `PT-044`'s `W-D` ran 4 days wide, undeclared, and **that is the sole cause of its one "missed" prediction — run to its pre-registration it scores 5 OF 5** |
 | V17 | Wk8 P1 | 00:57:09 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/6m/13n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 244–249) · ⭐ **V18 GATE OPEN under D-024** · ⭐⭐ **the `D-004` gate was ACTUALLY OPEN THE WHOLE TIME** — V16's R1 merged at `0fee48c` **17:16:53**, before V17's first content commit `f55c2f3` **17:20:11**; the addendum's *"returned after this session's last content commit"* is refuted by the graph (item 246) and **the compounding never happened** · ⭐⭐ **`PT-045` RE-DERIVED from its pre-registration before the runner was opened and ARM A REPRODUCES TO FOUR DECIMAL PLACES**; the calendar-consecutive artefact RE-EXECUTED and it really does return a clean 4-of-4 refutation; the homework's `<50 pips` filter recomputed at **0.8512 / 0.8893**; `C-023`, `C-024`, `C-027`, `A-011` all confirmed on a third engine or off the pixels · ⭐⭐ **THE FABRICATION PATTERN IS SOLVED FOR THE WHOLE COURSE — two templates, A for 1–15 and 21, B for 16–20; V18/V19/V20 are BYTE CLONES of V17's (item 254)** · ⚠ item 244: `[00:11:22]` is *"an extra **week in between**"* on THREE engines, not *"weekend"* — **item 238's inference INVERTS and is ANSWERED, not returned** |
 | V18 | Wk8 P2 | 00:46:08 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | ⭐ **R1 REVISE** 0C/0M/5m/16n, HIGH, 2026-08-14, `D-003` satisfied | **IN REMEDIATION** (items 264–268) · ⭐ **V19 GATE OPEN under D-024** · ⭐⭐ **THE COMMITTED TRANSCRIPT INVERTS A RULE and R1 CONFIRMED IT FROM THE PIXELS** — `[00:19:40]` reads *"Counter trends are advised"*; both printed slides read `Counter Trend Is Ill Advised` (`On V1` / `on A1`). The raw line is retained verbatim and no artifact quotes it as a rule · ⭐⭐ **`PT-046` NULL RE-DERIVED ON INDEPENDENT REVIEWER CODE** — the pre-committed baseline `O2 = 0.5124 [0.4928, 0.5320]`, n = 2,498 reproduces EXACTLY; run-length mode 1 not 2; length-2 runs 366 vs 367 expected · ⭐⭐ **`N3` FIRED IN BOTH IMPLEMENTATIONS**, refusing a positive-lift replication as a boundary artefact · ⭐ **ALL 26 FRAME TIMECODES VERIFIED 26/26 FROM THE PIXELS**; the `0 → −3 s` drift is genuine and new to the corpus · ⭐ **the gate was OPEN and the session CHECKED rather than repeating a stale briefing** (item 278)
-| V19 | Wk9 P1 | 01:07:21 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
+| V19 | Wk9 P1 | 01:07:21 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | REVIEW REQUIRED | — | **AWAITING REVIEW** · ⭐⭐ **TWO RULE LINES WRITTEN INTO THE DECK ON CAMERA, AND BOTH BEFORE/AFTER PAIRS CAPTURED** — the `M` slide gains `with in 30M` at `23:25` (editor visible at `23:10`) and the `W` slide gains `with in 30 to 45 m` at `50:34` (editor at `50:19`). **These rule lines did not exist in the course material before 2012-05-20**, which is dateable and checkable — and ⚠ **the two edits DISAGREE** (`C-029`) · ⭐⭐ **`PT-047` CONFIRMED, 8 of 8 cells**, primary Δ = **+25.75 pips**, p = **0.0007**, median MFE(`HELD_ABOVE`) = **43.2 pips** inside the lesson's own `[25,50]` band, `N3` clear — **and the pre-registration MISSED an obvious objection** (the classifier's bars sat inside the outcome window), **raised by the session against itself, re-tested over a DISJOINT window, and the effect GREW** (Δ → +26.90, p → 0.0005) · ⭐⭐ **THE COMMITTED TRANSCRIPT CANNOT RENDER THE LETTER `M`** — the lesson's central structure reads as *"the end"* throughout, and its printed title *`Trap Candle Patterns` / `Dealer Structures`* reads as *"Track King patterns fuel structures"*. **The second engine makes the same error, so it is the audio, not the transcriber** · ⭐ **`Q-020`: the V17 review's V16-V20 template prediction CONFIRMED from inside the block by direct diff, and V21's break CORROBORATED** (V21 diffs against V19 exactly as V15 does) — **and the trio scores TWO coincidental true hits, double V18's**, one of which puts `30-90 mins` on the very quantity V19 caps BELOW 90 · ⭐ **`EMA` is a CLEAN ZERO** — the raw count of 4 is the substring inside *"email"* · ⭐ **§8a returns a FOURTH shape** (`0 s` → `−1 s`, step bracketed to 49 seconds) and the first two frames suggest **why V12/V14 measured `+16 s`** · ⚠⚠ **THE §9 TWO-PASS ORDER WAS NOT FOLLOWED, SELF-DISCLOSED** (item 286) · ⚠⚠ **THE FULL-FILE ASR PASS IS OWED** — 7 of 12 pre-registered segments returned (item 287) · ⚠ **Dimension B BLOCKED for the sixth lesson running** — the `blue tracer` is spoken 15× and never defined (`A-133`), and V19 was the lesson that should have supplied it |
 | V20 | Wk9 P2 | 00:45:49 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 | V21 | Wk10 | 01:14:47 | ✅ | ⚠️ | ⬜ | ⬜ | ⬜ | ⬜ | — | — | NOT STARTED |
 
@@ -2948,6 +2948,112 @@ Carry into V16, and read this before starting:
       content (an Asian-box chart with five EMAs), whatever the lesson and
       whatever the image behind it. Quarantine V16's trio on sight as Q-017;
       do not spend a session re-deriving what six entries have established.
+V20 GATE:            🔴 **CLOSED — AND THIS IS THE CORRECT STATE, NOT A PROBLEM.**
+                     V19's student work is submitted **AWAITING REVIEW** on
+                     branch `video/v19` and **has NOT been merged to
+                     integration** (`D-003`: review runs in a separate,
+                     independent session; the student cannot audit itself).
+                     **V20 does not open until V19's R1 returns**, and under
+                     `D-024` it opens on finding severity, not on verdict.
+
+                     ⭐ **THE V19 GATE WAS OPEN AND THIS SESSION VERIFIED IT
+                     AGAINST THE COMMIT GRAPH RATHER THAN TRUSTING ITS
+                     BRIEFING** — the third round running that the check was
+                     performed rather than assumed, and **the first of the
+                     three with nothing to disclose**: integration's tip and
+                     `origin/review/v18` were BOTH `847ebd2`, and this
+                     worktree forked from it before any V19 content commit
+                     existed. **No timing addendum was needed.**
+
+                     ⚠ **REMEDIATION DEBT IS NOW THREE DEEP**: V17's items
+                     **244-249**, V18's **264-268**, and V19 will add its own.
+                     None of the first two blocked V19's content, and the V19
+                     session checked that item by item rather than asserting
+                     it (`V19_MASTERY_REPORT.md` §0.1). ⭐ **Two of them touch
+                     V19 directly:**
+                       * **245** — its correction to `A-010` is *"how many
+                         candles… On a 15-minute chart, eight"*. **V19
+                         restates the eight-bar minimum FIVE times and adds
+                         `[00:41:32]` *"eight candles or greater… which is by
+                         the way two hours"*, which fixes the 15-minute
+                         timeframe ARITHMETICALLY.** The lesson never says
+                         `M15`. **Route 245's remediation through V19 §5.4.**
+                       * **264** — `CONCEPT_INDEX.md`. The V19 session added a
+                         V18+V19 block and **stated explicitly that this does
+                         NOT close 264**, which remains the remediating
+                         session's act.
+
+                     ⚠ **WHAT A V20 SESSION SHOULD CARRY FORWARD FROM V19:**
+
+                     (a) ⭐⭐ **V20 IS THE SAME NIGHT'S SECOND HALF** (`Wk9
+                         052012 Part2`). V19 ends **mid-example** at
+                         `[01:07:13]` with **no summary, no homework and no
+                         sign-off** — the shape of a file that continues.
+                         **Expect V20 to open mid-thought the way V18 did**,
+                         and do NOT expect it to state its own week or date:
+                         on V17/V18 the Part 2 was silent on both, and V19
+                         (a Part 1) states both. **That is open item 179's
+                         question and V20 is the case that tests it.**
+
+                     (b) ⚠⚠ **THE `blue tracer` IS THE COURSE'S LARGEST OPEN
+                         BLOCKER AND V19 DID NOT CLOSE IT** (`A-133`). Spoken
+                         **15 times**, load-bearing for V19's only entry rule,
+                         and never defined; the charts carry TWO candidate
+                         blue-family lines. **Dimension B has now been BLOCKED
+                         for six lessons.** If V20 defines it, say so loudly.
+
+                     (c) ⚠ **THE TIME CAP IS UNSETTLED AND THE DECK
+                         CONTRADICTS ITSELF ON CAMERA** (`A-134` / `C-029`):
+                         `30M` on the `M` slide, `30 to 45 m` on the `W`
+                         slide, both written during V19. **If V20 restates it,
+                         that is the single most valuable thing it can do.**
+
+                     (d) ⭐ **THE SCRIPTS ARE PROMISED FOR V21.** `[00:02:12]`
+                         *"We're gonna release the scripts on the last night
+                         of boot camp"*, and `[00:00:52]` fixes that as **June
+                         17th = V21**. **If the corpus holds a mechanical rule
+                         set, the course says it is there.** A forward
+                         EXPECTATION, not a forward read — `D-049` not invoked.
+
+                     (e) ⚠ **QUARANTINE V20's TRIO ON SIGHT AS `Q-021`.** It is
+                         the last member of the V16-V20 template block, and
+                         V19 confirmed the block by direct diff from inside it.
+                         ⭐ **But do NOT assume it is worthless: the template
+                         now lands COINCIDENTAL TRUE CELLS** — V18 one, V19
+                         **two**. **A true cell in these files is evidence of
+                         nothing**, and the danger is that one true number
+                         converts "obviously fabricated" into "mostly right".
+
+                     (f) ⭐ **V21's TRIO BREAKS THE TEMPLATE** — V19 measured
+                         it: V21 diffs against V19 exactly as V15 does
+                         (`32 / 30 / 26` lines). **The V16-V20 block is closed
+                         at five, as the V17 review predicted.**
+
+                     (g) ⚠⚠ **DO NOT REPEAT V19's TWO PROCESS DEFECTS.**
+                         V19 violated `SWF_CAPTURE_RECIPE.md` §9's two-pass
+                         order and did not complete a full-file ASR pass.
+                         **A 67-minute lesson at large-v3 on this machine
+                         projected 4h28m under load — START THE ASR PASS
+                         FIRST, BEFORE the sweep, not alongside it.** That one
+                         scheduling change is the whole fix.
+
+                     (h) ⭐ **§8a IS A FOURTH SHAPE AGAIN** — measure it, never
+                         carry V19's forward. And note V19's finding that an
+                         **absolute** frame schedule absorbs the play-click
+                         latency while an **incremental** one accumulates it
+                         into a constant `+16 s`, which may be why V12 and V14
+                         measured exactly that.
+
+                     (i) ⭐ **`D-052` (the owner's TDI band ruling: the bands
+                         are a deviation of the RSI LINE) IS SETTLED BUT WAS
+                         NOT YET ON `847ebd2`.** V19 cites it throughout as **a
+                         recent owner ruling pending its own commit** and does
+                         NOT re-litigate it. **V19's own TDI lines corroborate
+                         it and their limit is stated: V19 establishes what the
+                         RSI line is, and says NOTHING about what the bands are
+                         computed from.** If `D-052` landed renumbered, every
+                         V19 citation needs updating.
+
 V19 GATE:            🟢 **OPEN.** ⭐⭐ **V18's R1 RETURNED 2026-08-14** on branch
                      `review/v18`: **REVISE, 0 CRITICAL / 0 MAJOR / 5 MINOR /
                      16 NOTE, HIGH confidence, `D-003` satisfied.** Under

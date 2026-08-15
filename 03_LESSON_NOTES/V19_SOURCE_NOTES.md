@@ -182,7 +182,7 @@ He immediately widens it and then narrows it again:
 
 ⚠ **The lesson does not settle on one number.** `30`, `30–45`, `45 tops`, and `30 minutes to an
 hour` all appear, and `[00:26:12]` explicitly ranks them (*"30 minutes is a good rule"*). This is
-carried as an ambiguity, not resolved — see `A-133`.
+carried as an ambiguity, not resolved — see `A-134`.
 
 ### 5.3 ⭐⭐ THE CONSEQUENCE OF FAILING THE TIME CAP
 
@@ -403,7 +403,7 @@ change the slide"* → `[00:23:17]` *"Save it and we're back in business"*; and 
 ⚠⚠ **AND THE TWO EDITS DO NOT SAY THE SAME THING.** The M slide is given **`30M`**; the W slide is
 given **`30 to 45 m`**. The *spoken* rule for both is 30 with 45 as the maximum. **The deck's own
 asymmetry is real, it is on camera, and it is not resolved by anything in this lesson.** Carried as
-`A-133` together with §5.2's spread.
+`A-134` together with §5.2's spread.
 
 ⭐ **Why this matters as evidence, beyond V19.** These two rule lines did not exist in the deck
 before this recording. **Any earlier lesson's copy of these slides will not carry the time cap**, and
@@ -428,7 +428,7 @@ standing homework.** Flagged for that draft. **No adoption is proposed by this s
 ### 10.3 WHAT THE DECK DOES **NOT** SETTLE
 
 * **The `blue tracer` is not identified.** Spoken 15 times, load-bearing at `[00:31:29]`, and the
-  charts carry two candidate blue-family lines. **Not resolved. `A-132`.**
+  charts carry two candidate blue-family lines. **Not resolved. `A-133`.**
 * **No frame prints a moving-average period beside a colour**, so V19 adds **no** new evidence to
   the `D-041`/`D-043` nickname↔colour question. The yellow-as-*"mustard"* usage at `[00:31:29]` is
   *consistent* with `D-043` and is recorded as consistency only.

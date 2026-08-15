@@ -42,7 +42,7 @@ to an hour`, and the two on-camera slide edits disagree with each other (`30M` o
 `30 to 45 m` on the W slide). `[00:26:12]` ranks them — *"30 minutes is a good rule"* — and
 `[00:47:21]` supplies the only hard exclusion: *"90 minutes is too long"*. **The defensible reading
 is: 30 minutes is the working figure, 45 is the tolerance, beyond 45 the setup is void.** That is an
-interpretation of a spread, not a transcription. `A-133`.
+interpretation of a spread, not a transcription. `A-134`.
 
 ### 2.2 The consequence of failing the cap
 
@@ -156,7 +156,7 @@ reads divergence off**. That is consistent with the ruling and independent of it
 **never defined**; the charts carry two candidate blue-family lines and no frame prints a period
 beside a colour. *"Mustard"* is bound by `D-043` to a **colour**, and V19 supplies no period.
 
-**`D-030` applies without qualification: the definitions are not approximated.** `A-132`.
+**`D-030` applies without qualification: the definitions are not approximated.** `A-133`.
 
 ---
 
@@ -201,11 +201,11 @@ two-pass method is seeing what the visuals corrected.
 
 | ID | Subject |
 |---|---|
-| `A-131` | The 9.0-second gap between the last marker and the end of audio is unverified |
-| `A-132` | The `blue tracer` is undefined; two candidate lines on the charts |
-| `A-133` | The second-leg time cap is `30` / `30–45` / `45 tops` / `30–60`, and the two on-camera slide edits disagree with each other |
+| `A-132` | The 9.0-second gap between the last marker and the end of audio is unverified |
+| `A-133` | The `blue tracer` is undefined; two candidate lines on the charts |
+| `A-134` | The second-leg time cap is `30` / `30–45` / `45 tops` / `30–60`, and the two on-camera slide edits disagree with each other |
 | `C-029` | The deck states the M cap as `30M` and the W cap as `30 to 45 m` for a rule the audio states identically for both |
 
-⚠ **`A-134` was opened for the `25 to 55` / `25 to 50` conflict and CLOSED in the same session** when
+⚠ **`A-135` was opened for the `25 to 55` / `25 to 50` conflict and CLOSED in the same session** when
 an independent engine read `50` at both disputed markers. **It is not carried forward.** The number
 is `25 to 50 pips`.
