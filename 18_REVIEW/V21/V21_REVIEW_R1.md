@@ -430,6 +430,6 @@ FINAL_COURSE_REVIEW.md: NOT YET - see §8.
    the runner.
 4. **`M1` was found by magnifying a frame, not by a tool** — the Navigator panel is legible at 6× in
    the committed PNG at its original resolution. **No re-capture was needed.**
-5. **Item numbering.** Items **365–379** allocated against integration at `19e6c2a`, where **356** was
+5. **Item numbering.** Items **365–380** allocated against integration at `19e6c2a`, where **356** was
    the highest item and `video/v21` holds **357–364**. **No collision.** Re-check at merge-back per
    `D-047`.
