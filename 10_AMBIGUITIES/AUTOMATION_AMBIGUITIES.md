@@ -10120,3 +10120,75 @@ A-131 -- OPEN. The three-session partition used anywhere in the V18 set is a DEC
   CONVENTION OF THE TEST (PT-046 s2a), never a reading of the lesson. DO NOT CODE
   session boundaries from V18.
 ```
+
+---
+
+## A-132 — V19's transcript ends 9.0 seconds before the audio does, and the gap is unverified
+
+**Raised:** V19, 2026-08-14 · **Tier 1 (measurement)**
+**Evidence:** the committed marker grid's last entry is `[01:07:13]` = 4,033 s; the extracted audio
+measures **4042.004898 s**. The final marker carries a complete sentence (*"it's an essence broken
+down railroad tracks which gives you an extra entry and earlier entry"*), and the player's burned
+readout clamps at `67:22`.
+**The ambiguity:** **this session did not verify the last nine seconds are silent.** They may hold
+speech the pre-ingestion transcriber dropped, or they may be room tone. **The largest tail margin in
+the corpus so far** — V18's was 1.0 s.
+**Why it matters:** V19 ends mid-example with no summary and no homework, which is read in
+`V19_INTERPRETATION.md` §3 as evidence that the recording continues into V20. **If the last nine
+seconds contain a sign-off, that reading weakens.**
+**How to close it:** transcribe `4033`–`4042` s on any engine. **Cheap; simply not done.**
+**Status:** OPEN
+
+---
+
+## A-133 — the `blue tracer` is undefined, and it blocks V19's entry rule and Dimension B
+
+**Raised:** V19, 2026-08-14 · **Tier 1 (absence)**
+**Evidence:** *"blue tracer"* / *"tracer"* is spoken **15 times** in V19 and is load-bearing for the
+only entry rule the lesson states: `[00:31:29]` *"He closed below the blue tracer and collapsed
+inside the mustard moving average only trade"*; `[00:39:56]` *"the deal[er] closes back below the
+blue tracer[,] you make an [M] in the mustard"*. **V19 never says what it is** — not a period, not a
+type, not a setting.
+**And the frames do not settle it:** the charts carry **two** candidate blue-family lines, a **cyan
+dashed horizontal** level and a **cyan solid sloping** average, and no frame in this lesson prints a
+period beside a colour (`04_SCREENSHOTS/V19/INDEX.md` §2h).
+**Consequence, stated plainly:** `D-030` blocks every V19 entry rule, and **Dimension B is BLOCKED
+rather than `NOT APPLICABLE`** — V19 *does* state a recognition rule; the project cannot execute it.
+**How to close it:** a later lesson, an owner ruling, or a `D-045`-class artifact (the owner's MT4
+template) that names the line.
+**Status:** OPEN
+
+---
+
+## A-134 — V19's second-leg time cap is stated four different ways, and the deck contradicts itself on camera
+
+**Raised:** V19, 2026-08-14 · **Tier 1 (internal spread)**
+**Evidence, spoken:** `[00:22:48]` *"within 30 minutes"*; `[00:23:47]` *"45 minutes tops"*;
+`[00:25:53]` *"within 30 to 45 minutes"*; `[00:26:12]` *"in 30 to 45 minutes[,] 30 minutes is a good
+rule"*; `[00:39:21]` *"in 30 minutes to an hour"*; and the only exclusion, `[00:47:21]` *"90 minutes
+is too long"*.
+**Evidence, printed — and this is the part that makes it more than a verbal spread:** the cap is
+**added to two slides on camera during this lesson**, and **the two additions disagree** — the `"M"`
+slide is given **`with in 30M`** (`23:25`) and the `"W"` slide **`with in 30 to 45 m`** (`50:34`).
+See `C-029`, which records the contradiction; this record holds the ambiguity.
+**Working reading used by every V19 artifact, and labelled as a reading:** 30 minutes is the working
+figure, 45 the tolerance, beyond 45 void. `PT-047` uses 30 as primary and 45 as a pre-declared
+robustness arm, and both arms confirm.
+**How to close it:** an owner ruling, or V20 — the same night's second half — restating it.
+**Status:** OPEN
+
+---
+
+## A-135 — ⭐ CLOSED IN THE SESSION THAT OPENED IT — the `25 to 55` / `25 to 50` strike-zone figure
+
+**Raised:** V19, 2026-08-14 · **CLOSED:** V19, 2026-08-14, same session
+**The ambiguity as raised:** the committed transcript reads *"25 to 55"* at `[00:23:57]` and
+`[00:24:32]`, and *"25 to 50"* at `[00:25:06]` and `[00:25:31]` — the same rule, four times, two
+different numbers, inside 100 seconds.
+**What closed it:** an independent `openai-whisper medium.en` pass over pre-registered segment `S5`
+reads **`25 to 50` at BOTH disputed markers** — *"25 to 50 pips higher"* and *"25 to 50 pips out"*
+(`V19_TRANSCRIPT.md` §5 correction #2). **All four instances are `25 to 50 pips`; the two `55`s are
+ASR defects**, refuted by a second engine *and* by the committed file's own two later readings.
+**Recorded rather than deleted** so the record shows an ambiguity that was opened, tested and
+resolved, instead of quietly disappearing.
+**Status:** **CLOSED** — the figure is `25 to 50 pips`.

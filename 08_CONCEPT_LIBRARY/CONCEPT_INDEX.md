@@ -11,12 +11,17 @@ Naming: `CL-NNN_concept-name.md`
 
 ```text
 CONCEPTS:        0
-LESSONS STUDIED: 17 (V01-V14 studied; V15, V16 and V17 studied and submitted
-                     as REVIEW REQUIRED. See COURSE_PROGRESS.md for per-lesson
+LESSONS STUDIED: 19 (V01-V14 studied; V15-V19 studied and submitted as
+                     REVIEW REQUIRED. See COURSE_PROGRESS.md for per-lesson
                      review status -- several are COMPLETE only in the
                      qualified SELF-VERIFIED AT OWNER DIRECTION sense, and
                      V16 and V17 were both opened with their D-004 gate
-                     CLOSED.)
+                     CLOSED. V18 and V19 were both opened on a gate that was
+                     OPEN, verified against the commit graph rather than
+                     assumed.)
+
+                     V18's row was added by the V19 session, discharging the
+                     omission REVIEW_INDEX item 264 charged against V18.
 ```
 
 > **UPDATED 2026-08-14 (V16 session).** `LESSONS STUDIED` read **`3`** while sixteen
@@ -48,6 +53,37 @@ LESSONS STUDIED: 17 (V01-V14 studied; V15, V16 and V17 studied and submitted
 >
 > **The rule below — no concept without evidence, no numeric thresholds in the Student Phase —
 > holds after seventeen lessons, and V17 is the clearest demonstration of why.**
+
+> **UPDATED 2026-08-14 (V19 session), COVERING V18 AND V19.** `LESSONS STUDIED` **17 → 19**.
+> `CONCEPTS` unchanged at **0**.
+>
+> ⚠ **V18's row is added here by the V19 session, not by V18's.** `REVIEW_INDEX.md` open item
+> **264** charged the V18 session with skipping this file, breaking a convention V16 and V17 both
+> followed. **The convention is restored here; item 264 itself remains OPEN against V18 and is not
+> closed by this entry** — closing it is the remediating session's act, not this one's.
+>
+> **V19 is the closest the corpus has come to a promotable rule, and it still does not clear the
+> bar.** V19 supplies a rule that is *spoken*, *repeated six times*, *mirrored for the W*,
+> *confirmed verbatim on an independent ASR engine*, **written into the deck on camera**, and
+> **tested and CONFIRMED against the corpus** (`PT-047`: Δ = +25.75 pips, p = 0.0007, eight of
+> eight cells, `N3` clear). ⛔ **It is still not promoted, for three reasons that are measured
+> rather than argued:**
+>
+> * ⚠ **The rule's own number is contradicted by the deck that carries it.** The `M` slide says
+>   `30M`; the `W` slide says `30 to 45 m` — **both written on camera, forty-five minutes apart**
+>   (`C-029`, `A-134`). **A concept promoted today would have to pick one, and the course has not.**
+> * ⚠ **`PT-047`'s event definition is the TEST's convention, not the course's** (`PT-047` §2b).
+>   The lesson points at charts and says *"the previous high"*. **A confirmation of an
+>   operationalisation is not a confirmation of a rule.**
+> * ⚠ **The entry that would make it tradeable is blocked.** V19's only stated entry needs the
+>   *"blue tracer"*, spoken 15 times and never defined (`A-133`), so **Dimension B is BLOCKED for
+>   the sixth lesson running** — and V19 was the lesson that should have supplied it.
+>
+> ⭐ **This is the sharpest test the standing rule has faced.** Every previous refusal rested on a
+> rule being under-specified. **V19's rule is well-specified enough to test, and it passed** — and
+> it is still refused, because a *statistical* confirmation of *this session's* operationalisation
+> is not the *course's* definition. **The rule below is doing exactly the work it was written to
+> do, and this is the first time that has cost something.**
 
 > **V16 specifically, because it is the strongest case for promotion the corpus has
 > produced and it still fails.** V16 supplies the most completely specified rule in

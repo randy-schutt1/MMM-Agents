@@ -10130,3 +10130,277 @@ multiplier being wrong.** Not inferred; asked.
 `D-054` collision resolved: stop/targets `D-054`→**`D-055`**, MMM `.tpl`/time-ribbon
 `D-055`→**`D-056`** (both still **UNADOPTED**, substance unchanged, rationale text corrected in
 both). Three byte-identical `" 2"` sync-artifact duplicates deleted from `06_MANUAL_BACKTEST/tools/`.
+## 2026-08-14 — V19 INGESTION (`Bootcamp1 Wk9 052012 Part1`, Week 9 Part 1)
+
+**Session:** student. **Branch:** `video/v19`, in an isolated worktree at
+`/Users/randyschutt/Desktop/Trading/MMM-Agents-v19` per `D-038`. **Forked from `847ebd2`.**
+**Status at close:** **AWAITING REVIEW.** ⛔ **NOT merged to integration** — `D-003`.
+
+### GATE — VERIFIED, NOT ASSUMED
+
+Integration (`claude/add-documents-repository-fdfb3u`, `origin/HEAD`) tip = **`847ebd2`** =
+`merge(review/v18) … V19 GATE OPEN under D-024`, and `origin/review/v18` is **the same commit**.
+This worktree forked from it **before any V19 content commit existed**. **0 CRITICAL / 0 MAJOR
+opens the gate under `D-024`.** ⭐ **Third round running that the gate was checked rather than
+repeated from a briefing — and the first of the three with nothing to disclose.**
+
+### WHAT V19 IS
+
+`MARKET MAKER TRAP MOVE(S)` — `Trap Candle Patterns` / `Dealer Structures` / `Behavioral
+Analysis`, printed. Four structures: **Half-A-Batman** (and inverted), the **M**, the **W**, and
+**star formations**. The organising claim: the day's high and low are manufactured, the manufacture
+leaves a countable eight-bar signature, and the signature has a 30-minute clock on it. The
+Half-A-Batman is the stated exception — if the first move filled the dealer's book there is no
+second leg.
+
+### HEADLINE FINDINGS
+
+1. ⭐⭐ **TWO RULE LINES ARE WRITTEN INTO THE DECK ON CAMERA, AND BOTH BEFORE/AFTER PAIRS ARE
+   CAPTURED.** `M` slide `21:15` → PowerPoint editor `23:10` → `23:25` *"with in 30M"*; `W` slide
+   `45:00` → editor `50:19` → `50:34` *"with in 30 to 45 m"*. **These lines did not exist in the
+   course material before 2012-05-20.** ⚠ **And the two edits disagree** — `C-029`.
+2. ⭐⭐ **`PT-047` CONFIRMED on all eight cells** — primary Δ **+25.75 pips**, p **0.0007**, median
+   MFE(`HELD_ABOVE`) **43.2 pips** inside the lesson's own `[25,50]` band, `N3` clear. ⚠ **The
+   pre-registration missed an obvious objection** — the classifier's bars sat inside the outcome
+   window. **Raised by this session against itself, re-tested over a disjoint window, and the effect
+   GREW** (Δ → +26.90, p → 0.0005).
+3. ⭐⭐ **THE COMMITTED TRANSCRIPT CANNOT RENDER THE LETTER `M`.** The lesson's central structure
+   reads as *"the end"* throughout, and its printed title reads as *"Track King patterns fuel
+   structures"*. **The independent engine makes the same error, so it is the audio, not the
+   transcriber.** The deck settles both.
+4. ⭐ **`Q-020`** — the V17 review's V16–V20 template prediction **CONFIRMED from inside the block**
+   by direct diff, **V21's break corroborated** (V21 diffs against V19 exactly as V15 does). ⚠
+   "Byte clone" corrected to "identifier-substituted clone". ⭐⭐ **The trio scores TWO coincidental
+   true cells, double V18's** — one attaching `30-90 mins` to the very quantity V19 caps **below**
+   90. ⭐ **`EMA` is a clean zero**; the raw count of 4 is the substring inside *"email"*.
+5. ⭐ **§8a returns a FOURTH shape** — `0 s` to `49:10`, `−1 s` after, step bracketed to 49 seconds.
+   And frames `i = 0,1` show the latency×speed effect being **absorbed** by an absolute frame
+   schedule — **a candidate explanation for V12's and V14's constant `+16 s`.**
+6. ⭐ **TDI:** `[00:27:07]` *"since TDI **RSI line** tracks the closes"* (corrected from *"RSI mine"*
+   on a second engine) and `[00:56:25]` *"divergence on the TDI or **the RSI line**"* (**verbatim**).
+   **Corroborates the owner's `D-052` ruling; cited throughout as a recent owner ruling pending its
+   own commit; NOT re-litigated.** ⚠ **Limit stated everywhere: V19 never mentions the bands.**
+7. ⭐ ***"A yard" is `ADR`*** — Tier 1 evidence for `DECISION_DRAFT_D-051_ADR_INDICATOR.md`.
+   **Flagged, not adopted.**
+
+### ⚠ DEFECTS THIS SESSION IS REPORTING AGAINST ITSELF
+
+* ⚠⚠ **`SWF_CAPTURE_RECIPE.md` §9's two-pass order was NOT followed** — frames were read before the
+  source notes were written. Disclosed in `V19_SOURCE_NOTES.md` §0 with a structural, not
+  chronological, mitigation. **The session's most serious process defect.**
+* ⚠⚠ **The full-file independent ASR pass was NOT completed.** Two engines projected multi-hour
+  runtimes under load. **A pre-registered twelve-segment pass ran instead; seven segments
+  returned**, covering every load-bearing rule. **`S3`, `S8`, `S9`, `S10`, `S12` are owed.**
+* ⚠ **`PT-047` §3 called `W-B` an "out-of-window" replication. `W-B` contains `W-A`.** Corrected in
+  the report; **the pre-registration left unedited** per `COMMON_PROTOCOL.md` §9 rule 7.
+* ⚠ **The `D-047` identifier collision happened** — `A-131` was already V18's. Records renumbered
+  `A-132`–`A-135`. **The bulk renumber touched the already-committed `PT-047` and was REVERTED**,
+  because a one-character "harmless" edit is how that rule stops being a rule.
+* ⚠ **Three tracked `QA_REPORT*.txt` files were briefly symlinked** while wiring the Git-ignored
+  corpus into the worktree. Caught by `git status` and restored **before any commit**.
+* ⚠ **The deck's cover slide was not captured** — two 1× attempts failed at the play click and the
+  `GOTCHA 5` guard aborted both, as designed.
+
+### ARTIFACTS
+
+`02_TRANSCRIPTS/V19/`, `03_LESSON_NOTES/V19_{SOURCE_NOTES,INTERPRETATION}.md`,
+`04_SCREENSHOTS/V19/` (27 frames + `INDEX.md`), `05_HOMEWORK/V19/`,
+`06_MANUAL_BACKTEST/PRE_REGISTERED/PT-047_*.md`, `06_MANUAL_BACKTEST/V19/BT_V19_0001.md`,
+`06_MANUAL_BACKTEST/scripts/{run_pt047,posthoc047,hw_v19}.py`,
+`07_MASTERY_REPORTS/V19_MASTERY_REPORT.md`. Ledgers: `Q-020`, `A-132`–`A-135`, `C-029`,
+`REVIEW_INDEX.md` items **285–301**, `COURSE_PROGRESS.md` V19 row + **V20 GATE** block,
+`CONCEPT_INDEX.md` (V18+V19 block — ⚠ **does not close item 264**).
+
+### NEXT ACTION
+
+**A REVIEWER session on `video/v19`** (`REVIEW_PROTOCOL.md`). **A student session must not proceed
+to V20.** Items **286**, **287**, **289**, **290** are addressed to the reviewer specifically.
+
+---
+
+## 2026-08-14 — Reviewer Session
+
+### Lesson
+
+**V19** — `Bootcamp1 Wk9 052012 Part1 (67mins).swf`, Week 9 Part 1, 2012-05-20.
+Branch `video/v19` @ `854d402`, 7 commits, forked from `847ebd2`.
+
+### Review Objective
+
+Independent mastery audit, `D-003`. This session authored no V19 artifact and did not
+participate in the ingestion. Reviewed on `review/v19` in a dedicated worktree.
+
+### ⚠ A HYGIENE EVENT, DISCLOSED FIRST
+
+**The primary checkout was in use by another session during this review.** `HEAD` moved from
+`review/v19` to `tools/indicator-folder-survey-and-owner-risk-rule` underneath this session
+mid-audit. All work from that point was moved into `/Users/randyschutt/Desktop/Trading/MMM-Agents-review-v19`
+(`D-038`) and **every quantitative result reported was re-run there from a clean tree.**
+**No commit was made to the shared checkout.** Wiring the git-ignored corpus in was done by
+symlinking the CSVs individually, never the directory, with `git status` checked for
+type-changes afterwards — **zero**. That is the step item **300** warns about, and the warning
+was useful.
+
+### Source Evidence Reviewed — FIRST, per `REVIEW_PROTOCOL.md` §3
+
+* The `.swf` itself — **SHA-256 re-computed to `7e8a1c2b…5c1ab28e` and length to 25,694,598
+  bytes, BOTH matching `SOURCE_MANIFEST.md` exactly.**
+* Its audio — extracted independently, **4042.005 s**.
+* **The four genuinely-owed ASR segments plus `S1` and three further probes**, `whisper
+  medium.en`. ⭐ **Every one corroborates the student's reading; nothing is overturned.**
+* The committed transcript, read in the **body** at every load-bearing marker.
+* **Six deck frames as pixels**, burned timecodes compared with filenames.
+* The three quarantined `Q-020` files across seven lessons — SHA-256, byte length and `diff`.
+
+### What Was Re-Derived Rather Than Read
+
+* `run_pt047.py` / `posthoc047.py` — **`pt047_results.json` came back BYTE-IDENTICAL.**
+* `06_MANUAL_BACKTEST/scripts/rev_pt047_independent.py` — **written from `PT-047` §3–§5 alone**,
+  vectorised scan, close-count classifier, **different seed**, plus a rank test the runner does
+  not contain. ⭐⭐ **Every `n`, every median and every Δ on all eight cells reproduces EXACTLY**,
+  as does the day accounting (256/2, 512/3).
+* Four robustness probes: the **60-minute arm** (item 290), `MAX_AGE` sensitivity, all-events-per-day,
+  and Mann-Whitney U. ⭐ **The test survives all four.**
+* `hw_v19.py` — byte-identical. `validate_project.py` — **103 / 0 / 0**.
+
+### Findings
+
+> **REVISE — 0 CRITICAL / 1 MAJOR / 3 MINOR / 18 NOTE. HIGH confidence.**
+
+**⚠️⚠️ `M1` / item 302 — MAJOR, `E24`.** Not one confidence interval is reported anywhere in the
+V19 quantitative chain, while `BT_V19_0001.md` §0a classifies the observation `EVIDENTIAL` —
+which `BACKTEST_EVIDENCE_STANDARD.md` §5 **defines** as requiring one, §4.2 requires on every
+rate, and §7 makes **at least `MAJOR`**. ⭐⭐ **With the intervals computed, BOTH LEGS of the
+`CONFIRMED` gate lie inside the 95 % interval of failing: Δ = +25.75 `[7.95, 38.60]` against a
+pre-registered materiality floor of 10, and median `O1`(`HELD`) = 43.20 `[32.30, 54.50]` against
+a band closing at 50.** ⚠ **A regression, not a novel demand** — `BT_V17_0001.md` and
+`BT_V18_0001.md` both carry Wilson columns, `mmm_lib` ships `boot_ci()`, and twelve prior
+runners call it. ⛔ **The verdict is NOT asked to change**; the direction and non-randomness are
+robust (`p` = 0.0004 on an independent seed, Mann-Whitney `p` = 7.0 × 10⁻⁵).
+
+**`m1` / item 303 — MINOR.** ⭐ **`S8` RETURNED and `S1` is NOT missing** — the two runs were
+concatenated under one header. **Eight of twelve returned, four owed**, not seven and five. The
+three `S1` citations are **sound**. The debt was **overstated**, which is why it is `MINOR`.
+
+**`m2` / item 304 — MINOR.** `V19_INTERPRETATION.md` §2.6 says the manual backtest *"goes after"*
+the star-formation claim. **It does not** — `PT-047` tests the time cap and §1a expressly
+excludes the formations. **V19's star claim remains untested.**
+
+**`m3` / item 305 — MINOR.** Item 286 answered: the §9 two-pass order was not followed, and ⭐ **the
+claimed mitigation HOLDS UNDER A FULL LEAK TEST** — exactly one frame-derived datum in §§1–9
+(`HOS`), explicitly labelled and cross-referenced to §10.
+
+**The reviewer-addressed items, adjudicated:** **286** answered (`m3`, verified clean); **287**
+answered **and its debt discharged** (item 309); **289** answered — the post-hoc reproduces, and
+the reviewer relied on four independent probes instead; **290** answered and **sharpened from
+*"very likely"* to certain**, with the twist that Δ **grows** at 60 minutes so `N3` would have
+returned `FRAGILE` on a strengthening result (item 308).
+
+### Required Corrections
+
+1. **Item 302** — add Wilson/bootstrap intervals to `BT_V19_0001.md` §2, a qualifying sentence to
+   §0, a line to §5's *"does NOT establish"*, and intervals to `V19_HOMEWORK.md` §§4–6.
+   ⛔ **Do not change the verdict, the decision rule, or `PT-047`.**
+2. **Item 303** — correct the ASR returned/owed lists in four places; split the `S8` block;
+   mark the four owed segments **DISCHARGED** by this round.
+3. **Item 304** — fix the §2.6 cross-reference.
+4. **Item 305** — no student action; the fix belongs to the recipe (item 306).
+
+### Decision
+
+**REVISE.** ⛔ **V20's gate is CLOSED** under `D-024` — one `MAJOR`.
+🔷 **Item 302's severity is put to the owner**, as item 222's was at V16. **If it reads as
+`MINOR`, the gate opens.**
+
+### Git
+
+`review/v19` from `video/v19` @ `854d402`. **NOT merged to integration** — every prior review
+branch merged on a `0C/0M` round and this one does not. ⭐ The `D-047` re-check nevertheless
+**passes against the moved integration tip** (`cf1fda9`): seven first-parent commits since the
+fork added **no `A-1xx` and no `C-0xx`**, so `A-132`–`A-135` and `C-029` remain free.
+
+### Next Review Trigger
+
+Student resubmission of V19 with items 302–304 applied. **A short round — item 302 adds figures
+rather than changing any.**
+
+---
+
+## 2026-08-15 — V19 Fix Round (item 302), AT OWNER DIRECTION
+
+### ⚠️⚠️ `D-003` STATUS, DECLARED FIRST
+
+**`D-003` IS NOT SATISFIED FOR THIS ROUND.** The session that raised item 302 in `V19_REVIEW_R1.md`
+also applied and closed it, on the owner's explicit authorisation (*"Fix the major"*) **for this
+round only**. **There was no R2 and no independent re-review.** Item 302 is recorded
+**`CLOSED — SELF-VERIFIED AT OWNER DIRECTION`**, never `CLOSED — VERIFIED`. **Fifth use of the
+pattern**, after V09 R2 (81–83), V10 R1 (91–94), V12 R1 (137–138) and V14 R1 (172–176).
+
+⭐ **AND THE OWNER DID NOT DOWNGRADE THE SEVERITY.** R1 put item 302's severity to him as an
+overrulable call; he directed a **fix** instead, which is the other available answer. **The finding
+stands at `MAJOR` in the permanent record and the gate opens because it was FIXED, not because it
+was reclassified.** `REVIEW_PROTOCOL.md` §8's bar on softening a `MAJOR` to unblock work is
+untouched by this outcome.
+
+### What Was Changed
+
+**`BT_V19_0001.md`** — a new **§2a** carrying the intervals and the working; a qualifying block
+under §0's verdict; an amendment note on §0a's `EVIDENTIAL` classification stating plainly that
+**as originally filed the classification was not earned**; Wilson columns and `k/n` on §2's
+secondary-outcome table; and a new first bullet in §5's *"does NOT establish"* list.
+
+**`V19_HOMEWORK.md`** — `k/n` and Wilson 95 % intervals on every rate in §§4–6.
+
+⛔ **`PT-047` IS NOT EDITED** (`COMMON_PROTOCOL.md` §9 rule 7). ⛔ **The verdict and the decision
+rule are UNCHANGED**, and `BT_V19_0001.md` §2a states in terms why re-scoring a pre-registered rule
+against a criterion invented after the numbers were seen would have been `REVIEW_PROTOCOL.md` §17.5
+run backwards.
+
+### ⭐ THE RE-VERIFICATION IMPROVED THE FIGURES RATHER THAN CONFIRMING THEM VERBATIM
+
+Re-run in a clean isolated worktree before anything was written:
+
+* **`run_pt047.py` re-run → `pt047_results.json` BYTE-IDENTICAL.** No number in §0 or §2 moved.
+* ⭐ **The two median intervals are now EXACT distribution-free order-statistic intervals, not
+  bootstraps.** median `O1`(`HELD`) = 43.20 **`[30.40, 55.40]`**, achieved coverage **97.6 %** —
+  **wider** than R1's bootstrap `[32.30, 54.50]`, deterministic, seed-free, and reported at its
+  real coverage rather than relabelled 95 %.
+* ⚠️ **R1's `Δ` interval carries Monte Carlo error.** Two seeds give `[7.90, 38.90]` and
+  `[8.20, 38.90]` against R1's `[7.95, 38.60]` — **±0.3 pips**. Now reported to **one decimal** as
+  `≈ [7.9, 38.9]`. ⭐ **The finding does not depend on the seed: the lower bound sits below the
+  pre-registered floor of 10 on every seed tried, and the exact median interval straddles 50 more
+  widely than the bootstrap did. UNCHANGED AND SLIGHTLY STRENGTHENED.**
+* **Hodges-Lehmann shift = +22.20 pips**, deterministic, **3.55 pips below** the difference of
+  medians — recorded because the pre-registered statistic is the more favourable of the two.
+
+### ⭐ TWO THINGS THE FIX FOUND THAT R1 DID NOT — item **316**
+
+1. ⚠️ **A DOUBLE-ROUNDING PATH RUNS THROUGH EVERY PERCENTAGE IN `V19_HOMEWORK.md`.** `hw_v19.py`
+   stores each rate rounded to four places and the tables render *that* to one. On `B｜W-A`'s
+   *pullback in 15–25*: `20/234 = 8.547 %` → stored `0.0855` → displayed **`8.6 %`**, true
+   **`8.5 %`**. ⭐ **All 40 rates were checked against recomputed counts; this is the ONLY cell
+   where a displayed digit moves.** Counts are now printed beside every rate.
+2. ⚠️⚠️ **THE HI/LO ASYMMETRY IS NOT ESTABLISHED AT ALL.** §5 recorded the low being touched more
+   often than the high *"consistently, on every cell"* and declined to explain it, citing a trend
+   confound. **The Wilson intervals overlap substantially on every cell** — `A｜W-A` is
+   `[40.3, 52.4]` against `[46.0, 58.2]`. **The gap is within sampling error before the confound
+   is reached.** ⭐ **The original bullet's caution was right; the interval shows it was not
+   cautious enough**, and §5 now says so. **This is `BACKTEST_EVIDENCE_STANDARD.md` §4.2's own
+   rationale biting on a real claim in this corpus.**
+
+### Gate and Merge
+
+⭐ **STANDING TALLY: 0 CRITICAL / 0 MAJOR / 3 MINOR / 19 NOTE. V20's GATE IS OPEN** under `D-024`'s
+second row — minors **deferred, not forgiven**. ⚠️ **Items 303 and 304 are still OWED before V19
+can reach `COMPLETE`**, and ⚠️ **V19 is NOT `COMPLETE`**: `D-004` reserves that to a reviewer
+`PASS`, and none has been given.
+
+**Merged to integration.** ⭐ **The `D-047` re-check was re-run against the tip AT MERGE TIME**
+(`444ab4e` — three further commits after `cf1fda9`, including `D-057`): highest records on the tip
+are still `A-131`, `C-028` and item 284, so **`A-132`–`A-135`, `C-029` and items 285–316 were all
+free and no renumber was owed.**
+
+### Next Review Trigger
+
+**Items 303 and 304**, and the independent `PASS` V19 still needs. ⚠️ **A future reviewer should
+note that item 302's closure was self-verified and may reopen it on the merits.**

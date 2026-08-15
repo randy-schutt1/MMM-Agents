@@ -1,0 +1,17 @@
+PT-047 PRIMARY CELL  A|W-A|30m   n_HELD=39  n_BACK=60
+Reviewer-computed intervals. BACKTEST_EVIDENCE_STANDARD.md §4.2 / §5.
+Bootstrap 20,000 resamples, reported at TWO seeds so the interval is not seed-fragile.
+
+  seed 77190419:
+    DELTA            25.75  boot95 [  7.90,  38.90]   pre-registered floor 10.00
+    median O1 HELD   43.20  boot95 [ 32.30,  54.50]   band [25, 50]
+    median O1 BACK   17.45  boot95 [ 11.45,  29.70]
+  seed 20260815:
+    DELTA            25.75  boot95 [  8.20,  38.90]   pre-registered floor 10.00
+    median O1 HELD   43.20  boot95 [ 32.30,  54.50]   band [25, 50]
+    median O1 BACK   17.45  boot95 [ 10.50,  29.70]
+
+  O2 HELD >=25 pips     30/ 39 =  76.9%   Wilson95 [61.7%, 87.4%]
+  O2 BACK >=25 pips     27/ 60 =  45.0%   Wilson95 [33.1%, 57.5%]
+  O3 HELD in [25,50]    13/ 39 =  33.3%   Wilson95 [20.6%, 49.0%]
+  O3 HELD in [25,55]    17/ 39 =  43.6%   Wilson95 [29.3%, 59.0%]

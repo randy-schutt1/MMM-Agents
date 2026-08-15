@@ -1,0 +1,6 @@
+POST-HOC disjoint-window check: O1 measured over t+3..t+16 only (cap=2 bars)
+
+A|W-A  nH= 39 nB= 60  medH= 43.20 medB= 16.30  Δ= 26.90  p=0.0005
+A|W-B  nH= 69 nB=137  medH= 35.50 medB= 12.80  Δ= 22.70  p=0.0001
+B|W-A  nH= 36 nB= 62  medH= 44.20 medB= 23.85  Δ= 20.35  p=0.0044
+B|W-B  nH= 73 nB=134  medH= 34.30 medB= 16.85  Δ= 17.45  p=0.0001

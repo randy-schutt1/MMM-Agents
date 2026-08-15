@@ -1,0 +1,62 @@
+====================================================================================================
+REPLICATION -- PT-047 §3/§5 re-implemented, reviewer seed 77190419
+====================================================================================================
+                 A|W-A|30m  nH=  39 nB=  60  medH= 43.20 medB= 17.45  D= 25.75  p=0.0004  days=256 excl=2
+                 A|W-A|45m  nH=  34 nB=  65  medH= 45.20 medB= 18.30  D= 26.90  p=0.0003  days=256 excl=2
+                 A|W-B|30m  nH=  69 nB= 137  medH= 35.50 medB= 16.30  D= 19.20  p=0.0001  days=512 excl=3
+                 A|W-B|45m  nH=  60 nB= 146  medH= 36.05 medB= 16.85  D= 19.20  p=0.0001  days=512 excl=3
+                 B|W-A|30m  nH=  36 nB=  62  medH= 44.20 medB= 23.85  D= 20.35  p=0.0025  days=256 excl=2
+                 B|W-A|45m  nH=  31 nB=  67  medH= 48.40 medB= 23.30  D= 25.10  p=0.0012  days=256 excl=2
+                 B|W-B|30m  nH=  73 nB= 134  medH= 34.40 medB= 17.75  D= 16.65  p=0.0001  days=512 excl=3
+                 B|W-B|45m  nH=  61 nB= 146  medH= 38.30 medB= 17.75  D= 20.55  p=0.0001  days=512 excl=3
+
+PRIMARY CELL A|W-A|30m
+  delta                    25.75 pips   (floor 10.0)
+  median O1 HELD           43.20  in band (25.0, 50.0): True
+  permutation p            0.0004
+  P4 Mann-Whitney U        U=1725  z=3.975  two-sided p=7.03e-05
+  bootstrap 95% CI on D    [8.39, 39.05] pips
+  mean O1  HELD/BACK       55.13 / 28.18
+
+====================================================================================================
+P1 -- THE 60-MINUTE ARM (REVIEW_INDEX item 290). N3 fires if any group n<30.
+====================================================================================================
+                 A|W-A|30m  nH=  39 nB=  60  medH= 43.20 medB= 17.45  D= 25.75  p=0.0004  
+                 A|W-A|45m  nH=  34 nB=  65  medH= 45.20 medB= 18.30  D= 26.90  p=0.0003  
+                 A|W-A|60m  nH=  29 nB=  70  medH= 51.80 medB= 22.35  D= 29.45  p=0.0003    <-- N3 n<30 WOULD FIRE
+                 A|W-B|30m  nH=  69 nB= 137  medH= 35.50 medB= 16.30  D= 19.20  p=0.0001  
+                 A|W-B|45m  nH=  60 nB= 146  medH= 36.05 medB= 16.85  D= 19.20  p=0.0001  
+                 A|W-B|60m  nH=  53 nB= 153  medH= 35.50 medB= 17.30  D= 18.20  p=0.0001  
+                 B|W-A|30m  nH=  36 nB=  62  medH= 44.20 medB= 23.85  D= 20.35  p=0.0025  
+                 B|W-A|45m  nH=  31 nB=  67  medH= 48.40 medB= 23.30  D= 25.10  p=0.0012  
+                 B|W-A|60m  nH=  27 nB=  71  medH= 51.80 medB= 23.60  D= 28.20  p=0.0005    <-- N3 n<30 WOULD FIRE
+                 B|W-B|30m  nH=  73 nB= 134  medH= 34.40 medB= 17.75  D= 16.65  p=0.0001  
+                 B|W-B|45m  nH=  61 nB= 146  medH= 38.30 medB= 17.75  D= 20.55  p=0.0001  
+                 B|W-B|60m  nH=  54 nB= 153  medH= 39.00 medB= 19.20  D= 19.80  p=0.0001  
+
+====================================================================================================
+P2 -- MAX_AGE SENSITIVITY (PT-047 §6 attack 2). Primary arm/window, cap=2.
+====================================================================================================
+                max_age=12  nH=  18 nB=  31  medH= 48.50 medB= 13.10  D= 35.40  p=0.0004  
+                max_age=16  nH=  25 nB=  41  medH= 51.80 medB= 15.00  D= 36.80  p=0.0001  
+                max_age=20  nH=  30 nB=  54  medH= 45.20 medB= 15.60  D= 29.60  p=0.0005  
+                max_age=24  nH=  39 nB=  60  medH= 43.20 medB= 17.45  D= 25.75  p=0.0004  
+                max_age=32  nH=  47 nB=  71  medH= 43.20 medB= 15.60  D= 27.60  p=0.0001  
+                max_age=48  nH=  50 nB=  71  medH= 43.10 medB= 15.60  D= 27.50  p=0.0001  
+              max_age=none  nH=  50 nB=  71  medH= 43.10 medB= 15.60  D= 27.50  p=0.0001  
+
+====================================================================================================
+P3 -- EVERY EVENT PER DAY, NOT THE FIRST (PT-047 §6 attack 3). cap=2.
+====================================================================================================
+          A|W-A|all-events  nH=  50 nB=  71  medH= 42.85 medB= 16.80  D= 26.05  p=0.0002  
+          A|W-B|all-events  nH=  93 nB= 159  medH= 32.30 medB= 15.60  D= 16.70  p=0.0001  
+          B|W-A|all-events  nH=  52 nB=  75  medH= 44.20 medB= 17.60  D= 26.60  p=0.0001  
+          B|W-B|all-events  nH= 103 nB= 164  medH= 31.70 medB= 16.50  D= 15.20  p=0.0001  
+
+====================================================================================================
+DISJOINT-WINDOW CHECK (BT_V19_0001 §4), re-implemented: O1 over t+3..t+16.
+====================================================================================================
+            A|W-A|disjoint  nH=  39 nB=  60  medH= 43.20 medB= 16.30  D= 26.90  p=0.0003  
+            A|W-B|disjoint  nH=  69 nB= 137  medH= 35.50 medB= 12.80  D= 22.70  p=0.0001  
+            B|W-A|disjoint  nH=  36 nB=  62  medH= 44.20 medB= 23.85  D= 20.35  p=0.0028  
+            B|W-B|disjoint  nH=  73 nB= 134  medH= 34.30 medB= 16.85  D= 17.45  p=0.0001  

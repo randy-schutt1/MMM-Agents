@@ -1,0 +1,12 @@
+       A|W-A|30m  n=  99 held=  39 back=  60 Δ=   25.75 p=0.0007 medH=43.2 medB=17.45
+       A|W-A|45m  n=  99 held=  34 back=  65 Δ=    26.9 p=0.0004 medH=45.2 medB=18.3
+       A|W-B|30m  n= 206 held=  69 back= 137 Δ=    19.2 p=0.0001 medH=35.5 medB=16.3
+       A|W-B|45m  n= 206 held=  60 back= 146 Δ=    19.2 p=0.0001 medH=36.05 medB=16.85
+       B|W-A|30m  n=  98 held=  36 back=  62 Δ=   20.35 p=0.004 medH=44.2 medB=23.85
+       B|W-A|45m  n=  98 held=  31 back=  67 Δ=    25.1 p=0.0007 medH=48.4 medB=23.3
+       B|W-B|30m  n= 207 held=  73 back= 134 Δ=   16.65 p=0.0001 medH=34.4 medB=17.75
+       B|W-B|45m  n= 207 held=  61 back= 146 Δ=   20.55 p=0.0001 medH=38.3 medB=17.75
+
+N3 fired: NO
+VERDICT: CONFIRMED
+wrote /Users/randyschutt/Desktop/Trading/MMM-Agents-v19/06_MANUAL_BACKTEST/V19/data/pt047_results.json
