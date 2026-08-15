@@ -10328,25 +10328,66 @@ to Phase 8. **`PT-050` §1a declined to build one and said so.**
 
 ---
 
-## A-141 — the `High / Low Trainer` script is described, installed on camera, and NOT PRESENT
+## A-141 — the `High / Low Trainer` scripts are NAMED and INSTALLED on camera, and their CODE is nowhere
 
-**Opened:** 2026-08-15 by the V21 student session. **Status: OPEN — and it may be permanently open.**
+**Opened:** 2026-08-15 by the V21 student session.
+**⚠️⚠️ AMENDED 2026-08-15 — V21 R1 `M1`, `REVIEW_INDEX.md` item 365. Status: OPEN, on corrected grounds.**
 
-V21 `[00:30:18]`–`[01:05:00]` names the tool, gives its parameters (`31:25`, handwritten,
-`1-27-2010`), and **installs it live on screen**. ⛔ **The artifact itself is not in this repository
-and no part of the lesson exposes it**: no filename, no code, no parameter dialog, no forum link
-that resolves.
+> *Superseded title, retained per `REMEDIATION_PROTOCOL.md` §2:*
+> *"~~the `High / Low Trainer` script is described, installed on camera, and NOT PRESENT~~"*
 
-⭐ **This is a different shape from every other `D-030` blocker in the corpus.** Elsewhere the course
-names a concept and withholds a definition. **Here the course SHIPPED a complete implementation and
-the copy did not reach this project.**
+### ⛔ WHAT THIS RECORD GOT WRONG
 
-⚠️ **What is known, and it is not nothing:** `MAX RISK 5%`; risk dial `1–5 %` *"on all orders
-combined"*; a market order plus **two pendings at +20 and +40 pips**; a hard stop on all three;
-take profit `+30` from order 1; cycle `30 + 50 + 70 = 150`, *"most often +80"*; and
-`[00:26:52]`'s *"the one I recommend using is **by order percent**"*, which implies **at least four
-variants shipped** (`[00:41:49]` *"four scripts in there"*).
+**As first filed it stated that *"no filename, no code, no parameter dialog"* is legible anywhere in
+75 minutes.** ⛔ **The filenames ARE legible — in a frame this session captured, named and committed
+itself**, `V21_00-49-33_scripts-pasted-into-folder.png`, **inside the very range
+`V21_MASTERY_REPORT.md` §2.3 sent a reviewer to re-sweep.** `E01`/`E11`, and it stood as the
+corpus's closing statement about its only mechanical artifact.
 
-⛔ **`D-030` bars reconstructing it from these figures.** A grid whose spacing is known but whose
-entry trigger, fill logic, order management and exit are not **is not the tool** — and a
-reconstruction would acquire the tool's authority without its behaviour.
+### ⭐⭐ WHAT IS ACTUALLY LEGIBLE — THE MT4 NAVIGATOR TREE AT `49:33`
+
+```text
+Expert Advisors
+   Heidi_Mauro_closeAll
+   524 more…
+Custom Indicators            (collapsed)
+Scripts
+   &sm_Buy_Order_Trainer
+   &sm_Buy_Order_Trainer_Pct
+   &sm_Sell_Order_Trainer
+   &sm_Sell_Order_Trainer_Pct
+   142 more…
+```
+
+⭐⭐ **FOUR SCRIPT FILENAMES — AND THEY CONVERT TWO RECORDED INFERENCES INTO ATTESTATION:**
+
+| Was inferred | Now attested |
+|---|---|
+| `[00:41:49]` *"four scripts in there"*, read as *"at least four variants shipped"* | ⭐ **Exactly four `&sm_*_Order_Trainer*` entries** |
+| `[00:26:52]` *"the one I recommend using is **by order percent**"* | ⭐ **The `_Pct` suffix** — *"by order percent"* names the `…_Pct` pair |
+
+⭐ **The `&sm_` prefix is consistent with the author's initials and with MT4 sorting `&`-prefixed
+items to the top of the tree.** ⚠️ **That is a reading of a naming convention, not a stated fact.**
+
+⭐ **Also legible in the same frame, recorded so a future session need not re-derive it:** the
+platform is **`MIG Bank Trading Station — Classic — Demo Account`**, the chart **`GBPUSD,M15`**, the
+open tabs **`GBPUSD,M15` / `GBPCHF,M15` / `AUDUSD,H1`**, an expert advisor **`Heidi_Mauro_closeAll`**
+is installed, and the indicator pane is labelled **`TDI_MMM`**. ⚠️ **`TDI_MMM` is noted and NOT
+pursued** — a 2012 instance name, and this session claims no relation to the owner's 2023-era
+`MMM_TDI.txt` (`D-052`/`D-053`).
+
+### ⭐ WHAT IS STILL MISSING — THE SUBSTANCE OF THE GAP, WHICH SURVIVES INTACT
+
+⛔ **No code. No entry trigger. No fill logic. No order management. No exit logic. No parameter
+dialog.** The `51:38` frame is a bare desktop; the Navigator shows **names in a tree, not
+contents**, and nothing in the lesson opens an editor or a properties panel.
+
+⚠️ **`D-030` still bars reconstruction, for exactly the reason first recorded.** A grid whose
+spacing is known (`↕20 ↕20 ↕20`), whose risk dial is known (`1–5 %`) and whose cycle targets are
+known (`30 + 50 + 70`, *"most often +80"*) **is not the tool** — the trigger that places it, the
+logic that manages it and the condition that closes it are all absent, and a reconstruction would
+acquire the tool's authority without its behaviour.
+
+⭐ **What changed is the ACQUISITION PATH, and it changed for the better.** Four exact filenames are
+searchable; *"not even a filename exists"* implied there was nothing to search for. **`A-141`
+remains the highest-value acquisition available to this project.**

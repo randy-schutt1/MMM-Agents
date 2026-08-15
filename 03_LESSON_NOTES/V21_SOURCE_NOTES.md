@@ -61,11 +61,13 @@ audio** (`REVIEW_INDEX.md` item 298). **V21 restates it in speech AND defines tw
 formation and it **exceeds the ADR** — you're looking for the **first sign of weakness to get
 out**."*
 
-⚠️⚠️ **ITEM 7 IS A NEAR-MISS AND IT IS FLAGGED HERE, NOT BURIED.** The committed grid reads *"the
-light blue tracer **in** the a DR line"*, which would make the sentence an **apposition** and would
-identify the *blue tracer* **as** the ADR line — **closing `A-133`, the corpus's longest-standing
-blocker.** ⛔ **The independent decode reads `and`.** **It is a list of two objects and it does not
-close `A-133`.** `V21_TRANSCRIPT.md` §2a; `V21_INTERPRETATION.md` §2.4.
+⚠️⚠️ **ITEM 7 — A CORRECTION THIS SESSION MADE AND V21 R1 WITHDREW (item 366).** This session read
+the committed *"the light blue tracer **in** the a DR line"* as an apposition, substituted *"and"*
+on one decode, and argued the substitution was what kept `A-133` open. ⛔ **Both halves were wrong:
+the substitution does not replicate (seven of ten decodes return `in`), and *"X in Y"* is LOCATIVE,
+not appositive, so `in` would not have closed `A-133` either.** ⭐ **`A-133` survives under both
+readings because NEITHER DEFINES THE TRACER.** Full accounting: `V21_TRANSCRIPT.md` §2a;
+`V21_INTERPRETATION.md` §2.4.
 
 ---
 
@@ -183,8 +185,11 @@ email from you"*, and `[00:10:02]` earlier: *"**make me a zip file of all the wo
 A live Windows/MT4 walkthrough: right-click the broker icon → *"open target location"* →
 `experts` → `scripts` → empty the folder of clutter → paste → attach to chart. `[00:41:49]` *"four
 scripts in there"*; `[00:26:52]` *"the one I recommend using is **by order percent**"*.
-⚠️ **No file names, no parameters and no code are legible in the transcript** — the artifact itself
-is not in this repository and **is not claimed to be**.
+⭐⭐ **CORRECTED 2026-08-15 — V21 R1 `M1`, item 365. FOUR SCRIPT FILENAMES ARE LEGIBLE** in the
+`49:33` frame's MT4 Navigator: `&sm_Buy_Order_Trainer`, `&sm_Buy_Order_Trainer_Pct`, `&sm_Sell_Order_Trainer`,
+`&sm_Sell_Order_Trainer_Pct`, plus `142 more…`.
+⚠️ **No code, entry trigger, fill logic, order management, exit logic or parameter dialog is legible
+anywhere** — the artifact itself is not in this repository and **is not claimed to be** (`A-141`).
 
 ---
 
@@ -204,7 +209,7 @@ your belt**"*.
 |---|---|
 | A definition of the **blue tracer** | ⛔ **`A-133` SURVIVES.** `[00:05:21]` lists it beside the ADR line and does not define it — and the committed grid's *"in"* would have read as a definition (§2) |
 | A **period, setting or formula** for any moving average | `L3`/*"spaghetti"* still unquantified |
-| The **script's code, filename or parameter defaults** | The tool is described and installed, never listed |
+| The script's **code, logic or parameter defaults** | ⭐ **Its four FILENAMES are legible at `49:33`** (item 365); its **contents** are not. `A-141` |
 | A definition of **`M3`**, the *"25-pip box"*, or *"shark fin"* | `[00:18:18]` names all three in one sentence and defines none |
 | Any new **entry** rule | V21 is money management; the entry is V20's |
 
@@ -259,5 +264,11 @@ V16–V20 block in every other respect too (`Q-022` §0).
 
 ### 10.5 ⚠️ WHAT THE VISUAL PASS DID **NOT** SETTLE
 
-⛔ **No frame defines the blue tracer**, and no frame in the install walkthrough shows a legible
-script filename or parameter dialog. **`A-133` and §6's gap both survive the visual pass.**
+⛔ **No frame defines the blue tracer** — `A-133` survives the visual pass.
+
+⚠️⚠️ **CORRECTED 2026-08-15 — V21 R1 `M1`, item 365.** This paragraph originally also claimed that
+**no frame shows a legible script filename**. ⛔ **That is false, and the counter-evidence is a frame
+this session captured and committed itself:** the `49:33` Navigator tree lists `&sm_Buy_Order_Trainer`, `&sm_Buy_Order_Trainer_Pct`, `&sm_Sell_Order_Trainer`,
+`&sm_Sell_Order_Trainer_Pct` and `142 more…`. ⭐ **What no frame shows is a
+**parameter dialog or any code** — that half of the claim stands, and it is the half `A-141` rests
+on.

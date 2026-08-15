@@ -10966,3 +10966,112 @@ ask, and one that cannot be asked one lesson at a time.
 
 ### Next Review Trigger
 A V21 resubmission applying items 365–368.
+## 2026-08-15 — V21 REMEDIATION ROUND (V21 R1 `M1` + items 366–368)
+
+**Owner direction: fix all four. Branch `video/v21`, isolated worktree (`D-038`).**
+
+### ⛔⛔ NOT SELF-VERIFIED
+
+`D-024` holds the gate on any `MAJOR` until it is fixed **and re-reviewed in a fresh round.**
+**These fixes go back to the V21 R1 session for R2 — the same pattern V20 used, and for the same
+reason the V20 reviewer gave: owner-authorised self-verify must not become the default.**
+
+### All four findings verified before being acted on
+
+⭐ **`M1` (365)** — confirmed by **opening my own committed frame.** `V21_00-49-33` shows the MT4
+Navigator `Scripts` tree: **`&sm_Buy_Order_Trainer`, `&sm_Buy_Order_Trainer_Pct`,
+`&sm_Sell_Order_Trainer`, `&sm_Sell_Order_Trainer_Pct`, `142 more…`** — plus `Heidi_Mauro_closeAll`
+under Expert Advisors and a `TDI_MMM` indicator pane.
+
+⭐ **`366`** — the reviewer's ten-decode replication is decisive, and **the grammatical point is
+independently checkable and correct**: *"X in Y"* is locative, not appositive.
+
+⭐ **`367`** — confirmed against `pt050_results.json`: both `N3` fires are **window** differences
+(`A|W-B`, `B|W-B`); the **arms agree in every window** (3/3, 1/1).
+
+⭐ **`368`** — `62` and `71` in a minutes field; `FILE_NAMING_STANDARD.md` line 74 fixes `HH-MM-SS`.
+
+### What changed
+
+* **`A-141` rewritten** around the four filenames, with the surviving gap restated precisely: **no
+  code, entry trigger, fill logic, order management, exit logic or parameter dialog.** ⭐ **The four
+  names convert `[00:41:49]`'s *"four scripts in there"* and `[00:26:52]`'s *"by order percent"*
+  from inference into attestation.** Corrected in **four** files — the record, the source notes
+  (§6, §8, §10.5), the homework (§2) and this report's §2.3 **misdirection**, which sent a reviewer
+  to re-sweep a range whose answer was already committed.
+* **The `[00:05:21]` correction is WITHDRAWN** in the transcript §2a, source notes §2,
+  interpretation §2.4 and mastery §4.2. ⭐ **`A-133`'s survival is restated on the stronger ground
+  that neither reading defines the tracer** — which does not depend on which word was said.
+* **`BT_V21_0001.md` §5 replaced** — it said *"NONE"*. It now reports the `N3` clause divergence and
+  states that **on §4's literal list the verdict is `REFUTED`, not `FRAGILE`.** ⛔ **Runner not
+  re-run**, per the finding. **The pre-registration is not edited.**
+* **Two frames renamed** `01-02-28` / `01-11-38`, with the cause and a recipe recommendation in
+  `INDEX.md` §0.
+
+### ⚠️ THE LESSON I WOULD CARRY FORWARD
+
+**`M1` was not a sweep-density problem — it was a failure to read my own evidence.** I captured the
+frame, named it *"scripts-pasted-into-folder"*, committed it, and then asserted four times that it
+contained no filename. ⭐ **And `366` is the mirror image: a single-decode substitution asserted with
+more confidence than one decode supports.** **V20's `candle` correction carried five decodes and
+held; this one carried one and did not.**
+
+### Git
+
+`video/v21`, pushed. ⛔ **NOT merged, NOT self-verified. Awaiting V21 R1's R2.** Validator 103/0/0.
+
+---
+
+## 2026-08-15 — Reviewer Session (V21 R2) — ⭐⭐⭐ THE CORPUS CLOSES
+
+### Lesson
+**V21** · `video/v21` @ **`4342a22`** — 1 commit on R1's `4bee5f4`. Review branch `review/v21`,
+worktree `MMM-Agents-v21-review` (`D-038`).
+
+### Decision
+> ## ⭐⭐⭐ **`PASS`** — 0 CRITICAL, 0 MAJOR, 0 MINOR, 6 NOTE. HIGH confidence.
+
+**All four R1 findings discharged. V21 is `COMPLETE`.**
+⭐⭐ **The 21-video corpus is now ingested and independently reviewed end to end.**
+**Merged to integration per `D-024`.**
+
+### The four, each re-verified from source rather than from the remediation's account
+* **365 / `M1`** — the frame was extracted from `4342a22` and **re-cropped at 9×**: the four names
+  are **character-for-character** what `A-141` now records. The rewrite's **four additional
+  readings** (MIG Bank Trading Station, `GBPUSD,M15`, the three tabs, `TDI_MMM` / `Heidi_Mauro_closeAll`)
+  were **also read from the pixels and all four hold**. ⭐ **The restraint is right too** — `TDI_MMM`
+  is recorded and explicitly **not** related to the owner's 2023-era `MMM_TDI.txt`. All four
+  propagation sites corrected, the mastery-report misdirection removed, and **the real gap restated
+  intact**.
+* **366** — correction **withdrawn**, grammatical error **conceded**. ⭐ **R2 re-ran the word count on
+  a DIFFERENT window (296 s/46 s, 0.5× stretch) rather than repeating R1's: 5 `in` / 1 `and`, total
+  **12 of 16** across four model families.** ⚠️ **The per-model instability is the real lesson** —
+  three of the four families flipped between windows.
+* **367** — `BT_V21_0001.md` §5 corrected from *"NONE"*. ⭐ **`git diff` confirms `PT-050`,
+  `run_pt050.py` and `pt050_results.json` are all byte-identical — nothing re-run, pre-registration
+  untouched.**
+* **368** — ⭐ **pure renames** (blob hashes identical), arithmetic checked, `INDEX.md` updated, all
+  17 frames valid `HH-MM-SS`.
+
+### ⭐⭐ CUMULATIVE `FINAL_COURSE_REVIEW.md` — RE-ASSESSED
+**One of R1's three blockers is cleared (365).** ⚠️ **Two remain:** the **twelve `MINOR` items across
+four lessons** — V17 (244–249), V18 (264–268), V19 (303–304), V20 (348) — and the **self-verify
+decision**, still unnumbered after V14, V16 and V19 used it. ⭐ **V21 itself is fully discharged.**
+**The remaining work is a sweep, not a round** — nothing needs re-capturing, re-transcribing or
+re-testing — **but `D-003` makes it a fix round plus a verification round.**
+**Recommended: sweep V17–V20's twelve minors → get the self-verify decision → then write it.**
+
+⭐ **What V21 sharpened for that review:** `A-133` is now **permanently** open, so dimension **B** is
+**permanently blocked corpus-wide** — eight lessons carried it and the course ended without defining
+the blue tracer. `A-141` now has **four filenames**, the difference between an unnamed absence and a
+searchable one. And V21 R1's test of three **V21-native** event definitions (32.90 / 24.75 / 31.20
+against a claimed *"about 50"*) is the first real evidence toward the cumulative review's hardest
+question: **whether the `PT-044`–`PT-050` null record is a fact about the method or about this
+project's operationalisations.**
+
+### Git
+`review/v21`: merged `4342a22` (conflicts in `COURSE_PROGRESS.md` and `LOG.md` resolved — R2 row
+taken, both log entries kept), then the R2 review file and ledgers. **Merged to integration.**
+
+### Next Review Trigger
+The V17–V20 minor sweep, then `FINAL_COURSE_REVIEW.md`.

@@ -35,7 +35,8 @@ any timecode.**
 | 465 | 38:45 | 38:44 | −1 s |
 | 477 | 39:45 | **39:45** | 0 s |
 | 512 | 42:40 | 42:38 | **−2 s** |
-| 595 / 620 / 750 / 860 | … | 49:33 / 51:38 / 62:28 / 71:38 | **−2 s** |
+| 595 / 620 | 49:35 / 51:40 | 49:33 / 51:38 | **−2 s** |
+| 750 / 860 | 62:30 / 71:40 | **62:28 / 71:38** ⚠️ *(OSD shows MM:SS past the hour — `01:02:28` / `01:11:38`)* | **−2 s** |
 | 897 | 74:45 | 74:43 | −2 s |
 | 900 | 75:00 | **74:47** | ⚠️ **clamped at the file end — expected, §8a step 2** |
 
@@ -54,6 +55,17 @@ seconds.
 ⭐⭐ **EVERY FILENAME BELOW CARRIES ITS OWN BURNED TIMECODE, READ FROM THE PIXELS INDIVIDUALLY** —
 not `i × 5`, and not a single global offset. **Seventeen frames, seventeen reads.**
 
+> ### ⚠️ CORRECTED 2026-08-15 — V21 R1 item **368**
+>
+> ⛔ **Two frames were first named `00-62-28` and `00-71-38` — `62` and `71` in the MINUTES field,
+> which `FILE_NAMING_STANDARD.md`'s `VXX_HH-MM-SS_…` does not permit.** ⭐ **Cause: the player OSD
+> displays `MM:SS` PAST THE HOUR on a 75-minute file, and §8a step 4 correctly requires naming from
+> the burned value — so the OSD string was pasted without converting the rollover.** **Renamed to
+> `01-02-28` and `01-11-38`.** ⚠️ **V10 (01:36:16) resolved this correctly and V21's own transcript
+> grid rolls over properly (`[01:14:24]`), so the standard was available and simply not applied at
+> the naming step.** ⭐ **Recommended: `SWF_CAPTURE_RECIPE.md` §8a step 4 should state the conversion
+> explicitly for files over an hour.**
+
 ---
 
 ## §1 — THE FRAMES
@@ -71,8 +83,8 @@ not `i × 5`, and not a single global offset. **Seventeen frames, seventeen read
 | 9 | ⭐⭐⭐ `31-25` **handwritten-high-low-trainer-spec-2010** | **THE MOST VALUABLE FRAME IN THE CORPUS TO DATE.** See §2 |
 | 10 | ⭐ `38-44` measuring-success-1 | **`Measuring Your Success` / `All Three Orders Are Opening, Or You Are Getting Stopped.` / `Need More Screen Time, Boot Camp, R&D` / `You Are Simply Not Identifying The Entries`** |
 | 11 | ⭐ `39-45` measuring-success-2 | **`2 Orders Are Opening, and You Are Moving Towards Profit.` / `Trader Is Getting Better, but Under Normal Conditions Would Have Been Stopped Out.` / `You Are Almost There. Perhaps You Are Too Impatient Or Too Aggressive?` / `Trader Should Be Able To Move To Next Level With Minor Adjustments, or Behavior Modifications`** |
-| 12–16 | `42-38`, `44-24`, `49-33`, `51-38`, `62-28` | The **MT4 installation walkthrough** — right-click the broker icon, open file location, `experts/scripts`, paste, attach to chart |
-| 17 | `71-38` closing-section | The closing stretch |
+| 12–16 | `42-38`, `44-24`, `49-33`, `51-38`, `01-02-28` | The **MT4 installation walkthrough** — right-click the broker icon, open file location, `experts/scripts`, paste, attach to chart |
+| 17 | `01-11-38` closing-section | The closing stretch |
 
 ⭐ **Frames 12–16 are a live screen recording of a Windows desktop**, and **`6/17/2012` is legible in
 the OS clock area on several of them** — ⭐⭐ **the recording dating itself from its own machine**,
