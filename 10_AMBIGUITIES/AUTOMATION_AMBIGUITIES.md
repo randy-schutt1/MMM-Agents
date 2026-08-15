@@ -6758,6 +6758,36 @@ A-020 STAYS ON THE §3.4 LIST for V13-V21 on the three owner-attested rows.
 A-014 and A-023 remain listed and untouched.
 ```
 
+> ### ⭐ ANNOTATED 2026-08-15 — `D-043` RE-AFFIRMED BY THE OWNER AGAINST A LIVE CHALLENGE. ⛔ **STATUS UNCHANGED. STILL ON THE §3.4 LIST.**
+>
+> > *"The canonical one is the one that has **5=mustard, 13=ketchup**"* — owner, 2026-08-15
+>
+> Proposed for the record by `DECISION_DRAFT_D-061_CANONICAL_EMA_SET.md`, **NOT ADOPTED.**
+>
+> **The challenge this answers.** The owner's own `MMM.tpl` (2023, md5 `db617bcd…`) and its two
+> sibling templates run **4 · 10 · 50 · 200 · 800 · 3200** — an artifact-backed divergence from
+> `D-043` on precisely the *mustard* and *ketchup* cells. It was flagged as an open question in
+> `DECISION_DRAFT_D-056` §3 and `D-059` §3.2. ⭐ **It is now answered, in `D-043`'s favour: the
+> 5/13 set is canonical and the 2023 chart is not.**
+>
+> ⭐ **Artifact corroboration, new since `D-043`:** `!sw_Multi-MA.ex4` (md5 `c534ce6b…`, Steve
+> Wilson 2011) **labels its inputs `Mustard · Ketchup · Water · Mayo · Blueberry`**, and
+> `Ultimate Blue.tpl` (md5 `ea22c8cf…`) saves them as **`5 · 13 · 50 · 200 · 800`** — so the
+> nickname↔period pairing is made by the **indicator author's input labels**, not by recollection.
+> `Mustard=5`/`Ketchup=13` hold across **all three** saved configurations found (`D-060` §5).
+>
+> | | |
+> |---|---|
+> | ⛔ **STATUS** | **UNCHANGED.** The three owner-attested rows stay `RESOLVED — OWNER ATTESTATION`; mayo and blueberry stay `RESOLVED BY COURSE` |
+> | ⛔ **§3.4 list** | ⭐ **STAYS ON IT.** Owner re-affirmation **cannot** promote a record above Tier 1, and the V13–V21 obligation is live — **V21 is ingested but UNMERGED**, so the check is owed on merge |
+> | ⛔ **The corpus** | **Unchanged.** `D-042`'s exhaustive negative stands: *ketchup* **0×** in genuine audio corpus-wide, *mustard* **2×, both numberless**. **No Tier 1 statement attaches a period to either, and this ruling does not create one** |
+> | ⚠️ **Tier 2** | `MMM-NOTES` p.38 agrees with the set but is **not independent corroboration** (`SOURCING_HIERARCHY.md` §1.3), and `C-010` is untouched — the notes still omit the **800** |
+>
+> ⭐ **Why the re-affirmation is nonetheless worth recording:** §3.4 documents an owner attestation
+> being **reversed within twenty-four hours** (`D-041` → `D-043`). **`D-043` has now been re-affirmed
+> by the owner against a documented counter-artifact**, which is materially stronger than an
+> unchallenged attestation — **without changing what tier it sits at.**
+
 ### Related
 
 `A-064`, `C-018`, `D-039`, `D-041`, `D-042`, `D-043`, `I-011`, `SOURCING_HIERARCHY.md` §3.1/§3.4;

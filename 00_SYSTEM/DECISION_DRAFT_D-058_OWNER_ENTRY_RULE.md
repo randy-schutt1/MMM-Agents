@@ -172,9 +172,12 @@ This is not a small gap, and the project's own records make it worse rather than
 ```text
 A-143 (proposed) -- "the EMA cross": the trigger of the owner's own entry rule
   (D-058 tier 1) does not name WHICH TWO MOVING AVERAGES CROSS, on WHICH
-  TIMEFRAME, in WHICH DIRECTION. The project holds two incompatible EMA sets
-  (D-043's 5/13/50/200/800 vs MMM.tpl's 4/10/50/200/800/3200) and the disputed
-  periods are precisely the fast ones a cross would use. 15 possible pairs.
+  TIMEFRAME, in WHICH DIRECTION.
+  NARROWED 2026-08-15 by OWNER RULING (D-061, proposed): the SET is settled --
+  canonical is 5/13/50/200/800; MMM.tpl's 4/10/.../3200 is NOT canonical. The
+  space falls from "15 pairs across an unresolved set" to TEN PAIRS ACROSS A
+  KNOWN SET. Still not a rule: 5x13 is the obvious pair and THE OWNER DID NOT
+  SAY IT, and the timeframe and direction remain unstated.
   DO NOT CODE. One owner sentence closes this record.
   Raised by: owner attestation, 2026-08-15. Basis: OWNER EMPIRICAL PREFERENCE.
   Related: A-020, C-010, D-043, D-055's anchor gap (A-142), A-139.

@@ -11159,3 +11159,84 @@ it has its own `D-039`-class ruling. ⭐ Flagged as potentially high-value; **ou
 
 **`D-060`**, verified free across integration and **every** remote branch. Adopted max `D-057`;
 `D-051`/`D-055`/`D-056`/`D-058`/`D-059` held by unadopted drafts.
+
+---
+
+## 2026-08-15 — OWNER RULING #9 — THE CANONICAL EMA SET IS `5 · 13 · 50 · 200 · 800`, and the tooling audit came back CLEAN
+
+**Branch:** `decisions/owner-canonical-ema-set`. **One draft (`D-061`, NOT ADOPTED), one ledger
+annotation, three cross-reference updates. ⛔ NO record changed status.**
+
+> *"The canonical one is the one that has **5=mustard, 13=ketchup**"* — owner, 2026-08-15
+
+⭐ **This settles a conflict three drafts had open** (`D-056` §3, `D-059` §3.2, `D-058`/`A-143`):
+the owner's own 2023 `MMM.tpl` runs **4 · 10 · 50 · 200 · 800 · 3200** while `D-043` says
+**5 · 13 · 50 · 200 · 800**. ⭐ **`D-043` wins. The chart is not canonical. `3200` is dropped.**
+
+### ⛔⛔ AND IT PROVES NOTHING ABOUT THE COURSE — the hard limit on this ruling
+
+**It is the owner ruling on which set HE uses and wants. No V-lesson said anything new; the corpus
+was not re-read.** `D-042`'s exhaustive negative **stands**: *ketchup* occurs **0×** in genuine
+audio corpus-wide and *mustard* **twice, both numberless**. ⛔ **Nothing becomes `RESOLVED BY
+COURSE`** — the only two rows that are (`mayonnaise = 200`, V12; `blueberry = 800`, V09 guest) were
+so already. ⚠️ `MMM-NOTES` p.38 agrees with the set but is **not independent corroboration**
+(§1.3's trap), and `C-010` is untouched — the notes still omit the 800.
+
+### ⚠️ `A-020` IS RE-AFFIRMED, NOT NEWLY RESOLVED — and this corrects the framing of the request
+
+`A-020`'s live status is a **SPLIT**, and its mustard/ketchup/water rows were **already**
+`RESOLVED — OWNER ATTESTATION` under `D-043`. ⭐ **So the ruling defends them rather than resolving
+them.** What it genuinely adds: it **discharges a live, artifact-backed challenge** (`MMM.tpl`'s
+4/10), and it brings **artifact corroboration** — `!sw_Multi-MA.ex4` labels its inputs
+`Mustard · Ketchup · …` and `Ultimate Blue.tpl` saves `5 · 13 · 50 · 200 · 800`, so the pairing is
+made by the **indicator author's labels, not by recollection** (`D-060` §5).
+
+⛔ **`A-020`'s STATUS IS UNCHANGED and it STAYS ON `SOURCING_HIERARCHY.md` §3.4's re-check list.**
+Owner re-affirmation cannot promote a record above Tier 1. ⚠️ **V21 is ingested but UNMERGED**, so
+the V13–V21 obligation is owed on merge. Ledger annotated; **status line untouched.**
+
+⭐ Worth recording: §3.4 documents an owner attestation being **reversed within 24 hours**
+(`D-041` → `D-043`). **`D-043` has now been re-affirmed against a documented counter-artifact** —
+materially stronger, **without changing its tier.**
+
+### ⚠️ `A-143` NARROWS AND DOES NOT CLOSE — and it was never in the ledger
+
+⚠️ **`A-143` has never been opened** — it is a proposal in `D-058` §4.1 and exists nowhere else, so
+there is no status to change, only a proposal to rewrite. It asked **three** questions and the
+ruling answers **one**:
+
+| | |
+|---|---|
+| ✅ **Which SET** | **ANSWERED — `5 · 13 · 50 · 200 · 800`** |
+| ⛔ **Which TWO cross** | **OPEN.** ⚠️ **5×13 is the obvious pair and the owner did not say it** — five averages give **ten** pairs |
+| ⛔ **Timeframe / direction** | **OPEN** |
+
+⭐ The space falls from *"15 pairs across an unresolved set"* to **ten pairs across a known set** — a
+real reduction, **and still not a rule.** ⛔ **`D-058` tier 1 stays `DO NOT CODE`.** The proposal in
+`D-058` §4.1 was rewritten to the narrower scope.
+
+### ⭐⭐ THE TOOLING AUDIT — RUN, AND NOTHING NEEDS FIXING
+
+| Tool | Periods | Verdict |
+|---|---|---|
+| `MMM_Indicator.txt` | `ta.ema` at **5 · 13 · 50 · 200 · 800** | ✅ **ALIGNED** |
+| `mmm_chart_render.py` | `EMA_SPEC` = **5 · 13 · 50 · 200 · 800** with per-row warrants | ✅ **ALIGNED** |
+| `MMM_TDI.txt` | no EMAs; only `RSI_Period=21` (Tier 1) | ✅ N/A |
+| `MMM_SESSION_RIBBON.txt` | no EMAs — its `50` is `NumberOfDays`, a **lookback** | ✅ **false positive checked and cleared** |
+
+⭐⭐ **Nothing needs fixing, and that is itself the finding.** The tools were built to `D-043` — and
+**had they been built to `MMM.tpl` when it arrived looking authoritative (it is, after all, the
+owner's actual chart), every EMA in the project would now be wrong.** The `TOOLING`-tier discipline
+that refused to let a 2023 chart override `D-043` (`D-056` §3: *"a 4/10 chart in 2023 is not
+testimony that the course taught 4/10 in 2012"*) **is what prevented that, and this ruling
+vindicates it.**
+
+⚠️ **One follow-up deferred:** on adoption, the tools' warrant comments should also cite `D-061` and
+record that the `MMM.tpl` divergence was **considered and rejected**, so a future reader does not
+rediscover 4/10 and think the tools are stale. ⛔ **Not done now** — the tools are correct and
+editing them to cite an unadopted decision would be worse.
+
+### Numbering
+
+**`D-061`**, verified free across integration and **every** remote branch. Adopted max `D-057`;
+`D-051`/`D-055`/`D-056`/`D-058`/`D-059`/`D-060` held by unadopted drafts.

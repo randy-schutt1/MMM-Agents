@@ -144,6 +144,15 @@ His statement **confirms EMAs are load-bearing**, which was never seriously in d
 | ⛔ **Not stated** | how many, which periods, which are load-bearing, or which two cross for `D-058`'s tier-1 entry |
 | ⚠️ **Still contradictory** | `D-043` (**adopted**, owner attestation about the *teaching*): **5 · 13** · 50 · 200 · 800. `MMM.tpl` (his *practice*, 2023): **4 · 10** · 50 · 200 · 800 · **3200** |
 
+> ### ✅ SUPERSEDED 2026-08-15 — the owner has since ruled on the set.
+>
+> > *"The canonical one is the one that has **5=mustard, 13=ketchup**"* — owner, 2026-08-15
+>
+> ⭐ **The canonical set is `5 · 13 · 50 · 200 · 800`** (`DECISION_DRAFT_D-061`, **NOT ADOPTED**);
+> `MMM.tpl`'s **4 · 10** is not canonical and **3200 is dropped**. ⚠️ **`A-143` still does not
+> close** — the ruling names a **set**, not a **cross**: which two of the five cross, on what
+> timeframe, in what direction, all remain unstated. **Ten pairs, down from fifteen.**
+
 ⛔ **`A-143` STAYS OPEN**, and this statement does not narrow it by a single period. ⭐ **It does
 raise its priority sharply**: `A-143` blocks `D-058`'s entire tier 1, and the owner has now
 independently confirmed that the object `A-143` is about is one of only four things he needs.

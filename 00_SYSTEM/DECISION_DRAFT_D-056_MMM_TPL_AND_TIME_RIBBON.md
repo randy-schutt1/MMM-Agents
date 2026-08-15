@@ -166,6 +166,15 @@ would repeat the `D-041` error the `D-043` reversal exists to warn about.**
 ⭐ **It is, however, a real divergence and it is owed to the owner as a question** — §7 Q3.
 **`A-020` is untouched. `D-043` stands. Nothing is coded.**
 
+> ### ✅ ANSWERED 2026-08-15 — the owner ruled, and it went `D-043`'s way.
+>
+> > *"The canonical one is the one that has **5=mustard, 13=ketchup**"* — owner, 2026-08-15
+>
+> ⭐ **The canonical set is `5 · 13 · 50 · 200 · 800`. `MMM.tpl`'s `4 · 10 · … · 3200` is NOT
+> canonical, and `3200` is dropped.** See `DECISION_DRAFT_D-061_CANONICAL_EMA_SET.md` (**NOT
+> ADOPTED**). ⛔ **`A-020`'s status is still unchanged** and it stays on the §3.4 re-check list —
+> this is owner **preference**, not evidence about what the course taught.
+
 ---
 
 ## 4. ⭐⭐ THE TIME RIBBON
