@@ -195,7 +195,7 @@ RSI_LEN    = 21      # ⭐ [TIER 1] — the ONLY Tier 1 parameter here. A-080 CL
                      #   both tools understating this to [TOOLING]). NOT the Tier-3 13.
 FAST_LEN   = 2       # [TOOLING] RSI_Price_Line=2,   RSI_Price_Type=0 (SMA)
 SLOW_LEN   = 7       # [TOOLING] Trade_Signal_Line=7, Trade_Signal_Type=0 (SMA)
-                     # ⛔ A-085 — see the TSL warning block at the TDI computation.
+                     # ⚠ A-085 (OPEN) — see the TSL note at the TDI computation.
 BAND_LEN   = 34      # [TOOLING] Volatility_Band=34
 BAND_MULT  = 1.6185  # [DEFAULT] ⚠ STILL A GUESS — not exposed by the MT4 indicator
 TDI_LEVELS = (68, 50, 32)          # [TOOLING] template levels
@@ -417,20 +417,26 @@ def render(bars, i0, i1, args, out_path):
     # [00:45:09] and Tier 2 MMM-NOTES p.45 both say the market base and are
     # OVERRIDDEN. Matches MMM_TDI.txt, the primary instrument (D-053).
     dev = BAND_MULT * stdev(r, BAND_LEN)
-    # ⛔⛔ A-085 — THE TRADE SIGNAL LINE ("slow", below). D-053 §3(a).
-    #   V12 [00:11:49]: "The TSL in essence is a POLLING OF THE ONE-HOUR CHART,
-    #   brought into your view on the 15 minute." [00:12:07]: "you now have a
-    #   SIGNAL ON THE ONE-HOUR CHART."
-    #   WHAT IT ACTUALLY IS HERE: a 7-period SMA of the RSI on THE RENDERED
-    #   TIMEFRAME. Nothing reads a higher timeframe; nothing in the shipped TDI
-    #   ever did. A-085 records that the claim may describe an EFFECT stated as a
-    #   MECHANISM, does not adjudicate which, and is DO NOT CODE.
-    #   => A crossover of this line is NOT evidence that "a one-hour signal has
-    #   fired" and may not be reported as one. V12 [00:12:18] tells a student
-    #   they "not necessarily" need the one-hour chart on the strength of this —
-    #   a student is told they may STOP LOOKING AT A TIMEFRAME.
-    #   DO NOT "fix" this by resampling H1 in here: that is D-030's forbidden act
-    #   and it would look authoritative on a rendered PNG.
+    # ⚠ A-085 — THE TRADE SIGNAL LINE ("slow", below). D-054, which WITHDREW
+    #   D-053 §3(a)'s harsher framing. Kept in sync with MMM_TDI.txt.
+    #   CODE FACT: "slow" is SMA(7) of RSI(21) on THE RENDERED TIMEFRAME. No
+    #   higher-timeframe read anywhere in this file. A fact about this code, NOT
+    #   a charge against the lesson.
+    #   V12 [00:11:39] frames it as a WORKFLOW question — "should I look at the
+    #   one-hour chart?" — answered "not necessarily"; [00:11:49] "the TSL IN
+    #   ESSENCE is a polling of the one-hour chart" is EFFECT language, hedged;
+    #   [00:12:44] the lesson NAMES it "one hour trade signal line".
+    #   SCOPED: V12 conditions the claim on SHARK FIN + BLOOD IN THE WATER
+    #   ([00:12:18]-[00:12:34]), which are UNCOMPUTABLE (A-031/A-032 need the
+    #   band; A-086's period is never stated). That claim is neither confirmed
+    #   nor refuted and may not be reported as either.
+    #   MEASURED (probe_a085_tsl_h1.py, 307,576 M15 / 76,901 H1 bars): the
+    #   UNCONDITIONED reading does not hold (42.9% same-side vs a 60.3% base
+    #   rate; SMA(7) not special). Bears on that reading only.
+    # ⛔ STILL FORBIDDEN (survived the correction): do NOT resample H1 in here to
+    #   make the tool "match" the lesson. A-085 gives no construction; inventing
+    #   one is D-030's forbidden act and would look authoritative on a PNG.
+    #   A-085 is OPEN and DO NOT CODE.
     tdi = {
         "fast": sma(r, FAST_LEN)[i0:i1],
         "slow": sma(r, SLOW_LEN)[i0:i1],

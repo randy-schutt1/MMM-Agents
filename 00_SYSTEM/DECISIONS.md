@@ -4519,3 +4519,193 @@ rejected, per `D-052`.
    **not** a freeze.
 **Status:** ACTIVE — **`MMM_TDI.txt` is the primary TDI instrument.** ⛔ **A referent decision, not
 an evidentiary one: nothing is unblocked, and `A-086` stays `DO NOT CODE`.**
+
+---
+
+## D-054 — ⚠️ **`D-053` §3(a) IS WITHDRAWN AND CORRECTED. The owner is right: it charged `MMM_TDI.txt` with failing a claim V12 did not make.** `A-085` itself is unchanged and still `OPEN`.
+
+> ### 🔢 NUMBERING DISCLOSURE — `D-054` WAS CONTESTED, AND THIS IS WHY THIS ENTRY TOOK IT
+>
+> At the moment this entry was written, an **unadopted draft** claiming `D-054` existed in the
+> working tree — `00_SYSTEM/DECISION_DRAFT_D-054_OWNER_STOP_AND_TARGETS.md` (the owner's stop /
+> take-profit rule), on branch `tools/indicator-folder-survey-and-owner-risk-rule`. **It is not
+> adopted, `DECISIONS.md` did not contain it, and its own header says its number is provisional and
+> must be re-checked at adoption time.**
+>
+> **`D-047` Consequence A and the `D-041`→`D-043` precedent both govern: the number is claimed by
+> ADOPTION on the integration branch, not by drafting, and the later arrival renumbers.** This entry
+> adopts now; that draft has not. **`D-054` is therefore this entry, and the stop/target draft
+> should be adopted as `D-055`** (re-checked against integration at that time — this is the second
+> time a draft in this project has been wrong about its own number, after `DRAFT_D-041`).
+>
+> ⚠️ **This is disclosed rather than done quietly**, and the draft file is **not edited by this
+> session** — renumbering it is its own adopting session's act (`D-043` consequence 8).
+
+**Date:** 2026-08-14
+**Supersedes:** **`D-053` §3(a) ONLY** — its characterisation of the Trade Signal Line finding, and
+consequences 1 and 2 insofar as they wrote that characterisation into the tools. **`D-053` is not
+otherwise disturbed**: the primary-instrument designation, §2's hard limits, §3(b)'s `A-080` tag
+correction, §3(c), and the pair-reconciliation rule at consequence 3 **all stand.** `D-053` is not
+edited, reopened or deleted (`DECISIONS.md` append-only; `REMEDIATION_PROTOCOL.md` §2).
+**Does not disturb:** `A-085`'s status, `A-031`, `A-032`, `A-086`, `D-030`, `D-052`.
+
+**The owner's challenge, 2026-08-14:**
+
+> *"What do you mean my signal never done that? It's playing on what V12 said. I compared what I
+> chose and what I learned and it's accurate."*
+
+**He is substantially right, and `D-053` §3(a) is the error.** This entry records what was wrong,
+what survives, and the measurement run to settle it.
+
+---
+
+### 1. WHAT `D-053` §3(a) CLAIMED, AND WHY IT WAS WRONG
+
+It claimed, as a headline: ***"the tool does not do what the lesson says it does"***, and stated
+flatly that ***"a TSL crossover is NOT evidence that 'a one-hour signal has fired', and may not be
+reported as one."***
+
+**Two distinct errors:**
+
+**ERROR 1 — IT MISCHARACTERISED V12 AS MAKING A MECHANISM CLAIM.** Read in full, with the sentence
+that sets it up — which `D-053` quoted from the register rather than from the transcript, and
+therefore never saw:
+
+> `[00:11:39]` *"Someone asked me a few minutes ago about **should I look at the one-hour chart?**
+> I'm gonna tell you a little secret about the TSL"*
+> `[00:11:49]` *"The TSL **in essence** is a polling of the one-hour chart"*
+> `[00:11:55]` *"Brought into your view on the 15 minute"*
+> `[00:12:18]` *"So you need to look at the one-hour chart **not necessarily** if you got a"*
+> `[00:12:22]` *"**Shark fin blood in the water**"*
+
+⭐ **The passage is answering a WORKFLOW QUESTION — *"should I look at the one-hour chart?"* — and
+its answer is *"not necessarily."*** That is a claim about **what the trader has to do**, not about
+what the indicator reads. And *"**in essence** is a polling of"* is **effect language, hedged on its
+face**; the speaker does not say the indicator reads H1 data, and nothing in the passage does.
+**`D-053` converted an effect claim, offered in answer to a practice question, into a mechanism
+claim, and then charged the tool with failing to implement it.**
+
+**ERROR 2 — IT ADJUDICATED A QUESTION `A-085` EXPRESSLY DECLINES.** `A-085` says, in terms, that
+the claim *"may be a description of an **effect** … stated as if it were a **mechanism**"* and that
+***"this record does not adjudicate it."*** `D-053` §3(a) adjudicated it — in the mechanism
+direction, against the corpus, **without measuring anything.** A session may not settle by assertion
+what the register holds open, and `D-053` had no warrant for it.
+
+### 2. ⭐ AND THE TEST `D-053` IMPLIED WAS THE WRONG TEST — V12 SCOPES THE CLAIM
+
+> `[00:12:18]`–`[00:12:34]` *"you need to look at the one-hour chart **not necessarily if you got a
+> shark fin blood in the water**. **Blood in the water indicates that the one-hour** … chart has
+> fired a signal **at the same time or in congruency with** the 15 minute chart."*
+
+**V12 does NOT claim that every TSL crossover is an H1 signal.** He claims that **when a shark fin
+and blood in the water are present**, the H1 has fired *in congruency*. **The claim is conditioned,
+and `D-053` restated it unconditioned.**
+
+⛔ **AND THE CONDITIONED CLAIM CANNOT BE TESTED WITH THIS CORPUS.** *Shark fin* (`A-032`) and *blood
+in the water* (`A-031`) are **uncomputable** — both are defined against the volatility band, and the
+band is unconstructible because its **period is never stated** (`A-086`). `D-052` and `D-053`
+changed none of that. **So the actual V12 claim is neither confirmed nor refuted here, and no
+session may report it as either.**
+
+### 3. THE MEASUREMENT — RUN BECAUSE THE OWNER MADE AN EMPIRICAL CLAIM AND ASSERTION WAS WHAT WENT WRONG THE FIRST TIME
+
+`06_MANUAL_BACKTEST/scripts/probe_a085_tsl_h1.py`, **307,576 M15 bars / 76,901 H1 bars** of GBPUSD
+2013–2025 (`D-044` extension, ARM A), at the `D-053` primary parameters, H1 aligned onto M15 with
+**no look-ahead** (each M15 bar sees the last *closed* H1 bar). **A measurement of the relationship
+between two constructions — NOT a test of the method** (`D-026`/`D-027` untouched), in the same
+class as the `C-021` band-basis comparison.
+
+| Question | Result |
+|---|---|
+| Does the M15 TSL track the H1 RSI line? | `r = 0.78` — **but see the control** |
+| ⭐ **CONTROL: is `SMA(7)` special?** | ❌ **NO.** `SMA(2)` `0.771` · `SMA(4)` `0.777` · **`SMA(7)` `0.782`** · `SMA(14)` `0.792` · `SMA(21)` `0.799` · `SMA(28)` `0.804`. **Correlation rises MONOTONICALLY with smoothing — 7 is not distinguished, and the raw M15 RSI already tracks H1 at `0.766`.** Nothing here identifies 7 as an H1-polling parameter |
+| Unfiltered M15 crossovers with H1 already on the same side | **42.9%**, against a **60.3%** base rate on all bars |
+| Unfiltered M15 crossovers coinciding with a real H1 crossover | ±1 bar **11.8%** · ±4 **34.0%** · ±8 **59.0%** |
+| M15 : H1 crossover count ratio | **4.08** — against a **4.00** bar-count ratio |
+
+**What this supports:** the **strong operational** reading — *any* TSL crossover means an H1 signal
+has fired — **does not hold unconditioned**, and the TSL fires in near-exact proportion to the bar
+count, i.e. it behaves like the same construction on a denser series.
+⚠️ **What this does NOT support, and must not be read as:** a refutation of what V12 actually said.
+**§2's conditioned claim was not tested and cannot be.** And the **weak/practical** reading — that a
+slower line gives a slower-timeframe sense on the chart in front of you, so you flip charts less —
+**is not refuted by anything here and is a fair reading of the words.**
+
+### 4. ⭐ WHY THE OWNER'S COMPARISON AND THE `D-053` FINDING DISAGREED — THEY CHECKED DIFFERENT THINGS
+
+| | What was checked | Verdict |
+|---|---|---|
+| **`D-053` §3(a)** | **Does the code perform a higher-timeframe read?** Is there a `request.security()` call? | **No, there is not** — true, trivially verifiable, **and never in dispute** |
+| **The owner** | **Does the line BEHAVE as taught** when compared against what he learned and against the H1? | **His judgment: yes** — and this is the reading V12's own words support |
+
+**These are not the same question, and the second is the one V12 was answering.** `D-053` reported
+the answer to the first as though it settled the second. **That is the whole of the disagreement.**
+
+**Note also, and it cuts the owner's way:** V12 `[00:12:44]` names the line ***"one hour trade
+signal line"*** (ASR *"our sideline"* = `RSI`, per `V12_TRANSCRIPT.md`'s ASR table). **The lesson
+itself attaches the one-hour association to the line's NAME.** A student who calls it *"my one-hour
+signal"* is using the instructor's own words, not overreading them.
+
+### 5. WHAT SURVIVES — STATED SO THE CORRECTION IS NOT OVERREAD EITHER
+
+1. ✅ **`A-085` STAYS `OPEN` AND `DO NOT CODE`. Its status is UNCHANGED by this entry.** There is
+   still **no period, no formula, and no account of what *"polling"* means**, and the
+   effect-vs-mechanism question is **still open** — this entry declines it exactly as `A-085` does.
+   **Nothing here closes it, and the owner's comparison is not offered as closing it**: it is his
+   judgment of behaviour, which is `D-052`'s `OWNER EMPIRICAL PREFERENCE` class, and **no owner
+   ruling has been sought or given on `A-085`.**
+2. ✅ **The code fact stands:** `slowMa = f_ma(rsiVal, slowLen, maType)` — `SMA(7)` of `RSI(21)` on
+   the chart's own timeframe, no higher-timeframe request. **Stated as a fact about the code, not
+   as a charge against the lesson.**
+3. ✅ **The prohibition on "fixing" it stands, and is the one part of §3(a) that was always right:**
+   **no session may wire an H1 `request.security()` / resample into either tool** to make it "match"
+   the lesson. `A-085` supplies no construction; inventing one is `D-030`'s forbidden act. **This
+   survives the correction and is if anything strengthened** — the lesson turns out not to be asking
+   for it.
+4. ✅ **`D-053`'s everything else** — primary designation, §2, `A-080`'s `[TIER 1]` correction, the
+   pair rule.
+
+**Reason:** The finding was produced by reading the ambiguity register's *summary* of V12 instead of
+the transcript, and the register's summary omits `[00:11:39]`'s framing question and `[00:12:18]`'s
+conditioning clause — **the two sentences that determine what kind of claim is being made.** The
+owner caught it by doing the thing the finding did not: **comparing the tool's behaviour against
+what he was taught**, rather than comparing the tool's source code against a paraphrase.
+⭐ **This is `REVIEW_PROTOCOL.md` §17's failure mode "confident misunderstanding" in its exact
+shape**, and it is recorded rather than quietly patched because the project's own calibration
+history — `D-042`/`D-043` — is built on doing so.
+
+**Evidence:** `02_TRANSCRIPTS/V12/V12_TRANSCRIPT.md` `[00:11:39]`–`[00:12:44]`, read at source (and
+its ASR table for the *"our sideline"* = `RSI` rendering); `A-085` in full, including its explicit
+*"this record does not adjudicate it"*; `D-053` §3(a) as adopted; the probe and its output,
+`06_MANUAL_BACKTEST/scripts/probe_a085_tsl_h1.py`; `A-031`, `A-032`, `A-086` for why the conditioned
+claim is untestable; the owner's challenge above.
+
+**Alternatives considered:** *Defending `D-053` §3(a) on the ground that the code demonstrably has
+no HTF read* — **rejected; that answers a question nobody asked.** The absence of a
+`request.security()` call refutes a mechanism claim, and V12 did not clearly make one. *Editing
+`D-053` in place* — rejected; append-only, and the mistake is worth keeping visible. *Closing
+`A-085` in the owner's favour on his comparison* — **rejected, and he has not asked for it**: it
+would convert an experiential judgment into a construction the corpus still does not supply, and
+`A-085` needs a **period and a formula**, which no comparison can produce. *Reporting the §3
+measurement as evidence against V12* — **rejected; it tested the unconditioned claim, which is not
+the claim made**, and saying otherwise would repeat the original error in the opposite direction.
+*Deleting the `A-085` warnings from the tools* — rejected; they are **rewritten**, not removed, and
+point 5.3's prohibition is retained.
+
+**Consequences:**
+
+1. **`D-053` §3(a) is WITHDRAWN.** Any artifact citing it must cite this entry instead.
+2. **The `A-085` blocks in `MMM_TDI.txt`, `mmm_chart_render.py` and
+   `06_MANUAL_BACKTEST/tools/README.md` are REWRITTEN** — the *"the tool does not do what the lesson
+   says"* framing and the *"a crossover is NOT evidence an H1 signal fired"* assertion are removed;
+   the code fact, the open effect-vs-mechanism question, the scoping clause, and the `D-030`
+   prohibition are retained. **No code and no parameter changes.**
+3. **`A-085` gains a correction block.** **Status unchanged: `OPEN`, `DO NOT CODE`.**
+4. **The probe is committed** so the numbers are auditable and re-runnable.
+5. **No `A-xxx` or `C-xxx` changes status. Nothing is unblocked. Nothing is closed.**
+6. ⚠️ **A standing caution, earned:** *a session reading an ambiguity record's summary of a lesson
+   is not reading the lesson.* Where a finding turns on **what kind of claim** a speaker is making,
+   the transcript must be opened at the passage **and its surrounding turns**. `D-053` §3(a) would
+   not have been written if `[00:11:39]` had been read.
+**Status:** ACTIVE — **`D-053` §3(a) withdrawn; `A-085` OPEN and unchanged; the owner's reading of
+V12 is the better-supported one, and the conditioned claim remains untested and untestable.**

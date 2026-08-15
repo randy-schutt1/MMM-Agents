@@ -7500,6 +7500,62 @@ mechanism from the same phrase as a description of lag.
 >          D-053 flagged it AT THE TOOL and forbade implementing it there.
 >          The effect-vs-mechanism question is STILL OPEN and D-053 declines it.
 > ```
+>
+> ## ⚠️⚠️ CORRECTED SAME DAY BY `D-054` — **THE BLOCK ABOVE OVERSTATED THE FINDING. THE OWNER CHALLENGED IT AND WAS SUBSTANTIALLY RIGHT.**
+>
+> **Retained unedited above** (`REMEDIATION_PROTOCOL.md` §2). What `D-053` got wrong, and what it
+> got right, in the order that matters:
+>
+> ⭐ **1. `D-053` MISCHARACTERISED WHAT V12 IS CLAIMING — because it read THIS RECORD'S SUMMARY
+> instead of the transcript.** This record quotes `[00:11:49]` onward. **It omits the sentence
+> immediately before, which sets the whole frame:**
+>
+> > `[00:11:39]` *"Someone asked me a few minutes ago about **should I look at the one-hour
+> > chart?** I'm gonna tell you a little secret about the TSL"*
+>
+> **The passage is answering a WORKFLOW question** — *do I have to go look at H1?* — and answers it
+> *"not necessarily"* `[00:12:18]`. And `[00:11:49]` says *"**in essence** is a polling of"*:
+> **effect language, hedged on its face.** `D-053` converted that into a **mechanism** claim (the
+> indicator reads H1 data) and then charged the tool with failing it. ⛔ **It also adjudicated the
+> effect-vs-mechanism question — which THIS RECORD EXPRESSLY DECLINES TO ADJUDICATE — in the
+> mechanism direction, without measuring anything.**
+>
+> ⭐ **2. AND V12 SCOPES THE CLAIM. `D-053` restated it unconditioned.** `[00:12:18]`–`[00:12:34]`:
+> *"not necessarily **if you got a shark fin blood in the water**. **Blood in the water indicates
+> that the one-hour** … has fired a signal **at the same time or in congruency**."* ⛔ **THAT CLAIM
+> IS UNTESTABLE WITH THIS CORPUS** — `A-032` and `A-031` are uncomputable because `A-086`'s band
+> **period** is never stated. **Neither confirmed nor refuted; may not be reported as either.**
+>
+> **3. WHAT WAS MEASURED, since assertion is what failed the first time.**
+> `06_MANUAL_BACKTEST/scripts/probe_a085_tsl_h1.py` — 307,576 M15 / 76,901 H1 bars, GBPUSD
+> 2013–2025, no look-ahead. The **unconditioned** reading does **not** hold: **42.9%** of M15
+> crossovers have H1 already on the same side against a **60.3%** base rate, ±1-bar coincidence
+> **11.8%**, and ⭐ **`SMA(7)` is NOT special** — correlation with the H1 `RSI` rises *monotonically*
+> with smoothing (`2→0.771`, `7→0.782`, `21→0.799`, `28→0.804`), and raw M15 `RSI` already tracks at
+> `0.766`. **Bears on the unconditioned reading ONLY**, and refutes neither §2's scoped claim nor
+> the practical reading that a slower line gives a slower-timeframe sense on the chart in front of
+> you.
+>
+> **4. WHY THE OWNER AND THE FINDING DISAGREED — THEY CHECKED DIFFERENT THINGS.** `D-053` checked
+> *"does the code perform a higher-timeframe read?"* (**no — true, and never in dispute**). The
+> owner checked *"does the line **behave** as taught?"* (**his judgment: yes**). **The second is the
+> question V12 was answering.** Note too that V12 `[00:12:44]` **names** it *"one hour trade signal
+> line"* — the lesson itself attaches the association to the line's name.
+>
+> **5. WHAT SURVIVES.** The **code fact** (`SMA(7)` of `RSI(21)`, chart's own timeframe, no HTF
+> request) — as a fact about the code, not a charge against the lesson. And ⛔ **the prohibition on
+> "implementing" `A-085` by wiring in an H1 read stands, strengthened**: the lesson turns out not to
+> be asking for it, and inventing a construction is still `D-030`'s forbidden act.
+>
+> ```text
+> A-085 -- OPEN.  DO NOT CODE.  STATUS UNCHANGED BY D-053 AND BY D-054.
+>          Still no period, no formula, no account of "polling".
+>          The effect-vs-mechanism question is STILL OPEN. D-054 declines it too.
+>          D-053 §3(a)'s "the tool does not do what the lesson says" is WITHDRAWN.
+>          The owner's comparison is his judgment of BEHAVIOUR; it is not offered
+>          as closing this record and does not close it -- no construction, no
+>          owner ruling sought or given on A-085.
+> ```
 
 > ## ⭐ POINTER ADDED 2026-08-14 BY THE V14 R1 REMEDIATION — `REVIEW_INDEX.md` ITEM 175
 >
