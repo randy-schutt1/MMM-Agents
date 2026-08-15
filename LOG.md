@@ -10925,3 +10925,77 @@ integration by another session** — all three of its commits (`cf1fda9`, `c0fb7
 ancestors of `19e6c2a`, and `D-055`/`D-056`/the inventory/the ribbon are on integration as **draft
 files**. ⚠️ **`D-055` and `D-056` are NOT adopted entries** — `DECISIONS.md`'s highest is `D-057` —
 so their numbers are held by drafts only, and `D-047` gives the number to whoever adopts first.
+
+---
+
+## 2026-08-15 — OWNER RULING #7 — THE CANONICAL TOOLSET IS SCOPED TO FOUR, and the scoping immediately shows THREE OF THE FOUR ARE UNSETTLED
+
+**Branch:** `tools/owner-canonical-toolset`. **One draft — `DECISION_DRAFT_D-059_CANONICAL_TOOLSET.md`.
+NOT ADOPTED. ⛔ NO record closed, excluded or deprioritised.**
+
+> *"The indicators that we'll need while trading are: 1. Worktime ribbon: highlights sessions and
+> previous highs and lows. 2. TDI. 3. EMAs. 4. ADR. I believe that's it."* — owner, 2026-08-15
+
+Recorded at **`OWNER EMPIRICAL PREFERENCE`** (`D-052`). ⚠️ **The hedge is kept**: *"I believe that's
+it"* is not *"that is it"*, and a hedged enumeration is not a closed set.
+
+### ⭐⭐ THE SCORECARD — one of four is settled
+
+| Tool | Status |
+|---|---|
+| **TDI** | ⭐ `D-045` + `D-052` + `D-053`, all **ADOPTED** — ⚠️ and `A-086`'s band period is still stated nowhere |
+| **Worktime ribbon** | ⛔ `D-056` **DRAFT, UNADOPTED**; `A-019`/`A-105`/`A-131` open; the Pine port never run |
+| **ADR** | ⛔ `D-051` **DRAFT, UNADOPTED**; `A-100` lookback **10/14/15/21**; ⚠️ *"ADR"* names **three** indicators and picks none |
+| **EMAs** | ⛔⛔ **actively contradictory** — `D-043` (adopted) **5·13**·50·200·800 vs `MMM.tpl` **4·10**·50·200·800·**3200** (`A-143`) |
+
+⭐ **The owner named the four things that matter and the project can compute none of them but the
+TDI.** The shortest path to a usable toolset is `D-056` → `D-051` → `A-143` → `A-100`, and **each
+waits on one owner sentence, not on more research.** That prioritisation is the entry's real product.
+
+### ⚠️ THE RIBBON DESCRIPTION DOES NOT MATCH HIS OWN CHART — and it is the SECOND instance
+
+He says the ribbon highlights *"sessions **and previous highs and lows**."* **Verified against
+`MMM.tpl`:** #8 (the ribbon) draws **sessions only**; previous highs/lows are **#7
+`!SM_Daily_HiLo`** and **#9 `Weekly_High_Low Great`** — two separate indicators. The ribbon's full
+recovered input surface has no daily/weekly-extreme input at all.
+
+⭐ **`A-141` was the first instance** (*"the high low trainer is part of the sessions indicator"*).
+**Three readings, none adopted:** a functional **bundle**; ⭐⭐ **a NEWER `!sm_WorkTime` build that
+really does bundle them** — which would be **the most valuable artifact the project could receive**,
+closing `A-141` and settling `D-056`'s auto-GMT question in one file; or misrecollection.
+⚠️ Under the bundle reading the set is **four FUNCTIONS delivered by SIX indicators**, pulling
+`!SM_Daily_HiLo` and `Weekly_High_Low Great` **into** scope.
+
+### ⚠️⚠️ PIVOTS WERE NOT MENTIONED — flagged, not resolved
+
+⭐ The omission **agrees with his chart files**: no pivot indicator on any of his three templates,
+and `PivotPoints.ex4` sits unused in a Downloads folder. ⚠️ **But the list also omits
+`PZ_QuartersTheory`, which IS on all three** — so the list provably under-reports his own charts and
+silence establishes nothing.
+
+⛔⛔ **`A-101` STAYS OPEN AT FULL PRIORITY REGARDLESS.** **V16 is an entire lesson on pivot points**
+and prints the grid at Tier 1. `A-101` asks **what the course taught**, which does not depend on what
+the owner trades. ⭐ **A confirmed "I don't use pivots" would only change the priority of BUILDING a
+pivot tool — an effort question, not an evidence question.**
+
+### ⛔ WHAT THIS RULING DOES NOT DO — the easiest error here
+
+**Nothing is closed, excluded or deprioritised.** `PZ_QuartersTheory`, `PivotPoints.ex4`/`A-101`,
+`Weekly_High_Low Great`, `!SM_Daily_HiLo`, `Candle Timer`, `ICT Day Of Week`, `mm_adr`/`D-051`,
+`A-100`, `A-086`, `A-143`, `C-022`, `C-032` — **all unchanged.**
+
+⭐ **The governing distinction, and it is doing real work:** `D-055`/`D-058` are **rules** (how to
+trade); **this is SCOPE** (what he uses). **A statement about the owner's practice says nothing about
+the course's curriculum, and the project exists to study the corpus.** Treating it as a curriculum
+filter would narrow the corpus on non-Tier-1 authority — the `A-082`/`D-030` error in its most
+consequential form. `SOURCING_HIERARCHY.md` §2's *"silence is never permission"* applies to the
+owner's silence exactly as to the corpus's.
+
+⭐ **`A-143` does NOT close.** *"EMAs"* confirms the family is load-bearing and states nothing about
+membership. It does raise the record's priority sharply — it blocks the whole of `D-058`'s tier 1.
+
+### Numbering
+
+**D-059**, verified free across integration **and every remote branch**. Adopted max is `D-057`;
+`D-051`/`D-055`/`D-056`/`D-058` are held by unadopted drafts. ⚠️ `D-047` still gives the number to
+whoever adopts first.
