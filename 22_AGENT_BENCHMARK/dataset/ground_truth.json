@@ -1,0 +1,1002 @@
+{
+  "CASE_01": {
+    "case_id": "CASE_01",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_M_FORMATION",
+    "timestamp": "2023-03-16 03:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "SHORT",
+    "expected_setup": "M_FORMATION",
+    "expected_stop_loss": 1.21182,
+    "expected_take_profit_1": 1.20788,
+    "expected_confidence_range": [
+      76,
+      96
+    ],
+    "expert_rationale": "M Formation test at Asian High Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_01_chart.svg",
+      "market_state_json": "CASE_01_state.json"
+    }
+  },
+  "CASE_02": {
+    "case_id": "CASE_02",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2016-02-11 10:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.43751,
+    "expected_take_profit_1": 1.44987,
+    "expected_confidence_range": [
+      72,
+      92
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_02_chart.svg",
+      "market_state_json": "CASE_02_state.json"
+    }
+  },
+  "CASE_03": {
+    "case_id": "CASE_03",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_M_FORMATION",
+    "timestamp": "2016-04-18 10:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "SHORT",
+    "expected_setup": "M_FORMATION",
+    "expected_stop_loss": 1.42459,
+    "expected_take_profit_1": 1.4201,
+    "expected_confidence_range": [
+      84,
+      104
+    ],
+    "expert_rationale": "M Formation test at Asian High Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_03_chart.svg",
+      "market_state_json": "CASE_03_state.json"
+    }
+  },
+  "CASE_04": {
+    "case_id": "CASE_04",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2023-11-17 08:45:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      3,
+      23
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_04_chart.svg",
+      "market_state_json": "CASE_04_state.json"
+    }
+  },
+  "CASE_05": {
+    "case_id": "CASE_05",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2024-11-18 08:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      0,
+      20
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_05_chart.svg",
+      "market_state_json": "CASE_05_state.json"
+    }
+  },
+  "CASE_06": {
+    "case_id": "CASE_06",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_BLOWN_ASIAN_BOX",
+    "timestamp": "2024-09-19 03:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      15,
+      35
+    ],
+    "expert_rationale": "Asian box range is 60.5 pips (>50p ceiling). Market expanded in Asia; reversal invalid.",
+    "files": {
+      "chart_image": "CASE_06_chart.svg",
+      "market_state_json": "CASE_06_state.json"
+    }
+  },
+  "CASE_07": {
+    "case_id": "CASE_07",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_M_FORMATION",
+    "timestamp": "2024-12-05 08:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "SHORT",
+    "expected_setup": "M_FORMATION",
+    "expected_stop_loss": 1.27481,
+    "expected_take_profit_1": 1.27023,
+    "expected_confidence_range": [
+      82,
+      102
+    ],
+    "expert_rationale": "M Formation test at Asian High Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_07_chart.svg",
+      "market_state_json": "CASE_07_state.json"
+    }
+  },
+  "CASE_08": {
+    "case_id": "CASE_08",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2014-10-17 03:15:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.60203,
+    "expected_take_profit_1": 1.60688,
+    "expected_confidence_range": [
+      73,
+      93
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_08_chart.svg",
+      "market_state_json": "CASE_08_state.json"
+    }
+  },
+  "CASE_09": {
+    "case_id": "CASE_09",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2014-08-28 03:15:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      5,
+      25
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_09_chart.svg",
+      "market_state_json": "CASE_09_state.json"
+    }
+  },
+  "CASE_10": {
+    "case_id": "CASE_10",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2023-09-21 08:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.2225,
+    "expected_take_profit_1": 1.22912,
+    "expected_confidence_range": [
+      83,
+      103
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_10_chart.svg",
+      "market_state_json": "CASE_10_state.json"
+    }
+  },
+  "CASE_11": {
+    "case_id": "CASE_11",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_BLOWN_ASIAN_BOX",
+    "timestamp": "2020-12-17 02:45:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      12,
+      32
+    ],
+    "expert_rationale": "Asian box range is 53.4 pips (>50p ceiling). Market expanded in Asia; reversal invalid.",
+    "files": {
+      "chart_image": "CASE_11_chart.svg",
+      "market_state_json": "CASE_11_state.json"
+    }
+  },
+  "CASE_12": {
+    "case_id": "CASE_12",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2019-01-24 02:45:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.30317,
+    "expected_take_profit_1": 1.30743,
+    "expected_confidence_range": [
+      80,
+      100
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_12_chart.svg",
+      "market_state_json": "CASE_12_state.json"
+    }
+  },
+  "CASE_13": {
+    "case_id": "CASE_13",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_BLOWN_ASIAN_BOX",
+    "timestamp": "2016-05-31 10:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      10,
+      30
+    ],
+    "expert_rationale": "Asian box range is 92.1 pips (>50p ceiling). Market expanded in Asia; reversal invalid.",
+    "files": {
+      "chart_image": "CASE_13_chart.svg",
+      "market_state_json": "CASE_13_state.json"
+    }
+  },
+  "CASE_14": {
+    "case_id": "CASE_14",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2019-03-05 02:45:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      17,
+      37
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_14_chart.svg",
+      "market_state_json": "CASE_14_state.json"
+    }
+  },
+  "CASE_15": {
+    "case_id": "CASE_15",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_M_FORMATION",
+    "timestamp": "2024-09-20 03:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "SHORT",
+    "expected_setup": "M_FORMATION",
+    "expected_stop_loss": 1.33481,
+    "expected_take_profit_1": 1.33095,
+    "expected_confidence_range": [
+      74,
+      94
+    ],
+    "expert_rationale": "M Formation test at Asian High Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_15_chart.svg",
+      "market_state_json": "CASE_15_state.json"
+    }
+  },
+  "CASE_16": {
+    "case_id": "CASE_16",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_BLOWN_ASIAN_BOX",
+    "timestamp": "2014-09-19 03:15:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      15,
+      35
+    ],
+    "expert_rationale": "Asian box range is 108.1 pips (>50p ceiling). Market expanded in Asia; reversal invalid.",
+    "files": {
+      "chart_image": "CASE_16_chart.svg",
+      "market_state_json": "CASE_16_state.json"
+    }
+  },
+  "CASE_17": {
+    "case_id": "CASE_17",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_DEAD_SESSION",
+    "timestamp": "2025-07-07 00:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      22,
+      42
+    ],
+    "expert_rationale": "Current time 00:00 is within Dead Gap / Asian accumulation. No active setup.",
+    "files": {
+      "chart_image": "CASE_17_chart.svg",
+      "market_state_json": "CASE_17_state.json"
+    }
+  },
+  "CASE_18": {
+    "case_id": "CASE_18",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2016-02-16 10:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.42673,
+    "expected_take_profit_1": 1.43219,
+    "expected_confidence_range": [
+      78,
+      98
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_18_chart.svg",
+      "market_state_json": "CASE_18_state.json"
+    }
+  },
+  "CASE_19": {
+    "case_id": "CASE_19",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2016-04-13 10:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.41928,
+    "expected_take_profit_1": 1.42474,
+    "expected_confidence_range": [
+      79,
+      99
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_19_chart.svg",
+      "market_state_json": "CASE_19_state.json"
+    }
+  },
+  "CASE_20": {
+    "case_id": "CASE_20",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2016-05-06 10:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.44142,
+    "expected_take_profit_1": 1.44861,
+    "expected_confidence_range": [
+      75,
+      95
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_20_chart.svg",
+      "market_state_json": "CASE_20_state.json"
+    }
+  },
+  "CASE_21": {
+    "case_id": "CASE_21",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_M_FORMATION",
+    "timestamp": "2024-02-13 02:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "SHORT",
+    "expected_setup": "M_FORMATION",
+    "expected_stop_loss": 1.26513,
+    "expected_take_profit_1": 1.26129,
+    "expected_confidence_range": [
+      84,
+      104
+    ],
+    "expert_rationale": "M Formation test at Asian High Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_21_chart.svg",
+      "market_state_json": "CASE_21_state.json"
+    }
+  },
+  "CASE_22": {
+    "case_id": "CASE_22",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2023-10-17 08:45:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.21246,
+    "expected_take_profit_1": 1.21705,
+    "expected_confidence_range": [
+      78,
+      98
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_22_chart.svg",
+      "market_state_json": "CASE_22_state.json"
+    }
+  },
+  "CASE_23": {
+    "case_id": "CASE_23",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2018-12-28 02:45:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      20,
+      40
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_23_chart.svg",
+      "market_state_json": "CASE_23_state.json"
+    }
+  },
+  "CASE_24": {
+    "case_id": "CASE_24",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_M_FORMATION",
+    "timestamp": "2023-04-17 08:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "SHORT",
+    "expected_setup": "M_FORMATION",
+    "expected_stop_loss": 1.24389,
+    "expected_take_profit_1": 1.23981,
+    "expected_confidence_range": [
+      74,
+      94
+    ],
+    "expert_rationale": "M Formation test at Asian High Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_24_chart.svg",
+      "market_state_json": "CASE_24_state.json"
+    }
+  },
+  "CASE_25": {
+    "case_id": "CASE_25",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2016-03-15 10:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.41391,
+    "expected_take_profit_1": 1.42014,
+    "expected_confidence_range": [
+      74,
+      94
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_25_chart.svg",
+      "market_state_json": "CASE_25_state.json"
+    }
+  },
+  "CASE_26": {
+    "case_id": "CASE_26",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2024-07-15 03:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      20,
+      40
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_26_chart.svg",
+      "market_state_json": "CASE_26_state.json"
+    }
+  },
+  "CASE_27": {
+    "case_id": "CASE_27",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_DEAD_SESSION",
+    "timestamp": "2021-02-10 17:45:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      18,
+      38
+    ],
+    "expert_rationale": "Current time 17:45 is within Dead Gap / Asian accumulation. No active setup.",
+    "files": {
+      "chart_image": "CASE_27_chart.svg",
+      "market_state_json": "CASE_27_state.json"
+    }
+  },
+  "CASE_28": {
+    "case_id": "CASE_28",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2023-11-29 08:45:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.26656,
+    "expected_take_profit_1": 1.27158,
+    "expected_confidence_range": [
+      78,
+      98
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_28_chart.svg",
+      "market_state_json": "CASE_28_state.json"
+    }
+  },
+  "CASE_29": {
+    "case_id": "CASE_29",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2014-06-30 03:15:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      0,
+      20
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_29_chart.svg",
+      "market_state_json": "CASE_29_state.json"
+    }
+  },
+  "CASE_30": {
+    "case_id": "CASE_30",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_DEAD_SESSION",
+    "timestamp": "2025-07-14 00:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      24,
+      44
+    ],
+    "expert_rationale": "Current time 00:00 is within Dead Gap / Asian accumulation. No active setup.",
+    "files": {
+      "chart_image": "CASE_30_chart.svg",
+      "market_state_json": "CASE_30_state.json"
+    }
+  },
+  "CASE_31": {
+    "case_id": "CASE_31",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_BLOWN_ASIAN_BOX",
+    "timestamp": "2016-06-24 10:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      11,
+      31
+    ],
+    "expert_rationale": "Asian box range is 1424.7 pips (>50p ceiling). Market expanded in Asia; reversal invalid.",
+    "files": {
+      "chart_image": "CASE_31_chart.svg",
+      "market_state_json": "CASE_31_state.json"
+    }
+  },
+  "CASE_32": {
+    "case_id": "CASE_32",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2014-07-22 03:15:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      14,
+      34
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_32_chart.svg",
+      "market_state_json": "CASE_32_state.json"
+    }
+  },
+  "CASE_33": {
+    "case_id": "CASE_33",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_DEAD_SESSION",
+    "timestamp": "2021-03-03 17:45:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      23,
+      43
+    ],
+    "expert_rationale": "Current time 17:45 is within Dead Gap / Asian accumulation. No active setup.",
+    "files": {
+      "chart_image": "CASE_33_chart.svg",
+      "market_state_json": "CASE_33_state.json"
+    }
+  },
+  "CASE_34": {
+    "case_id": "CASE_34",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_BLOWN_ASIAN_BOX",
+    "timestamp": "2016-02-02 10:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      18,
+      38
+    ],
+    "expert_rationale": "Asian box range is 58.0 pips (>50p ceiling). Market expanded in Asia; reversal invalid.",
+    "files": {
+      "chart_image": "CASE_34_chart.svg",
+      "market_state_json": "CASE_34_state.json"
+    }
+  },
+  "CASE_35": {
+    "case_id": "CASE_35",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2024-12-10 08:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      12,
+      32
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_35_chart.svg",
+      "market_state_json": "CASE_35_state.json"
+    }
+  },
+  "CASE_36": {
+    "case_id": "CASE_36",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2024-10-11 03:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      0,
+      20
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_36_chart.svg",
+      "market_state_json": "CASE_36_state.json"
+    }
+  },
+  "CASE_37": {
+    "case_id": "CASE_37",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_BLOWN_ASIAN_BOX",
+    "timestamp": "2016-04-14 10:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      11,
+      31
+    ],
+    "expert_rationale": "Asian box range is 55.3 pips (>50p ceiling). Market expanded in Asia; reversal invalid.",
+    "files": {
+      "chart_image": "CASE_37_chart.svg",
+      "market_state_json": "CASE_37_state.json"
+    }
+  },
+  "CASE_38": {
+    "case_id": "CASE_38",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_BLOWN_ASIAN_BOX",
+    "timestamp": "2016-06-29 10:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      11,
+      31
+    ],
+    "expert_rationale": "Asian box range is 66.5 pips (>50p ceiling). Market expanded in Asia; reversal invalid.",
+    "files": {
+      "chart_image": "CASE_38_chart.svg",
+      "market_state_json": "CASE_38_state.json"
+    }
+  },
+  "CASE_39": {
+    "case_id": "CASE_39",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2023-08-09 08:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.27124,
+    "expected_take_profit_1": 1.27519,
+    "expected_confidence_range": [
+      76,
+      96
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_39_chart.svg",
+      "market_state_json": "CASE_39_state.json"
+    }
+  },
+  "CASE_40": {
+    "case_id": "CASE_40",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2016-03-07 10:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.4126,
+    "expected_take_profit_1": 1.42039,
+    "expected_confidence_range": [
+      84,
+      104
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_40_chart.svg",
+      "market_state_json": "CASE_40_state.json"
+    }
+  },
+  "CASE_41": {
+    "case_id": "CASE_41",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2024-07-31 03:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      2,
+      22
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_41_chart.svg",
+      "market_state_json": "CASE_41_state.json"
+    }
+  },
+  "CASE_42": {
+    "case_id": "CASE_42",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_M_FORMATION",
+    "timestamp": "2023-08-16 08:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "SHORT",
+    "expected_setup": "M_FORMATION",
+    "expected_stop_loss": 1.27741,
+    "expected_take_profit_1": 1.27122,
+    "expected_confidence_range": [
+      81,
+      101
+    ],
+    "expert_rationale": "M Formation test at Asian High Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_42_chart.svg",
+      "market_state_json": "CASE_42_state.json"
+    }
+  },
+  "CASE_43": {
+    "case_id": "CASE_43",
+    "category": "POSITIVE",
+    "case_type": "POSITIVE_W_FORMATION",
+    "timestamp": "2016-05-04 10:00:00",
+    "expected_disposition": "TRADE",
+    "expected_direction": "LONG",
+    "expected_setup": "W_FORMATION",
+    "expected_stop_loss": 1.44533,
+    "expected_take_profit_1": 1.4514,
+    "expected_confidence_range": [
+      73,
+      93
+    ],
+    "expert_rationale": "W Formation test at Asian Low Trading Zone with rejection.",
+    "files": {
+      "chart_image": "CASE_43_chart.svg",
+      "market_state_json": "CASE_43_state.json"
+    }
+  },
+  "CASE_44": {
+    "case_id": "CASE_44",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_BLOWN_ASIAN_BOX",
+    "timestamp": "2016-01-29 10:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      22,
+      42
+    ],
+    "expert_rationale": "Asian box range is 69.1 pips (>50p ceiling). Market expanded in Asia; reversal invalid.",
+    "files": {
+      "chart_image": "CASE_44_chart.svg",
+      "market_state_json": "CASE_44_state.json"
+    }
+  },
+  "CASE_45": {
+    "case_id": "CASE_45",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_DEAD_SESSION",
+    "timestamp": "2025-11-11 00:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      10,
+      30
+    ],
+    "expert_rationale": "Current time 00:00 is within Dead Gap / Asian accumulation. No active setup.",
+    "files": {
+      "chart_image": "CASE_45_chart.svg",
+      "market_state_json": "CASE_45_state.json"
+    }
+  },
+  "CASE_46": {
+    "case_id": "CASE_46",
+    "category": "NEGATIVE",
+    "case_type": "NEGATIVE_BLOWN_ASIAN_BOX",
+    "timestamp": "2016-06-30 10:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      16,
+      36
+    ],
+    "expert_rationale": "Asian box range is 66.9 pips (>50p ceiling). Market expanded in Asia; reversal invalid.",
+    "files": {
+      "chart_image": "CASE_46_chart.svg",
+      "market_state_json": "CASE_46_state.json"
+    }
+  },
+  "CASE_47": {
+    "case_id": "CASE_47",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2024-04-08 03:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      10,
+      30
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_47_chart.svg",
+      "market_state_json": "CASE_47_state.json"
+    }
+  },
+  "CASE_48": {
+    "case_id": "CASE_48",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2019-03-08 02:45:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      6,
+      26
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_48_chart.svg",
+      "market_state_json": "CASE_48_state.json"
+    }
+  },
+  "CASE_49": {
+    "case_id": "CASE_49",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2019-04-22 03:45:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      14,
+      34
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_49_chart.svg",
+      "market_state_json": "CASE_49_state.json"
+    }
+  },
+  "CASE_50": {
+    "case_id": "CASE_50",
+    "category": "AMBIGUOUS",
+    "case_type": "AMBIGUOUS_MID_RANGE_CHOP",
+    "timestamp": "2024-02-15 02:00:00",
+    "expected_disposition": "NO_TRADE",
+    "expected_direction": "NEUTRAL",
+    "expected_setup": "NO_SETUP",
+    "expected_stop_loss": null,
+    "expected_take_profit_1": null,
+    "expected_confidence_range": [
+      3,
+      23
+    ],
+    "expert_rationale": "Price is trapped inside the Asian range with flat TDI (RSI ~50) and no liquidity hunt. NO TRADE.",
+    "files": {
+      "chart_image": "CASE_50_chart.svg",
+      "market_state_json": "CASE_50_state.json"
+    }
+  }
+}

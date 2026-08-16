@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "symbol": "GBPUSD",
+    "timestamp_ny_est": "2019-03-05 02:45:00",
+    "day_of_week": "Tuesday",
+    "active_session": "LONDON_OPEN"
+  },
+  "session_metrics": {
+    "asian_box": {
+      "high": 1.31745,
+      "low": 1.31497,
+      "range_pips": 24.8,
+      "status": "VALID_ACCUMULATION"
+    },
+    "trading_zone": {
+      "upper_hunt_zone_min": 1.31995,
+      "upper_hunt_zone_max": 1.32245,
+      "lower_hunt_zone_min": 1.30997,
+      "lower_hunt_zone_max": 1.31247
+    },
+    "blue_tracer": {
+      "prior_day_high": 1.32541,
+      "prior_day_low": 1.31663
+    },
+    "adr": {
+      "adr_14_pips": 105.6,
+      "daily_range_so_far_pips": 31.4,
+      "adr_percentage_used": 29.7
+    }
+  },
+  "indicators": {
+    "ema_values": {
+      "ema_5": 1.31636,
+      "ema_13": 1.31618,
+      "ema_50": 1.31698,
+      "ema_200": 1.32038,
+      "ema_800": 1.31684
+    },
+    "ema_crosses": {
+      "5_13_last_cross_bars_ago": 0,
+      "5_13_cross_direction": "BULLISH",
+      "price_vs_50_ema": "ABOVE",
+      "price_vs_200_ema": "BELOW"
+    },
+    "tdi": {
+      "rsi_price_line": 50.81,
+      "trade_signal_line": 42.31,
+      "market_baseline": 39.97,
+      "volatility_band_high": 49.03,
+      "volatility_band_low": 30.9,
+      "shark_fin_active": false,
+      "shark_fin_direction": "NONE",
+      "blood_in_water_active": false
+    }
+  },
+  "recent_price_action": {
+    "current_price": 1.31705,
+    "session_high": 1.31811,
+    "session_low": 1.31497,
+    "vector_breakout_detected": false
+  }
+}

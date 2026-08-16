@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "symbol": "GBPUSD",
+    "timestamp_ny_est": "2023-09-21 08:00:00",
+    "day_of_week": "Thursday",
+    "active_session": "LONDON_MID"
+  },
+  "session_metrics": {
+    "asian_box": {
+      "high": 1.23284,
+      "low": 1.23039,
+      "range_pips": 24.5,
+      "status": "VALID_ACCUMULATION"
+    },
+    "trading_zone": {
+      "upper_hunt_zone_min": 1.23534,
+      "upper_hunt_zone_max": 1.23784,
+      "lower_hunt_zone_min": 1.22539,
+      "lower_hunt_zone_max": 1.22789
+    },
+    "blue_tracer": {
+      "prior_day_high": 1.24211,
+      "prior_day_low": 1.23318
+    },
+    "adr": {
+      "adr_14_pips": 80.2,
+      "daily_range_so_far_pips": 98.1,
+      "adr_percentage_used": 122.4
+    }
+  },
+  "indicators": {
+    "ema_values": {
+      "ema_5": 1.22705,
+      "ema_13": 1.22831,
+      "ema_50": 1.23089,
+      "ema_200": 1.2351,
+      "ema_800": 1.24191
+    },
+    "ema_crosses": {
+      "5_13_last_cross_bars_ago": 18,
+      "5_13_cross_direction": "BEARISH",
+      "price_vs_50_ema": "BELOW",
+      "price_vs_200_ema": "BELOW"
+    },
+    "tdi": {
+      "rsi_price_line": 35.63,
+      "trade_signal_line": 37.88,
+      "market_baseline": 40.97,
+      "volatility_band_high": 47.82,
+      "volatility_band_low": 34.12,
+      "shark_fin_active": true,
+      "shark_fin_direction": "BULLISH_SHARK_FIN",
+      "blood_in_water_active": false
+    }
+  },
+  "recent_price_action": {
+    "current_price": 1.22612,
+    "session_high": 1.23311,
+    "session_low": 1.2233,
+    "vector_breakout_detected": true
+  }
+}

@@ -1,0 +1,135 @@
+//@version=5
+indicator("MMM Canonical Engine [Unified Master Pack]", overlay=true, max_boxes_count=500, max_lines_count=500)
+
+// =============================================================================
+// 1. INPUTS & CONFIGURATION
+// =============================================================================
+grp_ema = "1. Canonical EMAs (D-043 / D-061)"
+show_ema5   = input.bool(true, "Show 5 EMA (Mustard)", group=grp_ema)
+show_ema13  = input.bool(true, "Show 13 EMA (Ketchup)", group=grp_ema)
+show_ema50  = input.bool(true, "Show 50 EMA (Water)", group=grp_ema)
+show_ema200 = input.bool(true, "Show 200 EMA (Mayonnaise)", group=grp_ema)
+show_ema800 = input.bool(true, "Show 800 EMA (Blueberry)", group=grp_ema)
+
+grp_sess = "2. Session Windows & Asian Box"
+show_asian_box   = input.bool(true, "Draw Asian Accumulation Box (8 PM - 1 AM EST)", group=grp_sess)
+asian_box_max_p  = input.float(50.0, "Asian Box Max Valid Range (pips)", group=grp_sess)
+show_hunt_zones  = input.bool(true, "Draw Trading Zones (+25 / +50 pips)", group=grp_sess)
+show_blue_tracer = input.bool(true, "Draw Blue Tracer (Prior Day 5 PM H/L)", group=grp_sess)
+
+grp_tdi = "3. TDI Settings (D-065)"
+show_tdi_overlay = input.bool(false, "Show TDI Alert Shapes on Price Chart", group=grp_tdi)
+tdi_rsi_len      = input.int(21, "RSI Length", group=grp_tdi)
+tdi_pl_len       = input.int(2, "RSI Price Line (SMA)", group=grp_tdi)
+tdi_tsl_len      = input.int(7, "Trade Signal Line (SMA)", group=grp_tdi)
+tdi_mbl_len      = input.int(34, "Market Baseline (SMA)", group=grp_tdi)
+tdi_band_mult    = input.float(2.0, "Volatility Band Multiplier (StDev)", group=grp_tdi)
+
+// =============================================================================
+// 2. CANONICAL EMAS
+// =============================================================================
+ema5   = ta.ema(close, 5)
+ema13  = ta.ema(close, 13)
+ema50  = ta.ema(close, 50)
+ema200 = ta.ema(close, 200)
+ema800 = ta.ema(close, 800)
+
+plot(show_ema5   ? ema5   : na, "5 EMA (Mustard)",   color=color.yellow, linewidth=1)
+plot(show_ema13  ? ema13  : na, "13 EMA (Ketchup)",  color=color.red,    linewidth=1)
+plot(show_ema50  ? ema50  : na, "50 EMA (Water)",    color=color.aqua,   linewidth=2)
+plot(show_ema200 ? ema200 : na, "200 EMA (Mayonnaise)", color=color.white,  linewidth=2)
+plot(show_ema800 ? ema800 : na, "800 EMA (Blueberry)", color=color.blue,   linewidth=3)
+
+// 5/13 Cross Signals (Entry Timing Gate per D-058)
+bullish_5_13 = ta.crossover(ema5, ema13)
+bearish_5_13 = ta.crossunder(ema5, ema13)
+
+plotshape(bullish_5_13 and show_tdi_overlay, "5/13 Bullish Cross", shape.triangleup, location.belowbar, color.green, size=size.tiny)
+plotshape(bearish_5_13 and show_tdi_overlay, "5/13 Bearish Cross", shape.triangledown, location.abovebar, color.red, size=size.tiny)
+
+// =============================================================================
+// 3. ASIAN ACCUMULATION BOX & TRADING ZONES
+// =============================================================================
+// New York Timezone (EST UTC-5 / EDT UTC-4 automatically handled by exchange time)
+is_asian_session = not na(time(timeframe.period, "2000-0100:1234567", "America/New_York"))
+is_new_day       = ta.change(time("D")) != 0
+
+var float asian_high = na
+var float asian_low = na
+var int asian_start_bar = na
+var box current_asian_box = na
+
+if is_asian_session
+    if not is_asian_session[1] or is_new_day
+        asian_high := high
+        asian_low := low
+        asian_start_bar := bar_index
+        if show_asian_box
+            current_asian_box := box.new(left=bar_index, top=asian_high, right=bar_index, bottom=asian_low,
+                                         bgcolor=color.new(color.gray, 85), border_color=color.gray, border_style=line.style_dashed)
+    else
+        asian_high := math.max(asian_high, high)
+        asian_low := math.min(asian_low, low)
+        if show_asian_box and not na(current_asian_box)
+            box.set_top(current_asian_box, asian_high)
+            box.set_bottom(current_asian_box, asian_low)
+            box.set_right(current_asian_box, bar_index)
+
+// Trading Zones (+25 / +50 pips)
+pip_val = syminfo.mintick * 10
+var line upper_hunt_25 = na
+var line upper_hunt_50 = na
+var line lower_hunt_25 = na
+var line lower_hunt_50 = na
+
+if ta.change(is_asian_session) and not is_asian_session and show_hunt_zones
+    range_pips = (asian_high - asian_low) / pip_val
+    box_color = range_pips <= asian_box_max_p ? color.purple : color.maroon
+    
+    line.delete(upper_hunt_25)
+    line.delete(upper_hunt_50)
+    line.delete(lower_hunt_25)
+    line.delete(lower_hunt_50)
+    
+    upper_hunt_25 := line.new(bar_index, asian_high + (25 * pip_val), bar_index + 32, asian_high + (25 * pip_val), color=box_color, style=line.style_dotted)
+    upper_hunt_50 := line.new(bar_index, asian_high + (50 * pip_val), bar_index + 32, asian_high + (50 * pip_val), color=box_color, style=line.style_dotted)
+    lower_hunt_25 := line.new(bar_index, asian_low - (25 * pip_val), bar_index + 32, asian_low - (25 * pip_val), color=box_color, style=line.style_dotted)
+    lower_hunt_50 := line.new(bar_index, asian_low - (50 * pip_val), bar_index + 32, asian_low - (50 * pip_val), color=box_color, style=line.style_dotted)
+
+// =============================================================================
+// 4. BLUE TRACER (PRIOR DAY 5 PM EST HIGH/LOW)
+// =============================================================================
+var float prior_day_high = na
+var float prior_day_low = na
+var line bt_high_line = na
+var line bt_low_line = na
+
+// 5:00 PM NY Rollover
+is_5pm_rollover = not na(time(timeframe.period, "1700-1715:1234567", "America/New_York"))
+
+if is_new_day and show_blue_tracer
+    prior_day_high := request.security(syminfo.tickerid, "D", high[1], lookahead=barmerge.lookahead_off)
+    prior_day_low := request.security(syminfo.tickerid, "D", low[1], lookahead=barmerge.lookahead_off)
+    
+    line.delete(bt_high_line)
+    line.delete(bt_low_line)
+    
+    bt_high_line := line.new(bar_index, prior_day_high, bar_index + 96, prior_day_high, color=color.new(#29B6F6, 0), width=1)
+    bt_low_line := line.new(bar_index, prior_day_low, bar_index + 96, prior_day_low, color=color.new(#29B6F6, 0), width=1)
+
+// =============================================================================
+// 5. TRADERS DYNAMIC INDEX (TDI) ENGINE (D-065)
+// =============================================================================
+rsi_val = ta.rsi(close, tdi_rsi_len)
+pl      = ta.sma(rsi_val, tdi_pl_len)
+tsl     = ta.sma(pl, tdi_tsl_len)
+mbl     = ta.sma(pl, tdi_mbl_len)
+stdev   = ta.stdev(pl, tdi_mbl_len)
+vb_up   = mbl + (tdi_band_mult * stdev)
+vb_down = mbl - (tdi_band_mult * stdev)
+
+shark_fin_bear = (pl[1] >= vb_up[1] or pl[2] >= vb_up[2]) and pl < vb_up and pl < tsl and pl > 50
+shark_fin_bull = (pl[1] <= vb_down[1] or pl[2] <= vb_down[2]) and pl > vb_down and pl > tsl and pl < 50
+
+plotshape(shark_fin_bear and show_tdi_overlay, "TDI Shark Fin Bear", shape.labeldown, location.abovebar, color.orange, text="SHARK", textcolor=color.white, size=size.tiny)
+plotshape(shark_fin_bull and show_tdi_overlay, "TDI Shark Fin Bull", shape.labelup, location.belowbar, color.teal, text="SHARK", textcolor=color.white, size=size.tiny)
