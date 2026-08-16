@@ -202,3 +202,6 @@ yarn-error.log*
 # not excessive resolution. If the repository ever grows unwieldy, revisit
 # with an explicit decision in DECISIONS.md rather than deleting evidence.
 # --------------------------------------------------------------------------
+
+# Track corpus manifests (text) even though media is ignored
+!01_SOURCE_VIDEOS/**/MANIFEST.md
