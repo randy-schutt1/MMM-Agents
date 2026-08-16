@@ -114,7 +114,8 @@ void OnTick() {
          if (PaperMode) {
             Print("[PAPER] Would OrderSend BUY ", Symbol(), " lots=", lots, " price=", Ask, " sl=", sl, " tp=", tp);
          } else {
-            OrderSend(Symbol(), OP_BUY, lots, Ask, 3, sl, tp, "MMM-W-Trade", InpMagicNumber, 0, clrGreen);
+            int ticket = OrderSend(Symbol(), OP_BUY, lots, Ask, 3, sl, tp, "MMM-W-Trade", InpMagicNumber, 0, clrGreen);
+            if (ticket < 0) Print("OrderSend BUY error: ", GetLastError());
          }
       }
       // Bearish M-Formation (Sell)
@@ -125,7 +126,8 @@ void OnTick() {
          if (PaperMode) {
             Print("[PAPER] Would OrderSend SELL ", Symbol(), " lots=", lots, " price=", Bid, " sl=", sl, " tp=", tp);
          } else {
-            OrderSend(Symbol(), OP_SELL, lots, Bid, 3, sl, tp, "MMM-M-Trade", InpMagicNumber, 0, clrRed);
+            int ticket = OrderSend(Symbol(), OP_SELL, lots, Bid, 3, sl, tp, "MMM-M-Trade", InpMagicNumber, 0, clrRed);
+            if (ticket < 0) Print("OrderSend SELL error: ", GetLastError());
          }
       }
    }
@@ -143,10 +145,14 @@ void ManageActiveTrades() {
                if (PaperMode) {
                   Print("[PAPER] Would OrderClose ticket=", OrderTicket(), " lots=", OrderLots(), " (time stop)");
                }
-               else if (OrderType() == OP_BUY)
-                  OrderClose(OrderTicket(), OrderLots(), Bid, 3, clrYellow);
-               else if (OrderType() == OP_SELL)
-                  OrderClose(OrderTicket(), OrderLots(), Ask, 3, clrYellow);
+               else if (OrderType() == OP_BUY) {
+                  bool res = OrderClose(OrderTicket(), OrderLots(), Bid, 3, clrYellow);
+                  if (!res) Print("OrderClose error: ", GetLastError());
+               }
+               else if (OrderType() == OP_SELL) {
+                  bool res = OrderClose(OrderTicket(), OrderLots(), Ask, 3, clrYellow);
+                  if (!res) Print("OrderClose error: ", GetLastError());
+               }
             }
          }
       }
