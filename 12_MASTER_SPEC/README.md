@@ -2,7 +2,13 @@
 
 Canonical human specification of the Market Maker Method.
 
-## STATUS: EMPTY — DO NOT POPULATE YET
+## STATUS: POPULATED PAST THE PHASE-3 GATE — PENDING RE-RATIFICATION
+
+> **STATUS CORRECTION (2026-08-16):** this directory was populated by commit
+> `89e9c3d` while `18_REVIEW/FINAL_COURSE_REVIEW.md` had Phase 3 **NOT GRANTED**
+> (see LOG.md 2026-08-16 incident entry). Its contents carry **no doctrinal
+> authority** until re-ratified under MASTER_A_PLAN Phase 3: every parameter must
+> carry a D-number or Tier-1 citation or be deleted.
 
 Target file: `MMM_MASTER_SPECIFICATION.md`
 

@@ -1,4 +1,8 @@
 # MARKET MAKER METHOD (MMM) AGENT BENCHMARK REPORT
+
+> **CORRECTION (2026-08-16): RECLASSIFIED — DEVELOPMENT SMOKE TEST ONLY — NOT evidence of agent competence.**
+> The 98.3% / PASSED result below is **circular**: the "agent" under test was the `CanonicalExpertEvaluator` rule baseline that also generated the expected labels (`agent_harness.py:478-479`). Confidence targets were `random.randint` (`dataset_generator.py:204-218`), and Case 01 is internally inconsistent (state JSON shows a bullish 5/13 cross; baseline calls a bearish M trade). See `RECLASSIFICATION_NOTICE.md`. This report is preserved as a historical record only.
+
 **Date:** 2026-08-16 00:37:05
 **Test Suite:** 50-Case Blind Evaluation Dataset (`22_AGENT_BENCHMARK/dataset/`)
 **Status:** PASSED

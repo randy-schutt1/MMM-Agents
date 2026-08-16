@@ -1,10 +1,14 @@
 # MMM-MASTERY — Market Maker Method Research & Automation Project
 
-**CURRENT STATUS: INFRASTRUCTURE READY / SOURCE VIDEOS NOT YET AVAILABLE**
+**CURRENT STATUS: CORE COURSE INGESTED (V01–V21) / PART 2 AND "MORE VIDEOS" PENDING INGESTION**
 
-No bootcamp lesson has been processed. No transcript, note, chart example, homework
-answer, backtest, concept definition, or Market Maker Method rule exists in this
-repository. Everything currently present is operating-system scaffolding.
+> **STATUS CORRECTION (2026-08-16):** the previous banner ("SOURCE VIDEOS NOT YET
+> AVAILABLE / no transcript exists") was stale. In reality, **21 lessons have been
+> ingested** — transcripts, lesson notes, concept library, homework, manual
+> backtests, and reviews exist through the V01–V21 final course review. The
+> **Part 2 MP4s and the "More Videos" recordings are NOT yet ingested** (MASTER_A_PLAN
+> Phase 1). Governance per `/Users/randyschutt/Desktop/Trading/Audit/`
+> MASTER_AUDIT_2026-08-16.md and MASTER_A_PLAN_2026-08-16.md.
 
 ---
 
@@ -239,6 +243,16 @@ not edited. See `00_SYSTEM/REMEDIATION_PROTOCOL.md`.
 ---
 
 ## 11. CURRENT LIMITATION — SOURCE VIDEOS NOT ACCESSIBLE
+
+> **STATUS CORRECTION (2026-08-16):** this section described the initial
+> scaffolding state and is **no longer accurate**. The 21 core bootcamp lessons
+> (V01–V21) have since been ingested: transcripts, lesson notes, concepts,
+> homework, manual backtests, and reviews exist. What remains un-ingested is the
+> **Part 2 MP4 set and the "More Videos" recordings** (see MASTER_A_PLAN Phase 1).
+> Note also that `12_MASTER_SPEC/`, `13_MACHINE_SPEC/`, `14_PINE/`, `22_`, and
+> `23_` were populated past the NOT-GRANTED Phase-3 gate (see LOG.md 2026-08-16
+> incident entry) and are pending re-ratification. The original text below is
+> preserved as a historical record.
 
 The agent session that built this infrastructure had **no access to the bootcamp
 video files**. Accordingly, and deliberately:

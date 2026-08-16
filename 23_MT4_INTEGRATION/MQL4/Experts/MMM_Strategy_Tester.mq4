@@ -11,7 +11,10 @@
 #include <stdlib.mqh>
 
 //--- Input Parameters
-input string   sep0              = "=== 1. Risk Management ===";
+input string   sep0              = "=== 0. Safety ===";
+input bool     PaperMode         = true;      // Paper Mode (log intended orders, never send)
+
+input string   sep0a             = "=== 1. Risk Management ===";
 input double   InpRiskPercent    = 1.0;       // Risk Per Trade (%)
 input double   InpFixedLots      = 0.0;       // Fixed Lot Size (0 = use Risk %)
 input double   InpStopLossOffset = 8.0;       // SL Offset Beyond High/Low (pips)
@@ -68,7 +71,11 @@ void OnTick() {
    double asian_low = 999999.0;
    int bars_scanned = 0;
 
-   for (int i = 1; i < 40; i++) {
+   // Scan back far enough to reach the prior-evening Asian box (20:00 start).
+   // From late NY session (~12:00) back to 20:00 the previous day is ~16h = 64
+   // M15 bars; 40 bars (10h) could not reach it. Use 96 bars (24h) so the full
+   // box is always in range. (MASTER_A_PLAN Phase 0)
+   for (int i = 1; i < 96; i++) {
       int h = TimeHour(Time[i]);
       if (h >= InpAsianStartHour || h < InpAsianEndHour) {
          asian_high = MathMax(asian_high, High[i]);
@@ -104,14 +111,22 @@ void OnTick() {
          double sl = Low[1] - (InpStopLossOffset * g_pip_size);
          double tp = Close[1] + (InpTakeProfit1 * g_pip_size);
          double lots = CalculateLotSize(MathAbs(Close[1] - sl) / g_pip_size);
-         OrderSend(Symbol(), OP_BUY, lots, Ask, 3, sl, tp, "MMM-W-Trade", InpMagicNumber, 0, clrGreen);
+         if (PaperMode) {
+            Print("[PAPER] Would OrderSend BUY ", Symbol(), " lots=", lots, " price=", Ask, " sl=", sl, " tp=", tp);
+         } else {
+            OrderSend(Symbol(), OP_BUY, lots, Ask, 3, sl, tp, "MMM-W-Trade", InpMagicNumber, 0, clrGreen);
+         }
       }
       // Bearish M-Formation (Sell)
       else if (bearish_cross && Close[1] >= asian_high - (5.0 * g_pip_size)) {
          double sl = High[1] + (InpStopLossOffset * g_pip_size);
          double tp = Close[1] - (InpTakeProfit1 * g_pip_size);
          double lots = CalculateLotSize(MathAbs(sl - Close[1]) / g_pip_size);
-         OrderSend(Symbol(), OP_SELL, lots, Bid, 3, sl, tp, "MMM-M-Trade", InpMagicNumber, 0, clrRed);
+         if (PaperMode) {
+            Print("[PAPER] Would OrderSend SELL ", Symbol(), " lots=", lots, " price=", Bid, " sl=", sl, " tp=", tp);
+         } else {
+            OrderSend(Symbol(), OP_SELL, lots, Bid, 3, sl, tp, "MMM-M-Trade", InpMagicNumber, 0, clrRed);
+         }
       }
    }
 }
@@ -125,7 +140,10 @@ void ManageActiveTrades() {
          if (OrderSymbol() == Symbol() && OrderMagicNumber() == InpMagicNumber) {
             int open_bar_shift = iBarShift(Symbol(), PERIOD_M15, OrderOpenTime(), false);
             if (open_bar_shift >= InpTimeStopBars) {
-               if (OrderType() == OP_BUY)
+               if (PaperMode) {
+                  Print("[PAPER] Would OrderClose ticket=", OrderTicket(), " lots=", OrderLots(), " (time stop)");
+               }
+               else if (OrderType() == OP_BUY)
                   OrderClose(OrderTicket(), OrderLots(), Bid, 3, clrYellow);
                else if (OrderType() == OP_SELL)
                   OrderClose(OrderTicket(), OrderLots(), Ask, 3, clrYellow);
@@ -143,10 +161,17 @@ double CalculateLotSize(double sl_pips) {
    if (sl_pips <= 0) sl_pips = 10.0;
    
    double risk_usd = AccountBalance() * (InpRiskPercent / 100.0);
+   // MODE_TICKVALUE is the value of one tick (MODE_TICKSIZE) per lot, NOT one pip.
+   // On 5/3-digit brokers a pip = 10 ticks, so using tick_value per pip directly
+   // over-risks ~10x. Convert tick value to pip value via (pip_size / tick_size).
+   // (MASTER_A_PLAN Phase 0 lot-sizing fix)
    double tick_value = MarketInfo(Symbol(), MODE_TICKVALUE);
-   if (tick_value <= 0) tick_value = 10.0;
+   double tick_size  = MarketInfo(Symbol(), MODE_TICKSIZE);
+   if (tick_value <= 0) tick_value = 1.0;
+   if (tick_size <= 0)  tick_size  = Point;
+   double pip_value = tick_value * (g_pip_size / tick_size);
 
-   double lots = risk_usd / (sl_pips * tick_value);
+   double lots = risk_usd / (sl_pips * pip_value);
    double min_lot = MarketInfo(Symbol(), MODE_MINLOT);
    double max_lot = MarketInfo(Symbol(), MODE_MAXLOT);
    double lot_step = MarketInfo(Symbol(), MODE_LOTSTEP);

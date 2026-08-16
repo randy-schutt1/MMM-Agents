@@ -21,7 +21,18 @@ from typing import Dict, Any, Optional
 from scripts.mt4_client import MT4BridgeClient
 from scripts.mmm_engine import MMMEngine, MMMBar
 from scripts.mmm_chart_generator import render_mmm_chart
-from 22_AGENT_BENCHMARK.agent_harness import CanonicalExpertEvaluator
+
+# "22_AGENT_BENCHMARK" starts with a digit, so it cannot be imported with a
+# plain import statement (SyntaxError). Load agent_harness via importlib
+# instead. (MASTER_A_PLAN Phase 0 SyntaxError fix)
+import importlib.util as _importlib_util
+
+_REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_AGENT_HARNESS_PATH = os.path.join(_REPO_ROOT, "22_AGENT_BENCHMARK", "agent_harness.py")
+_spec = _importlib_util.spec_from_file_location("agent_harness", _AGENT_HARNESS_PATH)
+_agent_harness = _importlib_util.module_from_spec(_spec)
+_spec.loader.exec_module(_agent_harness)
+CanonicalExpertEvaluator = _agent_harness.CanonicalExpertEvaluator
 
 
 def run_live_stream(

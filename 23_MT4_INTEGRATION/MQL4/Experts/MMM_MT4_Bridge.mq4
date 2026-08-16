@@ -42,6 +42,7 @@ input int InpServerPort    = 5555;      // TCP Listening Port
 input int InpTimerInterval = 100;       // Socket Polling Timer (ms)
 input int InpMagicNumber   = 888111;    // Default EA Magic Number
 input int InpSlippage      = 3;         // Max Slippage (points)
+input bool PaperMode       = true;      // Paper Mode (log intended orders, never send) — MASTER_A_PLAN Phase 0
 
 // Global Variables
 int g_server_sock = INVALID_SOCKET;
@@ -352,6 +353,24 @@ void HandleOrderSend(string json) {
    int cmd_type = (type_str == "BUY") ? OP_BUY : OP_SELL;
    double price = (cmd_type == OP_BUY) ? MarketInfo(symbol, MODE_ASK) : MarketInfo(symbol, MODE_BID);
 
+   if (PaperMode) {
+      Print("[PAPER] Would OrderSend ", type_str, " ", symbol, " lots=", lots, " price=", price, " sl=", sl, " tp=", tp);
+      CJsonBuilder pjb;
+      pjb.StartObject();
+      pjb.AddString("status", "OK");
+      pjb.AddBool("paper", true);
+      pjb.AddInt("ticket", 0);
+      pjb.AddString("symbol", symbol);
+      pjb.AddString("type", type_str);
+      pjb.AddNumber("price", price, 5);
+      pjb.AddNumber("lots", lots, 2);
+      pjb.AddNumber("sl", sl, 5);
+      pjb.AddNumber("tp", tp, 5);
+      pjb.EndObject();
+      SendJsonResponse(pjb.GetJson());
+      return;
+   }
+
    int ticket = OrderSend(symbol, cmd_type, lots, price, InpSlippage, sl, tp, comment, magic, 0, (cmd_type == OP_BUY ? clrGreen : clrRed));
    
    CJsonBuilder jb;
@@ -383,6 +402,20 @@ void HandleOrderModify(string json) {
    double sl = JsonGetNumber(json, "sl");
    double tp = JsonGetNumber(json, "tp");
 
+   if (PaperMode) {
+      Print("[PAPER] Would OrderModify ticket=", ticket, " sl=", sl, " tp=", tp);
+      CJsonBuilder pjb;
+      pjb.StartObject();
+      pjb.AddString("status", "OK");
+      pjb.AddBool("paper", true);
+      pjb.AddInt("ticket", ticket);
+      pjb.AddNumber("sl", sl, 5);
+      pjb.AddNumber("tp", tp, 5);
+      pjb.EndObject();
+      SendJsonResponse(pjb.GetJson());
+      return;
+   }
+
    bool success = false;
    int err = 0;
    if (OrderSelect(ticket, SELECT_BY_TICKET)) {
@@ -410,6 +443,19 @@ void HandleOrderModify(string json) {
 //+------------------------------------------------------------------+
 void HandleOrderClose(string json) {
    int ticket = JsonGetInt(json, "ticket");
+
+   if (PaperMode) {
+      Print("[PAPER] Would OrderClose ticket=", ticket);
+      CJsonBuilder pjb;
+      pjb.StartObject();
+      pjb.AddString("status", "OK");
+      pjb.AddBool("paper", true);
+      pjb.AddInt("ticket", ticket);
+      pjb.EndObject();
+      SendJsonResponse(pjb.GetJson());
+      return;
+   }
+
    bool success = false;
    int err = 0;
 

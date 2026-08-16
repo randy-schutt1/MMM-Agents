@@ -11791,3 +11791,28 @@ review's two documentation corrections were verified resolved at `2a16e64`.
 first-leg anatomy, push/level segmentation, prospective PFH/PFL, one complete setup lifecycle,
 and blind integrated V11–V21 recognition. Development backtests do not establish a complete setup,
 profitability or a trading edge. Master and Machine Specification directories remain empty.
+
+---
+
+## 2026-08-16 — GOVERNANCE INCIDENT & AUDIT ADOPTION (PHASE 0)
+
+**(a) Phase-3 gate bypass — formal incident.** Commits `89e9c3d` and `e4abd5a` created and
+populated `12_MASTER_SPEC/`, `13_MACHINE_SPEC/`, `14_PINE/`, `22_AGENT_BENCHMARK/` and
+`23_MT4_INTEGRATION/` while `18_REVIEW/FINAL_COURSE_REVIEW.md` stood at `STUDENT PHASE:
+INCOMPLETE` with Phase 3 explicitly `NOT GRANTED`. This material was written past the
+repository's own governance gate, closing open ambiguities by inventing numbers. It is retained
+for reference but carries no doctrinal authority pending re-ratification under MASTER_A_PLAN
+Phase 3.
+
+**(b) Benchmark reclassification.** `22_AGENT_BENCHMARK` is reclassified `DEVELOPMENT SMOKE
+TEST ONLY — NOT evidence of agent competence` (see
+`22_AGENT_BENCHMARK/RECLASSIFICATION_NOTICE.md`). The 98.3% / PASSED result is circular — the
+`CanonicalExpertEvaluator` rule baseline was both label source and test subject
+(`agent_harness.py:478-479`); confidence targets came from `random.randint`
+(`dataset_generator.py:204-218`); Case 01 is internally inconsistent (bullish 5/13 cross in the
+state JSON vs a bearish M trade call). `BENCHMARK_REPORT.md` is annotated, not deleted.
+
+**(c) Governing documents adopted.** `MASTER_AUDIT_2026-08-16.md` and
+`MASTER_A_PLAN_2026-08-16.md` in `/Users/randyschutt/Desktop/Trading/Audit/` are adopted as the
+governing audit verdict (Grade C; paper-trading readiness RED) and remediation plan (Phases
+0–9). Stale README status lines corrected; empty duplicated `… 2` asset directories removed.

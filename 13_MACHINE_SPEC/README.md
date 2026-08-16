@@ -2,7 +2,13 @@
 
 Formal measurable interpretation required for software.
 
-## STATUS: EMPTY — DO NOT POPULATE YET
+## STATUS: POPULATED PAST THE PHASE-3 GATE — PENDING RE-RATIFICATION
+
+> **STATUS CORRECTION (2026-08-16):** this directory was populated by commit
+> `89e9c3d` while `18_REVIEW/FINAL_COURSE_REVIEW.md` had Phase 3 **NOT GRANTED**
+> (see LOG.md 2026-08-16 incident entry). Its contents carry **no doctrinal
+> authority** until re-ratified under MASTER_A_PLAN Phase 3 (which itself requires
+> a complete, authoritative `12_MASTER_SPEC`).
 
 Target file: `MMM_MACHINE_SPECIFICATION.md`
 

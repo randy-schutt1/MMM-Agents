@@ -6,8 +6,10 @@ Exposes MetaTrader 4 trading and analysis tools to AI Assistants via the
 standard Model Context Protocol (JSON-RPC over STDIO):
 - Market Data: Live candlesticks, ticks, and custom DLL indicator buffer values
 - Account & Risk: Balance, equity, margin, active positions
-- Execution: Market orders, SL/TP modifications, position closing
 - Intelligence Layer: Full MMM state extraction and AI setup analysis
+
+READ-ONLY: order execution tools were removed per MASTER_A_PLAN Phase 0
+(code safety). The AI agent cannot place, modify, or close orders via MCP.
 """
 
 import os
@@ -75,46 +77,10 @@ class MT4MCPServer:
                     "properties": {}
                 }
             },
-            {
-                "name": "mt4_open_order",
-                "description": "Execute a market BUY or SELL order in MetaTrader 4 with precise Stop Loss and Take Profit levels.",
-                "inputSchema": {
-                    "type": "object",
-                    "properties": {
-                        "symbol": {"type": "string", "description": "Symbol to trade", "default": "GBPUSD"},
-                        "order_type": {"type": "string", "enum": ["BUY", "SELL"], "description": "Order direction"},
-                        "volume": {"type": "number", "description": "Lot size (e.g. 0.01 for micro-lot)", "default": 0.01},
-                        "sl": {"type": "number", "description": "Stop loss price level"},
-                        "tp": {"type": "number", "description": "Take profit price level"},
-                        "comment": {"type": "string", "description": "Order comment tag", "default": "MMM-AI Trade"}
-                    },
-                    "required": ["order_type"]
-                }
-            },
-            {
-                "name": "mt4_modify_order",
-                "description": "Modify Stop Loss and Take Profit levels for an open trade ticket.",
-                "inputSchema": {
-                    "type": "object",
-                    "properties": {
-                        "ticket": {"type": "integer", "description": "Order ticket number"},
-                        "sl": {"type": "number", "description": "New Stop Loss price"},
-                        "tp": {"type": "number", "description": "New Take Profit price"}
-                    },
-                    "required": ["ticket", "sl", "tp"]
-                }
-            },
-            {
-                "name": "mt4_close_order",
-                "description": "Close an open market position by ticket number.",
-                "inputSchema": {
-                    "type": "object",
-                    "properties": {
-                        "ticket": {"type": "integer", "description": "Order ticket number to close"}
-                    },
-                    "required": ["ticket"]
-                }
-            },
+            # SAFETY (MASTER_A_PLAN Phase 0): the mt4_open_order, mt4_modify_order,
+            # and mt4_close_order tools have been removed so the AI agent cannot
+            # place, modify, or close orders via MCP. Only read-only tools remain.
+            # Do not re-add execution tools before Phase 8.
             {
                 "name": "mmm_analyze_live_chart",
                 "description": "Fetch live MT4 M15 bars, compute complete Market Maker Method metrics (Asian Box, Trading Zones, EMAs, TDI Shark Fin), and generate visual chart + state vector.",
@@ -154,24 +120,13 @@ class MT4MCPServer:
             positions = self.client.get_open_positions()
             return {"status": "OK", "count": len(positions), "positions": positions}
 
-        elif name == "mt4_open_order":
-            sym = arguments.get("symbol", "GBPUSD")
-            order_type = arguments.get("order_type")
-            vol = float(arguments.get("volume", 0.01))
-            sl = arguments.get("sl")
-            tp = arguments.get("tp")
-            comment = arguments.get("comment", "MMM-AI Trade")
-            return self.client.open_order(sym, order_type, vol, sl, tp, comment)
-
-        elif name == "mt4_modify_order":
-            ticket = arguments.get("ticket")
-            sl = arguments.get("sl")
-            tp = arguments.get("tp")
-            return self.client.modify_order(ticket, sl, tp)
-
-        elif name == "mt4_close_order":
-            ticket = arguments.get("ticket")
-            return self.client.close_order(ticket)
+        # SAFETY (MASTER_A_PLAN Phase 0): order execution handlers
+        # (mt4_open_order / mt4_modify_order / mt4_close_order) removed.
+        elif name in ("mt4_open_order", "mt4_modify_order", "mt4_close_order"):
+            return {
+                "status": "ERROR",
+                "error": "Order execution tools are disabled per MASTER_A_PLAN Phase 0 (safety). This MCP server is read-only."
+            }
 
         elif name == "mmm_analyze_live_chart":
             sym = arguments.get("symbol", "GBPUSD")
