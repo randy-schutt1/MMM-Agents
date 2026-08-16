@@ -20,11 +20,11 @@
    int socket(int af, int type, int protocol);
    int bind(int s, int& name[], int namelen);
    int listen(int s, int backlog);
-   int accept(int s, int& addr[], int& addrlen);
+   int accept(int s, int& addr[], int& addrlen[]);
    int closesocket(int s);
    int recv(int s, uchar& buf[], int len, int flags);
    int send(int s, uchar& buf[], int len, int flags);
-   int ioctlsocket(int s, long cmd, int& argp[]);
+   int ioctlsocket(int s, int cmd, int& argp[]);
    int htons(int hostshort);
    int htonl(int hostlong);
 #import
@@ -33,7 +33,7 @@
 #define AF_INET        2
 #define SOCK_STREAM    1
 #define IPPROTO_TCP    6
-#define FIONBIO        0x8004667E
+#define FIONBIO        -2147195266   // 0x8004667E in 32-bit signed int
 #define INVALID_SOCKET -1
 #define SOCKET_ERROR   -1
 
@@ -128,7 +128,7 @@ void OnTimer() {
       int clientAddr[4];
       int clientAddrLen[1];
       clientAddrLen[0] = 16;
-      int new_sock = accept(g_server_sock, clientAddr, clientAddrLen[0]);
+      int new_sock = accept(g_server_sock, clientAddr, clientAddrLen);
       if (new_sock != INVALID_SOCKET) {
          g_client_sock = new_sock;
          int nonBlock[1];
