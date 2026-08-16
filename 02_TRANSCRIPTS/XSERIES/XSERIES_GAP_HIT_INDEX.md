@@ -8,11 +8,21 @@
 >
 > Every row below is a **candidate passage**, not a resolution. No `A-xxx` changes status, no
 > `C-xxx` closes, no tier is assigned, no lesson is ingested by this file. `SOURCE_MANIFEST.md`
-> anomaly `A-03` (X-series `NOT A LESSON` / `OPEN — DEFERRED`) is **unchanged and still awaiting
-> an owner decision.** `10_AMBIGUITIES/`, `11_CONTRADICTIONS/`, `MMM_SETUP_REGISTRY.md`,
+> `10_AMBIGUITIES/`, `11_CONTRADICTIONS/`, `MMM_SETUP_REGISTRY.md`,
 > `MMM_GAP_AND_DEPENDENCY_MATRIX.md` and `08_CONCEPT_LIBRARY/` are untouched.
 >
-> **Three unresolved governance questions block any closure from this material — see §0.**
+> ### ⭐ UPDATED 2026-08-15 — THE OWNER RULED ON ALL THREE §0 QUESTIONS
+>
+> | §0 question | Ruling | Decision |
+> |---|---|---|
+> | Is the X-series Tier 1? | **YES — same level as the bootcamp**, to fill gaps and add detail. `A-03` discharged | **`D-063`** |
+> | Are the three ASR garbles real? | **court of wood · shooting star · railroad tracks** — one of my three guesses was wrong | **`D-064`** |
+> | Where may the derivatives live? | **`01_SOURCE_VIDEOS/` is fine.** §0.3 withdrawn | owner, 2026-08-15 |
+> | The TDI band basis conflict | **`D-052` reversed** — bands deviate from the **market baseline**. Conditional on chart-application verification | **`D-065`** |
+>
+> ⚠️ **Tier 1 status does not make these transcripts verified.** `D-063` §5: no numeric figure from
+> this single-pass `whisper-small.en` output may close a record before two-tier verification. §0.1
+> stands, and is now the *only* remaining blocker.
 
 ---
 
@@ -27,33 +37,58 @@ counts, EMA periods and RSI periods are load-bearing and are the most common ASR
 corpus."*
 
 Almost every finding below is load-bearing **because** it carries a number. Treat every figure as
-**unverified** until a second engine and a direct listen confirm it. Known-garbled examples already
-visible in these files: *"quart of wood"* / *"quarter wood"* (= **railroad tracks**?), *"human
-star"* (= **evening star**), *"Rarotracts"* / *"aero tracks"* / *"rubber track"* (= **railroad
-tracks**), *"nameable second leg"*, *"pins the man-made"* (= **mayonnaise**), *"the male"* (=
-**mayo**), *"$22.16"* for a quote of `1.2216`.
+**unverified** until a second engine and a direct listen confirm it. **This is now the only
+remaining blocker on this material** (`D-063` §5).
 
-### 0.2 The X-series tier is contradictory as written
+**Known garbles — corrected by the owner, `D-064`:**
+
+| ASR produced | Actual | |
+|---|---|---|
+| *"quart of wood"*, *"quarter wood"* | **court of wood** | its own pattern — ⚠️ ~~railroad tracks?~~ **my guess was wrong.** Spelling likely *cord of wood*, unconfirmed |
+| *"human star"*, *"morning speaking star"* | **shooting star** | ⚠️ ~~evening star~~ **wrong** — X12 names evening star separately, so they are two objects |
+| *"Rarotracts"*, *"aero tracks"*, *"rubber track"* | **railroad tracks** | confirmed |
+
+Still-unresolved garbles: *"nameable second leg"*, *"pins the man-made"* (= **mayonnaise**), *"the
+male"* (= **mayo**), *"$22.16"* for a quote of `1.2216`, *"naders to the center"* (= **nadir**).
+
+> ⚠️ **`court of wood` is a name-only pattern.** `X13 [33:25]` — *"He forms a court of wood on the
+> low. This is a double… double court of wood"* — is a usage, not a definition. It joins the P3
+> name-only backlog and stays `DO NOT CODE` (`D-064` consequence 2).
+
+### 0.2 ~~The X-series tier is contradictory as written~~ — **RESOLVED, `D-063`**
+
+<details>
+<summary>Original text, retained per <code>REMEDIATION_PROTOCOL.md</code> §2</summary>
 
 - `SOURCING_HIERARCHY.md` §1: **Tier 3** is *"generic internet research… `EXTERNAL — NON-NORMATIVE`,
   permanently… Closes nothing, unblocks nothing, cited in no artifact."*
 - `MMM_PT2_INTAKE_AND_ALLOCATION_PLAN.md` §5 Track B step 1 assigns the X-series **"T3, cross-course
   note required"** while describing it as *"**Does Mauro state it?** … same instructor, already owned."*
 
-These cannot both be right. Material from **the course author himself**, on tape, is not the same
-class of thing as a forum post — but it is also **not the V01–V21 corpus**. The X-series is a
-*different course*, recorded **2012-06-02**, and Tier 1 is defined as `01_SOURCE_VIDEOS/` V01–V21.
-**An owner ruling is owed on whether a fourth rung exists for "same instructor, different course"
-and what it may close.** Nothing below should be written into a ledger until that ruling exists.
+These cannot both be right… **An owner ruling is owed on whether a fourth rung exists for "same
+instructor, different course" and what it may close.**
 
-### 0.3 Derivative location violates `SOURCE_INGESTION_PROTOCOL.md` §2.3
+</details>
 
-The transcripts, JSON and MD were written **inside** `01_SOURCE_VIDEOS/`, which §2.3 forbids
-(this is the same class of defect as manifest anomaly `A-07`). They should be moved to
-`02_TRANSCRIPTS/XSERIES/<ID>/` or to `MMM_DERIVATIVES/XSERIES/`, and each file tied to its `X` ID
-and SHA-256. **Source SWF hashes have not been re-verified against `SOURCE_MANIFEST.md` since
-transcription.** Note also that no per-file SOURCE table, speaker note, VERIFICATION section or
-confidence rating exists for any of the 21 files.
+**The ruling:** *"X series is not contradictory. It should be treated on the same level as the
+bootcamp to fill in the gaps and adds more details."* — owner, 2026-08-15. **The X-series is
+Tier 1.** `A-03` is discharged; the `MMM_PT2` "T3" assignment is superseded.
+
+**What still constrains it** — `D-063` §1–5, none relaxed: `D-025`/`D-033` still rank the author
+above a guest (**X11, X15, X16, X21 are guest-presented; X01–X03 are Dean Malone**); `D-030` still
+forbids approximating a definition the tape does not supply, so every §15 negative stays
+`DO NOT CODE`; `D-048`'s ladder now applies routinely because Tier 1 has more internal
+disagreements; and **admission is not verification** — see §0.1.
+
+### 0.3 ~~Derivative location violates `SOURCE_INGESTION_PROTOCOL.md` §2.3~~ — **WITHDRAWN**
+
+> *"Source videos is fine to have it. It's just where it lives."* — owner, 2026-08-15
+
+The transcripts stay where they are. No move, no re-pathing. **Two smaller items survive the
+withdrawal and are still owed**, since they are about traceability rather than location: the 21
+source SWF hashes have **not** been re-verified against `SOURCE_MANIFEST.md` since transcription,
+and **no per-file SOURCE table, speaker note, VERIFICATION section or confidence rating exists for
+any of the 21 files**.
 
 ---
 
@@ -65,7 +100,7 @@ confidence rating exists for any of the 21 files.
 | `A-007` / `A-004` leg & level segmentation | **P0** | **SUBSTANTIALLY ANSWERED** — level vs. push explicitly disambiguated; EMA-based level markers given |
 | `A-010` / `A-056` prospective PFH/PFL | **P0** | **PARTIALLY ANSWERED** — an explicit *prospective* "lock" criterion exists |
 | `A-133` blue tracer | P1 | **ANSWERED** — and it confirms the `MMM_PT2` §6.1 prediction against the 800-EMA reading |
-| `A-086` TDI band period / multiplier | P1 | **PARTIAL + ⚠ CONTRADICTS AN OWNER RULING** — see §5 |
+| `A-086` TDI band period / multiplier | P1 | **PARTIAL** — multiplier stated; period not. **Band basis reversed `D-052` → `D-065`**; see §5 |
 | `A-024` "22" overshoot tolerance | P1 | **NOT ANSWERED** — "slightly" is still unbounded |
 | `C-029` / `C-030` second-leg time cap | P1 | **RESOLVED IN-SOURCE** — the instructor reconciles the 30 / 30–45 / 90-minute figures himself |
 | `A-141` High/Low Trainer | P1 | **NOT ANSWERED — zero hits.** Confirms it must come from owner artifacts (Track C) |
@@ -240,12 +275,32 @@ that states a construction for the bands governs and triggers §3.1.**"*
 > the **two standard deviations**. Now it's below **two standard deviations**…"*
 
 This **agrees with V14 `[00:45:09]` and `MMM-NOTES` p.45** — both of which `D-052` overrode — and
-**disagrees with the owner's ruling**. ⛔ Do not adjudicate. This is `SOURCING_HIERARCHY.md` §3.2
-**Case C**; the finding is owed to the owner, and the X-series tier question (§0.2) must be settled
-first, since a non-Tier-1 source cannot by itself overturn an owner adjudication.
+**disagreed with the owner's ruling**.
+
+> ### ⭐ RESOLVED 2026-08-15 — `D-065`. **`D-052` IS REVERSED. THE BANDS DEVIATE FROM THE MARKET
+> ### BASELINE.**
+>
+> *"It's okay the definitions of the tdi bands. We just need to ensure we are applying it correctly.
+> If you want to update so it matches, then I'm okay with it — **as long as we are applying it
+> correctly to the charts**."* — owner, 2026-08-15
+>
+> Under `D-063` X20 is Tier 1, and it states a **construction** rather than a characterisation —
+> `D-048` rung 2. `C-021` re-closes as `RESOLVED BY COURSE (X20)`, superseding `D-052`, which is
+> retained unedited. **§3.5's re-check obligation is vindicated a third time:** it named this exact
+> trigger — *"a later video that states a construction for the bands governs"* — and that is the
+> trigger that fired.
+>
+> ⭐ **The owner's authorization is CONDITIONAL.** Before the corrected basis enters any spec, it
+> must be reconciled against X20 [20:21–22:50]'s operational shark-fin description **and confirmed
+> on the owner's own chart** that the corrected construction reproduces what he is actually seeing
+> (`D-057` records that those signals work for him, without a number). If it does not reproduce,
+> that is a finding and goes back to the owner — not resolved by preferring whichever version codes
+> more easily.
 
 **Separately, `A-086` gains a MULTIPLIER it never had at any tier — "two standard deviations."**
-The **period** is still not stated by Mauro.
+⚠️ Unverified ASR; `D-063` §5 applies. The **period** is still not stated by Mauro, so **`A-086`
+does not close** and `A-031`/`A-032` stay uncomputable — `D-052`'s *"it unblocks nothing"* survives
+its own reversal.
 
 ### 5.2 The band period — one candidate, and it is exactly the kind of number §0.1 warns about
 
@@ -550,15 +605,22 @@ A negative result here is a real finding and directly informs whether more mater
 
 ## 16. RECOMMENDED NEXT ACTIONS, IN ORDER
 
-1. **Owner ruling on §0.2** — the X-series tier. Nothing below it can be actioned without this.
-2. **Tier-2 verify the numeric passages**, in this order: `X01` 01:18:00–01:19:00 (band period —
-   highest value), `X13` 23:30–33:30 (M/W definition), `X17` 03:20–04:10 (quiz answers),
-   `X05` 06:30–07:40 / 24:00–30:10 (clock + DST), `X14` 43:00–44:00 (stops). Second engine +
-   direct listen, per the transcription prompt's two-tier requirement.
-3. **Relocate the derivatives** out of `01_SOURCE_VIDEOS/` and re-verify the 21 SHA-256 hashes
-   against `SOURCE_MANIFEST.md` (§0.3).
-4. **Surface the `C-021` conflict to the owner** (§5.1) — `SOURCING_HIERARCHY.md` §3.2 Case C.
-5. **Flag `A-023` and `A-084`** for §3.1 reconciliation (§5.3, §12).
+✅ ~~1. Owner ruling on §0.2~~ — **done, `D-063`.** ✅ ~~4. Surface `C-021`~~ — **done, `D-065`.**
+✅ ~~3a. Relocate derivatives~~ — **withdrawn by the owner.**
+
+1. ⭐ **Re-transcribe the numeric passages properly** — the last remaining blocker (`D-063` §5).
+   Large model + second engine + direct listen, in this order: `X01` 01:18:00–01:19:00 (band period
+   — highest value in the program), `X13` 23:30–33:30 (M/W definition), `X17` 03:20–04:10 (quiz
+   answers), `X05` 06:30–07:40 / 24:00–30:10 (clock + DST), `X14` 43:00–44:00 (stops),
+   `X20` 17:20–18:30 (the `D-065` multiplier).
+2. **Amend `SOURCING_HIERARCHY.md` §1.1** to state Tier 1 = V01–V21 **and** X01–X21 (`D-063`
+   consequence 3), and append the supersession block to §3.5 for `D-065`.
+3. **Chart-application check for `D-065`** — the owner's stated condition. Confirm the corrected
+   band construction reproduces the shark fin / blood in the water he actually reads.
+4. **Run §3.1 reconciliation on `A-023`, `A-084` and `C-021`** — all three §3.4 re-check targets
+   fired at once (`D-063` consequence 4). Individually, on verified text.
+5. **Re-verify the 21 source SHA-256 hashes** against `SOURCE_MANIFEST.md`, and add per-file SOURCE
+   / speaker / VERIFICATION sections. Survives the §0.3 withdrawal — traceability, not location.
 6. **Frames, not more audio.** See §17.
 
 ---

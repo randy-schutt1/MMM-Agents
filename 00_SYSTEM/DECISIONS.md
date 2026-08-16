@@ -4950,3 +4950,153 @@ directed correction of item 348 closes the residue; the `PT-048` refutation rema
 
 **Status:** ACTIVE — owner ruling, applied to the named Phase 2 lessons and available prospectively
 only under the five conditions above.
+
+---
+
+## D-063 — ⭐ **The owner rules the X-series is TIER 1.** It sits at the same level as the bootcamp, to fill gaps and add detail. `A-03` is discharged and the `MMM_PT2` "T3" assignment is superseded.
+
+> *"X series is not contradictory. It should be treated on the same level as the bootcamp to fill in
+> the gaps and adds more details."* — owner, 2026-08-15
+
+**The conflict this settles.** `02_TRANSCRIPTS/XSERIES/XSERIES_GAP_HIT_INDEX.md` §0.2 raised that
+two active files disagreed about what the X-series is: `SOURCING_HIERARCHY.md` §1 defines **Tier 1**
+as `01_SOURCE_VIDEOS/` **V01–V21** and makes **Tier 3** non-normative permanently, while
+`MMM_PT2_INTAKE_AND_ALLOCATION_PLAN.md` §5 Track B step 1 assigned the X-series **"T3, cross-course
+note required"** while simultaneously describing it as *"Does Mauro state it? … same instructor,
+already owned."* The session declined to adjudicate and put it to the owner. This is the ruling.
+
+**Decision:** The 21 X-series recordings (`X01`–`X21`, `SOURCE_MANIFEST.md`) are **TIER 1 course
+recordings**. They rank with V01–V21, not below them.
+
+**Five things travel with this and none is optional:**
+
+1. **`SOURCING_HIERARCHY.md` §1.1's internal Tier-1 ranking still governs.** `D-025`/`D-033` are
+   untouched: **the course author outranks a guest presenter, and guest-only material cannot close
+   a record on its own.** This matters immediately — `X11` (Kar), `X15`/`X16` (Jim) and `X21`
+   (Kar and Kim) are **guest-presented**, and several of the strongest candidate passages in the
+   gap-hit index are theirs. Being Tier 1 does not make a guest the author.
+2. **`X01`–`X03` are Dean Malone, not Steve Mauro.** They are Tier 1 *material* subject to `D-033`
+   as guest content — and on the TDI specifically Malone is the **indicator's author**, which is a
+   different and in places stronger warrant than "guest." Record which is being relied on.
+3. **Tier 1 now contradicts itself more often, so `D-048`'s tie-break ladder becomes the routine
+   instrument rather than the exceptional one.** Two X-series-vs-V-series divergences are already
+   visible (the Asian-box end time, and whether the level count is capped at three). Rung 4 —
+   **do not adjudicate** — still applies wherever the rungs disagree or a load-bearing record is at
+   stake.
+4. **`D-030` is untouched.** Tier 1 status is permission to *read* the X-series as course evidence,
+   not permission to approximate a definition it does not supply. The §15 negatives in the gap-hit
+   index (High/Low Trainer, ADR construction, pivot formula, the `A-024` tolerance, the stop-hunt /
+   trap discriminator) stay `DO NOT CODE`.
+5. ⚠️ **Tier 1 status does NOT make the transcripts verified.** They are single-pass
+   `whisper-small.en` output with no second engine and no isolated re-transcription. **Admitting a
+   source is not reading it against a record** — the `D-039` and `D-045` caution, and it binds here.
+   **No numeric figure from these transcripts may close a record until it has had the two-tier
+   verification** `CLAUDE_MMM_XSERIES_TRANSCRIPTION_PROMPT.md` requires. A definition stated in
+   words may be relied on earlier than a figure stated in digits.
+
+**Consequences:**
+
+1. `SOURCE_MANIFEST.md` anomaly `A-03` (`NOT A LESSON` / `OPEN — DEFERRED`) is **discharged**. The
+   deferred owner decision is this one.
+2. `MMM_PT2_INTAKE_AND_ALLOCATION_PLAN.md` §5 Track B **step 1's "T3" is superseded**; the step's
+   substance — *search Mauro first, he is the cheapest and highest authority* — is confirmed and
+   strengthened. Step 2 (Pt 2 = T6 candidate) is unchanged.
+3. `SOURCING_HIERARCHY.md` §1.1 must be amended to state that Tier 1 comprises **V01–V21 and
+   X01–X21**. Until that edit lands, this decision governs.
+4. **The §3.4 standing re-check list is triggered on three records at once** — `A-023` (the 33
+   trade, closed on Tier 2), `A-084` (closed on `TOOLING`) and `C-021` (closed on owner preference;
+   see `D-065`). Each is owed a §3.1 reconciliation, individually, on verified text.
+5. This decision **closes no `A-xxx` and no `C-xxx` by itself.** It makes roughly a dozen of them
+   *eligible*. The gap-hit index remains a candidate list.
+
+**Status:** ACTIVE — owner ruling. Supersedes the `MMM_PT2` tier assignment; subordinate to
+`D-025`, `D-030`, `D-033` and `D-048`, none of which it relaxes.
+
+---
+
+## D-064 — Owner attestation on three ASR mishearings: **cord/court of wood**, **shooting star**, **railroad tracks**
+
+> *"court of wood, shooting star, and railroad tracks."* — owner, 2026-08-15, correcting the three
+> garble examples raised in `XSERIES_GAP_HIT_INDEX.md` §0.1
+
+**Decision:** The three recurring X-series mishearings resolve as follows, on owner attestation:
+
+| ASR produced | Actual term | Note |
+|---|---|---|
+| *"quart of wood"*, *"quarter wood"*, *"double quart of wood"* | **court of wood** | ⚠️ **Spelling not yet confirmed.** *"Cord of wood"* — a stack of split logs — is the more likely orthography given the ASR input and the stacked-candle image, and would make the term self-explaining. Flagged for the owner to confirm; the *referent* is not in doubt and is **not** railroad tracks |
+| *"human star"*, *"morning speaking star"* | **shooting star** | The gap-hit index's guess of *evening star* was **wrong**. `X12` discusses evening star separately and by name, so the two are distinct objects, not one garble |
+| *"Rarotracts"*, *"aero tracks"*, *"rubber track"*, *"Rarotract"* | **railroad tracks** | Confirmed as originally read |
+
+**Consequences:**
+
+1. `XSERIES_GAP_HIT_INDEX.md` §0.1 is corrected accordingly; the superseded guesses stay visible
+   per `REMEDIATION_PROTOCOL.md` §2.
+2. **`court of wood` is a name-only pattern with no anatomy on record.** It joins the P3 name-only
+   backlog. `X13 [33:25]` — *"He forms a court of wood on the low. This is a double… double court of
+   wood"* — is a **usage**, not a definition. `DO NOT CODE`.
+3. This attestation is about **what was said**, not about what the pattern means —
+   `RESOLVED — OWNER ATTESTATION` on the transcription only.
+4. These three rows should be added to the corpus's known-ASR-failure table so a later
+   re-transcription pass does not re-derive them.
+
+**Status:** ACTIVE — owner attestation, transcription scope only. One spelling question outstanding.
+
+---
+
+## D-065 — ⭐ **`D-052` is REVERSED on the owner's authorization. The TDI volatility bands are deviations from the MARKET BASELINE.** Tier 1, Tier 2 and the owner now agree.
+
+> *"It's okay the definitions of the tdi bands. We just need to ensure we are applying it correctly.
+> If you want to update so it matches, then I'm okay with it as long as we are applying it correctly
+> to the charts."* — owner, 2026-08-15
+
+**What `D-052` held.** `C-021` was closed `CLOSED — OWNER EMPIRICAL PREFERENCE` on the ruling
+*"It's definitely not the market basis. It's the RSI [line]."* `SOURCING_HIERARCHY.md` §3.5 records
+that this was **the first time in the project an owner ruling overrode an unretracted Tier 1
+statement rather than filling a Tier 1 silence** — V14 `[00:45:09]` and `MMM-NOTES` p.45 both said
+market base — and it therefore attached a standing re-check with an explicitly named trigger:
+***a later video that states a construction for the bands governs and triggers §3.1.***
+
+**The trigger fired.** `X20 [17:27–17:46]`, Mauro: *"he added some volatility bands, which are
+simply a take on Bollinger's standard deviation and the way they're plotted… **deviations away from
+the market base.** So taking **the market basis line**…"* — and `X20 [18:17–18:24]`: *"it was above
+the **two standard deviations**. Now it's below two standard deviations."* Under `D-063` that is
+Tier 1, and it is a **construction**, not a characterisation — `D-048` rung 2.
+
+**Decision:** `C-021` **REOPENS and RE-CLOSES the other way.** The volatility bands are plotted as
+standard deviations **from the market baseline**. `D-052` is **superseded on this point** and is
+retained unedited per `REMEDIATION_PROTOCOL.md` §2.
+
+**Three limits, and the third is the owner's actual condition:**
+
+1. **The multiplier is now on the record for the first time at any tier: two standard deviations**
+   (`X20 [18:17]`). ⚠️ Subject to `D-063` §5 — this figure is unverified ASR and must survive
+   two-tier verification before it is coded.
+2. ⛔ **The band PERIOD is still not stated by Mauro.** The only candidate is `X01 [01:18:28]`
+   (*"It's 30, the deviation's 34"*), which is internally incoherent as transcribed and is the
+   project's highest-value verification target. **`A-086` therefore does NOT close**, and `A-031` /
+   `A-032` stay uncomputable. `D-052`'s closing sentence — *"it unblocks nothing"* — survives its own
+   reversal.
+3. ⭐ **The owner's authorization is CONDITIONAL: *"as long as we are applying it correctly to the
+   charts."*** The basis change is only meaningful if the shark-fin / blood-in-the-water reading it
+   feeds is the one actually being read off the chart. `D-057` already records the owner attesting
+   that those signals **work on his chart** while stating no number. **The obligation this creates:
+   before the corrected basis is written into any spec, reconcile it against `X20 [20:21–22:50]`'s
+   operational description — bands tight → RSI line exits the band and returns → crossing the trade
+   signal line — and confirm on the owner's own chart that the corrected construction reproduces
+   what he is seeing.** If it does not, that is a finding and comes back to the owner; it is not
+   resolved by preferring whichever version is easier to code.
+
+**Consequences:**
+
+1. `11_CONTRADICTIONS/CONTRADICTIONS.md` `C-021` → `CLOSED — RESOLVED BY COURSE (X20), SUPERSEDING
+   D-052`. Both prior positions stay visible.
+2. `A-086` stays `OPEN` / `DO NOT CODE` on the period. `A-031`, `A-032` unchanged.
+3. The `D-052` entry in `SOURCING_HIERARCHY.md` §3.5 needs an appended supersession block. §3.5's
+   own argument is **vindicated a third time**: the re-check obligation it attached to an owner
+   override is what caught this, and the trigger it named is exactly the one that fired.
+4. Chart-application verification (limit 3) is a **prerequisite** to any spec entry, and is owed
+   before `A-086` is revisited.
+
+**Status:** ACTIVE — owner-authorized reversal, conditional on chart-application verification.
+Supersedes `D-052` on the bands' basis only; `D-052`'s reasoning about owner-preference tiering is
+untouched.
