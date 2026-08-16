@@ -72,13 +72,18 @@ class MT4BridgeClient:
             payload = json.dumps(cmd).encode('utf-8') + b"\n"
             self.sock.sendall(payload)
 
-            # Read response until newline
             chunks = []
             while True:
                 chunk = self.sock.recv(16384)
                 if not chunk:
                     raise ConnectionResetError("MT4 closed connection unexpectedly")
                 chunks.append(chunk)
+                current_bytes = b"".join(chunks).strip()
+                if current_bytes.startswith(b"{") and current_bytes.endswith(b"}"):
+                    try:
+                        return json.loads(current_bytes.decode('utf-8'))
+                    except json.JSONDecodeError:
+                        pass
                 if b"\n" in chunk:
                     break
 

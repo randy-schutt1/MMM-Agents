@@ -154,15 +154,12 @@ void OnTimer() {
    }
 }
 
-//+------------------------------------------------------------------+
-//| Sends a JSON response back to Python client                      |
-//+------------------------------------------------------------------+
 void SendJsonResponse(string json) {
    if (g_client_sock == INVALID_SOCKET) return;
    json += "\n";
    uchar send_buf[];
-   int len = StringToCharArray(json, send_buf, 0, StringLen(json));
-   send(g_client_sock, send_buf, len - 1, 0);
+   StringToCharArray(json, send_buf, 0, WHOLE_ARRAY);
+   send(g_client_sock, send_buf, StringLen(json), 0);
 }
 
 //+------------------------------------------------------------------+
