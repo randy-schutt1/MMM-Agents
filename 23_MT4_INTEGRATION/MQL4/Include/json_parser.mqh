@@ -14,6 +14,15 @@ class CJsonBuilder {
 private:
    string m_buffer;
 
+   void AddCommaIfNeeded() {
+      int len = StringLen(m_buffer);
+      if (len > 0) {
+         string lastChar = StringSubstr(m_buffer, len - 1, 1);
+         if (lastChar != "{" && lastChar != "[")
+            m_buffer += ",";
+      }
+   }
+
 public:
    CJsonBuilder() {
       m_buffer = "";
@@ -24,8 +33,7 @@ public:
    }
 
    void StartObject() {
-      if (StringLen(m_buffer) > 0 && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '{' && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '[')
-         m_buffer += ",";
+      AddCommaIfNeeded();
       m_buffer += "{";
    }
 
@@ -34,8 +42,7 @@ public:
    }
 
    void StartArray(string key = "") {
-      if (StringLen(m_buffer) > 0 && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '{' && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '[')
-         m_buffer += ",";
+      AddCommaIfNeeded();
       if (key != "")
          m_buffer += "\"" + key + "\":[";
       else
@@ -47,26 +54,22 @@ public:
    }
 
    void AddString(string key, string value) {
-      if (StringLen(m_buffer) > 0 && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '{' && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '[')
-         m_buffer += ",";
+      AddCommaIfNeeded();
       m_buffer += "\"" + key + "\":\"" + value + "\"";
    }
 
    void AddNumber(string key, double value, int digits = 5) {
-      if (StringLen(m_buffer) > 0 && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '{' && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '[')
-         m_buffer += ",";
-      m_buffer += "\"" + key + "\":" + DoubleToStr(value, digits);
+      AddCommaIfNeeded();
+      m_buffer += "\"" + key + "\":" + DoubleToString(value, digits);
    }
 
    void AddInt(string key, long value) {
-      if (StringLen(m_buffer) > 0 && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '{' && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '[')
-         m_buffer += ",";
+      AddCommaIfNeeded();
       m_buffer += "\"" + key + "\":" + IntegerToString(value);
    }
 
    void AddBool(string key, bool value) {
-      if (StringLen(m_buffer) > 0 && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '{' && StringGetChar(m_buffer, StringLen(m_buffer)-1) != '[')
-         m_buffer += ",";
+      AddCommaIfNeeded();
       m_buffer += "\"" + key + "\":" + (value ? "true" : "false");
    }
 
@@ -97,15 +100,20 @@ double JsonGetNumber(string json, string key) {
    int pos = StringFind(json, search);
    if (pos < 0) return 0.0;
    int start = pos + StringLen(search);
-   while (start < StringLen(json) && (StringGetChar(json, start) == ' ' || StringGetChar(json, start) == '"'))
-      start++;
+   while (start < StringLen(json)) {
+      string ch = StringSubstr(json, start, 1);
+      if (ch == " " || ch == "\"")
+         start++;
+      else
+         break;
+   }
    int end = start;
-   while (end < StringLen(json) && (
-      (StringGetChar(json, end) >= '0' && StringGetChar(json, end) <= '9') ||
-      StringGetChar(json, end) == '.' ||
-      StringGetChar(json, end) == '-'
-   )) {
-      end++;
+   while (end < StringLen(json)) {
+      string ch = StringSubstr(json, end, 1);
+      if ((ch >= "0" && ch <= "9") || ch == "." || ch == "-")
+         end++;
+      else
+         break;
    }
    string numStr = StringSubstr(json, start, end - start);
    return StrToDouble(numStr);

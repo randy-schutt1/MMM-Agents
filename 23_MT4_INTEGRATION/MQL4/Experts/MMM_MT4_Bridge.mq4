@@ -9,6 +9,7 @@
 #property strict
 
 #include <json_parser.mqh>
+#include <stdlib.mqh>
 
 //+------------------------------------------------------------------+
 //| Windows Winsock 2.2 API Imports (ws2_32.dll)                     |
