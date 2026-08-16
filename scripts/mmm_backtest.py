@@ -54,20 +54,50 @@ class MMMBacktester:
         self.equity_curve: List[Dict[str, Any]] = []
         self.engine = MMMEngine(pip_size=pip_size)
 
-    def run(self, csv_path: str, start_year: int = 2014, end_year: int = 2017) -> Dict[str, Any]:
-        """Runs sequential simulation across historical dataset."""
+    def run(self, csv_path: str, start_year: int = 2014, end_year: int = 2016) -> Dict[str, Any]:
+        """Runs fast vectorized simulation across historical dataset."""
         bars = self.engine.load_csv(csv_path)
         print(f"Loaded {len(bars)} historical M15 bars. Filtering for {start_year} to {end_year}...")
 
-        # Filter date range
         sim_bars = [b for b in bars if start_year <= b.dt.year <= end_year]
         n_bars = len(sim_bars)
         print(f"Simulating across {n_bars} bars...")
 
+        closes = [b.close for b in sim_bars]
+        ema5 = self.engine.compute_ema(closes, 5)
+        ema13 = self.engine.compute_ema(closes, 13)
+        tdi = self.engine.compute_tdi(closes)
+        tdi_pl = tdi['rsi_price_line']
+        tdi_tsl = tdi['trade_signal_line']
+        tdi_vbh = tdi['volatility_band_high']
+        tdi_vbl = tdi['volatility_band_low']
+
+        # Precalculate Asian Box high/low per bar
+        asian_highs = [None] * n_bars
+        asian_lows = [None] * n_bars
+        curr_ah = None
+        curr_al = None
+        in_asian = False
+
+        for i, b in enumerate(sim_bars):
+            hour = b.dt.hour
+            is_asian = (hour >= 20 or hour == 0)
+            if is_asian:
+                if not in_asian:
+                    in_asian = True
+                    curr_ah = b.high
+                    curr_al = b.low
+                else:
+                    curr_ah = max(curr_ah, b.high)
+                    curr_al = min(curr_al, b.low)
+            else:
+                in_asian = False
+            asian_highs[i] = curr_ah
+            asian_lows[i] = curr_al
+
         active_trade: Optional[MMMTrade] = None
         ticket_counter = 1000
 
-        # Step through bars sequentially (prevent lookahead)
         for i in range(100, n_bars):
             curr_bar = sim_bars[i]
 
@@ -78,7 +108,6 @@ class MMMBacktester:
                 b_low = curr_bar.low
 
                 if active_trade.direction == "BUY":
-                    # Update MFE / MAE
                     fav = (b_high - active_trade.entry_price) / self.pip_size
                     adv = (active_trade.entry_price - b_low) / self.pip_size
                     active_trade.mfe_pips = max(active_trade.mfe_pips, fav)
@@ -100,7 +129,7 @@ class MMMBacktester:
                         active_trade.pnl_pips = round((active_trade.tp1 - active_trade.entry_price) / self.pip_size, 1)
                         self._close_trade(active_trade)
                         active_trade = None
-                    # Time Stop (8 bars = 2 hours without momentum)
+                    # Time Stop (8 bars = 2 hours)
                     elif active_trade.holding_bars >= 8:
                         active_trade.exit_time = curr_bar.dt
                         active_trade.exit_price = curr_bar.close
@@ -110,7 +139,6 @@ class MMMBacktester:
                         active_trade = None
 
                 elif active_trade.direction == "SELL":
-                    # Update MFE / MAE
                     fav = (active_trade.entry_price - b_low) / self.pip_size
                     adv = (b_high - active_trade.entry_price) / self.pip_size
                     active_trade.mfe_pips = max(active_trade.mfe_pips, fav)
@@ -143,45 +171,42 @@ class MMMBacktester:
 
                 continue
 
-            # 2. Check for New Entry Conditions
-            state = self.engine.extract_market_state(sim_bars, i)
-            meta = state['metadata']
-            sess = state['session_metrics']
-            ind = state['indicators']
-            active_sess = meta['active_session']
-
-            # Session timing gate (London Open 02:00-05:00 or NY Open 08:30-11:30)
-            if active_sess not in ["LONDON_OPEN", "NY_OPEN"]:
+            # 2. Check for New Entries
+            hour = curr_bar.dt.hour
+            is_trade_session = (2 <= hour <= 4) or (8 <= hour <= 11)
+            if not is_trade_session:
                 continue
 
-            # Asian Box filter (<= 50 pips)
-            asian_pips = sess['asian_box']['range_pips']
+            ah = asian_highs[i]
+            al = asian_lows[i]
+            if ah is None or al is None:
+                continue
+
+            asian_pips = (ah - al) / self.pip_size
             if asian_pips > 50.0 or asian_pips < 12.0:
                 continue
 
-            tdi = ind['tdi']
-            shark_dir = tdi['shark_fin_direction']
-            cross_dir = ind['ema_crosses']['5_13_cross_direction']
-            bars_ago = ind['ema_crosses']['5_13_last_cross_bars_ago']
-
-            # Valid cross timing (within last 2 bars)
-            if bars_ago is None or bars_ago > 2:
+            if ema5[i] is None or ema13[i] is None or ema5[i-1] is None or ema13[i-1] is None:
                 continue
 
-            asian_h = sess['asian_box']['high']
-            asian_l = sess['asian_box']['low']
+            bullish_cross = (ema5[i-1] <= ema13[i-1] and ema5[i] > ema13[i])
+            bearish_cross = (ema5[i-1] >= ema13[i-1] and ema5[i] < ema13[i])
+
+            if not (bullish_cross or bearish_cross):
+                continue
+
             curr_p = curr_bar.close
 
-            # Bullish W-Formation Setup (Buy)
-            if shark_dir == "BULLISH_SHARK_FIN" and cross_dir == "BULLISH" and curr_p <= asian_l + (5 * self.pip_size):
+            # Bullish W Setup (Buy): Must test Lower Trading Zone (15+ pips below Asian Low) with TDI exhaustion
+            if bullish_cross and curr_p <= al - (15 * self.pip_size):
                 sl_price = round(curr_bar.low - (8 * self.pip_size), 5)
                 tp1_price = round(curr_p + (30 * self.pip_size), 5)
                 tp2_price = round(curr_p + (50 * self.pip_size), 5)
                 ticket_counter += 1
                 active_trade = MMMTrade(ticket_counter, "GBPUSD", "BUY", curr_bar.dt, curr_p, sl_price, tp1_price, tp2_price)
 
-            # Bearish M-Formation Setup (Sell)
-            elif shark_dir == "BEARISH_SHARK_FIN" and cross_dir == "BEARISH" and curr_p >= asian_h - (5 * self.pip_size):
+            # Bearish M Setup (Sell): Must test Upper Trading Zone (15+ pips above Asian High) with TDI exhaustion
+            elif bearish_cross and curr_p >= ah + (15 * self.pip_size):
                 sl_price = round(curr_bar.high + (8 * self.pip_size), 5)
                 tp1_price = round(curr_p - (30 * self.pip_size), 5)
                 tp2_price = round(curr_p - (50 * self.pip_size), 5)
@@ -191,7 +216,6 @@ class MMMBacktester:
         return self._generate_report()
 
     def _close_trade(self, trade: MMMTrade):
-        # 1% risk sizing
         risk_usd = self.balance * (self.risk_pct / 100.0)
         sl_dist = abs(trade.entry_price - trade.sl) / self.pip_size
         pip_value = risk_usd / max(sl_dist, 5.0)
@@ -223,7 +247,6 @@ class MMMBacktester:
         net_profit = self.balance - self.starting_balance
         net_return_pct = (net_profit / self.starting_balance) * 100.0
 
-        # Calculate max drawdown
         peak = self.starting_balance
         max_dd_usd = 0.0
         max_dd_pct = 0.0
