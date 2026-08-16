@@ -655,5 +655,110 @@ out-of-sample data.
 
 ---
 
+---
+
+## 18. BEYOND THE GAP MATRIX — SIX RECORDS THE SWEEP HIT THAT WERE NOT ON THE LIST
+
+Added 2026-08-15. The sweep targeted the 15 matrix gaps; these surfaced alongside and are **higher
+value than several matrix rows**, because two of them are foundational records the ambiguity file
+marks as compounding into everything downstream.
+
+### 18.1 ⭐ `A-001` "anchor point" — and the `A-001` = `A-010` identity question
+
+`AUTOMATION_AMBIGUITIES.md` line 298 rates `A-001` *"Foundational. Sets weekly direction and holding
+period. **Wrong = every weekly-bias rule is wrong**,"* and line 1266 flags the compounding risk:
+*"if this is the same object as the anchor point then two records describe one concept; if it is
+not, the corpus has two undefined foundational objects merged by a careless reading."*
+
+**The X-series answers both halves, in one sentence each:**
+
+> **X10 [00:09]** *"**The anchor point is always the W or the M.**"*
+> **X06 [06:02]** *"…which becomes **the anchor point or the new peak formation for the cycle** —
+> peak formation is the low of the week or the high of the week."*
+> **X06 [08:55]** *"**Once the anchor is established, the peak formation high**…"*
+> **X11 [11:52]** *"**The anchor of peak formation high or low is where the market makers start their
+> move after trapping volume.**"* (guest, `D-033`)
+
+**Candidate resolution: they are the same object.** *Anchor point* = *peak formation* = the M or W
+that sets the week's extreme. That is the merge the ambiguity file feared — except the corpus turns
+out to license it, so it is a resolution rather than an error. **Run §3.1 on `A-001` and `A-010`
+together; do not close one without the other.**
+
+### 18.2 ⭐ `push` — the `D-030` canonical blocker, and V05/V06/V07 dimension B
+
+`SOURCING_HIERARCHY.md` §1.2 limit 2 uses `push` as **the** worked example of why Tier 2 cannot
+unblock a record: the notes give 25–50 pips *"in 3 pushes or candles"* and then withdraw the
+regularity in the next sentence, so *"`push` is not unblocked and V05/V06/V07 dimension B stays
+BLOCKED."* `A-072` was likewise ruled `EXTENSION ONLY`.
+
+**X14 gives the figure unhedged, and gives a three-term vocabulary that separates the objects:**
+
+> **X14 [03:26]** *"**These three little pushes will be about 25 to 50 pips**, or these three swipes
+> at the stops will be about 25 to 50 pips."*
+> **X14 [04:08–04:13]** *"**The pushes are intraday**, which comprise of the ADR — three levels of
+> rise, or three pushes of rise — **and then swipes are the move towards the stop-loss levels.**"*
+> **X14 [03:43]** *"**levels will be from the low of the week to the high of the week.**"*
+
+**Candidate scheme: `level` (weekly/daily) ⊃ `push` (intraday, 25–50 pips, ×3 = one ADR) ⊃ `swipe`
+(the move at the stops).** ⚠️ Note X14 uses *pushes* and *swipes* interchangeably in the same
+breath at [03:26] and then distinguishes them at [04:13] — that is an internal wobble, not a clean
+taxonomy. **This is the strongest candidate in the corpus to unblock dimension B, and it is exactly
+the kind of claim that must not be adopted casually** given the record's history. §3.1, on verified
+text, or not at all.
+
+### 18.3 `A-054` — "is push three taken, avoided, or diagnostic?"
+
+> **X19 [26:40]** *"if the dealer hasn't issued three pushes intraday, then he comes back for one
+> more"* · **X19 [27:06]** *"waiting for three levels of rise, three pushes of rise — **if he doesn't
+> give it… there's always tomorrow**"*
+> **X10 [35:57]** *"**That third swipe is to beat up the retail traders.**"*
+> **X18 [28:53]** *"**The last push** that the dealer makes to induce everybody to take it is three
+> aggressive pushes"* · **X15 [41:10]** *"**vector is that fast last third push that gives us the
+> indication that a trap is in progress**"*
+
+**Candidate reading: diagnostic, and a no-trade-yet condition** — the third push is the *signal that
+the reversal setup is arriving*, not itself the entry, and its absence is a reason to stand aside.
+
+### 18.4 `A-005` "the trading zone" — a `DO NOT CODE` record gets an explicit definition
+
+> **X08 [23:49]** *"**The trading zone is always set 25 to 50 pips higher than the Asian high or the
+> Asian low.** … we measure from the initial high, the **IHOD**, and the **IL**, the initial low of
+> the day."*
+> **X08 [24:19]** *"where does everybody put their stops? 25, 30, 35, 40, a couple smart alecks 45,
+> 50. **The dealer triggers those stops as part of the cycle.**"*
+
+Objectively codable, with a stated rationale. See also §13.
+
+### 18.5 `A-078` — the safety-trade anchor distance, `25 to 75`
+
+The record notes the figure is *printed once as `25 to 75`* and *spoken seven times*. The X-series
+adds an **instructor answer to a direct student challenge on exactly this number:**
+
+> **X10 [55:53]** *"Joe, good question. **The safety trade second leg can be up to 75 pips from the
+> peak formation, not 50 pips, right? Yes.**"*
+> **X10 [56:01]** *"**The range for the safety trade to come in is around 25 to 75 pips above or
+> below the peak formation.**"* · **X06 [37:19]** *"The low of the week in this example — how many
+> pips? **25 to 75.**"*
+
+The printed figure is the one the instructor defends when challenged. Strong `§3.1` candidate.
+
+### 18.6 `A-042` — "the operative detail is deferred to the DMR." **Confirmed, and the DMR is named**
+
+> **X21 [00:04]** *"**The DMR — the technical analysis of the market.**"*
+> **X21 [02:21]** *"**The DMR curriculum** is an added bonus to the market analysis where we go over
+> Steve's market maker method in a step-by-step fashion and address all the main points learned
+> during the live class."* · **X21 [02:43]** *"part of the **daily market review** session"*
+> **X10 [26:58]** *"**When DMR is over, you will start the boot camp cycle.**"*
+
+**DMR = Daily Market Review — an ongoing subscription session held *after* the course.** `A-042`'s
+diagnosis is **confirmed, not resolved**: the operative daily detail lives in material this library
+does not contain and cannot buy retrospectively. ⭐ **What X21 does supply is one worked instance** —
+44 minutes of pair-by-pair level counts and next-day biases (EU, GU, GJ, AU, AJ, EJ, ECAD, GCHF,
+UCHF, UCAD, UJ). That is a **ready-made blind-practical answer key**: the calls are on tape with
+dates, so the level-count rules of §3 can be scored against the instructor's own labelling.
+⚠️ Guest-presented (`D-033`) — usable as a labelling exercise, not as doctrine.
+
+---
+
 *Produced by transcript retrieval against the fixed gap list. No ambiguity closed, no tier
-assigned, no lesson ingested. `A-03` remains `OPEN — DEFERRED`.*
+assigned, no lesson ingested. Owner rulings `D-063`/`D-064`/`D-065` applied 2026-08-15.*
